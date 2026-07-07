@@ -13,6 +13,7 @@ re-run the download script.
 """
 
 from pathlib import Path
+import time
 import pandas as pd
 import yaml
 
@@ -78,9 +79,23 @@ def cached_fetch(
             return df["_series_value"].rename(key)
         return df
 
-    # Cache miss (or forced refresh) — call the fetch function.
+  # Cache miss (or forced refresh) — call the fetch function with retries.
     print(f"[fetch] {source}/{key} — calling API...")
-    data = fetch_fn()
+    max_attempts = 4
+    base_delay = 2.0  # seconds; doubled each retry
+    last_error = None
+    for attempt in range(1, max_attempts + 1):
+        try:
+            data = fetch_fn()
+            break
+        except Exception as e:
+            last_error = e
+            if attempt == max_attempts:
+                print(f"[error] {source}/{key} failed after {max_attempts} attempts: {e}")
+                raise
+            delay = base_delay * (2 ** (attempt - 1))
+            print(f"[retry] {source}/{key} attempt {attempt}/{max_attempts} failed ({type(e).__name__}); retrying in {delay:.1f}s...")
+            time.sleep(delay)
 
     # Normalize to DataFrame for Parquet storage.
     if isinstance(data, pd.Series):

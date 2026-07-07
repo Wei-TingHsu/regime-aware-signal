@@ -2,94 +2,158 @@
 # Regime-Aware Cross-Asset Signal Framework — Master Configuration
 # =============================================================================
 # Single source of truth. Every script reads from this file.
-# If you find yourself hard-coding a ticker or date in a script, stop and put
-# it here instead. The reproducibility discipline depends on this rule.
+# The asset universe is split into three analytical groups with different
+# roles in the pipeline (see docstrings per group below).
 # =============================================================================
 
 project:
   name: regime-aware-signal
-  version: 0.1.0
-  random_seed: 42                  # fixed for reproducibility everywhere
+  version: 0.2.0
+  random_seed: 42
 
 # -----------------------------------------------------------------------------
 # Date ranges
 # -----------------------------------------------------------------------------
 dates:
-  panel_start: "1995-01-01"        # macro panel start; covers all crisis episodes
-  panel_end: null                  # null = today; pipeline fills this dynamically
+  panel_start: "1995-01-01"
+  panel_end: null
 
 # -----------------------------------------------------------------------------
-# Asset universe (locked, with justification per instrument)
+# Asset universe — THREE analytical groups
 # -----------------------------------------------------------------------------
+# GROUP 1 — Long-history core.
+#   Role: drives regime discovery, PCA, and historical backtesting.
+#   Rule: every asset here has enough history to span multiple crisis regimes.
+#
+# GROUP 2 — Modern-theme overlay.
+#   Role: tracked live for factor exposure and news attribution.
+#   Rule: excluded from regime clustering and pre-inception backtests
+#         because history is too short for cross-regime analysis.
+#
+# GROUP 3 — Spotlight single names.
+#   Role: news-attribution and factor-exposure analysis; industry leaders
+#         whose individual moves affect entire sectors.
+#   Rule: analyzed only within each asset's available history.
+# -----------------------------------------------------------------------------
+
 assets:
-  # Macro risk backbone — always-on; doubles as regime signal
-  macro_risk:
-    - {ticker: "SPY",  role: "equity_risk",     since: "1993-01-29"}
-    - {ticker: "TLT",  role: "long_treasuries", since: "2002-07-30"}
-    - {ticker: "GLD",  role: "gold_etf",        since: "2004-11-18"}
 
-  # Inversion study (Problem 1) — six-variable safe-haven panel
-  inversion:
-    - {ticker: "GLD",  role: "gold"}
-    - {ticker: "USO",  role: "oil_etf",       since: "2006-04-10"}
-    - {ticker: "UUP",  role: "usd_index_etf", since: "2007-02-20"}
-    # The other three (real yields, M2, liquidity-stress) come from FRED below
+  # ===========================================================================
+  # GROUP 1 — Long-history core (31 instruments)
+  # ===========================================================================
+  core:
+    # Tier 1 — highly liquid institutional baseline
+    - {ticker: "SPY",  role: "equity_broad",         since: "1993-01-29", tier: 1}
+    - {ticker: "VOO",  role: "equity_broad_alt",     since: "2010-09-09", tier: 1}
+    - {ticker: "TLT",  role: "long_treasuries",      since: "2002-07-30", tier: 1}
+    - {ticker: "UUP",  role: "usd_index",            since: "2007-02-20", tier: 1}
+    - {ticker: "XLP",  role: "consumer_staples",     since: "1998-12-22", tier: 1}
+    - {ticker: "XLV",  role: "healthcare",           since: "1998-12-22", tier: 1}
+    - {ticker: "XLE",  role: "energy_broad",         since: "1998-12-22", tier: 1}
+    - {ticker: "SMH",  role: "semi_broad",           since: "2000-05-05", tier: 1}
+    - {ticker: "SOXX", role: "semi_broad_alt",       since: "2001-07-10", tier: 1}
+    - {ticker: "IYW",  role: "us_tech_broad",        since: "2000-05-15", tier: 1}
+    - {ticker: "GLD",  role: "gold",                 since: "2004-11-18", tier: 1}
+    - {ticker: "IAU",  role: "gold_alt",             since: "2005-01-21", tier: 1}
+    - {ticker: "SLV",  role: "silver",               since: "2006-04-21", tier: 1}
+    - {ticker: "USO",  role: "oil",                  since: "2006-04-10", tier: 1}
+    - {ticker: "ITA",  role: "aerospace_defense",    since: "2006-05-01", tier: 1}
 
-  # Semiconductor chain (Problem 2 deep-dive) — proxy basket
-  semi_chain:
-    - {ticker: "NVDA", role: "gpu_design"}
-    - {ticker: "AMD",  role: "gpu_design"}
-    - {ticker: "MU",   role: "memory_dram_hbm"}
-    - {ticker: "AMKR", role: "packaging"}
-    - {ticker: "VRT",  role: "dc_power"}
+    # Tier 2 — liquid but more concentrated
+    - {ticker: "XSD",  role: "semi_equalweight",     since: "2006-01-31", tier: 2}
+    - {ticker: "IGN",  role: "networking_hardware",  since: "2001-07-10", tier: 2}
+    - {ticker: "WCLD", role: "cloud_software",       since: "2019-09-06", tier: 2}
+    - {ticker: "SKYY", role: "cloud_computing",      since: "2011-07-05", tier: 2}
+    - {ticker: "CIBR", role: "cybersecurity",        since: "2015-06-30", tier: 2}
+    - {ticker: "HACK", role: "cybersecurity_alt",    since: "2014-11-11", tier: 2}
+    - {ticker: "URA",  role: "uranium_broad",        since: "2010-11-04", tier: 2}
+    - {ticker: "URNM", role: "uranium_miners",       since: "2019-12-03", tier: 2}
+    - {ticker: "REMX", role: "rare_earth_metals",    since: "2010-10-27", tier: 2}
+    - {ticker: "AMLP", role: "energy_mlp",           since: "2010-08-25", tier: 2}
+    - {ticker: "MLPA", role: "energy_mlp_alt",       since: "2013-04-16", tier: 2}
+    - {ticker: "XAR",  role: "aerospace_equalweight", since: "2011-09-28", tier: 2}
+    - {ticker: "JETS", role: "airlines",             since: "2015-04-30", tier: 2}
+    - {ticker: "FIVG", role: "next_gen_connectivity", since: "2019-02-28", tier: 2}
+    - {ticker: "UFO",  role: "space_broad",          since: "2019-04-11", tier: 2}
+    - {ticker: "MAGS", role: "magnificent_seven",    since: "2023-04-11", tier: 2}
+
+  # ===========================================================================
+  # GROUP 2 — Modern-theme overlay (4 instruments)
+  # ===========================================================================
+  # NOT used for regime discovery or long backtests.
+  # Used for: live factor exposure, news attribution in the current regime.
+  overlay:
+    - {ticker: "DRAM", role: "memory_theme",         since: "2026-04-01"}
+    - {ticker: "FNGS", role: "fang_equalweight",     since: "2021-08-16"}
+    - {ticker: "SPCX", role: "spacex",               since: "2026-06-12"}
+    - {ticker: "FLY",  role: "firefly_aerospace",    since: "2025-08-07"}
+
+  # ===========================================================================
+  # GROUP 3 — Spotlight single names (12 instruments)
+  # ===========================================================================
+  # Industry leaders whose individual news moves sectors.
+  # Analyzed within each asset's available history; never used to make claims
+  # about periods before the asset existed as a listed instrument.
+  spotlight:
+    - {ticker: "NVDA", role: "ai_gpu_leader",        since: "1999-01-22"}
+    - {ticker: "TSM",  role: "foundry_leader",       since: "1997-10-08"}
+    - {ticker: "ASML", role: "euv_lithography",      since: "1995-03-14"}
+    - {ticker: "MU",   role: "memory_pureplay",      since: "1995-01-01"}
+    - {ticker: "SNDK", role: "nand_leader",          since: "2025-02-24"}
+    - {ticker: "ARM",  role: "chip_architecture",    since: "2023-09-14"}
+    - {ticker: "PLTR", role: "data_analytics",       since: "2020-09-30"}
+    - {ticker: "ORCL", role: "enterprise_software",  since: "1995-01-01"}
+    - {ticker: "INTC", role: "cpu_incumbent",        since: "1995-01-01"}
+    - {ticker: "MSFT", role: "ai_cloud_megacap",     since: "1995-01-01"}
+    - {ticker: "TSLA", role: "ev_leader",            since: "2010-06-29"}
+    - {ticker: "LMT",  role: "defense_leader",       since: "1995-03-15"}
 
 # -----------------------------------------------------------------------------
 # FRED macro series — the regime engine's input panel
 # -----------------------------------------------------------------------------
 fred_series:
   # Rates and curve
-  - {id: "DGS10",      role: "nominal_10y_yield",  freq: "daily",   since: "1962-01-02"}
-  - {id: "DFII10",     role: "real_10y_yield",     freq: "daily",   since: "2003-01-02"}
-  - {id: "T10Y2Y",     role: "term_spread_10y2y",  freq: "daily",   since: "1976-06-01"}
-  - {id: "DGS2",       role: "nominal_2y_yield",   freq: "daily",   since: "1976-06-01"}
+  - {id: "DGS10",        role: "nominal_10y_yield",   freq: "daily",   since: "1962-01-02"}
+  - {id: "DFII10",       role: "real_10y_yield",      freq: "daily",   since: "2003-01-02"}
+  - {id: "T10Y2Y",       role: "term_spread_10y2y",   freq: "daily",   since: "1976-06-01"}
+  - {id: "DGS2",         role: "nominal_2y_yield",    freq: "daily",   since: "1976-06-01"}
 
   # Money and liquidity
-  - {id: "M2SL",       role: "m2_money_supply",    freq: "monthly", since: "1959-01-01"}
-  - {id: "EFFR",       role: "effective_ff_rate",  freq: "daily",   since: "1954-07-01"}
-  - {id: "SOFR",       role: "sofr",               freq: "daily",   since: "2018-04-03"}
+  - {id: "M2SL",         role: "m2_money_supply",     freq: "monthly", since: "1959-01-01"}
+  - {id: "EFFR",         role: "effective_ff_rate",   freq: "daily",   since: "1954-07-01"}
+  - {id: "SOFR",         role: "sofr",                freq: "daily",   since: "2018-04-03"}
 
   # Credit and stress
-  - {id: "BAMLH0A0HYM2", role: "hy_credit_spread", freq: "daily",   since: "1996-12-31"}
-  - {id: "VIXCLS",       role: "vix",              freq: "daily",   since: "1990-01-02"}
+  - {id: "BAMLH0A0HYM2", role: "hy_credit_spread",    freq: "daily",   since: "1996-12-31"}
+  - {id: "VIXCLS",       role: "vix",                 freq: "daily",   since: "1990-01-02"}
 
   # Dollar
-  - {id: "DTWEXBGS",   role: "broad_usd_index",    freq: "daily",   since: "2006-01-02"}
+  - {id: "DTWEXBGS",     role: "broad_usd_index",     freq: "daily",   since: "2006-01-02"}
 
 # -----------------------------------------------------------------------------
 # Model hyperparameters
 # -----------------------------------------------------------------------------
 pca:
-  n_components: 5                  # try 3-5; 5 is the upper bound we'll inspect
+  n_components: 5
   standardize: true
 
 regime:
-  method: "gmm"                    # gaussian_mixture; "kmeans" as alternative
-  candidate_n_regimes: [3, 4, 5]   # BIC will pick among these
+  method: "gmm"
+  candidate_n_regimes: [3, 4, 5]
   covariance_type: "full"
   max_iter: 200
-  n_init: 10                       # multiple inits, pick best — stability
+  n_init: 10
 
 analog:
-  recency_decay_lambda: 0.0008     # ~daily; small = gentle decay
-  similarity_sigma: 1.5            # in PCA z-score space
-  weighting: "similarity_dominant" # 'multiplicative' is the alternative
+  recency_decay_lambda: 0.0008
+  similarity_sigma: 1.5
+  weighting: "similarity_dominant"
 
 backtest:
-  horizons_days: [5, 20, 60]       # forecast horizons in trading days
+  horizons_days: [5, 20, 60]
 
 # -----------------------------------------------------------------------------
-# Crisis episodes (graded — systemic + asset-specific)
-# Used for backtest validation and regime cluster sanity-checking
+# Crisis episodes (graded)
 # -----------------------------------------------------------------------------
 crisis_episodes:
   - {name: "1998_LTCM",          start: "1998-08-01", end: "1998-10-31", severity: "systemic"}
