@@ -17,6 +17,8 @@ meta:
   offset_handling: "SPLIT on comma, take OFFSET(0) to strip character offset"
   confirmed_on_partition: "2024-01-02"
   purpose: "Independent event-density signal to validate regime transitions (non-circular)"
+  resolution_note: "GKG updates every 15 min; aggregated to DAILY here because regime labels are daily. This is a deliberate choice for regime validation, NOT a discard."
+  resolution_preserved_for: "Intraday shock timing, the raw fast-shock layer of the dual-layer regime design, and eventual real-time alerting all use the 15-min stamp + market_calendar day-routing. Pull sub-daily then, not now."
 
 # -----------------------------------------------------------------------------
 # Macro factor -> theme groups (LOCKED for regime validation)
