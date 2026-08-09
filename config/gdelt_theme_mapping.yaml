@@ -1,0 +1,133 @@
+# =============================================================================
+# GDELT Theme Mapping — Regime Validation Layer
+# =============================================================================
+# Maps GDELT GKG V2 themes to the macro factors of the regime engine.
+# LOCKED for regime validation (PC1/PC2/PC3). Every theme below was confirmed
+# present in real GDELT data (query on 2024-01-02 partition, offset-stripped).
+#
+# Scope note: this mapping covers the MACRO factors only. Industrial/sector
+# coverage (semiconductors, defense, space, cyber) is DEFERRED to the
+# rotation-engine phase and will use trade/sanctions themes + exact-match
+# entity names + SEC EDGAR, not the theme families below. See `deferred:` block.
+# =============================================================================
+
+meta:
+  source: "GDELT 2.0 GKG (gdelt-bq.gdeltv2.gkg_partitioned)"
+  themes_field: "V2Themes"           # semicolon-delimited, each entry is THEME,offset
+  offset_handling: "SPLIT on comma, take OFFSET(0) to strip character offset"
+  confirmed_on_partition: "2024-01-02"
+  purpose: "Independent event-density signal to validate regime transitions (non-circular)"
+
+# -----------------------------------------------------------------------------
+# Macro factor -> theme groups (LOCKED for regime validation)
+# -----------------------------------------------------------------------------
+factors:
+
+  # Validates PC1 (rates level / monetary tightness) — corr(PC1,DGS2)=+0.983
+  monetary_rates:
+    themes:
+      - ECON_INTEREST_RATES
+      - EPU_POLICY_INTEREST_RATES
+      - EPU_POLICY_INTEREST_RATE
+      - EPU_CATS_MONETARY_POLICY
+      - EPU_POLICY_MONETARY_POLICY
+      - ECON_CENTRALBANK
+      - EPU_POLICY_FEDERAL_RESERVE
+      - EPU_POLICY_CENTRAL_BANK
+      - ECON_INFLATION
+      - WB_442_INFLATION
+      - ECON_DEFLATION
+    primary_assets: [TLT]            # purest rate play in the basket
+
+  # Validates PC2 (risk stress) — corr(PC2,VIX)=+0.792
+  market_stress:
+    themes:
+      - EPU_ECONOMY_HISTORIC
+      - EPU_ECONOMY
+      - EPU_UNCERTAINTY
+      - ECON_STOCKMARKET
+      - EPU_CATS_SOVEREIGN_DEBT_CURRENCY_CRISES
+      - ECON_BANKRUPTCY
+      - ECON_SOVEREIGN_DEBT
+      - ECON_DEBT
+    primary_assets: [SPY, VOO, XLP, XLV]
+
+  # Validates the USD factor (loads on PC1 and PC2)
+  dollar_fx:
+    themes:
+      - ECON_WORLDCURRENCIES_DOLLAR
+      - ECON_WORLDCURRENCIES_US_DOLLAR
+      - ECON_WORLDCURRENCIES_US_DOLLARS
+      - ECON_CURRENCY_EXCHANGE_RATE
+    primary_assets: [UUP]
+
+  # Gold — inversion study (Problem 1)
+  gold:
+    themes:
+      - ECON_GOLDPRICE
+    primary_assets: [GLD, IAU]
+    note: "No clean silver theme; SLV validated via GLD theme as proxy (flagged)."
+
+  # Oil / energy — energy assets
+  energy_oil:
+    themes:
+      - ECON_OILPRICE
+      - ECON_GASOLINEPRICE
+      - ECON_HEATINGOIL
+      - WB_507_ENERGY_AND_EXTRACTIVES
+      - WB_2290_OIL_AND_GAS_EXPORT
+    primary_assets: [USO, XLE, AMLP, MLPA]
+
+  # Nuclear / uranium
+  nuclear:
+    themes:
+      - WB_509_NUCLEAR_ENERGY
+      - ENV_NUCLEARPOWER
+    primary_assets: [URA, URNM]
+
+# -----------------------------------------------------------------------------
+# Deferred coverage (NOT used for regime validation) — rotation-engine phase
+# -----------------------------------------------------------------------------
+deferred:
+  reason: >
+    GDELT theme vocabulary covers macro/monetary/energy/commodity well but has
+    NO clean semiconductor/defense/space/cyber theme. Coverage for these requires
+    a different approach, confirmed viable on real data but deferred to the
+    rotation-engine phase.
+
+  semiconductors:
+    assets: [SMH, SOXX, XSD, IYW, NVDA, TSM, ASML, MU, SNDK, ARM, INTC, MSFT, ORCL]
+    approach_1_trade_themes:   # captures chip POLICY shocks (export bans, tariffs)
+      - WB_698_TRADE
+      - SANCTIONS
+      - WB_1281_MANUFACTURING
+      - EPU_CATS_TRADE_POLICY
+      - ECON_TRADE_DISPUTE
+      - WB_775_TRADE_POLICY_AND_INTEGRATION
+      - WB_1084_TECHNOLOGY_TRANSFER_AND_DIFFUSION
+    approach_2_entity_exact_match:   # captures company-specific news
+      confirmed_clean_entities: ["Nvidia", "Intel Corporation", "Broadcom",
+        "Qualcomm", "Micron Technology", "Taiwan Semiconductor Manufacturing", "ASML"]
+      CRITICAL_WARNING: >
+        Do NOT use LIKE '%INTEL%' — it matches 'intelligence' (CIA, Mossad,
+        House Intelligence Committee, etc.) and floods the signal with false
+        positives. Use EXACT entity-name matching only. Confirmed on real data.
+
+  other_industrial:
+    aerospace_defense: {assets: [ITA, XAR, LMT], approach: "entity match + EDGAR"}
+    space:             {assets: [UFO, SPCX, FLY], approach: "entity match + EDGAR"}
+    cyber:             {assets: [CIBR, HACK], approach: "entity match + EDGAR"}
+    rare_earths:       {assets: [REMX], approach: "WB_1699_METAL_ORE_MINING (partial)"}
+    airlines:          {assets: [JETS], approach: "WB_1804_AIRPORTS (partial)"}
+
+  future_source_note: >
+    For company-specific material events (earnings shocks, single-name crashes),
+    SEC EDGAR 8-K filings are a cleaner source than GDELT entities — structured,
+    mandatory, no intelligence-agency noise. Planned for Phase C.
+
+# -----------------------------------------------------------------------------
+# Excluded
+# -----------------------------------------------------------------------------
+excluded:
+  crypto:
+    reason: "No crypto asset in the 47-asset basket; ECON_BITCOIN theme dropped."
