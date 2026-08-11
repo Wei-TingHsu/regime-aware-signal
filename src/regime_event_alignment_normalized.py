@@ -40,6 +40,7 @@ import argparse
 
 import numpy as np
 import pandas as pd
+from src.stress_axis import stress_regime_id
 
 # Reuse the EXACT loaders + GMM fit from the main script so labels are identical.
 from src.regime_event_alignment import (
@@ -51,9 +52,8 @@ from src.regime_event_alignment import (
 
 
 def pick_stress_regime(labels, scores):
-    """Same rule as the main script: the regime with the highest mean PC2."""
-    means = {r: scores.loc[labels == r, "PC2"].mean() for r in labels.unique()}
-    return max(means, key=means.get)
+    # data-driven: stress = regime highest on the VIX-correlated PC
+    return stress_regime_id(labels, scores)
 
 
 def ratio_in_out(series, stress_mask):

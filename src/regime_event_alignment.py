@@ -21,6 +21,7 @@ Run from project root:
 import argparse
 import numpy as np
 import pandas as pd
+from src.stress_axis import stress_regime_id
 from sklearn.mixture import GaussianMixture
 
 from src.data_io import load_config, PROCESSED_DIR
@@ -77,9 +78,9 @@ def test_transition_alignment(labels, gdelt):
 
 
 def test_stress_regime(labels, scores, gdelt):
-    """Test B: does the high-PC2 regime sit on high GDELT stress density?"""
-    means = {r: scores.loc[labels == r, "PC2"].mean() for r in labels.unique()}
-    stress_regime = max(means, key=means.get)
+    """Test B: does the stress regime sit on high GDELT stress density?
+    Stress regime picked via the data-driven VIX axis (PCA-renumbering-proof)."""
+    stress_regime = stress_regime_id(labels, scores)
     stress_days = labels == stress_regime
     common = labels.index.intersection(gdelt.index)
     sd = stress_days.reindex(common).fillna(False)

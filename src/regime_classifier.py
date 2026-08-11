@@ -131,37 +131,40 @@ def _compute_run_lengths(labels: pd.Series, regime_id: int) -> list:
 # -----------------------------------------------------------------------------
 def interpret_regimes(characterization: pd.DataFrame) -> None:
     """
-    Print a plain-language description of each regime based on its PC signature.
-
-    Uses the PC1-PC2-PC3 interpretation we established:
-      PC1 high = tight monetary policy; low = easy
-      PC2 high = risk stress (VIX/M2/USD-up); low = calm
-      PC3 high = reflation (steep curve, M2, low vol); low = compression
+    Plain-language description of each regime from its RAW MACRO means, not from
+    fixed PC positions -- so it stays correct after a PCA refit renumbers the
+    components. Each proxy is z-scored ACROSS regimes to decide high/low/neutral.
     """
-    print("\n=== Regime interpretation ===")
+    print("\n=== Regime interpretation (macro-based, PC-renumbering-proof) ===")
+    proxies = {
+        "mean_VIXCLS":   ("STRESSED (high VIX)",    "CALM (low VIX)"),
+        "mean_DGS2":     ("TIGHT policy (high 2Y)", "EASY policy (low 2Y)"),
+        "mean_DGS10":    ("HIGH 10Y yield",         "LOW 10Y yield"),
+        "mean_T10Y2Y":   ("STEEP curve",            "FLAT / inverted curve"),
+        "mean_DTWEXBGS": ("STRONG USD",             "WEAK USD"),
+    }
+    present = {k: v for k, v in proxies.items() if k in characterization.columns}
+    zc = {}
+    for k in present:
+        col = characterization[k].astype(float)
+        sd = col.std()
+        zc[k] = (col - col.mean()) / sd if sd else col * 0.0
+
+    def w(z, hi, lo, thr=0.6):
+        return hi if z > thr else (lo if z < -thr else None)
+
     for regime_id, row in characterization.iterrows():
-        pc1, pc2, pc3 = row["mean_PC1"], row["mean_PC2"], row["mean_PC3"]
-
-        def label(val, high_word, low_word, threshold=0.5):
-            if val > threshold:
-                return high_word
-            elif val < -threshold:
-                return low_word
-            else:
-                return "neutral"
-
-        rates = label(pc1, "TIGHT policy", "EASY policy")
-        stress = label(pc2, "STRESSED", "CALM")
-        reflation = label(pc3, "REFLATION", "COMPRESSION")
-
+        tags = [w(zc[k].loc[regime_id], hi, lo) for k, (hi, lo) in present.items()]
+        tags = [t for t in tags if t] or ["neutral / mixed"]
         print(f"  Regime {regime_id} ({int(row['n_days'])} days, "
-              f"mean run={row['mean_run_length']:.0f}, max run={int(row['max_run_length'])}):")
-        print(f"      PC1={pc1:+.2f} ({rates})   "
-              f"PC2={pc2:+.2f} ({stress})   "
-              f"PC3={pc3:+.2f} ({reflation})")
-        print(f"      Mean 10Y={row['mean_DGS10']:.2f}%   "
-              f"VIX={row['mean_VIXCLS']:.1f}   "
-              f"USD idx={row['mean_DTWEXBGS']:.1f}")
+              f"mean run={row['mean_run_length']:.0f}, "
+              f"max run={int(row['max_run_length'])}): " + "; ".join(tags))
+        bits = []
+        if "mean_VIXCLS" in row:   bits.append(f"VIX={row['mean_VIXCLS']:.1f}")
+        if "mean_DGS10" in row:    bits.append(f"10Y={row['mean_DGS10']:.2f}%")
+        if "mean_DTWEXBGS" in row: bits.append(f"USD={row['mean_DTWEXBGS']:.1f}")
+        if bits:
+            print("      " + "   ".join(bits))
 
 
 # -----------------------------------------------------------------------------

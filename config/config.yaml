@@ -121,10 +121,9 @@ fred_series:
   # Money and liquidity
   - {id: "M2SL",         role: "m2_money_supply",     freq: "monthly", since: "1959-01-01"}
   - {id: "EFFR",         role: "effective_ff_rate",   freq: "daily",   since: "1954-07-01"}
-  - {id: "SOFR",         role: "sofr",                freq: "daily",   since: "2018-04-03"}
+ 
 
   # Credit and stress
-  - {id: "BAMLH0A0HYM2", role: "hy_credit_spread",    freq: "daily",   since: "1996-12-31"}
   - {id: "VIXCLS",       role: "vix",                 freq: "daily",   since: "1990-01-02"}
 
   # Dollar

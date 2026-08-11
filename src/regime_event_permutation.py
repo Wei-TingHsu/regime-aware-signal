@@ -1,33 +1,18 @@
 """
 Permutation test for the de-baselined Test B lean.
 
-Question it answers
--------------------
-The de-baselined run showed the stress regime sitting on proportionally
-stress-heavier days, strongest at n=4 (share ratio 1.031, z_in-z_out 0.261).
-Those effects are small. This asks: is that bigger than you'd get by chance
-from ANY day-set of the same size and clustering?
+For each n we take the REAL stress-day mask, rotate it by a random offset
+around the calendar many times, and compare the observed share-ratio and
+z_in-z_out gap against that null. p = P(null >= obs); small p => the stress
+regime's alignment to news-stress is real, not an artifact of clustering.
 
-Null model (circular rotation)
--------------------------------
-For each n we take the REAL stress-day mask, then rotate it by a random
-offset around the calendar many times. Rotation preserves exactly:
-  * the number of stress days, and
-  * their run-length structure (autocorrelation / clustering),
-while destroying their alignment to the GDELT stress series. So the null is
-"a stress-shaped block of days placed at a random point in 2024." If the real
-placement scores above almost all rotations, the alignment to news-stress is
-real, not an artifact of how many/how clustered the stress days are.
-
-Reports, per n, for BOTH the share ratio and the z_in-z_out difference:
-  observed value, null mean, and one-sided empirical p = P(null >= observed).
+v2: the stress regime is selected via the DATA-DRIVEN stress axis
+(src.stress_axis.stress_regime_id) -- the PC most correlated with VIX --
+instead of a hard-coded 'PC2', so it survives PCA renumbering.
 
 Run:
     python -m src.regime_event_permutation --gdelt processed/gdelt_2024_clean.csv
-Optional:
-    --iters 5000     number of rotations (default 5000)
-    --window 20      rolling window for the z-score (match the other script)
-    --nlist 3,4,5
+Optional: --iters 5000  --window 20  --nlist 3,4,5
 """
 import argparse
 
@@ -40,11 +25,12 @@ from src.regime_event_alignment import (
     load_scores_2024,
     fit_labels,
 )
+from src.stress_axis import stress_regime_id
 
 
 def pick_stress_regime(labels, scores):
-    means = {r: scores.loc[labels == r, "PC2"].mean() for r in labels.unique()}
-    return max(means, key=means.get)
+    # data-driven: stress = regime highest on the VIX-correlated PC
+    return stress_regime_id(labels, scores)
 
 
 def share_ratio(measure, mask):
@@ -72,7 +58,6 @@ def main():
     gdelt = load_gdelt(args.gdelt).sort_index().copy()
     scores = load_scores_2024()
 
-    # de-baselined measures, same construction as the normalized script
     raw = gdelt["stress_count"].astype(float)
     if "total_docs" in gdelt.columns and (gdelt["total_docs"] > 0).any():
         share = raw / gdelt["total_docs"].replace(0, np.nan).astype(float)
@@ -85,6 +70,7 @@ def main():
 
     print("=" * 78)
     print(f"PERMUTATION TEST (circular rotation, {args.iters} iters) -- de-baselined Test B")
+    print("  (stress regime selected via data-driven VIX axis)")
     print("=" * 78)
     print(f"{'n':>3} | {'measure':<12} | {'observed':>9} | {'null mean':>9} | "
           f"{'p (>=obs)':>9} | verdict")
@@ -101,11 +87,9 @@ def main():
         z_c = zc.loc[common].to_numpy()
         m = len(common)
 
-        # observed
         obs_share = share_ratio(pd.Series(share_c), pd.Series(sd))
         obs_z = z_diff(pd.Series(z_c), pd.Series(sd))
 
-        # null via circular rotation of the real mask
         null_share = np.empty(args.iters)
         null_z = np.empty(args.iters)
         offsets = rng.integers(1, m, size=args.iters)
@@ -135,12 +119,7 @@ def main():
 
     print("HOW TO READ")
     print("  p = fraction of random rotations scoring >= the real placement.")
-    print("  p<.05  : the stress regime's alignment to news-stress is real, not a")
-    print("           by-product of how many or how clustered the stress days are.")
-    print("  p>.10  : the small lean is within chance -> report GENUINE DISTINCTNESS")
-    print("           (macro regimes capture a different axis than news attention).")
-    print("  Rotation preserves count + run-structure, so this null is honest about")
-    print("  the autocorrelation the earlier CAVEAT warned about.")
+    print("  p<.05 : alignment to news-stress is real, not a clustering artifact.")
     print("=" * 78)
 
 

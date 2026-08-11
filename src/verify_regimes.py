@@ -38,30 +38,34 @@ def load_inputs():
 # -----------------------------------------------------------------------------
 def validate_pc_naming(scores, macro):
     """
-    Correlate each PC score series against external proxies to test whether
-    the human names ('rates level', 'risk stress', 'reflation') are earned.
-
-    PC1 hypothesis: tracks policy tightness  -> proxy = DGS2 (2y yield) or EFFR
-    PC2 hypothesis: tracks risk stress        -> proxy = VIXCLS
-    PC3 hypothesis: tracks curve steepness    -> proxy = T10Y2Y
+    DATA-DRIVEN PC identification. Rather than assert fixed names (which break
+    when a refit renumbers components), correlate every PC against external
+    proxies and report, per PC, the proxy it best matches. After any refit this
+    shows which PC currently carries rates, stress, curve, etc.
     """
     print("\n" + "=" * 70)
-    print("STEP 0 — PC-axis naming validation (correlation vs external proxy)")
+    print("STEP 0 - PC-axis identification (data-driven: best proxy per PC)")
     print("=" * 70)
-
-    checks = [
-        ("PC1", "proposed name 'rates level / tightness'", ["DGS2", "EFFR", "DGS10"]),
-        ("PC2", "proposed name 'risk stress'",             ["VIXCLS"]),
-        ("PC3", "proposed name 'reflation / curve slope'", ["T10Y2Y", "M2SL"]),
-    ]
-    for pc, name, proxies in checks:
-        print(f"\n{pc} — {name}")
-        for proxy in proxies:
-            if proxy in macro.columns:
-                r = np.corrcoef(scores[pc].values, macro[proxy].values)[0, 1]
-                verdict = "STRONG" if abs(r) > 0.8 else ("MODERATE" if abs(r) > 0.5 else "WEAK")
-                print(f"    corr({pc}, {proxy}) = {r:+.3f}   [{verdict}]")
-    print("\n  Reading: a name is 'earned' when |corr| with its proxy is high (>0.8).")
+    proxy_meaning = {
+        "DGS2": "rates/tightness", "EFFR": "rates/tightness", "DGS10": "long rates",
+        "VIXCLS": "risk stress", "T10Y2Y": "curve slope", "M2SL": "money supply",
+        "DTWEXBGS": "USD strength", "DFII10": "real rates",
+    }
+    proxies = [p for p in proxy_meaning if p in macro.columns]
+    corr = {}
+    print(f"\n  {'':6}" + "".join(f"{p:>10}" for p in proxies))
+    for pc in scores.columns:
+        row = {p: np.corrcoef(scores[pc].values, macro[p].values)[0, 1] for p in proxies}
+        corr[pc] = row
+        print(f"  {pc:6}" + "".join(f"{row[p]:>+10.2f}" for p in proxies))
+    print("\n  Best proxy per PC (data-driven identity):")
+    for pc in scores.columns:
+        best = max(corr[pc], key=lambda p: abs(corr[pc][p]))
+        r = corr[pc][best]
+        verdict = "STRONG" if abs(r) > 0.8 else ("MODERATE" if abs(r) > 0.5 else "WEAK")
+        print(f"    {pc}: {best} ({proxy_meaning[best]}), corr={r:+.3f}  [{verdict}]")
+    print("\n  Reading: shows which PC currently carries which axis, so no")
+    print("  downstream script needs to assume a fixed PC number.")
 
 
 # -----------------------------------------------------------------------------
