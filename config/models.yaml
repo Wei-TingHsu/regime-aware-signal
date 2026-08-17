@@ -1,0 +1,37 @@
+# Pre-registered forward-test models -- FROZEN 2026-08-14.
+# Specs locked BEFORE any live data existed. Do not edit; add new models instead.
+# In-sample numbers are from src/model_grid.py (frozen n=4 regimes, full permutation).
+
+models:
+  model_1_baseline:
+    horizon: 5
+    sim_mode: level
+    kernel: gaussian
+    sigma: 1.5
+    trend_window: 10
+    n_regimes: 4
+    topk: 100
+    nbasket: 5
+    note: "Plain macro engine, level-only similarity. In-sample Sharpe +0.21, p=0.0869 (not significant)."
+
+  model_2_horizon_trend:
+    horizon: 10
+    sim_mode: trend
+    kernel: gaussian
+    sigma: 1.5
+    trend_window: 10
+    n_regimes: 4
+    topk: 100
+    nbasket: 5
+    note: "PRINCIPLED amendment: longer horizon + trend-aware similarity (macro direction, not just level). Hypothesis-driven. In-sample Sharpe +0.39, p=0.0190 (significant)."
+
+  model_3_overfit:
+    horizon: 20
+    sim_mode: trend
+    kernel: gaussian
+    sigma: 1.0
+    trend_window: 10
+    n_regimes: 4
+    topk: 100
+    nbasket: 5
+    note: "CONTROL GROUP -- best-in-sample of 48 grid configs, explicitly CHERRY-PICKED. In-sample Sharpe +0.50, p=0.0390. Hypothesis: its in-sample lead shrinks or inverts out-of-sample."
