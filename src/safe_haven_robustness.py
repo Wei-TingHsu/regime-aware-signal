@@ -9,6 +9,14 @@ in that null, two design choices deserve a check:
   * averaging -- raw mean-correlation vs Fisher-z (arctanh), which weights the
     tails where haven effects would live.
 
+v2 CHANGE: the macro cross-check regime is now selected by a DATA-DRIVEN stress
+axis (the PC most correlated with VIX), not a hard-coded 'PC2'. On the 2006+
+panel the VIX axis sits on PC3, so the old code was conditioning on the
+money/dollar axis and reporting it as "stress" -- the same hazard src/stress_axis.py
+was built to eliminate, and already fixed in safe_haven_test.py. Before the fix
+this block reported gaps of about -0.21 on ~1816 "stress" days, contradicting
+safe_haven_test.py's +0.167 on 1084 days for the same statistic.
+
 Same states (fixed), same circular-rotation permutation. For every
 (state definition x window x transform) cell it reports the signed gap
 (stress - other) and a ONE-SIDED p = P(null <= observed): small p means the
@@ -27,6 +35,7 @@ import numpy as np
 import pandas as pd
 
 from src.data_io import load_config
+from src.stress_axis import find_stress_axis, describe
 
 
 def rolling_corr(rets, a, b, window):
@@ -56,16 +65,25 @@ def cell(corr, mask, iters, rng, fisher):
     return obs, p_neg, int(md.sum()), len(common)
 
 
-def macro_stress_mask(scores_path, seed, n_regimes):
+def macro_stress_mask(scores_path, panel_path, seed, n_regimes):
+    """Refit macro regimes at the config-pinned count; stress = regime with the
+    highest mean stress-axis score, where the stress axis is the VIX-correlated
+    PC (data-driven). Never hard-code a PC index -- refits renumber components."""
     from sklearn.mixture import GaussianMixture
     scores = pd.read_parquet(scores_path)
     scores.index = pd.to_datetime(scores.index)
-    if "PC2" not in scores.columns:
-        raise SystemExit(f"'PC2' not in macro_pca_scores columns: {list(scores.columns)}")
+    panel = pd.read_parquet(panel_path)
+    panel.index = pd.to_datetime(panel.index)
+    vixcol = "VIXCLS" if "VIXCLS" in panel.columns else "vix"
+    if vixcol not in panel.columns:
+        raise SystemExit(f"no VIX column in panel: {list(panel.columns)}")
+    print("  " + describe(scores, panel[vixcol]))          # log which axis was used
+    col, sign, _ = find_stress_axis(scores, panel[vixcol])
     gm = GaussianMixture(n_components=n_regimes, covariance_type="full",
                          n_init=10, max_iter=200, random_state=seed)
     lab = pd.Series(gm.fit_predict(scores.to_numpy()), index=scores.index)
-    means = {r: scores.loc[lab == r, "PC2"].mean() for r in lab.unique()}
+    axis = sign * scores[col]
+    means = {r: axis[lab == r].mean() for r in lab.unique()}
     return (lab == max(means, key=means.get))
 
 
@@ -77,6 +95,7 @@ def main():
     ap.add_argument("--states", default="processed/liquidity_states.parquet")
     ap.add_argument("--returns", default="processed/asset_returns.parquet")
     ap.add_argument("--scores", default="processed/macro_pca_scores.parquet")
+    ap.add_argument("--panel", default="processed/macro_panel.parquet")
     args = ap.parse_args()
     windows = [int(x) for x in args.windows.split(",")]
     rng = np.random.default_rng(args.seed)
@@ -86,7 +105,8 @@ def main():
     rets = rets.sort_index()
     states = pd.read_parquet(args.states); states.index = pd.to_datetime(states.index)
     liq_mask = states["stress"].astype(bool)
-    macro_mask = macro_stress_mask(args.scores, args.seed, n_regimes)
+    print("\n(macro cross-check: identifying stress axis...)")
+    macro_mask = macro_stress_mask(args.scores, args.panel, args.seed, n_regimes)
 
     print("=" * 78)
     print(f"SAFE-HAVEN ROBUSTNESS SWEEP  ({args.iters} rotations/cell)")
