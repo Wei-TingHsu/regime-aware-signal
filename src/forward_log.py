@@ -50,7 +50,10 @@ def refresh_data():
     """Pull fresh prices/macro and rebuild the panels + PCA scores."""
     for mod in ["src.download_data", "src.build_panel", "src.pca_macro"]:
         print(f"  refreshing: {mod} ...")
-        r = subprocess.run([sys.executable, "-m", mod], capture_output=True, text=True)
+        cmd = [sys.executable, "-m", mod]
+        if mod == "src.download_data":
+            cmd.append("--force")          # cache-first fetch would serve STALE data
+        r = subprocess.run(cmd, capture_output=True, text=True)
         if r.returncode != 0:
             tail = (r.stderr or r.stdout)[-1500:]
             die(f"{mod} failed.\n{tail}")
@@ -120,8 +123,27 @@ def main():
         die(f"could not load panels ({e}). Run the pipeline manually.")
 
     dates = scores.index
-    signal_date = dates[-1]                      # last completed US close
-    print(f"latest US close in data: {signal_date.date()}")
+
+    # --- signal date must be the last date with REAL price coverage ---------
+    # The macro panel is forward-filled, so PCA scores exist even on days with
+    # no prices. Using the last index row would compute picks from an empty bar.
+    cov = rets.notna().sum(axis=1)
+    min_assets = max(10, int(0.4 * rets.shape[1]))
+    valid = cov[cov >= min_assets].index
+    if len(valid) == 0:
+        die("no date has usable price coverage -- run: python -m src.download_data --force")
+    signal_date = valid[-1]
+    pos = int(dates.get_indexer([signal_date])[0])
+
+    stale_days = (pd.Timestamp.utcnow().tz_localize(None).normalize() - signal_date).days
+    print(f"latest US close WITH PRICE DATA: {signal_date.date()} "
+          f"({int(cov.loc[signal_date])}/{rets.shape[1]} assets, {stale_days}d old)")
+    if dates[-1] != signal_date:
+        print(f"  note: panel index runs to {dates[-1].date()} but those rows have no "
+              f"prices yet -- using {signal_date.date()} as the signal bar.")
+    if stale_days > 5:
+        die(f"price data is {stale_days} days stale (latest {signal_date.date()}). "
+            f"Check the data source before logging -- refusing to log stale picks.")
 
     ledger = pd.read_csv(LEDGER, parse_dates=["signal_date", "entry_date"]) \
         if LEDGER.exists() else pd.DataFrame(
@@ -134,7 +156,6 @@ def main():
     if already:
         print("  no new US close since last run -> skipping new entries (no duplicates).")
     else:
-        pos = len(dates) - 1
         new_rows = []
         for name, spec in specs.items():
             p = picks_for(scores, rets, spec, cfg, pos)

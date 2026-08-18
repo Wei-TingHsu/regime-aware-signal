@@ -18,6 +18,6 @@ Signal = last completed US close; **entry = next US session**; exit = H trading 
 
 | signal date | entry date | model | regime | longs | shorts | H | status | spread |
 |---|---|---|---|---|---|---|---|---|
-| 2026-08-17 |  | model_1_baseline | 1 | DRAM, ORCL, SNDK, PLTR, MU | MSFT, LMT, TSLA, INTC, FLY | 5 | pending | pending |
-| 2026-08-17 |  | model_2_horizon_trend | 1 | DRAM, SNDK, MU, INTC, ASML | ARM, XLE, LMT, URNM, FLY | 10 | pending | pending |
-| 2026-08-17 |  | model_3_overfit | 1 | SNDK, MU, INTC, PLTR, NVDA | USO, WCLD, ORCL, URNM, FLY | 20 | pending | pending |
+| 2026-08-14 | 2026-08-17 | model_1_baseline | 1 | USO, ORCL, PLTR, XLE, SKYY | TSLA, INTC, DRAM, SPCX, FLY | 5 | pending | pending |
+| 2026-08-14 | 2026-08-17 | model_2_horizon_trend | 1 | SNDK, PLTR, MU, INTC, ASML | TSLA, ORCL, ARM, URNM, FLY | 10 | pending | pending |
+| 2026-08-14 | 2026-08-17 | model_3_overfit | 1 | SNDK, MU, INTC, LMT, IAU | WCLD, ORCL, USO, ARM, FLY | 20 | pending | pending |
