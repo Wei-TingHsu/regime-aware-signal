@@ -2,7 +2,7 @@
 
 Pre-registered models frozen in `config/models.yaml` before any live data.
 Signal = last completed US close; **entry = next US session**; exit = H trading days later.
-`pending` = horizon has not elapsed yet (expected on recent rows).
+`pending` = horizon has not elapsed yet (expected on recent rows). `short_window` = the horizon elapsed but at least one session was missing data for at least one picked asset; the spread is shown with its realised session count and is EXCLUDED from the summary above.
 
 ## Running summary
 
