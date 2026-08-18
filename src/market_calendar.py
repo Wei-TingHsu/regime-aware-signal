@@ -138,6 +138,39 @@ def to_market_day(ts) -> pd.Timestamp:
     return future_days[0]
 
 
+def trading_days(start, end) -> pd.DatetimeIndex:
+    """
+    Return every NYSE trading day in [start, end] as a tz-naive DatetimeIndex.
+
+    Weekends and NYSE holidays are excluded. This is the calendar the forward
+    test counts horizons in: "H days after entry" means H actual sessions, not
+    H weekdays.
+
+    Note this is deliberately distinct from the panel index built by
+    `build_panel.business_day_index()`, which is a plain `pd.bdate_range`
+    (Mon-Fri, holidays INCLUDED as all-NaN rows). Anything that needs to tell
+    "market was closed" apart from "market was open but data is missing" must
+    use this function -- coverage alone cannot distinguish them.
+
+    Parameters
+    ----------
+    start, end : str, datetime, or pd.Timestamp
+        Inclusive bounds. Time components are ignored.
+
+    Returns
+    -------
+    pd.DatetimeIndex
+        Tz-naive, normalized, ascending.
+    """
+    start = pd.Timestamp(start).normalize()
+    end = pd.Timestamp(end).normalize()
+    if end < start:
+        raise ValueError(f"end ({end.date()}) precedes start ({start.date()})")
+    sched = _schedule(start.year, end.year)
+    days = pd.DatetimeIndex(sched.index).tz_localize(None).normalize()
+    return days[(days >= start) & (days <= end)]
+
+
 def is_market_open(ts) -> bool:
     """
     Return True if the timestamp is inside the regular NYSE session

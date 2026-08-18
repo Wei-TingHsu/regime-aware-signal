@@ -9,7 +9,16 @@ Architecture (see docs/architecture_decisions.md):
   * Entry = NEXT US session (never the signal bar -- that would be look-ahead).
   * Exit  = H trading days after entry.
   * If no new US close since the last logged row, SKIP (no duplicate rows).
+  * Horizons are counted in NYSE TRADING DAYS (src.market_calendar), not in
+    panel index rows -- the panel is a plain bdate_range, so market holidays
+    sit in it as all-NaN rows and would otherwise be miscounted as sessions.
   * Results are 'pending' until the horizon matures, then back-filled.
+  * WINDOW INTEGRITY (pre-registered 2026-08-18, at 0 matured / 3 pending):
+    a row is scored 'matured' only if EVERY day of its H-day window has a
+    return for EVERY picked asset. Incomplete windows are marked
+    'short_window' with their realised day count and excluded from the
+    headline summary, but stay visible in the full log. Entry dates and picks
+    are frozen at log time and are never reassigned.
   * Summary reports BOTH the naive all-overlapping-rows number AND the honest
     NON-OVERLAPPING number (every H-th entry), because overlapping daily rows
     share most of their days and would inflate apparent significance.
@@ -31,6 +40,7 @@ import yaml
 
 from src.data_io import load_config, PROCESSED_DIR
 from src.analog_core import DEFAULT, load_data, frozen_labels, feature_matrix, _kw, _forward, _expected_fwd
+from src.market_calendar import trading_days
 
 REPO = PROCESSED_DIR.parent
 SCOREBOARD = REPO / "docs" / "forward_scoreboard.md"
@@ -135,7 +145,7 @@ def main():
     signal_date = valid[-1]
     pos = int(dates.get_indexer([signal_date])[0])
 
-    stale_days = (pd.Timestamp.utcnow().tz_localize(None).normalize() - signal_date).days
+    stale_days = (pd.Timestamp.now("UTC").tz_localize(None).normalize() - signal_date).days
     print(f"latest US close WITH PRICE DATA: {signal_date.date()} "
           f"({int(cov.loc[signal_date])}/{rets.shape[1]} assets, {stale_days}d old)")
     if dates[-1] != signal_date:
@@ -149,7 +159,9 @@ def main():
         if LEDGER.exists() else pd.DataFrame(
             columns=["signal_date", "entry_date", "model", "regime", "n_analogs",
                      "longs", "shorts", "horizon", "status", "long_ret",
-                     "short_ret", "spread"])
+                     "short_ret", "spread", "realised_days"])
+    if "realised_days" not in ledger.columns:
+        ledger["realised_days"] = np.nan          # back-compat: pre-rule rows
 
     # ---- 1. log today's picks (skip if this US close is already logged) ----
     already = (not ledger.empty) and (ledger["signal_date"] == signal_date).any()
@@ -167,37 +179,78 @@ def main():
                 regime=p["regime"], n_analogs=p["n_analogs"],
                 longs="|".join(p["longs"]), shorts="|".join(p["shorts"]),
                 horizon=spec["horizon"], status="pending",
-                long_ret=np.nan, short_ret=np.nan, spread=np.nan))
+                long_ret=np.nan, short_ret=np.nan, spread=np.nan,
+                realised_days=np.nan))
             print(f"  {name}: regime {p['regime']} | L: {', '.join(p['longs'])} "
                   f"| S: {', '.join(p['shorts'])}")
         if args.dry_run:
             print("\n(dry run -- nothing written)"); return
         ledger = pd.concat([ledger, pd.DataFrame(new_rows)], ignore_index=True)
 
+    # The dry-run guard above only fires when new picks were computed. Repeat it
+    # here so --dry-run is inert on days with no new US close too, when the run
+    # would otherwise fall straight through to the write in section 2/3.
+    if args.dry_run:
+        print("\n(dry run -- nothing written)"); return
+
     # ---- 2. resolve entry dates + back-fill matured results ----------------
+    # Sessions, not index rows. The panel index is a bdate_range, so NYSE
+    # holidays appear in it as all-NaN rows; counting them as trading days
+    # would both mis-date entries and shorten every horizon that spans one.
     ret_dates = rets.index
+    tdays = ret_dates.intersection(trading_days(ret_dates[0], ret_dates[-1]))
+    if len(tdays) == 0:
+        die("no NYSE trading days found in the panel index -- check market_calendar.")
+
     for i, row in ledger.iterrows():
         sd = pd.to_datetime(row["signal_date"])
-        later = ret_dates[ret_dates > sd]
-        if len(later) == 0:
-            continue                                   # entry hasn't happened yet
-        entry = later[0]
-        ledger.at[i, "entry_date"] = entry
+
+        # entry is FROZEN once written -- never recompute a logged entry date
+        if pd.isna(row["entry_date"]):
+            later = tdays[tdays > sd]
+            if len(later) == 0:
+                continue                               # entry hasn't happened yet
+            entry = later[0]
+            ledger.at[i, "entry_date"] = entry
+        else:
+            entry = pd.to_datetime(row["entry_date"])
+
         if row["status"] == "matured":
-            continue
+            continue                                   # settled; nothing to revisit
+
         H = int(row["horizon"])
-        after = ret_dates[ret_dates > entry]
+        after = tdays[tdays > entry]
         if len(after) < H:
-            continue                                   # not matured yet
-        window = ret_dates[(ret_dates > entry)][:H]     # H days AFTER entry
+            continue                                   # window not fully formed
+        window = after[:H]                             # H SESSIONS after entry
+        if window[-1] > signal_date:
+            continue                                   # window runs past usable data
+
         L = [t for t in str(row["longs"]).split("|") if t in rets.columns]
         S = [t for t in str(row["shorts"]).split("|") if t in rets.columns]
+        picks = L + S
+        if not picks:
+            print(f"  WARNING: {row['model']} entry {entry.date()} has no resolvable "
+                  f"picks in the current universe -- left unscored.")
+            continue
+
+        # STRICT window integrity: every session, every picked asset.
+        day_ok = rets.loc[window, picks].notna().all(axis=1)
+        realised = int(day_ok.sum())
+
         lr = float(np.expm1(np.log1p(rets.loc[window, L]).sum()).mean())
         sr = float(np.expm1(np.log1p(rets.loc[window, S]).sum()).mean())
         ledger.at[i, "long_ret"] = lr
         ledger.at[i, "short_ret"] = sr
         ledger.at[i, "spread"] = lr - sr
-        ledger.at[i, "status"] = "matured"
+        ledger.at[i, "realised_days"] = realised
+        ledger.at[i, "status"] = "matured" if realised == H else "short_window"
+
+        if realised < H:
+            missing = [d.date() for d in window[~day_ok]]
+            print(f"  SHORT WINDOW: {row['model']} entry {entry.date()} scored on "
+                  f"{realised}/{H} sessions (missing {', '.join(map(str, missing))}) "
+                  f"-- excluded from the headline summary.")
 
     LEDGER.parent.mkdir(parents=True, exist_ok=True)
     ledger.to_csv(LEDGER, index=False)
@@ -206,7 +259,10 @@ def main():
     lines = ["# Forward-test scoreboard (live, out-of-sample)", "",
              "Pre-registered models frozen in `config/models.yaml` before any live data.",
              "Signal = last completed US close; **entry = next US session**; exit = H trading days later.",
-             "`pending` = horizon has not elapsed yet (expected on recent rows).", "",
+             "`pending` = horizon has not elapsed yet (expected on recent rows). "
+             "`short_window` = the horizon elapsed but at least one session was missing "
+             "data for at least one picked asset; the spread is shown with its realised "
+             "session count and is EXCLUDED from the summary above.", "",
              "## Running summary", ""]
 
     mat = ledger[ledger["status"] == "matured"]
@@ -229,15 +285,24 @@ def main():
               "| signal date | entry date | model | regime | longs | shorts | H | status | spread |",
               "|---|---|---|---|---|---|---|---|---|"]
     for _, r in ledger.sort_values(["signal_date", "model"], ascending=[False, True]).iterrows():
-        sp = "pending" if r["status"] != "matured" else f"{r['spread']*100:+.3f}%"
+        if r["status"] == "matured":
+            sp = f"{r['spread']*100:+.3f}%"
+        elif r["status"] == "short_window":
+            rd = r["realised_days"]
+            rd = "?" if pd.isna(rd) else int(rd)
+            sp = f"{r['spread']*100:+.3f}% ({rd}/{r['horizon']} sessions)"
+        else:
+            sp = "pending"
         ed = "" if pd.isna(r["entry_date"]) else pd.to_datetime(r["entry_date"]).date()
         lines.append(f"| {pd.to_datetime(r['signal_date']).date()} | {ed} | {r['model']} | "
                      f"{r['regime']} | {str(r['longs']).replace('|', ', ')} | "
                      f"{str(r['shorts']).replace('|', ', ')} | {r['horizon']} | {r['status']} | {sp} |")
     SCOREBOARD.write_text("\n".join(lines) + "\n")
 
-    n_pend = int((ledger["status"] != "matured").sum())
-    print(f"\n  ledger: {len(ledger)} rows ({len(mat)} matured, {n_pend} pending)")
+    n_pend = int((ledger["status"] == "pending").sum())
+    n_short = int((ledger["status"] == "short_window").sum())
+    print(f"\n  ledger: {len(ledger)} rows ({len(mat)} matured, {n_pend} pending, "
+          f"{n_short} short_window)")
     print(f"  scoreboard -> {SCOREBOARD}")
     print("=" * 72)
 
