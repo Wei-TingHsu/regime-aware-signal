@@ -1,8 +1,8 @@
 # PROJECT STATE — briefing document
 
 *Upload this file (or the `briefing.md` bundle) at the start of a new conversation to
-resume without re-explaining. Last updated: 2026-08-18. Keep it updated after each
-workstream closes.*
+resume without re-explaining. Last updated: 2026-08-18 (evening SGT). Keep it updated
+after each workstream closes.*
 
 ---
 
@@ -115,12 +115,80 @@ all three models pending). Nothing had matured, so the restart cost nothing.
 **Do not retro-fill skipped days.** The credibility of the forward test rests on entries
 being timestamped (via git) *before* outcomes exist. Gaps are honest.
 
-### Operational note — yfinance partial bars
-2026-08-17 returned from Yahoo with **volume present but Close/High/Low/Open all NaN**.
-That is why the signal legitimately sits on Friday 08-14 rather than Monday. Expect
-this to recur; the harness now falls back to the last real bar and says so. Yahoo
-usually backfills within a day, and `--force` re-pulls full history, so the panel heals
-itself retroactively even though the forward-test entry stays skipped.
+### 2026-08-17 vendor gap — corrected diagnosis (supersedes earlier description)
+
+An earlier version of this document recorded 08-17 as returning "volume present but
+Close/High/Low/Open all NaN." **That was wrong and would misdirect a future reader.**
+Verified directly against the vendor (`yf.download("SPY", ...)`, bypassing the cache):
+
+| field | 2026-08-17 |
+|---|---|
+| Open / High / Low / Volume | **present** (SPY: 776.18 / 776.78 / 772.51 / 33.29M) |
+| Close / Adj Close | **NaN** |
+
+Only the Close is missing. All 47 assets are affected (0/47 coverage on that date).
+
+**It did not self-heal.** The bar was still NaN after a `--force` full re-pull roughly a
+day later, so the earlier note that "Yahoo usually backfills within a day" is too
+optimistic as a general expectation. It may still repair before maturation (~08-24), in
+which case `--force` heals the panel retroactively — but that is not to be assumed.
+
+**Ruled out: a pipeline bug.** The 0/47 coverage initially looked too total for a vendor
+gap, raising the hypothesis that `build_panel` was losing the row. The vendor probe
+disproves it — Yahoo genuinely has no Close. `build_panel` is behaving correctly:
+returns derive from Close (line 65), so a NaN Close correctly yields no return.
+
+### Consequence for scoring — window integrity, not entry price
+
+Scoring is **return-based, not price-based**. `forward_log.py:192` sets
+`window = ret_dates[(ret_dates > entry)][:H]` — the H index dates strictly after entry —
+and lines 195–196 compound daily returns over that window. **No entry price is ever
+looked up**, so the missing 08-17 Close does not invalidate the entry date. An earlier
+proposal to void rows on entry-price grounds was based on a mistaken reading and is
+withdrawn.
+
+The real exposure is one level down:
+
+- The price path has **no forward-fill and no dropna** (`build_panel`: `ffill` is applied
+  to `macro` only, line 109; returns are merely reindexed onto the business-day index,
+  line 72). So the NaN Close on 08-17 **propagates into the 08-18 return** rather than
+  being silently converted into a compounded 08-14→08-18 move sitting in a one-day slot.
+  This is the cleaner of the two possible behaviours.
+  *(Status: verified by implication — no `ffill`/`dropna` exists on the price path. The
+  return-computation call itself was not located in `build_panel` under the searched
+  names and has not been read directly. Worth a one-line confirmation.)*
+- 08-17 occupies an index row with all-NaN values, so it **consumes a window slot while
+  contributing nothing**. For the three pending rows (entry 08-17), model_1's H=5 window
+  is 08-18/19/20/21/24, of which **08-18 is NaN**.
+- `np.log1p(...).sum()` at line 195 uses pandas' default **`skipna=True`**, so that day is
+  **silently dropped**: the row would be logged as a matured 5-day trade actually scored
+  on 4 days. No error, no flag.
+
+This is a **standing landmine**, not a one-off — any future vendor gap inside any future
+window shortens it invisibly.
+
+### Rule — window integrity (pre-registered 2026-08-18, before any row matured)
+
+> A row is scored only if its H-day window has **full return coverage**. Windows with
+> missing days are flagged with their **realised day count** and excluded from headline
+> statistics; they remain visible in the full log. **Entry dates are never reassigned.**
+
+Registered while the ledger stood at **0 matured / 3 pending**, so no outcome was visible
+and the rule cannot be selection-on-results. **Not yet implemented** in
+`src/forward_log.py` — implementation must land before model_1 matures (~2026-08-24).
+
+The same principle as the staleness guard: **fail loud rather than log something
+plausible.**
+
+### Current ledger state (as of 2026-08-18, 17:00 SGT)
+
+- Signal remains **2026-08-14** (4 days stale); the harness correctly skipped rather than
+  logging a duplicate, since no new usable US close had landed.
+- Ledger: **3 rows, 0 matured, 3 pending.**
+- **Staleness clock:** halts with `MANUAL INTERVENTION NEEDED` at >5 days →
+  **Thursday 2026-08-20** if no new usable close arrives. Tomorrow's run should advance
+  the signal to 08-18 once tonight's US close lands, independently of whether 08-17's
+  Close is ever repaired.
 
 ### Daily command
 ```bash
@@ -130,6 +198,9 @@ python -m src.forward_log
 Run once daily after ~05:00 SGT. Skips if no new US close. Scoreboard:
 `docs/forward_scoreboard.md` (naive column + **NON-OVERLAP** column, the latter being
 the statistically honest one).
+
+*Housekeeping:* `forward_log.py:138` emits a `Pandas4Warning` — `pd.Timestamp.utcnow()`
+is deprecated; use `pd.Timestamp.now("UTC").tz_localize(None)`.
 
 ---
 
@@ -154,19 +225,63 @@ the statistically honest one).
 
 ## Open threads (ordered)
 
-1. **Event engine Stage 1 — drift-existence test.** GDELT event days; returns at
+0. **Implement the window-integrity rule** in `src/forward_log.py` (see above).
+   **Deadline: before ~2026-08-24**, when model_1's first rows mature.
+
+1. **Pin the pipeline to n=4.** `regime_classifier.py` auto-selects by lowest BIC among
+   `candidate_n_regimes: [3, 4, 5]` and therefore **saves n=5**, contradicting the
+   documented n=4. (`verify_regimes.py` sweeps n=2..10 where BIC keeps decreasing to the
+   edge of the range — which is exactly why BIC is a poor selector here.)
+
+   **Verified 2026-08-18 — this is a documentation-integrity fix, not a correctness fix.**
+   `grep -rn "regime_labels" src/` returns no consumer outside `regime_classifier.py`;
+   the only other reference is a docstring at `analog_engine.py:19` stating the engine
+   deliberately refits rather than reading the saved parquet. Every regime consumer fits
+   its own GMM: `analog_backtest.py:147` (n=4), `analog_engine.py:113` (n=4),
+   `safe_haven_test.py:67` (n=4), `safe_haven_robustness.py:63` (n=4),
+   `short_run_events.py:87` (`--n`), `regime_event_alignment.py:56` (swept),
+   `analog_core.py:48` (from spec, default 4), `liquidity_classifier.py:133` (its own
+   2-component model). **No documented result was computed on n=5 labels.** This must be
+   stated in the commit message so history does not imply results were wrong.
+
+   Scope, so it is done properly rather than quickly:
+   - add `n_regimes: 4` to `config.yaml` with the stability/persistence/separation
+     reasoning attached — an explicit pin, not a quiet narrowing of the candidate list;
+   - comment `candidate_n_regimes` as **diagnostic sweep input for `verify_regimes.py`,
+     not a selector**, so the two cannot drift apart;
+   - `regime_classifier.py` reads the pin instead of BIC-selecting;
+   - **replace the five hard-coded `n_components=4` literals** (listed above) with the
+     config read — otherwise the pin is decorative and there are two sources of truth for
+     the same parameter, the count-shaped version of the PC-index hazard `stress_axis.py`
+     was built to eliminate;
+   - **do not touch `config/models.yaml`** — the frozen specs carry their own
+     `n_regimes` and are pre-registration evidence; `analog_core.py` keeps taking n from
+     the spec, with config supplying only its default;
+   - regenerate `regime_labels.parquet`;
+   - update `analog_engine.py:19` (it names an n=5 parquet that will no longer exist);
+   - remove caveat (a) from `docs/PIPELINE.md` §8.
+
+   Substitutions are **value-preserving** (config says 4, literals said 4), so re-running
+   `safe_haven_test.py` and `analog_backtest.py` must reproduce the documented numbers
+   **exactly**. If any number moves, stop — something else is wrong.
+
+2. **Event engine Stage 1 — drift-existence test.** GDELT event days; returns at
    1/5/10/20d entered next-open; permutation-tested vs matched non-event days.
-2. **Data amendments:** extend GDELT beyond the 2024 pilot (tagged floor ~2015);
+   **Power caveat:** the 2024 pilot yields ~30 event days — the same sample size whose
+   fragility collapsed the regime–event alignment under a basis change. A null on 2024
+   alone would be uninterpretable (no drift vs underpowered), which argues for extending
+   GDELT toward the ~2015 tagged floor **before** running Stage 1.
+
+3. **Data amendments:** extend GDELT beyond the 2024 pilot (tagged floor ~2015);
    add **company/entity-level** events (earnings line-items, fireside chats, tech
    breakpoints like a DeepSeek-style release) — current mapping is macro-only.
-3. **Pin the pipeline to n=4.** `regime_classifier.py` currently auto-selects by lowest
-   BIC among `candidate_n_regimes: [3, 4, 5]` and therefore **saves n=5**, contradicting
-   the documented n=4. (Separately, `verify_regimes.py` sweeps n=2..10 where BIC keeps
-   decreasing to the edge of the range — which is exactly why BIC is a poor selector
-   here.)
+
 4. **Problem 2 Stage 2:** conditional lead-lag *within* event episodes.
+
 5. **Ensemble combiner** (position-space, Sharpe-weighted).
+
 6. **Problem 3:** LLM/RAG scenario layer (ChromaDB + SQLite + GitHub raw text).
+
 7. **Streamlit MVP**, then integration/backtest phases.
 
 ---
@@ -183,5 +298,12 @@ the statistically honest one).
 - Extend data by **removing redundancy, never by imputation**.
 - Identify axes by **economic meaning, never by index**.
 - **Re-validate rather than assume** when the substrate changes.
-- **Correct the record** when new evidence weakens a prior claim.
+- **Correct the record** when new evidence weakens a prior claim — including when the
+  correction is to this document's own earlier description of a fact (see the 08-17
+  vendor-gap entry).
+- **Verify before asserting in a commit message.** "No result changes" was an assumption
+  until the consumer grep established it.
+- **Fail loud rather than log something plausible** (staleness guard; window integrity).
+- Operational rules affecting the forward test are **pre-registered while the affected
+  rows are still pending**, never after outcomes are visible.
 - The **repo is the source of truth**, not model memory.
