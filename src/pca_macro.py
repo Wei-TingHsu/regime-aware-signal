@@ -27,10 +27,16 @@ from src.data_io import load_config, PROCESSED_DIR, OUTPUTS_DIR
 def load_and_clean_macro(processed_path):
     """
     Load the macro panel and drop any rows that still have NaN after the
-    forward-fill in build_panel.py. Pre-inception NaNs (e.g. SOFR before 2018,
-    real yields before 2003) create rows that PCA cannot handle, because PCA
+    forward-fill in build_panel.py. Pre-inception NaNs (real yields before 2003,
+    DTWEXBGS before 2006) create rows that PCA cannot handle, because PCA
     requires a complete matrix. Dropping them means the effective PCA sample
-    starts once all 10 variables have valid data.
+    starts once every series has valid data -- currently 2006, bound by
+    DTWEXBGS. (SOFR was dropped from the panel entirely: redundant with EFFR at
+    R^2 = 0.998, and it was truncating history to 2018.)
+
+    NOTE the index is now the NYSE session calendar, not pd.bdate_range -- see
+    the CALENDAR NOTE in build_panel.py. Market-holiday rows, which carried
+    forward-filled macro values but no asset returns at all, no longer exist.
     """
     macro = pd.read_parquet(processed_path)
     print(f"Raw macro panel shape: {macro.shape}")
@@ -42,7 +48,8 @@ def load_and_clean_macro(processed_path):
 
     # Drop rows where ANY variable is NaN — PCA needs a complete matrix
     macro_clean = macro.dropna()
-    print(f"\nClean macro panel shape (rows with all 10 variables): {macro_clean.shape}")
+    print(f"\nClean macro panel shape (rows with all {macro.shape[1]} variables): "
+          f"{macro_clean.shape}")
     print(f"Effective PCA start date: {macro_clean.index.min().date()}")
     return macro_clean
 

@@ -9,7 +9,7 @@ run BEFORE freezing the regime model. Produces an auditable record of:
   1. Extended BIC/AIC sweep, n = 2..10 — find where BIC actually bottoms out
   2. Silhouette score per n — cluster separation, independent of likelihood
   3. Seed stability — refit best n across seeds, measure label agreement (ARI)
-  4. Temporal held-out check — fit 2018-2024, score 2025-2026 log-likelihood
+  4. Temporal held-out check — fit pre-2025, score 2025+ log-likelihood
   5. Run-length sanity per n — reject configs that flicker
 
 Run from project root:
