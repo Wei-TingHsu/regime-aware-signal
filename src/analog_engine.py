@@ -2,7 +2,7 @@
 Problem 1 engine -- STAGE 1: the analog + factor-attribution directional core.
 
 Given TODAY's macro state, produce a factor-attributed directional call:
-  1. ANALOG MATCH   -- find historical days that are (a) in the SAME n=4 regime
+  1. ANALOG MATCH   -- find historical days that are (a) in the SAME regime
      as now AND (b) nearest to now in PCA-score space, weighted by config
      similarity_sigma and recency_decay_lambda.
   2. FORWARD READ   -- for those analogs, read what happened NEXT: each asset's
@@ -15,8 +15,9 @@ confidence (hit-rate), and the macro-factor breakdown.
 No look-ahead in the CALL: analogs use only past data, and forward windows of
 the analogs are fully realized before the as-of date.
 
-Refits n=4 regimes on the fly (the documented count) rather than reading the
-BIC-selected n=5 regime_labels.parquet.
+Refits regimes on the fly at the count pinned in config (`regime.n_regimes`)
+rather than reading regime_labels.parquet. The saved parquet is not consumed by
+anything in this repo; regenerating it is a pipeline step, not an input here.
 
 Run:
     python -m src.analog_engine
@@ -108,9 +109,10 @@ def main():
     H = args.horizon
     as_of = pd.to_datetime(args.asof) if args.asof else scores.index.max()
 
-    # --- refit n=4 regimes on the clustering PCs ---------------------------
+    # --- refit regimes on the clustering PCs (count pinned in config) ------
+    n_regimes = int(cfg["regime"]["n_regimes"])
     Xc = scores[CLUSTERING_PCS]
-    gm = GaussianMixture(n_components=4, covariance_type=cfg["regime"]["covariance_type"],
+    gm = GaussianMixture(n_components=n_regimes, covariance_type=cfg["regime"]["covariance_type"],
                          max_iter=cfg["regime"]["max_iter"], n_init=cfg["regime"]["n_init"],
                          random_state=cfg["project"]["random_seed"])
     labels = pd.Series(gm.fit_predict(Xc.values), index=scores.index)
@@ -123,7 +125,8 @@ def main():
     print("=" * 76)
     print("PROBLEM 1 ENGINE -- Stage 1 (analog + factor-attribution directional call)")
     print("=" * 76)
-    print(f"as-of: {as_of.date()}   |   current regime: {int(r_now)} (n=4)   |   horizon: {H}d")
+    print(f"as-of: {as_of.date()}   |   current regime: {int(r_now)} "
+          f"(n={n_regimes})   |   horizon: {H}d")
 
     # --- analog candidates: same regime, forward window fully realized -----
     cutoff = labels.index[labels.index.get_indexer([as_of], method="ffill")[0]]

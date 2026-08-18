@@ -27,6 +27,7 @@ import argparse
 import numpy as np
 import pandas as pd
 
+from src.data_io import load_config
 from src.stress_axis import find_stress_axis, describe
 
 
@@ -52,9 +53,10 @@ def perm_p(corr_vals, mask, iters, rng):
     return obs, float(np.nanmean(null)), p_neg, p_pos
 
 
-def macro_stress_mask(scores_path, panel_path, seed):
-    """Refit n=4 macro regimes; stress = regime with highest mean stress-axis
-    score, where the stress axis is the VIX-correlated PC (data-driven)."""
+def macro_stress_mask(scores_path, panel_path, seed, n_regimes):
+    """Refit macro regimes at the config-pinned count; stress = regime with the
+    highest mean stress-axis score, where the stress axis is the VIX-correlated
+    PC (data-driven)."""
     from sklearn.mixture import GaussianMixture
     scores = pd.read_parquet(scores_path); scores.index = pd.to_datetime(scores.index)
     panel = pd.read_parquet(panel_path); panel.index = pd.to_datetime(panel.index)
@@ -64,7 +66,7 @@ def macro_stress_mask(scores_path, panel_path, seed):
     print("  " + describe(scores, panel[vixcol]))          # log which axis was used
 
     col, sign, _ = find_stress_axis(scores, panel[vixcol])
-    gm = GaussianMixture(n_components=4, covariance_type="full",
+    gm = GaussianMixture(n_components=n_regimes, covariance_type="full",
                          n_init=10, max_iter=200, random_state=seed)
     lab = pd.Series(gm.fit_predict(scores.to_numpy()), index=scores.index)
     axis = sign * scores[col]
@@ -107,6 +109,7 @@ def main():
     ap.add_argument("--panel", default="processed/macro_panel.parquet")
     args = ap.parse_args()
     rng = np.random.default_rng(args.seed)
+    n_regimes = int(load_config()["regime"]["n_regimes"])
 
     print("=" * 74)
     print("SAFE-HAVEN INVERSION TEST -- Stage 2 v2 (data-driven stress axis)")
@@ -127,8 +130,9 @@ def main():
     o1, p1 = report("PRIMARY -- liquidity sub-classifier", corr, liq_mask, args.iters, rng)
 
     print("\n(macro cross-check: identifying stress axis...)")
-    macro_mask = macro_stress_mask(args.scores, args.panel, args.seed)
-    o2, p2 = report("CROSS-CHECK -- n=4 macro stress regime", corr, macro_mask, args.iters, rng)
+    macro_mask = macro_stress_mask(args.scores, args.panel, args.seed, n_regimes)
+    o2, p2 = report(f"CROSS-CHECK -- n={n_regimes} macro stress regime",
+                    corr, macro_mask, args.iters, rng)
 
     print("\n" + "=" * 74)
     print("READING")

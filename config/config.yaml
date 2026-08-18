@@ -138,6 +138,18 @@ pca:
 
 regime:
   method: "gmm"
+
+  # PINNED regime count -- the single source of truth for n.
+  # Chosen on STABILITY (seed ARI 1.000; n=5 fragile at 0.774), PERSISTENCE
+  # (median run 52.5 days; n=3 flickers at a 3-day median) and SEPARATION
+  # (best silhouette) on the 2006+ panel. NOT chosen by BIC: verify_regimes.py
+  # sweeps n=2..10 and BIC keeps decreasing to the edge of the range, so it
+  # always prefers more components and is not a usable selector on this data.
+  # See docs/PROJECT_STATE.md and docs/regime_event_validation.md.
+  n_regimes: 4
+
+  # Diagnostic sweep input for verify_regimes.py / the BIC audit table ONLY.
+  # This is NOT a selector -- changing it does not change the regime count.
   candidate_n_regimes: [3, 4, 5]
   covariance_type: "full"
   max_iter: 200

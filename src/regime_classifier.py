@@ -2,9 +2,11 @@
 src/regime_classifier.py
 
 Fit a Gaussian Mixture Model on the macro PCA scores to discover market
-regimes. Candidate regime counts (3, 4, 5) are compared by BIC; the best
-is frozen, applied to every historical date, and characterized by both
-its PC-space centroid and its raw-macro-variable means.
+regimes. The regime count is PINNED in config (`regime.n_regimes`), chosen on
+stability / persistence / separation -- NOT on BIC, which decreases monotonically
+to the edge of the n=2..10 sweep and therefore always prefers more components.
+The candidate counts are still fitted so the BIC audit table remains available
+as a diagnostic, but they do not select anything.
 
 Run from project root:
     python -m src.regime_classifier
@@ -65,7 +67,11 @@ def fit_candidate_gmms(X: np.ndarray, candidate_n: list, cfg: dict) -> dict:
 
 
 def select_best_by_bic(results: dict) -> int:
-    """Return the n_regimes with the lowest BIC."""
+    """Lowest-BIC n. Reported for the audit trail ONLY -- never used to select.
+
+    See the module docstring: BIC keeps falling to the edge of the sweep, so it
+    is not a usable selector here.
+    """
     return min(results, key=lambda n: results[n]["bic"])
 
 
@@ -214,7 +220,10 @@ def save_artifacts(
 # -----------------------------------------------------------------------------
 def main() -> None:
     cfg = load_config()
-    candidates = cfg["regime"]["candidate_n_regimes"]
+    n_regimes = int(cfg["regime"]["n_regimes"])          # PINNED -- the decision
+    candidates = cfg["regime"]["candidate_n_regimes"]    # diagnostic sweep only
+    # always fit the pinned count, even if it is absent from the sweep list
+    fit_ns = sorted(set(candidates) | {n_regimes})
 
     # Load PCA scores
     scores = load_scores()
@@ -224,13 +233,19 @@ def main() -> None:
     print(f"Clustering on {len(CLUSTERING_PCS)} components: {CLUSTERING_PCS}")
 
     # Fit candidate GMMs
-    print(f"\nFitting candidate GMMs (n_regimes = {candidates})...")
-    results = fit_candidate_gmms(X, candidates, cfg)
+    print(f"\nFitting GMMs (n_regimes = {fit_ns})...")
+    results = fit_candidate_gmms(X, fit_ns, cfg)
 
-    # Select by BIC
-    best_n = select_best_by_bic(results)
+    # Use the PINNED count. BIC is reported, never obeyed.
+    best_n = n_regimes
     best_gmm = results[best_n]["gmm"]
-    print(f"\n=> BIC selects n_regimes = {best_n}")
+    bic_pick = select_best_by_bic(results)
+    print(f"\n=> PINNED n_regimes = {best_n}  (config: regime.n_regimes)")
+    if bic_pick != best_n:
+        print(f"   note: lowest BIC in this sweep is n={bic_pick}, NOT used. BIC keeps "
+              f"decreasing to the edge of the n=2..10 range (see verify_regimes.py), "
+              f"so it always prefers more components. n={best_n} stands on seed "
+              f"stability, run-length persistence, and cluster separation.")
 
     # Build BIC summary table
     bic_summary = pd.DataFrame([

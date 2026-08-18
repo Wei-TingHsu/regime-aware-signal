@@ -26,6 +26,8 @@ import argparse
 import numpy as np
 import pandas as pd
 
+from src.data_io import load_config
+
 
 def rolling_corr(rets, a, b, window):
     sub = rets[[a, b]].dropna(how="all").dropna()
@@ -54,13 +56,13 @@ def cell(corr, mask, iters, rng, fisher):
     return obs, p_neg, int(md.sum()), len(common)
 
 
-def macro_stress_mask(scores_path, seed):
+def macro_stress_mask(scores_path, seed, n_regimes):
     from sklearn.mixture import GaussianMixture
     scores = pd.read_parquet(scores_path)
     scores.index = pd.to_datetime(scores.index)
     if "PC2" not in scores.columns:
         raise SystemExit(f"'PC2' not in macro_pca_scores columns: {list(scores.columns)}")
-    gm = GaussianMixture(n_components=4, covariance_type="full",
+    gm = GaussianMixture(n_components=n_regimes, covariance_type="full",
                          n_init=10, max_iter=200, random_state=seed)
     lab = pd.Series(gm.fit_predict(scores.to_numpy()), index=scores.index)
     means = {r: scores.loc[lab == r, "PC2"].mean() for r in lab.unique()}
@@ -78,12 +80,13 @@ def main():
     args = ap.parse_args()
     windows = [int(x) for x in args.windows.split(",")]
     rng = np.random.default_rng(args.seed)
+    n_regimes = int(load_config()["regime"]["n_regimes"])
 
     rets = pd.read_parquet(args.returns); rets.index = pd.to_datetime(rets.index)
     rets = rets.sort_index()
     states = pd.read_parquet(args.states); states.index = pd.to_datetime(states.index)
     liq_mask = states["stress"].astype(bool)
-    macro_mask = macro_stress_mask(args.scores, args.seed)
+    macro_mask = macro_stress_mask(args.scores, args.seed, n_regimes)
 
     print("=" * 78)
     print(f"SAFE-HAVEN ROBUSTNESS SWEEP  ({args.iters} rotations/cell)")
@@ -93,7 +96,7 @@ def main():
 
     any_hit_primary = False
     for name, mask in [("PRIMARY: liquidity classifier", liq_mask),
-                       ("CROSS-CHECK: n=4 macro regime", macro_mask)]:
+                       (f"CROSS-CHECK: n={n_regimes} macro regime", macro_mask)]:
         print(f"\n{name}")
         print(f"  {'window':>6} | {'raw  gap (p)':>20} | {'Fisher-z gap (p)':>20} | overlap")
         print("  " + "-" * 66)

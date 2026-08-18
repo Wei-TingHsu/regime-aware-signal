@@ -144,7 +144,7 @@ def main():
     records = []
     for pos in rebs:
         if pos - last_fit >= args.refit_every or model is None:
-            model = GaussianMixture(n_components=4,
+            model = GaussianMixture(n_components=int(cfg["regime"]["n_regimes"]),
                                     covariance_type=cfg["regime"]["covariance_type"],
                                     max_iter=cfg["regime"]["max_iter"],
                                     n_init=cfg["regime"]["n_init"],

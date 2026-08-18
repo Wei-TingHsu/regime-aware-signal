@@ -9,7 +9,9 @@ A spec is a dict:
     kernel      'gaussian' | 'exp'   (how analog distance -> weight)
     sigma       kernel width
     trend_window   lookback for the momentum block when sim_mode='trend'
-    n_regimes   regime hard-gate count (default 4 = the documented choice)
+    n_regimes   regime hard-gate count; defaults to config regime.n_regimes.
+                Frozen model specs in config/models.yaml carry their own value
+                and override this -- they are pre-registration evidence.
     topk        number of nearest analogs to weight
     nbasket     longs / shorts per side
 
@@ -22,9 +24,10 @@ import pandas as pd
 from src.data_io import load_config, PROCESSED_DIR
 
 CLUSTERING_PCS = ["PC1", "PC2", "PC3"]
+_CFG = load_config()
 DEFAULT = dict(horizon=5, sim_mode="level", kernel="gaussian", sigma=1.5,
-               trend_window=10, n_regimes=4, topk=100, nbasket=5,
-               min_analogs=20, min_cov=10)
+               trend_window=10, n_regimes=int(_CFG["regime"]["n_regimes"]),
+               topk=100, nbasket=5, min_analogs=20, min_cov=10)
 
 
 def load_data():
