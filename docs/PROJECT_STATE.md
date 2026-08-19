@@ -1,26 +1,17 @@
 # PROJECT STATE — briefing document
 
 *Upload this file (or the `briefing.md` bundle) at the start of a new conversation to
-resume without re-explaining. Last updated: 2026-08-19. Keep it updated after each
-workstream closes.*
+resume without re-explaining. Last updated: 2026-08-20 (early hours SGT). Keep it
+updated after each workstream closes.*
 
-> ## CASCADE STATUS — nearly complete
+> ## STATUS
 >
-> The panel index was migrated from `pd.bdate_range` to the **NYSE session calendar**
-> on 2026-08-18. Everything downstream has been re-run except two scripts.
+> The NYSE-session migration cascade is **COMPLETE** — every downstream script has
+> been re-run. The forward test is live on the new basis.
 >
-> | artefact | state |
-> |---|---|
-> | `asset_returns`, `macro_panel`, `macro_pca_scores` | **REGENERATED** (sessions) |
-> | `verify_regimes` — n=4 re-earned | **FRESH** |
-> | `regime_labels.parquet` | **REGENERATED** |
-> | `liquidity_states.parquet` | **REGENERATED** |
-> | Problem 1 (safe-haven + robustness) | **RE-RUN** |
-> | GDELT alignment (4 scripts) | **RE-RUN** |
-> | `analog_backtest` | **RE-RUN — figures revised down, see below** |
-> | forward test | **RESTARTED** on the new basis, 3 live rows |
-> | `model_grid` | **STALE** |
-> | `chain_rotation` | **STALE** |
+> Active workstream: **GDELT event layer.** The BigQuery query was lost and has been
+> recovered; the ingest is now scripted. Two findings are open and are the reason the
+> 2025–2026 extension is the next step.
 
 ---
 
@@ -31,494 +22,468 @@ vision: engines that (a) read the macro state and issue directional calls, (b) d
 event-triggered rotation cascades, (c) narrate scenarios via an LLM layer. The
 47-asset universe is an **MVP baseline and must stay expandable** — never hard-code 47.
 
-**Product vision (settled).** Rotation is **event-initiated**, but the event names the
-**focus SET, not the ORDER**. So: GDELT/text detects the trigger and the set; price
-statistics determine the sequence and timing **within** event episodes. Core value is
-bridging information-quiet gaps — once a cascade fires, position along it between
-headlines.
+**Product vision.** Rotation is **event-initiated**, but the event names the **focus
+SET, not the ORDER**. GDELT/text detects the trigger and the set; price statistics
+determine sequence and timing **within** event episodes.
 
-**Where the three engines actually stand (plain statement, 2026-08-19).**
-1. **Macro engine — measured and thin.** Sharpe **0.25–0.51 depending on universe**
-   (see below). This engine is *done being measured*. It does not get "made thicker":
-   re-tuning it until the number improves is the overfitting failure the working
-   principles exist to prevent.
-2. **Event engine — its real test has not happened.** The drift-existence test is
-   unrun, and the 2024 pilot is underpowered for it.
-3. **Rotation chain — its first test asked the wrong question.** Stage 1 tested for a
-   *permanent* lead-lag order across all history. Rotation is event-triggered, so that
-   test averaged brief cascade episodes together with long stretches of noise. The
-   correct test is conditional on event episodes, and it **blocks on the event engine**.
+**Where the three engines stand.**
+1. **Macro engine — measured and thin.** Sharpe **0.25–0.51 depending on universe**.
+   *Done being measured.* Re-tuning it until the number improves is the overfitting
+   failure the working principles exist to prevent.
+2. **Event engine — its real test has not happened.** Drift-existence is unrun.
+3. **Rotation chain — its first test asked the wrong question**, and the current engine
+   is structurally unable to detect the kind of chain most likely to exist (below).
 
-The system thesis is that three engines with different data, horizons and failure modes
-combine to something better than any one of them — error cancellation, not addition.
-**That correlation has never been measured.** So "each engine is individually modest"
-and "the system does not work" remain genuinely different claims until the ensemble step
-runs. Equally: if the event engine finds no drift on an adequately powered sample *and*
-the conditional rotation test is null, the signal-sensing product has no foundation and
-the correct response is to say so. Three documented nulls with rigorous method remain a
-legitimate capstone; that is a weaker *business*, not a failed *project*.
+The system thesis is error cancellation across engines with different data, horizons and
+failure modes. **That correlation has never been measured**, so "each engine is modest"
+and "the system does not work" remain different claims until the ensemble step runs.
+Equally: if drift-existence is null on an adequately powered sample *and* conditional
+rotation is null, the product has no foundation and the correct response is to say so.
+Three documented nulls with rigorous method remain a legitimate capstone — a weaker
+*business*, not a failed *project*.
+
+### Architecture decision (2026-08-19): CONDITIONAL MERGE of the event and rotation engines
+
+Interruptions inside cascades are expected to be common, and detecting them requires
+event detection — the same detector that identifies a trigger identifies a rupture. So
+the natural form is **one engine**: GDELT segments time into episodes (start on trigger,
+censor on rupture) and the chain logic runs inside them.
+
+**Merge only if and when Stage 1 drift-existence is positive.** A merged engine built on
+an undetected trigger has nothing to condition on. Two consequences to hold in view:
+merging leaves **two** engines, not three, reducing the diversification the
+position-space combiner assumes; and it concentrates risk, since a null on event
+detection would kill both lines at once.
 
 ---
 
-## The calendar migration (2026-08-18)
+## The calendar migration (2026-08-18) — complete
 
-`build_panel.business_day_index()` used `pd.bdate_range` — Mon–Fri **including market
-holidays**. Those rows had no asset returns at all, but the macro side was
-forward-filled onto them, so they entered the PCA and the GMM as near-duplicates of the
-preceding row. Manufactured data, against the standing rule *extend by removing
+`build_panel` used `pd.bdate_range` (Mon–Fri **including market holidays**). Those rows
+carried no asset returns but had macro values forward-filled onto them, entering the PCA
+and GMM as near-duplicates — manufactured data, against the rule *extend by removing
 redundancy, never by imputation*.
 
 | 2006+ panel | before | after |
 |---|---|---|
 | rows | 5,382 | **5,188** |
 | rows with zero asset coverage | ~196 | **2** |
-| non-session rows | 194 | **0** |
 
-"No prices" now reliably means **genuinely missing data** rather than *market was shut*.
-Independently confirmed by `liquidity_classifier`, which dropped 3 all-NaN rows where it
-would previously have dropped ~293.
+Not free: ≤46 rows per series carried genuinely new macro values (Good Fridays, Hurricane
+Sandy 2012). Still correct — a macro state with no session cannot be traded.
+Side effect: `analog_core._forward` rolls over index rows, so with a session index it is
+now session-counting; that horizon bug is resolved with no code change.
 
-**Not free.** Of the 194 removed rows a minority carried genuinely new macro values
-(≤46 per series; Good Fridays — Fed open, NYSE closed — plus unscheduled closures such
-as Hurricane Sandy 2012). Still correct: a macro state with no session cannot be traded
-and carries no return information.
+**Which results were exposed, and which were immune — the key structural lesson.**
+Problem 1 and `chain_rotation` both `dropna` before computing, so all-NaN holiday rows
+were *already* discarded. Their stability is **not** evidence the migration was
+inconsequential; it is evidence they were never at risk. The backtest had no such
+protection, and it moved. **Ask which results were exposed, not just which survived.**
 
-**Free side effect.** `analog_core._forward` compounds `rolling(H)` over index rows.
-With a session index that *is* session counting, so the horizon bug logged as an open
-thread is resolved with no code change — fix (b) subsuming fix (a).
-
-### Which results were exposed and which were immune — the key structural finding
-
-**Problem 1 was structurally immune.** `rolling_corr` does `.dropna(how="all").dropna()`
-before computing, so all-NaN holiday rows were *already* being discarded. The GLD–SPY
-correlation series reports 5,458 days and mean +0.069 both before and after, identically.
-Overlap arithmetic: 5,382 − 194 − 2 = 5,186 before; 5,188 − 2 = 5,186 after. The same
-number for mechanical reasons.
-
-**The backtest had no such protection.** `analog_core` reindexes returns onto the score
-index without dropping, so `_forward` was compounding across holiday NaNs and
-`skipna=True` silently shortened horizons.
-
-**Therefore: Problem 1's stability is NOT evidence that the migration was
-inconsequential. It is evidence that Problem 1 was never exposed.** The backtest is
-where the error actually lived, and it moved.
-
-### n=4 re-earned on the session panel — hypothesis NOT falsified, case narrowed
-
-Registered with falsification conditions stated before running.
+### n=4 re-earned — hypothesis NOT falsified, case narrowed
 
 | criterion | old panel | session panel | verdict |
 |---|---|---|---|
-| seed ARI n=4 | 1.000 (n=5 fragile 0.774) | **1.000** — n=3 and n=5 also 1.000 | **leg lost** |
-| silhouette | peaks n=4 | n=4 **0.4689** vs n=2 0.4678, n=6 0.4641 | **tie, not support** |
-| run-length median | 52.5d | **51.0d**, 12 runs (n=3: 3d/87 runs; n=5: 5d; n=7: 3d) | **holds decisively** |
-| generalization gap | n=4 +4.89 | **n=4 +5.130**, n=3 +0.507, n=5 +6.173 | **against n=4, widened** |
+| seed ARI n=4 | 1.000 (n=5 fragile 0.774) | 1.000 — n=3, n=5 also 1.000 | **leg lost** |
+| silhouette | peaks n=4 | n=4 0.4689 vs n=2 0.4678 | **tie** |
+| run-length median | 52.5d | **51.0d**, 12 runs (others 3–7d) | **holds decisively** |
+| generalization gap | n=4 +4.89 | **n=4 +5.130** (n=3 +0.507) | **against n=4** |
 
-Direct n=2 probe (never tested by `verify_regimes` on persistence/holdout — a
-pre-existing blind spot, closed here): median run **4.0** vs n=4's 51.0; gap **−0.080**
-vs n=4's +5.130; ARI 1.000 both. Pre-registered rule required n=2 to win **both** to
-displace n=4. It won one. **n=4 stands.**
+Direct n=2 probe (a blind spot in `verify_regimes`, closed): median run 4.0 vs 51.0; gap
+−0.080 vs +5.130. Pre-registered rule required n=2 to win **both**. It won one. **n=4
+stands**, on run-length persistence plus an economic argument (PC1 rates 52.3% + PC2
+money/dollar 27.2% = 79.6%; a 2-regime split collapses two distinct axes into one).
 
-**The honest state of the n=4 case: one quantitative line plus an economic argument.**
-1. **Run-length persistence** — n=4 is the only count producing macro-scale segments;
-   every alternative flickers at 3–7 day medians.
-2. **Economic structure** — PC1 (rates, 52.3%) + PC2 (money/dollar, 27.2%) = 79.6% of
-   variance. A 2-regime split collapses two distinct macro axes into one risk-on/risk-off
-   dimension. Four states let the engine condition on rate and stress structure
-   separately, which is its premise.
-
-"Three converging lines" was retired when GDELT alignment collapsed; seed stability and
-silhouette no longer support it either. **Two mild signals now favour n=5** — it became
-perfectly seed-stable on this panel, and it is the only count approaching significance in
-the GDELT permutation (p=0.079). Neither is decisive; both are recorded rather than
-omitted.
-
-**A registered prior that was wrong.** The prior was that removing duplicate rows would
-*reduce* persistence and leave ARI intact. The opposite happened: persistence barely
-moved (52.5 → 51.0) while the duplicates turned out to have been *destabilising the n=5
-fit*. **The old "n=5 fragile at 0.774" finding was partly an artifact of holiday rows**
-and must be struck wherever it appears. Only a stated prior made this visible.
+**A registered prior that was wrong:** removing duplicates was predicted to *reduce*
+persistence and leave ARI intact. Persistence barely moved; instead the duplicates had
+been *destabilising n=5*. **"n=5 fragile at 0.774" was partly an artifact** and is struck.
 
 ### PCA on the session panel (5,188 × 8, from 2006-01-03)
-
-| PC | variance | best proxy | corr |
-|---|---|---|---|
-| PC1 | 52.3% | DGS2 (rates/tightness) | +0.984 |
-| PC2 | 27.2% | M2SL (money supply) | +0.813 |
-| PC3 | 12.8% | VIXCLS (risk stress) | +0.964 |
-| PC4 | 5.0% | T10Y2Y (curve) | +0.402 (weak) |
-| PC5 | 1.9% | DTWEXBGS (USD) | +0.245 (weak) |
-
-Top 3 = 92.3%. **No renumbering this refit** — stress axis stays PC3.
+PC1 52.3% DGS2 (+0.984) · PC2 27.2% M2SL (+0.813) · PC3 12.8% VIXCLS (+0.964) ·
+PC4 5.0% T10Y2Y (+0.402, weak) · PC5 1.9% DTWEXBGS (+0.245, weak). Top 3 = 92.3%.
+**No renumbering this refit** — stress axis stays PC3.
 
 ---
 
 ## Current status by workstream
 
-### Regime engine — DONE on the session basis
-- PCA on **8 FRED series, 2006-01-03 → present**, NYSE sessions. DTWEXBGS binding
-  (5,188 observations = the full 2006+ session count).
-- **n=4 pinned** in `config.yaml` as `regime.n_regimes: 4`; read by every consumer.
-  BIC reported, never obeyed (it decreases to n=10 at the edge of the sweep).
-- Regime structure barely moved across the migration — each regime shrank 3–4%, matching
-  the row removal, and macro character is unchanged to two decimals:
+### Regime engine — DONE
+n=4 pinned in `config.yaml`; every consumer reads it. Regime structure barely moved
+(each regime −3–4%, macro character unchanged to 2dp). Classifier and verifier agree
+exactly: 12 runs, median 51.0, mean 432.3. Current regime as of 2026-08-18: **Regime 1**
+(tight policy, high 10Y, strong USD).
 
-  | regime | days (was) | mean run | VIX | 10Y | USD | character |
-  |---|---|---|---|---|---|---|
-  | 0 | 1735 (1796) | 434 | 22.5 | 2.80% | 92.7 | STRESSED, easy policy, steep, weak USD |
-  | 1 | 984 (1023) | 492 | 18.0 | 4.16% | 121.8 | TIGHT policy, high 10Y, flat/inverted, strong USD |
-  | 2 | 516 (538) | 258 | 15.4 | 4.69% | 96.0 | CALM, tight policy, high 10Y, weak USD |
-  | 3 | 1953 (2025) | 488 | 18.5 | 2.02% | 113.7 | EASY policy, low 10Y |
+| regime | days | mean run | VIX | 10Y | USD |
+|---|---|---|---|---|---|
+| 0 | 1735 | 434 | 22.5 | 2.80% | 92.7 |
+| 1 | 984 | 492 | 18.0 | 4.16% | 121.8 |
+| 2 | 516 | 258 | 15.4 | 4.69% | 96.0 |
+| 3 | 1953 | 488 | 18.5 | 2.02% | 113.7 |
 
-  Current regime as of 2026-08-18: **Regime 1**.
-- **Classifier and verifier agree exactly**: 12 runs, median 51.0, mean 432.3 — the same
-  numbers from two independently written code paths on the same model and data.
-- **PCA renumbering hazard:** `src/stress_axis.py` identifies the stress axis
-  data-drivenly (PC most correlated with VIX). Never hard-code a PC index. This hazard
-  **recurred and was caught on 2026-08-18** — see Problem 1.
+### Problem 1 (safe-haven) — DONE, clean NULL, basis-independent
+Liquidity gap **+0.011, p 0.488** (581 stress days / 5,448); macro gap **+0.167,
+p 0.0814** (1,084 / 5,186). Robustness cross-check identical to 3dp across all eight
+cells; primary non-significant everywhere (p 0.415–0.537). Liquidity classifier crisis
+lift **×2.99**.
 
-### Problem 1 (safe-haven inversion) — DONE, clean NULL, confirmed basis-independent
+*Phrasing correction:* three of four primary raw cells are now mildly negative — noise
+around zero. "If anything it co-moves slightly more" is now carried by the **cross-check**
+block, not the primary one.
 
-| | pre-migration | session panel |
-|---|---|---|
-| liquidity gap | +0.017, p 0.441 | **+0.011, p 0.488** (581 stress days / 5,448 overlap) |
-| macro gap | +0.167, p 0.081 | **+0.167, p 0.0814** (1,084 / 5,186) |
-| stress axis | PC3, VIX +0.963 | PC3, VIX **+0.964** |
+**Stress-axis bug (fixed 2026-08-18).** `safe_haven_robustness.py` selected its stress
+regime by hard-coded **PC2** while `safe_haven_test.py` used the data-driven axis (PC3).
+The two reported **opposite signs for the same statistic**: −0.209 vs +0.167, on 1,816 vs
+1,084 stress days. The bug erred in the **flattering** direction. Corrected, they agree to
+three decimals and the documented null is corroborated rather than contradicted.
+**Lesson: when a hazard is fixed in one script, grep for every other consumer in the same
+commit.**
 
-Robustness sweep: **cross-check block identical to three decimals** across all eight
-cells (raw +0.148/+0.162/+0.167/+0.139; Fisher-z +0.206/+0.201/+0.192/+0.152). Primary
-block shifted only via the liquidity refit and remains non-significant everywhere
-(p 0.415–0.537).
-
-**One phrasing correction.** Three of four primary raw cells are now mildly *negative*
-(−0.006/−0.004/−0.007) rather than mildly positive. These are noise around zero —
-magnitudes an order below the cross-check, p-values dead centre of the null. The summary
-line "if anything it co-moves slightly more" is now carried by the **cross-check** block,
-not the primary one, and should be written that way.
-
-Gold does **not** decouple from equities in stress — it co-moves at least as much
-(dash-for-cash). A defensible negative finding contradicting popular intuition.
-
-*Reading the p-values:* one-sided, P(null ≤ obs). p=0.915 means inversion is
-**unsupported**; it does not mean co-movement is significant. Honest claim: gold
-co-moves *more* in macro stress, **marginally, not significantly at 5%**.
-
-#### Stress-axis bug found and fixed 2026-08-18
-`safe_haven_robustness.py` selected its cross-check stress regime by **hard-coded PC2**.
-`safe_haven_test.py` had been ported to `stress_axis.py`; this file was missed. The two
-had been reporting **opposite signs for the same statistic on the same data**:
-
-| script | axis | stress days | gap @20d |
-|---|---|---|---|
-| `safe_haven_test.py` | PC3 (data-driven) | 1,084 | **+0.167** |
-| `safe_haven_robustness.py` | PC2 (hard-coded) | 1,816 | **−0.209** |
-
-The bug erred in the **flattering** direction: −0.20 at p 0.10–0.13 reads as marginal
-support for inversion; corrected, p=0.915 *against*. After the port the two agree to
-three decimals and the documented result got **stronger** — the sweep stopped
-contradicting the headline test.
-
-**Standing procedural lesson:** when a hazard is fixed in one script, grep for every
-other consumer of the same hazard **in the same commit**. One-file fixes leave silent
-twins.
-
-### Problem 1 ENGINE (macro analog) — REVISED DOWN on the session basis
-
-Expanding-window walk-forward, 2010-01-04 → 2026-08-11, no look-ahead, non-overlapping
-weekly rebalances, **835 rebalances**:
+### Problem 1 ENGINE (macro analog) — REVISED DOWN
+835 rebalances, 2010-01-04 → 2026-08-11:
 
 | universe | spread/reb | ~/yr | Sharpe | hit | payoff | p |
 |---|---|---|---|---|---|---|
 | all 47 | +0.292% | ~15.2% | **0.51** | 50.3% | 1.04 | 0.0010 |
 | long-history (35, ≥8y) | +0.129% | ~6.7% | **0.25** | 49.7% | 1.01 | 0.0380 |
 
-**Comparison to the pre-migration figures, which were wrong:**
+Was 0.57 / 0.40 with p 0.0010 / 0.0040. **The survivorship-bias block is what degraded**
+— it exists to answer "is this just recent AI-boom tickers?", and the honest answer is now
+that the edge weakens substantially without them and clears 5% only just. The claim
+"survives dropping recent-inception tickers → not just an AI-boom artifact" is **retired**.
 
-| | before | after | change |
-|---|---|---|---|
-| rebalances | 712 | 835 | +123 |
-| ALL-47 Sharpe | 0.57 | 0.51 | −11% |
-| long-hist Sharpe | 0.40 | **0.25** | **−38%** |
-| long-hist p | 0.0040 | **0.0380** | 10× weaker |
-| long-hist hit-rate | 51.3% | **49.7%** | below 50% |
+Old figures were flattered by `_forward` compounding across holiday NaNs that `skipna`
+dropped — a "5-day" return was sometimes 4 sessions of movement, understating volatility.
+**Lower and correct beats higher and wrong.**
 
-**What this means, stated plainly.** The all-asset block survives (p=0.0010). **The
-survivorship-bias check is what degraded.** That block exists precisely to answer *"is
-this just recent AI-boom tickers?"* The pre-migration answer was a confident no. The
-honest answer now: **the edge weakens substantially once recent-inception tickers are
-removed, and what remains clears the 5% bar only just.** The previously documented claim
-"survives dropping recent-inception tickers → not just an AI-boom artifact" is
-**overstated and retired.**
+**Ensemble framing:** "a ~0.4 Sharpe ingredient" describes neither block and is retired.
+Standalone is **0.25–0.51 depending on universe**, low end being the
+survivorship-controlled universe. The ingredient is **thinner than previously recorded**,
+which makes the ensemble case more load-bearing, not less.
 
-**Why the direction is right, not a regression.** The old numbers were computed with
-`_forward` compounding H index rows, where a holiday contributed a NaN that `skipna`
-dropped — so a "5-day" forward return was sometimes 4 days of actual market movement,
-understating realised volatility and flattering the Sharpe. The new figures are what the
-strategy actually earns over five sessions. Lower and correct beats higher and wrong.
+### Model grid — RANKING FLIPPED, a prior claim retired
 
-**Why rebalances rose while the panel shrank:** `rebs` steps by H=5 *index positions*.
-Removing holidays also removed dead bars, so more usable rebalance points survive the
-`min_analogs` filter.
+Re-run on the session basis, all three scored at their **frozen** specs:
 
-**Character note:** payoff ratio moved 0.99/0.96 → 1.04/1.01, so the engine is now mildly
-positively asymmetric rather than purely a frequency edge. Minor, but the old description
-needs adjusting.
-
-**Ensemble framing — REVISED.** The previous line "a ~0.4 Sharpe standalone signal is one
-ingredient" **no longer describes either block** and is retired. The correct statement is
-**0.25–0.51 depending on universe**, where the low end is the survivorship-controlled
-universe and the drop from 0.40 to 0.25 is what the calendar fix revealed. The ingredient
-is **thinner than previously recorded**. The route to a presentable number remains the
-**ensemble**, not torturing this engine — and the ensemble case is now more load-bearing,
-not less.
-
-### GDELT regime↔event alignment — still NULL on the session basis
-
-| | pre-migration | session panel |
+| model | pre-migration | session basis |
 |---|---|---|
-| n=4 permutation (z-diff) | p≈0.32 | **p=0.261** |
-| windows clearing p<.05 | 0/7 | **0/7** |
-| FOMC overlay | 9/10 | **9/10** |
+| model_1_baseline (5d, level) | 0.21 | **0.40** |
+| model_2_horizon_trend (10d, trend) | 0.39 | **0.36** |
+| model_3_overfit (20d, trend, σ1.0) | 0.50 | **0.44** |
 
-Same verdict, marginally stronger observed effect (+0.080 vs null −0.000), still nowhere
-near significance. The FOMC check is the external-validity anchor and confirms the GDELT
-file is intact — it validates against a real calendar, not against the panel.
+**model_1 now beats model_2.** The documented claim — *"model_2 is the principled
+amendment… nearly doubled the baseline Sharpe and became significant. Hypothesis
+confirmed"* — is **overturned** and retired.
 
-**n=5, not n=4, is the count that flirts with significance** — z-diff p=0.079 (marginal),
-and the lowest column throughout the window sweep (0.051/0.077/0.080/0.097/0.102). It
-clears no window at p<0.05, so nothing changes, but a reader looking for event support
-finds it pointing at n=5. Recorded, not omitted.
+Mechanism: the old bug dropped holiday NaNs from forward windows, so a 5-day horizon was
+sometimes short by 20%, a 10-day by 10%, a 20-day by 5%. **The shortest horizon was most
+contaminated and gained most from the fix.** That is what one would predict, not a
+coincidence.
 
-**Low power, stated either way:** 2024-only overlap, 252 days, ~30 stress days at n=4.
+**A confound that invalidated the comparison in both directions:** model_1 and model_2
+differ in **horizon AND sim_mode simultaneously** (5d/level vs 10d/trend). Neither the old
+nor the new comparison isolates the trend effect. The grid contains same-horizon
+level-vs-trend cells; that specific comparison must be run before any claim about
+trend-aware similarity.
 
-### Problem 2 (rotation chain) — Stage 1 NULL, reframed *(STALE — not re-run)*
-Chain NVDA/TSM/ASML/MU/INTC, leave-one-out residualization to strip shared semi beta.
-- Discovered order ASML→TSM→MU→INTC→NVDA; vs thesis Spearman **−0.100**, permutation
-  **p=0.597**; sub-period stability **−0.250** → **anti-stable**
-- **Why this was the wrong question:** it assumed a *permanent* pecking order. Rotation
-  is event-triggered — an event fires, attention hits a group, money moves through it
-  over days; between events there is only noise. Testing unconditionally mixes brief
-  cascade episodes with long quiet stretches and the noise swamps the signal.
-- **The right question (Stage 2):** within the days following an event naming this group,
-  is there a sequence? Same chain, same statistics, measured inside episodes.
-  **Blocks on the event engine** — episodes must be defined before they can be
-  conditioned on.
+**An unexpected live demonstration.** `model_3_overfit`'s pre-registered hypothesis was
+that its in-sample lead shrinks or inverts *live*. It has now shrunk **in-sample**, on a
+corrected basis (0.50 → 0.44 while model_1 rose 0.21 → 0.40) — the cherry-picked winner
+degraded under a methodology fix unrelated to model selection. A cleaner demonstration of
+in-sample fragility than the live test will provide, and it arrived early.
+
+**`model_grid.py` was re-deriving `model_3_overfit`** as whatever currently won the grid
+(15d/σ2.0 on this basis) rather than reading the frozen 20d/σ1.0 from `models.yaml` — so
+the written record contradicted both the frozen spec and the live harness. Fixed: all
+three specs now come from `models.yaml`, parsed identically to `forward_log.load_models`;
+the current winner is reported as a labelled diagnostic only; `--out` prevents re-runs
+overwriting the record.
+
+**Pre-registration evidence:** `config/models.yaml` first committed in **ce18d34,
+2026-08-17 14:24:09 +0800** — before the valid forward log began 2026-08-18. Original grid
+preserved at `docs/model_grid_results_prereg_2026-08.md`; session re-run at
+`docs/model_grid_results_session_basis.md`.
+
+### Problem 2 (rotation chain) — NULL confirmed, and the test is now known to be too weak
+
+Re-run unchanged on the session basis (immune via `dropna`): discovered order
+ASML→TSM→MU→INTC→NVDA, Spearman **−0.100**, permutation **p=0.605**, mean sub-period
+agreement **−0.250**.
+
+| period | order |
+|---|---|
+| 1999–2005 | MU → INTC → TSM → ASML → NVDA |
+| 2005–2012 | INTC → NVDA → TSM → ASML → MU |
+| 2012–2019 | ASML → TSM → INTC → NVDA → MU |
+| 2019–2026 | ASML → NVDA → MU → TSM → INTC |
+
+**Three problems with the existing test, all found 2026-08-20:**
+
+1. **"Anti-stable" is not supported.** −0.250 is the mean of 6 pairwise Spearmans on
+   **n=5 rankings**; random permutations of 5 items have SD ≈ 0.5, so the statistic's
+   standard error is ~0.25 and the observed value sits about **one SE from zero**. There
+   is **no permutation test on it anywhere in the script**. The defensible claim is
+   *"orders across sub-periods are indistinguishable from random reshuffling"* — not
+   systematic reversal. **Correcting this; "anti-stable" is retired.**
+2. **The sub-period test has look-ahead.** `residualize()` fits ONE OLS beta over the
+   full 1999–2026 sample; `main()` then slices those residuals per sub-period. So
+   1999–2005 residuals were built with betas estimated through 2026 — in a test whose
+   entire purpose is asking whether structure is stable *over time*. ASML's beta to the
+   complex pre- and post-EUV is certainly not constant. **Fix: residualise within each
+   sub-period.**
+3. **The permutation tests the wrong thing.** `[2]` asks whether the discovered order
+   matches *the thesis* beyond chance. A perfectly real chain with a different order
+   still returns p≈0.6. Existence is tested only by `[3]`, which is the statistic with no
+   significance test. **The null currently rests on the weaker leg.**
+
+**The engine cannot detect the kind of chain most likely to exist.** `net_lead` averages
+correlation across lags 1..K with K=10 fixed, unconditionally, assuming one order:
+- **Variable speed** — a 2-day cascade contributes at k=1,2 and noise at k=3..10, an 80%
+  dilution. Widening K makes this *worse*, not better. Needed: a **per-lag profile**, with
+  peak lag reported as an episode property rather than assumed.
+- **Interruptions** — expected to be the common case. A cascade that stalls two weeks
+  mid-episode has real propagation averaged with dead time. Needs a **rupture/censoring
+  rule**, which requires event detection.
+- **Variable order** — averaging different per-episode orders yields ~0. Needs a
+  **distribution of orders**, not one averaged order. And "predict the next link" then
+  requires knowing which order *this* episode follows — a harder, possibly underpowered
+  problem.
+
+**Therefore the current output cannot distinguish "no chain exists" from "chains exist
+with episode-varying speed and order."** Both produce this result. Earlier framing that
+the sub-period table was strong evidence against the phenomenon was **overconfident**.
+
+**Literature check (2026-08-19).** Molchanov & Stangl relaxed any assumed sequence,
+ignored cycle stages, and tested cross-sector predictability at lags of 1–24 months —
+2,640 t-statistics — finding scant evidence of sector rotation; robust across groupings
+and factor models. Jacobsen, Stangl & Visaltanachoti gave an investor *perfect foresight*
+of cycle stages and still got at best 2.3%/yr, dissipating in realistic settings.
+**Our null replicates published findings** — a stronger position than a lone null, and a
+warning that searching for a better *chain* unconditionally has poor prospects. **The
+differentiated angle is the conditioning, which nobody in that literature applied.**
+
+**Definition of "lead" for the write-up.** *A leads B if, after residualising each name
+against the equal-weight mean of the other four (removing shared semiconductor beta), the
+correlation between A's residual at t and B's residual at t+k, averaged over k = 1…10
+trading days, exceeds the same quantity with roles reversed; net-lead sums that asymmetry
+across all partners.* It measures average statistical precedence in **deviations from the
+sector**, across the whole sample. It is **not** price level, **not** direction (a led
+decline scores identically to a led rally), **not** per-episode, and **not** causal.
 
 ---
 
-## Forward test — RESTARTED 2026-08-19 on the session basis
+## GDELT event layer — query recovered, two open findings
 
-Three models **pre-registered and frozen** in `config/models.yaml` before any live data.
-All 48 grid configs in `docs/model_grid_results.md` as the pre-registration record.
+### Reproducibility gap CLOSED
+Nothing in the repo produced `processed/gdelt_2024_clean.csv`; it came from a manual
+BigQuery console run exported to `.xlsx` and cleaned by hand. The query text survived only
+inside the xlsx export metadata. Now:
+- **`src/gdelt_query.py`** regenerates the SQL from `config/gdelt_theme_mapping.yaml` with
+  parameterised dates. **Verified: generated SQL matches the recovered query exactly.**
+- **`src/gdelt_ingest.py`** scripts xlsx → CSV. **Verified: reproduces
+  `gdelt_2024_clean.csv` identically.**
+- Exports copied to `data_provenance/gdelt/`. `raw/` is gitignored as "regenerable",
+  which was true for FRED and yfinance and **false** for these — without the query they
+  could not be regenerated at all. (`*.xlsx` is itself gitignored; they required
+  `git add -f`.)
+- Source: `gdelt-bq.gdeltv2.gkg_partitioned`, V2Themes exploded via UNNEST/SPLIT with the
+  character offset stripped, grouped daily.
 
-| model | spec | Sharpe | ~/yr | hit | payoff | p |
-|---|---|---|---|---|---|---|
-| model_1_baseline | 5d, level, gauss σ1.5 | +0.21 | +5.4% | 51.1% | 0.93 | 0.0869 |
-| model_2_horizon_trend | 10d, trend, gauss σ1.5 | +0.39 | +10.4% | 51.4% | 0.89 | 0.0190 |
-| model_3_overfit | 20d, trend, gauss σ1.0 | +0.50 | +11.3% | 50.5% | 1.06 | 0.0390 |
+### FINDING 1 — config and data disagree on what "stress" means
+`gdelt_theme_mapping.yaml` documents `market_stress` with **eight** themes. The data
+actually used has **six**, omitting `EPU_ECONOMY_HISTORIC` and `EPU_ECONOMY` — confirmed
+by exact match against `raw/UNNEST EPU_ECO one-year.xlsx`. The two differ **~5.5×** in
+`stress_count` (mean 63,712 narrow vs 310,189 broad). **Every alignment result to date
+used the narrow definition while the config described the broad one.** Intent
+undocumented; the narrow export is timestamped later (6:21 PM vs 6:07 PM), consistent with
+a deliberate refinement, but that is inference, not a record.
 
-*(In-sample figures on the PRE-migration basis — STALE. `model_grid.py` must be re-run.
-The re-run is recorded **alongside** the original, never overwriting it: that file is the
-pre-registration record for `model_3_overfit`, and the three frozen specs do not change
-whatever the new grid says is best in-sample.)*
+### FINDING 2 — the alignment result is DEFINITION-DEPENDENT
 
-**Why the daily run matters even though the macro engine is finished being measured.**
-Every backtest number above is in-sample in the honest sense: the specification was
-chosen while looking at that history, across 48 configurations. The forward test is the
-only evidence in the project that cannot be contaminated that way — specs frozen and
-git-timestamped before the data existed. It also answers a question no re-run can:
-`model_3_overfit` carries a pre-registered prediction that **its lead shrinks or inverts
-live**. If it does, that demonstrates in-sample selection inflation with this project's
-own evidence. And `forward_log` is the shared harness the event and rotation engines will
-plug into — the window-integrity rule, frozen entry dates, session calendar and
-honest-gaps policy are infrastructure, not macro-specific. **If the daily ritual becomes
-a burden, automate it (cron). Do not stop it.**
+Narrow (as used): n=4 **p=0.261**, 0/7 windows; n=5 marginal 0.079.
+Broad (same 2024 data, wider stress themes):
 
-### Wipe history
-- **Wipe #1 (2026-08-17)** — first six rows computed from stale cache and empty bars.
-  `download_data` called without `--force`; signal date taken as the last index row.
-- **Wipe #2 (2026-08-18)** — deliberate, at 0 matured rows. The ledger held picks
-  computed on the `bdate_range` basis while the scores parquet had moved to sessions;
-  continuing would have mixed two bases in one ledger.
+| n | share ratio | p | z_in − z_out | p |
+|---|---|---|---|---|
+| 3 | 1.026 | **0.046** | +0.011 | 0.428 |
+| 4 | **1.035** | **0.015** | −0.029 | 0.581 |
+| 5 | 1.024 | 0.089 | +0.061 | 0.218 |
 
-### Live rows (as of 2026-08-19)
-Signal **2026-08-18** (45/47 coverage), entry **2026-08-19**, all three models in
-**regime 1** — matching the classifier's current-regime output. 3 rows, 0 matured,
-3 pending, 0 short_window. Entry sits on a session that has not closed yet, which is
-correct: entry is prospective by design.
+Window sweep on z-diff: still **0/7 at every n**.
 
-**Exposure note, recorded now so it is not reverse-engineered later.** Model 1 shorts
-SPCX (43 days of history); model 2 shorts SPCX and FLY (256); all three go long DRAM
-(92). The live models are actively trading **recent-inception tickers — the exact group
-whose removal costs 40% of the long-history Sharpe.** This is pre-registered behaviour,
-not a bug, but it means the forward test is heavily exposed to the question the
-survivorship check just raised. If live results come in strong, the first follow-up must
-be whether that is the newcomers again.
+**Prediction stated before running was that the null would hold. It held for the z-score
+measure and broke for share ratio.** Recorded as another wrong prior.
 
-### Window integrity — IMPLEMENTED (commit 7352dd1), STILL UNEXERCISED
+*Why the two measures disagree, mechanically:* `z_in − z_out` uses a **20-day rolling**
+baseline while regime runs average ~400 days, so inside a long stress regime the baseline
+drifts up to meet the level and the z-score reads ≈0. The de-baselining that removes news
+volume also removes the regime-length signal — it is structurally near-blind to persistent
+regimes. `share ratio` compares against the global mean and survives that; the
+circular-rotation permutation preserves autocorrelation, so p=0.015 is not a clustering
+artifact. **This argues share ratio is the more appropriate statistic, not that broad is
+the right definition.**
 
-> A row is scored `matured` only if **every session** of its H-day window has a return
-> for **every picked asset** (strict). Incomplete windows are marked `short_window` with
-> their realised session count, excluded from the headline summary, and remain visible in
-> the full log. **Entry dates and picks are frozen at log time and never reassigned.**
+*Three cautions:* (a) the direction now favours **n=4** (strongest at p=0.015, with n=5
+weakest) — partially restoring a third leg, but one that appears under only one theme
+definition, so **conditional, not corroborated**; (b) **multiple comparisons** — six tests
+in that table, twenty-one more in the sweep; (c) broad `stress_count` averages **310,189
+against 335,832 total documents** — nearly one hit per document, so `EPU_ECONOMY` appears
+to tag most economic coverage and the "broad stress measure" may be closer to *"the
+economy is in the news"* than to stress. That is a substantive argument for narrow,
+independent of any p-value.
 
-Pre-registered at 0 matured / 3 pending, implemented the same day. Fixed: horizons
-counted index rows rather than sessions; `np.log1p(...).sum()` silently dropped missing
-days via `skipna=True`; maturation could fire on windows extending past usable data;
-`entry_date` was re-derived every run; `--dry-run` wrote to disk on skip days.
+**The choice of canonical definition must be made on definitional grounds and stated
+before looking again.** Choosing broad *because* it produced significance is exactly the
+failure this project's discipline exists to prevent. Current read: narrow is more
+defensible on the 310k/336k grounds.
 
-`short_window` rows stay eligible for upgrade to `matured` if a vendor backfills — the
-window is a fixed set of sessions, so healing means those sessions gain data, not that
-the window slides.
+**PRE-REGISTERED TEST for the extension:** *under the extended 2025–2026 sample, does
+broad-definition share ratio at n=4 remain significant?* If yes, it is real; if it
+evaporates, it was a 2024 small-sample artifact. 2024 alone gives 252 overlap days and
+~30 stress days — far too few to adjudicate.
 
-### 2026-08-17 vendor gap — CLOSED, and an earlier claim in this document corrected
+---
 
-Yahoo returned 08-17 with **Open/High/Low/Volume present and only Close/Adj Close NaN**,
-all 47 assets — verified against the vendor directly, bypassing the cache. Ruled out as a
-pipeline bug.
+## Forward test — LIVE on the session basis
 
-**This document previously stated it "has not self-healed across three `--force`
-re-pulls in ~24 hours." It healed at roughly 48 hours** and 08-17 now shows 45/47 like
-any other session. The claim was accurate when written and is now false. Correct
-statement: **Yahoo can leave a Close missing for up to two days; the panel heals
-retroactively via `--force`, but a forward-test entry for a skipped day stays skipped.**
+Three models frozen in `config/models.yaml` (**ce18d34, 2026-08-17 14:24:09 +0800**),
+before any live data. Wipe #1 (2026-08-17: stale cache + empty bars) and wipe #2
+(2026-08-18: deliberate, at 0 matured rows, because the ledger held picks computed on the
+`bdate_range` basis while the scores parquet had moved to sessions).
 
-The restart moved the entry to 08-18, so the incident never needed the `short_window`
-rule. No permanent gap exists in the panel.
+**Live rows:** signal **2026-08-18** (45/47 coverage), entry **2026-08-19**, all three in
+regime 1. 3 rows, 0 matured, 3 pending, 0 short_window.
+
+**Exposure note.** Model 1 shorts SPCX (43 days of history); model 2 shorts SPCX and FLY
+(256); all three go long DRAM (92). The live models actively trade **recent-inception
+tickers — the exact group whose removal costs 40% of the long-history Sharpe**.
+Pre-registered behaviour, not a bug, but if live results come in strong the first
+follow-up must be whether that is the newcomers again.
+
+**Window integrity — implemented (7352dd1), still unexercised.** A row scores `matured`
+only if every session of its H-day window has a return for every picked asset; otherwise
+`short_window` with its realised session count, excluded from the headline summary.
+Entry dates and picks frozen at log time, never reassigned. Fixed alongside: horizons
+counted index rows not sessions; `skipna=True` silently shortening windows; maturation
+firing past usable data; `entry_date` re-derived each run; `--dry-run` writing on skip
+days.
+
+**2026-08-17 vendor gap — CLOSED.** Only Close/Adj Close were NaN (OHLV present).
+**It healed at ~48 hours**, correcting this document's earlier claim that it had not
+self-healed. Correct statement: *Yahoo can leave a Close missing for up to two days; the
+panel heals retroactively via `--force`, but a forward-test entry for a skipped day stays
+skipped.* No permanent panel gap.
 
 ### Daily command
 ```bash
 cd ~/Projects/regime-aware-signal && source .venv/bin/activate
 python -m src.forward_log
 ```
-Once daily after ~05:00 SGT. Skips if no new US close. Safe to run twice. Then commit
+Once daily after ~05:00 SGT. Skips if no new US close. Then commit
 `docs/forward_scoreboard.md` — the git timestamp is what makes entries pre-registered.
-The ledger CSV is gitignored machine state.
-
-Watch, in priority order: `MANUAL INTERVENTION NEEDED`; `SHORT WINDOW:`; whether the
-signal date advanced; the three-way counter line.
-
----
-
-## Architecture decisions (full detail in `docs/architecture_decisions.md`)
-
-1. **One shared daily clock.** Signal = last completed US close with real prices;
-   **entry = next US session**; exit = H sessions later. Duplicate same-day runs skip.
-2. **Aggregation in position space**: each engine emits a target exposure in [−1,+1]
-   that *persists* between its own updates; a Sharpe-weighted combiner nets them per
-   asset. This is where ensemble noise-cancellation comes from.
-3. **Event engine scope**: trade the **post-gap multi-day drift** only; concede the
-   overnight gap. Side benefit: event checks run **once daily**.
-4. **PEAD is a hypothesis, not a licence**: classic PEAD is earnings-surprise based and
-   has weakened since the 1990s; whether it extends to GDELT news-density triggers is
-   **open**. Stage 1 must be a **drift-existence test** before any trading claim.
+**Automate via cron if the ritual becomes a burden; do not stop it.** It is the only
+evidence in the project not contaminated by in-sample selection, and `forward_log` is the
+shared harness the other engines will plug into.
 
 ---
 
 ## Open threads (ordered)
 
-1. **Finish the cascade:** `model_grid` (record alongside, never overwrite) and
-   `chain_rotation`.
+1. **GDELT extension 2025 → 2026.** `python -m src.gdelt_query --start 2025-01-01 --end
+   2026-08-19 --variant narrow` (and `--variant broad`), run in BigQuery, export, ingest.
+   Answers the pre-registered test above and feeds the live forward test.
+   **Then extend back toward the ~2015 tagged floor** — the forward window is essentially
+   one macro regime (Regime 1), so a positive drift result there alone could not be
+   distinguished from a regime-conditional one. This project has already been bitten by
+   exactly that (alignment significant on 2018+, null on 2006+). 2015–16 China, 2018Q4,
+   COVID and the 2022 rate shock supply the regime variety. **Watch the control group:**
+   if event density is very high, matched non-event days become scarce and the test loses
+   power from the other direction.
 
-2. **GDELT extension — forward first, then backward.** Decision after discussion
-   2026-08-19:
-   - **Extend 2024 → 2026 first.** Cheapest, feeds the live forward test, and it is the
-     regime deployment would happen in. Event density is high (sustained political news
-     flow).
-   - **Then extend back toward the ~2015 tagged floor.** The forward window is
-     essentially **one macro regime** (currently Regime 1: tight policy, strong USD).
-     A positive drift result on that window alone cannot distinguish "drift exists" from
-     "drift exists in high-attention tight-policy conditions", and there would be no
-     other regime in-sample to check against. This project has already been bitten once
-     by exactly that: the GDELT alignment was significant on 2018+ and null on 2006+.
-     2015–16 China, 2018Q4, COVID and the 2022 rate shock supply the regime variety.
-   - **Watch the control group.** If event density is very high, matched non-event days
-     become scarce and the test loses power from the other direction.
-   - If time forces forward-only, the write-up must state the result is **conditional on
-     one regime**.
+2. **Fix `chain_rotation.py`** — residualise within sub-periods (removes look-ahead); add
+   a permutation null for the sub-period agreement statistic; add an existence test
+   distinct from the thesis-match test.
 
 3. **Event engine Stage 1 — drift-existence test.** GDELT event days; returns at
-   1/5/10/20d entered next-open; permutation-tested vs matched non-event days. Prior
-   question to signal quality: does anything happen at all?
+   1/5/10/20d entered next-open; permutation-tested vs matched non-event days.
 
-4. **Problem 2 Stage 2:** conditional lead-lag *within* event episodes. Blocks on (3).
+4. **Problem 2 Stage 2** — conditional lead-lag within episodes, built **multi-scale**
+   (per-lag profile), **per-episode** (distribution of orders), with a **rupture rule**.
+   Blocks on (3).
 
-5. **Ensemble combiner** (position-space, Sharpe-weighted). **This is the actual open
-   question for the product** — the engines' correlation with each other has never been
-   measured, and that measurement decides whether three modest signals make one good
-   system.
+5. **Same-horizon level-vs-trend comparison** from the existing grid, to isolate the trend
+   effect that model_1-vs-model_2 never did.
 
-6. **The n=4 generalization gap is a live concern.** +5.130 means the regime model
-   transfers poorly to 2025–26 — the exact period the forward test runs in. **Test:**
-   check which regimes 2025+ rows occupy and whether they sit in a low-density corner of
-   the training distribution. If the live period is out-of-distribution for the fitted
-   regimes, the analog engine's regime gate is selecting analogs from a state the present
-   does not resemble.
+6. **Ensemble combiner** (position-space, Sharpe-weighted). **The actual open question for
+   the product** — engine correlation has never been measured.
 
-7. **Doc/code accuracy fixes queued:**
-   - `regime_classifier.py`'s console note still says n=4 stands on "seed stability,
-     run-length persistence, and cluster separation" — two of those three are no longer
-     true on this panel.
-   - `regime_event_alignment_normalized.py` prints a VERDICT ("de-baselined signal
-     APPEARS... firm up that n as the event-supported choice") that the permutation test
-     in the next script directly contradicts. Written before the permutation existed.
-   - `PIPELINE.md` §4 documents the four `regime_event_*` scripts without their
-     **required `--gdelt` argument**; a reviewer following the doc hits an immediate
-     error.
-   - `PIPELINE.md` §1's reproduce-from-scratch chain has **no step producing
-     `gdelt_2024_clean.csv`**. It came from a BigQuery pull plus manual cleanup that is
-     neither scripted nor documented, so "reproduce everything" is currently false.
+7. **The n=4 generalization gap (+5.130) is a live concern.** The regime model transfers
+   poorly to 2025–26 — the exact period the forward test runs in. **Test:** check which
+   regimes 2025+ rows occupy and whether they sit in a low-density corner of the training
+   distribution.
 
-8. **Policy on documented figures.** Numbers drift as the panel grows. Decide: freeze
-   with an as-of date, or re-run at fixed checkpoints.
+8. **Doc/code accuracy fixes queued:**
+   - `regime_classifier.py` console note still claims n=4 stands on "seed stability,
+     run-length persistence, and cluster separation" — two of three no longer true.
+   - `regime_event_alignment_normalized.py` prints a VERDICT the next script's permutation
+     test contradicts; written before the permutation existed.
+   - `chain_rotation.py` READING says "even if the full-sample order matches the thesis" —
+     it does not (Spearman −0.100).
+   - `PIPELINE.md` §4 omits the required `--gdelt` argument on four scripts.
+   - `PIPELINE.md` §1 has no step producing the GDELT panel — now fixable by documenting
+     `gdelt_query` → BigQuery → `gdelt_ingest`.
+   - `briefing.md`'s `docs/*.md` glob silently skips
+     `docs/Regime_Aware_Framework_Methodology_Log.pdf`.
 
-9. **Data amendments:** company/entity-level events (earnings line-items, fireside chats,
-   tech breakpoints like a DeepSeek-style release) — current mapping is macro-only.
+9. **Policy on documented figures.** Numbers drift as the panel grows. Freeze with an
+   as-of date, or re-run at fixed checkpoints.
 
-10. **Problem 3:** LLM/RAG scenario layer (ChromaDB + SQLite + GitHub raw text).
+10. **Data amendments:** company/entity-level events. Note `gdelt_theme_mapping.yaml`
+    already records that GDELT has **no clean semiconductor/defense/space/cyber theme**,
+    that entity matching must be **exact** (`LIKE '%INTEL%'` matches "intelligence" and
+    floods the signal), and that SEC EDGAR 8-K is the cleaner source for company-specific
+    material events.
 
-11. **Streamlit MVP**, then integration/backtest phases.
+11. **Problem 3:** LLM/RAG scenario layer. **12. Streamlit MVP**, then integration.
 
-### Closed 2026-08-18/19
-- ~~Window integrity~~ → commit 7352dd1.
-- ~~Pin the pipeline to n=4~~ → commit 5ec014e. Verified by grep beforehand that no
-  script consumes `regime_labels.parquet`.
-- ~~Port `safe_haven_robustness.py` to the data-driven stress axis~~ → a real correctness
-  fix.
-- ~~`analog_core._forward` counts index rows~~ → resolved by the calendar migration.
-- ~~2026-08-17 vendor gap~~ → healed at ~48h; no permanent panel gap.
+### Closed 2026-08-18/20
+- Window integrity (7352dd1) · n=4 pin (5ec014e) · stress-axis port · `_forward` horizon
+  bug (resolved by the migration) · 08-17 vendor gap · `model_grid` re-deriving model_3
+  (7c1da76) · GDELT query recovery + scripted ingest (303bdae)
 
 ---
 
-## Working principles (established, keep following)
+## Working principles
 
-- Every claim about project data must come from data actually run. Hypotheses must be
-  labelled as hypotheses with the test proposed.
-- Null results are findings; document them rather than softening.
+- Every claim about project data must come from data actually run; hypotheses labelled as
+  hypotheses with the test proposed.
+- Null results are findings. **Check whether the null is definition-dependent** before
+  calling it clean.
 - Permutation tests over raw p-values; check robustness across specifications.
 - Judge signals by **risk-adjusted return**, never hit-rate alone.
-- Few, principled hypotheses beat large grids — and if a grid is run, the winner is
-  labelled a cherry-pick and forward-tested.
-- Extend data by **removing redundancy, never by imputation** — including redundancy that
-  enters through the *index* rather than through a fetcher.
+- Few, principled hypotheses beat large grids — and a grid's winner is labelled a
+  cherry-pick and forward-tested.
+- Extend data by **removing redundancy, never by imputation** — including redundancy
+  entering through the *index*.
 - Identify axes by **economic meaning, never by index** — and when that hazard is fixed in
   one script, **grep for every other consumer in the same commit**.
 - **Re-validate rather than assume** when the substrate changes — and **ask which results
-  were actually exposed**. A result that survives may simply never have been at risk
-  (Problem 1's `dropna`), which is not the same as robustness.
-- **Correct the record** when new evidence weakens a prior claim — including corrections
-  to this document's own earlier statements.
+  were exposed**, since one that survives may never have been at risk.
+- **Correct the record**, including corrections to this document's own earlier statements.
 - **Verify before asserting in a commit message.**
 - **State the prediction before running the check**, and **record priors that turn out
-  wrong** — the n=5-fragility finding was an artifact, and only a stated prior made that
-  visible.
-- **Register falsification conditions before re-validating**, so the verdict cannot be
-  reverse-engineered from the numbers.
+  wrong** — two so far: n=5 fragility (an artifact) and the GDELT null holding under a
+  broader definition (it did not).
+- **Register falsification conditions before re-validating.**
+- **Decide definitions on definitional grounds, before looking at the p-value they
+  produce.**
+- **A measured engine is finished being measured.** What strengthens the system is engine
+  *independence*, not a better version of a measured component.
+- **Know what a test cannot see.** A null from an instrument blind to the phenomenon is
+  not evidence of absence.
 - **Take the correct long-term fix over the contained one** when they conflict.
-- **A measured engine is finished being measured.** Re-tuning until the number improves
-  is the overfitting failure. What strengthens the system is engine *independence*, not a
-  better version of a measured component.
 - **Fail loud rather than log something plausible.**
-- Operational rules affecting the forward test are **pre-registered while the affected
-  rows are still pending**, never after outcomes are visible.
+- Operational rules affecting the forward test are pre-registered while affected rows are
+  still pending.
+- **Committed is not the same as written**, and gitignore rules apply to files you assume
+  are safe. Verify with `git ls-files`, not `ls`.
 - The **repo is the source of truth**, not model memory.
