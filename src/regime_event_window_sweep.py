@@ -20,7 +20,7 @@ import pandas as pd
 from src.regime_event_alignment import (
     load_config,
     load_gdelt,
-    load_scores_2024,
+    load_scores_range,
     fit_labels,
 )
 from src.stress_axis import stress_regime_id
@@ -48,6 +48,8 @@ def main():
     ap.add_argument("--iters", type=int, default=5000)
     ap.add_argument("--nlist", default="3,4,5")
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--start", default=None, help="override window start (YYYY-MM-DD)")
+    ap.add_argument("--end", default=None, help="override window end (YYYY-MM-DD)")
     args = ap.parse_args()
     windows = [int(x) for x in args.windows.split(",")]
     nlist = [int(x) for x in args.nlist.split(",")]
@@ -55,13 +57,17 @@ def main():
 
     cfg = load_config()
     gdelt = load_gdelt(args.gdelt).sort_index().copy()
-    scores = load_scores_2024()
+    start = args.start or gdelt.index.min()
+    end = args.end or gdelt.index.max()
+    scores = load_scores_range(start, end)
     raw = gdelt["stress_count"].astype(float)
 
     print("=" * 78)
     print(f"WINDOW-ROBUSTNESS SWEEP  (z_in - z_out, {args.iters} rotations per cell)")
     print("  (stress regime selected via data-driven VIX axis)")
     print("=" * 78)
+    print(f"window {pd.Timestamp(start).date()} -> {pd.Timestamp(end).date()}  |  "
+          f"overlap {len(scores.index.intersection(gdelt.index))}d")
     print("cell = observed z-diff  (permutation p);  * p<.05   ** p<.008 (strict)")
     header = "window | " + " | ".join(f"     n={n}      " for n in nlist)
     print(header)

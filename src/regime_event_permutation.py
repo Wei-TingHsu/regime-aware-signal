@@ -22,7 +22,7 @@ import pandas as pd
 from src.regime_event_alignment import (
     load_config,
     load_gdelt,
-    load_scores_2024,
+    load_scores_range,
     fit_labels,
 )
 from src.stress_axis import stress_regime_id
@@ -50,13 +50,17 @@ def main():
     ap.add_argument("--window", type=int, default=20)
     ap.add_argument("--nlist", default="3,4,5")
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--start", default=None, help="override window start (YYYY-MM-DD)")
+    ap.add_argument("--end", default=None, help="override window end (YYYY-MM-DD)")
     args = ap.parse_args()
     nlist = [int(x) for x in args.nlist.split(",")]
     rng = np.random.default_rng(args.seed)
 
     cfg = load_config()
     gdelt = load_gdelt(args.gdelt).sort_index().copy()
-    scores = load_scores_2024()
+    start = args.start or gdelt.index.min()
+    end = args.end or gdelt.index.max()
+    scores = load_scores_range(start, end)
 
     raw = gdelt["stress_count"].astype(float)
     if "total_docs" in gdelt.columns and (gdelt["total_docs"] > 0).any():
@@ -72,6 +76,10 @@ def main():
     print(f"PERMUTATION TEST (circular rotation, {args.iters} iters) -- de-baselined Test B")
     print("  (stress regime selected via data-driven VIX axis)")
     print("=" * 78)
+    print(f"window {pd.Timestamp(start).date()} -> {pd.Timestamp(end).date()}  |  "
+          f"gdelt {len(gdelt)}d, scores {len(scores)}d, "
+          f"overlap {len(scores.index.intersection(gdelt.index))}d")
+    print("-" * 78)
     print(f"{'n':>3} | {'measure':<12} | {'observed':>9} | {'null mean':>9} | "
           f"{'p (>=obs)':>9} | verdict")
     print("-" * 78)

@@ -46,7 +46,7 @@ from src.stress_axis import stress_regime_id
 from src.regime_event_alignment import (
     load_config,
     load_gdelt,
-    load_scores_2024,
+    load_scores_range,
     fit_labels,
 )
 
@@ -71,12 +71,16 @@ def main():
                     help="trailing window for the rolling z-score (default 20)")
     ap.add_argument("--nlist", default="3,4,5",
                     help="comma-separated n values to test (default 3,4,5)")
+    ap.add_argument("--start", default=None, help="override window start (YYYY-MM-DD)")
+    ap.add_argument("--end", default=None, help="override window end (YYYY-MM-DD)")
     args = ap.parse_args()
     nlist = [int(x) for x in args.nlist.split(",")]
 
     cfg = load_config()
     gdelt = load_gdelt(args.gdelt)
-    scores = load_scores_2024()
+    start = args.start or gdelt.index.min()
+    end = args.end or gdelt.index.max()
+    scores = load_scores_range(start, end)
 
     # --- Build the three stress measures on the GDELT frame -------------------
     if "stress_count" not in gdelt.columns:
@@ -105,8 +109,9 @@ def main():
     print("=" * 78)
     print("TEST B, DE-BASELINED  (2024) -- raw vs share vs rolling-z, identical labels")
     print("=" * 78)
-    print(f"GDELT days: {len(g)} | PCA-score days in 2024: {len(scores)} | "
-          f"rolling window: {w}")
+    print(f"window {pd.Timestamp(start).date()} -> {pd.Timestamp(end).date()} | "
+          f"GDELT days: {len(g)} | PCA-score days: {len(scores)} | "
+          f"overlap: {len(scores.index.intersection(g.index))} | rolling window: {w}")
     if not share_ok:
         print("  NOTE: total_docs missing/zero -> 'share' column unavailable, showing NaN.")
     print(f"\n{'n':>3} | {'raw ratio':>10} | {'share ratio':>11} | "
@@ -163,7 +168,11 @@ def main():
         print("           regimes (rates/VIX/curve space) capture a different axis of")
         print("           market state than daily news attention. Report as a real,")
         print("           defensible finding -- the two need not coincide.")
-    print("  CAVEAT: 2024-only overlap (~262 days) => low power; state this either way.")
+    print(f"  CAVEAT: overlap is {len(scores.index.intersection(g.index))} days; state "
+          f"the power either way.")
+    print("  NOTE: this VERDICT reads point estimates only. The permutation test in")
+    print("        src.regime_event_permutation is the arbiter -- if it says a measure is")
+    print("        not distinguishable from chance, that overrides the wording above.")
     print("=" * 78)
 
 

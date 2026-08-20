@@ -46,10 +46,28 @@ def load_gdelt(path):
     return df
 
 
-def load_scores_2024():
+def load_scores_range(start=None, end=None):
+    """PCA scores restricted to [start, end]. Pass None for an open end.
+
+    Replaces load_scores_2024(), which hard-coded 2024 and silently discarded
+    every row outside it -- so passing an extended GDELT panel returned the
+    2024 result unchanged. Found 2026-08-20, when a "2024-2026" run reproduced
+    the 2024 numbers to three decimals in every cell.
+
+    Callers derive the range from the GDELT file itself, so the overlap can
+    never be narrower than the data supplied without that being visible.
+    """
     scores = pd.read_parquet(PROCESSED_DIR / "macro_pca_scores.parquet")
-    scores = scores[(scores.index >= "2024-01-01") & (scores.index <= "2024-12-31")]
+    if start is not None:
+        scores = scores[scores.index >= pd.Timestamp(start)]
+    if end is not None:
+        scores = scores[scores.index <= pd.Timestamp(end)]
     return scores[CLUSTERING_PCS]
+
+
+def load_scores_2024():
+    """DEPRECATED shim. Prefer load_scores_range."""
+    return load_scores_range("2024-01-01", "2024-12-31")
 
 
 def fit_labels(scores, n, cfg):
@@ -104,24 +122,34 @@ def test_fomc_overlay(gdelt, tol_days=1):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--gdelt", required=True, help="path to gdelt 2024 clean csv")
+    ap.add_argument("--gdelt", required=True, help="path to a gdelt daily-counts csv")
+    ap.add_argument("--start", default=None, help="override window start (YYYY-MM-DD)")
+    ap.add_argument("--end", default=None, help="override window end (YYYY-MM-DD)")
     args = ap.parse_args()
 
     cfg = load_config()
     gdelt = load_gdelt(args.gdelt)
-    scores = load_scores_2024()
+    start = args.start or gdelt.index.min()
+    end = args.end or gdelt.index.max()
+    scores = load_scores_range(start, end)
 
     print("=" * 72)
-    print("REGIME <-> EVENT ALIGNMENT  (2024, independent GDELT validation)")
+    print("REGIME <-> EVENT ALIGNMENT  (independent GDELT validation)")
     print("=" * 72)
-    print(f"GDELT days: {len(gdelt)} | PCA-score days in 2024: {len(scores)}")
+    print(f"window: {pd.Timestamp(start).date()} -> {pd.Timestamp(end).date()}")
+    print(f"GDELT days: {len(gdelt)} | PCA-score days in window: {len(scores)}")
     print(f"Overlap used: {len(scores.index.intersection(gdelt.index))} days")
 
-    # FOMC overlay (independent of n)
-    hits, total = test_fomc_overlay(gdelt)
-    print(f"\nTest C - FOMC overlay: {hits}/{total} of top-10 GDELT monetary-spike "
-          f"days land within +/-1d of a (user-verified) 2024 FOMC date.")
-    print("  *** verify FOMC_2024 against federalreserve.gov before trusting this ***")
+    # FOMC overlay -- the verified date list is 2024 ONLY, so restrict to it.
+    g24 = gdelt[(gdelt.index >= "2024-01-01") & (gdelt.index <= "2024-12-31")]
+    if len(g24) < 30:
+        print("\nTest C - FOMC overlay: SKIPPED (window does not cover 2024; the "
+              "verified FOMC date list is 2024-only).")
+    else:
+        hits, total = test_fomc_overlay(g24)
+        print(f"\nTest C - FOMC overlay (2024 subset): {hits}/{total} of top-10 GDELT "
+              f"monetary-spike days land within +/-1d of a (user-verified) FOMC date.")
+        print("  *** verify FOMC_2024 against federalreserve.gov before trusting this ***")
 
     print(f"\n{'n':>3} | {'A: trans vs stable event-z':<32} | {'B: stress-regime density ratio':<34}")
     print("-" * 72)
