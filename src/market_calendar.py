@@ -138,6 +138,36 @@ def to_market_day(ts) -> pd.Timestamp:
     return future_days[0]
 
 
+def last_completed_session(now=None) -> pd.Timestamp:
+    """Latest NYSE session whose CLOSING BELL has already passed.
+
+    The forward test's signal must be a *completed* close. A price panel pulled
+    during US market hours contains a live partial bar for today, which is not
+    empty and therefore passes any coverage check -- so coverage alone cannot
+    distinguish "session finished" from "session in progress". This can.
+
+    Early closes are respected: the schedule carries each day's actual close.
+
+    Parameters
+    ----------
+    now : optional timestamp (naive assumed ET). Defaults to the current time.
+
+    Returns
+    -------
+    pd.Timestamp  tz-naive, normalized to midnight.
+    """
+    now_et = _to_et(pd.Timestamp.now(tz="UTC") if now is None else now)
+    sched = _relevant_schedule(now_et)
+    closes = sched["market_close"]
+    done = closes[closes <= now_et]
+    if len(done) == 0:
+        raise ValueError(f"no completed NYSE session on or before {now_et}")
+    last = pd.Timestamp(done.index[-1])
+    if last.tz is not None:
+        last = last.tz_convert("UTC").tz_localize(None)
+    return last.normalize()
+
+
 def trading_days(start, end) -> pd.DatetimeIndex:
     """
     Return every NYSE trading day in [start, end] as a tz-naive DatetimeIndex.

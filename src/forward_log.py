@@ -5,7 +5,11 @@ the Markdown scoreboard, back-fills matured results, and FAILS LOUD if anything
 needs a human.
 
 Architecture (see docs/architecture_decisions.md):
-  * ONE shared daily clock. Signal = last completed US close.
+  * ONE shared daily clock. Signal = last COMPLETED US close -- verified
+    against the NYSE closing bell, not just price coverage. A panel pulled
+    during US hours holds a live partial bar for today; it is not empty, so it
+    passes any coverage check. Bug found 2026-08-20 21:32 SGT (09:32 ET), when
+    a bar two minutes into the session was accepted as the signal.
   * Entry = NEXT US session (never the signal bar -- that would be look-ahead).
   * Exit  = H trading days after entry.
   * If no new US close since the last logged row, SKIP (no duplicate rows).
@@ -40,7 +44,7 @@ import yaml
 
 from src.data_io import load_config, PROCESSED_DIR
 from src.analog_core import DEFAULT, load_data, frozen_labels, feature_matrix, _kw, _forward, _expected_fwd
-from src.market_calendar import trading_days
+from src.market_calendar import trading_days, last_completed_session
 
 REPO = PROCESSED_DIR.parent
 SCOREBOARD = REPO / "docs" / "forward_scoreboard.md"
@@ -139,9 +143,20 @@ def main():
     # no prices. Using the last index row would compute picks from an empty bar.
     cov = rets.notna().sum(axis=1)
     min_assets = max(10, int(0.4 * rets.shape[1]))
-    valid = cov[cov >= min_assets].index
+
+    # The signal bar must be a session whose closing bell has PASSED. Coverage
+    # alone cannot see the difference between a finished session and one that
+    # opened two minutes ago.
+    cutoff = last_completed_session()
+    live = cov[(cov >= min_assets) & (cov.index > cutoff)]
+    if len(live) > 0:
+        print(f"  note: {live.index[-1].date()} has prices but its close has not "
+              f"passed yet (live/partial bar) -- excluded from signal selection.")
+
+    valid = cov[(cov >= min_assets) & (cov.index <= cutoff)].index
     if len(valid) == 0:
-        die("no date has usable price coverage -- run: python -m src.download_data --force")
+        die("no COMPLETED session has usable price coverage -- "
+            "run: python -m src.download_data --force")
     signal_date = valid[-1]
     pos = int(dates.get_indexer([signal_date])[0])
 
