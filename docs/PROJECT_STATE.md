@@ -1,15 +1,23 @@
 # PROJECT STATE — briefing document
 
 *Upload this file (or the `briefing.md` bundle) at the start of a new conversation to
-resume without re-explaining. Last updated: 2026-08-20 (evening SGT). Keep it updated
+resume without re-explaining. Last updated: 2026-08-21 (afternoon SGT). Keep it updated
 after each workstream closes.*
 
 > ## STATUS
 >
-> NYSE-session migration: **COMPLETE**. Forward test: **LIVE** on the new basis.
-> GDELT panel: **EXTENDED** 2024 → 2024-2026 (366 → 944 days), both theme variants.
-> Two silent-failure bugs found and fixed today (partial-bar signal; hard-coded 2024
-> window). Next: the event-engine **drift-existence test** — still unrun.
+> **Report due to Dr. Lee 2026-08-24.** Nothing in the forward test matures before then
+> (model_1 matures ~08-26), so the live test contributes its *design and timestamps* to
+> the report, not numbers — which is the correct contribution at this stage.
+>
+> **Problem 2 is CLOSED as a null**, now under three separate tests rather than one
+> (existence p=0.8371, 0/10 pairs after Holm, agreement p=0.2659). Look-ahead removed.
+> Stage 1 drift-existence is **PRE-REGISTERED (8273be4, 2026-08-21 13:18:53 +0800) and
+> UNRUN** — deliberately, so the registration stays valid for a deeper panel.
+>
+> Two live-edge defects found today: **per-series macro staleness** (bounded — 2 affected
+> rows, no reported result exposed) and **GMM label permutation across refits** (the
+> ledger's `regime` column is not comparable across rows; picks are unaffected).
 
 ---
 
@@ -73,10 +81,16 @@ sequence and timing **within** episodes.
 1. **Macro engine — measured and thin.** Sharpe **0.25–0.51 depending on universe**.
    *Done being measured.* Re-tuning until the number improves is the overfitting failure
    the working principles exist to prevent.
-2. **Event engine — its real test has not happened.** Drift-existence is unrun. The data
-   for it now exists (944 days, both variants).
-3. **Rotation chain — its first test asked the wrong question**, and the current engine
-   is structurally unable to detect the kind of chain most likely to exist.
+2. **Event engine — PRE-REGISTERED, UNRUN, and deliberately so.** Drift-existence is
+   specified in `docs/prereg_drift_existence.md` (8273be4, 2026-08-21 13:18:53 +0800),
+   re-scoped to a *macro narrative-density* test because the 944-day panel has no
+   per-asset event density. Held until the GDELT extension supplies adequate power, so the
+   registration stays valid for the deeper panel.
+3. **Rotation chain — CLOSED as an unconditional null (2026-08-21).** The test now asks
+   the right question (existence, not thesis-match), has no look-ahead, and returns null
+   on all three arms. The engine remains structurally unable to detect an *episode-local*
+   chain, so the null is scoped to the unconditional estimand and says nothing about the
+   conditional one.
 
 The system thesis is error cancellation across engines with different data, horizons and
 failure modes. **That correlation has never been measured**, so "each engine is modest"
@@ -191,6 +205,17 @@ The claim "survives dropping recent-inception tickers → not just an AI-boom ar
 Standalone is **0.25–0.51 depending on universe**, low end being the
 survivorship-controlled universe.
 
+**A declared look-ahead in the feature scaling (found 2026-08-21, NOT a bug).**
+`analog_core._z()` standardises the PC features using `nanmean`/`nanstd` over the **entire
+panel**, and `feature_matrix` applies it before any `pos` slicing — so analog distances at
+2010 are measured in units set by moments estimated through 2026. This is the same class
+as the frozen regime model, which the docstring declares intentional and which Stage 2
+validated; but that declaration did **not** extend to the feature scaling, and the phrase
+"expanding-window walk-forward, no look-ahead" was therefore too strong. **Corrected here
+rather than defended.** Magnitude is expected to be small — PC moments over 5,188 days are
+stable — but *expected to be small* is not measured. **Test when time allows:** recompute
+the backtest with expanding-window moments and report both numbers side by side.
+
 ### Model grid — RANKING FLIPPED, a prior claim retired
 
 | model | pre-migration | session basis |
@@ -220,45 +245,78 @@ current winner is a labelled diagnostic only; `--out` prevents overwriting the r
 14:24:09 +0800**, before the valid log began 2026-08-18. Original grid preserved at
 `docs/model_grid_results_prereg_2026-08.md`.
 
-### Problem 2 (rotation chain) — NULL confirmed, and the test is known to be too weak
+### Problem 2 (rotation chain) — CLOSED, unconditional NULL under three tests
 
-Discovered order ASML→TSM→MU→INTC→NVDA, Spearman **−0.100**, permutation **p=0.605**,
-mean sub-period agreement **−0.250**.
+*Run 2026-08-21, seed 42, 2,000 rotations, 1999-01-25 → 2026-08-20 (6,936 days).
+All three defects listed in the previous version of this section are now fixed;
+`docs/chain_rotation_results.md` holds the full output.*
 
-| period | order |
-|---|---|
-| 1999–2005 | MU → INTC → TSM → ASML → NVDA |
-| 2005–2012 | INTC → NVDA → TSM → ASML → MU |
-| 2012–2019 | ASML → TSM → INTC → NVDA → MU |
-| 2019–2026 | ASML → NVDA → MU → TSM → INTC |
+| arm | statistic | p | reading |
+|---|---|---|---|
+| **Existence** (order-agnostic) | net_lead dispersion 0.0067 | **0.8371** | no ordering structure |
+| **Pairwise** | 10 directed pairs, Holm-corrected | **0/10 significant** | no single pair survives |
+| **Thesis-match** | Spearman −0.100 | **0.5947** | discovered order ≠ thesis |
+| **Sub-period stability** | agreement −0.217 | **0.2659** | indistinguishable from reshuffling |
 
-**Three problems with the existing test:**
-1. **"Anti-stable" is not supported.** −0.250 is a mean of 6 pairwise Spearmans on **n=5
-   rankings**; random permutations of 5 items have SD ≈ 0.5, so the statistic's standard
-   error is ~0.25 and the observed value is about **one SE from zero**. There is **no
-   permutation test on it**. Defensible claim: *"orders are indistinguishable from random
-   reshuffling."* **"Anti-stable" is retired.**
-2. **The sub-period test has look-ahead.** `residualize()` fits ONE beta over 1999–2026;
-   `main()` slices those residuals per sub-period. So 1999–2005 residuals used betas
-   estimated through 2026 — in a test about stability over time. **Fix: residualise within
-   each sub-period.**
-3. **The permutation tests the wrong thing.** It asks whether the discovered order matches
-   *the thesis*. A real chain with a different order still returns p≈0.6. Existence is
-   tested only by the statistic with no significance test.
+Full-sample discovered order **ASML→TSM→MU→INTC→NVDA**, net_lead spanning +0.0082 to
+−0.0069. Adjacent names are separated by as little as **0.0007** (MU −0.0033 vs INTC
+−0.0040): these are near-ties, not a ranking.
 
-**The engine cannot detect the likely form of chain.** `net_lead` averages lags 1..K with
-K=10 fixed, unconditionally, assuming one order:
-- **Variable speed** — a 2-day cascade contributes at k=1,2 and noise at k=3..10, an 80%
-  dilution. Widening K makes this *worse*. Needed: a **per-lag profile**, peak lag reported
-  as an episode property.
-- **Interruptions** — expected to be the common case. Needs a **rupture/censoring rule**,
-  which requires event detection.
-- **Variable order** — averaging different per-episode orders yields ~0. Needs a
-  **distribution of orders**.
+**The existence test is the one that was missing**, and it is the one that closes the
+question. The old permutation asked only whether the discovered order matched the
+supply-chain thesis — a real chain running in a *different* order also returns p≈0.6
+there, so it could never have detected existence. The new arm tests the dispersion of the
+net_lead vector against an independent circular-rotation null and is agnostic to which
+order appears. Note the direction: p=0.8371 puts the observed dispersion in the **lower**
+tail — the real data is *less* ordered than randomly-rotated data typically is. The
+opposite of a chain, though not significantly so.
 
-**So the output cannot distinguish "no chain exists" from "chains exist with
-episode-varying speed and order."** Earlier framing that the sub-period table was strong
-evidence against the phenomenon was **overconfident**.
+**"Anti-stable" is RETIRED** — the claim now has the test it never had. Null mean −0.007,
+SD 0.200, observed −0.217, p=0.2659. About one SD from a null centred at zero. The
+defensible claim is *"sub-period orders are indistinguishable from random reshuffling."*
+
+#### The sub-period table is a noise realisation, not a finding
+
+| period | CORRECTED (betas fit within period) | OLD (look-ahead) |
+|---|---|---|
+| 1999–2005 | MU → TSM → INTC → ASML → NVDA | MU → INTC → TSM → ASML → NVDA |
+| 2005–2012 | NVDA → INTC → TSM → ASML → MU | INTC → NVDA → TSM → ASML → MU |
+| 2012–2019 | TSM → ASML → NVDA → INTC → MU | ASML → TSM → INTC → NVDA → MU |
+| 2019–2026 | ASML → NVDA → MU → TSM → INTC | ASML → NVDA → MU → TSM → INTC |
+
+**8 of 20 name-slots moved** when the look-ahead was removed — every one an *adjacent*
+swap, which is what near-tied net_lead scores produce. Yet the agreement statistic moved
+only −0.250 → −0.217.
+
+**That combination is the actual finding.** Reshuffling 40% of the positions barely moved
+the number *because both versions are draws from the same null*. The earlier presentation
+of these four orders as substantive evidence is **retired**: they are one realisation, and
+a defensible change to the beta-estimation window reshuffles nearly half of them.
+
+#### Per-lag profile — dilution hypothesis NOT supported
+
+The previous version of this section asserted that averaging k=1..10 dilutes a fast
+cascade by ~80%. **The profile does not show that.** Peak |d_ij| lags are scattered —
+5, 6, 6, 1, 2, 10, 10, 8, 10, 4 — with three sitting at the k=10 boundary, which is where
+`argmax` lands on a flat profile. Per-lag values reach ±0.06 while the k-average is
+~0.008, so the averaging is diluting **sign-flipping noise**, not a signal. This
+*strengthens* the null rather than qualifying it.
+
+**Still unaddressed by this test**, and the reason the null is scoped rather than
+absolute:
+- **Interruptions** — need a rupture/censoring rule, which requires event detection.
+- **Variable order across episodes** — averaging different per-episode orders yields ~0.
+  Needs a *distribution* of orders, not a single one.
+
+**So the null is scoped: no unconditional, single-order, full-period chain exists in these
+five names.** It does not distinguish that from "chains exist with episode-varying order."
+The instrument is blind to the episode-local form by construction.
+
+**Invariance check passed.** Sections [1] and [2] were untouched by the look-ahead fix —
+the full-sample beta was always correct for the full-sample test — and Spearman reproduced
+at **−0.100 exactly**. The permutation p read 0.5947 against 0.605 recorded; the Monte
+Carlo SE at 2,000 iterations is ~0.011 and the window is longer than when 0.605 was
+recorded, so every rotation draw differs. Within noise; to be confirmed at higher iters.
 
 **Literature check.** Molchanov & Stangl tested cross-sector predictability at lags of
 1–24 months — 2,640 t-statistics — finding scant evidence of sector rotation, robust across
@@ -372,12 +430,65 @@ change at 0 matured), plus the 3 partial-bar rows deleted 2026-08-20.
 **Current (2026-08-21):** signals 2026-08-18, 08-19 and 08-20 (entries 08-19, 08-20,
 08-21). **9 rows, 0 matured, 9 pending, 0 short_window.**
 
-**First regime transition of the live test.** 08-18 and 08-19 signalled in **regime 1**
-(tight policy, high 10Y, strong USD); **08-20 signalled in regime 0 — the STRESSED regime**
-(VIX 22.5, easy policy, steep curve, weak USD), and the picks shifted accordingly. Watch
-whether it persists: regime 0 has a 434-day mean run, so a one-day flip would be unusual,
-but the live period is also where the model generalizes worst (+5.130 gap, thread 7).
-First maturities: model_1 (H=5) around 2026-08-26; model_3 (H=20) around mid-September.
+**NO regime transition has occurred — CORRECTION (2026-08-21).** This document previously
+recorded 08-20 as *"the first regime transition of the live test… regime 0 — the STRESSED
+regime… and the picks shifted accordingly."* **That entry was wrong on every clause** and
+is retired.
+
+*What actually happened: a label permutation across GMM refits.* `analog_core.frozen_labels`
+refits the GMM on every call, and `forward_log.refresh_data` reruns `pca_macro` first.
+PCA component **signs are arbitrary across refits**; a sign flip mirrors the input, which
+is an isometry — the partition is identical but the component *indices* are free to
+permute. `random_state` is pinned, which makes the fit deterministic given identical input,
+but it cannot pin index order across a *changed* input.
+
+*Diagnosis by pool size.* Re-running the classifier today labels **08-19 as regime 0** —
+a past, fixed date whose ledger row says regime 1 — while handing it an analog pool of
+**979**. Regime 1 holds 984 days; regime 0 holds 1,735. The cluster now called 0 is the
+cluster that was called 1. Not a close call.
+
+*What follows:*
+- **The macro state did not move.** 08-19 PC1..3 = [3.0668, 0.3524, 0.1245], 08-20 =
+  [3.0505, 0.3397, 0.1272]. A ~0.02 move on PC1 cannot reassign anything.
+- **The picks cannot have shifted because of the regime.** Analog selection is
+  `labels[:pos] == r_now` plus Euclidean distance — both invariant under a label
+  permutation *and* under a PC sign flip. "The picks shifted accordingly" asserted a
+  causal link that does not exist and is **retired**.
+- **The `regime` column in `forward_ledger.csv` is not comparable across rows** and is
+  currently an annotation only. The regime table above is likewise labelled by whichever
+  run produced it.
+- **Seed stability never tested this.** The n=4 validation is ARI = 1.000, and ARI is
+  **label-invariant by construction** — mathematically incapable of detecting an ID
+  permutation. The strongest validation the regime engine has could not see this failure.
+
+*Fix (queued, thread 3):* fit once, persist the fitted parameters, order components by
+their coordinate on the data-driven stress axis — the principle `src/stress_axis.py`
+already applies one level down — and make consumers **read** `regime_labels.parquet`
+instead of refitting.
+
+**Per-series macro staleness at the live edge (2026-08-21) — bounded.** 08-20 and 08-21
+carry a fresh `T10Y2Y` (0.50) beside a stale `DGS10`/`DGS2` (4.65/4.19), so the curve
+identity `DGS10 − DGS2 = T10Y2Y` fails on exactly those two rows. Full-panel audit:
+**3 violations in 7,962 rows** — those two plus 1995-11-29, which sits outside the
+2006-01-03 PCA panel and has never entered a result. **No reported number is exposed.**
+`DTWEXBGS` frozen at 118.9028 to 4dp across six sessions and `VIXCLS` at 14.89 across
+three indicate the staleness is broader than the two flagged series. Note this survives
+`download_data --force`, so the divergence is either upstream at FRED or in a per-series
+cache path that `--force` does not reach. *Guard queued (thread 4).*
+
+*This is the macro-side twin of the partial-bar bug.* There, coverage could not distinguish
+a live bar from a finished one. Here, **value-equality cannot distinguish "no change" from
+"no data."*
+
+**Maturity dates.** model_1 (H=5) matures ~2026-08-26; model_3 (H=20) ~mid-September.
+**Nothing matures before the 08-24 report deadline** — every row will read `pending`. The
+forward test's contribution to the report is its pre-registration timestamps, its harness
+design, and the two silent-failure bugs it caught, not any number.
+
+**Live-period location — first concrete evidence for thread 7.** PC1 ≈ **3.05** on the
+current bars, roughly three standard deviations out on the rates axis. That is a genuinely
+low-density corner of the training distribution, which is what the +5.130 generalization
+gap predicts and which had until now only been inferred from a summary statistic.
 
 **Exposure note.** The live models actively trade **recent-inception tickers** (SPCX 43d,
 FLY 256d, DRAM 92d) — the exact group whose removal costs 40% of the long-history Sharpe.
@@ -406,56 +517,111 @@ do not stop it.** It is the only evidence not contaminated by in-sample selectio
 
 ## Open threads (ordered)
 
-1. **Event engine Stage 1 — drift-existence test.** GDELT event days; returns at
-   1/5/10/20d entered next-open; permutation-tested vs matched non-event days. **The data
-   now exists (944 days, both variants).** This is the test that decides whether the event
-   engine and the rotation chain have a foundation. Alignment says "regimes and news move
-   together"; drift-existence asks "does anything tradeable happen after an event?"
+1. **Event engine Stage 1 — drift-existence test. PRE-REGISTERED, UNRUN.**
+   `docs/prereg_drift_existence.md`, committed **8273be4, 2026-08-21 13:18:53 +0800**,
+   before any drift-test code exists. **RE-SCOPED**: the 944-day panel carries a *global*
+   stress-density series with no per-asset event density, so the entity-level spec in
+   `architecture_decisions.md` §3 was not runnable. The registered question is now *does a
+   spike in economy-wide narrative-stress density predict market-level drift?*
 
-2. **Confirmatory test of the exploratory narrow-n=4 alignment result.** Pre-register it
-   properly and test on data it was not discovered in — e.g. extend GDELT back toward the
-   ~2015 tagged floor, which also supplies regime variety (2015–16 China, 2018Q4, COVID,
-   2022 rate shock). Without that, it stays exploratory.
+   **The earlier description of this as "the test that decides whether the event engine
+   and the rotation chain have a foundation" is RETIRED as overstated in both
+   directions.** A positive result does **not** discharge the entity-detection
+   precondition on the conditional merge; a null does **not** close out firm-level drift,
+   because the instrument is blind to it. Entity-level detection is thread 11.
 
-3. **Fix `chain_rotation.py`** — residualise within sub-periods (removes look-ahead); add a
-   permutation null for the sub-period agreement statistic; add an existence test distinct
-   from the thesis-match test.
+   **Deliberately unrun.** At ~25–35 de-clustered episodes the MDE is ~1.6% at H=10 and
+   ~2.3% at H=20 — above plausible PEAD-scale effects — so running it now would spend the
+   registration on an underpowered version of a question worth asking on a deeper panel.
+   Sequence: **extend GDELT first (thread 2), then run.**
 
-4. **Problem 2 Stage 2** — conditional lead-lag within episodes, built **multi-scale**
+2. **GDELT extension to the ~2015 tagged floor.** Serves three purposes at once: powers
+   thread 1 to ~100+ episodes; supplies the out-of-sample basis for the exploratory
+   narrow-n=4 alignment result; adds regime variety (2015–16 China, 2018Q4, COVID, 2022
+   rate shock). Tooling exists (`gdelt_query` → BigQuery → `gdelt_ingest`, 303bdae), so
+   the marginal cost is an afternoon of year-split pulls.
+
+   **Precondition before trusting any share or z-score across the join:** plot `total_docs`
+   across 2015–2026 and check for level shifts. GDELT's source set grew over the period; a
+   structural break in the *denominator* would contaminate the share measure and a z-score
+   computed through it would manufacture spikes at the seam. Check before it becomes a
+   finding.
+
+3. **Canonical regime labels.** Fit once, persist the fitted parameters, order components
+   by their coordinate on the data-driven stress axis, make consumers read
+   `regime_labels.parquet` rather than refit. Makes the ledger's `regime` column
+   comparable **by construction** instead of by luck. Five hard-coded `n_components=4`
+   literals should be replaced with config reads in the same commit.
+
+4. **`forward_log` macro guard.** Refuse to log when the signal-date macro row duplicates
+   its predecessor across all eight series, or when |DGS10 − DGS2 − T10Y2Y| > 0.005.
+   Direct analogue of the partial-bar fix. Fail loud.
+
+5. **Problem 2 Stage 2** — conditional lead-lag within episodes, built **multi-scale**
    (per-lag profile), **per-episode** (distribution of orders), with a **rupture rule**.
-   Blocks on (1).
+   Blocks on (1). *The unconditional arm is now closed as a null, so this is the only
+   remaining route by which a rotation chain could exist.*
 
-5. **Same-horizon level-vs-trend comparison** from the existing grid, to isolate the trend
+6. **Universe-wide directed-pair scan (exploratory by construction).** Instead of choosing
+   another 5-name chain by hand — data-mining, and C(47,5) = 1,533,939 subsets makes
+   per-subset testing meaningless — compute the full **47 × 46 = 2,162** ordered-pair
+   lead-lag matrix in one pass and test the **maximum statistic across the whole matrix**
+   against the rotation null. That single distribution accounts for the search itself and
+   is far less conservative than Bonferroni because the pairs are heavily correlated
+   (White reality-check construction). Chains would then be *built* from surviving pairs
+   rather than assumed. `cross_corr_by_lag` already vectorises this. Must be labelled
+   **exploratory** — it would be run after seeing the 5-name null — and a universe-wide
+   null is the expected outcome, replicating Molchanov & Stangl at larger scale.
+
+7. **Max-over-lag existence test** on the existing 5 names: `max_k |d_ij(k)|` against the
+   same rotation null. Immune to k-averaging dilution by construction, so a second null
+   would close the "the engine cannot detect the likely form of chain" objection on
+   evidence rather than argument. Exploratory. ~30 minutes.
+
+8. **Same-horizon level-vs-trend comparison** from the existing grid, to isolate the trend
    effect that model_1-vs-model_2 never did.
 
-6. **Ensemble combiner** (position-space, Sharpe-weighted). **The actual open question for
+9. **Ensemble combiner** (position-space, Sharpe-weighted). **The actual open question for
    the product** — engine correlation has never been measured.
 
-7. **The n=4 generalization gap (+5.130) is a live concern**, and now doubly so: it is the
-   period where the alignment result appears. **Test:** check which regimes 2025+ rows
-   occupy and whether they sit in a low-density corner of the training distribution.
+10. **The n=4 generalization gap (+5.130) is a live concern**, and now doubly so: it is the
+   period where the alignment result appears. **PARTIALLY ANSWERED 2026-08-21:** live bars
+   sit at PC1 ≈ 3.05, ~3 SD out on the rates axis — a low-density corner, as predicted.
+   Remaining: quantify the training-density at that coordinate rather than eyeballing it,
+   and check which regimes 2025+ rows occupy.
 
-8. **Doc/code accuracy fixes queued:**
+11. **Entity-level event detection** — the precondition for the conditional merge, carved
+    out of thread 1 where it was previously implicit. `gdelt_theme_mapping.yaml` records
+    that GDELT has **no clean semiconductor/defense/space/cyber theme**, that entity
+    matching must be **exact** (`LIKE '%INTEL%'` matches "intelligence"), and that SEC
+    EDGAR 8-K is cleaner for company-specific material events. **The merge decision cannot
+    be made without this**, whichever way thread 1 resolves.
+
+12. **Expanding-window feature scaling** — measure the magnitude of the declared `_z()`
+    full-sample look-ahead in `analog_core`, and report both numbers side by side.
+
+13. **Doc/code accuracy fixes queued:**
    - `regime_classifier.py` console note still claims n=4 stands on "seed stability,
      run-length persistence, and cluster separation" — two of three no longer true.
    - `PIPELINE.md` §4 omits the required `--gdelt` argument on four scripts; §1 has no step
      producing the GDELT panel (now fixable: `gdelt_query` → BigQuery → `gdelt_ingest`).
    - `briefing.md`'s `docs/*.md` glob skips `Regime_Aware_Framework_Methodology_Log.pdf`.
+   - `chain_rotation.py` docstring's dilution claim is now contradicted by its own §5
+     output; the file says "if a cascade completes fast" conditionally, but PROJECT_STATE
+     previously asserted it. Corrected above.
 
-9. **Policy on documented figures** — freeze with an as-of date, or re-run at checkpoints.
+14. **Policy on documented figures** — freeze with an as-of date, or re-run at checkpoints.
 
-10. **Data amendments:** company/entity-level events. `gdelt_theme_mapping.yaml` records
-    that GDELT has **no clean semiconductor/defense/space/cyber theme**, that entity
-    matching must be **exact** (`LIKE '%INTEL%'` matches "intelligence"), and that SEC EDGAR
-    8-K is cleaner for company-specific material events.
+15. **Problem 3:** LLM/RAG scenario layer. **16. Streamlit MVP**, then integration.
 
-11. **Problem 3:** LLM/RAG scenario layer. **12. Streamlit MVP**, then integration.
-
-### Closed 2026-08-18/20
+### Closed 2026-08-18/21
 Window integrity (7352dd1) · n=4 pin (5ec014e) · stress-axis port · `_forward` horizon bug
 · 08-17 vendor gap · `model_grid` re-deriving model_3 (7c1da76) · GDELT query recovery +
 scripted ingest (303bdae) · GDELT extension to 944 days · hard-coded 2024 window ·
-partial-bar signal
+partial-bar signal · **Problem 2 unconditional null closed under three tests** ·
+**`chain_rotation` sub-period look-ahead removed** · **Stage 1 pre-registered (8273be4)** ·
+**08-19/08-20 regime flip diagnosed as label permutation** · **curve-identity audit:
+staleness bounded to 2 live-edge rows, no result exposed**
 
 ---
 
@@ -483,8 +649,34 @@ partial-bar signal
 - **Correct the record**, including corrections to this document's own earlier statements.
 - **Verify before asserting in a commit message.**
 - **State the prediction before running the check**, and **record priors that turn out
-  wrong** — three so far: n=5 fragility (an artifact), the GDELT null holding under a
-  broader definition (it did not), and broad-n=4 surviving the extension (it did not).
+  wrong** — **five so far**: n=5 fragility (an artifact); the GDELT null holding under a
+  broader definition (it did not); broad-n=4 surviving the extension (it did not); the
+  chain agreement statistic moving substantially under the look-ahead fix (it moved 0.033);
+  and the per-lag profile peaking at 1–2 days to show cascade dilution (peaks are
+  scattered, three at the k=10 boundary).
+- **The first three wrong priors shared a pattern**: results were more *basis-carried* and
+  less *phenomenon-carried* than expected. The fourth was that correction **over-applied**.
+  The refinement: *the presentation layer can be basis-sensitive while the test statistic
+  is not.* 8 of 20 chain order-slots moved and the agreement barely shifted — precisely
+  because both versions were draws from the same null.
+- **A statistic robust to a basis change is not thereby evidence of signal.** If it sits at
+  its null, robustness only says the null is stable.
+- **Test existence separately from thesis-match.** A test asking "does the discovered order
+  match my hypothesis?" returns a large p for a real effect running in a different order,
+  and can never detect existence. This is what the rotation chain lacked for months.
+- **A null needs its estimand stated, not just its p-value.** "No unconditional,
+  single-order, full-period chain in these five names" is a claim; "no chain" is not
+  something this instrument can say.
+- **Label-invariant validation cannot detect label instability.** ARI = 1.000 was the
+  regime engine's strongest evidence and was mathematically incapable of seeing the ID
+  permutation that broke the ledger column.
+- **Value-equality cannot distinguish "no change" from "no data."** The macro twin of
+  "coverage cannot distinguish a live bar from a finished one." Check the as-of date, not
+  the values — and check derived identities (a curve that must equal a difference) as a
+  cheap cross-series staleness detector.
+- **When a search space is large, permute the search, not the candidate.** C(47,5) subsets
+  makes per-candidate testing meaningless; a maximum-statistic null over the whole matrix
+  is the honest construction.
 - **Decide definitions on definitional grounds, before looking at the p-value.**
 - **A measured engine is finished being measured.** What strengthens the system is engine
   *independence*, not a better version of a measured component.
