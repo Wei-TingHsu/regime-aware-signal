@@ -13,6 +13,51 @@ after each workstream closes.*
 
 ---
 
+## How this project is worked — read before starting a session
+
+**Session start.** Regenerate the bundle and upload it:
+```bash
+for f in docs/*.md; do echo "===== $f ====="; cat "$f"; echo; done > ~/Downloads/briefing.md
+```
+It is a snapshot, not a live link — regenerate every time. The repo is the source of
+truth; model memory is not.
+
+**File handoff.** Claude has no access to this machine. The loop is: Claude names the file
+it needs → Steven uploads it → Claude returns the **complete patched file** (never a diff)
+→ Steven downloads, `cp`s it into place, and commits. Always `ls -lt ~/Downloads | head`
+first: a repeat download saves as `name-1.py` and the `cp` then silently installs the
+stale version.
+
+**Verify before trusting, always.** Every fix gets a check that would fail if the fix did
+not work, and the check is stated **before** it runs. Refactors get a
+behaviour-preserving test on known input — the 2024 file reproducing every cell exactly is
+what licensed the `regime_event` refactor. Two bugs this week were caught only by such
+checks, and one (the hard-coded 2024 window) was invisible except as an exact match to a
+result still in view.
+
+**Commit discipline.** One logical change per commit, with the reasoning and the
+verification in the message — the commit log is the methodology record, not a changelog.
+Never bundle a correctness fix with a documentation fix. Commit and **push** before
+stopping; an uncommitted finding is one laptop crash from gone.
+
+**Session end.** Update this document and push it, then regenerate `briefing.md` for next
+time. Say *"update PROJECT_STATE before we finish"* at the start of a session so it is a
+closing ritual rather than something forgotten mid-flow.
+
+**Daily, regardless of what else is happening:**
+```bash
+cd ~/Projects/regime-aware-signal && source .venv/bin/activate
+python -m src.forward_log
+git add docs/forward_scoreboard.md && git commit -m "forward test: daily log $(date +%F)" && git push
+```
+Skipped days stay skipped. **Never retro-fill.**
+
+**What Claude is asked to do.** Push back rather than agree; name what a test cannot see;
+say when a result is exploratory rather than confirmatory; and never present a hypothesis
+as a result. Claimed results must come from data actually run.
+
+---
+
 ## What this project is
 
 **Regime-Aware Cross-Asset Signal Framework.** Three research problems + a product
@@ -324,8 +369,15 @@ Three models frozen in `config/models.yaml` (**ce18d34, 2026-08-17 14:24:09 +080
 Wipe #1 (2026-08-17: stale cache + empty bars), wipe #2 (2026-08-18: deliberate, basis
 change at 0 matured), plus the 3 partial-bar rows deleted 2026-08-20.
 
-**Current:** signals 2026-08-18 (entry 08-19) and 2026-08-19 (entry 08-20), all in regime
-1. **6 rows, 0 matured, 6 pending, 0 short_window.**
+**Current (2026-08-21):** signals 2026-08-18, 08-19 and 08-20 (entries 08-19, 08-20,
+08-21). **9 rows, 0 matured, 9 pending, 0 short_window.**
+
+**First regime transition of the live test.** 08-18 and 08-19 signalled in **regime 1**
+(tight policy, high 10Y, strong USD); **08-20 signalled in regime 0 — the STRESSED regime**
+(VIX 22.5, easy policy, steep curve, weak USD), and the picks shifted accordingly. Watch
+whether it persists: regime 0 has a 434-day mean run, so a one-day flip would be unusual,
+but the live period is also where the model generalizes worst (+5.130 gap, thread 7).
+First maturities: model_1 (H=5) around 2026-08-26; model_3 (H=20) around mid-September.
 
 **Exposure note.** The live models actively trade **recent-inception tickers** (SPCX 43d,
 FLY 256d, DRAM 92d) — the exact group whose removal costs 40% of the long-history Sharpe.
