@@ -10,9 +10,15 @@ xlsx metadata row; it is now recovered and parameterised in `src/gdelt_query.py`
 The console export has a metadata row above the header (it carries the "Custom
 query: ..." string and the export timestamp), so the real header is row 2.
 
+The BigQuery console caps a result-pane export at 500 rows, silently. The 2024
+pull (366 rows) was under it; a multi-year pull is not. Split the query by year
+and pass every export -- they are concatenated, sorted and checked for overlap.
+
 Run:
     python -m src.gdelt_ingest --xlsx "raw/UNNEST EPU_ECO one-year.xlsx" \
                                --out processed/gdelt_2024_clean.csv
+    python -m src.gdelt_ingest --xlsx "raw/narrow 2025.xlsx" "raw/narrow 2026.xlsx" \
+                               --out processed/gdelt_2025_2026_narrow.csv --expect-rows 595
 Optional:
     --expect-rows 366     fail loud if the row count differs
 """
@@ -52,21 +58,29 @@ def query_text(path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--xlsx", required=True, help="path to the BigQuery console export")
+    ap.add_argument("--xlsx", required=True, nargs="+",
+                    help="one or more BigQuery console exports (concatenated in day order)")
     ap.add_argument("--out", required=True, help="output CSV path (repo-relative)")
     ap.add_argument("--expect-rows", type=int, default=None)
     ap.add_argument("--show-query", action="store_true",
                     help="print the query recovered from the export metadata")
     args = ap.parse_args()
 
-    src = REPO / args.xlsx if not str(args.xlsx).startswith("/") else args.xlsx
-    df = read_export(src)
-
-    if args.show_query:
-        q = query_text(src)
-        print("-" * 70)
-        print(q.replace("\\n", "\n") if q else "(no query string found in metadata row)")
-        print("-" * 70)
+    parts = []
+    for x in args.xlsx:
+        src = REPO / x if not str(x).startswith("/") else x
+        part = read_export(src)
+        print(f"  {x}: {len(part)} rows  {part['day'].min()} -> {part['day'].max()}")
+        if len(part) == 500:
+            print("    WARNING: exactly 500 rows -- the BigQuery console export cap. "
+                  "This chunk is probably TRUNCATED.")
+        if args.show_query:
+            q = query_text(src)
+            print("-" * 70)
+            print(q.replace("\\n", "\n") if q else "(no query string in metadata row)")
+            print("-" * 70)
+        parts.append(part)
+    df = pd.concat(parts, ignore_index=True).sort_values("day").reset_index(drop=True)
 
     dup = int(df["day"].duplicated().sum())
     if dup:
