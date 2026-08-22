@@ -896,3 +896,30 @@ adding a tunable knob after observing Sharpe 0.25 is exactly how backtests get
 flattered. Disciplined version, post-submission: pre-register lambda on
 economic grounds (a stated half-life, not a searched one), declare a
 sensitivity ladder, report every rung.
+
+## EVENT SOURCE REGISTRY (created 2026-08-23)
+
+Recorded because no single place listed what still needs testing. `--trigger file`
+in episode_rotation and the spillover/PEAD harnesses take any date list, so each
+row below is a CSV away from being runnable.
+
+| # | event class | status | source | cost |
+|---|---|---|---|---|
+| 1 | Macro narrative-stress density (GDELT) | TESTED — null, prereg 8273be4 | BigQuery GDELT, 944d | done |
+| 2 | Firm earnings — own-firm drift (PEAD) | TESTED — criterion not met; H=1 confined to TSLA/NVDA/MSFT | yfinance | done |
+| 3 | Firm earnings — cross-firm spillover | REGISTERED, unrun | yfinance + adjusted OHLC | done |
+| 4 | FOMC decisions (2pm day-2 statement) | UNTESTED | federalreserve.gov calendars | ~1h transcription |
+| 5 | FOMC minutes (3 weeks after decision) | UNTESTED | same | ~1h |
+| 6 | SEC 8-K filings (Item 2.02 etc.) | UNTESTED — the clean firm-level source (thread 11) | EDGAR full-text API | ~half day |
+| 7 | CEO fireside chats / conference appearances | UNTESTED — no structured source | transcript scraping | weeks |
+| 8 | Institutional research reports | UNTESTED — no free structured source | — | weeks, may be infeasible |
+| 9 | Senate/Congressional announcements, policy events | UNTESTED — no date list | Congress.gov / Federal Register | ~half day |
+| 10 | Central bank materials beyond FOMC | UNTESTED — intended as the Problem 3 RAG corpus (2026-08-18 session) | central bank sites | tied to Problem 3 |
+| 11 | Guidance revisions, product launches, analyst days | UNTESTED, never previously recorded | — | unscoped |
+
+**Structural limitation applying to rows 4-11 under the current entry convention:**
+drift is measured from t+2, so the announcement session and the following session
+are DISCARDED. For a 2pm FOMC statement that removes the entire announcement
+response and the pre-FOMC drift anomaly (Lucca & Moench). Any null on these
+sources is a null about POST-announcement drift only. The spillover harness
+(row 3) is the first to decompose GAP vs INTRA and can see inside that window.
