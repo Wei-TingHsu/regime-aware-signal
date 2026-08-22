@@ -87,7 +87,7 @@ def fetch_earnings(tickers, verbose=True):
     out = {}
     for t in tickers:
         try:
-            df = yf.Ticker(t).get_earnings_dates(limit=200)
+            df = yf.Ticker(t).get_earnings_dates(limit=100)
             if df is None or len(df) == 0:
                 if verbose:
                     print(f"    {t:6} no earnings dates returned")
