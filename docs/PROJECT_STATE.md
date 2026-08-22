@@ -1,7 +1,7 @@
 # PROJECT STATE — briefing document
 
 *Upload this file (or the `briefing.md` bundle) at the start of a new conversation to
-resume without re-explaining. Last updated: 2026-08-21 (afternoon SGT). Keep it updated
+resume without re-explaining. Last updated: 2026-08-23 (00:15 SGT). Keep it updated
 after each workstream closes.*
 
 > ## STATUS
@@ -10,8 +10,13 @@ after each workstream closes.*
 > (model_1 matures ~08-26), so the live test contributes its *design and timestamps* to
 > the report, not numbers — which is the correct contribution at this stage.
 >
-> **Problem 2 is CLOSED as a null**, now under three separate tests rather than one
-> (existence p=0.8371, 0/10 pairs after Holm, agreement p=0.2659). Look-ahead removed.
+> **ROTATION IS CLOSED AT EVERY LEVEL REACHABLE WITH THIS DATA (2026-08-22).**
+> Seven hypotheses, four instruments, all null: the semiconductor chain
+> (unconditional, shock-conditional, news-conditional), cross-asset
+> flight-to-quality, sector business-cycle, environment-conditional order, and a
+> universe-wide 561-pair scan. The two pairs that survived discovery failed a
+> temporal split and a transaction-cost test. **No tradeable rotation signal
+> exists in this universe.**
 > Stage 1 drift-existence is **PRE-REGISTERED (8273be4, 2026-08-21 13:18:53 +0800) and
 > UNRUN** — deliberately, so the registration stays valid for a deeper panel.
 >
@@ -86,11 +91,13 @@ sequence and timing **within** episodes.
    re-scoped to a *macro narrative-density* test because the 944-day panel has no
    per-asset event density. Held until the GDELT extension supplies adequate power, so the
    registration stays valid for the deeper panel.
-3. **Rotation chain — CLOSED as an unconditional null (2026-08-21).** The test now asks
-   the right question (existence, not thesis-match), has no look-ahead, and returns null
-   on all three arms. The engine remains structurally unable to detect an *episode-local*
-   chain, so the null is scoped to the unconditional estimand and says nothing about the
-   conditional one.
+3. **Rotation — CLOSED AT EVERY LEVEL (2026-08-21/22).** The unconditional null was
+   extended by an episode-conditional engine (`src/episode_rotation.py`), two new
+   pre-registered hypotheses on different asset classes, an environment-conditional
+   test, and a universe-wide scan. All null. The scoping caveat that previously
+   protected the hypothesis — "this instrument cannot see episode-local chains" — has
+   itself been tested and removed: the instrument was built, verified to recover a
+   planted lead at d=+0.50 on the real panel, and still found nothing.
 
 The system thesis is error cancellation across engines with different data, horizons and
 failure modes. **That correlation has never been measured**, so "each engine is modest"
@@ -257,6 +264,150 @@ All three defects listed in the previous version of this section are now fixed;
 | **Pairwise** | 10 directed pairs, Holm-corrected | **0/10 significant** | no single pair survives |
 | **Thesis-match** | Spearman −0.100 | **0.5947** | discovered order ≠ thesis |
 | **Sub-period stability** | agreement −0.217 | **0.2659** | indistinguishable from reshuffling |
+
+### Problem 2 Stage 2 — the conditional merge, BUILT and NULL (2026-08-21/22)
+
+`src/episode_rotation.py` implements the conditional merge decided 2026-08-19: an event
+detector segments time into **episodes**, chain logic runs **inside** them. The event
+names the WHEN and the SET; price statistics determine the sequence. Detector-agnostic —
+`--trigger file --dates <csv>` is the slot FOMC decisions, FOMC minutes, chain earnings
+and SEC 8-K plug into with **no engine changes**.
+
+**Design:** episode = eplen sessions AFTER the trigger (trigger day excluded — the gap is
+conceded, and including the day that defines a shock trigger would be circular);
+de-clustering gap = eplen so episodes never overlap; betas fit on the trailing 250
+sessions ending the day before the trigger and frozen through the episode. Statistic [1]
+pooled within-episode lead-lag at short lags (a 15-day episode cannot support K=10 — this
+is the multi-scale fix); statistic [2] **order concentration**, mean pairwise Kendall τ-b
+of per-episode half-max response orders — the *distribution of orders* the old engine
+could not compute. Null for both: independent per-name episode shuffle.
+
+**Detection capability demonstrated, not assumed.** `--inject` plants a known lead in the
+REAL episodes. On the semiconductor basket a strength-0.3 lead moved NVDA→TSM from
+d=−0.006 (p=0.997) to **d=+0.502 (p=0.0005, Holm 0.005)**. Every null below comes from an
+instrument proven to recover planted structure on this data.
+
+| arm | trigger | episodes | [2] τ | p |
+|---|---|---|---|---|
+| **Shock** (powered) | \|z\|≥2 eq-weight chain | 203 / 243 / 171 | +0.004 / +0.001 / −0.002 | 0.229 / 0.886 / 0.267 |
+| **Stress** (GDELT merge) | narrow share z≥1.5 | 26 | −0.015 | 0.969 |
+
+eplen ladder {10, 15, 20}, all rungs reported. **The GDELT→episode plumbing ran end to
+end** (65 triggers → 26 episodes, inside the 25–35 preregistered range) — the merge
+architecture works; there is nothing for it to find.
+
+### Cross-asset and sector rotation — PRE-REGISTERED, both NULL (2026-08-22)
+
+Registered `b4a942a` **before execution**. Two hypotheses with independent mechanisms, not
+retries of the closed chain. Injection audits passed on both baskets first (TLT→SPY
+d=+0.269 p=0.0005; SOXX→XLE d=+0.369 p=0.0005).
+
+| hypothesis | registered order | design | [2] τ / p at ep 10/15/20 |
+|---|---|---|---|
+| **Cross-asset** | TLT→UUP→GLD→SPY→USO | no residualization (the raw flow IS the signal); **risk-off only** (flight-to-quality is directional) | +0.005/0.311 · −0.003/0.124 · +0.005/0.259 |
+| **Sector** | SOXX→XAR→XLE→XLV→XLP | SPY-factor residual (sectors share market beta); bidirectional (capex lead is symmetric) | +0.001/0.595 · −0.005/0.841 · −0.005/0.559 |
+
+Each trigger justified by **its own mechanism**, not by consistency across hypotheses.
+Neither clears the registered criterion at any rung. Sector prereg recorded the base rate
+against it up front (Molchanov & Stangl, 2,640 t-statistics, scant evidence; Jacobsen et
+al., ~2.3%/yr with perfect foresight) — **a null replicates published findings.**
+
+Panel limit recorded honestly: **no financials, industrials, discretionary, utilities or
+materials ETFs exist in the universe**, so a full business-cycle rotation test is not
+constructible on this data.
+
+### The two surviving pairs — BOTH FAILED confirmation (2026-08-22)
+
+Statistic [1] produced two pairs stable in sign and magnitude across the eplen ladder.
+`src/pair_confirm.py` tested them on the two questions discovery cannot answer. **Both
+failed**, for different reasons.
+
+| pair | full sample | first half | second half | verdict |
+|---|---|---|---|---|
+| **SPY→GLD** k=1 | d=+0.170, p=0.001 | 2007–2017: **+0.294**, p=0.0005 | 2017–2026: **+0.053**, p=0.357 | magnitude collapses **5.6×**; crisis-specific |
+| **SOXX→XAR** k=3 | d=+0.152, p=0.001 | 2012–2019: **−0.035**, p=0.578 | 2019–2026: **+0.228**, p=0.001 | **sign FLIPS**; entirely one period |
+
+**Economic test** (sign of leader → hold follower, block bootstrap by episode, 4bps
+round-trip):
+
+- SPY→GLD: +9.32 bps/trade, **95% CI +0.11 … +19.66**, net +5.32 — the CI lower bound
+  does not clear costs, and the estimate is inflated by the dead first half.
+- SOXX→XAR: +3.69 bps, CI −2.48 … +10.33, **net −0.31 bps**, hit rate 49.2%. Not tradeable.
+
+**Read the SPY→GLD sign.** Positive d on a risk-off trigger means equities fall and gold
+follows *the next day, in the same direction*. That is **not** flight-to-quality — it is
+liquidation (the "dash for cash" mechanism), the rival hypothesis that was NOT registered.
+A pre-registered hypothesis producing evidence for its rival is a stronger result than
+confirmation would have been.
+
+**The methodological lesson, worth more than the pairs.** Ladder consistency across
+eplen {10,15,20} looked like robustness. It was not: the rungs draw 108/97/77 episodes
+from the *same* 225 triggers, so they re-measure one sample three times. **Overlapping-
+sample robustness checks can pass while an effect is entirely period-specific. A temporal
+split catches what a parameter ladder cannot.**
+
+### Environment-conditional order — NULL (2026-08-22)
+
+Hypothesis: sequences are not universal but **environment-specific** — bonds lead in one
+macro regime, equities in another — so pooling across regimes dilutes real order to ~0.
+This is the one test the project is uniquely equipped to run, because it has a regime
+classifier.
+
+Designed as **ONE test, not twelve**: testing each regime separately and reporting the
+significant one is a fishing licence. The hypothesis predicts that grouping episodes by
+regime raises **within-group** order agreement above **pooled** agreement. Null shuffles
+regime labels across episodes, preserving group sizes and every episode path.
+
+Regimes are **canonically ordered** calm→stressed by the stress axis (PC3, |corr| VIX
+0.96), so labels are comparable by construction.
+
+| basket | pooled τ | within-regime τ | lift | p |
+|---|---|---|---|---|
+| Cross-asset | −0.0034 | −0.0093 | **−0.0059** | 0.688 |
+| Sector | −0.0052 | −0.0015 | **+0.0037** | 0.272 |
+
+Cross-asset conditioning made agreement **worse** than pooling. **The pooled nulls were
+not a dilution artifact.** Verified on synthetic data first: four planted per-regime
+orders give a lift of +0.977 (p=0.002); order independent of regime gives +0.005.
+
+**One positive, and it is narrow.** Cross-asset first-mover concentration: **TLT first in
+28.4%** of episodes against 20% uniform, **p=0.032** — the significance test first-mover
+counts never had. Sector was null (p=0.744), so it is not a generic property of the
+statistic. But: (a) a first mover is **not a sequence** — knowing bonds move first says
+nothing about the order of what follows, and [2] says what follows does not repeat;
+(b) across two baskets × two statistics that is four tests, and one at p=0.032 is roughly
+what chance produces. **Requires confirmation before it is a finding.**
+
+### Universe-wide scan — the answer to "did we only test what we imagined"
+
+`src/universe_scan.py`. Pre-registration is lossy: it can only test what someone thought
+to write down. Testing every 5-asset basket is arithmetically hopeless — C(47,5) =
+1,533,939, of which ~77,000 would look significant on pure noise. The honest construction
+changes the unit to **ordered pairs** and corrects for the search itself: compute every
+pair at every lag, take the **maximum** |d|, and build the null distribution *of that
+maximum* by independent circular rotation (White reality check / Westfall-Young).
+
+Window 2015-07-08 → 2026-07-17, 2,772 sessions, 35 of 47 assets with ≥2,500 sessions.
+
+| variant | pairs | naive p<0.05 | expected by chance | universe-corrected |
+|---|---|---|---|---|
+| SPY-residualized | 561 | **148** | ~28 | **0** |
+| raw | 595 | **154** | ~30 | **0** |
+
+**The informative number is 148 vs 28.** Real dependence exists in the universe, and
+roughly 120 apparent findings are manufactured by the search. That is the empirical
+demonstration, on this data, of why exhaustive search without correction is worthless.
+
+**HONEST CAVEAT — the corrected test is underpowered and its null is inflated.** Observed
+maximum |d| = 0.157 against a null maximum averaging 0.232 and a 95th percentile of
+**0.628** (0.893 unresidualized). For Gaussian series of this length the null maximum
+should be ≈0.11. Diagnosed: **MLPA (18.8σ) and AMLP (17.4σ)** have extreme single-day
+moves and appear in 7 of the top 20 pairs — they drive both the observed maximum and the
+null's tail. A normal-scores transform was attempted and **did not demonstrably fix it**
+on fat-tailed synthetic data, so it is not claimed as a fix. **"0 survive" is therefore
+conservative but weak**: the test likely could not have detected a real effect either.
+Remedy (winsorize or exclude the offending assets) is post-submission. The 148-vs-28
+contrast is unaffected by this defect.
 
 Full-sample discovered order **ASML→TSM→MU→INTC→NVDA**, net_lead spanning +0.0082 to
 −0.0069. Adjacent names are separated by as little as **0.0007** (MU −0.0033 vs INTC
@@ -623,6 +774,16 @@ partial-bar signal · **Problem 2 unconditional null closed under three tests** 
 **08-19/08-20 regime flip diagnosed as label permutation** · **curve-identity audit:
 staleness bounded to 2 live-edge rows, no result exposed**
 
+### Closed 2026-08-22
+**Problem 2 Stage 2 conditional merge BUILT and null** (shock + GDELT arms, injection
+audit passed) · **cross-asset rotation pre-registered and null** · **sector rotation
+pre-registered and null** · **both surviving pairs failed temporal split and cost test**
+· **environment-conditional order null** · **universe-wide 561-pair scan, 0 survive
+correction** · three silent-failure bugs fixed: O(E²) Kendall loop (~1hr → ~1s at E=203,
+verified against scipy to 1e-12), **YYYYMMDD integers parsed as nanoseconds since epoch**
+(every GDELT date became 1970, zero triggers, no error raised), reading rule firing
+"structure detected" on a single Holm hit within one ladder rung
+
 ---
 
 ## Working principles
@@ -637,6 +798,26 @@ staleness bounded to 2 live-edge rows, no result exposed**
   on data it was not discovered in before it counts. Do not relabel the question to match
   whichever arm succeeded.
 - Permutation tests over raw p-values; check robustness across specifications.
+- **A robustness ladder built on OVERLAPPING samples is not robustness.** eplen
+  {10,15,20} drew 108/97/77 episodes from the same 225 triggers and re-measured one
+  sample three times; both pairs that passed it failed a temporal split. **Split by time,
+  not just by parameter.**
+- **Demonstrate detection capability before reporting a null.** `--inject` plants a known
+  lead in the real episodes; a null from an instrument that cannot recover it is
+  meaningless. Synthetic verification is not sufficient — it must run on the actual data,
+  and the synthetic must match the data's distribution (Gaussian verification missed the
+  fat-tail problem in the universe scan entirely).
+- **When a hypothesis has a natural rival, register which one you believe.** SPY→GLD came
+  back with the sign of the *unregistered* rival (liquidation, not flight-to-quality).
+  Evidence for a rival mechanism is stronger than confirmation of your own.
+- **Test the conditioning hypothesis as ONE statistic, not per-group.** "Does grouping by
+  regime raise agreement above shuffled labels" is one test; "is regime k significant" ×
+  4 regimes is a fishing licence.
+- **When the search space is large, permute the search, not the candidate.** A
+  maximum-statistic null over the whole matrix accounts for having looked at all of it,
+  and is far less conservative than Bonferroni because the candidates are correlated.
+- **A statistically detectable effect that does not clear the spread is not a product.**
+  Measure bps against a cost assumption with a block bootstrap, not correlation alone.
 - Judge signals by **risk-adjusted return**, never hit-rate alone.
 - Few, principled hypotheses beat large grids — and a grid's winner is labelled a
   cherry-pick and forward-tested.
