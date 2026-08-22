@@ -877,3 +877,22 @@ verified against scipy to 1e-12), **YYYYMMDD integers parsed as nanoseconds sinc
 - **Committed is not the same as written**; gitignore rules apply to files you assume are
   safe. Verify with `git ls-files`, not `ls`.
 - The **repo is the source of truth**, not model memory.
+
+## GAP FOUND 2026-08-23 — the recency kernel was designed and never built
+
+The 2026-08-18 design session LOCKED a two-axis weighting:
+w_t = exp(-lambda*(T-t)) * exp(-||z_t - z_now||^2 / 2 sigma^2), described as
+"similarity-dominant (tight sigma so only true analogs get weight; gentle
+recency decay breaks ties among them) -- an explicit, documented choice."
+
+`analog_core._kw()` implements ONLY the similarity kernel. There is no lambda
+and no time term anywhere in the codebase; a 2008 analog and a 2024 analog at
+equal macro distance receive equal weight. Not in config.yaml, not in
+models.yaml, not in any open thread. It fell through the gap between design
+and build and went unnoticed for five days.
+
+NOT to be implemented under deadline. lambda is a free hyperparameter, and
+adding a tunable knob after observing Sharpe 0.25 is exactly how backtests get
+flattered. Disciplined version, post-submission: pre-register lambda on
+economic grounds (a stated half-life, not a searched one), declare a
+sensitivity ladder, report every rung.
