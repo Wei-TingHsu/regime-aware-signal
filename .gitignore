@@ -25,3 +25,8 @@ outputs/
 .vscode/
 .idea/
 .Rhistory
+
+# never commit credentials
+.env
+*.key
+**/secrets*
