@@ -923,3 +923,36 @@ are DISCARDED. For a 2pm FOMC statement that removes the entire announcement
 response and the pre-FOMC drift anomaly (Lucca & Moench). Any null on these
 sources is a null about POST-announcement drift only. The spillover harness
 (row 3) is the first to decompose GAP vs INTRA and can see inside that window.
+
+## DECISIONS DEFERRED — revisit before any product launch (recorded 2026-08-23)
+
+**1. Manual-collection sources cannot scale to a daily automated product.**
+`transcript` (CEO fireside chats, conference appearances) and `bank_research`
+(published summaries of investment-bank views) have NO free structured feed.
+Manual collection is fine for building the HISTORICAL corpus that step 3 needs,
+and that corpus is genuinely necessary. But a live daily product cannot depend
+on a human saving files. Three options, none chosen:
+  (a) buy a data vendor feed (transcript providers, news APIs) -- a purchasing
+      decision, not an engineering one;
+  (b) accept a declared coverage gap and state it to the customer;
+  (c) drop those two sources from the live product and keep them for research.
+DECIDE BEFORE LAUNCH, not before submission.
+
+**2. The political source is biased toward DECIDED policy.**
+Federal Register presidential documents (executive orders, proclamations,
+memoranda) are free, full-text and backtestable to 1994 -- and they are all
+high-`specificity` by construction. Statements, posts and rhetoric -- the
+low-specificity end, which is precisely where a market-moving threat-to-act
+lives -- are NOT covered. The X API is ~$200/mo and its HISTORICAL archive is
+the expensive part; without history a source can never enter step 3, which
+conditions on macro-similar precedent. Truth Social has no public API at all.
+CONSEQUENCE: an absence of low-specificity political events in any result is a
+COVERAGE GAP, not evidence that rhetoric does not move markets.
+
+**3. Foreign private issuers file 6-K, not 8-K.**
+TSM (Taiwan) and ASML (Netherlands) returned zero 8-Ks -- correctly, since the
+form does not apply to them. 6-K carries no item codes, so the Item 2.02 filter
+that isolates earnings releases for domestic filers has no equivalent. Foreign
+issuers therefore arrive with LOWER PRECISION than domestic ones, and any
+cross-firm comparison must account for that asymmetry rather than treating the
+two document sets as equivalent.

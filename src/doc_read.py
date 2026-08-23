@@ -1,0 +1,277 @@
+"""
+doc_read.py -- PROBLEM 3, STEP 2 GENERALISED: read ANY information source into
+ONE comparable schema.
+
+WHY ONE SCHEMA MATTERS MORE THAN ANY SINGLE SOURCE
+    Step 5 of the design is "weigh which force dominates when several land the
+    same day". That is impossible unless every source is measured on the SAME
+    scale. A hawkish FOMC statement and an NVDA earnings beat and a Trump tariff
+    post have to produce commensurable numbers or there is nothing to weigh.
+
+    So: source-specific PROMPTS, one common OUTPUT.
+
+INGESTION IS A DROP FOLDER, NOT A SCRAPER
+    Sources differ enormously in how they are obtained -- Fed pages parse
+    cleanly, EDGAR has an API, conference transcripts are downloaded by hand,
+    media summaries are copy-pasted. Rather than a scraper per source, every
+    source lands as dated text in:
+
+        data_provenance/docs/<source_type>/<YYYYMMDD>[_<id>].txt
+
+    Anything in that layout is readable, whether a script fetched it or a human
+    saved it. Manual collection builds HISTORY; automation handles LIVE.
+
+THE LIVE-VS-BACKTEST ASYMMETRY, recorded because it decides what is usable
+    A source collectable only going forward can NEVER enter step 3, which asks
+    "what did this kind of news do in macro-similar history". No history, no
+    conditioning. Such a source can enter the live system only as an
+    unvalidated input, and must be labelled that way in any output shown to a
+    customer.
+
+COMMON SCHEMA (every source, every document)
+    direction     dict, -1..+1 per asset class: equity, duration, gold, dollar,
+                  oil. Sign = which way this news pushes that asset.
+    magnitude     0..1, how big a move this warrants relative to typical news
+                  of its type. NOT a return forecast.
+    horizon_days  over how many sessions the effect would plausibly play out.
+    specificity   0..1. Concrete, verifiable, immediately actionable (a rate
+                  decision, a reported EPS) = high. Vague intention, aspiration
+                  or rhetoric = low. This is what separates a signed executive
+                  order from a social-media threat, and it is the field that
+                  makes political sources usable at all.
+    novelty       0..1, how much is NOT already expected/priced by the time of
+                  release, judged from the text alone.
+    confidence    0..1, the model's confidence in its own read.
+    evidence      up to 3 verbatim quotes under 15 words each.
+
+    Source-specific extras (stance for Fed, surprise_direction for earnings,
+    etc.) are kept alongside but are NOT used for cross-source weighing.
+
+THE MODEL NEVER PREDICTS RETURNS
+    It reads content and classifies it. What a given direction/magnitude
+    actually DID is answered by the data in step 3, conditioned on the macro
+    state -- not by the model's recollection of history. This is also the main
+    defence against outcome leakage on documents the model has seen before.
+
+Run:
+    python -m src.doc_read --source fomc_statement
+    python -m src.doc_read --all
+    python -m src.doc_read --list                     # what is in the drop folder
+"""
+import argparse
+import json
+import os
+import re
+import time
+from pathlib import Path
+
+import pandas as pd
+
+DOCS = Path("data_provenance/docs")
+READS = Path("data_provenance/doc_reads")
+PROMPT_VERSION = "v1-2026-08-23"
+
+COMMON = """Return STRICT JSON, no preamble, no markdown fences, exactly:
+{"direction": {"equity": float, "duration": float, "gold": float,
+               "dollar": float, "oil": float},
+ "magnitude": float, "horizon_days": int, "specificity": float,
+ "novelty": float, "confidence": float, "evidence": [string], "extra": {}}
+
+direction    -1..+1 per asset class. Sign only: which way does this news PUSH
+             that asset. "duration" means long-dated government bonds (price,
+             so falling yields = positive). 0.0 if the news says nothing about it.
+magnitude    0..1, size relative to TYPICAL news of this same type. A routine
+             release is ~0.2; a genuine regime break is ~0.9. NOT a return.
+horizon_days over how many trading sessions would this plausibly play out.
+specificity  0..1. Concrete, verifiable, already decided = high. Aspiration,
+             intention, rhetoric or threat = low.
+novelty      0..1. How much of this was NOT already expected before release,
+             judged from the text alone.
+confidence   0..1, your confidence in this read.
+evidence     up to 3 verbatim quotes from the document, each under 15 words.
+extra        source-specific fields as instructed below; {} if none.
+
+You are NOT forecasting markets. Do not reason about what any asset actually
+did. Do not use recollection of subsequent events. Judge only this text."""
+
+PROFILES = {
+    "fomc_statement": ("You classify the policy stance of a Federal Reserve FOMC "
+                       "statement.",
+                       '"extra": {"stance": -1..+1 hawkish positive, '
+                       '"guidance": -1..+1}'),
+    "fomc_minutes": ("You classify FOMC meeting minutes. Minutes reveal the "
+                     "DISPERSION of views and the conditions attached to future "
+                     "action; weigh those over the headline decision, which was "
+                     "already public three weeks earlier.",
+                     '"extra": {"stance": -1..+1, "dispersion": 0..1}'),
+    "earnings_8k": ("You classify a company earnings release (SEC 8-K Item 2.02 "
+                    "or equivalent). Weigh GUIDANCE over reported results: the "
+                    "quarter is history, the outlook is not.",
+                    '"extra": {"surprise": -1..+1, "guidance_change": -1..+1, '
+                    '"ticker": string}'),
+    "political": ("You classify a political or policy communication (executive "
+                  "statement, social post, official remarks). CRITICAL: separate "
+                  "what has been DECIDED from what has been merely SAID. A signed "
+                  "order and a threat to act are not the same event; the "
+                  "difference belongs in `specificity`, and a low-specificity "
+                  "item should carry low magnitude even if the language is "
+                  "forceful.",
+                  '"extra": {"actor": string, "is_decided": true/false, '
+                  '"sectors": [string]}'),
+    "bank_research": ("You classify a published summary of investment-bank "
+                      "research or a strategist view. This is opinion, not fact: "
+                      "keep `novelty` low unless it contains information not "
+                      "already public.",
+                      '"extra": {"institution": string, "conviction": 0..1}'),
+    "transcript": ("You classify an executive appearance -- fireside chat, "
+                   "conference, interview. Weigh forward-looking commitments and "
+                   "changes in tone over restated known facts.",
+                   '"extra": {"speaker": string, "company": string}'),
+}
+
+
+def parse_name(p):
+    m = re.match(r"(\d{8})(?:_(.+))?$", p.stem)
+    if not m:
+        return None, None
+    return pd.to_datetime(m.group(1), format="%Y%m%d"), (m.group(2) or "")
+
+
+def call(client, model, profile, text, prev=None):
+    role, extra = PROFILES[profile]
+    system = f"{role}\n\n{COMMON}\n\nFor this source type, extra must be:\n{extra}"
+    body = f"DOCUMENT:\n{text}"
+    if prev:
+        body = f"PREVIOUS DOCUMENT OF THE SAME TYPE:\n{prev}\n\n{body}"
+    r = client.messages.create(model=model, max_tokens=1400, system=system,
+                               messages=[{"role": "user", "content": body}])
+    t = "".join(b.text for b in r.content if b.type == "text").strip()
+    t = re.sub(r"^```(?:json)?|```$", "", t, flags=re.M).strip()
+    return json.loads(t), r.usage.input_tokens, r.usage.output_tokens
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--source", choices=sorted(PROFILES))
+    ap.add_argument("--all", action="store_true")
+    ap.add_argument("--list", action="store_true")
+    ap.add_argument("--model", default="claude-sonnet-5")
+    ap.add_argument("--limit", type=int)
+    ap.add_argument("--max-words", type=int, default=6000)
+    ap.add_argument("--with-prev", action="store_true",
+                    help="pass the previous document of the same type as "
+                         "context (deltas matter for Fed statements)")
+    ap.add_argument("--sleep", type=float, default=0.3)
+    ap.add_argument("--out", default="processed/doc_reads.csv")
+    args = ap.parse_args()
+
+    DOCS.mkdir(parents=True, exist_ok=True)
+    if args.list or not (args.source or args.all):
+        print(f"drop folder: {DOCS}/<source_type>/<YYYYMMDD>[_<id>].txt\n")
+        print("recognised source types:")
+        for k, (role, _) in PROFILES.items():
+            d = DOCS / k
+            n = len(list(d.glob("*.txt"))) if d.exists() else 0
+            print(f"  {k:16} {n:5d} docs   {role.split('.')[0][:52]}")
+        print("\nAnything dropped into that layout is readable -- fetched by a "
+              "script or saved by hand.")
+        if not (args.source or args.all):
+            return
+
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        raise SystemExit("set ANTHROPIC_API_KEY")
+    from anthropic import Anthropic
+    client = Anthropic()
+    READS.mkdir(parents=True, exist_ok=True)
+
+    sources = sorted(PROFILES) if args.all else [args.source]
+    rows, tin, tout, failed = [], 0, 0, 0
+    for src in sources:
+        d = DOCS / src
+        if not d.exists():
+            continue
+        files = sorted(d.glob("*.txt"))
+        pairs = [(f, *parse_name(f)) for f in files]
+        pairs = [(f, dt, i) for f, dt, i in pairs if dt is not None]
+        bad = len(files) - len(pairs)
+        if bad:
+            print(f"  {src}: {bad} file(s) skipped -- name must be "
+                  f"YYYYMMDD[_id].txt")
+        pairs.sort(key=lambda x: x[1])
+        texts = [f.read_text() for f, _, _ in pairs]
+        long_ = [i for i, t in enumerate(texts)
+                 if len(t.split()) > args.max_words]
+        if long_:
+            print(f"  {src}: {len(long_)} doc(s) over {args.max_words} words, "
+                  f"skipped -- split or trim them")
+        use = [i for i in range(len(pairs)) if i not in long_]
+        if args.limit:
+            use = use[:args.limit]
+        if not use:
+            continue
+        print(f"\n{src}: reading {len(use)} of {len(pairs)} docs")
+        for k, i in enumerate(use):
+            f, dt, did = pairs[i]
+            out_f = READS / f"{src}__{f.stem}__{PROMPT_VERSION}.json"
+            if out_f.exists():
+                rows.append(json.loads(out_f.read_text()))
+                continue
+            prev = texts[i - 1] if (args.with_prev and i > 0) else None
+            try:
+                data, a, b = call(client, args.model, src, texts[i], prev)
+                tin += a; tout += b
+            except Exception as e:
+                print(f"    {f.stem}  FAILED: {type(e).__name__}: {e}")
+                failed += 1
+                continue
+            data.update(source=src, date=dt.strftime("%Y-%m-%d"), doc_id=did,
+                        prompt_version=PROMPT_VERSION, model=args.model)
+            out_f.write_text(json.dumps(data, indent=2))
+            rows.append(data)
+            if (k + 1) % 20 == 0:
+                print(f"    {k+1}/{len(use)} ...")
+            time.sleep(args.sleep)
+
+    if not rows:
+        print("\nnothing read")
+        return
+    flat = []
+    for r in rows:
+        d = r.get("direction", {}) or {}
+        # NOTE: column names are prefixed dir_* deliberately. A column called
+        # "eq" collides with pandas' DataFrame.eq() method, so g.eq returns the
+        # bound method rather than the column -- an AttributeError at best and
+        # silently wrong at worst.
+        flat.append(dict(date=r.get("date"), source=r.get("source"),
+                         doc_id=r.get("doc_id", ""),
+                         dir_eq=d.get("equity"), dir_dur=d.get("duration"),
+                         dir_gold=d.get("gold"), dir_usd=d.get("dollar"),
+                         dir_oil=d.get("oil"),
+                         magnitude=r.get("magnitude"),
+                         horizon_days=r.get("horizon_days"),
+                         specificity=r.get("specificity"),
+                         novelty=r.get("novelty"),
+                         confidence=r.get("confidence")))
+    df = pd.DataFrame(flat).sort_values(["date", "source"])
+    out = Path(args.out); out.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(out, index=False)
+
+    print(f"\nread {len(df)} docs, {failed} failed | "
+          f"tokens {tin:,} in / {tout:,} out")
+    print("\nby source:")
+    for s, g in df.groupby("source"):
+        print(f"  {s:16} n={len(g):4d}  |dir| mean "
+              f"eq {g['dir_eq'].abs().mean():.2f} "
+              f"dur {g['dir_dur'].abs().mean():.2f} "
+              f"gold {g['dir_gold'].abs().mean():.2f} | specificity "
+              f"{g['specificity'].mean():.2f} | "
+              f"novelty {g['novelty'].mean():.2f}")
+    print(f"\n-> {out}   full reads in {READS}/")
+    print("\nCHECK BEFORE USE: specificity should SEPARATE sources -- decided")
+    print("policy and reported earnings high, rhetoric and opinion low. If every")
+    print("source scores alike, the field is not discriminating and step 5 has")
+    print("nothing to weigh with.")
+
+
+if __name__ == "__main__":
+    main()
