@@ -45,9 +45,21 @@ REGISTERED PARAMETERS
                 is ALSO reported separately as a control: if the announcer's own
                 INTRA is null while peers' is not, that is incoherent and the
                 result should be distrusted.
-    Surprise    sign of the announcer's market-adjusted close-to-close return
-                over the news session N. Return-based proxy; analyst SUE is not
-                used (patchy coverage, second specification).
+    Surprise    TWO signals, because information timing matters:
+                  SIG_GAP  = sign of the announcer's market-adjusted OVERNIGHT
+                             gap into N. Known AT THE OPEN of N. This is the
+                             only announcer information a trader entering at
+                             the bell actually has.
+                  SIG_FULL = sign of the announcer's market-adjusted
+                             close-to-close return on N. Known only at the
+                             CLOSE of N.
+                INTRA is reported under BOTH. INTRA/SIG_FULL uses session N's
+                close to "predict" session N's open-to-close -- that is
+                LOOK-AHEAD and is reported ONLY to show how much of the effect
+                is an artifact of it. INTRA/SIG_GAP is the tradeable version.
+                (v1 of this file used SIG_FULL for everything; that bug was
+                caught on the first run and is preserved here as a labelled
+                comparison rather than silently removed.)
     Estimand    mean( sign(announcer surprise) x peer X ) for X in
                 {GAP, INTRA, NEXT}. Registered prediction: POSITIVE for GAP
                 (news propagates); the OPEN question is INTRA.
@@ -194,7 +206,15 @@ def main():
         if surprise == 0:
             continue
 
-        rec = dict(date=sess[N], sign=np.sign(surprise), surprise=surprise)
+        g_a, _, _ = components(ohlc[A], N)
+        g_m, _, _ = components(mkt, N)
+        if np.isnan(g_a) or np.isnan(g_m):
+            continue
+        sig_gap = np.sign(g_a - g_m)
+        if sig_gap == 0:
+            continue
+        rec = dict(date=sess[N], sign=np.sign(surprise), sign_gap=sig_gap,
+                   surprise=surprise)
         for p in peers + [A]:
             if p not in ohlc:
                 continue
@@ -217,22 +237,30 @@ def main():
     say(f"mean |{A} surprise| = {df['surprise'].abs().mean()*100:.2f}%")
     sgn = df["sign"].to_numpy()
 
+    sgap = df["sign_gap"].to_numpy()
+    say("\n  signal used per component:")
+    say("    GAP        <- SIG_FULL   descriptive co-movement, never a trade")
+    say("    INTRA_LA   <- SIG_FULL   LOOK-AHEAD, shown only for comparison")
+    say("    INTRA      <- SIG_GAP    TRADEABLE: signal known at the open")
+    say("    NEXT       <- SIG_FULL   tradeable: signal known at close(N)")
     say("\n  peer     component      n    stat      p(flip)  p(perm)")
     out = []
     for p in peers + [A]:
-        for comp in ("GAP", "INTRA", "NEXT"):
-            col = f"{p}_{comp}"
+        for comp, src, use in (("GAP", "GAP", "full"), ("INTRA_LA", "INTRA", "full"),
+                               ("INTRA", "INTRA", "gap"), ("NEXT", "NEXT", "full")):
+            col = f"{p}_{src}"
             if col not in df:
                 continue
             v = df[col].to_numpy()
+            s_ = sgn if use == "full" else sgap
             ok = ~np.isnan(v)
             if ok.sum() < 15:
                 continue
-            stat = float((sgn[ok] * v[ok]).mean())
-            p1, p2 = pvals(stat, v[ok], sgn[ok], rng, args.iters)
+            stat = float((s_[ok] * v[ok]).mean())
+            p1, p2 = pvals(stat, v[ok], s_[ok], rng, args.iters)
             star = " *" if p1 < 0.05 and p2 < 0.05 else ""
             tag = "(announcer)" if p == A else ""
-            say(f"  {p:6} {comp:>7} {tag:>12}  {ok.sum():>3}  "
+            say(f"  {p:6} {comp:>9} {tag:>12}  {ok.sum():>3}  "
                 f"{stat*100:+7.3f}%  {p1:.4f}   {p2:.4f}{star}")
             out.append(dict(peer=p, comp=comp, n=int(ok.sum()), stat=stat,
                             p1=p1, p2=p2, is_announcer=(p == A)))
@@ -243,8 +271,10 @@ def main():
     pr = res[~res.is_announcer]
     sig = lambda c: pr[(pr.comp == c) & (pr.p1 < 0.05) & (pr.p2 < 0.05)]
     ng, ni, nn = len(sig("GAP")), len(sig("INTRA")), len(sig("NEXT"))
+    nla = len(sig("INTRA_LA"))
     npeer = pr.peer.nunique()
     say(f"  peers with significant GAP:   {ng}/{npeer}")
+    say(f"  peers with significant INTRA_LA: {nla}/{npeer}  (look-ahead, NOT a result)")
     say(f"  peers with significant INTRA: {ni}/{npeer}   <-- the capturable one")
     say(f"  peers with significant NEXT:  {nn}/{npeer}")
     say("")
