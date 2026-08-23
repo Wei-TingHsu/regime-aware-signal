@@ -36,6 +36,7 @@ import html
 import json
 import re
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -53,15 +54,31 @@ ARCH = "https://www.sec.gov/Archives/edgar/data/{cik}/{acc}/{doc}"
 
 
 def get(url, retries=3):
+    """Fetch, and on an HTTP error RAISE WITH THE SERVER'S OWN MESSAGE.
+
+    A bare "HTTP Error 400: Bad Request" says nothing about which parameter was
+    wrong. APIs almost always explain themselves in the response body; throwing
+    that away turns a five-second fix into guesswork."""
+    last = None
     for i in range(retries):
         try:
             req = urllib.request.Request(url, headers=UA)
             with urllib.request.urlopen(req, timeout=40) as r:
                 return r.read().decode("utf-8", "ignore")
+        except urllib.error.HTTPError as e:
+            body = ""
+            try:
+                body = e.read().decode("utf-8", "ignore")[:400]
+            except Exception:
+                pass
+            last = RuntimeError(f"HTTP {e.code} for {url}\n    server said: {body}")
+            if e.code < 500:
+                raise last                      # client error: retrying will not help
         except Exception as e:
-            if i == retries - 1:
-                raise
+            last = e
+        if i < retries - 1:
             time.sleep(1.5 * (i + 1))
+    raise last
 
 
 def clean(raw):
@@ -212,76 +229,114 @@ def cmd_edgar(args):
 
 
 # --------------------------------------------------------------------------- #
-FR_API = ("https://www.federalregister.gov/api/v1/documents.json"
-          "?conditions[type][]=PRESDOCU"
-          "&conditions[publication_date][gte]={start}"
-          "&conditions[presidential_document_type][]={ptype}"
-          "&per_page=1000&order=oldest"
-          "&fields[]=document_number&fields[]=title"
-          "&fields[]=publication_date&fields[]=signing_date"
-          "&fields[]=raw_text_url&fields[]=presidential_document_type")
+FR_DOCS = ("https://www.federalregister.gov/api/v1/documents.json"
+           "?conditions[type][]=PRESDOCU"
+           "&conditions[publication_date][gte]={start}"
+           "&per_page=1000&page={page}&order=oldest")
 
 
 def cmd_political(args):
     """Presidential documents from the Federal Register.
 
     WHY THIS AND NOT GDELT OR X
-      doc_read needs TEXT. GDELT returns article COUNTS, so it can tell you a
-      topic spiked but not what was said -- useful as a trigger, useless as a
-      document. The X API is ~$200/mo and its historical archive is the costly
-      part; a source with no history can never enter step 3.
+      doc_read needs TEXT. GDELT returns article COUNTS -- it can tell you a
+      topic spiked but not what was said, so it is a trigger, not a document.
+      The X API is ~$200/mo and its HISTORICAL archive is the costly tier; a
+      source with no history can never enter step 3, which conditions on
+      macro-similar precedent. Truth Social has no public API at all.
 
-      The Federal Register API is free, needs no key, returns full plain text,
-      and reaches back to 1994. Executive orders and proclamations are DECIDED
-      policy, which is the high-`specificity` end of the scale the reader uses
-      to separate an actual measure from a threat to act. Tariff and Iran
-      sanctions actions land here as executive orders.
+      Federal Register: free, no key, full plain text, back to 1994. Executive
+      orders and proclamations are DECIDED policy -- the high-`specificity` end
+      the reader uses to separate an actual measure from a threat to act.
 
-    WHAT IT DOES NOT COVER
-      Statements, posts and rhetoric -- the low-specificity end. Those are the
-      X/Truth Social problem and remain uncovered. So this source is biased
-      toward the decided end by construction, and that must be stated when
-      results are read: an absence of low-specificity political events here is
-      a coverage gap, not evidence they do not matter.
+    QUERY DESIGN, after a 400 on the first attempt
+      The first version filtered server-side on
+      conditions[presidential_document_type][] with guessed enum values and was
+      rejected. Rather than guess again, this queries ONLY on
+      conditions[type][]=PRESDOCU -- the one parameter that is certain -- and
+      filters by document type CLIENT-SIDE on whatever the API actually
+      returns. Slower, but it cannot be broken by an enum name being wrong, and
+      the observed type values are printed so the filter can be tightened later
+      from evidence instead of assumption.
+
+    COVERAGE GAP, stated because it biases every result
+      This is decided policy only. Statements, posts and rhetoric -- the
+      low-specificity end, which is exactly where a market-moving threat lives
+      -- are NOT here. Their absence is a gap, not evidence.
     """
     out = DOCS / "political"; out.mkdir(parents=True, exist_ok=True)
-    got = 0
-    for ptype in [p.strip() for p in args.types.split(",")]:
-        url = FR_API.format(start=args.start, ptype=ptype)
+    want = {t.strip().lower() for t in args.types.split(",") if t.strip()}
+
+    docs, page = [], 1
+    while page <= args.max_pages:
         try:
-            js = json.loads(get(url))
+            js = json.loads(get(FR_DOCS.format(start=args.start, page=page)))
         except Exception as e:
-            print(f"  {ptype}: API FAILED: {e}")
+            print(f"  page {page} FAILED: {e}")
+            break
+        got = js.get("results", [])
+        if not got:
+            break
+        docs += got
+        total = js.get("count")
+        print(f"  page {page}: {len(got)} docs (API reports {total} total)")
+        if len(docs) >= (total or 0) or len(got) < 1000:
+            break
+        page += 1
+        time.sleep(args.sleep)
+
+    if not docs:
+        print("  no documents returned -- inspect the error above before retrying")
+        return
+
+    seen = {}
+    for d in docs:
+        t = (d.get("presidential_document_type") or d.get("subtype")
+             or d.get("type") or "unknown")
+        seen[str(t).lower()] = seen.get(str(t).lower(), 0) + 1
+    print("\n  document types actually returned by the API:")
+    for k, v in sorted(seen.items(), key=lambda x: -x[1]):
+        mark = "  <- kept" if (not want or k in want) else ""
+        print(f"    {k:32} {v:5d}{mark}")
+
+    got_n = skipped = 0
+    for d in docs:
+        t = str(d.get("presidential_document_type") or d.get("subtype")
+                or d.get("type") or "unknown").lower()
+        if want and t not in want:
             continue
-        docs = js.get("results", [])
-        print(f"  {ptype:22} {len(docs):4d} documents since {args.start}")
-        for d in docs[:args.limit]:
-            # publication_date is when it entered the public record
-            pub = d.get("publication_date") or d.get("signing_date")
-            if not pub:
-                continue
-            stamp = pd.to_datetime(pub).strftime("%Y%m%d")
-            num = (d.get("document_number") or "").replace("-", "")
-            f = out / f"{stamp}_{ptype[:4]}{num}.txt"
-            if f.exists() and not args.refetch:
-                continue
-            ru = d.get("raw_text_url")
-            if not ru:
-                continue
-            try:
-                txt = get(ru)
-            except Exception:
-                continue
-            txt = re.sub(r"\n{3,}", "\n\n", txt).strip()
-            if len(txt.split()) < 80:
-                continue
-            f.write_text(f"[{ptype}] {d.get('title','')}\n\n{txt}")
-            got += 1
-            time.sleep(args.sleep)
-    print(f"\npolitical: {got} documents -> {out}/")
-    print("  Dated by PUBLICATION date (when it entered the public record).")
-    print("  COVERAGE GAP recorded: decided policy only. Statements, posts and")
-    print("  rhetoric are not here -- absence of them is a gap, not evidence.")
+        pub = d.get("publication_date") or d.get("signing_date")
+        if not pub:
+            continue
+        stamp = pd.to_datetime(pub).strftime("%Y%m%d")
+        num = str(d.get("document_number") or "").replace("-", "")
+        f = out / f"{stamp}_{t[:4]}{num}.txt"
+        if f.exists() and not args.refetch:
+            continue
+        url = d.get("raw_text_url") or d.get("body_html_url")
+        if not url:
+            skipped += 1
+            continue
+        try:
+            txt = get(url)
+        except Exception:
+            skipped += 1
+            continue
+        if "<" in txt[:200]:
+            txt = clean(txt)
+        txt = re.sub(r"\n{3,}", "\n\n", txt).strip()
+        if len(txt.split()) < 80:
+            continue
+        f.write_text(f"[{t}] {d.get('title','')}\n\n{txt}")
+        got_n += 1
+        if got_n >= args.limit:
+            break
+        time.sleep(args.sleep)
+
+    print(f"\npolitical: {got_n} documents -> {out}/  ({skipped} unfetchable)")
+    print("  Dated by PUBLICATION date -- when it entered the public record.")
+    print("  COVERAGE GAP: decided policy only. Statements, posts and rhetoric")
+    print("  are not here; their absence is a gap, not evidence.")
 
 
 def main():
@@ -314,6 +369,7 @@ def main():
                    default="executive_order,proclamation,presidential_memorandum")
     p.add_argument("--start", default="2011-01-01")
     p.add_argument("--limit", type=int, default=400)
+    p.add_argument("--max-pages", type=int, default=6)
     p.add_argument("--refetch", action="store_true")
     p.add_argument("--sleep", type=float, default=0.2)
     p.set_defaults(fn=cmd_political)

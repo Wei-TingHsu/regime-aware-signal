@@ -956,3 +956,21 @@ that isolates earnings releases for domestic filers has no equivalent. Foreign
 issuers therefore arrive with LOWER PRECISION than domestic ones, and any
 cross-firm comparison must account for that asymmetry rather than treating the
 two document sets as equivalent.
+
+## OPEN THREAD 17 — political source, BUILT BUT NOT YET WORKING (2026-08-23)
+
+Status: `src/fetch_sources.py political` exists; first run returned HTTP 400 on
+every document type. Cause: server-side filtering on
+`conditions[presidential_document_type][]` with GUESSED enum values. Rewritten
+to query only `conditions[type][]=PRESDOCU`, paginate, filter client-side, and
+print the API's own error body plus the type labels actually returned.
+
+**NOT DONE UNTIL `data_provenance/docs/political/` is non-empty.** Recorded as a
+numbered thread rather than an intention because the recency kernel (λ) was
+"locked" on 2026-08-18 and sat unbuilt for five days without anything in the
+repo flagging it. A thread that only exists in conversation does not exist.
+
+Remaining coverage gap after this works: LOW-SPECIFICITY political
+communication -- statements, posts, rhetoric. Federal Register carries decided
+policy only. X archive is the paid tier and Truth Social has no API, so this
+gap is a purchasing decision, not an engineering one. See "Decisions deferred".
