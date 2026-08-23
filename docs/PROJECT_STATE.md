@@ -17,8 +17,8 @@ after each workstream closes.*
 > universe-wide 561-pair scan. The two pairs that survived discovery failed a
 > temporal split and a transaction-cost test. **No tradeable rotation signal
 > exists in this universe.**
-> Stage 1 drift-existence is **PRE-REGISTERED (8273be4, 2026-08-21 13:18:53 +0800) and
-> UNRUN** — deliberately, so the registration stays valid for a deeper panel.
+> Stage 1 drift-existence was **RUN 2026-08-23 and is NULL** at the registered
+> criterion (prereg 8273be4) — deliberately, so the registration stays valid for a deeper panel.
 >
 > Two live-edge defects found today: **per-series macro staleness** (bounded — 2 affected
 > rows, no reported result exposed) and **GMM label permutation across refits** (the
@@ -878,7 +878,7 @@ verified against scipy to 1e-12), **YYYYMMDD integers parsed as nanoseconds sinc
   safe. Verify with `git ls-files`, not `ls`.
 - The **repo is the source of truth**, not model memory.
 
-## GAP FOUND 2026-08-23 — the recency kernel was designed and never built
+## GAP FOUND AND CLOSED 2026-08-23 — recency kernel BUILT, sweep unrun
 
 The 2026-08-18 design session LOCKED a two-axis weighting:
 w_t = exp(-lambda*(T-t)) * exp(-||z_t - z_now||^2 / 2 sigma^2), described as
@@ -974,3 +974,8 @@ Remaining coverage gap after this works: LOW-SPECIFICITY political
 communication -- statements, posts, rhetoric. Federal Register carries decided
 policy only. X archive is the paid tier and Truth Social has no API, so this
 gap is a purchasing decision, not an engineering one. See "Decisions deferred".
+
+
+> **SUPERSEDED IN PART.** See `docs/CURRENT_STATE_2026-08-23.md`, which is
+> authoritative where it conflicts with anything above. Stale passages are
+> listed there in section 9.

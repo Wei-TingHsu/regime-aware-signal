@@ -236,7 +236,7 @@ FR_DOCS = ("https://www.federalregister.gov/api/v1/documents.json"
            "&fields[]=document_number&fields[]=title"
            "&fields[]=publication_date&fields[]=signing_date"
            "&fields[]=raw_text_url&fields[]=body_html_url"
-           "&fields[]=presidential_document_type&fields[]=type")
+           "&fields[]=type&fields[]=subtype")
 
 
 def cmd_political(args):
