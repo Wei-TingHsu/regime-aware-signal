@@ -432,3 +432,77 @@ saved to the repo — it does not exist**. Rebuild it from this document when th
 engines are settled, or drop it: it is a demo, not a deliverable. Its earlier
 version showed an evidence tab that predated the rotation closure, the PEAD
 result and the spillover finding, so rebuilding beats recovering.
+
+---
+
+## 13. STEPS 1 AND 2 — WHAT IS ACTUALLY COMPLETE (2026-08-23)
+
+Neither step is finished. Precisely:
+
+**Step 1 — BUILT, UNTESTED.** The λ mechanism is in `analog_core._kw`,
+invariance-verified (bit-identical when `half_life_years=None`, so frozen live
+models are untouched). Pre-registration committed. Four `model_1_recency_*`
+entries added to `models.yaml`. **The sweep has NOT been run — zero rungs
+executed. λ has never touched a return.**
+
+**Step 2 — ONE SOURCE OF SIX READ.**
+
+| source | fetched | read |
+|---|---|---|
+| fomc_statement | 131 | **131** (validated against known policy) |
+| fomc_minutes | 125 | **0** |
+| earnings_8k | 307 | **0** |
+| political | 60 | **0** |
+| transcript | 0 | 0 — not yet collected |
+| bank_research | 0 | 0 — not yet collected |
+
+**492 of 623 documents unread.**
+
+Two further gaps that matter more than the count:
+
+- **The common schema has been exercised on 3 documents.** The 131 FOMC reads
+  used the EARLIER stance-only schema (`fomc_llm_read.py`). The cross-source
+  schema in `doc_read.py` — direction per asset class, magnitude, specificity,
+  novelty — has only run under `--limit 3`.
+- **The `specificity` gate is UNCHECKED.** That field is what makes step 5
+  possible: decided policy and reported earnings should score high, rhetoric and
+  opinion low. If it does not discriminate across sources there is nothing to
+  weigh with, and the prompt is wrong before any conditioning matters. Untested,
+  because only one source has been read.
+
+**Honest sentence for the report:** *step 1 built and untested; step 2
+infrastructure built and validated on one source, 79% of the corpus unread, two
+sources uncollected, the discriminating gate unverified.*
+
+## 14. DECISIONS TAKEN IN THIS SESSION — reasoning, not just outcome
+
+**Anthropic API, not Claude Code, as the runtime.** The business plan sequences
+**institutional software licensing first**. That means a system running on a
+customer's schedule and producing reports for them — it has to be embeddable and
+programmatic. Claude Code is a developer's workstation tool and cannot be the
+runtime inside a licensed product. Use it to BUILD if convenient; the pipeline
+calls the API.
+
+**Bank research: top-4 investment banks, published SUMMARIES only, collected
+manually.** Not all institutions, and not the reports themselves — actual
+research is a licensed product, and redistributing it inside something you sell
+is real exposure for the institutional-licensing line, which is exactly the
+segment that audits for it. Media write-ups ("Goldman raises S&P target to X")
+are public and fine.
+
+**Transcripts: collected manually by Steven**, saved directly to
+`data_provenance/docs/transcript/YYYYMMDD_id.txt` in the repo — not sent through
+chat, which would leave them unversioned and unreproducible.
+
+**Trump / Iran: route through GDELT, not the X API.** ACTION, not just a deferred
+decision. GDELT infrastructure and 944 days of history already exist and are
+backtestable; the X archive is the paid tier and without history a source can
+never enter step 3. Needs a themes/actor filter added to the existing GDELT
+query. GDELT returns article COUNTS, not text, so it is a TRIGGER for step 3
+conditioning rather than a document for `doc_read` — a different role from the
+Federal Register source, and it should not be conflated with it.
+
+**Governing principle, stated by Steven:** `PROJECT_STATE.md` and `briefing.md`
+are where the core research design lives, and the build follows them. Where an
+implementation has drifted from the design, **the design is correct and the
+implementation is the defect** — which is how the λ gap was found.
