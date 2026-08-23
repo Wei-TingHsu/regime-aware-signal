@@ -35,3 +35,28 @@ models:
     topk: 100
     nbasket: 5
     note: "CONTROL GROUP -- best-in-sample of 48 grid configs, explicitly CHERRY-PICKED. In-sample Sharpe +0.50, p=0.0390. Hypothesis: its in-sample lead shrinks or inverts out-of-sample."
+
+  # --- recency-weighted variants, added 2026-08-23 -----------------------
+  # NEW entries only. model_1/2/3 above are FROZEN pre-registration for the
+  # live forward test (ce18d34) and are not edited. These are backtest-only
+  # until forward-test evidence exists. See docs/prereg_recency_kernel.md.
+  model_1_recency_hl4:
+    horizon: 5
+    sim_mode: level
+    half_life_years: 4
+    note: "primary rung. exp decay, HL=4y (US presidential term)."
+  model_1_recency_hl2:
+    horizon: 5
+    sim_mode: level
+    half_life_years: 2
+    note: "ladder rung"
+  model_1_recency_hl8:
+    horizon: 5
+    sim_mode: level
+    half_life_years: 8
+    note: "ladder rung. Fed chair tenure anchor."
+  model_1_recency_hl16:
+    horizon: 5
+    sim_mode: level
+    half_life_years: 16
+    note: "ladder rung"

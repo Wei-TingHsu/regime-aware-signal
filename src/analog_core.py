@@ -12,6 +12,10 @@ A spec is a dict:
     n_regimes   regime hard-gate count; defaults to config regime.n_regimes.
                 Frozen model specs in config/models.yaml carry their own value
                 and override this -- they are pre-registration evidence.
+    half_life_years  recency half-life in YEARS. None (default) = no
+                decay, identical to pre-2026-08-23 behaviour. Restores
+                the 2026-08-18 locked design w = exp(-lam*age) * sim,
+                lam = ln(2)/half_life. OPT-IN: frozen models omit it.
     topk        number of nearest analogs to weight
     nbasket     longs / shorts per side
 
@@ -27,7 +31,8 @@ CLUSTERING_PCS = ["PC1", "PC2", "PC3"]
 _CFG = load_config()
 DEFAULT = dict(horizon=5, sim_mode="level", kernel="gaussian", sigma=1.5,
                trend_window=10, n_regimes=int(_CFG["regime"]["n_regimes"]),
-               topk=100, nbasket=5, min_analogs=20, min_cov=10)
+               topk=100, nbasket=5, min_analogs=20, min_cov=10,
+               half_life_years=None)
 
 
 def load_data():
@@ -63,10 +68,24 @@ def feature_matrix(scores, spec):
     return lvl
 
 
-def _kw(dist, spec):
+def _kw(dist, spec, age_years=None):
+    """Analog weight = similarity kernel x recency kernel.
+
+    similarity: gaussian exp(-d^2/2s^2) or exponential exp(-d/s)
+    recency:    exp(-lambda * age_years), lambda = ln(2)/half_life_years
+
+    age_years is None, or spec has no half_life_years -> recency term is 1.0,
+    which reproduces the pre-2026-08-23 behaviour EXACTLY. The frozen models in
+    models.yaml carry no half_life_years and are therefore unaffected."""
     if spec["kernel"] == "exp":
-        return np.exp(-dist / spec["sigma"])
-    return np.exp(-(dist ** 2) / (2 * spec["sigma"] ** 2))
+        sim = np.exp(-dist / spec["sigma"])
+    else:
+        sim = np.exp(-(dist ** 2) / (2 * spec["sigma"] ** 2))
+    hl = spec.get("half_life_years")
+    if hl is None or age_years is None:
+        return sim
+    lam = np.log(2.0) / float(hl)
+    return sim * np.exp(-lam * np.asarray(age_years, dtype=float))
 
 
 def _forward(rets, H):
@@ -109,7 +128,8 @@ def backtest(scores, rets, spec, cfg, start="2010-01-01", do_perm=True, iters=10
         if len(cand) < spec["min_analogs"]:
             continue
         dist = np.linalg.norm(X[cand] - x_now, axis=1)
-        w = _kw(dist, spec)
+        age = (pos - cand) / 252.0          # sessions -> years
+        w = _kw(dist, spec, age)
         if len(cand) > spec["topk"]:
             keep = np.argsort(-w)[: spec["topk"]]
             cand, w = cand[keep], w[keep]
@@ -171,7 +191,8 @@ def current_picks(scores, rets, spec, cfg, as_of=None):
     cand = idx[(labels[:pos] == r_now) & (idx + H < pos)]
     cand = cand[~np.isnan(X[cand]).any(axis=1)]
     dist = np.linalg.norm(X[cand] - x_now, axis=1)
-    w = _kw(dist, spec)
+    age = (pos - cand) / 252.0          # sessions -> years
+    w = _kw(dist, spec, age)
     if len(cand) > spec["topk"]:
         keep = np.argsort(-w)[: spec["topk"]]; cand, w = cand[keep], w[keep]
     w = w / w.sum()
