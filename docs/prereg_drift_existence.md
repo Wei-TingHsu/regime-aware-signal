@@ -288,8 +288,8 @@ Recorded when the test runs, in this file:
 
 ## 9. Amendments
 
-*(none — this section exists so that any post-hoc change is visible rather than silent)*
+*One amendment, recorded below. Made and written down BEFORE any result was read.*
 
 | date | change | reason |
 |---|---|---|
-| | | |
+| 2026-08-23 | §4.2 control buffer changed from a flat ±20 sessions to **H+2** sessions | The registered ±20 buffer is infeasible on a 659-session panel: at z≥1.0 there are 70 episodes, and 70 × 41 slots cover the panel several times, so NO control day survives. The first run returned empty pools and p(matched)=1.0000 for every cell. The registered relaxation order covers the era window and the vol quintile but NOT the buffer, so the buffer bound to zero. H+2 is what the buffer's stated purpose — stopping a control's forward window overlapping an event's — actually requires; the flat 20 was sized for the longest horizon and applied to all. **Recorded before any result was read.** Estimands, thresholds, ladder, de-clustering, entry convention, nulls and success criterion all UNCHANGED. |
