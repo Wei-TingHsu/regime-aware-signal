@@ -232,7 +232,11 @@ def cmd_edgar(args):
 FR_DOCS = ("https://www.federalregister.gov/api/v1/documents.json"
            "?conditions[type][]=PRESDOCU"
            "&conditions[publication_date][gte]={start}"
-           "&per_page=1000&page={page}&order=oldest")
+           "&per_page=1000&page={page}&order=oldest"
+           "&fields[]=document_number&fields[]=title"
+           "&fields[]=publication_date&fields[]=signing_date"
+           "&fields[]=raw_text_url&fields[]=body_html_url"
+           "&fields[]=presidential_document_type&fields[]=type")
 
 
 def cmd_political(args):
