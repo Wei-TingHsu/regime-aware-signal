@@ -104,13 +104,40 @@ def main():
     ap.add_argument("--min-history", type=float, default=8.0)
     ap.add_argument("--min-analogs", type=int, default=20)
     ap.add_argument("--min-cov", type=int, default=10)
+    ap.add_argument("--half-life", type=float, default=None, metavar="YEARS",
+                    help="recency half-life in YEARS. Converted to a per-session "
+                         "lambda as ln2/(HL*252). Pass 'inf' for NO decay. "
+                         "DEFAULT None = read analog.recency_decay_lambda from "
+                         "config.yaml (0.0008/session, HL 3.44y), so a "
+                         "no-argument run is BIT-IDENTICAL to the run that "
+                         "produced the recorded 0.51 / 0.25.")
     args = ap.parse_args()
     from sklearn.mixture import GaussianMixture
 
     cfg = load_config()
     H, N = args.horizon, args.nbasket
     sigma = float(cfg["analog"]["similarity_sigma"])
-    lam = float(cfg["analog"]["recency_decay_lambda"])
+
+    # --- recency decay ----------------------------------------------------
+    # config's recency_decay_lambda is a PER-SESSION lambda with UNKNOWN
+    # provenance: 0.0008 => HL = ln2/0.0008 = 866 sessions = 3.44 years. It is
+    # off the registered ladder in docs/prereg_recency_kernel.md and is reported
+    # as THE INCUMBENT, never as a rung. The recorded 0.51 / 0.25 carry it.
+    # --half-life overrides it for the ladder sweep; the default path is
+    # untouched so the headline figures stay reproducible from this repo.
+    if args.half_life is None:
+        lam = float(cfg["analog"]["recency_decay_lambda"])
+        lam_src = (f"config recency_decay_lambda={lam:g}/session "
+                   f"(HL {np.log(2)/lam/252:.2f}y) -- INCUMBENT, unregistered")
+    elif np.isinf(args.half_life):
+        lam = 0.0
+        lam_src = "NO DECAY (HL = inf) -- ladder control rung"
+    else:
+        if args.half_life <= 0:
+            raise SystemExit("--half-life must be positive, or inf for no decay.")
+        lam = float(np.log(2.0) / (args.half_life * 252.0))
+        lam_src = (f"HL {args.half_life:g}y -> lambda {lam:.6g}/session "
+                   f"-- ladder rung")
     rng = np.random.default_rng(cfg["project"]["random_seed"])
 
     scores = pd.read_parquet(PROCESSED_DIR / "macro_pca_scores.parquet")
@@ -134,6 +161,9 @@ def main():
     print("=" * 78)
     print(f"horizon {H}d | basket {N}/side | expanding window, refit every "
           f"{args.refit_every}d | {args.iters} permutations")
+    print(f"recency:  {lam_src}")
+    print(f"features: RAW PC values (not z-scored) -- a different basis from "
+          f"analog_core/model_grid")
     print(f"long-history cut: >= {args.min_history:g}y -> keeps {int(long_hist.sum())}/{A} assets; "
           f"drops: {', '.join(dropped) if dropped else '(none)'}")
 

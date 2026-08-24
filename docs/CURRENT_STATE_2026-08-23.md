@@ -70,9 +70,18 @@ because it is a self-caught error rather than an argument.
   corrected null is inflated by MLPA (18.8σ) and AMLP (17.4σ), so "0 survive" is
   conservative but underpowered. **The usable number is 148-vs-28**, which
   demonstrates empirically why exhaustive search without correction is worthless.
-- **Wrong-prior tally: nine.** Several are Claude's. Pattern across the first
+- **Wrong-prior tally: ten.** Several are Claude's. Pattern across the first
   three: results are more *basis-carried* and less *phenomenon-carried* than
   expected. The fourth showed that correction can be over-applied.
+  **Tenth (2026-08-24):** "no λ existed anywhere in the codebase, not in
+  config.yaml" — asserted in `prereg_recency_kernel.md` §1 and in PROJECT_STATE's
+  gap note, **false**; λ was in `config.yaml` and applied in
+  `analog_backtest.py`, the engine behind the headline numbers. The lesson is
+  narrower than the earlier basis-carried pattern and worth stating separately:
+  **a negative claim about a codebase requires a grep, not a reading of the file
+  you happen to have open.**
+  *(Note: PROJECT_STATE's working-principles list still says "five so far" — it
+  stopped being updated at five while this count went to ten. Reconcile.)*
 
 ---
 
@@ -192,6 +201,14 @@ The mechanism is built (`analog_core._kw(dist, spec, age_years)`, opt-in via
 `half_life_years`; `None` reproduces prior weights bit-identically, so the frozen
 live models are untouched). Pre-registered: exponential, HL = 4 years, ladder
 {2,4,8,16,∞}. **The sweep has NOT been run.**
+
+> **SCOPE CORRECTION 2026-08-24.** The table below characterises
+> **`analog_core`** only. `analog_backtest.py` — the engine behind the reported
+> 0.51 / 0.25 — has decayed all along at `recency_decay_lambda = 0.0008`/session
+> (HL ≈ 3.44y). Its "no decay" behaviour has never been measured; that is the
+> ∞ rung of Engine B and it is the point of running the sweep. The claim in §9
+> that the kernel was merely "BUILT, sweep unrun" understates this: the sweep is
+> also a **correction to the record**, not only an extension of it.
 
 **Measured before any return was computed:**
 

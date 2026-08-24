@@ -1,0 +1,12 @@
+6b19b880f68c7f818798ae0c89e40b829e2fe7331bcf9e5dca31cb1597105fe1  config/models.yaml::models
+# Canonical checksum of the FROZEN model block: yaml -> dict ->
+# sorted-key JSON -> sha256. Whitespace- and comment-invariant, so what
+# is protected is the SPECS, not the file's bytes. Verified by
+# forward_log.load_models() and model_grid.load_frozen_models(); both
+# refuse to run on mismatch.
+#
+# Covers model_1_baseline, model_2_horizon_trend, model_3_overfit --
+# pre-registration evidence for the live forward test, first committed
+# ce18d34 2026-08-17 14:24:09 +0800. Adding models under
+# `backtest_models:` does not change this hash. Changing a frozen
+# hyperparameter does, and that is the point.

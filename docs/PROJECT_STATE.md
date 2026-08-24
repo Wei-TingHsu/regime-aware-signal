@@ -198,6 +198,15 @@ commit.**
 ### Problem 1 ENGINE (macro analog) — REVISED DOWN
 835 rebalances, 2010-01-04 → 2026-08-11:
 
+> **Basis note added 2026-08-24.** These figures come from
+> `src/analog_backtest.py`, which applies recency decay at
+> `analog.recency_decay_lambda = 0.0008` per session (**HL ≈ 3.44 years**). They
+> are **not** no-decay numbers. `analog_core`/`model_grid` — the frozen-model
+> path, genuinely decay-free — reports **0.40** for `model_1_baseline` on a
+> different feature basis (z-scored PCs, frozen GMM). Two engines, two bases, two
+> legitimate numbers. Do not compare them as though one were a rung of the
+> other's ladder.
+
 | universe | spread/reb | ~/yr | Sharpe | hit | payoff | p |
 |---|---|---|---|---|---|---|
 | all 47 | +0.292% | ~15.2% | **0.51** | 50.3% | 1.04 | 0.0010 |
@@ -885,11 +894,26 @@ w_t = exp(-lambda*(T-t)) * exp(-||z_t - z_now||^2 / 2 sigma^2), described as
 "similarity-dominant (tight sigma so only true analogs get weight; gentle
 recency decay breaks ties among them) -- an explicit, documented choice."
 
-`analog_core._kw()` implements ONLY the similarity kernel. There is no lambda
-and no time term anywhere in the codebase; a 2008 analog and a 2024 analog at
-equal macro distance receive equal weight. Not in config.yaml, not in
-models.yaml, not in any open thread. It fell through the gap between design
-and build and went unnoticed for five days.
+`analog_core._kw()` implements ONLY the similarity kernel; within THAT engine a
+2008 analog and a 2024 analog at equal macro distance receive equal weight. It
+fell through the gap between design and build and went unnoticed for five days.
+
+> **CORRECTED 2026-08-24.** The original text continued: *"There is no lambda and
+> no time term anywhere in the codebase... Not in config.yaml, not in
+> models.yaml, not in any open thread."* **The config.yaml clause was false.**
+> `config/config.yaml` carries `analog.recency_decay_lambda: 0.0008`, and
+> `src/analog_backtest.py` applies it as `exp(-lam * (pos - cand))` with age in
+> **sessions** — HL = ln2/0.0008 = 866 sessions = **3.44 years**.
+>
+> `analog_backtest.py` is the engine behind the reported **0.51 / 0.25**, so
+> **those numbers carry recency decay.** The gap was real for `analog_core` (the
+> frozen-model and live-harness path) and false for the project as a whole.
+>
+> Recorded as a **wrong prior**: an absence was asserted across the whole
+> codebase on the evidence of one file. The check that would have caught it is
+> the one already in this document's working principles — *when a hazard is fixed
+> in one script, grep for every other consumer in the same commit*. Applied to a
+> claimed absence it reads: **grep before asserting a negative.**
 
 NOT to be implemented under deadline. lambda is a free hyperparameter, and
 adding a tunable knob after observing Sharpe 0.25 is exactly how backtests get

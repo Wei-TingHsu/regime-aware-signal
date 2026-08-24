@@ -36,7 +36,26 @@ models:
     nbasket: 5
     note: "CONTROL GROUP -- best-in-sample of 48 grid configs, explicitly CHERRY-PICKED. In-sample Sharpe +0.50, p=0.0390. Hypothesis: its in-sample lead shrinks or inverts out-of-sample."
 
-  # --- recency-weighted variants, added 2026-08-23 -----------------------
+# ===========================================================================
+# EXPERIMENTAL / BACKTEST-ONLY MODELS
+# ===========================================================================
+# SPLIT OUT OF `models:` 2026-08-24. These four entries were added under
+# `models:` on 08-23. forward_log.load_models() reads `models:`, so the next
+# forward_log run -- the first since they were added -- would have logged all
+# seven models live. And because picks_for() passed no age_years to _kw(), the
+# recency term never applied: all four would have produced picks BIT-IDENTICAL
+# to model_1_baseline under four different names, in a scoreboard presenting
+# them as forward-tested recency variants.
+#
+# Nothing here is read by the live forward test. Adding entries below is free.
+# Editing anything under `models:` above changes config/models.frozen.sha256
+# and every loader refuses to run.
+#
+# See docs/prereg_recency_kernel.md sections 3, 5 and 7.
+# ===========================================================================
+
+backtest_models:
+
   # NEW entries only. model_1/2/3 above are FROZEN pre-registration for the
   # live forward test (ce18d34) and are not edited. These are backtest-only
   # until forward-test evidence exists. See docs/prereg_recency_kernel.md.

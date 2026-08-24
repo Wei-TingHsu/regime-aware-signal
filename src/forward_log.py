@@ -74,14 +74,69 @@ def refresh_data():
     print("  data refresh OK")
 
 
+def frozen_sha256(models: dict) -> str:
+    """Canonical checksum of the frozen model block.
+
+    yaml -> dict -> sorted-key JSON -> sha256. Whitespace- and comment-
+    invariant by construction: what is protected is the SPECS, not the file's
+    bytes. Comments and key order may change freely; a single altered
+    hyperparameter cannot.
+    """
+    import hashlib as _h, json as _j
+    return _h.sha256(_j.dumps(models, sort_keys=True,
+                              separators=(",", ":")).encode()).hexdigest()
+
+
 def load_models():
+    """Load ONLY the frozen pre-registered models, and verify they are intact.
+
+    Reads `models:` and nothing else. Experimental specs live under
+    `backtest_models:` and MUST NOT enter the live forward test -- see
+    docs/prereg_recency_kernel.md section 5.
+
+    Split 2026-08-24. Before that, four `model_1_recency_*` entries sat under
+    `models:` and this function would have logged them live. Worse: picks_for()
+    called `_kw(dist, spec)` with no age_years, so the recency term never
+    applied and all four would have produced picks BIT-IDENTICAL to
+    model_1_baseline under four different names. Caught before the first run
+    that would have seen them.
+    """
     if not MODELS_YAML.exists():
         die(f"missing {MODELS_YAML} -- the frozen model registry.")
-    spec_file = yaml.safe_load(MODELS_YAML.read_text())["models"]
+    raw = yaml.safe_load(MODELS_YAML.read_text())
+    if "models" not in raw:
+        die(f"{MODELS_YAML} has no `models:` key -- the frozen registry is gone.")
+    spec_file = raw["models"]
+
+    # --- frozen-block integrity ------------------------------------------
+    sha_path = MODELS_YAML.parent / "models.frozen.sha256"
+    if not sha_path.exists():
+        die(f"missing {sha_path} -- the frozen-block checksum. Frozen specs "
+            f"cannot be verified; refusing to log live picks.")
+    want = sha_path.read_text().split()[0].strip()
+    got = frozen_sha256(spec_file)
+    if got != want:
+        die("FROZEN MODEL REGISTRY ALTERED.\n"
+            f"    expected {want}\n"
+            f"    got      {got}\n"
+            "    config/models.yaml `models:` no longer matches its committed checksum.\n"
+            "    model_1/2/3 are pre-registration evidence for THIS forward test\n"
+            "    (ce18d34) and are never edited. New models go under `backtest_models:`.\n"
+            "    Refusing to log picks against an altered registry.")
+
+    # --- no experimental spec may reach the live path ---------------------
+    leaked = sorted(n for n, s in spec_file.items() if "half_life_years" in s)
+    if leaked:
+        die(f"experimental spec(s) found under `models:`: {', '.join(leaked)}.\n"
+            f"    Entries carrying half_life_years are backtest-only "
+            f"(docs/prereg_recency_kernel.md section 5).\n"
+            f"    Move them to `backtest_models:` before running the forward test.")
+
     out = {}
     for name, s in spec_file.items():
         d = dict(DEFAULT); d.update({k: v for k, v in s.items() if k != "note"})
         out[name] = d
+    print(f"  frozen registry verified ({len(out)} models, sha {got[:12]})")
     return out
 
 
@@ -101,7 +156,15 @@ def picks_for(scores, rets, spec, cfg, pos):
     if len(cand) < spec["min_analogs"]:
         return None
     dist = np.linalg.norm(X[cand] - x_now, axis=1)
-    w = _kw(dist, spec)
+    # age_years MUST be passed. Omitting it silently disabled the recency term:
+    # _kw returns the bare similarity kernel when age_years is None, so any spec
+    # carrying half_life_years produced picks identical to the no-decay
+    # baseline. Fixed 2026-08-24. This is a NO-OP for model_1/2/3, which carry
+    # no half_life_years -- _kw still short-circuits on `hl is None` and returns
+    # bit-identical weights, so no logged row changes. analog_core.current_picks
+    # always passed age; only this path did not.
+    age = (pos - cand) / 252.0          # sessions -> years
+    w = _kw(dist, spec, age)
     if len(cand) > spec["topk"]:
         keep = np.argsort(-w)[: spec["topk"]]; cand, w = cand[keep], w[keep]
     w = w / w.sum()

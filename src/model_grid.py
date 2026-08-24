@@ -40,17 +40,59 @@ def spec(**kw):
     s = dict(DEFAULT); s.update(kw); return s
 
 
+def frozen_sha256(models: dict) -> str:
+    """Canonical checksum of the frozen model block. See forward_log for the
+    reference implementation; kept in sync deliberately rather than imported, so
+    neither script can be broken by an edit to the other."""
+    import hashlib as _h, json as _j
+    return _h.sha256(_j.dumps(models, sort_keys=True,
+                              separators=(",", ":")).encode()).hexdigest()
+
+
 def load_frozen_models():
     """Read the frozen pre-registered specs. Same parsing as forward_log.load_models,
     so the grid scores exactly what the live harness trades. NEVER edit models.yaml
-    to match a new grid winner -- it is pre-registration evidence."""
+    to match a new grid winner -- it is pre-registration evidence.
+
+    Reads `models:` ONLY. Experimental specs live under `backtest_models:`
+    (split 2026-08-24). Before the split, four recency variants sat under
+    `models:`, so this function returned SEVEN models, printed them all under
+    the heading "THE THREE FROZEN PRE-REGISTERED MODELS", and -- because --out
+    defaults to docs/model_grid_results.md -- would have overwritten the
+    pre-registration record with backtest-only variants mixed into it.
+    """
     if not MODELS_YAML.exists():
         raise SystemExit(f"missing {MODELS_YAML} -- the frozen model registry.")
-    raw = yaml.safe_load(MODELS_YAML.read_text())["models"]
+    parsed = yaml.safe_load(MODELS_YAML.read_text())
+    if "models" not in parsed:
+        raise SystemExit(f"{MODELS_YAML} has no `models:` key.")
+    raw = parsed["models"]
+
+    sha_path = MODELS_YAML.parent / "models.frozen.sha256"
+    if not sha_path.exists():
+        raise SystemExit(f"missing {sha_path} -- the frozen-block checksum.")
+    want = sha_path.read_text().split()[0].strip()
+    got = frozen_sha256(raw)
+    if got != want:
+        raise SystemExit(
+            "FROZEN MODEL REGISTRY ALTERED.\n"
+            f"  expected {want}\n  got      {got}\n"
+            "  models.yaml `models:` no longer matches its committed checksum. It is\n"
+            "  pre-registration evidence and is never edited to match a new winner.")
+
+    leaked = sorted(n for n, s in raw.items() if "half_life_years" in s)
+    if leaked:
+        raise SystemExit(
+            f"experimental spec(s) under `models:`: {', '.join(leaked)}.\n"
+            f"  Entries carrying half_life_years are backtest-only and must not be\n"
+            f"  written into the frozen pre-registration record.\n"
+            f"  Move them to `backtest_models:`.")
+
     out = {}
     for name, s in raw.items():
         d = dict(DEFAULT); d.update({k: v for k, v in s.items() if k != "note"})
         out[name] = d
+    print(f"frozen registry verified: {len(out)} models, sha {got[:12]}")
     return out
 
 

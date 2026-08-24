@@ -156,6 +156,20 @@ regime:
   n_init: 10
 
 analog:
+  # PROVENANCE UNKNOWN -- flagged 2026-08-24. This value is applied by
+  # src/analog_backtest.py as exp(-lam * (pos - cand)) with age in SESSIONS,
+  # giving a half-life of ln2/0.0008 = 866 sessions = 3.44 YEARS.
+  #
+  # It is NOT no-decay. The reported 0.51 / 0.25 (835 rebalances) carry it.
+  # No document in docs/ records who chose 0.0008 or why. It is:
+  #   * OFF the registered ladder {2,4,8,16,inf} in docs/prereg_recency_kernel.md
+  #   * NEVER promotable to a live model (see that file, section 3)
+  #   * ABSENT from the live forward test, which runs analog_core via
+  #     models.yaml, where model_1/2/3 carry no half_life_years at all
+  #
+  # KEEP THIS VALUE. It is the reproduction constant for the recorded headline
+  # figures; setting it to 0 makes 0.51 / 0.25 unreproducible from this repo.
+  # The lambda sweep passes its own value per rung and does NOT read this key.
   recency_decay_lambda: 0.0008
   similarity_sigma: 1.5
   weighting: "similarity_dominant"

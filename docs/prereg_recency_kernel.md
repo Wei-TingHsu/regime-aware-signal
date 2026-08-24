@@ -18,13 +18,42 @@ w_t = exp(-λ(T-t)) · exp(-‖z_t - z_now‖² / 2σ²)
 described as *"similarity-dominant (tight σ so only true analogs get weight;
 gentle recency decay breaks ties among them) — an explicit, documented choice."*
 
-`analog_core._kw()` implemented only the similarity half. No λ existed anywhere
-in the codebase. The gap was found 2026-08-23, five days after the design was
-locked, and only because it was asked about directly.
+`analog_core._kw()` implemented only the similarity half. The gap was found
+2026-08-23, five days after the design was locked, and only because it was asked
+about directly.
+
+> **CORRECTED 2026-08-24 (see §7, Amendment 1).** The original text of this
+> section read *"No λ existed anywhere in the codebase."* **That was false.**
+> `config/config.yaml` carries `analog.recency_decay_lambda: 0.0008` and
+> `src/analog_backtest.py` applies it as
+> `exp(-lam * (pos - cand))` with age in **sessions** — an effective half-life of
+> ln2/0.0008 = 866 sessions = **3.44 years**.
+>
+> `analog_backtest.py` is the script that produced the reported **0.51 / 0.25**
+> (835 rebalances, 2010-01-04 → 2026-08-11, 35-asset ≥8y cut). **Those figures
+> were computed WITH recency decay at HL ≈ 3.44y, not without it.**
+>
+> The gap was real but narrower than stated: λ was missing from `analog_core`
+> (the frozen-model and live-harness path), not from the project. The two engines
+> differ in three further respects — `analog_core` z-scores the PCs, freezes one
+> GMM on all history, and applies no decay; `analog_backtest` uses raw PC values
+> so PC1 dominates the distance, refits the GMM expanding-window every 20
+> sessions, and decays. They are different estimators and legitimately report
+> different numbers (0.40 vs 0.25).
+>
+> **Consequence for this registration: the ladder runs on BOTH engines.** See §7.
+> The value 0.0008 has no recorded provenance anywhere in `docs/`; it is off the
+> registered ladder and is reported as **the incumbent, not a rung**.
 
 ## 2. Functional form: EXPONENTIAL
 
 `recency = exp(-ln2 · age_years / HL)`, with age measured in years (sessions/252).
+
+> **SCOPE NOTE (2026-08-24).** `recency_diagnostic.py` characterised
+> `analog_core`, whose default is genuinely no-decay. It did **not** characterise
+> `analog_backtest`, which already decays at HL ≈ 3.44y. Every "no decay" column
+> in §4 therefore describes the frozen-model engine, **not** the engine behind
+> the reported 0.51 / 0.25.
 
 Chosen over the alternatives on structural grounds, decided from
 `recency_diagnostic.py` **before any return was computed**:
@@ -126,8 +155,20 @@ in this sweep may be promoted to a live model without forward-test evidence.
 
 ## 7. Amendments
 
-*(none)*
+*One amendment, recorded below. Written BEFORE any rung of the ladder was run,
+and before any Sharpe under decay was observed.*
 
 | date | change | reason |
 |---|---|---|
-| | | |
+| 2026-08-24 | §1's claim that "no λ existed anywhere in the codebase" is retracted as **false**. λ has been present in `config/config.yaml` as `analog.recency_decay_lambda: 0.0008` and applied in `src/analog_backtest.py`, giving HL ≈ 3.44y in session units. The reported 0.51 / 0.25 carry that decay. | The premise was wrong on a checkable fact. Recording it as an amendment rather than editing §1 silently, so the error and its correction are both visible. |
+| 2026-08-24 | **The ladder now runs on BOTH engines.** Engine A = `analog_core` (frozen-model path, genuine no-decay default); Engine B = `analog_backtest` (headline path, incumbent λ=0.0008). Rungs {2,4,8,16,∞} on each. On Engine B, HL is converted to per-session λ as `ln2/(HL×252)` and ∞ is `λ=0`. | One engine's ladder cannot speak for the other. Engine B at ∞ is a number that has never been computed, and it is the only way to learn what the headline result owes to an unregistered hyperparameter. |
+| 2026-08-24 | λ=0.0008 (HL≈3.44y) is reported as **the incumbent, off-ladder**, never as a rung and never promotable. | §3 forbids promoting a rung after the fact; an unregistered value with no recorded provenance has weaker standing still. Its only role is reproducing the recorded 0.51 / 0.25. |
+
+**Unchanged by this amendment:** the functional form (exponential), the primary
+half-life (4y, presidential-term grounds), the ladder values, and the §6 success
+criterion. Only the count of engines the ladder runs on has changed.
+
+**Note on 4y vs 3.44y.** The primary rung was fixed on stated economic grounds
+before this discovery, and it sits close to the incumbent's effective half-life.
+That proximity is **coincidence, not corroboration** — 0.0008 has no recorded
+reasoning behind it. Neither value may be cited as evidence for the other.
