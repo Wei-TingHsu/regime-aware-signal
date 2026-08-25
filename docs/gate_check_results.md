@@ -1,6 +1,6 @@
 # Specificity gate — result
 
-*Run 2026-08-25 01:30:22 +0800.*
+*Run 2026-08-25 15:45:26 +0800.*
 
 **Amended criterion** (`docs/prereg_analog_event.md` §11): the lower bound of a 95% bootstrap CI on the spread must exceed 0.25, and every expected-high source must sit above every expected-low source.
 
@@ -13,7 +13,7 @@
 | fomc_minutes | 60 | 0.489 | 0.133 | 0.017 | - | v1-2026-08-23 |
 | political_other | 60 | 0.268 | 0.316 | 0.041 | low | v1-2026-08-23 |
 
-Widest pair: **earnings_8k** vs **political_other**. Spread **0.363**, 95% CI **[0.279, 0.453]**.
+Widest pair: **earnings_8k** vs **political_other**. Spread **0.363**, 95% CI **[0.281, 0.455]**.
 
 - Clause 1 (CI lower bound > 0.25): **PASS**
 - Clause 2 (ordering): **PASS**

@@ -30,8 +30,16 @@ CS = REPO / "docs" / "CURRENT_STATE_2026-08-23.md"
 SOURCES = ["fomc_statement", "fomc_minutes", "earnings_8k",
            "political_order", "political_other", "bank_research", "transcript"]
 
-# observed input tokens per document, from the read logs
-TOK = {"fomc_statement": 1400, "fomc_minutes": 22097, "earnings_8k": 8421,
+# Observed input tokens per document, from the read logs.
+#
+# earnings_8k CORRECTED 2026-08-25: 8421 was the CORPUS MEAN, and the unread
+# remainder is not a random sample of the corpus. All 189 outstanding 8-K
+# documents are exactly the 189 that the old cap SKIPPED for being over
+# max_words -- they are unread BECAUSE they were over-cap. Every one now bills
+# at the 20,000-word truncation cap, ~27,000 input tokens, not 8,421. Pricing
+# them at the mean understated the cost to finish by roughly 1.8x (~$8.91 vs
+# ~$16) and would have exhausted the balance mid-run for the third time.
+TOK = {"fomc_statement": 1400, "fomc_minutes": 22097, "earnings_8k": 27000,
        "political_order": 3551, "political_other": 2037}
 IN_RATE, OUT_RATE, OUT_TOK = 2.0, 10.0, 290      # $/M in, $/M out, tokens out
 
