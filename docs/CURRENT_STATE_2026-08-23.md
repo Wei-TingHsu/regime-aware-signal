@@ -1246,3 +1246,27 @@ tab screens a ticker against the real ≥8y rule but does not fetch it or write 
 | 7 | `app.py` full version | **minimal version DONE**; wire to steps 3–6 |
 | 8 | step 7 launchd automation | not started |
 | + | FOMC→GLD temporal split + cost test | not started — the Tier-1 exemplar |
+
+---
+
+## CORPUS STATE — counted from disk 2026-08-25 15:24
+
+*Supersedes the table in §15.8, which was written by hand and went stale. These counts come from the filesystem — cached JSON reads against text files in the drop folder — not from a log, because a log can be truncated by a double launch and the cache cannot lie.*
+
+| source | read | documents | unread | status |
+|---|---|---|---|---|
+| `fomc_statement` | 131 | 131 | 0 | **COMPLETE** |
+| `fomc_minutes` | 125 | 125 | 0 | **COMPLETE** |
+| `earnings_8k` | 645 | 834 | 189 | 77% read |
+| `political_order` | 873 | 873 | 0 | **COMPLETE** |
+| `political_other` | 73 | 816 | 743 | 9% read |
+| `bank_research` | 0 | 0 | 0 | no documents — no free structured feed |
+| `transcript` | 0 | 0 | 0 | no documents — no free structured feed |
+| **TOTAL** | **1847** | **2779** | **932** | |
+
+Estimated cost to finish: **~$8.91**. Cached reads are never re-billed — a re-run costs only the unread.
+
+**The read is INCOMPLETE.** It has been interrupted three times: twice by API credit exhaustion (the second time it aborted correctly on the first error instead of retrying) and once by a cache file corrupted by an accidental double launch, since fixed by atomic writes.
+
+Finish with a **single** launch of `./run_corpus.sh`, then re-run `python -m src.gate_check` — the gate was measured before the corpus was complete and before over-cap documents were truncated rather than skipped, so both the `political_other` and `earnings_8k` arms will move.
+

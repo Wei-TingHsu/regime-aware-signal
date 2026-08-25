@@ -1,0 +1,31 @@
+
+fomc_minutes: reading 125 of 125 docs
+
+read 125 docs, 0 failed | tokens 0 in / 0 out
+
+by source:
+  fomc_minutes     n= 125  |dir| mean eq 0.16 dur 0.26 gold 0.13 | specificity 0.49 | novelty 0.34
+
+-> processed/read_minutes.csv   full reads in data_provenance/doc_reads/
+
+CHECK BEFORE USE: specificity should SEPARATE sources -- decided
+policy and reported earnings high, rhetoric and opinion low. If every
+source scores alike, the field is not discriminating and step 5 has
+nothing to weigh with.
+  earnings_8k: 189 doc(s) over 20000 words, TRUNCATED and read (was: skipped)
+
+earnings_8k: reading 834 of 834 docs
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+FATAL -- ABORTING THE WHOLE RUN, NOT JUST THIS DOC
+  BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeP4cKZGiCSfvENFqzYVY'}
+
+  earnings_8k: 2 read this session, 832 NOT READ.
+  This error is permanent for the run. Retrying it is pointless and
+  continuing past it produces a log that looks like a completed pass --
+  which is exactly what happened on 2026-08-25: 897 documents failed
+  this way over four hours.
+
+  Everything read so far IS CACHED. Fix the cause, re-run the same
+  command, and only the unread documents are billed.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
