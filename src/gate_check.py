@@ -35,7 +35,9 @@ Run:
 import argparse
 import glob
 import json
+import os
 from datetime import datetime, timezone
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -62,26 +64,63 @@ EXPECT_HIGH = {"political_order", "earnings_8k", "fomc_statement"}
 EXPECT_LOW = {"political_other", "bank_research", "transcript"}
 
 
-def load_all():
-    """Every pilot CSV plus any full read, deduplicated on (source, date, doc_id).
+# Cache location -- the same directory corpus_status.py counts. Kept here so
+# the gate can check itself against the corpus rather than trusting a CSV.
+READS_DIR = REPO / "data_provenance" / "doc_reads"
 
-    Reads whatever is in processed/. A source appearing in several files (a v1
-    and a v2 pilot, say) keeps the LAST occurrence, so a corrected re-read
-    supersedes the run it replaced."""
+# Every read CSV the pipeline writes. `read_*.csv` was ADDED 2026-08-25:
+# run_corpus.sh writes read_statement.csv / read_minutes.csv / read_8k.csv /
+# read_political_order.csv / read_political_other.csv, and the original two
+# patterns matched none of them, so a post-corpus gate run would have silently
+# re-scored the n=60 pilots and dated the result today.
+READ_GLOBS = ("pilot*.csv", "read_*.csv", "doc_reads.csv")
+
+
+def cache_counts():
+    """Cached reads per source, counted from disk.
+
+    The cache filename is {source}__{stem}__{prompt_version}.json, so the source
+    is the first field. This is the same count corpus_status.py reports; if the
+    gate disagrees with it, one of them is reading a partial file."""
+    out = {}
+    if READS_DIR.exists():
+        for p in READS_DIR.glob("*.json"):
+            s = p.name.split("__")[0]
+            out[s] = out.get(s, 0) + 1
+    return out
+
+
+def load_all():
+    """Every read CSV in processed/, deduplicated on (source, date, doc_id).
+
+    ORDERING IS BY MODIFICATION TIME, oldest first, so `keep="last"` keeps the
+    most recently written read of a document: a corrected re-read supersedes the
+    run it replaced. The previous version sorted by FILENAME, which happened to
+    put pilots before full reads only because 'p' sorts before 'r' -- correct by
+    accident, and it would have silently inverted under any rename."""
+    paths = []
+    for g in READ_GLOBS:
+        paths += glob.glob(str(PROCESSED_DIR / g))
+    paths = sorted(set(paths), key=os.path.getmtime)
+
     frames = []
-    for f in sorted(glob.glob(str(PROCESSED_DIR / "pilot*.csv"))
-                    + glob.glob(str(PROCESSED_DIR / "doc_reads.csv"))):
+    print("  loading (oldest first; later files win on duplicates):")
+    for f in paths:
         try:
             d = pd.read_csv(f)
-            d["_file"] = f.split("/")[-1]
+            d["_file"] = Path(f).name
             frames.append(d)
+            n = len(d.dropna(subset=["specificity"])) if "specificity" in d else 0
+            print(f"    {Path(f).name:34} {n:6d} rows with specificity")
         except Exception as e:
-            print(f"  skipped {f}: {type(e).__name__}")
+            print(f"    skipped {Path(f).name}: {type(e).__name__}")
     if not frames:
-        raise SystemExit("no pilot*.csv or doc_reads.csv in processed/.")
+        raise SystemExit(f"no {' / '.join(READ_GLOBS)} in processed/.")
     df = pd.concat(frames, ignore_index=True)
     df = df.dropna(subset=["specificity", "source"])
-    df["doc_id"] = df.get("doc_id", "").fillna("")
+    if "doc_id" not in df.columns:
+        df["doc_id"] = ""
+    df["doc_id"] = df["doc_id"].fillna("")
     return df.drop_duplicates(subset=["source", "date", "doc_id"], keep="last")
 
 
@@ -102,9 +141,52 @@ def bootstrap_spread(groups, iters, rng):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--iters", type=int, default=10000)
+    ap.add_argument("--allow-partial", action="store_true",
+                    help="run even though the CSVs carry fewer documents than "
+                         "the cache holds. The shortfall is printed and written "
+                         "into the results file.")
     args = ap.parse_args()
 
     df = load_all()
+    # --- COVERAGE CHECK -----------------------------------------------
+    # The gate must be computed on the corpus that exists, not on whatever
+    # CSVs happen to be lying in processed/. corpus_status counts the cache;
+    # this counts the CSVs; if they disagree, one of them is short and the
+    # spread below would be computed on an unstated subset.
+    cache = cache_counts()
+    csv_n = {s: int(len(g)) for s, g in df.groupby("source")}
+    short = {s: (csv_n.get(s, 0), c) for s, c in cache.items()
+             if csv_n.get(s, 0) < c}
+    coverage_note = ""
+    if cache:
+        print("\n  coverage -- CSV rows vs cached reads on disk:")
+        for s in sorted(set(cache) | set(csv_n)):
+            mark = "  <-- SHORT" if s in short else ""
+            print(f"    {s:22} csv {csv_n.get(s,0):6d}   cache "
+                  f"{cache.get(s,0):6d}{mark}")
+    if short:
+        coverage_note = ("CSV coverage was SHORT of the cache for: "
+                         + "; ".join(f"{s} {a} of {b}" for s, (a, b)
+                                     in sorted(short.items())) + ".")
+        if not args.allow_partial:
+            print("\n" + "!" * 78)
+            print("ABORTING -- the CSVs carry fewer documents than the cache "
+                  "holds.")
+            print("  The gate would be computed on a subset without saying so, "
+                  "and the")
+            print("  results file would be dated today. That is the failure "
+                  "this check")
+            print("  exists to prevent.")
+            print("\n  Most likely cause: run_corpus.sh did not finish, or a "
+                  "source was")
+            print("  read without an --out CSV. Re-run the read, or pass "
+                  "--allow-partial")
+            print("  to proceed with the shortfall recorded in the results "
+                  "file.")
+            print("!" * 78)
+            raise SystemExit(1)
+        print(f"\n  ** PROCEEDING PARTIAL (--allow-partial). {coverage_note}")
+
     groups = {s: g["specificity"].dropna().values
               for s, g in df.groupby("source") if len(g) >= 5}
     if len(groups) < 2:
@@ -117,11 +199,18 @@ def main():
     print("=" * 78)
     # Read condition per source, so a cross-source comparison that is ALSO a
     # cross-prompt comparison cannot pass unnoticed.
+    # Read condition = prompt_version AND model. The cache key carries only
+    # the prompt version, so two models can read one corpus under one
+    # prompt_version and nothing in the filenames would show it. Checking only
+    # the prompt version would report that corpus as uniform.
     vers = {}
     if "prompt_version" in df.columns:
         for s, g in df.groupby("source"):
             vv = sorted(set(g["prompt_version"].dropna().astype(str)) - {""})
-            vers[s] = vv
+            mm = (sorted(set(g["model"].dropna().astype(str)) - {""})
+                  if "model" in g.columns else [])
+            vers[s] = [f"{v} / {m}" for v in (vv or ["(no prompt_version)"])
+                       for m in (mm or ["(model not recorded)"])]
 
     print(f"\n  {'source':22} {'n':>5} {'mean':>8} {'sd':>7} {'se':>7}   "
           f"{'expected':>9}   read condition")
