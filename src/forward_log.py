@@ -336,6 +336,13 @@ def main():
     # ---- 3. write the Markdown scoreboard ---------------------------------
     lines = ["# Forward-test scoreboard (live, out-of-sample)", "",
              "Pre-registered models frozen in `config/models.yaml` before any live data.",
+             "**Regime labels are canonically ordered by ascending mean PC1 from "
+             "2026-08-25.** Rows logged before that date carry the old arbitrary "
+             "GMM component ordering, so the `regime` column is comparable within "
+             "each era and NOT across the boundary. Historical rows are not "
+             "retro-relabelled -- the ledger is never rewritten. Picks are "
+             "unaffected: candidate selection uses label EQUALITY, which is "
+             "invariant under relabelling.",
              "Signal = last completed US close; **entry = next US session**; exit = H trading days later.",
              "`pending` = horizon has not elapsed yet (expected on recent rows). "
              "`short_window` = the horizon elapsed but at least one session was missing "

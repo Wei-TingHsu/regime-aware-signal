@@ -165,9 +165,126 @@ def cmd_minutes(args):
 
 
 # --------------------------------------------------------------------------- #
+EX_PAT = __import__("re").compile(r"ex[-_]?99", __import__("re").I)
+FIG_PAT = __import__("re").compile(
+    r"(\$\s?\d|\d+\.\d+\s*(billion|million|per share)|per diluted share"
+    r"|revenue[s]?\s+(of|were|increased|decreased)|net income|earnings per share)",
+    __import__("re").I)
+
+
+def has_figures(text):
+    """Does this look like a results release rather than a cover page?
+
+    A word count cannot tell them apart -- SEC cover-page boilerplate (address,
+    state of incorporation, checkbox items) runs to several hundred words. The
+    presence of reported FIGURES can. Requires at least three distinct matches
+    so a single stray dollar sign in boilerplate does not pass."""
+    return len(set(m.group(0).lower() for m in FIG_PAT.finditer(text))) >= 3
+
+
+def _pdf_text(raw_bytes):
+    """Extract text from a PDF exhibit. Returns '' when no extractor is
+    available -- the caller REPORTS that rather than silently skipping."""
+    try:
+        import io
+        from pypdf import PdfReader
+        return "\n".join((p.extract_text() or "")
+                          for p in PdfReader(io.BytesIO(raw_bytes)).pages)
+    except Exception:
+        return ""
+
+
+def _fetch_one(cik, accn, name, args):
+    """Fetch one document from an accession. Handles htm/txt and pdf."""
+    url = ARCH.format(cik=str(int(cik)), acc=accn, doc=name)
+    if name.lower().endswith(".pdf"):
+        try:
+            import urllib.request
+            req = urllib.request.Request(
+                url, headers={"User-Agent": __import__("os").environ.get(
+                    "SEC_CONTACT", "research contact@example.com")})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                txt = _pdf_text(r.read())
+            return txt, ("" if txt else "pdf-no-extractor")
+        except Exception as e:
+            return "", f"pdf-fetch-failed:{type(e).__name__}"
+    try:
+        return clean(get(url)), ""
+    except Exception as e:
+        return "", f"fetch-failed:{type(e).__name__}"
+
+
+def fetch_exhibits(cik, accn, primary_doc, args, max_ex=3, max_scan=8,
+                   ticker=""):
+    """Return (release text, [names]) for one accession.
+
+    TWO PASSES. The first matches EX_PAT filenames -- fast and usually right.
+    The second, used ONLY when the first yields nothing, scans every other
+    document in the accession and keeps whatever CONTAINS REPORTED FIGURES.
+
+    The second pass exists because the first is a guess about naming
+    conventions and issuers do not share one: NVDA saved 0 of 25 and TSLA 4 of
+    25 under filename matching alone. A results release is identified by its
+    CONTENT, not by what someone called the file.
+
+    When both passes fail, the accession's actual filenames are printed, so the
+    next failure of this kind names itself instead of vanishing into a count.
+    """
+    import json as _j
+    idx = f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{accn}/index.json"
+    try:
+        items = _j.loads(get(idx))["directory"]["item"]
+    except Exception as e:
+        if args.verbose_exhibits:
+            print(f"      {ticker} {accn}: index.json FAILED "
+                  f"({type(e).__name__})")
+        return "", []
+    names = [i.get("name", "") for i in items if i.get("name")]
+    doc_ext = (".htm", ".html", ".txt", ".pdf")
+    others = [n for n in names
+              if n != primary_doc and n.lower().endswith(doc_ext)]
+
+    def _try(cands, need_figures):
+        parts, got, notes = [], [], []
+        for n in cands:
+            t, note = _fetch_one(cik, accn, n, args)
+            if note:
+                notes.append(f"{n}:{note}")
+            __import__("time").sleep(max(args.sleep, 0.11))
+            if len(t.split()) < 60:
+                continue
+            if need_figures and not has_figures(t):
+                continue
+            parts.append(t); got.append(n)
+            if len(got) >= max_ex:
+                break
+        return "\n\n".join(parts), got, notes
+
+    # PASS 1 -- filename match, no content requirement (fast path)
+    p1 = sorted([n for n in others if EX_PAT.search(n)])[:max_ex]
+    txt, got, notes = _try(p1, need_figures=False)
+    if txt and has_figures(txt):
+        return txt, got
+
+    # PASS 2 -- content scan. Naming failed us; test what is actually inside.
+    rest = [n for n in others if n not in p1][:max_scan]
+    txt2, got2, notes2 = _try(rest, need_figures=True)
+    if txt2:
+        return txt2, got2
+
+    if args.verbose_exhibits:
+        print(f"      {ticker} {accn}: no release found among "
+              f"{len(others)} document(s): {', '.join(others[:10])}"
+              + (" ..." if len(others) > 10 else ""))
+        if notes + notes2:
+            print(f"        notes: {'; '.join((notes + notes2)[:6])}")
+    return "", []
+
+
 def cmd_edgar(args):
-    """8-K filings. Item 2.02 IS the earnings release, so this covers both
-    earnings line-items and other material corporate events."""
+    """8-K filings. Item 2.02 IS the earnings release -- but the release TEXT
+    is in EX-99, not in the primary document, which is a one-page cover."""
+    skipped_nosub = []
     out = DOCS / "earnings_8k"; out.mkdir(parents=True, exist_ok=True)
     tick = [t.strip().upper() for t in args.tickers.split(",")]
     print("resolving tickers -> CIK ...")
@@ -209,14 +326,33 @@ def cmd_edgar(args):
             f = out / f"{stamp}_{t}.txt"
             if f.exists() and not args.refetch:
                 continue
-            url = ARCH.format(cik=str(int(cik)), acc=acc.replace("-", ""), doc=doc)
+            accn = acc.replace("-", "")
+            url = ARCH.format(cik=str(int(cik)), acc=accn, doc=doc)
             try:
                 txt = clean(get(url))
             except Exception:
                 continue
-            if len(txt.split()) < 60:
-                continue                      # cover page only, no substance
-            f.write_text(f"[{form} items: {items or 'n/a'}]\n\n{txt}")
+
+            # THE EARNINGS RELEASE IS IN EX-99, NOT THE PRIMARY DOCUMENT.
+            # For Item 2.02 the primary doc is a one-page cover saying "a press
+            # release is attached as Exhibit 99.1". Fetch the exhibits.
+            ex_txt, ex_names = fetch_exhibits(cik, accn, doc, args, ticker=t)
+            if ex_txt:
+                body = ex_txt
+                src_note = f"exhibits: {', '.join(ex_names)}"
+            else:
+                body = txt
+                src_note = "PRIMARY DOCUMENT ONLY -- no EX-99 found"
+
+            # A substance guard that actually fires. Cover-page boilerplate is
+            # long (address, jurisdiction, checkboxes), so a word count cannot
+            # separate it from a results release; the presence of reported
+            # figures can. Rejections are COUNTED and reported, never silent.
+            if not has_figures(body):
+                skipped_nosub.append(f"{t} {stamp}")
+                continue
+            f.write_text(f"[{form} items: {items or 'n/a'}] [{src_note}]"
+                         f"\n\n{body}")
             n += 1
             time.sleep(max(args.sleep, 0.11))   # SEC asks <=10 req/sec
         kinds = sorted({x[0] for x in eights})
@@ -224,7 +360,16 @@ def cmd_edgar(args):
               f"{'/'.join(kinds) or 'none'}  -> {n} saved")
         total += n
     print(f"\n8-K: {total} documents -> {out}/")
-    print("  Item 2.02 = results of operations (the earnings release itself).")
+    if skipped_nosub:
+        print(f"  {len(skipped_nosub)} filing(s) REJECTED as cover-page-only "
+              f"(no reported figures found):")
+        print("    " + ", ".join(skipped_nosub[:12])
+              + (" ..." if len(skipped_nosub) > 12 else ""))
+        print("  These are counted, not silently dropped. A high count means the"
+              " exhibit fetch is failing, not that the filings are empty.")
+    print("  Item 2.02 = results of operations. The release TEXT comes from")
+    print("  EX-99 exhibits; the primary document is a cover page and carries")
+    print("  no figures. Each file records which exhibits it was built from.")
     print("  Filed date is the PUBLIC date, which is the correct event date.")
 
 
@@ -356,6 +501,11 @@ def main():
     e = sub.add_parser("edgar")
     e.add_argument("--tickers",
                    default="NVDA,TSM,ASML,MU,INTC,MSFT,ORCL,TSLA,LMT")
+    e.add_argument("--verbose-exhibits", action="store_true", default=True,
+                   help="print the accession's actual filenames when no "
+                        "earnings release is found. ON by default: a silent "
+                        "rejection count is how 307 cover pages entered the "
+                        "corpus unnoticed.")
     e.add_argument("--items", default="2.02",
                    help="comma-separated 8-K item codes; empty for all. "
                         "Ignored for 6-K, which carries no item codes.")

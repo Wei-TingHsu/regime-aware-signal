@@ -109,6 +109,40 @@ PROFILES = {
                     "quarter is history, the outlook is not.",
                     '"extra": {"surprise": -1..+1, "guidance_change": -1..+1, '
                     '"ticker": string}'),
+    "political_order": (
+        "You classify a United States presidential EXECUTIVE ORDER, "
+        "PRESIDENTIAL ORDER or PRESIDENTIAL DETERMINATION as published in the "
+        "Federal Register. Separate what has been DECIDED from what has been "
+        "merely SAID or planned, and judge the text on its own terms.",
+        '"extra": {"actor": string, "is_decided": true/false, '
+        '"sectors": [string]}'),
+    "political_other": (
+        "You classify a United States presidential PROCLAMATION, NOTICE or "
+        "MEMORANDUM as published in the Federal Register. Separate what has "
+        "been DECIDED from what has been merely SAID or planned, and judge the "
+        "text on its own terms. Note that this document class spans a wide "
+        "range: some are administrative or commemorative, others carry "
+        "operative trade or emergency measures. Judge each document by its own "
+        "content, not by its class.",
+        '"extra": {"actor": string, "is_decided": true/false, '
+        '"sectors": [string]}'),
+    "political_order": (
+        "You classify a United States presidential EXECUTIVE ORDER, "
+        "PRESIDENTIAL ORDER or PRESIDENTIAL DETERMINATION as published in the "
+        "Federal Register. Separate what has been DECIDED from what has been "
+        "merely SAID or planned, and judge the text on its own terms.",
+        '"extra": {"actor": string, "is_decided": true/false, '
+        '"sectors": [string]}'),
+    "political_other": (
+        "You classify a United States presidential PROCLAMATION, NOTICE or "
+        "MEMORANDUM as published in the Federal Register. Separate what has "
+        "been DECIDED from what has been merely SAID or planned, and judge the "
+        "text on its own terms. Note that this document class spans a wide "
+        "range: some are administrative or commemorative, others carry "
+        "operative trade or emergency measures. Judge each document by its own "
+        "content, not by its class.",
+        '"extra": {"actor": string, "is_decided": true/false, '
+        '"sectors": [string]}'),
     "political": ("You classify a political or policy communication (executive "
                   "statement, social post, official remarks). CRITICAL: separate "
                   "what has been DECIDED from what has been merely SAID. A signed "
@@ -147,7 +181,21 @@ def call(client, model, profile, text, prev=None):
                                messages=[{"role": "user", "content": body}])
     t = "".join(b.text for b in r.content if b.type == "text").strip()
     t = re.sub(r"^```(?:json)?|```$", "", t, flags=re.M).strip()
-    return json.loads(t), r.usage.input_tokens, r.usage.output_tokens
+    try:
+        return json.loads(t), r.usage.input_tokens, r.usage.output_tokens
+    except json.JSONDecodeError:
+        # Salvage: the reply carried preamble or trailing prose. Take the
+        # outermost {...} rather than discarding a document that cost a full
+        # call. A 4,399-word FOMC minutes doc -- well under the word cap -- was
+        # lost this way in the 2026-08-24 pilot.
+        i, j = t.find("{"), t.rfind("}")
+        if i != -1 and j > i:
+            try:
+                return (json.loads(t[i:j + 1]), r.usage.input_tokens,
+                        r.usage.output_tokens)
+            except json.JSONDecodeError:
+                pass
+        raise
 
 
 def main():
@@ -157,7 +205,17 @@ def main():
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--model", default="claude-sonnet-5")
     ap.add_argument("--limit", type=int)
-    ap.add_argument("--max-words", type=int, default=6000)
+    ap.add_argument("--max-words", type=int, default=20000,
+                    help="skip documents longer than this. Raised from 6000 on "
+                         "2026-08-24: the cap was dropping 105 of 125 FOMC "
+                         "minutes (84%%) and 13 political documents. FOMC "
+                         "minutes typically run 10-15k words, so a 6k cap "
+                         "excluded the source almost entirely.")
+    ap.add_argument("--max-prev-words", type=int, default=3000,
+                    help="cap on the PREVIOUS document passed by --with-prev. "
+                         "Without this, raising --max-words doubles the cost of "
+                         "every minutes call; the previous document is context "
+                         "for detecting change, and its opening is enough.")
     ap.add_argument("--with-prev", action="store_true",
                     help="pass the previous document of the same type as "
                          "context (deltas matter for Fed statements)")
@@ -186,6 +244,7 @@ def main():
 
     sources = sorted(PROFILES) if args.all else [args.source]
     rows, tin, tout, failed = [], 0, 0, 0
+    failed_names = []
     for src in sources:
         d = DOCS / src
         if not d.exists():
@@ -217,13 +276,29 @@ def main():
                 rows.append(json.loads(out_f.read_text()))
                 continue
             prev = texts[i - 1] if (args.with_prev and i > 0) else None
+            if prev is not None:
+                pw = prev.split()
+                if len(pw) > args.max_prev_words:
+                    prev = (" ".join(pw[:args.max_prev_words])
+                            + "\n\n[previous document truncated for context]\n")
             try:
                 data, a, b = call(client, args.model, src, texts[i], prev)
                 tin += a; tout += b
             except Exception as e:
-                print(f"    {f.stem}  FAILED: {type(e).__name__}: {e}")
-                failed += 1
-                continue
+                # ONE retry with a stricter instruction before giving up. A
+                # transient formatting slip should not cost a document.
+                try:
+                    data, a, b = call(client, args.model, src,
+                                      texts[i] + "\n\n[REMINDER: reply with "
+                                      "the JSON object ONLY. No preamble, no "
+                                      "explanation, no markdown fences.]", prev)
+                    tin += a; tout += b
+                    print(f"    {f.stem}  recovered on retry")
+                except Exception as e2:
+                    print(f"    {f.stem}  FAILED: {type(e2).__name__}: {e2}")
+                    failed += 1
+                    failed_names.append(f"{src}/{f.stem}")
+                    continue
             data.update(source=src, date=dt.strftime("%Y-%m-%d"), doc_id=did,
                         prompt_version=PROMPT_VERSION, model=args.model)
             out_f.write_text(json.dumps(data, indent=2))
@@ -244,6 +319,12 @@ def main():
         # silently wrong at worst.
         flat.append(dict(date=r.get("date"), source=r.get("source"),
                          doc_id=r.get("doc_id", ""),
+                         # Read condition, carried into the CSV so any
+                         # cross-source comparison can show whether it is also a
+                         # cross-prompt or cross-model comparison. Without these
+                         # two columns that mixture is invisible.
+                         prompt_version=r.get("prompt_version", ""),
+                         model=r.get("model", ""),
                          dir_eq=d.get("equity"), dir_dur=d.get("duration"),
                          dir_gold=d.get("gold"), dir_usd=d.get("dollar"),
                          dir_oil=d.get("oil"),
@@ -258,6 +339,11 @@ def main():
 
     print(f"\nread {len(df)} docs, {failed} failed | "
           f"tokens {tin:,} in / {tout:,} out")
+    if failed_names:
+        print("\nFAILED, re-runnable (cached reads are skipped, so a re-run "
+              "only retries these):")
+        for fn in failed_names:
+            print(f"    {fn}")
     print("\nby source:")
     for s, g in df.groupby("source"):
         print(f"  {s:16} n={len(g):4d}  |dir| mean "
