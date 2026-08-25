@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 15,
+  "specificity": 0.8,
+  "novelty": 0.55,
+  "confidence": 0.55,
+  "evidence": [
+    "expects these headcount reduction initiatives will reduce our core Intel workforce by 15%",
+    "expects to recognize $1.9 billion of restructuring charges related to these actions",
+    "enterprise-wide initiative...to fundamentally transform our culture and the way in which we operate"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": -0.2,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2025-07-24",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.4,
+    "gold": 0.4,
+    "dollar": -0.4,
+    "oil": 0.2
+  },
+  "magnitude": 0.5,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "lower the target range for the federal funds rate to 2 to 2-1/4 percent",
+    "conclude the reduction of its aggregate securities holdings...in August, two months earlier",
+    "will act as appropriate to sustain the expansion"
+  ],
+  "extra": {
+    "stance": -0.3,
+    "guidance": -0.1
+  },
+  "source": "fomc_statement",
+  "date": "2019-07-31",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

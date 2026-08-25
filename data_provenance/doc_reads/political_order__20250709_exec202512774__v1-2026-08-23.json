@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.2,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "There is hereby established the President's Make America Beautiful Again Commission",
+    "expand access to public lands and waters for recreation, hunting, and fishing",
+    "cut bureaucratic delays that hinder effective environmental management"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "outdoor recreation",
+      "land management",
+      "conservation",
+      "energy/land-use"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-07-09",
+  "doc_id": "exec202512774",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

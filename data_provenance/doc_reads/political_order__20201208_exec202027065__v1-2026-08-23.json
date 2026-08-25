@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "establishes additional principles (Principles) for the use of AI in the Federal Government",
+    "Within 180 days of the date of this order, the Director of OMB...shall publicly post a roadmap",
+    "This order does not apply to: AI used in defense or national security systems"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 13960)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "government IT",
+      "AI vendors/contractors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-12-08",
+  "doc_id": "exec202027065",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": -0.05,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "to operate in the gold sector of the Venezuelan economy",
+    "All property and interests in property that are in the United States",
+    "hereby blocked and may not be transferred, paid, exported, withdrawn"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State to implement)",
+    "is_decided": true,
+    "sectors": [
+      "Venezuela gold mining",
+      "Venezuelan government-linked entities"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-11-02",
+  "doc_id": "exec201824254",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

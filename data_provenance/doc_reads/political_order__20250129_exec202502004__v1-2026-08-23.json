@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "I hereby declare a national emergency, under IEEPA, to deal with those threats.",
+    "the Secretary of State shall take all appropriate action... to make a recommendation regarding the designation",
+    "total elimination of these organizations' presence in the United States"
+  ],
+  "extra": {
+    "actor": "President / Secretary of State, Treasury, DHS, DOJ, DNI",
+    "is_decided": false,
+    "sectors": [
+      "security",
+      "immigration",
+      "financial sanctions",
+      "Mexico-related trade/border"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-29",
+  "doc_id": "exec202502004",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

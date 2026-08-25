@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.05,
+  "confidence": 0.75,
+  "evidence": [
+    "Seen as a whole, ASML was still well on schedule to achieve the previously published targets for 2020.",
+    "It is possible that the program will be resumed in the course of 2017",
+    "a proposal would be made later on in the meeting to pay out a dividend of EUR 1.20 per share"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.05,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2017-07-20",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

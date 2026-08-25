@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 15,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "All property and interests in property that are in the United States...are blocked",
+    "engage in any activity that materially contributes to the supply, sale, or transfer...of arms",
+    "the entry of such persons into the United States...is hereby suspended"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State to implement)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "energy",
+      "financial sanctions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-09-23",
+  "doc_id": "exec202021160",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

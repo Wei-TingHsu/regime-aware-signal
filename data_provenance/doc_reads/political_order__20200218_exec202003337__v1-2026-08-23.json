@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.8,
+  "evidence": [
+    "develop and make available, to at least the appropriate agencies and private sector users, PNT profiles",
+    "Secretary of Commerce shall make available a GNSS-independent source of Coordinated Universal Time",
+    "develop a plan to test the vulnerabilities of critical infrastructure systems"
+  ],
+  "extra": {
+    "actor": "President (multiple federal agencies: Commerce, DHS, DoD, DOT, Energy, OSTP)",
+    "is_decided": true,
+    "sectors": [
+      "critical infrastructure",
+      "technology",
+      "telecommunications",
+      "defense",
+      "transportation",
+      "energy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-02-18",
+  "doc_id": "exec202003337",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

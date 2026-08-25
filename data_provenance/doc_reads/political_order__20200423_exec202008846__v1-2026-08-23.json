@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "shall consider taking appropriate action under section 1318(a)",
+    "temporarily extend deadlines, for importers suffering significant financial hardship because of COVID-19",
+    "invoked and made available, according to its terms, to the Secretary"
+  ],
+  "extra": {
+    "actor": "President/Secretary of the Treasury",
+    "is_decided": false,
+    "sectors": [
+      "importers",
+      "customs/trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-04-23",
+  "doc_id": "exec202008846",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

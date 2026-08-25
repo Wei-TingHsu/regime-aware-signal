@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.3,
+    "gold": 0.3,
+    "dollar": 0.2,
+    "oil": -0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 20,
+  "specificity": 0.95,
+  "novelty": 0.6,
+  "confidence": 0.85,
+  "evidence": [
+    "striking the words ``10 percent'' and inserting in lieu thereof the words ``20 percent''",
+    "the PRC has not taken adequate steps to alleviate the illicit drug crisis",
+    "impose ad valorem tariffs on articles that are products of the PRC"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, IEEPA/Trade Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "China trade",
+      "tariffs",
+      "imports",
+      "consumer goods",
+      "manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-07",
+  "doc_id": "exec202503775",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

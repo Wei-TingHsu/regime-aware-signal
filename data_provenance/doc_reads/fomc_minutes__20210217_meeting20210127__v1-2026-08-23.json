@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": -0.3,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.25,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "members decided that the reference...to risks to the economic outlook over the medium term was no longer warranted",
+    "the medium-term outlook had improved",
+    "most still viewed the risks as weighted to the downside"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.4
+  },
+  "source": "fomc_minutes",
+  "date": "2021-02-17",
+  "doc_id": "meeting20210127",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

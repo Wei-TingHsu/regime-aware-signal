@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "there is established in the Department of Education...the White House Initiative",
+    "There is established in the Department a Presidential Advisory Commission",
+    "This order supersedes Executive Order 13621 of July 26, 2012"
+  ],
+  "extra": {
+    "actor": "Department of Education / White House",
+    "is_decided": true,
+    "sectors": [
+      "education",
+      "HBCUs/PBIs",
+      "workforce development"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-10-22",
+  "doc_id": "exec202123224",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

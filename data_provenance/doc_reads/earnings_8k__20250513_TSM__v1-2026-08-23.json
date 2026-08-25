@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "First quarter consolidated revenue was NT$839.25 billion and net income was NT$361.56 billion",
+    "the Board approved capital appropriations of approximately US$15,247.70 million",
+    "Approved the distribution of a NT$5.00 per share cash dividend"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2025-05-13",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

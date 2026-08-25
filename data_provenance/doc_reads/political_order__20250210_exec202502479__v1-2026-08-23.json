@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "the additional 25 percent ad valorem rate of duty shall be paused",
+    "will not take effect until March 4, 2025",
+    "immediate implementation of the tariffs described in the Executive Order of February 1, 2025"
+  ],
+  "extra": {
+    "actor": "President (IEEPA/Trade Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "Mexico imports",
+      "border security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-10",
+  "doc_id": "exec202502479",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

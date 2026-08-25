@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "review, to the extent practicable, performance of contracts",
+    "protect United States workers from any adverse effects on wages",
+    "propose action, if necessary and as appropriate...to improve the economy"
+  ],
+  "extra": {
+    "actor": "President/Executive Branch agencies",
+    "is_decided": false,
+    "sectors": [
+      "federal contractors",
+      "H-1B employers",
+      "IT/outsourcing services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-08-06",
+  "doc_id": "exec202017363",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

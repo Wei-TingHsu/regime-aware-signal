@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "any transaction by any person...with ByteDance Ltd.",
+    "shall be prohibited beginning 45 days after the date of this order",
+    "The United States must take aggressive action against the owners of TikTok"
+  ],
+  "extra": {
+    "actor": "President (IEEPA/Commerce Department)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "social media",
+      "China-US trade relations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-08-11",
+  "doc_id": "exec202017699",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "dividend in respect of the financial year 2014 of EUR 0.70 per ordinary share",
+    "ASML intends to purchase up to EUR 750 million of ordinary shares",
+    "increase the dividend per ordinary share by 15 percent"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2015-04-08",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

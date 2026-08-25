@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "The rates of basic pay or salaries of the statutory pay systems",
+    "Schedule 8 is effective January 1, 2013",
+    "Executive Order 13594 of December 19, 2011, is superseded"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "federal government employees",
+      "military pay"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-01-03",
+  "doc_id": "exec201300002",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.05,
+  "confidence": 0.85,
+  "evidence": [
+    "The General Meeting of Shareholders adopted ASML's statutory financial statements",
+    "Proposal to adopt a 2013 dividend of EUR 0.61 per ordinary share",
+    "Proposal to extend the existing authority of the Board of Management to acquire through October 23, 2015 a maximum of 20%"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2014-05-02",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

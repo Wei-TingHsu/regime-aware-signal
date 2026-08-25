@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "establish within the Department of Justice a Task Force on Market Integrity and Consumer Fraud",
+    "shall replace the Financial Fraud Enforcement Task Force created by Executive Order 13519",
+    "provide guidance for the investigation and prosecution of cases involving fraud"
+  ],
+  "extra": {
+    "actor": "Department of Justice",
+    "is_decided": true,
+    "sectors": [
+      "financial services",
+      "securities",
+      "banking",
+      "consumer protection"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-07-16",
+  "doc_id": "exec201815299",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

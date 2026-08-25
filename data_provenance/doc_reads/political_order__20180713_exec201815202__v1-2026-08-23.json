@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "Appointments of ALJs shall be made under Schedule E of the excepted service",
+    "conditions of good administration make necessary an exception to the competitive hiring rules",
+    "This action will also give agencies greater ability and discretion to assess critical qualities"
+  ],
+  "extra": {
+    "actor": "President (OPM implementation)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "federal civil service",
+      "legal/regulatory process"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-07-13",
+  "doc_id": "exec201815202",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

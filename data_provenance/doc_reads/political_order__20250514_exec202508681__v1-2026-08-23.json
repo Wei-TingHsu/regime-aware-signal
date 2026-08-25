@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "Criminal enforcement of criminal regulatory offenses is disfavored.",
+    "Strict liability offenses are \"generally disfavored.\"",
+    "the head of each agency ... shall provide ... a report containing ... a list of all criminal regulatory offenses"
+  ],
+  "extra": {
+    "actor": "President/Executive Agencies (OMB, DOJ)",
+    "is_decided": true,
+    "sectors": [
+      "regulatory compliance",
+      "corporate legal risk",
+      "manufacturing",
+      "healthcare",
+      "environmental/financial regulated industries"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-05-14",
+  "doc_id": "exec202508681",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

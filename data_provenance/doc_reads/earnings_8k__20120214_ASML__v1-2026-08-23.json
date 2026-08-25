@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "ASML Holding NV (ASML) has filed its annual report on Form 20-F",
+    "Tachyon FMO has been demonstrated on real customer cases to reduce tapeout cycle time by over 65%"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2012-02-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

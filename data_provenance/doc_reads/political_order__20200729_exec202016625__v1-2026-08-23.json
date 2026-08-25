@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.15,
+  "confidence": 0.55,
+  "evidence": [
+    "exclude from safe harbor protections under the anti-kickback statute",
+    "establish new safe harbors that would permit health plan sponsors, pharmacies, and PBMs",
+    "shall confirm...that the action is not projected to increase Federal spending"
+  ],
+  "extra": {
+    "actor": "President (HHS to implement)",
+    "is_decided": false,
+    "sectors": [
+      "pharmaceuticals",
+      "pharmacy benefit managers",
+      "healthcare insurers"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-07-29",
+  "doc_id": "exec202016625",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

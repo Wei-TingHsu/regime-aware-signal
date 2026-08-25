@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Committee decided that it would be appropriate to make a further measured reduction in the pace of its asset purchases",
+    "it was appropriate to replace the existing quantitative thresholds at this meeting",
+    "economic conditions may, for some time, warrant keeping the target federal funds rate below levels the Committee views as normal"
+  ],
+  "extra": {
+    "stance": 0.1,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2014-04-09",
+  "doc_id": "meeting20140319",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

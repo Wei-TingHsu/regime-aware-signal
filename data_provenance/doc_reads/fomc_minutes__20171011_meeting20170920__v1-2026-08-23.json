@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 10,
+  "specificity": 0.65,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "Members agreed that, in October, the Committee would initiate the balance sheet normalization program",
+    "Many participants thought that another increase in the target range later this year was likely to be warranted",
+    "A few of these participants thought that no further increases in the federal funds rate were called for in the near term"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2017-10-11",
+  "doc_id": "meeting20170920",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

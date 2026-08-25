@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "expressing a false ``gender identity'' divergent from an individual's sex cannot satisfy the rigorous standards",
+    "the Secretary shall update DoDI 6130.03",
+    "Armed Forces shall neither allow males to use or share sleeping, changing, or bathing facilities"
+  ],
+  "extra": {
+    "actor": "Department of Defense / Department of Homeland Security (Coast Guard)",
+    "is_decided": true,
+    "sectors": [
+      "defense/military policy",
+      "social policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-03",
+  "doc_id": "exec202502178",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

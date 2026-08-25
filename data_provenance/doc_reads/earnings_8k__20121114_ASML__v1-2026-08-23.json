@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "none of its creditors has opposed the capital repayment",
+    "cash capital repayment of EUR 9.18 per ordinary share",
+    "reverse stock split in a ratio of 77 shares for every 100 shares"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2012-11-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

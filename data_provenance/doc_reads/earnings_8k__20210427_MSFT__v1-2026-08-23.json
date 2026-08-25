@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 3,
+  "specificity": 0.7,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "Revenue was $41.7 billion and increased 19%",
+    "Azure revenue growth of 50%",
+    "commercial cloud revenue, up 33% year over year"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "MSFT"
+  },
+  "source": "earnings_8k",
+  "date": "2021-04-27",
+  "doc_id": "MSFT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

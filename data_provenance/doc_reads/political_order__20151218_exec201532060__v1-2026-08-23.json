@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "to strengthen the recruitment, hiring, and development of the Federal Government's senior executives",
+    "Establishment of PMC Subcommittee to Strengthen the Senior Executive Service",
+    "agencies shall implement policies... for career SES appointees"
+  ],
+  "extra": {
+    "actor": "OPM/OMB/PMC Subcommittee/agency heads",
+    "is_decided": true,
+    "sectors": [
+      "federal workforce management"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-12-18",
+  "doc_id": "exec201532060",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

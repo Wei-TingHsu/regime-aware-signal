@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue is expected to be between US$10.2 billion and US$10.3 billion",
+    "continued ramp of 5G smartphones",
+    "2020 capital budget to be between US$15 billion and US$16 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2020-01-16",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

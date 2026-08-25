@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "the FAR should contain only provisions required by statute or essential to sound procurement",
+    "Within 180 days of the date of this order, the Administrator... shall take appropriate actions to amend the FAR",
+    "any provisions identified... will expire 4 years after the effective date"
+  ],
+  "extra": {
+    "actor": "President / OFPP Administrator / FAR Council",
+    "is_decided": true,
+    "sectors": [
+      "government contractors",
+      "defense industrial base",
+      "federal procurement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-18",
+  "doc_id": "exec202506839",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

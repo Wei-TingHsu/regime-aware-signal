@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.35,
+  "confidence": 0.75,
+  "evidence": [
+    "revenue for October 2023 was approximately NT$243.20 billion, an increase of 34.8 percent from September 2023",
+    "an increase of 15.7 percent from October 2022",
+    "January through October 2023 totaled NT$1,779.41 billion, a decrease of 3.7 percent"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2023-11-13",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

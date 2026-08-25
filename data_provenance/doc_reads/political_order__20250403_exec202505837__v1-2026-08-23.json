@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "establishing the D.C. Safe and Beautiful Task Force",
+    "directing maximum enforcement of Federal immigration law",
+    "prompt removal and cleanup of all homeless or vagrant encampments"
+  ],
+  "extra": {
+    "actor": "President / DHS Advisor / Task Force / Secretary of Interior",
+    "is_decided": true,
+    "sectors": [
+      "local government/DC",
+      "law enforcement",
+      "real estate/public land",
+      "transit"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-03",
+  "doc_id": "exec202505837",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

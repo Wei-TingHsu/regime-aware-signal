@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 20,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "exposed 1022 wafers in 24 hours with sustained power of over 90 Watts",
+    "moves us closer to our stated target of sustained output of 1000 wafers per day in 2015",
+    "TSMC has stated that it intends to use EUV in production"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2015-02-24",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.15,
+  "confidence": 0.5,
+  "evidence": [
+    "We continue to expect a total revenue level for 2011 clearly above \u20ac5 billion",
+    "Order intake between \u20ac900 million \u2013 \u20ac1 billion",
+    "Net sales around \u20ac1.5 billion"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2011-06-07",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

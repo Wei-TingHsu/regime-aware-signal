@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "the adjustment of the limits of liability listed in section 1004(a) of OPA",
+    "delegated to the Secretary of the department in which the Coast Guard is operating",
+    "This order is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (delegating to Coast Guard Secretary, EPA Administrator, DOT, DOI)",
+    "is_decided": true,
+    "sectors": [
+      "oil spill liability",
+      "marine transportation",
+      "energy/offshore facilities"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-03-21",
+  "doc_id": "exec201306712",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

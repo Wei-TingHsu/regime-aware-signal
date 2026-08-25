@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.35,
+  "evidence": [
+    "ASML reports \u20ac8.8 billion total net sales and \u20ac2.8 billion net income in Q1 2026",
+    "ASML now expects 2026 total net sales to be between \u20ac36 billion and \u20ac40 billion",
+    "with a gross margin between 51% and 53%"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2026-04-15",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

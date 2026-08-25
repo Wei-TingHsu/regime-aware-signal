@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "shall file a petition for rulemaking with the Federal Communications Commission",
+    "the FTC shall consider taking action... to prohibit unfair or deceptive acts or practices",
+    "The Attorney General shall develop a proposal for Federal legislation"
+  ],
+  "extra": {
+    "actor": "President (Executive Order) directing FCC petition, FTC, DOJ, OMB",
+    "is_decided": true,
+    "sectors": [
+      "social media",
+      "technology",
+      "internet platforms"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-06-02",
+  "doc_id": "exec202012030",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

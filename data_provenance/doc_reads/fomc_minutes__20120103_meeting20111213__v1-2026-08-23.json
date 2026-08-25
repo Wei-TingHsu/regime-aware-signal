@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "A number of members indicated that current and prospective economic conditions could well warrant additional policy accommodation",
+    "participants decided to incorporate information about their projections of appropriate monetary policy into the SEP beginning in January",
+    "One member preferred to undertake additional accommodation at this meeting and dissented"
+  ],
+  "extra": {
+    "stance": 0.1,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2012-01-03",
+  "doc_id": "meeting20111213",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

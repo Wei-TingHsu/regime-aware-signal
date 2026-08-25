@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "Delegation of Functions",
+    "Executive Order 11958 of January 18, 1977, as amended, is revoked",
+    "shall be responsible for the continuous supervision and general direction of sales and exports"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State/Defense)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "aerospace/defense exports"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-03-13",
+  "doc_id": "exec201305967",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.5,
+  "evidence": [
+    "revenue for June 2022 was approximately NT$175.87 billion, a decrease of 5.3 percent from May 2022",
+    "an increase of 18.5 percent from June 2021",
+    "Revenue for January through June 2022 totaled NT$1,025.22 billion, an increase of 39.6 percent"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2022-07-08",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

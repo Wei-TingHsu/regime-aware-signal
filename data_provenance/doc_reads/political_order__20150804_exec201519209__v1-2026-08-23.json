@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "Implementing the National HIV/AIDS Strategy for the United States for 2015-2020",
+    "Lead agencies for implementing the Updated Strategy shall be",
+    "This order is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "public health",
+      "federal agencies"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-08-04",
+  "doc_id": "exec201519209",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

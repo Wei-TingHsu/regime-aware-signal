@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "agencies shall procure commercially available products and services",
+    "conduct a review of all open agency solicitations",
+    "non-commercial product or service is required"
+  ],
+  "extra": {
+    "actor": "President/OMB/Federal agencies",
+    "is_decided": true,
+    "sectors": [
+      "government contractors",
+      "defense",
+      "IT services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-18",
+  "doc_id": "exec202506835",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.15
+  },
+  "magnitude": 0.35,
+  "horizon_days": 10,
+  "specificity": 0.85,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "new debt with a maturity of greater than 90 days of Petroleos de Venezuela",
+    "bonds issued by the Government of Venezuela prior to the effective date",
+    "dividend payments or other distributions of profits to the Government of Venezuela"
+  ],
+  "extra": {
+    "actor": "President (Treasury/OFAC implementation)",
+    "is_decided": true,
+    "sectors": [
+      "oil and gas",
+      "sovereign debt",
+      "financial services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-08-29",
+  "doc_id": "exec201718468",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

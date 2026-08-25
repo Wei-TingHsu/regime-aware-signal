@@ -1,0 +1,66 @@
+==============================================================================
+TREND CHECK -- level vs trend at FIXED horizon, on BOTH scaling bases
+==============================================================================
+  thread 8: model_1 and model_2 differ in horizon AND sim_mode, so
+  neither the original claim nor its retirement is supported.
+  Added question: scaling_check found the _z() look-ahead is small
+  for LEVEL (+0.012 long-history, p 0.94) and large for TREND
+  (model_2 long-history +0.261, 0.4131 -> 0.1522). If trend beats
+  level only on the full basis, the trend effect IS the look-ahead.
+
+  4x2 cells x 2 bases x 2 universes, gaussian kernel
+  NO multiplicity correction; individual cells are ESTIMATES, the claim is the PATTERN.
+
+==============================================================================
+BASIS: full  (every recorded figure)
+==============================================================================
+  H= 5 sigma 1.0 ALL            level +0.4346  trend +0.1092  trend-level -0.3254  paired p 0.1736
+  H= 5 sigma 1.0 LONG-HISTORY   level +0.2493  trend +0.0213  trend-level -0.2280  paired p 0.3607
+  H=10 sigma 1.0 ALL            level +0.1308  trend +0.3441  trend-level +0.2133  paired p 0.3675
+  H=10 sigma 1.0 LONG-HISTORY   level +0.0708  trend +0.4219  trend-level +0.3511  paired p 0.1694
+  H=15 sigma 1.0 ALL            level +0.3025  trend +0.4896  trend-level +0.1872  paired p 0.3411
+  H=15 sigma 1.0 LONG-HISTORY   level +0.1587  trend +0.4075  trend-level +0.2487  paired p 0.3127
+  H=20 sigma 1.0 ALL            level +0.3359  trend +0.4434  trend-level +0.1075  paired p 0.7141
+  H=20 sigma 1.0 LONG-HISTORY   level +0.3460  trend +0.4947  trend-level +0.1487  paired p 0.5571
+  H= 5 sigma 1.5 ALL            level +0.4034  trend +0.0625  trend-level -0.3409  paired p 0.1348
+  H= 5 sigma 1.5 LONG-HISTORY   level +0.2526  trend -0.0470  trend-level -0.2997  paired p 0.2100
+  H=10 sigma 1.5 ALL            level +0.1787  trend +0.3598  trend-level +0.1811  paired p 0.4257
+  H=10 sigma 1.5 LONG-HISTORY   level +0.1413  trend +0.4131  trend-level +0.2719  paired p 0.2839
+  H=15 sigma 1.5 ALL            level +0.3305  trend +0.4934  trend-level +0.1630  paired p 0.4479
+  H=15 sigma 1.5 LONG-HISTORY   level +0.2196  trend +0.4925  trend-level +0.2729  paired p 0.2432
+  H=20 sigma 1.5 ALL            level +0.3433  trend +0.3446  trend-level +0.0013  paired p 0.8736
+  H=20 sigma 1.5 LONG-HISTORY   level +0.3101  trend +0.4543  trend-level +0.1442  paired p 0.5461
+==============================================================================
+BASIS: expanding  (no look-ahead)
+==============================================================================
+  H= 5 sigma 1.0 ALL            level +0.4060  trend -0.1666  trend-level -0.5726  paired p 0.0214 <-
+  H= 5 sigma 1.0 LONG-HISTORY   level +0.1775  trend -0.3420  trend-level -0.5195  paired p 0.0520
+  H=10 sigma 1.0 ALL            level +0.1142  trend +0.1224  trend-level +0.0082  paired p 0.9978
+  H=10 sigma 1.0 LONG-HISTORY   level -0.0091  trend +0.0869  trend-level +0.0960  paired p 0.6893
+  H=15 sigma 1.0 ALL            level +0.5715  trend +0.3159  trend-level -0.2556  paired p 0.2200
+  H=15 sigma 1.0 LONG-HISTORY   level +0.3519  trend +0.2680  trend-level -0.0839  paired p 0.7041
+  H=20 sigma 1.0 ALL            level +0.4134  trend +0.4035  trend-level -0.0099  paired p 0.8770
+  H=20 sigma 1.0 LONG-HISTORY   level +0.2940  trend +0.3568  trend-level +0.0628  paired p 0.7938
+  H= 5 sigma 1.5 ALL            level +0.3834  trend -0.0467  trend-level -0.4301  paired p 0.0728
+  H= 5 sigma 1.5 LONG-HISTORY   level +0.2406  trend -0.2530  trend-level -0.4936  paired p 0.0458 <-
+  H=10 sigma 1.5 ALL            level +0.1722  trend +0.2538  trend-level +0.0816  paired p 0.7451
+  H=10 sigma 1.5 LONG-HISTORY   level +0.0442  trend +0.1522  trend-level +0.1080  paired p 0.6597
+  H=15 sigma 1.5 ALL            level +0.5898  trend +0.3234  trend-level -0.2663  paired p 0.2412
+  H=15 sigma 1.5 LONG-HISTORY   level +0.3941  trend +0.2969  trend-level -0.0973  paired p 0.6577
+  H=20 sigma 1.5 ALL            level +0.4583  trend +0.3393  trend-level -0.1190  paired p 0.4719
+  H=20 sigma 1.5 LONG-HISTORY   level +0.3169  trend +0.2738  trend-level -0.0431  paired p 0.7794
+
+==============================================================================
+PATTERN -- trend minus level, averaged over sigma and horizon
+==============================================================================
+  full       ALL            mean trend-level +0.0234  |  trend ahead in 6/8 cells
+  full       LONG-HISTORY   mean trend-level +0.1137  |  trend ahead in 6/8 cells
+  expanding  ALL            mean trend-level -0.1955  |  trend ahead in 2/8 cells
+  expanding  LONG-HISTORY   mean trend-level -0.1213  |  trend ahead in 3/8 cells
+
+  long-history: trend advantage +0.1137 on the full basis, -0.1213 with the look-ahead removed.
+  -> the trend advantage does NOT survive removing the look-ahead. On this panel the trend effect IS the look-ahead.
+==============================================================================
+
+  -> /Users/hsuweiting/Projects/regime-aware-signal/docs/trend_check_results.md
+  -> /Users/hsuweiting/Projects/regime-aware-signal/processed/trend_check.json

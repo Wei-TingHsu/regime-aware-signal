@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "shall establish targets for the production, allocation, and distribution of COVID-19 treatments",
+    "evaluate the COVID-19 Uninsured Program",
+    "accelerate the development of novel therapies to treat COVID-19"
+  ],
+  "extra": {
+    "actor": "President (HHS, DoD, VA directed)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "pharmaceuticals",
+      "hospitals"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-26",
+  "doc_id": "exec202101858",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

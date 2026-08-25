@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": -0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 10,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "to operate or have operated in the gold sector of the Nicaraguan economy",
+    "new investment in any sector of the Nicaraguan economy as may be determined",
+    "the importation into the United States of any products of Nicaraguan origin"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "Nicaragua sanctions",
+      "gold sector",
+      "trade/investment restrictions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-10-26",
+  "doc_id": "exec202223433",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

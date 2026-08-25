@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.4,
+  "evidence": [
+    "We expect to achieve 50% average annual growth in vehicle production and deliveries over a multi-year horizon",
+    "we expect to recognize nearly $1 billion of deferred revenue",
+    "Q4 and FY 2022 Update"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2023-01-25",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

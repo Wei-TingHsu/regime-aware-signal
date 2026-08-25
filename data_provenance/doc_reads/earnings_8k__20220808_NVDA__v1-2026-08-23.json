@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 5,
+  "specificity": 0.85,
+  "novelty": 0.7,
+  "confidence": 0.75,
+  "evidence": [
+    "Preliminary second quarter revenue of $6.70 billion versus outlook of $8.10 billion",
+    "Gaming revenue was $2.04 billion, down 44% sequentially and down 33% from the prior year",
+    "challenging market conditions...expected to persist into the third quarter"
+  ],
+  "extra": {
+    "surprise": -0.85,
+    "guidance_change": -0.6,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2022-08-08",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

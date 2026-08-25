@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 250,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "transition all HVAs and high impact systems to use PQC for key establishment by December 31, 2030",
+    "publish a proposed rule amending the Federal Acquisition Regulation (FAR) to require covered contractors to comply by December 31, 2030",
+    "The advent of large-scale quantum computers...will pose a significant threat to widely used cryptographic security systems"
+  ],
+  "extra": {
+    "actor": "President / OMB / NIST / DHS-CISA / NSA",
+    "is_decided": true,
+    "sectors": [
+      "cybersecurity",
+      "technology",
+      "defense",
+      "quantum computing",
+      "federal contractors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-06-25",
+  "doc_id": "exec202612909",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

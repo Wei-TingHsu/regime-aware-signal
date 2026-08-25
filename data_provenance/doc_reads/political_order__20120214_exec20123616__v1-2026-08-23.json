@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "There is established the President's Global Development Council",
+    "The Council shall terminate 2 years after the date of this order",
+    "advise and support the President... in furtherance of the policy set forth in section 1"
+  ],
+  "extra": {
+    "actor": "President (via USAID)",
+    "is_decided": true,
+    "sectors": [
+      "development",
+      "foreign policy",
+      "advisory council"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-02-14",
+  "doc_id": "exec20123616",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.35,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.15
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "2010 sales to grow 10 - 15% above historical peak of \u20ac 3.8 billion",
+    "No customer has delayed shipment of any tool",
+    "Continued urgent demand for tools at ASML customers"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2010-09-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

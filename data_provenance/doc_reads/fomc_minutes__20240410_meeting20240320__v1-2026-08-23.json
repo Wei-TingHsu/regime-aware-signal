@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "almost all participants judged that it would be appropriate to move policy to a less restrictive stance at some point this year",
+    "The vast majority of participants thus judged it would be prudent to begin slowing the pace of runoff fairly soon",
+    "participants generally favored reducing the monthly pace of runoff by roughly half from the recent overall pace"
+  ],
+  "extra": {
+    "stance": 0.1,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2024-04-10",
+  "doc_id": "meeting20240320",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

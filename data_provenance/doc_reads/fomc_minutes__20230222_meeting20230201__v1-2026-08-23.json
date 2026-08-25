@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.3,
+    "gold": 0.1,
+    "dollar": -0.2,
+    "oil": 0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.55,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "almost all participants agreed that it was appropriate to raise the target range for the federal funds rate 25 basis points",
+    "A few participants stated that they favored raising the target range for the federal funds rate 50 basis points",
+    "a restrictive policy stance would need to be maintained until the incoming data provided confidence that inflation was on a sustained downward path"
+  ],
+  "extra": {
+    "stance": 0.4,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2023-02-22",
+  "doc_id": "meeting20230201",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

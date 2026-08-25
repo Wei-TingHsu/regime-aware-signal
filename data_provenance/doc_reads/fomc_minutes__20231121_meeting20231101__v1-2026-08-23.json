@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.4,
+    "gold": 0.2,
+    "dollar": -0.3,
+    "oil": 0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 15,
+  "specificity": 0.4,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "All participants agreed to maintain the target range for the federal funds rate",
+    "whatever the source of the rise in longer-term yields, persistent changes in financial conditions could have implications for the path of monetary policy",
+    "Many participants observed that a range of measures suggested that the rise in longer-term yields had been driven primarily or substantially by a rise in the term premiums"
+  ],
+  "extra": {
+    "stance": -0.3,
+    "dispersion": 0.4
+  },
+  "source": "fomc_minutes",
+  "date": "2023-11-21",
+  "doc_id": "meeting20231101",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

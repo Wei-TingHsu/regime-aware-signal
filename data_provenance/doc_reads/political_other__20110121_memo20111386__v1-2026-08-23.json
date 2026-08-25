@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "agencies... shall develop plans to make public information concerning their regulatory compliance",
+    "This memorandum is not intended to, and does not, create any right or benefit",
+    "Greater disclosure of regulatory compliance information fosters fair and consistent enforcement"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "regulatory transparency",
+      "government administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-01-21",
+  "doc_id": "memo20111386",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

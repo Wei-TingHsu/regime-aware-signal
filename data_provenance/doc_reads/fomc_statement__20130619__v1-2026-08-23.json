@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "The Committee sees the downside risks to the outlook for the economy and the labor market as having diminished since the fall.",
+    "continue purchasing additional agency mortgage-backed securities at a pace of $40 billion per month and longer-term Treasury securities at a pace of $45 billion per month",
+    "this exceptionally low range for the federal funds rate will be appropriate at least as long as the unemployment rate remains above 6-1/2 percent"
+  ],
+  "extra": {
+    "stance": 0.1,
+    "guidance": 0.0
+  },
+  "source": "fomc_statement",
+  "date": "2013-06-19",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

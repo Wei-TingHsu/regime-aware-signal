@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.02
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "I hereby declare a national emergency to deal with that threat.",
+    "All property and interests in property...are blocked",
+    "suspend entry into the United States, as immigrants or nonimmigrants, of such persons"
+  ],
+  "extra": {
+    "actor": "President (Treasury/OFAC implementation)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "South Sudan",
+      "oil/energy (regional)"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-04-07",
+  "doc_id": "exec201407895",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

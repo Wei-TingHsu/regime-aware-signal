@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "exceeded $1B of GAAP net income for the first time in our history",
+    "we expect to achieve 50% average annual growth in vehicle deliveries",
+    "we have shifted the launch of the Semi truck program to 2022"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.2,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2021-07-26",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

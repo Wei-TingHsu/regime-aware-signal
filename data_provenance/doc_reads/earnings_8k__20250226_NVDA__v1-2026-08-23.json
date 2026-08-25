@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.2,
+    "gold": -0.1,
+    "dollar": 0.15,
+    "oil": 0.05
+  },
+  "magnitude": 0.65,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.35,
+  "confidence": 0.68,
+  "evidence": [
+    "Revenue is expected to be $43.0 billion, plus or minus 2%.",
+    "Demand for Blackwell is amazing as reasoning AI adds another scaling law",
+    "GAAP and non-GAAP gross margins are expected to be 70.6% and 71.0%"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.3,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2025-02-26",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "Our 2014 fourth-quarter net sales came in ahead of guidance",
+    "ASML guides Q1 2015 net sales at around EUR 1.6 billion",
+    "announces a new EUR 1 bln share buyback program"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2015-01-21",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

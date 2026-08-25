@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "we expect that fourth quarter order unit intake will exceed third quarter bookings",
+    "potential for our revenues over the first three quarters of 2008 to exceed the first three quarters of 2007",
+    "new buy back program of up to 14 million of our shares"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2007-10-17",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

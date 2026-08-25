@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 180,
+  "specificity": 0.25,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "shall consider proposing regulations or revising guidance, consistent with law, to expand access to health coverage by allowing more employers to form AHPs",
+    "expand the availability of STLDI",
+    "increase the usability of HRAs, to expand employers' ability to offer HRAs"
+  ],
+  "extra": {
+    "actor": "Secretaries of Labor, Treasury, and HHS",
+    "is_decided": false,
+    "sectors": [
+      "health insurance",
+      "managed care",
+      "small business insurance",
+      "healthcare services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-10-17",
+  "doc_id": "exec201722677",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.1,
+    "gold": -0.15,
+    "dollar": 0.15,
+    "oil": 0.1
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.75,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "The United States will apply a baseline 15 percent tariff on nearly all Japanese imports",
+    "the Government of Japan has agreed to invest $550 billion in the United States",
+    "the additional automobile or automobile part section 232 ad valorem rate of duty pursuant to this order shall be zero percent"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14345)",
+    "is_decided": true,
+    "sectors": [
+      "automobiles",
+      "aerospace",
+      "pharmaceuticals",
+      "agriculture",
+      "trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-09-09",
+  "doc_id": "exec202517389",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

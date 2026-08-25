@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 15,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.55,
+  "evidence": [
+    "produced over 410,000 vehicles, delivered over 384,000 vehicles",
+    "Total 410,244 384,122 2%",
+    "Net income and cash flow results will be announced along with the rest of our financial performance"
+  ],
+  "extra": {
+    "surprise": -0.05,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2025-07-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.02,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "There is hereby established an Interagency Task Force on Commercial Advocacy",
+    "to help level the playing field on behalf of U.S. businesses",
+    "increase the success of U.S. exporters competing for foreign procurements"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "exporters",
+      "trade promotion",
+      "defense exports",
+      "government contracting"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-12-11",
+  "doc_id": "exec201230060",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

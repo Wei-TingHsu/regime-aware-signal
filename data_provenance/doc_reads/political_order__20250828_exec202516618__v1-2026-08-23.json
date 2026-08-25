@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "Federal policies and resources should not be used to support jurisdictions with cashless bail policies",
+    "the Attorney General shall submit to the President... a list of States and local jurisdictions",
+    "may be suspended or terminated, as appropriate and consistent with applicable law"
+  ],
+  "extra": {
+    "actor": "President/Attorney General/OMB",
+    "is_decided": false,
+    "sectors": [
+      "state and local government",
+      "criminal justice",
+      "municipal finance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-28",
+  "doc_id": "exec202516618",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

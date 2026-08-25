@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.5,
+  "evidence": [
+    "Revenue of \u20ac 533 million... Net profit of \u20ac 48 million",
+    "ASML expects to ship 40 systems in Q4 2005",
+    "ASML 2006 baseline revenues at same level as 2005 with expected upside"
+  ],
+  "confidence_reasoning": null,
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.05,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2005-11-09",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

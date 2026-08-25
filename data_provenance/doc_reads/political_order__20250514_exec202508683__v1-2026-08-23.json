@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "establishing a National Center for Warrior Independence on the West Los Angeles VA Campus",
+    "present an action plan...to restore the capacity to house up to 6,000 homeless veterans",
+    "directing a feasibility study at the Manchester VA Medical Center"
+  ],
+  "extra": {
+    "actor": "Department of Veterans Affairs",
+    "is_decided": true,
+    "sectors": [
+      "veterans affairs",
+      "healthcare",
+      "housing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-05-14",
+  "doc_id": "exec202508683",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "ASML raises expectation for full-year 2013 sales of up to EUR 5 billion, before Cymer consolidation",
+    "Q2 2013 results as guided, before impact of Cymer consolidation",
+    "which is above our previous guidance of a level similar to the EUR 4.73 billion of 2012"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2013-07-17",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

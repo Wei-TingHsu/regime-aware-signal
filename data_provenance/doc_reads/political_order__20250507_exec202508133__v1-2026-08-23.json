@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "cease Federal funding for NPR and PBS",
+    "The CPB Board shall cancel existing direct funding to the maximum extent allowed by law",
+    "heads of all agencies shall identify and terminate...any direct or indirect funding of NPR and PBS"
+  ],
+  "extra": {
+    "actor": "President (Executive Order via CPB and federal agencies)",
+    "is_decided": true,
+    "sectors": [
+      "media",
+      "public broadcasting",
+      "nonprofit/government grants"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-05-07",
+  "doc_id": "exec202508133",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

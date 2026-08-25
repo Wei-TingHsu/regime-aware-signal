@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "not to exceed 3,000 total members at any one time",
+    "necessary to augment the active Armed Forces",
+    "effective conduct of Operation Atlantic Resolve"
+  ],
+  "extra": {
+    "actor": "President (DoD/DHS)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "military"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-07-18",
+  "doc_id": "exec202315347",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

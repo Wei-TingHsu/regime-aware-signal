@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.2,
+    "gold": -0.2,
+    "dollar": 0.3,
+    "oil": -0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Two members, however, dissented because...ongoing progress will likely warrant an earlier increase",
+    "several participants thought that the current forward guidance...suggested a longer period before liftoff...than they believed was likely to be appropriate",
+    "all but one participant could support the publication of the following statement"
+  ],
+  "extra": {
+    "stance": 0.25,
+    "dispersion": 0.7
+  },
+  "source": "fomc_minutes",
+  "date": "2014-10-08",
+  "doc_id": "meeting20140917",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

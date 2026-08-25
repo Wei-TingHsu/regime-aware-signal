@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I am continuing for 1 year the national emergency",
+    "national emergency declared on March 6, 2003",
+    "must continue in effect beyond March 6, 2011"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch)",
+    "is_decided": true,
+    "sectors": [
+      "Zimbabwe-related sanctions targets"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-03-04",
+  "doc_id": "noti20115152",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

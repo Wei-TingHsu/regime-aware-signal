@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "ownership by ByteDance of any interest in Musical.ly in the United States... is also prohibited",
+    "ByteDance...shall divest all interests and rights",
+    "not later than 90 days after the date of this order"
+  ],
+  "extra": {
+    "actor": "President (CFIUS enforcement)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "social media",
+      "China-US trade/investment"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-08-19",
+  "doc_id": "exec202018360",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

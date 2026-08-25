@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 0,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "it is the policy of my Administration to cultivate a workforce that draws from the full diversity of the Nation",
+    "develop and issue a Government-wide Diversity, Equity, Inclusion, and Accessibility Strategic Plan",
+    "This order is not intended to... create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (federal agencies, OPM, OMB, EEOC)",
+    "is_decided": true,
+    "sectors": [
+      "federal government administration/HR policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-06-30",
+  "doc_id": "exec202114127",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

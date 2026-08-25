@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.65,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "Micron's strong execution and pricing drove better-than-anticipated first quarter financial results",
+    "We expect our business fundamentals to improve throughout 2024, with record industry TAM projected for calendar 2025",
+    "Revenue $5.30 billion \u00b1 $200 million"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.5,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2023-12-20",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

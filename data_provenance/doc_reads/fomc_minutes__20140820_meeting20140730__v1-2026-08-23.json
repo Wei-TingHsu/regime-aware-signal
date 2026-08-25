@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 15,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "some participants viewed the actual and expected progress toward the Committee's goals as sufficient to call for a relatively prompt move toward reducing policy accommodation",
+    "One member, however, objected to the guidance that it would likely be appropriate to maintain the current range for the federal funds rate for a considerable time",
+    "These participants were increasingly uncomfortable with the Committee's forward guidance"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2014-08-20",
+  "doc_id": "meeting20140730",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

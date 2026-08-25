@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.55,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "ASML confirms expectation for record sales year",
+    "Q4 2011 bookings expected at a level above Q3",
+    "It is too early to understand how overall demand for semiconductors will contribute to our business in 2012"
+  ],
+  "extra": {
+    "surprise": 0.05,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2011-10-12",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

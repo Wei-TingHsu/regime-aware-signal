@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.15,
+  "horizon_days": 45,
+  "specificity": 0.8,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "I hereby declare a national emergency to deal with that threat.",
+    "any attachment, judgment, decree, lien, execution, garnishment, or other judicial process is prohibited",
+    "The Foreign Government Deposit Funds constitute property of the Government of Venezuela"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State/DOJ/Energy implementation)",
+    "is_decided": true,
+    "sectors": [
+      "oil and gas",
+      "sovereign funds",
+      "financial/legal"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-01-15",
+  "doc_id": "exec202600831",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

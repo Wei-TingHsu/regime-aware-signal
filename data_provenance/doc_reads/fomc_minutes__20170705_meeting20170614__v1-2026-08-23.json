@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": -0.15,
+    "gold": 0.1,
+    "dollar": 0.15,
+    "oil": -0.05
+  },
+  "magnitude": 0.4,
+  "horizon_days": 45,
+  "specificity": 0.75,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "the Committee anticipates that the cap will be $6 billion per month initially",
+    "several participants expressed concern that progress toward the Committee's 2 percent longer-run inflation objective might have slowed",
+    "some others emphasized that deferring the decision until later in the year would permit additional time to assess the outlook"
+  ],
+  "extra": {
+    "stance": 0.25,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2017-07-05",
+  "doc_id": "meeting20170614",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

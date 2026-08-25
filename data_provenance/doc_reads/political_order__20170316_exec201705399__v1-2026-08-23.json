@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.2,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "proposed plan to reorganize governmental functions and eliminate unnecessary agencies",
+    "Within 180 days of the date of this order",
+    "recommendations to eliminate unnecessary agencies, components of agencies, and agency programs"
+  ],
+  "extra": {
+    "actor": "OMB Director / Executive Branch agencies",
+    "is_decided": false,
+    "sectors": [
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-03-16",
+  "doc_id": "exec201705399",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 250,
+  "specificity": 0.25,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "it is the policy of the United States that... deploying and maintaining a next-generation missile defense shield",
+    "Submit to the President a reference architecture, capabilities-based requirements, and an implementation plan",
+    "jointly with the Director of the Office of Management and Budget, submit to the President a plan to fund this directive"
+  ],
+  "extra": {
+    "actor": "President (Department of Defense to implement)",
+    "is_decided": false,
+    "sectors": [
+      "defense",
+      "aerospace",
+      "space systems"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-03",
+  "doc_id": "exec202502182",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

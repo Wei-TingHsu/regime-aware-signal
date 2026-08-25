@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.4,
+  "evidence": [
+    "ASML continues to expect 2024 total net sales to be similar to 2023, supported by a strong second half year",
+    "ASML reports \u20ac6.2 billion total net sales and \u20ac1.6 billion net income in Q2 2024"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2024-07-17",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

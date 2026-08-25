@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "Forecasting second-quarter 2023 revenue of $11.5 billion to $12.5 billion; expecting second-quarter EPS of $(0.62)",
+    "We exceeded our first-quarter expectations on the top and bottom line",
+    "While we remain cautious on the macroeconomic outlook"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": -0.2,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2023-04-27",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

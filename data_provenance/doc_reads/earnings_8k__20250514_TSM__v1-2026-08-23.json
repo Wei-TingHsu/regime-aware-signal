@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "Issue of shares: TSMC Arizona Corporation issued 3.05 million shares",
+    "out of the 7.5 million shares authorized on September 6, 2024",
+    "with par value US$1,000 per share to Taiwan Semiconductor Manufacturing Co., Ltd."
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2025-05-14",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

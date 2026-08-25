@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.8,
+    "duration": 0.3,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.85,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.75,
+  "confidence": 0.75,
+  "evidence": [
+    "Second-half trends are more challenging than we previously expected",
+    "Suspending dividend starting in the fourth quarter of 2024",
+    "operating expense and capital expenditure reductions of more than $10 billion in 2025"
+  ],
+  "extra": {
+    "surprise": -0.7,
+    "guidance_change": -0.6,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2024-08-01",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.35,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.6,
+  "confidence": 0.6,
+  "evidence": [
+    "Recorded pre-tax losses on programs of $1.6 billion and other charges of $169 million",
+    "Reaffirming 2025 guidance for sales and free cash flow",
+    "Business segment operating profit ~$6,600 - $6,700 ~$8,100 - $8,200"
+  ],
+  "extra": {
+    "surprise": -0.6,
+    "guidance_change": -0.35,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2025-07-22",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

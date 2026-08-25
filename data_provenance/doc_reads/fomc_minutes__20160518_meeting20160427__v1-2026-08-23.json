@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "most participants judged that if incoming data were consistent with economic growth picking up in the second quarter... it likely would be appropriate for the Committee to increase the target range for the federal funds rate in June",
+    "Several participants were concerned that the incoming information might not provide sufficiently clear signals to determine by mid-June whether an increase...would be warranted",
+    "A few participants judged it appropriate to increase the target range for the federal funds rate at this meeting"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.75
+  },
+  "source": "fomc_minutes",
+  "date": "2016-05-18",
+  "doc_id": "meeting20160427",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

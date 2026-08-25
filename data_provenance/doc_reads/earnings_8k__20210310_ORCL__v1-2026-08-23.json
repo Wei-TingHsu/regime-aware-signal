@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Non-GAAP EPS up 20% to $1.16",
+    "Board of Directors increased the authorization for share repurchases by $20 billion",
+    "quarterly cash dividend of $0.32 per share...reflecting a 33% increase"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2021-03-10",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

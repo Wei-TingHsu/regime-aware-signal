@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "Tesla expects to increase production to 6,000 Model 3s per week by late next month.",
+    "We also reaffirm our guidance for positive GAAP net income and cash flow in Q3 and Q4",
+    "Q2 production totaled 53,339 vehicles, a 55% increase from Q1"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.2,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2018-07-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.3,
+    "gold": 0.1,
+    "dollar": 0.1,
+    "oil": -0.1
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "it likely would become appropriate at some point to slow the pace of policy rate increases",
+    "some participants emphasized that the real federal funds rate would likely still be below shorter-run neutral levels",
+    "there was also a risk that the Committee could tighten the stance of policy by more than necessary"
+  ],
+  "extra": {
+    "stance": 0.4,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2022-08-17",
+  "doc_id": "meeting20220727",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

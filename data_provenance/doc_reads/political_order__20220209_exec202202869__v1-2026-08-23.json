@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "agencies shall require every contractor or subcontractor engaged in construction on the project to agree...to negotiate or become a party to a project labor agreement",
+    "Large-scale construction project'' means a Federal construction project...for which the total estimated cost of the construction contract...is $35 million or more",
+    "Executive Order 13502...is revoked as of the effective date of the final regulations"
+  ],
+  "extra": {
+    "actor": "President (Federal Acquisition Regulatory Council/OMB implementation)",
+    "is_decided": true,
+    "sectors": [
+      "construction",
+      "federal contracting",
+      "labor unions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-02-09",
+  "doc_id": "exec202202869",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

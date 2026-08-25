@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Second-quarter results on the top and bottom line exceeded the high end of guidance",
+    "Forecasting third-quarter 2023 revenue of approximately $12.9 billion to $13.9 billion",
+    "expecting third-quarter EPS attributable to Intel of $0.04; non-GAAP EPS attributable to Intel of $0.20"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.2,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2023-07-27",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

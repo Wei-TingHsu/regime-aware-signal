@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.85,
+    "duration": -0.2,
+    "gold": -0.1,
+    "dollar": 0.15,
+    "oil": 0.05
+  },
+  "magnitude": 0.9,
+  "horizon_days": 60,
+  "specificity": 0.9,
+  "novelty": 0.6,
+  "confidence": 0.75,
+  "evidence": [
+    "Revenue is expected to be $24.0 billion, plus or minus 2%.",
+    "Data Center revenue for the fourth quarter was a record, up 409% from a year ago",
+    "Demand is surging worldwide across companies, industries and nations"
+  ],
+  "extra": {
+    "surprise": 0.6,
+    "guidance_change": 0.7,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2024-02-21",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

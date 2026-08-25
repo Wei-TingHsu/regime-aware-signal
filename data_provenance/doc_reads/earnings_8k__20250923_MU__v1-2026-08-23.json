@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.6,
+  "confidence": 0.75,
+  "evidence": [
+    "Forecasting $1.2 billion in sequential revenue growth with gross margins exceeding 50%",
+    "Record fiscal Q4 and full-year revenue driven by AI data center growth",
+    "entering fiscal 2026 with strong momentum and our most competitive portfolio to date"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.6,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2025-09-23",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

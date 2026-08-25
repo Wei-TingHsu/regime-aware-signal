@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "We therefore confirm our view that 2007 will be a growth year for ASML.",
+    "This backlog will ensure a sustained sales level in Q2, and strong revenues in the second half",
+    "ASML does confirm that revenue growth is expected for the year."
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.15,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2007-04-19",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

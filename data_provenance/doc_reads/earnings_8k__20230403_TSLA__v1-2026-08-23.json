@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.85,
+  "novelty": 0.35,
+  "confidence": 0.45,
+  "evidence": [
+    "we produced over 440,000 vehicles and delivered over 422,000 vehicles",
+    "transition towards a more even regional mix of vehicle builds",
+    "Tesla will post its financial results for the first quarter of 2023 after market close on Wednesday, April 19, 2023"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2023-04-03",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

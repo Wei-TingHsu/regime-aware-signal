@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue is expected to be between US$16.6 billion and US$17.2 billion",
+    "Gross profit margin is expected to be between 53% and 55%",
+    "2022 capital budget to be between US$40 billion and US$44 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2022-01-13",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

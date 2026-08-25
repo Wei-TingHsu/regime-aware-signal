@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.02
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "consolidate their wildland fire programs to achieve the most efficient and effective use",
+    "consider modifying or rescinding...Federal rules or policies hindering the appropriate use of fire retardant",
+    "prioritize the sale of excess aircraft and aircraft parts to support wildfire mitigation"
+  ],
+  "extra": {
+    "actor": "President (Interior, Agriculture, EPA, DOD, DOJ, FERC)",
+    "is_decided": false,
+    "sectors": [
+      "utilities",
+      "forestry/timber",
+      "defense/aerospace",
+      "insurance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-06-18",
+  "doc_id": "exec202511358",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

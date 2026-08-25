@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.8,
+  "evidence": [
+    "suspend for a period of 6 months the limitations set forth in sections 3(b) and 7(b)",
+    "necessary, in order to protect the national security interests of the United States"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "foreign policy",
+      "Middle East"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-01-10",
+  "doc_id": "dete2011380",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

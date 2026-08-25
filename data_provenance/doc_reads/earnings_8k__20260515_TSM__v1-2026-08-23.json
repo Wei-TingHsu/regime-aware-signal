@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "TSMC plans to execute the sale of up to 152.0 million common shares",
+    "TSMC expects to reduce its shareholding in VIS to approximately 19%",
+    "TSMC has no plan to sell more VIS shares in the foreseeable future"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2026-05-15",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

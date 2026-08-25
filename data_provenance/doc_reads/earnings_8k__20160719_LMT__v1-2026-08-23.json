@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.75,
+  "evidence": [
+    "Increases 2016 outlook for sales, operating profit, earnings per share and cash from operations",
+    "Net earnings of $1.0 billion, or $3.32 per share",
+    "Diluted earnings per share $12.15 \u2013 $12.45"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.5,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2016-07-19",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

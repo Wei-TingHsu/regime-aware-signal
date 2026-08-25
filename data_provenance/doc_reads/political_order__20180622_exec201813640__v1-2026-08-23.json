@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "ensure that Federal regulations and management decisions do not prevent productive and sustainable use",
+    "there is hereby established the interagency Ocean Policy Committee",
+    "Executive Order 13547 of July 19, 2010... is hereby revoked"
+  ],
+  "extra": {
+    "actor": "President (Executive Office)",
+    "is_decided": true,
+    "sectors": [
+      "offshore energy/oil",
+      "fisheries",
+      "maritime industry",
+      "ocean science"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-06-22",
+  "doc_id": "exec201813640",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

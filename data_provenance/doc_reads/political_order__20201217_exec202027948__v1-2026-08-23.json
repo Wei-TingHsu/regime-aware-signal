@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.2,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "reduce the burden of occupational regulations in order to promote the free practice of commerce",
+    "shall submit a report to the Director of OMB",
+    "least restrictive to competition sufficient to protect consumers"
+  ],
+  "extra": {
+    "actor": "President (Executive Order directing agencies, OMB, SBA, states/territories/tribes)",
+    "is_decided": false,
+    "sectors": [
+      "labor/services",
+      "state and local government regulation",
+      "small business"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-12-17",
+  "doc_id": "exec202027948",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

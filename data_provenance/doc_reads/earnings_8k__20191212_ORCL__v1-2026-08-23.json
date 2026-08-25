@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.35,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "GAAP EPS UP 14% TO $0.69 and NON-GAAP EPS UP 12% TO $0.90",
+    "Fusion ERP Cloud Revenue Up 37%; Autonomous Database Cloud Revenue Up >100%",
+    "I fully expect we will do that again this year"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.15,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2019-12-12",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

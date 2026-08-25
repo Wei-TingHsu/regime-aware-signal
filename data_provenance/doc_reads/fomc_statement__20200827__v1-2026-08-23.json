@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.4,
+    "gold": 0.3,
+    "dollar": -0.4,
+    "oil": 0.1
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.75,
+  "confidence": 0.7,
+  "evidence": [
+    "seeks to achieve inflation that averages 2 percent over time",
+    "appropriate monetary policy will likely aim to achieve inflation moderately above 2 percent for some time",
+    "assessments of the shortfalls of employment from its maximum level"
+  ],
+  "extra": {
+    "stance": -0.6,
+    "guidance": -0.7
+  },
+  "source": "fomc_statement",
+  "date": "2020-08-27",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -393,9 +393,29 @@ negative-results moat argument already rests on.
 
 ## 11. AMENDMENTS
 
-*(none — this section exists so any post-hoc change is visible rather than
-silent)*
+*Five amendments, all made during 2026-08-24/25. Each records WHEN it was decided
+relative to what had been seen, because that is the only thing distinguishing an
+amendment from a rationalisation.*
 
 | date | change | reason |
 |---|---|---|
-| | | |
+| 2026-08-24 | §3.2 gains two scale-relative numerical guards: `DEGENERATE_VAR = 1e-9` and `TAU2_REL_FLOOR = 1e-6`, and the registered `Q ≤ C−1 → τ²=0` rule is applied **before** the division rather than after. | Blind test 6 caught the registered null path **silently failing to fire**. `np.var` of 80 identical float64 values returns 4.76e-38, so `W = 4.2e38`, which amplified float noise into `Q ≈ 4.2 > 3` and produced `τ² = 2e-38 > 0` — a **Tier-1 label with w = 0.96 on data with no between-cell variation at all**. The guards make the registered rule fire; they do not change it. Written before any real estimate. |
+| 2026-08-25 | `political` split by Federal Register document type into `political_order` and `political_other`. Gate criterion changes from a **point** spread > 0.25 to the **lower bound of a 95% bootstrap CI** > 0.25; pilot raised to n=60 per source. | **Both decided AFTER seeing a marginal point spread of 0.26 on n=20 — declared, not hidden.** The split uses the **government's own type tag**, an external taxonomy, and reassigns no document by judgement. The criterion change is a **tightening**: at n=20 the spread carried se ≈ 0.063, so 0.26 was indistinguishable from failing. Gate subsequently PASSED at 0.363, CI [0.279, 0.453]. |
+| 2026-08-25 | §5.3's null gains a second implementation. **`permute_y`** becomes PRIMARY; **`permute_Z`** is retained and reported permanently. Registered in advance: a rejection rate below 0.02 means the null is conservative, and a step 3 null must then be reported as *"inconclusive at this power"*, never as *"macro conditioning has no effect"*. | `permute_Z` changes the ESS distribution — macro states are autocorrelated, so permuting Z breaks the alignment between similarity and recency and its draws are **not exchangeable** with the observed fit. `permute_y` destroys the state↔outcome correspondence and nothing else, which is what §5.3 registered **in words**. **THIRD change to test 5 after a failure — declared.** Both nulls reported every run; disagreement is a finding with **no tie-break**. Final: permute_y 0.066 (in band), permute_Z 0.000 (out). |
+| 2026-08-25 | §2.2's conditioning switches to the **LIVE BASIS**: expanding-window standardisation and expanding-window regime labels, canonically ordered by ascending mean PC1. | Step 3 is a **live daily product**; a deployed system has no future data, so the full-panel basis is something it **cannot do**, and a backtest that cannot be run live is not a backtest of the product. **Not** justified by effect size — `scaling_check` measured the level basis at +0.012, p 0.94. **FIRST amendment changing the estimator rather than the reporting.** No real estimate had been computed. Also closes PROJECT_STATE thread 3. |
+| 2026-08-25 | Documents longer than `--max-words` are **truncated and read** rather than skipped. Each read records `truncated`, `orig_words` and `max_words`, carried into the CSV. | Skipping dropped **189 of 834** earnings documents (23%), all 6-K complete submissions where the whole filing is one file because foreign issuers file no separate EX-99. Costed at Sonnet 5 rates: skip = free with a 23% gap; raise the cap = **$17.77** for those 189 alone; truncate = **~$7.60** with no gap. An earnings release's figures sit near the top; the tail is exhibits. **This changes the model's input**, so any specificity or direction difference between truncated and whole documents is a property of the pipeline, not the source — which is why `truncated` is recorded per document rather than assumed away. |
+
+### 11.1 Effect of the live-basis switch, recorded
+
+| | full-panel basis | live basis |
+|---|---|---|
+| test 1 kernel attenuation | 86.2% | 90.3% |
+| τ²=0 degenerate fraction | 42.5% | 32.0% (200 reps) |
+| "no planted structure" tiers 1/2/3 | 0/8/392 | 0/260/140 |
+| `permute_y` rejection | 0.043 | 0.066 |
+
+**The estimator conditions more often on the live basis.** `permute_y` stays
+inside the registered band, so this is recorded as a property of the basis, not a
+defect — and it is the first thing to re-check if any real step-3 result looks
+strong.
+

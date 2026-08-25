@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.1,
+    "gold": 0.2,
+    "dollar": 0.1,
+    "oil": 0.3
+  },
+  "magnitude": 0.4,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Imposing Sanctions With Respect to the Iron, Steel, Aluminum, and Copper Sectors of Iran",
+    "any person determined by the Secretary of the Treasury... to be operating in the iron, steel, aluminum, or copper sector of Iran",
+    "The unrestricted immigrant and nonimmigrant entry into the United States of aliens... is therefore hereby suspended"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State to implement)",
+    "is_decided": true,
+    "sectors": [
+      "Iran sanctions",
+      "metals",
+      "energy geopolitics",
+      "financial institutions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-05-10",
+  "doc_id": "exec201909877",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

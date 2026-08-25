@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.15,
+  "confidence": 0.55,
+  "evidence": [
+    "significantly reduce the aggregate time required to make decisions in the permitting and review of infrastructure projects",
+    "There is established a Steering Committee on Federal Infrastructure Permitting and Review Process Improvement",
+    "Neither the Steering Committee, nor the CPO, may direct or coordinate agency decisions with respect to any particular permit or project"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "infrastructure",
+      "transportation",
+      "energy",
+      "pipelines",
+      "electricity transmission",
+      "broadband",
+      "water resources"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-03-28",
+  "doc_id": "exec20127636",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

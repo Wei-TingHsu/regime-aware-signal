@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 3,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "produced approximately 459,000 vehicles, delivered over 495,000 vehicles",
+    "a record for both deliveries and deployments",
+    "Energy storage deployments for 2024 were 31.4 GWh"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2025-01-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

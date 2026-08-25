@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.4,
+    "gold": 0.3,
+    "dollar": -0.3,
+    "oil": 0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.65,
+  "evidence": [
+    "growth in employment has slowed in recent months",
+    "continue through the end of the year its program to extend the average maturity",
+    "exceptionally low levels for the federal funds rate at least through late 2014"
+  ],
+  "extra": {
+    "stance": -0.4,
+    "guidance": -0.4
+  },
+  "source": "fomc_statement",
+  "date": "2012-06-20",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

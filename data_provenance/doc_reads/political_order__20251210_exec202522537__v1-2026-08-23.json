@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "establish a Food Supply Chain Security Task Force",
+    "whether control of food-related industries by foreign entities is increasing the cost",
+    "commence criminal proceedings as appropriate, including grand jury investigations"
+  ],
+  "extra": {
+    "actor": "President / DOJ / FTC",
+    "is_decided": true,
+    "sectors": [
+      "food processing",
+      "agriculture",
+      "meat processing",
+      "seed",
+      "fertilizer",
+      "equipment"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-12-10",
+  "doc_id": "exec202522537",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

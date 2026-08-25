@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "creating a new Schedule G in the excepted service for noncareer positions",
+    "Positions of a policy-making or policy-advocating character normally subject to change",
+    "shall consider whether prospective appointees would be suitable exponents of the President's policies"
+  ],
+  "extra": {
+    "actor": "President (OPM/Dept of Veterans Affairs)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "civil service"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-07-23",
+  "doc_id": "exec202513925",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

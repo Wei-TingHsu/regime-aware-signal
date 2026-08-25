@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "restore the Smithsonian Institution to its rightful place as a symbol of inspiration",
+    "prohibit expenditure on exhibits or programs that degrade shared American values",
+    "shall provide sufficient funding, as available, to improve the infrastructure"
+  ],
+  "extra": {
+    "actor": "President (Executive Order); Vice President, OMB, Secretary of the Interior",
+    "is_decided": true,
+    "sectors": [
+      "cultural institutions",
+      "museums",
+      "federal parks"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-03",
+  "doc_id": "exec202505838",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": -0.05,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 5,
+  "specificity": 0.85,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "Revenue is expected to be $32.5 billion, plus or minus 2%.",
+    "gross margins are expected to be 74.4% and 75.0%, respectively",
+    "We executed a change to the Blackwell GPU mask to improve production yield."
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": -0.1,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2024-08-28",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

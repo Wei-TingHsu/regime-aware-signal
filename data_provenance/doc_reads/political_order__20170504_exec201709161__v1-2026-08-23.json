@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "The Office of Trade and Manufacturing Policy (OTMP) is hereby established",
+    "decrease the trade deficit, and strengthen the United States manufacturing",
+    "advise the President on innovative strategies and promote trade policies"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": true,
+    "sectors": [
+      "manufacturing",
+      "trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-05-04",
+  "doc_id": "exec201709161",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

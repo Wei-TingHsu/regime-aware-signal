@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.2,
+    "gold": -0.1,
+    "dollar": 0.15,
+    "oil": -0.1
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.7,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "all members but one supported concluding the Committee's asset purchase program at the end of October",
+    "the Committee judges that the likelihood of inflation running persistently below 2 percent has diminished somewhat since early this year",
+    "if incoming information indicates faster progress toward the Committee's employment and inflation objectives than the Committee now expects, then increases in the target range for the federal funds rate are likely to occur sooner"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2014-11-19",
+  "doc_id": "meeting20141029",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

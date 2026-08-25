@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "record production of 96,155 vehicles and record deliveries of approximately 97,000 vehicles",
+    "we achieved record net orders in Q3 and are entering Q4 with an increase in our order backlog",
+    "solidifying the transition to generating strong organic demand"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.2,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2019-10-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

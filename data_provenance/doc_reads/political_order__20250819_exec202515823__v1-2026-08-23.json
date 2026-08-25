@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "obtain a 6-month supply of the APIs needed to make the critical drugs",
+    "with a preference for obtaining domestically manufactured APIs if possible",
+    "subject to the availability of funds identified pursuant to subsection (a)"
+  ],
+  "extra": {
+    "actor": "President / HHS-ASPR / OMB",
+    "is_decided": false,
+    "sectors": [
+      "pharmaceuticals",
+      "healthcare",
+      "domestic manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-19",
+  "doc_id": "exec202515823",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

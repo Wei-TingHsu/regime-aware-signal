@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.15
+  },
+  "magnitude": 0.6,
+  "horizon_days": 20,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "All property and interests in property of the Government of Venezuela...are blocked",
+    "Central Bank of Venezuela and Petroleos de Venezuela, S.A. (PdVSA)",
+    "in light of the continued usurpation of power by Nicolas Maduro"
+  ],
+  "extra": {
+    "actor": "President (Treasury/OFAC implementation)",
+    "is_decided": true,
+    "sectors": [
+      "oil",
+      "financial",
+      "sanctions",
+      "PdVSA",
+      "Central Bank of Venezuela"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-08-07",
+  "doc_id": "exec201917052",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

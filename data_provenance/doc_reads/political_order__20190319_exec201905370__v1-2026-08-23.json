@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.8,
+  "evidence": [
+    "amended to read as follows",
+    "means a group of persons that includes one or more foreign persons",
+    "threatens the national security, foreign policy, or economy of the United States"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "national security",
+      "transnational crime"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-03-19",
+  "doc_id": "exec201905370",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

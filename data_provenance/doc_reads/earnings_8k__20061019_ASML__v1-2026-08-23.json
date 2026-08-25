@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.25,
+  "confidence": 0.65,
+  "evidence": [
+    "Record revenues and profit in Q3 2006... confirm the healthy state of the semiconductor lithography market",
+    "expect unit bookings in Q4 2006 to remain high at 65 units, with upside potential",
+    "lithography demand for ASML in 2007 at about 2006 level"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2006-10-19",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

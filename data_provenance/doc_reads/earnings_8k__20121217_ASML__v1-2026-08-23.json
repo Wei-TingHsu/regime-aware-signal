@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.15,
+  "confidence": 0.55,
+  "evidence": [
+    "the \u20ac1,130 million share buy back program has been fully completed",
+    "24,627,581 have been cancelled with the remaining shares intended to be cancelled in 2013",
+    "average price of EUR 47.81 per share"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2012-12-17",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

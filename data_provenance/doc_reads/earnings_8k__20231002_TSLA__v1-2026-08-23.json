@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 3,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "produced over 430,000 vehicles and delivered over 435,000 vehicles",
+    "Our 2023 volume target of around 1.8 million vehicles remains unchanged",
+    "sequential decline in volumes was caused by planned downtimes"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2023-10-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

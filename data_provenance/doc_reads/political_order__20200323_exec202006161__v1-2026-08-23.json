@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.4,
+  "horizon_days": 10,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "health and medical resources needed to respond to the spread of COVID-19",
+    "is delegated to the Secretary of Health and Human Services",
+    "controlling the distribution of such materials"
+  ],
+  "extra": {
+    "actor": "President (DPA delegation to HHS Secretary)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "medical equipment/PPE",
+      "ventilators",
+      "manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-03-23",
+  "doc_id": "exec202006161",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

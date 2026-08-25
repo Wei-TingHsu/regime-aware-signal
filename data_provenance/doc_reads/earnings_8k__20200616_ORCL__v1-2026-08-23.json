@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Fusion ERP cloud revenue, up 32% year-over-year",
+    "non-GAAP EPS of $1.20, up 3% YoY",
+    "Total quarterly revenues were $10.4 billion, down 6% YoY"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.0,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2020-06-16",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

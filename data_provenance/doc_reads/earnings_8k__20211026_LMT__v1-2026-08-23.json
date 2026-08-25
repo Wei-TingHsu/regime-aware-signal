@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.15,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.6,
+  "confidence": 0.65,
+  "evidence": [
+    "expects 2022 net sales to decline from expected 2021 levels to approximately $66 billion",
+    "roughly flat to low-single-digit growth rates in both revenue and segment operating profit over the next few years",
+    "increased share repurchase authority by $5.0 billion and quarterly dividend rate to $2.80 per share"
+  ],
+  "extra": {
+    "surprise": -0.4,
+    "guidance_change": -0.5,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2021-10-26",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

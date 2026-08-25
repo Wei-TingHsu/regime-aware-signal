@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "expanding the scope of the national emergency",
+    "any person determined by the Secretary of the Treasury",
+    "tampering with, altering, or causing a misappropriation of information"
+  ],
+  "extra": {
+    "actor": "President Obama / Treasury, State, DOJ",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "critical infrastructure",
+      "sanctions/geopolitics"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-01-03",
+  "doc_id": "exec201631922",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "establishing the President's Advisory Commission on Asian Americans, Native Hawaiians, and Pacific Islanders",
+    "There is established the White House Initiative on Asian Americans, Native Hawaiians, and Pacific Islanders",
+    "The Commission shall terminate 2 years from the date of this order"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "civil rights",
+      "social policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-06-03",
+  "doc_id": "exec202111792",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

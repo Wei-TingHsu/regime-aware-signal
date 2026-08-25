@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 2,
+  "specificity": 0.85,
+  "novelty": 0.4,
+  "confidence": 0.35,
+  "evidence": [
+    "produced over 408,000 vehicles, delivered over 358,000 vehicles",
+    "deployed 8.8 GWh of energy storage products",
+    "Tesla will post its financial results for the first quarter of 2026"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2026-04-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.4,
+  "confidence": 0.7,
+  "evidence": [
+    "Raising full-year revenue outlook to $71 billion, up $1.5 billion from July guidance.",
+    "Third-quarter revenue of $19.2 billion set a new record and exceeded July guidance",
+    "Board of Directors has approved a $20 billion increase in Intel's stock repurchase program"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.5,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2019-10-24",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.05,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "shall...identify all military training and experience within the applicable service that may qualify",
+    "waiver of fees for active duty service members",
+    "pay for Transportation Worker Identification Credential cards"
+  ],
+  "extra": {
+    "actor": "President/DoD/DHS/Coast Guard",
+    "is_decided": true,
+    "sectors": [
+      "shipping",
+      "maritime",
+      "defense"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-03-07",
+  "doc_id": "exec201904298",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

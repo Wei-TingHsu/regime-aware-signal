@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.7,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "The Council shall terminate on September 30, 2021, unless extended by the President.",
+    "is continued until September 30, 2021"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "labor policy",
+      "workforce development"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-07-01",
+  "doc_id": "exec202014328",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

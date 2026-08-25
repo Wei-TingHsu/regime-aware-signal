@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue is expected to be between US$12.4 billion and US$12.7 billion",
+    "third quarter revenue increased 21.6% while net income and diluted EPS both increased 35.9%",
+    "we expect our sequential growth to be supported by strong demand for our industry-leading 5-nanometer technology"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2020-10-15",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

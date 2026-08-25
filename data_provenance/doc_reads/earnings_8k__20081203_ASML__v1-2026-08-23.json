@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 45,
+  "specificity": 0.75,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Demand for capacity expansion remains extremely weak",
+    "Significant weakening in the last 2 to 3 months",
+    "Gross margin approximately 36%"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": -0.15,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-12-03",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

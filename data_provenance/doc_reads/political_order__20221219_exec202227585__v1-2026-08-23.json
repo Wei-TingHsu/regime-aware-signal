@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "Establishing the President's Advisory Council on African Diaspora Engagement",
+    "The Advisory Council shall consist of not more than 12 members",
+    "The Department of State shall provide funding and administrative support"
+  ],
+  "extra": {
+    "actor": "Secretary of State / Department of State",
+    "is_decided": true,
+    "sectors": [
+      "diplomacy",
+      "civil society"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-12-19",
+  "doc_id": "exec202227585",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

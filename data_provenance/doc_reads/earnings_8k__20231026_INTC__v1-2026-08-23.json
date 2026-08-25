@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Guiding fourth-quarter revenue of $14.6 billion to $15.6 billion",
+    "Third-quarter revenue exceeded high end of guidance and EPS benefited from strong operating leverage",
+    "Our results exceeded expectations for the third consecutive quarter"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.4,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2023-10-26",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "Record backlog of $179 billion",
+    "Increased share repurchase authority by $2 billion",
+    "Diluted earnings per share ~$22.15 - $22.35"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.2,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2025-10-21",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

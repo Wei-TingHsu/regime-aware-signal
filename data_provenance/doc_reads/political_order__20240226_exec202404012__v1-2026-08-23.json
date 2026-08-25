@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "security of the United States is endangered by reason of...malicious cyber campaigns",
+    "Captain of the Port may prevent...digital infrastructure...from boarding",
+    "prevent, detect, assess, and remediate an actual or threatened cyber incident"
+  ],
+  "extra": {
+    "actor": "President/Coast Guard (DHS)",
+    "is_decided": true,
+    "sectors": [
+      "maritime",
+      "ports",
+      "cybersecurity",
+      "shipping"
+    ]
+  },
+  "source": "political_order",
+  "date": "2024-02-26",
+  "doc_id": "exec202404012",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

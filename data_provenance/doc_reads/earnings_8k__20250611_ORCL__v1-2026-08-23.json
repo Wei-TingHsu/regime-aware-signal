@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": -0.15,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.8,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.75,
+  "confidence": 0.7,
+  "evidence": [
+    "We expect our total cloud growth rate...will increase from 24% in FY25 to over 40% in FY26",
+    "RPO is likely to grow more than 100% in FY26",
+    "Cloud Infrastructure growth rate is expected to increase from 50% in FY25 to over 70% in FY26"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.8,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2025-06-11",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

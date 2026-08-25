@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.15,
+    "dollar": 0.0,
+    "oil": 0.35
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby declare a national emergency to deal with that threat.",
+    "All property and interests in property... of the Government of Libya... are blocked",
+    "using weapons of war, mercenaries, and wanton violence against unarmed civilians"
+  ],
+  "extra": {
+    "actor": "President (Treasury/OFAC implementation)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "financial",
+      "sanctions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-03-02",
+  "doc_id": "exec20114753",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

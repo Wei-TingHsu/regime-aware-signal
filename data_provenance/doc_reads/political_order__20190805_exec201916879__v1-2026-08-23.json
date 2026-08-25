@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "prohibit any United States bank from making any loan or providing any credit to the government of that country",
+    "authorities and duties vested in me... are delegated to the Secretary of the Treasury"
+  ],
+  "extra": {
+    "actor": "President/Treasury/State",
+    "is_decided": true,
+    "sectors": [
+      "banking",
+      "sanctions administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-08-05",
+  "doc_id": "exec201916879",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

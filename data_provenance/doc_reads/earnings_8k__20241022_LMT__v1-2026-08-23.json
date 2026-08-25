@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "2024 financial outlook increased",
+    "we are raising the outlook for full year 2024 sales, segment operating profit, EPS and free cash flow",
+    "Increased share repurchase authority by $3.0 billion to a total authorization of $10.3 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2024-10-22",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

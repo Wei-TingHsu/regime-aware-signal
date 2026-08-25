@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "Achieved record backlog of $150.4 billion",
+    "Net sales ~$65,250 $63,500 - $65,000",
+    "expects its 2021 net sales to increase to greater than or equal to $67 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2020-10-20",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

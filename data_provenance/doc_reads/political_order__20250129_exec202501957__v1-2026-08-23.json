@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.75,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "The United States intends to withdraw from the WHO.",
+    "pause the future transfer of any United States Government funds, support, or resources to the WHO",
+    "cease negotiations on the WHO Pandemic Agreement"
+  ],
+  "extra": {
+    "actor": "President (State Dept, OMB, NSC)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "global health/pharma",
+      "public health institutions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-29",
+  "doc_id": "exec202501957",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.9,
+  "evidence": [
+    "reapportionment shall be based on the total number of persons residing in the several States",
+    "Executive Order 13880 of July 11, 2019... are hereby revoked",
+    "excluding persons who are not in a lawful immigration status"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "census",
+      "apportionment",
+      "immigration policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-25",
+  "doc_id": "exec202101755",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

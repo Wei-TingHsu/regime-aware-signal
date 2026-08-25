@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.4,
+    "gold": 0.2,
+    "dollar": -0.1,
+    "oil": -0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.55,
+  "confidence": 0.65,
+  "evidence": [
+    "uncertainty had increased, and many saw these developments as increasing the downside risks to the outlook",
+    "spending and production data generally had been disappointing",
+    "monetary policy was less well positioned to respond effectively to shocks that reduce inflation or real activity than to upside shocks"
+  ],
+  "extra": {
+    "stance": -0.3,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2016-02-17",
+  "doc_id": "meeting20160127",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

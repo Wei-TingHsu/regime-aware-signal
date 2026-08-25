@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.2,
+    "gold": -0.15,
+    "dollar": 0.15,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Many participants judged that the risk of a sizable undershooting of the longer-run normal unemployment rate had increased somewhat",
+    "almost all also indicated that the upside risks to their forecasts for economic growth had increased",
+    "A couple of participants expressed concern that the Committee's communications about a gradual pace of policy firming might be misunderstood"
+  ],
+  "extra": {
+    "stance": 0.3,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2017-01-04",
+  "doc_id": "meeting20161214",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

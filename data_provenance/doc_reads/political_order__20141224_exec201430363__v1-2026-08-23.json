@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "The rates of basic pay or salaries of the statutory pay systems",
+    "Schedule 8 is effective January 1, 2015",
+    "Executive Order 13655 of December 23, 2013, is superseded"
+  ],
+  "extra": {
+    "actor": "President (annual federal pay adjustment)",
+    "is_decided": true,
+    "sectors": [
+      "federal government employees",
+      "public administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-12-24",
+  "doc_id": "exec201430363",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

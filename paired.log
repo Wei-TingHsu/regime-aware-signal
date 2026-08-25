@@ -1,0 +1,33 @@
+==============================================================================
+ENGINE B PAIRED TEST -- no decay vs the incumbent lambda
+==============================================================================
+  registered: sign-flip on paired per-rebalance differences,
+  p < 0.05 two-sided. Above that -> 'not distinguishable at this
+  sample size', NOT evidence of equality.
+
+  running no-decay (HL = inf) ...
+  running incumbent (config lambda) ...
+
+  no-decay : NO DECAY (HL = inf) -- ladder control rung
+  incumbent: config recency_decay_lambda=0.0008/session (HL 3.44y) -- INCUMBENT, unregistered
+
+  ALL  (836 paired rebalances)
+    Sharpe   no-decay +0.5251   incumbent +0.5165   diff +0.0087
+    mean spread difference -0.0105%/reb
+    sign-flip p = 0.8960  ->  NOT DISTINGUISHABLE at this sample size -- this is NOT evidence the two are equal
+
+  LONG-HISTORY  (836 paired rebalances)
+    Sharpe   no-decay +0.3837   incumbent +0.2528   diff +0.1309
+    mean spread difference +0.0579%/reb
+    sign-flip p = 0.4848  ->  NOT DISTINGUISHABLE at this sample size -- this is NOT evidence the two are equal
+
+==============================================================================
+READING
+  The fine lambda sweep found the Sharpe surface jagged in lambda
+  (0.30 / 0.25 / 0.22 / 0.29 across steps of 1e-4). A null here
+  means the 0.38-vs-0.25 gap is not separable from that roughness,
+  which is a statement about the SURFACE, not about lambda.
+==============================================================================
+
+  -> /Users/hsuweiting/Projects/regime-aware-signal/docs/engine_b_paired_results.md
+  -> /Users/hsuweiting/Projects/regime-aware-signal/processed/engine_b_paired.json

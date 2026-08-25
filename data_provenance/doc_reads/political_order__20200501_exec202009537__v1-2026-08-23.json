@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "Establishment of the Interagency Labor Committee for Monitoring and Enforcement",
+    "shall be co-chaired by the United States Trade Representative and the Secretary of Labor",
+    "to recommend enforcement actions with respect to Canada or Mexico"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "labor",
+      "USMCA"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-05-01",
+  "doc_id": "exec202009537",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

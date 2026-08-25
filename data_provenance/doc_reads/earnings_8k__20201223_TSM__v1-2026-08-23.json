@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "Machinery equipment for advanced technology capacity: NT$156.5 billion",
+    "Real estate and capitalized leased assets: NT$229.6 billion",
+    "Investment in a new venture capital fund: US$50 million"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2020-12-23",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

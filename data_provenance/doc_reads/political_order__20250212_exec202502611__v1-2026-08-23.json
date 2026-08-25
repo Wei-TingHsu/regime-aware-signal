@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 180,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "There is hereby established within the Department of Justice the Task Force to Eradicate Anti-Christian Bias",
+    "identify any unlawful anti-Christian policies, practices, or conduct by an agency",
+    "The Task Force shall terminate 2 years from the date of this order"
+  ],
+  "extra": {
+    "actor": "President (Executive Order via DOJ Task Force)",
+    "is_decided": true,
+    "sectors": [
+      "religious liberty",
+      "justice/law enforcement",
+      "civil rights policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-12",
+  "doc_id": "exec202502611",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

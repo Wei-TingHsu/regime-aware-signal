@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.3,
+    "gold": 0.2,
+    "dollar": -0.3,
+    "oil": 0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "many participants expressed the view that a somewhat lower path for the federal funds rate than they had projected in December now seemed most likely to be appropriate",
+    "several expressed the view that a cautious approach to raising rates would be prudent",
+    "A couple of participants, however, saw an increase in the target range to 1/2 to 3/4 percent as appropriate at this meeting"
+  ],
+  "extra": {
+    "stance": -0.3,
+    "dispersion": 0.7
+  },
+  "source": "fomc_minutes",
+  "date": "2016-04-06",
+  "doc_id": "meeting20160316",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

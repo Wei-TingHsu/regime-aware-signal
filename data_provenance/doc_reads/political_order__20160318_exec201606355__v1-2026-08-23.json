@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.85,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "All property and interests in property... of the Government of North Korea or the Workers' Party of Korea are blocked",
+    "the exportation or reexportation... of any goods, services, or technology to North Korea",
+    "new investment in North Korea by a United States person, wherever located"
+  ],
+  "extra": {
+    "actor": "President (Obama) / Treasury-State",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "North Korea",
+      "financial services",
+      "trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-03-18",
+  "doc_id": "exec201606355",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.65,
+  "evidence": [
+    "nearly all members agreed to raise the target range for the federal funds rate to 1-1/4 to 1-1/2 percent",
+    "A few participants indicated that they were not comfortable with the degree of additional policy tightening through the end of 2018",
+    "Two members preferred to leave the target range at 1 to 1-1/4 percent"
+  ],
+  "extra": {
+    "stance": 0.3,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2018-01-03",
+  "doc_id": "meeting20171213",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

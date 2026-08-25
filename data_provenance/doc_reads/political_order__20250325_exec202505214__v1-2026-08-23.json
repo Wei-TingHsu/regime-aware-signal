@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Agency Heads shall take all necessary steps... to ensure Federal officials... have full and prompt access to all unclassified agency records",
+    "the Federal Government has unfettered access to comprehensive data from all State programs that receive Federal funding",
+    "the Secretary of Labor... shall receive... unfettered access to all unemployment data"
+  ],
+  "extra": {
+    "actor": "President/Executive Branch Agencies",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "data privacy",
+      "federal IT"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-25",
+  "doc_id": "exec202505214",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

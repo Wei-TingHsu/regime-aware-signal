@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby declare a national emergency to deal with that threat.",
+    "The Secretary of the Treasury is authorized to impose any of the sanctions described in section 2",
+    "block all property and interests in property of the sanctioned person"
+  ],
+  "extra": {
+    "actor": "President (Treasury/OFAC implementation)",
+    "is_decided": true,
+    "sectors": [
+      "financial institutions",
+      "narcotics trafficking networks"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-12-17",
+  "doc_id": "exec202127505",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

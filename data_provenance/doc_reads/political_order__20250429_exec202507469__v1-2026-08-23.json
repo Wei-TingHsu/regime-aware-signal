@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.7,
+  "evidence": [
+    "agencies will have to affirmatively determine that the continued employment of individuals serving probationary or trial periods would benefit the Federal service",
+    "This order supersedes subpart H of part 315 of title 5, Code of Federal Regulations",
+    "the requirements of sections 5(b) through 5(d)... shall become effective 90 days from the date of this order"
+  ],
+  "extra": {
+    "actor": "President (OPM/Executive Departments)",
+    "is_decided": true,
+    "sectors": [
+      "federal workforce",
+      "public administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-29",
+  "doc_id": "exec202507469",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

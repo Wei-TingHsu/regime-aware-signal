@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": -0.15,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.25,
+  "horizon_days": 10,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "financial conditions had improved notably since the January meeting",
+    "one member judged that maintaining the current degree of policy accommodation much beyond this year would likely be inappropriate",
+    "a number of members perceived a nonnegligible risk that improvements in employment could diminish"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2012-04-03",
+  "doc_id": "meeting20120313",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

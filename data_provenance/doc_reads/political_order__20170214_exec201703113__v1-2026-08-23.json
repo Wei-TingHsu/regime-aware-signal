@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "A comprehensive and decisive approach is required to dismantle these organized crime syndicates",
+    "strengthen enforcement of Federal law in order to thwart transnational criminal organizations",
+    "within 120 days of the date of this order, submit to the President a report"
+  ],
+  "extra": {
+    "actor": "President (DOJ, DHS, State, DNI)",
+    "is_decided": true,
+    "sectors": [
+      "law enforcement",
+      "immigration",
+      "national security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-02-14",
+  "doc_id": "exec201703113",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.4,
+    "gold": 0.4,
+    "dollar": -0.4,
+    "oil": 0.2
+  },
+  "magnitude": 0.55,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.25,
+  "confidence": 0.65,
+  "evidence": [
+    "purchases of additional agency mortgage-backed securities at a pace of $40 billion per month",
+    "the Committee agreed on an extension through mid-2015",
+    "the Committee will continue its purchases of agency mortgage-backed securities, undertake additional asset purchases"
+  ],
+  "extra": {
+    "stance": 0.6,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2012-10-04",
+  "doc_id": "meeting20120913",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

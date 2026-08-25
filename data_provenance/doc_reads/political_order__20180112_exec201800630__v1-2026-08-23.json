@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "a Joint Action Plan that describes concrete actions to provide",
+    "seamless access to mental health treatment and suicide prevention resources",
+    "This order is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (DoD, VA, DHS)",
+    "is_decided": true,
+    "sectors": [
+      "veterans affairs",
+      "healthcare policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-01-12",
+  "doc_id": "exec201800630",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

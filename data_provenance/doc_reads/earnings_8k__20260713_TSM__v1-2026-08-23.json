@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "revenue for June 2026 was approximately NT$442.68 billion, an increase of 6.2 percent from May 2026",
+    "an increase of 67.9 percent from June 2025",
+    "Revenue for January through June 2026 totaled NT$2,404.48 billion, an increase of 35.6 percent"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2026-07-13",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

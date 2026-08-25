@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 2,
+  "specificity": 0.9,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "revenue for April 2023 was approximately NT$147.90 billion, an increase of 1.7 percent from March 2023",
+    "a decrease of 14.3 percent from April 2022",
+    "January through April 2023 totaled NT$656.53 billion, a decrease of 1.1 percent"
+  ],
+  "extra": {
+    "surprise": 0.05,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2023-05-10",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

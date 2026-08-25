@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 250,
+  "specificity": 0.25,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "develop, within 120 days of the date of this order, a comprehensive, Government-wide strategy",
+    "consider publishing, by September 2021, for notice and comment a proposed rule",
+    "require major Federal suppliers to publicly disclose greenhouse gas emissions and climate-related financial risk"
+  ],
+  "extra": {
+    "actor": "President Biden / Treasury, FSOC, OMB, Labor, FAR Council",
+    "is_decided": false,
+    "sectors": [
+      "financial regulation",
+      "insurance",
+      "energy",
+      "fossil fuels",
+      "pensions",
+      "federal procurement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-05-25",
+  "doc_id": "exec202111168",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Prohibiting Certain Transactions With and Suspending Entry Into the United States of Foreign Sanctions Evaders",
+    "impose on a foreign person the measures described in subsection (b)",
+    "suspend the entry into the United States, as immigrants or nonimmigrants, of such persons"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State authorized)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "financial services",
+      "energy-related Iran/Syria trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-05-03",
+  "doc_id": "exec201210884",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

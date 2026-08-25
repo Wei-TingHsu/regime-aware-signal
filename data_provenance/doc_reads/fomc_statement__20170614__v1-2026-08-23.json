@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": -0.4,
+    "gold": -0.3,
+    "dollar": 0.3,
+    "oil": -0.1
+  },
+  "magnitude": 0.45,
+  "horizon_days": 30,
+  "specificity": 0.75,
+  "novelty": 0.35,
+  "confidence": 0.7,
+  "evidence": [
+    "raise the target range for the federal funds rate to 1 to 1-1/4 percent",
+    "expects to begin implementing a balance sheet normalization program this year",
+    "expects that economic conditions will evolve in a manner that will warrant gradual increases"
+  ],
+  "extra": {
+    "stance": 0.4,
+    "guidance": 0.3
+  },
+  "source": "fomc_statement",
+  "date": "2017-06-14",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

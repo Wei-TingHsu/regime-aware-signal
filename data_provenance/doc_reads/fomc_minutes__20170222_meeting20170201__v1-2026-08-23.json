@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.05,
+    "gold": -0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 15,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "Most participants continued to judge that... a gradual pace of rate increases over time was likely to be appropriate",
+    "many participants expressed the view that it might be appropriate to raise the federal funds rate again fairly soon",
+    "members agreed to maintain the target range for the federal funds rate at 1/2 to 3/4 percent"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2017-02-22",
+  "doc_id": "meeting20170201",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

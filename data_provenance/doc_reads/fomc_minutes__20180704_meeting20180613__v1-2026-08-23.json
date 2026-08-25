@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": -0.2,
+    "gold": 0.0,
+    "dollar": 0.3,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 10,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.65,
+  "evidence": [
+    "almost all participants expressed the view that it would be appropriate...raising the target range for the federal funds rate 25 basis points",
+    "many noted that...the federal funds rate could be at or above their estimates of its neutral level sometime next year",
+    "Most participants noted that uncertainty and risks associated with trade policy had intensified"
+  ],
+  "extra": {
+    "stance": 0.4,
+    "dispersion": 0.35
+  },
+  "source": "fomc_minutes",
+  "date": "2018-07-04",
+  "doc_id": "meeting20180613",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

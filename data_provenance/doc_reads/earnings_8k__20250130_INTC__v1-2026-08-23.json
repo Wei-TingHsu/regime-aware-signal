@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.4,
+    "duration": 0.2,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "Forecasting first-quarter 2025 revenue of $11.7 billion to $12.7 billion",
+    "Our Q1 outlook reflects seasonal weakness magnified by macro uncertainties, further inventory digestion and competitive dynamics",
+    "expecting first-quarter EPS attributable to Intel of $(0.27) and non-GAAP EPS attributable to Intel of $0.00"
+  ],
+  "extra": {
+    "surprise": -0.5,
+    "guidance_change": -0.6,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2025-01-30",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

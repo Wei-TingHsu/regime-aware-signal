@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.15
+  },
+  "magnitude": 0.5,
+  "horizon_days": 250,
+  "specificity": 0.7,
+  "novelty": 0.6,
+  "confidence": 0.55,
+  "evidence": [
+    "at least two prior regulations be identified for elimination",
+    "total incremental cost of all new regulations...shall be no greater than zero",
+    "no regulation shall be issued by an agency if it was not included"
+  ],
+  "extra": {
+    "actor": "President (OMB Director implementation)",
+    "is_decided": true,
+    "sectors": [
+      "cross-sector regulatory",
+      "energy",
+      "financial services",
+      "manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-02-03",
+  "doc_id": "exec201702451",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

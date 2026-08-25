@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.85,
+  "evidence": [
+    "ordering the closure of detention facilities at U.S. Naval Station Guant\u00e1namo Bay, is hereby revoked",
+    "the United States may transport additional detainees to U.S. Naval Station Guant\u00e1namo Bay",
+    "recommend policies to the President regarding the disposition of individuals captured"
+  ],
+  "extra": {
+    "actor": "President (DoD, DOJ, DHS, DNI, State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "national security",
+      "detention operations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-02-02",
+  "doc_id": "exec201802261",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

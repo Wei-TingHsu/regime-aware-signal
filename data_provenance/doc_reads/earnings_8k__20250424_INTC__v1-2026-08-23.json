@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.45,
+  "confidence": 0.65,
+  "evidence": [
+    "Forecasting second-quarter 2025 revenue of $11.2 billion to $12.4 billion",
+    "expecting second-quarter EPS attributable to Intel of $(0.32)",
+    "The current macro environment is creating elevated uncertainty across the industry"
+  ],
+  "extra": {
+    "surprise": -0.3,
+    "guidance_change": -0.4,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2025-04-24",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

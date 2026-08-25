@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby declare a national emergency to deal with this threat.",
+    "impose all appropriate sanctions pursuant to section 2(a) of this order",
+    "proposed sanctions with respect to the largest business entities licensed or domiciled in a country"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State/DNI/DOJ/DHS)",
+    "is_decided": false,
+    "sectors": [
+      "financial services",
+      "defense",
+      "energy",
+      "technology",
+      "transportation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-09-14",
+  "doc_id": "exec201820203",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

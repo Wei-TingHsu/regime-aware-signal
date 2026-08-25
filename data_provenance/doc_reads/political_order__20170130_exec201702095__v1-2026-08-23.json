@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 250,
+  "specificity": 0.5,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "immediate construction of a physical wall on the southern border",
+    "hire 5,000 additional Border Patrol agents",
+    "termination of the practice commonly known as \"catch and release\""
+  ],
+  "extra": {
+    "actor": "President (DHS Secretary, DOJ, OPM directed)",
+    "is_decided": true,
+    "sectors": [
+      "construction/engineering",
+      "defense/security contractors",
+      "private prison/detention operators"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-01-30",
+  "doc_id": "exec201702095",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

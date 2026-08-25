@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "delivered fourth quarter results ahead of expectations",
+    "encouraged by signs of improving industry demand",
+    "mindful of continued near-term macroeconomic and trade uncertainties"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": -0.1,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2019-09-26",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.6,
+  "confidence": 0.75,
+  "evidence": [
+    "ASML Holding NV (ASML) today reports a business pick-up above previous guidance",
+    "Q3 and Q4 2009 net sales of above EUR 500 million each and Q3 2009 bookings significantly above that level",
+    "Previous guidance issued on July 15 was for Q3 2009 net sales of around EUR 450 million"
+  ],
+  "extra": {
+    "surprise": 0.6,
+    "guidance_change": 0.6,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2009-09-10",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

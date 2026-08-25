@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": -0.4,
+    "gold": -0.3,
+    "dollar": 0.3,
+    "oil": -0.1
+  },
+  "magnitude": 0.55,
+  "horizon_days": 45,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.65,
+  "evidence": [
+    "several members judged that a reduction in asset purchases would likely soon be warranted",
+    "Ms. George dissented because she viewed the ongoing improvement... as warranting a deliberate statement",
+    "Mr. Bullard dissented because he believed... the Committee should signal more strongly its willingness to defend its goal of 2 percent inflation"
+  ],
+  "extra": {
+    "stance": 0.25,
+    "dispersion": 0.75
+  },
+  "source": "fomc_minutes",
+  "date": "2013-07-10",
+  "doc_id": "meeting20130619",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

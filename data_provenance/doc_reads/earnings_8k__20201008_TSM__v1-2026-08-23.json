@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "revenues for September 2020 were approximately NT$127.59 billion, an increase of 3.8 percent",
+    "increase of 24.9 percent from September 2019",
+    "January through September 2020 totaled NT$977.72 billion, an increase of 29.9 percent"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2020-10-08",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "Executive Order 14036 of July 9, 2021 (Promoting Competition in the American Economy), is hereby revoked.",
+    "Revocation of Executive Order on Competition"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "antitrust",
+      "competition policy",
+      "broad economy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-19",
+  "doc_id": "exec202515824",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

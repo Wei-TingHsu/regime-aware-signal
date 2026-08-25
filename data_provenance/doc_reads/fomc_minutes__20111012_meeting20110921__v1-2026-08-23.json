@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.6,
+    "gold": 0.2,
+    "dollar": -0.2,
+    "oil": -0.1
+  },
+  "magnitude": 0.55,
+  "horizon_days": 30,
+  "specificity": 0.75,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "purchase, by the end of June 2012, $400 billion of Treasury securities with remaining maturities of 6 years to 30 years",
+    "Three members concluded that additional accommodation was not appropriate at this time.",
+    "significant downside risks to the economic outlook, including strains in global financial markets"
+  ],
+  "extra": {
+    "stance": 0.35,
+    "dispersion": 0.7
+  },
+  "source": "fomc_minutes",
+  "date": "2011-10-12",
+  "doc_id": "meeting20110921",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "total revenue grew 23% in constant currency beating guidance by $200 million",
+    "we expect our constant currency organic revenue growth rate to hit double-digits",
+    "Cerner will also positively impact revenue and earnings per share growth in the coming quarters"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.4,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2022-09-12",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

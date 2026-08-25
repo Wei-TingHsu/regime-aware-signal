@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "ASML is not able to issue guidance or forecasts due to an uncertain semiconductor equipment investment climate",
+    "The semiconductor industry is in uncharted waters entering 2003",
+    "order backlog... EUR 1,077 million, as compared with EUR 1,570 million on June 30, 2002"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": -0.4,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2003-01-16",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

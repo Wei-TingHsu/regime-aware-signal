@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "USRAP should be rebuilt and expanded, commensurate with global need",
+    "Executive Order 13815 of October 24, 2017... are revoked",
+    "shall prepare and submit to the President a report on climate change and its impact on migration"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "immigration/refugee resettlement",
+      "national security policy",
+      "climate policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-02-09",
+  "doc_id": "exec202102804",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

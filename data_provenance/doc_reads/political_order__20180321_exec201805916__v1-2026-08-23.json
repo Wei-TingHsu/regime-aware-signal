@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.02,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 10,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "prohibited as of the effective date of this order",
+    "digital currency, digital coin, or digital token, that was issued by, for, or on behalf of the Government of Venezuela",
+    "attempt to circumvent U.S. sanctions by issuing a digital currency"
+  ],
+  "extra": {
+    "actor": "President (Treasury/OFAC implementation)",
+    "is_decided": true,
+    "sectors": [
+      "Venezuela sanctions",
+      "cryptocurrency",
+      "energy/PdVSA"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-03-21",
+  "doc_id": "exec201805916",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

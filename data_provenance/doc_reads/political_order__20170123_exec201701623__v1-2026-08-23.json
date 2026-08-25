@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "to modernize the executive branch-wide governance structure and processes for security clearances",
+    "There is hereby established a Security, Suitability, and Credentialing Performance Accountability Council",
+    "Executive Order 13381 of June 27, 2005, as amended, and Executive Order 10450 of April 27, 1953, as amended, are revoked"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 13764)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "federal workforce",
+      "national security clearances"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-01-23",
+  "doc_id": "exec201701623",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

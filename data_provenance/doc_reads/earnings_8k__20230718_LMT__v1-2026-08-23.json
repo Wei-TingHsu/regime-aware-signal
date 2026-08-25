@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.75,
+  "evidence": [
+    "2023 outlook increased for sales, segment operating profit and earnings per share",
+    "we are raising our full year sales and earnings per share outlooks for 2023",
+    "Record backlog of $158.0 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.35,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2023-07-18",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

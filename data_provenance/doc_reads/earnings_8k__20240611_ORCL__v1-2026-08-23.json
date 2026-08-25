@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 10,
+  "specificity": 0.55,
+  "novelty": 0.55,
+  "confidence": 0.6,
+  "evidence": [
+    "RPO up 44% to $98 billion",
+    "double-digit revenue growth this fiscal year",
+    "each successive quarter should grow faster than the previous quarter"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.5,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2024-06-11",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

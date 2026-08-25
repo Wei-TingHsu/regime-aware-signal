@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": -0.3,
+    "gold": -0.3,
+    "dollar": 0.3,
+    "oil": 0.1
+  },
+  "magnitude": 0.55,
+  "horizon_days": 20,
+  "specificity": 0.75,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "the Committee agreed that, beginning in January, it would add to its holdings of agency mortgage-backed securities at a pace of $35 billion",
+    "it likely will be appropriate to maintain the current target range for the federal funds rate well past the time that the unemployment rate declines below 6-1/2 percent",
+    "Mr. Rosengren dissented because he viewed the decision to slow the pace of asset purchases at this meeting as premature"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2014-01-08",
+  "doc_id": "meeting20131218",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

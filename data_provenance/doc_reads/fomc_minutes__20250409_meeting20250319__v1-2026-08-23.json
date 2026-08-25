@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.4,
+    "gold": 0.3,
+    "dollar": -0.4,
+    "oil": -0.2
+  },
+  "magnitude": 0.5,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.55,
+  "confidence": 0.6,
+  "evidence": [
+    "participants generally saw increased downside risks to employment and economic growth and upside risks to inflation",
+    "Almost all participants supported a slowing of the pace of runoff at this meeting",
+    "risks around the baseline projections for economic activity and employment had tilted to the downside"
+  ],
+  "extra": {
+    "stance": -0.2,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2025-04-09",
+  "doc_id": "meeting20250319",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

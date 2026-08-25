@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.9,
+  "evidence": [
+    "establish in the Department of Education the President's Advisory 1776 Commission",
+    "shall produce a report for the President, within 1 year of the date of this order",
+    "The 1776 Commission shall terminate 2 years from the date of this order"
+  ],
+  "extra": {
+    "actor": "President (Department of Education)",
+    "is_decided": true,
+    "sectors": [
+      "education"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-11-05",
+  "doc_id": "exec202024793",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

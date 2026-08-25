@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established... a Second Emergency Board",
+    "the parties to the controversy shall make no change in the conditions",
+    "its recommendations were not accepted by the parties"
+  ],
+  "extra": {
+    "actor": "President (RLA Section 9A)",
+    "is_decided": true,
+    "sectors": [
+      "rail transportation",
+      "labor relations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2024-11-26",
+  "doc_id": "exec202427850",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

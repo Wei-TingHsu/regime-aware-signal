@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 1.0,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "locality-based comparability payments shall be paid in accordance with Schedule 9",
+    "Schedule 8 is effective January 1, 2022",
+    "Executive Order 13970 of December 31, 2020, is superseded"
+  ],
+  "extra": {
+    "actor": "President (OPM implementation)",
+    "is_decided": true,
+    "sectors": [
+      "federal government pay administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-12-28",
+  "doc_id": "exec202128313",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

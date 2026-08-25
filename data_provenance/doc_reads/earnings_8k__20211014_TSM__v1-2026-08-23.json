@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "revenue increased 16.3% while net income and diluted EPS both increased 13.8%",
+    "Revenue is expected to be between US$15.4 billion and US$15.7 billion",
+    "strong demand for our industry-leading 5nm technology"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2021-10-14",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

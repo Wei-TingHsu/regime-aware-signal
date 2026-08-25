@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.03,
+    "oil": 0.15
+  },
+  "magnitude": 0.2,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.15,
+  "confidence": 0.55,
+  "evidence": [
+    "Blocking Property With Respect to Certain Russian Energy Export Pipelines",
+    "all property and interests in property of such person...are blocked",
+    "Protecting Europe's Energy Security Act of 2019"
+  ],
+  "extra": {
+    "actor": "President Biden / Treasury / State Dept",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "pipelines",
+      "Russia sanctions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-08-24",
+  "doc_id": "exec202118306",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

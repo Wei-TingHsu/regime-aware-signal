@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "Q2 2005 results exceeded expectations",
+    "Net bookings of 24 systems with a value of EUR 297 million",
+    "ASML expects to ship 38 systems in Q3 2005"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": -0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2005-07-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

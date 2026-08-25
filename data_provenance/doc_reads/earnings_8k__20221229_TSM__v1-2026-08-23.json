@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "3nm technology has successfully entered volume production with good yields",
+    "3nm technology will create end products with a market value of US$1.5 trillion within five years",
+    "TSMC is also building 3nm capacity at its Arizona site"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2022-12-29",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

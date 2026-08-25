@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "This order sets forth the Council's membership, duties, and responsibilities.",
+    "The Council shall meet at least annually.",
+    "This order supersedes Executive Order 13803 of June 30, 2017"
+  ],
+  "extra": {
+    "actor": "President (National Space Council)",
+    "is_decided": true,
+    "sectors": [
+      "aerospace",
+      "defense",
+      "space"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-12-03",
+  "doc_id": "exec202126459",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

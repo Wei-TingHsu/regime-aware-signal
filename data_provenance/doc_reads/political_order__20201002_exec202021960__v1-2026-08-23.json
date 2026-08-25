@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "It is the policy of the United States to recognize the human dignity",
+    "shall take all appropriate enforcement action against individuals and organizations",
+    "up to and including terminating Federal funding for non-compliant programs"
+  ],
+  "extra": {
+    "actor": "HHS Secretary",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "hospitals"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-10-02",
+  "doc_id": "exec202021960",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.35,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.45,
+  "confidence": 0.55,
+  "evidence": [
+    "AI development companies have signed contracts to purchase more than $4 billion of capacity",
+    "Oracle Cloud Infrastructure revenue grew 66% in Q1",
+    "Total cloud services revenue, Infrastructure plus Applications, grew 30% to $4.6 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.25,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2023-09-11",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

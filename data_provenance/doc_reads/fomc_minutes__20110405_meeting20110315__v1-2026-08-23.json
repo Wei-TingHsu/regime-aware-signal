@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": -0.05,
+    "oil": 0.05
+  },
+  "magnitude": 0.2,
+  "horizon_days": 10,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "A few members remained uncertain about the benefits of the asset purchase program but judged that making changes to the program at this time was not appropriate.",
+    "Several of them indicated, in light of recent developments, that the risks to their forecasts of inflation had shifted somewhat to the upside.",
+    "A few participants indicated that economic conditions might warrant a move toward less-accommodative monetary policy this year"
+  ],
+  "extra": {
+    "stance": 0.1,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2011-04-05",
+  "doc_id": "meeting20110315",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

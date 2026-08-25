@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby declare a national emergency to deal with that threat",
+    "All property and interests in property that are in the United States... are blocked",
+    "the entry of such persons into the United States, as immigrants or nonimmigrants, is hereby suspended"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State implementation)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Mali",
+      "financial institutions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-07-30",
+  "doc_id": "exec201916383",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

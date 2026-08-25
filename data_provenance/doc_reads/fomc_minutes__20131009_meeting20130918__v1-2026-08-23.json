@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.5,
+    "gold": 0.3,
+    "dollar": -0.4,
+    "oil": 0.1
+  },
+  "magnitude": 0.6,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.7,
+  "confidence": 0.7,
+  "evidence": [
+    "all members but one judged that it would be appropriate for the Committee to await more evidence",
+    "the Committee decided to await more evidence that progress will be sustained before adjusting the pace of its purchases",
+    "the tightening of financial conditions observed in recent months, if sustained, could slow the pace of improvement"
+  ],
+  "extra": {
+    "stance": -0.4,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2013-10-09",
+  "doc_id": "meeting20130918",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

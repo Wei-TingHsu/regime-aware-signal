@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "this order establishes the National Strategic Computing Initiative (NSCI)",
+    "Accelerating delivery of a capable exascale computing system",
+    "The Executive Council shall, within 90 days of the date of this order, establish an implementation plan"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 13702)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "high-performance computing",
+      "semiconductors",
+      "defense",
+      "scientific research"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-08-03",
+  "doc_id": "exec201519183",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

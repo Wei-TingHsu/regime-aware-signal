@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "This order establishes a White House Council to carry out my Administration's plan to encourage public and private investment",
+    "The Council shall terminate on January 21, 2021, unless extended by the President.",
+    "Within 90 days of the date of this order, a detailed work plan"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "real estate",
+      "community development",
+      "housing",
+      "small business"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-12-18",
+  "doc_id": "exec201827515",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

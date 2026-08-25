@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.15,
+    "gold": 0.05,
+    "dollar": -0.15,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.4,
+  "novelty": 0.45,
+  "confidence": 0.6,
+  "evidence": [
+    "the extent to which additional increases in the target range may be appropriate after this meeting had become less certain",
+    "Some participants commented that... additional policy firming would likely be warranted at future meetings. Several participants noted that... further policy firming after this meeting may not be necessary",
+    "the language in the postmeeting statement should not be interpreted as signaling either that decreases in the target range are likely this year or that further increases... had been ruled out"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2023-05-24",
+  "doc_id": "meeting20230503",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

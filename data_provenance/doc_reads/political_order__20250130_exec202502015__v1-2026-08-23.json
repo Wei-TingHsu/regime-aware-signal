@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Establishing a physical wall and other barriers monitored and supported by adequate personnel and technology",
+    "resume the Migrant Protection Protocols in all sectors along the southern border",
+    "Cease using the ``CBP One'' application as a method of paroling"
+  ],
+  "extra": {
+    "actor": "President / DHS / DOD / DOJ / State",
+    "is_decided": true,
+    "sectors": [
+      "immigration enforcement",
+      "defense/border security contractors",
+      "labor market"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-30",
+  "doc_id": "exec202502015",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

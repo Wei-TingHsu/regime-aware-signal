@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 45,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.5,
+  "evidence": [
+    "Semiconductor sales correction ongoing, reducing inventory to standard levels",
+    "However, limited H2 visibility leads to a focus on managing flexibility",
+    "ASML backlog supports solid H1 2005; plan to ship 60 systems in Q1 05"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": -0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2005-02-11",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

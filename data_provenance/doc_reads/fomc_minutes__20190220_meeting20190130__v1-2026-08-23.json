@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.4,
+    "gold": 0.2,
+    "dollar": -0.3,
+    "oil": 0.2
+  },
+  "magnitude": 0.6,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "the Committee will be patient as it determines what future adjustments to the target range",
+    "all participants agreed that it was important to be flexible in managing the process of balance sheet normalization",
+    "Committee decided that it was not useful at this time to express a judgment about the balance of risks"
+  ],
+  "extra": {
+    "stance": -0.4,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2019-02-20",
+  "doc_id": "meeting20190130",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

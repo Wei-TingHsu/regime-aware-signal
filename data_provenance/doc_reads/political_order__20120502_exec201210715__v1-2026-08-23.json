@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "I am directing my Administration to develop Principles of Excellence to strengthen oversight, enforcement, and accountability",
+    "end fraudulent and unduly aggressive recruiting techniques on and off military installations",
+    "new rules should ensure...only those institutions that enter into a memorandum of agreement...are permitted entry"
+  ],
+  "extra": {
+    "actor": "President (DoD, VA, Education, CFPB, DOJ)",
+    "is_decided": true,
+    "sectors": [
+      "for-profit education",
+      "higher education",
+      "student lending"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-05-02",
+  "doc_id": "exec201210715",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

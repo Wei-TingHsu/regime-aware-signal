@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.55,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.6,
+  "confidence": 0.55,
+  "evidence": [
+    "all executive departments and agencies, including so-called independent agencies, shall submit for review all proposed and final significant regulatory actions",
+    "The Director of OMB shall, on an ongoing basis: review independent regulatory agencies' obligations",
+    "This order shall not apply to the Board of Governors of the Federal Reserve System"
+  ],
+  "extra": {
+    "actor": "President (OMB Director, independent agency heads)",
+    "is_decided": true,
+    "sectors": [
+      "financial regulation",
+      "banking",
+      "energy regulation",
+      "telecommunications",
+      "consumer protection"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-24",
+  "doc_id": "exec202503063",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "revenue for July 2023 was approximately NT$177.62 billion, an increase of 13.6 percent from June 2023",
+    "a decrease of 4.9 percent from July 2022",
+    "Revenue for January through July 2023 totaled NT$1,167.09 billion, a decrease of 3.7 percent"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2023-08-10",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

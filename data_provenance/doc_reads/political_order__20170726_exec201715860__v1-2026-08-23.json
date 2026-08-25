@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 270,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "Within 270 days of the date of this order, the Secretary of Defense",
+    "provide to the President an unclassified report",
+    "recommends such legislative, regulatory, and policy changes"
+  ],
+  "extra": {
+    "actor": "Secretary of Defense",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "manufacturing",
+      "industrial supply chain"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-07-26",
+  "doc_id": "exec201715860",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

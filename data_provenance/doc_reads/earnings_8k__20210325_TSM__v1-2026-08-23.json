@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "Machinery equipment for advanced technology capacity: NT$227.2 billion",
+    "Disposal of VisEra Technologies Company Ltd.'s common shares to facilitate its IPO",
+    "The changes in the shareholdings of TSMC board of directors"
+  ],
+  "confidence_note": "",
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.05,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2021-03-25",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

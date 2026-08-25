@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.0,
+  "confidence": 0.9,
+  "evidence": [
+    "the date line should read ``April 11, 2013''",
+    "Drawdown Pursuant to Section 552(c)(2) of the Foreign Assistance Act",
+    "up to $10 Million in Commodities and Services"
+  ],
+  "extra": {
+    "actor": "President (correction notice)",
+    "is_decided": true,
+    "sectors": [
+      "defense/foreign aid",
+      "Syria policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-09-10",
+  "doc_id": "execC1201309860",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

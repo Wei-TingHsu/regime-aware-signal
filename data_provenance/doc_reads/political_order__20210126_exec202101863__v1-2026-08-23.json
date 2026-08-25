@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 60,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "issue them by March 15, 2021",
+    "launch a national program to focus OSHA enforcement efforts related to COVID-19",
+    "consider whether any emergency temporary standards on COVID-19"
+  ],
+  "extra": {
+    "actor": "President/OSHA/DOL",
+    "is_decided": true,
+    "sectors": [
+      "labor/employment",
+      "healthcare",
+      "manufacturing",
+      "mining"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-26",
+  "doc_id": "exec202101863",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

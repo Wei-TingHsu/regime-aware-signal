@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.3,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 20,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Participants judged that although inflation remained elevated, there had been modest further progress toward the 2 percent goal",
+    "they did not expect that it would be appropriate to lower the target range... until additional information had emerged",
+    "risks to achieving the Committee's employment and inflation goals had moved toward better balance over the past year"
+  ],
+  "extra": {
+    "stance": 0.1,
+    "dispersion": 0.45
+  },
+  "source": "fomc_minutes",
+  "date": "2024-07-03",
+  "doc_id": "meeting20240612",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

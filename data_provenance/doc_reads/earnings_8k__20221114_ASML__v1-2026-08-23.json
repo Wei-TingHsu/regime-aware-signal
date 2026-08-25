@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 250,
+  "specificity": 0.6,
+  "novelty": 0.45,
+  "confidence": 0.55,
+  "evidence": [
+    "ASML announces a new share buyback program, effective today",
+    "2030: annual revenue between approximately \u20ac44 billion and \u20ac60 billion",
+    "We plan to increase our capacity to 90 Low-NA EUV and 600 DUV systems"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.5,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2022-11-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

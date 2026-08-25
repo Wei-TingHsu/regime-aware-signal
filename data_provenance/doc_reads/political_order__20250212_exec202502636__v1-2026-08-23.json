@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Attorney General shall examine all orders, regulations, guidance, plans",
+    "present a proposed plan of action to the President",
+    "This order shall be implemented consistent with applicable law"
+  ],
+  "extra": {
+    "actor": "Attorney General / DOJ",
+    "is_decided": false,
+    "sectors": [
+      "firearms manufacturers",
+      "defense/gun retailers"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-12",
+  "doc_id": "exec202502636",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue is expected to be between US$11.2 billion and US$11.5 billion",
+    "strong demand for our industry-leading 5nm and 7nm technologies",
+    "2020 capital budget to be between US$16 billion and US$17 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2020-07-16",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

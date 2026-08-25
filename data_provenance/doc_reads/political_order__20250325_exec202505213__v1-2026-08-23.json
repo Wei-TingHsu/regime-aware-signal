@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.25,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "shall...take all necessary steps to facilitate the closure of the Department of Education",
+    "to the maximum extent appropriate and permitted by law",
+    "This order shall be implemented consistent with applicable law and subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "Secretary of Education",
+    "is_decided": false,
+    "sectors": [
+      "education",
+      "student loans",
+      "for-profit education"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-25",
+  "doc_id": "exec202505213",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

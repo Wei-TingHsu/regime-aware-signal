@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Continued American leadership in AI is of paramount importance",
+    "heads of AI R&D agencies shall budget an amount for AI R&D",
+    "shall organize the development of an action plan to protect the United States advantage in AI"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, coordinated via NSTC Select Committee/OMB/OSTP)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "artificial intelligence",
+      "defense",
+      "education",
+      "federal R&D"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-02-14",
+  "doc_id": "exec201902544",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.6,
+    "gold": 0.4,
+    "dollar": -0.4,
+    "oil": -0.1
+  },
+  "magnitude": 0.65,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "Many participants indicated that the case for somewhat more accommodative policy had strengthened.",
+    "A couple of participants favored a cut in the target range at this meeting",
+    "removed the \"patient\" language and to emphasize instead...would act as appropriate to sustain the expansion"
+  ],
+  "extra": {
+    "stance": -0.6,
+    "dispersion": 0.7
+  },
+  "source": "fomc_minutes",
+  "date": "2019-07-10",
+  "doc_id": "meeting20190619",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

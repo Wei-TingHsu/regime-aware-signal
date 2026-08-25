@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Shifting homeless individuals into long-term institutional settings for humane treatment",
+    "ending support for ``housing first'' policies that deprioritize accountability",
+    "encampment removal efforts in areas for which public safety is at risk"
+  ],
+  "extra": {
+    "actor": "President/Attorney General/HHS/HUD/DOT",
+    "is_decided": false,
+    "sectors": [
+      "homeless services",
+      "healthcare/behavioral health",
+      "housing",
+      "private prisons/reentry",
+      "law enforcement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-07-29",
+  "doc_id": "exec202514391",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

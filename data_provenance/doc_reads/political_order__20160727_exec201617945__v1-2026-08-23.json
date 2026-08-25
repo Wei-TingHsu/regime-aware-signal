@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "The functions of the President under section 2313A(b)",
+    "the Secretary of the Treasury shall consult with the Secretary of State",
+    "shall make a recommendation to the President regarding which of the actions"
+  ],
+  "extra": {
+    "actor": "President (delegating to Treasury, State, Commerce, USTR, USAID)",
+    "is_decided": true,
+    "sectors": [
+      "trade policy",
+      "currency policy",
+      "export promotion"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-07-27",
+  "doc_id": "exec201617945",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

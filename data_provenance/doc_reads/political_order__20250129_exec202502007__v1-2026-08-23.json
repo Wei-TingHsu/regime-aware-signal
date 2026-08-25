@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.8,
+  "novelty": 0.6,
+  "confidence": 0.5,
+  "evidence": [
+    "no department or agency of the United States government shall issue documents recognizing United States citizenship",
+    "Subsection (a) of this section shall apply only to persons who are born within the United States after 30 days",
+    "when that person's mother was unlawfully present in the United States"
+  ],
+  "extra": {
+    "actor": "President / Secretary of State, Attorney General, Secretary of Homeland Security, Commissioner of Social Security",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "social policy",
+      "legal/constitutional"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-29",
+  "doc_id": "exec202502007",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

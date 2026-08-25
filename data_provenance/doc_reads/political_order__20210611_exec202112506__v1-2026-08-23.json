@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "The following orders are revoked: Executive Order 13942 of August 6, 2020",
+    "shall provide a report to the Assistant to the President and National Security Advisor with recommendations",
+    "shall evaluate on a continuing basis transactions involving connected software applications"
+  ],
+  "extra": {
+    "actor": "President Biden / Secretary of Commerce",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "software",
+      "telecommunications",
+      "China-linked apps"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-06-11",
+  "doc_id": "exec202112506",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.55,
+  "confidence": 0.55,
+  "evidence": [
+    "we produced approximately 411,000 vehicles and delivered approximately 444,000 vehicles",
+    "We deployed 9.4 GWh of energy storage products in Q2, the highest quarterly deployment yet",
+    "Total 410,831 443,956 2%"
+  ],
+  "confidence_reason": "",
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2024-07-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

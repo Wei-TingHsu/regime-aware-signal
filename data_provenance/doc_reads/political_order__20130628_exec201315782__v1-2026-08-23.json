@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established within the Department of the Treasury the President's Advisory Council on Financial Capability for Young Americans",
+    "the Council shall terminate 2 years after the date of this order",
+    "Members of the Council appointed under section 3(a)(ii) of this order shall serve without any compensation"
+  ],
+  "extra": {
+    "actor": "President/Department of the Treasury",
+    "is_decided": true,
+    "sectors": [
+      "financial education",
+      "advisory council",
+      "consumer finance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-06-28",
+  "doc_id": "exec201315782",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

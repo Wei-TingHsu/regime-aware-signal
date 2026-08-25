@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.0,
+  "confidence": 0.97,
+  "evidence": [
+    "I, BARACK OBAMA... do hereby proclaim May 15, 2011, as Peace Officers Memorial Day",
+    "designate May 15 of each year as \"Peace Officers Memorial Day\"",
+    "My Administration is committed to stopping senseless tragedies and keeping our police safe."
+  ],
+  "extra": {
+    "actor": "President Barack Obama",
+    "is_decided": true,
+    "sectors": [
+      "ceremonial",
+      "law enforcement"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-05-19",
+  "doc_id": "proc201112548",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

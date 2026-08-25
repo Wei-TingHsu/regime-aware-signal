@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": -0.4
+  },
+  "magnitude": 0.5,
+  "horizon_days": 120,
+  "specificity": 0.4,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby declare a national emergency.",
+    "agencies shall identify and use all relevant lawful emergency and other authorities available to them to expedite",
+    "the construction authority provided in section 2808 of title 10, United States Code, is invoked"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14156)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "oil and gas",
+      "critical minerals",
+      "electricity generation",
+      "infrastructure permitting"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-29",
+  "doc_id": "exec202502003",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

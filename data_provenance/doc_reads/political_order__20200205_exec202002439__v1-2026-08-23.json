@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "issue a notice of proposed rulemaking to establish criteria importers must meet",
+    "shall develop an International Mail Non-Compliance metric",
+    "prevent the importation into the United States of shipments dispatched from such posts"
+  ],
+  "extra": {
+    "actor": "DHS/CBP, USPS, DOJ, USTR",
+    "is_decided": true,
+    "sectors": [
+      "e-commerce",
+      "customs/trade",
+      "logistics/express carriers",
+      "postal services",
+      "retail/counterfeit goods enforcement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-02-05",
+  "doc_id": "exec202002439",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

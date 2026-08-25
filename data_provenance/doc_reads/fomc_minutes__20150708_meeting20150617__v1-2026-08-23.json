@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.2,
+    "gold": 0.0,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "conditions warranting an increase in the target range for the federal funds rate had not yet been met",
+    "Most participants judged that the conditions for policy firming had not yet been achieved",
+    "One member, however, indicated a readiness to take that step at this meeting"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2015-07-08",
+  "doc_id": "meeting20150617",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

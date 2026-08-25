@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.15,
+    "gold": 0.1,
+    "dollar": -0.15,
+    "oil": 0.05
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "a few members viewed the increase in inflation risks as suggesting that economic conditions might well evolve in a way that would warrant the Committee taking steps toward less-accommodative policy sooner",
+    "Participants expressed a range of views on some aspects of a normalization strategy",
+    "no decisions regarding the Committee's strategy for normalizing policy were made at this meeting"
+  ],
+  "extra": {
+    "stance": 0.05,
+    "dispersion": 0.7
+  },
+  "source": "fomc_minutes",
+  "date": "2011-05-18",
+  "doc_id": "meeting20110427",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

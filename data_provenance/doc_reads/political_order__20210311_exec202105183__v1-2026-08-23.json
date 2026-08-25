@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "There is established a White House Gender Policy Council",
+    "the Council, after coordination by the Co-Chairs, shall develop and submit to the President a Government-wide strategy",
+    "This order is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "White House / Executive Office of the President",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_order",
+  "date": "2021-03-11",
+  "doc_id": "exec202105183",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "establishes...a Board...to investigate and report on these disputes",
+    "no change in the conditions out of which the disputes arose shall be made",
+    "threaten substantially to interrupt interstate commerce"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "railroads",
+      "transportation",
+      "labor"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-07-20",
+  "doc_id": "exec202215628",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.05
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "I have determined that it is necessary and appropriate to modify Annex II to Executive Order 14257",
+    "the United States and the European Union recently announced a landmark \"Framework on an Agreement on Reciprocal, Fair, and Balanced Trade\"",
+    "Secretary of Commerce and the United States Trade Representative shall take the necessary and appropriate actions to implement the final agreement"
+  ],
+  "extra": {
+    "actor": "President (Trump), delegating to Secretary of Commerce and USTR",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "automobiles",
+      "steel",
+      "aluminum",
+      "pharmaceuticals",
+      "agriculture"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-09-10",
+  "doc_id": "exec202517507",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

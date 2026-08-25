@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.2,
+    "gold": 0.3,
+    "dollar": 0.1,
+    "oil": 0.3
+  },
+  "magnitude": 0.6,
+  "horizon_days": 20,
+  "specificity": 0.85,
+  "novelty": 0.6,
+  "confidence": 0.7,
+  "evidence": [
+    "articles of India imported into the customs territory of the United States shall be subject to an additional ad valorem rate of duty of 25 percent",
+    "I determine that it is necessary and appropriate to impose an additional ad valorem duty on imports of articles of India",
+    "The Government of India is currently directly or indirectly importing Russian Federation oil"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "energy",
+      "India-US relations",
+      "Russia sanctions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-11",
+  "doc_id": "exec202515267",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

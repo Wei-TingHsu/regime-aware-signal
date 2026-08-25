@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "We are excited about the strengthening DRAM industry fundamentals.",
+    "Industry's first 176-layer NAND in production",
+    "Revenue $5.8 billion \u00b1 $200 million"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.15,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2021-01-07",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

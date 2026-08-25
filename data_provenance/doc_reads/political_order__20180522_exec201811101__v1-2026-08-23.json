@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.02,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.8,
+  "evidence": [
+    "Executive Order 13693 of March 19, 2015 (Planning for Federal Sustainability in the Next Decade), is revoked.",
+    "reduce potable and non-potable water consumption",
+    "Meet statutory requirements relating to the consumption of renewable energy"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "federal facilities management",
+      "energy efficiency",
+      "government procurement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-05-22",
+  "doc_id": "exec201811101",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

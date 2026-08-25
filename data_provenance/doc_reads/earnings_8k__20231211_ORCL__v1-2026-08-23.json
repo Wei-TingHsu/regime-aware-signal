@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 10,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "Q2 Total Remaining Performance Obligations over $65 billion",
+    "Cloud Infrastructure (IaaS) Revenue $1.6 billion, up 52% in USD",
+    "Demand for our Cloud Infrastructure and Generative AI services is increasing at an astronomical rate"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.2,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2023-12-11",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

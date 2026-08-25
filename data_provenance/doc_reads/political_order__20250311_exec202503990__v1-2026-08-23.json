@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.05
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.75,
+  "evidence": [
+    "shall not be subject to the additional ad valorem rate of duty",
+    "reduced to 10 percent in lieu of 25 percent",
+    "effective with respect to goods entered for consumption...on or after March 7, 2025"
+  ],
+  "extra": {
+    "actor": "President (via IEEPA/Trade Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "automotive",
+      "USMCA-compliant goods",
+      "potash",
+      "Canada trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-11",
+  "doc_id": "exec202503990",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

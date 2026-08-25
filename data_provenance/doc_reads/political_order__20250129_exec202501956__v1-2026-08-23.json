@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.5
+  },
+  "magnitude": 0.6,
+  "horizon_days": 250,
+  "specificity": 0.4,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "to encourage energy exploration and production on Federal lands and waters",
+    "restart reviews of applications for approvals of liquified natural gas export projects",
+    "eliminate the ``electric vehicle (EV) mandate'' and promote true consumer choice"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14154)",
+    "is_decided": true,
+    "sectors": [
+      "oil and gas",
+      "LNG export",
+      "mining/critical minerals",
+      "electric vehicles",
+      "renewable energy/climate programs"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-29",
+  "doc_id": "exec202501956",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

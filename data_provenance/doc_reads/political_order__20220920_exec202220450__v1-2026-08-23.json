@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 120,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "The Committee shall consider, as appropriate, the covered transaction's effect on supply chain resilience",
+    "microelectronics, artificial intelligence, biotechnology and biomanufacturing, quantum computing, advanced clean energy",
+    "the Committee shall consider whether a covered transaction involves the transfer of United States persons' sensitive data"
+  ],
+  "extra": {
+    "actor": "President/CFIUS",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "semiconductors",
+      "biotech",
+      "critical minerals",
+      "data/privacy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-09-20",
+  "doc_id": "exec202220450",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

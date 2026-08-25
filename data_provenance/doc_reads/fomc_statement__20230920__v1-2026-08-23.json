@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.1,
+    "gold": -0.1,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "maintain the target range for the federal funds rate at 5-1/4 to 5-1/2 percent",
+    "The Committee remains highly attentive to inflation risks.",
+    "continue reducing its holdings of Treasury securities and agency debt"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "guidance": -0.1
+  },
+  "source": "fomc_statement",
+  "date": "2023-09-20",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "shall, within 60 days of the date of this order, rescind the guidance document",
+    "a violation of the English language proficiency requirement results in the driver being placed out-of-service",
+    "review non-domiciled commercial driver's licenses (CDLs) issued by relevant State agencies"
+  ],
+  "extra": {
+    "actor": "Department of Transportation/FMCSA",
+    "is_decided": true,
+    "sectors": [
+      "trucking",
+      "transportation",
+      "logistics"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-05-02",
+  "doc_id": "exec202507786",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

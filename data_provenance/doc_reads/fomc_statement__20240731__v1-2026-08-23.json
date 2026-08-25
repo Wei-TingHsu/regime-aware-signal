@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "some further progress toward the Committee's 2 percent inflation objective",
+    "risks to achieving its employment and inflation goals continue to move into better balance",
+    "does not expect it will be appropriate to reduce the target range until"
+  ],
+  "extra": {
+    "stance": -0.15,
+    "guidance": -0.2
+  },
+  "source": "fomc_statement",
+  "date": "2024-07-31",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "establishes an interagency Council on Climate Preparedness and Resilience",
+    "identify and seek to remove or reform barriers that discourage investments",
+    "reform policies and Federal funding programs that may... increase the vulnerability"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "infrastructure",
+      "energy",
+      "insurance",
+      "agriculture",
+      "federal agencies"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-11-06",
+  "doc_id": "exec201326785",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

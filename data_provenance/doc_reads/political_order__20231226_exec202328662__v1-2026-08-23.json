@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.05
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "impose on a foreign financial institution the sanctions described in subsection (b)",
+    "prohibit the opening of, or prohibit or impose strict conditions on the maintenance of, correspondent accounts",
+    "the importation and entry into the United States...of...fish, seafood, and preparations thereof; alcoholic beverages; non-industrial diamonds"
+  ],
+  "extra": {
+    "actor": "President Biden / Treasury, State, Commerce, DHS",
+    "is_decided": true,
+    "sectors": [
+      "financial institutions",
+      "Russia trade/import",
+      "military-industrial base",
+      "diamonds/seafood/alcohol imports"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-12-26",
+  "doc_id": "exec202328662",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

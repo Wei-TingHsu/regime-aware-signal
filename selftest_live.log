@@ -1,0 +1,47 @@
+==============================================================================
+ANALOG EVENT ESTIMATOR -- BLIND ACCEPTANCE TESTS (prereg section 9.2)
+==============================================================================
+  Real macro PCs, real regimes, real returns with real volatility,
+  fat tails, missing values and holidays. ONLY the event-date <->
+  return correspondence is destroyed. No real conditional estimate
+  is computed anywhere in this run.
+
+  test 5: 200 replications x 500 permutations
+
+  running test 1 ...
+  running test 2 ...
+  running test 3 ...
+  running test 4 ...
+  running test 5 (the expensive one) ...
+      rep 20/200  degenerate 0.45  rejection: permute_y 0.091  permute_Z 0.000
+      rep 40/200  degenerate 0.45  rejection: permute_y 0.045  permute_Z 0.000
+      rep 60/200  degenerate 0.35  rejection: permute_y 0.077  permute_Z 0.000
+      rep 80/200  degenerate 0.34  rejection: permute_y 0.094  permute_Z 0.000
+      rep 100/200  degenerate 0.37  rejection: permute_y 0.095  permute_Z 0.000
+      rep 120/200  degenerate 0.37  rejection: permute_y 0.092  permute_Z 0.000
+      rep 140/200  degenerate 0.36  rejection: permute_y 0.079  permute_Z 0.000
+      rep 160/200  degenerate 0.33  rejection: permute_y 0.084  permute_Z 0.000
+      rep 180/200  degenerate 0.33  rejection: permute_y 0.074  permute_Z 0.000
+      rep 200/200  degenerate 0.32  rejection: permute_y 0.066  permute_Z 0.000
+  running test 6 ...
+
+==============================================================================
+  [PASS]  1 recovery
+          estimator +0.793% +/- 0.390% vs ORACLE +0.903% (same weights) -> agreement within 2se | raw planted +1.000%, kernel attenuation 90.3% of it -- expected for a smoother across a step | n=400, median ESS 29.7, sigma 0.350 (target 30.0, bisection converged)
+  [PASS]  2 precedent count
+          reported matched-event counts equal planted counts at n=25,60,140
+  [PASS]  3 tier labelling
+          all three tiers reached AND correctly assigned | strong: tiers 1/2/3 = 347/0/53 of 400 queries; moderate: tiers 1/2/3 = 264/75/61 of 400 queries; none: tiers 1/2/3 = 0/260/140 of 400 queries; thin: tiers 1/2/3 = 0/0/6 of 6 queries
+  [PASS]  4 abstention
+          6 matched events -> ESS 3.7 < 8, abstain=True, tier 3
+  [PASS]  5a degenerate fraction
+          tau2 = 0 in 32.0% of 200 reps -- the registered null path fired and the blend stayed at the unconditional. This is the estimator working, and it is why the ORIGINAL test 5 failed (rejection 0.005, median p 0.906): a statistic that is identically zero gives p = 1 by ties.
+  [PASS]  5b null calibration
+          over the 136 reps where the estimator conditioned, band [0.02, 0.08] UNCHANGED -- PRIMARY permute_y: 0.066 | permute_Z (original, retained): 0.000; ** THE TWO NULLS DISAGREE ON THE VERDICT -- that disagreement is itself the finding and is reported as such, with no tie-break **. Median p (permute_y) 0.653. Naive rate over all 200 reps including degenerate ones: 0.045.
+  [PASS]  6 tau2=0 path
+          identical cell means -> tau2 0.00e+00, w 0.00, tier 3, estimate == unconditional: True
+==============================================================================
+ALL SIX PASS -- unblinding is authorised once the corpus is read.
+==============================================================================
+
+  -> /Users/hsuweiting/Projects/regime-aware-signal/docs/analog_event_selftest.md

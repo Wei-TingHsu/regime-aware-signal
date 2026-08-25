@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "Microsoft Cloud revenue was $49.1 billion and increased 26%",
+    "Azure and other cloud services revenue increased 40%",
+    "OpenAI has contracted to purchase an incremental $250B of Azure services"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.0,
+    "ticker": "MSFT"
+  },
+  "source": "earnings_8k",
+  "date": "2025-10-29",
+  "doc_id": "MSFT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

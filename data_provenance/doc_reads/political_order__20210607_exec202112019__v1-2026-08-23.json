@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "the purchase or sale of any publicly traded securities...of any person listed in the Annex",
+    "prohibitions in subsection (a) of this section shall take effect...August 2, 2021",
+    "I hereby expand the scope of the national emergency declared in Executive Order 13959"
+  ],
+  "extra": {
+    "actor": "President Biden / Treasury",
+    "is_decided": true,
+    "sectors": [
+      "China defense",
+      "surveillance technology",
+      "capital markets"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-06-07",
+  "doc_id": "exec202112019",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

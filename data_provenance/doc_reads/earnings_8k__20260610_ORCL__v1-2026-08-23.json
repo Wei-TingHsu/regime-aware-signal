@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 10,
+  "specificity": 0.8,
+  "novelty": 0.55,
+  "confidence": 0.75,
+  "evidence": [
+    "Record Remaining Performance Obligations grew $85 billion in Q4",
+    "Total Revenues are expected to grow from 27% to 29%",
+    "raise our non-GAAP EPS guidance to $8.05"
+  ],
+  "extra": {
+    "surprise": 0.6,
+    "guidance_change": 0.55,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2026-06-10",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

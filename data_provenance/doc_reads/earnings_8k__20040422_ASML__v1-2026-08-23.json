@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "The upturn strengthens",
+    "All indications suggest that orders will continue to be strong in Q2 2004",
+    "This will strengthen the ASP as the year progresses"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2004-04-22",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

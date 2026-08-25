@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established the White House Hispanic Prosperity Initiative",
+    "There is established in the Department the President's Advisory Commission on Hispanic Prosperity",
+    "This order supersedes Executive Order 13555 of October 19, 2010"
+  ],
+  "extra": {
+    "actor": "President/Department of Education",
+    "is_decided": true,
+    "sectors": [
+      "education",
+      "small business"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-07-14",
+  "doc_id": "exec202015338",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby direct executive departments and agencies... to give serious consideration to whether and how it is appropriate... to reduce regulatory burdens on small businesses",
+    "This memorandum is not intended to, and does not, create any right or benefit",
+    "explicitly justify its decision not to do so"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum to agencies)",
+    "is_decided": true,
+    "sectors": [
+      "small business",
+      "regulatory policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-01-21",
+  "doc_id": "memo20111387",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

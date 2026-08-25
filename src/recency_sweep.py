@@ -315,27 +315,46 @@ def verdict(res, engine):
                         f"criterion requires BOTH conditions; the first fails, "
                         f"so stability is not evaluated.")
 
-    # stability: >=3 adjacent rungs whose Sharpe is monotone or flat in HL
-    order = [2.0, 4.0, 8.0, 16.0, float("inf")]
+    # STABILITY. Section 6 says "monotone or stable across at least three
+    # adjacent rungs" but never defines "stable" numerically. The previous
+    # implementation supplied an UNREGISTERED +/-0.02 tolerance, and the printed
+    # count depended entirely on it (0.02 -> 5, 0.01 -> 4, none -> 4). The
+    # reported figure is now the STRICTLY MONOTONE run; tolerance-based counts
+    # are computed too but LABELLED AS DIAGNOSTIC.
+    # Registered in docs/prereg_rung_diagnostic.md section 4.
+    order = [float("inf"), 16.0, 8.0, 4.0, 2.0]      # increasing decay
     sh = [res[(h, "LONG-HISTORY")]["sharpe"] for h in order
           if (h, "LONG-HISTORY") in res]
-    best_run, run = 1, 1
-    for i in range(1, len(sh)):
-        if abs(sh[i] - sh[i - 1]) < 0.02 or (sh[i] - sh[i - 1]) * (
-                sh[1] - sh[0] if len(sh) > 1 else 1) > 0:
-            run += 1; best_run = max(best_run, run)
-        else:
-            run = 1
-    if best_run < 3:
+
+    def _run(tol):
+        """Longest run of adjacent rungs that does not DECREASE by more than
+        tol as decay increases. tol=0 is strictly monotone."""
+        best, run = 1, 1
+        for i in range(1, len(sh)):
+            if (sh[i] - sh[i - 1]) >= -tol:
+                run += 1; best = max(best, run)
+            else:
+                run = 1
+        return best
+
+    strict = _run(0.0)
+    diag = {t: _run(t) for t in (0.01, 0.02)}
+    diag_s = ", ".join(f"+/-{t}: {n}" for t, n in diag.items())
+
+    if strict < 3:
         return ("NULL", f"primary rung beats the control "
                         f"({prim['sharpe']:+.4f} vs {ctrl['sharpe']:+.4f}) but "
-                        f"the longest monotone-or-stable stretch is {best_run} "
+                        f"the longest STRICTLY MONOTONE stretch is {strict} "
                         f"adjacent rungs, short of the registered 3. A single "
-                        f"winning rung is a GRID WINNER, NOT A FINDING.")
+                        f"winning rung is a GRID WINNER, NOT A FINDING. "
+                        f"[diagnostic, tolerance-based: {diag_s}]")
     return ("POSITIVE", f"primary rung HL={PRIMARY_HL:g}y beats the no-decay "
                         f"control ({prim['sharpe']:+.4f} vs {ctrl['sharpe']:+.4f}) "
-                        f"and the improvement is monotone or stable across "
-                        f"{best_run} adjacent rungs. Criterion MET.")
+                        f"and the improvement is STRICTLY MONOTONE across "
+                        f"{strict} adjacent rungs. Criterion MET. "
+                        f"[diagnostic only, tolerance-based counts: {diag_s} -- "
+                        f"these depend on an unregistered tolerance and are NOT "
+                        f"the reported figure]")
 
 
 def write_report(a_res, b_res, iters):
@@ -408,10 +427,36 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--engine", choices=["A", "B", "both"], default="both")
     ap.add_argument("--iters", type=int, default=1000)
+    ap.add_argument("--rederive", action="store_true",
+                    help="recompute the verdict from processed/recency_sweep.json "
+                         "and rewrite the report. Does NOT re-run the ladder -- "
+                         "the numbers are unchanged, only the count derived "
+                         "from them.")
     ap.add_argument("--skip-control", action="store_true",
                     help="skip the control-rung assertion. NOT ALLOWED for a "
                          "reported run: no output file is written.")
     args = ap.parse_args()
+
+    if args.rederive:
+        if not OUT_JSON.exists():
+            raise SystemExit(f"missing {OUT_JSON} -- nothing to re-derive from.")
+        raw = json.loads(OUT_JSON.read_text())
+        a_res, b_res = {}, {}
+        for k, v in raw.items():
+            eng, hl_s, uni = k.split("|")
+            hl = "incumbent" if hl_s == "incumbent" else float(hl_s)
+            (a_res if eng == "A" else b_res)[(hl, uni)] = v
+        print("=" * 78)
+        print("RE-DERIVING VERDICTS FROM processed/recency_sweep.json")
+        print("  ladder NOT re-run: the numbers are unchanged, only the")
+        print("  adjacent-rung count derived from them (tracker item 1a-iii).")
+        print("=" * 78)
+        for e, res in (("A", a_res), ("B", b_res)):
+            if res:
+                v, why = verdict(res, e)
+                print(f"\nENGINE {e} VERDICT: {v}\n  {why}")
+        write_report(a_res, b_res, args.iters)
+        return
 
     print("=" * 78)
     print("RECENCY KERNEL SWEEP -- pre-registered ladder {2, 4, 8, 16, inf}")

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "reinvigorating Administrative PAYGO through this order is a prudent approach",
+    "Before an agency may undertake any discretionary administrative action",
+    "The Director may pursue additional deficit reduction through agency administrative actions"
+  ],
+  "extra": {
+    "actor": "OMB Director / executive agencies",
+    "is_decided": true,
+    "sectors": [
+      "federal budget process",
+      "mandatory spending programs"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-10-16",
+  "doc_id": "exec201922749",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

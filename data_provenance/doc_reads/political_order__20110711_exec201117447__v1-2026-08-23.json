@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "work to coordinate the development of policies and programs among executive departments",
+    "Executive Order 13509 of June 23, 2009, is hereby revoked.",
+    "The purpose of this order is to continue the coordinated Federal response"
+  ],
+  "extra": {
+    "actor": "Secretary of Labor",
+    "is_decided": true,
+    "sectors": [
+      "automotive"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-07-11",
+  "doc_id": "exec201117447",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

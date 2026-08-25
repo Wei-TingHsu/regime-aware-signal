@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.25,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.15,
+  "confidence": 0.55,
+  "evidence": [
+    "Sales were slightly above analysts\u2019 expectations, totaling EUR 2,285 million",
+    "In Q2, sales are expected to increase to somewhere between EUR 2.5 billion and EUR 2.6 billion",
+    "ASML expects that a margin of 40% can be achieved in 2020"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2018-07-23",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

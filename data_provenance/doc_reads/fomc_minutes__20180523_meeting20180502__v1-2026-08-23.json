@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": -0.15,
+    "gold": -0.1,
+    "dollar": 0.15,
+    "oil": 0.1
+  },
+  "magnitude": 0.25,
+  "horizon_days": 20,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.55,
+  "evidence": [
+    "Most participants judged that if incoming information broadly confirmed their current economic outlook, it would likely soon be appropriate for the Committee to take another step",
+    "Many participants judged that it would be useful to make such a technical adjustment sooner rather than later",
+    "Some participants noted that inflation was likely to modestly overshoot 2 percent for a time"
+  ],
+  "extra": {
+    "stance": 0.3,
+    "dispersion": 0.45
+  },
+  "source": "fomc_minutes",
+  "date": "2018-05-23",
+  "doc_id": "meeting20180502",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "There is established an Arctic Executive Steering Committee",
+    "shall meet quarterly, or as appropriate, to shape priorities",
+    "establish a working group to provide a report to the Steering Committee by May 1, 2015"
+  ],
+  "extra": {
+    "actor": "President (Executive Office)",
+    "is_decided": true,
+    "sectors": [
+      "government/interagency coordination",
+      "energy",
+      "environment"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-01-26",
+  "doc_id": "exec201501522",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

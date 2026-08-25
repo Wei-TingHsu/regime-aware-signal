@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.4,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby terminate the national emergency declared in Executive Order 13712, and revoke that order",
+    "significantly decreased violence, and President Ndayishimiye's pursuit of reforms across multiple sectors"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "Burundi sanctions",
+      "immigration/travel restrictions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-11-19",
+  "doc_id": "exec202125548",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

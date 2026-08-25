@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 250,
+  "specificity": 0.2,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "establishes a White House Council on Eliminating Regulatory Barriers to Affordable Housing",
+    "identify and assess the actions each agency can take under existing authorities",
+    "recommend Federal, State, local, and tribal actions and policies"
+  ],
+  "extra": {
+    "actor": "President / HUD Secretary",
+    "is_decided": true,
+    "sectors": [
+      "homebuilders",
+      "real estate",
+      "construction materials"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-06-28",
+  "doc_id": "exec201914016",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "establishes the position of Coordinator of the COVID-19 Response",
+    "coordinating the Federal Government's efforts to support the timely, safe, and effective delivery of COVID-19 vaccines",
+    "complete a review of and recommend actions to the President concerning emerging domestic and global biological risks"
+  ],
+  "extra": {
+    "actor": "President (Executive Office of the President)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "government administration",
+      "public health",
+      "vaccines/PPE supply chain"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-25",
+  "doc_id": "exec202101759",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

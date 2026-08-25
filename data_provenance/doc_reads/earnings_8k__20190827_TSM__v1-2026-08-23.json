@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.2,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "TSMC Will Vigorously Defend its Proprietary Technology in Response to GlobalFoundries Complaints",
+    "confident that GlobalFoundries\u2019 allegations are baseless",
+    "We will fight vigorously, using any and all options, to protect our proprietary technologies"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2019-08-27",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

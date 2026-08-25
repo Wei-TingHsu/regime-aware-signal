@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue of $7.42 billion versus $6.24 billion for the prior quarter",
+    "largest sequential earnings improvement in our history",
+    "$8.2 billion \u00b1 $200 million"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.5,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2021-06-30",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

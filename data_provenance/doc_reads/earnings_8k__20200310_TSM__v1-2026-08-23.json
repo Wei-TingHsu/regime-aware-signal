@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "revenues for February 2020 were approximately NT$93.39 billion, a decrease of 9.9 percent from January 2020 and an increase of 53.4 percent from February 2019",
+    "Revenues for January through February 2020 totaled NT$197.08 billion, an increase of 41.8 percent"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2020-03-10",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

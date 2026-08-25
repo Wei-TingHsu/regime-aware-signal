@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "increase nonimmigrant visa processing capacity in China and Brazil by 40 percent over the coming year",
+    "ensure that 80 percent of nonimmigrant visa applicants are interviewed within 3 weeks",
+    "A Task Force on Travel and Competitiveness (Task Force) is hereby established"
+  ],
+  "extra": {
+    "actor": "President (Executive Office); State/Homeland Security/Commerce Departments",
+    "is_decided": true,
+    "sectors": [
+      "travel",
+      "tourism",
+      "hospitality",
+      "airlines"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-01-24",
+  "doc_id": "exec20121568",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

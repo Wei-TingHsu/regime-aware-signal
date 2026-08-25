@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "shall issue guidance regarding how States can use Federal formula funds",
+    "shall include education freedom as a priority in discretionary grant programs",
+    "submit a plan to the President describing such mechanisms"
+  ],
+  "extra": {
+    "actor": "President (Dept of Education, Labor, HHS, Defense, Interior)",
+    "is_decided": false,
+    "sectors": [
+      "education",
+      "for-profit education/charter/private schools"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-03",
+  "doc_id": "exec202502233",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

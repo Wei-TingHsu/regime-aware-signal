@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "establishes an NS/EP Communications Executive Committee",
+    "Executive Order 12472 of April 3, 1984, as amended, is hereby revoked",
+    "The Federal Government must have the ability to communicate at all times"
+  ],
+  "extra": {
+    "actor": "President (Executive Office; DOD, DHS, DOC, GSA, FCC, DNI)",
+    "is_decided": true,
+    "sectors": [
+      "telecommunications",
+      "national security",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-07-11",
+  "doc_id": "exec201217022",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

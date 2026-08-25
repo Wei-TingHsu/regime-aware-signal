@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "adding a new paragraph (6)",
+    "the Commission may choose other Presidential Scholars not exceeding twenty",
+    "outstanding scholarship and demonstrated ability... in career and technical education fields"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "education"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-06-25",
+  "doc_id": "exec201515828",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "No Federal civilian position that is vacant may be filled, and no new position may be created",
+    "each agency head shall establish a Strategic Hiring Committee",
+    "Within 60 days of the date of this order, each agency shall prepare an Annual Staffing Plan"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "federal government employment",
+      "government contractors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-10-20",
+  "doc_id": "exec202519614",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

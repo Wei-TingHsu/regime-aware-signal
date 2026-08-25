@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.25,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "establish...the Task Force on Worker Organizing and Empowerment",
+    "functions of the Task Force are advisory in nature only",
+    "submit to the President recommendations for actions...within 180 days"
+  ],
+  "extra": {
+    "actor": "President (Executive Office/Task Force chaired by VP)",
+    "is_decided": true,
+    "sectors": [
+      "labor",
+      "unions",
+      "private sector employers"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-04-29",
+  "doc_id": "exec202109213",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

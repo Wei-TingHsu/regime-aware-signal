@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "The Attorney General shall create a database to coordinate the sharing of information",
+    "prohibit the use of chokeholds",
+    "allocate Department of Justice discretionary grant funding only to those State and local law enforcement agencies"
+  ],
+  "extra": {
+    "actor": "President/Attorney General/DOJ/HHS",
+    "is_decided": true,
+    "sectors": [
+      "law enforcement",
+      "public policy",
+      "social services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-06-19",
+  "doc_id": "exec202013449",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

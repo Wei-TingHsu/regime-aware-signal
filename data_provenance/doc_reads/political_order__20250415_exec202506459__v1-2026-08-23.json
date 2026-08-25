@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.02,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby direct the Secretary of Energy to publish in the Federal Register a notice rescinding",
+    "Notice and comment is unnecessary because I am ordering the repeal.",
+    "The rescission shall be effective 30 days from the date of publication"
+  ],
+  "extra": {
+    "actor": "President (Department of Energy)",
+    "is_decided": true,
+    "sectors": [
+      "consumer appliances",
+      "energy efficiency regulation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-15",
+  "doc_id": "exec202506459",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

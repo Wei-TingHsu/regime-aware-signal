@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.15
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.25,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "an additional ad valorem duty may be imposed on imports of goods",
+    "directly or indirectly sells or otherwise provides any oil to Cuba",
+    "hereby declare a national emergency with respect to that threat"
+  ],
+  "extra": {
+    "actor": "President (IEEPA/NEA authority, Secretary of State/Commerce implementation)",
+    "is_decided": false,
+    "sectors": [
+      "oil",
+      "shipping",
+      "international trade",
+      "Cuba-related"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-02-03",
+  "doc_id": "exec202602250",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "Establishment of the Climate Change Support Office",
+    "temporary organization to be known as the Climate Change Support Office (CCSO)",
+    "support bilateral and multilateral engagement to advance the United States initiative to address the global climate crisis"
+  ],
+  "extra": {
+    "actor": "Department of State",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "diplomacy",
+      "climate policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-05-12",
+  "doc_id": "exec202110139",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

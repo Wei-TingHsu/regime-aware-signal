@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "Raising full-year revenue and earnings expectations from July guidance.",
+    "Third-quarter revenue of $18.3 billion was above July expectations",
+    "now expects to ship 30% higher 10nm product volumes in 2020 compared to January expectations"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.5,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2020-10-22",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

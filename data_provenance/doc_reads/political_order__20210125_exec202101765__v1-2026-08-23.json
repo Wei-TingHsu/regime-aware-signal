@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": -0.35
+  },
+  "magnitude": 0.55,
+  "horizon_days": 90,
+  "specificity": 0.75,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "The Permit is hereby revoked in accordance with Article 1(1) of the Permit.",
+    "place a temporary moratorium on all activities of the Federal Government relating to the implementation of the Coastal Plain Oil and Gas Leasing Program",
+    "proposing new regulations to establish comprehensive standards of performance and emission guidelines for methane"
+  ],
+  "extra": {
+    "actor": "President (Biden), EPA, Interior, OMB, CEQ",
+    "is_decided": true,
+    "sectors": [
+      "oil and gas",
+      "pipelines",
+      "energy",
+      "appliances/building efficiency",
+      "autos"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-25",
+  "doc_id": "exec202101765",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

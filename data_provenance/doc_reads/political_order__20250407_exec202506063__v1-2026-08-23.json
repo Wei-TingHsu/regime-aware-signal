@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.9,
+    "duration": 0.6,
+    "gold": 0.6,
+    "dollar": -0.5,
+    "oil": -0.5
+  },
+  "magnitude": 0.95,
+  "horizon_days": 60,
+  "specificity": 0.9,
+  "novelty": 0.85,
+  "confidence": 0.85,
+  "evidence": [
+    "a national emergency with respect to this threat",
+    "the additional ad valorem duty on all imports from all trading partners shall start at 10 percent",
+    "country-specific ad valorem rates of duty specified in Annex I"
+  ],
+  "extra": {
+    "actor": "President (Trump), via Commerce/USTR implementation",
+    "is_decided": true,
+    "sectors": [
+      "all imports",
+      "manufacturing",
+      "agriculture",
+      "automobiles",
+      "steel/aluminum exempted",
+      "semiconductors exempted"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-07",
+  "doc_id": "exec202506063",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "independent regulatory agencies should comply with these provisions as well",
+    "each independent regulatory agency should develop and release to the public a plan",
+    "to modify, streamline, expand, or repeal them"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "financial regulation",
+      "independent agencies",
+      "general business/regulatory"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-07-14",
+  "doc_id": "exec201117953",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

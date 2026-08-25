@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.35,
+  "horizon_days": 250,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "accelerating rapid and efficient buildout of this infrastructure by easing Federal regulatory burdens",
+    "shall launch an initiative to provide financial support for Qualifying Projects",
+    "Executive Order 14141... is hereby revoked"
+  ],
+  "extra": {
+    "actor": "President (via Commerce, Interior, Energy, EPA, CEQ, DoD)",
+    "is_decided": true,
+    "sectors": [
+      "data centers",
+      "AI infrastructure",
+      "semiconductors",
+      "energy/power generation",
+      "utilities/transmission"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-07-28",
+  "doc_id": "exec202514212",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

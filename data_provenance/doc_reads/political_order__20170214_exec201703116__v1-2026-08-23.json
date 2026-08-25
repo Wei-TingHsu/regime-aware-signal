@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "Providing an Order of Succession Within the Department of Justice",
+    "Executive Order 13762 of January 13, 2017, is revoked.",
+    "the President retains discretion...to depart from this order"
+  ],
+  "extra": {
+    "actor": "President (DOJ succession)",
+    "is_decided": true,
+    "sectors": [
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-02-14",
+  "doc_id": "exec201703116",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

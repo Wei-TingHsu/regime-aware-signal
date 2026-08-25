@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 15,
+  "specificity": 0.5,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "Most participants judged that if economic information came in about in line with their expectations, it would soon be appropriate for the Committee to take another step",
+    "the Committee would announce a set of gradually increasing caps, or limits, on the dollar amounts",
+    "they viewed the slowing as likely to be transitory"
+  ],
+  "extra": {
+    "stance": 0.25,
+    "dispersion": 0.45
+  },
+  "source": "fomc_minutes",
+  "date": "2017-05-24",
+  "doc_id": "meeting20170503",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

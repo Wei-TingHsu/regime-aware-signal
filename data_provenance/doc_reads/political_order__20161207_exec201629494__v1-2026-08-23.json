@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.95,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "The proposed acquisition of Aixtron US by the Purchasers is hereby prohibited",
+    "might take action that threatens to impair the national security of the United States",
+    "shall take all steps necessary to fully and permanently abandon the proposed acquisition"
+  ],
+  "extra": {
+    "actor": "President (CFIUS/Treasury enforcement)",
+    "is_decided": true,
+    "sectors": [
+      "semiconductors",
+      "China-outbound M&A",
+      "national security/CFIUS"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-12-07",
+  "doc_id": "exec201629494",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

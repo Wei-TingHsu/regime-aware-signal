@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.9,
+  "evidence": [
+    "information collected and generated in the United States Government's investigation of the 9/11 terrorist attacks should now be disclosed",
+    "not later than September 11, 2021, of the Federal Bureau of Investigation (FBI) electronic communication",
+    "The Attorney General and the heads of any other executive departments and agencies...shall complete declassification reviews"
+  ],
+  "extra": {
+    "actor": "President/Attorney General/executive agencies",
+    "is_decided": true,
+    "sectors": [
+      "intelligence",
+      "national security",
+      "legal/judicial"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-09-09",
+  "doc_id": "exec202119578",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

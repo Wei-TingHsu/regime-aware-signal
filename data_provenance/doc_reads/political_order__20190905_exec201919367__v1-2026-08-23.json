@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "The Committee shall consist of the Director of the Office of Science and Technology Policy",
+    "Committee shall advise the Secretary and the Subcommittee on Quantum Information Science",
+    "not more than 22 members appointed by the Secretary of Energy"
+  ],
+  "extra": {
+    "actor": "President (Department of Energy / OSTP)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "quantum computing",
+      "research"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-09-05",
+  "doc_id": "exec201919367",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

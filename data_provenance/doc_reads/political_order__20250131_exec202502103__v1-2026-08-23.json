@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.15,
+    "dollar": 0.05,
+    "oil": 0.3
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "sets in motion a process by which Ansar Allah... shall be considered for designation",
+    "attacked commercial vessels transiting Bab al-Mandeb more than 100 times",
+    "eliminate Ansar Allah's capabilities and operations, deprive it of resources"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": false,
+    "sectors": [
+      "shipping",
+      "energy",
+      "defense",
+      "maritime insurance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-31",
+  "doc_id": "exec202502103",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

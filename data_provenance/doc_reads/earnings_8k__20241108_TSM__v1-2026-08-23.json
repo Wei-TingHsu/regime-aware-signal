@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "revenue for October 2024 was approximately NT$314.24 billion, an increase of 24.8 percent",
+    "increase of 29.2 percent from October 2023",
+    "January through October 2024 totaled NT$2,340.09 billion, an increase of 31.5 percent"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2024-11-08",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

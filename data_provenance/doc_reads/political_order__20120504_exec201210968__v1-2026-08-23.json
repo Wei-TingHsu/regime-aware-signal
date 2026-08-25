@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.08,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "promote international regulatory cooperation",
+    "The Working Group shall develop and issue guidelines",
+    "Independent regulatory agencies are encouraged to comply"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "regulatory policy",
+      "trade",
+      "cross-border business"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-05-04",
+  "doc_id": "exec201210968",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

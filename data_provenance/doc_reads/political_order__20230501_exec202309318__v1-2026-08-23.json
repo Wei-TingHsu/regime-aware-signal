@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "Authority To Order the Ready Reserve of the Armed Forces to Active Duty To Address International Drug Trafficking",
+    "the authority under section 12302 of title 10, United States Code, is invoked",
+    "such units and individual members of the Ready Reserve...as the Secretary concerned considers necessary"
+  ],
+  "extra": {
+    "actor": "President (DoD/DHS authorized)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "national security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-05-01",
+  "doc_id": "exec202309318",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

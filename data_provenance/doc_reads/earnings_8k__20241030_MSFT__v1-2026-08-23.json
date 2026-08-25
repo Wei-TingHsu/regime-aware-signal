@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "Revenue was $65.6 billion and increased 16%",
+    "Azure and other cloud services revenue growth of 33%",
+    "Microsoft Cloud revenue of $38.9 billion, up 22% year-over-year"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.0,
+    "ticker": "MSFT"
+  },
+  "source": "earnings_8k",
+  "date": "2024-10-30",
+  "doc_id": "MSFT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

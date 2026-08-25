@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Q1 net sales in line with guidance at EUR 1.65 billion, gross margin 47.2 pct",
+    "ASML guides Q2 2015 net sales at around EUR 1.6 billion and a gross margin of around 45 percent",
+    "ASML proposal to again increase dividend by 15% to \u20ac 0.70 per ordinary share"
+  ],
+  "extra": {
+    "surprise": 0.05,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2015-04-15",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

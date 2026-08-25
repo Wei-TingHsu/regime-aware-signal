@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.05,
+    "gold": -0.05,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.7,
+  "evidence": [
+    "growth in economic activity rebounded in the second quarter",
+    "the Committee decided to make a further measured reduction in the pace of its asset purchases",
+    "maintain the current target range for the federal funds rate for a considerable time after the asset purchase program ends"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "guidance": -0.1
+  },
+  "source": "fomc_statement",
+  "date": "2014-07-30",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

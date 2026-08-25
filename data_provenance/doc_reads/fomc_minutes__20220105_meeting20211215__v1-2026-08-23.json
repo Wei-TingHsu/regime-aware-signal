@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.3,
+    "gold": -0.1,
+    "dollar": 0.3,
+    "oil": -0.1
+  },
+  "magnitude": 0.55,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.45,
+  "confidence": 0.6,
+  "evidence": [
+    "Almost all participants agreed that it would likely be appropriate to initiate balance sheet runoff at some point after the first increase",
+    "many participants judged that the appropriate pace of balance sheet runoff would likely be faster than it was during the previous normalization episode",
+    "it may become warranted to increase the federal funds rate sooner or at a faster pace than participants had earlier anticipated"
+  ],
+  "extra": {
+    "stance": 0.55,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2022-01-05",
+  "doc_id": "meeting20211215",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

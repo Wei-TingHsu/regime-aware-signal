@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.15
+  },
+  "magnitude": 0.4,
+  "horizon_days": 90,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "The following executive actions are hereby revoked",
+    "Climate Change Support Office",
+    "Withdrawal of Certain Areas of the United States Outer Continental Shelf from Oil or Natural Gas Leasing"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "climate/ESG",
+      "DEI/labor",
+      "immigration",
+      "healthcare"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-28",
+  "doc_id": "exec202501901",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

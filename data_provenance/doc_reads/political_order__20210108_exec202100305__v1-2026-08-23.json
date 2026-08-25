@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "prohibited beginning 45 days after the date of this order",
+    "Alipay, CamScanner, QQ Wallet, SHAREit, Tencent QQ, VMate, WeChat Pay, and WPS Office",
+    "The United States must take aggressive action against those who develop or control Chinese connected software applications"
+  ],
+  "extra": {
+    "actor": "President (Commerce Secretary to implement)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "fintech/payments",
+      "China ADRs",
+      "software"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-08",
+  "doc_id": "exec202100305",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.5,
+  "evidence": [
+    "establishes the Department of Government Efficiency to implement the President's DOGE Agenda",
+    "shall terminate on July 4, 2026",
+    "each Agency Head shall establish within their respective Agencies a DOGE Team"
+  ],
+  "extra": {
+    "actor": "President / Executive Office of the President (USDS)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "federal IT",
+      "defense/govt contractors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-29",
+  "doc_id": "exec202502005",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

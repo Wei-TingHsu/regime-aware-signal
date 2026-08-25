@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "any transaction that is related to WeChat by any person",
+    "shall be prohibited beginning 45 days after the date of this order",
+    "The United States must take aggressive action against the owner of WeChat"
+  ],
+  "extra": {
+    "actor": "President (IEEPA/Commerce Dept)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "social media",
+      "China trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-08-11",
+  "doc_id": "exec202017700",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

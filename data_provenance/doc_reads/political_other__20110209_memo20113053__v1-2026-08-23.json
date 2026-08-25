@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby direct the Secretaries of Defense and Energy to jointly provide annual updates",
+    "submit this annual update to the 1251 Report concurrently with the President's budget each year"
+  ],
+  "extra": {
+    "actor": "President (Defense/Energy Secretaries)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "nuclear weapons policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-02-09",
+  "doc_id": "memo20113053",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

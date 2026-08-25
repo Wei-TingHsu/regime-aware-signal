@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.2,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "shall utilize his discretion to operate the CVP to deliver more water",
+    "shall expedite action related to any exemption under the Endangered Species Act",
+    "Federal preparedness grants shall not be used to support illegal aliens"
+  ],
+  "extra": {
+    "actor": "President (multiple federal agencies)",
+    "is_decided": false,
+    "sectors": [
+      "water utilities",
+      "agriculture",
+      "construction",
+      "insurance",
+      "energy/hydropower"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-31",
+  "doc_id": "exec202502174",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

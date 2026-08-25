@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "shall propose revisions to 34 CFR 685.219, Public Service Loan Forgiveness Program",
+    "the definition of \"public service\" excludes organizations that engage in activities that have a substantial illegal purpose",
+    "individuals employed by organizations whose activities have a substantial illegal purpose shall not be eligible"
+  ],
+  "extra": {
+    "actor": "President / Department of Education",
+    "is_decided": false,
+    "sectors": [
+      "education",
+      "student loans",
+      "nonprofit"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-12",
+  "doc_id": "exec202504103",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

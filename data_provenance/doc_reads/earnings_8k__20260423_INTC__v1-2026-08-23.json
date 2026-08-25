@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.35,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.45,
+  "confidence": 0.6,
+  "evidence": [
+    "a sixth consecutive quarter of revenue above our expectations",
+    "Forecasting second-quarter 2026 revenue of $13.8 billion to $14.8 billion",
+    "unprecedented demand for silicon, as well as our disciplined execution to expand available supply"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2026-04-23",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

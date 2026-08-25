@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby declare a national emergency to deal with that threat",
+    "All property and interests in property ... are blocked",
+    "suspend entry into the United States, as immigrants or nonimmigrants, of such persons"
+  ],
+  "extra": {
+    "actor": "President Obama",
+    "is_decided": true,
+    "sectors": [
+      "Venezuela sanctions",
+      "oil/energy geopolitics"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-03-11",
+  "doc_id": "exec201505677",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

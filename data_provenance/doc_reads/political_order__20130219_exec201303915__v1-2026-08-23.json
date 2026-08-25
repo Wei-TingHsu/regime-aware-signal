@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "establish a voluntary program to support the adoption of the Cybersecurity Framework",
+    "Within 240 days of the date of this order, the Director shall publish a preliminary version of the Cybersecurity Framework",
+    "shall establish a consultative process to coordinate improvements to the cybersecurity of critical infrastructure"
+  ],
+  "extra": {
+    "actor": "President (via DHS, NIST, Commerce, DOJ, DNI)",
+    "is_decided": true,
+    "sectors": [
+      "critical infrastructure",
+      "cybersecurity",
+      "technology",
+      "utilities",
+      "financial services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-02-19",
+  "doc_id": "exec201303915",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "these tariffs should not all have a cumulative effect (or ``stack'' on top of one another)",
+    "This order shall apply retroactively to all entries of merchandise",
+    "Any refunds will be processed pursuant to applicable laws"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, DHS/CBP/Treasury/Commerce/USTR implementation)",
+    "is_decided": true,
+    "sectors": [
+      "automobiles",
+      "steel",
+      "aluminum",
+      "import/trade",
+      "customs"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-05-02",
+  "doc_id": "exec202507835",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

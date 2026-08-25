@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.35
+  },
+  "magnitude": 0.4,
+  "horizon_days": 250,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "prioritize the development of Alaska's liquified natural gas (LNG) potential",
+    "initiate additional leasing through the Coastal Plain Oil and Gas Leasing Program",
+    "rescind the Bureau of Land Management final rule entitled ``Management and Protection of the National Petroleum Reserve in Alaska''"
+  ],
+  "extra": {
+    "actor": "President (Executive Order), Dept. of Interior/Commerce/Agriculture/Army",
+    "is_decided": true,
+    "sectors": [
+      "oil & gas",
+      "LNG",
+      "mining",
+      "energy infrastructure",
+      "public lands"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-29",
+  "doc_id": "exec202501955",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

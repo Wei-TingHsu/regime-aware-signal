@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 10,
+  "specificity": 0.65,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "Customer inventories are getting better, and we expect gradual improvements to the industry's supply-demand balance.",
+    "Revenue of $3.69 billion versus $4.09 billion for the prior quarter",
+    "$3.70 billion \u00b1 $200 million"
+  ],
+  "extra": {
+    "surprise": 0.05,
+    "guidance_change": -0.1,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2023-03-28",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

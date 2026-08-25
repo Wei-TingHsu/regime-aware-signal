@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.4,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "Revenue is expected to be $8.10 billion, plus or minus 2%.",
+    "This includes an estimated reduction of approximately $500 million relating to Russia and the COVID lockdowns in China.",
+    "We have been successful in hiring this year and expect to slow hiring in the second half of fiscal 2023"
+  ],
+  "extra": {
+    "surprise": -0.3,
+    "guidance_change": -0.35,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2022-05-25",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

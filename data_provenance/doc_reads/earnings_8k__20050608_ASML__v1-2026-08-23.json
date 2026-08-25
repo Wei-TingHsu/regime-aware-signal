@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.35,
+  "novelty": 0.15,
+  "confidence": 0.5,
+  "evidence": [
+    "ASML today announced that it had won a contract from ProMOS Technologies",
+    "ASML Holding NV (ASML) today announced it was awarded a customer contract from Winbond",
+    "there is uncertainty with respect to market developments in the second half of 2005"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2005-06-08",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

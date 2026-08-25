@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.55,
+  "evidence": [
+    "shall seek to procure power from the United States coal generation fleet",
+    "approving long-term Power Purchase Agreements... with coal-fired energy production facilities",
+    "coal is essential to our national and economic security"
+  ],
+  "extra": {
+    "actor": "Department of War / Department of Energy",
+    "is_decided": false,
+    "sectors": [
+      "coal",
+      "utilities",
+      "defense",
+      "energy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-02-17",
+  "doc_id": "exec202603156",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

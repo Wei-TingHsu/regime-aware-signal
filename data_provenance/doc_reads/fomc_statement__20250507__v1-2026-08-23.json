@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "the Committee decided to maintain the target range for the federal funds rate at 4-1/4 to 4-1/2 percent",
+    "Uncertainty about the economic outlook has increased further",
+    "risks of higher unemployment and higher inflation have risen"
+  ],
+  "extra": {
+    "stance": 0.0,
+    "guidance": -0.1
+  },
+  "source": "fomc_statement",
+  "date": "2025-05-07",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

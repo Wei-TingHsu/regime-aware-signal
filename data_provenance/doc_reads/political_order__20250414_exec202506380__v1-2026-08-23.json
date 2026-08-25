@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.25,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "it is a national priority to support the domestic coal industry",
+    "prioritize coal leasing and related activities...as the primary land use",
+    "shall determine whether coal used in the production of steel meets the definition of a \"critical material\""
+  ],
+  "extra": {
+    "actor": "President (Executive Order, Interior/Energy/EPA/Commerce/Treasury agencies)",
+    "is_decided": true,
+    "sectors": [
+      "coal",
+      "energy",
+      "utilities",
+      "steel",
+      "mining"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-14",
+  "doc_id": "exec202506380",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

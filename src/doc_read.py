@@ -164,6 +164,29 @@ PROFILES = {
 }
 
 
+# Errors that will NEVER succeed on retry. Retrying these burned 897 pointless
+# calls on 2026-08-25 after the API balance ran out mid-run, and produced a log
+# that looked like a completed pass.
+FATAL_MARKERS = (
+    "credit balance is too low",
+    "invalid x-api-key",
+    "authentication_error",
+    "permission_error",
+    "insufficient_quota",
+)
+
+
+def is_fatal(exc):
+    """Is this error permanent for the whole run, not just this document?
+
+    Deliberately matches on the MESSAGE rather than the exception class: the
+    SDK raises BadRequestError for both a malformed request (per-document, worth
+    retrying) and an exhausted balance (fatal). The class cannot tell them
+    apart; the message can."""
+    s = f"{type(exc).__name__}: {exc}".lower()
+    return any(m in s for m in FATAL_MARKERS)
+
+
 def parse_name(p):
     m = re.match(r"(\d{8})(?:_(.+))?$", p.stem)
     if not m:
@@ -203,6 +226,11 @@ def main():
     ap.add_argument("--source", choices=sorted(PROFILES))
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--list", action="store_true")
+    ap.add_argument("--repair-cache", action="store_true",
+                    help="scan every cached read, report and DELETE any that "
+                         "will not parse, then exit. Deleted entries are simply "
+                         "re-read on the next run at the cost of one API call "
+                         "each.")
     ap.add_argument("--model", default="claude-sonnet-5")
     ap.add_argument("--limit", type=int)
     ap.add_argument("--max-words", type=int, default=20000,
@@ -222,6 +250,33 @@ def main():
     ap.add_argument("--sleep", type=float, default=0.3)
     ap.add_argument("--out", default="processed/doc_reads.csv")
     args = ap.parse_args()
+
+    if args.repair_cache:
+        files = sorted(READS.glob("*.json")) if READS.exists() else []
+        bad = []
+        for p in files:
+            try:
+                json.loads(p.read_text())
+            except Exception as e:
+                bad.append((p, type(e).__name__))
+        print(f"cache scan: {len(files)} entries, {len(bad)} unparseable")
+        for p, e in bad:
+            print(f"  DELETE {p.name}  ({e})")
+            try:
+                p.unlink()
+            except OSError as e2:
+                print(f"    could not delete: {e2}")
+        # stray temp files from an interrupted atomic write
+        tmps = sorted(READS.glob("*.tmp")) if READS.exists() else []
+        for p in tmps:
+            print(f"  DELETE {p.name}  (stray temp)")
+            try:
+                p.unlink()
+            except OSError:
+                pass
+        print(f"\n{len(bad)} deleted, {len(tmps)} temp file(s) removed. "
+              f"They will be re-read at one API call each.")
+        return
 
     DOCS.mkdir(parents=True, exist_ok=True)
     if args.list or not (args.source or args.all):
@@ -258,12 +313,23 @@ def main():
                   f"YYYYMMDD[_id].txt")
         pairs.sort(key=lambda x: x[1])
         texts = [f.read_text() for f, _, _ in pairs]
-        long_ = [i for i, t in enumerate(texts)
-                 if len(t.split()) > args.max_words]
+        # TRUNCATE, DO NOT SKIP (2026-08-25, prereg_analog_event section 11).
+        # Skipping dropped 189 of 834 earnings documents -- 23% -- all 6-K
+        # complete submissions where the whole filing is one file because
+        # foreign issuers file no separate EX-99. An earnings release's figures
+        # sit near the TOP; the tail is exhibits and signature pages.
+        # The truncation is RECORDED, not silent.
+        orig_words = {i: len(t.split()) for i, t in enumerate(texts)}
+        long_ = [i for i in range(len(texts)) if orig_words[i] > args.max_words]
+        for i in long_:
+            texts[i] = (" ".join(texts[i].split()[:args.max_words])
+                        + f"\n\n[DOCUMENT TRUNCATED at {args.max_words} words "
+                          f"of {orig_words[i]}. The remainder is not shown. "
+                          f"Judge only what is above.]\n")
         if long_:
             print(f"  {src}: {len(long_)} doc(s) over {args.max_words} words, "
-                  f"skipped -- split or trim them")
-        use = [i for i in range(len(pairs)) if i not in long_]
+                  f"TRUNCATED and read (was: skipped)")
+        use = list(range(len(pairs)))
         if args.limit:
             use = use[:args.limit]
         if not use:
@@ -273,8 +339,23 @@ def main():
             f, dt, did = pairs[i]
             out_f = READS / f"{src}__{f.stem}__{PROMPT_VERSION}.json"
             if out_f.exists():
-                rows.append(json.loads(out_f.read_text()))
-                continue
+                # SELF-HEALING. A cache file that will not parse is deleted and
+                # the document re-read. A concurrent double-launch on
+                # 2026-08-25 spliced two JSON objects into one file, and the
+                # unguarded json.loads() below aborted the whole run on a CACHE
+                # READ -- before any API call -- blocking that source until the
+                # file was found by hand. A corrupt entry should cost one call,
+                # not a source.
+                try:
+                    rows.append(json.loads(out_f.read_text()))
+                    continue
+                except (json.JSONDecodeError, OSError) as ce:
+                    print(f"    {f.stem}  CORRUPT CACHE ({type(ce).__name__}), "
+                          f"deleting and re-reading: {out_f.name}")
+                    try:
+                        out_f.unlink()
+                    except OSError:
+                        pass
             prev = texts[i - 1] if (args.with_prev and i > 0) else None
             if prev is not None:
                 pw = prev.split()
@@ -285,6 +366,25 @@ def main():
                 data, a, b = call(client, args.model, src, texts[i], prev)
                 tin += a; tout += b
             except Exception as e:
+                if is_fatal(e):
+                    remaining = len(use) - k
+                    print("\n" + "!" * 70)
+                    print("FATAL -- ABORTING THE WHOLE RUN, NOT JUST THIS DOC")
+                    print(f"  {type(e).__name__}: {e}")
+                    print(f"\n  {src}: {k} read this session, "
+                          f"{remaining} NOT READ.")
+                    print("  This error is permanent for the run. Retrying it "
+                          "is pointless and")
+                    print("  continuing past it produces a log that looks like "
+                          "a completed pass --")
+                    print("  which is exactly what happened on 2026-08-25: 897 "
+                          "documents failed")
+                    print("  this way over four hours.")
+                    print("\n  Everything read so far IS CACHED. Fix the cause, "
+                          "re-run the same")
+                    print("  command, and only the unread documents are billed.")
+                    print("!" * 70)
+                    raise SystemExit(1)
                 # ONE retry with a stricter instruction before giving up. A
                 # transient formatting slip should not cost a document.
                 try:
@@ -295,13 +395,30 @@ def main():
                     tin += a; tout += b
                     print(f"    {f.stem}  recovered on retry")
                 except Exception as e2:
+                    if is_fatal(e2):
+                        print("\n" + "!" * 70)
+                        print("FATAL ON RETRY -- ABORTING THE WHOLE RUN")
+                        print(f"  {type(e2).__name__}: {e2}")
+                        print(f"  {src}: {k} read this session, "
+                              f"{len(use) - k} NOT READ. Cached reads are kept.")
+                        print("!" * 70)
+                        raise SystemExit(1)
                     print(f"    {f.stem}  FAILED: {type(e2).__name__}: {e2}")
                     failed += 1
                     failed_names.append(f"{src}/{f.stem}")
                     continue
             data.update(source=src, date=dt.strftime("%Y-%m-%d"), doc_id=did,
-                        prompt_version=PROMPT_VERSION, model=args.model)
-            out_f.write_text(json.dumps(data, indent=2))
+                        prompt_version=PROMPT_VERSION, model=args.model,
+                        truncated=bool(i in long_),
+                        orig_words=int(orig_words[i]),
+                        max_words=int(args.max_words))
+            # ATOMIC WRITE. os.replace() is atomic on POSIX, so two writers
+            # can only produce a whole file from one or a whole file from the
+            # other -- never a splice. A plain write_text() here is what let a
+            # double-launched run corrupt the cache on 2026-08-25.
+            tmp_f = out_f.with_suffix(f".{os.getpid()}.tmp")
+            tmp_f.write_text(json.dumps(data, indent=2))
+            os.replace(tmp_f, out_f)
             rows.append(data)
             if (k + 1) % 20 == 0:
                 print(f"    {k+1}/{len(use)} ...")
@@ -325,6 +442,8 @@ def main():
                          # two columns that mixture is invisible.
                          prompt_version=r.get("prompt_version", ""),
                          model=r.get("model", ""),
+                         truncated=r.get("truncated", False),
+                         orig_words=r.get("orig_words", None),
                          dir_eq=d.get("equity"), dir_dur=d.get("duration"),
                          dir_gold=d.get("gold"), dir_usd=d.get("dollar"),
                          dir_oil=d.get("oil"),

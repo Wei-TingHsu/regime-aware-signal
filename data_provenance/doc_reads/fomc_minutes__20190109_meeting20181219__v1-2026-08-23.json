@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.5,
+    "gold": 0.2,
+    "dollar": -0.1,
+    "oil": -0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "A few participants, however, favored no change in the target range at this meeting",
+    "the Committee could afford to be patient about further policy firming",
+    "recent developments warranted emphasizing that the Committee would continue to monitor global economic and financial developments"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2019-01-09",
+  "doc_id": "meeting20181219",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

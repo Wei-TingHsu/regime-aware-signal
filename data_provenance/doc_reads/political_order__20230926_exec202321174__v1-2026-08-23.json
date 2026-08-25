@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.7,
+  "evidence": [
+    "It is critical that Norfolk Southern continue to be held fully accountable under the law",
+    "shall designate a Federal Disaster Recovery Coordinator",
+    "EPA shall submit a report to the President on the cleanup efforts"
+  ],
+  "extra": {
+    "actor": "President (EPA, DOT, FEMA, HHS, DHS)",
+    "is_decided": true,
+    "sectors": [
+      "railroads",
+      "transportation",
+      "environmental remediation",
+      "healthcare/Medicaid"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-09-26",
+  "doc_id": "exec202321174",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

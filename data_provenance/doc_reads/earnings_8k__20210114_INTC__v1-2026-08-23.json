@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.75,
+  "confidence": 0.65,
+  "evidence": [
+    "Intel expects its fourth-quarter 2020 revenue and EPS to exceed its prior guidance provided on October 22, 2020.",
+    "Board of Directors has appointed 40-year technology industry leader Pat Gelsinger as its new Chief Executive Officer",
+    "the company has made strong progress on its 7nm process technology"
+  ],
+  "extra": {
+    "surprise": 0.6,
+    "guidance_change": 0.5,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2021-01-14",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "ASML expects Q3 orders to be at a higher level than Q2",
+    "Backlog supports gross margin of 35-37% for Q3",
+    "Visibility beyond Q3 2005 is limited, and the semiconductor industry is, as always, subject to wide swings"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2005-08-01",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

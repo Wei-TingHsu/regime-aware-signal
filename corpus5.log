@@ -1,0 +1,31 @@
+
+fomc_minutes: reading 125 of 125 docs
+
+read 125 docs, 0 failed | tokens 0 in / 0 out
+
+by source:
+  fomc_minutes     n= 125  |dir| mean eq 0.16 dur 0.26 gold 0.13 | specificity 0.49 | novelty 0.34
+
+-> processed/read_minutes.csv   full reads in data_provenance/doc_reads/
+
+CHECK BEFORE USE: specificity should SEPARATE sources -- decided
+policy and reported earnings high, rhetoric and opinion low. If every
+source scores alike, the field is not discriminating and step 5 has
+nothing to weigh with.
+  earnings_8k: 189 doc(s) over 20000 words, skipped -- split or trim them
+
+earnings_8k: reading 645 of 834 docs
+    420/645 ...
+    500/645 ...
+
+read 645 docs, 0 failed | tokens 842,408 in / 9,139 out
+
+by source:
+  earnings_8k      n= 645  |dir| mean eq 0.26 dur 0.02 gold 0.00 | specificity 0.70 | novelty 0.29
+
+-> processed/read_8k.csv   full reads in data_provenance/doc_reads/
+
+CHECK BEFORE USE: specificity should SEPARATE sources -- decided
+policy and reported earnings high, rhetoric and opinion low. If every
+source scores alike, the field is not discriminating and step 5 has
+nothing to weigh with.

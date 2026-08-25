@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "it is the policy of the United States to expand domestic production of health and medical resources needed to respond to the spread of COVID-19",
+    "I am delegating authority under title III of the Act to guarantee loans by private institutions, make loans",
+    "the Secretary of Health and Human Services and the Secretary of Homeland Security are each delegated... the authority of the President conferred by sections 301, 302, and 303"
+  ],
+  "extra": {
+    "actor": "President (DPA delegation to HHS/DHS Secretaries)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "medical equipment manufacturing",
+      "industrial base/defense production"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-04-01",
+  "doc_id": "exec202006969",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

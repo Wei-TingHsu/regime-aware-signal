@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "revenue for November 2024 was approximately NT$276.06 billion",
+    "a decrease of 12.2 percent from October 2024",
+    "an increase of 34.0 percent from November 2023"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2024-12-10",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

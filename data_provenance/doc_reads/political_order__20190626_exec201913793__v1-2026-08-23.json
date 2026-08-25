@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.2,
+    "gold": 0.25,
+    "dollar": 0.05,
+    "oil": 0.3
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "blocked and may not be transferred, paid, exported, withdrawn, or otherwise dealt in",
+    "the Supreme Leader of the Islamic Republic of Iran and the Iranian Supreme Leader's Office",
+    "impose strict conditions on the maintaining, in the United States of a correspondent account"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State to implement)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "financials",
+      "geopolitics/Iran"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-06-26",
+  "doc_id": "exec201913793",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "vehicle deliveries should comfortably exceed 500,000 units",
+    "We expect positive quarterly free cash flow going forward",
+    "returned to GAAP profitability in 2H19 and generated $1.1B of free cash flow"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.5,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2020-01-29",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

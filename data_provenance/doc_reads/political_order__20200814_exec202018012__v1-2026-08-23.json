@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "reduce our dependence on foreign manufacturers for Essential Medicines, Medical Countermeasures, and Critical Inputs",
+    "using procedures to limit competition to only those Essential Medicines...produced in the United States",
+    "directing each executive department and agency...to consider a variety of actions to increase their domestic procurement"
+  ],
+  "extra": {
+    "actor": "President (multiple agencies: HHS/FDA, DoD, USTR, OMB, EPA)",
+    "is_decided": true,
+    "sectors": [
+      "pharmaceuticals",
+      "medical devices",
+      "healthcare",
+      "defense procurement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-08-14",
+  "doc_id": "exec202018012",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

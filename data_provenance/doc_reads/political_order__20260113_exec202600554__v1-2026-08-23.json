@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.7,
+  "confidence": 0.6,
+  "evidence": [
+    "they are not permitted in any way, shape, or form to pay dividends or buy back stock",
+    "Major defense contractors will no longer conduct stock buy-backs or issue dividends",
+    "executive base salaries of the contractor be capped at current levels"
+  ],
+  "extra": {
+    "actor": "President (Secretary of War/Defense, SEC)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "aerospace & defense contractors",
+      "industrials"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-01-13",
+  "doc_id": "exec202600554",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

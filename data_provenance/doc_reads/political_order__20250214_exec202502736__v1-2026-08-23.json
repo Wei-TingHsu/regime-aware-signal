@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "cease initiation of any new FCPA investigations or enforcement actions",
+    "For a period of 180 days following the date of this order",
+    "eliminating excessive barriers to American commerce abroad"
+  ],
+  "extra": {
+    "actor": "Attorney General / DOJ",
+    "is_decided": true,
+    "sectors": [
+      "multinational corporates",
+      "extractives/mining",
+      "defense contractors",
+      "infrastructure"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-14",
+  "doc_id": "exec202502736",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

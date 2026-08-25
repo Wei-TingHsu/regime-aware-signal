@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.55,
+  "evidence": [
+    "Secretary of Health and Human Services shall take action to ensure future grants",
+    "insulin and injectable epinephrine available at the discounted price paid by the FQHC",
+    "This order shall be implemented consistent with applicable law and subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "HHS/FQHCs",
+    "is_decided": true,
+    "sectors": [
+      "pharmaceuticals",
+      "healthcare",
+      "insulin manufacturers"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-07-29",
+  "doc_id": "exec202016623",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

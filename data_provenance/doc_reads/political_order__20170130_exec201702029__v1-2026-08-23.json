@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.2,
+  "horizon_days": 90,
+  "specificity": 0.35,
+  "novelty": 0.25,
+  "confidence": 0.55,
+  "evidence": [
+    "streamline and expedite... environmental reviews and approvals for all infrastructure projects",
+    "decide whether an infrastructure project qualifies as a ``high priority'' infrastructure project",
+    "establish, in a manner consistent with law, expedited procedures and deadlines"
+  ],
+  "extra": {
+    "actor": "President (CEQ Chairman, executive agencies)",
+    "is_decided": true,
+    "sectors": [
+      "infrastructure",
+      "energy",
+      "construction",
+      "pipelines",
+      "utilities"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-01-30",
+  "doc_id": "exec201702029",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "I am hereby ordering all agencies to share information requested by the Department to the maximum extent permissible under law.",
+    "the Court's ruling...has now made it impossible...to include a citizenship question on the 2020 decennial census",
+    "The Secretary of Commerce shall consider initiating any administrative process necessary to include a citizenship question on the 2030 decennial census"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, Census/Commerce Dept, DHS, State, SSA, HHS)",
+    "is_decided": true,
+    "sectors": [
+      "government/administrative",
+      "immigration policy",
+      "census data"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-07-16",
+  "doc_id": "exec201915222",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

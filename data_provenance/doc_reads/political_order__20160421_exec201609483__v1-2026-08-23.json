@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "expand the scope of the national emergency declared in Executive Order 13566",
+    "illicit exploitation of crude oil or any other natural resources in Libya",
+    "blocked and may not be transferred, paid, exported, withdrawn, or otherwise dealt in"
+  ],
+  "extra": {
+    "actor": "President (Obama) / Treasury OFAC",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "oil",
+      "financial institutions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-04-21",
+  "doc_id": "exec201609483",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

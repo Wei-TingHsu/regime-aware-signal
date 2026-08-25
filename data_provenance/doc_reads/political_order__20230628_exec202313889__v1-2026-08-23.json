@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 60,
+  "specificity": 0.15,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "shall consider issuing guidance, consistent with applicable law",
+    "shall consider taking steps, as appropriate and consistent with applicable law",
+    "This order is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (HHS, Treasury, Labor, DOD, VA, OPM, Education)",
+    "is_decided": false,
+    "sectors": [
+      "healthcare",
+      "managed care/insurance",
+      "pharmaceuticals"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-06-28",
+  "doc_id": "exec202313889",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

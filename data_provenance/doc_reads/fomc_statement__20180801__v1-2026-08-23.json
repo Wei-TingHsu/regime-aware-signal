@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": -0.2,
+    "gold": -0.1,
+    "dollar": 0.15,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 5,
+  "specificity": 0.55,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "economic activity has been rising at a strong rate",
+    "further gradual increases in the target range",
+    "Household spending and business fixed investment have grown strongly"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "guidance": 0.3
+  },
+  "source": "fomc_statement",
+  "date": "2018-08-01",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

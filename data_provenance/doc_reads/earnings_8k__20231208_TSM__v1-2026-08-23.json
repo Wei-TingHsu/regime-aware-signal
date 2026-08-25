@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "revenue for November 2023 was approximately NT$206.03 billion, a decrease of 15.3 percent from October 2023",
+    "a decrease of 7.5 percent from November 2022",
+    "Revenue for January through November 2023 totaled NT$1,985.44 billion, a decrease of 4.1 percent"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2023-12-08",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

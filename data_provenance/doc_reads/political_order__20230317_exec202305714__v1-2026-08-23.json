@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.75,
+  "evidence": [
+    "The Attorney General shall develop and implement a plan to",
+    "clarify the definition of who is engaged in the business of dealing in firearms",
+    "The Federal Trade Commission is encouraged to issue a public report"
+  ],
+  "extra": {
+    "actor": "President/Attorney General/multiple agencies",
+    "is_decided": true,
+    "sectors": [
+      "firearms manufacturing",
+      "firearms retail"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-03-17",
+  "doc_id": "exec202305714",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

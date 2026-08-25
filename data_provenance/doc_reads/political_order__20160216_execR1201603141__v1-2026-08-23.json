@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "There is hereby established the Federal Privacy Council",
+    "the Government's efforts to meet these new challenges and preserve our core value of privacy",
+    "This order shall be implemented consistent with applicable law and subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "technology/privacy policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-02-16",
+  "doc_id": "execR1201603141",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

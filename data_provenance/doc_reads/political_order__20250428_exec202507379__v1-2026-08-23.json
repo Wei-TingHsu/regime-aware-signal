@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "The Secretary of Education shall take all appropriate actions to enforce the requirements of section 1011f",
+    "which shall not be provided in cases of noncompliance with 20 U.S.C. 1011f",
+    "end the secrecy surrounding foreign funds in American educational institutions"
+  ],
+  "extra": {
+    "actor": "Department of Education",
+    "is_decided": true,
+    "sectors": [
+      "higher education",
+      "university research funding"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-28",
+  "doc_id": "exec202507379",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

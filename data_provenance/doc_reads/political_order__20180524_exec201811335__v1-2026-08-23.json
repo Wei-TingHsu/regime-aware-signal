@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.3,
+  "horizon_days": 10,
+  "specificity": 0.85,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "the purchase of any debt owed to the Government of Venezuela",
+    "any equity interest in any entity in which the Government of Venezuela has a 50 percent",
+    "This order is effective at 12:30 p.m."
+  ],
+  "extra": {
+    "actor": "President (Treasury/OFAC to implement)",
+    "is_decided": true,
+    "sectors": [
+      "oil_and_gas",
+      "financials",
+      "sovereign_debt"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-05-24",
+  "doc_id": "exec201811335",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

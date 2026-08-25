@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.3,
+    "gold": 0.3,
+    "dollar": 0.2,
+    "oil": -0.1
+  },
+  "magnitude": 0.7,
+  "horizon_days": 20,
+  "specificity": 0.85,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby determine and order... an additional 25 percent ad valorem rate of duty",
+    "expand the scope of the national emergency declared in that proclamation",
+    "Should the government of Mexico retaliate... the President may increase or expand"
+  ],
+  "extra": {
+    "actor": "President (DHS/Treasury/Commerce implementation)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "imports",
+      "manufacturing",
+      "agriculture",
+      "automotive",
+      "energy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-07",
+  "doc_id": "exec202502407",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

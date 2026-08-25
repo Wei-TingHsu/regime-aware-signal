@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "Executive Order 12072 is hereby revoked.",
+    "freeing agencies to select cost-effective facilities",
+    "directed to initiate the process to amend the regulations"
+  ],
+  "extra": {
+    "actor": "President (GSA implementation)",
+    "is_decided": true,
+    "sectors": [
+      "real estate",
+      "government services",
+      "commercial office leasing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-18",
+  "doc_id": "exec202506838",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

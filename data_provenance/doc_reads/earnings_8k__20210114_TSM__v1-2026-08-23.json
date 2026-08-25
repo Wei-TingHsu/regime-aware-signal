@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 30,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue is expected to be between US$12.7 billion and US$13.0 billion",
+    "management further expects the 2021 capital budget to be between US$25 billion and US$28 billion",
+    "supported by HPC-related demand, recovery in the automotive segment"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2021-01-14",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

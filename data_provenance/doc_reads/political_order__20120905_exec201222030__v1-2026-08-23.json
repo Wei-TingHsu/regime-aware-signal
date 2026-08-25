@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 365,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "deploying 40 gigawatts of new, cost-effective industrial CHP in the United States by the end of 2020",
+    "convene national and regional stakeholders to identify, develop, and encourage the adoption of investment models",
+    "This order is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 13624)",
+    "is_decided": true,
+    "sectors": [
+      "industrial",
+      "energy efficiency",
+      "manufacturing",
+      "utilities",
+      "CHP/combined heat and power"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-09-05",
+  "doc_id": "exec201222030",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

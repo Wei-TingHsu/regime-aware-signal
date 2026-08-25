@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "establish an agency-specific goal that, in aggregate, supports the Government-wide goal",
+    "The Government-wide goal for Federal procurement dollars awarded to small business concerns... shall be 15 percent in Fiscal Year 2025",
+    "agency heads shall submit an Equity Action Plan to the Steering Committee"
+  ],
+  "extra": {
+    "actor": "President (Executive Office of the President; multiple federal agencies)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "civil rights",
+      "small business/federal procurement",
+      "housing/urban development",
+      "rural development"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-02-22",
+  "doc_id": "exec202303779",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

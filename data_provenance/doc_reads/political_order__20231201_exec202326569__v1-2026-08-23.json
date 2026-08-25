@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "There is hereby established the Interagency Security Committee",
+    "This order supersedes Executive Order 12977 of October 19, 1995",
+    "establish policies and standards for security in and protection of Federal facilities"
+  ],
+  "extra": {
+    "actor": "President / DHS",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "federal facility security",
+      "government contractors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-12-01",
+  "doc_id": "exec202326569",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

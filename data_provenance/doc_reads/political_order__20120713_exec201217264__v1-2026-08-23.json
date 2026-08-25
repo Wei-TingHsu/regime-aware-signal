@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "The Government of Burma has made progress towards political reform",
+    "hereby order: blocked and may not be transferred, paid, exported, withdrawn",
+    "no prior notice of a listing or determination made pursuant to section 1"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State to implement)",
+    "is_decided": true,
+    "sectors": [
+      "Burma-related trade/investment",
+      "financial sanctions targets"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-07-13",
+  "doc_id": "exec201217264",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

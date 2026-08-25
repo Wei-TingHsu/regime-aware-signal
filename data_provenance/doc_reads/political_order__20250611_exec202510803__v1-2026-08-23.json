@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "establishes the Federal Task Force to Restore American Airspace Sovereignty",
+    "promptly submit a notice of proposed rulemaking (NPRM) to the Office of Management and Budget",
+    "shall provide...automated real-time access to personal identifying information associated with UAS remote identification signals"
+  ],
+  "extra": {
+    "actor": "President / FAA / DOJ / DHS / DoD / FCC",
+    "is_decided": true,
+    "sectors": [
+      "drones/UAS",
+      "aerospace defense",
+      "airport security",
+      "critical infrastructure protection"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-06-11",
+  "doc_id": "exec202510803",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

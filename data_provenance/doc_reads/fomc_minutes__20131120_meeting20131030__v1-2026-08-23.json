@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.3,
+    "gold": 0.1,
+    "dollar": -0.15,
+    "oil": 0.05
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "all members but one again judged that it would be appropriate for the Committee to await more evidence",
+    "participants generally expected that... would thus warrant trimming the pace of purchases in coming months",
+    "Committee decided to await more evidence that progress will be sustained before adjusting the pace of its purchases"
+  ],
+  "extra": {
+    "stance": -0.2,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2013-11-20",
+  "doc_id": "meeting20131030",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.05,
+  "confidence": 0.5,
+  "evidence": [
+    "Net income (loss) (96,064) (98,123) (94,122)",
+    "Operating income (loss) (127,736) (122,859) (117,850)",
+    "If some or all of Nikon's claims are successful, this could have a material adverse effect"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2002-12-20",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

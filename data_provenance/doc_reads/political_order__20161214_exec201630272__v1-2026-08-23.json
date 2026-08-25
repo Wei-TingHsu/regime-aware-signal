@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "Amending the Order of Succession in the Department of Homeland Security",
+    "the officers named in subsection (a) of this section, in the order listed, shall act as",
+    "the President retains discretion...to depart from this order"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "homeland security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-12-14",
+  "doc_id": "exec201630272",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

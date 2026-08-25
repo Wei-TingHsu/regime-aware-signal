@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "we still expect to achieve GAAP profitability in Q3 and Q4",
+    "Model 3 gross margin should grow significantly to approximately 15% in Q3",
+    "expect, for the first time in our history, to become both sustainably profitable and cash flow positive"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.6,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2018-08-01",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

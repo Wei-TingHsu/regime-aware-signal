@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.5,
+  "evidence": [
+    "hire 10,000 additional immigration officers",
+    "jurisdictions that fail to comply with applicable Federal law do not receive Federal funds",
+    "terminate the Priority Enforcement Program"
+  ],
+  "extra": {
+    "actor": "DHS/DOJ/President",
+    "is_decided": true,
+    "sectors": [
+      "private prisons/detention",
+      "state and local government funding",
+      "immigration enforcement contractors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-01-30",
+  "doc_id": "exec201702102",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

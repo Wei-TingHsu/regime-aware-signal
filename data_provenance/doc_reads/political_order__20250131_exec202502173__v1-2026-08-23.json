@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "FEMA therefore requires a full-scale review",
+    "There is hereby established the Federal Emergency Management Agency Review Council",
+    "The Council shall terminate 1 year from the date of this order"
+  ],
+  "extra": {
+    "actor": "President (DHS/DoD Secretaries)",
+    "is_decided": true,
+    "sectors": [
+      "disaster relief",
+      "government reorganization",
+      "homeland security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-31",
+  "doc_id": "exec202502173",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

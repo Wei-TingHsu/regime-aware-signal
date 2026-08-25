@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "it shall be the policy of the executive branch to prioritize its resources",
+    "propose to the President ... legislative and executive actions",
+    "establish an internal working group to develop and incorporate practical strategies"
+  ],
+  "extra": {
+    "actor": "President/DOJ/DHS/HHS/State/Labor/Education",
+    "is_decided": true,
+    "sectors": [
+      "law enforcement",
+      "social media/technology",
+      "child welfare",
+      "housing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-02-05",
+  "doc_id": "exec202002438",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

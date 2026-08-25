@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "The importation into the United States of any jadeite or rubies mined or extracted from Burma",
+    "is hereby prohibited",
+    "This order is effective at 12:01 a.m. eastern daylight time on August 7, 2013"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State to implement)",
+    "is_decided": true,
+    "sectors": [
+      "jewelry",
+      "gemstones",
+      "Burma trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-08-09",
+  "doc_id": "exec201319520",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

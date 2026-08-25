@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "This order continues in place the Board established in 2012",
+    "preventing mass atrocities and genocide is a core national security interest",
+    "The Board shall be composed of individuals at the Assistant Secretary-level or higher"
+  ],
+  "extra": {
+    "actor": "President/National Security Council",
+    "is_decided": true,
+    "sectors": [
+      "foreign policy",
+      "national security",
+      "human rights"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-05-23",
+  "doc_id": "exec201612307",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "TSMC will use a TWINSCAN NXE:3100 for research and development",
+    "ASML today announced the shipment of its 100th TWINSCAN XT:1900 series lithography system",
+    "FlexRay is finding strong acceptance by providing chip makers with virtually unlimited illumination"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2010-03-02",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

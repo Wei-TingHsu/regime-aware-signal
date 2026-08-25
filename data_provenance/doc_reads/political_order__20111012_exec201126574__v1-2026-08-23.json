@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "Disputes exist between certain railroads represented by the National Carriers' Conference Committee",
+    "no change in the conditions out of which the disputes arose shall be made",
+    "The Board shall report to the President with respect to the disputes within 30 days"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "railroads",
+      "transportation",
+      "labor"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-10-12",
+  "doc_id": "exec201126574",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

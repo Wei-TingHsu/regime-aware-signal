@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.5,
+    "gold": 0.3,
+    "dollar": -0.3,
+    "oil": 0.2
+  },
+  "magnitude": 0.9,
+  "horizon_days": 20,
+  "specificity": 0.8,
+  "novelty": 0.7,
+  "confidence": 0.75,
+  "evidence": [
+    "The Federal Reserve will continue to purchase Treasury securities and agency mortgage-backed securities in the amounts needed",
+    "maintain the federal funds rate in a target range of 0 to 1/4 percent",
+    "amounts limited only by the value of Treasury securities held outright"
+  ],
+  "extra": {
+    "stance": -0.9,
+    "guidance": -0.8
+  },
+  "source": "fomc_statement",
+  "date": "2020-03-23",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

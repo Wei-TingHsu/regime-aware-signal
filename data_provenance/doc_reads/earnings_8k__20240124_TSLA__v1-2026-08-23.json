@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.6,
+  "confidence": 0.7,
+  "evidence": [
+    "vehicle volume growth rate may be notably lower than the growth rate achieved in 2023",
+    "Total GAAP gross margin 23.8% 19.3% 18.2% 17.9% 17.6% -612 bp",
+    "Income from operations 3,901 2,664 2,399 1,764 2,064 -47%"
+  ],
+  "extra": {
+    "surprise": -0.5,
+    "guidance_change": -0.6,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2024-01-24",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

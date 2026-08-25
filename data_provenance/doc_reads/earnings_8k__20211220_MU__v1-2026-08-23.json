@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 10,
+  "specificity": 0.75,
+  "novelty": 0.45,
+  "confidence": 0.55,
+  "evidence": [
+    "Revenue of $7.69 billion versus $8.27 billion for the prior quarter",
+    "$7.5 billion \u00b1 $200 million $7.5 billion \u00b1 $200 million",
+    "Diluted earnings per share $1.83 \u00b1 $0.10 $1.95 \u00b1 $0.10"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": -0.3,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2021-12-20",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

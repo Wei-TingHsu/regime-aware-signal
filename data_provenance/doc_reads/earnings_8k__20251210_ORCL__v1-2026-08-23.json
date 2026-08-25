@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 10,
+  "specificity": 0.7,
+  "novelty": 0.55,
+  "confidence": 0.5,
+  "evidence": [
+    "Remaining Performance Obligations were up 438% year-over-year in USD to $523 billion",
+    "Q2 GAAP earnings per share was up 91% to $2.10",
+    "Free Cash Flow $ (13,181) trailing four quarters"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.1,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2025-12-10",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.25,
+  "horizon_days": 400,
+  "specificity": 0.4,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "repeal the prohibition on overland supersonic flight in 14 CFR 91.817 within 180 days",
+    "Any final rule in connection with the NPRM shall be issued within 24 months of the date of this order",
+    "reestablish the United States as the undisputed leader in high-speed aviation"
+  ],
+  "extra": {
+    "actor": "FAA/OSTP/DOT/President",
+    "is_decided": true,
+    "sectors": [
+      "aerospace",
+      "aviation",
+      "defense"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-06-11",
+  "doc_id": "exec202510800",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

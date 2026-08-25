@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.15
+  },
+  "magnitude": 0.25,
+  "horizon_days": 15,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "the term \"Government of Venezuela\" includes...the Central Bank of Venezuela and Petroleos de Venezuela, S.A. (PDVSA)",
+    "actions by persons affiliated with the illegitimate Maduro regime",
+    "to prevent the Interim President and the National Assembly from exercising legitimate authority"
+  ],
+  "extra": {
+    "actor": "President (Trump) via IEEPA/National Emergencies Act",
+    "is_decided": true,
+    "sectors": [
+      "oil/energy",
+      "sanctions/financial"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-01-30",
+  "doc_id": "exec201900615",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

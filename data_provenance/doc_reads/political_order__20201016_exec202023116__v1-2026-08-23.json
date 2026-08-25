@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 250,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.75,
+  "evidence": [
+    "an interagency Water Policy Committee (to be known as the Water Subcabinet) is hereby established",
+    "Within 120 days of the date of this order, the Water Subcabinet shall submit... a report that recommends actions",
+    "Reduce unnecessary duplication across the Federal Government by coordinating and consolidating existing water-related task forces"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 13956)",
+    "is_decided": true,
+    "sectors": [
+      "water utilities",
+      "infrastructure",
+      "agriculture",
+      "engineering/construction"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-10-16",
+  "doc_id": "exec202023116",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

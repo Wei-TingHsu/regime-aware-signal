@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 250,
+  "specificity": 0.15,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "setting a goal that 50 percent of all new passenger cars and light trucks sold in 2030 be zero-emission vehicles",
+    "shall, as appropriate and consistent with applicable law, consider beginning work on a rulemaking",
+    "consider issuing a notice of proposed rulemaking by January 2022"
+  ],
+  "extra": {
+    "actor": "President (EPA, DOT directed)",
+    "is_decided": false,
+    "sectors": [
+      "automotive",
+      "EV",
+      "energy",
+      "oil_gas"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-08-10",
+  "doc_id": "exec202117121",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

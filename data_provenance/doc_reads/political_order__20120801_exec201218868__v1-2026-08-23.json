@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "There is hereby established the White House Initiative on Educational Excellence for African Americans",
+    "There is established in the Department the President's Advisory Commission on Educational Excellence for African Americans",
+    "to the extent permitted by law and within existing appropriations"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "education"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-08-01",
+  "doc_id": "exec201218868",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

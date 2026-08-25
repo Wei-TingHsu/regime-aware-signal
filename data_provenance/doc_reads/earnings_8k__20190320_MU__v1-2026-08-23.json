@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.4,
+  "evidence": [
+    "Revenue of $5.84 billion, versus $7.35 billion for the same period last year",
+    "challenging market environment",
+    "will enable us to emerge even stronger as the market environment improves"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": -0.3,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2019-03-20",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

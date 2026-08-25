@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "approve the disestablishment of United States Joint Forces Command",
+    "effective on a date to be determined by the Secretary of Defense"
+  ],
+  "extra": {
+    "actor": "President (Commander in Chief)",
+    "is_decided": true,
+    "sectors": [
+      "defense"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-01-11",
+  "doc_id": "memo2011590",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

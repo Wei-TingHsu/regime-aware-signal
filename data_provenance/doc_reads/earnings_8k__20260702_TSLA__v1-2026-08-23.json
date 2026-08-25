@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.35,
+  "confidence": 0.5,
+  "evidence": [
+    "we produced over 450,000 vehicles, delivered over 480,000 vehicles",
+    "Model 3/Y 442,936 467,762 2%",
+    "Tesla will post its financial results for the second quarter of 2026"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2026-07-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.05,
+    "gold": -0.15,
+    "dollar": 0.15,
+    "oil": 0.15
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.15,
+  "confidence": 0.65,
+  "evidence": [
+    "the United States and the PRC reached a historic and monumental deal on economic and trade relations",
+    "continue the suspension of the heightened reciprocal tariffs on imports of the PRC until 12:01 a.m. eastern standard time on November 10, 2026",
+    "Should the PRC fail to implement its commitments under the Arrangement, I may modify this order"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14358)",
+    "is_decided": true,
+    "sectors": [
+      "semiconductors",
+      "agriculture",
+      "rare earths/critical minerals",
+      "manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-11-07",
+  "doc_id": "exec202519826",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

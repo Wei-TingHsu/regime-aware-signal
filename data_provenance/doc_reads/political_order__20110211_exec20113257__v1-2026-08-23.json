@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "There is established an interagency Senior Intellectual Property Enforcement Advisory Committee",
+    "shall advise the Coordinator and facilitate the formation and implementation of each Joint Strategic Plan",
+    "The Coordinator may not control or direct any Federal law enforcement agency"
+  ],
+  "extra": {
+    "actor": "President (Executive Office of the President)",
+    "is_decided": true,
+    "sectors": [
+      "intellectual property",
+      "trade enforcement",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-02-11",
+  "doc_id": "exec20113257",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

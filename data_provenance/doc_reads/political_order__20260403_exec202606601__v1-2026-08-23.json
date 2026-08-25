@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.85,
+  "evidence": [
+    "Attorney General shall prioritize the investigation and, as appropriate, the prosecution",
+    "the Postmaster General is hereby directed to initiate a proposed rulemaking",
+    "withholding Federal funds from noncompliant States and localities where such withholding is authorized by law"
+  ],
+  "extra": {
+    "actor": "President (DHS, SSA, USPS, DOJ)",
+    "is_decided": true,
+    "sectors": [
+      "elections",
+      "postal services",
+      "immigration/citizenship verification"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-04-03",
+  "doc_id": "exec202606601",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

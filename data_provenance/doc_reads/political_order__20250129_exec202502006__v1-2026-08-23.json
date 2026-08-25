@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.03,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 250,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "achieve the total and efficient enforcement of those laws",
+    "shall promptly take all appropriate action to construct, operate, control, or use facilities to detain removable aliens",
+    "significantly increase the number of agents and officers available"
+  ],
+  "extra": {
+    "actor": "President (DHS/DOJ/State/Treasury directed)",
+    "is_decided": true,
+    "sectors": [
+      "immigration enforcement",
+      "private prisons/detention",
+      "agriculture/labor-intensive industries",
+      "state/local government funding"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-29",
+  "doc_id": "exec202502006",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

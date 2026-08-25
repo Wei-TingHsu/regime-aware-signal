@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 20,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "it is necessary to require COVID-19 vaccination for all Federal employees",
+    "Each agency shall implement... a program to require COVID-19 vaccination",
+    "The Task Force shall issue guidance within 7 days"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "federal government",
+      "healthcare",
+      "public administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-09-14",
+  "doc_id": "exec202119927",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

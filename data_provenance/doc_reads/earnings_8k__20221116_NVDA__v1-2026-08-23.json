@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue is expected to be $6.00 billion, plus or minus 2%.",
+    "Began shipping the NVIDIA\u00ae H100 Tensor Core GPU based on the new NVIDIA Hopper\u2122 architecture",
+    "We are quickly adapting to the macro environment, correcting inventory levels and paving the way for new products"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2022-11-16",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

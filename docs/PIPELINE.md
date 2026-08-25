@@ -48,6 +48,10 @@ After that, any analysis script in Section 4 can be run independently.
 
 Run once daily, any time after ~05:00 SGT (so the prior US close has landed).
 
+| File | Role | Run as |
+|---|---|---|
+| `app.py` | **Demonstration terminal** (repo root, not `src/`). Eight tabs; every live tab reads its numbers from `processed/*.json`, `forward_ledger.csv` and file counts under `data_provenance/` at run time, and says so when a results file is missing rather than showing a stale figure. **Shows no predictions** — steps 3–6 are registered but not unblinded. Tab 2 is a **labelled UI specimen** with invented numbers that doubles as the step 6 specification (`prereg_analog_event.md` §8). See `CURRENT_STATE` §16. | `streamlit run app.py` |
+
 Safeguards built in, each the result of a bug found on 2026-08-18:
 - refresh passes **`--force`** — the cache-first fetcher otherwise serves **stale
   data while reporting success**;
@@ -71,6 +75,30 @@ Safeguards built in, each the result of a bug found on 2026-08-18:
 
 Outputs: `processed/forward_ledger.csv` (machine state, gitignored) and
 `docs/forward_scoreboard.md` (readable table, committed).
+
+**Regime labels are canonically ordered by ascending mean PC1 from 2026-08-25**
+(open thread 3). Rows logged before that date carry the old arbitrary GMM
+component ordering, so the `regime` column is comparable **within each era and
+not across the boundary**. Historical rows are not retro-relabelled. Picks are
+unaffected — candidate selection uses label *equality*, which is invariant under
+relabelling, verified bit-identical on 826 rebalances.
+
+`config/models.frozen.sha256` holds a canonical checksum of the frozen `models:`
+block (yaml → sorted JSON → sha256, so comments and key order may change but a
+hyperparameter may not). `forward_log` and `model_grid` **verify it and refuse to
+run on mismatch**, and refuse any entry carrying `half_life_years` under
+`models:`. This replaced a comment reading "never edit this file" — an invariant
+already broken on 08-23, when four backtest-only recency variants were added
+under `models:` where the live harness would have logged them.
+
+### 3a. The corpus read (API-bound, not daily)
+
+`./run_corpus.sh` reads every unread document through `doc_read`. **Not part of
+the reproduce chain and not a daily job** — run it when new documents are
+fetched. Cached reads are skipped and never re-billed, so a re-run costs only
+the remainder. The script uses `set -e`: `doc_read` exits 1 on a fatal error, and
+without it the script would proceed to the next source against the same
+exhausted balance.
 
 Model specs are frozen in **`config/models.yaml`** — pre-registered before any
 live data existed. Do not edit; add new models instead.
@@ -114,6 +142,29 @@ live data existed. Do not edit; add new models instead.
 |---|---|
 | `src/chain_rotation.py` | Stage 1: residualized lead-lag order discovery + thesis comparison + permutation + sub-period stability. **Result: null / anti-stable** — which motivated the event-conditioned reframe (see `docs/PROJECT_STATE.md`). Kept as the record of that finding. |
 
+**Step 1 closure — what λ, σ and the scaling basis actually do (2026-08-24/25)**
+
+*Every script below writes a `docs/*_results.md` and a `processed/*.json`. Read
+the results files, not this table, for the numbers.*
+
+| File | What it shows |
+|---|---|
+| `src/recency_sweep.py` | The pre-registered λ ladder {2,4,8,16,∞} on **both engines**. Runs the ∞ control first and asserts it reproduces `model_1_baseline` **element-wise on the spread series**, refusing to run a decayed rung otherwise. `--rederive` recomputes verdicts from the saved JSON without re-running. Engine A POSITIVE, Engine B NULL — **reframed exploratory**, see `rung_diagnostic`. |
+| `src/rung_diagnostic.py` | What λ does to *selection*: weighted mean analog age, ESS, and top-k overlap against the no-decay control, per rung, per engine. **No forward return enters any quantity**, so nothing here can be tuned to an outcome. Registered threshold ≥0.90 overlap = tie-breaking. Measured 0.765 / 0.850 → **RESELECTION on both engines**. |
+| `src/fine_lambda_sweep.py` | Exploratory, post-hoc, **no registered criterion** — maps the Sharpe surface across λ 0.0004–0.0014 to characterise the unexplained dip at the incumbent. Surface is **jagged**: 0.30 / 0.25 / 0.22 / 0.29 across steps of 1e-4. |
+| `src/scaling_check.py` | Quantifies the **declared `_z()` full-panel look-ahead** (open thread 12) by running both scaling bases side by side on all three frozen models, paired sign-flip on the spread series, with candidate-pool counts so a smaller pool cannot be mistaken for a scaling effect. Small for level, **large for both trend models**. |
+| `src/trend_check.py` | Isolates the trend effect at **fixed horizon** (thread 8's confound), on both scaling bases. Trend advantage +0.1137 full-panel, **−0.1213** with the look-ahead removed: on this panel **the trend advantage IS the look-ahead**. |
+| `src/engine_b_paired.py` | Paired sign-flip on 836 shared rebalances: `analog_backtest` no-decay vs the incumbent λ. **p = 0.485 — not distinguishable**, retiring the claim that removing λ raised Sharpe 0.25→0.38. Uses `analog_backtest --dump-spreads`. |
+
+**Problem 3 — the LLM document layer (steps 1–2 built; 3–6 registered, unbuilt)**
+
+| File | What it shows |
+|---|---|
+| `src/fetch_sources.py` | Fetches every document source into the drop folder. **EDGAR**: for Item 2.02 the release text is in **EX-99**, not the primary document — the primary is a one-page cover page. Two passes: filename match, then a **content scan** of every other document in the accession keeping whatever contains reported figures, because issuers share no naming convention. Prints the accession's filenames when both fail. **Federal Register**: presidential documents by type. Filed/publication date is the **public** date, which is the correct event date. |
+| `src/doc_read.py` | Reads any source into **ONE common schema** (direction per asset class, magnitude, horizon, specificity, novelty, confidence, evidence) via source-specific prompts. **The model never predicts returns** — it classifies content; what a direction *did* is answered by data in step 3. Aborts the whole run on a credit or auth error rather than retrying it; transient errors get one retry. Cached reads are keyed by prompt version and never re-billed. |
+| `src/gate_check.py` | Does `specificity` **discriminate between sources**? Amended criterion: lower bound of a 95% bootstrap CI on the between-source spread must exceed 0.25, plus an ordering clause. Reports the **read condition per source**, so a cross-source comparison that is also a cross-prompt comparison cannot pass unnoticed. **PASS** at n=60×4: spread 0.363, CI [0.279, 0.453]. |
+| `src/analog_event.py` | **Steps 3+4 as ONE estimator.** `ŷ = w·conditional + (1−w)·unconditional`, `w = ESS/(ESS+k)`; step 4 is the `w=0` limit. **k is estimated, not chosen** (DerSimonian–Laird τ² across regime cells, re-estimated inside every LOO fold); τ²=0 → w=0 is a **registered null**. Abstains below ESS 8. Runs on the **live basis** — expanding-window scaling and expanding canonically-ordered regime labels — because a deployed system has no future data. `--self-test` only: no real conditional estimate is computed until all six blind acceptance tests pass. |
+
 ---
 
 ## 5. Shared helpers (imported by the above, not run directly)
@@ -135,6 +186,8 @@ live data existed. Do not edit; add new models instead.
 | `raw/` | Untouched API pulls, plus the raw GDELT `.xlsx` exports. | gitignored, regenerable |
 | `processed/` | Cleaned panels + scores + labels: `asset_returns.parquet`, `macro_panel.parquet`, `macro_pca_scores.parquet`, `regime_labels.parquet`, `liquidity_states.parquet`, `gdelt_2024_clean.csv`, `forward_ledger.csv`. | gitignored, regenerable |
 | `outputs/` | Fitted models, diagnostics (CSVs), figures. | gitignored |
+| `data_provenance/docs/<source>/` | The **drop folder**: dated source text as `YYYYMMDD[_id].txt`, one directory per source type. Anything in that layout is readable — fetched by a script or saved by hand. Files are dated by **publication date**, not event date; dating FOMC minutes by meeting date would build look-ahead into a filename. `earnings_8k_coverpages/` retains the 307 SEC cover pages fetched before the EX-99 fix, as evidence. | gitignored, re-fetchable |
+| `data_provenance/doc_reads/` | One JSON per document per prompt version, `<source>__<stem>__<version>.json`. **Committed** — these cost API spend and are not deterministically regenerable, so unlike the raw documents they cannot simply be re-pulled. Also the cache: a hit means zero tokens. | **yes** |
 | `docs/` | `PROJECT_STATE.md` (the briefing), `architecture_decisions.md`, `regime_event_validation.md`, `model_grid_results.md`, `forward_scoreboard.md`, the methodology log, the learning journal, and this map. | yes |
 | `hypotheses/` | Pre-registered hypotheses. | yes |
 
@@ -192,6 +245,26 @@ the session panel the seed-stability argument **no longer discriminates** (every
 candidate scores ARI 1.000) and the silhouette margin over n=2 is 0.001. n=4 now
 rests on run-length persistence plus an economic argument, not on three
 converging lines.
+
+**(d) The document corpus has two properties that decide what it can support.**
+
+*Dating.* Every file is dated by when the document became **public**, never by
+when the event occurred. FOMC minutes are released about three weeks after the
+meeting; dating them by meeting date would build look-ahead into a filename.
+
+*Coverage.* Federal Register carries presidential documents only. Executive
+orders and determinations (`political_order`) are decided policy;
+proclamations, notices and memoranda (`political_other`) are largely ceremonial
+or administrative — that split uses the **government's own type tag**, not a
+judgement applied per document. Statements, posts and rhetoric outside the
+Federal Register are **not covered**, and their absence in any result is a
+**coverage gap, not evidence** that rhetoric does not move markets. Closing it is
+a purchasing decision. `bank_research` and `transcript` have no free structured
+feed and stand at zero documents.
+
+*Foreign issuers* file 6-K with the whole submission as a single document and no
+separate exhibits, so the EX-99 route that works for domestic 8-K yields little
+for TSM and ASML. Cross-firm comparison must account for the asymmetry.
 
 **(c) Data vendor gaps are expected.**
 Yahoo occasionally returns a **partial bar** for a recent trading day. On

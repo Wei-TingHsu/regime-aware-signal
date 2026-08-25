@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.25,
+  "confidence": 0.65,
+  "evidence": [
+    "This national effort shall pursue development of a quantum computer at a scale intended to initiate",
+    "shall develop a plan, potentially including advance market commitments, to encourage contributions to the QC-ADDS Effort",
+    "prevent countries of concern from acquiring critical quantum-enabling technologies"
+  ],
+  "extra": {
+    "actor": "President / multiple federal agencies (DOE, DoW, Commerce, NSF, NASA, DNI)",
+    "is_decided": false,
+    "sectors": [
+      "quantum computing",
+      "quantum sensing",
+      "quantum networking",
+      "semiconductors/foundries",
+      "defense technology"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-06-25",
+  "doc_id": "exec202612910",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

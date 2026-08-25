@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 3,
+  "specificity": 0.7,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "beating guidance by $0.10",
+    "Constant currency revenue beat guidance by $200 million",
+    "The board of directors increased the authorization for share repurchases by $10 billion"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.3,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2021-12-09",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

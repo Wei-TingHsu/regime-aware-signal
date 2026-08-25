@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "Federal Mission Resilience Executive Committee (Executive Committee) is hereby established.",
+    "Within 90 days of the date of this order, the Executive Committee shall submit",
+    "This order is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "national security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-12-10",
+  "doc_id": "exec202027353",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

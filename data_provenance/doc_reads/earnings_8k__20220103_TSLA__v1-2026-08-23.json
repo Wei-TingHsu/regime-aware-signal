@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 2,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "achieved production of more than 305,000 vehicles and deliveries of over 308,000 vehicles",
+    "In 2021, we delivered over 936,000 vehicles.",
+    "Our net income and cash flow results will be announced along with the rest of our financial performance"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2022-01-03",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

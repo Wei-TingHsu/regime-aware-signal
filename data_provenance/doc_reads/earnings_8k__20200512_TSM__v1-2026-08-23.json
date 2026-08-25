@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.75,
+  "evidence": [
+    "Approved capital appropriations of approximately US$5,704.0 million",
+    "Approved the distribution of a NT$2.5 per share cash dividend",
+    "Approved the issuance of no more than NT$60 billion unsecured corporate bonds"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2020-05-12",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

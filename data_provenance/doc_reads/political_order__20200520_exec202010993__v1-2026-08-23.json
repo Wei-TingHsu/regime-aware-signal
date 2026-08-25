@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "The Forced Labor Enforcement Task Force (Task Force) is hereby established to monitor United States enforcement",
+    "shall be chaired by the Secretary of Homeland Security",
+    "make any decision on an action under sections 742 through 744"
+  ],
+  "extra": {
+    "actor": "President (DHS-chaired task force)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "customs enforcement",
+      "supply chain/import compliance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-05-20",
+  "doc_id": "exec202010993",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

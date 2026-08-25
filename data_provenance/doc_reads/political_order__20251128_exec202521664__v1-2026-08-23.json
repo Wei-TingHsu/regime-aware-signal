@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "sets in motion a process by which certain chapters or other subdivisions of the Muslim Brotherhood shall be considered for designation",
+    "Within 30 days of the date of this order, the Secretary of State and the Secretary of the Treasury...shall submit a joint report",
+    "chapters in Lebanon, Jordan, and Egypt engage in or facilitate and support violence and destabilization"
+  ],
+  "extra": {
+    "actor": "President (State/Treasury to act)",
+    "is_decided": false,
+    "sectors": [
+      "national security",
+      "sanctions",
+      "Middle East geopolitics"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-11-28",
+  "doc_id": "exec202521664",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

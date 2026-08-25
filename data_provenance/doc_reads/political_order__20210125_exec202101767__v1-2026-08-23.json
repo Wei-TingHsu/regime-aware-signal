@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "This order revokes harmful policies and directives",
+    "Executive Order 13771 of January 30, 2017 (Reducing Regulation and Controlling Regulatory Costs)",
+    "agencies must be equipped with the flexibility to use robust regulatory action"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "regulatory policy",
+      "energy",
+      "financial services",
+      "cross-sector"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-25",
+  "doc_id": "exec202101767",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

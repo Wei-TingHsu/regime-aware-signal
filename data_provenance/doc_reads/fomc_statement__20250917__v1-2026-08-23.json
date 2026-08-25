@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.4,
+    "gold": 0.2,
+    "dollar": -0.3,
+    "oil": 0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "lower the target range for the federal funds rate by 1/4 percentage point to 4 to 4\u20111/4 percent",
+    "downside risks to employment have risen",
+    "will carefully assess incoming data, the evolving outlook, and the balance of risks"
+  ],
+  "extra": {
+    "stance": -0.3,
+    "guidance": -0.1
+  },
+  "source": "fomc_statement",
+  "date": "2025-09-17",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

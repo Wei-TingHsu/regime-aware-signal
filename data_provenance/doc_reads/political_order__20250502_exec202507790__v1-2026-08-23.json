@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "surge resources to officers in need",
+    "increase the provision of excess military and national security assets",
+    "modify, rescind, or move to conclude such measures"
+  ],
+  "extra": {
+    "actor": "President / Attorney General / DoD / DHS",
+    "is_decided": true,
+    "sectors": [
+      "law enforcement",
+      "defense",
+      "private prisons/security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-05-02",
+  "doc_id": "exec202507790",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

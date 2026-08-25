@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.2,
+    "gold": -0.1,
+    "dollar": 0.15,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 15,
+  "specificity": 0.65,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "all members agreed... it would be appropriate to make a further measured reduction in the pace of its asset purchases",
+    "A few participants raised the possibility that it might be appropriate to increase the federal funds rate relatively soon",
+    "Several participants argued that... there should be a clear presumption in favor of continuing to reduce the pace of purchases by a total of $10 billion at each FOMC meeting"
+  ],
+  "extra": {
+    "stance": 0.3,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2014-02-19",
+  "doc_id": "meeting20140129",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

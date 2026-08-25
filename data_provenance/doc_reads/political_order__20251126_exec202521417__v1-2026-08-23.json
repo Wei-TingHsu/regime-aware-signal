@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.05,
+    "gold": -0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 10,
+  "specificity": 0.85,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "certain agricultural products shall not be subject to the additional ad valorem rate of duty",
+    "there has been initial progress in negotiations with the Government of Brazil",
+    "effective with respect to goods entered for consumption...on or after...November 13, 2025"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": [
+      "agriculture",
+      "trade",
+      "Brazil imports"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-11-26",
+  "doc_id": "exec202521417",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

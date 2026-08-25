@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.2,
+    "gold": 0.3,
+    "dollar": 0.1,
+    "oil": 0.4
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "an additional ad valorem rate of duty--for example, 25 percent--may be imposed",
+    "directly or indirectly purchases, imports, or otherwise acquires any goods or services from Iran",
+    "Should a foreign country retaliate against the United States in response to this order"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14382)",
+    "is_decided": false,
+    "sectors": [
+      "energy",
+      "trade",
+      "sanctions",
+      "Iran"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-02-11",
+  "doc_id": "exec202602813",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

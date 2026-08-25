@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.2,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "prevent taxpayer-funded bailouts",
+    "report to the President within 120 days",
+    "make regulation efficient, effective, and appropriately tailored"
+  ],
+  "extra": {
+    "actor": "Secretary of the Treasury / Financial Stability Oversight Council",
+    "is_decided": false,
+    "sectors": [
+      "financials",
+      "banking regulation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-02-08",
+  "doc_id": "exec201702762",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

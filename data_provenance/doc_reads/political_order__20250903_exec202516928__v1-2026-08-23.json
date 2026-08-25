@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "classical architecture shall be the preferred and default architecture for Federal public buildings",
+    "create the position of senior advisor for architectural design",
+    "This order shall be implemented consistent with applicable law and subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "President (GSA implementation)",
+    "is_decided": true,
+    "sectors": [
+      "construction",
+      "architecture/design services",
+      "government real estate"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-09-03",
+  "doc_id": "exec202516928",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

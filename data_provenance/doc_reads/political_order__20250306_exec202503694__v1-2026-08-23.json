@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.9,
+  "evidence": [
+    "this order designates English as the official language of the United States",
+    "Executive Order 13166 of August 11, 2000... is hereby revoked",
+    "Agency heads are not required to amend, remove, or otherwise stop production"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "language services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-06",
+  "doc_id": "exec202503694",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

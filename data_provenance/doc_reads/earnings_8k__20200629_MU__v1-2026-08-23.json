@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "Strong execution drives higher profitability",
+    "Revenue of $5.44 billion versus $4.80 billion for the prior quarter",
+    "$5.75 billion - $6.25 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2020-06-29",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

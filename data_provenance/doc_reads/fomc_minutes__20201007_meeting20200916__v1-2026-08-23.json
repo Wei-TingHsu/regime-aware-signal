@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.15,
+    "gold": 0.1,
+    "dollar": -0.15,
+    "oil": 0.05
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "Two members dissented from the policy decision.",
+    "these participants preferred forward guidance in which the target range for the federal funds rate remained at the ELB until inflation had moved above 2 percent for some time",
+    "with longer-term interest rates already very low, there did not appear to be a need for enhanced forward guidance"
+  ],
+  "extra": {
+    "stance": 0.3,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2020-10-07",
+  "doc_id": "meeting20200916",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

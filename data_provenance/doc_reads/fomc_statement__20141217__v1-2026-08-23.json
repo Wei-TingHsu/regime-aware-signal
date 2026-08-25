@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.2,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "the Committee judges that it can be patient in beginning to normalize the stance of monetary policy",
+    "increases in the target range for the federal funds rate are likely to occur sooner than currently anticipated",
+    "Inflation has continued to run below the Committee's longer-run objective"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "guidance": 0.2
+  },
+  "source": "fomc_statement",
+  "date": "2014-12-17",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

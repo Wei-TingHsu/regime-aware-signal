@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.55,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.55,
+  "confidence": 0.6,
+  "evidence": [
+    "Our Q2 results represent our strongest revenue growth in more than fifteen years",
+    "exceeding our financial guidance on robust demand and improved execution",
+    "Forecasting third-quarter 2026 revenue of $15.8 billion to $16.8 billion"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.3,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2026-07-23",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.5,
+  "confidence": 0.75,
+  "evidence": [
+    "Fiscal Q4 revenue projected to grow another 15% sequentially",
+    "Record revenue in fiscal Q3 with growth across end markets",
+    "nearly 50% sequential growth in HBM revenue"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.6,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2025-06-25",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

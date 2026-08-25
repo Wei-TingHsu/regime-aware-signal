@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.1,
+    "gold": -0.05,
+    "dollar": 0.05,
+    "oil": 0.05
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Many participants... expressed the view that continued solid improvement in the outlook for the labor market could prompt the Committee to slow the pace of purchases beginning at some point over the next several meetings",
+    "A few members felt that... a reduction in the pace of purchases appropriate around midyear, with purchases ending later this year",
+    "One member dissented... expressing concern that the continued high level of monetary accommodation increased the risks of future economic and financial imbalances"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2013-04-10",
+  "doc_id": "meeting20130320",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

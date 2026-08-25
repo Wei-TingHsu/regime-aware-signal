@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "restrict access by countries of concern to Americans' bulk sensitive personal data",
+    "issue, subject to public notice and comment, regulations that prohibit or otherwise restrict",
+    "shall publish the proposed rule described in subsection (a) of this section for notice and comment"
+  ],
+  "extra": {
+    "actor": "President Biden / DOJ-DHS",
+    "is_decided": true,
+    "sectors": [
+      "data brokers",
+      "technology",
+      "healthcare/genomics",
+      "telecommunications/submarine cables",
+      "cross-border data services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2024-03-01",
+  "doc_id": "exec202404573",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 20,
+  "specificity": 0.15,
+  "novelty": 0.1,
+  "confidence": 0.75,
+  "evidence": [
+    "Agencies shall promptly identify actions they can take within existing authorities",
+    "The economic crisis resulting from the pandemic must be met by the full resources of the Federal Government",
+    "This order is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (executive agencies directive)",
+    "is_decided": false,
+    "sectors": [
+      "small business",
+      "state/local government",
+      "social services",
+      "unemployment relief"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-27",
+  "doc_id": "exec202101923",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

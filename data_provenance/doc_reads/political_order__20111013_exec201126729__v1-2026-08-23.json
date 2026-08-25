@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "establishes an interagency Insider Threat Task Force",
+    "Senior Information Sharing and Safeguarding Steering Committee",
+    "Executive Agent for Safeguarding Classified Information on Computer Networks"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch agencies - DoD, NSA, DOJ, ODNI, DHS, State, Energy, CIA)",
+    "is_decided": true,
+    "sectors": [
+      "government/national security",
+      "cybersecurity",
+      "defense contractors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-10-13",
+  "doc_id": "exec201126729",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

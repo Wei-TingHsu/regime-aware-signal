@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 20,
+  "specificity": 0.7,
+  "novelty": 0.15,
+  "confidence": 0.75,
+  "evidence": [
+    "growth in economic activity has picked up recently",
+    "the Committee decided to make a further measured reduction in the pace of its asset purchases",
+    "it likely will be appropriate to maintain the current target range for the federal funds rate for a considerable time"
+  ],
+  "extra": {
+    "stance": 0.1,
+    "guidance": -0.1
+  },
+  "source": "fomc_statement",
+  "date": "2014-04-30",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

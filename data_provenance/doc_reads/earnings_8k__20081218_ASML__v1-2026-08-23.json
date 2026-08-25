@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.6,
+    "duration": 0.3,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": -0.2
+  },
+  "magnitude": 0.8,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.85,
+  "confidence": 0.8,
+  "evidence": [
+    "ASML expects sales in the fourth quarter of 2008 to be between EUR 450 million and EUR 500 million, compared with guidance issued on October 15 for sales of around EUR 530 million.",
+    "We currently anticipate that sales in the first quarter of 2009 will be between EUR 180 million and EUR 250 million.",
+    "we will reduce our total workforce by more than 10 percent, comprising approximately 1,000 employees"
+  ],
+  "extra": {
+    "surprise": -0.7,
+    "guidance_change": -0.8,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-12-18",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

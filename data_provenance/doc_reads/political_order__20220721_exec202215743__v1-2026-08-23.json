@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby declare a national emergency to deal with this threat.",
+    "All property and interests in property of the following persons... are blocked",
+    "entry into the United States... is hereby suspended"
+  ],
+  "extra": {
+    "actor": "President Biden / Dept of State, Treasury, DHS",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_order",
+  "date": "2022-07-21",
+  "doc_id": "exec202215743",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

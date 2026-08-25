@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Achieved record backlog of $130.5 billion at the end of 2018",
+    "Diluted earnings per share $19.15 - $19.45",
+    "Net sales $55,750 - $57,250"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.3,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2019-01-29",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

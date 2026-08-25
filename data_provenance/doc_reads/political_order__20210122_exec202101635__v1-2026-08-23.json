@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "ordering enhanced protections for judges, prosecutors, and law enforcement officers",
+    "shall propose a regulation revising section 0.112",
+    "shall develop and propose Federal legislation providing additional protection"
+  ],
+  "extra": {
+    "actor": "President/DOJ/DHS",
+    "is_decided": true,
+    "sectors": [
+      "law enforcement",
+      "judiciary",
+      "public safety"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-22",
+  "doc_id": "exec202101635",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

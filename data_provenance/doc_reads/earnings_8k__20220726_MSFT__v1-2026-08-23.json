@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "evolving macroeconomic conditions and other unforeseen items had an impact on financial results beyond what was included in our forward-looking guidance",
+    "Extended production shutdowns in China... contributed to a negative impact on Windows OEM revenue of over $(300) million",
+    "Commercial bookings grew 25% and Microsoft Cloud revenue was $25 billion, up 28% year over year"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": 0.0,
+    "ticker": "MSFT"
+  },
+  "source": "earnings_8k",
+  "date": "2022-07-26",
+  "doc_id": "MSFT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.25,
+  "horizon_days": 250,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "completing all Federal environmental reviews and authorization decisions for major infrastructure projects within 2 years",
+    "All Federal authorization decisions for the construction of a major infrastructure project shall be completed within 90 days of the issuance of a ROD",
+    "Executive Order 13690... is revoked"
+  ],
+  "extra": {
+    "actor": "President (CEQ/OMB/FPISC/Interior/Agriculture)",
+    "is_decided": true,
+    "sectors": [
+      "infrastructure",
+      "energy",
+      "transportation",
+      "construction",
+      "utilities"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-08-24",
+  "doc_id": "exec201718134",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

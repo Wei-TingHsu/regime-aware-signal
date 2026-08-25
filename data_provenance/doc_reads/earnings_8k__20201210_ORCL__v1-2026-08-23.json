@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "Non-GAAP EPS up 19% to $1.06",
+    "Oracle Gen2 Cloud Infrastructure and Autonomous Database revenue up over 100%",
+    "Demand for our Gen2 Cloud Infrastructure is exceeding our plan"
+  ],
+  "confidence_explanation": "",
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.2,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2020-12-10",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

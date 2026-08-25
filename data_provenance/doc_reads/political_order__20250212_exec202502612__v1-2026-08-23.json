@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby declare a national emergency to address that threat",
+    "All property and interests in property ... are blocked",
+    "suspended, except where the Secretary of State determines"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State to implement)",
+    "is_decided": true,
+    "sectors": [
+      "geopolitics",
+      "sanctions",
+      "legal/diplomatic"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-12",
+  "doc_id": "exec202502612",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

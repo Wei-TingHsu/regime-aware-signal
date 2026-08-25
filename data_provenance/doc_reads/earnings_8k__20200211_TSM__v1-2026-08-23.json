@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.15,
+  "confidence": 0.55,
+  "evidence": [
+    "Approved capital appropriations of approximately US$6,742.1 million",
+    "Consolidated revenue totaled NT$1,069.99 billion and net income was NT$345.26 billion",
+    "Approved the distribution of a NT$2.5 per share cash dividend"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2020-02-11",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

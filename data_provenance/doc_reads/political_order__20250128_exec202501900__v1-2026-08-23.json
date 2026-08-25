@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "shall take appropriate action to review the activities",
+    "prepare a report to be submitted to the President",
+    "with recommendations for appropriate remedial actions to be taken"
+  ],
+  "extra": {
+    "actor": "President / Attorney General / DNI",
+    "is_decided": true,
+    "sectors": [
+      "law enforcement",
+      "intelligence community",
+      "government oversight"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-28",
+  "doc_id": "exec202501900",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

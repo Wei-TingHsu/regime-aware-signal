@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "Sections 1, 3, 4, 5, and 7 of Executive Order 13961 ... are hereby revoked.",
+    "Governance and Integration of Federal Mission Resilience",
+    "the Restricted Principals Committee described in section 3 of the National Security Memorandum"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "national security",
+      "federal continuity operations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-24",
+  "doc_id": "exec202501759",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

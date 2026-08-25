@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "There is hereby established the White House Task Force on the 2028 Summer Olympics",
+    "coordinate Federal planning and response related to the security, transportation, and entry/exit processes",
+    "The Task Force shall terminate on December 31, 2028"
+  ],
+  "extra": {
+    "actor": "President / White House / DHS",
+    "is_decided": true,
+    "sectors": [
+      "security",
+      "transportation",
+      "travel/tourism",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-08",
+  "doc_id": "exec202515193",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

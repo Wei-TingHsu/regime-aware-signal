@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.3,
+    "gold": 0.2,
+    "dollar": -0.2,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "it would be prudent to wait for the outcome of the upcoming referendum in the United Kingdom",
+    "some other participants were uncertain whether economic conditions would soon warrant an increase",
+    "the recent slowing in payroll employment gains had increased their uncertainty about the likely pace"
+  ],
+  "extra": {
+    "stance": -0.15,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2016-07-06",
+  "doc_id": "meeting20160615",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

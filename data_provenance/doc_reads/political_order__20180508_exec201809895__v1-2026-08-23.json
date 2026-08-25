@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established within the Executive Office of the President the White House Faith and Opportunity Initiative",
+    "substituting ``White House Faith and Opportunity Initiative'' for ``White House Office of Faith-Based and Community Initiatives''",
+    "Executive Order 13199... and Executive Order 13498... are hereby revoked"
+  ],
+  "extra": {
+    "actor": "President (Executive Office of the President)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "nonprofit/faith-based organizations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-05-08",
+  "doc_id": "exec201809895",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

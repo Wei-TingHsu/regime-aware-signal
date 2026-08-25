@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "Net bookings picked up in Q3 2005 with a product and customer mix that reinforces our competitive position going into 2006",
+    "We expect order intake at about the same level in Q4 2005 as in Q3 2005",
+    "backlog now includes ten new immersion systems... puts us at a clear lead in the 45 nm node race"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2005-10-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

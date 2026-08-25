@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.4,
+    "gold": 0.3,
+    "dollar": -0.3,
+    "oil": 0.2
+  },
+  "magnitude": 0.45,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "Several participants judged that the economic data and outlook were likely to warrant beginning normalization at the June meeting.",
+    "a couple of participants suggested that the economic outlook likely would not call for liftoff until 2016",
+    "members agreed to remove from the forward guidance ... the indication that the Committee judges that it can be patient"
+  ],
+  "extra": {
+    "stance": -0.3,
+    "dispersion": 0.7
+  },
+  "source": "fomc_minutes",
+  "date": "2015-04-08",
+  "doc_id": "meeting20150318",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,31 @@
+
+fomc_minutes: reading 125 of 125 docs
+
+read 125 docs, 0 failed | tokens 0 in / 0 out
+
+by source:
+  fomc_minutes     n= 125  |dir| mean eq 0.16 dur 0.26 gold 0.13 | specificity 0.49 | novelty 0.34
+
+-> processed/read_minutes.csv   full reads in data_provenance/doc_reads/
+
+CHECK BEFORE USE: specificity should SEPARATE sources -- decided
+policy and reported earnings high, rhetoric and opinion low. If every
+source scores alike, the field is not discriminating and step 5 has
+nothing to weigh with.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/hsuweiting/Projects/regime-aware-signal/src/doc_read.py", line 413, in <module>
+    main()
+  File "/Users/hsuweiting/Projects/regime-aware-signal/src/doc_read.py", line 299, in main
+    rows.append(json.loads(out_f.read_text()))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 29 column 2 (char 768)
+  earnings_8k: 189 doc(s) over 20000 words, skipped -- split or trim them
+
+earnings_8k: reading 645 of 834 docs

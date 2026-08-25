@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.2,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "Our AI business surpassed an annual revenue run rate of $37 billion, up 123% year-over-year.",
+    "Azure and other cloud services revenue increased 40%",
+    "commercial remaining performance obligation increased 99% to $627 billion"
+  ],
+  "extra": {
+    "surprise": 0.6,
+    "guidance_change": 0.1,
+    "ticker": "MSFT"
+  },
+  "source": "earnings_8k",
+  "date": "2026-04-29",
+  "doc_id": "MSFT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

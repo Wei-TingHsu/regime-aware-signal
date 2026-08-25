@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.3,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": -0.2
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "the economic recovery is continuing at a moderate pace, though somewhat more slowly than the Committee had expected",
+    "a few members viewed the increase in inflation risks as suggesting that economic conditions might well evolve in a way that would warrant the Committee taking steps to begin removing policy accommodation sooner",
+    "a few members noted that, depending on how economic conditions evolve, the Committee might have to consider providing additional monetary policy stimulus"
+  ],
+  "extra": {
+    "stance": -0.1,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2011-07-13",
+  "doc_id": "meeting20110622",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

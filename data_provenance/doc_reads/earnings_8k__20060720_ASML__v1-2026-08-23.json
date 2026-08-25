@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "ASML continued its strong execution in Q2 2006, marking a record quarter for sales and profit",
+    "ASML expects to ship 62 systems in Q3 2006 with an average selling price of EUR 14.5 million",
+    "expects unit bookings in Q3 2006 to be higher than Q3 shipments"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.4,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2006-07-20",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "backlog supports shipment of approx. 50 tools in Q2 2005",
+    "Q2 2005 orders are expected at a lower level than Q1 2005",
+    "Visibility beyond Q3 2005 is limited"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": -0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2005-05-05",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

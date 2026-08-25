@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 250,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "shall propose a regulation and implement other administrative actions to enable the Medicare program to provide beneficiaries with more diverse and affordable plan choices",
+    "modifying the Value-Based Insurance Design payment model to remove any disincentives for MA plans",
+    "The Medicare program shall adopt and implement those market-based recommendations"
+  ],
+  "extra": {
+    "actor": "HHS Secretary / President",
+    "is_decided": false,
+    "sectors": [
+      "managed care/Medicare Advantage insurers",
+      "healthcare providers",
+      "medical device/telehealth companies"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-10-08",
+  "doc_id": "exec201922073",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

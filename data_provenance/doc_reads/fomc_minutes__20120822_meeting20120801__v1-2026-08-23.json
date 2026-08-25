@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.5,
+    "gold": 0.4,
+    "dollar": -0.4,
+    "oil": 0.15
+  },
+  "magnitude": 0.5,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.45,
+  "confidence": 0.65,
+  "evidence": [
+    "additional monetary accommodation would likely be warranted fairly soon unless incoming information pointed to a substantial and sustainable strengthening",
+    "Many members expressed support for extending the Committee's forward guidance, but they agreed to defer a decision",
+    "the Committee decided that the statement should conclude by indicating that it will provide additional accommodation as needed"
+  ],
+  "extra": {
+    "stance": 0.6,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2012-08-22",
+  "doc_id": "meeting20120801",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

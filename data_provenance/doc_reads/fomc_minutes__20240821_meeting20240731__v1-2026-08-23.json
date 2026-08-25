@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.5,
+    "gold": 0.2,
+    "dollar": -0.3,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "several observed that the recent progress on inflation and increases in the unemployment rate had provided a plausible case for reducing the target range 25 basis points at this meeting",
+    "The vast majority observed that, if the data continued to come in about as expected, it would likely be appropriate to ease policy at the next meeting",
+    "A majority of participants remarked that the risks to the employment goal had increased, and many participants noted that the risks to the inflation goal had decreased"
+  ],
+  "extra": {
+    "stance": -0.6,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2024-08-21",
+  "doc_id": "meeting20240731",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

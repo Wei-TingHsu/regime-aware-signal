@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.05,
+    "gold": 0.03,
+    "dollar": 0.02,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "expand the scope of the national emergency declared in Executive Order 13466",
+    "All property and interests in property... are blocked",
+    "its destructive, coercive cyber-related actions during November and December 2014"
+  ],
+  "extra": {
+    "actor": "President Obama / Treasury / State",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "North Korea",
+      "cyber"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-01-06",
+  "doc_id": "exec201500058",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

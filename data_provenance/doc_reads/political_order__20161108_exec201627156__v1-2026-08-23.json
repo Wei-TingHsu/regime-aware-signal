@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.03
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "There is hereby established the Power Africa Working Group",
+    "double access to power in Sub-Saharan Africa by adding 30,000 megawatts",
+    "I hereby direct Participating Agencies to facilitate as appropriate"
+  ],
+  "extra": {
+    "actor": "President (Executive Office/USAID-led interagency)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "utilities",
+      "development finance",
+      "infrastructure"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-11-08",
+  "doc_id": "exec201627156",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

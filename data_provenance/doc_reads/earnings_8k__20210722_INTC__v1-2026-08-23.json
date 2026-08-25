@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.65,
+  "evidence": [
+    "Raising full-year 2021 guidance. Now expecting GAAP revenue of $77.6 billion",
+    "which exceeded April guidance by $700 million",
+    "Exceeded Q2 guidance for revenue, EPS, and gross margin"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.5,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2021-07-22",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

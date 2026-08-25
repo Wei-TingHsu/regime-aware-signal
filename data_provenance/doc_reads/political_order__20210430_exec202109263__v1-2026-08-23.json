@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "increasing the hourly minimum wage paid by the parties that contract with the Federal Government to $15.00",
+    "$15.00 per hour, beginning January 30, 2022",
+    "Secretary shall, consistent with applicable law, issue regulations by November 24, 2021"
+  ],
+  "extra": {
+    "actor": "President (Executive Order), Department of Labor",
+    "is_decided": true,
+    "sectors": [
+      "federal contractors",
+      "government services",
+      "construction contractors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-04-30",
+  "doc_id": "exec202109263",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

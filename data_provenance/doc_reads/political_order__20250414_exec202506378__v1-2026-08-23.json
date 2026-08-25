@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.7,
+    "duration": 0.4,
+    "gold": 0.5,
+    "dollar": -0.3,
+    "oil": -0.4
+  },
+  "magnitude": 0.85,
+  "horizon_days": 10,
+  "specificity": 0.95,
+  "novelty": 0.6,
+  "confidence": 0.75,
+  "evidence": [
+    "inserting \"84%\" in lieu thereof",
+    "increase the ad valorem rate of duty set forth in section 2(c)(i) of Executive Order 14256 from 30 percent to 90 percent",
+    "a 34 percent tariff would be imposed on all goods imported into the PRC"
+  ],
+  "extra": {
+    "actor": "President (IEEPA/Trade Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "China imports",
+      "e-commerce/de minimis parcels",
+      "manufacturing",
+      "retail"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-14",
+  "doc_id": "exec202506378",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

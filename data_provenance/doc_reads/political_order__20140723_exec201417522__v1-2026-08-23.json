@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.9,
+  "evidence": [
+    "prohibiting discrimination based on sexual orientation and gender identity",
+    "the Secretary of Labor shall prepare regulations to implement the requirements",
+    "This order shall become effective immediately"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "federal contracting",
+      "employment law"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-07-23",
+  "doc_id": "exec201417522",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

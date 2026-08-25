@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.1,
+    "gold": 0,
+    "dollar": 0,
+    "oil": 0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "We continue to expect a total revenue level for 2011 clearly above \u20ac 5 billion",
+    "Backlog at \u20ac 3,330 million, 134 systems with ASP of \u20ac 28.4 million for new tools",
+    "Net system bookings of 40 systems, \u20ac 845 million"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.05,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2011-05-11",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

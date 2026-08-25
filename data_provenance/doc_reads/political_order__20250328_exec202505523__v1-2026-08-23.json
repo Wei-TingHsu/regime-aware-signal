@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.85,
+  "evidence": [
+    "require, in its national mail voter registration form issued under 52 U.S.C. 20508: documentary proof of United States citizenship",
+    "cease providing Federal funds to States that do not comply with the Federal laws",
+    "there be a uniform and nondiscriminatory ballot receipt deadline of Election Day"
+  ],
+  "extra": {
+    "actor": "President/Election Assistance Commission/DOJ/DHS",
+    "is_decided": true,
+    "sectors": [
+      "election administration",
+      "voting systems",
+      "state and local government funding"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-28",
+  "doc_id": "exec202505523",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

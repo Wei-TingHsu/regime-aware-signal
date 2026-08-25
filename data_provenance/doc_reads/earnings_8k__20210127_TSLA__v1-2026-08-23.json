@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "we expect to achieve 50% average annual growth in vehicle deliveries",
+    "which we expect to be the case in 2021",
+    "operating margin will continue to grow over time, continuing to reach industry-leading levels"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.3,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2021-01-27",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "Approved the distribution of a NT$3.00 per share cash dividend",
+    "Approved capital appropriations of approximately US$366.1 million",
+    "Net income attributable to shareholders of the parent 206,986,561"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2023-05-09",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

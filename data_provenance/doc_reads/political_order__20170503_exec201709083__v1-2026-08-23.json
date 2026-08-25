@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "this order establishes the American Technology Council (ATC)",
+    "coordinate the vision, strategy, and direction for the Federal Government's use of information technology",
+    "This order, and the ATC established hereunder, shall terminate on January 20, 2021"
+  ],
+  "extra": {
+    "actor": "President (Executive Office/OMB/tech agencies)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "government IT services",
+      "federal contracting"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-05-03",
+  "doc_id": "exec201709083",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "2022 financial outlook provided",
+    "Diluted earnings per share ~$26.70",
+    "Lockheed Martin believes it is highly likely that the FTC will vote to sue to block the transaction"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.05,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2022-01-25",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

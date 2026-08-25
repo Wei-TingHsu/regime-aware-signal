@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "This order commences the process for eliminating anti-competitive regulations",
+    "Within 70 days of the date of this order, agency heads shall each provide",
+    "a consolidated list of regulations that warrant rescission or modification"
+  ],
+  "extra": {
+    "actor": "President (executive agencies, FTC, DOJ, OMB)",
+    "is_decided": true,
+    "sectors": [
+      "regulated industries broadly",
+      "licensing/accreditation sectors",
+      "government procurement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-15",
+  "doc_id": "exec202506463",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

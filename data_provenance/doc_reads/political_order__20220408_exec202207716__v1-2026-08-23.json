@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.15,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "shall review agency actions to identify ways to continue to expand the availability of affordable health coverage",
+    "It remains the policy of my Administration to protect and strengthen Medicaid and the ACA",
+    "Agencies with authorities and responsibilities related to Medicaid and the ACA are continuing their review"
+  ],
+  "extra": {
+    "actor": "President (agencies directed to review policy)",
+    "is_decided": false,
+    "sectors": [
+      "healthcare",
+      "health insurance",
+      "managed care",
+      "hospitals"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-04-08",
+  "doc_id": "exec202207716",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

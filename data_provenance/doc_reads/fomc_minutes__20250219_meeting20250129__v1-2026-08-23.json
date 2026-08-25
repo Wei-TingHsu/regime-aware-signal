@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": -0.2,
+    "gold": 0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "all participants viewed it as appropriate to maintain the target range for the federal funds rate",
+    "participants generally pointed to upside risks to the inflation outlook",
+    "it may be appropriate to consider pausing or slowing balance sheet runoff until the resolution of this event"
+  ],
+  "extra": {
+    "stance": 0.3,
+    "dispersion": 0.4
+  },
+  "source": "fomc_minutes",
+  "date": "2025-02-19",
+  "doc_id": "meeting20250129",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

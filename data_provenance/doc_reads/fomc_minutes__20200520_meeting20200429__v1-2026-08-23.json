@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.15
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "Financial conditions had shown notable improvement over recent weeks.",
+    "all participants judged that it would be appropriate to maintain the target range for the federal funds rate at 0 to 1/4 percent",
+    "Some participants commented that the Committee could make its forward guidance for the path for the federal funds rate more explicit"
+  ],
+  "extra": {
+    "stance": -0.7,
+    "dispersion": 0.45
+  },
+  "source": "fomc_minutes",
+  "date": "2020-05-20",
+  "doc_id": "meeting20200429",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

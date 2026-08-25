@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "Azure and other cloud services revenue growth of 33% (up 35% in constant currency)",
+    "Microsoft Cloud revenue of $42.4 billion, up 20%",
+    "Diluted earnings per share was $3.46 and increased 18%"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.0,
+    "ticker": "MSFT"
+  },
+  "source": "earnings_8k",
+  "date": "2025-04-30",
+  "doc_id": "MSFT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

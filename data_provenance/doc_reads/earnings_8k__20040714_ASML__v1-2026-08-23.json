@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "we expect that the positive market conditions will stay with us well into 2005",
+    "ASML expects the gross margin will reach 40 percent by Q4 2004",
+    "It is expected that new unit sales will accelerate in Q4 2004"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.5,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2004-07-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

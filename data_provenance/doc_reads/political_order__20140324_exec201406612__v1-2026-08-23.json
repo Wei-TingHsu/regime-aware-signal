@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.15,
+    "gold": 0.2,
+    "dollar": 0.1,
+    "oil": 0.15
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "operate in such sectors of the Russian Federation economy as may be determined",
+    "purported annexation of Crimea and its use of force in Ukraine",
+    "hereby expand the scope of the national emergency"
+  ],
+  "extra": {
+    "actor": "President Obama / Treasury-State",
+    "is_decided": true,
+    "sectors": [
+      "financial services",
+      "energy",
+      "metals and mining",
+      "engineering",
+      "defense"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-03-24",
+  "doc_id": "exec201406612",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

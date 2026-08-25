@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.2,
+    "gold": 0.0,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 20,
+  "specificity": 0.45,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "a further measured reduction in the pace of the Committee's asset purchases was appropriate at this meeting",
+    "it would be appropriate to complete asset purchases with a $15 billion reduction in the pace of purchases",
+    "Most participants expressed concerns that in times of financial stress, the facility's counterparties could shift investments"
+  ],
+  "extra": {
+    "stance": 0.05,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2014-07-09",
+  "doc_id": "meeting20140618",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

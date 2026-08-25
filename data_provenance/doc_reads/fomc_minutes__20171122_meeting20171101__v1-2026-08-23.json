@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": -0.3,
+    "gold": -0.1,
+    "dollar": 0.2,
+    "oil": 0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 15,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Several other members, however, were reasonably confident that the economy and inflation would evolve in coming months such that an additional firming would likely be appropriate",
+    "many participants observed that continued low readings on inflation ... might reflect ... developments that could prove more persistent",
+    "the probability of an increase at the December meeting rose to about 85 percent"
+  ],
+  "extra": {
+    "stance": 0.3,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2017-11-22",
+  "doc_id": "meeting20171101",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "Machinery equipment for advanced technology capacity: NT$66.4 billion",
+    "Fab construction & installation of fab facilities: NT$74.8 billion",
+    "R&D capital investments and sustaining capital expenditures: NT$16 billion"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.1,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2019-12-23",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

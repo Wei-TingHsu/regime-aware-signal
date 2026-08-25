@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "designated to have authority to release strategic and critical materials from the National Defense Stockpile",
+    "No release is authorized for economic or budgetary purposes",
+    "ensure that both the Federal Government and the private sector maintain adequate quantities"
+  ],
+  "extra": {
+    "actor": "President/Department of Defense (Under Secretary of Defense for Acquisition and Sustainment)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "critical materials/mining"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-11-03",
+  "doc_id": "exec202124183",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

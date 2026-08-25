@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "shall consider whether to designate veterans",
+    "conduct a rigorous study investigating toxic exposure",
+    "Within 365 days of the date of this order"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, VA/DoD)",
+    "is_decided": false,
+    "sectors": [
+      "veterans affairs",
+      "defense"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-25",
+  "doc_id": "exec202101712",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

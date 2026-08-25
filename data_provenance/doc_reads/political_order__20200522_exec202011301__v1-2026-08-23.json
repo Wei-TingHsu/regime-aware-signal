@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.25,
+  "horizon_days": 90,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.55,
+  "evidence": [
+    "Agencies should address this economic emergency by rescinding, modifying, waiving, or providing exemptions from regulations",
+    "shall identify regulatory standards that may inhibit economic recovery and shall consider taking appropriate action",
+    "determine which, if any, would promote economic recovery if made permanent"
+  ],
+  "extra": {
+    "actor": "President (directing all executive agencies)",
+    "is_decided": true,
+    "sectors": [
+      "broad business/regulatory compliance",
+      "small business",
+      "administrative enforcement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-05-22",
+  "doc_id": "exec202011301",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

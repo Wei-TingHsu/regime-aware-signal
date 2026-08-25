@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.1,
+    "gold": -0.05,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.15,
+  "confidence": 0.7,
+  "evidence": [
+    "decided to maintain the target range for the federal funds rate at 1 to 1-1/4 percent",
+    "economic conditions will evolve in a manner that will warrant gradual increases in the federal funds rate",
+    "labor market has continued to strengthen and that economic activity has been rising at a solid rate"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "guidance": 0.3
+  },
+  "source": "fomc_statement",
+  "date": "2017-11-01",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

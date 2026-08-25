@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": -0.05,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "indicators of economic activity and employment have turned up recently",
+    "will continue to increase its holdings of Treasury securities by at least $80 billion per month",
+    "expects it will be appropriate to maintain this target range until labor market conditions have reached levels"
+  ],
+  "extra": {
+    "stance": -0.65,
+    "guidance": 0.7
+  },
+  "source": "fomc_statement",
+  "date": "2021-03-17",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

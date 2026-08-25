@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "All property and interests in property of DAB... are blocked",
+    "shall promptly transfer the blocked property... into a consolidated account held at the Federal Reserve Bank of New York",
+    "I hereby declare a national emergency to deal with that threat"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "banking",
+      "sanctions",
+      "foreign policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-02-15",
+  "doc_id": "exec202203346",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

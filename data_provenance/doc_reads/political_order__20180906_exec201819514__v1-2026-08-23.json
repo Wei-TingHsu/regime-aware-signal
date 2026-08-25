@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 250,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "The Secretary of Labor shall examine policies that would",
+    "consider whether to issue a notice of proposed rulemaking, other guidance, or both",
+    "increase retirement security for part-time workers, sole proprietors, working owners"
+  ],
+  "extra": {
+    "actor": "President (DOL/Treasury directed)",
+    "is_decided": false,
+    "sectors": [
+      "financials",
+      "asset management",
+      "insurance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-09-06",
+  "doc_id": "exec201819514",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

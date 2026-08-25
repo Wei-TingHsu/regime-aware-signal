@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established, effective 12:01 a.m. eastern daylight time on June 15, 2014, a Board of three members",
+    "no change in the conditions out of which the disputes arose shall be made by the parties",
+    "The Board shall report to the President with respect to the disputes within 30 days"
+  ],
+  "extra": {
+    "actor": "President (RLA Section 9A)",
+    "is_decided": true,
+    "sectors": [
+      "transportation",
+      "labor relations",
+      "SEPTA"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-06-18",
+  "doc_id": "exec201414432",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

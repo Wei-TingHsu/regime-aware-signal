@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.25,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "initiate a rulemaking to update Part 193 and shall finalize such rulemaking no later than 13 months",
+    "propose for notice and comment a rule...that would treat LNG the same as other cryogenic liquids",
+    "publish for notice and comment proposed rules revising such regulations"
+  ],
+  "extra": {
+    "actor": "President (EPA, DOT, DOI, USDA, Commerce, Labor)",
+    "is_decided": true,
+    "sectors": [
+      "energy infrastructure",
+      "oil and gas",
+      "LNG",
+      "pipelines"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-04-15",
+  "doc_id": "exec201907656",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

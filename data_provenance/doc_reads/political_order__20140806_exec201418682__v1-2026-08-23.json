@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.7,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "Severe acute respiratory syndromes, which are diseases that are associated with fever",
+    "This subsection does not apply to influenza.",
+    "Revised List of Quarantinable Communicable Diseases"
+  ],
+  "extra": {
+    "actor": "President (HHS recommendation)",
+    "is_decided": true,
+    "sectors": [
+      "public health",
+      "healthcare"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-08-06",
+  "doc_id": "exec201418682",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "the FTC rigorously enforce the Better Online Ticket Sales Act",
+    "evaluate and, if appropriate, take enforcement action to prevent unfair, deceptive, and anti-competitive conduct",
+    "Within 180 days of the date of this order... shall jointly submit a report"
+  ],
+  "extra": {
+    "actor": "President (FTC, DOJ, Treasury directed)",
+    "is_decided": true,
+    "sectors": [
+      "live entertainment",
+      "ticketing",
+      "consumer protection"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-03",
+  "doc_id": "exec202505906",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

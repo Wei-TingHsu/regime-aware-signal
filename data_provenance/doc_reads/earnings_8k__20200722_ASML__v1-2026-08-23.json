@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.5,
+  "evidence": [
+    "We currently see no push-outs or cancellations as a result of the COVID-19 crisis.",
+    "We believe this is a matter of postponement, not of cancellation.",
+    "an increase of 14% compared to last year"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2020-07-22",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

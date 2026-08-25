@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.02,
+    "oil": 0.03
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby terminate the national emergency declared in Executive Order 13396",
+    "removal of multilateral sanctions by the United Nations Security Council in Resolution 2283",
+    "progress achieved in the stabilization of C\u00f4te d'Ivoire"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Cote d'Ivoire",
+      "natural resources trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-09-16",
+  "doc_id": "exec201622454",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

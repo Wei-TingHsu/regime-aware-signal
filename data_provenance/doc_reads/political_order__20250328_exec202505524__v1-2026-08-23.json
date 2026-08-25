@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "This order promotes financial integrity by enabling the Department of the Treasury to more easily conduct improper payment and fraud prevention screening",
+    "Within 180 days of the date of this order, the OMB Director shall issue guidance that directs agencies... to consolidate their core financial systems",
+    "the Secretary of the Treasury shall assess whether to maintain disbursing authority that it has delegated to agencies"
+  ],
+  "extra": {
+    "actor": "Department of the Treasury / OMB",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "federal payments/fintech"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-28",
+  "doc_id": "exec202505524",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

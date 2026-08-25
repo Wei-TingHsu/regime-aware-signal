@@ -28,6 +28,7 @@ Optional:
     --refit-every 20  --iters 1000  --min-history 8
 """
 import argparse
+from pathlib import Path          # used by the --dump-spreads block in main()
 
 import numpy as np
 import pandas as pd
@@ -45,7 +46,11 @@ def load_returns():
     return df
 
 
-def evaluate(records, universe, N, iters, rng, label):
+def evaluate(records, universe, N, iters, rng, label, collect=None):
+    """collect: optional dict; when given, the per-rebalance spread series and
+    the panel positions are stored under `label`. Added 2026-08-25 for the
+    paired no-decay vs incumbent test (tracker 1e). Purely additive -- no
+    existing output or behaviour changes."""
     """records: list of (pos, exp_fwd[A], realized[A]); universe: bool mask over assets."""
     spreads, hits, long_r, short_r = [], [], [], []
     eligs = []
@@ -91,6 +96,12 @@ def evaluate(records, universe, N, iters, rng, label):
     print(f"  WIN/LOSS: avg up-week {up.mean()*100:+.3f}%  avg down-week "
           f"{dn.mean()*100:+.3f}%  payoff ratio {payoff:.2f}")
     print(f"  PERMUTATION vs random baskets: null {null.mean()*100:+.3f}%  p = {p:.4f}")
+    if collect is not None:
+        collect[label] = dict(
+            spreads=[float(x) for x in spreads],
+            positions=[int(pos) for pos, _e, _r in records
+                       if (universe & ~np.isnan(_e) & ~np.isnan(_r)).sum() >= 2 * N],
+            n=int(len(spreads)), sharpe=float(spread_sharpe), p=float(p))
 
 
 def main():
@@ -104,6 +115,11 @@ def main():
     ap.add_argument("--min-history", type=float, default=8.0)
     ap.add_argument("--min-analogs", type=int, default=20)
     ap.add_argument("--min-cov", type=int, default=10)
+    ap.add_argument("--dump-spreads", default=None, metavar="PATH",
+                   help="write the per-rebalance spread series for both "
+                        "universes to PATH as JSON. Used by "
+                        "src/engine_b_paired.py for the paired no-decay vs "
+                        "incumbent test. Additive: nothing else changes.")
     ap.add_argument("--half-life", type=float, default=None, metavar="YEARS",
                     help="recency half-life in YEARS. Converted to a per-session "
                          "lambda as ln2/(HL*252). Pass 'inf' for NO decay. "
@@ -202,9 +218,18 @@ def main():
     print(f"\nwalk-forward complete: {len(records)} rebalances "
           f"({dates[records[0][0]].date()} -> {dates[records[-1][0]].date()})")
 
-    evaluate(records, np.ones(A, bool), N, args.iters, rng, f"ALL {A} ASSETS")
-    evaluate(records, long_hist, N, args.iters, rng,
-             f"LONG-HISTORY ONLY (>= {args.min_history:g}y)")
+    collect = {} if args.dump_spreads else None
+    evaluate(records, np.ones(A, bool), N, args.iters, rng, "ALL", collect)
+    evaluate(records, long_hist, N, args.iters, rng, "LONG-HISTORY", collect)
+    if collect is not None:
+        import json as _j
+        meta = dict(lam=float(lam), lam_src=lam_src, horizon=int(H),
+                    nbasket=int(N), min_history=float(args.min_history),
+                    rebalances=int(len(records)))
+        Path(args.dump_spreads).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.dump_spreads).write_text(
+            _j.dumps(dict(meta=meta, universes=collect), indent=2))
+        print(f"\n  spread series -> {args.dump_spreads}")
 
     print("\n" + "=" * 78)
     print("READING")

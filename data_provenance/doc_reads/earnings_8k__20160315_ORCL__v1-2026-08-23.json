@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "Our cloud business is now in a hyper-growth phase.",
+    "These two factors will ignite substantial EPS and cash flow growth over Oracle's next few quarters.",
+    "authorized the repurchase of up to an additional $10 billion of common stock"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.3,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2016-03-15",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

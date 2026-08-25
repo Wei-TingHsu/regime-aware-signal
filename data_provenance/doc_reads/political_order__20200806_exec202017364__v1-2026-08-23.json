@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "announce a new model...to test innovative payment mechanisms",
+    "develop and implement a strategy to improve rural health",
+    "propose a regulation to extend these measures"
+  ],
+  "extra": {
+    "actor": "HHS/USDA/FCC",
+    "is_decided": false,
+    "sectors": [
+      "healthcare",
+      "telehealth",
+      "rural infrastructure"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-08-06",
+  "doc_id": "exec202017364",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

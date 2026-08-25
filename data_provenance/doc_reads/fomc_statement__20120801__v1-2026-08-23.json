@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.4,
+    "gold": 0.3,
+    "dollar": -0.3,
+    "oil": 0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "economic activity decelerated somewhat over the first half of this year",
+    "exceptionally low levels for the federal funds rate at least through late 2014",
+    "will provide additional accommodation as needed to promote a stronger economic recovery"
+  ],
+  "extra": {
+    "stance": -0.4,
+    "guidance": -0.5
+  },
+  "source": "fomc_statement",
+  "date": "2012-08-01",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

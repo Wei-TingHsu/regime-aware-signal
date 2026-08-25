@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.85,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "TSMC has also started the construction of a second fab",
+    "The overall investment for these two fabs will be approximately US$40 billion",
+    "TSMC Arizona\u2019s two fabs will manufacture over 600,000 wafers per year"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.2,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2022-12-06",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

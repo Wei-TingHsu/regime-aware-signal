@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "I hereby designate illicit fentanyl and its core precursor chemicals as Weapons of Mass Destruction (WMD)",
+    "Secretary of War and the Attorney General shall determine whether the threats posed by illicit fentanyl",
+    "pursue appropriate actions against relevant assets and financial institutions"
+  ],
+  "extra": {
+    "actor": "President/DOJ/State/Treasury/DoW/DHS",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "cartel-linked financial institutions",
+      "border security",
+      "pharmaceuticals/precursor chemicals"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-12-18",
+  "doc_id": "exec202523417",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

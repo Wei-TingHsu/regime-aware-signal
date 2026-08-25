@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": -0.2,
+    "oil": 0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.4,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "staff no longer judged that the economy would enter a mild recession toward the end of the year",
+    "A couple of participants indicated that they favored leaving the target range for the federal funds rate unchanged",
+    "risks to the achievement of the Committee's goals had become more two sided"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.45
+  },
+  "source": "fomc_minutes",
+  "date": "2023-08-16",
+  "doc_id": "meeting20230726",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

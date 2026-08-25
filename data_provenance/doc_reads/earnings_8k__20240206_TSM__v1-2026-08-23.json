@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 250,
+  "specificity": 0.7,
+  "novelty": 0.55,
+  "confidence": 0.6,
+  "evidence": [
+    "overall investment in JASM will exceed US$20 billion",
+    "second fab, which is scheduled to begin operation by the end of the 2027",
+    "Toyota will also take a minority stake"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.2,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2024-02-06",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

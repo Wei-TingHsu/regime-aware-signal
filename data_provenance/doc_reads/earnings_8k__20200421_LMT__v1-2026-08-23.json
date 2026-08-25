@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "Updates 2020 outlook for sales; maintains 2020 outlook for operating profit, earnings per share and cash from operations",
+    "Ultimate impact of COVID-19 on 2020 outlook uncertain",
+    "The outbreak did not have a material impact on the corporation's operating results or business in the first quarter of 2020"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": -0.05,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2020-04-21",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

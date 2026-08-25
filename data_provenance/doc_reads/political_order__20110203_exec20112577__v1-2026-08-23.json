@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "establishes ... the President's Council on Jobs and Competitiveness",
+    "The functions of the PCJC are advisory only.",
+    "The PCJC shall terminate 2 years after the date of this order"
+  ],
+  "extra": {
+    "actor": "President (Executive Office)",
+    "is_decided": true,
+    "sectors": [
+      "advisory body",
+      "economic policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-02-03",
+  "doc_id": "exec20112577",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.55,
+  "confidence": 0.75,
+  "evidence": [
+    "Revenue is expected to be $4.40 billion, plus or minus 2 percent.",
+    "Record Data Center revenue of $1.75 billion, up 167 percent from a year earlier",
+    "Adoption of NVIDIA computing is accelerating, driving record revenue and exceptional growth"
+  ],
+  "extra": {
+    "surprise": 0.6,
+    "guidance_change": 0.6,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2020-08-19",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

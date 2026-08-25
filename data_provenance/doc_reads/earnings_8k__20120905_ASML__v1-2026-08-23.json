@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.15,
+  "confidence": 0.55,
+  "evidence": [
+    "ASML's H2 2012 revenue level is expected to be between \u20ac2.2 billion and \u20ac2.4 billion",
+    "Net sales around \u20ac1.2 billion",
+    "Received customer commitment to purchase 4 additional NXE:3300 systems for delivery in 2014"
+  ],
+  "extra": {
+    "surprise": 0.05,
+    "guidance_change": 0.05,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2012-09-05",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,59 @@
+==============================================================================
+RECENCY KERNEL SWEEP -- pre-registered ladder {2, 4, 8, 16, inf}
+==============================================================================
+  primary rung: HL=4y, LONG-HISTORY universe
+  permutations: 1000 per cell
+
+==============================================================================
+ENGINE A -- analog_core (z-scored PCs, frozen GMM, no-decay default)
+==============================================================================
+  frozen registry verified (sha 6b19b880f68c), baseline: horizon 5d | level | gaussian | sigma 1.5 | n=4
+  panel: 5191 sessions, 47 assets | long-history (>=8y): 35 assets
+  dropped from long-history: WCLD, URNM, FIVG, UFO, MAGS, DRAM, FNGS, SPCX, FLY, SNDK, ARM, PLTR
+
+  CONTROL RUNG (HL=inf) -- must reproduce model_1_baseline element-wise
+    ALL            826 rebalances, spread series identical (max |diff| = 0.0)
+    LONG-HISTORY   826 rebalances, spread series identical (max |diff| = 0.0)
+  CONTROL PASSED -- harness matches the frozen model exactly.
+
+  running the ladder (1000 permutations per cell)
+    HL inf (no decay) ALL            n= 826  Sharpe +0.4034  spread +0.2219%  p 0.0020
+    HL inf (no decay) LONG-HISTORY   n= 826  Sharpe +0.2526  spread +0.1250%  p 0.0470
+    HL 16y            ALL            n= 826  Sharpe +0.4043  spread +0.2350%  p 0.0020
+    HL 16y            LONG-HISTORY   n= 826  Sharpe +0.2338  spread +0.1214%  p 0.0480
+    HL 8y             ALL            n= 826  Sharpe +0.5301  spread +0.3126%  p 0.0010
+    HL 8y             LONG-HISTORY   n= 826  Sharpe +0.2495  spread +0.1291%  p 0.0290
+    HL 4y             ALL            n= 826  Sharpe +0.4977  spread +0.2991%  p 0.0010
+    HL 4y             LONG-HISTORY   n= 826  Sharpe +0.3205  spread +0.1694%  p 0.0070  <- PRIMARY
+    HL 2y             ALL            n= 826  Sharpe +0.5981  spread +0.3689%  p 0.0010
+    HL 2y             LONG-HISTORY   n= 826  Sharpe +0.4194  spread +0.2279%  p 0.0010
+
+==============================================================================
+ENGINE B -- analog_backtest (raw PCs, expanding refit, incumbent decay)
+==============================================================================
+
+  INCUMBENT (config lambda=0.0008/session, HL 3.44y) -- off-ladder, never a rung
+    ALL            n= 836  Sharpe +0.5200  spread +0.2990%  p 0.0010
+    LONG-HISTORY   n= 836  Sharpe +0.2500  spread +0.1330%  p 0.0370
+
+  running the ladder (1000 permutations per cell)
+    HL inf (no decay) ALL            n= 836  Sharpe +0.5300  spread +0.2880%  p 0.0010  <- NEVER COMPUTED BEFORE
+    HL inf (no decay) LONG-HISTORY   n= 836  Sharpe +0.3800  spread +0.1890%  p 0.0050  <- NEVER COMPUTED BEFORE
+    HL 16y            ALL            n= 836  Sharpe +0.4700  spread +0.2650%  p 0.0010
+    HL 16y            LONG-HISTORY   n= 836  Sharpe +0.2400  spread +0.1210%  p 0.0539
+    HL 8y             ALL            n= 836  Sharpe +0.4800  spread +0.2750%  p 0.0010
+    HL 8y             LONG-HISTORY   n= 836  Sharpe +0.2900  spread +0.1480%  p 0.0260
+    HL 4y             ALL            n= 836  Sharpe +0.5400  spread +0.3130%  p 0.0010
+    HL 4y             LONG-HISTORY   n= 836  Sharpe +0.3200  spread +0.1680%  p 0.0050  <- PRIMARY
+    HL 2y             ALL            n= 836  Sharpe +0.4400  spread +0.2670%  p 0.0010
+    HL 2y             LONG-HISTORY   n= 836  Sharpe +0.3000  spread +0.1600%  p 0.0140
+
+==============================================================================
+ENGINE A VERDICT: POSITIVE
+  primary rung HL=4y beats the no-decay control (+0.3205 vs +0.2526) and the improvement is monotone or stable across 5 adjacent rungs. Criterion MET.
+ENGINE B VERDICT: NULL
+  primary rung HL=4y Sharpe +0.3200 does not beat the no-decay control +0.3800. The registered criterion requires BOTH conditions; the first fails, so stability is not evaluated.
+==============================================================================
+
+  -> /Users/hsuweiting/Projects/regime-aware-signal/docs/recency_sweep_results.md
+  -> /Users/hsuweiting/Projects/regime-aware-signal/processed/recency_sweep.json

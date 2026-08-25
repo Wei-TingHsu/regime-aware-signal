@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "The Department of Health and Human Services is hereby designated as the Central Authority",
+    "The Convention will enter into force for the United States on January 1, 2017."
+  ],
+  "extra": {
+    "actor": "HHS",
+    "is_decided": true,
+    "sectors": [
+      "family law",
+      "child support administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-12-13",
+  "doc_id": "exec201630101",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

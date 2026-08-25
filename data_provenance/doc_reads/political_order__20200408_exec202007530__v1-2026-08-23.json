@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "establishing the Committee for the Assessment of Foreign Participation in the United States Telecommunications Services Sector",
+    "recommend that the FCC deny the application due to the risk to the national security",
+    "The Committee shall review and assess applications to determine whether granting a license... poses a risk"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, formalizing 'Team Telecom' review process)",
+    "is_decided": true,
+    "sectors": [
+      "telecommunications",
+      "foreign investment/national security review",
+      "FCC-regulated licensees"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-04-08",
+  "doc_id": "exec202007530",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

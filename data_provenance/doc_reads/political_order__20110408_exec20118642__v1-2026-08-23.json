@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "Executive Order 13507 of April 8, 2009 (Establishment of the White House Office of Health Reform), is hereby revoked",
+    "reestablished and shall terminate 2 years from the date of this order",
+    "inserting in lieu thereof Chair of the Council on Environmental Quality"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-04-08",
+  "doc_id": "exec20118642",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

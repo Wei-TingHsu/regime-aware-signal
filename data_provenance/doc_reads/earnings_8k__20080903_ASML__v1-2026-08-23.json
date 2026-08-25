@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "No change from last quarter guidance",
+    "Reiterate Q3 bookings guidance",
+    "Guidance for lower revenue 2008 (may see \u2014 20% versus 2007) unchanged"
+  ],
+  "extra": {
+    "surprise": -0.05,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-09-03",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

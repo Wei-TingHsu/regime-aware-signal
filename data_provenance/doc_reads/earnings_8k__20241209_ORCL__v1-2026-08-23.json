@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.45,
+  "confidence": 0.6,
+  "evidence": [
+    "Total Remaining Performance Obligations $97 billion, up 49% in USD",
+    "Cloud Infrastructure (IaaS) Revenue $2.4 billion, up 52%",
+    "This fiscal year, total Oracle Cloud revenue should top $25 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.5,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2024-12-09",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "The Commission shall be composed of not more than ten members appointed by the President.",
+    "Amendment to Executive Order 13639"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "elections administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-05-24",
+  "doc_id": "exec201312650",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "this Department should once again be known as the Department of War",
+    "may be recognized by that title in official correspondence",
+    "a recommendation on the actions required to permanently change the name"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-09-10",
+  "doc_id": "exec202517508",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

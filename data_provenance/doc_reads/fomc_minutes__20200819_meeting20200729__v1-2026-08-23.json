@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.25,
+    "gold": 0.2,
+    "dollar": -0.2,
+    "oil": -0.05
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "several participants suggested that additional accommodation could be required to promote economic recovery",
+    "providing greater clarity regarding the likely path of the target range for the federal funds rate would be appropriate at some point",
+    "most judged that yield caps and targets would likely provide only modest benefits in the current environment"
+  ],
+  "extra": {
+    "stance": -0.4,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2020-08-19",
+  "doc_id": "meeting20200729",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

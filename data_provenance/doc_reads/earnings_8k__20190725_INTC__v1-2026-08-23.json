@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.55,
+  "confidence": 0.7,
+  "evidence": [
+    "Raising full-year revenue outlook to $69.5 billion, up $500 million from April guidance.",
+    "Second-quarter revenue of $16.5 billion... exceeded April guidance.",
+    "Announced an agreement for Apple to acquire the majority of Intel's smartphone modem business"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.5,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2019-07-25",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

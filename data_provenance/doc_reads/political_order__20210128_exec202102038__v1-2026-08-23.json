@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "maximize the use of goods, products, and materials produced in, and services offered in, the United States",
+    "establish within OMB the Made in America Office",
+    "increase the numerical threshold for domestic content requirements for end products"
+  ],
+  "extra": {
+    "actor": "President Biden / OMB / FAR Council",
+    "is_decided": true,
+    "sectors": [
+      "industrials",
+      "government procurement",
+      "manufacturing",
+      "steel",
+      "defense contractors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-28",
+  "doc_id": "exec202102038",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

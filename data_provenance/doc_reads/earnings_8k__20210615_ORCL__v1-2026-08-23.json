@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "total revenue beating guidance by nearly $200 million, and non-GAAP earnings per share beating guidance by $0.24",
+    "Fusion ERP was up 30% in Q3 and up 46% in Q4",
+    "Revenue from our Gen2 Cloud Infrastructure business including Autonomous Database grew over 100% in Q4"
+  ],
+  "extra": {
+    "surprise": 0.6,
+    "guidance_change": 0.3,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2021-06-15",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "This order shall not apply to contracts or contract-like instruments entered into with the Federal Government in connection with seasonal recreational services",
+    "Seasonal recreational services include river running, hunting, fishing, horseback riding, camping"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "recreation",
+      "tourism",
+      "federal contracting",
+      "outdoor services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-06-01",
+  "doc_id": "exec201811936",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

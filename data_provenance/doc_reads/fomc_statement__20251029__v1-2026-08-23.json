@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.3,
+    "gold": 0.3,
+    "dollar": -0.3,
+    "oil": 0.2
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.35,
+  "confidence": 0.7,
+  "evidence": [
+    "lower the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent",
+    "conclude the reduction of its aggregate securities holdings on December 1",
+    "downside risks to employment rose in recent months"
+  ],
+  "extra": {
+    "stance": -0.2,
+    "guidance": 0.0
+  },
+  "source": "fomc_statement",
+  "date": "2025-10-29",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

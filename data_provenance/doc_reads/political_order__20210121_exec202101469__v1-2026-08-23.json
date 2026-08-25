@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.15,
+  "novelty": 0.05,
+  "confidence": 0.85,
+  "evidence": [
+    "USPS is strongly encouraged to consider similar changes to its Buy American domestic procurement preferences.",
+    "the United States Postmaster General is encouraged to consider",
+    "Nothing in this order shall be construed to impair or otherwise affect"
+  ],
+  "extra": {
+    "actor": "President (USPS/FAR Council encouraged)",
+    "is_decided": false,
+    "sectors": [
+      "postal",
+      "government procurement",
+      "manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-21",
+  "doc_id": "exec202101469",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

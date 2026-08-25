@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.85,
+  "evidence": [
+    "Crime is out of control in the District of Columbia.",
+    "the Mayor of the District of Columbia (Mayor) shall provide the services of the Metropolitan Police force for Federal purposes",
+    "The authority of the President conferred by section 740(a) of the Home Rule Act...is delegated to the Attorney General"
+  ],
+  "extra": {
+    "actor": "President/DOJ",
+    "is_decided": true,
+    "sectors": [
+      "local governance",
+      "law enforcement",
+      "District of Columbia"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-14",
+  "doc_id": "exec202515550",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

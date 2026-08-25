@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": -0.15,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "nine members agreed to lower the target range for the federal funds rate by 1/4 percentage point",
+    "three members voted against that decision",
+    "the Committee would initiate purchases of shorter-term Treasury securities as needed to maintain an ample supply of reserves"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2025-12-30",
+  "doc_id": "meeting20251210",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

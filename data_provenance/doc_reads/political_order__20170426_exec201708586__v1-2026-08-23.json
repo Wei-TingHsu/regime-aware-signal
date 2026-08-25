@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "shall immediately review all significant tax regulations issued by the Department of the Treasury",
+    "recommends specific actions to mitigate the burden imposed by regulations",
+    "to modify or rescind such regulations as appropriate and consistent with law"
+  ],
+  "extra": {
+    "actor": "Secretary of the Treasury",
+    "is_decided": true,
+    "sectors": [
+      "financial",
+      "corporate tax",
+      "regulatory"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-04-26",
+  "doc_id": "exec201708586",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

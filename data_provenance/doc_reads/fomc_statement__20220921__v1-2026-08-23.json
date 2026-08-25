@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": -0.5,
+    "gold": -0.4,
+    "dollar": 0.5,
+    "oil": -0.2
+  },
+  "magnitude": 0.65,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "raise the target range for the federal funds rate to 3 to 3-1/4 percent",
+    "anticipates that ongoing increases in the target range will be appropriate",
+    "strongly committed to returning inflation to its 2 percent objective"
+  ],
+  "extra": {
+    "stance": 0.7,
+    "guidance": 0.6
+  },
+  "source": "fomc_statement",
+  "date": "2022-09-21",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

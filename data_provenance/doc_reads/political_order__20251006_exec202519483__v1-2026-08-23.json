@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.35,
+  "horizon_days": 90,
+  "specificity": 0.4,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "it is the policy of the United States to guarantee the security and territorial integrity of the State of Qatar against external attack",
+    "The United States shall regard any armed attack on the territory, sovereignty, or critical infrastructure of the State of Qatar as a threat to the peace and security of the United States",
+    "maintain joint contingency planning with the State of Qatar to ensure a rapid and coordinated response"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "energy",
+      "geopolitics",
+      "Middle East security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-10-06",
+  "doc_id": "exec202519483",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

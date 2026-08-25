@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": -0.2,
+    "gold": -0.1,
+    "dollar": 0.3,
+    "oil": -0.1
+  },
+  "magnitude": 0.55,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.25,
+  "confidence": 0.65,
+  "evidence": [
+    "members agreed to raise the target range for the federal funds rate to 1/4 to 1/2 percent at this meeting",
+    "some members said that their decision to raise the target range was a close call",
+    "Committee expects that economic conditions will evolve in a manner that will warrant only gradual increases in the federal funds rate"
+  ],
+  "extra": {
+    "stance": 0.3,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2016-01-06",
+  "doc_id": "meeting20151216",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

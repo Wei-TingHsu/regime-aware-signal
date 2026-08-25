@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "revenues for May 2019 were approximately NT$80.44 billion, an increase of 7.7 percent from April 2019",
+    "a decrease of 0.7 percent from May 2018",
+    "Revenues for January through May 2019 totaled NT$373.84 billion, a decrease of 9.0 percent"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2019-06-10",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

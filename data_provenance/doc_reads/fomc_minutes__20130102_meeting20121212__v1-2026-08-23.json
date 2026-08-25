@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.3,
+    "gold": 0.2,
+    "dollar": -0.2,
+    "oil": 0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 20,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "the Committee decided to indicate...at least as long as the unemployment rate remains above 6\u00bd percent",
+    "purchase longer-term Treasury securities, initially at a pace of $45 billion per month",
+    "Several others thought that it would probably be appropriate to slow or to stop purchases well before the end of 2013"
+  ],
+  "extra": {
+    "stance": 0.4,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2013-01-02",
+  "doc_id": "meeting20121212",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

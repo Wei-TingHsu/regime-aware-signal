@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": -0.4,
+    "gold": -0.2,
+    "dollar": 0.3,
+    "oil": 0.1
+  },
+  "magnitude": 0.45,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Most participants anticipated that... these conditions could well be met by the time of the next meeting",
+    "One member, however, preferred to raise the target range for the federal funds rate by 25 basis points at this meeting",
+    "A number of participants pointed to various reasons why the Committee should avoid a delay in policy firming"
+  ],
+  "extra": {
+    "stance": 0.35,
+    "dispersion": 0.7
+  },
+  "source": "fomc_minutes",
+  "date": "2015-11-18",
+  "doc_id": "meeting20151028",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

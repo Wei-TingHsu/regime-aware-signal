@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.25,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 200,
+  "specificity": 0.2,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "shall consider, as appropriate and consistent with applicable law",
+    "tailor rules for community banks and ``smaller banks''",
+    "reduce the regulatory burden on community banks"
+  ],
+  "extra": {
+    "actor": "President (directing CFPB, Federal Reserve, FDIC, OCC, NCUA, FHFA, HUD, VA, USDA)",
+    "is_decided": false,
+    "sectors": [
+      "banks",
+      "mortgage lenders",
+      "community banks",
+      "housing finance",
+      "homebuilders"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-03-18",
+  "doc_id": "exec202605384",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

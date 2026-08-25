@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.4,
+  "confidence": 0.5,
+  "evidence": [
+    "revenues for March 2019 were approximately NT$79.72 billion",
+    "an increase of 30.9 percent from February 2019",
+    "a decrease of 23.1 percent from March 2018"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2019-04-10",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

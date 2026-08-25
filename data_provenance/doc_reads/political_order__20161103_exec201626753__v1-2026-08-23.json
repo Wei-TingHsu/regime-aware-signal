@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "authorized to exercise the function vested in the President",
+    "directing OPM to establish an emergency leave transfer program"
+  ],
+  "extra": {
+    "actor": "President (delegating to OPM Director)",
+    "is_decided": true,
+    "sectors": [
+      "federal government administration",
+      "human resources policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-11-03",
+  "doc_id": "exec201626753",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

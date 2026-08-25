@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "Center for Strategic Counterterrorism Communications",
+    "There is established within the Department of State... a temporary organization",
+    "coordinate, orient, and inform Government-wide public communications activities"
+  ],
+  "extra": {
+    "actor": "Department of State",
+    "is_decided": true,
+    "sectors": [
+      "government",
+      "defense",
+      "communications"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-09-15",
+  "doc_id": "exec201123891",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

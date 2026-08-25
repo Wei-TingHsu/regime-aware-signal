@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 60,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "Section 3(f) of Executive Order 12866 is hereby amended",
+    "shall issue revisions to the Office of Management and Budget's Circular A-4",
+    "Regulatory analysis...shall recognize distributive impacts and equity"
+  ],
+  "extra": {
+    "actor": "President / OIRA / OMB",
+    "is_decided": true,
+    "sectors": [
+      "regulatory process",
+      "administrative procedure"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-04-11",
+  "doc_id": "exec202307760",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 10,
+  "specificity": 0.5,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby declare a national emergency to deal with that threat",
+    "All property and interests in property... are blocked",
+    "misappropriation of state assets of Ukraine or of an economically significant entity"
+  ],
+  "extra": {
+    "actor": "President Obama / Treasury-State",
+    "is_decided": true,
+    "sectors": [
+      "financial sanctions",
+      "energy",
+      "Russia/Ukraine-linked entities"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-03-10",
+  "doc_id": "exec201405323",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

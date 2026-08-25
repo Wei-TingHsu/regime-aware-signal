@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "There is hereby established the President's National Council for the American Worker",
+    "Within 180 days of the date of this order, the Council shall",
+    "The Council shall terminate 2 years after the date of this order"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "education",
+      "workforce training",
+      "labor"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-07-24",
+  "doc_id": "exec201815955",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

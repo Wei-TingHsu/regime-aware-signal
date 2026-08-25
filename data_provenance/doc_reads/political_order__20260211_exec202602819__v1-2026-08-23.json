@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "DHS immigration authorities must access criminal history record information (CHRI)",
+    "exchange, to the maximum extent permitted by law, CHRI with the border security and immigration authorities",
+    "implemented consistent with applicable law and subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "President/DHS/DOJ",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "law enforcement",
+      "border security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-02-11",
+  "doc_id": "exec202602819",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby terminate the national emergency declared in Executive Order 13928",
+    "the threat and imposition of financial sanctions against the Court...are not an effective or appropriate strategy"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "foreign policy",
+      "sanctions",
+      "immigration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-04-07",
+  "doc_id": "exec202107239",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

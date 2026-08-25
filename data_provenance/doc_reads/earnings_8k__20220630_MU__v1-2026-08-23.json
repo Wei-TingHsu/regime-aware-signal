@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.2,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.65,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.6,
+  "confidence": 0.75,
+  "evidence": [
+    "the industry demand environment has weakened, and we are taking action to moderate our supply growth",
+    "$7.2 billion \u00b1 $400 million",
+    "Gross margin 41.5% \u00b1 1.5%"
+  ],
+  "extra": {
+    "surprise": -0.5,
+    "guidance_change": -0.6,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2022-06-30",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

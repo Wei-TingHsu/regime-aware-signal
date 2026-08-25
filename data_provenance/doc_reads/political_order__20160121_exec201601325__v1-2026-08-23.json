@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": -0.2,
+    "dollar": 0.0,
+    "oil": 0.3
+  },
+  "magnitude": 0.6,
+  "horizon_days": 20,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.7,
+  "evidence": [
+    "I am revoking Executive Orders 13574 of May 23, 2011, 13590 of November 20, 2011, 13622 of July 30, 2012, and 13645 of June 3, 2013",
+    "marks a fundamental shift in circumstances with respect to Iran's nuclear program",
+    "provide implementation authorities for aspects of certain statutory sanctions that are outside the scope"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "petrochemical",
+      "financial",
+      "sanctions/Iran"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-01-21",
+  "doc_id": "exec201601325",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

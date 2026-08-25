@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 250,
+  "specificity": 0.55,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Federal Government must continue to adopt secure software acquisition practices",
+    "the FAR Council shall jointly take steps to amend the Federal Acquisition Regulation",
+    "I hereby order that section 1(a) of Executive Order 13694 is further amended"
+  ],
+  "extra": {
+    "actor": "President (OMB, CISA, NIST, DoD, FAR Council)",
+    "is_decided": true,
+    "sectors": [
+      "software/IT",
+      "cybersecurity",
+      "cloud services",
+      "telecom",
+      "defense contractors",
+      "critical infrastructure"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-17",
+  "doc_id": "exec202501470",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

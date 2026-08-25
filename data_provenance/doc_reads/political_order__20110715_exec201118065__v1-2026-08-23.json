@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.8,
+  "evidence": [
+    "establishes a high-level, interagency working group",
+    "facilitate orderly and efficient decisionmaking regarding the issuance of permits",
+    "to help reduce our dependence on foreign oil"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "oil and gas",
+      "Alaska permitting"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-07-15",
+  "doc_id": "exec201118065",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

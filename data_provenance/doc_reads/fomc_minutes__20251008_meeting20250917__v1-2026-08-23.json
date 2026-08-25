@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.25,
+    "duration": 0.3,
+    "gold": 0.25,
+    "dollar": -0.3,
+    "oil": 0.1
+  },
+  "magnitude": 0.45,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "most judged that it likely would be appropriate to ease policy further over the remainder of this year",
+    "downside risks to employment had risen",
+    "A few participants stated there was merit in keeping the federal funds rate unchanged at this meeting"
+  ],
+  "extra": {
+    "stance": -0.4,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2025-10-08",
+  "doc_id": "meeting20250917",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

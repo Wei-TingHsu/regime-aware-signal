@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.4,
+    "duration": -0.5,
+    "gold": -0.1,
+    "dollar": 0.4,
+    "oil": 0.1
+  },
+  "magnitude": 0.6,
+  "horizon_days": 25,
+  "specificity": 0.75,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "they would have preferred a 50 basis point increase in the target range",
+    "Participants generally agreed that monthly caps of about $60 billion for Treasury securities and about $35 billion for agency MBS would likely be appropriate",
+    "One member preferred to raise the target range for the federal funds rate by 0.5 percentage point"
+  ],
+  "extra": {
+    "stance": 0.6,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2022-04-06",
+  "doc_id": "meeting20220316",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

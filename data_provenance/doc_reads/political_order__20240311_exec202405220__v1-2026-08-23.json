@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.8,
+  "evidence": [
+    "establish and expand the use of Registered Apprenticeship programs",
+    "Executive Order 13812... is hereby revoked",
+    "shall submit an initial report to the President within 180 days"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch agencies, OPM)",
+    "is_decided": true,
+    "sectors": [
+      "federal workforce",
+      "labor relations",
+      "education/training"
+    ]
+  },
+  "source": "political_order",
+  "date": "2024-03-11",
+  "doc_id": "exec202405220",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

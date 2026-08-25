@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.35,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "take immediate action to facilitate domestic mineral production to the maximum possible extent",
+    "I hereby delegate to the Secretary of Defense the authority... section 303 of the Defense Production Act",
+    "prioritize mineral production and mining related purposes as the primary land uses"
+  ],
+  "extra": {
+    "actor": "President (NEDC, DOD, DOI, DOE, DFC, EXIM, SBA)",
+    "is_decided": true,
+    "sectors": [
+      "mining",
+      "critical minerals",
+      "defense industrial base",
+      "materials"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-25",
+  "doc_id": "exec202505212",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

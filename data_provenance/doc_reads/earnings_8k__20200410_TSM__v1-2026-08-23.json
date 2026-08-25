@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 3,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "revenues for March 2020 were approximately NT$113.52 billion, an increase of 21.5 percent from February 2020",
+    "increase of 42.4 percent from March 2019",
+    "January to March 2020 totaled NT$310.60 billion, an increase of 42.0 percent"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2020-04-10",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

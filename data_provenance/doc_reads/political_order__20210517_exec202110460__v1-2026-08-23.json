@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 250,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "The Federal Government needs to make bold changes and significant investments",
+    "shall deploy an Endpoint Detection and Response (EDR) initiative",
+    "provide a purchaser a Software Bill of Materials (SBOM) for each product"
+  ],
+  "extra": {
+    "actor": "President/Executive Branch agencies (OMB, DHS/CISA, NIST, DoD/NSA, FAR Council)",
+    "is_decided": true,
+    "sectors": [
+      "cybersecurity",
+      "cloud services",
+      "IT/software vendors",
+      "federal contractors",
+      "IoT"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-05-17",
+  "doc_id": "exec202110460",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

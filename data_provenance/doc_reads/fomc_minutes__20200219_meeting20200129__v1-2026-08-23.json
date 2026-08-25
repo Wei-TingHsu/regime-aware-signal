@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": -0.05,
+    "oil": -0.1
+  },
+  "magnitude": 0.25,
+  "horizon_days": 15,
+  "specificity": 0.4,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "The threat of the coronavirus, in addition to its human toll, had emerged as a new risk to the global growth outlook",
+    "participants viewed the current stance of policy as likely to remain appropriate for a time",
+    "raise the interest rates on required and excess reserve balances to 1.60 percent"
+  ],
+  "extra": {
+    "stance": 0.05,
+    "dispersion": 0.35
+  },
+  "source": "fomc_minutes",
+  "date": "2020-02-19",
+  "doc_id": "meeting20200129",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.25,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "shall consider revising or rescinding those rules, regulations, guidance, bulletins, and memoranda",
+    "assess whether to require proxy advisors...to register as Registered Investment Advisers",
+    "shall investigate whether proxy advisors engage in unfair methods of competition"
+  ],
+  "extra": {
+    "actor": "SEC/FTC/Department of Labor",
+    "is_decided": false,
+    "sectors": [
+      "financial services",
+      "asset management",
+      "corporate governance",
+      "proxy advisory (ISS, Glass Lewis)"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-12-16",
+  "doc_id": "exec202523093",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

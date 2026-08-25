@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "I have determined that action is necessary to address the significant risks, egregious conduct, and conflicts of interest associated with Susman Godfrey LLP",
+    "shall immediately take steps consistent with applicable law to suspend any active security clearances",
+    "take appropriate steps to terminate any contract, to the maximum extent permitted by applicable law"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "legal services",
+      "government contracting"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-15",
+  "doc_id": "exec202506458",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

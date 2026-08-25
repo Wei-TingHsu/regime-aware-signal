@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "establish the Global Engagement Center",
+    "Executive Order 13584 of September 9, 2011... is revoked",
+    "a temporary organization to be known as the Global Engagement Center Coordination Office"
+  ],
+  "extra": {
+    "actor": "State Department",
+    "is_decided": true,
+    "sectors": [
+      "government/administrative",
+      "counterterrorism",
+      "defense"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-03-17",
+  "doc_id": "exec201606250",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

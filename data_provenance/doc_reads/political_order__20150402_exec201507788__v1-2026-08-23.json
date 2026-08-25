@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.03,
+    "dollar": 0.02,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby declare a national emergency to deal with this threat.",
+    "All property and interests in property that are in the United States... are blocked",
+    "causing a significant misappropriation of funds or economic resources, trade secrets"
+  ],
+  "extra": {
+    "actor": "President (Treasury/OFAC to implement)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "critical infrastructure",
+      "financial"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-04-02",
+  "doc_id": "exec201507788",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

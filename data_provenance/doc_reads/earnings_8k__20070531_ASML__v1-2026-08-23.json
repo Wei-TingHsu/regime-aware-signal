@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.55,
+  "confidence": 0.6,
+  "evidence": [
+    "return of approximately EUR 960 million to shareholders in combination with a reverse stock split",
+    "capital repayment will be effected by paying a total cash distribution of approximately EUR 960 million",
+    "We are committed to return excess cash to our shareholders"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2007-05-31",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

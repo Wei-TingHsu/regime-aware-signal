@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 60,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "CDC and its Advisory Committee on Immunization Practices (ACIP) shall review the scientific assessment",
+    "the core childhood vaccine schedule should be aligned with scientific evidence and best practices from peer, developed countries",
+    "all the immunizations that are in any category on the schedule...should continue to be covered without cost sharing"
+  ],
+  "extra": {
+    "actor": "HHS/CDC/ACIP",
+    "is_decided": false,
+    "sectors": [
+      "healthcare",
+      "pharmaceuticals",
+      "vaccines",
+      "insurance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-06-03",
+  "doc_id": "exec202611180",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

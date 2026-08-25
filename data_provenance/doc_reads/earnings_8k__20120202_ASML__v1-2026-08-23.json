@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "Repurchase up to \u20ac 1.130 billion within 2 years",
+    "ASML intends to cancel all shares repurchased under this program",
+    "represents 67.8% of the program"
+  ],
+  "extra": {
+    "surprise": 0.05,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2012-02-02",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

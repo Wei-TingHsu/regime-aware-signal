@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "budget at least $50 million per fiscal year for programs that advance international religious freedom",
+    "may consider imposing sanctions under Executive Order 13818",
+    "develop a plan to prioritize international religious freedom"
+  ],
+  "extra": {
+    "actor": "President/Secretary of State/Treasury",
+    "is_decided": true,
+    "sectors": [
+      "diplomacy",
+      "foreign aid",
+      "sanctions policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-06-05",
+  "doc_id": "exec202012430",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

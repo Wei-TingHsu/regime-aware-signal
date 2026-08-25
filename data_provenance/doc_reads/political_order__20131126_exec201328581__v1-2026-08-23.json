@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "Disputes exist between the Long Island Rail Road Company (LIRR) and certain of its employees",
+    "no change in the conditions out of which the disputes arose shall be made",
+    "The Board shall report to the President with respect to the disputes within 30 days"
+  ],
+  "extra": {
+    "actor": "President (via Railway Labor Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "railroads",
+      "labor relations",
+      "transportation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-11-26",
+  "doc_id": "exec201328581",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

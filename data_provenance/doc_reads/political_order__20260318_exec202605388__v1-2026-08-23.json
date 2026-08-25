@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 250,
+  "specificity": 0.25,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "reduce regulatory barriers to building homes",
+    "Streamlining Federal Permitting Requirements for Residential Development",
+    "develop and promulgate a series of regulatory best practices for State and local governments"
+  ],
+  "extra": {
+    "actor": "President (multiple agencies directed: EPA, Army Corps, HUD, DOT, FHFA, USDA, DOE, CEQ, ACHP, Treasury)",
+    "is_decided": false,
+    "sectors": [
+      "homebuilders",
+      "construction materials",
+      "real estate",
+      "manufactured housing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-03-18",
+  "doc_id": "exec202605388",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

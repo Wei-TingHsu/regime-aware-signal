@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.25,
+  "horizon_days": 90,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "our electric grid must utilize all available power generation resources",
+    "prevent...a generation resource in excess of 50 megawatts...from leaving the bulk-power system",
+    "streamline, systemize, and expedite the Department of Energy's processes for issuing orders under section 202(c)"
+  ],
+  "extra": {
+    "actor": "Secretary of Energy / DOE",
+    "is_decided": true,
+    "sectors": [
+      "utilities",
+      "energy",
+      "power generation",
+      "coal",
+      "natural gas"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-14",
+  "doc_id": "exec202506381",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

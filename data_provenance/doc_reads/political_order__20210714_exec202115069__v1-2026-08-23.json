@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "it is the policy of my Administration to enforce the antitrust laws to combat the excessive concentration of industry",
+    "There is established a White House Competition Council",
+    "the Chair of the FTC is also encouraged to consider working with the rest of the Commission to exercise the FTC's statutory rulemaking authority"
+  ],
+  "extra": {
+    "actor": "President (White House Competition Council; FTC, DOJ, and multiple agencies directed/encouraged)",
+    "is_decided": true,
+    "sectors": [
+      "Technology/Internet platforms",
+      "Healthcare/Pharmaceuticals",
+      "Agriculture",
+      "Telecommunications",
+      "Banking/Financial Services",
+      "Transportation/Airlines",
+      "Shipping",
+      "Labor markets"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-07-14",
+  "doc_id": "exec202115069",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

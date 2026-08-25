@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby declare a national emergency to deal with that threat.",
+    "obstruct the implementation of the agreement of November 23, 2011",
+    "All property and interests in property that are in the United States... are blocked"
+  ],
+  "extra": {
+    "actor": "President (Treasury/OFAC enforcement)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Yemen",
+      "financial services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-05-18",
+  "doc_id": "exec201212225",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

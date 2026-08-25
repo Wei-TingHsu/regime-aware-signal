@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "not to exceed 200 Selected Reservists at any one time",
+    "Enhanced Department of Defense Counternarcotic Operation in the Western Hemisphere",
+    "order to active duty for not more than 365 consecutive days"
+  ],
+  "extra": {
+    "actor": "President / Department of Defense",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "military"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-05-04",
+  "doc_id": "exec202009645",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

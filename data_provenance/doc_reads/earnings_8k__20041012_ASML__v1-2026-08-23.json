@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "ASML takes a more prudent position for Q4 2004",
+    "we do not exclude possible push-outs of five to ten lithography systems from Q4 into 2005",
+    "customers are showing signs of uncertainty by pushing out a handful of delivery dates"
+  ],
+  "extra": {
+    "surprise": -0.4,
+    "guidance_change": -0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2004-10-12",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

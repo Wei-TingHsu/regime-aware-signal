@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.2
+  },
+  "magnitude": 0.25,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "blocking property of certain persons with respect to human rights abuses in Syria",
+    "constitute an unusual and extraordinary threat to the national security, foreign policy, and economy",
+    "expand the scope of the national emergency declared in Executive Order 13338"
+  ],
+  "extra": {
+    "actor": "President (via Treasury/OFAC)",
+    "is_decided": true,
+    "sectors": [
+      "financial sanctions",
+      "energy/Syria-related",
+      "government/state entities"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-05-03",
+  "doc_id": "exec201110910",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

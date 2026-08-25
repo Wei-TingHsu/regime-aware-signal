@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.6,
+  "confidence": 0.6,
+  "evidence": [
+    "we produced just over 145,000 vehicles and delivered nearly 140,000 vehicles",
+    "new vehicle inventory declined further in Q3",
+    "Final numbers could vary by up to 0.5% or more"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2020-10-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

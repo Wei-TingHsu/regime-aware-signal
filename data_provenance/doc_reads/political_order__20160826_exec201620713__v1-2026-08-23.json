@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "Amendment to Executive Order 13673",
+    "in subsection 2(a)(iv)(A), by inserting, after the word ``disclose,''",
+    "This order shall become effective immediately"
+  ],
+  "extra": {
+    "actor": "President (Federal Acquisition Regulatory process)",
+    "is_decided": true,
+    "sectors": [
+      "government contracting",
+      "federal procurement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-08-26",
+  "doc_id": "exec201620713",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

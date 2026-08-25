@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.7,
+  "confidence": 0.75,
+  "evidence": [
+    "GAAP net income of $312M, non-GAAP net income of $516M",
+    "Reaffirm expectation of continued GAAP net income and free cash flow in Q4",
+    "Model 3 GAAP and non-GAAP gross margin > 20% in Q3"
+  ],
+  "extra": {
+    "surprise": 0.6,
+    "guidance_change": 0.3,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2018-10-24",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

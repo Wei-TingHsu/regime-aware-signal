@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.15,
+  "confidence": 0.9,
+  "evidence": [
+    "develop and issue a Government-wide Military and Veteran Spouse... Hiring and Retention Strategic Plan",
+    "establish flexible spending accounts for the care of military dependents",
+    "expand access to resources tailored to military and veteran spouses"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, multiple agencies directed)",
+    "is_decided": true,
+    "sectors": [
+      "federal workforce/HR policy",
+      "defense/military family services",
+      "small business/entrepreneurship support"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-06-15",
+  "doc_id": "exec202312974",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

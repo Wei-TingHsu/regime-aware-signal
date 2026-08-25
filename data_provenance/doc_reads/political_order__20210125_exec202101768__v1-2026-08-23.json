@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Executive Order 13768 of January 25, 2017 ... is hereby revoked.",
+    "reset the policies and practices for enforcing civil immigration laws",
+    "address the humanitarian challenges at the southern border"
+  ],
+  "extra": {
+    "actor": "President (DHS, DOJ, State, OMB, OPM)",
+    "is_decided": true,
+    "sectors": [
+      "immigration enforcement",
+      "labor/workforce",
+      "border security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-25",
+  "doc_id": "exec202101768",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

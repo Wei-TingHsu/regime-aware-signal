@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "There is hereby established the President's Council of Advisors on Science and Technology (PCAST)",
+    "The PCAST shall terminate 2 years from the date of this order",
+    "Executive Order 13895 of October 22, 2019...is hereby revoked"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "science",
+      "technology",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-02-01",
+  "doc_id": "exec202102176",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

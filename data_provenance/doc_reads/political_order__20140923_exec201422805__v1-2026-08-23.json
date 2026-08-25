@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "Task Force for Combating Antibiotic-Resistant Bacteria",
+    "the Task Force shall submit a 5-year National Action Plan",
+    "FDA...shall continue taking steps to eliminate the use of medically important classes of antibiotics for growth promotion"
+  ],
+  "extra": {
+    "actor": "President (Executive Order establishing interagency Task Force and Advisory Council)",
+    "is_decided": true,
+    "sectors": [
+      "pharmaceuticals/biotech",
+      "healthcare",
+      "agriculture"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-09-23",
+  "doc_id": "exec201422805",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

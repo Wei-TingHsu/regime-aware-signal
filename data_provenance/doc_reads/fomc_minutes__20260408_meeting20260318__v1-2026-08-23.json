@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": -0.1,
+    "gold": 0.3,
+    "dollar": 0.2,
+    "oil": 0.4
+  },
+  "magnitude": 0.5,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.6,
+  "confidence": 0.6,
+  "evidence": [
+    "the risk of inflation running persistently above the Committee's objective had increased",
+    "vast majority of participants judged that upside risks to inflation and downside risks to employment were elevated",
+    "Most participants commented that it was too early to know how developments in the Middle East would affect the U.S. economy"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2026-04-08",
+  "doc_id": "meeting20260318",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

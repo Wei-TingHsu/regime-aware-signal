@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 2,
+  "specificity": 0.8,
+  "novelty": 0.45,
+  "confidence": 0.55,
+  "evidence": [
+    "we produced nearly 480,000 vehicles and delivered over 466,000 vehicles",
+    "Model 3/Y 460,211 446,915 5%",
+    "Tesla will post its financial results for the second quarter of 2023...Wednesday, July 19, 2023"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2023-07-03",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

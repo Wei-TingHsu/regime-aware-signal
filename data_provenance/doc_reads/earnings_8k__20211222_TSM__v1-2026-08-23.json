@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 3,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.5,
+  "evidence": [
+    "Machinery equipment for advanced technology capacity: NT$154.3 billion",
+    "Number of shares held as of 10/31/2021 11/30/2021",
+    "The unsecured bonds issued by TSMC and its subsidiaries: None"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2021-12-22",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

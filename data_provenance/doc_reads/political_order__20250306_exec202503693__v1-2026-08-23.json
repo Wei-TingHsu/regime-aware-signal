@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 120,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "The Secretary of Commerce shall initiate an investigation under section 232",
+    "whether additional measures, including tariffs or quotas, are necessary to protect national security",
+    "No later than 270 days after the date of this order, the Secretary of Commerce shall submit a report"
+  ],
+  "extra": {
+    "actor": "Secretary of Commerce",
+    "is_decided": false,
+    "sectors": [
+      "timber",
+      "lumber",
+      "wood products",
+      "construction",
+      "furniture"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-06",
+  "doc_id": "exec202503693",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

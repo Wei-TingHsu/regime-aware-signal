@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "I hereby declare a national emergency to deal with that threat.",
+    "operate in the defense sector of the Burmese economy",
+    "All property and interests in property that are in the United States... are blocked"
+  ],
+  "extra": {
+    "actor": "President Biden / Treasury (OFAC)",
+    "is_decided": true,
+    "sectors": [
+      "Burma defense sector",
+      "financial sanctions",
+      "immigration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-02-12",
+  "doc_id": "exec202103139",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

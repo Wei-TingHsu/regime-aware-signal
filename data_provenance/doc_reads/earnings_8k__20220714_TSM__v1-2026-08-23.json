@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue is expected to be between US$19.8 billion and US$20.6 billion",
+    "second quarter revenue increased 43.5% while net income and diluted EPS both increased 76.4%",
+    "Gross profit margin to be between 57.5% and 59.5%"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.1,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2022-07-14",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

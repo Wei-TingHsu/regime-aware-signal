@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.8,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.65,
+  "confidence": 0.7,
+  "evidence": [
+    "Q3 Remaining Performance Obligations $553 billion, up 325% year-over-year",
+    "For fiscal year 2027, we are raising total revenue guidance to $90 billion.",
+    "These market dynamics enable Oracle to comfortably meet and likely exceed our revenue growth rate forecast for FY27"
+  ],
+  "extra": {
+    "surprise": 0.7,
+    "guidance_change": 0.6,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2026-03-10",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.15,
+    "gold": 0.3,
+    "dollar": 0.1,
+    "oil": 0.4
+  },
+  "magnitude": 0.65,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "All property and interests in property of the Government of Iran, including the Central Bank of Iran... are blocked",
+    "the continuing and unacceptable risk posed to the international financial system by Iran's activities",
+    "This order is effective at 12:01 a.m. eastern standard time on February 6, 2012"
+  ],
+  "extra": {
+    "actor": "President Obama / U.S. Treasury",
+    "is_decided": true,
+    "sectors": [
+      "financial institutions",
+      "energy/oil",
+      "sanctions/Iran"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-02-08",
+  "doc_id": "exec20123097",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

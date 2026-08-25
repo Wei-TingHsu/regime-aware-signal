@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": -0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "reaffirmed its intention to purchase $600 billion of longer-term Treasury securities by the end of the second quarter of 2011",
+    "A few members noted that additional data pointing to a sufficiently strong recovery could make it appropriate to consider reducing the pace",
+    "participants generally expressed greater confidence that the economic recovery would be sustained"
+  ],
+  "extra": {
+    "stance": 0.1,
+    "dispersion": 0.35
+  },
+  "source": "fomc_minutes",
+  "date": "2011-02-16",
+  "doc_id": "meeting20110126",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

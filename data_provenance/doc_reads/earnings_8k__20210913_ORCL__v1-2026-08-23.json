@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 3,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Q1 results were excellent as constant currency revenue beat guidance by $100 million",
+    "Non-GAAP earnings per share beating guidance by $0.08",
+    "IaaS and SaaS are Oracle's fastest growing and highest margin new businesses"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.3,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2021-09-13",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

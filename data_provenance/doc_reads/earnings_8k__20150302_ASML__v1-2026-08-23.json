@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 3,
+  "specificity": 0.35,
+  "novelty": 0.7,
+  "confidence": 0.6,
+  "evidence": [
+    "ASML recently discovered unauthorized access to a limited portion of its IT systems",
+    "No evidence that anything of value has been compromised",
+    "We will not provide further information about this event unless there is a significant development"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2015-03-02",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

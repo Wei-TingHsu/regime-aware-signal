@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.15,
+    "gold": 0.05,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "almost all Committee members agreed that a change in the purchase program was not yet appropriate",
+    "the Committee recognizes that inflation persistently below its 2 percent objective could pose risks to economic performance",
+    "it might soon be time to slow somewhat the pace of purchases as outlined in that plan"
+  ],
+  "extra": {
+    "stance": -0.1,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2013-08-21",
+  "doc_id": "meeting20130731",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

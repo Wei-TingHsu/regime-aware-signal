@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": -0.15,
+    "gold": -0.1,
+    "dollar": 0.15,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "make a further measured reduction in the pace of its asset purchases",
+    "add to its holdings of agency mortgage-backed securities at a pace of $25 billion per month",
+    "The Committee has updated its forward guidance"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "guidance": -0.1
+  },
+  "source": "fomc_statement",
+  "date": "2014-03-19",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

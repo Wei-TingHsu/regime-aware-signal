@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 120,
+  "specificity": 0.15,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "shall develop a plan for the establishment of a sovereign wealth fund",
+    "Secretary of Commerce shall jointly submit this plan to the President within 90 days",
+    "including an evaluation of the legal considerations for establishing and managing such a fund"
+  ],
+  "extra": {
+    "actor": "President / Treasury & Commerce Secretaries",
+    "is_decided": false,
+    "sectors": [
+      "finance",
+      "sovereign investment",
+      "government"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-10",
+  "doc_id": "exec202502477",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

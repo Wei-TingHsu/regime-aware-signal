@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "revenue for May 2025 was approximately NT$320.52 billion",
+    "a decrease of 8.3 percent from April 2025 and an increase of 39.6 percent from May 2024",
+    "January through May 2025 totaled NT$1,509.34 billion, an increase of 42.6 percent"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2025-06-10",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

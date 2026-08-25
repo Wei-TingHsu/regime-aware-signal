@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.15,
+    "gold": 0.05,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 20,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "reaffirmed exceptionally low levels for the federal funds rate at least through late 2014",
+    "some participants saw a risk that inflation pressures could increase as the expansion continued",
+    "Several members indicated that additional monetary policy accommodation could be necessary if the economic recovery lost momentum"
+  ],
+  "extra": {
+    "stance": 0.1,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2012-05-16",
+  "doc_id": "meeting20120425",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

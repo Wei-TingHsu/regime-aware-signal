@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "There is established... a Board... to investigate and report on these disputes",
+    "for 120 days from the date of the creation of the Board, no change in the conditions... shall be made",
+    "The Board shall report to the President... within 30 days of its creation"
+  ],
+  "extra": {
+    "actor": "President (RLA Section 9A)",
+    "is_decided": true,
+    "sectors": [
+      "railroads",
+      "transportation",
+      "labor"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-09-23",
+  "doc_id": "exec202518479",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

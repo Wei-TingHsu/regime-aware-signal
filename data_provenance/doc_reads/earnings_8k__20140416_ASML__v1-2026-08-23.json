@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.45,
+  "confidence": 0.6,
+  "evidence": [
+    "Q1 2014 sales in line with guidance, gross margin above guidance",
+    "Sales in the second quarter are however expected to be affected by adjustments of system demand from some logic customers",
+    "we currently estimate second and third quarter 2014 sales at a total of around EUR 3 billion"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": -0.15,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2014-04-16",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

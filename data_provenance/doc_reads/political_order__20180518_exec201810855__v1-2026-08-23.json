@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 60,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "empower agency CIOs to ensure that agency IT systems are secure",
+    "eliminate unnecessary IT management functions",
+    "the Director shall, within 30 days, grant that agency direct hiring authority"
+  ],
+  "extra": {
+    "actor": "President / OPM / OMB / agency heads",
+    "is_decided": true,
+    "sectors": [
+      "government IT",
+      "federal contractors",
+      "cybersecurity"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-05-18",
+  "doc_id": "exec201810855",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.15,
+    "dollar": 0.1,
+    "oil": 0.4
+  },
+  "magnitude": 0.55,
+  "horizon_days": 120,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "I, DONALD J. TRUMP ... hereby order as follows",
+    "purchase, acquisition, sale, transport, or marketing of petroleum or petroleum products from Iran",
+    "This order is effective 12:01 a.m. eastern daylight time on August 7, 2018"
+  ],
+  "extra": {
+    "actor": "President (Trump) via Treasury/State Departments",
+    "is_decided": true,
+    "sectors": [
+      "oil and gas",
+      "banking/financial institutions",
+      "automotive",
+      "shipping",
+      "petrochemicals"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-08-07",
+  "doc_id": "exec201817068",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

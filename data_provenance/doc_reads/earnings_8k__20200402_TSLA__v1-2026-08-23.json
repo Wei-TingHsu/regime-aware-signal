@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 3,
+  "specificity": 0.8,
+  "novelty": 0.55,
+  "confidence": 0.55,
+  "evidence": [
+    "we produced almost 103,000 vehicles and delivered approximately 88,400 vehicles",
+    "This is our best ever first quarter performance",
+    "Model Y production started in January...significantly ahead of schedule"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2020-04-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

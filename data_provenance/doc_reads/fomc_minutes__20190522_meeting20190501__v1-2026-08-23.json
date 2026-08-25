@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.2,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "a patient approach to determining future adjustments to the target range for the federal funds rate remained appropriate",
+    "some viewed the downside risks to inflation as having increased",
+    "a few participants noted that if the economy evolved as they expected, the Committee would likely need to firm the stance"
+  ],
+  "extra": {
+    "stance": -0.1,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2019-05-22",
+  "doc_id": "meeting20190501",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

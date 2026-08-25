@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "focusing criminal enforcement of regulatory offenses on the most culpable individuals",
+    "Strict liability offenses are \"generally disfavored.\"",
+    "each agency should publish guidance in the Federal Register describing its plan"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, outgoing administration Jan 2021)",
+    "is_decided": true,
+    "sectors": [
+      "regulatory compliance",
+      "cross-sector business/corporate liability"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-22",
+  "doc_id": "exec202101645",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 1.0,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "Providing an Order of Succession Within the Department of Justice",
+    "Executive Order 13775 of February 9, 2017, is revoked.",
+    "shall act as and perform the functions and duties of the office of Attorney General"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-04-05",
+  "doc_id": "exec201706971",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

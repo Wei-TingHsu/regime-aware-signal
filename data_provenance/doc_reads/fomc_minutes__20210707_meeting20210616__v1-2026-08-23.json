@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": -0.2,
+    "gold": -0.1,
+    "dollar": 0.25,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.45,
+  "confidence": 0.65,
+  "evidence": [
+    "Various participants mentioned that they expected the conditions for beginning to reduce the pace of asset purchases to be met somewhat earlier",
+    "a substantial majority of participants judged that the risks to their inflation projections were tilted to the upside",
+    "Several participants saw benefits to reducing the pace of these purchases more quickly or earlier than Treasury purchases"
+  ],
+  "extra": {
+    "stance": 0.3,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2021-07-07",
+  "doc_id": "meeting20210616",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

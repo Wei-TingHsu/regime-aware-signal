@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "each agency shall develop, in consultation with the Office of Management and Budget (OMB), a Customer Service Plan",
+    "establishing one major initiative (signature initiative) that will use technology to improve the customer experience",
+    "This order shall be implemented consistent with applicable law and subject to the availability of appropriations."
+  ],
+  "extra": {
+    "actor": "President (Executive Order 13571)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "federal agencies"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-05-02",
+  "doc_id": "exec201110732",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

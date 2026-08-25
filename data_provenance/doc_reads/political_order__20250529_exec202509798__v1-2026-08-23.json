@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.35,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.4,
+  "horizon_days": 500,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "The NRC shall issue final rules and guidance to conclude this revision process within 18 months",
+    "Facilitate the expansion of American nuclear energy capacity from approximately 100 GW in 2024 to 400 GW by 2050",
+    "a deadline of no more than 18 months for final decision on an application to construct and operate a new reactor"
+  ],
+  "extra": {
+    "actor": "President (Executive Order) directing Nuclear Regulatory Commission",
+    "is_decided": true,
+    "sectors": [
+      "nuclear power",
+      "utilities",
+      "energy infrastructure",
+      "uranium/nuclear fuel"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-05-29",
+  "doc_id": "exec202509798",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

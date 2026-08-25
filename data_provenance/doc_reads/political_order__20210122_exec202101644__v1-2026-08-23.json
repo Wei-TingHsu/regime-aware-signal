@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "require that agency rules promulgated under section 553... must be signed by a senior appointee",
+    "review all significant rules the agency has issued over the last 12 years",
+    "This practice undermines the power of the American people to choose who governs them"
+  ],
+  "extra": {
+    "actor": "President (agency heads)",
+    "is_decided": true,
+    "sectors": [
+      "regulatory process",
+      "administrative law"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-22",
+  "doc_id": "exec202101644",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

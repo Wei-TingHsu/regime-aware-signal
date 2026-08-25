@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.15,
+    "gold": 0.05,
+    "dollar": 0.1,
+    "oil": -0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.35,
+  "confidence": 0.62,
+  "evidence": [
+    "almost all participants reaffirmed the view that further gradual increases in the target range",
+    "a few participants...expressed uncertainty about the timing of such increases",
+    "A couple of participants noted that the federal funds rate might currently be near its neutral level"
+  ],
+  "extra": {
+    "stance": 0.25,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2018-11-29",
+  "doc_id": "meeting20181108",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

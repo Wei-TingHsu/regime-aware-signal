@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.05,
+    "oil": 0.05
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "certain agricultural products shall not be subject to the reciprocal tariff imposed under Executive 14257",
+    "effective with respect to goods entered for consumption...on or after 12:01 a.m. eastern standard time on November 13, 2025",
+    "I have determined that it is necessary and appropriate to further modify the scope of products"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "agriculture",
+      "trade",
+      "tariffs"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-11-25",
+  "doc_id": "exec202521203",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

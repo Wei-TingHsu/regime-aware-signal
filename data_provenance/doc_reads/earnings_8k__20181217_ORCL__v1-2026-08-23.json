@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 3,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.55,
+  "evidence": [
+    "Total Revenues were unchanged at $9.6 billion",
+    "non-GAAP earnings per share grew 19% in constant currency",
+    "I am confident that we will continue to record strong EPS and free cash flow growth"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.15,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2018-12-17",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby find, pursuant to section 101 of the Act, that domestic elemental phosphorus and glyphosate-based herbicides meet the criteria",
+    "the Secretary shall ensure that any order, rule, or regulation issued under this section does not place the corporate viability of any domestic producer... at risk",
+    "there is only a single domestic producer of elemental phosphorus and glyphosate-based herbicides"
+  ],
+  "extra": {
+    "actor": "President (delegated to Secretary of Agriculture)",
+    "is_decided": true,
+    "sectors": [
+      "agriculture",
+      "chemicals",
+      "defense industrial base"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-02-23",
+  "doc_id": "exec202603628",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

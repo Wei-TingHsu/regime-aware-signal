@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "it shall be the policy of the executive branch to buy American and hire American",
+    "suggest reforms to help ensure that H-1B visas are awarded to the most-skilled or highest-paid petition beneficiaries",
+    "minimize the use of waivers, consistent with applicable law"
+  ],
+  "extra": {
+    "actor": "President Trump / executive agencies (Commerce, OMB, State, Labor, DHS, DOJ)",
+    "is_decided": false,
+    "sectors": [
+      "technology",
+      "manufacturing",
+      "steel/iron",
+      "defense industrial base",
+      "immigration/visa-dependent industries"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-04-21",
+  "doc_id": "exec201708311",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

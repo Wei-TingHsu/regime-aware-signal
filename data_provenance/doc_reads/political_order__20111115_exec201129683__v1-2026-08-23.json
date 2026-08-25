@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.7,
+  "evidence": [
+    "reducing the combined costs...by not less than 20 percent below Fiscal Year 2010 levels",
+    "agencies are encouraged to devise strategic alternatives to Government travel",
+    "Each agency shall establish a plan for reducing the combined costs"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "federal procurement",
+      "travel/IT services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-11-15",
+  "doc_id": "exec201129683",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

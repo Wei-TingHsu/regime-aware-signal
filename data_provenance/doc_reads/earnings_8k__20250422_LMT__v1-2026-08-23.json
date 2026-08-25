@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Reaffirms 2025 financial outlook",
+    "Sales increased 4% to $18.0 billion",
+    "Free cash flow was $955 million in the first quarter of 2025, compared to $1.3 billion"
+  ],
+  "extra": {
+    "surprise": 0.15,
+    "guidance_change": 0.0,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2025-04-22",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

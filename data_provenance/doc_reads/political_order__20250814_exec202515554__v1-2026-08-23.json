@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.05,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "continue the suspension effectuated by Executive Order 14298 until 12:01 a.m. eastern standard time on November 10, 2025",
+    "The PRC continues to take significant steps toward remedying non-reciprocal trade arrangements",
+    "this 90-day suspension expires at 12:01 a.m. eastern daylight time on August 12, 2025"
+  ],
+  "extra": {
+    "actor": "President (via IEEPA/Trade Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "China imports"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-14",
+  "doc_id": "exec202515554",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

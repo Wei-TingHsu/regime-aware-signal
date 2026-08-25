@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "strengthen the security and resilience of the Nation against earthquakes",
+    "each agency shall ensure that every new building... is in compliance with the earthquake-resistant design provisions",
+    "Executive Order 12699... and Executive Order 12941... are hereby revoked"
+  ],
+  "extra": {
+    "actor": "President (Federal agencies, NIST/ICSSC)",
+    "is_decided": true,
+    "sectors": [
+      "construction",
+      "federal real estate",
+      "building materials/codes"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-02-05",
+  "doc_id": "exec201602475",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

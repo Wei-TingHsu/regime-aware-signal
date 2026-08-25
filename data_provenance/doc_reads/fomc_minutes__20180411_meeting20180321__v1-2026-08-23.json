@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": -0.15,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "stronger outlook for economic activity...implied that the appropriate path for the federal funds rate...would likely be slightly steeper",
+    "almost all participants expressed the view that it would be appropriate for the Committee to raise the target range for the federal funds rate 25 basis points",
+    "a strong majority of participants viewed the prospect of retaliatory trade actions by other countries...as downside risks"
+  ],
+  "extra": {
+    "stance": 0.35,
+    "dispersion": 0.45
+  },
+  "source": "fomc_minutes",
+  "date": "2018-04-11",
+  "doc_id": "meeting20180321",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

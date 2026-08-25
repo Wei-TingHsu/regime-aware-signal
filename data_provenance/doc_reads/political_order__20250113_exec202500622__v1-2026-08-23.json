@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "Executive Order 14033 is hereby amended by striking section 1",
+    "corruption related to the Western Balkans",
+    "any person determined by the Secretary of the Treasury"
+  ],
+  "extra": {
+    "actor": "President (Biden)/Treasury/State",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Western Balkans",
+      "regional geopolitics"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-13",
+  "doc_id": "exec202500622",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

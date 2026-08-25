@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.6,
+  "confidence": 0.65,
+  "evidence": [
+    "not providing full-year guidance given significant economic uncertainty",
+    "Expecting second-quarter revenue of $18.5 billion",
+    "suspension of share buybacks in light of the COVID-19 pandemic"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": -0.3,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2020-04-23",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

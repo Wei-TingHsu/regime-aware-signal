@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "any transaction in publicly traded securities...of any Communist Chinese military company",
+    "I hereby declare a national emergency with respect to this threat",
+    "beginning 9:30 a.m. eastern standard time on January 11, 2021"
+  ],
+  "extra": {
+    "actor": "President (Treasury/Defense to implement)",
+    "is_decided": true,
+    "sectors": [
+      "China equities",
+      "defense-linked Chinese companies",
+      "index funds/ETFs with China exposure"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-11-17",
+  "doc_id": "exec202025459",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

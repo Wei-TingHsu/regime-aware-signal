@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "they will be manufactured in the United States whenever feasible",
+    "shall require recipients of Federal R&D funding agreements to track and update",
+    "consider whether \"exceptional circumstances\" exist warranting a determination"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14104)",
+    "is_decided": true,
+    "sectors": [
+      "manufacturing",
+      "technology",
+      "R&D",
+      "semiconductors",
+      "defense"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-08-02",
+  "doc_id": "exec202316636",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

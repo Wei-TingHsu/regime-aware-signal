@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.15
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "authorized to impose on a foreign financial institution the sanctions",
+    "purchase or acquisition of petroleum or petroleum products from Iran",
+    "block all property and interests in property that are in the United States"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State authorized)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "financial institutions",
+      "petrochemicals"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-08-02",
+  "doc_id": "exec201219055",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

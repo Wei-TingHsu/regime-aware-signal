@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "Establishment of the Chemical Facility Safety and Security Working Group",
+    "develop a list of potential regulatory and legislative proposals to improve the safe and secure storage, handling, and sale of ammonium nitrate",
+    "determine if the RMP or PSM can and should be expanded to address additional regulated substances"
+  ],
+  "extra": {
+    "actor": "President (multiple agencies: DHS, EPA, DOL, DOJ, USDA, DOT)",
+    "is_decided": true,
+    "sectors": [
+      "chemicals",
+      "agriculture",
+      "energy/refining",
+      "manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-08-07",
+  "doc_id": "exec201319220",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

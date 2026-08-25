@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "strengthen protections against trafficking in persons in Federal contracting",
+    "the FAR Council...shall take steps necessary to amend the Federal Acquisition Regulation",
+    "This order shall become effective immediately"
+  ],
+  "extra": {
+    "actor": "President (Executive Order / FAR Council)",
+    "is_decided": true,
+    "sectors": [
+      "government contractors",
+      "defense/federal procurement",
+      "labor compliance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-10-02",
+  "doc_id": "exec201224374",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

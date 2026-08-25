@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.85,
+    "duration": -0.15,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.85,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.7,
+  "confidence": 0.75,
+  "evidence": [
+    "Revenue of $23.86 billion versus $13.64 billion for the prior quarter",
+    "we expect significant records again in fiscal Q3",
+    "Revenue $33.5 billion \u00b1 $750 million",
+    "our board has approved a 30% increase in our quarterly dividend"
+  ],
+  "extra": {
+    "surprise": 0.7,
+    "guidance_change": 0.8,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2026-03-18",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

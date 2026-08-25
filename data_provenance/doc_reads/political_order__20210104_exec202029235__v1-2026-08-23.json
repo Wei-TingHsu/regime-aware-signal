@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "The Secretary of Health and Human Services shall take steps, consistent with law, to allow funds available through the Community Services Block Grant program",
+    "This order shall be implemented consistent with applicable law and subject to the availability of appropriations",
+    "empowering families with emergency learning scholarships"
+  ],
+  "extra": {
+    "actor": "HHS Secretary",
+    "is_decided": false,
+    "sectors": [
+      "education",
+      "social services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-04",
+  "doc_id": "exec202029235",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 10,
+  "specificity": 0.65,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "intention to build and operate an advanced semiconductor fab in the United States",
+    "approximately US$12 billion from 2021 to 2029",
+    "production targeted to begin in 2024"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.1,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2020-05-15",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

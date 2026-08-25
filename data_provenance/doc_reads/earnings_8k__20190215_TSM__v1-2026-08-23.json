@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.35,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 5,
+  "specificity": 0.85,
+  "novelty": 0.6,
+  "confidence": 0.75,
+  "evidence": [
+    "expected to reduce Q1 revenue by about US$550 million",
+    "now expects Q1 revenue to be between US$7 billion to US$7.1 billion",
+    "Revised Guidance 7.0-7.1 vs Original Guidance 7.3-7.4"
+  ],
+  "extra": {
+    "surprise": -0.5,
+    "guidance_change": -0.4,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2019-02-15",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

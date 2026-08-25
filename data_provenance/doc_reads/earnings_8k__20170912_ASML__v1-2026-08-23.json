@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.7,
+  "confidence": 0.6,
+  "evidence": [
+    "CFO Wolfgang Nickl to Leave ASML by the End of April 2018",
+    "has decided to accept the position of CFO at German-based life science company Bayer",
+    "secure uninterrupted execution of our strategy to reach our stated targets"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2017-09-12",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "convene a GHSA Interagency Review Council",
+    "make the GHSA and its implementation a high priority",
+    "Conduct an overall review of the GHSA for submission to the President by September 2019"
+  ],
+  "extra": {
+    "actor": "President (Executive Order establishing interagency council)",
+    "is_decided": true,
+    "sectors": [
+      "public health",
+      "biodefense",
+      "international coordination"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-11-09",
+  "doc_id": "exec201627171",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

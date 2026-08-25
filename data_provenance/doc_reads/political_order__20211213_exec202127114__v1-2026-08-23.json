@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.15
+  },
+  "magnitude": 0.3,
+  "horizon_days": 1500,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "100 percent carbon pollution-free electricity on a net annual basis by 2030",
+    "100 percent zero-emission vehicle acquisitions by 2035",
+    "net-zero emissions economy-wide by no later than 2050"
+  ],
+  "extra": {
+    "actor": "President/CEQ/OMB/Federal agencies",
+    "is_decided": true,
+    "sectors": [
+      "clean energy",
+      "federal procurement",
+      "automotive/EV",
+      "construction materials",
+      "utilities"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-12-13",
+  "doc_id": "exec202127114",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

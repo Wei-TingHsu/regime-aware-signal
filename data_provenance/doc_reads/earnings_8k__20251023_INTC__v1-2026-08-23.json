@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.65,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.55,
+  "confidence": 0.6,
+  "evidence": [
+    "Current demand is outpacing supply, a trend we expect will persist into 2026.",
+    "Our stronger than expected Q3 results mark our fourth consecutive quarter of improved execution",
+    "Forecasting fourth-quarter 2025 revenue of $12.8 billion to $13.8 billion"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.3,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2025-10-23",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

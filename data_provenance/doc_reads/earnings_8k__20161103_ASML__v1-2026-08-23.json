@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.6,
+  "confidence": 0.55,
+  "evidence": [
+    "ASML buys 24.9% of ZEISS subsidiary Carl Zeiss SMT for EUR 1 billion in cash",
+    "ASML supports Carl Zeiss SMT`s R&D and capex for approximately EUR 760 million over the next 6 years",
+    "ASML will prolong the pause of its share buy back program for the time being"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": -0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2016-11-03",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

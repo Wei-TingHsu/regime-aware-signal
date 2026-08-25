@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 15,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "softening of the overall semiconductor market which may lead to some order push-outs",
+    "The current backlog supports a Q4 2004 gross margin of 39 \u2014 40 percent",
+    "The value of ASML's backlog is currently the highest in the company's history"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": -0.15,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2004-10-13",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "ASML is still well positioned for robust revenues in the first half of this year",
+    "We expect to almost double our net sales from immersion systems in 2008 from 2007",
+    "overall 2008 semiconductor capital investment slowdown forecast by some analysts and customers"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-01-16",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

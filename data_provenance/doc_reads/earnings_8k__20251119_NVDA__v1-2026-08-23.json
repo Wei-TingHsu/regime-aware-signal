@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.8,
+    "duration": -0.15,
+    "gold": -0.1,
+    "dollar": 0.15,
+    "oil": 0.05
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.55,
+  "confidence": 0.75,
+  "evidence": [
+    "Revenue is expected to be $65.0 billion, plus or minus 2%.",
+    "Blackwell sales are off the charts, and cloud GPUs are sold out",
+    "We've entered the virtuous cycle of AI."
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.7,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2025-11-19",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

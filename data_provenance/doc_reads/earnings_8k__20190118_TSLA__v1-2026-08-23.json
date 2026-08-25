@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.6,
+  "confidence": 0.7,
+  "evidence": [
+    "reduce full-time employee headcount by approximately 7%",
+    "In Q4, preliminary, unaudited results indicate that we again made a GAAP profit, but less than Q3",
+    "target a tiny profit"
+  ],
+  "extra": {
+    "surprise": -0.5,
+    "guidance_change": -0.4,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2019-01-18",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

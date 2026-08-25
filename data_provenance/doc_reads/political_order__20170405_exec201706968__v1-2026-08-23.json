@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Omnibus Report on Significant Trade Deficits",
+    "The United States annual trade deficit in goods exceeds $700 billion",
+    "identify imports and trade practices that may be impairing the national security"
+  ],
+  "extra": {
+    "actor": "Secretary of Commerce and USTR",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "manufacturing",
+      "defense industrial base"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-04-05",
+  "doc_id": "exec201706968",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.35,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.55,
+  "evidence": [
+    "Medicare would pay, for certain high-cost prescription drugs and biological products covered by Medicare Part B, no more than the most-favored-nation price",
+    "the Secretary shall take appropriate steps to develop and implement a rulemaking plan",
+    "The Executive Order of July 24, 2020...is revoked"
+  ],
+  "extra": {
+    "actor": "HHS Secretary / President",
+    "is_decided": false,
+    "sectors": [
+      "pharmaceuticals",
+      "biotechnology",
+      "healthcare"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-09-23",
+  "doc_id": "exec202021129",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

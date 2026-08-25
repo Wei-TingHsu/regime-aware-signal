@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.6,
+  "confidence": 0.7,
+  "evidence": [
+    "Chairman Dr. Mark Liu has decided not to seek the nomination",
+    "vice chairman Dr. C.C. Wei succeed as the company's next Chairman",
+    "will retire from the Company after the 2024 Annual Shareholders Meeting"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2023-12-19",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

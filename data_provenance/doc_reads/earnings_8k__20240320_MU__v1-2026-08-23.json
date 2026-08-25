@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.55,
+  "confidence": 0.6,
+  "evidence": [
+    "revenue, gross margin and EPS well above the high-end of our guidance range",
+    "AI demand and tight supply accelerate return to profitability",
+    "$6.60 billion \u00b1 $200 million"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.6,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2024-03-20",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

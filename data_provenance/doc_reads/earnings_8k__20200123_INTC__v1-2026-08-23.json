@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "Expecting record 2020 revenue of approximately $73.5 billion and first-quarter revenue of approximately $19.0 billion.",
+    "Record Fourth-quarter revenue was $20.2 billion, up 8 percent year-over-year",
+    "Announces Five Percent Increase to Quarterly Cash Dividend"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.4,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2020-01-23",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

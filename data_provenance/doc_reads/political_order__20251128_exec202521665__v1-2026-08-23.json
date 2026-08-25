@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.25,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "This order launches the ``Genesis Mission'' as a dedicated, coordinated national effort",
+    "The Secretary shall establish and operate the American Science and Security Platform",
+    "subject to available appropriations"
+  ],
+  "extra": {
+    "actor": "President / Department of Energy",
+    "is_decided": true,
+    "sectors": [
+      "AI",
+      "energy",
+      "semiconductors",
+      "biotechnology",
+      "quantum computing",
+      "advanced manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-11-28",
+  "doc_id": "exec202521665",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

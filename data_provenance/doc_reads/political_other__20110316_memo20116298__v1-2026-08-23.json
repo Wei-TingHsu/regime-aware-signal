@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "The Chief Performance Officer shall submit recommendations to me for presidential and, ultimately, congressional action",
+    "Now is the time to act to consolidate and reorganize the executive branch",
+    "totaling approximately $30 billion in fiscal year 2012"
+  ],
+  "extra": {
+    "actor": "President (via Chief Performance Officer/OMB)",
+    "is_decided": false,
+    "sectors": [
+      "government administration",
+      "trade policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-03-16",
+  "doc_id": "memo20116298",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

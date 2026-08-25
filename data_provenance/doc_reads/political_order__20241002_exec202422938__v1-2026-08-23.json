@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "There is hereby established an interagency Emerging Firearms Threats Task Force",
+    "the Task Force shall submit to the President... a report containing a risk assessment and strategy",
+    "Within 110 days of the date of this order... shall develop and publish information about school-based active-shooter drills"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "firearms manufacturing",
+      "3D printing",
+      "education",
+      "law enforcement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2024-10-02",
+  "doc_id": "exec202422938",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

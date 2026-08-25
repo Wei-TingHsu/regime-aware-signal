@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "This order delegates authorities and addresses national defense resource policies and programs under the Defense Production Act",
+    "is delegated to the following agency heads",
+    "Executive Order 12919 of June 3, 1994...are revoked"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 13603)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "energy",
+      "agriculture",
+      "transportation",
+      "health",
+      "industrial base"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-03-22",
+  "doc_id": "exec20127019",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

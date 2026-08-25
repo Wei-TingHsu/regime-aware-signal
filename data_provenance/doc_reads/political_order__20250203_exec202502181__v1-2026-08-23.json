@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "shall abolish every DEI office within the Department of Defense",
+    "prohibited from promoting, advancing, or otherwise inculcating",
+    "shall issue detailed guidance for the implementation of this order"
+  ],
+  "extra": {
+    "actor": "Department of Defense / Department of Homeland Security",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-03",
+  "doc_id": "exec202502181",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

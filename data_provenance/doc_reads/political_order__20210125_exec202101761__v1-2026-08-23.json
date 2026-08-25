@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "It is the policy of my Administration to prevent and combat discrimination on the basis of gender identity or sexual orientation",
+    "The head of each agency shall...review all existing orders, regulations, guidance documents",
+    "Within 100 days of the date of this order, the head of each agency shall develop...a plan"
+  ],
+  "extra": {
+    "actor": "President (executive branch agencies)",
+    "is_decided": true,
+    "sectors": [
+      "civil rights",
+      "employment",
+      "housing",
+      "education",
+      "healthcare"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-25",
+  "doc_id": "exec202101761",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

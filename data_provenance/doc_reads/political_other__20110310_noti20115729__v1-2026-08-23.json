@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I am continuing for 1 year the national emergency with respect to Iran",
+    "actions and policies of the Government of Iran continue to pose an unusual and extraordinary threat"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "sanctions"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-03-10",
+  "doc_id": "noti20115729",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

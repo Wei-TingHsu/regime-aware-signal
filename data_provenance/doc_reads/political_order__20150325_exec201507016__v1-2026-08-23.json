@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 365,
+  "specificity": 0.55,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "reduce agency direct greenhouse gas emissions by at least 40 percent over the next decade",
+    "not less than 25 percent by fiscal year 2025 and each year thereafter",
+    "Executive Order 13423 of January 24, 2007, is revoked"
+  ],
+  "extra": {
+    "actor": "President (Executive Order via CEQ/OMB/agencies)",
+    "is_decided": true,
+    "sectors": [
+      "federal procurement",
+      "clean energy/renewables",
+      "energy efficiency/buildings",
+      "government fleet/EVs",
+      "waste/water management"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-03-25",
+  "doc_id": "exec201507016",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

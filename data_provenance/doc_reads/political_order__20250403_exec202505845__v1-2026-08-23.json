@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 10,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "suspend any active security clearances held by individuals at WilmerHale",
+    "take appropriate steps to terminate any contract... for which WilmerHale has been hired",
+    "refrain from hiring employees of WilmerHale, absent a waiver"
+  ],
+  "extra": {
+    "actor": "President (Executive Order targeting a specific law firm)",
+    "is_decided": true,
+    "sectors": [
+      "legal services",
+      "government contracting"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-03",
+  "doc_id": "exec202505845",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

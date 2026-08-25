@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 180,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "increasing entry fees for foreign tourists, improving affordability for United States residents",
+    "The Secretary of the Interior shall develop a strategy to increase revenue",
+    "shall take steps to increase the prices at which the America the Beautiful Pass"
+  ],
+  "extra": {
+    "actor": "Department of the Interior",
+    "is_decided": false,
+    "sectors": [
+      "parks",
+      "tourism",
+      "recreation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-07-09",
+  "doc_id": "exec202512775",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

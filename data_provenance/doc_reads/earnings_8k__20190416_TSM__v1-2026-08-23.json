@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 90,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.5,
+  "evidence": [
+    "TSMC Unveils 6-nanometer Process",
+    "delivers 18% higher logic density over the N7 process",
+    "Scheduled for risk production in the first quarter of 2020"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2019-04-16",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

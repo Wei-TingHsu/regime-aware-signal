@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "establish a statuary park named the National Garden of American Heroes",
+    "the Task Force shall submit a report to the President",
+    "This order shall be implemented consistent with applicable law and subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "President (Executive Order); Task Force chaired by Secretary of the Interior",
+    "is_decided": true,
+    "sectors": [
+      "cultural/arts",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-07-08",
+  "doc_id": "exec202014872",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

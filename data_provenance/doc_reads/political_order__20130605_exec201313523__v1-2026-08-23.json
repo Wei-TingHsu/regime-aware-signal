@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.2
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "knowingly conducted or facilitated any significant transaction related to the purchase or sale of Iranian rials",
+    "restrict or prohibit imports of goods, technology, or services, directly or indirectly",
+    "This order is effective at 12:01 a.m. eastern daylight time on July 1, 2013"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State authorized to implement)",
+    "is_decided": true,
+    "sectors": [
+      "financial institutions",
+      "energy/oil",
+      "automotive",
+      "Iran-related trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-06-05",
+  "doc_id": "exec201313523",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

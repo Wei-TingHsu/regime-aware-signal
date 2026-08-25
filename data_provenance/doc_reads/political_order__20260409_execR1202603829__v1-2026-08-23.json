@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "I have determined that it is still necessary and appropriate to suspend duty-free de minimis treatment",
+    "CBP shall collect duties on shipments sent through the international postal network",
+    "all such shipments...shall be subject to all applicable duties, taxes, fees, exactions, and charges"
+  ],
+  "extra": {
+    "actor": "President (CBP/DHS/Commerce implementation)",
+    "is_decided": true,
+    "sectors": [
+      "retail",
+      "e-commerce",
+      "logistics/postal shipping",
+      "cross-border trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-04-09",
+  "doc_id": "execR1202603829",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

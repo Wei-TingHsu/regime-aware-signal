@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.75,
+  "evidence": [
+    "Supervisors and deciding officials should not be required to use progressive discipline.",
+    "no agency shall subject to grievance procedures or binding arbitration disputes",
+    "each agency shall provide a report to the OPM Director"
+  ],
+  "extra": {
+    "actor": "President (OPM, executive agencies)",
+    "is_decided": true,
+    "sectors": [
+      "federal government workforce/labor policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-06-01",
+  "doc_id": "exec201811939",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

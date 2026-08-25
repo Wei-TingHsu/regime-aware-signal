@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "Executive Order 11644 and Executive Order 11989 are hereby rescinded.",
+    "shall initiate rulemakings to rescind or revise the regulations",
+    "would facilitate the replacement of current regulations with a system"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "land management",
+      "recreation/off-road vehicles",
+      "energy/timber extraction",
+      "public lands"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-06-03",
+  "doc_id": "exec202611181",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "In 2020, we produced and delivered half a million vehicles, in line with our most recent guidance.",
+    "Model Y production in Shanghai has begun, with deliveries expected to begin shortly.",
+    "Our delivery count should be viewed as slightly conservative"
+  ],
+  "extra": {
+    "surprise": 0.05,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2021-01-04",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

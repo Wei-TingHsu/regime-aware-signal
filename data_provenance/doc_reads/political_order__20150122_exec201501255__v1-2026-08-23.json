@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "establishing an interagency Law Enforcement Equipment Working Group",
+    "shall provide specific recommendations to the President",
+    "Within 60 days of the date of this order"
+  ],
+  "extra": {
+    "actor": "President (Working Group co-chaired by DoD, DOJ, DHS)",
+    "is_decided": true,
+    "sectors": [
+      "defense/law enforcement equipment",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-01-22",
+  "doc_id": "exec201501255",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

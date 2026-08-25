@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.05,
+    "dollar": -0.05,
+    "oil": 0.05
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "I therefore direct that the entry into the United States of nationals of those six countries be suspended for 90 days",
+    "suspend the entry of more than 50,000 refugees in fiscal year 2017",
+    "I am revoking Executive Order 13769 and replacing it with this order"
+  ],
+  "extra": {
+    "actor": "President (DHS/State/DOJ/DNI to implement)",
+    "is_decided": true,
+    "sectors": [
+      "travel",
+      "immigration",
+      "airlines",
+      "technology/visa-dependent labor",
+      "defense/security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-03-09",
+  "doc_id": "exec201704837",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

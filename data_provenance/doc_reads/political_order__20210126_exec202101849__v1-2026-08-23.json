@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.02
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "shall facilitate the gathering, sharing, and publication of COVID-19-related data",
+    "shall develop a plan for advancing innovation in public health data and analytics",
+    "review the effectiveness, interoperability, and connectivity of public health data systems"
+  ],
+  "extra": {
+    "actor": "President/HHS/OMB/OSTP",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "public health data/IT",
+      "biotech"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-26",
+  "doc_id": "exec202101849",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

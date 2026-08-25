@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 180,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.55,
+  "evidence": [
+    "revoked",
+    "shall consider establishing a Special Enrollment Period",
+    "review all existing regulations, orders, guidance documents"
+  ],
+  "extra": {
+    "actor": "President (HHS, Treasury, Labor directed)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "health insurance",
+      "managed care"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-02-02",
+  "doc_id": "exec202102252",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

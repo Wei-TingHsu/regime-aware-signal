@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.9,
+  "evidence": [
+    "I am directing that it officially be renamed the Gulf of America",
+    "reinstate the name ``Mount McKinley.''",
+    "shall take all appropriate actions to rename"
+  ],
+  "extra": {
+    "actor": "President (Department of the Interior, U.S. Board on Geographic Names)",
+    "is_decided": true,
+    "sectors": [
+      "symbolic/cultural",
+      "geographic naming"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-31",
+  "doc_id": "exec202502096",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

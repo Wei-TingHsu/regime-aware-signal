@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.15
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "could directly and significantly contribute to the maintenance or enhancement of Iran's ability to develop petroleum resources",
+    "block all property and interests in property that are in the United States",
+    "This order is effective at 12:01 a.m. eastern standard time on November 21, 2011"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, State/Treasury implementation)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "petrochemical",
+      "financial institutions",
+      "sanctions/Iran"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-11-23",
+  "doc_id": "exec201130463",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

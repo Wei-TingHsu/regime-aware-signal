@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.6,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.7,
+  "horizon_days": 5,
+  "specificity": 0.55,
+  "novelty": 0.6,
+  "confidence": 0.4,
+  "evidence": [
+    "ASML expects total net sales for 2024 of around \u20ac28 billion",
+    "reports \u20ac7.5 billion total net sales and \u20ac2.1 billion net income in Q3 2024"
+  ],
+  "extra": {
+    "surprise": -0.5,
+    "guidance_change": -0.4,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2024-10-15",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

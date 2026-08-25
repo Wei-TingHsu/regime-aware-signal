@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.25,
+  "novelty": 0.15,
+  "confidence": 0.7,
+  "evidence": [
+    "Prioritize projects for selection that provide a clear plan for efficient project delivery",
+    "There is established within the Executive Office of the President the Investing in Good Jobs Task Force",
+    "implementing agencies shall consider actions that, as appropriate and consistent with applicable law"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14126)",
+    "is_decided": true,
+    "sectors": [
+      "infrastructure",
+      "clean energy",
+      "manufacturing",
+      "construction",
+      "labor"
+    ]
+  },
+  "source": "political_order",
+  "date": "2024-09-11",
+  "doc_id": "exec202420712",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

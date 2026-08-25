@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.4,
+    "gold": 0.2,
+    "dollar": -0.3,
+    "oil": 0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "a substantial majority of participants supported lowering the target range for the federal funds rate by 50 basis points",
+    "some participants observed that they would have preferred a 25 basis point reduction",
+    "Almost all participants judged that the risks to achieving the Committee's employment and inflation goals were roughly in balance"
+  ],
+  "extra": {
+    "stance": 0.4,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2024-10-09",
+  "doc_id": "meeting20240918",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

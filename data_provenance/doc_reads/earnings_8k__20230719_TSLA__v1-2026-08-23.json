@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.25,
+  "confidence": 0.55,
+  "evidence": [
+    "Our operating margin remained healthy at approximately 10%, even with price reductions",
+    "For 2023, we expect to remain ahead of the long-term 50% CAGR with around 1.8 million vehicles",
+    "Cybertruck remains on track to begin initial production later this year"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2023-07-19",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

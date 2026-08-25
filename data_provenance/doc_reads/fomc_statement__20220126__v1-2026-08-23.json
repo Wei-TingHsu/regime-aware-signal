@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": -0.4,
+    "gold": -0.2,
+    "dollar": 0.3,
+    "oil": -0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.35,
+  "confidence": 0.7,
+  "evidence": [
+    "expects it will soon be appropriate to raise the target range",
+    "bringing them to an end in early March",
+    "inflation well above 2 percent and a strong labor market"
+  ],
+  "extra": {
+    "stance": 0.5,
+    "guidance": 0.6
+  },
+  "source": "fomc_statement",
+  "date": "2022-01-26",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

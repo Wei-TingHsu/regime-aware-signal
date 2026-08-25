@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Near-term risks to the economic outlook have diminished.",
+    "Job gains were strong in June following weak growth in May.",
+    "will warrant only gradual increases in the federal funds rate"
+  ],
+  "extra": {
+    "stance": -0.1,
+    "guidance": -0.2
+  },
+  "source": "fomc_statement",
+  "date": "2016-07-27",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

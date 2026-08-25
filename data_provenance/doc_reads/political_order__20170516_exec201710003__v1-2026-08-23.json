@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "The Commission shall be solely advisory",
+    "study the registration and voting processes used in Federal elections",
+    "Commission shall terminate 30 days after it submits its report"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_order",
+  "date": "2017-05-16",
+  "doc_id": "exec201710003",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

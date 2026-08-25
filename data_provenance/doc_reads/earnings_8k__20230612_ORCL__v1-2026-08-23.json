@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.65,
+  "horizon_days": 10,
+  "specificity": 0.45,
+  "novelty": 0.55,
+  "confidence": 0.6,
+  "evidence": [
+    "That bodes well for another strong year in FY24.",
+    "signed contracts to purchase more than $2 billion of capacity",
+    "Our infrastructure growth rate has been accelerating\u2014with 63% growth"
+  ],
+  "extra": {
+    "surprise": 0.55,
+    "guidance_change": 0.5,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2023-06-12",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.6,
+  "confidence": 0.7,
+  "evidence": [
+    "Schedule F of the excepted service, as established by section 4 of this order",
+    "agencies need the flexibility to expeditiously remove poorly performing employees",
+    "each agency head shall...petition the Director to place in Schedule F"
+  ],
+  "extra": {
+    "actor": "President (OPM/agency heads)",
+    "is_decided": true,
+    "sectors": [
+      "federal_workforce",
+      "government_administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-10-26",
+  "doc_id": "exec202023780",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

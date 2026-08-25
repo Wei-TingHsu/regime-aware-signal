@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 1.0,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "All executive departments and agencies of the Federal Government shall be closed on January 9, 2025",
+    "as a mark of respect for James Earl Carter, Jr."
+  ],
+  "extra": {
+    "actor": "President (via Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "federal government operations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-03",
+  "doc_id": "exec202431766",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

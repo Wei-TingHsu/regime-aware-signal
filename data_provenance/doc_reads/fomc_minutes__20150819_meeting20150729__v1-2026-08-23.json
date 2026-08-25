@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 15,
+  "specificity": 0.35,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "The Committee concluded that, although it had seen further progress, the economic conditions warranting an increase in the target range for the federal funds rate had not yet been met.",
+    "One member, however, indicated a readiness to take that step at this meeting but was willing to wait for additional data",
+    "Several of these participants cited evidence that the response of inflation to the elimination of resource slack might be attenuated"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2015-08-19",
+  "doc_id": "meeting20150729",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

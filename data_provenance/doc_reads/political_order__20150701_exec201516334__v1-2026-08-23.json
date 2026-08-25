@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established within the Department of Labor the Advisory Board on Toxic Substances and Worker Health",
+    "The Advisory Board shall consist of no more than 15 members",
+    "The Advisory Board shall terminate on the date that is 5 years after the enactment"
+  ],
+  "extra": {
+    "actor": "Department of Labor",
+    "is_decided": true,
+    "sectors": [
+      "labor",
+      "healthcare/occupational health"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-07-01",
+  "doc_id": "exec201516334",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

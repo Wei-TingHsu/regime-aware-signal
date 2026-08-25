@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.45,
+  "confidence": 0.6,
+  "evidence": [
+    "We expect our available supply to be at its lowest level in Q1 before improving in Q2",
+    "Forecasting first-quarter 2026 revenue of $11.7 billion to $12.7 billion",
+    "expecting first-quarter EPS attributable to Intel of $(0.21) and non-GAAP EPS attributable to Intel of $0.00"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": -0.5,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2026-01-22",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

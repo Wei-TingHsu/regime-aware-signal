@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": -0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby terminate the national emergency declared in Executive Order 13288",
+    "the declaration of a national emergency in Executive Order 13288 is no longer needed",
+    "revoke that order, Executive Order 13391, and Executive Order 13469"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "Zimbabwe sanctions",
+      "OFAC-related"
+    ]
+  },
+  "source": "political_order",
+  "date": "2024-03-05",
+  "doc_id": "exec202404857",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.15,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 20,
+  "specificity": 0.45,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Many participants suggested that if incoming data continued to support their current economic outlook, it would likely soon be appropriate to take another step",
+    "most participants expressed the view that an escalation in international trade disputes was a potentially consequential downside risk",
+    "Many participants noted that it would likely be appropriate in the not-too-distant future to revise the Committee's characterization"
+  ],
+  "extra": {
+    "stance": 0.4,
+    "dispersion": 0.45
+  },
+  "source": "fomc_minutes",
+  "date": "2018-08-22",
+  "doc_id": "meeting20180801",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 120,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Consolidating domestic Federal procurement in the General Services Administration",
+    "agency heads shall...submit to the Administrator proposals",
+    "GSA to procure common goods and services across the domestic components"
+  ],
+  "extra": {
+    "actor": "President / GSA / OMB",
+    "is_decided": true,
+    "sectors": [
+      "government contractors",
+      "federal procurement",
+      "IT services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-25",
+  "doc_id": "exec202505197",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

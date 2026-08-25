@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "I have determined to eliminate the additional ad valorem rate of duty imposed on imports of articles of India",
+    "India has committed to stop directly or indirectly importing Russian Federation oil",
+    "products of India imported into the United States shall no longer be subject to the additional ad valorem rate of duty of 25 percent"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "India",
+      "energy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-02-11",
+  "doc_id": "exec202602818",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

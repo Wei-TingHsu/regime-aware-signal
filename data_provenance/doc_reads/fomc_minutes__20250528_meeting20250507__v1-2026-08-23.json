@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": -0.2,
+    "gold": 0.3,
+    "dollar": -0.4,
+    "oil": -0.2
+  },
+  "magnitude": 0.55,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "the staff viewed the possibility that the economy would enter a recession to be almost as likely as the baseline forecast",
+    "Participants judged that downside risks to employment and economic activity and upside risks to inflation had risen",
+    "the dollar had depreciated even though U.S. interest rates had risen more than foreign interest rates"
+  ],
+  "extra": {
+    "stance": -0.3,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2025-05-28",
+  "doc_id": "meeting20250507",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

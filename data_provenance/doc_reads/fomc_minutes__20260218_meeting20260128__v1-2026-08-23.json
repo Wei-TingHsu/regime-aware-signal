@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": -0.15,
+    "gold": -0.1,
+    "dollar": 0.15,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "almost all members no longer judged that downside risks to employment had risen in recent months",
+    "Several participants indicated that they would have supported a two-sided description of the Committee's future interest rate decisions",
+    "the current stance of monetary policy was within the range of estimates of the neutral level"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2026-02-18",
+  "doc_id": "meeting20260128",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

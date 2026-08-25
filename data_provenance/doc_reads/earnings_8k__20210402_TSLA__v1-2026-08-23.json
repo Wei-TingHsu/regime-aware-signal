@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 3,
+  "specificity": 0.85,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "we produced just over 180,000 vehicles and delivered nearly 185,000 vehicles",
+    "encouraged by the strong reception of the Model Y in China",
+    "Our net income and cash flow results will be announced along with the rest of our financial performance"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2021-04-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

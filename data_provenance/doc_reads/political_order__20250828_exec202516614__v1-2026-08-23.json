@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "I am now ordering further actions to address the conditions",
+    "hire additional members of the United States Park Police",
+    "immediately create and begin training, manning, hiring, and equipping a specialized unit"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch - DOJ, DoD, HUD, DOT, National Park Service)",
+    "is_decided": true,
+    "sectors": [
+      "law enforcement",
+      "defense",
+      "housing",
+      "transportation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-28",
+  "doc_id": "exec202516614",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

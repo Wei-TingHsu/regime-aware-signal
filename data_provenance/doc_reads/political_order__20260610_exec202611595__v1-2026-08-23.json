@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 120,
+  "specificity": 0.55,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "prohibit a foreign IOR from filing informal entry",
+    "establishing a minimum penalty floor of not less than 50 percent",
+    "increasing the minimum required bond coverage for an IOR"
+  ],
+  "extra": {
+    "actor": "DHS/CBP",
+    "is_decided": true,
+    "sectors": [
+      "retail",
+      "e-commerce/low-value imports",
+      "customs brokers",
+      "logistics/freight forwarders",
+      "importers"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-06-10",
+  "doc_id": "exec202611595",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

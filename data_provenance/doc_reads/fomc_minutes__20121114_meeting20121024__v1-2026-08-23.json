@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 15,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "all but one member judged that maintaining the current, highly accommodative stance of monetary policy was warranted",
+    "a number of participants indicated that additional asset purchases would likely be appropriate next year",
+    "Several participants questioned the effectiveness of the current purchases or whether a continuation of them would be warranted"
+  ],
+  "extra": {
+    "stance": 0.4,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2012-11-14",
+  "doc_id": "meeting20121024",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

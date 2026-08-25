@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Non-GAAP EPS growth rate now at 16% in constant currency, we will comfortably deliver another year of double-digit EPS growth",
+    "quarterly cash dividend of $0.24 per share...reflecting a 26% increase",
+    "nearly 1,000 paying Autonomous Database customers"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.3,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2019-03-14",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

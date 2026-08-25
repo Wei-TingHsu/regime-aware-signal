@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 3,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "priced its private offering of US$1 billion aggregate principal amount of senior unsecured notes",
+    "intend to use the net proceeds from this offering for general corporate purposes",
+    "US$400 million aggregate principal amount of 4.375% notes due July 22, 2027"
+  ],
+  "confidence_note": "",
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2022-07-20",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

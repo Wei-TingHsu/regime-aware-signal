@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "A majority of participants judged the upside risk to inflation as the greater of these two risks",
+    "A couple of members preferred to lower the target range for the federal funds rate by 25 basis points at this meeting",
+    "Voting against this action: Michelle W. Bowman and Christopher J. Waller"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.75
+  },
+  "source": "fomc_minutes",
+  "date": "2025-08-20",
+  "doc_id": "meeting20250730",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

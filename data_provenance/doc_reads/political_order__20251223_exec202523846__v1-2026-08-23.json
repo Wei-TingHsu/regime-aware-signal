@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "The Attorney General shall take all necessary steps to complete the rulemaking process related to rescheduling marijuana",
+    "work with the Congress to update the statutory definition of final hemp-derived cannabinoid products",
+    "It is the policy of my Administration to increase medical marijuana and CBD research"
+  ],
+  "extra": {
+    "actor": "President (Executive Order); Attorney General; HHS/FDA/NIH/CMS",
+    "is_decided": false,
+    "sectors": [
+      "cannabis",
+      "pharmaceuticals",
+      "healthcare"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-12-23",
+  "doc_id": "exec202523846",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

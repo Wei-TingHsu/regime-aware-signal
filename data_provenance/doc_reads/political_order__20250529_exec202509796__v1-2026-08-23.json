@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 500,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "commence the operation of a nuclear reactor... no later than September 30, 2028",
+    "release into a readily available fuel bank not less than 20 metric tons of high assay low-enriched uranium",
+    "aggressively pursue at least 20 new 123 Agreements by the close of the 120th Congress"
+  ],
+  "extra": {
+    "actor": "President / DoD / DOE / State / Treasury",
+    "is_decided": true,
+    "sectors": [
+      "nuclear power",
+      "utilities",
+      "defense",
+      "AI data centers",
+      "uranium mining/enrichment"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-05-29",
+  "doc_id": "exec202509796",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

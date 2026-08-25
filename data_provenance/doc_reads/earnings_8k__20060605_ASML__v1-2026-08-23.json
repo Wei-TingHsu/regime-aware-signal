@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 15,
+  "specificity": 0.7,
+  "novelty": 0.6,
+  "confidence": 0.6,
+  "evidence": [
+    "ASML today announced that it expects Q2 2006 order entry to be at least 40 percent higher than Q1 2006 net bookings",
+    "Our higher than expected Q2 bookings intake further confirms the steady capacity increase need of the semiconductor industry",
+    "we plan to raise Research and Development variable expenses in Q2 2006"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.6,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2006-06-05",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

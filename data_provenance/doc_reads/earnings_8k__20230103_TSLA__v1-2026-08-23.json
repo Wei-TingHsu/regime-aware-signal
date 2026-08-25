@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.55,
+  "confidence": 0.55,
+  "evidence": [
+    "produced over 439,000 vehicles and delivered over 405,000 vehicles",
+    "vehicle deliveries grew 40% YoY to 1.31 million",
+    "further increase in cars in transit at the end of the quarter"
+  ],
+  "extra": {
+    "surprise": -0.4,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2023-01-03",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "the Secretary of Agriculture shall take all appropriate action under that section to ensure that meat and poultry processors continue operations",
+    "closure of a single large beef processing facility can result in the loss of over 10 million individual servings of beef in a single day",
+    "is delegated to the Secretary of Agriculture with respect to food supply chain resources, including meat and poultry"
+  ],
+  "extra": {
+    "actor": "Secretary of Agriculture",
+    "is_decided": true,
+    "sectors": [
+      "food processing",
+      "agriculture",
+      "meatpacking"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-05-01",
+  "doc_id": "exec202009536",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

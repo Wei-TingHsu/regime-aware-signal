@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.9,
+  "evidence": [
+    "is hereby revoked.",
+    "should, therefore, be discontinued.",
+    "spend tax dollars responsibly, efficiently, and in the public interest"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch/OPM)",
+    "is_decided": true,
+    "sectors": [
+      "federal workforce",
+      "labor relations",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-10-04",
+  "doc_id": "exec201721559",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

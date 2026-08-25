@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "require masks to be worn in compliance with CDC guidelines",
+    "proof of a recent negative COVID-19 test prior to entry",
+    "immediately take action...to require masks to be worn"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "airlines",
+      "transportation",
+      "travel"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-26",
+  "doc_id": "exec202101859",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

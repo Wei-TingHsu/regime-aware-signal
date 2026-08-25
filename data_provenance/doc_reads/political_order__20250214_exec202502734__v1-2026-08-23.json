@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "The Director of the Office of Personnel Management shall take all necessary steps to eliminate the Federal Executive Institute",
+    "it is the policy of my Administration to eliminate, to the greatest extent permitted by law, executive departments and agencies"
+  ],
+  "extra": {
+    "actor": "President (OPM Director to implement)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "federal workforce training"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-14",
+  "doc_id": "exec202502734",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

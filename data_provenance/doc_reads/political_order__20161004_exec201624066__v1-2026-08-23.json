@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "establishing the National Background Investigations Bureau",
+    "primary executive branch service provider for background investigations",
+    "The Council shall submit to the President a recommendation"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "defense/security contracting",
+      "IT services (background investigation systems)"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-10-04",
+  "doc_id": "exec201624066",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

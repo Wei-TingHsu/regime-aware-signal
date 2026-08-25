@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.25
+  },
+  "magnitude": 0.3,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "give full consideration to revising the schedule of proposed oil and gas lease sales",
+    "shall immediately take all steps necessary to review the Final Rule",
+    "Executive Order 13754 of December 9, 2016 (Northern Bering Sea Climate Resilience), is hereby revoked"
+  ],
+  "extra": {
+    "actor": "President (Dept. of Interior/Commerce)",
+    "is_decided": false,
+    "sectors": [
+      "oil & gas",
+      "offshore energy",
+      "energy regulation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-05-03",
+  "doc_id": "exec201709087",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

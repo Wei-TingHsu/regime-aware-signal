@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.85,
+    "duration": -0.15,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.75,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.6,
+  "confidence": 0.7,
+  "evidence": [
+    "Revenue is expected to be $91.0 billion, plus or minus 2%.",
+    "NVIDIA announces $80.0 billion additional share repurchase authorization",
+    "Record revenue of $81.6 billion, up 85% from a year ago"
+  ],
+  "extra": {
+    "surprise": 0.6,
+    "guidance_change": 0.5,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2026-05-20",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

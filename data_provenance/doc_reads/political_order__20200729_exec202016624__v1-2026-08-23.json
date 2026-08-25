@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "facilitating grants to individuals of waivers of the prohibition of importation of prescription drugs",
+    "completing the rulemaking process regarding the proposed rule...to allow importation of certain prescription drugs from Canada",
+    "authorizing the re-importation of insulin products upon a finding by the Secretary"
+  ],
+  "extra": {
+    "actor": "HHS Secretary/President",
+    "is_decided": false,
+    "sectors": [
+      "pharmaceuticals",
+      "healthcare"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-07-29",
+  "doc_id": "exec202016624",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

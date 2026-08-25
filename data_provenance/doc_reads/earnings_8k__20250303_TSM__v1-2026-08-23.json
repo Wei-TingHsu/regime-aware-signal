@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 10,
+  "specificity": 0.5,
+  "novelty": 0.6,
+  "confidence": 0.5,
+  "evidence": [
+    "TSMC today announced its intention to expand its investment in advanced semiconductor manufacturing in the United States by an additional $100 billion",
+    "TSMC's total investment in the U.S. is expected to reach US$165 billion",
+    "we intend to expand our U.S. semiconductor manufacturing investment by an additional $100 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2025-03-03",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

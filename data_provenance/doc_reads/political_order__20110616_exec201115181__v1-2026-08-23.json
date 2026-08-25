@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "cut waste, streamline Government operations",
+    "There is hereby established a Government Accountability and Transparency Board",
+    "each agency's share of the $2.1 billion in administrative cost savings"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch agencies, OMB)",
+    "is_decided": true,
+    "sectors": [
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-06-16",
+  "doc_id": "exec201115181",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

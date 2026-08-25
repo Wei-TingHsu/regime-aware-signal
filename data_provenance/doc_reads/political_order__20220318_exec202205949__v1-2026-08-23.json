@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.15,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "shall consider issuing proposed rules to promote economy, efficiency, and effectiveness in Federal procurement by enhancing pay equity",
+    "The Federal Acquisition Regulatory Council shall also consider the inclusion of appropriate accountability measures",
+    "Federal Acquisition Regulatory Council...shall consider whether any such rules should limit or prohibit Federal contractors...from seeking and considering information about job applicants'...compensation"
+  ],
+  "extra": {
+    "actor": "Federal Acquisition Regulatory Council / OPM",
+    "is_decided": false,
+    "sectors": [
+      "federal contractors",
+      "labor/HR compliance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-03-18",
+  "doc_id": "exec202205949",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

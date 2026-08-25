@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": -0.3,
+    "gold": -0.15,
+    "dollar": 0.25,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "A majority of participants judged that one more increase in the target federal funds rate at a future meeting would likely be appropriate",
+    "some judged it likely that no further increases would be warranted",
+    "almost all participants judged it appropriate to maintain the target range for the federal funds rate at 5-1/4 to 5-1/2 percent"
+  ],
+  "extra": {
+    "stance": 0.35,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2023-10-11",
+  "doc_id": "meeting20230920",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

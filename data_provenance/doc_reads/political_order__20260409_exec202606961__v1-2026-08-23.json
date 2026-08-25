@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "shall be effective on August 1, 2026",
+    "should...update or clarify its rules before August 1, 2026, as appropriate",
+    "The Attorney General shall take appropriate measures to further meritorious actions to invalidate State laws"
+  ],
+  "extra": {
+    "actor": "President/OMB/DOJ/FTC/Dept of Education",
+    "is_decided": false,
+    "sectors": [
+      "higher education",
+      "college athletics",
+      "media/broadcasting"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-04-09",
+  "doc_id": "exec202606961",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

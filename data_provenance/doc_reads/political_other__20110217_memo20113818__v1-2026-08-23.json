@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "I hereby delegate to you the functions and authority",
+    "to make the specified reports to the Congress"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of Agriculture)",
+    "is_decided": true,
+    "sectors": [
+      "agriculture"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-02-17",
+  "doc_id": "memo20113818",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": -0.05,
+    "oil": -0.4
+  },
+  "magnitude": 0.5,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "The Secretary of the Interior shall pause new oil and natural gas leases on public lands or in offshore waters",
+    "a carbon pollution-free electricity sector no later than 2035",
+    "achieve net-zero emissions, economy-wide, by no later than 2050"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14008)",
+    "is_decided": true,
+    "sectors": [
+      "oil & gas",
+      "coal",
+      "utilities/clean energy",
+      "financial institutions",
+      "construction/infrastructure"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-02-01",
+  "doc_id": "exec202102177",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

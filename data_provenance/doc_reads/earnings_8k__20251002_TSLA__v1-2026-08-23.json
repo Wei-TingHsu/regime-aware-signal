@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 3,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.4,
+  "evidence": [
+    "produced over 447,000 vehicles, delivered over 497,000 vehicles",
+    "record for both deliveries and deployments",
+    "Tesla will post its financial results for the third quarter of 2025 after market close on Wednesday, October 22, 2025"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2025-10-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

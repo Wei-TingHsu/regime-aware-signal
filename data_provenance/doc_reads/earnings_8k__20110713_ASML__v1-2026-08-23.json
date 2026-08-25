@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.4,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.6,
+  "confidence": 0.7,
+  "evidence": [
+    "Q2 2011 orders came in a couple of systems lower than expected",
+    "we anticipate third quarter orders likely not to exceed EUR 500 million",
+    "customers are currently taking some time to assess the semiconductor end-demand trends for 2012"
+  ],
+  "extra": {
+    "surprise": -0.4,
+    "guidance_change": -0.5,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2011-07-13",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

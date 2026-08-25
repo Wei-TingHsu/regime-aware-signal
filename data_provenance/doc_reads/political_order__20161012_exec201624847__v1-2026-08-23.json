@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby terminate the national emergency declared in Executive Order 13047, and revoke that order",
+    "it is in the national interest of the United States to waive, and hereby waive, the sanctions",
+    "Burma's substantial advances to promote democracy, including historic elections in November 2015"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "Burma/Myanmar-related trade and investment",
+      "sanctions-affected financial institutions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-10-12",
+  "doc_id": "exec201624847",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

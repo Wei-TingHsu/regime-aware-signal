@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "The United States will not participate in the UNHRC",
+    "shall not use any funds for a contribution, grant, or other payment to UNRWA",
+    "conduct a review of its membership in UNESCO"
+  ],
+  "extra": {
+    "actor": "President/Secretary of State",
+    "is_decided": true,
+    "sectors": [
+      "international organizations",
+      "foreign policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-10",
+  "doc_id": "exec202502504",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

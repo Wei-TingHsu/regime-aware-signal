@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 365,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "the default state of new and modernized Government information resources shall be open and machine readable",
+    "The Director of the Office of Management and Budget (OMB)...shall issue an Open Data Policy",
+    "Within 30 days of the issuance of the Open Data Policy, the CIO and CTO shall publish an open online repository"
+  ],
+  "extra": {
+    "actor": "President/OMB/CIO/CTO",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "data/analytics",
+      "government services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-05-14",
+  "doc_id": "exec201311533",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

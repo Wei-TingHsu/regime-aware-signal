@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "Failure to faithfully implement the President's policy is grounds for professional discipline, including separation.",
+    "The Secretary shall, consistent with applicable law, reform the Foreign Service",
+    "The Secretary shall have sole and exclusive discretion in the exercise or delegation"
+  ],
+  "extra": {
+    "actor": "Secretary of State / State Department",
+    "is_decided": true,
+    "sectors": [
+      "government/foreign policy administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-18",
+  "doc_id": "exec202502841",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

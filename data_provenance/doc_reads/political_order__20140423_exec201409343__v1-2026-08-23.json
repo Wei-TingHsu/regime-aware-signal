@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 1.0,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "is hereby ordered as follows",
+    "or to any member of the armed forces of a friendly foreign nation"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "military honors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-04-23",
+  "doc_id": "exec201409343",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

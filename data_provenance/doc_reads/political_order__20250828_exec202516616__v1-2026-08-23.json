@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "The Attorney General shall prioritize the enforcement to the fullest extent possible",
+    "deny, prohibit, terminate, or revoke visas, residence permits, naturalization proceedings",
+    "vigorously prosecute those who violate our laws in ways that involve desecrating the American Flag"
+  ],
+  "extra": {
+    "actor": "Attorney General / Secretary of State / Secretary of Homeland Security",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "law enforcement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-28",
+  "doc_id": "exec202516616",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.8,
+  "evidence": [
+    "This order revives the Council",
+    "The Council is hereby revived and shall resume operations",
+    "foster close coordination, cooperation, and technology and information exchange among the civil, national security, and commercial space sectors"
+  ],
+  "extra": {
+    "actor": "President (Executive Office of the President)",
+    "is_decided": true,
+    "sectors": [
+      "aerospace",
+      "defense",
+      "satellite/space commercial"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-07-07",
+  "doc_id": "exec201714378",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

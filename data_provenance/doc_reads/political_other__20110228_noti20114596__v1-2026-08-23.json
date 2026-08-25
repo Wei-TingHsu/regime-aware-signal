@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I am continuing the national emergency with respect to Cuba",
+    "the unauthorized entry of any U.S.-registered vessel into Cuban territorial waters continues to be detrimental"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": [
+      "Cuba sanctions",
+      "shipping/vessel regulation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-02-28",
+  "doc_id": "noti20114596",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

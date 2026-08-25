@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "decided to make a further measured reduction in the pace of its asset purchases",
+    "asset purchases are not on a preset course",
+    "members continued to see risks to the outlook for the economy and the labor market as nearly balanced"
+  ],
+  "extra": {
+    "stance": 0.05,
+    "dispersion": 0.35
+  },
+  "source": "fomc_minutes",
+  "date": "2014-05-21",
+  "doc_id": "meeting20140430",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

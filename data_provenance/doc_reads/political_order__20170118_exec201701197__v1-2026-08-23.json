@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 120,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Effective July 12, 2017 and provided the criteria in section 12(b) of this order are met",
+    "sections 1 and 2 of Executive Order 13067... are revoked, and Executive Order 13412... is revoked in its entirety",
+    "shall provide to the President a report on whether the Government of Sudan has sustained the positive actions"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Sudan trade/oil",
+      "financial services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-01-18",
+  "doc_id": "exec201701197",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

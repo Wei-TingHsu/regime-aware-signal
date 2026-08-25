@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 10,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "revenue forecast for the first quarter of 2025 is now anticipated to be closer to the lower end",
+    "estimated related earthquake losses to be approximately NT$5.3 billion, net of insurance claim",
+    "there is no change to our full-year outlook"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": -0.2,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2025-02-10",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

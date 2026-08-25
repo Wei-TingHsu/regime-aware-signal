@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 250,
+  "specificity": 0.25,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "It must take into account benefits and costs, both quantitative and qualitative.",
+    "each agency will periodically review its existing significant regulations",
+    "propose or adopt a regulation only upon a reasoned determination that its benefits justify its costs"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 13563, agencies via OIRA)",
+    "is_decided": true,
+    "sectors": [
+      "cross-sector regulatory policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-01-21",
+  "doc_id": "exec20111385",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

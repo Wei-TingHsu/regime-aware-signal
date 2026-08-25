@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "directed to perform, without approval, ratification, or other action by the President",
+    "to appoint officers from the categories described in section 2101(a)(1)"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of Homeland Security)",
+    "is_decided": true,
+    "sectors": [
+      "Coast Guard",
+      "defense administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-08-17",
+  "doc_id": "exec202317832",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

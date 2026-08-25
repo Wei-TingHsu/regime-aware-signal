@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Diluted earnings per share $25.65 - $26.35",
+    "Net sales $68,500 - $70,000",
+    "we anticipate continued top-line growth in 2024 and sustained cash flow conversion"
+  ],
+  "extra": {
+    "surprise": -0.15,
+    "guidance_change": -0.2,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2024-01-23",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

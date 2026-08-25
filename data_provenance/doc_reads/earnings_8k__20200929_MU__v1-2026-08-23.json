@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "Revenue of $6.06 billion versus $5.44 billion for the prior quarter",
+    "We look forward to improving market conditions throughout calendar 2021, driven by 5G, cloud and automotive growth",
+    "$5.2 billion \u00b1 $200 million"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": -0.1,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2020-09-29",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

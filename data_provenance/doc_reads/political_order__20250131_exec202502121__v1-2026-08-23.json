@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "There is hereby established the President's Council of Advisors on Science and Technology (PCAST)",
+    "unquestioned and unchallenged global technological dominance",
+    "Special Advisor for AI & Crypto shall be members of the PCAST"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "AI",
+      "science policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-31",
+  "doc_id": "exec202502121",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

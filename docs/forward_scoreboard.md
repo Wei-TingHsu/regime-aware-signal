@@ -1,6 +1,7 @@
 # Forward-test scoreboard (live, out-of-sample)
 
 Pre-registered models frozen in `config/models.yaml` before any live data.
+**Regime labels are canonically ordered by ascending mean PC1 from 2026-08-25.** Rows logged before that date carry the old arbitrary GMM component ordering, so the `regime` column is comparable within each era and NOT across the boundary. Historical rows are not retro-relabelled -- the ledger is never rewritten. Picks are unaffected: candidate selection uses label EQUALITY, which is invariant under relabelling.
 Signal = last completed US close; **entry = next US session**; exit = H trading days later.
 `pending` = horizon has not elapsed yet (expected on recent rows). `short_window` = the horizon elapsed but at least one session was missing data for at least one picked asset; the spread is shown with its realised session count and is EXCLUDED from the summary above.
 
@@ -18,9 +19,12 @@ Signal = last completed US close; **entry = next US session**; exit = H trading 
 
 | signal date | entry date | model | regime | longs | shorts | H | status | spread |
 |---|---|---|---|---|---|---|---|---|
-| 2026-08-21 |  | model_1_baseline | 0 | MU, PLTR, ORCL, USO, DRAM | SLV, TSLA, INTC, FLY, SPCX | 5 | pending | pending |
-| 2026-08-21 |  | model_2_horizon_trend | 0 | SNDK, MU, DRAM, SLV, TSM | UUP, WCLD, TSLA, SPCX, FLY | 10 | pending | pending |
-| 2026-08-21 |  | model_3_overfit | 0 | SNDK, MU, PLTR, ASML, INTC | MSFT, TLT, WCLD, TSLA, FLY | 20 | pending | pending |
+| 2026-08-24 | 2026-08-25 | model_1_baseline | 3 | USO, PLTR, XLE, XLV, MU | TSLA, ARM, INTC, SPCX, FLY | 5 | pending | pending |
+| 2026-08-24 | 2026-08-25 | model_2_horizon_trend | 3 | SNDK, DRAM, MU, INTC, SLV | WCLD, JETS, MSFT, TSLA, FLY | 10 | pending | pending |
+| 2026-08-24 | 2026-08-25 | model_3_overfit | 3 | SNDK, DRAM, MU, PLTR, ASML | ORCL, MSFT, WCLD, TSLA, FLY | 20 | pending | pending |
+| 2026-08-21 | 2026-08-24 | model_1_baseline | 0 | MU, PLTR, ORCL, USO, DRAM | SLV, TSLA, INTC, FLY, SPCX | 5 | pending | pending |
+| 2026-08-21 | 2026-08-24 | model_2_horizon_trend | 0 | SNDK, MU, DRAM, SLV, TSM | UUP, WCLD, TSLA, SPCX, FLY | 10 | pending | pending |
+| 2026-08-21 | 2026-08-24 | model_3_overfit | 0 | SNDK, MU, PLTR, ASML, INTC | MSFT, TLT, WCLD, TSLA, FLY | 20 | pending | pending |
 | 2026-08-20 | 2026-08-21 | model_1_baseline | 0 | SNDK, USO, ORCL, PLTR, XLE | ARM, TSLA, INTC, SPCX, FLY | 5 | pending | pending |
 | 2026-08-20 | 2026-08-21 | model_2_horizon_trend | 0 | SNDK, MU, PLTR, SLV, TSM | TSLA, MSFT, JETS, WCLD, FLY | 10 | pending | pending |
 | 2026-08-20 | 2026-08-21 | model_3_overfit | 0 | SNDK, MU, INTC, PLTR, SLV | TLT, UUP, MSFT, WCLD, FLY | 20 | pending | pending |

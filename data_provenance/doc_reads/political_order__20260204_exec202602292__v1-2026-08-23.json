@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.9,
+  "evidence": [
+    "Freedom 250 Grand Prix in Washington, D.C.",
+    "designate a route through Washington, D.C.",
+    "all permits, approvals, and other authorizations... issued... as expeditiously as possible"
+  ],
+  "extra": {
+    "actor": "President; Secretary of the Interior; Secretary of Transportation",
+    "is_decided": true,
+    "sectors": [
+      "motor racing",
+      "tourism/events",
+      "transportation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-02-04",
+  "doc_id": "exec202602292",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

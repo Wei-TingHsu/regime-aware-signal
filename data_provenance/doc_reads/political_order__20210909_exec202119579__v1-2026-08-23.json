@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "there is established in the Department of Education... the White House Initiative",
+    "supersedes Executive Order 13779 of February 28, 2017",
+    "hosting the National HBCU Week Conference"
+  ],
+  "extra": {
+    "actor": "President (Executive Office/Department of Education)",
+    "is_decided": true,
+    "sectors": [
+      "education"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-09-09",
+  "doc_id": "exec202119579",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

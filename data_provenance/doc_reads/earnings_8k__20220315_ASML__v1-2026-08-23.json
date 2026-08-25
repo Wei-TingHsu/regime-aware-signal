@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "ASML intends to declare a total dividend for 2021 of \u20ac5.50 per ordinary share",
+    "This is a 100% increase compared to the 2020 total dividend",
+    "its Supervisory Board intends to reappoint the five members of ASML's Board of Management"
+  ],
+  "extra": {
+    "surprise": 0.05,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2022-03-15",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.4,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "communicate most-favored-nation price targets to pharmaceutical manufacturers",
+    "the Secretary shall propose a rulemaking plan to impose most-favored-nation pricing",
+    "my Administration will take additional aggressive action"
+  ],
+  "extra": {
+    "actor": "President (HHS, USTR, Commerce, DOJ, FTC, FDA)",
+    "is_decided": false,
+    "sectors": [
+      "pharmaceuticals",
+      "healthcare",
+      "biotech"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-05-15",
+  "doc_id": "exec202508876",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.25,
+  "confidence": 0.55,
+  "evidence": [
+    "most participants commented that the Committee should communicate a more explicit form of forward guidance",
+    "Desk had gradually reduced the pace of purchases over the intermeeting period, to their current levels of $4 billion per day",
+    "many survey respondents attached some probability to the target range increasing in 2022"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.5
+  },
+  "source": "fomc_minutes",
+  "date": "2020-07-01",
+  "doc_id": "meeting20200610",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

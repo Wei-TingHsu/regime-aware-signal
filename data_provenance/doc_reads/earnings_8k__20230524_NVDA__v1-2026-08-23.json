@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.9,
+    "duration": -0.2,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.9,
+  "horizon_days": 60,
+  "specificity": 0.9,
+  "novelty": 0.85,
+  "confidence": 0.85,
+  "evidence": [
+    "Second quarter fiscal 2024 revenue outlook of $11.00 billion",
+    "Record Data Center revenue of $4.28 billion",
+    "significantly increasing our supply to meet surging demand"
+  ],
+  "extra": {
+    "surprise": 0.9,
+    "guidance_change": 0.9,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2023-05-24",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "there is established in the Department of Education",
+    "Presidential Advisory Commission on Advancing Educational Equity",
+    "This order supersedes Executive Order 13935 of July 9, 2020"
+  ],
+  "extra": {
+    "actor": "Department of Education",
+    "is_decided": true,
+    "sectors": [
+      "education"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-09-16",
+  "doc_id": "exec202120165",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

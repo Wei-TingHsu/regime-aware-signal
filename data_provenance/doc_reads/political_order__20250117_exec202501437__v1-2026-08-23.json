@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "in view of changing circumstances on the ground in Syria",
+    "amended by: (a) striking from the second paragraph the phrase",
+    "to be owned or controlled by, or to have acted or purported to act for"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "energy",
+      "Syria-related trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-17",
+  "doc_id": "exec202501437",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

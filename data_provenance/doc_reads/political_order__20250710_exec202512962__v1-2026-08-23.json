@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.1,
+    "gold": -0.2,
+    "dollar": 0.1,
+    "oil": 0.2
+  },
+  "magnitude": 0.3,
+  "horizon_days": 15,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "extend the suspension effectuated by Executive Order 14266 until 12:01 a.m. eastern daylight time on August 1, 2025",
+    "This 90-day suspension expires at 12:01 a.m. eastern daylight time on July 9, 2025",
+    "the separate tariff suspension effectuated by Executive Order 14298... remains in effect"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14316)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "import/export"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-07-10",
+  "doc_id": "exec202512962",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

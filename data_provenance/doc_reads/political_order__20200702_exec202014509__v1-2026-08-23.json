@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "prosecute to the fullest extent permitted under Federal law",
+    "withhold Federal support tied to public spaces from State and local governments",
+    "Attorney General shall prioritize within the Department of Justice the investigation and prosecution"
+  ],
+  "extra": {
+    "actor": "President/DOJ/DHS/DOD",
+    "is_decided": true,
+    "sectors": [
+      "law enforcement",
+      "state and local government funding"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-07-02",
+  "doc_id": "exec202014509",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

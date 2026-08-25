@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.35,
+  "evidence": [
+    "2025 total net sales expected to be between \u20ac30 billion and \u20ac35 billion",
+    "ASML reports \u20ac28.3 billion total net sales and \u20ac7.6 billion net income in 2024"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2025-01-29",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

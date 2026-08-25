@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.4,
+    "duration": -0.5,
+    "gold": -0.3,
+    "dollar": 0.5,
+    "oil": -0.2
+  },
+  "magnitude": 0.6,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "all participants agreed that it was appropriate to raise the target range for the federal funds rate 75 basis points",
+    "it would become appropriate at some point to slow the pace of policy rate increases while assessing the effects",
+    "the cost of taking too little action to bring down inflation likely outweighed the cost of taking too much action"
+  ],
+  "extra": {
+    "stance": 0.6,
+    "dispersion": 0.35
+  },
+  "source": "fomc_minutes",
+  "date": "2022-10-12",
+  "doc_id": "meeting20220921",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

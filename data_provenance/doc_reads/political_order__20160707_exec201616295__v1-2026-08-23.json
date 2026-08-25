@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "United States Policy on Pre- and Post-Strike Measures To Address Civilian Casualties",
+    "publicly release an unclassified summary of such information no later than May 1, 2017",
+    "No part of this order modifies the chain of command of the U.S. Armed Forces"
+  ],
+  "extra": {
+    "actor": "President/DNI/NSC",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "national security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-07-07",
+  "doc_id": "exec201616295",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

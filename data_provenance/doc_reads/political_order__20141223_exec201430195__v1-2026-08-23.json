@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "There is established a President's Task Force on 21st Century Policing",
+    "The Task Force shall be solely advisory and shall submit a report to the President by March 2, 2015",
+    "The Task Force shall terminate 30 days after the President requests a final report"
+  ],
+  "extra": {
+    "actor": "President (Executive Office)",
+    "is_decided": true,
+    "sectors": [
+      "law enforcement",
+      "public safety",
+      "civil rights"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-12-23",
+  "doc_id": "exec201430195",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

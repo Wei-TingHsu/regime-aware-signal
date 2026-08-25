@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.55,
+  "confidence": 0.55,
+  "evidence": [
+    "Starting today, we are reducing the price of Model S, Model X and Model 3 vehicles in the U.S. by $2,000.",
+    "Q4 deliveries grew to 90,700 vehicles, which was 8% more than our prior all time-high",
+    "the federal EV tax credit (which, as of January 1st, dropped from $7,500 to $3,750)"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": -0.1,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2019-01-02",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

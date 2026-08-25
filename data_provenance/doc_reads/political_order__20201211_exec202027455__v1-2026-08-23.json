@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 20,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "ensure Americans have priority access to United States Government COVID-19 Vaccines",
+    "facilitate international access to United States Government COVID-19 Vaccines",
+    "Within 30 days of the date of this order"
+  ],
+  "extra": {
+    "actor": "President / HHS / DOD / State Dept",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "pharmaceuticals",
+      "biotech"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-12-11",
+  "doc_id": "exec202027455",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

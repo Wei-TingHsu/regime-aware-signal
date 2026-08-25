@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 250,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "establish a website (TrumpIRA.gov)",
+    "receive a Federal Saver's Match contribution of up to $1,000",
+    "prepare legislative recommendations to codify the policy"
+  ],
+  "extra": {
+    "actor": "Secretary of the Treasury",
+    "is_decided": true,
+    "sectors": [
+      "financial services",
+      "asset management",
+      "retirement savings"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-05-05",
+  "doc_id": "exec202608908",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

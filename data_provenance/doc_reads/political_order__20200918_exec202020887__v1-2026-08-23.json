@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.55,
+  "evidence": [
+    "Medicare program should not pay more for costly Part B prescription drugs or biological products than the most-favored-nation price",
+    "the Secretary of Health and Human Services shall immediately take appropriate steps to implement his rulemaking plan to test a payment model",
+    "To the extent consistent with law"
+  ],
+  "extra": {
+    "actor": "President (HHS to implement)",
+    "is_decided": false,
+    "sectors": [
+      "pharmaceuticals",
+      "healthcare",
+      "biotech"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-09-18",
+  "doc_id": "exec202020887",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

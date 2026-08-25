@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby declare a national emergency to deal with that threat",
+    "All property and interests in property... are blocked",
+    "I hereby suspend entry into the United States"
+  ],
+  "extra": {
+    "actor": "President Obama / OFAC",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "foreign policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-05-15",
+  "doc_id": "exec201411442",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "it is the policy of my Administration to combat unlawful discrimination",
+    "shall establish an initiative to reduce the risk of youth exposure to so-called conversion therapy",
+    "consider whether to issue guidance clarifying"
+  ],
+  "extra": {
+    "actor": "President (multiple agencies: HHS, Education, HUD, State, DOJ, OMB)",
+    "is_decided": false,
+    "sectors": [
+      "social policy",
+      "healthcare",
+      "education",
+      "housing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-06-21",
+  "doc_id": "exec202213391",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

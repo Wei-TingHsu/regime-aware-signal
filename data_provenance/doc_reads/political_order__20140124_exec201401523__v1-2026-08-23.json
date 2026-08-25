@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Afghanistan and Pakistan Strategic Partnership Office (APSPO)",
+    "coordinate the final drawdown of the Department of State's civilian field operations",
+    "transitioning to a normalized diplomatic presence in both countries"
+  ],
+  "extra": {
+    "actor": "President (State Department)",
+    "is_decided": true,
+    "sectors": [
+      "defense/diplomacy",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-01-24",
+  "doc_id": "exec201401523",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

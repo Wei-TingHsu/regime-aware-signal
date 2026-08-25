@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby declare a national emergency to deal with that threat.",
+    "All property and interests in property that are in the United States...are blocked",
+    "high levels of extremist settler violence, forced displacement of people and villages, and property destruction"
+  ],
+  "extra": {
+    "actor": "President Biden / Treasury / State Dept",
+    "is_decided": true,
+    "sectors": [
+      "geopolitical risk",
+      "Middle East",
+      "financial sanctions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2024-02-05",
+  "doc_id": "exec202402354",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

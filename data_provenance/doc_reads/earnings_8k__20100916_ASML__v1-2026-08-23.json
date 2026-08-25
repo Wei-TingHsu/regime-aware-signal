@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.4,
+  "evidence": [
+    "Medium term: the business may fluctuate",
+    "Cisco cautious and Intel reduces guidance due to PC demand weakness",
+    "Rumored slowdown at Samsung, TSMC, etc"
+  ],
+  "extra": {
+    "surprise": -0.15,
+    "guidance_change": -0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2010-09-16",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

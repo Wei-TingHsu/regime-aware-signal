@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "There is established a COVID-19 Pandemic Testing Board",
+    "facilitate the provision of COVID-19 testing free of charge",
+    "establishing a national contact tracing and COVID-19 public health workforce program"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "public health",
+      "diagnostics/testing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-26",
+  "doc_id": "exec202101854",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

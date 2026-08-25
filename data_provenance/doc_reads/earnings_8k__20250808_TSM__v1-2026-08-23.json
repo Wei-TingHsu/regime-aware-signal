@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.35,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 3,
+  "specificity": 0.85,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "revenue for July 2025 was approximately NT$323.17 billion, an increase of 22.5 percent from June 2025",
+    "increase of 25.8 percent from July 2024",
+    "January through July 2025 totaled NT$2,096.21 billion, an increase of 37.6 percent"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2025-08-08",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

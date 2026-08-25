@@ -1,0 +1,45 @@
+==============================================================================
+ANALOG EVENT ESTIMATOR -- BLIND ACCEPTANCE TESTS (prereg section 9.2)
+==============================================================================
+  Real macro PCs, real regimes, real returns with real volatility,
+  fat tails, missing values and holidays. ONLY the event-date <->
+  return correspondence is destroyed. No real conditional estimate
+  is computed anywhere in this run.
+
+  test 5: 200 replications x 500 permutations
+
+  running test 1 ...
+  running test 2 ...
+  running test 3 ...
+  running test 4 ...
+  running test 5 (the expensive one) ...
+      rep 20/200  rejection so far 0.000
+      rep 40/200  rejection so far 0.000
+      rep 60/200  rejection so far 0.000
+      rep 80/200  rejection so far 0.000
+      rep 100/200  rejection so far 0.000
+      rep 120/200  rejection so far 0.000
+      rep 140/200  rejection so far 0.000
+      rep 160/200  rejection so far 0.000
+      rep 180/200  rejection so far 0.006
+      rep 200/200  rejection so far 0.005
+  running test 6 ...
+
+==============================================================================
+  [PASS]  1 recovery
+          estimate +0.017% +/- 2.826%, ESS 2.4, sigma 0.591 (median ESS 17.8 vs target 18.0)
+  [PASS]  2 precedent count
+          reported matched-event counts equal planted counts at n=25,60,140
+  [PASS]  3 tier labelling
+          tier matches the w/ESS boundaries at every n | n=10: ESS 6.1 w 0.62 tier 3; n=20: ESS 3.2 w 0.11 tier 3; n=40: ESS 2.6 w 0.00 tier 3; n=80: ESS 2.2 w 0.00 tier 3; n=160: ESS 2.3 w 0.05 tier 3
+  [PASS]  4 abstention
+          6 matched events -> ESS 3.6 < 8, abstain=True, tier 3
+  [FAIL]  5 null calibration
+          200 reps x 500 perms, no effect planted: rejection at alpha=0.05 is 0.005 (registered band [0.02, 0.08]); median p 0.906
+  [PASS]  6 tau2=0 path
+          identical cell means -> tau2 0.00e+00, w 0.00, tier 3, estimate == unconditional: True
+==============================================================================
+NOT ALL TESTS PASS -- unblinding is NOT authorised (prereg 9.2).
+==============================================================================
+
+  -> /Users/hsuweiting/Projects/regime-aware-signal/docs/analog_event_selftest.md

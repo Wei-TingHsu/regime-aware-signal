@@ -1,0 +1,30 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "Parts III and IV of the Manual for Courts-Martial, United States, are amended",
+    "These amendments shall take effect as of the date of this order"
+  ],
+  "extra": {
+    "actor": "President (DoD/military justice)",
+    "is_decided": true,
+    "sectors": [
+      "defense/military justice"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-05-21",
+  "doc_id": "exec201312157",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

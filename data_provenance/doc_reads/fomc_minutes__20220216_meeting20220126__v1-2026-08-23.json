@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": -0.5,
+    "gold": -0.2,
+    "dollar": 0.4,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "they also anticipated that it would soon be appropriate to raise the target range",
+    "most participants suggested that a faster pace of increases in the target range... would likely be warranted",
+    "a number of participants commented that conditions would likely warrant beginning to reduce the size of the balance sheet sometime later this year"
+  ],
+  "extra": {
+    "stance": 0.55,
+    "dispersion": 0.35
+  },
+  "source": "fomc_minutes",
+  "date": "2022-02-16",
+  "doc_id": "meeting20220126",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

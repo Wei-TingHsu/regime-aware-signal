@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established a White House Office of Faith-Based and Neighborhood Partnerships",
+    "Executive Order 13831 of May 3, 2018... is revoked.",
+    "The operations of the White House Partnerships Office shall begin within 30 days"
+  ],
+  "extra": {
+    "actor": "White House / Executive Office of the President",
+    "is_decided": true,
+    "sectors": [
+      "nonprofit",
+      "government administration",
+      "social services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-02-18",
+  "doc_id": "exec202103424",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

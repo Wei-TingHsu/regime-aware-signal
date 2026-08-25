@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.3,
+    "oil": 0.2
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "All participants supported enhancing the Committee's guidance on asset purchases at this meeting",
+    "until substantial further progress has been made toward the Committee's maximum employment and price stability goals",
+    "this judgment would be broad, qualitative, and not based on specific numerical criteria or thresholds"
+  ],
+  "extra": {
+    "stance": 0.4,
+    "dispersion": 0.35
+  },
+  "source": "fomc_minutes",
+  "date": "2021-01-06",
+  "doc_id": "meeting20201216",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

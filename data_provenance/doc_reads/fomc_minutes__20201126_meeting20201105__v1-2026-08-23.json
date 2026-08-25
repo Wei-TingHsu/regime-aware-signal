@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": -0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "participants judged that immediate adjustments to the pace and composition of asset purchases were not necessary",
+    "Most participants judged that the Committee should update this guidance at some point and implement qualitative outcome-based guidance",
+    "rising COVID-19 cases in Europe and the United States weighed on the outlook, and equity prices reversed some of their earlier gains"
+  ],
+  "extra": {
+    "stance": -0.15,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2020-11-26",
+  "doc_id": "meeting20201105",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

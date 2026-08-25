@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "possession of any such securities by a United States person is prohibited",
+    "extends divestment deadline to November 11, 2021",
+    "any person that the Secretary of Defense... publicly lists as a Communist Chinese military company"
+  ],
+  "extra": {
+    "actor": "President (Treasury/Defense implementation)",
+    "is_decided": true,
+    "sectors": [
+      "Chinese equities",
+      "defense-linked securities",
+      "cross-border investment"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-19",
+  "doc_id": "exec202101228",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

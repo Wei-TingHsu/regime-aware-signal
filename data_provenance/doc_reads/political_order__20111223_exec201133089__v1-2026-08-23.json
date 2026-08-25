@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "shall be the policy and practice of the executive branch",
+    "A National Action Plan shall be created",
+    "This order shall be implemented consistent with applicable law and subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "President/State/Defense/USAID",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_order",
+  "date": "2011-12-23",
+  "doc_id": "exec201133089",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

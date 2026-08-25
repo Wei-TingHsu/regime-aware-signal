@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.1,
+    "gold": 0.2,
+    "dollar": 0.1,
+    "oil": -0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "impose an additional ad valorem duty rate of 40 percent on certain products of Brazil",
+    "hereby declare a national emergency with respect to that threat",
+    "effective with respect to goods entered for consumption...7 days after the date of this order"
+  ],
+  "extra": {
+    "actor": "President Trump / IEEPA",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "Brazil imports",
+      "tariffs"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-05",
+  "doc_id": "exec202514896",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

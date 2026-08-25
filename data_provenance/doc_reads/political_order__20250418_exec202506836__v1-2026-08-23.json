@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.2,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 120,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "The Secretary of Commerce shall initiate an investigation under section 232",
+    "the imposition of tariffs as well as other import restrictions and their appropriate levels",
+    "a final report and recommendations to the President within 180 days"
+  ],
+  "extra": {
+    "actor": "President (Executive Order) / Department of Commerce",
+    "is_decided": true,
+    "sectors": [
+      "critical minerals",
+      "rare earth elements",
+      "manufacturing",
+      "defense",
+      "electronics",
+      "automotive/EV"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-18",
+  "doc_id": "exec202506836",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

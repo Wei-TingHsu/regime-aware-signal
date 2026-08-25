@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "establishing a strong framework that integrates early student exposure with comprehensive teacher training",
+    "There is hereby established the White House Task Force on Artificial Intelligence Education",
+    "the Task Force shall establish plans for a Presidential Artificial Intelligence Challenge"
+  ],
+  "extra": {
+    "actor": "White House/multiple agencies (Task Force)",
+    "is_decided": true,
+    "sectors": [
+      "education",
+      "technology/AI"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-28",
+  "doc_id": "exec202507368",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

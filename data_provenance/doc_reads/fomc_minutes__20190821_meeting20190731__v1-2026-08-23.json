@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.65,
+  "evidence": [
+    "Most participants viewed a proposed quarter-point policy easing at this meeting as part of a recalibration of the stance of policy, or mid-cycle adjustment",
+    "A couple of participants indicated that they would have preferred a 50 basis point cut",
+    "Several participants favored maintaining the same target range at this meeting"
+  ],
+  "extra": {
+    "stance": 0.1,
+    "dispersion": 0.7
+  },
+  "source": "fomc_minutes",
+  "date": "2019-08-21",
+  "doc_id": "meeting20190731",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1003,3 +1003,155 @@ gap is a purchasing decision, not an engineering one. See "Decisions deferred".
 > **SUPERSEDED IN PART.** See `docs/CURRENT_STATE_2026-08-23.md`, which is
 > authoritative where it conflicts with anything above. Stale passages are
 > listed there in section 9.
+
+
+---
+
+## SESSION 2026-08-24/25 — FOUR THREADS CLOSED, STEP 1 CLOSED
+
+*The detailed record is `docs/CURRENT_STATE_2026-08-23.md` §15, appended per that
+file's §12 discipline. This section records only what changes IN THIS FILE:
+threads closed, claims retired, counts corrected. It does not duplicate §15.*
+
+---
+
+### THREADS CLOSED
+
+**Thread 1 — drift-existence. CLOSED, RUN AND NULL.** The text above still reads
+"PRE-REGISTERED, UNRUN" and "deliberately unrun… extend GDELT first, then run."
+Both are stale. It was **run 2026-08-23 at 70 de-clustered episodes** on the
+944-day panel without the extension, and is **null at the registered criterion**
+(prereg 8273be4). See `docs/drift_existence_results.md`. The MDE argument above
+was overtaken by the decision to run it; the amendment (control buffer H+2 rather
+than a flat 20, the registered buffer being infeasible on a 659-session panel) is
+recorded in `prereg_drift_existence.md` §9.
+
+**Thread 3 — canonical regime labels. CLOSED 2026-08-25.** Components are now
+ordered by **ascending mean PC1** in both `analog_core.frozen_labels` and
+`analog_event.regime_labels_expanding`. The `regime` column in
+`forward_ledger.csv` is comparable **within each era and NOT across the
+2026-08-25 boundary**; historical rows are **not** retro-relabelled, on the same
+principle that a missed forward-log day is an honest gap rather than a back-fill.
+**Picks are unaffected** — candidate selection uses label *equality*, which is
+invariant under relabelling, verified bit-identical on 826 rebalances. Five
+hard-coded `n_components=4` literals remain outstanding; the ordering fix was
+forced by the τ² cells in step 3, not by a deliberate visit to this thread.
+
+**Thread 8 — same-horizon level-vs-trend. CLOSED.** `docs/trend_check_results.md`.
+Fixing horizon and varying only `sim_mode` across 4 horizons × 2 sigmas × 2
+universes: on the full-panel basis the mean trend−level advantage is **+0.1137**
+long-history (trend ahead in 6/8 cells); with the `_z()` look-ahead removed it is
+**−0.1213** (3/8 cells). **On this panel the trend advantage IS the look-ahead.**
+Both cells reaching significance on the expanding basis favour *level*.
+model_2_horizon_trend's retirement now rests on two independent grounds rather
+than on a confound.
+
+**Thread 12 — expanding-window feature scaling. CLOSED, MEASURED.** The standing
+instruction was *"expected to be small is not measured."* Now measured
+(`docs/scaling_check_results.md`), identical spec and identical rebalance dates,
+min_periods 252, paired sign-flip on the spread series:
+
+| model | long-history full-panel | expanding | diff | paired p |
+|---|---|---|---|---|
+| model_1_baseline (level) | 0.2526 | 0.2406 | +0.012 | 0.940 |
+| model_2_horizon_trend (trend) | 0.4131 | 0.1522 | **+0.261** | 0.057 |
+| model_3_overfit (trend) | 0.4947 | 0.3568 | +0.138 | 0.500 |
+
+**Small for level, large for both trend models.** Mechanism: `sim_mode='trend'`
+z-scores the *differenced* PCs, whose volatility is dominated by 2008 and 2020,
+so a full-panel sd for that block encodes future volatility regimes far more than
+the level block's does. Candidate-pool shrinkage is **0.0%** for all three, which
+rules out a smaller analog pool as the cause.
+
+**The phrase "expanding-window walk-forward, no look-ahead" stays wrong.** It is
+now wrong by a measured amount rather than an unmeasured one.
+
+**Thread 17 — political source. CLOSED.** The heading above still reads "BUILT
+BUT NOT YET WORKING". It works: 873 executive orders / determinations and 816
+proclamations / notices / memoranda fetched. The `--types` filter also works —
+an earlier claim in conversation that it did not was wrong; the ~50 non-EO
+documents in the first pull were residue from a run made before the filter was
+fixed.
+
+**The coverage-gap paragraph above is CORRECTED.** It says Federal Register
+"carries decided policy only" and that low-specificity communication is absent.
+**Proclamations, notices and memoranda were in the corpus all along**, pooled
+under one source and one prompt. They are now split by the Federal Register's own
+type tag into `political_order` and `political_other`, and `political_other`
+measures at specificity **0.27** against `political_order`'s **0.60** — it is the
+low-specificity arm the gate needed. The remaining gap is narrower than stated:
+**statements, posts and rhetoric outside the Federal Register**, which is still a
+purchasing decision.
+
+---
+
+### CLAIMS RETIRED
+
+**"There is no lambda and no time term anywhere in the codebase."** Already
+retracted in place above. `config.yaml` carries
+`analog.recency_decay_lambda: 0.0008` in **sessions** — HL 3.44 years — and
+`analog_backtest.py` applies it. The reported **0.51 / 0.25 always carried
+decay.**
+
+**"Removing the incumbent λ raises long-history Sharpe from 0.25 to 0.38."**
+Asserted 2026-08-24, **retired 2026-08-25**. `docs/engine_b_paired_results.md`,
+sign-flip on 836 paired rebalances against a criterion registered before
+implementation: **p = 0.485**. Reported as *not distinguishable at this sample
+size*, which is **not** evidence the two are equal. The λ surface is jagged
+(0.30 / 0.25 / 0.22 / 0.29 across steps of 1e-4), so the gap is not separable
+from surface roughness.
+
+**The word *analog* as applied to either engine.**
+`docs/rung_diagnostic_results.md`: registered threshold ≥ 0.90 top-k overlap
+versus the no-decay control = tie-breaking. Measured at the primary rung —
+**Engine A 0.765, Engine B 0.850, both RESELECTION.** ESS holds at ~99.6 of 100
+at every rung on both engines: λ does not concentrate weight, it swaps
+membership. Both engines reduce to *"pick the 100 most recent same-regime days
+and average them with equal weight."* The λ ladder is therefore **reframed as
+exploratory**: it measures whether restricting to recent history improves
+returns, not whether recency decay improves analog quality.
+
+---
+
+### COUNTS CORRECTED IN THIS FILE
+
+- **Working principles: "five wrong priors so far" → SEVENTEEN.** Eight added in
+  this session, all Claude's, listed in `CURRENT_STATE` §15.10. Every one was
+  caught by **running something**, not by reasoning about it.
+- **Corpus** is no longer 623 documents. Current on-disk counts are in
+  `CURRENT_STATE` §15.8; the read is in progress after two credit exhaustions.
+- **The `earnings_8k` corpus recorded above was 307 SEC cover pages** — the
+  primary 8-K document, not the EX-99 release. |dir| eq 0.07 → **0.47** and
+  specificity 0.20 → **0.66** once exhibits were fetched. The reader was correct
+  throughout; the corpus was wrong. Cover pages retained as evidence at
+  `data_provenance/docs/earnings_8k_coverpages/`.
+
+---
+
+### NEW IN THIS FILE
+
+**`config/models.frozen.sha256`** — canonical checksum of the frozen `models:`
+block (yaml → sorted JSON → sha256, so comments and key order may change but a
+hyperparameter may not). `forward_log` and `model_grid` verify it and refuse to
+run on mismatch, and refuse any entry carrying `half_life_years` under `models:`.
+This replaced a comment reading *"never edit this file"*, an invariant that had
+already been broken on 08-23 when four recency variants were added under
+`models:` — where `forward_log` would have logged them live, producing picks
+**bit-identical to model_1_baseline** under four different names because
+`picks_for` passed no `age_years` to `_kw`. Caught before the first run that
+would have seen them.
+
+**Steps 3–6 pre-registered** in `docs/prereg_analog_event.md` (74b88dc), before
+the corpus read. Estimator built **blind** and passing 6/6 acceptance tests.
+Unblinding authorised once the corpus completes. Detail in `CURRENT_STATE` §15.9.
+
+---
+
+### STILL OPEN IN THIS FILE
+
+Threads 2, 4–7, 9–11, 13–16 are unchanged. Thread 13's documentation-accuracy
+items are now larger, not smaller: `PIPELINE.md` documents none of the ten
+scripts written in the last two days.
+
+**The report does not exist and the deadline has passed.** Nothing in this
+session changes that, and no engineering item outranks it.

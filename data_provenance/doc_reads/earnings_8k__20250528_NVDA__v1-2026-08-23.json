@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "Revenue is expected to be $45.0 billion, plus or minus 2%.",
+    "reflects a loss in H20 revenue of approximately $8.0 billion due to the recent export control limitations",
+    "Global demand for NVIDIA\u2019s AI infrastructure is incredibly strong."
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.4,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2025-05-28",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

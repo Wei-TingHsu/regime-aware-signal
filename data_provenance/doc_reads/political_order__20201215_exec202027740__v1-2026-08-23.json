@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "shall initiate notice-and-comment rulemaking to brand and mark all United States foreign assistance",
+    "the President will select a logo that embodies the values and generosity of the American people",
+    "The single logo shall be prominently displayed on all materials related to United States foreign assistance"
+  ],
+  "extra": {
+    "actor": "President/State Department/USAID",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid administration",
+      "diplomacy/public affairs"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-12-15",
+  "doc_id": "exec202027740",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

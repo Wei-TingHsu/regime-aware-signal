@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.25,
+    "duration": -0.2,
+    "gold": -0.15,
+    "dollar": 0.25,
+    "oil": -0.05
+  },
+  "magnitude": 0.55,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "several of these participants indicated that they did not necessarily view another 25 basis point reduction as likely to be appropriate at the December meeting",
+    "Many participants suggested that, under their economic outlooks, it would likely be appropriate to keep the target range unchanged for the rest of the year",
+    "Two members voted against that decision. One of these members preferred to lower the target range 1/2 percentage point, while the other member preferred to leave the target range unchanged"
+  ],
+  "extra": {
+    "stance": -0.3,
+    "dispersion": 0.8
+  },
+  "source": "fomc_minutes",
+  "date": "2025-11-19",
+  "doc_id": "meeting20251029",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

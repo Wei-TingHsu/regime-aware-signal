@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "confidence": 0.65,
+  "novelty": 0.4,
+  "evidence": [
+    "Sales of \u20ac942 million, an increase of 50% compared with Q1 2006, strongest quarterly sales in history",
+    "Achieved target for unit booking guidance 50% above Q1 2006 at 93 units",
+    "Reiterating shipment forecast of 20-25 immersion systems in 2006"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2006-08-10",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.2,
+  "horizon_days": 90,
+  "specificity": 0.2,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "It shall be the policy of my Administration to make America energy dominant.",
+    "advise the President on improving the processes for permitting, production, generation",
+    "recommend to the President a plan to raise awareness on a national level"
+  ],
+  "extra": {
+    "actor": "President (Executive Office); Dept of Interior/Energy chair council",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "oil and gas",
+      "nuclear",
+      "critical minerals",
+      "utilities"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-20",
+  "doc_id": "exec202502928",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

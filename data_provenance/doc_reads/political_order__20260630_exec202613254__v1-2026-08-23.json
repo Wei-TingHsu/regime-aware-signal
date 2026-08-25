@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 60,
+  "specificity": 0.25,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "prioritize registration actions related to substances that can be used as alternatives",
+    "maximize the funding of the current Regenerative Pilot Program",
+    "significantly increase Federal investment in regenerative agriculture practices"
+  ],
+  "extra": {
+    "actor": "President/EPA/USDA/HHS",
+    "is_decided": false,
+    "sectors": [
+      "agriculture",
+      "agrochemicals",
+      "food"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-06-30",
+  "doc_id": "exec202613254",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

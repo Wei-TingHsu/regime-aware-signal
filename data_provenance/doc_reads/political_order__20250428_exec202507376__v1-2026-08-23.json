@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 90,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "Federal recognition will not be provided to accreditors engaging in unlawful discrimination",
+    "resume recognizing new accreditors to increase competition and accountability",
+    "assess whether to suspend or terminate the Council's status as an accrediting agency"
+  ],
+  "extra": {
+    "actor": "Department of Education / Attorney General",
+    "is_decided": false,
+    "sectors": [
+      "education",
+      "for-profit education",
+      "student loans"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-28",
+  "doc_id": "exec202507376",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

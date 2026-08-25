@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "establishes within the Department of Health and Human Services (HHS) a COVID-19 Health Equity Task Force",
+    "shall provide specific recommendations to the President",
+    "strengthen enforcement of anti-discrimination requirements pertaining to the availability of, and access to, COVID-19 care"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "public health administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-26",
+  "doc_id": "exec202101852",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

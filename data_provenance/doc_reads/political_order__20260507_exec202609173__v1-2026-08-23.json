@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.02,
+    "duration": 0.03,
+    "gold": 0.03,
+    "dollar": 0.02,
+    "oil": 0.01
+  },
+  "magnitude": 0.15,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.7,
+  "evidence": [
+    "Imposing Sanctions on Those Responsible for Repression in Cuba",
+    "All property and interests in property that are in the United States...are blocked",
+    "I hereby suspend entry into the United States, as immigrants or nonimmigrants, of such persons"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State implementation)",
+    "is_decided": true,
+    "sectors": [
+      "Cuba economy",
+      "energy",
+      "defense",
+      "metals and mining",
+      "financial services",
+      "security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-05-07",
+  "doc_id": "exec202609173",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

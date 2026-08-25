@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.3,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "a substantial majority of participants judged that a slowing in the pace of increase would likely soon be appropriate",
+    "the level to which the Committee ultimately raised the target range... had become more important considerations... than the pace",
+    "A few other participants noted that... it could be advantageous to wait until the stance of policy was more clearly in restrictive territory"
+  ],
+  "extra": {
+    "stance": 0.4,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2022-11-23",
+  "doc_id": "meeting20221102",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

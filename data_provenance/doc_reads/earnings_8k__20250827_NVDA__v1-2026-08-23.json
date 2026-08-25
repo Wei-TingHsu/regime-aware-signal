@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.65,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.45,
+  "confidence": 0.7,
+  "evidence": [
+    "Revenue is expected to be $54.0 billion, plus or minus 2%.",
+    "The company has not assumed any H20 shipments to China in the outlook.",
+    "Blackwell Data Center revenue grew 17% sequentially"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.5,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2025-08-27",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

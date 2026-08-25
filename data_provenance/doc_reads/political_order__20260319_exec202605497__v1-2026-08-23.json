@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "There is hereby established within the Executive Office of the President a Task Force to Eliminate Fraud",
+    "proactively pausing certain types of funding until such controls can be established",
+    "examine and recommend, as appropriate, any ways that Federal funds may be withheld"
+  ],
+  "extra": {
+    "actor": "President / Vice President-led Task Force",
+    "is_decided": true,
+    "sectors": [
+      "Medicaid/healthcare",
+      "SNAP/food assistance",
+      "housing assistance",
+      "state and local government funding",
+      "nonprofit/NGO service providers"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-03-19",
+  "doc_id": "exec202605497",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

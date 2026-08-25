@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "Coordinating Efforts To Prepare the Nation for Space Weather Events",
+    "shall develop a plan to test and evaluate available devices that mitigate the effects of geomagnetic disturbances",
+    "shall establish a Space Weather Operations, Research, and Mitigation Subcommittee"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 13744)",
+    "is_decided": true,
+    "sectors": [
+      "energy/electric grid",
+      "aerospace/satellite",
+      "telecommunications",
+      "government/homeland security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-10-18",
+  "doc_id": "exec201625290",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

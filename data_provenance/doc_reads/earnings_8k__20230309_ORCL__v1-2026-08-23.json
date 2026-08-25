@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "non-GAAP earnings per share growth hit the high end of our guidance",
+    "Cloud businesses now exceed $16 billion in annualized revenue",
+    "quarterly cash dividend of $0.40 per share, up 25% from $0.32"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.2,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2023-03-09",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "Every appointee in every executive agency appointed on or after January 20, 2017, shall sign",
+    "I will not, within 5 years after the termination of my employment as an appointee...engage in lobbying activities",
+    "This order supersedes Executive Order 13490 of January 21, 2009"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch)",
+    "is_decided": true,
+    "sectors": [
+      "government ethics",
+      "lobbying",
+      "federal employment"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-02-03",
+  "doc_id": "exec201702450",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

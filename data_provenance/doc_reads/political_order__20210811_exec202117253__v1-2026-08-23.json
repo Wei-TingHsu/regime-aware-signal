@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.02,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 20,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "expand the scope of the national emergency declared in Executive Order 13405",
+    "operate or have operated in the defense and related materiel sector, security sector, energy sector",
+    "unrestricted immigrant and nonimmigrant entry into the United States... is hereby suspended"
+  ],
+  "extra": {
+    "actor": "President Biden / Treasury (OFAC)",
+    "is_decided": true,
+    "sectors": [
+      "Belarus sanctions",
+      "defense",
+      "energy",
+      "potash",
+      "tobacco",
+      "construction",
+      "transportation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-08-11",
+  "doc_id": "exec202117253",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

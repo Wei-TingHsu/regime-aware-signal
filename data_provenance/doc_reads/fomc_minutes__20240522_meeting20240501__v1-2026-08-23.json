@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.55,
+  "novelty": 0.2,
+  "confidence": 0.65,
+  "evidence": [
+    "they did not expect that it would be appropriate to reduce the target range until they have gained greater confidence",
+    "recent data had not increased their confidence in progress toward 2 percent",
+    "A few participants indicated that they could have supported a continuation of the current pace of balance sheet runoff"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.45
+  },
+  "source": "fomc_minutes",
+  "date": "2024-05-22",
+  "doc_id": "meeting20240501",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

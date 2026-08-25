@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.2,
+    "gold": 0.3,
+    "dollar": -0.1,
+    "oil": -0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 20,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby declare a national emergency with respect to that threat.",
+    "suspend or eliminate different and preferential treatment for Hong Kong",
+    "All property and interests in property that are in the United States... are blocked"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "finance",
+      "trade",
+      "immigration",
+      "export controls",
+      "Hong Kong-US relations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-07-17",
+  "doc_id": "exec202015646",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

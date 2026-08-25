@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.65,
+  "novelty": 0.55,
+  "confidence": 0.6,
+  "evidence": [
+    "bookings project strong outlook",
+    "Q1 2006 sales showing important growth versus the previous quarter",
+    "significant 55 tool bookings in Q4 2005 confirm an overall semiconductor cycle upswing"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.5,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2006-01-19",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

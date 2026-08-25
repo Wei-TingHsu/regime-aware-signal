@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 250,
+  "specificity": 0.4,
+  "novelty": 0.35,
+  "confidence": 0.5,
+  "evidence": [
+    "contracting officers shall consider the information provided pursuant to paragraphs (i) and (ii)",
+    "the FAR Council shall...propose to amend the Federal Acquisition Regulation",
+    "contractors agree that the decision to arbitrate claims...may only be made with the voluntary consent"
+  ],
+  "extra": {
+    "actor": "President (Executive Order); FAR Council/DOL to implement via rulemaking",
+    "is_decided": false,
+    "sectors": [
+      "federal contractors",
+      "construction",
+      "defense/government services",
+      "labor/employment compliance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-08-05",
+  "doc_id": "exec201418561",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

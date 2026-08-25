@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.1
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "prohibit any transactions in foreign exchange that are subject to the jurisdiction of the United States",
+    "block all property and interests in property that are in the United States",
+    "restrict or prohibit imports of goods, technology, or services"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, implementing ITRSHRA/ISA/CISADA)",
+    "is_decided": true,
+    "sectors": [
+      "energy/oil",
+      "financial institutions",
+      "shipping/trade with Iran"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-10-12",
+  "doc_id": "exec201225236",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

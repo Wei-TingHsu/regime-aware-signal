@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.2,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "Coronavirus Mental Health Working Group is hereby established",
+    "national call to action",
+    "subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "mental health/social services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-10-08",
+  "doc_id": "exec202022510",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

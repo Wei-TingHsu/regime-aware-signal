@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "There is established the HIV Care Continuum Initiative",
+    "the Working Group shall provide recommendations to the President",
+    "This acceleration will enable us to meet the goals of the Strategy"
+  ],
+  "extra": {
+    "actor": "President (Executive Office/HHS)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "public health",
+      "pharmaceuticals"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-07-18",
+  "doc_id": "exec201317478",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

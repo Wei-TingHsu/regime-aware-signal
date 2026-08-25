@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "it is the policy of the United States to rescind all funds from educational programs",
+    "prioritize Title IX enforcement actions against educational institutions",
+    "review grants to educational programs and, where appropriate, rescind funding"
+  ],
+  "extra": {
+    "actor": "President/Department of Education/State/Homeland Security",
+    "is_decided": true,
+    "sectors": [
+      "education",
+      "sports"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-11",
+  "doc_id": "exec202502513",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

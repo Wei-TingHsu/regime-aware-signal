@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.3,
+    "gold": 0.3,
+    "dollar": 0.3,
+    "oil": -0.1
+  },
+  "magnitude": 0.75,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.6,
+  "confidence": 0.75,
+  "evidence": [
+    "subject to an additional 25 percent ad valorem rate of duty",
+    "Should Canada retaliate against the United States... the President may increase or expand",
+    "I hereby declare and reiterate a national emergency under the NEA and IEEPA"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, IEEPA/NEA authority)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "energy",
+      "cross-border commerce"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-07",
+  "doc_id": "exec202502406",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

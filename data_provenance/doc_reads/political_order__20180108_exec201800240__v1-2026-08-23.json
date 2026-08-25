@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "Executive Order 13799 of May 11, 2017 ... is hereby revoked",
+    "the Presidential Advisory Commission on Election Integrity is accordingly terminated"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "elections"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-01-08",
+  "doc_id": "exec201800240",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

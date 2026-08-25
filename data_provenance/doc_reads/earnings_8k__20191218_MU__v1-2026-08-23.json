@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "we are optimistic that Micron's fiscal second quarter will be the cyclical bottom",
+    "well-positioned for anticipated recovery starting in the fiscal third quarter",
+    "Non-GAAP diluted earnings per share $0.35 \u00b1 $0.06"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.2,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2019-12-18",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

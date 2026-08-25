@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": -0.3,
+    "gold": 0.2,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.4,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Many participants indicated that they would have preferred removing the language from the postmeeting statement that suggested an easing bias",
+    "A majority of participants highlighted, however, that some policy firming would likely become appropriate if inflation were to continue to run persistently above 2 percent",
+    "Three members would have preferred to provide a more two-sided characterization of the Committee's future interest rate decisions"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "dispersion": 0.75
+  },
+  "source": "fomc_minutes",
+  "date": "2026-05-20",
+  "doc_id": "meeting20260429",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

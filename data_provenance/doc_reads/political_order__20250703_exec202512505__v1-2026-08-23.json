@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "the Office for Special Peace Missions is hereby established within the White House Office",
+    "shall advance efforts aimed at ending ongoing conflicts abroad",
+    "This order is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "White House / President",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "diplomacy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-07-03",
+  "doc_id": "exec202512505",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

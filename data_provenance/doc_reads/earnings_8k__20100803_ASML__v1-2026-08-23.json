@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.2,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "100% of ASML's leading-edge scanners are now sold with one or more holistic lithography components.",
+    "STMicroelectronics for example will incorporate Eclipse in conjunction with a TWINSCAN NXT:1950i scanner",
+    "All of our customers have adopted multiple products from the holistic product portfolio"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2010-08-03",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

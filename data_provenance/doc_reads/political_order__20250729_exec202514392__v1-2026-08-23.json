@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.25,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "it is the policy of the executive branch that third-party, pay-for-play payments to collegiate athletes are improper",
+    "shall develop a plan to advance the policies set forth in subsections (a)-(c)",
+    "shall work to stabilize and preserve college athletics through litigation, guidelines, policies"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": false,
+    "sectors": [
+      "college sports",
+      "education",
+      "sports media/entertainment"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-07-29",
+  "doc_id": "exec202514392",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

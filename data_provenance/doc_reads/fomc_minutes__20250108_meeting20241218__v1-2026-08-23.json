@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": -0.4,
+    "gold": -0.1,
+    "dollar": 0.3,
+    "oil": -0.1
+  },
+  "magnitude": 0.55,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.45,
+  "confidence": 0.7,
+  "evidence": [
+    "Committee was at or near the point at which it would be appropriate to slow the pace of policy easing",
+    "Almost all participants judged that upside risks to the inflation outlook had increased",
+    "One member voted against that decision, preferring to maintain the target range"
+  ],
+  "extra": {
+    "stance": 0.3,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2025-01-08",
+  "doc_id": "meeting20241218",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

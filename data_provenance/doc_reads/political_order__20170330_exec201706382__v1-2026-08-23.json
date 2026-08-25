@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Executive Order 13673 of July 31, 2014...are revoked",
+    "consider promptly rescinding any orders, rules, regulations, guidance"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "federal contractors",
+      "defense",
+      "government services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-03-30",
+  "doc_id": "exec201706382",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

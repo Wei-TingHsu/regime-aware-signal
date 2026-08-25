@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "The suspension of the USRAP and other processes specified in section 6(a) of Executive Order 13780 are no longer in effect.",
+    "the Secretary of State may resume travel of qualified and appropriately vetted refugees",
+    "they will apply special measures to certain categories of refugees whose entry continues to pose potential threats"
+  ],
+  "extra": {
+    "actor": "President (DHS/State/DNI/DOJ implementation)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "refugee resettlement",
+      "national security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-10-27",
+  "doc_id": "exec201723630",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

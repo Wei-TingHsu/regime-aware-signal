@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.65,
+  "evidence": [
+    "establish and implement a plan to demonstrate the energy flexibility capability",
+    "pilot a transportable micro-reactor prototype",
+    "develop a common technology roadmap through 2030"
+  ],
+  "extra": {
+    "actor": "President (DOD, DOE, NASA, State, Commerce)",
+    "is_decided": true,
+    "sectors": [
+      "nuclear energy",
+      "defense",
+      "aerospace"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-14",
+  "doc_id": "exec202101013",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

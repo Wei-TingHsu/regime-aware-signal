@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "ensure that every new Federal building above 5,000 gross square feet",
+    "in compliance with the 2015 edition of the International Wildland-Urban Interface Code",
+    "It is the policy of the United States to strengthen the security and resilience"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "federal real estate",
+      "construction",
+      "building codes"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-05-20",
+  "doc_id": "exec201612155",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

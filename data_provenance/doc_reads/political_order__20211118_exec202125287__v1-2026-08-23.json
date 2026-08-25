@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 365,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.9,
+  "evidence": [
+    "shall assess and build on existing efforts to develop a coordinated and comprehensive Federal law enforcement strategy",
+    "shall report to the President within 240 days of the date of this order",
+    "This order shall be implemented consistent with applicable law and subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "President (multiple agencies: DOJ, DOI, HHS, DHS, DOE)",
+    "is_decided": false,
+    "sectors": [
+      "public safety",
+      "tribal affairs",
+      "law enforcement",
+      "social services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-11-18",
+  "doc_id": "exec202125287",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

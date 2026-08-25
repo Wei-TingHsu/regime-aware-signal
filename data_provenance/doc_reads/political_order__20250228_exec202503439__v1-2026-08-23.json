@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 120,
+  "specificity": 0.3,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "initiate an investigation under section 232 of the Trade Expansion Act",
+    "whether additional measures, including tariffs or quotas, are necessary",
+    "submit a report to the President within 270 days"
+  ],
+  "extra": {
+    "actor": "Department of Commerce",
+    "is_decided": false,
+    "sectors": [
+      "copper",
+      "mining",
+      "metals",
+      "manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-28",
+  "doc_id": "exec202503439",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Duty-free de minimis treatment under 19 U.S.C. 1321 is available for otherwise eligible covered articles",
+    "Such duty-free de minimis treatment shall cease to be available",
+    "upon notification by the Secretary of Commerce to the President that adequate systems are in place"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, Commerce Secretary determination trigger)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "e-commerce",
+      "customs"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-06",
+  "doc_id": "exec202503729",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

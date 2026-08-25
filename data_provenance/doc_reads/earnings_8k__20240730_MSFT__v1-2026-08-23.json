@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "Microsoft Cloud Strength Drives Fourth Quarter Results",
+    "record bookings and Microsoft Cloud quarterly revenue of $36.8 billion, up 21%",
+    "Microsoft will provide forward-looking guidance in connection with this quarterly earnings announcement on its earnings conference call"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.0,
+    "ticker": "MSFT"
+  },
+  "source": "earnings_8k",
+  "date": "2024-07-30",
+  "doc_id": "MSFT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

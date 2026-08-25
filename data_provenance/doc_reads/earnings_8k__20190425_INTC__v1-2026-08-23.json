@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.2,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.55,
+  "confidence": 0.65,
+  "evidence": [
+    "Expecting full-year revenue of $69.0 billion...down from January guidance",
+    "we're taking a more cautious view of the year",
+    "Data Center Group... enterprise and government revenue declined 21 percent"
+  ],
+  "extra": {
+    "surprise": -0.4,
+    "guidance_change": -0.5,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2019-04-25",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

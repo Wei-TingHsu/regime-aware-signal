@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "There is hereby established the President's Council on Sports, Fitness, and Nutrition",
+    "Executive Order 13545 of June 22, 2010, is hereby revoked.",
+    "shall develop a national strategy to expand children's participation in youth sports"
+  ],
+  "extra": {
+    "actor": "President/HHS",
+    "is_decided": true,
+    "sectors": [
+      "public health",
+      "sports",
+      "nutrition"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-03-02",
+  "doc_id": "exec201804414",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

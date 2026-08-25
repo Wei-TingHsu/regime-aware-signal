@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.45,
+  "confidence": 0.75,
+  "evidence": [
+    "2024 outlook increased for sales, segment operating profit and earnings per share",
+    "backlog of nearly $160 billion, greater than two times annual revenue",
+    "gives us confidence to raise our 2024 full-year outlook"
+  ],
+  "extra": {
+    "surprise": 0.35,
+    "guidance_change": 0.4,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2024-07-23",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

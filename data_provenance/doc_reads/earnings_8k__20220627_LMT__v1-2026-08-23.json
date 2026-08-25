@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 45,
+  "specificity": 0.85,
+  "novelty": 0.6,
+  "confidence": 0.7,
+  "evidence": [
+    "expects to recognize a non-cash, non-operating settlement charge of approximately $1.5 billion",
+    "was not included in the Company's prior 2022 financial outlook released on April 19, 2022",
+    "will provide an update to its 2022 financial outlook with its second quarter earnings release"
+  ],
+  "extra": {
+    "surprise": -0.3,
+    "guidance_change": -0.4,
+    "ticker": "LMT"
+  },
+  "source": "earnings_8k",
+  "date": "2022-06-27",
+  "doc_id": "LMT",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

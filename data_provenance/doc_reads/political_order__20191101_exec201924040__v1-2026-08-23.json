@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "The Attorney General shall establish a Commission on Law Enforcement and the Administration of Justice",
+    "The Commission shall study issues related to law enforcement and the administration of justice",
+    "The Commission shall submit a report and recommendations to the Attorney General no later than 1 year"
+  ],
+  "extra": {
+    "actor": "Department of Justice / Attorney General",
+    "is_decided": true,
+    "sectors": [
+      "law enforcement",
+      "criminal justice"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-11-01",
+  "doc_id": "exec201924040",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

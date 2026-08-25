@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.55,
+  "confidence": 0.6,
+  "evidence": [
+    "We forecast record revenue in fiscal Q1 and a substantial revenue record",
+    "Achieved record data center revenue and NAND revenue in fiscal Q4",
+    "best competitive positioning in Micron's history"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.6,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2024-09-25",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

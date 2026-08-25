@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.3
+  },
+  "magnitude": 0.4,
+  "horizon_days": 250,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "each of the Covered Agencies shall issue a sunset rule, effective not later than September 30, 2025",
+    "regulations governing energy production",
+    "This order shall not apply to regulatory permitting regimes authorized by statute"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14270)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "oil & gas",
+      "nuclear",
+      "mining",
+      "environmental regulation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-04-15",
+  "doc_id": "exec202506466",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.35,
+    "gold": 0.15,
+    "dollar": -0.1,
+    "oil": -0.1
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "Committee agreed to continue through the end of this year the Committee's program to extend the average maturity",
+    "strains in global financial markets... continued to pose significant downside risks to the economic outlook",
+    "A few members expressed the view that further policy stimulus likely would be necessary"
+  ],
+  "extra": {
+    "stance": -0.3,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2012-07-11",
+  "doc_id": "meeting20120620",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

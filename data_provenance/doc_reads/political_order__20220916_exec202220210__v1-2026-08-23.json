@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "establishes the White House Office on Clean Energy Innovation and Implementation",
+    "prioritize investing public dollars effectively and efficiently",
+    "achieve a carbon pollution-free electricity sector by 2035"
+  ],
+  "extra": {
+    "actor": "President (Executive Office of the President)",
+    "is_decided": true,
+    "sectors": [
+      "clean energy",
+      "manufacturing",
+      "energy infrastructure"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-09-16",
+  "doc_id": "exec202220210",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "The Attorney General shall not renew Department of Justice contracts with privately operated criminal detention facilities",
+    "phasing out the Federal Government's reliance on privately operated criminal detention facilities"
+  ],
+  "extra": {
+    "actor": "Attorney General / Department of Justice",
+    "is_decided": true,
+    "sectors": [
+      "private prisons",
+      "criminal justice services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-29",
+  "doc_id": "exec202102070",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

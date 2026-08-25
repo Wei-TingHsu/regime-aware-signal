@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 90,
+  "specificity": 0.55,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "Agency Heads shall promptly undertake preparations to initiate large-scale reductions in force (RIFs)",
+    "each agency hire no more than one employee for every four employees that depart",
+    "Within 240 days of the date of this order, the USDS Administrator shall submit a report"
+  ],
+  "extra": {
+    "actor": "President/OMB/OPM/USDS",
+    "is_decided": true,
+    "sectors": [
+      "federal government workforce",
+      "government contractors",
+      "public administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-14",
+  "doc_id": "exec202502762",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

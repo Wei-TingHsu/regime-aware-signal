@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": -0.3,
+    "gold": -0.15,
+    "dollar": 0.25,
+    "oil": -0.1
+  },
+  "magnitude": 0.45,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "a moderation in the pace of asset purchases may soon be warranted",
+    "tapering... if begun later this year, would lead the Federal Reserve to end purchases around the middle of next year",
+    "a number of participants raised the possibility of beginning to increase the target range by the end of next year"
+  ],
+  "extra": {
+    "stance": 0.4,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2021-10-13",
+  "doc_id": "meeting20210922",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

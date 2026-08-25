@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.1,
+    "gold": 0.15,
+    "dollar": 0.05,
+    "oil": 0.2
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "operate in the construction, mining, manufacturing, or textiles sectors of the Iranian economy",
+    "impose on a foreign financial institution the sanctions",
+    "deny the Iranian government revenues"
+  ],
+  "extra": {
+    "actor": "President (Treasury/State to implement)",
+    "is_decided": true,
+    "sectors": [
+      "construction",
+      "mining",
+      "manufacturing",
+      "textiles",
+      "financial institutions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-01-14",
+  "doc_id": "exec202000534",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby authorize the Secretary of Defense... to order to active duty",
+    "necessary to augment the active Armed Forces... for Operation United Assistance",
+    "consequence management support related to the Ebola virus disease outbreak"
+  ],
+  "extra": {
+    "actor": "President (DoD/DHS)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "military reserves",
+      "public health/Ebola response"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-10-23",
+  "doc_id": "exec201425292",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

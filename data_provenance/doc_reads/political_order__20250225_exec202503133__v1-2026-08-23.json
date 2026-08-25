@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 20,
+  "specificity": 0.55,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "reduction in the elements of the Federal bureaucracy that the President has determined are unnecessary",
+    "shall be eliminated to the maximum extent consistent with applicable law",
+    "shall terminate the Advisory Committee on Voluntary Foreign Aid"
+  ],
+  "extra": {
+    "actor": "President/OMB/OPM",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "federal advisory committees",
+      "USAID",
+      "Presidio Trust",
+      "Inter-American Foundation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-25",
+  "doc_id": "exec202503133",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "vehicle volume growth rate may be notably lower than the growth rate achieved in 2023",
+    "Free cash flow of negative $2.5 billion in Q1",
+    "This update may result in achieving less cost reduction than previously expected"
+  ],
+  "extra": {
+    "surprise": -0.5,
+    "guidance_change": -0.4,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2024-04-23",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

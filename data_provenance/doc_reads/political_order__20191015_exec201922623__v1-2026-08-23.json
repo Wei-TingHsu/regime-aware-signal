@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "require that agencies treat guidance documents as non-binding both in law and in practice",
+    "each agency shall...finalize regulations...to set forth processes and procedures for issuing guidance documents",
+    "No agency may cite, use, or rely on guidance documents that are rescinded"
+  ],
+  "extra": {
+    "actor": "President/OMB/Executive agencies",
+    "is_decided": true,
+    "sectors": [
+      "regulated industries broadly",
+      "administrative/regulatory compliance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-10-15",
+  "doc_id": "exec201922623",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

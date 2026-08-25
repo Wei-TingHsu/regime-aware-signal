@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.9,
+  "evidence": [
+    "it is the policy of the United States to recognize two sexes, male and female",
+    "Federal funds shall not be used to promote gender ideology",
+    "These Executive Orders are hereby rescinded, and the White House Gender Policy Council... is dissolved"
+  ],
+  "extra": {
+    "actor": "President/Executive Branch agencies (HHS, DOJ, DHS, HUD, OPM, EEOC)",
+    "is_decided": true,
+    "sectors": [
+      "social policy",
+      "civil rights",
+      "federal employment",
+      "healthcare/prisons"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-30",
+  "doc_id": "exec202502090",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

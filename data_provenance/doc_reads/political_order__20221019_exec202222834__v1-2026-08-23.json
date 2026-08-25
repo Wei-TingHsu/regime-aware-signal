@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.25,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "The Secretary shall, not later than 90 days after the date of this order, submit a report",
+    "consider whether to select for testing by the Innovation Center new health care payment and delivery models that would lower drug costs",
+    "As my Administration works to implement the IRA, it is critical that we take additional actions"
+  ],
+  "extra": {
+    "actor": "HHS Secretary / CMS Innovation Center",
+    "is_decided": false,
+    "sectors": [
+      "pharmaceuticals",
+      "healthcare",
+      "managed care"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-10-19",
+  "doc_id": "exec202222834",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

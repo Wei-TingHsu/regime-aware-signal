@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.2
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "Effective July 1, 2025, I hereby terminate the national emergency declared in Executive Order 13338",
+    "directing additional actions, including the removal of sanctions on Syria",
+    "shall reimpose sanctions"
+  ],
+  "extra": {
+    "actor": "President (Executive Order), Treasury/State/Commerce implementation",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "financial services",
+      "reconstruction/infrastructure",
+      "trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-07-03",
+  "doc_id": "exec202512506",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

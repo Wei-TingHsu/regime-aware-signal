@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.35,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "Many participants indicated that their assessment of the balance of risks associated with the timing of the beginning of policy normalization had inclined them toward keeping the federal funds rate at its effective lower bound for a longer time.",
+    "dropping the \"patient\" language in the statement, whenever that might occur, as risking a shift in market expectations for the beginning of policy firming toward an unduly narrow range of dates",
+    "a few expressed concern that in some circumstances the public could come to question the credibility of the Committee's 2 percent goal"
+  ],
+  "extra": {
+    "stance": -0.2,
+    "dispersion": 0.6
+  },
+  "source": "fomc_minutes",
+  "date": "2015-02-18",
+  "doc_id": "meeting20150128",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

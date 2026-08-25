@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "each agency head shall use The Framework for Improving Critical Infrastructure Cybersecurity",
+    "Agency heads shall show preference in their procurement for shared IT services",
+    "shall jointly assess the scope and sufficiency of efforts to educate and train"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch agencies: DHS, OMB, DoD, Commerce, DNI)",
+    "is_decided": true,
+    "sectors": [
+      "federal IT/cybersecurity",
+      "critical infrastructure",
+      "defense industrial base",
+      "cybersecurity workforce/education"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-05-16",
+  "doc_id": "exec201710004",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

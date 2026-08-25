@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "highest quarterly organic revenue growth rate since we began our transition to the cloud",
+    "Total Cloud revenue which includes Cloud Infrastructure and Cloud Applications is now over $11 billion a year",
+    "Q3 Cloud Infrastructure revenue was up 47% in constant currency"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.0,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2022-03-10",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

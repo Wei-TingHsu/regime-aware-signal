@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.85,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.9,
+  "horizon_days": 60,
+  "specificity": 0.9,
+  "novelty": 0.75,
+  "confidence": 0.8,
+  "evidence": [
+    "Micron's record fiscal Q3 financial results and even stronger outlook for Q4",
+    "Revenue $50.0 billion \u00b1 $1.0 billion",
+    "our multi-year Strategic Customer Agreements will significantly enhance the durability"
+  ],
+  "extra": {
+    "surprise": 0.7,
+    "guidance_change": 0.9,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2026-06-24",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

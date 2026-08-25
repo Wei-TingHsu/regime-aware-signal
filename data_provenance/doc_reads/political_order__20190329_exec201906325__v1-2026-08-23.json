@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 0,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "The Federal Government must foster sustainable, efficient, and cost-effective approaches to improving the Nation's resilience to the effects of EMPs.",
+    "Within 90 days of the date of this order, the Secretary of Homeland Security... shall identify and list the national critical functions",
+    "This order is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 13865)",
+    "is_decided": true,
+    "sectors": [
+      "critical infrastructure",
+      "defense",
+      "energy",
+      "telecommunications",
+      "homeland security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-03-29",
+  "doc_id": "exec201906325",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

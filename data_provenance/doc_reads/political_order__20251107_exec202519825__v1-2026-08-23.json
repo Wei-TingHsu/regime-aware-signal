@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.1,
+    "gold": -0.2,
+    "dollar": 0.15,
+    "oil": 0.1
+  },
+  "magnitude": 0.4,
+  "horizon_days": 10,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "reduce the additional ad valorem rate of duty applicable under Executive Order 14195... from 20 percent to 10 percent",
+    "effective November 10, 2025",
+    "the PRC has committed to take significant measures to end the flow of fentanyl"
+  ],
+  "extra": {
+    "actor": "President (DHS implementation)",
+    "is_decided": true,
+    "sectors": [
+      "China trade",
+      "tariffs",
+      "imports"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-11-07",
+  "doc_id": "exec202519825",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

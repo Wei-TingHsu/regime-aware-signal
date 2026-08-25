@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby terminate the national emergency declared in Executive Order 13348",
+    "Liberia's significant advances to promote democracy and the orderly development",
+    "This order is effective at 2:00 p.m. eastern standard time on November 12, 2015"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "Liberia sanctions",
+      "IEEPA"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-11-16",
+  "doc_id": "exec201529403",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

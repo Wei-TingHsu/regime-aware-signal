@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "comply with all guidance for contractor or subcontractor workplace locations published by the Safer Federal Workforce Task Force",
+    "This order shall apply to any new contract; new contract-like instrument",
+    "effective immediately and shall apply to new contracts"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14042)",
+    "is_decided": true,
+    "sectors": [
+      "federal contractors",
+      "government services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-09-14",
+  "doc_id": "exec202119924",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

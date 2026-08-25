@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "not to exceed $15 million from the United States Emergency Refugee and Migration Assistance Fund",
+    "humanitarian crisis resulting from the violence in Libya"
+  ],
+  "extra": {
+    "actor": "President/Secretary of State",
+    "is_decided": true,
+    "sectors": [
+      "humanitarian aid",
+      "foreign policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-03-16",
+  "doc_id": "dete20116263",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

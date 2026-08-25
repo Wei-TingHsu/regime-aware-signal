@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "Raising full-year 2021 guidance. Now expecting GAAP revenue of $77.0 billion",
+    "exceeded January guidance by $1.1 billion",
+    "This is a pivotal year for Intel"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.5,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2021-04-22",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

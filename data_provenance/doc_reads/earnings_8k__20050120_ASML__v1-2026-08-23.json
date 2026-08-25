@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Q4 2004 was a quarter that showed strong momentum as sales increased 29 percent",
+    "We remain cautious in our forecast as customer order push-outs are always possible",
+    "The company has limited visibility for Q3 and Q4 2005."
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2005-01-20",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

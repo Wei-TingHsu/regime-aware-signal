@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "it shall not make operational use of commercial spyware that poses significant counterintelligence or security risks",
+    "An agency seeking to procure commercial spyware for any purpose other than for a criminal investigation",
+    "A relevant official... may issue a waiver, for a period not to exceed 1 year"
+  ],
+  "extra": {
+    "actor": "President / Executive Departments and Agencies",
+    "is_decided": true,
+    "sectors": [
+      "surveillance technology",
+      "cybersecurity",
+      "defense/intelligence contractors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-03-30",
+  "doc_id": "exec202306730",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

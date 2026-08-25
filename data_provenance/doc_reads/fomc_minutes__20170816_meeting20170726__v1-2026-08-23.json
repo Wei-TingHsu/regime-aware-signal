@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.3,
+    "gold": 0.1,
+    "dollar": -0.2,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "some participants expressed concern about the recent decline in inflation... argued against additional adjustments until incoming information confirmed",
+    "most preferred to defer that decision until an upcoming meeting",
+    "it intended to begin implementing the balance sheet normalization program relatively soon"
+  ],
+  "extra": {
+    "stance": -0.15,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2017-08-16",
+  "doc_id": "meeting20170726",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

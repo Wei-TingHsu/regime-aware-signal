@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.25,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.3,
+  "horizon_days": 250,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "The Secretary shall approve at least three reactors pursuant to this pilot program with the goal of achieving criticality in each of the three reactors by July 4, 2026.",
+    "significantly expedite the review, approval, and deployment of advanced reactors under the Department's jurisdiction",
+    "Within 90 days of the date of this order, the Secretary shall take appropriate action to revise the regulations"
+  ],
+  "extra": {
+    "actor": "Department of Energy",
+    "is_decided": true,
+    "sectors": [
+      "nuclear power",
+      "energy infrastructure",
+      "utilities",
+      "advanced reactor technology"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-05-29",
+  "doc_id": "exec202509799",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 180,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "the National Quantum Initiative Advisory Committee (Committee) is hereby established",
+    "Executive Order 13885 of August 30, 2019 ... is hereby revoked",
+    "not more than 26 members, appointed by the President"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "quantum computing",
+      "technology",
+      "national security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-05-09",
+  "doc_id": "exec202210076",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "establishing the White House Task Force on Celebrating America's 250th Birthday",
+    "Task Force 250 shall terminate on December 31, 2026",
+    "reinstated as it was prior to the issuance of Executive Order 14029"
+  ],
+  "extra": {
+    "actor": "President/White House Task Force 250",
+    "is_decided": true,
+    "sectors": [
+      "ceremonial/cultural",
+      "defense (administrative support)"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-03",
+  "doc_id": "exec202502231",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

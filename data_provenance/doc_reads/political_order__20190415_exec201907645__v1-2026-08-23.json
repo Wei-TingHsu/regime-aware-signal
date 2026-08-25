@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "shall adopt procedures to ensure that all actions... can be completed within 60 days",
+    "Any decision to issue, deny, or amend a permit under this section shall be made solely by the President.",
+    "Executive Order 13337... and Executive Order 11423... are hereby revoked."
+  ],
+  "extra": {
+    "actor": "President (Executive Order, Dept. of State implementation)",
+    "is_decided": true,
+    "sectors": [
+      "energy infrastructure",
+      "cross-border pipelines",
+      "transportation crossings"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-04-15",
+  "doc_id": "exec201907645",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

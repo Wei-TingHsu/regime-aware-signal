@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 120,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "develop and send to agency heads a Federal Hiring Plan",
+    "decrease government-wide time-to-hire to under 80 days",
+    "prevent the hiring of individuals based on their race, sex, or religion"
+  ],
+  "extra": {
+    "actor": "President (Domestic Policy Advisor/OPM/OMB/DOGE)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "federal workforce"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-01-30",
+  "doc_id": "exec202502094",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

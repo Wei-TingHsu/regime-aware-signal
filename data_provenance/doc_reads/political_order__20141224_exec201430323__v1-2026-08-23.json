@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.03,
+    "oil": -0.05
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "prohibits new investment in the Crimea region of Ukraine by a United States person",
+    "blocked and may not be transferred, paid, exported, withdrawn, or otherwise dealt in",
+    "suspend entry into the United States, as immigrants or nonimmigrants, of such persons"
+  ],
+  "extra": {
+    "actor": "President Obama / Treasury (OFAC)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Russia/Ukraine-Crimea trade and investment"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-12-24",
+  "doc_id": "exec201430323",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

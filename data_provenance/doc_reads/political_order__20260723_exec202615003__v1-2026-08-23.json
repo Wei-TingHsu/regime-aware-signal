@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.15,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 250,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "cease to issue waivers under 10 U.S.C. 4872(c)(1)",
+    "prohibit contractors from utilizing in their supply chains covered material supplied by an unreliable foreign supplier",
+    "qualify and utilize an alternative source for the material or components"
+  ],
+  "extra": {
+    "actor": "Department of War / Secretary",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "critical minerals",
+      "manufacturing",
+      "mining"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-07-23",
+  "doc_id": "exec202615003",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

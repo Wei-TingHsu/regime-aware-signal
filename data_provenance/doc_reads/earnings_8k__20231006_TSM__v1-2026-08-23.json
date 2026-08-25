@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "revenue for September 2023 was approximately NT$180.43 billion, a decrease of 4.4 percent from August 2023",
+    "a decrease of 13.4 percent from September 2022",
+    "January through September 2023 totaled NT$1,536.21 billion, a decrease of 6.2 percent"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2023-10-06",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

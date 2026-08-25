@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "No decision was made at this meeting to change the Committee's policy strategy or communications.",
+    "One member dissented from the policy decision on the grounds that additional monetary policy accommodation was warranted at this time.",
+    "participants agreed that it would not be advisable to make such a change under present circumstances"
+  ],
+  "extra": {
+    "stance": -0.15,
+    "dispersion": 0.65
+  },
+  "source": "fomc_minutes",
+  "date": "2011-11-23",
+  "doc_id": "meeting20111102",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

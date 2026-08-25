@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Executive Order 13772 of February 3, 2017 (Core Principles for Regulating the United States Financial System)",
+    "the following Presidential actions are revoked",
+    "shall promptly consider taking steps to rescind any orders, rules, regulations"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "financial regulation",
+      "labor relations",
+      "federal architecture",
+      "agency rulemaking"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-03-01",
+  "doc_id": "exec202104281",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

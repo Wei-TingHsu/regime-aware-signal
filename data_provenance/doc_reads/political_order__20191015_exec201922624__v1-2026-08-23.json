@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 250,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "Guidance documents may not be used to impose new standards of conduct on persons outside the executive branch",
+    "it may apply only standards of conduct that have been publicly stated in a manner that would not cause unfair surprise",
+    "each agency, as appropriate, shall...propose procedures to encourage voluntary self-reporting"
+  ],
+  "extra": {
+    "actor": "President (executive branch agencies)",
+    "is_decided": true,
+    "sectors": [
+      "regulated industries broadly",
+      "financial services",
+      "healthcare",
+      "energy",
+      "manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-10-15",
+  "doc_id": "exec201922624",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

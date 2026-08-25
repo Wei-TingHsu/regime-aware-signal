@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "SaaS and PaaS revenue growth accelerated to 68% in constant currency, significantly higher than my guidance",
+    "Q1 SaaS and PaaS revenue growth, which we now expect to be between 75% and 80%",
+    "Total Q4 Revenues were $10.6 billion, down 1% in U.S. dollars"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.6,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2016-06-16",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "we have also passed the bottom of the cycle of our business and began to see demand increases",
+    "we expect our third quarter business to further improve",
+    "Revenue is expected to be between US$9.1 billion and US$9.2 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.5,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2019-07-18",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

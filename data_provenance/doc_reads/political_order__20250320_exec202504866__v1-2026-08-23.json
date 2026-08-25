@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "Executive Order 14026 of April 27, 2021 (Increasing the Minimum Wage for Federal Contractors)",
+    "the following executive actions are hereby revoked",
+    "Executive Order 14081 ... Advancing Biotechnology and Biomanufacturing Innovation"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "federal contractors",
+      "labor",
+      "biotechnology",
+      "energy/DPA",
+      "tribal affairs"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-20",
+  "doc_id": "exec202504866",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

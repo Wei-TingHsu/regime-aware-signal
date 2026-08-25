@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.5,
+    "gold": 0.2,
+    "dollar": -0.4,
+    "oil": 0.1
+  },
+  "magnitude": 0.55,
+  "horizon_days": 20,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "almost all participants indicated that... a lower target range for the federal funds rate would be appropriate by the end of 2024",
+    "participants viewed the policy rate as likely at or near its peak for this tightening cycle",
+    "financial conditions had eased over the intermeeting period"
+  ],
+  "extra": {
+    "stance": -0.35,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2024-01-03",
+  "doc_id": "meeting20231213",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

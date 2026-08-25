@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "all property and interests in property of the Government of the Russian Federation directly related to the implementation of the HEU Agreements",
+    "hereby declare a national emergency to deal with that threat",
+    "In order to ensure the preservation and proper and complete transfer to the Government of the Russian Federation"
+  ],
+  "extra": {
+    "actor": "President (Treasury/OFAC implementation)",
+    "is_decided": true,
+    "sectors": [
+      "nuclear",
+      "financial sanctions",
+      "government assets"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-06-27",
+  "doc_id": "exec201215954",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

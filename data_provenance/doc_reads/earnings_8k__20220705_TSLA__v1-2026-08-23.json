@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 3,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "produced over 258,000 vehicles and delivered over 254,000 vehicles",
+    "June 2022 was the highest vehicle production month in Tesla's history",
+    "despite ongoing supply chain challenges and factory shutdowns beyond our control"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2022-07-05",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

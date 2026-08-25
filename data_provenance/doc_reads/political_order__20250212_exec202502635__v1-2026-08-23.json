@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established within the Executive Office of the President (EOP) the White House Faith Office",
+    "to compete on a level playing field for grants, contracts, programs",
+    "This order shall be implemented consistent with applicable law and subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "President (Executive Office)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "religious/nonprofit organizations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-12",
+  "doc_id": "exec202502635",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "There is hereby established the Federal Interagency Council on Crime Prevention and Improving Reentry",
+    "The Council shall develop recommendations for evidence-based programmatic and other reforms",
+    "This order...shall terminate 3 years after the date of this order"
+  ],
+  "extra": {
+    "actor": "President/DOJ-led interagency council",
+    "is_decided": true,
+    "sectors": [
+      "criminal justice",
+      "social services",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-03-12",
+  "doc_id": "exec201805113",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

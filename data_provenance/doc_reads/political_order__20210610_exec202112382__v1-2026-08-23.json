@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "expand the scope of the national emergency declared in Executive Order 13219",
+    "All property and interests in property...are blocked",
+    "the entry of such persons into the United States...is hereby suspended"
+  ],
+  "extra": {
+    "actor": "President Biden / Treasury / State Dept",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Western Balkans",
+      "immigration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-06-10",
+  "doc_id": "exec202112382",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

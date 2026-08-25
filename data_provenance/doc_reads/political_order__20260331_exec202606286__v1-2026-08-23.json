@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "The contractor will not engage in any racially discriminatory DEI activities",
+    "this contract may be canceled, terminated, or suspended in whole or in part",
+    "contracting agencies shall: (i) cancel, terminate, suspend"
+  ],
+  "extra": {
+    "actor": "President (OMB, FAR Council, DOJ, EEOC)",
+    "is_decided": true,
+    "sectors": [
+      "federal contractors",
+      "government services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-03-31",
+  "doc_id": "exec202606286",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

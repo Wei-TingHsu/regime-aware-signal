@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "Third quarter consolidated revenue totaled NT$989.92 billion, and net income was NT$452.30 billion",
+    "Board approved capital appropriations of approximately US$14,981.60 million",
+    "Approved the distribution of a NT$6.0 per share cash dividend"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.2,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2025-11-12",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

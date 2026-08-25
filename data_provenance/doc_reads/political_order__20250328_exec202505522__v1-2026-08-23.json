@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "cease issuing paper checks for all Federal disbursements",
+    "Effective September 30, 2025",
+    "not, for avoidance of doubt, to establish a Central Bank Digital Currency"
+  ],
+  "extra": {
+    "actor": "President/Department of the Treasury",
+    "is_decided": true,
+    "sectors": [
+      "financial services",
+      "payments technology",
+      "government operations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-03-28",
+  "doc_id": "exec202505522",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

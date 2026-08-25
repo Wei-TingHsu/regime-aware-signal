@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "The importation into the United States, directly or indirectly, of charcoal from Somalia is prohibited.",
+    "to have engaged, directly or indirectly, in the import or export of charcoal from Somalia",
+    "all of which contribute to the deterioration of the security situation"
+  ],
+  "extra": {
+    "actor": "President Obama / Treasury / State",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "commodities-charcoal",
+      "national security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-07-24",
+  "doc_id": "exec201218237",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "ASML shareholders approve Customer Co-Investment Program",
+    "ASML will return the entire cash proceeds of the share issue to ASML shareholders",
+    "agreed to contribute EUR 1.38 billion to ASML's research and development"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2012-09-07",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

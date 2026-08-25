@@ -765,3 +765,484 @@ schedules it. This is the gap between a study and a product.
 5. **Register before running.** Every result in this project that survived
    scrutiny had its criterion written first; every one that collapsed was found
    by a test registered in advance.
+
+
+---
+
+## 15. SESSION 2026-08-24/25 — STEP 1 CLOSED, GATE PASSED, ESTIMATOR BUILT
+
+*Appended per §12: everything new goes at the end of this file. This section
+supersedes §2, §3, §7, §11, §13 and the REVISED ACTION ORDER above wherever they
+conflict. The earlier text is left in place deliberately — several findings below
+are corrections to it, and deleting the error would delete the evidence.*
+
+---
+
+### 15.1 THE ONE-LINE STATE
+
+Step 1 is **closed** — seven items, all run. The specificity gate **passed** on a
+tightened criterion. The step 3 estimator is **built blind and passes 6/6**
+acceptance tests. The corpus read is **in progress** after an overnight credit
+exhaustion. Steps 4–6, `app.py` and automation remain unbuilt.
+
+**The report does not exist. The deadline (§1) has passed.**
+
+---
+
+### 15.2 STEP 1 — ALL SEVEN ITEMS, WITH VERDICTS
+
+| # | item | verdict |
+|---|---|---|
+| 1a | λ ladder {2,4,8,16,∞}, both engines | Engine A POSITIVE, Engine B NULL — **reframed exploratory**, see 15.3 |
+| 1a′ | rung-level selection diagnostic | **RESELECTION on both engines** |
+| 1a″ | fine λ scan around the incumbent | surface **jagged**; dip **unexplained** |
+| 1a‴ | adjacent-rung count | **4**, strictly monotone (code said 5, an earlier reading said 3 — both wrong) |
+| 1b | `_z()` full-panel look-ahead | **measured**: small for level, large for trend |
+| 1c | same-horizon level-vs-trend | **the trend advantage IS the look-ahead** |
+| 1d | ESS characterisation | superseded by 1a′, which answers it better |
+| 1e | Engine B no-decay vs incumbent, paired | **NOT DISTINGUISHABLE** — retires a claim, see 15.4 |
+
+---
+
+### 15.3 λ EXISTED ALL ALONG, AND THE LADDER DOES NOT MEASURE WHAT IT CLAIMS
+
+**`prereg_recency_kernel.md` §1 and PROJECT_STATE both asserted "no λ exists
+anywhere in the codebase, not in config.yaml." FALSE.** `config.yaml` carries
+`analog.recency_decay_lambda: 0.0008` and `analog_backtest.py` applies it in
+**sessions** — HL = ln2/0.0008/252 = **3.44 years**. `analog_backtest.py` is the
+engine behind the reported 0.51 / 0.25, so **those figures always carried decay.**
+
+Two engines, not one, and they are different estimators:
+
+| | `analog_core` (Engine A) | `analog_backtest` (Engine B) |
+|---|---|---|
+| features | z-scored PCs | **raw** PCs, PC1 dominates distance |
+| regimes | one GMM on all history | refit expanding, every 20 sessions |
+| decay | none by default | λ = 0.0008/session all along |
+| baseline Sharpe | 0.40 | 0.25 long-history |
+
+Ladder verdicts **disagree**: Engine A POSITIVE (primary 0.3205 > control
+0.2526, strictly monotone over 4 rungs), Engine B NULL (primary 0.3200 <
+control 0.3800). At 16y, 8y and 4y the two engines agree within 0.04 — **the
+entire flip comes from Engine B's ∞ rung.**
+
+**The rung diagnostic (`docs/rung_diagnostic_results.md`) settles what λ is
+doing, and it is not what the locked design claims.** Registered threshold:
+top-k overlap ≥ 0.90 versus the no-decay control = tie-breaking. Measured at the
+primary rung: **Engine A 0.765, Engine B 0.850. Both RESELECTION.** ESS holds at
+~99.6 of 100 at every rung on both engines — λ does not concentrate weight, it
+**swaps membership**. Combined with σ=1.5 being too wide to discriminate, both
+engines reduce to:
+
+> pick the 100 most recent same-regime days, then average them with equal weight.
+
+**The word *analog* describes neither engine.** The ladder measures "does
+restricting to recent history improve returns", not "does gentle recency decay
+improve analog quality". The report must say the latter.
+
+**Status: the ladder result is REFRAMED AS EXPLORATORY.** The numbers stand; the
+interpretation registered in `prereg_recency_kernel.md` §6 does not.
+
+---
+
+### 15.4 THE λ SURFACE IS JAGGED, AND THE 0.38-vs-0.25 GAP IS NOT REAL
+
+`docs/fine_lambda_sweep_results.md`, exploratory and post-hoc by construction.
+Engine B long-history across λ steps of 1e-4:
+
+| λ | 0.0007 | 0.0008 | 0.0009 | 0.0010 |
+|---|---|---|---|---|
+| Sharpe | 0.30 | **0.25** | 0.22 | 0.29 |
+
+The incumbent re-ran at exactly 0.2500 — **not a measurement error**. Per
+`prereg_rung_diagnostic.md` §3.3 the interior dip is **unexplained**: Engine B
+top-k overlap runs 0.950 / 0.910 / 0.850 / 0.800, smooth, no discontinuity
+between 4y and 2y to attribute it to.
+
+**Consequence: rung-to-rung differences on Engine B are the same order as the
+jitter between adjacent λ values.** Engine B's NULL verdict rests on differences
+indistinguishable from surface roughness.
+
+**1e tested the headline gap directly** (`docs/engine_b_paired_results.md`),
+sign-flip on 836 paired rebalances, criterion registered before implementation:
+
+| universe | no-decay | incumbent | Sharpe diff | mean spread diff | p |
+|---|---|---|---|---|---|
+| ALL | 0.5251 | 0.5165 | +0.0087 | **−0.0105%** | 0.896 |
+| LONG-HISTORY | 0.3837 | 0.2528 | +0.1309 | +0.0579% | **0.485** |
+
+> **RETIRED CLAIM.** On 2026-08-24 it was asserted that "the incumbent decay was
+> costing you Sharpe — long-history 0.25 → 0.38 with it removed" and that this
+> belonged in the report. **Not supported.** p = 0.485. Reported as *not
+> distinguishable at this sample size*, which per §3.2 is **not** evidence the
+> two are equal.
+
+**Keep the ALL row.** Sharpe favours no-decay (+0.0087) while mean spread favours
+the incumbent (−0.0105%) — **they disagree in sign.** Sharpe is mean/sd, so a
+Sharpe gap can be produced entirely by volatility. A live demonstration on real
+data that a Sharpe difference cannot be read as a mean difference.
+
+**λ=0.0008 stays in `config.yaml` permanently.** It is the reproduction constant
+for the recorded headline figures; setting it to zero makes them unreproducible.
+It has never been in the live path (model_1/2/3 carry no `half_life_years`) and
+is off-ladder, so it can never be promoted.
+
+---
+
+### 15.5 THE DECLARED `_z()` LOOK-AHEAD, MEASURED — AND THE TREND EFFECT IS IT
+
+Open thread 12 said *"expected to be small is not measured."* Now measured
+(`docs/scaling_check_results.md`), identical spec, identical rebalance dates,
+only the standardisation window differing, min_periods 252:
+
+| model | universe | full-panel | expanding | diff | paired p |
+|---|---|---|---|---|---|
+| model_1 (level) | long-hist | 0.2526 | 0.2406 | +0.012 | 0.940 |
+| **model_2 (trend)** | **long-hist** | **0.4131** | **0.1522** | **+0.261** | **0.057** |
+| model_3 (trend) | long-hist | 0.4947 | 0.3568 | +0.138 | 0.500 |
+
+**Small for level, large for both trend models.** Mechanism: `sim_mode='trend'`
+z-scores the **differenced** PCs, and macro momentum volatility is dominated by
+2008 and 2020, so a full-panel sd for that block encodes future volatility
+regimes far more than the level block's does.
+
+Pool shrinkage is **0.0%** for all three, which rules out the alternative
+explanation that a smaller analog pool caused it.
+
+**Thread 8 then resolves** (`docs/trend_check_results.md`). model_1 and model_2
+differ in horizon AND sim_mode, so that comparison supported neither the original
+claim nor its retirement. Fixing horizon and varying only `sim_mode`, across
+4 horizons × 2 sigmas × 2 universes:
+
+| basis | mean trend−level (long-hist) | trend ahead in |
+|---|---|---|
+| full-panel | **+0.1137** | 6/8 cells |
+| expanding | **−0.1213** | 3/8 cells |
+
+> **On this panel the trend advantage IS the look-ahead.** Both cells reaching
+> significance on the expanding basis favour **level**. model_2's retirement now
+> rests on two independent grounds, not on a confound.
+
+**The phrase "expanding-window walk-forward, no look-ahead" stays wrong.** It is
+now wrong by a measured amount rather than an unmeasured one. `analog_backtest`'s
+headline figures are untouched — that engine never z-scores.
+
+---
+
+### 15.6 THE SPECIFICITY GATE — PASSED, ON A TIGHTENED CRITERION
+
+`docs/gate_check_results.md`. Two amendments, both made **after** seeing a
+marginal spread of 0.26 on n=20, both declared:
+
+1. **`political` split by Federal Register document type** into
+   `political_order` (executive order, presidential order, determination — 873
+   docs) and `political_other` (proclamation, notice, memorandum — 816 docs).
+   The partition uses the **government's own tag**, an external pre-existing
+   taxonomy, not a judgement applied per document. This also corrects §8's claim
+   that rhetoric is not covered — ceremonial documents were there all along,
+   mislabelled.
+2. **Criterion changed from a point spread > 0.25 to the LOWER BOUND of a 95%
+   bootstrap CI > 0.25.** A **tightening**: at n=20 the spread carried se ≈
+   0.063, so 0.26 was indistinguishable from failing and the point criterion
+   could not say so. Pilot raised to n=60 per source.
+
+Result at n=60 × 4 sources, uniform read condition v1-2026-08-23:
+
+| source | n | mean specificity |
+|---|---|---|
+| earnings_8k | 60 | 0.631 |
+| political_order | 60 | 0.603 |
+| fomc_minutes | 60 | 0.489 |
+| political_other | 60 | 0.268 |
+
+Spread **0.363**, 95% CI **[0.279, 0.453]**. Both clauses pass.
+
+`fomc_minutes` was moved to **unclassified**: its low-group placement was mine,
+not registered, and minutes are genuinely ambiguous (a decision public for three
+weeks, deliberative new content). Removing it makes clause 2 **harder**, and the
+gate survived.
+
+> **`specificity` therefore enters the content-class definition
+> (`prereg_analog_event.md` §2.1) and the step 5 weighting rule (§7.2).**
+>
+> **Caveat:** `political_other` was measured at n=60 of 816. Re-run
+> `gate_check` once the corpus read completes.
+
+---
+
+### 15.7 THE 8-K CORPUS WAS 307 SEC COVER PAGES
+
+`fetch_sources.cmd_edgar` fetched `primaryDocument`. For an Item 2.02 filing that
+is a one-page form saying *"a press release is attached as Exhibit 99.1"*. The
+numbers live in **EX-99**, never fetched. The `len(txt.split()) < 60` guard was
+written to catch this and never fired, because cover-page boilerplate runs to
+hundreds of words — **a silent filter that passed 307 empty documents.**
+
+**The reader was not wrong.** It correctly reported that a cover page contains no
+market information. The corpus was wrong.
+
+| earnings_8k pilot | \|dir\| eq | specificity | novelty |
+|---|---|---|---|
+| v1 (cover pages) | 0.07 | 0.20 | 0.09 |
+| v2 (EX-99.1) | **0.47** | **0.66** | **0.37** |
+
+Filename matching alone still lost NVDA (0/25), TSLA (4/25) and INTC (2/25) —
+issuers share no naming convention and TSLA files PDFs. Fixed by a **content
+scan**: when filename matching yields nothing, fetch every other document in the
+accession and keep whatever contains reported figures. NVDA 8/8, TSLA 8/8, INTC
+6/8 after. When both passes fail the accession's actual filenames are printed, so
+the next failure names itself.
+
+**6-K foreign issuers file the whole submission as one document with no separate
+exhibits** — TSM and ASML yield little. Deferred decision §8.3 observed rather
+than anticipated.
+
+The 307 cover pages are kept at `data_provenance/docs/earnings_8k_coverpages/`
+as evidence.
+
+---
+
+### 15.8 CORPUS — IN PROGRESS
+
+The overnight read **exhausted the API balance** partway through
+`political_order` and then failed every remaining document — **897 failures over
+four hours**, each retried first, producing a log that looked like a completed
+pass.
+
+`doc_read` now **aborts the whole run** on a credit or auth error and prints how
+many documents remain unread. Transient errors (overload, rate limit, malformed
+reply) keep one-retry-then-continue. The classifier matches on the **message**,
+not the exception class, because the SDK raises `BadRequestError` for both a
+malformed request and an exhausted balance.
+
+State at the abort:
+
+| source | read | total |
+|---|---|---|
+| fomc_statement | 131 | 131 |
+| fomc_minutes | 125 | 125 |
+| earnings_8k | 364 | 364 |
+| political_order | 732 | 873 |
+| political_other | 65 | 816 |
+
+**Re-run in progress.** Cached reads are skipped, so only the ~890 unread are
+billed. **Update this table when `corpus2.log` reports CORPUS READ COMPLETE.**
+
+Also fixed: the word cap 6,000 → 20,000, which had been dropping **105 of 125**
+FOMC minutes; `--max-prev-words 3000` so `--with-prev` does not double an
+already-large call; and JSON salvage plus one retry so a reply with preamble does
+not cost a document.
+
+---
+
+### 15.9 STEP 3 ESTIMATOR — BUILT BLIND, 6/6
+
+`docs/prereg_analog_event.md` (commit 74b88dc) registers steps 3–6 **before the
+corpus read**. `src/analog_event.py` implements the estimator and was built
+**blind**: real macro PCs, real regimes, real returns with real volatility, fat
+tails, missing values and holidays — only the event-date ↔ return correspondence
+destroyed, with a known effect planted on top.
+
+Key registered choices:
+
+- **Steps 3 and 4 are ONE estimator.** `ŷ = w·conditional + (1−w)·unconditional`,
+  `w = ESS/(ESS+k)`. Step 4 is the `w = 0` limit. The hard "<10 precedents"
+  cutoff is **replaced** — nothing real changes between 9 and 10 precedents.
+- **k is ESTIMATED, never chosen.** `k = σ²_within / τ²`, τ² by
+  DerSimonian–Laird across regime cells, re-estimated **inside every LOO fold**.
+  τ² = 0 → w = 0 → **registered NULL**, not a reason to try another estimator.
+- **All three PCs**, no per-source axis selection. An axis mapping was proposed
+  and **rejected before any data**: it could not be checked afterwards without
+  trying mappings until one worked.
+- **Agreement flag displayed, never weighted.** On divergence the report shows
+  both numbers and **issues no combined figure**.
+- **σ by registered bisection** on median ESS, target `clip(0.15·n_pool, 8, 30)`.
+  Uses no returns, so it cannot be tuned toward an outcome.
+- **Abstention floor ESS < 8.** Tier 3 only.
+
+Acceptance tests, all six pass. Three were repaired after failing, each declared:
+
+- **Test 1 was vacuous** (`ok = isfinite(estimate)`) — it passed with an interval
+  166× the planted effect. Now judged against the **oracle**: what a perfect
+  estimator returns given those exact weights. Kernel attenuation of ~90% across
+  a step is expected of any smoother and is reported separately. Its standard
+  error was also wrong by **8×** — `d_est` is a linear functional of y, so
+  `Var = σ_y²·Σaⱼ²`; verified against 200 simulated draws, 96.5% coverage.
+- **Test 3 never exercised tiers 1 or 2** — it evaluated one query that sat in a
+  sparse region. Now scans every query and **requires all three tiers**. With
+  strong planted structure: 347/0/53 of 400 queries. With none: 0/260/140.
+- **Test 5 FAILED and that result is preserved** in
+  `docs/analog_event_selftest_v1_FAILED.md` (rejection 0.005, median p 0.906).
+  Diagnosis, demonstrated in simulation before any change: when τ² = 0 the
+  registered null path makes the statistic **identically zero**, so p = 1 by
+  ties. Re-specified with the band **[0.02, 0.08] unchanged**, applied only to
+  reps where the estimator conditioned, minimum 40 or INCONCLUSIVE.
+
+**The null gained a second implementation, its third change after a failure —
+declared.** `permute_y` (shuffle outcomes, weight geometry identical every draw)
+is PRIMARY; `permute_Z` (the original) is **retained and reported permanently**.
+Final: **permute_y 0.066** (in band), **permute_Z 0.000** (out). They disagree,
+and that disagreement is reported as the finding with no tie-break. τ² = 0 in
+32% of 200 reps.
+
+**Conditioning moved to the LIVE BASIS** — expanding-window standardisation and
+expanding-window regime labels, canonically ordered by ascending mean PC1. Not
+because the look-ahead was large, but because **a deployed system has no future
+data to standardise with or fit regimes on**, and a backtest that cannot be run
+live is not a backtest of the product. This also closed **thread 3**: picks
+verified bit-identical on 826 rebalances, only the reported `regime` integer
+changes. Ledger rows before 2026-08-25 keep the old ordering and are **not**
+retro-relabelled.
+
+> **UNBLINDING IS AUTHORISED** once the corpus read completes.
+
+---
+
+### 15.10 WRONG PRIORS — NINE TO SEVENTEEN
+
+Added this session, all Claude's:
+
+10. "No λ exists anywhere in the codebase, not in config.yaml" — false.
+11. Monotone rung count given as 3 — wrong (it is 4).
+12. Code printed 5 for the same count under an unregistered ±0.02 tolerance.
+13. "The `--types` filter is not filtering" — it was; the 50 non-EO documents
+    were residue from an earlier unfiltered pull.
+14. Test 1 written as a vacuous `isfinite` check.
+15. Test 3 written to scan one query, concluding the tiers were unreachable.
+16. Test 1's standard error understated **8×** by treating correlated smoothed
+    estimates as independent.
+17. "Removing the incumbent λ raises Sharpe from 0.25 to 0.38 and belongs in the
+    report" — **not distinguishable**, p = 0.485.
+
+**Every one was caught by RUNNING something, not by reasoning about it.** That is
+this project's stated posture and this session is its largest single body of
+evidence. Item 17 in particular was retired by a test registered before it was
+implemented.
+
+*(PROJECT_STATE's working-principles list still says "five so far". Reconcile.)*
+
+---
+
+### 15.11 WHAT IS ACTUALLY LEFT
+
+| # | item | state |
+|---|---|---|
+| 1 | **the report** | **does not exist; deadline passed** |
+| 2 | corpus read completion | running |
+| 3 | re-run `gate_check` with full `political_other` | after 2 |
+| 4 | unblind step 3 — the LOO test | after 2 |
+| 5 | step 5 source weighing | not started; count same-day collisions first |
+| 6 | step 6 decision report | not started — the customer-facing artifact |
+| 7 | rebuild `app.py` | not started; **rebuild, do not recover** |
+| 8 | step 7 launchd automation | not started |
+| + | FOMC→GLD temporal split + cost test | not started — the Tier-1 exemplar |
+| + | PROJECT_STATE / PIPELINE / EXECUTION_PLAN updates | pending |
+
+---
+
+### 15.12 THE REPORT'S SPINE — REVISED
+
+§11's spine still holds and gains a second half.
+
+Two clean nulls that survived every basis change. Two positive-looking results
+that collapsed when split by time. One measured engine with its caveats declared
+rather than defended. A live forward test with timestamps and no matured rows.
+One mechanism — instant overnight propagation — explaining why the earlier entry
+convention found nothing.
+
+**And now: an engine whose central metaphor did not survive being measured.**
+Both engines were shown to reselect rather than tie-break, so *analog* promises
+more than the mechanism delivers. The trend advantage was shown to **be** a
+look-ahead. A headline gap of 0.25 → 0.38 was **retired by a test registered
+before it ran**. A corpus of 307 documents was found to contain nothing. Eight
+silent-continuation defects were caught, one of which cost money.
+
+**The honesty is still the finding, and it is now load-bearing rather than
+decorative.** Every null came from an instrument demonstrated to detect a planted
+effect first. Every retracted claim was retracted by a criterion written before
+the number was seen. That is the negative-results moat argument, evidenced.
+
+
+---
+
+## 16. DEMONSTRATION TERMINAL — `app.py` (2026-08-25)
+
+*Supersedes §15.11's line "rebuild `app.py` — not started". A minimal version now
+exists. The full version still waits on steps 5–6.*
+
+### 16.1 What it is
+
+`app.py` at the repo root, Streamlit, eight tabs. Run with
+`pip install streamlit && streamlit run app.py`.
+
+It shows **no predictions and no signal**, because steps 3–6 are registered but
+not unblinded and any signal display would be fabricated. What it shows instead
+is the project's actual argument: an instrument that grades its own evidence,
+prints what it cannot see, and keeps the record of what it got wrong.
+
+**Every number on every live tab is read from the repository at run time** —
+`processed/*.json`, `forward_ledger.csv`, file counts under `data_provenance/`.
+If a results file is missing the tab says so rather than showing a stale figure.
+Ten figures are hard-coded, all from committed `docs/*_results.md` files.
+
+| tab | source of its numbers |
+|---|---|
+| What this is | narrative + three counts |
+| **Today's report (SPECIMEN)** | **invented — see §16.2** |
+| Universe | `config/config.yaml`; live screening logic |
+| Engines | `recency_sweep.json`, `rung_diagnostic.json`, `scaling_check` figures |
+| Document layer | file counts on disk, `gate_check.json` |
+| Forward test | `forward_ledger.csv` |
+| What we got wrong | the wrong-prior tally, §15.10 |
+| Behind the scenes | narrative; working principles and commercial read |
+
+### 16.2 The specimen tab — a labelled mockup, and the step 6 spec
+
+Tab 2 is a **UI mockup with invented numbers**. It carries a red banner, a
+fictional date (2027-03-15), and the word SPECIMEN eighteen times, because a
+fabricated figure that escapes its context becomes a claimed result — and an
+untraceable number is the one thing that would genuinely damage this submission.
+
+**It doubles as the specification for step 6.** Its fields are exactly those
+registered in `prereg_analog_event.md` §8, so building the real decision report
+becomes filling a shape that already exists rather than designing from a
+paragraph:
+
+- macro regime and **posterior confidence** (below 0.60 prints as a warning)
+- every document read: source, direction, magnitude, specificity, novelty,
+  evidence quote
+- per asset: estimate, precedent count, **ESS**, **precedent strength w**, tier,
+  dominant source, reader-vs-history agreement flag
+- one **abstention** (ESS 4.1 < 8) shown as an abstention, not a thin number
+- one **divergence** where reader and history disagree in sign: both numbers
+  shown, **no combined figure issued**
+- the coverage-gap block
+- **no performance number, specimen or real**
+
+**The guardrails survive the mockup deliberately.** Even the invented report
+abstains, flags divergence, prints what it cannot see, and shows no performance
+figure. A demo whose fake version behaves better than the real one would be worth
+nothing.
+
+### 16.3 What it does not do
+
+No conditional estimate, no source weighing, no report emission to
+`outputs/reports/`, no scheduling. Those are steps 3, 5, 6 and 7. The Universe
+tab screens a ticker against the real ≥8y rule but does not fetch it or write to
+`config.yaml`.
+
+### 16.4 Revised remaining list
+
+§15.11 stands with one line changed:
+
+| # | item | state |
+|---|---|---|
+| 1 | **the report** | **does not exist; deadline passed** |
+| 2 | corpus read | in progress; over-cap documents now truncated, not skipped |
+| 3 | re-run `gate_check` with the full corpus | after 2 |
+| 4 | unblind step 3 — the registered LOO test | **authorised**, after 2 |
+| 5 | step 5 source weighing | not started; count same-day collisions first |
+| 6 | step 6 decision report | not started — **spec exists as `app.py` tab 2** |
+| 7 | `app.py` full version | **minimal version DONE**; wire to steps 3–6 |
+| 8 | step 7 launchd automation | not started |
+| + | FOMC→GLD temporal split + cost test | not started — the Tier-1 exemplar |

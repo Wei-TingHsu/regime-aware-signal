@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "offer service employees ... a right of first refusal of employment under this contract",
+    "The Secretary of Labor shall ... issue final regulations within 180 days",
+    "Executive Order 13897 ... is revoked"
+  ],
+  "extra": {
+    "actor": "President (federal procurement policy / DOL, FAR Council)",
+    "is_decided": true,
+    "sectors": [
+      "government services contractors",
+      "federal procurement",
+      "labor/staffing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-11-23",
+  "doc_id": "exec202125715",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

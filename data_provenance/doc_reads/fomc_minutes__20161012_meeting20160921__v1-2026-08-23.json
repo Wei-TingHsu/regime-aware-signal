@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.15,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.55,
+  "novelty": 0.3,
+  "confidence": 0.65,
+  "evidence": [
+    "Three members preferred to raise the target range for the federal funds rate by 25 basis points at this meeting.",
+    "the case for an increase in the federal funds rate has strengthened but decided, for the time being, to wait",
+    "Several members judged that it would be appropriate to increase the target range for the federal funds rate relatively soon"
+  ],
+  "extra": {
+    "stance": 0.3,
+    "dispersion": 0.75
+  },
+  "source": "fomc_minutes",
+  "date": "2016-10-12",
+  "doc_id": "meeting20160921",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

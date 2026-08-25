@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.3,
+    "gold": -0.2,
+    "dollar": 0.3,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.65,
+  "evidence": [
+    "Nominal Treasury yields rose notably over the period",
+    "risks had become less skewed toward the downside",
+    "monetary policy decisions were not on a preset course and were conditional on the evolution of the economy"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "dispersion": 0.55
+  },
+  "source": "fomc_minutes",
+  "date": "2024-11-26",
+  "doc_id": "meeting20241107",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "The contractor will not discharge or in any other manner discriminate against any employee",
+    "Within 160 days of the date of this order, the Secretary of Labor shall propose regulations",
+    "in order to take further steps to promote economy and efficiency in Federal Government procurement"
+  ],
+  "extra": {
+    "actor": "President (Executive Order amending EO 11246)",
+    "is_decided": true,
+    "sectors": [
+      "federal contractors",
+      "labor/employment"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-04-11",
+  "doc_id": "exec201408426",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

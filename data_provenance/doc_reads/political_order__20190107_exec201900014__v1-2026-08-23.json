@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Treating 3.5 million acres of Department of Agriculture (USDA) Forest Service (FS) lands to reduce fuel load",
+    "offering for sale at least 3.8 billion board feet of timber from USDA FS lands",
+    "developing and using new categorical exclusions to implement active management"
+  ],
+  "extra": {
+    "actor": "Secretaries of Interior and Agriculture",
+    "is_decided": true,
+    "sectors": [
+      "timber",
+      "forestry",
+      "land management"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-01-07",
+  "doc_id": "exec201900014",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

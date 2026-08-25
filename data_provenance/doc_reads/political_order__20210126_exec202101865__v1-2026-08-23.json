@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "directs immediate actions to secure supplies necessary for responding to the pandemic",
+    "take appropriate action using all available legal authorities, including the Defense Production Act",
+    "a strategy to design, build, and sustain a long-term capability"
+  ],
+  "extra": {
+    "actor": "President (Executive Order), HHS/DoD/DHS/State",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "medical supplies/PPE",
+      "pharmaceuticals",
+      "defense industrial base"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-01-26",
+  "doc_id": "exec202101865",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

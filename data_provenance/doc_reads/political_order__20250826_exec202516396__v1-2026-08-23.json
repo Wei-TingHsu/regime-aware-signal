@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "there is established... the National Design Studio",
+    "The Chief Design Officer shall help recruit top creative talent",
+    "Heads of agencies shall... produce initial results by July 4, 2026"
+  ],
+  "extra": {
+    "actor": "President/Executive Office of the President",
+    "is_decided": true,
+    "sectors": [
+      "government IT/design services",
+      "federal contracting"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-26",
+  "doc_id": "exec202516396",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

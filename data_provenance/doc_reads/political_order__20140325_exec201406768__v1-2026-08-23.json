@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established, effective 12:01 a.m. eastern daylight time on March 22, 2014, a Board",
+    "no change in the conditions out of which the disputes arose shall be made",
+    "Subsequently, its recommendations were not accepted by the parties."
+  ],
+  "extra": {
+    "actor": "President (Executive Office)",
+    "is_decided": true,
+    "sectors": [
+      "railroads",
+      "transportation",
+      "labor relations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-03-25",
+  "doc_id": "exec201406768",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.55,
+  "confidence": 0.75,
+  "evidence": [
+    "Revenue is expected to be $20.00 billion, plus or minus 2%.",
+    "Record Data Center revenue of $14.51 billion, up 41% from Q2, up 279% from year ago",
+    "The era of generative AI is taking off"
+  ],
+  "extra": {
+    "surprise": 0.6,
+    "guidance_change": 0.7,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2023-11-21",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

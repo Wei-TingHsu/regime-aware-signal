@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.3,
+    "gold": 0.4,
+    "dollar": 0.3,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.75,
+  "evidence": [
+    "I hereby determine and order... impose... ad valorem tariffs on articles that are products of the PRC",
+    "an additional 10 percent ad valorem rate of duty",
+    "Should the PRC retaliate... the President may increase or expand in scope the duties"
+  ],
+  "extra": {
+    "actor": "President (DHS/Treasury/Commerce implementation)",
+    "is_decided": true,
+    "sectors": [
+      "China trade",
+      "tariffs",
+      "imports",
+      "chemicals/precursors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-02-07",
+  "doc_id": "exec202502408",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

@@ -1,0 +1,29 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "Providing an Order of Succession Within the Office of Management and Budget",
+    "Executive Order 13615 of May 21, 2012...is hereby revoked",
+    "the President retains discretion...to depart from this order"
+  ],
+  "extra": {
+    "actor": "President (OMB succession)",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_order",
+  "date": "2025-01-13",
+  "doc_id": "exec202500619",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}
