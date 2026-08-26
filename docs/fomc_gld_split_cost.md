@@ -1,35 +1,35 @@
 # FOMC → GLD — temporal split and cost test
 
-*Run 2026-08-26 15:03:59 +0800.*
+*Run 2026-08-26 18:23:23 +0800.*
 
 *Pre-registered in this script's docstring, committed before the run. The original result stays at its own tier — docstring `8640d2d` — and this document does not upgrade it.*
 
 131 events, 2011-01-26 → 2026-07-29. Split at the chronological median, 2019-03-20.
 
-| h | arm | n | stat | p(flip) | p(perm) |
-|---|---|---|---|---|---|
-| 1 | pooled | 131 | +0.326% | 0.0088 | 0.0059 |
-| 1 | EARLY | 65 | +0.411% | 0.0249 | 0.0151 |
-| 1 | LATE | 66 | +0.242% | 0.1498 | 0.1982 |
-| 2 | pooled | 131 | +0.175% | 0.3232 | 0.2469 |
-| 2 | EARLY | 65 | +0.589% | 0.0051 | 0.0029 |
-| 2 | LATE | 66 | -0.232% | 0.4096 | 0.4432 |
-| 3 | pooled | 131 | +0.274% | 0.2047 | 0.1372 |
-| 3 | EARLY | 65 | +0.758% | 0.0013 | 0.0003 |
-| 3 | LATE | 66 | -0.203% | 0.5773 | 0.6736 |
-| 5 | pooled | 131 | +0.387% | 0.1044 | 0.0778 |
-| 5 | EARLY | 65 | +0.771% | 0.0101 | 0.0053 |
-| 5 | LATE | 66 | +0.009% | 0.9810 | 0.9987 |
+| h | arm | n | mean NEXT_h | p(rotation) |
+|---|---|---|---|---|
+| 1 | pooled | 131 | -0.132% | 0.0925 |
+| 1 | EARLY | 65 | -0.427% | 0.0039 |
+| 1 | LATE | 66 | +0.159% | 0.4175 |
+| 2 | pooled | 131 | -0.232% | 0.0288 |
+| 2 | EARLY | 65 | -0.383% | 0.0234 |
+| 2 | LATE | 66 | -0.083% | 0.3880 |
+| 3 | pooled | 131 | -0.317% | 0.0142 |
+| 3 | EARLY | 65 | -0.380% | 0.0511 |
+| 3 | LATE | 66 | -0.254% | 0.1187 |
+| 5 | pooled | 131 | -0.320% | 0.0132 |
+| 5 | EARLY | 65 | -0.690% | 0.0088 |
+| 5 | LATE | 66 | +0.045% | 0.5560 |
 
-- **S1** sign agreement: **FAIL**
+- **S1** sign agreement: **PASS**
 - **S2** magnitude ratio ≤ 3.0×: **FAIL**
-- **S3** pooled p < 0.05 under both nulls: **FAIL**
+- **S3** pooled p < 0.05 under the rotation null: **PASS**
 - **C1** net > 0 at 10 bps: **PASS**
 
 | h | gross (bps) | net @2bp | net @5bp | net @10bp | net @20bp | break-even |
 |---|---|---|---|---|---|---|
-| 2 | 17.5 | +15.5 | +12.5 | +7.5 | -2.5 | 17.5 |
-| 3 | 27.4 | +25.4 | +22.4 | +17.4 | +7.4 | 27.4 |
+| 2 | 23.2 | +21.2 | +18.2 | +13.2 | +3.2 | 23.2 |
+| 3 | 31.7 | +29.7 | +26.7 | +21.7 | +11.7 | 31.7 |
 
 ## Verdict
 
