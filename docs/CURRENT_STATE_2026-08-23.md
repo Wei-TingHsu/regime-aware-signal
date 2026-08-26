@@ -1627,3 +1627,174 @@ than a product that quietly returns zero.
 **Everything between here and submission costs $0.** The only remaining uses for
 API credit are the 163 deferred 8-Ks (declined), the 4,595 political documents
 (not needed for the report), and the schema v2 pilot (registered, not funded).
+
+---
+
+## 17.7 (REPLACES THE PENDING BLOCK) — STEP 3 UNBLINDED, AND THEN RE-TESTED
+
+*The `[pending]` block written earlier in §17.7 is superseded by this section.
+It is not deleted: it recorded that the run was in progress and that the result
+would be reported whatever it said. This is that report.*
+
+---
+
+### 17.7.1 THE RESULT IN ONE LINE
+
+**Step 3 did not demonstrate a conditional effect that survives correct
+inference.** Seven of 45 cells met the registered criterion on the unblinding;
+one of those seven survived re-testing under a null that respects overlapping
+outcomes, and that one is the cell whose original null was already valid.
+
+This is the failure mode `prereg_analog_event.md` §10 registered on 24 August,
+before the corpus was read: *"τ² = 0 across most cells → macro conditioning adds
+nothing measurable. Reported as a null; the report still ships, with every asset
+at Tier 3."* The product ships as designed.
+
+### 17.7.2 THE UNBLINDING — 7 OF 45
+
+Run 2026-08-26. Estimator frozen at `9062391`, every function imported from
+`src/analog_event.py`, never reimplemented. The delta from `build_blind()` was
+three lines: real document dates, `y = fwd[pos]`, no planted effect.
+
+| cell | n | MSE reduction | hit gain | p_mse | p_hit |
+|---|---|---|---|---|---|
+| `political_order`/SPY/h20 | 232 | 23% | +5.2pp | 1e-4 | 1e-4 |
+| `political_order`/SPY/h5 | 233 | 10% | +1.7pp | 1e-4 | 0.0052 |
+| `political_order`/SPY/h3 | 233 | 8% | +2.1pp | 1e-4 | 0.0093 |
+| `political_order`/GLD/h20 | 76 | 10% | +2.6pp | 0.0020 | 0.0060 |
+| `fomc_minutes`/USO/h5 | 69 | 13% | +8.7pp | 0.0010 | 0.0121 |
+| `earnings_8k`/SPY/h20 | 459 | 9% | +0.4pp | 1e-4 | 0.0030 |
+| `earnings_8k`/SPY/h5 | 462 | 1.4% | +0.2pp | 0.0031 | 0.0222 |
+
+Six cells abstained at the ESS floor; 15 `political_order_other` cells were
+empty; the rest did not meet the criterion. Reported in full at
+`docs/unblind_step3_results.md` per §5.4.
+
+**The transfer check (§4.1) came back 0.95–1.00** against a 0.90 threshold. On
+the document pool λ is **tie-breaking, not reselecting** — the opposite of the
+step 1 engines at 0.765 and 0.850 which forced the retraction of "analog" in
+§15.3. σ = 0.38 on `political_order` is a tight kernel and k=20 drawn from 231
+candidates cannot be reordered by decay. **One measurement, two pools, opposite
+answers, and the difference is explained by pool size and kernel width.** At
+n=76 the overlap of 1.000 is partly a small-n artifact (k=15 of 75) and only the
+SPY cells carry this cleanly.
+
+### 17.7.3 WRONG PRIOR #25 — THE NULL IGNORED OVERLAPPING OUTCOMES
+
+**The estimator was never the problem.** `analog_event.py` computes leave-one-out
+predictions and overlapping outcomes do not affect that computation. The MSE and
+hit gains above are descriptive and they stand.
+
+The defect was in the null that `unblind_step3.py` used — code written for this
+run, not registered code. It permuted outcomes freely within content class. But
+at h=20 the passing cells overlap 61–87%: most events share most of their
+forward window with their neighbours, so `y` is strongly autocorrelated. Free
+permutation destroys that dependence, the permuted draws are less variable than
+the observed data, the null is too narrow and **every p-value is too small.**
+
+| cell | overlap at h | 2025+ share |
+|---|---|---|
+| `earnings_8k`/SPY/h20 | 87% | 17% |
+| `political_order`/SPY/h20 | 81% | 51% |
+| `political_order`/GLD/h20 | 61% | 57% |
+| `political_order`/SPY/h5 | 56% | 52% |
+| `political_order`/SPY/h3 | 44% | 52% |
+
+`political_order` compounds it: median event gap **5 days**, **52% of events
+from 2025–26** (239 executive orders in 2025 against 18 in 2024).
+
+The check was one line — event spacing against horizon — and was not done. The
+prereg registered `permute_y` for a pool where it was appropriate; the runner
+applied it to a clustered pool without checking.
+
+**Wrong priors #26** followed while fixing #25, twice: `int(round(h/gap))`
+returned a block length of 1 at h=5 — and a block of 1 *is* free permutation,
+the broken null relabelled as fixed; and calibrating on the **median** gap
+ignored the clustered tail, since `political_order`/SPY has a median gap of 3.5
+sessions so `ceil(3/3.5) = 1` at h=3 while 44% of its events measurably overlap.
+Both caught by reading the dry run against what the fix claimed to change. Final
+rule: 25th-percentile gap with `ceil`, which errs toward **larger** blocks and
+makes the test **harder** to pass.
+
+### 17.7.4 THE RE-TEST — 1 OF 7
+
+Registered in `step3_robustness.py`'s docstring before it ran. Three checks,
+no new criteria invented: **N1** non-overlap subsample (valid, costs power),
+**N2** block permutation preserving within-block dependence (retains n),
+**S** temporal split with the same S1/S2 clauses as `fomc_gld_split_cost.py`.
+CONFIRMED requires all three. Only the seven passing cells were re-tested —
+re-testing failures under a new null until one passes is the error this project
+exists to avoid.
+
+| cell | N2 block | N1 non-overlap | split ratio | verdict |
+|---|---|---|---|---|
+| `fomc_minutes`/USO/h5 | p 0.0024 / 0.0138 | p 0.0022 / 0.0122 | 2.28×, agree | **CONFIRMED** |
+| `political_order`/GLD/h20 | p 0.0039 / 0.0129 | p 0.0018 / 0.0149 | **14.86×, sign flip** | not confirmed |
+| `political_order`/SPY/h20 | p_hit **0.2244** | mse gain **negative** | 7.08× | not confirmed |
+| `political_order`/SPY/h5 | p_hit 0.0611 | hit gain **−0.040** | 1.44× | not confirmed |
+| `political_order`/SPY/h3 | p 0.0001 / 0.0337 | p 0.1333 / **0.8793** | 4.62× | not confirmed |
+| `earnings_8k`/SPY/h20 | p_hit 0.1177 | mse gain **negative** | 4.10× | not confirmed |
+| `earnings_8k`/SPY/h5 | p 0.1022 / 0.0769 | mse gain **negative** | 12.64×, sign flip | not confirmed |
+
+**The h=20 cells collapsed exactly where the null was broken.** `p_hit` on
+`political_order`/SPY/h20 went from 1e-4 to 0.2244. And on the non-overlap
+subsamples several went **negative**: with independent events the conditioned
+estimator does no better, and slightly worse, than the unconditional one.
+
+### 17.7.5 THE SURVIVOR, AND TWO REASONS NOT TO OVERREAD IT
+
+`fomc_minutes`/USO/h5: n=69, MSE reduction 13%, hit gain +8.7pp, temporal split
+2.28× with sign agreement.
+
+**It survived because its original inference was already sound.** FOMC minutes
+are released roughly six weeks apart, so at h=5 no overlap exists: block length
+computes to 1 and `n_nonoverlap = n_full = 69`. Its p-values were never
+inflated. The cells whose inference was broken did not survive; the cell whose
+inference was valid did. That is a coherent story and it is the strongest thing
+in this section.
+
+**Declared, two ways it must not be overread:**
+
+1. **N1 and N2 are the same test on this cell.** Block = 1 *is* free
+   permutation, and the non-overlap subsample *is* the full sample. The
+   identical numbers give it away (+3.201e-04 at p 0.0024 and 0.0022). The
+   R1/R2 structure awards two ticks for one piece of evidence. **It passes one
+   null, not two.**
+2. **One cell of 45 is inside the chance expectation.** Between 0.11 (if the
+   two statistics were independent) and 2.25 (if perfectly correlated) passes
+   were expected by construction. On multiplicity grounds a single survivor
+   cannot be distinguished from noise.
+
+### 17.7.6 WHAT WOULD CHANGE THIS — ROADMAP, NOT PROMISE
+
+**The binding constraint is independent events, not method.** Non-overlap caps
+each cell at 41–317, and everything else follows from that. Three routes, none
+available before 2026-08-28 and none a claim that step 3 would then work:
+
+1. **Read the 4,595 political documents already fetched at $0.** More events
+   means more *independent* events at any horizon. Cost to read ~$30–60. The
+   cheapest real lever, and it is already on disk.
+2. **Schema v2's sector axes** (`docs/prereg_schema_v2.md`, registered).
+   `political_order`'s tariff class scores specificity 0.669 against a 0.550
+   baseline but direction only 0.129 — the reader knows what it is looking at
+   and has nowhere to point. If direction carries more signal the content-class
+   filter partitions better. $200–400.
+3. **Shorter horizons on naturally spaced events.** The one confirmed cell is
+   the one whose events are six weeks apart. FOMC statements, minutes and
+   scheduled macro releases have that property; earnings and executive orders do
+   not.
+
+### 17.7.7 WHAT SHIPS
+
+Per §10, every asset at **Tier 3**: the decision report states the regime, the
+evidence and the precision, and **abstains from a conditional forecast** where
+the evidence floor is not met. `fomc_minutes`/USO/h5 is the single cell with a
+confirmed conditional estimate and is labelled as one cell of 45, passing one
+null, inside the chance expectation.
+
+The FOMC→GLD exemplar is also unavailable — split FAIL at 4.62× on the same day
+(`docs/fomc_gld_split_cost.md`). **The demo therefore abstains rather than
+showing a Tier-1 cell, and that abstention is the product working as specified,
+not a gap in it.** A system that declines to forecast when its own registered
+evidence floor is not met is the thing the pivot to risk-management signals in
+Week 11 committed to building.
