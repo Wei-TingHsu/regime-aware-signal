@@ -6,13 +6,24 @@ THIS FILE IS THE PRE-REGISTRATION. Commit it BEFORE running it.
 result in its docstring at commit 8640d2d.)
 
 WHAT IS BEING TESTED, AND WHY IT IS NOT YET A FINDING
-    macro_event_test.py measured, on GLD, the Q2 sign-conditioned statistic
-        stat_h = mean( sign(DAY_N) x NEXT_h )
-    at -0.3% for h = 2, 3, 5, with p = 0.028 / 0.0096 / 0.0104.
+    macro_event_test.py measured, on GLD, the Q1 UNCONDITIONAL statistic
+        stat_h = mean( NEXT_h )   where NEXT_h = close(N+h)/close(N) - 1
+    at -0.232% / -0.317% / -0.320% for h = 2, 3, 5, with p(rotation) =
+    0.0280 / 0.0096 / 0.0104. Source: docs/fomc_drift.md, GLD block.
 
-    Negative means REVERSAL: the decision-day move partly unwinds. The implied
-    position is -sign(DAY) taken at the CLOSE of the decision day and held h
-    sessions. That is a real round trip and it must pay a real cost.
+    Plainly: GLD FALLS about 0.3% over the two to three sessions after an FOMC
+    decision. The implied position is SHORT GLD taken at the CLOSE of the
+    decision day and held h sessions. One round trip per event, two crossings,
+    and it must pay a real cost.
+
+    *** CORRECTION, 2026-08-26, recorded rather than quietly fixed. ***
+    The first version of this file tested Q2, the SIGN-CONDITIONED statistic
+    mean(sign(DAY) x NEXT_h), because "-0.3%" was read as a reversal without
+    checking which column it came from. Q2 on GLD is +0.175% / +0.274% /
+    +0.387% at p 0.33 / 0.21 / 0.10 -- it never met any criterion and was never
+    the registered claim. That run reproduced Q2 to three decimals, so the
+    machinery was right and the question was wrong. Its SPLIT: FAIL verdict is
+    VOID and must not be cited. This is wrong prior #24.
 
     CURRENT_STATE section 2.3 records the status verbatim: "FOMC->GLD IS NOT YET
     A FINDING. It meets its criterion but has not had the temporal split or the
@@ -61,14 +72,16 @@ LATE. Registered pass requires ALL of:
     S2  neither half's magnitude is more than 3x the other's, at both h=2 and
         h=3 -- an effect concentrated 4:1 or worse in one half is a subsample
         result, whatever its sign
-    S3  the pooled estimate remains p < 0.05 under both registered nulls at
-        both h=2 and h=3, recomputed here rather than quoted
+    S3  the pooled estimate remains p < 0.05 under the DATE-ROTATION null --
+        the only null applicable to Q1 -- at both h=2 and h=3, recomputed here
+        rather than quoted
 
     Per-half p-values ARE reported but are NOT part of the criterion, for the
     power reason above. A half that reaches p < 0.05 is noted, not required.
 
-COST (C). The position is -sign(DAY) at close(N), exited at close(N+h): one
-round trip per event, two crossings.
+COST (C). The position is SHORT GLD at close(N), exited at close(N+h): one
+round trip per event, two crossings. The effect is negative, so the gross edge
+is |mean NEXT_h|.
     Net_h(c) = |stat_h| - c, where c is the round-trip cost in the same units.
     Reported at c = 2, 5, 10, 20 bps. Registered pass requires:
     C1  Net > 0 at c = 10 bps at BOTH h=2 and h=3
@@ -124,22 +137,20 @@ MAX_RATIO = 3.0            # registered, S2
 ITERS = 10_000
 
 
-def signed_stat(day, nxt):
-    s = np.sign(day); s[s == 0] = 1
-    return float((s * nxt).mean())
-
-
-def nulls(day, nxt, rng, iters):
-    """The two registered nulls from macro_event_test.py, unchanged:
-    sign-flip and sign-permutation."""
-    s = np.sign(day); s[s == 0] = 1
-    obs = float((s * nxt).mean())
-    n = len(nxt)
-    n1 = (rng.choice([-1.0, 1.0], size=(iters, n)) * nxt).mean(axis=1)
-    p1 = (np.sum(np.abs(n1) >= abs(obs)) + 1) / (iters + 1)
-    n2 = np.array([(rng.permutation(s) * nxt).mean() for _ in range(iters)])
-    p2 = (np.sum(np.abs(n2 - n2.mean()) >= abs(obs - n2.mean())) + 1) / (iters + 1)
-    return obs, float(p1), float(p2)
+def rotation_null(nxt, ev_idx, close, n_sess, h, rng, iters):
+    """The registered Q1 null from macro_event_test.py, unchanged: shift the
+    whole event block by a random offset, preserving spacing and leaving the
+    return series intact. Copied in form, not in spirit -- the arithmetic below
+    is line-for-line what macro_event_test.py does."""
+    obs = float(np.mean(nxt))
+    null_r = np.empty(iters)
+    for b in range(iters):
+        off = rng.integers(1, n_sess)
+        j = (ev_idx + off) % (n_sess - h - 1)
+        null_r[b] = np.nanmean(close[j + h] / close[j] - 1)
+    mu = null_r.mean()
+    p = (np.sum(np.abs(null_r - mu) >= abs(obs - mu)) + 1) / (iters + 1)
+    return obs, float(p)
 
 
 def main():
@@ -181,19 +192,21 @@ def main():
     print(f"  split at the chronological median: EARLY n={cut} "
           f"(< {boundary.date()}), LATE n={len(df)-cut}")
     print(f"  registered: S1 sign agreement, S2 ratio <= {MAX_RATIO}x, "
-          f"S3 pooled p<0.05 both nulls, at h={ADJACENT[0]} and {ADJACENT[1]}")
+          f"S3 pooled p<0.05 (rotation null), at h={ADJACENT[0]} and {ADJACENT[1]}")
     print(f"  registered: C1 net > 0 at {HURDLE_BPS} bps round trip")
 
     if args.dry_run:
         print("\n  DRY RUN -- no statistic computed.")
         return
 
+    close = px["Close"].to_numpy()
+    n_sess = len(sess)
+    ev_pos = np.array(idx[:len(df)])
+
     res, L = {}, []
-    print(f"\n  {'h':>2} {'arm':>6} {'n':>5} {'stat':>9} {'p_flip':>8} "
-          f"{'p_perm':>8}")
+    print(f"\n  {'h':>2} {'arm':>6} {'n':>5} {'mean NEXT_h':>12} {'p(rot)':>9}")
     for h in HORIZONS:
         v = df[f"NEXT_{h}"].to_numpy()
-        d = df["DAY"].to_numpy()
         ok = ~np.isnan(v)
         arms = {"pooled": ok,
                 "EARLY": ok & (np.arange(len(df)) < cut),
@@ -202,10 +215,11 @@ def main():
         for name, m in arms.items():
             if m.sum() < 20:
                 continue
-            stat, p1, p2 = nulls(d[m], v[m], rng, args.iters)
-            r[name] = dict(n=int(m.sum()), stat=stat, p_flip=p1, p_perm=p2)
-            print(f"  {h:>2} {name:>6} {int(m.sum()):5d} {stat*100:+8.3f}% "
-                  f"{p1:8.4f} {p2:8.4f}")
+            stat, p = rotation_null(v[m], ev_pos[m], close, n_sess, h,
+                                    rng, args.iters)
+            r[name] = dict(n=int(m.sum()), stat=stat, p_rot=p)
+            print(f"  {h:>2} {name:>6} {int(m.sum()):5d} {stat*100:+11.3f}% "
+                  f"{p:9.4f}")
         res[h] = r
 
     # ---- registered criteria -------------------------------------------
@@ -221,7 +235,7 @@ def main():
         agree = np.sign(se) == np.sign(sp) and np.sign(sl) == np.sign(sp)
         lo, hi = sorted((abs(se), abs(sl)))
         ratio = hi / lo if lo > 0 else np.inf
-        sig = r["pooled"]["p_flip"] < 0.05 and r["pooled"]["p_perm"] < 0.05
+        sig = r["pooled"]["p_rot"] < 0.05
         s1 &= bool(agree); s2 &= bool(ratio <= MAX_RATIO); s3 &= bool(sig)
         print(f"  h={h}: pooled {sp*100:+.3f}%  EARLY {se*100:+.3f}%  "
               f"LATE {sl*100:+.3f}%   sign agree {agree}   "
@@ -229,10 +243,10 @@ def main():
     split_pass = s1 and s2 and s3
     print(f"\n  S1 sign agreement at h={ADJACENT}: {'PASS' if s1 else 'FAIL'}")
     print(f"  S2 magnitude ratio <= {MAX_RATIO}x:  {'PASS' if s2 else 'FAIL'}")
-    print(f"  S3 pooled p<0.05 both nulls:  {'PASS' if s3 else 'FAIL'}")
+    print(f"  S3 pooled p<0.05, rotation null:  {'PASS' if s3 else 'FAIL'}")
     print(f"  SPLIT: {'PASS' if split_pass else 'FAIL'}")
 
-    print("\n  cost, round trip, on |stat|:")
+    print("\n  cost, round trip, SHORT GLD, on |mean NEXT_h|:")
     cost_rows, cost_pass = [], True
     for h in ADJACENT:
         g = abs(res[h]["pooled"]["stat"]) * 1e4     # bps
@@ -274,14 +288,15 @@ def main():
          f"{len(df)} events, {df['session'].iloc[0].date()} → "
          f"{df['session'].iloc[-1].date()}. Split at the chronological median, "
          f"{boundary.date()}.", "",
-         "| h | arm | n | stat | p(flip) | p(perm) |", "|---|---|---|---|---|---|"]
+         "| h | arm | n | mean NEXT_h | p(rotation) |",
+         "|---|---|---|---|---|"]
     for h in HORIZONS:
         for name, d_ in res.get(h, {}).items():
-            L.append(f"| {h} | {name} | {d_['n']} | {d_['stat']*100:+.3f}% | "
-                     f"{d_['p_flip']:.4f} | {d_['p_perm']:.4f} |")
+            L.append(f"| {h} | {name} | {d_['n']} | "
+                     f"{d_['stat']*100:+.3f}% | {d_['p_rot']:.4f} |")
     L += ["", f"- **S1** sign agreement: **{'PASS' if s1 else 'FAIL'}**",
           f"- **S2** magnitude ratio ≤ {MAX_RATIO}×: **{'PASS' if s2 else 'FAIL'}**",
-          f"- **S3** pooled p < 0.05 under both nulls: "
+          f"- **S3** pooled p < 0.05 under the rotation null: "
           f"**{'PASS' if s3 else 'FAIL'}**",
           f"- **C1** net > 0 at {HURDLE_BPS} bps: "
           f"**{'PASS' if cost_pass else 'FAIL'}**", "",
