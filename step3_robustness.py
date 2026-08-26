@@ -196,7 +196,13 @@ def build(sub, axcol, rets, asset, h, Zall, labels_all, scores, C,
         sig, _, _, _ = select_sigma(Zall[pp], Zall[pp], ages, len(pp))
         cells.append(dict(Z=Zall[pp], y=f[pp], labels=labels_all[pp],
                           ages=ages, C=C, sigma=sig, pos=pp))
-        gaps.append(float(np.median(np.diff(pp))) if len(pp) > 1 else 1.0)
+        # 25th PERCENTILE of the session gap, not the median. political_order
+        # has a median gap of ~3.5 sessions, so at h=3 the MEDIAN event does
+        # not overlap and ceil(3/3.5)=1 -- yet 44% of events measurably do.
+        # Calibrating a dependence correction on the median of a right-skewed
+        # gap distribution ignores the clustered tail that causes the problem.
+        # q25 errs toward LARGER blocks, which makes the test harder to pass.
+        gaps.append(float(np.percentile(np.diff(pp), 25)) if len(pp) > 1 else 1.0)
     return cells, gaps
 
 
@@ -224,7 +230,13 @@ def main():
         ax = ASSET_AXIS[ast]
         full, gaps = build(sub, ax, rets, ast, h, Zall, labels_all, scores, C)
         nfull = sum(len(x["y"]) for x in full)
-        blocks = [max(1, int(round(h / max(g, 1.0)))) for g in gaps]
+        # Block length must SPAN the horizon, so ceil, not round. int(round())
+        # returned 1 at h=5 with a ~3.5-session median gap -- and a block of 1
+        # IS free permutation, i.e. exactly the broken null this fix replaces,
+        # relabelled as fixed. Floor of 2 wherever consecutive events actually
+        # overlap, measured per class rather than assumed.
+        blocks = [max(2 if g < h else 1, int(np.ceil(h / max(g, 1.0))))
+                  for g in gaps]
         no, _ = build(sub, ax, rets, ast, h, Zall, labels_all, scores, C, keep=h)
         nno = sum(len(x["y"]) for x in no) if no else 0
         tag = f"{src}/{ast}/h{h}"
@@ -267,7 +279,8 @@ def main():
                 hc.append(dict(Z=Zall[pp], y=cc["y"][idx],
                                labels=cc["labels"][idx], ages=ages, C=C,
                                sigma=sig, pos=pp))
-                hg.append(max(1, int(round(h / max(np.median(np.diff(pp)), 1.0)))))
+                _g = max(float(np.percentile(np.diff(pp), 25)), 1.0)
+                hg.append(max(2 if _g < h else 1, int(np.ceil(h / _g))))
             if hc:
                 pbh, puh, yh = [], [], []
                 for cc in hc:
