@@ -1270,3 +1270,360 @@ Estimated cost to finish: **~$8.91**. Cached reads are never re-billed — a re-
 
 Finish with a **single** launch of `./run_corpus.sh`, then re-run `python -m src.gate_check` — the gate was measured before the corpus was complete and before over-cap documents were truncated rather than skipped, so both the `political_other` and `earnings_8k` arms will move.
 
+
+---
+
+## 17. SESSIONS 2026-08-25 / 26 — CORPUS CLOSED, GATE PASSED, READER AUDITED, STEP 3 UNBLINDED
+
+*Appended per §12. Supersedes nothing. §16.4's list is revised at §17.10.*
+
+---
+
+### 17.1 STATE IN ONE PARAGRAPH
+
+The corpus read is **closed at 2,616 of 2,779**; four sources complete, 163
+over-cap 8-Ks deferred on budget and explicitly kept, not abandoned. The
+specificity gate **PASSED on the full corpus** at the registered 10,000
+iterations. A cross-source audit of the reader found the reader sound and found
+two things that are not: a fetcher bug that had truncated the political corpus,
+and a schema that cannot represent a sector shock. Three pre-registrations were
+filed before the step 3 unblinding — two amendments on the agreement flag and
+one for schema v2. **The step 3 unblinding is running as this is written; its
+result is recorded at §17.7 and is not known here.**
+
+**The report deadline is 2026-08-28.** §1 of this file carries 24 August. That
+is wrong and has been wrong all along; the correction is recorded at §17.9.
+
+---
+
+### 17.2 THE CORPUS IS CLOSED
+
+| source | read | documents | status |
+|---|---|---|---|
+| `fomc_statement` | 131 | 131 | COMPLETE |
+| `fomc_minutes` | 125 | 125 | COMPLETE |
+| `earnings_8k` | 671 | 834 | 80% — 163 over-cap 6-Ks deferred |
+| `political_order` | 873 | 873 | COMPLETE |
+| `political_other` | 816 | 816 | COMPLETE |
+| `bank_research`, `transcript` | 0 | 0 | no free structured feed |
+| **total** | **2,616** | **2,779** | |
+
+Read condition audited **before** the final launch, not after: 1,847 cached
+reads, all `claude-sonnet-5` / `v1-2026-08-23`, zero unparseable. Finishing kept
+it uniform.
+
+**The fourth interruption.** The read was interrupted four times in total: two
+credit exhaustions, one cache corrupted by an accidental double launch, and a
+fourth exhaustion on 08-25 after a top-up sized by an estimate that was wrong
+for the third time (§17.4). The abort mechanism added after interruption two
+worked correctly under real conditions on the fourth: it stopped on the *first*
+fatal error, named the unread count, exited 1, and `set -e` prevented the
+remaining sources from launching against a dead balance. The morning of 08-25,
+before that mechanism existed, 897 documents had failed over four hours and
+produced a log that read as a completed pass.
+
+**The 163 deferred 8-Ks — decision recorded.** Reading them does not improve
+quality; it adds coverage at *degraded* quality. Truncated reads measure
+specificity 0.458 and confidence 0.431 against 0.696 and 0.610 for whole
+documents (confounded with document type — 6-K complete submissions versus EX-99
+press releases — and reported unadjusted). They cost ~127,000 input tokens each,
+roughly $35–55 for the set. **Not read.** Declared consequence: `earnings_8k` at
+671 is US-issuer-biased, because the deferred set is disproportionately foreign
+issuers filing 6-K.
+
+---
+
+### 17.3 THE SPECIFICITY GATE — PASS ON THE FULL CORPUS
+
+Registered criterion (`prereg_analog_event.md` §11): the lower bound of a 95%
+bootstrap CI on the spread must exceed 0.25, and every expected-high source must
+sit above every expected-low source.
+
+| source | n | mean specificity | expected |
+|---|---|---|---|
+| `earnings_8k` | 671 | 0.687 | HIGH |
+| `fomc_statement` | 131 | 0.563 | HIGH |
+| `political_order` | 873 | 0.550 | HIGH |
+| `fomc_minutes` | 125 | 0.494 | — |
+| `political_other` | 816 | 0.170 | low |
+
+Spread **0.517**, 95% CI **[0.494, 0.539]**, 10,000 resamples, read condition
+uniform, coverage clean on all five sources. **Clause 1 PASS** (0.494 > 0.25).
+**Clause 2 PASS** (min HIGH 0.550 > max low 0.170).
+
+`specificity` therefore enters the content-class definition (§2.1) and the step 5
+weighting rule (§7.2).
+
+Two things worth recording about how this result was reached. `fomc_statement`
+entered clause 2 **for the first time** at n=131 — the n=60 gate had only 3 of
+its documents and it had never been evaluated. It was kept in `EXPECT_HIGH` as
+registered, and the decision to include it was committed before the number was
+seen. And `political_other` fell from 0.268 at n=60 to 0.170 at n=816, widening
+the spread; the low arm is genuinely empty, which §17.5 explains.
+
+---
+
+### 17.4 WRONG PRIORS 18–23 — SIX IN TWO SESSIONS, ALL CLAUDE'S, ALL CAUGHT BY RUNNING SOMETHING
+
+**18. The cost estimate priced the wrong documents.** `corpus_status` valued the
+189 unread `earnings_8k` documents at the corpus mean of 8,421 tokens. Those 189
+were *exactly* the 189 the old cap had skipped for being over `max_words` — they
+were unread *because* they were over-cap, so the mean could not describe them.
+$8.91 → $15.94. The tell sat two numbers apart in a comment in the same file.
+
+**19. Five green anchors over code that would not run.** `patch_gate_check.py`
+verified five anchors, applied cleanly, reported success, and shipped a
+`NameError` — the new `load_all()` calls `Path(f).name` and `gate_check.py` had
+never imported `pathlib`. *Anchor verification proves an edit landed where it was
+aimed; it says nothing about whether the file still runs.* A `py_compile` check
+that reverts on failure was added to the patch protocol. Separately, that
+patch's `--write` was never executed, so the gate then ran on the **unpatched**
+file and overwrote the registered result with a fresh timestamp — the exact
+failure the patch existed to prevent, produced by the patch not being applied.
+Caught by comparing the run's output against what the patch should have changed.
+Commit `a31d0a9`'s false third bullet is left in history, corrected by `bf921f1`.
+
+**20. The corrected estimate was calibrated on the wrong population — again.**
+`measure_unread.py` derived tokens-per-word from documents *already read*, which
+are ordinary press-release prose. The remainder is dense 6-K financial tables at
+about 6.3 tokens per word. $15.94 → measured **~$46**. The identical error as
+#18, one level deeper, made while explicitly fixing #18.
+
+**21. The `political_other` null was interpreted without checking the corpus.**
+816 documents, mean |direction| below 0.005, read as "the reader correctly finds
+nothing in ceremonial documents". That interpretation was made without asking
+whether the documents that would falsify it were present. They were not — see
+§17.5.
+
+**22. A timing test whose premise was wrong.** The audit asserted novelty should
+fall with publication lag. FOMC statements read at the *lowest* novelty of the
+market sources (0.289), which is correct: they are the most telegraphed
+documents in finance. The field was right and the test was wrong. **Retracted —
+`novelty` is not to be reported as a defect.**
+
+**23. "Ten of 28 hikes read backwards, a genuine defect."** Four were false
+positives from a regex matching *"an increase in the target range … remains
+**unlikely**"*. The remaining six all carried dovish forward guidance in their
+own evidence quotes, and `stance` was correctly hawkish on every one. The test
+was cruder than the thing it was testing.
+
+**Tally: 23.** Every one caught by running something rather than by reasoning
+about it.
+
+---
+
+### 17.5 THE READER IS SOUND. THE CORPUS AND THE SCHEMA ARE NOT.
+
+`docs/read_audit_results.md`, run 2026-08-25 over 2,616 cached reads at zero
+cost. Seven checks: timing order, signal classes against source baseline, sign
+consistency, within-reader consistency, landmark documents, field population,
+flat-tail.
+
+**Evidence the reader works:**
+
+| check | result |
+|---|---|
+| `corr(stance, dir_duration)`, statements | **−0.802** — hawkish means bond price down, as the schema demands |
+| `corr(stance, dir_duration)`, minutes | −0.527 |
+| `extra.surprise` vs own `dir_equity` | agree 431, disagree 11 (**92%**) |
+| `is_decided=True` vs `False` specificity, `political_order` | 0.586 vs 0.281 |
+| landmarks | COVID emergency cut novelty 0.95; NVDA May-2023 guidance 0.90; 2022 75bp hike, 2013 taper, 2025 IEEPA and reciprocal tariffs all read large and correctly signed |
+
+**Finding A — the political corpus was truncated by two bugs in the fetcher.**
+Every 2018 and 2025 Section 232 proclamation was **ABSENT**. Two independent
+caps: `--types` matched `executive_order` (underscore) against the API's
+`executive order` (space), silently dropping five of six document types; and
+`--max-pages 6` at 1,000 per page capped an oldest-first pull near 2016. Both
+fixed. Re-fetch on 2026-08-26 at **$0**: proclamations 1,674 → 2,440, executive
+orders 0 → 870, notices, memoranda, determinations and presidential orders all
+now retained. **4,595 documents on disk in `docs/political/`, unread and
+unbilled.** They sit outside every source `run_corpus.sh` names, so no accidental
+read is possible.
+
+**Finding B — the schema cannot represent a sector shock.** `direction` has five
+axes: equity, duration, gold, dollar, oil. A Section 232 steel tariff's
+first-order effect is on steel and aluminium equities and on input costs. There
+is no axis to point at.
+
+| `political_order` class | n | specificity | max\|dir\| |
+|---|---|---|---|
+| baseline (all) | 873 | 0.550 | 0.073 |
+| TARIFF / trade action | 235 | **0.669** | 0.129 |
+| ceremonial / administrative | 135 | 0.475 | 0.037 |
+
+The reader marks tariff documents as markedly more specific than baseline and
+than ceremonial documents — *it knows what it is looking at.* Its direction
+barely moves because the vocabulary has nowhere for it to go. **This is the same
+finding as the analog metaphor collapsing in §15.3, one layer up: what the
+instrument can detect is bounded by the language it was given.**
+
+**Finding C — FOMC `direction` is guidance-net, not decision-net.** Six genuine
+hikes read with positive `direction.duration`, every one carrying softening
+forward guidance. `stance` was hawkish on all six. The reader puts the decision
+in `stance` and the net of the guidance in `direction`. Coherent, arguably
+correct, and undocumented anywhere until this audit.
+
+**On `political_other` (correcting wrong prior #21):** measured directly, 816
+documents carry **33 non-zero direction readings in total across five axes**.
+`dir_duration` is literally 0.000 on all 816. Only 5 documents exceed 0.05 on
+any axis. So the source contributes **zero events to step 3 under any
+negligibility floor**, not merely under the chosen one — checked before the
+unblinding, because the floor was Claude's operational reading of §2.1's "both
+non-zero" and not a registered constant. The source is not a reader failure: 798
+of 816 are commemorative, and the documents that would have carried direction
+are the tariff proclamations that Finding A shows were never fetched.
+
+---
+
+### 17.6 THREE PRE-REGISTRATIONS, ALL BEFORE THE UNBLINDING
+
+**Amendment 2** (`docs/prereg_amendment_2_agreement_flag.md`, `87dff26`).
+Permits the agreement flag to set a conviction label
+(`CONCORDANT` / `DISCORDANT` / `UNINFORMATIVE`) in the step 6 report, displayed
+prominently and usable to order and filter. Prohibits any effect on the number.
+Registers a falsification test: mean signed realised return, `CONCORDANT` versus
+`DISCORDANT`, permutation p < 0.05, with an `n < 20` UNDERPOWERED clause.
+
+**Amendment 3** (`docs/prereg_amendment_3_agreement_moves_number.md`,
+`d8b40b9`). **Supersedes Amendment 2's prohibition, filed the same day.
+Amendment 2 is left unaltered** — the sequence of decisions, including one
+reversed within a day, is part of the record. The interval may now move; the
+point estimate may not, because the reader carries a sign and a specificity but
+no magnitude. ρ̂ — the ratio of residual dispersion among `CONCORDANT` events to
+pooled — is **estimated inside each LOO fold from training events only**, exactly
+as `k` already is, and clipped to [0.70, 1.30]. Three registered clauses set
+ρ = 1: the Amendment 2 test fails; either arm has n < 20; or **out-of-fold
+empirical coverage of the adjusted intervals falls below 0.90**. The third is
+the one that matters — reader and history are keyed to the same event, and if
+agreement is being double-counted, narrow intervals missing their coverage
+target is what that looks like from outside. Amendment 2 handled the concern by
+assertion; Amendment 3 handles it by measurement.
+
+§7 of that document records that permitting movement was Steven's decision,
+taken after the display-only recommendation was given and argued.
+
+**Schema v2** (`docs/prereg_schema_v2.md`, `87dff26`). Written from the measured
+deficiencies in §17.5. Adds a `sector` object with a closed name list rather than
+fixed sector axes; splits FOMC `direction_decision` from `direction_guidance`;
+documents `novelty` as content-novelty; sets `earnings_8k` `max_words` by a
+registered measurement procedure. **The five macro axes are unchanged**, which is
+what keeps v1 and v2 comparable. Acceptance on a 100-document paired pilot with
+three criteria written in advance, including A2: v2 must show non-negligible
+`sector.direction` on ≥ 60% of tariff documents — *if it also reads them flat,
+the schema was not the binding constraint and Finding B was misdiagnosed.*
+**Mixed corpus explicitly prohibited.** Not funded; v1 ships with the limitation
+declared and diagnosed.
+
+---
+
+### 17.7 STEP 3 UNBLINDING — RUNNING
+
+`unblind_step3.py`, committed at `3863d6c`. The estimator is frozen at `9062391`
+and every function is **imported** from `src/analog_event.py`, never
+reimplemented — if the runner reimplemented any of it, the six blind acceptance
+tests would no longer be evidence about the thing being run.
+
+The delta from `build_blind()` is three lines: real document dates instead of
+`rng.choice(valid)`, `y = fwd[pos]` instead of `fwd[donor]`, and no planted
+effect.
+
+**Assembly, from the dry run:** 45 cells ready, 6 abstaining at the ESS floor,
+15 `political_other` cells empty. Panel 5,194 sessions, 2,616 documents, C=4.
+
+**Declared as chosen, not registered** — the prereg left these open and they are
+Claude's, recorded before the run: horizons (3, 5, 20) with 3 primary; the five
+liquid proxies GLD/SPY/TLT/UUP/USO, one per schema axis; the 0.05 negligibility
+floor; and enforcing the content class by running the estimator separately
+within each sign class, so a query is never predicted from an opposite-sign
+document, with the null permuting outcomes *within* class.
+
+**OBSERVED BEFORE THE RUN AND DELIBERATELY NOT FIXED — the ESS knife-edge.**
+§4 sets `target_ESS = clip(0.15·n_pool, 8, 30)` and §3.5 abstains below ESS 8.
+Split across two content classes, most pools give 0.15·n < 8, so the target
+clips to 8 — and σ is bisected to land median ESS *exactly on the abstention
+boundary*. `political_order` UUP abstains at **7.993**; `earnings_8k` UUP
+proceeds at **8.051**. A difference of 0.007 decides a registered abstention.
+Changing the rule after seeing which cells fall on which side is the move this
+project exists to forbid. **It runs as written; the knife-edge is reported as a
+limitation; a corrected rule is registered as an amendment after this run
+completes.** Also recorded: five cells have `n_classes = 1`, so the content-class
+filter is not filtering in those, and they test something weaker than the
+two-class cells.
+
+> **RESULT: [pending — the run is in progress at the time of writing. It is
+> recorded here on completion, whatever it says. §5.2's criterion is BOTH lower
+> MSE AND higher sign hit-rate at p < 0.05; one of two is inconclusive, not a
+> partial success. §10 pre-states the failure modes, including τ² = 0 across
+> most cells, which is reported as a null with every asset at Tier 3 and does
+> not stop the product shipping.]**
+
+A runner defect found and fixed before the real launch: the first version
+iterated sources alphabetically, so the first cell computed was the most
+expensive in the run (`earnings_8k` SPY, n=462, ~2 billion kernel evaluations),
+and with stdout block-buffered to a file it produced a 0-byte log for hours with
+no way to distinguish working from hung. Rewritten to assemble all cells first,
+sort cheapest-first, seed each cell from its own identity so ordering cannot
+affect any cell's draws, report progress with measured time estimates, and
+checkpoint each completed cell to `processed/unblind_cells.jsonl` so an
+interrupted run resumes rather than restarting.
+
+---
+
+### 17.8 COMMERCIAL — WHAT THESE SESSIONS CHANGED
+
+**Cost accounting is now measured, not estimated.** Three successive estimates
+were wrong by 1.8× and then 3× (§17.4). The lesson generalises past this
+project: an LLM pipeline's unit cost cannot be carried as a per-document average
+when the remainder is selected on length. `docs/prereg_schema_v2.md` §7 prices
+v2 from *measured* token counts, and any pricing model in the business plan
+should be built the same way.
+
+**The corpus is not the binding constraint, and that is a commercial finding.**
+2,616 documents were read for roughly $30 in total. The deferred 163 would add
+$35–55 for measurably worse reads, and 4,595 political documents sit fetched at
+$0. What limits the product is the *schema* — five macro axes — not the data
+volume. That reframes the roadmap: v2's sector axes are worth more than more
+corpus, and v2 is costed at $200–400 for a full re-read.
+
+**The declared limitation is a product artifact, not only an academic one.** A
+client who asks "what does this say about a steel tariff" gets a diagnosed
+answer — the instrument's vocabulary cannot express it, here is the measurement
+showing that, here is the registered v2 that would. That is a stronger position
+than a product that quietly returns zero.
+
+---
+
+### 17.9 CORRECTIONS TO THE RECORD
+
+- **The report deadline is 28 August, not 24 August.** §1 of this file is wrong.
+  Work had been paced against a date that was never right.
+- `processed/doc_reads.csv` moved to `processed/superseded/`. Three rows written
+  before `prompt_version` and `model` entered the schema, which tripped MIXED
+  READ CONDITIONS on a corpus the pre-run audit had just proved uniform.
+- `corpus_status.py` still reports **~$9.27** to finish. Measured cost for the
+  163 remaining is **$35–55**. The file has now been wrong three times on this
+  number and remains unfixed at the time of writing — recorded here rather than
+  patched mid-run.
+
+---
+
+### 17.10 WHAT IS LEFT
+
+| # | item | state |
+|---|---|---|
+| 1 | **the report** | **does not exist. Due 2026-08-28. Nothing below is what Dr. Lee is waiting for.** |
+| 2 | corpus read | **CLOSED** at 2,616/2,779 |
+| 3 | gate re-run, full corpus | **CLOSED — PASS**, 0.517, CI [0.494, 0.539] |
+| 4 | unblind step 3 | **running**; result at §17.7 |
+| 5 | Amendment 2/3 agreement tests | after 4; runs on the predictions CSV, $0 |
+| 6 | step 5 source weighing | not started; count same-day collisions first |
+| 7 | step 6 decision report | not started; spec is `app.py` tab 2 |
+| 8 | `app.py` wiring to steps 3–6 | minimal 8-tab version exists |
+| 9 | step 7 launchd automation | not started |
+| 10 | ESS knife-edge amendment | drafted after item 4 completes, never before |
+| 11 | `corpus_status` cost figure | wrong three times, unfixed |
+| + | FOMC→GLD temporal split + cost test | not started — the Tier-1 exemplar for the demo |
+
+**Everything between here and submission costs $0.** The only remaining uses for
+API credit are the 163 deferred 8-Ks (declined), the 4,595 political documents
+(not needed for the report), and the schema v2 pilot (registered, not funded).

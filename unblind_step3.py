@@ -65,6 +65,7 @@ Run:
 """
 import argparse
 import json
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -82,6 +83,7 @@ REPO = PROCESSED_DIR.parent
 OUT_MD = REPO / "docs" / "unblind_step3_results.md"
 OUT_JSON = PROCESSED_DIR / "unblind_step3.json"
 OUT_PRED = PROCESSED_DIR / "unblind_step3_predictions.csv"
+OUT_CELLS = PROCESSED_DIR / "unblind_cells.jsonl"   # checkpoint, one cell/line
 
 HORIZONS = (3, 5, 20)              # declared above; 3 is primary
 PRIMARY_H = 3
@@ -130,7 +132,7 @@ def map_to_positions(dates, index):
     return pos, ok
 
 
-def pooled_perm_test(cells, rng, iters):
+def pooled_perm_test(cells, rng, iters, tag=""):
     """Pooled null, prereg 5.3, permute_y mode.
 
     Content class is a hard filter, so leave-one-out runs WITHIN each class.
@@ -152,7 +154,16 @@ def pooled_perm_test(cells, rng, iters):
     obs_mse_gain, obs_hit_gain = mse_u - mse_b, hit_b - hit_u
 
     null_mse, null_hit = np.empty(iters), np.empty(iters)
+    t0 = time.time()
     for it in range(iters):
+        if it == 100:
+            per = (time.time() - t0) / 100.0
+            print(f"      {tag}: {per*1000:.0f} ms/draw -> "
+                  f"~{per*iters/60:.1f} min for this cell", flush=True)
+        if it and it % 1000 == 0:
+            el = time.time() - t0
+            print(f"      {tag}: {it}/{iters}  {el/60:.1f} min elapsed, "
+                  f"~{(el/it)*(iters-it)/60:.1f} min left", flush=True)
         Pb, Pu, Y = [], [], []
         for c in cells:
             yp = c["y"][rng.permutation(len(c["y"]))]
@@ -221,7 +232,15 @@ def main():
     print(f"  horizons {HORIZONS} (primary {PRIMARY_H})   HL_d={HL_D}y   "
           f"ESS floor {ESS_FLOOR}")
 
-    rows, results, preds = [], [], []
+    # ---- PASS 1: assemble every cell, compute nothing --------------------
+    # Assembling first lets the expensive work be ORDERED. The original version
+    # iterated sources alphabetically, so the first cell computed was
+    # earnings_8k SPY at 462 events -- the single most expensive in the run --
+    # and nothing printed for hours. Cheapest-first gives feedback in minutes
+    # and changes no result: each cell now draws from its own seeded generator
+    # keyed to (source, asset, horizon), so the order cells run in cannot
+    # affect any cell's permutations.
+    rows, results, preds, todo = [], [], [], []
     for source in sorted(ev["source"].unique()):
         sub = ev[ev.source == source]
         for asset, axcol in ASSET_AXIS.items():
@@ -274,43 +293,81 @@ def main():
                                      f"{row['median_ess']:.1f} < {ESS_FLOOR} "
                                      f"(prereg 3.5)")
                     rows.append(row); continue
-                if args.dry_run:
-                    row["status"] = "ready"
-                    rows.append(row); continue
+                row["status"] = "ready"
+                rows.append(row)
+                if not args.dry_run:
+                    todo.append((row, cells))
+                continue
 
-                r = pooled_perm_test(cells, rng, args.iters)
-                r["overlap"] = transfer_check(cells)
-                passed = (r["obs_mse_gain"] > 0 and r["obs_hit_gain"] > 0
-                          and r["p_mse"] < 0.05 and r["p_hit"] < 0.05)
-                row.update({k: v for k, v in r.items()
-                            if k not in ("pred_blend", "pred_uncond", "y")})
-                row["status"] = "PASS" if passed else "not met"
-                rows.append(row); results.append(row)
-                off = 0
-                for c in cells:
-                    k = len(c["y"])
-                    for j in range(k):
-                        preds.append(dict(source=source, asset=asset,
-                                          horizon=h, cls=int(c["cls"]),
-                                          date=str(pd.Timestamp(c["dates"][j]).date()),
-                                          pred_blend=float(r["pred_blend"][off + j]),
-                                          pred_uncond=float(r["pred_uncond"][off + j]),
-                                          realised=float(r["y"][off + j])))
-                    off += k
-                print(f"  {source:18} {asset:4} h={h:<3} n={n_ev:5d} "
-                      f"ESS {row['median_ess']:5.1f}  MSEgain "
-                      f"{r['obs_mse_gain']:+.2e} p{r['p_mse']:.4f}  HITgain "
-                      f"{r['obs_hit_gain']:+.3f} p{r['p_hit']:.4f}  "
-                      f"-> {row['status']}")
-
-    df = pd.DataFrame(rows)
-    ts = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d %H:%M:%S %z")
-
+    # ---- PASS 2: compute, cheapest first, checkpointing as we go ----------
     if args.dry_run:
+        df = pd.DataFrame(rows)
         print("\n" + df.to_string(index=False))
         print("\n  DRY RUN -- no estimate computed against the real alignment.")
         print("  Re-run without --dry-run to unblind. This is a one-way door.")
         return
+
+    done = {}
+    if OUT_CELLS.exists():
+        for line in OUT_CELLS.read_text().splitlines():
+            if line.strip():
+                d = json.loads(line)
+                done[(d["source"], d["asset"], d["horizon"])] = d
+        print(f"  resuming: {len(done)} cell(s) already computed in "
+              f"{OUT_CELLS.name}", flush=True)
+
+    todo.sort(key=lambda t: t[0]["n_events"])
+    total_ops = sum(t[0]["n_events"] ** 2 for t in todo)
+    print(f"\n  {len(todo)} cells to compute, cheapest first. Relative cost "
+          f"is n^2 per cell; total {total_ops/1e6:.1f}M units.", flush=True)
+
+    seen = 0
+    for row, cells in todo:
+        key = (row["source"], row["asset"], row["horizon"])
+        seen += row["n_events"] ** 2
+        if key in done:
+            print(f"  SKIP (done) {key}", flush=True)
+            results.append(done[key]); continue
+        tag = f"{row['source']}/{row['asset']}/h{row['horizon']}"
+        print(f"\n  [{100*seen/total_ops:5.1f}% of work] {tag}  "
+              f"n={row['n_events']}  ESS {row['median_ess']:.1f}  "
+              f"computing {args.iters} permutations...", flush=True)
+        # per-cell generator: order-independent and reproducible
+        cr = np.random.default_rng(abs(hash(key)) % (2**32) ^ SEED)
+        r = pooled_perm_test(cells, cr, args.iters, tag)
+        r["overlap"] = transfer_check(cells)
+        passed = (r["obs_mse_gain"] > 0 and r["obs_hit_gain"] > 0
+                  and r["p_mse"] < 0.05 and r["p_hit"] < 0.05)
+        row.update({k: v for k, v in r.items()
+                    if k not in ("pred_blend", "pred_uncond", "y")})
+        row["status"] = "PASS" if passed else "not met"
+        results.append(row)
+        off = 0
+        for c in cells:
+            k = len(c["y"])
+            for j in range(k):
+                preds.append(dict(source=row["source"], asset=row["asset"],
+                                  horizon=row["horizon"], cls=int(c["cls"]),
+                                  date=str(pd.Timestamp(c["dates"][j]).date()),
+                                  pred_blend=float(r["pred_blend"][off + j]),
+                                  pred_uncond=float(r["pred_uncond"][off + j]),
+                                  realised=float(r["y"][off + j])))
+            off += k
+        # CHECKPOINT IMMEDIATELY. A four-hour run that dies at hour three and
+        # loses everything is a runner defect, not bad luck.
+        with open(OUT_CELLS, "a") as fh:
+            fh.write(json.dumps(row, default=str) + "\n")
+        if preds:
+            pd.DataFrame(preds).to_csv(OUT_PRED, index=False)
+        print(f"      -> MSEgain {r['obs_mse_gain']:+.3e} p={r['p_mse']:.4f}  "
+              f"HITgain {r['obs_hit_gain']:+.3f} p={r['p_hit']:.4f}  "
+              f"overlap {r['overlap']:.3f}  ** {row['status']} **", flush=True)
+
+    # merge computed results back into the full row table for reporting
+    rmap = {(r["source"], r["asset"], r["horizon"]): r for r in results}
+    rows = [rmap.get((x["source"], x["asset"], x["horizon"]), x) for x in rows]
+    df = pd.DataFrame(rows)
+    ts = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d %H:%M:%S %z")
 
     if preds:
         pd.DataFrame(preds).to_csv(OUT_PRED, index=False)

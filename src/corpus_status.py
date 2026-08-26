@@ -30,17 +30,34 @@ CS = REPO / "docs" / "CURRENT_STATE_2026-08-23.md"
 SOURCES = ["fomc_statement", "fomc_minutes", "earnings_8k",
            "political_order", "political_other", "bank_research", "transcript"]
 
-# Observed input tokens per document, from the read logs.
+# Input tokens per UNREAD document, per source. Provenance is given for every
+# entry, because this number has been wrong three times and every time the
+# cause was applying an average to a population it did not describe.
 #
-# earnings_8k CORRECTED 2026-08-25: 8421 was the CORPUS MEAN, and the unread
-# remainder is not a random sample of the corpus. All 189 outstanding 8-K
-# documents are exactly the 189 that the old cap SKIPPED for being over
-# max_words -- they are unread BECAUSE they were over-cap. Every one now bills
-# at the 20,000-word truncation cap, ~27,000 input tokens, not 8,421. Pricing
-# them at the mean understated the cost to finish by roughly 1.8x (~$8.91 vs
-# ~$16) and would have exhausted the balance mid-run for the third time.
-TOK = {"fomc_statement": 1400, "fomc_minutes": 22097, "earnings_8k": 27000,
-       "political_order": 3551, "political_other": 2037}
+#   fomc_statement   1400   observed, source complete, unused
+#   fomc_minutes    22097   observed, source complete, unused
+#   political_order  3551   observed, source complete, unused
+#   political_other  2037   observed; MEASURED against the full read on
+#                           2026-08-25: 1,763,503 input tokens over 743
+#                           documents = 2,373/doc. The estimate held.
+#   earnings_8k    127000   MEASURED, not estimated. 26 over-cap 6-K
+#                           submissions were read on 2026-08-25 and the console
+#                           recorded 3.3M input tokens over 31 requests. The
+#                           remaining 163 are all of that class.
+#
+# HISTORY OF THIS CONSTANT, kept because the pattern matters more than the
+# value: 8,421 (corpus mean -- wrong, the remainder is over-cap by
+# construction) -> 27,000 (tokens-per-word calibrated on documents already
+# read, which are prose, when the remainder is numeric tables -- wrong the same
+# way, one level deeper) -> 127,000 (measured from billed tokens).
+#
+# THE RULE THIS ENCODES: an average describes the population it was computed
+# on. When the unread remainder is SELECTED -- on length, on type, on anything
+# -- it is not that population, and the average does not apply to it.
+MEASURED_TOKENS_PER_DOC = {
+    "fomc_statement": 1400, "fomc_minutes": 22097, "earnings_8k": 127000,
+    "political_order": 3551, "political_other": 2037}
+TOK = MEASURED_TOKENS_PER_DOC   # name retained for existing callers
 IN_RATE, OUT_RATE, OUT_TOK = 2.0, 10.0, 290      # $/M in, $/M out, tokens out
 
 
@@ -84,6 +101,10 @@ def main():
         + total_u * OUT_TOK / 1e6 * OUT_RATE
     print(f"\n  estimated cost to finish: ~${cost:.2f}")
     print("  (cached reads are never re-billed; a re-run costs only the unread)")
+    print("  earnings_8k priced at 127,000 tok/doc -- MEASURED from billed")
+    print("  tokens on 26 over-cap documents, not averaged. Every unread 8-K")
+    print("  is an over-cap 6-K submission; the corpus mean does not describe")
+    print("  them. This estimate was wrong twice before by exactly that error.")
     print("=" * 70)
 
     if not args.append:
