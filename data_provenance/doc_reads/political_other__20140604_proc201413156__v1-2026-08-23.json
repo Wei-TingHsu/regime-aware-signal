@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I, BARACK OBAMA... do hereby proclaim June 2014 as Lesbian, Gay, Bisexual, and Transgender Pride Month",
+    "I continue to call on the Congress to correct this injustice by passing the Employment Non-Discrimination Act"
+  ],
+  "extra": {
+    "actor": "President Obama",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2014-06-04",
+  "doc_id": "proc201413156",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 583,
+  "max_words": 20000
+}

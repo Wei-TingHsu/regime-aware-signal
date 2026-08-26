@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.3,
+  "evidence": [
+    "ASML expects to ship 50 systems",
+    "Gross margin between 40 - 41%",
+    "we are awaiting confirmation of this potential growth through the exact level of Q1 and Q2 bookings"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.05,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-04-03",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 88464,
+  "max_words": 20000
+}

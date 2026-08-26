@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.05,
+    "gold": -0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 10,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.4,
+  "evidence": [
+    "ASML 2007 1st Quarter Results \u2013 Confirming growth for 2007",
+    "Revenue 960 million, up 53% year-on-year",
+    "Q2 2007 outlook ASML expects to ship 69 systems"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.15,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2007-05-02",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 30246,
+  "max_words": 20000
+}

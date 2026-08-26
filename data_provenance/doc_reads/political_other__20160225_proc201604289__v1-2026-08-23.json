@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "hereby continue the national emergency with regard to Cuba",
+    "the descriptions of the national emergency set forth in Proclamations 6867 and 7757 no longer reflect",
+    "authorize and direct the Secretary of Homeland Security"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "shipping",
+      "maritime",
+      "Cuba-related policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-02-25",
+  "doc_id": "proc201604289",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1259,
+  "max_words": 20000
+}

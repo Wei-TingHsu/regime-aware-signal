@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.3,
+  "confidence": 0.4,
+  "evidence": [
+    "Order intake set to rise from Q2",
+    "Robust results in difficult market circumstances Confirming revenue growth expectation 2007",
+    "Our global capacity utilization model anticipates supply/demand balance by Q4 2007 in the memory segment"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2007-08-02",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 22622,
+  "max_words": 20000
+}

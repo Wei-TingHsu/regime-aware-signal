@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.05,
+  "confidence": 0.7,
+  "evidence": [
+    "ASML Announces Update of its Share Buyback Program",
+    "the announced objective of maximum EUR 400 million to be repurchased",
+    "aggregate amount of shares bought back up to and including June 23, 2006 is 16,179,998"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2006-07-13",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 71689,
+  "max_words": 20000
+}

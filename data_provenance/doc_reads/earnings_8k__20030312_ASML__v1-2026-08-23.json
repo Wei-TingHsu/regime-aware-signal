@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "For 2003, the Company cannot give a forecast due to an uncertain semiconductor investment climate and an increasingly volatile order backlog.",
+    "Equipment industry flat to low growth in 2003 over 2002",
+    "Rate of growth initially modest"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": -0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2003-03-12",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 62166,
+  "max_words": 20000
+}

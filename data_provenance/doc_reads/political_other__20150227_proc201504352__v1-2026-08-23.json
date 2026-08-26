@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "hereby proclaim the objects identified above ... to be the Honouliuli National Monument",
+    "reserved Federal lands and interests in lands encompass approximately 123.0 acres",
+    "The Secretary of the Interior shall manage the monument through the National Park Service"
+  ],
+  "extra": {
+    "actor": "President Obama",
+    "is_decided": true,
+    "sectors": [
+      "land management",
+      "historic preservation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-02-27",
+  "doc_id": "proc201504352",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2104,
+  "max_words": 20000
+}

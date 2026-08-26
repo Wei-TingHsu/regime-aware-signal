@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "To Implement the United States-Panama Trade Promotion Agreement and for Other Purposes",
+    "the HTS is modified as set forth in Annex I of Publication 4349",
+    "Panama is to be removed from the enumeration of designated beneficiary developing countries"
+  ],
+  "extra": {
+    "actor": "President Obama",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "textiles/apparel",
+      "agriculture"
+    ]
+  },
+  "source": "political_other",
+  "date": "2012-11-05",
+  "doc_id": "proc201227143",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2513,
+  "max_words": 20000
+}

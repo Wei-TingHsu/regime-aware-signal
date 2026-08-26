@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.8,
+  "evidence": [
+    "hereby proclaim the objects identified above ... to be the Browns Canyon National Monument",
+    "withdrawn from all forms of entry, location, selection, sale, leasing, or other disposition",
+    "reserved Federal lands and interests in lands encompass approximately 21,586 acres"
+  ],
+  "extra": {
+    "actor": "President Obama",
+    "is_decided": true,
+    "sectors": [
+      "public lands",
+      "mining",
+      "recreation",
+      "conservation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-02-24",
+  "doc_id": "proc201503972",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2956,
+  "max_words": 20000
+}

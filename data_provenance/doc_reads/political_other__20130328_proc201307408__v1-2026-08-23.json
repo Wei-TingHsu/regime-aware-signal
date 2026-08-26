@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "hereby proclaim the objects identified above ... to be the San Juan Islands National Monument",
+    "withdrawn from all forms of entry, location, selection, sale, leasing, or other disposition",
+    "encompass approximately 970 acres"
+  ],
+  "extra": {
+    "actor": "President Obama",
+    "is_decided": true,
+    "sectors": [
+      "land management",
+      "conservation",
+      "mining/leasing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-03-28",
+  "doc_id": "proc201307408",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1771,
+  "max_words": 20000
+}

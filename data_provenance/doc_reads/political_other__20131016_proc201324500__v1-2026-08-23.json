@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.0,
+  "confidence": 0.95,
+  "evidence": [
+    "I, BARACK OBAMA, President of the United States of America, do hereby proclaim Monday, October 7, 2013, as Child Health Day.",
+    "All children deserve to grow up healthy and safe.",
+    "This Child Health Day, let us recommit to providing our children with one of life's most basic building blocks"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2013-10-16",
+  "doc_id": "proc201324500",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 589,
+  "max_words": 20000
+}

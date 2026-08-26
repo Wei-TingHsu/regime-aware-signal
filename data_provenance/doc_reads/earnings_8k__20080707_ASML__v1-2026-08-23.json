@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.4,
+    "duration": 0.3,
+    "gold": 0.0,
+    "dollar": -0.15,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.5,
+  "novelty": 0.5,
+  "confidence": 0.4,
+  "evidence": [
+    "Order pattern translates into weaker net sales for next 2 quarters",
+    "We expect gradual unit order pick-up from Q2 onwards",
+    "8th consecutive quarter with sales over \u20ac 900 million"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": -0.35,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-07-07",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 28230,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "reduce the applied tariff rates of the United States to the level agreed upon by APEC leaders",
+    "effective with respect to goods entered...on or after December 31, 2015",
+    "reduce applied tariff rates to 5 percent or less by the end of 2015 on 54 environmental goods"
+  ],
+  "extra": {
+    "actor": "President Obama",
+    "is_decided": true,
+    "sectors": [
+      "environmental goods trade",
+      "tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-12-29",
+  "doc_id": "proc201532853",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 637,
+  "max_words": 20000
+}

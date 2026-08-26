@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.2,
+  "evidence": [
+    "ASML Confirms Record Date for Capital Repayment and Reverse Stock Split",
+    "ASML plans to ship about 35 immersion machines in 2007",
+    "ASML sold 30 300-mm i-Line machines in the first half of 2007"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2007-10-04",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 31413,
+  "max_words": 20000
+}

@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "the HTS is modified as set forth in Annex I to this proclamation",
+    "modifications to the USCFTA rules of origin set forth in Proclamation 7746",
+    "to reflect the modified requirements under which a special import quota for upland cotton takes effect"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "footwear",
+      "textiles",
+      "cotton/agriculture",
+      "trade with Chile"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-11-03",
+  "doc_id": "proc201128727",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1521,
+  "max_words": 20000
+}

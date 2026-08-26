@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.02,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim October 2015 as National Energy Action Month",
+    "My Administration remains committed to securing a stable, energy-independent future",
+    "This plan will aid in our fight against climate change"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "energy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-10-02",
+  "doc_id": "proc201525350",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 940,
+  "max_words": 20000
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.02,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim October 2012 as National Cybersecurity Awareness Month",
+    "comprehensive legislation remains essential to securing our critical infrastructure",
+    "My Administration looks forward to working with the Congress"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "cybersecurity"
+    ]
+  },
+  "source": "political_other",
+  "date": "2012-10-04",
+  "doc_id": "proc201224668",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 576,
+  "max_words": 20000
+}

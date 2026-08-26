@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "Proclamation 9388 of January 11, 2016, is hereby revoked.",
+    "suspending the application of duty-free treatment to certain goods is no longer necessary",
+    "I suspended the application of duty-free treatment for all AGOA-eligible goods"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "agriculture",
+      "trade",
+      "South Africa"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-03-17",
+  "doc_id": "proc201606249",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 633,
+  "max_words": 20000
+}

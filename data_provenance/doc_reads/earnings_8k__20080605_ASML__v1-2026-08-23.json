@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.15,
+    "gold": 0.1,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.55,
+  "novelty": 0.3,
+  "confidence": 0.45,
+  "evidence": [
+    "We expect gradual unit order pick-up from Q2 onwards",
+    "Order pattern translates into weaker net sales for next 2 quarters",
+    "Given current market weakness, we are trimming Manufacturing and SG&A variable costs"
+  ],
+  "extra": {
+    "surprise": -0.3,
+    "guidance_change": -0.4,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-06-05",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 107501,
+  "max_words": 20000
+}

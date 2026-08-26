@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "Guinea-Bissau is designated as a beneficiary sub-Saharan African country.",
+    "The designations of South Sudan and The Gambia as beneficiary sub-Saharan African countries...are terminated",
+    "duty-free access into the United States through the close of December 31, 2015, for specified quantities of certain agricultural products of Israel"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "trade/AGOA",
+      "agriculture",
+      "tariffs/HTS"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-12-30",
+  "doc_id": "proc201430727",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 4742,
+  "max_words": 20000
+}

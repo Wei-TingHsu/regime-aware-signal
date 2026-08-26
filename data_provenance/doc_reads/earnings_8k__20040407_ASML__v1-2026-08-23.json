@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.5,
+  "evidence": [
+    "In the last quarter of 2003, we have seen what may be the beginning of an upturn",
+    "We believe that by adjusting labor capacity...we can reduce our break-even level by the end of 2004 to approximately 130 new systems",
+    "We expect capital expenditures in 2004 to range between EUR 75 million and EUR 85 million"
+  ],
+  "confidence_note": "",
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2004-04-07",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 43505,
+  "max_words": 20000
+}

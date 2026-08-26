@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.35,
+  "horizon_days": 45,
+  "specificity": 0.4,
+  "novelty": 0.35,
+  "confidence": 0.5,
+  "evidence": [
+    "our earlier expectations of a full year 2008 net sales decrease of about 10% versus 2007",
+    "our 2008 net sales may potentially drop by as much as 20% versus 2007",
+    "demand for our latest immersion technology remains robust, with 80% of Q3 system revenues expected to come from the XT:1900i"
+  ],
+  "extra": {
+    "surprise": -0.4,
+    "guidance_change": -0.5,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-08-04",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 32249,
+  "max_words": 20000
+}

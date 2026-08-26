@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.3,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "our 2008 net sales may potentially drop by as much as 20% versus 2007",
+    "the current macro-economic weakness may force our customers to focus only on technology transfers to immersion and delay capacity additions",
+    "Q3 2008 outlook ASML expects to ship 37 systems"
+  ],
+  "extra": {
+    "surprise": -0.4,
+    "guidance_change": -0.5,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-07-16",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 31878,
+  "max_words": 20000
+}

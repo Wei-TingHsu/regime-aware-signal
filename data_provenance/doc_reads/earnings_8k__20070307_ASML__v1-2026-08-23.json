@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.2,
+  "novelty": 0.05,
+  "confidence": 0.6,
+  "evidence": [
+    "ASML reconfirmed its strong position in the global market",
+    "The Company improved its operating and financial performance",
+    "achieving best-in-class operating margins, solid earnings"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2007-03-07",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 180097,
+  "max_words": 20000
+}

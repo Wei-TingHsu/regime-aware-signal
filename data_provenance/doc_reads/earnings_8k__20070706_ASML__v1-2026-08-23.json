@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 20,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.4,
+  "evidence": [
+    "ASML expects an overall increased market share in 2007",
+    "Based on all of the above, ASML expects another year of growth in 2007",
+    "ASML Convenes Extraordinary General Meeting of Shareholders in Relation to Plans for Optimization of Capital Structure"
+  ],
+  "confidence_note": "",
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2007-07-06",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 25029,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.1,
+  "confidence": 0.4,
+  "evidence": [
+    "Net profit increased by 32 percent to EUR 311 million",
+    "ASML sales increased by three percent to EUR 2.5 billion",
+    "market share by revenue at 58 percent in 2005 from 52 percent"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2006-04-19",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 140145,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.15,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.05
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.4,
+  "evidence": [
+    "record current backlog of \u20ac 2.163 billion and Q1 results support a strong 2007",
+    "We expect an overall increased ASML market share in 2007 and a ramp of the XT:1900i in H2 2007",
+    "Some production capacity reallocated to DRAM due to low flash prices and overcapacity in H1 2007"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": 0.05,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2007-06-05",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 58145,
+  "max_words": 20000
+}

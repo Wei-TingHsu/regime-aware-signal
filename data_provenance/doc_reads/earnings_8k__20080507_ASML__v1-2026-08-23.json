@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.5,
+  "evidence": [
+    "ASML continues to execute its leadership strategy and expects gradual order pick-up",
+    "Order pattern translates into weaker net sales for next 2 quarters bringing our current full year sales estimate to about 10% less than our record sales number in 2007",
+    "We expect gradual unit order pick-up from Q2 onwards, due to: Improvements in memory supply/demand balance"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": -0.4,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-05-07",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 32560,
+  "max_words": 20000
+}

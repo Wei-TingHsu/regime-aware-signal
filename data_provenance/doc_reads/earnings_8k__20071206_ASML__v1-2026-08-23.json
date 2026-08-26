@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.35,
+  "evidence": [
+    "Q4 order intake will exceed Q3 bookings",
+    "Potential for revenues over the first 3 quarters of 2008 to exceed the first 3 quarters of 2007",
+    "ASML also reiterates its potential to achieve 5 billion euros in revenues by 2010"
+  ],
+  "confidence_reasoning": "",
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2007-12-06",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 352934,
+  "max_words": 20000
+}

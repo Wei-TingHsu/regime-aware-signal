@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim September 11 through September 17, 2011, as National Health Information Technology Week",
+    "Ensuring the security of health information records is a top priority for my Administration"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "healthcare IT"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-09-15",
+  "doc_id": "proc201123924",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 650,
+  "max_words": 20000
+}

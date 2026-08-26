@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.02,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim April 22, 2013, as Earth Day",
+    "I will direct my Cabinet to come up with executive actions to reduce pollution",
+    "climate change is real and that it poses an urgent threat"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": false,
+    "sectors": [
+      "environment",
+      "energy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-04-24",
+  "doc_id": "proc201309870",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 732,
+  "max_words": 20000
+}

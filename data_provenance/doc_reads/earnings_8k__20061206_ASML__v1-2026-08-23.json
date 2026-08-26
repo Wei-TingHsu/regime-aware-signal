@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "ASML's record current backlog of 2.1 billion Euro suggests strong H1 2007",
+    "Industry Analysts forecast average 9% IC unit growth in 2007",
+    "Anticipated pause in lithography purchasing by the Flash memory segment in H2 07"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2006-12-06",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 22036,
+  "max_words": 20000
+}

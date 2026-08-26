@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "hereby proclaim that all lands and interests in lands... are hereby set apart and reserved as the Fort Monroe National Monument",
+    "The reserved Federal lands and interests in lands encompass approximately 325.21 acres"
+  ],
+  "extra": {
+    "actor": "President (Barack Obama)",
+    "is_decided": true,
+    "sectors": [
+      "land management",
+      "national parks",
+      "historic preservation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-11-07",
+  "doc_id": "proc201128926",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1978,
+  "max_words": 20000
+}

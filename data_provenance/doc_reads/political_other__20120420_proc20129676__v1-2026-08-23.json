@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.0,
+  "confidence": 0.95,
+  "evidence": [
+    "I, BARACK OBAMA, President of the United States of America... do hereby proclaim April 17, 2012, as National Equal Pay Day.",
+    "That is why my Administration is committed to securing equal pay for equal work.",
+    "women who worked full-time earned only 77 percent of what their male counterparts did"
+  ],
+  "extra": {
+    "actor": "President Obama",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2012-04-20",
+  "doc_id": "proc20129676",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 598,
+  "max_words": 20000
+}

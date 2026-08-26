@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I have decided to terminate the designation of Burundi as a beneficiary sub-Saharan African country",
+    "the HTS is modified as set forth in Annex I to this proclamation",
+    "modifications to the HTS are necessary to correct the technical errors"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "agriculture",
+      "sugar",
+      "textiles/jewelry (Burma)"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-12-24",
+  "doc_id": "proc201532679",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2569,
+  "max_words": 20000
+}

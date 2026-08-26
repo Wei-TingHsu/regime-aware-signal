@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "certain articles are import-sensitive in the context of the GSP",
+    "provide duty-free access into the United States through the close of December 31, 2012",
+    "technical corrections to the HTS are necessary"
+  ],
+  "extra": {
+    "actor": "President (Obama), USTR/Customs",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "agriculture",
+      "footwear",
+      "tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2012-01-04",
+  "doc_id": "proc201200019",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1254,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "hereby proclaim the objects identified above ... to be the Waco Mammoth National Monument",
+    "reserved Federal lands and interests in lands encompass approximately 7.11 acres",
+    "appropriated and withdrawn from all forms of entry, location, selection, sale, or other disposition"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "land management",
+      "national parks",
+      "tourism"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-07-15",
+  "doc_id": "proc201517564",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1578,
+  "max_words": 20000
+}

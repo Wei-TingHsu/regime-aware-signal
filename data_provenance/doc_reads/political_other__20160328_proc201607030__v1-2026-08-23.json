@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "I hereby order that the flag of the United States shall be flown at half-staff",
+    "As a mark of respect for the victims of the senseless acts of violence"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2016-03-28",
+  "doc_id": "proc201607030",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 333,
+  "max_words": 20000
+}

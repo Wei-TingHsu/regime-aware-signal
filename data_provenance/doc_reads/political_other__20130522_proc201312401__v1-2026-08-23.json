@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim May 19 through May 25, 2013, as World Trade Week",
+    "we also plan to launch talks for a Transatlantic Trade and Investment Partnership",
+    "Once realized, the deal would boost our exports, support American jobs"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": false,
+    "sectors": [
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-05-22",
+  "doc_id": "proc201312401",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 529,
+  "max_words": 20000
+}

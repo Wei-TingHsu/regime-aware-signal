@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.35,
+  "evidence": [
+    "ASML 2006 revenue growth year-on-year estimated at approximately 40% over 2005",
+    "Q3 \u201906 Bookings at about Q2 \u201806 order intake level",
+    "75% of new orders will be for shipments in 2007"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2006-10-04",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 49315,
+  "max_words": 20000
+}

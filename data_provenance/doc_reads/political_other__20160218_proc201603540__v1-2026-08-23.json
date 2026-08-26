@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "hereby proclaim the objects identified above... to be the Castle Mountains National Monument",
+    "withdrawn from all forms of entry, location, selection, sale, or other disposition under the public land laws",
+    "from disposition under all laws relating to mineral and geothermal leasing"
+  ],
+  "extra": {
+    "actor": "President Obama",
+    "is_decided": true,
+    "sectors": [
+      "mining",
+      "land use",
+      "conservation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-02-18",
+  "doc_id": "proc201603540",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2109,
+  "max_words": 20000
+}

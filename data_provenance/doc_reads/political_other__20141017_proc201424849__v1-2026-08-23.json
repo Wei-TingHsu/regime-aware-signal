@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "hereby proclaim the objects identified above ... to be the San Gabriel Mountains National Monument",
+    "reserved Federal lands and interests in lands encompass approximately 346,177 acres",
+    "withdrawn from all forms of entry, location, selection, sale, leasing, or other disposition"
+  ],
+  "extra": {
+    "actor": "President Obama",
+    "is_decided": true,
+    "sectors": [
+      "land management",
+      "mining",
+      "energy leasing",
+      "conservation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-10-17",
+  "doc_id": "proc201424849",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2714,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "I have decided to designate Madagascar as a beneficiary sub-Saharan African country",
+    "terminate the designation of the Kingdom of Swaziland as a beneficiary sub-Saharan African country",
+    "effective on January 1, 2015"
+  ],
+  "extra": {
+    "actor": "President Barack Obama",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "textiles/apparel",
+      "AGOA beneficiary countries"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-07-01",
+  "doc_id": "proc201415619",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 842,
+  "max_words": 20000
+}

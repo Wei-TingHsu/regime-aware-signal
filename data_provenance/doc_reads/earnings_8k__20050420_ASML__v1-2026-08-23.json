@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "We are entering 2005 with arguably the best product portfolio in ASML's history",
+    "average selling price is rising steadily, as customer demand migrates toward advanced products",
+    "We grew gross margin to 37 percent in 2004 from 24 percent in 2003"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2005-04-20",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 118649,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "proclaim March 1 through March 7, 2015, as National Consumer Protection Week",
+    "we are proposing a new rule to require retirement advisors",
+    "I also continue to call on the Congress to enact overdue cybersecurity legislation"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": false,
+    "sectors": [
+      "consumer protection",
+      "financial services"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-03-04",
+  "doc_id": "proc201504517",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 785,
+  "max_words": 20000
+}

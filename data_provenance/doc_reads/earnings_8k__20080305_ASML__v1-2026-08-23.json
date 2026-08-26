@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.1,
+    "gold": 0.05,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.35,
+  "novelty": 0.1,
+  "confidence": 0.35,
+  "evidence": [
+    "Concern continues over global economic weakness",
+    "Slowdown of overall 2008 semiconductor capex forecast by analysts and indicated by customers",
+    "Robust results with 7 quarters of over \u20ac 900 Million revenue"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": -0.15,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-03-05",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 22342,
+  "max_words": 20000
+}

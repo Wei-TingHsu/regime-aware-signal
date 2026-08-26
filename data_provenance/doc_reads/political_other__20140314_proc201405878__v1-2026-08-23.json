@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.02
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "hereby proclaim the objects identified above... to be part of the California Coastal National Monument",
+    "reserved Federal lands and interests in lands consist of approximately 1,665 acres",
+    "withdrawn from all forms of entry, location, selection, sale, leasing... from disposition under all laws relating to mineral and geothermal leasing"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "land management",
+      "conservation",
+      "mining/geothermal leasing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-03-14",
+  "doc_id": "proc201405878",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1633,
+  "max_words": 20000
+}

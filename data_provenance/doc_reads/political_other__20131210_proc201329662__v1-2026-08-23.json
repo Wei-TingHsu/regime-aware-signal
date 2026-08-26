@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "Nelson Mandela is no longer with us, he belongs to the ages",
+    "the flag of the United States shall be flown at half-staff"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2013-12-10",
+  "doc_id": "proc201329662",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 556,
+  "max_words": 20000
+}
