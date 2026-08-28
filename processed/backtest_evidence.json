@@ -1,0 +1,234 @@
+{
+  "ALL": {
+    "n_rebalances": 837,
+    "first": "2010-01-04",
+    "last": "2026-08-18",
+    "gross_weekly": 0.0029475483779434182,
+    "gross_sharpe": 0.5096619014385332,
+    "turnover_long": 0.23253588516746412,
+    "turnover_short": 0.2535885167464115,
+    "legs_per_rebalance": 0.4861244019138756,
+    "breakeven_bps": 60.63362312895417,
+    "costs": [
+      {
+        "bps": 0,
+        "drag_pct": 0.0,
+        "net_weekly": 0.0029475483779434182,
+        "net_sharpe": 0.5096619014385332
+      },
+      {
+        "bps": 5,
+        "drag_pct": 0.024306220095693783,
+        "net_weekly": 0.002704486176986479,
+        "net_sharpe": 0.4676339081290621
+      },
+      {
+        "bps": 10,
+        "drag_pct": 0.048612440191387565,
+        "net_weekly": 0.0024614239760295427,
+        "net_sharpe": 0.4256059148195914
+      },
+      {
+        "bps": 20,
+        "drag_pct": 0.09722488038277513,
+        "net_weekly": 0.0019752995741156663,
+        "net_sharpe": 0.34154992820064944
+      },
+      {
+        "bps": 50,
+        "drag_pct": 0.2430622009569378,
+        "net_weekly": 0.0005169263683740394,
+        "net_sharpe": 0.08938196834382406
+      }
+    ],
+    "borrow": [
+      {
+        "annual_bps": 0,
+        "net_sharpe": 0.5096619014385332
+      },
+      {
+        "annual_bps": 50,
+        "net_sharpe": 0.4930358971197881
+      },
+      {
+        "annual_bps": 100,
+        "net_sharpe": 0.4764098928010429
+      },
+      {
+        "annual_bps": 300,
+        "net_sharpe": 0.4099058755260624
+      }
+    ],
+    "long_only_sharpe": 0.8307659029748157,
+    "block": 16,
+    "p_block": 0.04477611940298507,
+    "exceedances": 8,
+    "t_iid": 2.044764173971286,
+    "names_held": [
+      "VOO",
+      "TLT",
+      "UUP",
+      "XLP",
+      "XLV",
+      "XLE",
+      "SMH",
+      "SOXX",
+      "IYW",
+      "GLD",
+      "IAU",
+      "SLV",
+      "USO",
+      "ITA",
+      "XSD",
+      "IGN",
+      "WCLD",
+      "SKYY",
+      "CIBR",
+      "HACK",
+      "URA",
+      "URNM",
+      "REMX",
+      "AMLP",
+      "MLPA",
+      "XAR",
+      "JETS",
+      "FIVG",
+      "UFO",
+      "MAGS",
+      "DRAM",
+      "FNGS",
+      "SPCX",
+      "FLY",
+      "NVDA",
+      "TSM",
+      "ASML",
+      "MU",
+      "SNDK",
+      "ARM",
+      "PLTR",
+      "ORCL",
+      "INTC",
+      "MSFT",
+      "TSLA",
+      "LMT"
+    ]
+  },
+  "LONG-HISTORY": {
+    "n_rebalances": 837,
+    "first": "2010-01-04",
+    "last": "2026-08-18",
+    "gross_weekly": 0.0012881900234082025,
+    "gross_sharpe": 0.2461235828112705,
+    "turnover_long": 0.2389952153110048,
+    "turnover_short": 0.2516746411483254,
+    "legs_per_rebalance": 0.49066985645933014,
+    "breakeven_bps": 26.253702086037478,
+    "costs": [
+      {
+        "bps": 0,
+        "drag_pct": 0.0,
+        "net_weekly": 0.0012881900234082025,
+        "net_sharpe": 0.2461235828112705
+      },
+      {
+        "bps": 5,
+        "drag_pct": 0.024533492822966504,
+        "net_weekly": 0.0010428550951785368,
+        "net_sharpe": 0.19924951110803302
+      },
+      {
+        "bps": 10,
+        "drag_pct": 0.04906698564593301,
+        "net_weekly": 0.0007975201669488715,
+        "net_sharpe": 0.15237543940479564
+      },
+      {
+        "bps": 20,
+        "drag_pct": 0.09813397129186602,
+        "net_weekly": 0.00030685031048954245,
+        "net_sharpe": 0.058627295998321165
+      },
+      {
+        "bps": 50,
+        "drag_pct": 0.2453349282296651,
+        "net_weekly": -0.0011651592588884491,
+        "net_sharpe": -0.2226171342211031
+      }
+    ],
+    "borrow": [
+      {
+        "annual_bps": 0,
+        "net_sharpe": 0.2461235828112705
+      },
+      {
+        "annual_bps": 50,
+        "net_sharpe": 0.22775227990841537
+      },
+      {
+        "annual_bps": 100,
+        "net_sharpe": 0.20938097700555997
+      },
+      {
+        "annual_bps": 300,
+        "net_sharpe": 0.1358957653941388
+      }
+    ],
+    "long_only_sharpe": 0.7076583425176501,
+    "block": 16,
+    "p_block": 0.18407960199004975,
+    "exceedances": 36,
+    "t_iid": 0.9874481162540579,
+    "names_held": [
+      "VOO",
+      "TLT",
+      "UUP",
+      "XLP",
+      "XLV",
+      "XLE",
+      "SMH",
+      "SOXX",
+      "IYW",
+      "GLD",
+      "IAU",
+      "SLV",
+      "USO",
+      "ITA",
+      "XSD",
+      "IGN",
+      "SKYY",
+      "CIBR",
+      "HACK",
+      "URA",
+      "REMX",
+      "AMLP",
+      "MLPA",
+      "XAR",
+      "JETS",
+      "NVDA",
+      "TSM",
+      "ASML",
+      "MU",
+      "ORCL",
+      "INTC",
+      "MSFT",
+      "TSLA",
+      "LMT"
+    ]
+  },
+  "family": {
+    "cells": 54,
+    "best_sharpe": 0.7274467744340349,
+    "best_cell": {
+      "H": 5,
+      "N": 5,
+      "topk": 200,
+      "sigma": 2.0
+    },
+    "null_mean": 0.5571583421612342,
+    "null_p95": 0.7715497755831644,
+    "exceedances": 17,
+    "p_family": 0.08955223880597014
+  },
+  "run": "2026-08-28 13:28:35 +0800",
+  "iters": 200
+}
