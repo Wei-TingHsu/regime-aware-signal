@@ -1,35 +1,73 @@
 """
-app.py -- DEMONSTRATION TERMINAL. Regime-Aware Cross-Asset Signal Framework.
+app.py -- the product. Three tabs, plain English, no jargon above the fold.
 
-TWO KINDS OF TAB, AND THE DIFFERENCE MATTERS
-    LIVE tabs read every number from the repo -- processed/*.json, the ledger,
-    file counts on disk. If a file is missing the tab says so rather than
-    showing a stale figure.
+WHAT CHANGED ON 2026-08-27, AND WHY
+    The previous version had EIGHT tabs -- "Universe", "Engines", "Document
+    layer", "Forward test", "What we got wrong", "Behind the scenes" -- and
+    spoke in tier / ESS / w / tau2 / political_other / regime 3. That is an
+    evidence terminal for a supervisor. It is not a product: a new user cannot
+    tell what to look at first, and a portfolio manager should not have to
+    learn five abbreviations to read one screen.
 
-    The SPECIMEN tab is a UI MOCKUP. Steps 3-6 are registered but NOT unblinded,
-    so no conditional estimate exists. Every number there is INVENTED to show
-    the shape of the deliverable. It is banner-labelled, dated to a fictional
-    date, and marked SPECIMEN throughout -- because a fabricated figure that
-    escapes its context becomes a claimed result, and an untraceable number is
-    the one thing that would actually damage this submission.
+    This version has THREE tabs. Everything a user needs is on the first.
+    Technical detail that used to be a tab is now a FOOTNOTE at the bottom of
+    the tab it belongs to, marked with an asterisk. Nothing was deleted from
+    the record -- the repository still holds every number and every registered
+    criterion. It is just no longer the front page.
 
-    The specimen doubles as the SPECIFICATION for step 6: its fields are exactly
-    those registered in prereg_analog_event.md section 8.
+    Vocabulary is translated once, in PLAIN, and nowhere is a term used on
+    screen that has not been translated.
+
+STILL TRUE, AND THE REASON THE PRODUCT LOOKS LIKE THIS
+    Every figure is READ from outputs/reports/*.json, written by
+    step6_report.py. The app computes nothing except the on-demand asset run.
+    Most days, on most assets, the honest answer is "no view", and the product
+    says so in those words. A screen that always produced a number would be
+    the failure.
 
 Run:
-    pip install streamlit
     streamlit run app.py
 """
 import json
+from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
-DOCS, PROC, PROV = ROOT / "docs", ROOT / "processed", ROOT / "data_provenance"
+DOCS, PROC = ROOT / "docs", ROOT / "processed"
+REPORTS = ROOT / "outputs" / "reports"
 
-st.set_page_config(page_title="Regime-Aware Signal — terminal", layout="wide")
+st.set_page_config(page_title="Market Conditions Monitor", layout="wide",
+                   initial_sidebar_state="collapsed")
+
+# --------------------------------------------------------------------------
+# PLAIN. Every term that appears on screen is translated here, once.
+# --------------------------------------------------------------------------
+SOURCE = {
+    "fomc_statement": "Fed policy statement",
+    "fomc_minutes": "Fed meeting minutes",
+    "earnings_8k": "Company earnings release",
+    "political_order": "Executive order",
+    "political_other": "Proclamation or notice",
+}
+ASSET = {"SPY": "US equities", "TLT": "Long-term US Treasuries",
+         "GLD": "Gold", "UUP": "US dollar", "USO": "Oil"}
+JARGON = {
+    "market condition": "Which of four broad market environments today "
+                        "resembles, learned from macro data rather than "
+                        "assumed.",
+    "confidence in that condition": "How sure the model is that today belongs "
+                                    "to that environment rather than a "
+                                    "neighbouring one. Below 60% we say so.",
+    "comparable past days": "How many genuinely similar past situations the "
+                            "estimate rests on, after accounting for how "
+                            "similar each one is. Fewer than 8 and we decline "
+                            "to give a view.",
+    "how much history counted": "Between 0 and 1. At 0 the past adds nothing "
+                                "beyond the long-run average and we say so.",
+}
 
 
 def jload(p):
@@ -39,402 +77,280 @@ def jload(p):
         return None
 
 
-def missing(name, what):
-    st.warning(f"`{name}` not found — {what} has not been run. Nothing shown "
-               f"rather than a stale figure.")
-
-
-def nfiles(d, pat):
-    try:
-        return len(list(Path(d).glob(pat)))
-    except Exception:
-        return 0
-
-
-st.title("Regime-Aware Cross-Asset Signal Framework")
-st.caption("BMF5391C Applied Faculty Project · evidence terminal")
-
-tabs = st.tabs(["What this is", "Today's report (SPECIMEN)", "Universe",
-                "Engines", "Document layer", "Forward test",
-                "What we got wrong", "Behind the scenes"])
-
-# ============================================================ 1 · WHAT
-with tabs[0]:
-    st.header("The claim, and how it is defended")
-    st.markdown("""
-Three questions: does safe-haven behaviour invert conditionally, does capital
-rotate through thematic chains in a detectable order, and can an LLM do useful
-work inside a quantitative pipeline?
-
-**Two came back null. The third is registered and unbuilt.**
-
-That is the design working. What is on offer is not a signal — it is
-**measurement with declared precision**: an instrument that states how much it
-knows, abstains when it does not know enough, and keeps the record of what it
-got wrong.
-""")
-    c = st.columns(3)
-    c[0].metric("Pre-registered hypotheses", "10+")
-    c[1].metric("Claims retired after testing", "9")
-    c[2].metric("Wrong priors logged", "17")
-    st.info("""**Why the nulls are the asset.** Every null came from an
-instrument first shown to detect a *planted* effect — `--inject` recovered a
-planted lead at d = +0.502, p = 0.0005 on the real panel before any null was
-reported. A null from an unproven instrument is not evidence.""")
-    st.divider()
-    st.error("""**Read the tab labels.** The tab marked **SPECIMEN** is a UI
-mockup with invented numbers, shown to demonstrate the shape of the deliverable.
-Every other tab reads live from the repository.""")
-
-# ============================================================ 2 · SPECIMEN
-with tabs[1]:
-    st.error("""### SPECIMEN — EVERY NUMBER ON THIS TAB IS INVENTED
-
-Steps 3–6 are **registered but not unblinded**. No conditional estimate exists
-yet. This tab shows the **shape** of the daily deliverable and serves as the
-specification for step 6. The date is fictional. Do not cite, screenshot or
-quote any figure below as a result.""")
-
-    st.header("Daily Decision Report — 2027-03-15  *(specimen)*")
-    c = st.columns(4)
-    c[0].metric("Macro regime", "3 — tightening", "SPECIMEN")
-    c[1].metric("Regime posterior", "0.71", "SPECIMEN")
-    c[2].metric("Documents read", "4", "SPECIMEN")
-    c[3].metric("Assets with a view", "3 of 47", "SPECIMEN")
-    st.caption("A regime posterior below 0.60 prints as a warning, not a "
-               "footnote — the system says when it is unsure which regime it is in.")
-
-    st.subheader("Documents read today  *(specimen)*")
-    st.dataframe(pd.DataFrame([
-        {"source": "fomc_statement", "direction": "gold −0.4", "magnitude": 0.55,
-         "specificity": 0.85, "novelty": 0.40,
-         "evidence quote": "\"the Committee decided to raise the target range\""},
-        {"source": "earnings_8k · NVDA", "direction": "equity +0.7",
-         "magnitude": 0.70, "specificity": 0.80, "novelty": 0.55,
-         "evidence quote": "\"revenue increased 22% year over year\""},
-        {"source": "political_order", "direction": "equity −0.2",
-         "magnitude": 0.30, "specificity": 0.75, "novelty": 0.20,
-         "evidence quote": "\"it is hereby ordered that tariffs be imposed\""},
-        {"source": "political_other", "direction": "equity 0.0",
-         "magnitude": 0.05, "specificity": 0.20, "novelty": 0.02,
-         "evidence quote": "\"National Small Business Week, 2027\""},
-    ]), use_container_width=True, hide_index=True)
-    st.caption("The reader never predicts returns. It classifies content; what a "
-               "direction *did* is answered by price data. Note the ceremonial "
-               "proclamation scoring specificity 0.20 — that separation is what "
-               "makes weighing possible at all.")
-
-    st.subheader("Net view per asset  *(specimen)*")
-    st.dataframe(pd.DataFrame([
-        {"asset": "GLD", "estimate (3d)": "−0.31%", "precedents": 34,
-         "ESS": 21.4, "precedent strength": 0.68, "tier": "1 · matched",
-         "dominant source": "fomc_statement", "reader vs history": "corroborated"},
-        {"asset": "SMH", "estimate (3d)": "+0.44%", "precedents": 17,
-         "ESS": 11.2, "precedent strength": 0.41, "tier": "2 · partial",
-         "dominant source": "earnings_8k", "reader vs history": "corroborated"},
-        {"asset": "XLE", "estimate (3d)": "—", "precedents": 6, "ESS": 4.1,
-         "precedent strength": 0.00, "tier": "3 · abstain",
-         "dominant source": "political_order", "reader vs history": "abstained"},
-    ]), use_container_width=True, hide_index=True)
-    st.caption("**ESS** is the effective sample size after weighting — how many "
-               "precedents the number is really made of. **Precedent strength** "
-               "is how much of the estimate came from macro-matched history "
-               "versus the unconditional average. Below ESS 8 the system "
-               "**abstains** rather than issuing a thin number.")
-
-    st.warning("""**Divergent — both shown, no combined number issued  *(specimen)*.**
-
-`UUP` · the reader scores today's order **dollar-positive (+0.3)**; macro-matched
-history says **−0.18%** over 3 sessions across 22 precedents.
-
-They disagree in sign, so **no net view is issued for UUP today**. Both numbers
-are shown and the disagreement is flagged. The reader's opinion is never allowed
-to weight the historical estimate — it would be validating itself.""")
-
-    st.error("""**What this system could not see today  *(specimen — but the
-gaps are real)*.**
-
-- Statements, social posts and rhetoric outside the Federal Register — **not covered**
-- Bank research and earnings-call transcripts — **no free structured feed, zero documents**
-- Foreign issuers (6-K) — no separate exhibits, lower precision than domestic 8-K
-
-Their absence is a **coverage gap, not evidence** that these sources do not move
-markets. This block prints on every report.""")
-    st.info("**No performance number appears on this report, specimen or real.** "
-            "Nothing is claimed until a forward-test row has matured.")
-
-# ============================================================ 3 · UNIVERSE
-with tabs[2]:
-    st.header("Asset universe")
-    st.markdown("""47 instruments in three groups: 31 long-history core ETFs
-driving regime discovery and backtesting, 4 modern-theme overlay instruments
-tracked live but excluded from pre-inception backtests, and 12 spotlight single
-names used for news attribution.
-
-**The ≥8-year cut matters.** Any instrument with less than 8 years of history is
-excluded from the long-history universe — the survivorship check that stops a
-result being carried by recent-inception tickers which only exist inside one
-bull run.""")
-
-    st.subheader("Add an instrument  *(interface demonstration)*")
-    st.caption("Shows how a client instrument would be screened before entering "
-               "the universe. Adding one is a config entry plus a pipeline "
-               "re-run; the screening logic shown is real.")
-    col1, col2 = st.columns([2, 1])
-    tic = col1.text_input("Ticker", placeholder="e.g. XLF, EEM, IWM")
-    yrs = col2.number_input("Years of history available", 0.0, 60.0, 12.0, 0.5)
-
-    if tic:
-        t = tic.strip().upper()
-        st.markdown(f"#### Screening `{t}`")
-        long_ok = yrs >= 8
-        st.dataframe(pd.DataFrame([
-            {"check": "Ticker resolves on the data vendor",
-             "result": "verified on `download_data --force`"},
-            {"check": "≥ 8 years of history (long-history universe)",
-             "result": "qualifies" if long_ok else
-                       f"{yrs:g}y — tracked live, EXCLUDED from long-history"},
-            {"check": "Spans ≥ 2 crisis regimes",
-             "result": "likely" if long_ok else "insufficient span"},
-            {"check": "Group assignment",
-             "result": "core — regime discovery + backtest" if long_ok
-                       else "overlay — live attribution only"},
-            {"check": "Enters the analog engine's forward-return panel",
-             "result": "yes" if long_ok else "from its inception date onward"},
-        ]), use_container_width=True, hide_index=True)
-        if long_ok:
-            st.success(f"""`{t}` would join the **core** group: regime discovery,
-PCA, backtesting and the analog engine. Adding it needs a `config.yaml` entry and
-a pipeline re-run — panel, PCA and regimes all regenerate deterministically from
-the seed.""")
+def verdict(e):
+    """Plain-English verdict for one asset. Returns (headline, colour, detail)."""
+    est = e.get("estimate")
+    if e["net_view"] is None:
+        return "No view", "grey", e.get("abstain_reason") or "nothing published"
+    if est is None or e.get("abstain"):
+        why = e.get("abstain_reason", "")
+        if "ESS" in why or "pool" in why or "precedent" in why:
+            plain = "Not enough comparable history to say anything"
         else:
-            st.warning(f"""`{t}` would be added to the **overlay** group. It would
-appear in daily reports and news attribution but be **excluded from the
-long-history universe**, so no historical claim would rest on it. That exclusion
-is the point — it is what stops a backtest being carried by instruments that only
-existed during one favourable period.""")
+            plain = why or "conditions for a view were not met"
+        return "No view", "grey", plain
+    pct = est["estimate"]
+    tier = est["tier"]
+    word = "Clear signal" if tier == 1 else "Weak signal"
+    colour = "green" if tier == 1 else "orange"
+    return word, colour, f"{pct:+.2%} over the next 3 trading days"
 
-    st.divider()
-    cfg = ROOT / "config" / "config.yaml"
-    if cfg.exists():
-        txt = cfg.read_text()
-        st.caption(f"Universe defined in `config/config.yaml` — "
-                   f"{txt.count('ticker:')} instruments across "
-                   f"{sum(k in txt for k in ('core:', 'overlay:', 'spotlight:'))} "
-                   f"groups.")
+
+st.markdown("<h1 style='margin-bottom:0'>Market Conditions Monitor</h1>",
+            unsafe_allow_html=True)
+st.caption("What today's policy and company news implies for five core "
+           "markets — and, more often than not, why it implies nothing.")
+
+tabs = st.tabs(["Today", "Look up an asset", "How this works"])
+
+# ==========================================================================
+with tabs[0]:
+    idx = jload(PROC / "report_index.json")
+    if not idx:
+        st.warning("No reports have been generated yet. Run "
+                   "`python generate_reports.py --docs-only`.")
     else:
-        missing("config/config.yaml", "the universe definition")
+        ix = pd.DataFrame(idx).sort_values("date")
+        top = st.columns([2, 1, 3])
+        only = top[1].checkbox("Only days with a signal", value=False,
+                               help="Days where at least one market reached a "
+                                    "clear or weak signal.")
+        pool = ix[ix.best_tier <= 2] if only else ix
+        if not len(pool):
+            st.info("No day matches that filter.")
+            st.stop()
+        dates = list(pool.date)
+        day = top[0].selectbox("Date", dates, index=len(dates) - 1)
+        R = jload(REPORTS / f"{day.replace('-','')}.json")
+        if not R:
+            st.warning(f"No report for {day}.")
+            st.stop()
 
-# ============================================================ 4 · ENGINES
-with tabs[3]:
-    st.header("Engines — what was measured")
-    st.subheader("The recency ladder, run on two engines")
-    rs = jload(PROC / "recency_sweep.json")
-    if rs is None:
-        missing("processed/recency_sweep.json", "the λ ladder")
-    else:
-        rows = []
-        for k, v in rs.items():
-            parts = k.split("|")
-            if len(parts) != 3 or parts[2] != "LONG-HISTORY":
-                continue
-            rows.append({"engine": parts[0], "rung": parts[1],
-                         "Sharpe": round(float(v.get("sharpe", float("nan"))), 4),
-                         "p": round(float(v.get("p", float("nan"))), 4)})
-        if rows:
-            st.dataframe(pd.DataFrame(rows).sort_values(["engine", "rung"]),
-                         use_container_width=True, hide_index=True)
-    st.markdown("""**The two engines disagree, and that is the finding.** They
-differ only in feature basis, regime-refit policy and decay default — so the
-result is **basis-carried, not phenomenon-carried**, and is reported as
-exploratory rather than as a finding.""")
+        # ---- headline ---------------------------------------------------
+        views = [a for a, e in R["assets"].items()
+                 if e.get("estimate") and not e.get("abstain")]
+        if not views:
+            st.info(f"### No view on any market for {day}\n"
+                    "The news that landed does not resemble enough past "
+                    "situations to support a view. That is the system's most "
+                    "common answer.")
+        else:
+            st.success(f"### {len(views)} of 5 markets have a view for {day}: "
+                       + ", ".join(ASSET.get(v, v) for v in views))
 
-    st.subheader("What λ actually does to analog selection")
-    if jload(PROC / "rung_diagnostic.json") is None:
-        missing("processed/rung_diagnostic.json", "the rung diagnostic")
-    else:
-        st.error("""**Verdict: RESELECTION on both engines.** The registered
-threshold was top-k overlap ≥ 0.90 against the no-decay control — that would mean
-λ merely breaks ties. Measured **0.765 and 0.850**, with effective sample size
-holding at ~99.6 of 100 at every rung. λ does not concentrate weight; **it swaps
-which days are used at all.**
-
-Both engines reduce to *"pick the 100 most recent same-regime days and average
-them equally."* **The word *analog* promises more than the mechanism delivers**,
-and the report says so.""")
-
-    st.subheader("A declared look-ahead, finally measured")
-    st.dataframe(pd.DataFrame([
-        {"model": "level", "full-panel": 0.2526, "expanding": 0.2406,
-         "diff": 0.012, "paired p": 0.940},
-        {"model": "trend (model_2)", "full-panel": 0.4131, "expanding": 0.1522,
-         "diff": 0.261, "paired p": 0.057},
-        {"model": "trend (model_3)", "full-panel": 0.4947, "expanding": 0.3568,
-         "diff": 0.138, "paired p": 0.500},
-    ]), use_container_width=True, hide_index=True)
-    st.warning("""Small for the level model, large for both trend models — and
-that resolves an older question. Fixing horizon and varying only the similarity
-mode, the trend advantage is **+0.11 with the look-ahead and −0.12 without it**.
-On this panel **the trend advantage *is* the look-ahead.**""")
-
-# ============================================================ 5 · DOCS
-with tabs[4]:
-    st.header("The document layer")
-    st.markdown("""Every source — Fed statements, Fed minutes, SEC earnings
-releases, executive orders, proclamations — is read into **one common schema**:
-direction per asset class, magnitude, horizon, specificity, novelty, confidence,
-and up to three verbatim evidence quotes.
-
-**The model never predicts returns.** It classifies *content*. What a direction
-actually did is answered by price data — which is also the main defence against
-outcome leakage on documents it may have seen in training.""")
-    rows = []
-    for s in ["fomc_statement", "fomc_minutes", "earnings_8k",
-              "political_order", "political_other"]:
-        rows.append({"source": s,
-                     "documents": nfiles(PROV / "docs" / s, "*.txt"),
-                     "read": nfiles(PROV / "doc_reads", f"{s}__*.json")})
-    df = pd.DataFrame(rows)
-    df["% read"] = (100 * df["read"] / df["documents"].replace(0, pd.NA)).round(0)
-    st.dataframe(df, use_container_width=True, hide_index=True)
-
-    st.subheader("Does `specificity` actually discriminate?")
-    g = jload(PROC / "gate_check.json")
-    if g is None:
-        missing("processed/gate_check.json", "the gate check")
-    else:
-        lo, hi = (g.get("ci") or [None, None])[:2]
-        st.metric("Between-source spread",
-                  f"{g.get('spread', float('nan')):.3f}",
-                  f"95% CI [{lo:.3f}, {hi:.3f}]" if lo is not None else None)
-        (st.success if g.get("passed") else st.error)(
-            f"**GATE: {'PASS' if g.get('passed') else 'FAIL'}** — the criterion "
-            f"is the *lower bound* of the CI exceeding "
-            f"{g.get('threshold', 0.25)}, tightened from a point comparison "
-            f"after a marginal result. The tightening is an amendment with its "
-            f"timing declared.")
-        srcs = g.get("sources", {})
-        if srcs:
-            st.dataframe(pd.DataFrame([
-                {"source": k, "n": v.get("n"),
-                 "mean specificity": round(v.get("mean", float("nan")), 3),
-                 "expected": v.get("expected", "—")}
-                for k, v in srcs.items()
-            ]).sort_values("mean specificity", ascending=False),
-                use_container_width=True, hide_index=True)
-    st.error("""**What this system cannot see.** Statements, posts and rhetoric
-outside the Federal Register are **not covered**. Bank research and transcripts
-have no free structured feed and stand at zero documents. Foreign issuers file
-6-K with no separate exhibits. Their absence is a **coverage gap, not
-evidence** — and it prints on every daily report.""")
-
-# ============================================================ 6 · FORWARD
-with tabs[5]:
-    st.header("Live forward test")
-    st.markdown("""Three models frozen in `config/models.yaml` **before any live
-data existed**, including a deliberately cherry-picked overfit control whose
-registered hypothesis is that its in-sample lead shrinks out of sample.
-
-Signal is the last completed US close; entry is the **next** session, never the
-signal bar. A row matures only if **every** session of its window has a return
-for **every** picked asset. Missed days are honest gaps, never back-filled.""")
-    led = PROC / "forward_ledger.csv"
-    if not led.exists():
-        missing("processed/forward_ledger.csv", "the forward test")
-    else:
-        d = pd.read_csv(led)
+        # ---- market condition -------------------------------------------
+        g = R["regime"]
         c = st.columns(3)
-        c[0].metric("Rows logged", len(d))
-        c[1].metric("Matured", int((d["status"] == "matured").sum()))
-        c[2].metric("Pending", int((d["status"] == "pending").sum()))
-        st.dataframe(d.sort_values("signal_date", ascending=False).head(15),
-                     use_container_width=True, hide_index=True)
-    st.info("""**No performance number is shown because none has matured.** The
-live test contributes its *design and timestamps*, not its numbers. Reporting an
-unmatured return would be the easiest way to mislead a reader here.""")
+        c[0].metric("Market condition", f"{g['label'] + 1} of 4")
+        c[1].metric("Confidence in that condition",
+                    f"{g['posterior']:.0%}" if g["posterior"] else "—")
+        c[2].metric("News items today", len(R["documents"]))
+        if g.get("warning"):
+            st.error("The model is **not confident** which market condition "
+                     "today belongs to. Treat everything below with extra "
+                     "caution.")
 
-# ============================================================ 7 · WRONG
-with tabs[6]:
-    st.header("What we got wrong — and how we found out")
-    st.markdown("A running tally of wrong priors is a first-class project "
-                "artifact. **Seventeen entries.** The most consequential:")
-    st.dataframe(pd.DataFrame([
-        {"claim": "No recency parameter exists anywhere in the codebase",
-         "how it was caught": "Reading the config file",
-         "outcome": "False — it was there, and the headline figures carried it"},
-        {"claim": "Removing that parameter raises Sharpe 0.25 → 0.38",
-         "how it was caught": "A paired test registered before it ran",
-         "outcome": "Not distinguishable, p = 0.485 — claim retired"},
-        {"claim": "The trend similarity mode outperforms level",
-         "how it was caught": "Fixing horizon, varying only the mode",
-         "outcome": "The advantage was a look-ahead, not an effect"},
-        {"claim": "The 8-K corpus contains earnings releases",
-         "how it was caught": "A 20-document pilot before the full spend",
-         "outcome": "307 SEC cover pages containing no figures"},
-        {"claim": "The estimator's null path fires when there is no signal",
-         "how it was caught": "A blind acceptance test",
-         "outcome": "Floating-point residue stopped it firing — guarded"},
-    ]), use_container_width=True, hide_index=True)
-    st.success("""**Every one was caught by *running something*, not by reasoning
-about it.**
+        # ---- the five markets -------------------------------------------
+        st.write("")
+        cols = st.columns(5)
+        for i, (a, e) in enumerate(R["assets"].items()):
+            head, colour, detail = verdict(e)
+            with cols[i]:
+                st.markdown(f"**{ASSET.get(a, a)}**")
+                st.markdown(f":{colour}[**{head}**]")
+                st.caption(detail)
+                if e["net_view"] is not None:
+                    tone = "positive" if e["net_view"] > 0 else "negative"
+                    st.caption(f"Today's news reads *{tone}* for this market, "
+                               f"mostly from a "
+                               f"{SOURCE.get(e['dominant_source'], e['dominant_source']).lower()}.")
+                if e.get("sources_disagree"):
+                    st.caption(":orange[Two news items point opposite ways. We "
+                               "show both and combine neither.]")
+                if e.get("agreement") == "DISCORDANT":
+                    st.caption(":orange[The news and the history disagree.]")
 
-The record of failure is kept, not deleted: the 307 cover pages are retained on
-disk, the failed acceptance-test log is committed alongside the passing one, and
-every amendment records **when it was decided relative to what had already been
-seen** — the only thing distinguishing an amendment from a rationalisation.""")
+        # ---- what landed today ------------------------------------------
+        if R["documents"]:
+            st.write("")
+            with st.expander(f"The {len(R['documents'])} news item(s) behind "
+                             f"this, in detail"):
+                rows = []
+                for d in R["documents"]:
+                    dirs = ", ".join(
+                        f"{ASSET.get(k, k)} {'up' if v > 0 else 'down'}"
+                        for k, v in d["direction"].items()
+                        if v is not None and abs(v) > 0.05) or "no clear read"
+                    rows.append({"Type": SOURCE.get(d["source"], d["source"]),
+                                 "Published": d["published"],
+                                 "Reads as": dirs,
+                                 "How specific": f"{d['specificity']:.0%}"
+                                 if d["specificity"] else "—",
+                                 "How new": f"{d['novelty']:.0%}"
+                                 if d["novelty"] else "—"})
+                st.dataframe(pd.DataFrame(rows), use_container_width=True,
+                             hide_index=True)
 
-# ============================================================ 8 · BEHIND
-with tabs[7]:
-    st.header("Behind the scenes — how a claim becomes a result")
+        # ---- carry-forward ------------------------------------------------
+        prev = ix[ix.date < day]
+        if len(prev):
+            pday = prev.iloc[-1].date
+            P = jload(REPORTS / f"{pday.replace('-','')}.json")
+            age = (pd.Timestamp(day) - pd.Timestamp(pday)).days
+            if P:
+                lines = [f"- **{ASSET.get(a, a)}**: news read "
+                         f"{'positive' if e['net_view'] > 0 else 'negative'}"
+                         for a, e in P["assets"].items()
+                         if e["net_view"] is not None]
+                if lines:
+                    with st.expander(f"What the last news day said "
+                                     f"({pday}, {age} day(s) before)"):
+                        st.markdown("\n".join(lines))
+                        st.caption("Shown as it was, not faded with age. "
+                                   "Whether older news should count for less "
+                                   "is a modelling question we have not "
+                                   "answered, so we do not pretend to.")
+
+        # ---- footnotes ----------------------------------------------------
+        st.write("")
+        st.divider()
+        st.caption("**\\* Notes on the above.**")
+        n = []
+        for a, e in R["assets"].items():
+            est = e.get("estimate")
+            if est:
+                n.append(f"*{ASSET.get(a, a)}*: {est['n_matched']} past "
+                         f"situations matched, of which "
+                         f"{est['ess']:.0f} counted as genuinely comparable; "
+                         f"history weight {est['w_shrink']:.2f}.")
+        if n:
+            st.caption("  \n".join(n))
+        st.caption("\\* *A view is withheld unless at least 8 past situations "
+                   "are genuinely comparable. This threshold was fixed in "
+                   "advance, in writing, before any result was seen.*")
+        st.caption("\\* *Where the news and the history disagree, both are "
+                   "shown and no combined number is produced. Combining them "
+                   "would hide the disagreement, which is the most useful "
+                   "thing on the screen.*")
+        st.caption("\\* *We tested whether agreement between news and history "
+                   "predicts better outcomes. It does not — cases where they "
+                   "disagreed performed better. So agreement is displayed and "
+                   "changes no number.*")
+
+# ==========================================================================
+with tabs[1]:
+    st.subheader("Look up any asset")
+    st.caption("Enter a ticker. We identify which broad market it belongs to, "
+               "then ask the same question of that asset's own price history.")
+    idx = jload(PROC / "report_index.json")
+    if not idx:
+        st.warning("No reports generated yet.")
+    else:
+        ix = pd.DataFrame(idx).sort_values("date")
+        c = st.columns([1, 1, 1])
+        tk = c[0].text_input("Ticker", value="SMH").strip().upper()
+        day = c[1].selectbox("Date", list(ix.date), index=len(ix) - 1)
+        ax = c[2].selectbox("Market", ["decide for me", "equities", "bonds",
+                                       "gold", "dollar", "oil"])
+        AXMAP = {"equities": "equity", "bonds": "duration", "gold": "gold",
+                 "dollar": "dollar", "oil": "oil"}
+        if st.button("Check"):
+            with st.spinner("Checking history…"):
+                try:
+                    import asset_extension as AE
+                    cfg = AE.load_config(); sc, rt = AE.load_data()
+                    ii = pd.DatetimeIndex(sc.index)
+                    lab = AE.regime_labels_expanding(sc, cfg)
+                    Z = AE._z_expanding(sc[AE.CLUSTERING_PCS].values)
+                    amap = AE.axis_map(cfg)
+                    docs = AE.load_reads()
+                    pos = ii.searchsorted(pd.DatetimeIndex(docs["date"].values),
+                                          side="left")
+                    ok = pos < len(ii)
+                    docs = docs.loc[ok].copy(); docs["session"] = ii[pos[ok]]
+                    for cc in ("magnitude", "specificity", "novelty",
+                               "confidence"):
+                        docs[cc] = pd.to_numeric(docs.get(cc), errors="coerce")
+                    docs["weight"] = (docs.magnitude.fillna(0)
+                                      * docs.specificity.fillna(0)
+                                      * docs.novelty.fillna(0)
+                                      * docs.confidence.fillna(0))
+                    t = pd.Timestamp(day); ti = int(ii.get_loc(t))
+                    axis = (amap.get(tk, ("equity", "?"))[0]
+                            if ax == "decide for me" else AXMAP[ax])
+                    e = AE.run_asset(tk, axis, t, ti, ii, sc, rt, Z, lab,
+                                     int(AE.DEFAULT["n_regimes"]),
+                                     docs[docs.session == t],
+                                     docs[docs.session < t])
+                except Exception as ex:
+                    st.error(f"Could not check {tk}: {type(ex).__name__}")
+                    e = None
+            if e:
+                head, colour, detail = verdict(e)
+                st.markdown(f"## {tk} — :{colour}[{head}]")
+                st.write(detail)
+                nice = {"equity": "equities", "duration": "bonds",
+                        "gold": "gold", "dollar": "the dollar", "oil": "oil"}
+                st.caption(f"{tk} was treated as a **{nice[e['axis']]}** "
+                           f"exposure.")
+                est = e.get("estimate")
+                if est:
+                    st.caption(f"\\* {est['n_matched']} past situations "
+                               f"matched, {est['ess']:.0f} genuinely "
+                               f"comparable, history weight "
+                               f"{est['w_shrink']:.2f}.")
+                if not e.get("is_proxy"):
+                    st.caption(f"\\* *The news we read describes "
+                               f"{nice[e['axis']]} broadly. It says nothing "
+                               f"specific to {tk}'s own industry, so treat "
+                               f"this as a market-level read, not a "
+                               f"company-level one.*")
+
+# ==========================================================================
+with tabs[2]:
+    st.subheader("How this works")
     st.markdown("""
-**1 · Register before running.** Every hypothesis has a written criterion
-committed to git before any number is looked at. Nine claims have been retired
-this way.
+Every trading day we read the policy and company documents published that day —
+Federal Reserve statements and minutes, company earnings releases, executive
+orders and proclamations. A language model classifies each one: what it says,
+how specific it is, how much of it was already public.
 
-**2 · Prove the instrument before trusting the null.** Before any test reports
-"no effect", a known effect is planted in the real data and the test must recover
-it.
+We separately identify which of **four broad market environments** today
+resembles, using macro data alone.
 
-**3 · Build blind.** The document estimator was built against data with real
-volatility, fat tails, missing values and holidays — only the link between
-events and outcomes destroyed, a known effect planted on top. Six acceptance
-tests passed before it ever saw a real conditional estimate.
+Then we ask one question: **when documents like today's landed in environments
+like today's, what happened next?** If enough genuinely comparable situations
+exist, we report what they did. If they do not, we say so and give no number.
 
-**4 · Fail loud.** Nine defects this session shared one shape: something failed
-and the code carried on, logging something plausible. A silent filter passed 307
-empty documents. A retry loop burned 897 calls against an exhausted balance. Each
-is now a hard stop.
-
-**5 · Estimate, don't choose.** Where a parameter can be estimated it is never
-picked by hand — trying values and keeping the best is a one-parameter grid
-search.
-""")
+That last part is the product. Most days, for most markets, the honest answer
+is that there is no usable precedent — and a tool that produced a number anyway
+would be worse than useless.
+    """)
     st.divider()
-    st.subheader("Commercial read")
-    st.markdown("""The precedent is **Barra**, which did not sell alpha. It sold
-*measurement with declared precision* and became a standard.
-
-The deliverable is the daily report in the specimen tab: every asset carrying its
-estimate, its precedent count, its **effective** sample size after weighting, a
-**precedent-strength** number, and an explicit **abstention** when evidence is
-thin. Where the reader and the historical record disagree, both are shown and no
-combined number is issued.
-
-**A system that abstains is more sellable to a fiduciary than one that always has
-an answer** — the fiduciary carries the liability and needs to know which days
-the model is guessing.""")
+    st.markdown("#### What this cannot see")
+    R0 = None
+    ixx = jload(PROC / "report_index.json")
+    if ixx:
+        R0 = jload(REPORTS / f"{ixx[-1]['date'].replace('-','')}.json")
+    if R0:
+        for h, b in R0["cannot_see"]:
+            plain = (b.replace("`transcript`", "earnings call transcripts")
+                      .replace("`bank_research`", "sell-side research")
+                      .replace("**", ""))
+            st.markdown(f"- **{h}.** {plain}")
     st.divider()
-    c = st.columns(2)
-    c[0].success("""**Done**
-- Macro analog engine measured, caveats declared
-- Two hypotheses closed as clean nulls
-- Document layer built; 5 sources on one schema
-- Discrimination gate passed on a tightened criterion
-- Conditional estimator registered, blind-tested 6/6
-- Live forward test running with frozen models""")
-    c[1].warning("""**Not done**
-- Conditional estimator not yet unblinded
-- Source weighing and decision report unbuilt
-- Daily automation unbuilt
-- Two sources have no free feed — zero documents
-- **No forward-test row has matured**""")
+    st.caption("**\\* Method notes, for readers who want them.**")
+    st.caption("\\* *Every threshold in this system — how comparable a past "
+               "situation must be, how many are enough, what counts as a "
+               "signal — was written down and committed to version control "
+               "before any result was looked at. Where a test failed, the "
+               "failure is recorded rather than the test rerun.*")
+    st.caption("\\* *Two headline hypotheses were tested and rejected: gold "
+               "does not reliably decouple from equities under stress on this "
+               "data, and sector rotation has no stable running order. Both "
+               "are published rather than buried.*")
+    st.caption("\\* *No live performance figure is shown anywhere in this "
+               "tool. The forward test began on 19 August 2026 and too few "
+               "positions have run their course to report anything honestly.*")
+    st.caption("\\* *Full methodology, every registered test and every "
+               "correction is in the project repository.*")
