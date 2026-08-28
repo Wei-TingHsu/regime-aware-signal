@@ -401,8 +401,18 @@ with tabs[1]:
                                      int(AE.DEFAULT["n_regimes"]),
                                      docs[docs.session == t],
                                      docs[docs.session < t])
+                except FileNotFoundError as ex:
+                    # Name the file. "File not found" with no path is the least
+                    # useful error a demo can give someone evaluating it.
+                    st.error(f"**Missing data file:** `{ex.filename or ex}`\n\n"
+                             "This tab runs the estimator live, so it needs the "
+                             "price panel and the document reads on disk — "
+                             "unlike the daily report, which is pre-generated. "
+                             "If this is a fresh clone, those files may not be "
+                             "committed.")
+                    e = None
                 except Exception as ex:
-                    st.error(f"Could not check {tk}: {type(ex).__name__}")
+                    st.error(f"Could not check {tk}: {type(ex).__name__}: {ex}")
                     e = None
             if e:
                 head, colour, detail = verdict(e)
