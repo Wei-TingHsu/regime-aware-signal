@@ -97,6 +97,108 @@ def axis_map(cfg):
     return m
 
 
+_PRICE_CACHE = {}
+
+
+def get_returns(ticker, rets, idx):
+    """Daily simple returns for `ticker`, aligned to the panel index.
+
+    First from the 47-asset panel. If the ticker is not there -- which is the
+    whole point of "any asset" -- download it. Without this the feature only
+    ever worked for tickers already in config.yaml, which is not "any asset",
+    it is "any of ours".
+
+    Returns (series_or_None, source_string). None means the ticker could not be
+    priced, and the caller must abstain and say so rather than guess."""
+    if ticker in rets.columns:
+        return rets[ticker].values, "project price panel"
+    if ticker in _PRICE_CACHE:
+        return _PRICE_CACHE[ticker]
+
+    # THREE ATTEMPTS, because one is not enough in practice.
+    #   yf.download() uses a bulk endpoint that intermittently returns nothing
+    #   with "no timezone found" -- on rate limits, and on tickers the bulk
+    #   path cannot resolve even when the per-ticker path can. A single attempt
+    #   reports a live ticker as delisted, which is what happened to SIVE.
+    #   So: bulk, then per-ticker history, then per-ticker with a period
+    #   argument instead of explicit dates.
+    import pandas as _pd
+    start = str(pd.Timestamp(idx[0]).date())
+    end = str((pd.Timestamp(idx[-1]) + pd.Timedelta(days=2)).date())
+    close, how, tried = None, None, []
+
+    def _series(obj):
+        if obj is None or len(obj) == 0:
+            return None
+        c = obj["Close"] if "Close" in obj else None
+        if c is None:
+            return None
+        if isinstance(c, _pd.DataFrame):
+            c = c.iloc[:, 0]
+        return c if len(c.dropna()) else None
+
+    try:
+        import yfinance as yf
+    except Exception as ex:
+        out = (None, f"yfinance unavailable ({type(ex).__name__})")
+        _PRICE_CACHE[ticker] = out
+        return out
+
+    # Yahoo keys non-US listings by an EXCHANGE SUFFIX. A bare "SIVE" resolves
+    # to nothing and is reported as delisted, even though Sivers Semiconductors
+    # trades daily in Stockholm as SIVE.ST. So: try the bare symbol first (it
+    # is right for US listings and costs one call), then the common suffixes.
+    # Ordered by how often a user is likely to name that market, and stopping
+    # at the first hit, so a US ticker still costs exactly one lookup.
+    SUFFIXES = ["", ".ST", ".L", ".DE", ".PA", ".AS", ".SI", ".HK", ".T",
+                ".TO", ".SW", ".MI", ".MC", ".CO", ".OL", ".HE", ".AX",
+                ".TW", ".KS", ".BR"]
+    symbol = None
+    for suf in SUFFIXES:
+        cand = ticker + suf
+        for name, fn in (
+            ("bulk", lambda c=cand: yf.download(c, start=start, end=end,
+                                                auto_adjust=True,
+                                                progress=False, threads=False)),
+            ("history", lambda c=cand: yf.Ticker(c).history(
+                start=start, end=end, auto_adjust=True)),
+        ):
+            try:
+                cs = _series(fn())
+            except Exception:
+                cs = None
+            if cs is not None:
+                close, how, symbol = cs, f"{cand} via {name}", cand
+                break
+        if close is not None:
+            break
+        tried.append(cand)
+        if suf == "":
+            continue
+
+    if close is None:
+        out = (None, f"no price data — tried {len(tried)} symbols "
+                     f"({', '.join(tried[:4])}…)")
+    else:
+        try:
+            close.index = pd.to_datetime(close.index).tz_localize(None)
+        except (TypeError, AttributeError):
+            close.index = pd.to_datetime(close.index)
+        r = close.pct_change().reindex(pd.DatetimeIndex(idx))
+        n = int(r.notna().sum())
+        foreign = symbol is not None and "." in symbol
+        note = f"{how}, {n} sessions of history"
+        if foreign:
+            note += (" — FOREIGN LISTING: prices are in the local currency, so "
+                     "returns carry FX; and its trading calendar differs from "
+                     "the NYSE sessions this panel runs on, so holidays on "
+                     "either side drop out")
+        out = ((r.values, note) if n >= 252 else
+               (None, f"only {n} sessions overlapping the panel, need 252"))
+    _PRICE_CACHE[ticker] = out
+    return out
+
+
 def run_asset(ticker, axis, t, ti, idx, scores, rets, Zall, labels_all, C,
               docs_today, docs_hist):
     col = AXIS_COL[axis]
@@ -104,8 +206,37 @@ def run_asset(ticker, axis, t, ti, idx, scores, rets, Zall, labels_all, C,
          "is_proxy": ticker == PROXY[axis], "net_view": None,
          "dominant_source": None, "estimate": None, "abstain": True,
          "abstain_reason": None, "agreement": "UNINFORMATIVE"}
-    if ticker not in rets.columns:
-        e["abstain_reason"] = f"{ticker} is not in the price panel"
+    series, price_src = get_returns(ticker, rets, idx)
+    e["price_source"] = price_src
+    if series is None:
+        e["abstain_reason"] = f"could not price {ticker} — {price_src}"
+        return e
+
+    # ---- ELIGIBILITY, computed before any estimate and reported either way --
+    # Nothing about a new asset needs pre-computing: the estimator has no
+    # per-asset trained state, it just looks up THIS asset's returns over
+    # events already matched. What DOES need checking is whether the asset can
+    # support an estimate at all, and the user is entitled to see that rather
+    # than a bare "no view".
+    have = np.isfinite(series)
+    first = int(np.argmax(have)) if have.any() else len(series)
+    hist_before = int(have[:ti].sum())
+    regs = labels_all[:ti][have[:ti] & (labels_all[:ti] >= 0)]
+    n_regimes_seen = int(len(np.unique(regs))) if len(regs) else 0
+    e["eligibility"] = dict(
+        sessions_of_history=hist_before,
+        first_priced=str(pd.Timestamp(idx[first]).date()) if first < len(idx) else None,
+        regimes_covered=n_regimes_seen,
+        regimes_total=int(C),
+        price_source=price_src)
+    if hist_before < 252:
+        e["abstain_reason"] = (f"only {hist_before} sessions of price history "
+                               f"before this date — at least 252 are needed")
+        return e
+    if n_regimes_seen < 2:
+        e["abstain_reason"] = (f"{ticker} has only ever traded in "
+                               f"{n_regimes_seen} of {C} market conditions, so "
+                               f"there is nothing to condition on")
         return e
     td = docs_today.copy()
     td["dir"] = pd.to_numeric(td[col], errors="coerce").fillna(0)
@@ -122,7 +253,8 @@ def run_asset(ticker, axis, t, ti, idx, scores, rets, Zall, labels_all, C,
     hd = docs_hist.copy()
     hd["dir"] = pd.to_numeric(hd[col], errors="coerce").fillna(0)
     pool = hd[(hd["dir"].abs() > NEGLIGIBLE) & (np.sign(hd["dir"]) == cls)]
-    f = fwd_returns(rets, ticker, PRIMARY_H)
+    f = np.expm1(pd.Series(series).pipe(np.log1p)
+                 .rolling(PRIMARY_H).sum().shift(-PRIMARY_H)).values
     ppos = np.array(sorted({int(idx.get_loc(s)) for s in pool.session}),
                     dtype=int)
     ppos = ppos[(ppos > 252) & (ppos < ti)].astype(int)
@@ -161,7 +293,18 @@ def render(t, results):
                  + ("" if e["is_proxy"] else f"  (proxy {e['axis_proxy']})"))
         if e["net_view"] is None:
             L += ["", f"**ABSTAIN.** {e['abstain_reason']}.", ""]
+            el = e.get("eligibility")
+            if el:
+                L += [f"*Coverage: {el['sessions_of_history']:,} sessions from "
+                      f"{el['first_priced']}, spanning {el['regimes_covered']} "
+                      f"of {el['regimes_total']} market conditions.*", ""]
             continue
+        el = e.get("eligibility")
+        if el:
+            L += ["", f"*Coverage: {el['sessions_of_history']:,} sessions of "
+                      f"price history from {el['first_priced']}, spanning "
+                      f"{el['regimes_covered']} of {el['regimes_total']} market "
+                      f"conditions. Prices {el['price_source']}.*"]
         L += ["", f"Net view on the {e['axis']} axis today: "
               f"**{e['net_view']:+.3f}**, dominant source "
               f"**{e['dominant_source']}**.", ""]
@@ -227,6 +370,10 @@ def main():
         out = []
         for tk in tickers:
             ax = axis_override or amap.get(tk, (DEFAULT_AXIS, "?"))[0]
+            if not axis_override and tk not in amap:
+                print(f"  note: {tk} is not in config.yaml, so no role is "
+                      f"recorded for it. Defaulting to the {DEFAULT_AXIS} "
+                      f"axis; pass --axis to choose.")
             out.append(run_asset(tk, ax, t, ti, idx, scores, rets, Zall,
                                  labels_all, C, today, hist))
         return out

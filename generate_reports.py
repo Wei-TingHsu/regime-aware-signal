@@ -59,6 +59,12 @@ def document_sessions(idx):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--docs-only", action="store_true")
+    ap.add_argument("--recent", type=int, default=0, metavar="N",
+                    help="also generate the last N panel sessions even if no "
+                         "document landed on them. Without this the index ends "
+                         "at the newest DOCUMENT session, so a user cannot "
+                         "select today and sees a stale date instead of "
+                         "'no news today' -- which is the answer they came for.")
     ap.add_argument("--limit", type=int)
     ap.add_argument("--coverage-only", action="store_true")
     args = ap.parse_args()
@@ -131,6 +137,12 @@ def main():
     targets = doc_sessions if args.docs_only else list(idx)
     if args.limit:
         targets = targets[-args.limit:]
+    if args.recent:
+        # union, preserving panel order, so today is always selectable
+        extra = [t for t in list(idx)[-args.recent:] if t not in set(targets)]
+        targets = sorted(set(list(targets) + extra))
+        print(f"  + {len(extra)} recent session(s) with no documents, so the "
+              f"latest date is always selectable")
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     print(f"\n  generating {len(targets)} report(s)...")
     written, tiers, index = 0, defaultdict(int), []
@@ -158,7 +170,20 @@ def main():
         if (i + 1) % 100 == 0:
             print(f"    {i+1}/{len(targets)}", flush=True)
 
+    # Merge with whatever is already indexed: a --limit run must not shrink
+    # the picker to the handful of dates it happened to regenerate.
+    prev = []
+    if INDEX.exists():
+        try:
+            prev = json.loads(INDEX.read_text())
+        except Exception:
+            prev = []
+    merged = {r["date"]: r for r in prev}
+    merged.update({r["date"]: r for r in index})
+    index = [merged[k] for k in sorted(merged)]
     INDEX.write_text(json.dumps(index, indent=2))
+    print(f"  index now spans {index[0]['date']} to {index[-1]['date']} "
+          f"({len(index)} dates)")
     print(f"\n  written {written} report pairs -> {REPORT_DIR}")
     print(f"  tier counts across all asset-days: "
           + "  ".join(f"tier {k}: {v}" for k, v in sorted(tiers.items())))

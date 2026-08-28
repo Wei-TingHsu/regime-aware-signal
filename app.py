@@ -39,7 +39,7 @@ ROOT = Path(__file__).resolve().parent
 DOCS, PROC = ROOT / "docs", ROOT / "processed"
 REPORTS = ROOT / "outputs" / "reports"
 
-st.set_page_config(page_title="Market Conditions Monitor", layout="wide",
+st.set_page_config(page_title="Regime-Aware Signal", layout="wide",
                    initial_sidebar_state="collapsed")
 
 # --------------------------------------------------------------------------
@@ -77,18 +77,39 @@ def jload(p):
         return None
 
 
+def plain_reason(raw, e=None):
+    """Registered wording -> what a user can read. The technical phrasing is
+    kept in the footnotes; it does not belong on the card."""
+    r = (raw or "").lower()
+    if "direction floor" in r or "no document" in r:
+        # NOT "no news today". We read five named document sources, not the
+        # news. Saying "no news" claims a coverage we do not have and would be
+        # false on any day a market moved on something we do not read.
+        return ("Nothing we read today spoke to this market — see what we "
+                "cover, below")
+    if "ess" in r:
+        n = None
+        if e and e.get("estimate"):
+            n = e["estimate"].get("ess")
+        return (f"Only {n:.0f} genuinely comparable past situations — we need "
+                f"at least 8" if n is not None else
+                "Too few genuinely comparable past situations")
+    if "pool" in r or "precedent" in r:
+        return "Not enough past situations of this kind to compare against"
+    if "vetoed" in r:
+        return "Today's news was too vague to act on"
+    if "not in the price panel" in r:
+        return "We do not carry price history for this instrument"
+    return raw or "conditions for a view were not met"
+
+
 def verdict(e):
     """Plain-English verdict for one asset. Returns (headline, colour, detail)."""
     est = e.get("estimate")
     if e["net_view"] is None:
-        return "No view", "grey", e.get("abstain_reason") or "nothing published"
+        return "No view", "grey", plain_reason(e.get("abstain_reason"), e)
     if est is None or e.get("abstain"):
-        why = e.get("abstain_reason", "")
-        if "ESS" in why or "pool" in why or "precedent" in why:
-            plain = "Not enough comparable history to say anything"
-        else:
-            plain = why or "conditions for a view were not met"
-        return "No view", "grey", plain
+        return "No view", "grey", plain_reason(e.get("abstain_reason"), e)
     pct = est["estimate"]
     tier = est["tier"]
     word = "Clear signal" if tier == 1 else "Weak signal"
@@ -96,10 +117,52 @@ def verdict(e):
     return word, colour, f"{pct:+.2%} over the next 3 trading days"
 
 
-st.markdown("<h1 style='margin-bottom:0'>Market Conditions Monitor</h1>",
+st.markdown("<h1 style='margin-bottom:0'>Regime-Aware Signal</h1>",
             unsafe_allow_html=True)
-st.caption("What today's policy and company news implies for five core "
-           "markets — and, more often than not, why it implies nothing.")
+st.caption("A daily read on five core markets, from the policy and company "
+           "documents published that day — and, more often than not, an "
+           "explicit refusal to call it.")
+
+with st.expander("**How a number on this page is arrived at** — read this first",
+                 expanded=False):
+    st.markdown("""
+Five steps run every trading day. Nothing is hand-adjusted at any of them.
+
+**1 · Where are we?**  Eight macro series — volatility, the dollar, short and
+long interest rates, the real yield, the yield curve, the policy rate, money
+supply — are reduced to their principal directions of variation, and the day is
+assigned to one of **four market conditions**. The four were not chosen by us:
+the number came out of stability testing on twenty years of data, and each
+condition is described on this page by what is actually inside it, not by a
+name we picked.
+
+**2 · What counts as comparable?**  A past day is comparable to today only if
+it sat in a similar macro position *and* the documents that landed on it said a
+similar thing about the market in question. Both conditions, not either.
+
+**3 · What was published today?**  Every Fed statement, Fed minute, company
+earnings release, executive order and proclamation published that day is read
+by a language model. It never predicts a price. It classifies: what the
+document says, how specific it is, how much of it was already public, and how
+confident the reading is.
+
+**4 · Combining several documents into one view.**  When more than one document
+lands, each is weighted by how big, how specific, how new and how confidently
+read it is — multiplied together, so a vague document contributes almost
+nothing regardless of its other scores. If two documents point opposite ways,
+**we show both and combine neither**, because the disagreement is more
+informative than any average of it.
+
+**5 · What happened last time?**  We find every past situation matching step 2,
+weight them by how similar they are and how recent, and report what those
+markets did over the following three trading days — blended against the long-run
+average in proportion to how much genuinely comparable history exists.
+
+**If fewer than eight past situations are genuinely comparable, we stop at
+step 5 and report no number.** That threshold was fixed in writing before any
+result was looked at. On most days, for most markets, that is what happens, and
+saying so is the product.
+    """)
 
 tabs = st.tabs(["Today", "Look up an asset", "How this works"])
 
@@ -113,6 +176,7 @@ with tabs[0]:
         ix = pd.DataFrame(idx).sort_values("date")
         top = st.columns([2, 1, 3])
         only = top[1].checkbox("Only days with a signal", value=False,
+                               key="today_signal_only",
                                help="Days where at least one market reached a "
                                     "clear or weak signal.")
         pool = ix[ix.best_tier <= 2] if only else ix
@@ -120,7 +184,8 @@ with tabs[0]:
             st.info("No day matches that filter.")
             st.stop()
         dates = list(pool.date)
-        day = top[0].selectbox("Date", dates, index=len(dates) - 1)
+        day = top[0].selectbox("Date", dates, index=len(dates) - 1,
+                               key="today_date")
         R = jload(REPORTS / f"{day.replace('-','')}.json")
         if not R:
             st.warning(f"No report for {day}.")
@@ -131,20 +196,36 @@ with tabs[0]:
                  if e.get("estimate") and not e.get("abstain")]
         if not views:
             st.info(f"### No view on any market for {day}\n"
-                    "The news that landed does not resemble enough past "
-                    "situations to support a view. That is the system's most "
-                    "common answer.")
+                    "Either nothing we read was published, or what was "
+                    "published does not resemble enough past situations to "
+                    "support a view. That is the system's most common answer.")
         else:
             st.success(f"### {len(views)} of 5 markets have a view for {day}: "
                        + ", ".join(ASSET.get(v, v) for v in views))
 
         # ---- market condition -------------------------------------------
         g = R["regime"]
-        c = st.columns(3)
-        c[0].metric("Market condition", f"{g['label'] + 1} of 4")
-        c[1].metric("Confidence in that condition",
-                    f"{g['posterior']:.0%}" if g["posterior"] else "—")
-        c[2].metric("News items today", len(R["documents"]))
+        prof = jload(PROC / "regime_profile.json")
+        rlab = None
+        if prof:
+            rlab = prof["regimes"].get(str(g["label"]), {}).get("label")
+        # Deliberately NOT st.metric: it clips a long value with an ellipsis
+        # and offers no way to widen it, which is what hid the market-condition
+        # description in the first build.
+        cond_text = rlab if rlab else f"Condition {g['label'] + 1} of 4"
+        c = st.columns([3, 1, 1])
+        with c[0]:
+            st.caption("MARKET CONDITION")
+            st.markdown(f"#### {cond_text}")
+            st.caption("One of four environments identified from macro data. "
+                       "The description is generated from what is inside this "
+                       "condition, not chosen.")
+        with c[1]:
+            st.caption("CONFIDENCE")
+            st.markdown(f"#### {g['posterior']:.0%}" if g["posterior"] else "#### —")
+        with c[2]:
+            st.caption("NEWS TODAY")
+            st.markdown(f"#### {len(R['documents'])}")
         if g.get("warning"):
             st.error("The model is **not confident** which market condition "
                      "today belongs to. Treat everything below with extra "
@@ -152,28 +233,62 @@ with tabs[0]:
 
         # ---- the five markets -------------------------------------------
         st.write("")
-        cols = st.columns(5)
-        for i, (a, e) in enumerate(R["assets"].items()):
+        # One row per market rather than five narrow columns: at 1/5 of the
+        # width a two-line reason wraps to five lines and the card stops being
+        # scannable. Rows read left to right the way a user reads.
+        for a, e in R["assets"].items():
             head, colour, detail = verdict(e)
-            with cols[i]:
-                st.markdown(f"**{ASSET.get(a, a)}**")
-                st.markdown(f":{colour}[**{head}**]")
-                st.caption(detail)
+            row = st.container(border=True)
+            with row:
+                k = st.columns([2.2, 1.6, 4.2, 4.0])
+                k[0].markdown(f"**{ASSET.get(a, a)}**")
+                k[1].markdown(f":{colour}[**{head}**]")
+                k[2].markdown(detail)
+                notes = []
                 if e["net_view"] is not None:
                     tone = "positive" if e["net_view"] > 0 else "negative"
-                    st.caption(f"Today's news reads *{tone}* for this market, "
-                               f"mostly from a "
-                               f"{SOURCE.get(e['dominant_source'], e['dominant_source']).lower()}.")
+                    src = SOURCE.get(e["dominant_source"],
+                                     e["dominant_source"] or "")
+                    notes.append(f"Today's news reads *{tone}* here, mostly "
+                                 f"from a {src.lower()}.")
                 if e.get("sources_disagree"):
-                    st.caption(":orange[Two news items point opposite ways. We "
-                               "show both and combine neither.]")
+                    notes.append(":orange[Two items point opposite ways — both "
+                                 "shown, neither combined.]")
                 if e.get("agreement") == "DISCORDANT":
-                    st.caption(":orange[The news and the history disagree.]")
+                    notes.append(":orange[The news and the history disagree.]")
+                k[3].markdown("  \n".join(notes) if notes else "")
 
         # ---- what landed today ------------------------------------------
+        st.caption("We read five document types: Federal Reserve statements "
+                   "and minutes, company earnings releases, and executive "
+                   "orders and proclamations from the Federal Register. We do "
+                   "**not** read wire copy, social media or commentary — so a "
+                   "quiet day here means our sources were quiet, not that the "
+                   "world was.")
+        with st.expander("Wider coverage — on the roadmap, and a paid tier"):
+            st.markdown("""
+Everything above is a **filed decision**. The moment a policy is *threatened*
+rather than enacted — a tariff warning, a sanctions signal, a closure of a
+shipping lane — is usually where a market moves first, and it is not covered
+here today.
+
+Four further sources would close that gap. All are US government works, so free
+to obtain and free of the copyright constraint that rules out news text.
+
+| Source | Volume | What it adds |
+|---|---|---|
+| White House statements and remarks | ~500–1,000/yr | Where threats to act live |
+| Federal Reserve speeches and testimony | ~150/yr | We read 8 statements a year and miss ~150 speeches |
+| Treasury releases and OFAC sanctions | ~300/yr | Immediate and market-moving |
+| USTR press releases | ~200/yr | Trade actions before the Federal Register |
+
+**Not built.** It is costed, scheduled after the current submission, and will be
+offered as a subscription tier rather than folded into the base product —
+reading intentions rather than only decisions is a materially different service.
+            """)
         if R["documents"]:
             st.write("")
-            with st.expander(f"The {len(R['documents'])} news item(s) behind "
+            with st.expander(f"The {len(R['documents'])} document(s) behind "
                              f"this, in detail"):
                 rows = []
                 for d in R["documents"]:
@@ -188,7 +303,7 @@ with tabs[0]:
                                  if d["specificity"] else "—",
                                  "How new": f"{d['novelty']:.0%}"
                                  if d["novelty"] else "—"})
-                st.dataframe(pd.DataFrame(rows), use_container_width=True,
+                st.dataframe(pd.DataFrame(rows), width='stretch',
                              hide_index=True)
 
         # ---- carry-forward ------------------------------------------------
@@ -240,21 +355,25 @@ with tabs[0]:
 # ==========================================================================
 with tabs[1]:
     st.subheader("Look up any asset")
-    st.caption("Enter a ticker. We identify which broad market it belongs to, "
-               "then ask the same question of that asset's own price history.")
+    st.caption("Enter any listed ticker. We identify which broad market it "
+               "belongs to, pull its price history if we do not already hold "
+               "it, and ask the same question of that asset's own record. "
+               "Tickers outside our core universe take a few seconds to fetch.")
     idx = jload(PROC / "report_index.json")
     if not idx:
         st.warning("No reports generated yet.")
     else:
         ix = pd.DataFrame(idx).sort_values("date")
         c = st.columns([1, 1, 1])
-        tk = c[0].text_input("Ticker", value="SMH").strip().upper()
-        day = c[1].selectbox("Date", list(ix.date), index=len(ix) - 1)
+        tk = c[0].text_input("Ticker", value="SMH", key="lookup_tk").strip().upper()
+        day = c[1].selectbox("Date", list(ix.date), index=len(ix) - 1,
+                             key="lookup_date")
         ax = c[2].selectbox("Market", ["decide for me", "equities", "bonds",
-                                       "gold", "dollar", "oil"])
+                                       "gold", "dollar", "oil"],
+                            key="lookup_axis")
         AXMAP = {"equities": "equity", "bonds": "duration", "gold": "gold",
                  "dollar": "dollar", "oil": "oil"}
-        if st.button("Check"):
+        if st.button("Check", key="lookup_go"):
             with st.spinner("Checking history…"):
                 try:
                     import asset_extension as AE
@@ -293,6 +412,23 @@ with tabs[1]:
                         "gold": "gold", "dollar": "the dollar", "oil": "oil"}
                 st.caption(f"{tk} was treated as a **{nice[e['axis']]}** "
                            f"exposure.")
+                el = e.get("eligibility")
+                if el:
+                    q = st.columns(3)
+                    q[0].caption("PRICE HISTORY")
+                    q[0].markdown(f"**{el['sessions_of_history']:,}** sessions"
+                                  f"  \nfrom {el['first_priced']}")
+                    q[1].caption("MARKET CONDITIONS SEEN")
+                    q[1].markdown(f"**{el['regimes_covered']} of "
+                                  f"{el['regimes_total']}**")
+                    q[2].caption("PRICES")
+                    q[2].markdown(f"{el['price_source']}")
+                src = (el or {}).get("price_source", "")
+                if ax == "decide for me" and src and src != "project price panel":
+                    st.info(f"We have no recorded classification for {tk}, so "
+                            f"it was treated as an equity exposure by default. "
+                            f"If that is wrong, pick the right market above and "
+                            f"run it again — the answer will change.")
                 est = e.get("estimate")
                 if est:
                     st.caption(f"\\* {est['n_matched']} past situations "
@@ -327,6 +463,24 @@ is that there is no usable precedent — and a tool that produced a number anywa
 would be worse than useless.
     """)
     st.divider()
+    st.markdown("#### The four market conditions, and what is in them")
+    prof = jload(PROC / "regime_profile.json")
+    if prof:
+        rows = []
+        for r, d in sorted(prof["regimes"].items()):
+            rows.append({"Condition": f"{int(r)+1} of {len(prof['regimes'])}",
+                         "What it looks like": d["label"],
+                         "Share of history": f"{d['share_pct']}%"})
+        st.dataframe(pd.DataFrame(rows), width='stretch',
+                     hide_index=True)
+        st.caption("Each description is the average of the macro series inside "
+                   "that condition, against their own long-run averages. It "
+                   "describes; it does not validate.")
+    else:
+        st.caption("Run `python regime_profile.py` to generate the "
+                   "descriptions of each condition.")
+
+    st.divider()
     st.markdown("#### What this cannot see")
     R0 = None
     ixx = jload(PROC / "report_index.json")
@@ -338,6 +492,12 @@ would be worse than useless.
                       .replace("`bank_research`", "sell-side research")
                       .replace("**", ""))
             st.markdown(f"- **{h}.** {plain}")
+    st.markdown("")
+    st.markdown("**On the roadmap.** Four further government sources — White "
+                "House statements, Federal Reserve speeches, Treasury and OFAC "
+                "releases, and USTR announcements — would let this system read "
+                "*intentions* rather than only *decisions*. Costed and "
+                "scheduled, not built, and intended as a paid tier.")
     st.divider()
     st.caption("**\\* Method notes, for readers who want them.**")
     st.caption("\\* *Every threshold in this system — how comparable a past "
