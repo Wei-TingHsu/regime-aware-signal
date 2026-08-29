@@ -1,6 +1,6 @@
 # Pipeline coverage
 
-*Run 2026-08-28 13:19:18 +0800.*
+*Run 2026-08-29 11:22:34 +0800.*
 
 The engine covers **1566 of 5196 panel sessions** (30%) — the rest carry no document, so every asset abstains for the plainest reason there is. It covers **5 assets**, the macro axes the reader schema defines; the 47-asset universe belongs to step 1.
 

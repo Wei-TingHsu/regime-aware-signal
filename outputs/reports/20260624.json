@@ -1,19 +1,19 @@
 {
   "date": "2026-06-24",
-  "generated": "2026-08-28 13:19:22 +0800",
+  "generated": "2026-08-29 11:22:38 +0800",
   "prereg": "prereg_analog_event.md \u00a78",
   "regime": {
     "label": 3,
-    "posterior": 0.9999105456101397,
+    "posterior": 0.9999105324665819,
     "posterior_label": 3,
     "note": null,
     "warning": false,
     "label_mismatch": false
   },
   "macro_state": {
-    "PC1": 2.9882578054363726,
-    "PC2": 0.6161505371326645,
-    "PC3": 0.5262681964821525
+    "PC1": 2.9882363185246903,
+    "PC2": 0.616126312013445,
+    "PC3": 0.5263086584676089
   },
   "documents": [
     {
@@ -52,13 +52,13 @@
       "sources_disagree": false,
       "estimate": {
         "n_matched": 602,
-        "ess": 69.95878644821032,
+        "ess": 69.95973740088233,
         "w_shrink": 0.0,
         "tau2": 0.0,
         "k": null,
-        "conditional": 0.00590001851905253,
-        "unconditional": 0.002579816209424622,
-        "estimate": 0.002579816209424622,
+        "conditional": 0.0058999672858180184,
+        "unconditional": 0.002579818762182986,
+        "estimate": 0.002579818762182986,
         "tier": 3,
         "abstain": false,
         "tau2_zero": true
@@ -77,13 +77,13 @@
       "sources_disagree": false,
       "estimate": {
         "n_matched": 121,
-        "ess": 23.746683894022876,
-        "w_shrink": 0.5030518256251691,
-        "tau2": 1.0283540351746105e-05,
-        "k": 23.45855955084806,
-        "conditional": 0.00017647873323126112,
-        "unconditional": -4.9637487244164685e-05,
-        "estimate": 6.411069026946151e-05,
+        "ess": 23.746914250518678,
+        "w_shrink": 0.5030441426958241,
+        "tau2": 1.028311092901441e-05,
+        "k": 23.459508079057553,
+        "conditional": 0.0001765308672447041,
+        "unconditional": -4.9666585681595285e-05,
+        "estimate": 6.412071810569401e-05,
         "tier": 2,
         "abstain": false,
         "tau2_zero": "False"
@@ -102,13 +102,13 @@
       "sources_disagree": false,
       "estimate": {
         "n_matched": 154,
-        "ess": 43.52279708644088,
-        "w_shrink": 0.707119353274821,
-        "tau2": 2.8548891791225176e-06,
-        "k": 18.026638500178965,
-        "conditional": -7.74007859217066e-05,
-        "unconditional": 0.0013773466657927848,
-        "estimate": 0.00034866658855823977,
+        "ess": 43.52326770421908,
+        "w_shrink": 0.7071209425005558,
+        "tau2": 2.8548838810869977e-06,
+        "k": 18.02669509324802,
+        "conditional": -7.739272614105204e-05,
+        "unconditional": 0.0013773484403024536,
+        "estimate": 0.000348670495592564,
         "tier": 1,
         "abstain": false,
         "tau2_zero": "False"
