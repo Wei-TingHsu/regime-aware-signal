@@ -1,19 +1,19 @@
 {
   "date": "2026-05-12",
-  "generated": "2026-08-29 11:22:35 +0800",
+  "generated": "2026-09-04 19:51:39 +0800",
   "prereg": "prereg_analog_event.md \u00a78",
   "regime": {
     "label": 3,
-    "posterior": 0.9995248045462697,
+    "posterior": 0.9995261230992767,
     "posterior_label": 3,
     "note": null,
     "warning": false,
     "label_mismatch": false
   },
   "macro_state": {
-    "PC1": 2.766289304924668,
-    "PC2": 0.5155912276199056,
-    "PC3": 0.3817952137587508
+    "PC1": 2.763321189795082,
+    "PC2": 0.5125063771443042,
+    "PC3": 0.3812472350850834
   },
   "documents": [
     {
@@ -52,16 +52,16 @@
       "sources_disagree": false,
       "estimate": {
         "n_matched": 596,
-        "ess": 63.11159110221549,
-        "w_shrink": 0.0,
-        "tau2": 0.0,
-        "k": null,
-        "conditional": 0.004003362657647379,
-        "unconditional": 0.002556883369918887,
-        "estimate": 0.002556883369918887,
+        "ess": 63.09566754396652,
+        "w_shrink": 0.1037656073275948,
+        "tau2": 6.283725356946964e-07,
+        "k": 544.9638732706444,
+        "conditional": 0.004004201940189013,
+        "unconditional": 0.0025568956216976504,
+        "estimate": 0.002707076240824972,
         "tier": 3,
         "abstain": false,
-        "tau2_zero": true
+        "tau2_zero": "False"
       },
       "agreement": "CONCORDANT",
       "abstain": false,

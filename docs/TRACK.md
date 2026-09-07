@@ -30,7 +30,7 @@ supervisor review pending.
 
 | item | what should be true | how to check | if it isn't |
 |---|---|---|---|
-| **Forward test, launchd** | One dated log per weekday since 28 Aug | `ls ~/Projects/regime-aware-signal/logs/` | The gap is permanent. Find the cause (Mac asleep at 18:30 is the usual one) and record the gap dates in `CURRENT_STATE` |
+| **Forward test, launchd** | One dated log per weekday since 28 Aug | `ls ~/Projects/regime-aware-signal/logs/` | The gap is permanent. Find the cause (Mac asleep at 15:00 is the usual one) and record the gap dates in `CURRENT_STATE` |
 | **Matured positions** | Count rising weekly; H=5 first, H=20 from ~16 Sep | `tail -3 docs/forward_scoreboard.md` | Too few to report a figure until late October at the earliest; do not report one |
 | **Nightly document reads** | Read count ≥ 2,616 and creeping up | `python -m src.corpus_status` | If it stopped, check the API balance — the cap is 40/night but the balance can still run dry |
 | **Supervisor review** | Feedback from Dr Lee on the 28 Aug submission | inbox | When it arrives, log it here before acting on any of it |

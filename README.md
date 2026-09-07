@@ -75,7 +75,7 @@ of 45, and the product that ships is one that abstains and says why.
 ## Automation
 
 ```bash
-./install_launchd.sh          # weekdays 18:30 SGT
+./install_launchd.sh          # weekdays 15:00 SGT
 launchctl list | grep regimeaware
 ./daily_run.sh --no-read      # run once by hand, no API spend
 ```

@@ -1,19 +1,19 @@
 {
   "date": "2026-06-10",
-  "generated": "2026-08-29 11:22:37 +0800",
+  "generated": "2026-09-04 19:51:47 +0800",
   "prereg": "prereg_analog_event.md \u00a78",
   "regime": {
     "label": 3,
-    "posterior": 0.9998040986105482,
+    "posterior": 0.9998046738643798,
     "posterior_label": 3,
     "note": null,
     "warning": false,
     "label_mismatch": false
   },
   "macro_state": {
-    "PC1": 2.9096427297488376,
-    "PC2": 0.4532091915475622,
-    "PC3": 0.9133506862184894
+    "PC1": 2.906470276868926,
+    "PC2": 0.45008172732102836,
+    "PC3": 0.9129343422478841
   },
   "documents": [
     {
@@ -103,16 +103,16 @@
       "sources_disagree": true,
       "estimate": {
         "n_matched": 601,
-        "ess": 22.97295831733759,
-        "w_shrink": 0.0,
-        "tau2": 0.0,
-        "k": null,
-        "conditional": 0.009791405564010622,
-        "unconditional": 0.0025172071805821743,
-        "estimate": 0.0025172071805821743,
+        "ess": 22.968426161897735,
+        "w_shrink": 0.043847704005444556,
+        "tau2": 6.815964074390676e-07,
+        "k": 500.8543527696001,
+        "conditional": 0.009793486464679492,
+        "unconditional": 0.002517219330432662,
+        "estimate": 0.002836266937999661,
         "tier": 3,
         "abstain": false,
-        "tau2_zero": true
+        "tau2_zero": "False"
       },
       "agreement": "CONCORDANT",
       "abstain": false,
@@ -128,13 +128,13 @@
       "sources_disagree": false,
       "estimate": {
         "n_matched": 119,
-        "ess": 17.465527663016875,
-        "w_shrink": 0.4307307873563037,
-        "tau2": 1.0591210529065825e-05,
-        "k": 23.083065972964057,
-        "conditional": -0.0001755064126136417,
-        "unconditional": -0.00011993334890418986,
-        "estimate": -0.00014387037839156406,
+        "ess": 17.463194782340132,
+        "w_shrink": 0.49636871569147967,
+        "tau2": 1.3797691558458048e-05,
+        "k": 17.718705749027087,
+        "conditional": -0.00017511842273815352,
+        "unconditional": -0.00011991626730741345,
+        "estimate": -0.00014731689030197134,
         "tier": 2,
         "abstain": false,
         "tau2_zero": "False"

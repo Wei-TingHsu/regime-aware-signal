@@ -1,19 +1,19 @@
 {
   "date": "2026-07-23",
-  "generated": "2026-08-29 11:22:40 +0800",
+  "generated": "2026-09-04 19:51:50 +0800",
   "prereg": "prereg_analog_event.md \u00a78",
   "regime": {
     "label": 3,
-    "posterior": 0.9999279008086541,
+    "posterior": 0.9999281716849381,
     "posterior_label": 3,
     "note": null,
     "warning": false,
     "label_mismatch": false
   },
   "macro_state": {
-    "PC1": 3.2125181751634395,
-    "PC2": 0.39910578751830983,
-    "PC3": 0.5805829472832768
+    "PC1": 3.2093236560816565,
+    "PC2": 0.39588882543616943,
+    "PC3": 0.5799735913999483
   },
   "documents": [
     {
@@ -76,13 +76,13 @@
       "sources_disagree": false,
       "estimate": {
         "n_matched": 175,
-        "ess": 39.745768926646235,
-        "w_shrink": 0.39474477267659003,
-        "tau2": 7.718389436006918e-06,
-        "k": 60.94148946856372,
-        "conditional": -0.0007949551288233249,
+        "ess": 39.74029636978029,
+        "w_shrink": 0.28556174373889054,
+        "tau2": 4.730902239715444e-06,
+        "k": 99.42504086852175,
+        "conditional": -0.0007938834694944194,
         "unconditional": 0.0005394997820397492,
-        "estimate": 1.2730681603945779e-05,
+        "estimate": 0.00015873653565942034,
         "tier": 2,
         "abstain": false,
         "tau2_zero": "False"
@@ -101,16 +101,16 @@
       "sources_disagree": false,
       "estimate": {
         "n_matched": 608,
-        "ess": 56.686565845942766,
-        "w_shrink": 0.0,
-        "tau2": 0.0,
-        "k": null,
-        "conditional": 0.007210850039225747,
-        "unconditional": 0.0025841256557550276,
-        "estimate": 0.0025841256557550276,
+        "ess": 56.68028865281546,
+        "w_shrink": 0.08976029252924346,
+        "tau2": 5.930170844518839e-07,
+        "k": 574.7825448083089,
+        "conditional": 0.007210812144305876,
+        "unconditional": 0.0025841376657223694,
+        "estimate": 0.00299942932035761,
         "tier": 3,
         "abstain": false,
-        "tau2_zero": true
+        "tau2_zero": "False"
       },
       "agreement": "CONCORDANT",
       "abstain": false,

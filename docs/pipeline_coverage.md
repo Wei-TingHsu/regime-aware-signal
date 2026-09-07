@@ -1,17 +1,17 @@
 # Pipeline coverage
 
-*Run 2026-08-29 11:22:34 +0800.*
+*Run 2026-09-04 19:51:37 +0800.*
 
-The engine covers **1566 of 5196 panel sessions** (30%) — the rest carry no document, so every asset abstains for the plainest reason there is. It covers **5 assets**, the macro axes the reader schema defines; the 47-asset universe belongs to step 1.
+The engine covers **1566 of 5201 panel sessions** (30%) — the rest carry no document, so every asset abstains for the plainest reason there is. It covers **5 assets**, the macro axes the reader schema defines; the 47-asset universe belongs to step 1.
 
 | regime | sessions | with documents | % | documents |
 |---|---|---|---|---|
-| 0 | 2264 | 693 | 31% | 1298 |
-| 1 | 902 | 271 | 30% | 402 |
-| 2 | 942 | 325 | 35% | 379 |
-| 3 | 584 | 242 | 41% | 475 |
+| 0 | 2206 | 663 | 30% | 1219 |
+| 1 | 962 | 297 | 31% | 475 |
+| 2 | 920 | 323 | 35% | 377 |
+| 3 | 609 | 248 | 41% | 483 |
 
 Every regime carries documents on at least 10% of its sessions.
 
-Tier counts across all generated asset-days: tier 1: 8, tier 2: 16, tier 3: 30.
+Tier counts across all generated asset-days: tier 1: 8, tier 2: 15, tier 3: 31.
 
