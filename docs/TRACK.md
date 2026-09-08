@@ -204,14 +204,11 @@ fall. That is the single interview finding that changes the business most.
 
 ---
 
-### 3.8 Model 4 — long top-5 vs universe — REGISTERED 8 Sep, not run
+### 3.8 Model 4 — RUN 8 Sep — FAIL (moved to §5)
 
-`model4_long_vs_universe.py`. Tests whether ranking has selection skill once
-the failing short leg is removed. Must pass on both universes including the
-survivorship-controlled 35 where Model 1 failed, plus a ≤3× split. Falsification
-stated: spread ≈ 0 means no skill exists and Model 1's edge was beta.
-Run `--quick` first (a few minutes), then the registered 2,000 permutations.
-If PASS, freeze into `models.yaml` and add to the forward ledger.
+Ranking beats universe on ALL at p 0.035 but the effect is 9× concentrated
+post-2018 and fails on the survivorship-controlled 35. Selection skill is
+recent and in recently listed names. Not adopted. See `MODEL_EVOLUTION.md`.
 
 ### 3.9 Kernel family — REGISTERED 8 Sep, not run
 
@@ -220,11 +217,12 @@ tight σ (ceiling), Mahalanobis. Reported as best-of-3 vs best-of-3-nulls, never
 individually. Prior: no-decay already ran at p 0.485, so expect similarity-only
 to be null. Mahalanobis is the one that could differ. Script not yet written.
 
-### 3.10 FOMC→GLD by regime — descriptive only, then forward registration
+### 3.10 FOMC→GLD by regime — RUN 8 Sep — forward hypothesis registered
 
-`fomc_gld_by_regime.py` shows which regime carried the retired effect. Not a
-test; all 131 events were used, so the only honest test is the next ~20 FOMC
-meetings in that regime. Register the hypothesis forward; verdict ~2 years out.
+Gold falls after FOMC in three regimes and RISES in the flat-curve /
+strong-dollar regime (+0.42% h=3, n=30, all post-2019). Not a finding — found
+by looking. Registered for forward testing on FOMC meetings landing in that
+regime; ~2 years to a verdict. `docs/fomc_gld_by_regime.md`.
 
 ## 4. Potential upgrades — not registered, not costed
 
@@ -268,7 +266,7 @@ Kept so that "what was done" stays beside "what was not".
 | 2026-08-28 | `daily_run.sh` on launchd; README; repo made runnable from a fresh clone |
 | 2026-08-28 | **Submitted** |
 | 2026-09-07 | This file created; Track consolidated here |
-| 2026-09-08 | Model 4 and kernel family registered; `MODEL_EVOLUTION.md` written for investors; launchd moved to 15:00 |
+| 2026-09-08 | Model 4 registered and run: FAIL (skill post-2018 only, not survivorship-robust). FOMC→GLD regime breakdown: sign flips in regime 2, forward hypothesis registered. Kernel family registered, not run. `MODEL_EVOLUTION.md` written. launchd → 15:00 |
 
 ---
 

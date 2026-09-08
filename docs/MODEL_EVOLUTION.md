@@ -6,7 +6,7 @@ for, what it found, and what is registered next. Written 2026-09-08. Every
 number below traces to a file in this repository; the file is named.*
 
 The short version: **four models have been specified, three are running
-forward, one is registered and not yet run.** Two headline claims were made
+forward, one was run on 8 September and failed.** Two headline claims were made
 early and both were retired by the project's own tests. What survives is
 narrower than the first draft promised and every step of the narrowing is
 recorded here.
@@ -89,7 +89,7 @@ without this caveat.
 
 ---
 
-## Model 4 — long top-5 against the universe · REGISTERED 8 Sep 2026, not run
+## Model 4 — long top-5 against the universe · RUN 8 Sep 2026 · FAIL
 
 **The hypothesis.** Selection skill exists on the long side and is masked by a
 short leg that captures beta. Remove the short leg without removing market
@@ -115,9 +115,57 @@ ranking is retired.
 **Designed from the backtest record only.** The forward ledger held two
 non-overlapping trades at the time of writing and contributed nothing.
 
-*Source: `model4_long_vs_universe.py`, docstring is the registration.*
+**Result — FAIL, and the shape of the failure is the finding.**
+
+| | ALL 47 | LONG-HISTORY 35 |
+|---|---|---|
+| spread, top-5 − universe | +0.206%/wk, Sharpe 0.54 | +0.099%/wk, Sharpe 0.32 |
+| block-permutation p | **0.035** — passes | 0.0995 — fails |
+| chronological split | +0.041% → +0.370%, **9.08×** — fails | +0.041% → +0.158%, 3.87× — fails |
+
+Ranking beats holding everything on the full universe at p 0.035, so some
+selection skill exists. **But it lives almost entirely after 2018** — the
+early half is +0.041%/week, effectively zero — and it does not clear
+significance on the survivorship-controlled universe. Whatever skill the
+ranking has is recent and concentrated in recently listed names: the top 5 in
+the forward ledger is the same handful of AI-semiconductor names almost every
+day. Selection "skill" in 2019–2026 is picking momentum names in a momentum
+market.
+
+The falsification fired in a specific way: not "no skill exists" but "skill
+exists, is not stable, and is not survivorship-robust." Removing the short leg
+does not rescue the strategy. The plan's language on ranking is retired
+accordingly.
+
+*Source: `model4_long_vs_universe.py` → `docs/model4_long_vs_universe.md`.*
 
 ---
+
+## A hypothesis found by looking — FOMC → GLD by regime · 8 Sep 2026
+
+Not a model and not a test. The retired FOMC→GLD cell (split FAIL 4.62×) was
+broken down by regime, descriptively:
+
+| regime | n | h=3 after FOMC |
+|---|---|---|
+| steep curve, low rates | 50 | −0.37% |
+| low long rates, low real rates | 30 | −0.51% |
+| **flat curve, strong dollar** | 30 | **+0.42%** |
+| rapid money growth, high policy rate | 21 | −1.14% |
+
+The time split failed because its late half pooled the third regime's +0.4%
+with the fourth's −1.1% and they cancelled. The effect did not fade with time;
+it reverses under one specific condition.
+
+**This is a hypothesis, not a finding.** One regime of four flipping sign is
+what a four-way split of noise produces, and every one of the 131 events was
+used to find it. It is registered for *forward* testing only — the next FOMC
+meetings that land in a flat-curve, strong-dollar regime — and a verdict is
+roughly two years away. It is recorded here because a registered directional
+prediction per regime is the right thing to have on file, whichever way it
+goes.
+
+*Source: `fomc_gld_by_regime.py` → `docs/fomc_gld_by_regime.md`.*
 
 ## The kernel family — REGISTERED 8 Sep 2026, not run
 
