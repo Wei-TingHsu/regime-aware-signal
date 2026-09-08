@@ -1,19 +1,19 @@
 {
   "date": "2026-06-03",
-  "generated": "2026-09-04 19:51:41 +0800",
+  "generated": "2026-09-07 15:01:21 +0800",
   "prereg": "prereg_analog_event.md \u00a78",
   "regime": {
     "label": 3,
-    "posterior": 0.9997376699041784,
+    "posterior": 0.9997376179325796,
     "posterior_label": 3,
     "note": null,
     "warning": false,
     "label_mismatch": false
   },
   "macro_state": {
-    "PC1": 2.9019995481237495,
-    "PC2": 0.5261632647758419,
-    "PC3": 0.20217491426788256
+    "PC1": 2.9020234998034486,
+    "PC2": 0.5261388716584111,
+    "PC3": 0.20223026255637902
   },
   "documents": [
     {
@@ -69,13 +69,13 @@
       "sources_disagree": true,
       "estimate": {
         "n_matched": 599,
-        "ess": 67.51838104357942,
-        "w_shrink": 0.10627240882532796,
-        "tau2": 6.006193997209983e-07,
-        "k": 567.8147387180546,
-        "conditional": 0.002380364360257004,
-        "unconditional": 0.0025871092633297896,
-        "estimate": 0.002565137984467886,
+        "ess": 67.51705044101094,
+        "w_shrink": 0.10626547959247334,
+        "tau2": 6.005871116736096e-07,
+        "k": 567.8449758721239,
+        "conditional": 0.002380288845479726,
+        "unconditional": 0.0025870991752413998,
+        "estimate": 0.002565122376364598,
         "tier": 3,
         "abstain": false,
         "tau2_zero": "False"
@@ -114,11 +114,11 @@
       "sources_disagree": false,
       "estimate": {
         "n_matched": 152,
-        "ess": 36.87487118930398,
+        "ess": 36.8747746259512,
         "w_shrink": 0.0,
         "tau2": 0.0,
         "k": null,
-        "conditional": -0.004076280201194913,
+        "conditional": -0.0040764377413824715,
         "unconditional": 0.004123189760851507,
         "estimate": 0.004123189760851507,
         "tier": 3,

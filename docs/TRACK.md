@@ -6,7 +6,7 @@ date at the top is the last edit. `POST_SUBMISSION_STATE.md` holds the fuller
 reasoning behind each item and `CURRENT_STATE` §17 holds the evidence record.
 This file holds *status only*, so it stays short enough to read in one sitting.
 
-**Last updated:** 2026-09-07
+**Last updated:** 2026-09-08
 **Project state:** submitted 2026-08-28; forward test running unattended;
 supervisor review pending.
 
@@ -30,7 +30,7 @@ supervisor review pending.
 
 | item | what should be true | how to check | if it isn't |
 |---|---|---|---|
-| **Forward test, launchd** | One dated log per weekday since 28 Aug | `ls ~/Projects/regime-aware-signal/logs/` | The gap is permanent. Find the cause (Mac asleep at 15:00 is the usual one) and record the gap dates in `CURRENT_STATE` |
+| **Forward test, launchd** | One dated log per weekday since 28 Aug | `ls ~/Projects/regime-aware-signal/logs/` | The gap is permanent. Find the cause (Mac asleep at 18:30 is the usual one) and record the gap dates in `CURRENT_STATE` |
 | **Matured positions** | Count rising weekly; H=5 first, H=20 from ~16 Sep | `tail -3 docs/forward_scoreboard.md` | Too few to report a figure until late October at the earliest; do not report one |
 | **Nightly document reads** | Read count ≥ 2,616 and creeping up | `python -m src.corpus_status` | If it stopped, check the API balance — the cap is 40/night but the balance can still run dry |
 | **Supervisor review** | Feedback from Dr Lee on the 28 Aug submission | inbox | When it arrives, log it here before acting on any of it |
@@ -204,6 +204,28 @@ fall. That is the single interview finding that changes the business most.
 
 ---
 
+### 3.8 Model 4 — long top-5 vs universe — REGISTERED 8 Sep, not run
+
+`model4_long_vs_universe.py`. Tests whether ranking has selection skill once
+the failing short leg is removed. Must pass on both universes including the
+survivorship-controlled 35 where Model 1 failed, plus a ≤3× split. Falsification
+stated: spread ≈ 0 means no skill exists and Model 1's edge was beta.
+Run `--quick` first (a few minutes), then the registered 2,000 permutations.
+If PASS, freeze into `models.yaml` and add to the forward ledger.
+
+### 3.9 Kernel family — REGISTERED 8 Sep, not run
+
+Three kernels as one family: regime-only equal-weight (floor), similarity-only
+tight σ (ceiling), Mahalanobis. Reported as best-of-3 vs best-of-3-nulls, never
+individually. Prior: no-decay already ran at p 0.485, so expect similarity-only
+to be null. Mahalanobis is the one that could differ. Script not yet written.
+
+### 3.10 FOMC→GLD by regime — descriptive only, then forward registration
+
+`fomc_gld_by_regime.py` shows which regime carried the retired effect. Not a
+test; all 131 events were used, so the only honest test is the next ~20 FOMC
+meetings in that regime. Register the hypothesis forward; verdict ~2 years out.
+
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a
@@ -246,6 +268,7 @@ Kept so that "what was done" stays beside "what was not".
 | 2026-08-28 | `daily_run.sh` on launchd; README; repo made runnable from a fresh clone |
 | 2026-08-28 | **Submitted** |
 | 2026-09-07 | This file created; Track consolidated here |
+| 2026-09-08 | Model 4 and kernel family registered; `MODEL_EVOLUTION.md` written for investors; launchd moved to 15:00 |
 
 ---
 
