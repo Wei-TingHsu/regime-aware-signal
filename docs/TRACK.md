@@ -210,12 +210,13 @@ Ranking beats universe on ALL at p 0.035 but the effect is 9× concentrated
 post-2018 and fails on the survivorship-controlled 35. Selection skill is
 recent and in recently listed names. Not adopted. See `MODEL_EVOLUTION.md`.
 
-### 3.9 Kernel family — REGISTERED 8 Sep, not run
+### 3.9 Kernel family — RUN 8 Sep — NULL (moved to §5)
 
-Three kernels as one family: regime-only equal-weight (floor), similarity-only
-tight σ (ceiling), Mahalanobis. Reported as best-of-3 vs best-of-3-nulls, never
-individually. Prior: no-decay already ran at p 0.485, so expect similarity-only
-to be null. Mahalanobis is the one that could differ. Script not yet written.
+Family p 0.114. K0 regime-only = Sharpe 0.04: the floor is zero, so the kernel
+is doing all the work (wrong prior #28 — expected K0 ≈ Model 1). K1 collapses
+at 33× split. K2 Mahalanobis is the only stable kernel (2.94×) but p 0.0498 on
+ALL, 0.110 on LONG-HIST. Model 1 itself fails the split at 3.88× — a check
+never run on it before. See `docs/kernel_family.md`.
 
 ### 3.10 FOMC→GLD by regime — RUN 8 Sep — forward hypothesis registered
 
@@ -266,7 +267,7 @@ Kept so that "what was done" stays beside "what was not".
 | 2026-08-28 | `daily_run.sh` on launchd; README; repo made runnable from a fresh clone |
 | 2026-08-28 | **Submitted** |
 | 2026-09-07 | This file created; Track consolidated here |
-| 2026-09-08 | Model 4 registered and run: FAIL (skill post-2018 only, not survivorship-robust). FOMC→GLD regime breakdown: sign flips in regime 2, forward hypothesis registered. Kernel family registered, not run. `MODEL_EVOLUTION.md` written. launchd → 15:00 |
+| 2026-09-08 | Model 4 FAIL (skill post-2018 only). Kernel family NULL (family p 0.114; floor is zero, wrong prior #28; Model 1 fails split 3.88×). FOMC→GLD forward test registered at `9c5ad8e`, first observation 17 Sep. `MODEL_EVOLUTION.md` written. launchd → 15:00 |
 
 ---
 

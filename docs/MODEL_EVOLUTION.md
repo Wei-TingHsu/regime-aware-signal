@@ -5,8 +5,9 @@ prospective client — of every model this project has run, what each one was
 for, what it found, and what is registered next. Written 2026-09-08. Every
 number below traces to a file in this repository; the file is named.*
 
-The short version: **four models have been specified, three are running
-forward, one was run on 8 September and failed.** Two headline claims were made
+The short version: **four models and a three-kernel family have been
+specified. Three models run forward; Model 4 and the kernel family were run on
+8 September and neither produced a finding.** Two headline claims were made
 early and both were retired by the project's own tests. What survives is
 narrower than the first draft promised and every step of the narrowing is
 recorded here.
@@ -80,10 +81,13 @@ model's advantage. The grid-selected best.
 **One mechanism was diagnosed.** The kernel's recency decay does not
 *tie-break* between similar past days — it *reselects*: with and without decay,
 the top-100 sets overlap only 76–85% against a 90% threshold, and every
-selected day gets nearly equal weight. The engine reduces to *"the 100 most
-recent same-regime days, averaged equally."* That is a reasonable method. It is
-not what the word "analog" implies, and the plan no longer uses the word
-without this caveat.
+selected day gets nearly equal weight. It was initially inferred that the engine therefore reduces to *"the 100
+most recent same-regime days, averaged equally."* **The kernel family test on
+8 September showed that inference was wrong**: equal-weighting every
+same-regime day gives Sharpe 0.04, so the kernel's weighting is doing the
+work. Recency reselects rather than tie-breaks — that finding stands — but the
+selection it performs is not nothing. The word "analog" still overpromises; the
+mechanism is more than regime averaging.
 
 *Source: `CURRENT_STATE` §15.3, rung-level selection diagnostic.*
 
@@ -167,7 +171,7 @@ goes.
 
 *Source: `fomc_gld_by_regime.py` → `docs/fomc_gld_by_regime.md`.*
 
-## The kernel family — REGISTERED 8 Sep 2026, not run
+## The kernel family — RUN 8 Sep 2026 · NULL, with one prediction reversed
 
 Three alternative kernels, registered as **one family** so that no single one
 can be quoted on its own p-value. The reported result is the best-of-three
@@ -176,7 +180,7 @@ against the best-of-three-nulls, per the standing protocol (business plan
 
 | kernel | what it tests | prior expectation |
 |---|---|---|
-| **Regime-only, equal weight** | The floor. What the current engine *effectively* is, stated honestly: every same-regime day, weighted equally, no similarity, no recency. | Should match Model 1 closely. If it does, the kernel adds nothing. |
+| **Regime-only, equal weight** | The floor: every same-regime day, weighted equally, no similarity, no recency. | *Registered prior:* should match Model 1 closely. **Result: Sharpe 0.04 — the floor is zero.** The prior was wrong (logged as #28). Regime membership alone has no ranking power; the kernel is where the spread comes from. |
 | **Similarity-only, tight σ** | The ceiling. Drop recency, shrink the kernel so only genuinely close days score. Makes "analog" true. | The no-decay control already ran and was indistinguishable from the incumbent (p 0.485). Expect a null; be pleased if not. |
 | **Mahalanobis distance** | Whether similarity is being measured wrong. Euclidean distance lets the first principal component dominate; Mahalanobis normalises by variance. | Untested. The one of the three that could genuinely differ. |
 
@@ -185,10 +189,38 @@ selection problem that produced Model 3's false 0.73 is reintroduced at small
 scale. The family-level test is the correction, and it is committed here before
 any of the three runs.
 
-**What the family answers.** Whether the resemblance dial matters at all. If
-similarity-only beats regime-only, resemblance is worth something within a
-regime and "analog" can be earned. If they are the same, it is not, and the
-honest model is the simplest one.
+**Result.**
+
+| kernel | ALL Sharpe | p | split | LONG-HIST Sharpe | p |
+|---|---|---|---|---|---|
+| Model 1 (incumbent) | +0.54 | 0.030 | **3.88×** | +0.26 | 0.164 |
+| K0 regime-only | **+0.04** | 0.418 | 1.35× | −0.02 | 0.503 |
+| K1 similarity σ=0.75 | +0.44 | 0.065 | **33.3×** | +0.25 | 0.164 |
+| K2 Mahalanobis | +0.52 | 0.0498 | 2.94× | +0.35 | 0.110 |
+
+**Family p = 0.114. Null.** Best-of-three was Mahalanobis at 0.52; the
+best-of-three null averages 0.23 and reaches 0.61 at its 95th percentile. No
+kernel is adopted.
+
+Three things the run established beyond the null:
+
+- **The floor is zero.** Regime-only weighting has no ranking power. Whatever
+  Model 1 does, it does through the similarity-and-recency kernel, not through
+  regime membership. This reverses the registered prior and a sentence earlier
+  in this document.
+- **Model 1 fails the chronological split** at 3.88× — a check never run on it
+  before. It survives the dependence-corrected null (p 0.045) and fails the
+  split. Both facts now stand in the record.
+- **Mahalanobis is the only kernel that holds across time** (2.94×). Its own
+  p sits at the 0.05 boundary and it fails on the survivorship-controlled
+  universe. Not a finding — but the one variant that does not collapse when
+  the sample is cut in half, which similarity-only does at 33×.
+
+The paired K0-versus-Model-1 comparison shows a Sharpe gap of 0.49 at p 0.124:
+the gap is large, the paired test is underpowered because the two kernels
+select almost entirely different baskets, and both facts are reported.
+
+*Source: `kernel_family.py` → `docs/kernel_family.md`.*
 
 ---
 
