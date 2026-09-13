@@ -106,8 +106,12 @@ else
   echo "  cap: $MAX_NEW new documents, so an unattended job cannot drain the"
   echo "  balance overnight. Four interruptions on this project were caused by"
   echo "  exactly that."
-  for SRC in fomc_statement fomc_minutes earnings_8k political_order political_other; do
-    python -m src.doc_read --source "$SRC" --unread-only --limit "$MAX_NEW" \
+    # Documents dated before READ_SINCE are deferred backfill sets (TRACK 3.1:
+  # 4,595 political; 163 over-cap 6-Ks). They are read as dedicated, funded
+  # runs -- never by the nightly cap, which would spend it oldest-first.
+  READ_SINCE=20260827
+  for SRC in fomc_statement fomc_minutes earnings_8k political_order political_other political; do
+    python -m src.doc_read --source "$SRC" --unread-only --since "$READ_SINCE" --limit "$MAX_NEW" \
       --out "processed/read_$(echo $SRC | sed 's/fomc_//;s/political_//;s/earnings_//').csv" \
       || { echo "  READ ABORTED on $SRC -- almost certainly credit exhaustion."; break; }
   done

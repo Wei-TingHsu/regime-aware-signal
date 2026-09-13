@@ -233,6 +233,13 @@ def main():
                          "each.")
     ap.add_argument("--model", default="claude-sonnet-5")
     ap.add_argument("--limit", type=int)
+    ap.add_argument("--unread-only", action="store_true",
+                    help="drop documents already in the read cache BEFORE "
+                         "applying --limit, so the cap is spent on new reads")
+    ap.add_argument("--since",
+                    help="YYYYMMDD; drop documents dated before this BEFORE "
+                         "--unread-only and --limit. Keeps deferred backfill "
+                         "sets out of the nightly cap.")
     ap.add_argument("--max-words", type=int, default=20000,
                     help="skip documents longer than this. Raised from 6000 on "
                          "2026-08-24: the cap was dropping 105 of 125 FOMC "
@@ -312,6 +319,11 @@ def main():
             print(f"  {src}: {bad} file(s) skipped -- name must be "
                   f"YYYYMMDD[_id].txt")
         pairs.sort(key=lambda x: x[1])
+        if args.since:
+            n0 = len(pairs)
+            pairs = [t for t in pairs if t[0].stem[:8] >= args.since]
+            print(f"  {src}: --since {args.since}: "
+                  f"{n0 - len(pairs)} older doc(s) left for a dedicated run")
         texts = [f.read_text() for f, _, _ in pairs]
         # TRUNCATE, DO NOT SKIP (2026-08-25, prereg_analog_event section 11).
         # Skipping dropped 189 of 834 earnings documents -- 23% -- all 6-K
@@ -330,6 +342,11 @@ def main():
             print(f"  {src}: {len(long_)} doc(s) over {args.max_words} words, "
                   f"TRUNCATED and read (was: skipped)")
         use = list(range(len(pairs)))
+        if args.unread_only:
+            use = [i for i in use
+                   if not (READS / f"{src}__{pairs[i][0].stem}__"
+                                   f"{PROMPT_VERSION}.json").exists()]
+            print(f"  {src}: {len(use)} unread of {len(pairs)}")
         if args.limit:
             use = use[:args.limit]
         if not use:
