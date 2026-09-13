@@ -241,26 +241,49 @@ def main():
     if "realised_days" not in ledger.columns:
         ledger["realised_days"] = np.nan          # back-compat: pre-rule rows
 
-    # ---- 1. log today's picks (skip if this US close is already logged) ----
-    already = (not ledger.empty) and (ledger["signal_date"] == signal_date).any()
-    if already:
+    if "logged_at" not in ledger.columns:
+        ledger["logged_at"] = np.nan              # back-compat: pre-2026-09-13 rows
+
+    # ---- 1. log picks for EVERY completed close not yet in the ledger -----
+    # CATCH-UP (2026-09-13). Until this date only the single latest close was
+    # entered, so any run that did not happen -- Mac asleep past the launchd
+    # slot, a vendor failure (2026-09-08, AMLP), a crash -- lost that session
+    # permanently. Now every completed session with price coverage later than
+    # the newest logged signal date is entered, oldest first. A late row is
+    # still computed only from data up to its own signal close (picks_for is
+    # positional); logged_at records when it was written, so a late entry is
+    # visible in the ledger rather than hidden. Normal days are unchanged.
+    logged = set(pd.to_datetime(ledger["signal_date"])) if not ledger.empty else set()
+    newest = max(logged) if logged else None
+    if newest is None:
+        to_enter = [signal_date]
+    else:
+        to_enter = [d for d in valid if d > newest and d not in logged]
+    if not to_enter:
         print("  no new US close since last run -> skipping new entries (no duplicates).")
     else:
+        if len(to_enter) > 1:
+            print(f"  CATCH-UP: {len(to_enter)} completed sessions not yet logged "
+                  f"({to_enter[0].date()} .. {to_enter[-1].date()}) -- entering all, oldest first.")
+        now_str = pd.Timestamp.now("UTC").strftime("%Y-%m-%d %H:%M UTC")
         new_rows = []
-        for name, spec in specs.items():
-            p = picks_for(scores, rets, spec, cfg, pos)
-            if p is None:
-                print(f"  WARNING: {name} produced no picks (too few analogs) -- skipped.")
-                continue
-            new_rows.append(dict(
-                signal_date=signal_date, entry_date=pd.NaT, model=name,
-                regime=p["regime"], n_analogs=p["n_analogs"],
-                longs="|".join(p["longs"]), shorts="|".join(p["shorts"]),
-                horizon=spec["horizon"], status="pending",
-                long_ret=np.nan, short_ret=np.nan, spread=np.nan,
-                realised_days=np.nan))
-            print(f"  {name}: regime {p['regime']} | L: {', '.join(p['longs'])} "
-                  f"| S: {', '.join(p['shorts'])}")
+        for sd in to_enter:
+            sd_pos = int(dates.get_indexer([sd])[0])
+            for name, spec in specs.items():
+                p = picks_for(scores, rets, spec, cfg, sd_pos)
+                if p is None:
+                    print(f"  WARNING: {name} produced no picks for {sd.date()} "
+                          f"(too few analogs) -- skipped.")
+                    continue
+                new_rows.append(dict(
+                    signal_date=sd, entry_date=pd.NaT, model=name,
+                    regime=p["regime"], n_analogs=p["n_analogs"],
+                    longs="|".join(p["longs"]), shorts="|".join(p["shorts"]),
+                    horizon=spec["horizon"], status="pending",
+                    long_ret=np.nan, short_ret=np.nan, spread=np.nan,
+                    realised_days=np.nan, logged_at=now_str))
+                print(f"  {sd.date()} {name}: regime {p['regime']} | L: {', '.join(p['longs'])} "
+                      f"| S: {', '.join(p['shorts'])}")
         if args.dry_run:
             print("\n(dry run -- nothing written)"); return
         ledger = pd.concat([ledger, pd.DataFrame(new_rows)], ignore_index=True)

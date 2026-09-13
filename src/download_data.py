@@ -65,13 +65,32 @@ def download_all_yfinance(cfg: dict, force: bool) -> None:
             tickers.add(entry["ticker"])
 
     print(f"\n=== yfinance: {len(tickers)} unique tickers ===")
+    # ONE TICKER MUST NOT ABORT THE RUN (2026-09-13). On 2026-09-08 yfinance
+    # returned nothing for AMLP (a transient -- it fetched fine on the 9th),
+    # this loop raised, and daily_run.sh stopped at step 1 of 7: no forward
+    # row, no report. The panel already tolerates missing assets (45/47
+    # every day), so a failed refresh is a loud warning that keeps the
+    # ticker's cached history, not a fatal error. Only a MAJORITY failure
+    # -- the network, not a ticker -- is fatal.
+    failed = []
     for ticker in tqdm(sorted(tickers), desc="yfinance"):
-        cached_fetch(
-            source="yfinance",
-            key=ticker,
-            fetch_fn=lambda t=ticker: download_yfinance_ticker(t, start, end),
-            force_refresh=force,
-        )
+        try:
+            cached_fetch(
+                source="yfinance",
+                key=ticker,
+                fetch_fn=lambda t=ticker: download_yfinance_ticker(t, start, end),
+                force_refresh=force,
+            )
+        except Exception as e:
+            failed.append(ticker)
+            tqdm.write(f"  {ticker}: REFRESH FAILED ({type(e).__name__}: "
+                       f"{str(e)[:80]}) -- cached history kept, continuing")
+    if failed:
+        print(f"\n  yfinance: {len(failed)} of {len(tickers)} ticker(s) NOT "
+              f"refreshed: {', '.join(failed)}")
+        if len(failed) > len(tickers) // 2:
+            raise SystemExit(f"yfinance: majority failure ({len(failed)}/"
+                             f"{len(tickers)}) -- treating as a network outage")
 
 
 # -----------------------------------------------------------------------------
