@@ -2,7 +2,8 @@
 
 *A record for readers outside the project — investors, a supervisor, a
 prospective client — of every model this project has run, what each one was
-for, what it found, and what is registered next. Written 2026-09-08. Every
+for, what it found, and what is registered next. Written 2026-09-08, last
+edited 2026-09-13. Every
 number below traces to a file in this repository; the file is named.*
 
 The short version: **four models and a three-kernel family have been
@@ -34,7 +35,7 @@ New models run **beside** the old ones, never instead of them.
 | **Specification** | 5-session horizon, long 5 / short 5, 100 nearest same-regime days, kernel width 1.5, recency half-life 3.4 years |
 | **Selection** | Specified in advance |
 | **What it tests** | Whether ranking assets by what happened after macro-similar past days produces a spread |
-| **Backtest** | Sharpe **0.51** on 47 assets, 837 weekly rebalances 2010–2026 |
+| **Backtest** | Sharpe **0.51** on 47 assets, 837 weekly rebalances 2010–2026 (838 by 8 Sep as the panel extends; the kernel-family run reports 0.54 on the longer sample) |
 | **Under correct inference** | Block-permutation **p = 0.045** (8 exceedances of 200) — survives, marginally |
 | **On the survivorship-controlled 35** | Sharpe 0.25, **p = 0.184** — **retired** as a claim |
 | **Costs** | Break-even 60.6 bps/side; realistic execution takes ~0.08 of Sharpe |

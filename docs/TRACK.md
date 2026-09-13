@@ -2,15 +2,27 @@
 
 **This is the one file to bring to a new conversation.** It supersedes the Track
 tables in `CURRENT_STATE_2026-08-23.md` §17.10 and is updated in place; the
-date at the top is the last edit. `POST_SUBMISSION_STATE.md` holds the fuller
-reasoning behind each item and `CURRENT_STATE` §17 holds the evidence record.
+date at the top is the last edit. `MODEL_EVOLUTION.md` holds the reasoning
+behind every model result and `CURRENT_STATE` §17 holds the evidence record
+through 27 August.
 This file holds *status only*, so it stays short enough to read in one sitting.
 
-**Last updated:** 2026-09-08
-**Project state:** submitted 2026-08-28; forward test running unattended;
-supervisor review pending.
+**Last updated:** 2026-09-13
+**Project state:** submitted 2026-08-28; two forward tests running unattended
+(model ledger; FOMC→GLD, first observation 17 Sep); supervisor review pending.
+Nothing in the project is currently a trading signal.
 
 ---
+
+## Which documents to trust
+
+Three tiers. A new conversation gets tier 1 only unless it needs to touch method.
+
+- **Tier 1, authoritative, kept current:** this file; `MODEL_EVOLUTION.md`; `README.md`. If these disagree with anything else, these win.
+- **Tier 2, dated snapshots, never edited after their date:** `CURRENT_STATE_2026-08-23.md` (evidence record; its §17.10 Track is superseded by this file); every `prereg_*.md`; every `*_results.md` and test output. Correct as of the date in their header. Not descriptions of the present.
+- **Tier 3, superseded, carry a banner:** `POST_SUBMISSION_STATE.md`, `PROJECT_STATE.md`, the 23 August handoffs, `briefing.md`. Do not upload these to a new conversation.
+
+Known drift corrected on 2026-09-13: automation time is **15:00 SGT** (older files say 18:30); wrong-prior tally is **28**; Model 4 and the kernel family have **run** (older files say registered, not run).
 
 ## How to use this file
 
@@ -30,7 +42,8 @@ supervisor review pending.
 
 | item | what should be true | how to check | if it isn't |
 |---|---|---|---|
-| **Forward test, launchd** | One dated log per weekday since 28 Aug | `ls ~/Projects/regime-aware-signal/logs/` | The gap is permanent. Find the cause (Mac asleep at 18:30 is the usual one) and record the gap dates in `CURRENT_STATE` |
+| **Forward test, launchd, 15:00 SGT** | One dated log per weekday since 28 Aug | `ls ~/Projects/regime-aware-signal/logs/` | The gap is permanent. Find the cause (Mac asleep at 15:00 is the usual one) and record the gap dates here in §5 |
+| **FOMC→GLD forward test** | Registered `9c5ad8e` on 8 Sep. Ledger gains one row ~3 sessions after each FOMC decision. First observation: 17 Sep decision, matures ~22 Sep | `python fomc_gld_forward.py` or `cat docs/fomc_gld_forward.md` | Criterion is n ≥ 10 with both tests at p < 0.05 — no verdict before early 2028. **Do not change the per-regime sign after a miss; do not trade it.** The model does not forecast this; it is a hypothesis found by looking |
 | **Matured positions** | Count rising weekly; H=5 first, H=20 from ~16 Sep | `tail -3 docs/forward_scoreboard.md` | Too few to report a figure until late October at the earliest; do not report one |
 | **Nightly document reads** | Read count ≥ 2,616 and creeping up | `python -m src.corpus_status` | If it stopped, check the API balance — the cap is 40/night but the balance can still run dry |
 | **Supervisor review** | Feedback from Dr Lee on the 28 Aug submission | inbox | When it arrives, log it here before acting on any of it |
@@ -202,29 +215,6 @@ would accept an exempt vendor's output in client-facing documents. If not,
 §5's value proposition collapses to internal time-saving and the price must
 fall. That is the single interview finding that changes the business most.
 
----
-
-### 3.8 Model 4 — RUN 8 Sep — FAIL (moved to §5)
-
-Ranking beats universe on ALL at p 0.035 but the effect is 9× concentrated
-post-2018 and fails on the survivorship-controlled 35. Selection skill is
-recent and in recently listed names. Not adopted. See `MODEL_EVOLUTION.md`.
-
-### 3.9 Kernel family — RUN 8 Sep — NULL (moved to §5)
-
-Family p 0.114. K0 regime-only = Sharpe 0.04: the floor is zero, so the kernel
-is doing all the work (wrong prior #28 — expected K0 ≈ Model 1). K1 collapses
-at 33× split. K2 Mahalanobis is the only stable kernel (2.94×) but p 0.0498 on
-ALL, 0.110 on LONG-HIST. Model 1 itself fails the split at 3.88× — a check
-never run on it before. See `docs/kernel_family.md`.
-
-### 3.10 FOMC→GLD by regime — RUN 8 Sep — forward hypothesis registered
-
-Gold falls after FOMC in three regimes and RISES in the flat-curve /
-strong-dollar regime (+0.42% h=3, n=30, all post-2019). Not a finding — found
-by looking. Registered for forward testing on FOMC meetings landing in that
-regime; ~2 years to a verdict. `docs/fomc_gld_by_regime.md`.
-
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a
@@ -246,6 +236,10 @@ reason; none has one yet.
   matured trades it reports an interval, per §3.4.1's "distribution, not a
   point" rule.
 - **Founder review of `PROFILES`** in `src/doc_read.py`, as the input to 3.3.
+- **Mahalanobis as a registered model_5.** The only kernel that held across
+  time (2.94× split) in the 8 Sep family test; p 0.0498 on ALL, fails on
+  LONG-HISTORY. Not a finding. Worth registering only with a reason beyond
+  "it looked best in the family" — today there isn't one.
 
 ---
 
@@ -268,6 +262,7 @@ Kept so that "what was done" stays beside "what was not".
 | 2026-08-28 | **Submitted** |
 | 2026-09-07 | This file created; Track consolidated here |
 | 2026-09-08 | Model 4 FAIL (skill post-2018 only). Kernel family NULL (family p 0.114; floor is zero, wrong prior #28; Model 1 fails split 3.88×). FOMC→GLD forward test registered at `9c5ad8e`, first observation 17 Sep. `MODEL_EVOLUTION.md` written. launchd → 15:00 |
+| 2026-09-13 | Document authority hierarchy written into this file; SUPERSEDED banners on `POST_SUBMISSION_STATE`, `SESSION_HANDOFF`, `EXECUTION_PLAN`; FOMC→GLD forward test moved to §1 as running; stale §3.8–3.10 stubs removed |
 
 ---
 
