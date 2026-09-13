@@ -215,6 +215,30 @@ would accept an exempt vendor's output in client-facing documents. If not,
 §5's value proposition collapses to internal time-saving and the price must
 fall. That is the single interview finding that changes the business most.
 
+### 3.8 Report-level scoreboard — $0, registered in draft, not built
+
+**What it is.** A second append-only ledger that scores the *decision report* — hit-rate and
+asymmetry when it speaks, coverage when it abstains — beside the forward test that scores
+Models 1–3. Two ledgers: forward (from 14 Sep, never rewritten) and backfilled (live-basis
+pipeline, leave-one-out, versioned by corpus hash) so a new document source can be judged in
+weeks rather than months.
+
+**Why it is here.** Session coverage is 30%; every source added under §3.1–3.2 changes what the
+report says on what days, and without a registered metric there is no verdict on whether it
+helped. Registered before any source is added.
+
+**Steps, in order.** (1) fill the three placeholders — horizon set from the unblinding script,
+primary horizon (proposal 5), source-expansion tolerance (proposal 2 pts) — and commit;
+(2) confirm the report JSON carries every field the scorer reads; (3) register six acceptance
+tests before any code; (4) build `src/report_scoreboard.py`, pass them on synthetic ledgers;
+(5) first real run — expected output is coverage and "too few to report"; (6) one line in
+`daily_run.sh` after `forward_log`, then a §1 row; (7) backfilled ledger via
+`src/report_backfill.py`; (8) source expansion, one registration per source — funded, deferred.
+
+**Blocked on.** Step 1 needs the founder: the horizon set and two proposals to confirm.
+
+---
+
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a
@@ -263,6 +287,8 @@ Kept so that "what was done" stays beside "what was not".
 | 2026-09-07 | This file created; Track consolidated here |
 | 2026-09-08 | Model 4 FAIL (skill post-2018 only). Kernel family NULL (family p 0.114; floor is zero, wrong prior #28; Model 1 fails split 3.88×). FOMC→GLD forward test registered at `9c5ad8e`, first observation 17 Sep. `MODEL_EVOLUTION.md` written. launchd → 15:00 |
 | 2026-09-13 | Document authority hierarchy written into this file; SUPERSEDED banners on `POST_SUBMISSION_STATE`, `SESSION_HANDOFF`, `EXECUTION_PLAN`; FOMC→GLD forward test moved to §1 as running; stale §3.8–3.10 stubs removed |
+| 2026-09-13 | **Harness audit, five commits.** (1) Nightly document reads found DEAD since 29 Aug — `--unread-only` never existed and `--limit` sliced before the cache check; fixed, plus `--since 20260827` so the deferred sets (4,595 political, 163 over-cap 6-Ks) are never read by the nightly cap (`8533969`). (2) `outputs/reports/` was being REWRITTEN nightly by `--limit 30 --recent 10`; now frozen, nightly job rebuilds the index only (`e740751`). (3) `step6 --latest` wrote each report a day EARLY (panel index runs ahead of the close); now targets the last completed session and is write-once (`562dedb`). (4) One failed ticker refresh no longer aborts the run (8 Sep AMLP); catch-up entry logs every completed-but-unlogged close with a `logged_at` column (`2296725`). Forward ledger verified complete 19 Aug–10 Sep, no Labor Day row, no duplicates. Report-level forward ledger therefore starts **14 Sep** |
+| 2026-09-13 | Report-level scoreboard pre-registration drafted (`docs/prereg_report_scoreboard.md`, three `[FILL]` placeholders open); eight-step build plan agreed — see §3.8 |
 
 ---
 
