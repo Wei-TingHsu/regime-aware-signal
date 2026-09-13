@@ -6,11 +6,21 @@ date at the top is the last edit. `POST_SUBMISSION_STATE.md` holds the fuller
 reasoning behind each item and `CURRENT_STATE` §17 holds the evidence record.
 This file holds *status only*, so it stays short enough to read in one sitting.
 
-**Last updated:** 2026-09-08
+**Last updated:** 2026-09-13
 **Project state:** submitted 2026-08-28; forward test running unattended;
 supervisor review pending.
 
 ---
+
+## Which documents to trust
+
+Three tiers. A new conversation gets tier 1 only unless it needs to touch method.
+
+- **Tier 1, authoritative, kept current:** this file; `MODEL_EVOLUTION.md`; `README.md`. If these disagree with anything else, these win.
+- **Tier 2, dated snapshots, never edited after their date:** `CURRENT_STATE_2026-08-23.md` (evidence record; its §17.10 Track is superseded by this file); every `prereg_*.md`; every `*_results.md` and test output. Correct as of the date in their header. Not descriptions of the present.
+- **Tier 3, superseded, carry a banner:** `POST_SUBMISSION_STATE.md`, `PROJECT_STATE.md`, the 23 August handoffs, `briefing.md`. Do not upload these to a new conversation.
+
+Known drift that was corrected on 2026-09-13: automation time is **15:00 SGT** (older files say 18:30); wrong-prior tally is **28**; Model 4 and the kernel family have **run** (older files say registered, not run).
 
 ## How to use this file
 

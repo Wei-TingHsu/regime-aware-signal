@@ -1,3 +1,5 @@
+> **SUPERSEDED 2026-09-13.** This file is a dated snapshot and is no longer maintained. For current status read `docs/TRACK.md`; for model results read `docs/MODEL_EVOLUTION.md`. Statements here about schedules, what is built, or what is pending may be wrong.
+
 # SESSION HANDOFF — 2026-08-23
 
 *Append to `docs/PROJECT_STATE.md`, or upload alongside `briefing.md` to start a

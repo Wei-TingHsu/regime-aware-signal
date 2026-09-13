@@ -1,3 +1,5 @@
+> **SUPERSEDED 2026-09-13.** This file is a dated snapshot and is no longer maintained. For current status read `docs/TRACK.md`; for model results read `docs/MODEL_EVOLUTION.md`. Statements here about schedules, what is built, or what is pending may be wrong.
+
 # Where this project stands, and what it does next
 
 *Written 2026-08-28, after submission. This is the handover document: what runs
