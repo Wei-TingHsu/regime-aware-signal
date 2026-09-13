@@ -374,17 +374,41 @@ def main():
     ap.add_argument("--date")
     ap.add_argument("--latest", action="store_true")
     ap.add_argument("--print", dest="show", action="store_true")
+    ap.add_argument("--force", action="store_true",
+                    help="overwrite an existing report. Never passed by the "
+                         "nightly job: outputs/reports/ is write-once.")
     a = ap.parse_args()
     if a.latest:
+        # WRITE-ONCE, ON THE RIGHT DAY (2026-09-13). A session's report is
+        # written on the first run after its closing bell has passed --
+        # the forward log's rule for its signal bar -- so the day's
+        # documents have been fetched before the report is frozen.
+        # Before this date --latest took the panel's last index date, which
+        # runs a day AHEAD of the close: each report was written at ~03:00
+        # ET on its own date, before any document dated that day could
+        # exist, and then silently patched by the nightly regeneration.
+        from src.market_calendar import last_completed_session
         s, _ = load_data()
-        a.date = pd.Timestamp(s.index[-1]).strftime("%Y%m%d")
+        dates = pd.DatetimeIndex(s.index)
+        done = dates[dates <= last_completed_session()]
+        if len(done) == 0:
+            raise SystemExit("no completed session in the panel")
+        a.date = done[-1].strftime("%Y%m%d")
     if not a.date:
         raise SystemExit("give --date YYYYMMDD or --latest")
 
-    R = build_report(a.date)
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    js = REPORT_DIR / f"{a.date}.json"
+    if js.exists() and not a.force:
+        print(f"  {a.date}: report already on disk -- write-once, not "
+              f"rewritten (pass --force to overwrite)\n  -> {js}")
+        return
+
+    R = build_report(a.date)
     stem = R["date"].replace("-", "")
     md, js = REPORT_DIR / f"{stem}.md", REPORT_DIR / f"{stem}.json"
+    if js.exists() and not a.force:
+        raise SystemExit(f"  {stem}: exists -- write-once (--force to overwrite)")
     text = render_md(R)               # both from the same dict, §8
     md.write_text(text)
     js.write_text(json.dumps(R, indent=2, default=str))
