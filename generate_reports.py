@@ -67,6 +67,10 @@ def main():
                          "'no news today' -- which is the answer they came for.")
     ap.add_argument("--limit", type=int)
     ap.add_argument("--coverage-only", action="store_true")
+    ap.add_argument("--index-only", action="store_true",
+                    help="rebuild report_index.json from the report files "
+                         "already on disk; write no report. The nightly job "
+                         "uses this so an emitted report is never rewritten.")
     args = ap.parse_args()
 
     cfg = load_config()
@@ -144,8 +148,37 @@ def main():
         print(f"  + {len(extra)} recent session(s) with no documents, so the "
               f"latest date is always selectable")
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
-    print(f"\n  generating {len(targets)} report(s)...")
     written, tiers, index = 0, defaultdict(int), []
+
+    def _index_row(R):
+        nv = sum(1 for e in R["assets"].values() if e["net_view"] is not None)
+        ab = sum(1 for e in R["assets"].values() if e["abstain"])
+        best = 3
+        for e in R["assets"].values():
+            if e.get("estimate"):
+                tiers[e["estimate"]["tier"]] += 1
+                best = min(best, int(e["estimate"]["tier"]))
+        return dict(date=R["date"], regime=R["regime"]["label"],
+                    posterior=R["regime"]["posterior"],
+                    n_docs=len(R["documents"]), n_views=nv,
+                    n_abstain=ab, best_tier=best)
+
+    if args.index_only:
+        # FROZEN REPORTS (2026-09-13). A report under outputs/reports/ is
+        # never rewritten. The nightly job writes today's report once
+        # (step6_report.py --latest) and rebuilds the index from what is on
+        # disk. Regeneration writes to a backfill folder, never here.
+        # Until this date the nightly --limit 30 --recent 10 call rewrote
+        # the 40 most recent reports every night.
+        targets = []
+        for pth in sorted(REPORT_DIR.glob("*.json")):
+            try:
+                index.append(_index_row(json.loads(pth.read_text())))
+            except Exception as e:
+                print(f"    {pth.name}: unreadable ({type(e).__name__}), skipped")
+        print(f"\n  index-only: {len(index)} report(s) on disk, none rewritten")
+    else:
+        print(f"\n  generating {len(targets)} report(s)...")
     for i, t in enumerate(targets):
         stem = pd.Timestamp(t).strftime("%Y%m%d")
         try:

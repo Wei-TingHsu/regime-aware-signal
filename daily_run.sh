@@ -127,7 +127,8 @@ step "6b/7 FOMC->GLD forward ledger (registered 2026-09-08)"
 python fomc_gld_forward.py 2>/dev/null | tail -4 || echo "  (no new matured FOMC observation)"
 
 step "7/7  refresh the index the app reads"
-python generate_reports.py --docs-only --limit 30 --recent 10
+# index-only: reports on disk are frozen; only the index is rebuilt.
+python generate_reports.py --index-only
 
 echo
 echo "DONE  $(date '+%H:%M:%S')"
