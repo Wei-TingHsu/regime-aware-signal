@@ -236,7 +236,9 @@ tests before any code; (4) build `src/report_scoreboard.py`, pass them on synthe
 `src/report_backfill.py`; (8) source expansion, one registration per source — funded, deferred.
 
 **Step 1 done** `97dd490` (14 Sep): horizons {3, 5, 20}, `h* = 3`, tolerance 2 pts / lower
-bound −5, revisable only before a comparison runs. **Now at step 2** (report JSON field check).
+bound −5, revisable only before a comparison runs. Step 2 done (field map; emitter records `estimate.horizon`). Step 3 done (seven
+acceptance tests, prereg §12). **Now at step 4** — build `src/report_scoreboard.py`
+against §12, $0.
 
 ---
 

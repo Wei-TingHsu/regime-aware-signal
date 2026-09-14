@@ -234,6 +234,34 @@ The specificity gate is re-run on every enlarged corpus regardless.
 | 2026-09-14 | §7.1 start date changed from 27 Aug to "first session after nightly reads resume" | Reports before 13 Sep were rewritten nightly (no as-emitted version exists); reads paused for credit from 14 Sep |
 | 2026-09-14 | §2 filled: horizon set `{3, 5, 20}`; primary `h* = 3` | Set and primary taken from `unblind_step3.py` (`HORIZONS = (3, 5, 20)`, 3 primary) so the scoreboard scores the estimator on the estimator's own clock. An earlier proposal of 5 (to match Model 1) was withdrawn once the estimator's registration was read |
 | 2026-09-14 | §8 filled: two-part tolerance — point-estimate drop ≤ 2 pts AND bootstrap lower bound > −5 pts | Founder's choice, 2 / −5. Revisable only by a prior dated amendment, per §8; frozen for any comparison already run |
+| 2026-09-14 | Step 2 field map, checked against `outputs/reports/20260910.json` and `20260708.json`: net direction = `assets[a].net_view` (horizon-free); tier, ESS, `w` = inside `assets[a].estimate` (null when abstaining); exclusions from `abstain`, `sources_disagree`; per-report `regime.label`, `regime.posterior`, `documents[]`. The estimate carried no horizon key; emitter now writes `estimate.horizon` and `estimate_horizon_sessions` (= 3) for every report from this date. `matured_performance: null` is a pre-existing slot; the scorer may populate it, and if it does not, the field is removed rather than left null | Score what the report contained on its day; a reader must be able to see which horizon a number belongs to |
+| 2026-09-14 | §12 acceptance tests registered — seven, before `src/report_scoreboard.py` exists | Blind-build protocol, as for the estimator |
 
 *Amendments are recorded here before results are read. An amendment after a
 result is read is declared as such.*
+
+## 12. ACCEPTANCE TESTS — registered before any scoring code exists
+
+Each test builds its own synthetic ledger; no real report is used. A test is
+written, run, and its result recorded here before the next is written. A test
+that fails is repaired **once**, with the original failure and the repair both
+recorded in §11; a test that fails twice halts the build. Same protocol as the
+estimator's blind build.
+
+Synthetic ledgers follow the real schema: one row per (date, asset, h) with
+`net_view`, `abstain`, `sources_disagree`, and realised returns for both entry
+conventions. Dates are NYSE sessions from `trading_days()`.
+
+| # | test | construction | pass criterion |
+|---|---|---|---|
+| T1 | planted-perfect | 300 report dates × 5 assets; `net_view` sign set equal to the realised sign at `h*=3` | hit-rate = 100% on every cell; "no misses" printed for asymmetry (denominator zero is stated, not divided); null p < 0.001 |
+| T2 | planted-shuffled | calls drawn independently of returns; 200 replications | rejection rate at α=0.05 lies in [0.02, 0.08]; the null is neither anti-conservative nor dead |
+| T3 | min-count | one cell with 29 non-overlap rows, one with 30 | 29 → "too few to report" and no number anywhere in the cell; 30 → number printed |
+| T4 | non-overlap sampler | 20 synthetic report dates, `h*=3`, first date fixed | selects dates 1, 4, 7, 10, 13, 16, 19 — seven rows — matching a hand-written list committed with the test |
+| T5 | exclusions | rows with `abstain=true`, `sources_disagree=true`, `net_view=0`, realised return exactly 0 | none enters hit-rate; each appears in the coverage block under its own label with the right count |
+| T6 | two entries | synthetic OHLC with a constructed overnight gap `g` on `t+1` | primary (close `t` → close `t+h`) minus tradeable (open `t+1` → close `t+1+h`) equals `g` plus the constructed close-to-close difference on the extra day, to 1e-9 |
+| T7 | block null does something | calls with strong serial correlation (runs of 5 identical signs) and returns independent of them | block-permutation null spread ≥ free-permutation null spread; if blocking is not widening the null, it is not respecting the dependence it exists for |
+
+T7 is added at registration, not later: the earlier plan listed six, and the
+seventh is the one that guards the null itself. Nothing is built until all
+seven are written.

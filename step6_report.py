@@ -451,6 +451,12 @@ def main():
         return
 
     R = build_report(a.date)
+    # Step 2 of the report scoreboard (2026-09-14): the JSON must say which
+    # horizon its estimate was computed at. The markdown already did.
+    R["estimate_horizon_sessions"] = PRIMARY_H
+    for e in R["assets"].values():
+        if e.get("estimate"):
+            e["estimate"].setdefault("horizon", PRIMARY_H)
     stem = R["date"].replace("-", "")
     md, js = REPORT_DIR / f"{stem}.md", REPORT_DIR / f"{stem}.json"
     if js.exists() and not a.force:
