@@ -42,10 +42,10 @@ Known drift corrected on 2026-09-13: automation time is **15:00 SGT** (older fil
 
 | item | what should be true | how to check | if it isn't |
 |---|---|---|---|
-| **Forward test, launchd, 15:00 SGT** | One dated log per weekday since 28 Aug | `ls ~/Projects/regime-aware-signal/logs/` | The gap is permanent. Find the cause (Mac asleep at 15:00 is the usual one) and record the gap dates here in §5 |
+| **Forward test, launchd, 15:00 SGT** | One dated log per weekday since 28 Aug | `ls ~/Projects/regime-aware-signal/logs/` | Since `2296725` the next successful run catches the missed close up (see `logged_at`); a gap becomes permanent only past the 5-day stale guard. Record any catch-up dates here in §5. A run *suspended* mid-way (11 Sep) is not caught up by this — hold the machine awake (`caffeinate -is`) |
 | **FOMC→GLD forward test** | Registered `9c5ad8e` on 8 Sep. Ledger gains one row ~3 sessions after each FOMC decision. First observation: 17 Sep decision, matures ~22 Sep | `python fomc_gld_forward.py` or `cat docs/fomc_gld_forward.md` | Criterion is n ≥ 10 with both tests at p < 0.05 — no verdict before early 2028. **Do not change the per-regime sign after a miss; do not trade it.** The model does not forecast this; it is a hypothesis found by looking |
 | **Matured positions** | Count rising weekly; H=5 first, H=20 from ~16 Sep | `tail -3 docs/forward_scoreboard.md` | Too few to report a figure until late October at the earliest; do not report one |
-| **Nightly document reads** | Read count ≥ 2,616 and creeping up | `python -m src.corpus_status` | If it stopped, check the API balance — the cap is 40/night but the balance can still run dry |
+| **Nightly document reads — PAUSED for credit** | Read count is 2,616 and stays there until the API balance is funded. It was silently dead 29 Aug–13 Sep for a different reason (§5, `8533969`); the pipeline is now correct and idle | `python -m src.corpus_status` | When credit returns the count rises by ≤ 40/night on documents dated ≥ 27 Aug only. If it does not, the flag or the balance is wrong again |
 | **Supervisor review** | Feedback from Dr Lee on the 28 Aug submission | inbox | When it arrives, log it here before acting on any of it |
 | **Collaborator access** | Dr Lee accepted the invite | GitHub → Settings → Collaborators | Re-invite by email address if the handle failed again |
 
@@ -247,7 +247,9 @@ reason; none has one yet.
 - **Persist the expanding regime labels to disk** at build time so the app's
   first asset lookup is instant rather than a minute. Touches
   `regime_labels_expanding`, which the whole pipeline depends on — not to be
-  done during an active evaluation.
+  done during an active evaluation. **Now has a reason:** the backfilled report
+  ledger (§3.8 step 7) re-runs the pipeline over ~1,600 document dates and
+  would otherwise recompute the labels every time.
 - **Streamlit Community Cloud deployment** so a reviewer gets a URL instead of
   four commands. Ten minutes once the repo is public; not worth it while it is
   private and under review.
@@ -287,7 +289,7 @@ Kept so that "what was done" stays beside "what was not".
 | 2026-09-07 | This file created; Track consolidated here |
 | 2026-09-08 | Model 4 FAIL (skill post-2018 only). Kernel family NULL (family p 0.114; floor is zero, wrong prior #28; Model 1 fails split 3.88×). FOMC→GLD forward test registered at `9c5ad8e`, first observation 17 Sep. `MODEL_EVOLUTION.md` written. launchd → 15:00 |
 | 2026-09-13 | Document authority hierarchy written into this file; SUPERSEDED banners on `POST_SUBMISSION_STATE`, `SESSION_HANDOFF`, `EXECUTION_PLAN`; FOMC→GLD forward test moved to §1 as running; stale §3.8–3.10 stubs removed |
-| 2026-09-13 | **Harness audit, five commits.** (1) Nightly document reads found DEAD since 29 Aug — `--unread-only` never existed and `--limit` sliced before the cache check; fixed, plus `--since 20260827` so the deferred sets (4,595 political, 163 over-cap 6-Ks) are never read by the nightly cap (`8533969`). (2) `outputs/reports/` was being REWRITTEN nightly by `--limit 30 --recent 10`; now frozen, nightly job rebuilds the index only (`e740751`). (3) `step6 --latest` wrote each report a day EARLY (panel index runs ahead of the close); now targets the last completed session and is write-once (`562dedb`). (4) One failed ticker refresh no longer aborts the run (8 Sep AMLP); catch-up entry logs every completed-but-unlogged close with a `logged_at` column (`2296725`). Forward ledger verified complete 19 Aug–10 Sep, no Labor Day row, no duplicates. Report-level forward ledger therefore starts **14 Sep** |
+| 2026-09-13 | **Harness audit, five commits.** (1) Nightly document reads found DEAD since 29 Aug — `--unread-only` never existed and `--limit` sliced before the cache check; fixed, plus `--since 20260827` so the deferred sets (4,595 political, 163 over-cap 6-Ks) are never read by the nightly cap (`8533969`). (2) `outputs/reports/` was being REWRITTEN nightly by `--limit 30 --recent 10`; now frozen, nightly job rebuilds the index only (`e740751`). (3) `step6 --latest` wrote each report a day EARLY (panel index runs ahead of the close); now targets the last completed session and is write-once (`562dedb`). (4) One failed ticker refresh no longer aborts the run (8 Sep AMLP); catch-up entry logs every completed-but-unlogged close with a `logged_at` column (`2296725`). Forward ledger verified complete 19 Aug–10 Sep, no Labor Day row, no duplicates. Report-level forward ledger starts at the first session whose report is written with all its documents read — reads are paused for credit, so not 14 Sep as first written (CURRENT_STATE §18.3) |
 | 2026-09-13 | Report-level scoreboard pre-registration drafted (`docs/prereg_report_scoreboard.md`, three `[FILL]` placeholders open); eight-step build plan agreed — see §3.8 |
 
 ---

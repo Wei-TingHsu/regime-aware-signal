@@ -1798,3 +1798,104 @@ showing a Tier-1 cell, and that abstention is the product working as specified,
 not a gap in it.** A system that declines to forecast when its own registered
 evidence floor is not met is the thing the pivot to risk-management signals in
 Week 11 committed to building.
+
+---
+
+## 18. SESSIONS 2026-09-13 / 14 — HARNESS AUDIT: FOUR SILENT DEFECTS, SIX COMMITS
+
+*Appended 2026-09-14. Nothing above is altered. TRACK §5 carries the one-line summary;
+this section is the evidence.*
+
+### 18.1 WHAT WAS FOUND, BY READING THE LOGS RATHER THAN TRUSTING THEM
+
+The forward-test log folder was checked against the calendar before anything was made
+public. Every weekday 28 Aug–11 Sep had a dated file (eleven of eleven). The
+`forward_ledger.csv` held 48 rows = 16 signal dates × 3 models, and those sixteen dates
+were exactly every US session 19 Aug–10 Sep: no Labor Day row, no duplicate, and the
+11 Sep run — which fired at 02:03 SGT on the 12th, mid-session in New York — correctly
+refused the live bar and used the 10 Sep close. **The ledger itself was clean.** The
+same logs showed four things the ledger could not:
+
+1. **Nightly document reads had been dead since 29 Aug.** Every log from the 29th
+   carried `doc_read.py: error: unrecognized arguments: --unread-only`. The flag had
+   never existed; `daily_run.sh` had passed it from the day launchd was set up. The
+   evidence was the coverage line, byte-identical across fourteen logs: `sessions
+   carrying documents 1566 (30%)`. TRACK §1 (written 7 Sep) said the read count was
+   "creeping up". It was not. Further: even without the bad flag the read would have
+   been a no-op, because `--limit` sliced the file list *before* the cache check and
+   the list is date-ascending — the cap would have been spent re-touching the forty
+   oldest cached documents every night.
+2. **`outputs/reports/` was rewritten every night.** Step 7/7 of `daily_run.sh` ran
+   `generate_reports.py --docs-only --limit 30 --recent 10`, regenerating the 30 most
+   recent document-bearing dates plus the 10 most recent sessions. A report dated 8 Jul
+   carried a 12 Sep `generated` stamp and a `w_shrink` that had moved from 0.295 to
+   0.390. Nothing in the folder was ever final. Cause of the drift: the PCA is refit on
+   the extended panel nightly and yfinance's adjusted closes revise history, so
+   regeneration can never be idempotent.
+3. **Reports were written a day early.** `step6_report.py --latest` took the panel's
+   last index date, which runs a day ahead of the price data (the log line "panel index
+   runs to 2026-09-11 but those rows have no prices yet"). The 11 Sep report was
+   therefore written at ~03:00 ET on the 11th, before any document dated 11 Sep could
+   have been published or fetched. Defect 2 had been silently patching defect 3: each
+   report received its documents on the next night's rewrite.
+4. **One ticker aborted the whole run on 8 Sep.** yfinance returned nothing for AMLP
+   (a transient — it fetched normally on the 9th); `cached_fetch` exhausted its retries
+   and raised; `daily_run.sh` stopped at step 1 of 7 with no forward row and no
+   report. It cost nothing only because 4 Sep had already been entered on the 7th and
+   Labor Day meant no new close existed. On any other weekday it would have been a
+   permanent gap.
+
+Also recorded: the **28 Aug vendor gap** (Close/Adj Close NaN, same pattern as
+17 Aug) surfaced on 31 Aug as `latest US close WITH PRICE DATA: 2026-08-27 (4d old)`
+and as SHORT WINDOW flags on four entries through 3 Sep; it healed by 4 Sep and the
+flags cleared. And the **machine sleeps at 15:00 most days**: runs landed at 16:59,
+17:11 and 02:03 (launchd fires a missed job on wake), and the 11 Sep run was
+*suspended mid-way* for ten hours between its forward-log step and its report step.
+
+### 18.2 WHAT WAS CHANGED — SIX COMMITS, NO MODEL TOUCHED
+
+| commit | change |
+|---|---|
+| `8533969` | `doc_read.py`: `--unread-only` exists and filters *before* `--limit`; `--since YYYYMMDD` drops documents before a cutoff. `daily_run.sh`: reads all six sources (`political` added — the nightly fetcher had been writing to a folder the read loop never visited) with `--since 20260827`, so the deferred sets (4,595 political, 163 over-cap 6-Ks) are never consumed by the nightly cap |
+| `e740751` | `generate_reports.py --index-only`: rebuilds `report_index.json` from files on disk, writes no report. `daily_run.sh` step 7/7 uses it. Index now spans all 1,585 reports (2006-01-03 → 2026-09-11), not the 47 dates the old merge had accumulated |
+| `562dedb` | `step6_report.py --latest` resolves to the last panel session ≤ `last_completed_session()` (the forward log's rule) and is write-once (`--force` to overwrite). The mid-session 11 Sep report was deleted so it can be written correctly |
+| `2296725` | `download_data.py`: per-ticker failure warns and continues, cached history kept; majority failure fatal. `forward_log.py`: catch-up entry of every completed-but-unlogged close, oldest first, with `logged_at`. Registered in `docs/forward_test_amendment_2026-09-13_catchup.md` |
+| `4f17d2e` | TRACK: §5 rows for the above; §3.8 report-level scoreboard |
+| this commit | This section; the amendment file; `docs/prereg_report_scoreboard.md` committed with placeholders; TRACK corrections |
+
+### 18.3 CONSEQUENCES FOR THE RECORD
+
+- **Reports dated 27 Aug–11 Sep have no "as emitted" version.** What is on disk is
+  their last regeneration (7 Sep for most; 12 Sep for the forty most recent). They
+  are backfill, and the report-level scoreboard treats them as such.
+- **Nightly document reads remain paused** — the API balance is exhausted and the
+  founder is not funding it at present. The read pipeline is now correct; it is
+  idle for lack of credit, not broken.
+- **Therefore: a report written while its session's documents are fetched but
+  unread would be frozen incomplete.** The rule adopted is that `step6 --latest`
+  **defers** a report whose session has unread documents, and writes deferred
+  sessions oldest-first once their documents are read. Enforcement is the next code
+  item (§18.5); until it lands, `daily_run.sh` should not be relied on to produce a
+  correct 11 Sep report.
+- **The report-level forward ledger starts at the first session whose report is
+  written with all its fetched documents read** — not 14 Sep as TRACK said on the
+  13th. Corrected in TRACK and in the prereg §7.1/§11.
+- **Wrong prior #29 — founder to decide.** "The nightly reads are running and the
+  count is creeping up" (TRACK §1, 7 Sep) was a belief about the system, held in
+  writing, overturned by reading a log. By this project's definition it qualifies.
+  The tally is not changed here.
+
+### 18.4 THE SCOREBOARD WORKSTREAM
+
+`docs/prereg_report_scoreboard.md` is committed with three `[FILL]` placeholders
+(horizon set from the unblinding script; primary horizon, proposal 5; source-expansion
+tolerance, proposal 2 points). The eight-step plan is TRACK §3.8. Nothing in it costs
+money until step 8, which is deferred.
+
+### 18.5 OPEN — NEXT CODE ITEM
+
+`step6_report.py`: (a) refuse to write a report for a session that has fetched-but-
+unread documents (count files under `data_provenance/docs/<source>/` dated that
+session with no entry under `doc_reads/`), printing the count and "deferred"; (b) a
+`--pending` mode that lists completed sessions with no report on disk, so
+`daily_run.sh` can loop `--date` over them once reads resume. Neither is written yet.
