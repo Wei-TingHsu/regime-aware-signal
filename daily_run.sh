@@ -1,4 +1,7 @@
 #!/bin/zsh
+# Load secrets for EVERY step (doc_read.py does not call load_dotenv itself).
+# .env is git-ignored; .env.example lists the names. TRACK section 7.
+if [ -f .env ]; then set -a; . ./.env; set +a; fi
 # =============================================================================
 # daily_run.sh -- STEP 7. One command, run every trading evening by launchd.
 #
