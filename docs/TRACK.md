@@ -237,8 +237,8 @@ tests before any code; (4) build `src/report_scoreboard.py`, pass them on synthe
 
 **Step 1 done** `97dd490` (14 Sep): horizons {3, 5, 20}, `h* = 3`, tolerance 2 pts / lower
 bound −5, revisable only before a comparison runs. Step 2 done (field map; emitter records `estimate.horizon`). Step 3 done (seven
-acceptance tests, prereg §12). **Now at step 4** — build `src/report_scoreboard.py`
-against §12, $0.
+acceptance tests, prereg §12). Step 4 done: `src/report_scoreboard.py`, seven tests pass. **Now at step 5** — first real run;
+expected output is zero coverage and "too few to report" while reports are deferred.
 
 ---
 
