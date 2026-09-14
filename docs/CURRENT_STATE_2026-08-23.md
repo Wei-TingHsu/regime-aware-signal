@@ -1906,3 +1906,57 @@ unread documents (count files under `data_provenance/docs/<source>/` dated that
 session with no entry under `doc_reads/`), printing the count and "deferred"; (b) a
 `--pending` mode that lists completed sessions with no report on disk, so
 `daily_run.sh` can loop `--date` over them once reads resume. Neither is written yet.
+
+### 18.6 STEP 7 — THE BACKFILLED REPORT SCOREBOARD, FIRST RESULT (14 Sep, 14:30)
+
+*The first hit-rate this project has produced for the decision report. Recorded here
+before any interpretation beyond the registered criterion.*
+
+**Setup.** `build_report` re-run as-of over every document-bearing labelled session
+(1,531 dates), same function, prompt version and model as the live reports; precedent
+pool `session ≤ t − 3` (registered 14 Sep, closes the backfill look-ahead); expanding
+regime labels and standardisation; corpus hash `986e0d65b6df_n2616`. Scored by
+`src/report_scoreboard.py` — the same scorer as the forward ledger, seven acceptance
+tests passed — at the registered 10,000 permutations and 2,000 bootstrap draws.
+
+**Coverage.** 803 document days; the report issued at least one net view on 585 (38%).
+Asset-days: 1,026 call, 844 abstain, 51 divergence, 5,734 no-document. SPY accounts for
+511 of the 1,026 calls.
+
+**Primary cell — h=3, close-to-close, non-overlap, n=345.**
+
+| | value | criterion | met |
+|---|---|---|---|
+| hit-rate | 59.4% | > null 95th pct (59.1%); p 0.0497 | yes, by 0.3 pts |
+| asymmetry | 1.116 | > 1 with 95% block-bootstrap lower bound > 1; CI [0.910, 1.402] | no |
+| verdict | **INCONCLUSIVE** | both required | — |
+
+The null's 95th percentile is 59%, not ~50%, because permuting calls within asset
+preserves each asset's call mix and its drift. A report that said "up" on SPY every day
+lives inside that null. The report clears it by 0.3 points at p 0.0497 — the same
+boundary the kernel family sat on (§5 of `docs/kernel_family.md`, Mahalanobis 0.0498)
+and it earns the same sentence: a real but weak effect, or none; not separable here.
+
+**Secondary cells (reported, not tested).** h=3 tradeable 57.1%; h=5 close-to-close
+54.3%, tradeable 49.5% (mean signed −0.05%); h=20 non-overlap n=54, 59.3%.
+
+**Breakdowns (reported, not tested).** By asset: SPY 68.4% (n=171), USO 55.6%, TLT
+53.4%, UUP 47.6%, GLD 44.7%. By tier: tier 2 51.5% (n=66) < tier 3 57.5% (n=273); tier 1
+n=6, too few — §6.1's expectation is unevaluable, and what is visible does not show the
+tiers grading. By dominant source: `earnings_8k` 62.4% (n=117); `fomc_minutes` 37.8%
+(n=74). The last is below a coin flip on 74 rows; if it held it would mean the reader's
+sign on minutes is reversed or the market has priced them. It is a hypothesis for a
+registration, not a finding, and no test is run on it here.
+
+**What this is the baseline for.** Every step-8 source is judged against this hash by
+the registered rule (§8 of the prereg): coverage must rise by the registered amount and
+pooled hit-rate on shared days may not fall by more than 2 points (point estimate) with
+bootstrap lower bound above −5.
+
+**Repair found by the run.** The scorer's timestamp columns were all-NaN float and
+refused a string on the first real write. Fixed in scorer and backfill; the seven
+acceptance tests do not cover ledger maintenance and did not catch it.
+
+**Not claimed.** No live figure — the forward ledger has zero rows. No per-asset, per-tier
+or per-source significance. Nothing in this section reaches any external document.
+

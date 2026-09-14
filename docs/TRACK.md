@@ -240,7 +240,10 @@ tests before any code; (4) build `src/report_scoreboard.py`, pass them on synthe
 bound −5, revisable only before a comparison runs. Step 2 done (field map; emitter records `estimate.horizon`). Step 3 done (seven
 acceptance tests, prereg §12). Step 4 done: `src/report_scoreboard.py`, seven tests pass. Step 5 done (14 Sep 13:01): zero
 coverage, "too few to report" — correct. Step 6 done: wired into `daily_run.sh` as 6c/7; §1 row.
-**Step 7 in progress** (registered 14 Sep, prereg §11): pool cutoff `session ≤ t − 3`; backfill per corpus hash; then `src/report_backfill.py`. Step 8 deferred (funded).
+**Step 7 done** (14 Sep): pool cutoff applied; `src/report_backfill.py` generated 1,531 as-of reports
+under corpus `986e0d65b6df_n2616` in 5 min and scored them. **Verdict INCONCLUSIVE** — h=3 hit-rate 59.4%
+vs null q95 59.1% (p 0.0497), asymmetry 1.116 CI [0.91, 1.40]. Within the registered prior. This is the
+baseline every step-8 source is judged against. Step 8 deferred (funded).
 
 ---
 
@@ -297,6 +300,7 @@ Kept so that "what was done" stays beside "what was not".
 | 2026-09-13 | **Harness audit, five commits.** (1) Nightly document reads found DEAD since 29 Aug — `--unread-only` never existed and `--limit` sliced before the cache check; fixed, plus `--since 20260827` so the deferred sets (4,595 political, 163 over-cap 6-Ks) are never read by the nightly cap (`8533969`). (2) `outputs/reports/` was being REWRITTEN nightly by `--limit 30 --recent 10`; now frozen, nightly job rebuilds the index only (`e740751`). (3) `step6 --latest` wrote each report a day EARLY (panel index runs ahead of the close); now targets the last completed session and is write-once (`562dedb`). (4) One failed ticker refresh no longer aborts the run (8 Sep AMLP); catch-up entry logs every completed-but-unlogged close with a `logged_at` column (`2296725`). Forward ledger verified complete 19 Aug–10 Sep, no Labor Day row, no duplicates. Report-level forward ledger starts at the first session whose report is written with all its documents read — reads are paused for credit, so not 14 Sep as first written (CURRENT_STATE §18.3) |
 | 2026-09-13 | Report-level scoreboard pre-registration drafted (`docs/prereg_report_scoreboard.md`, three `[FILL]` placeholders open); eight-step build plan agreed — see §3.8 |
 | 2026-09-14 | Audit recorded: CURRENT_STATE §18, forward-test catch-up amendment, prereg committed with placeholders, TRACK corrections (`202fe37`). `step6` defers a report while its session has unread documents; `--pending` + `daily_run` loop (`e761072`) — tested on 11 Sep: deferred, 2 unread. Reads remain PAUSED for credit; pending reports queue until they resume |
+| 2026-09-14 | Report scoreboard steps 1–7 done in one day, $0. Backfill `986e0d65b6df_n2616`: 1,531 as-of reports; **INCONCLUSIVE** (hit 59.4% vs null q95 59.1%, p 0.0497; asymmetry CI includes 1). Coverage baseline 38% of document days. Ledger dtype bug found by the run, fixed. Details prereg §11, CURRENT_STATE §18.6 |
 
 ---
 

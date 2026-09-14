@@ -166,6 +166,8 @@ def realise(calls: pd.DataFrame, closes: pd.DataFrame, opens: pd.DataFrame | Non
     for c in LEDGER_COLS:
         if c not in df.columns:
             df[c] = np.nan
+    for c in ("logged_at", "matured_at"):       # text columns; an all-NaN float
+        df[c] = df[c].astype(object)            # column refuses a string later
     return df[LEDGER_COLS]
 
 
@@ -462,6 +464,9 @@ def update_ledger(report_dir: Path, ledger_path: Path) -> pd.DataFrame:
     new = rows_from_reports(reports)
     assets = sorted(new["asset"].unique()) if not new.empty else []
     old = pd.read_csv(ledger_path, parse_dates=["date"]) if ledger_path.exists() else pd.DataFrame(columns=LEDGER_COLS)
+    for c in ("logged_at", "matured_at"):
+        if c in old.columns:
+            old[c] = old[c].astype(object)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     if new.empty and old.empty:
