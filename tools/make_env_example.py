@@ -12,6 +12,7 @@ for f in glob.glob("*.sh"):
 names -= {"HOME", "PATH", "USER", "PWD", "SHELL", "TERM", "LANG"}
 where = {"ANTHROPIC_API_KEY": "console.anthropic.com -> API keys (document reader)",
          "FRED_API_KEY": "fred.stlouisfed.org -> My Account -> API Keys (macro panel)",
+         "SEC_CONTACT": "not a secret -- the contact email EDGAR requires in the User-Agent header, e.g. Name your@email",
          "GOOGLE_APPLICATION_CREDENTIALS": "console.cloud.google.com -> service-account JSON path (BigQuery/GDELT)"}
 out = ["# .env.example -- variable NAMES only. Copy to .env and fill in on a new machine.",
        "# .env is git-ignored and is never committed. See docs/TRACK.md section 7.",
