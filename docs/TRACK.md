@@ -235,7 +235,8 @@ tests before any code; (4) build `src/report_scoreboard.py`, pass them on synthe
 `daily_run.sh` after `forward_log`, then a §1 row; (7) backfilled ledger via
 `src/report_backfill.py`; (8) source expansion, one registration per source — funded, deferred.
 
-**Blocked on.** Step 1 needs the founder: the horizon set and two proposals to confirm.
+**Step 1 done** `97dd490` (14 Sep): horizons {3, 5, 20}, `h* = 3`, tolerance 2 pts / lower
+bound −5, revisable only before a comparison runs. **Now at step 2** (report JSON field check).
 
 ---
 
