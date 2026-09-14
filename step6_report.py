@@ -188,7 +188,13 @@ def build_report(date_str):
                                  * today.specificity.fillna(0)
                                  * today.novelty.fillna(0)
                                  * today.confidence.fillna(0)))
-    hist = docs[docs.session < t]
+    # POOL CUTOFF (registered 2026-09-14, prereg_report_scoreboard §11, step 7a).
+    # A precedent's outcome is its PRIMARY_H-session forward return, so the pool
+    # is documents at least PRIMARY_H sessions before t: every outcome in it had
+    # closed by the close of t. `session < t` was harmless live (unclosed
+    # outcomes are NaN) and a look-ahead in backfill (outcomes exist on disk).
+    t_pos = int(idx.get_indexer([t])[0])
+    hist = docs[docs.session <= idx[t_pos - PRIMARY_H]] if t_pos >= PRIMARY_H else docs.iloc[0:0]
 
     for asset, axcol in AX.items():
         entry = {"net_view": None, "dominant_source": None, "n_docs_today": 0,
