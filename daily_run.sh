@@ -139,3 +139,16 @@ python generate_reports.py --index-only
 echo
 echo "DONE  $(date '+%H:%M:%S')"
 python -m src.corpus_status | tail -14
+
+step "8/7  commit the record and push -- ledgers, scoreboards, write-once reports (TRACK section 7)"
+# Only these paths are staged; unrelated working-tree changes are never swept in.
+# outputs/ and processed/ are git-ignored, hence -f. .env is never listed here.
+git add -f processed/forward_ledger.csv processed/report_ledger.csv \
+           docs/forward_scoreboard.md docs/report_scoreboard.md docs/fomc_gld_forward.md \
+           outputs/reports/*.json outputs/reports/*.md 2>/dev/null
+if git diff --cached --quiet; then
+  echo "  nothing new to commit"
+else
+  git commit -qm "nightly record $(date '+%Y-%m-%d'): ledgers, scoreboards, reports" && echo "  committed"
+  git push -q 2>&1 | tail -1 || echo "  PUSH FAILED -- commit is local; push by hand"
+fi

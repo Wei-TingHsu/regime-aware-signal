@@ -309,3 +309,57 @@ Kept so that "what was done" stays beside "what was not".
   fixed first (business plan §3.4.1).
 - The frozen models in `models.yaml` are not touched. The forward test's
   value is that they haven't been.
+- **The record leaves the machine every night.** `daily_run.sh` step 8/7 commits and
+  pushes the ledgers, scoreboards and write-once reports. `.env.example` (names only)
+  is kept current with `python tools/make_env_example.py` and committed; `.env`
+  (values) is never committed. See section 7.
+
+---
+
+## 7. Backup and restore -- what lives where, and how to rebuild on a new machine
+
+*Added 2026-09-14 after an audit found nine unpushed commits and the forward ledger
+untracked since the forward test began. Read this in any new conversation before
+touching data paths.*
+
+### On GitHub (safe once pushed)
+
+| class | path | note |
+|---|---|---|
+| code, docs, pre-registrations, TRACK, CURRENT_STATE | everything not git-ignored | `git push` after every session; step 8/7 does it nightly |
+| forward ledger | `processed/forward_ledger.csv` | force-tracked from 14 Sep, committed nightly. "Entries provably predate outcomes" depends on this. Before 14 Sep it existed only on the founder's disk |
+| report ledger + scoreboards | `processed/report_ledger.csv`, `docs/*_scoreboard.md` | same |
+| write-once reports | `outputs/reports/*.json`, `*.md` | force-tracked nightly; a rewrite would show as a diff |
+| document reads (the corpus) | `data_provenance/doc_reads/*.json` | ~2,616 files, 10 MB. If `git ls-files data_provenance/doc_reads` is empty, force-add them -- they cost US$30-50 and a prompt-version discontinuity to recreate |
+| `.env.example` | repo root | variable NAMES only, values `enter_your_key_here`; regenerate with `python tools/make_env_example.py` whenever the code gains a new variable |
+
+### Not on GitHub, on purpose
+
+| class | path | on a new machine |
+|---|---|---|
+| secrets | `.env` | **never committed.** `cp .env.example .env`, then issue NEW keys at each provider and fill them in. Old keys die with the old laptop |
+| raw documents | `data_provenance/docs/` (~770 MB) | re-fetchable at $0 with `fetch_sources.py`; slow. Optional zip to Drive |
+| price/macro caches, processed panels | `data_provenance/*` caches, `processed/*.parquet` | rebuilt by `src.download_data --force`, `src.build_panel`, `src.pca_macro`. yfinance history drifts slightly; frozen ledger rows are unaffected |
+| logs | `logs/` | disposable |
+| the launchd job | `~/Library/LaunchAgents/com.regimeaware.daily.plist` | outside the repo; recreate from the description below |
+
+### Restore on a new laptop, in order
+
+1. `git clone https://github.com/Wei-TingHsu/regime-aware-signal.git && cd regime-aware-signal`
+2. `python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt`
+3. `cp .env.example .env` -- fill in NEW keys from each provider named in the file
+4. `python -m src.download_data --force && python -m src.build_panel && python -m src.pca_macro`
+5. `python -m src.forward_log --no-refresh --dry-run` -- must print `no new US close` or a CATCH-UP line, never an error
+6. `python -m src.report_scoreboard --selftest` -- seven PASS
+7. Recreate the launchd plist (below) and `launchctl load` it
+8. Read the first unattended log against section 1
+
+### The launchd job (outside the repo, so described here)
+
+`~/Library/LaunchAgents/com.regimeaware.daily.plist`: Label `com.regimeaware.daily`;
+ProgramArguments `/usr/bin/caffeinate -is /bin/zsh <repo>/daily_run.sh`; WorkingDirectory
+`<repo>`; StandardOutPath/StandardErrorPath `<repo>/logs/launchd.out` and `.err`;
+RunAtLoad false; StartCalendarInterval weekdays 1-5 at Hour 15 Minute 0.
+`caffeinate -is` holds the machine awake for the job's duration (the 11 Sep run was
+suspended mid-way for ten hours without it).
+
