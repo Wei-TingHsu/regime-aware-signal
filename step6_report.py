@@ -369,9 +369,32 @@ def render_md(R):
     return "\n".join(L) + "\n"
 
 
+WRITE_ONCE_FROM = "20260911"   # first session under the write-once rule (2026-09-13)
+
+
+def _unread_docs(stem):
+    """Fetched documents dated `stem` with no entry in the read cache.
+    A report frozen while these exist would be frozen incomplete (CURRENT_STATE
+    §18.3), so the caller defers rather than writes."""
+    from src.doc_read import DOCS, READS, PROMPT_VERSION, PROFILES
+    out = []
+    for src in PROFILES:
+        d = DOCS / src
+        if not d.exists():
+            continue
+        for f in sorted(d.glob(f"{stem}*.txt")):
+            if not (READS / f"{src}__{f.stem}__{PROMPT_VERSION}.json").exists():
+                out.append(f"{src}/{f.name}")
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--date")
+    ap.add_argument("--pending", action="store_true",
+                    help="list completed sessions since WRITE_ONCE_FROM with no "
+                         "report on disk, one per line as PENDING YYYYMMDD; write "
+                         "nothing. daily_run.sh loops --date over these.")
     ap.add_argument("--latest", action="store_true")
     ap.add_argument("--print", dest="show", action="store_true")
     ap.add_argument("--force", action="store_true",
@@ -394,8 +417,31 @@ def main():
         if len(done) == 0:
             raise SystemExit("no completed session in the panel")
         a.date = done[-1].strftime("%Y%m%d")
+    if a.pending:
+        from src.market_calendar import last_completed_session
+        s, _ = load_data()
+        dates = pd.DatetimeIndex(s.index)
+        done = dates[(dates <= last_completed_session())
+                     & (dates >= pd.Timestamp(WRITE_ONCE_FROM))]
+        for d in done:
+            stem = d.strftime("%Y%m%d")
+            if not (REPORT_DIR / f"{stem}.json").exists():
+                print(f"PENDING {stem}")
+        return
     if not a.date:
-        raise SystemExit("give --date YYYYMMDD or --latest")
+        raise SystemExit("give --date YYYYMMDD, --latest or --pending")
+
+    # DEFER WHILE UNREAD (2026-09-14, CURRENT_STATE §18.5). Reads are paused
+    # for credit; a report written now for a session whose documents were
+    # fetched but not read would be frozen without them. Nothing is written
+    # until every document dated this session is in the read cache.
+    unread = _unread_docs(a.date)
+    if unread and not a.force:
+        print(f"  {a.date}: {len(unread)} document(s) fetched but UNREAD -- report "
+              f"DEFERRED, nothing written (--force writes it anyway)")
+        for u in unread[:10]:
+            print(f"    {u}")
+        return
 
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     js = REPORT_DIR / f"{a.date}.json"

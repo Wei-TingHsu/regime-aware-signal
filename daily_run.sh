@@ -120,8 +120,10 @@ fi
 step "5/7  rebuild read CSVs from cache (free)"
 python rebuild_csv.py --all
 
-step "6/7  today's decision report"
-python step6_report.py --latest
+step "6/7  decision reports -- every completed session since 11 Sep with no report; deferred while its documents are unread"
+for D in $(python step6_report.py --pending | awk '/^PENDING /{print $2}'); do
+  python step6_report.py --date "$D"
+done
 
 step "6b/7 FOMC->GLD forward ledger (registered 2026-09-08)"
 python fomc_gld_forward.py 2>/dev/null | tail -4 || echo "  (no new matured FOMC observation)"
