@@ -1892,7 +1892,14 @@ flags cleared. And the **machine sleeps at 15:00 most days**: runs landed at 16:
 tolerance, proposal 2 points). The eight-step plan is TRACK §3.8. Nothing in it costs
 money until step 8, which is deferred.
 
-### 18.5 OPEN — NEXT CODE ITEM
+### 18.5 NEXT CODE ITEM — DONE `e761072`, 14 Sep, before the 15:00 run
+
+Implemented as written below. First test: `--pending` listed 20260911; `--date 20260911`
+deferred with two unread executive orders dated 11 Sep listed by name. Confirms the
+defect: without the guard, the first write-once report would have been frozen empty.
+Reports now accumulate as PENDING until reads resume, then are written oldest-first.
+
+*Original item, for the record:*
 
 `step6_report.py`: (a) refuse to write a report for a session that has fetched-but-
 unread documents (count files under `data_provenance/docs/<source>/` dated that
