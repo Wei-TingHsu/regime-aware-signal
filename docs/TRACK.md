@@ -319,7 +319,8 @@ Kept so that "what was done" stays beside "what was not".
 ## 7. Backup and restore -- what lives where, and how to rebuild on a new machine
 
 *Added 2026-09-14 after an audit found nine unpushed commits and the forward ledger
-untracked since the forward test began. Read this in any new conversation before
+untracked since the forward test began. A same-day scan of the repo and its full git history found no key-shaped
+string anywhere (tracked files, history, committed filenames, notebooks): nothing to revoke. Read this in any new conversation before
 touching data paths.*
 
 ### On GitHub (safe once pushed)
@@ -341,6 +342,8 @@ touching data paths.*
 | raw documents | `data_provenance/docs/` (~770 MB) | re-fetchable at $0 with `fetch_sources.py`; slow. Optional zip to Drive |
 | price/macro caches, processed panels | `data_provenance/*` caches, `processed/*.parquet` | rebuilt by `src.download_data --force`, `src.build_panel`, `src.pca_macro`. yfinance history drifts slightly; frozen ledger rows are unaffected |
 | logs | `logs/` | disposable |
+| shell startup | `~/.zshrc` | also exports the API key for interactive shells. launchd does not read it — `.env`, loaded by `daily_run.sh`, is the source of truth for the nightly job. When rotating a key, change both or delete the `.zshrc` line |
+| GitHub login | macOS keychain (`osxkeychain`) | dies with the laptop, as it should; sign in again on the new one |
 | the launchd job | `~/Library/LaunchAgents/com.regimeaware.daily.plist` | outside the repo; recreate from the description below |
 
 ### Restore on a new laptop, in order
