@@ -46,6 +46,7 @@ Known drift corrected on 2026-09-13: automation time is **15:00 SGT** (older fil
 | **FOMC→GLD forward test** | Registered `9c5ad8e` on 8 Sep. Ledger gains one row ~3 sessions after each FOMC decision. First observation: 17 Sep decision, matures ~22 Sep | `python fomc_gld_forward.py` or `cat docs/fomc_gld_forward.md` | Criterion is n ≥ 10 with both tests at p < 0.05 — no verdict before early 2028. **Do not change the per-regime sign after a miss; do not trade it.** The model does not forecast this; it is a hypothesis found by looking |
 | **Matured positions** | Count rising weekly; H=5 first, H=20 from ~16 Sep | `tail -3 docs/forward_scoreboard.md` | Too few to report a figure until late October at the earliest; do not report one |
 | **Nightly document reads — PAUSED for credit** | Read count is 2,616 and stays there until the API balance is funded. It was silently dead 29 Aug–13 Sep for a different reason (§5, `8533969`); the pipeline is now correct and idle | `python -m src.corpus_status` | When credit returns the count rises by ≤ 40/night on documents dated ≥ 27 Aug only. If it does not, the flag or the balance is wrong again |
+| **Report scoreboard** (from 14 Sep) | `docs/report_scoreboard.md` regenerated each weekday; `processed/report_ledger.csv` gains rows as write-once reports land; prints "too few to report" until a cell has 30 non-overlap rows | `tail -5 processed/report_ledger.csv`; `head -15 docs/report_scoreboard.md` | Zero rows is correct while reads are paused (reports deferred). The first report to land is also the first time the scorer touches the real price paths (`load_data`, raw yfinance cache) — untested until then; a traceback there is a scorer bug, not a data problem. It never writes a report, so a failure costs nothing |
 | **Supervisor review** | Feedback from Dr Lee on the 28 Aug submission | inbox | When it arrives, log it here before acting on any of it |
 | **Collaborator access** | Dr Lee accepted the invite | GitHub → Settings → Collaborators | Re-invite by email address if the handle failed again |
 
@@ -237,8 +238,9 @@ tests before any code; (4) build `src/report_scoreboard.py`, pass them on synthe
 
 **Step 1 done** `97dd490` (14 Sep): horizons {3, 5, 20}, `h* = 3`, tolerance 2 pts / lower
 bound −5, revisable only before a comparison runs. Step 2 done (field map; emitter records `estimate.horizon`). Step 3 done (seven
-acceptance tests, prereg §12). Step 4 done: `src/report_scoreboard.py`, seven tests pass. **Now at step 5** — first real run;
-expected output is zero coverage and "too few to report" while reports are deferred.
+acceptance tests, prereg §12). Step 4 done: `src/report_scoreboard.py`, seven tests pass. Step 5 done (14 Sep 13:01): zero
+coverage, "too few to report" — correct. Step 6 done: wired into `daily_run.sh` as 6c/7; §1 row.
+**Now at step 7** — backfilled ledger, `src/report_backfill.py`, $0. Step 8 deferred (funded).
 
 ---
 

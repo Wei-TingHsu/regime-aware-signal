@@ -128,6 +128,10 @@ done
 step "6b/7 FOMC->GLD forward ledger (registered 2026-09-08)"
 python fomc_gld_forward.py 2>/dev/null | tail -4 || echo "  (no new matured FOMC observation)"
 
+step "6c/7 report-level scoreboard (docs/prereg_report_scoreboard.md) -- scores reports on disk; never writes one"
+python -m src.report_scoreboard \
+  || echo "  report scoreboard FAILED -- reports and forward ledger untouched; see traceback above; continuing"
+
 step "7/7  refresh the index the app reads"
 # index-only: reports on disk are frozen; only the index is rebuilt.
 python generate_reports.py --index-only
