@@ -240,7 +240,7 @@ tests before any code; (4) build `src/report_scoreboard.py`, pass them on synthe
 bound −5, revisable only before a comparison runs. Step 2 done (field map; emitter records `estimate.horizon`). Step 3 done (seven
 acceptance tests, prereg §12). Step 4 done: `src/report_scoreboard.py`, seven tests pass. Step 5 done (14 Sep 13:01): zero
 coverage, "too few to report" — correct. Step 6 done: wired into `daily_run.sh` as 6c/7; §1 row.
-**Now at step 7** — backfilled ledger, `src/report_backfill.py`, $0. Step 8 deferred (funded).
+**Step 7 in progress** (registered 14 Sep, prereg §11): pool cutoff `session ≤ t − 3`; backfill per corpus hash; then `src/report_backfill.py`. Step 8 deferred (funded).
 
 ---
 
