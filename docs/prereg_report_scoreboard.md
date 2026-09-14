@@ -1,9 +1,8 @@
 # Pre-registration — report-level scoreboard
 
-*Draft 2026-09-08; committed 2026-09-14 with three `[FILL]` placeholders open
-(see §11). No code exists. Every threshold below is committed before
-`src/report_scoreboard.py` is written; the placeholders are filled by amendment,
-so the order of decisions stays visible.*
+*Draft 2026-09-08; committed 2026-09-14 with three placeholders, filled the same
+day by amendment (§11) so the order of decisions stays visible. No `[FILL]`
+remains. No code exists; every threshold below precedes `src/report_scoreboard.py`.*
 
 **Why this exists.** `docs/forward_scoreboard.md` scores the three frozen
 price models. Nothing scores the decision report itself — the artefact the
@@ -47,8 +46,10 @@ as **coverage** (§4).
   primary on every table, never substituted for it.
 - A realised return of exactly zero counts as a **miss**.
 
-Horizons: **`h ∈ {[FILL from analog_event.py registered set]}`**. Primary
-horizon **`h* = [FILL — proposal: 5]`**. Nothing at any other horizon is a
+Horizons: **`h ∈ {3, 5, 20}`** — the set registered in `unblind_step3.py`
+(`HORIZONS = (3, 5, 20)`), so the scoreboard and the estimator it scores share
+one clock. Primary horizon **`h* = 3`**, matching the estimator's own registered
+primary. Nothing at any other horizon is a
 primary result.
 
 ## 3. METRICS
@@ -185,8 +186,20 @@ After the read, the new backfilled ledger is scored and compared to the old one
 **on the days both cover** (paired) and **on the new days only** (unpaired):
 
 > **A source is retained in the pooled corpus if coverage rose by at least the
-> registered amount AND pooled hit-rate on the shared days did not fall by more
-> than [FILL — proposal: 2 percentage points], block-bootstrap lower bound.**
+> registered amount AND, on the shared days, pooled hit-rate at `h*` did not
+> fall by more than 2 percentage points (point estimate) AND the block-bootstrap
+> 95% lower bound of the change is above −5 points.**
+>
+> The point-estimate part catches real degradation; the lower-bound part stops
+> the rule firing on noise alone at small n (hit-rate SE ≈ 0.5/√n: ~5 points at
+> n=100, ~3 at n=300).
+
+**Revising the tolerance.** These two numbers are a first setting, not a
+finding. They may be changed by a dated §11 amendment recorded **before** any
+source comparison is run against them. Once a comparison has been run, the
+tolerance in force at that time is frozen for that comparison; a later change
+applies only to later sources. A tolerance moved after a result has been seen
+is not a criterion, and this document does not permit it.
 > Otherwise it is kept in the corpus but **reported separately**, not pooled —
 > the same treatment the specificity gate prescribes for a source that fails.
 
@@ -219,6 +232,8 @@ The specificity gate is re-run on every enlarged corpus regardless.
 |---|---|---|
 | 2026-09-14 | File committed with three `[FILL]` placeholders open: horizon set, primary horizon `h*`, source-expansion tolerance (§2, §8) | The draft is recorded before the decisions are made, not after; each fill is its own row here |
 | 2026-09-14 | §7.1 start date changed from 27 Aug to "first session after nightly reads resume" | Reports before 13 Sep were rewritten nightly (no as-emitted version exists); reads paused for credit from 14 Sep |
+| 2026-09-14 | §2 filled: horizon set `{3, 5, 20}`; primary `h* = 3` | Set and primary taken from `unblind_step3.py` (`HORIZONS = (3, 5, 20)`, 3 primary) so the scoreboard scores the estimator on the estimator's own clock. An earlier proposal of 5 (to match Model 1) was withdrawn once the estimator's registration was read |
+| 2026-09-14 | §8 filled: two-part tolerance — point-estimate drop ≤ 2 pts AND bootstrap lower bound > −5 pts | Founder's choice, 2 / −5. Revisable only by a prior dated amendment, per §8; frozen for any comparison already run |
 
 *Amendments are recorded here before results are read. An amendment after a
 result is read is declared as such.*
