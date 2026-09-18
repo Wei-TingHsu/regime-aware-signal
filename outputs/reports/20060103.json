@@ -1,0 +1,575 @@
+{
+  "date": "2006-01-03",
+  "generated": "2026-08-27 22:59:33 +0800",
+  "prereg": "prereg_analog_event.md \u00a78",
+  "regime": {
+    "label": -1,
+    "posterior": null,
+    "posterior_label": null,
+    "note": "insufficient history (<504 sessions)",
+    "warning": false,
+    "label_mismatch": false
+  },
+  "macro_state": {
+    "PC1": 2.266125955752084,
+    "PC2": -1.8050233289027786,
+    "PC3": -1.0367358451505666
+  },
+  "documents": [
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2002-12-20",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": -0.1,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.15,
+      "specificity": 0.6,
+      "novelty": 0.05,
+      "confidence": 0.5,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2003-01-16",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": -0.3,
+        "TLT": 0.1,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.4,
+      "specificity": 0.3,
+      "novelty": 0.3,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2003-03-12",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": -0.2,
+        "TLT": 0.1,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.35,
+      "specificity": 0.4,
+      "novelty": 0.2,
+      "confidence": 0.5,
+      "truncated": true
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2003-03-14",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.0,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.05,
+      "specificity": 0.9,
+      "novelty": 0.0,
+      "confidence": 0.9,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2003-04-16",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.2,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.25,
+      "specificity": 0.4,
+      "novelty": 0.2,
+      "confidence": 0.5,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2003-06-11",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.2,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.2,
+      "specificity": 0.4,
+      "novelty": 0.2,
+      "confidence": 0.4,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2003-07-16",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": -0.2,
+        "TLT": 0.1,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.4,
+      "specificity": 0.5,
+      "novelty": 0.4,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2003-10-15",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.3,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.35,
+      "specificity": 0.4,
+      "novelty": 0.3,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2003-11-13",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.5,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.4,
+      "specificity": 0.6,
+      "novelty": 0.4,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2003-12-18",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.3,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.25,
+      "specificity": 0.35,
+      "novelty": 0.3,
+      "confidence": 0.4,
+      "truncated": true
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2004-01-15",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.6,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.55,
+      "specificity": 0.6,
+      "novelty": 0.5,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2004-04-07",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.1,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.15,
+      "specificity": 0.3,
+      "novelty": 0.1,
+      "confidence": 0.5,
+      "truncated": true
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2004-04-22",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.5,
+        "TLT": -0.1,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.4,
+      "specificity": 0.55,
+      "novelty": 0.4,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2004-07-14",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.6,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.6,
+      "specificity": 0.6,
+      "novelty": 0.4,
+      "confidence": 0.6,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2004-08-11",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.5,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.55,
+      "specificity": 0.55,
+      "novelty": 0.4,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2004-10-12",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": -0.3,
+        "TLT": 0.05,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.4,
+      "specificity": 0.5,
+      "novelty": 0.5,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2004-10-13",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.15,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.35,
+      "specificity": 0.55,
+      "novelty": 0.4,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2005-01-20",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.4,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.4,
+      "specificity": 0.5,
+      "novelty": 0.3,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2005-02-11",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.05,
+        "TLT": 0.05,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.25,
+      "specificity": 0.4,
+      "novelty": 0.15,
+      "confidence": 0.5,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2005-04-14",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": -0.2,
+        "TLT": 0.05,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.35,
+      "specificity": 0.6,
+      "novelty": 0.4,
+      "confidence": 0.6,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2005-04-20",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.05,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.1,
+      "specificity": 0.3,
+      "novelty": 0.1,
+      "confidence": 0.6,
+      "truncated": true
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2005-05-05",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.3,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.35,
+      "specificity": 0.55,
+      "novelty": 0.35,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2005-06-08",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.15,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.15,
+      "specificity": 0.35,
+      "novelty": 0.15,
+      "confidence": 0.5,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2005-07-14",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.3,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.35,
+      "specificity": 0.6,
+      "novelty": 0.35,
+      "confidence": 0.6,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2005-08-01",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.2,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.3,
+      "specificity": 0.5,
+      "novelty": 0.4,
+      "confidence": 0.6,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2005-10-06",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.1,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.15,
+      "specificity": 0.3,
+      "novelty": 0.15,
+      "confidence": 0.5,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2005-10-14",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.4,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.35,
+      "specificity": 0.55,
+      "novelty": 0.4,
+      "confidence": 0.55,
+      "truncated": false
+    },
+    {
+      "source": "earnings_8k",
+      "doc_id": "ASML",
+      "published": "2005-11-09",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.15,
+        "TLT": 0.0,
+        "UUP": 0.0,
+        "USO": 0.0
+      },
+      "magnitude": 0.35,
+      "specificity": 0.55,
+      "novelty": 0.4,
+      "confidence": 0.5,
+      "truncated": false
+    }
+  ],
+  "assets": {
+    "GLD": {
+      "net_view": null,
+      "dominant_source": null,
+      "n_docs_today": 0,
+      "sources_disagree": false,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "no document above the direction floor today"
+    },
+    "SPY": {
+      "net_view": 0.2712336106224163,
+      "dominant_source": "earnings_8k",
+      "n_docs_today": 25,
+      "sources_disagree": true,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "no precedent before this session",
+      "dominant_share": 0.10512369409873809,
+      "pool_size": 0
+    },
+    "TLT": {
+      "net_view": 0.023296354992076055,
+      "dominant_source": "earnings_8k",
+      "n_docs_today": 4,
+      "sources_disagree": true,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "no precedent before this session",
+      "dominant_share": 0.3835182250396197,
+      "pool_size": 0
+    },
+    "UUP": {
+      "net_view": null,
+      "dominant_source": null,
+      "n_docs_today": 0,
+      "sources_disagree": false,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "no document above the direction floor today"
+    },
+    "USO": {
+      "net_view": null,
+      "dominant_source": null,
+      "n_docs_today": 0,
+      "sources_disagree": false,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "no document above the direction floor today"
+    }
+  },
+  "cannot_see": [
+    [
+      "Manual-collection sources cannot scale to a daily product",
+      "`transcript` and `bank_research` have no free structured feed. No option has been chosen between buying a vendor feed, declaring the gap to the customer, or dropping them from the live product."
+    ],
+    [
+      "The political source is biased toward DECIDED policy",
+      "The Federal Register carries executive orders and proclamations \u2014 all high-specificity by construction. Statements, posts and rhetoric, precisely where a market-moving threat-to-act lives, are **not covered**. **An absence of low-specificity political events in any result below is a COVERAGE GAP, not evidence that rhetoric does not move markets.**"
+    ],
+    [
+      "Foreign private issuers file 6-K, not 8-K",
+      "6-K carries no item codes, so the Item 2.02 filter that isolates earnings releases for domestic filers has no equivalent. Foreign issuers arrive with lower precision and cross-firm comparison must account for it."
+    ],
+    [
+      "The reader's five macro axes cannot represent a sector shock",
+      "A steel tariff proclamation scores high specificity and near-zero direction because there is no axis to point at. Schema v2 is pre-registered and unfunded."
+    ],
+    [
+      "One conditional cell of 45 survived correct inference",
+      "`fomc_minutes`/USO at h=5, inside the range expected by chance. Most assets on most days therefore abstain, and that is the honest state of the evidence, not a failure of the pipeline."
+    ]
+  ],
+  "matured_performance": null
+}

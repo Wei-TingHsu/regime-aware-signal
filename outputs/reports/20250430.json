@@ -1,0 +1,142 @@
+{
+  "date": "2025-04-30",
+  "generated": "2026-08-27 23:04:56 +0800",
+  "prereg": "prereg_analog_event.md \u00a78",
+  "regime": {
+    "label": 3,
+    "posterior": 0.9770403636320907,
+    "posterior_label": 3,
+    "note": null,
+    "warning": false,
+    "label_mismatch": false
+  },
+  "macro_state": {
+    "PC1": 2.6135281725101116,
+    "PC2": 0.6006023055409312,
+    "PC3": 1.1172631085171876
+  },
+  "documents": [
+    {
+      "source": "earnings_8k",
+      "doc_id": "MSFT",
+      "published": "2025-04-30",
+      "direction": {
+        "GLD": 0.0,
+        "SPY": 0.6,
+        "TLT": 0.0,
+        "UUP": 0.1,
+        "USO": 0.0
+      },
+      "magnitude": 0.55,
+      "specificity": 0.5,
+      "novelty": 0.4,
+      "confidence": 0.55,
+      "truncated": false
+    }
+  ],
+  "assets": {
+    "GLD": {
+      "net_view": null,
+      "dominant_source": null,
+      "n_docs_today": 0,
+      "sources_disagree": false,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "no document above the direction floor today"
+    },
+    "SPY": {
+      "net_view": 0.6,
+      "dominant_source": "earnings_8k",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 528,
+        "ess": 6.945055802213582,
+        "w_shrink": 0.06596345015891102,
+        "tau2": 3.695948241180458e-06,
+        "k": 98.34136850522347,
+        "conditional": 6.67234110023256e-06,
+        "unconditional": 0.0022995964495793916,
+        "estimate": 0.002148347264431561,
+        "tier": 3,
+        "abstain": true,
+        "tau2_zero": "False"
+      },
+      "agreement": "CONCORDANT",
+      "abstain": true,
+      "abstain_reason": "realised ESS 6.9 below the registered floor of 8 (\u00a73.5)",
+      "dominant_share": 1.0,
+      "pool_size": 528,
+      "sigma": 0.243359375
+    },
+    "TLT": {
+      "net_view": null,
+      "dominant_source": null,
+      "n_docs_today": 0,
+      "sources_disagree": false,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "no document above the direction floor today"
+    },
+    "UUP": {
+      "net_view": 0.1,
+      "dominant_source": "earnings_8k",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 125,
+        "ess": 11.050989400967161,
+        "w_shrink": 0.3946267636704,
+        "tau2": 3.0286038055836636e-06,
+        "k": 16.952659662726763,
+        "conditional": 0.0006224684094675831,
+        "unconditional": 0.001650432931292122,
+        "estimate": 0.0012447706188765141,
+        "tier": 2,
+        "abstain": false,
+        "tau2_zero": "False"
+      },
+      "agreement": "CONCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 125,
+      "sigma": 0.4173828125
+    },
+    "USO": {
+      "net_view": null,
+      "dominant_source": null,
+      "n_docs_today": 0,
+      "sources_disagree": false,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "no document above the direction floor today"
+    }
+  },
+  "cannot_see": [
+    [
+      "Manual-collection sources cannot scale to a daily product",
+      "`transcript` and `bank_research` have no free structured feed. No option has been chosen between buying a vendor feed, declaring the gap to the customer, or dropping them from the live product."
+    ],
+    [
+      "The political source is biased toward DECIDED policy",
+      "The Federal Register carries executive orders and proclamations \u2014 all high-specificity by construction. Statements, posts and rhetoric, precisely where a market-moving threat-to-act lives, are **not covered**. **An absence of low-specificity political events in any result below is a COVERAGE GAP, not evidence that rhetoric does not move markets.**"
+    ],
+    [
+      "Foreign private issuers file 6-K, not 8-K",
+      "6-K carries no item codes, so the Item 2.02 filter that isolates earnings releases for domestic filers has no equivalent. Foreign issuers arrive with lower precision and cross-firm comparison must account for it."
+    ],
+    [
+      "The reader's five macro axes cannot represent a sector shock",
+      "A steel tariff proclamation scores high specificity and near-zero direction because there is no axis to point at. Schema v2 is pre-registered and unfunded."
+    ],
+    [
+      "One conditional cell of 45 survived correct inference",
+      "`fomc_minutes`/USO at h=5, inside the range expected by chance. Most assets on most days therefore abstain, and that is the honest state of the evidence, not a failure of the pipeline."
+    ]
+  ],
+  "matured_performance": null
+}

@@ -1,0 +1,135 @@
+{
+  "date": "2013-07-10",
+  "generated": "2026-08-27 23:00:21 +0800",
+  "prereg": "prereg_analog_event.md \u00a78",
+  "regime": {
+    "label": 1,
+    "posterior": 0.9999996089187634,
+    "posterior_label": 1,
+    "note": null,
+    "warning": false,
+    "label_mismatch": false
+  },
+  "macro_state": {
+    "PC1": -1.873350523409932,
+    "PC2": -0.8939727951806008,
+    "PC3": -0.7054158374791637
+  },
+  "documents": [
+    {
+      "source": "fomc_minutes",
+      "doc_id": "meeting20130619",
+      "published": "2013-07-10",
+      "direction": {
+        "GLD": -0.3,
+        "SPY": -0.2,
+        "TLT": -0.4,
+        "UUP": 0.3,
+        "USO": -0.1
+      },
+      "magnitude": 0.55,
+      "specificity": 0.6,
+      "novelty": 0.3,
+      "confidence": 0.65,
+      "truncated": false
+    }
+  ],
+  "assets": {
+    "GLD": {
+      "net_view": -0.3,
+      "dominant_source": "fomc_minutes",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "content-class pool too small (3 precedents)",
+      "dominant_share": 1.0,
+      "pool_size": 3
+    },
+    "SPY": {
+      "net_view": -0.2,
+      "dominant_source": "fomc_minutes",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 18,
+        "ess": 9.544869094949583,
+        "w_shrink": 0.0,
+        "tau2": 0.0,
+        "k": null,
+        "conditional": -0.005904097549002485,
+        "unconditional": -0.005840859512263875,
+        "estimate": -0.005840859512263875,
+        "tier": 3,
+        "abstain": false,
+        "tau2_zero": true
+      },
+      "agreement": "CONCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 18,
+      "sigma": 1.2874999999999999
+    },
+    "TLT": {
+      "net_view": -0.4,
+      "dominant_source": "fomc_minutes",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "content-class pool too small (7 precedents)",
+      "dominant_share": 1.0,
+      "pool_size": 7
+    },
+    "UUP": {
+      "net_view": 0.3,
+      "dominant_source": "fomc_minutes",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "content-class pool too small (4 precedents)",
+      "dominant_share": 1.0,
+      "pool_size": 4
+    },
+    "USO": {
+      "net_view": -0.1,
+      "dominant_source": "fomc_minutes",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": null,
+      "agreement": "UNINFORMATIVE",
+      "abstain": true,
+      "abstain_reason": "content-class pool too small (9 precedents)",
+      "dominant_share": 1.0,
+      "pool_size": 9
+    }
+  },
+  "cannot_see": [
+    [
+      "Manual-collection sources cannot scale to a daily product",
+      "`transcript` and `bank_research` have no free structured feed. No option has been chosen between buying a vendor feed, declaring the gap to the customer, or dropping them from the live product."
+    ],
+    [
+      "The political source is biased toward DECIDED policy",
+      "The Federal Register carries executive orders and proclamations \u2014 all high-specificity by construction. Statements, posts and rhetoric, precisely where a market-moving threat-to-act lives, are **not covered**. **An absence of low-specificity political events in any result below is a COVERAGE GAP, not evidence that rhetoric does not move markets.**"
+    ],
+    [
+      "Foreign private issuers file 6-K, not 8-K",
+      "6-K carries no item codes, so the Item 2.02 filter that isolates earnings releases for domestic filers has no equivalent. Foreign issuers arrive with lower precision and cross-firm comparison must account for it."
+    ],
+    [
+      "The reader's five macro axes cannot represent a sector shock",
+      "A steel tariff proclamation scores high specificity and near-zero direction because there is no axis to point at. Schema v2 is pre-registered and unfunded."
+    ],
+    [
+      "One conditional cell of 45 survived correct inference",
+      "`fomc_minutes`/USO at h=5, inside the range expected by chance. Most assets on most days therefore abstain, and that is the honest state of the evidence, not a failure of the pipeline."
+    ]
+  ],
+  "matured_performance": null
+}

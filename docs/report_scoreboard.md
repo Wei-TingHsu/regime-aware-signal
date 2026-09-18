@@ -1,13 +1,21 @@
 # Report-level scoreboard — forward
 
-*Generated 2026-09-14 13:01:44 +0800. Registered in `docs/prereg_report_scoreboard.md`. Primary horizon h*=3; minimum 30 non-overlap rows before any figure is printed. Only the primary cell is tested; every other cell and every breakdown is reported, not tested.*
+*Generated 2026-09-18 18:44:21 +0800. Registered in `docs/prereg_report_scoreboard.md`. Primary horizon h*=3; minimum 30 non-overlap rows before any figure is printed. Only the primary cell is tested; every other cell and every breakdown is reported, not tested.*
 
 ## Coverage — before any metric
 
-- report dates scored: **0**
+- report dates scored: **1**
 - dates with ≥1 document: 0
 - dates with ≥1 net view (a call): 0
-- no rows
+- per (date, asset): no_document 5
+
+| asset | call | no_document | abstain | divergence | zero_direction | tiers (1/2/3) |
+|---|---|---|---|---|---|---|
+| GLD | 0 | 1 | 0 | 0 | 0 | 0/0/0 |
+| SPY | 0 | 1 | 0 | 0 | 0 | 0/0/0 |
+| TLT | 0 | 1 | 0 | 0 | 0 | 0/0/0 |
+| USO | 0 | 1 | 0 | 0 | 0 | 0/0/0 |
+| UUP | 0 | 1 | 0 | 0 | 0 | 0/0/0 |
 
 ## Verdict (primary cell, h*=3, close-to-close, non-overlap)
 

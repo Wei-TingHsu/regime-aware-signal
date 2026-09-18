@@ -1,0 +1,187 @@
+{
+  "date": "2024-09-18",
+  "generated": "2026-08-27 23:04:33 +0800",
+  "prereg": "prereg_analog_event.md \u00a78",
+  "regime": {
+    "label": 3,
+    "posterior": 0.9986876352515668,
+    "posterior_label": 3,
+    "note": null,
+    "warning": false,
+    "label_mismatch": false
+  },
+  "macro_state": {
+    "PC1": 2.792534537950278,
+    "PC2": 0.938918453432233,
+    "PC3": 0.2273939707765584
+  },
+  "documents": [
+    {
+      "source": "fomc_statement",
+      "doc_id": "nan",
+      "published": "2024-09-18",
+      "direction": {
+        "GLD": 0.4,
+        "SPY": 0.5,
+        "TLT": 0.5,
+        "UUP": -0.4,
+        "USO": 0.2
+      },
+      "magnitude": 0.65,
+      "specificity": 0.85,
+      "novelty": 0.5,
+      "confidence": 0.7,
+      "truncated": false
+    }
+  ],
+  "assets": {
+    "GLD": {
+      "net_view": 0.4,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 136,
+        "ess": 13.525925514580807,
+        "w_shrink": 0.3130427049451113,
+        "tau2": 1.3050024534748401e-05,
+        "k": 29.681998838591493,
+        "conditional": -0.005927156665960875,
+        "unconditional": -0.00022647291251442976,
+        "estimate": -0.0020110303747299554,
+        "tier": 2,
+        "abstain": false,
+        "tau2_zero": "False"
+      },
+      "agreement": "DISCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 136,
+      "sigma": 0.5333984375
+    },
+    "SPY": {
+      "net_view": 0.5,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 481,
+        "ess": 10.98804752881448,
+        "w_shrink": 0.015348416485105182,
+        "tau2": 4.933635908878225e-07,
+        "k": 704.9195211430282,
+        "conditional": 0.008498778549277698,
+        "unconditional": 0.00254977980348204,
+        "estimate": 0.00264108751390188,
+        "tier": 3,
+        "abstain": false,
+        "tau2_zero": "False"
+      },
+      "agreement": "CONCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 481,
+      "sigma": 0.25302734375
+    },
+    "TLT": {
+      "net_view": 0.5,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 193,
+        "ess": 32.740816426110314,
+        "w_shrink": 0.0,
+        "tau2": 0.0,
+        "k": null,
+        "conditional": -0.0002489539893810323,
+        "unconditional": 0.0015947847603108335,
+        "estimate": 0.0015947847603108335,
+        "tier": 3,
+        "abstain": false,
+        "tau2_zero": true
+      },
+      "agreement": "CONCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 193,
+      "sigma": 0.552734375
+    },
+    "UUP": {
+      "net_view": -0.4,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 115,
+        "ess": 14.64093723486297,
+        "w_shrink": 0.4959076686288776,
+        "tau2": 6.237900937417687e-06,
+        "k": 14.88257724383691,
+        "conditional": -0.002365840353901645,
+        "unconditional": 0.0005232389205954754,
+        "estimate": -0.0009094776469044008,
+        "tier": 2,
+        "abstain": false,
+        "tau2_zero": "False"
+      },
+      "agreement": "CONCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 115,
+      "sigma": 0.5140625
+    },
+    "USO": {
+      "net_view": 0.2,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 110,
+        "ess": 7.5078055226566995,
+        "w_shrink": 0.0,
+        "tau2": 0.0,
+        "k": null,
+        "conditional": -0.009698553876877939,
+        "unconditional": 0.007914933959529195,
+        "estimate": 0.007914933959529195,
+        "tier": 3,
+        "abstain": true,
+        "tau2_zero": true
+      },
+      "agreement": "CONCORDANT",
+      "abstain": true,
+      "abstain_reason": "realised ESS 7.5 below the registered floor of 8 (\u00a73.5)",
+      "dominant_share": 1.0,
+      "pool_size": 110,
+      "sigma": 0.47539062499999996
+    }
+  },
+  "cannot_see": [
+    [
+      "Manual-collection sources cannot scale to a daily product",
+      "`transcript` and `bank_research` have no free structured feed. No option has been chosen between buying a vendor feed, declaring the gap to the customer, or dropping them from the live product."
+    ],
+    [
+      "The political source is biased toward DECIDED policy",
+      "The Federal Register carries executive orders and proclamations \u2014 all high-specificity by construction. Statements, posts and rhetoric, precisely where a market-moving threat-to-act lives, are **not covered**. **An absence of low-specificity political events in any result below is a COVERAGE GAP, not evidence that rhetoric does not move markets.**"
+    ],
+    [
+      "Foreign private issuers file 6-K, not 8-K",
+      "6-K carries no item codes, so the Item 2.02 filter that isolates earnings releases for domestic filers has no equivalent. Foreign issuers arrive with lower precision and cross-firm comparison must account for it."
+    ],
+    [
+      "The reader's five macro axes cannot represent a sector shock",
+      "A steel tariff proclamation scores high specificity and near-zero direction because there is no axis to point at. Schema v2 is pre-registered and unfunded."
+    ],
+    [
+      "One conditional cell of 45 survived correct inference",
+      "`fomc_minutes`/USO at h=5, inside the range expected by chance. Most assets on most days therefore abstain, and that is the honest state of the evidence, not a failure of the pipeline."
+    ]
+  ],
+  "matured_performance": null
+}

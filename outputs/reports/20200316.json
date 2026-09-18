@@ -1,0 +1,187 @@
+{
+  "date": "2020-03-16",
+  "generated": "2026-08-27 23:02:35 +0800",
+  "prereg": "prereg_analog_event.md \u00a78",
+  "regime": {
+    "label": 1,
+    "posterior": 1.0,
+    "posterior_label": 1,
+    "note": null,
+    "warning": false,
+    "label_mismatch": false
+  },
+  "macro_state": {
+    "PC1": -2.0300531626216967,
+    "PC2": 1.8631296200594887,
+    "PC3": 6.981970734610142
+  },
+  "documents": [
+    {
+      "source": "fomc_statement",
+      "doc_id": "nan",
+      "published": "2020-03-15",
+      "direction": {
+        "GLD": 0.6,
+        "SPY": 0.3,
+        "TLT": 0.8,
+        "UUP": -0.6,
+        "USO": -0.2
+      },
+      "magnitude": 0.95,
+      "specificity": 0.8,
+      "novelty": 0.65,
+      "confidence": 0.75,
+      "truncated": false
+    }
+  ],
+  "assets": {
+    "GLD": {
+      "net_view": 0.6,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 88,
+        "ess": 1.000000002941704,
+        "w_shrink": 0.04124953700434757,
+        "tau2": 1.7767506173859833e-05,
+        "k": 23.242696414143104,
+        "conditional": 0.023551114916635023,
+        "unconditional": -0.00034855755995265113,
+        "estimate": 0.0006372928642621392,
+        "tier": 3,
+        "abstain": true,
+        "tau2_zero": "False"
+      },
+      "agreement": "CONCORDANT",
+      "abstain": true,
+      "abstain_reason": "realised ESS 1.0 below the registered floor of 8 (\u00a73.5)",
+      "dominant_share": 1.0,
+      "pool_size": 88,
+      "sigma": 0.398046875
+    },
+    "SPY": {
+      "net_view": 0.3,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 249,
+        "ess": 1.0,
+        "w_shrink": 0.004669520285848611,
+        "tau2": 1.0180075163035618e-06,
+        "k": 213.15476082855605,
+        "conditional": 0.006940275054354098,
+        "unconditional": 0.001348943802440041,
+        "estimate": 0.0013750526371457531,
+        "tier": 3,
+        "abstain": true,
+        "tau2_zero": "False"
+      },
+      "agreement": "CONCORDANT",
+      "abstain": true,
+      "abstain_reason": "realised ESS 1.0 below the registered floor of 8 (\u00a73.5)",
+      "dominant_share": 1.0,
+      "pool_size": 249,
+      "sigma": 0.28203125
+    },
+    "TLT": {
+      "net_view": 0.8,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 118,
+        "ess": 1.0000000001648535,
+        "w_shrink": 0.013958814471576137,
+        "tau2": 3.2629872583562164e-06,
+        "k": 70.6393216772684,
+        "conditional": 0.0006731839575415666,
+        "unconditional": 0.003979373211110239,
+        "estimate": 0.003933222728711756,
+        "tier": 3,
+        "abstain": true,
+        "tau2_zero": "False"
+      },
+      "agreement": "CONCORDANT",
+      "abstain": true,
+      "abstain_reason": "realised ESS 1.0 below the registered floor of 8 (\u00a73.5)",
+      "dominant_share": 1.0,
+      "pool_size": 118,
+      "sigma": 0.398046875
+    },
+    "UUP": {
+      "net_view": -0.6,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 73,
+        "ess": 1.000000000000673,
+        "w_shrink": 0.028852077126205366,
+        "tau2": 1.4492818429408025e-06,
+        "k": 33.65954966176031,
+        "conditional": -0.009944472202217917,
+        "unconditional": 0.0010551827610862882,
+        "estimate": 0.0007378198677233875,
+        "tier": 3,
+        "abstain": true,
+        "tau2_zero": "False"
+      },
+      "agreement": "DISCORDANT",
+      "abstain": true,
+      "abstain_reason": "realised ESS 1.0 below the registered floor of 8 (\u00a73.5)",
+      "dominant_share": 1.0,
+      "pool_size": 73,
+      "sigma": 0.359375
+    },
+    "USO": {
+      "net_view": -0.2,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 31,
+        "ess": 1.0000000041132413,
+        "w_shrink": 0.0,
+        "tau2": 0.0,
+        "k": null,
+        "conditional": -0.12193009746828533,
+        "unconditional": -0.021001674041533806,
+        "estimate": -0.021001674041533806,
+        "tier": 3,
+        "abstain": true,
+        "tau2_zero": true
+      },
+      "agreement": "CONCORDANT",
+      "abstain": true,
+      "abstain_reason": "realised ESS 1.0 below the registered floor of 8 (\u00a73.5)",
+      "dominant_share": 1.0,
+      "pool_size": 31,
+      "sigma": 0.43671875
+    }
+  },
+  "cannot_see": [
+    [
+      "Manual-collection sources cannot scale to a daily product",
+      "`transcript` and `bank_research` have no free structured feed. No option has been chosen between buying a vendor feed, declaring the gap to the customer, or dropping them from the live product."
+    ],
+    [
+      "The political source is biased toward DECIDED policy",
+      "The Federal Register carries executive orders and proclamations \u2014 all high-specificity by construction. Statements, posts and rhetoric, precisely where a market-moving threat-to-act lives, are **not covered**. **An absence of low-specificity political events in any result below is a COVERAGE GAP, not evidence that rhetoric does not move markets.**"
+    ],
+    [
+      "Foreign private issuers file 6-K, not 8-K",
+      "6-K carries no item codes, so the Item 2.02 filter that isolates earnings releases for domestic filers has no equivalent. Foreign issuers arrive with lower precision and cross-firm comparison must account for it."
+    ],
+    [
+      "The reader's five macro axes cannot represent a sector shock",
+      "A steel tariff proclamation scores high specificity and near-zero direction because there is no axis to point at. Schema v2 is pre-registered and unfunded."
+    ],
+    [
+      "One conditional cell of 45 survived correct inference",
+      "`fomc_minutes`/USO at h=5, inside the range expected by chance. Most assets on most days therefore abstain, and that is the honest state of the evidence, not a failure of the pipeline."
+    ]
+  ],
+  "matured_performance": null
+}

@@ -1,0 +1,187 @@
+{
+  "date": "2022-04-06",
+  "generated": "2026-08-27 23:03:26 +0800",
+  "prereg": "prereg_analog_event.md \u00a78",
+  "regime": {
+    "label": 2,
+    "posterior": 0.9999983631655491,
+    "posterior_label": 2,
+    "note": null,
+    "warning": false,
+    "label_mismatch": false
+  },
+  "macro_state": {
+    "PC1": 0.1310558590870395,
+    "PC2": 2.073360644258103,
+    "PC3": 0.3513972985769882
+  },
+  "documents": [
+    {
+      "source": "fomc_minutes",
+      "doc_id": "meeting20220316",
+      "published": "2022-04-06",
+      "direction": {
+        "GLD": -0.1,
+        "SPY": -0.4,
+        "TLT": -0.5,
+        "UUP": 0.4,
+        "USO": 0.1
+      },
+      "magnitude": 0.6,
+      "specificity": 0.75,
+      "novelty": 0.5,
+      "confidence": 0.7,
+      "truncated": false
+    }
+  ],
+  "assets": {
+    "GLD": {
+      "net_view": -0.09999999999999999,
+      "dominant_source": "fomc_minutes",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 66,
+        "ess": 5.691452857511011,
+        "w_shrink": 0.0,
+        "tau2": 0.0,
+        "k": null,
+        "conditional": 0.00993693365638904,
+        "unconditional": 0.0010624149732327674,
+        "estimate": 0.0010624149732327674,
+        "tier": 3,
+        "abstain": true,
+        "tau2_zero": true
+      },
+      "agreement": "DISCORDANT",
+      "abstain": true,
+      "abstain_reason": "realised ESS 5.7 below the registered floor of 8 (\u00a73.5)",
+      "dominant_share": 1.0,
+      "pool_size": 66,
+      "sigma": 0.28203125
+    },
+    "SPY": {
+      "net_view": -0.39999999999999997,
+      "dominant_source": "fomc_minutes",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 108,
+        "ess": 17.077284364650353,
+        "w_shrink": 0.0,
+        "tau2": 0.0,
+        "k": null,
+        "conditional": -0.005555054953154965,
+        "unconditional": 0.0025097326012299462,
+        "estimate": 0.0025097326012299462,
+        "tier": 3,
+        "abstain": false,
+        "tau2_zero": true
+      },
+      "agreement": "DISCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 108,
+      "sigma": 0.359375
+    },
+    "TLT": {
+      "net_view": -0.5,
+      "dominant_source": "fomc_minutes",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 76,
+        "ess": 7.159560940285798,
+        "w_shrink": 0.03177396740212117,
+        "tau2": 9.517003780193613e-07,
+        "k": 218.16832618431167,
+        "conditional": 0.00227974437445349,
+        "unconditional": 0.0034654153966913563,
+        "estimate": 0.0034277419242811306,
+        "tier": 3,
+        "abstain": true,
+        "tau2_zero": "False"
+      },
+      "agreement": "DISCORDANT",
+      "abstain": true,
+      "abstain_reason": "realised ESS 7.2 below the registered floor of 8 (\u00a73.5)",
+      "dominant_share": 1.0,
+      "pool_size": 76,
+      "sigma": 0.29169921875000004
+    },
+    "UUP": {
+      "net_view": 0.39999999999999997,
+      "dominant_source": "fomc_minutes",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 81,
+        "ess": 9.7642370165141,
+        "w_shrink": 0.0,
+        "tau2": 0.0,
+        "k": null,
+        "conditional": 0.000326326882524454,
+        "unconditional": 0.0011695754976541487,
+        "estimate": 0.0011695754976541487,
+        "tier": 3,
+        "abstain": false,
+        "tau2_zero": true
+      },
+      "agreement": "CONCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 81,
+      "sigma": 0.3013671875
+    },
+    "USO": {
+      "net_view": 0.09999999999999999,
+      "dominant_source": "fomc_minutes",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 103,
+        "ess": 19.01572905986812,
+        "w_shrink": 0.0,
+        "tau2": 0.0,
+        "k": null,
+        "conditional": 0.025365550053399973,
+        "unconditional": 0.008613981511265535,
+        "estimate": 0.008613981511265535,
+        "tier": 3,
+        "abstain": false,
+        "tau2_zero": true
+      },
+      "agreement": "CONCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 103,
+      "sigma": 0.43671875
+    }
+  },
+  "cannot_see": [
+    [
+      "Manual-collection sources cannot scale to a daily product",
+      "`transcript` and `bank_research` have no free structured feed. No option has been chosen between buying a vendor feed, declaring the gap to the customer, or dropping them from the live product."
+    ],
+    [
+      "The political source is biased toward DECIDED policy",
+      "The Federal Register carries executive orders and proclamations \u2014 all high-specificity by construction. Statements, posts and rhetoric, precisely where a market-moving threat-to-act lives, are **not covered**. **An absence of low-specificity political events in any result below is a COVERAGE GAP, not evidence that rhetoric does not move markets.**"
+    ],
+    [
+      "Foreign private issuers file 6-K, not 8-K",
+      "6-K carries no item codes, so the Item 2.02 filter that isolates earnings releases for domestic filers has no equivalent. Foreign issuers arrive with lower precision and cross-firm comparison must account for it."
+    ],
+    [
+      "The reader's five macro axes cannot represent a sector shock",
+      "A steel tariff proclamation scores high specificity and near-zero direction because there is no axis to point at. Schema v2 is pre-registered and unfunded."
+    ],
+    [
+      "One conditional cell of 45 survived correct inference",
+      "`fomc_minutes`/USO at h=5, inside the range expected by chance. Most assets on most days therefore abstain, and that is the honest state of the evidence, not a failure of the pipeline."
+    ]
+  ],
+  "matured_performance": null
+}

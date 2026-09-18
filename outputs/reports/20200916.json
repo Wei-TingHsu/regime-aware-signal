@@ -1,0 +1,187 @@
+{
+  "date": "2020-09-16",
+  "generated": "2026-08-27 23:02:46 +0800",
+  "prereg": "prereg_analog_event.md \u00a78",
+  "regime": {
+    "label": 1,
+    "posterior": 0.999999973378712,
+    "posterior_label": 1,
+    "note": null,
+    "warning": false,
+    "label_mismatch": false
+  },
+  "macro_state": {
+    "PC1": -1.8918994773018916,
+    "PC2": 2.636696135538409,
+    "PC3": 0.5418718087218595
+  },
+  "documents": [
+    {
+      "source": "fomc_statement",
+      "doc_id": "nan",
+      "published": "2020-09-16",
+      "direction": {
+        "GLD": 0.2,
+        "SPY": 0.3,
+        "TLT": 0.2,
+        "UUP": -0.2,
+        "USO": 0.1
+      },
+      "magnitude": 0.4,
+      "specificity": 0.5,
+      "novelty": 0.3,
+      "confidence": 0.6,
+      "truncated": false
+    }
+  ],
+  "assets": {
+    "GLD": {
+      "net_view": 0.2,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 101,
+        "ess": 9.594125764547181,
+        "w_shrink": 0.33008819617119256,
+        "tau2": 2.178904490612552e-05,
+        "k": 19.471214577315305,
+        "conditional": 0.005717165494678967,
+        "unconditional": 0.0003940881539823489,
+        "estimate": 0.0021511731514526444,
+        "tier": 2,
+        "abstain": false,
+        "tau2_zero": "False"
+      },
+      "agreement": "CONCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 101,
+      "sigma": 0.4560546875
+    },
+    "SPY": {
+      "net_view": 0.3,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 283,
+        "ess": 18.12692423598762,
+        "w_shrink": 0.12097267529170304,
+        "tau2": 2.8581305988902075e-06,
+        "k": 131.7162051506935,
+        "conditional": 0.0006016517710993546,
+        "unconditional": 0.0026039006997627383,
+        "estimate": 0.0023616832902623825,
+        "tier": 3,
+        "abstain": false,
+        "tau2_zero": "False"
+      },
+      "agreement": "CONCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 283,
+      "sigma": 0.29169921875000004
+    },
+    "TLT": {
+      "net_view": 0.2,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 134,
+        "ess": 12.735016737375949,
+        "w_shrink": 0.1286270945046344,
+        "tau2": 3.495632476306029e-06,
+        "k": 86.27224752852965,
+        "conditional": 0.003477162044845739,
+        "unconditional": 0.0028779687056941683,
+        "estimate": 0.0029550412039557644,
+        "tier": 3,
+        "abstain": false,
+        "tau2_zero": "False"
+      },
+      "agreement": "CONCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 134,
+      "sigma": 0.4560546875
+    },
+    "UUP": {
+      "net_view": -0.2,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 84,
+        "ess": 9.206616256684242,
+        "w_shrink": 0.41505728330526187,
+        "tau2": 7.995247308240996e-06,
+        "k": 12.974939463452488,
+        "conditional": -0.001073527354300997,
+        "unconditional": 0.001268266335132952,
+        "estimate": 0.000296287808335091,
+        "tier": 2,
+        "abstain": false,
+        "tau2_zero": "False"
+      },
+      "agreement": "DISCORDANT",
+      "abstain": false,
+      "abstain_reason": null,
+      "dominant_share": 1.0,
+      "pool_size": 84,
+      "sigma": 0.4173828125
+    },
+    "USO": {
+      "net_view": 0.1,
+      "dominant_source": "fomc_statement",
+      "n_docs_today": 1,
+      "sources_disagree": false,
+      "estimate": {
+        "n_matched": 88,
+        "ess": 5.778202264122707,
+        "w_shrink": 0.0,
+        "tau2": 0.0,
+        "k": null,
+        "conditional": -0.006910620360179604,
+        "unconditional": 0.00632708593250906,
+        "estimate": 0.00632708593250906,
+        "tier": 3,
+        "abstain": true,
+        "tau2_zero": true
+      },
+      "agreement": "CONCORDANT",
+      "abstain": true,
+      "abstain_reason": "realised ESS 5.8 below the registered floor of 8 (\u00a73.5)",
+      "dominant_share": 1.0,
+      "pool_size": 88,
+      "sigma": 0.3787109375
+    }
+  },
+  "cannot_see": [
+    [
+      "Manual-collection sources cannot scale to a daily product",
+      "`transcript` and `bank_research` have no free structured feed. No option has been chosen between buying a vendor feed, declaring the gap to the customer, or dropping them from the live product."
+    ],
+    [
+      "The political source is biased toward DECIDED policy",
+      "The Federal Register carries executive orders and proclamations \u2014 all high-specificity by construction. Statements, posts and rhetoric, precisely where a market-moving threat-to-act lives, are **not covered**. **An absence of low-specificity political events in any result below is a COVERAGE GAP, not evidence that rhetoric does not move markets.**"
+    ],
+    [
+      "Foreign private issuers file 6-K, not 8-K",
+      "6-K carries no item codes, so the Item 2.02 filter that isolates earnings releases for domestic filers has no equivalent. Foreign issuers arrive with lower precision and cross-firm comparison must account for it."
+    ],
+    [
+      "The reader's five macro axes cannot represent a sector shock",
+      "A steel tariff proclamation scores high specificity and near-zero direction because there is no axis to point at. Schema v2 is pre-registered and unfunded."
+    ],
+    [
+      "One conditional cell of 45 survived correct inference",
+      "`fomc_minutes`/USO at h=5, inside the range expected by chance. Most assets on most days therefore abstain, and that is the honest state of the evidence, not a failure of the pipeline."
+    ]
+  ],
+  "matured_performance": null
+}
