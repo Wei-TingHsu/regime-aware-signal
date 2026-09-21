@@ -1,6 +1,6 @@
 # TRACK — Regime-Aware Cross-Asset Signal Framework
 
-**This is the one file to bring to a new conversation.** It supersedes the Track
+**Bring `docs/PROJECT_MASTER.md` to a new conversation — it holds everything, plain-language first. This file is the short daily status board it points to.** It supersedes the Track
 tables in `CURRENT_STATE_2026-08-23.md` §17.10 and is updated in place; the
 date at the top is the last edit. `MODEL_EVOLUTION.md` holds the reasoning
 behind every model result and `CURRENT_STATE` §17 holds the evidence record
