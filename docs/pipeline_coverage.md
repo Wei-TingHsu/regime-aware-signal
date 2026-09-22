@@ -1,15 +1,15 @@
 # Pipeline coverage
 
-*Run 2026-09-21 20:18:15 +0800.*
+*Run 2026-09-22 15:07:02 +0800.*
 
-The engine covers **1566 of 5211 panel sessions** (30%) — the rest carry no document, so every asset abstains for the plainest reason there is. It covers **5 assets**, the macro axes the reader schema defines; the 47-asset universe belongs to step 1.
+The engine covers **1566 of 5212 panel sessions** (30%) — the rest carry no document, so every asset abstains for the plainest reason there is. It covers **5 assets**, the macro axes the reader schema defines; the 47-asset universe belongs to step 1.
 
 | regime | sessions | with documents | % | documents |
 |---|---|---|---|---|
 | 0 | 2208 | 663 | 30% | 1219 |
-| 1 | 982 | 305 | 31% | 485 |
-| 2 | 918 | 321 | 35% | 375 |
-| 3 | 599 | 242 | 40% | 475 |
+| 1 | 962 | 299 | 31% | 477 |
+| 2 | 938 | 327 | 35% | 383 |
+| 3 | 600 | 242 | 40% | 475 |
 
 Every regime carries documents on at least 10% of its sessions.
 
