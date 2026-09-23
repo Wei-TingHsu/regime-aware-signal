@@ -56,21 +56,36 @@ def _dates_from_csv(path: Path) -> list[date]:
 
 
 def _article_text(page: str) -> str:
-    # keep the article div if the page has one; otherwise the whole body
-    m = re.search(r'<div[^>]+id="article"[^>]*>(.*?)</div>\s*(?:<div[^>]+class="[^"]*col-xs-12[^"]*"|<footer|<div id="footer)',
-                  page, flags=re.S | re.I)
-    body = m.group(1) if m else re.sub(r".*?<body[^>]*>", "", page, count=1, flags=re.S | re.I)
-    body = re.sub(r"<(script|style|nav|header|footer)[^>]*>.*?</\1>", " ", body, flags=re.S | re.I)
+    """Statement body only, matching the scope of the 131 August files: from the
+    first 'The Committee decided' through the voting paragraph. The article div
+    nests other divs, so the region is cut by markers rather than by tag depth."""
+    start = page.find('id="article"')
+    start = start if start > 0 else 0
+    ends = [page.find(m, start) for m in ("Implementation Note", 'id="footer"', "<footer", "Last Update")]
+    ends = [e for e in ends if e > start]
+    end = min(ends) if ends else len(page)
+    body = page[start:end]
+    body = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", body, flags=re.S | re.I)
     body = re.sub(r"</(p|div|li|h[1-6]|br)>", "\n", body, flags=re.I)
     body = re.sub(r"<[^>]+>", " ", body)
     body = html.unescape(body)
     body = re.sub(r"[ \t]+", " ", body)
     body = re.sub(r"\n\s*\n+", "\n\n", body).strip()
-    # cut leading site chrome before the release line, if present
-    k = body.find("For release at")
+    # Start at the preamble, not at "The Committee decided": in the 2026 format the
+    # vote count ("approved ... by a 12-0 vote") lives in the preamble and nowhere
+    # else when the vote is unanimous. Only site navigation is dropped ahead of it.
+    k = -1
+    for m in ("The Federal Open Market Committee approved", "For release at", "The Committee decided", "The Committee"):
+        k = body.find(m)
+        if k >= 0:
+            break
     if k > 0:
         body = body[k:]
-    return body
+    for m in ("For media inquiries", "Implementation Note", "Last Update"):   # trailing chrome
+        j = body.find(m)
+        if j > 0:
+            body = body[:j]
+    return body.strip()
 
 
 def fetch_one(d: date, refetch: bool, sleep: float) -> str:
@@ -102,13 +117,16 @@ def main():
     ap.add_argument("--csv", default=str(CSV))
     ap.add_argument("--dates", help="comma-separated YYYY-MM-DD, added to the CSV dates")
     ap.add_argument("--days", type=int, help="only dates within the last N days (nightly use)")
-    ap.add_argument("--refetch", action="store_true")
+    ap.add_argument("--refetch", action="store_true",
+                    help="rewrite files for the --dates given; never touches CSV dates")
+    ap.add_argument("--refetch-all", action="store_true",
+                    help="rewrite EVERY file. A corpus change: re-read and re-baseline afterwards "
+                         "(CURRENT_STATE 18.8). On 2026-09-24 plain --refetch did this by accident.")
     ap.add_argument("--sleep", type=float, default=0.5)
     a = ap.parse_args()
 
-    dates = set(_dates_from_csv(Path(a.csv)))
-    if a.dates:
-        dates |= {datetime.strptime(x.strip(), "%Y-%m-%d").date() for x in a.dates.split(",") if x.strip()}
+    explicit = {datetime.strptime(x.strip(), "%Y-%m-%d").date() for x in (a.dates or "").split(",") if x.strip()}
+    dates = set(_dates_from_csv(Path(a.csv))) | explicit
     today = date.today()
     dates = sorted(d for d in dates if d <= today)          # never ask the Fed for tomorrow
     if a.days:
@@ -116,7 +134,7 @@ def main():
     print(f"FOMC statements: {len(dates)} candidate date(s) -> {OUT}")
     counts = {}
     for d in dates:
-        r = fetch_one(d, a.refetch, a.sleep)
+        r = fetch_one(d, a.refetch_all or (a.refetch and d in explicit), a.sleep)
         counts[r.split(" ")[0]] = counts.get(r.split(" ")[0], 0) + 1
         if r != "exists":
             print(f"  {d}: {r}")
