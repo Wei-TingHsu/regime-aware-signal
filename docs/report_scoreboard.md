@@ -1,6 +1,6 @@
 # Report-level scoreboard — forward
 
-*Generated 2026-09-22 15:07:00 +0800. Registered in `docs/prereg_report_scoreboard.md`. Primary horizon h*=3; minimum 30 non-overlap rows before any figure is printed. Only the primary cell is tested; every other cell and every breakdown is reported, not tested.*
+*Generated 2026-09-23 15:02:38 +0800. Registered in `docs/prereg_report_scoreboard.md`. Primary horizon h*=3; minimum 30 non-overlap rows before any figure is printed. Only the primary cell is tested; every other cell and every breakdown is reported, not tested.*
 
 ## Coverage — before any metric
 
