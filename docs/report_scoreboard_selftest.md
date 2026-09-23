@@ -1,6 +1,6 @@
 # Report scoreboard — acceptance tests (prereg §12)
 
-*Run 2026-09-14 13:00 +0800. Synthetic ledgers only; no real report used. Fast settings: 300 permutation draws per test, 200 replications for T2.*
+*Run 2026-09-14 14:30 +0800. Synthetic ledgers only; no real report used. Fast settings: 300 permutation draws per test, 200 replications for T2.*
 
 | test | result | detail |
 |---|---|---|
