@@ -147,6 +147,7 @@ step "8/7  commit the record and push -- ledgers, scoreboards, write-once report
 # Only these paths are staged; unrelated working-tree changes are never swept in.
 # outputs/ and processed/ are git-ignored, hence -f. .env is never listed here.
 git add -f processed/forward_ledger.csv processed/report_ledger.csv \
+           processed/asset_returns.parquet processed/macro_pca_scores.parquet processed/pipeline_coverage.json \
            docs/forward_scoreboard.md docs/report_scoreboard.md docs/fomc_gld_forward.md docs/pipeline_coverage.md docs/fomc_minutes_forward.md \
            outputs/reports/*.json outputs/reports/*.md 2>/dev/null
 if git diff --cached --quiet; then

@@ -11,7 +11,7 @@ Faculty supervisor: Dr Lee Yen Teik
 ## Run the demonstration terminal
 
 ```bash
-git clone <this repo>
+git clone https://github.com/Wei-TingHsu/regime-aware-signal.git
 cd regime-aware-signal
 
 python3.11 -m venv .venv
@@ -81,5 +81,5 @@ launchctl list | grep regimeaware
 ```
 
 `daily_run.sh` appends the forward-test row, fetches and reads new documents
-under a nightly cap, and regenerates the reports the app serves. It never
+under a nightly cap, writes each completed session's report once — never regenerated — and rebuilds the index the app serves. It never
 refits a frozen model.
