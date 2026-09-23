@@ -1960,3 +1960,26 @@ acceptance tests do not cover ledger maintenance and did not catch it.
 **Not claimed.** No live figure — the forward ledger has zero rows. No per-asset, per-tier
 or per-source significance. Nothing in this section reaches any external document.
 
+### 18.7 TWO MORE SILENT DEFECTS (24 Sep) — THE KEY, AND THE STATEMENTS NOBODY FETCHED
+
+Found while checking why the 16 Sep FOMC day produced no report.
+
+1. **The nightly job never had the API key.** `.env` held FRED and SEC_CONTACT but not
+   ANTHROPIC_API_KEY, which lived only in `~/.zshrc` — read by interactive shells, never by
+   launchd. `doc_read.py` exited with `set ANTHROPIC_API_KEY` every night from 14 Sep, and
+   `daily_run.sh` labelled that exit "almost certainly credit exhaustion". The diagnosis in
+   §18.3 ("reads paused for credit") was therefore wrong for those ten days: reads were
+   blocked by a missing key, not by the balance. Key added to `.env` 24 Sep; the abort message
+   now distinguishes the two faults.
+2. **No fetcher for FOMC statements existed.** Nothing in the repository writes to
+   `fomc_statement/`; the 131 statements were pulled in August outside the nightly job, whose
+   only fetch is the Federal Register. The 16 Sep statement was never on disk, so the engine
+   could not have read it with any balance. The deferral guard (§18.5) behaved correctly: the
+   16 Sep report was never written, and will be written with the statement in it on the first
+   run after it is read. `src/fetch_fomc_statements.py` added 24 Sep and wired into step 3;
+   `processed/fomc_decisions.csv` extended to the remaining 2026 meetings.
+
+Wrong prior candidates #30 ("the nightly job can see the key") and #31 ("every source the
+reader loops over has a fetcher") — founder to decide, as with #29. Same family as the 13 Sep
+audit: a belief about the system, held in writing, overturned by reading a log.
+

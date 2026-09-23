@@ -97,6 +97,10 @@ step "2/7  forward-test row  [THE REGISTERED EXPERIMENT]"
 python -m src.forward_log
 
 step "3/7  new policy documents (free)"
+# FOMC statements were never auto-fetched before 2026-09-24 (no writer existed);
+# --days 60 keeps the nightly call cheap. Minutes stay a manual fetch until
+# cmd_minutes is confirmed to tolerate an unpublished date.
+python -m src.fetch_fomc_statements --days 60 || echo "  FOMC statement fetch failed -- continuing, the corpus is additive"
 python -m src.fetch_sources political --start "$(date -v-14d +%Y-%m-%d 2>/dev/null || date -d '14 days ago' +%Y-%m-%d)" \
   --limit 100000 --max-pages 3 \
   --types "executive order,proclamation,notice,memorandum,determination,presidential order" \
@@ -116,7 +120,7 @@ else
   for SRC in fomc_statement fomc_minutes earnings_8k political_order political_other political; do
     python -m src.doc_read --source "$SRC" --unread-only --since "$READ_SINCE" --limit "$MAX_NEW" \
       --out "processed/read_$(echo $SRC | sed 's/fomc_//;s/political_//;s/earnings_//').csv" \
-      || { echo "  READ ABORTED on $SRC -- almost certainly credit exhaustion."; break; }
+      || { echo "  READ ABORTED on $SRC -- see the line above: a missing ANTHROPIC_API_KEY prints \"set ANTHROPIC_API_KEY\"; an empty balance prints an API error. They are not the same fault."; break; }
   done
 fi
 
