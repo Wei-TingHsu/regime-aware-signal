@@ -1,0 +1,64 @@
+{
+  "sources": {
+    "earnings_8k": {
+      "n": 671,
+      "mean": 0.686661698956781,
+      "sd": 0.2008865507621385,
+      "se": 0.0077551392773945235,
+      "expected": "HIGH",
+      "prompt_versions": [
+        "v1-2026-08-23 / claude-sonnet-5"
+      ]
+    },
+    "fomc_statement": {
+      "n": 132,
+      "mean": 0.5738636363636364,
+      "sd": 0.1738062786103708,
+      "se": 0.015127894785438146,
+      "expected": "HIGH",
+      "prompt_versions": [
+        "v1-2026-08-23 / claude-sonnet-5"
+      ]
+    },
+    "political_order": {
+      "n": 873,
+      "mean": 0.5502290950744559,
+      "sd": 0.24040045475813623,
+      "se": 0.00813632266116839,
+      "expected": "HIGH",
+      "prompt_versions": [
+        "v1-2026-08-23 / claude-sonnet-5"
+      ]
+    },
+    "fomc_minutes": {
+      "n": 125,
+      "mean": 0.49399999999999994,
+      "sd": 0.12693661105373205,
+      "se": 0.011353555645983842,
+      "expected": "-",
+      "prompt_versions": [
+        "v1-2026-08-23 / claude-sonnet-5"
+      ]
+    },
+    "political_other": {
+      "n": 816,
+      "mean": 0.16991421568627454,
+      "sd": 0.24117273293336822,
+      "se": 0.00844273436843004,
+      "expected": "low",
+      "prompt_versions": [
+        "v1-2026-08-23 / claude-sonnet-5"
+      ]
+    }
+  },
+  "spread": 0.5167474832705065,
+  "ci": [
+    0.49449715406840833,
+    0.5388840825078169
+  ],
+  "threshold": 0.25,
+  "clause_ci": true,
+  "clause_order": true,
+  "passed": true,
+  "iters": 10000
+}

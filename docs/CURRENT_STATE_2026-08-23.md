@@ -1983,3 +1983,46 @@ Wrong prior candidates #30 ("the nightly job can see the key") and #31 ("every s
 reader loops over has a fetcher") — founder to decide, as with #29. Same family as the 13 Sep
 audit: a belief about the system, held in writing, overturned by reading a log.
 
+### 18.8 THE STATEMENT CORPUS REPLACED, RE-READ, RE-BASELINED (24 Sep)
+
+**What happened.** Building the missing FOMC fetcher (§18.7), a `--refetch` meant for the
+16 Sep statement applied to every date in `fomc_decisions.csv` and overwrote all 131 August
+statement texts. The August text files were never in git; their exact content is lost. The
+error was the assistant's (the flag's scope, and the instruction to combine it with `--dates`);
+`--refetch` is now scoped to explicit dates and `--refetch-all` is a separate, deliberate flag.
+
+**Decision: re-read, not reconstruct.** The new texts are more complete than the August ones —
+in the 2026 format the vote count lives in the preamble ("approved … by a 12–0 vote"), which the
+August extraction dropped — so they were made canonical after the trailing media-inquiries line
+was cut. All 132 statements (131 + 16 Sep 2026) were re-read under identical conditions: model
+`claude-sonnet-5`, prompt `v1-2026-08-23`, no `--with-prev` (as `run_corpus.sh` line 67). The
+131 superseded reads are kept in git history and in `data_provenance/doc_reads_superseded_20260924/`.
+Statement novelty after re-read 0.28 (August audit 0.289) — the reader behaves as before.
+
+**Specificity gate, 10,000 iterations:** spread 0.517, CI [0.494, 0.539] — identical to August.
+PASS on both clauses.
+
+**Backfill, old vs new corpus:**
+
+| | `986e0d65b6df_n2616` (14 Sep) | `48a6c4e879a1_n2617` (24 Sep) |
+|---|---|---|
+| report dates | 1,531 | 1,532 (16 Sep 2026 now carries a document) |
+| calls naive / non-overlap | 1,026 / 345 | 1,060 / 354 |
+| hit-rate non-overlap | 59.4% | 58.2% |
+| null 95th pct / p | 59.1% / 0.0497 | 58.8% / 0.0879 |
+| asymmetry, 95% CI | 1.116 [0.910, 1.402] | 0.880 [0.710, 1.141] |
+| mean signed | +0.31% | +0.12% |
+| verdict | INCONCLUSIVE | **FAIL** |
+
+**Reading.** The 14 Sep INCONCLUSIVE met its hit criterion by 0.3 points; correcting one source of
+five moved it below. The INCONCLUSIVE was therefore not robust — a boundary result, as p 0.0497
+indicated. The new calls concentrate in TLT (172 → 186) and UUP, where FOMC statements load.
+Asymmetry fell below 1: on the new corpus the report's wrong calls are larger than its right ones.
+The naive hit-rate rose (56.5% → 57.5%) while the non-overlap rate fell — the non-overlap sampler
+(every third date from a fixed first date) re-phases when calls are added, so the tested statistic
+is itself sensitive to sampling phase at n ≈ 350. That sensitivity is recorded, not corrected; any
+change to the sampler would be an amendment registered before a further run.
+
+**Baseline.** `48a6c4e879a1_n2617` is the baseline for every future source comparison (prereg §8), because its
+corpus is the more complete one. Both hashes, both folders and both scoreboards are kept.
+

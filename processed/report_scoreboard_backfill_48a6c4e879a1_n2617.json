@@ -1,0 +1,363 @@
+{
+  "run": "2026-09-24 15:54:10 +0800",
+  "prereg": "docs/prereg_report_scoreboard.md",
+  "primary_h": 3,
+  "horizons": [
+    3,
+    5,
+    20
+  ],
+  "min_rows": 30,
+  "coverage": {
+    "report_dates": 1532,
+    "dates_with_docs": 806,
+    "dates_with_call": 597,
+    "by_kind": {
+      "no_document": 5720,
+      "call": 1060,
+      "abstain": 835,
+      "divergence": 45
+    },
+    "by_asset": {
+      "GLD": {
+        "no_document": 1245,
+        "abstain": 168,
+        "call": 117,
+        "divergence": 2,
+        "tier_counts": {
+          "1": 1,
+          "2": 47,
+          "3": 69
+        }
+      },
+      "SPY": {
+        "no_document": 755,
+        "call": 517,
+        "abstain": 226,
+        "divergence": 34,
+        "tier_counts": {
+          "2": 20,
+          "3": 497
+        }
+      },
+      "TLT": {
+        "no_document": 1178,
+        "call": 186,
+        "abstain": 164,
+        "divergence": 4,
+        "tier_counts": {
+          "1": 3,
+          "2": 31,
+          "3": 152
+        }
+      },
+      "USO": {
+        "no_document": 1307,
+        "abstain": 117,
+        "call": 108,
+        "tier_counts": {
+          "2": 8,
+          "3": 100
+        }
+      },
+      "UUP": {
+        "no_document": 1235,
+        "abstain": 160,
+        "call": 132,
+        "divergence": 5,
+        "tier_counts": {
+          "1": 9,
+          "2": 68,
+          "3": 55
+        }
+      }
+    }
+  },
+  "cells": {
+    "h3_primary": {
+      "h": 3,
+      "ret": "ret_primary",
+      "naive": {
+        "n": 1060,
+        "hit": 0.5754716981132075,
+        "asym": 0.9542718094511576,
+        "mean_signed": 0.0016097162913021,
+        "pf": 1.2935684528115694,
+        "n_hits": 610,
+        "n_misses": 450,
+        "no_misses": false
+      },
+      "nonoverlap": {
+        "n": 354,
+        "hit": 0.5819209039548022,
+        "asym": 0.8800113880206322,
+        "mean_signed": 0.0012062620972627064,
+        "pf": 1.2248807157584476,
+        "n_hits": 206,
+        "n_misses": 148,
+        "no_misses": false
+      },
+      "too_few": false,
+      "null_hit_q95": 0.5875706214689266,
+      "p_hit": 0.0879,
+      "asym_ci": [
+        0.7095077868144187,
+        1.1407903719501877
+      ],
+      "pass_hit": false,
+      "pass_asym": false,
+      "verdict": "FAIL",
+      "n_perm": 10000,
+      "n_boot": 2000,
+      "block": 3,
+      "primary": true
+    },
+    "h3_tradeable": {
+      "h": 3,
+      "ret": "ret_tradeable",
+      "naive": {
+        "n": 1059,
+        "hit": 0.5354107648725213,
+        "asym": 1.0533126522284286,
+        "mean_signed": 0.0013109621349813659,
+        "pf": 1.2138786053120307,
+        "n_hits": 567,
+        "n_misses": 492,
+        "no_misses": false
+      },
+      "nonoverlap": {
+        "n": 354,
+        "hit": 0.5423728813559322,
+        "asym": 1.1917068444934809,
+        "mean_signed": 0.0021601681221349437,
+        "pf": 1.4123932971774587,
+        "n_hits": 192,
+        "n_misses": 162,
+        "no_misses": false
+      },
+      "too_few": false,
+      "primary": false,
+      "note_secondary": "reported, not tested"
+    },
+    "h5_primary": {
+      "h": 5,
+      "ret": "ret_primary",
+      "naive": {
+        "n": 1055,
+        "hit": 0.5554502369668246,
+        "asym": 0.9471352148116148,
+        "mean_signed": 0.0013093175883602914,
+        "pf": 1.1834141489970282,
+        "n_hits": 586,
+        "n_misses": 469,
+        "no_misses": false
+      },
+      "nonoverlap": {
+        "n": 214,
+        "hit": 0.6121495327102804,
+        "asym": 0.9453838166971682,
+        "mean_signed": 0.003259581775453736,
+        "pf": 1.4921118070762533,
+        "n_hits": 131,
+        "n_misses": 83,
+        "no_misses": false
+      },
+      "too_few": false,
+      "primary": false,
+      "note_secondary": "reported, not tested"
+    },
+    "h5_tradeable": {
+      "h": 5,
+      "ret": "ret_tradeable",
+      "naive": {
+        "n": 1055,
+        "hit": 0.5099526066350711,
+        "asym": 1.0821676083890786,
+        "mean_signed": 0.000980703979118162,
+        "pf": 1.1261241263313815,
+        "n_hits": 538,
+        "n_misses": 517,
+        "no_misses": false
+      },
+      "nonoverlap": {
+        "n": 214,
+        "hit": 0.5046728971962616,
+        "asym": 1.3566883580055558,
+        "mean_signed": 0.0027649008479702698,
+        "pf": 1.3822862515528305,
+        "n_hits": 108,
+        "n_misses": 106,
+        "no_misses": false
+      },
+      "too_few": false,
+      "primary": false,
+      "note_secondary": "reported, not tested"
+    },
+    "h20_primary": {
+      "h": 20,
+      "ret": "ret_primary",
+      "naive": {
+        "n": 1055,
+        "hit": 0.5592417061611374,
+        "asym": 1.0461999287691865,
+        "mean_signed": 0.004825463790314398,
+        "pf": 1.3274364687609033,
+        "n_hits": 590,
+        "n_misses": 465,
+        "no_misses": false
+      },
+      "nonoverlap": {
+        "n": 55,
+        "hit": 0.6,
+        "asym": 1.5050530137013853,
+        "mean_signed": 0.01202136695858411,
+        "pf": 2.257579520552078,
+        "n_hits": 33,
+        "n_misses": 22,
+        "no_misses": false
+      },
+      "too_few": false,
+      "primary": false,
+      "note_secondary": "reported, not tested"
+    },
+    "h20_tradeable": {
+      "h": 20,
+      "ret": "ret_tradeable",
+      "naive": {
+        "n": 1055,
+        "hit": 0.5706161137440758,
+        "asym": 0.9496456304105445,
+        "mean_signed": 0.004077895064891666,
+        "pf": 1.2620014779407238,
+        "n_hits": 602,
+        "n_misses": 453,
+        "no_misses": false
+      },
+      "nonoverlap": {
+        "n": 55,
+        "hit": 0.6545454545454545,
+        "asym": 1.325742730383146,
+        "mean_signed": 0.013916512758815487,
+        "pf": 2.5119335944101713,
+        "n_hits": 36,
+        "n_misses": 19,
+        "no_misses": false
+      },
+      "too_few": false,
+      "primary": false,
+      "note_secondary": "reported, not tested"
+    }
+  },
+  "breakdowns": {
+    "asset": {
+      "GLD": {
+        "n": 39,
+        "hit": 0.6153846153846154,
+        "asym": 1.3031447250189065,
+        "mean_signed": 0.00443280531452274
+      },
+      "SPY": {
+        "n": 173,
+        "hit": 0.6184971098265896,
+        "asym": 0.8586863127070411,
+        "mean_signed": 0.001862811644252897
+      },
+      "TLT": {
+        "n": 62,
+        "hit": 0.532258064516129,
+        "asym": 0.8451267789678507,
+        "mean_signed": -0.00019349048514209497
+      },
+      "USO": {
+        "n": 36,
+        "hit": 0.5555555555555556,
+        "asym": 0.7480413170513143,
+        "mean_signed": -0.0008772954282833823
+      },
+      "UUP": {
+        "n": 44,
+        "hit": 0.5,
+        "asym": 0.7922895553540026,
+        "mean_signed": -0.0005579544044120062
+      }
+    },
+    "tier": {
+      "1.0": {
+        "n": 5,
+        "note": "too few"
+      },
+      "2.0": {
+        "n": 60,
+        "hit": 0.5333333333333333,
+        "asym": 0.4940618372045291,
+        "mean_signed": -0.002857185286830075
+      },
+      "3.0": {
+        "n": 293,
+        "hit": 0.5870307167235495,
+        "asym": 1.0012822919229611,
+        "mean_signed": 0.002123581406515753
+      }
+    },
+    "dominant_source": {
+      "earnings_8k": {
+        "n": 120,
+        "hit": 0.6583333333333333,
+        "asym": 1.179681824926133,
+        "mean_signed": 0.004537629739200262
+      },
+      "fomc_minutes": {
+        "n": 77,
+        "hit": 0.5324675324675324,
+        "asym": 1.1095460590977495,
+        "mean_signed": 0.0014187223545769495
+      },
+      "fomc_statement": {
+        "n": 80,
+        "hit": 0.525,
+        "asym": 0.8382682507197899,
+        "mean_signed": -0.0006465270634498288
+      },
+      "political_order": {
+        "n": 84,
+        "hit": 0.4880952380952381,
+        "asym": 0.8064861651711298,
+        "mean_signed": -0.0016115256030155858
+      },
+      "political_other": {
+        "n": 1,
+        "note": "too few"
+      }
+    },
+    "regime": {
+      "0": {
+        "n": 95,
+        "hit": 0.6105263157894737,
+        "asym": 0.6405308508079578,
+        "mean_signed": 2.1935953773162627e-05
+      },
+      "1": {
+        "n": 54,
+        "hit": 0.5925925925925926,
+        "asym": 0.7492613740617582,
+        "mean_signed": 0.0005399143405204891
+      },
+      "2": {
+        "n": 83,
+        "hit": 0.5783132530120482,
+        "asym": 1.1866656252109336,
+        "mean_signed": 0.0028805531912674343
+      },
+      "3": {
+        "n": 130,
+        "hit": 0.5615384615384615,
+        "asym": 0.9943356637143139,
+        "mean_signed": 0.0016171384620371377
+      }
+    }
+  },
+  "verdict": "FAIL",
+  "backfill_tag": "48a6c4e879a1_n2617",
+  "reports_dir": "outputs/reports_backfill/48a6c4e879a1_n2617",
+  "n_reports": 1532
+}

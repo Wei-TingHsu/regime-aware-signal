@@ -443,6 +443,7 @@ commit and push the record.
 | 24 | The report's directional calls beat drift (backfill `986e0d65b6df_n2616`) | 14 Sep | **INCONCLUSIVE** — hit 59.4% vs q95 59.1% (p 0.0497); asymmetry CI includes 1 | CURRENT_STATE §18.6 |
 | 25 | The tiers grade confidence | 14 Sep | no — tier 2 51.5% < tier 3 57.5%; tier 1 too few | §18.6 |
 | 26 | `fomc_minutes`-driven calls are wrong more often than chance | registered 15 Sep | forward-only, 0 of 30 rows | `overlays/fomc_minutes_contrarian.md` |
+| 27 | The report's directional calls beat drift, re-run on the corrected statement corpus `48a6c4e879a1_n2617` | 24 Sep | **FAIL** — hit 58.2% vs q95 58.8% (p 0.0879); asymmetry 0.880; row 24's INCONCLUSIVE not robust | CURRENT_STATE §18.8 |
 
 ---
 
@@ -761,6 +762,7 @@ and its full history found nothing to revoke.
 | date | change |
 |---|---|
 | 2026-09-21 | Created. Consolidates the journal (Weeks 1–15), the post-submission record to 21 Sep, TRACK, CURRENT_STATE §1–18, MODEL_EVOLUTION, POST_SUBMISSION_STATE, the report-scoreboard addendum, the roadmap (brought to v2.2 with T13 and the US/Japan amendments), the business plan and deck, and the communications drafts. Nothing removed. |
+| 2026-09-24 | Two silent defects found (API key never in `.env`; no FOMC statement fetcher); fetcher built; statement corpus replaced by a mis-scoped refetch and re-read; backfill re-baselined — verdict INCONCLUSIVE → FAIL (register row 27; CURRENT_STATE §18.7–18.8). Repo made runnable from a fresh clone; LICENSE added. |
 
 *Add a row here whenever a verdict is recorded or a tree changes state, and bump Appendix B's
 version line with it.*
