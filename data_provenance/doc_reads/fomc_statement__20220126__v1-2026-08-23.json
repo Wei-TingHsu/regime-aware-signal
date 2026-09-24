@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": -0.3,
-    "duration": -0.4,
-    "gold": -0.2,
-    "dollar": 0.3,
+    "equity": -0.5,
+    "duration": -0.6,
+    "gold": -0.4,
+    "dollar": 0.5,
     "oil": -0.1
   },
-  "magnitude": 0.5,
+  "magnitude": 0.6,
   "horizon_days": 30,
   "specificity": 0.6,
-  "novelty": 0.35,
+  "novelty": 0.5,
   "confidence": 0.7,
   "evidence": [
-    "expects it will soon be appropriate to raise the target range",
+    "the Committee expects it will soon be appropriate to raise the target range",
     "bringing them to an end in early March",
     "inflation well above 2 percent and a strong labor market"
   ],
   "extra": {
-    "stance": 0.5,
-    "guidance": 0.6
+    "stance": 0.6,
+    "guidance": 0.7
   },
   "source": "fomc_statement",
   "date": "2022-01-26",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 437,
+  "max_words": 20000
 }

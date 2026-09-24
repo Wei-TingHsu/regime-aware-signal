@@ -1,28 +1,31 @@
 {
   "direction": {
     "equity": 0.1,
-    "duration": -0.1,
-    "gold": -0.1,
-    "dollar": 0.1,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": -0.1,
     "oil": 0.0
   },
   "magnitude": 0.2,
   "horizon_days": 30,
-  "specificity": 0.35,
-  "novelty": 0.15,
+  "specificity": 0.3,
+  "novelty": 0.1,
   "confidence": 0.6,
   "evidence": [
-    "The labor market continued to improve, with solid job gains and declining unemployment.",
-    "it will be appropriate to raise the target range for the federal funds rate when it has seen some further improvement",
-    "the current 0 to 1/4 percent target range for the federal funds rate remains appropriate"
+    "current 0 to 1/4 percent target range for the federal funds rate remains appropriate",
+    "when it has seen some further improvement in the labor market",
+    "Inflation is anticipated to remain near its recent low level in the near term"
   ],
   "extra": {
-    "stance": 0.15,
-    "guidance": 0.2
+    "stance": -0.2,
+    "guidance": -0.2
   },
   "source": "fomc_statement",
   "date": "2015-07-29",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 405,
+  "max_words": 20000
 }

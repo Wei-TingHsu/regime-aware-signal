@@ -6,10 +6,10 @@
     "dollar": -0.4,
     "oil": 0.1
   },
-  "magnitude": 0.75,
-  "horizon_days": 60,
-  "specificity": 0.7,
-  "novelty": 0.75,
+  "magnitude": 0.8,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.8,
   "confidence": 0.7,
   "evidence": [
     "seeks to achieve inflation that averages 2 percent over time",
@@ -18,11 +18,14 @@
   ],
   "extra": {
     "stance": -0.6,
-    "guidance": -0.7
+    "guidance": 0.7
   },
   "source": "fomc_statement",
   "date": "2020-08-27",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 579,
+  "max_words": 20000
 }

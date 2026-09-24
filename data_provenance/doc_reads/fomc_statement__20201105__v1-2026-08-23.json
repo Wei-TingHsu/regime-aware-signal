@@ -6,23 +6,26 @@
     "dollar": -0.2,
     "oil": 0.1
   },
-  "magnitude": 0.4,
-  "horizon_days": 30,
+  "magnitude": 0.3,
+  "horizon_days": 5,
   "specificity": 0.5,
-  "novelty": 0.3,
+  "novelty": 0.2,
   "confidence": 0.6,
   "evidence": [
-    "aim to achieve inflation moderately above 2 percent for some time",
-    "expects it will be appropriate to maintain this target range until labor market conditions",
+    "will aim to achieve inflation moderately above 2 percent for some time",
+    "expects it will be appropriate to maintain this target range until labor market conditions have reached",
     "increase its holdings of Treasury securities and agency mortgage-backed securities at least at the current pace"
   ],
   "extra": {
-    "stance": -0.8,
+    "stance": -0.6,
     "guidance": 0.7
   },
   "source": "fomc_statement",
   "date": "2020-11-05",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 471,
+  "max_words": 20000
 }

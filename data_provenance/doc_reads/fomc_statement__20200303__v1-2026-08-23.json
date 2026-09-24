@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.3,
+    "equity": 0.2,
     "duration": 0.6,
-    "gold": 0.5,
+    "gold": 0.4,
     "dollar": -0.4,
     "oil": -0.3
   },
   "magnitude": 0.85,
   "horizon_days": 5,
-  "specificity": 0.85,
-  "novelty": 0.9,
-  "confidence": 0.75,
+  "specificity": 0.9,
+  "novelty": 0.6,
+  "confidence": 0.7,
   "evidence": [
     "lower the target range for the federal funds rate by 1/2 percentage point",
     "coronavirus poses evolving risks to economic activity",
-    "will use its tools and act as appropriate"
+    "will use its tools and act as appropriate to support the economy"
   ],
   "extra": {
-    "stance": -0.9,
-    "guidance": -0.4
+    "stance": -0.8,
+    "guidance": -0.5
   },
   "source": "fomc_statement",
   "date": "2020-03-03",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 131,
+  "max_words": 20000
 }

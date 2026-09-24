@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.15,
-    "duration": 0.25,
-    "gold": 0.2,
-    "dollar": -0.15,
-    "oil": 0.1
+    "equity": -0.1,
+    "duration": -0.2,
+    "gold": -0.1,
+    "dollar": 0.2,
+    "oil": 0.0
   },
-  "magnitude": 0.35,
+  "magnitude": 0.45,
   "horizon_days": 30,
-  "specificity": 0.65,
-  "novelty": 0.3,
+  "specificity": 0.8,
+  "novelty": 0.35,
   "confidence": 0.6,
   "evidence": [
     "lower the target range for the federal funds rate by 1/4 percentage point",
     "will carefully assess incoming data, the evolving outlook, and the balance of risks",
-    "labor market conditions have generally eased, and the unemployment rate has moved up"
+    "Voting against the action was Beth M. Hammack, who preferred to maintain"
   ],
   "extra": {
-    "stance": 0.2,
-    "guidance": -0.1
+    "stance": 0.3,
+    "guidance": -0.15
   },
   "source": "fomc_statement",
   "date": "2024-12-18",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 352,
+  "max_words": 20000
 }

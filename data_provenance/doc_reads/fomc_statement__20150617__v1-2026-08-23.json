@@ -7,22 +7,25 @@
     "oil": 0.0
   },
   "magnitude": 0.2,
-  "horizon_days": 30,
+  "horizon_days": 5,
   "specificity": 0.3,
-  "novelty": 0.15,
+  "novelty": 0.1,
   "confidence": 0.6,
   "evidence": [
-    "reaffirmed its view that the current 0 to 1/4 percent target range",
-    "will be appropriate to raise the target range for the federal funds rate when it has seen further improvement",
-    "pace of job gains picked up while the unemployment rate remained steady"
+    "current 0 to 1/4 percent target range for the federal funds rate remains appropriate",
+    "Inflation is anticipated to remain near its recent low level in the near term",
+    "economic conditions may, for some time, warrant keeping the target federal funds rate below"
   ],
   "extra": {
-    "stance": -0.1,
+    "stance": -0.15,
     "guidance": -0.1
   },
   "source": "fomc_statement",
   "date": "2015-06-17",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 404,
+  "max_words": 20000
 }

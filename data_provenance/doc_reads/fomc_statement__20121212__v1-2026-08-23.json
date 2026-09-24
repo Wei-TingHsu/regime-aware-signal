@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.4,
+    "equity": 0.3,
     "duration": 0.3,
-    "gold": 0.3,
-    "dollar": -0.3,
+    "gold": 0.2,
+    "dollar": -0.2,
     "oil": 0.1
   },
-  "magnitude": 0.5,
-  "horizon_days": 60,
+  "magnitude": 0.4,
+  "horizon_days": 30,
   "specificity": 0.6,
-  "novelty": 0.6,
+  "novelty": 0.4,
   "confidence": 0.7,
   "evidence": [
-    "at least as long as the unemployment rate remains above 6-1/2 percent",
-    "will continue purchasing additional agency mortgage-backed securities at a pace of $40 billion per month",
+    "will purchase longer-term Treasury securities... initially at a pace of $45 billion per month",
+    "appropriate at least as long as the unemployment rate remains above 6-1/2 percent",
     "highly accommodative stance of monetary policy will remain appropriate for a considerable time"
   ],
   "extra": {
-    "stance": -0.3,
-    "guidance": -0.5
+    "stance": -0.6,
+    "guidance": 0.5
   },
   "source": "fomc_statement",
   "date": "2012-12-12",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 575,
+  "max_words": 20000
 }

@@ -2,19 +2,19 @@
   "direction": {
     "equity": -0.1,
     "duration": -0.1,
-    "gold": 0.0,
-    "dollar": 0.1,
+    "gold": -0.1,
+    "dollar": 0.15,
     "oil": 0.0
   },
-  "magnitude": 0.35,
+  "magnitude": 0.3,
   "horizon_days": 5,
   "specificity": 0.7,
   "novelty": 0.15,
   "confidence": 0.7,
   "evidence": [
     "raise the target range for the federal funds rate to 5-1/4 to 5-1/2 percent",
-    "Inflation remains elevated.",
-    "The Committee remains highly attentive to inflation risks."
+    "The Committee remains highly attentive to inflation risks",
+    "strongly committed to returning inflation to its 2 percent objective"
   ],
   "extra": {
     "stance": 0.3,
@@ -24,5 +24,8 @@
   "date": "2023-07-26",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 340,
+  "max_words": 20000
 }

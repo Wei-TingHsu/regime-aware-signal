@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.05,
-    "duration": -0.05,
-    "gold": 0.05,
-    "dollar": -0.05,
-    "oil": 0.0
+    "equity": 0.2,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.1
   },
-  "magnitude": 0.15,
-  "horizon_days": 5,
+  "magnitude": 0.2,
+  "horizon_days": 20,
   "specificity": 0.5,
-  "novelty": 0.15,
+  "novelty": 0.1,
   "confidence": 0.7,
   "evidence": [
-    "Inflation has picked up in recent months",
     "will complete purchases of $600 billion of longer-term Treasury securities by the end of the current quarter",
-    "exceptionally low levels for the federal funds rate for an extended period"
+    "exceptionally low levels for the federal funds rate for an extended period",
+    "continue expanding its holdings of securities as announced in November"
   ],
   "extra": {
-    "stance": 0.1,
-    "guidance": -0.85
+    "stance": -0.5,
+    "guidance": 0.6
   },
   "source": "fomc_statement",
   "date": "2011-04-27",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 284,
+  "max_words": 20000
 }

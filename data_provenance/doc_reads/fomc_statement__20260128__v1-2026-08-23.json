@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.1,
-    "duration": 0.1,
-    "gold": 0.0,
-    "dollar": 0.0,
+    "equity": -0.1,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.15,
     "oil": 0.0
   },
-  "magnitude": 0.2,
+  "magnitude": 0.3,
   "horizon_days": 30,
-  "specificity": 0.3,
-  "novelty": 0.15,
-  "confidence": 0.6,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.55,
   "evidence": [
-    "Job gains have remained low, and the unemployment rate has shown some signs of stabilization.",
-    "Inflation remains somewhat elevated.",
-    "maintain the target range for the federal funds rate at 3\u20111/2 to 3\u20113/4 percent"
+    "maintain the target range for the federal funds rate at 3\u20111/2 to 3\u20113/4 percent",
+    "Job gains have remained low, and the unemployment rate has shown some signs of stabilization",
+    "preferred to lower the target range for the federal funds rate by 1/4 percentage point"
   ],
   "extra": {
-    "stance": 0.0,
+    "stance": 0.15,
     "guidance": 0.0
   },
   "source": "fomc_statement",
   "date": "2026-01-28",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 299,
+  "max_words": 20000
 }

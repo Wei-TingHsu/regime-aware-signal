@@ -1,16 +1,16 @@
 {
   "direction": {
     "equity": 0.3,
-    "duration": 0.3,
+    "duration": 0.4,
     "gold": 0.2,
     "dollar": -0.3,
-    "oil": 0.2
+    "oil": 0.0
   },
-  "magnitude": 0.5,
-  "horizon_days": 20,
+  "magnitude": 0.55,
+  "horizon_days": 15,
   "specificity": 0.8,
-  "novelty": 0.6,
-  "confidence": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.65,
   "evidence": [
     "establishment of a temporary repurchase agreement facility for foreign and international monetary authorities",
     "help ease strains in global U.S. dollar funding markets",
@@ -18,11 +18,14 @@
   ],
   "extra": {
     "stance": -0.6,
-    "guidance": -0.3
+    "guidance": -0.4
   },
   "source": "fomc_statement",
   "date": "2020-03-31",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 247,
+  "max_words": 20000
 }

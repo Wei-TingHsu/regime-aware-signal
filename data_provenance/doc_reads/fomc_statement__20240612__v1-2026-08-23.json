@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.1,
-    "duration": 0.1,
+    "equity": 0.15,
+    "duration": 0.15,
     "gold": 0.05,
-    "dollar": -0.05,
-    "oil": 0.0
+    "dollar": -0.1,
+    "oil": 0.05
   },
   "magnitude": 0.25,
   "horizon_days": 5,
-  "specificity": 0.6,
-  "novelty": 0.3,
-  "confidence": 0.7,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.6,
   "evidence": [
     "modest further progress toward the Committee's 2 percent inflation objective",
     "risks to achieving its employment and inflation goals have moved toward better balance",
-    "does not expect it will be appropriate to reduce the target range"
+    "does not expect it will be appropriate to reduce the target range until"
   ],
   "extra": {
-    "stance": 0.1,
-    "guidance": -0.1
+    "stance": 0.2,
+    "guidance": 0.15
   },
   "source": "fomc_statement",
   "date": "2024-06-12",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 349,
+  "max_words": 20000
 }

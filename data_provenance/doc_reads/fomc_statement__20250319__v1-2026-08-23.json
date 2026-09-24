@@ -1,28 +1,31 @@
 {
   "direction": {
     "equity": 0.2,
-    "duration": 0.3,
-    "gold": 0.15,
+    "duration": 0.35,
+    "gold": 0.2,
     "dollar": -0.15,
-    "oil": 0.0
+    "oil": 0.05
   },
   "magnitude": 0.35,
   "horizon_days": 30,
-  "specificity": 0.65,
+  "specificity": 0.55,
   "novelty": 0.4,
   "confidence": 0.6,
   "evidence": [
+    "slow the pace of decline of its securities holdings",
     "reducing the monthly redemption cap on Treasury securities from $25 billion to $5 billion",
-    "Uncertainty around the economic outlook has increased",
-    "maintain the target range for the federal funds rate at 4-1/4 to 4-1/2 percent"
+    "Uncertainty around the economic outlook has increased"
   ],
   "extra": {
-    "stance": -0.15,
+    "stance": -0.2,
     "guidance": -0.1
   },
   "source": "fomc_statement",
   "date": "2025-03-19",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 372,
+  "max_words": 20000
 }

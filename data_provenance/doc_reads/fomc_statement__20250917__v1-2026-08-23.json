@@ -7,22 +7,25 @@
     "oil": 0.1
   },
   "magnitude": 0.35,
-  "horizon_days": 30,
-  "specificity": 0.6,
-  "novelty": 0.2,
-  "confidence": 0.6,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.25,
+  "confidence": 0.7,
   "evidence": [
-    "lower the target range for the federal funds rate by 1/4 percentage point to 4 to 4\u20111/4 percent",
+    "lower the target range for the federal funds rate by 1/4 percentage point to 4 to 4-1/4 percent",
     "downside risks to employment have risen",
-    "will carefully assess incoming data, the evolving outlook, and the balance of risks"
+    "growth of economic activity moderated in the first half of the year"
   ],
   "extra": {
     "stance": -0.3,
-    "guidance": -0.1
+    "guidance": -0.2
   },
   "source": "fomc_statement",
   "date": "2025-09-17",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 342,
+  "max_words": 20000
 }

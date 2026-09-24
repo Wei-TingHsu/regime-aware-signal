@@ -1,20 +1,20 @@
 {
   "direction": {
-    "equity": -0.1,
+    "equity": 0.1,
     "duration": -0.2,
     "gold": -0.1,
     "dollar": 0.15,
     "oil": 0.0
   },
-  "magnitude": 0.25,
-  "horizon_days": 60,
-  "specificity": 0.35,
-  "novelty": 0.2,
-  "confidence": 0.6,
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.7,
   "evidence": [
-    "Inflation on a 12\u2011month basis is expected to move up this year",
-    "will warrant further gradual increases in the federal funds rate",
-    "maintain the target range for the federal funds rate at 1-1/4 to 1\u20111/2 percent"
+    "further gradual increases in the federal funds rate",
+    "labor market has continued to strengthen",
+    "Market-based measures of inflation compensation have increased in recent months"
   ],
   "extra": {
     "stance": 0.2,
@@ -24,5 +24,8 @@
   "date": "2018-01-31",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 427,
+  "max_words": 20000
 }

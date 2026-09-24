@@ -1,20 +1,20 @@
 {
   "direction": {
-    "equity": 0.3,
+    "equity": 0.2,
     "duration": -0.3,
-    "gold": -0.4,
+    "gold": -0.3,
     "dollar": 0.3,
-    "oil": 0.0
+    "oil": 0.1
   },
-  "magnitude": 0.7,
+  "magnitude": 0.6,
   "horizon_days": 30,
-  "specificity": 0.8,
-  "novelty": 0.6,
-  "confidence": 0.7,
+  "specificity": 0.85,
+  "novelty": 0.35,
+  "confidence": 0.75,
   "evidence": [
-    "will add to its holdings of agency mortgage-backed securities at a pace of $35 billion per month rather than $40 billion",
     "the Committee decided to modestly reduce the pace of its asset purchases",
-    "likely be appropriate to maintain the current target range for the federal funds rate well past the time that the unemployment rate declines below 6-1/2 percent"
+    "will add to its holdings of agency mortgage-backed securities at a pace of $35 billion per month",
+    "likely will be appropriate to maintain the current target range for the federal funds rate well past"
   ],
   "extra": {
     "stance": 0.2,
@@ -24,5 +24,8 @@
   "date": "2013-12-18",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 777,
+  "max_words": 20000
 }

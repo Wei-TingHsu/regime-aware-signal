@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.3,
-    "duration": 0.2,
-    "gold": 0.1,
-    "dollar": -0.2,
+    "equity": -0.1,
+    "duration": -0.15,
+    "gold": -0.1,
+    "dollar": 0.2,
     "oil": 0.0
   },
-  "magnitude": 0.4,
-  "horizon_days": 30,
-  "specificity": 0.4,
-  "novelty": 0.4,
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.5,
   "confidence": 0.6,
   "evidence": [
     "an increase in the target range for the federal funds rate remains unlikely at the April FOMC meeting",
-    "This change in the forward guidance does not indicate that the Committee has decided on the timing",
-    "economic growth has moderated somewhat"
+    "it has seen further improvement in the labor market and is reasonably confident that inflation will move back",
+    "This change in the forward guidance does not indicate that the Committee has decided on the timing"
   ],
   "extra": {
-    "stance": -0.2,
-    "guidance": -0.3
+    "stance": 0.15,
+    "guidance": 0.1
   },
   "source": "fomc_statement",
   "date": "2015-03-18",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 455,
+  "max_words": 20000
 }

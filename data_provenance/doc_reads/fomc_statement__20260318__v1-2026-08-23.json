@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.1,
-    "duration": 0.1,
-    "gold": 0.1,
-    "dollar": -0.1,
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.05,
     "oil": 0.0
   },
-  "magnitude": 0.2,
+  "magnitude": 0.3,
   "horizon_days": 5,
-  "specificity": 0.55,
-  "novelty": 0.15,
-  "confidence": 0.6,
+  "specificity": 0.3,
+  "novelty": 0.25,
+  "confidence": 0.55,
   "evidence": [
-    "Job gains have remained low",
     "maintain the target range for the federal funds rate at 3\u20111/2 to 3\u20113/4 percent",
-    "Uncertainty about the economic outlook remains elevated"
+    "carefully assess incoming data, the evolving outlook, and the balance of risks",
+    "preferred to lower the target range for the federal funds rate by 1/4 percentage point"
   ],
   "extra": {
-    "stance": -0.15,
-    "guidance": -0.1
+    "stance": 0.15,
+    "guidance": -0.05
   },
   "source": "fomc_statement",
   "date": "2026-03-18",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 313,
+  "max_words": 20000
 }

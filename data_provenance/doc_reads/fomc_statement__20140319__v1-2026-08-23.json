@@ -1,7 +1,7 @@
 {
   "direction": {
     "equity": -0.1,
-    "duration": -0.15,
+    "duration": -0.2,
     "gold": -0.1,
     "dollar": 0.15,
     "oil": 0.0
@@ -12,17 +12,20 @@
   "novelty": 0.2,
   "confidence": 0.6,
   "evidence": [
-    "make a further measured reduction in the pace of its asset purchases",
-    "add to its holdings of agency mortgage-backed securities at a pace of $25 billion per month",
+    "the Committee decided to make a further measured reduction in the pace of its asset purchases",
+    "it likely will be appropriate to maintain the current target range for the federal funds rate for a considerable time",
     "The Committee has updated its forward guidance"
   ],
   "extra": {
     "stance": 0.15,
-    "guidance": -0.1
+    "guidance": 0.1
   },
   "source": "fomc_statement",
   "date": "2014-03-19",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 778,
+  "max_words": 20000
 }

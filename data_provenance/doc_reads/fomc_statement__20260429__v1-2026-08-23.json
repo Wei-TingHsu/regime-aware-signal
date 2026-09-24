@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.1,
-    "duration": 0.1,
+    "equity": 0.05,
+    "duration": -0.1,
     "gold": 0.1,
-    "dollar": -0.1,
-    "oil": 0.2
+    "dollar": 0.1,
+    "oil": 0.0
   },
-  "magnitude": 0.3,
-  "horizon_days": 30,
-  "specificity": 0.4,
-  "novelty": 0.2,
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.55,
+  "novelty": 0.5,
   "confidence": 0.55,
   "evidence": [
-    "maintain the target range for the federal funds rate at 3\u20111/2 to 3\u20113/4 percent",
-    "Inflation is elevated, in part reflecting the recent increase in global energy prices",
-    "Job gains have remained low, on average"
+    "Inflation is elevated, in part reflecting the recent increase in global energy prices.",
+    "did not support inclusion of an easing bias in the statement at this time.",
+    "who preferred to lower the target range for the federal funds rate by 1/4 percentage point"
   ],
   "extra": {
-    "stance": 0.05,
-    "guidance": 0.0
+    "stance": 0.2,
+    "guidance": 0.05
   },
   "source": "fomc_statement",
   "date": "2026-04-29",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 348,
+  "max_words": 20000
 }

@@ -1,28 +1,31 @@
 {
   "direction": {
     "equity": 0.1,
-    "duration": -0.15,
-    "gold": -0.1,
-    "dollar": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
     "oil": 0.0
   },
-  "magnitude": 0.25,
+  "magnitude": 0.2,
   "horizon_days": 5,
   "specificity": 0.4,
-  "novelty": 0.2,
-  "confidence": 0.65,
+  "novelty": 0.15,
+  "confidence": 0.6,
   "evidence": [
-    "The Committee views the slowing in growth during the first quarter as likely to be transitory",
     "decided to maintain the target range for the federal funds rate at 3/4 to 1 percent",
-    "economic conditions will evolve in a manner that will warrant gradual increases in the federal funds rate"
+    "views the slowing in growth during the first quarter as likely to be transitory",
+    "warrant gradual increases in the federal funds rate"
   ],
   "extra": {
-    "stance": 0.15,
-    "guidance": 0.1
+    "stance": 0.1,
+    "guidance": 0.2
   },
   "source": "fomc_statement",
   "date": "2017-05-03",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 524,
+  "max_words": 20000
 }

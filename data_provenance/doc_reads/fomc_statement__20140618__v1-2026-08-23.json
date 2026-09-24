@@ -1,28 +1,31 @@
 {
   "direction": {
     "equity": 0.1,
-    "duration": -0.05,
-    "gold": -0.05,
-    "dollar": 0.05,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": -0.05,
     "oil": 0.0
   },
-  "magnitude": 0.15,
-  "horizon_days": 5,
+  "magnitude": 0.2,
+  "horizon_days": 30,
   "specificity": 0.7,
   "novelty": 0.1,
-  "confidence": 0.75,
+  "confidence": 0.7,
   "evidence": [
     "make a further measured reduction in the pace of its asset purchases",
-    "growth in economic activity has rebounded in recent months",
-    "maintain the current target range for the federal funds rate for a considerable time"
+    "maintain the current target range for the federal funds rate for a considerable time",
+    "asset purchases are not on a preset course"
   ],
   "extra": {
-    "stance": 0.1,
+    "stance": -0.1,
     "guidance": -0.2
   },
   "source": "fomc_statement",
   "date": "2014-06-18",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 703,
+  "max_words": 20000
 }

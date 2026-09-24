@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.4,
-    "duration": 0.4,
-    "gold": 0.4,
-    "dollar": -0.4,
+    "equity": 0.3,
+    "duration": 0.3,
+    "gold": 0.3,
+    "dollar": -0.3,
     "oil": 0.2
   },
   "magnitude": 0.5,
-  "horizon_days": 20,
-  "specificity": 0.6,
-  "novelty": 0.4,
-  "confidence": 0.65,
+  "horizon_days": 45,
+  "specificity": 0.75,
+  "novelty": 0.35,
+  "confidence": 0.7,
   "evidence": [
-    "lower the target range for the federal funds rate to 2 to 2-1/4 percent",
-    "conclude the reduction of its aggregate securities holdings...in August, two months earlier",
-    "will act as appropriate to sustain the expansion"
+    "decided to lower the target range for the federal funds rate to 2 to 2-1/4 percent",
+    "will conclude the reduction of its aggregate securities holdings in the System Open Market Account in August, two months earlier",
+    "Voting against the action were Esther L. George and Eric S. Rosengren"
   ],
   "extra": {
     "stance": -0.3,
-    "guidance": -0.1
+    "guidance": -0.2
   },
   "source": "fomc_statement",
   "date": "2019-07-31",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 410,
+  "max_words": 20000
 }

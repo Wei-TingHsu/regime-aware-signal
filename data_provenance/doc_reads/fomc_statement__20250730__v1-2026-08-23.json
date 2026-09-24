@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.0,
-    "duration": 0.05,
-    "gold": 0.0,
-    "dollar": 0.0,
+    "equity": 0.1,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
     "oil": 0.0
   },
-  "magnitude": 0.15,
+  "magnitude": 0.3,
   "horizon_days": 30,
-  "specificity": 0.3,
-  "novelty": 0.1,
+  "specificity": 0.55,
+  "novelty": 0.4,
   "confidence": 0.6,
   "evidence": [
-    "maintain the target range for the federal funds rate at 4-1/4 to 4-1/2 percent",
-    "Inflation remains somewhat elevated",
-    "growth of economic activity moderated in the first half of the year"
+    "growth of economic activity moderated in the first half of the year",
+    "preferred to lower the target range for the federal funds rate by 1/4 percentage point",
+    "maintain the target range for the federal funds rate at 4-1/4 to 4-1/2 percent"
   ],
   "extra": {
-    "stance": 0.05,
-    "guidance": 0.0
+    "stance": -0.15,
+    "guidance": -0.1
   },
   "source": "fomc_statement",
   "date": "2025-07-30",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 332,
+  "max_words": 20000
 }

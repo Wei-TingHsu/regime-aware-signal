@@ -4,25 +4,28 @@
     "duration": 0.1,
     "gold": 0.1,
     "dollar": -0.1,
-    "oil": 0.05
+    "oil": 0.0
   },
-  "magnitude": 0.2,
-  "horizon_days": 30,
-  "specificity": 0.8,
-  "novelty": 0.15,
-  "confidence": 0.7,
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.6,
   "evidence": [
     "the Federal Reserve will purchase Treasury bills at least into the second quarter of next year",
-    "These actions are purely technical measures to support the effective implementation of the FOMC's monetary policy",
+    "conduct term and overnight repurchase agreement operations at least through January of next year",
     "do not represent a change in the stance of monetary policy"
   ],
   "extra": {
-    "stance": -0.1,
-    "guidance": 0.1
+    "stance": -0.15,
+    "guidance": -0.1
   },
   "source": "fomc_statement",
   "date": "2019-10-11",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 722,
+  "max_words": 20000
 }

@@ -3,10 +3,10 @@
     "equity": 0.1,
     "duration": 0.1,
     "gold": 0.0,
-    "dollar": 0.05,
+    "dollar": -0.1,
     "oil": 0.0
   },
-  "magnitude": 0.3,
+  "magnitude": 0.25,
   "horizon_days": 5,
   "specificity": 0.5,
   "novelty": 0.3,
@@ -14,15 +14,18 @@
   "evidence": [
     "expects to begin implementing its balance sheet normalization program relatively soon",
     "maintain the target range for the federal funds rate at 1 to 1-1/4 percent",
-    "Inflation on a 12-month basis is expected to remain somewhat below 2 percent"
+    "Market-based measures of inflation compensation remain low"
   ],
   "extra": {
-    "stance": 0.1,
+    "stance": 0.05,
     "guidance": 0.2
   },
   "source": "fomc_statement",
   "date": "2017-07-26",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 513,
+  "max_words": 20000
 }

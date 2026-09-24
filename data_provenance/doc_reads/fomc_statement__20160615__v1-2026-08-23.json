@@ -2,27 +2,30 @@
   "direction": {
     "equity": 0.1,
     "duration": 0.1,
-    "gold": 0.0,
-    "dollar": -0.1,
+    "gold": -0.05,
+    "dollar": 0.05,
     "oil": 0.0
   },
   "magnitude": 0.2,
-  "horizon_days": 30,
-  "specificity": 0.3,
-  "novelty": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.2,
   "confidence": 0.6,
   "evidence": [
     "job gains have diminished",
-    "will warrant only gradual increases in the federal funds rate",
-    "maintain the target range for the federal funds rate at 1/4 to 1/2 percent"
+    "Growth in household spending has strengthened",
+    "warrant only gradual increases in the federal funds rate"
   ],
   "extra": {
-    "stance": -0.2,
+    "stance": -0.1,
     "guidance": -0.2
   },
   "source": "fomc_statement",
   "date": "2016-06-15",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 547,
+  "max_words": 20000
 }

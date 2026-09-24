@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": -0.2,
+    "equity": -0.3,
     "duration": -0.4,
     "gold": -0.3,
     "dollar": 0.4,
     "oil": -0.1
   },
-  "magnitude": 0.5,
-  "horizon_days": 5,
-  "specificity": 0.8,
+  "magnitude": 0.45,
+  "horizon_days": 30,
+  "specificity": 0.85,
   "novelty": 0.3,
   "confidence": 0.7,
   "evidence": [
     "raise the target range for the federal funds rate to 1/2 to 3/4 percent",
-    "warrant only gradual increases in the federal funds rate",
+    "will warrant only gradual increases in the federal funds rate",
     "Market-based measures of inflation compensation have moved up considerably"
   ],
   "extra": {
-    "stance": 0.3,
-    "guidance": 0.1
+    "stance": 0.4,
+    "guidance": 0.2
   },
   "source": "fomc_statement",
   "date": "2016-12-14",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 542,
+  "max_words": 20000
 }

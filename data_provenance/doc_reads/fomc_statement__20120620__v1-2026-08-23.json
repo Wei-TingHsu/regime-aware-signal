@@ -1,28 +1,31 @@
 {
   "direction": {
     "equity": 0.2,
-    "duration": 0.4,
-    "gold": 0.3,
-    "dollar": -0.3,
+    "duration": 0.5,
+    "gold": 0.2,
+    "dollar": -0.2,
     "oil": 0.1
   },
   "magnitude": 0.35,
-  "horizon_days": 60,
+  "horizon_days": 30,
   "specificity": 0.6,
-  "novelty": 0.3,
-  "confidence": 0.65,
+  "novelty": 0.2,
+  "confidence": 0.6,
   "evidence": [
-    "growth in employment has slowed in recent months",
-    "continue through the end of the year its program to extend the average maturity",
-    "exceptionally low levels for the federal funds rate at least through late 2014"
+    "continuation of the maturity extension program should put downward pressure on longer-term interest rates",
+    "exceptionally low levels for the federal funds rate at least through late 2014",
+    "strains in global financial markets continue to pose significant downside risks"
   ],
   "extra": {
-    "stance": -0.4,
-    "guidance": -0.4
+    "stance": -0.5,
+    "guidance": 0.6
   },
   "source": "fomc_statement",
   "date": "2012-06-20",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 399,
+  "max_words": 20000
 }

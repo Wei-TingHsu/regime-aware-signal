@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.1,
-    "duration": 0.1,
+    "equity": 0.2,
+    "duration": 0.3,
     "gold": 0.1,
-    "dollar": -0.1,
-    "oil": 0.0
+    "dollar": -0.2,
+    "oil": 0.1
   },
-  "magnitude": 0.2,
-  "horizon_days": 5,
+  "magnitude": 0.3,
+  "horizon_days": 60,
   "specificity": 0.6,
-  "novelty": 0.15,
-  "confidence": 0.75,
+  "novelty": 0.2,
+  "confidence": 0.6,
   "evidence": [
     "exceptionally low levels for the federal funds rate at least through late 2014",
-    "Inflation has picked up somewhat, mainly reflecting higher prices of crude oil and gasoline",
-    "Strains in global financial markets continue to pose significant downside risks"
+    "Strains in global financial markets continue to pose significant downside risks",
+    "continue its program to extend the average maturity of its holdings"
   ],
   "extra": {
-    "stance": -0.1,
-    "guidance": 0.0
+    "stance": -0.4,
+    "guidance": -0.5
   },
   "source": "fomc_statement",
   "date": "2012-04-25",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 347,
+  "max_words": 20000
 }

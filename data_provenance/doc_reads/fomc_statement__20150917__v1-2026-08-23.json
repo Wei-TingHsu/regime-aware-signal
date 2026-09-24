@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.2,
-    "duration": 0.3,
-    "gold": 0.1,
-    "dollar": -0.2,
-    "oil": 0.1
+    "equity": 0.1,
+    "duration": 0.1,
+    "gold": 0.05,
+    "dollar": -0.1,
+    "oil": 0.0
   },
-  "magnitude": 0.4,
-  "horizon_days": 30,
+  "magnitude": 0.25,
+  "horizon_days": 5,
   "specificity": 0.4,
-  "novelty": 0.4,
+  "novelty": 0.15,
   "confidence": 0.6,
   "evidence": [
-    "Recent global economic and financial developments may restrain economic activity somewhat",
-    "reaffirmed its view that the current 0 to 1/4 percent target range for the federal funds rate remains appropriate",
-    "Market-based measures of inflation compensation moved lower"
+    "is monitoring developments abroad",
+    "reasonably confident that inflation will move back to its 2 percent objective",
+    "preferred to raise the target range for the federal funds rate by 25 basis points"
   ],
   "extra": {
-    "stance": -0.3,
-    "guidance": -0.2
+    "stance": -0.1,
+    "guidance": -0.1
   },
   "source": "fomc_statement",
   "date": "2015-09-17",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 400,
+  "max_words": 20000
 }

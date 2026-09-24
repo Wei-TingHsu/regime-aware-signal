@@ -2,7 +2,7 @@
   "direction": {
     "equity": 0.2,
     "duration": 0.1,
-    "gold": 0.0,
+    "gold": 0.1,
     "dollar": -0.1,
     "oil": 0.1
   },
@@ -17,12 +17,15 @@
     "will continue to increase its holdings of Treasury securities by at least $80 billion per month"
   ],
   "extra": {
-    "stance": -0.3,
-    "guidance": -0.2
+    "stance": -0.1,
+    "guidance": -0.1
   },
   "source": "fomc_statement",
   "date": "2021-06-16",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 481,
+  "max_words": 20000
 }

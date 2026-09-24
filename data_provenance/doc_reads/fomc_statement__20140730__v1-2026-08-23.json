@@ -1,20 +1,20 @@
 {
   "direction": {
     "equity": 0.1,
-    "duration": -0.05,
-    "gold": -0.05,
-    "dollar": 0.1,
+    "duration": -0.15,
+    "gold": -0.1,
+    "dollar": 0.15,
     "oil": 0.0
   },
-  "magnitude": 0.2,
-  "horizon_days": 5,
+  "magnitude": 0.25,
+  "horizon_days": 30,
   "specificity": 0.6,
-  "novelty": 0.15,
-  "confidence": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.6,
   "evidence": [
-    "growth in economic activity rebounded in the second quarter",
-    "the Committee decided to make a further measured reduction in the pace of its asset purchases",
-    "maintain the current target range for the federal funds rate for a considerable time after the asset purchase program ends"
+    "a further measured reduction in the pace of its asset purchases",
+    "likely be appropriate to maintain the current target range for the federal funds rate for a considerable time",
+    "likelihood of inflation running persistently below 2 percent has diminished somewhat"
   ],
   "extra": {
     "stance": 0.15,
@@ -24,5 +24,8 @@
   "date": "2014-07-30",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 745,
+  "max_words": 20000
 }

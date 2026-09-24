@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.0,
-    "duration": 0.0,
-    "gold": 0.0,
-    "dollar": 0.0,
+    "equity": -0.05,
+    "duration": -0.1,
+    "gold": -0.05,
+    "dollar": 0.05,
     "oil": 0.0
   },
-  "magnitude": 0.15,
-  "horizon_days": 5,
+  "magnitude": 0.2,
+  "horizon_days": 90,
   "specificity": 0.3,
-  "novelty": 0.25,
-  "confidence": 0.4,
+  "novelty": 0.35,
+  "confidence": 0.45,
   "evidence": [
     "unanimous approval of updates to its Statement on Longer-Run Goals and Monetary Policy Strategy",
     "The Committee's two percent longer-run inflation goal was not a focus of the review.",
-    "intended to enhance the transparency, accountability, and effectiveness of monetary policy"
+    "reflect lessons from the economy over the past five years"
   ],
   "extra": {
-    "stance": 0.1,
-    "guidance": 0.0
+    "stance": 0.15,
+    "guidance": -0.1
   },
   "source": "fomc_statement",
   "date": "2025-08-22",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 184,
+  "max_words": 20000
 }

@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.15,
-    "duration": -0.1,
-    "gold": 0.1,
-    "dollar": 0.05,
-    "oil": 0.1
+    "equity": 0.2,
+    "duration": 0.2,
+    "gold": 0.15,
+    "dollar": -0.15,
+    "oil": 0.05
   },
   "magnitude": 0.2,
-  "horizon_days": 30,
-  "specificity": 0.35,
-  "novelty": 0.25,
-  "confidence": 0.6,
+  "horizon_days": 10,
+  "specificity": 0.7,
+  "novelty": 0.1,
+  "confidence": 0.75,
   "evidence": [
-    "economic recovery is on a firmer footing",
-    "concerns about global supplies of crude oil have contributed to a sharp run-up in oil prices",
-    "The Committee expects these effects to be transitory"
+    "intends to purchase $600 billion of longer-term Treasury securities by the end of the second quarter of 2011",
+    "maintain the target range for the federal funds rate at 0 to 1/4 percent",
+    "likely to warrant exceptionally low levels for the federal funds rate for an extended period"
   ],
   "extra": {
-    "stance": 0.15,
-    "guidance": -0.1
+    "stance": -0.5,
+    "guidance": -0.4
   },
   "source": "fomc_statement",
   "date": "2011-03-15",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 289,
+  "max_words": 20000
 }

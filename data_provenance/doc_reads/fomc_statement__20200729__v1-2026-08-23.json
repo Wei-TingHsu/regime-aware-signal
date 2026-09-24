@@ -1,20 +1,20 @@
 {
   "direction": {
-    "equity": 0.1,
+    "equity": 0.2,
     "duration": 0.1,
     "gold": 0.1,
     "dollar": -0.1,
     "oil": 0.1
   },
   "magnitude": 0.2,
-  "horizon_days": 30,
-  "specificity": 0.4,
+  "horizon_days": 5,
+  "specificity": 0.35,
   "novelty": 0.15,
-  "confidence": 0.6,
+  "confidence": 0.65,
   "evidence": [
     "maintain the target range for the federal funds rate at 0 to 1/4 percent",
     "will increase its holdings of Treasury securities and agency residential and commercial mortgage-backed securities at least at the current pace",
-    "Committee expects to maintain this target range until it is confident that the economy has weathered recent events"
+    "expects to maintain this target range until it is confident that the economy has weathered recent events"
   ],
   "extra": {
     "stance": -0.6,
@@ -24,5 +24,8 @@
   "date": "2020-07-29",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 453,
+  "max_words": 20000
 }

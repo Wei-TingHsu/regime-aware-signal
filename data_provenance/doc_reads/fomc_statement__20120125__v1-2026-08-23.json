@@ -1,20 +1,20 @@
 {
   "direction": {
-    "equity": 0.5,
-    "duration": 0.6,
-    "gold": 0.5,
-    "dollar": -0.5,
+    "equity": 0.4,
+    "duration": 0.5,
+    "gold": 0.3,
+    "dollar": -0.3,
     "oil": 0.2
   },
   "magnitude": 0.55,
-  "horizon_days": 45,
-  "specificity": 0.6,
+  "horizon_days": 30,
+  "specificity": 0.7,
   "novelty": 0.6,
   "confidence": 0.7,
   "evidence": [
     "exceptionally low levels for the federal funds rate at least through late 2014",
     "highly accommodative stance for monetary policy",
-    "inflation will run at levels at or below those consistent with the Committee's dual mandate"
+    "continue its program to extend the average maturity of its holdings"
   ],
   "extra": {
     "stance": -0.6,
@@ -24,5 +24,8 @@
   "date": "2012-01-25",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 327,
+  "max_words": 20000
 }

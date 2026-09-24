@@ -2,27 +2,30 @@
   "direction": {
     "equity": 0.4,
     "duration": 0.5,
-    "gold": 0.4,
+    "gold": 0.3,
     "dollar": -0.3,
-    "oil": 0.2
+    "oil": 0.0
   },
-  "magnitude": 0.55,
-  "horizon_days": 30,
-  "specificity": 0.55,
-  "novelty": 0.3,
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.5,
+  "novelty": 0.2,
   "confidence": 0.7,
   "evidence": [
-    "maintain the target range for the federal funds rate at 0 to 1/4 percent",
+    "committed to using its full range of tools",
     "will continue to purchase Treasury securities and agency residential and commercial mortgage-backed securities",
-    "committed to using its full range of tools to support the U.S. economy"
+    "expects to maintain this target range until it is confident"
   ],
   "extra": {
-    "stance": -0.85,
+    "stance": -0.9,
     "guidance": -0.8
   },
   "source": "fomc_statement",
   "date": "2020-04-29",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 429,
+  "max_words": 20000
 }

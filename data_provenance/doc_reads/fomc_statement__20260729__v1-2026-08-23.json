@@ -1,10 +1,10 @@
 {
   "direction": {
-    "equity": -0.2,
-    "duration": -0.3,
+    "equity": -0.3,
+    "duration": -0.4,
     "gold": -0.2,
     "dollar": 0.3,
-    "oil": 0.1
+    "oil": 0.0
   },
   "magnitude": 0.45,
   "horizon_days": 30,
@@ -12,17 +12,20 @@
   "novelty": 0.55,
   "confidence": 0.6,
   "evidence": [
-    "maintain the target range for the federal funds rate at 3-1/2 to 3-3/4 percent",
+    "preferred to raise the target range for the federal funds rate by 1/4 percentage point",
     "Inflation remains elevated relative to the Committee's 2 percent goal",
-    "preferred to raise the target range for the federal funds rate by 1/4 percentage point"
+    "Economic activity is expanding at a solid pace"
   ],
   "extra": {
     "stance": 0.35,
-    "guidance": 0.2
+    "guidance": 0.1
   },
   "source": "fomc_statement",
   "date": "2026-07-29",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 167,
+  "max_words": 20000
 }

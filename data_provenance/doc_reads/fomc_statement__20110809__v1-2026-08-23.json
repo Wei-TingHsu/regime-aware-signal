@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": 0.1,
-    "duration": 0.7,
-    "gold": 0.5,
-    "dollar": -0.4,
-    "oil": -0.2
+    "equity": 0.4,
+    "duration": 0.6,
+    "gold": 0.2,
+    "dollar": -0.3,
+    "oil": 0.1
   },
-  "magnitude": 0.75,
+  "magnitude": 0.7,
   "horizon_days": 60,
-  "specificity": 0.75,
-  "novelty": 0.85,
-  "confidence": 0.7,
+  "specificity": 0.7,
+  "novelty": 0.6,
+  "confidence": 0.75,
   "evidence": [
     "exceptionally low levels for the federal funds rate at least through mid-2013",
-    "economic growth so far this year has been considerably slower than the Committee had expected",
-    "downside risks to the economic outlook have increased"
+    "downside risks to the economic outlook have increased",
+    "somewhat slower pace of recovery over coming quarters"
   ],
   "extra": {
     "stance": -0.6,
-    "guidance": -0.8
+    "guidance": -0.7
   },
   "source": "fomc_statement",
   "date": "2011-08-09",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 339,
+  "max_words": 20000
 }

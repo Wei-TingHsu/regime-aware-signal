@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": -0.5,
+    "equity": -0.6,
     "duration": -0.6,
     "gold": -0.3,
-    "dollar": 0.5,
+    "dollar": 0.6,
     "oil": -0.2
   },
-  "magnitude": 0.7,
-  "horizon_days": 20,
+  "magnitude": 0.75,
+  "horizon_days": 30,
   "specificity": 0.85,
-  "novelty": 0.35,
-  "confidence": 0.7,
+  "novelty": 0.7,
+  "confidence": 0.75,
   "evidence": [
     "raise the target range for the federal funds rate to 1\u20111/2 to 1-3/4 percent",
     "anticipates that ongoing increases in the target range will be appropriate",
-    "strongly committed to returning inflation to its 2 percent objective"
+    "The Committee is strongly committed to returning inflation to its 2 percent objective"
   ],
   "extra": {
     "stance": 0.7,
-    "guidance": 0.6
+    "guidance": 0.5
   },
   "source": "fomc_statement",
   "date": "2022-06-15",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 375,
+  "max_words": 20000
 }

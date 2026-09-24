@@ -1,28 +1,31 @@
 {
   "direction": {
-    "equity": -0.1,
-    "duration": -0.2,
+    "equity": -0.05,
+    "duration": -0.15,
     "gold": -0.1,
     "dollar": 0.15,
     "oil": 0.0
   },
-  "magnitude": 0.25,
+  "magnitude": 0.15,
   "horizon_days": 5,
-  "specificity": 0.55,
-  "novelty": 0.2,
-  "confidence": 0.7,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.75,
   "evidence": [
     "economic activity has been rising at a strong rate",
     "further gradual increases in the target range",
-    "Household spending and business fixed investment have grown strongly"
+    "Risks to the economic outlook appear roughly balanced"
   ],
   "extra": {
     "stance": 0.2,
-    "guidance": 0.3
+    "guidance": 0.2
   },
   "source": "fomc_statement",
   "date": "2018-08-01",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 315,
+  "max_words": 20000
 }

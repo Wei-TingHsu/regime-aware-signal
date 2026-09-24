@@ -1,15 +1,15 @@
 {
   "direction": {
-    "equity": 0.1,
+    "equity": 0.2,
     "duration": 0.3,
-    "gold": 0.1,
-    "dollar": -0.1,
+    "gold": 0.2,
+    "dollar": -0.2,
     "oil": 0.1
   },
   "magnitude": 0.2,
   "horizon_days": 30,
   "specificity": 0.5,
-  "novelty": 0.1,
+  "novelty": 0.15,
   "confidence": 0.6,
   "evidence": [
     "continue its program to extend the average maturity of its holdings",
@@ -18,11 +18,14 @@
   ],
   "extra": {
     "stance": -0.3,
-    "guidance": 0.3
+    "guidance": -0.3
   },
   "source": "fomc_statement",
   "date": "2011-12-13",
   "doc_id": "",
   "prompt_version": "v1-2026-08-23",
-  "model": "claude-sonnet-5"
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 335,
+  "max_words": 20000
 }
