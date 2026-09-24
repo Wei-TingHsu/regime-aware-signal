@@ -3,7 +3,7 @@
 A daily read on five core markets, built from the policy and company documents
 published that day — and, more often than not, an explicit refusal to call it.
 
-NUS MSc Finance · BMF5391C Applied Faculty Project · Hsu Wei-Ting
+NUS MSc Finance · BMF5391C Applied Faculty Project · Hsu Wei-Ting  
 Faculty supervisor: Dr Lee Yen Teik
 
 ---
@@ -51,26 +51,25 @@ Three things worth trying:
 
 | Path | What it is |
 |---|---|
+| `docs/PROJECT_MASTER.md` | **Start here.** The whole project in one file — plain-language overview, week-by-week history, every test and its verdict, the thirteen-route roadmap, and every canonical document bound in full |
+| `docs/TRACK.md` | Short daily status board: what is running, what to check, what is done |
+| `docs/CURRENT_STATE_2026-08-23.md` | The append-only evidence record; §18 is the latest |
+| `docs/prereg_*.md` · `docs/overlays/` | Pre-registrations — every criterion, fixed before the test |
+| `docs/*_results.md` · `docs/*_scoreboard*.md` | Every registered test's output, including the failures |
+| `outputs/reports/` | One decision report per completed session, written once and never regenerated (Markdown and JSON) |
+| `outputs/reports_backfill/<hash>/` | As-of reports over the historical corpus, one folder per corpus version, never merged |
 | `app.py` | The demonstration terminal |
-| `docs/prereg_*.md` | Pre-registrations — every criterion, fixed before the test |
-| `docs/CURRENT_STATE_2026-08-23.md` | The authoritative project record; §17 is the latest |
-| `docs/*_results.md` | Every registered test's output, including the failures |
-| `outputs/reports/` | One decision report per document session, Markdown and JSON |
 | `src/analog_event.py` | The conditional estimator, frozen at commit `9062391` |
 | `step5_weighting.py` · `step6_report.py` | Weighted net view and decision report |
+| `src/report_scoreboard.py` · `src/report_backfill.py` | The referee that scores the report's own calls, and its historical backfill |
 | `daily_run.sh` · `install_launchd.sh` | Unattended nightly run |
+| `docs/archive/` | Superseded documents, kept for the record |
 
 ## How to read the evidence
 
-Start with `docs/CURRENT_STATE_2026-08-23.md` §17. It records what was tested,
-what failed, and what the failures cost — including 27 logged cases where a
-plausible belief was overturned by running code, and the claims retired as a
-result.
+Start with `docs/PROJECT_MASTER.md` — Part A reads in half an hour and assumes no finance background; Part B holds every source document in full. For the evidence behind any number, `docs/CURRENT_STATE_2026-08-23.md` is the dated record, and §18 is the latest.
 
-The short version: two headline hypotheses were tested and rejected (gold does
-not reliably decouple from equities under stress; sector rotation has no stable
-running order), the conditional estimator survived correct inference in one cell
-of 45, and the product that ships is one that abstains and says why.
+The short version: the headline hypotheses were tested and rejected — gold does not reliably decouple from equities under stress; sector rotation has no stable running order — and a trend-model advantage was traced to a look-ahead. The conditional estimator survived correct inference in one cell of 45. The report's own directional calls, scored against a within-asset permutation null over 1,532 historical document days, did not beat following the market's drift. Nearly thirty plausible beliefs, each held in writing, were overturned by running code and are logged with dates. The product that ships is one that abstains and says why; the next phase, registered in the roadmap, builds exposure, expected move and unfamiliarity as its primary outputs.
 
 ## Automation
 
