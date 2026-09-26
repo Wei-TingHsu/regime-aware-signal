@@ -42,6 +42,8 @@ cat > "$PLIST" <<EOF
   <key>Label</key><string>$LABEL</string>
   <key>ProgramArguments</key>
   <array>
+    <string>/usr/bin/caffeinate</string>
+    <string>-is</string>
     <string>/bin/zsh</string>
     <string>$REPO/daily_run.sh</string>
   </array>

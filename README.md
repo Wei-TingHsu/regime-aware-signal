@@ -24,9 +24,7 @@ streamlit run app.py
 It opens a browser tab. `Ctrl+C` in the terminal stops it.
 
 **Nothing needs to be computed first.** The daily reports are pre-generated in
-`outputs/reports/` and the app only reads them, so it loads instantly and works
-offline. The one exception is the "Look up an asset" tab, which prices a ticker
-on request and needs a network connection.
+`outputs/reports/` and the app only reads them, so the Today tab loads instantly and works offline. The exception is "Look up an asset", which prices a ticker on request, needs a network connection, and takes about a minute on its first use while the expanding regime labels are computed.
 
 ### What you should expect to see
 
@@ -80,5 +78,4 @@ launchctl list | grep regimeaware
 ```
 
 `daily_run.sh` appends the forward-test row, fetches and reads new documents
-under a nightly cap, writes each completed session's report once — never regenerated — and rebuilds the index the app serves. It never
-refits a frozen model.
+under a nightly cap, writes each completed session's report once — never regenerated — and rebuilds the index the app serves. It never refits a frozen model. It also fetches new FOMC statements and Federal Register documents, holds a report back while any of its session's documents are unread, and commits and pushes the day's ledgers, scoreboards and reports so the record leaves the machine every night.
