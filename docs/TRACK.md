@@ -247,6 +247,38 @@ baseline every step-8 source is judged against. Step 8 deferred (funded).
 
 ---
 
+### 3.9 T9b — surprise conditioning for scheduled events — $0 (level 1)
+
+**What it is.** The reader scores what a statement *says*; the market reacts to what it says
+*relative to what was priced*. Add a per-event surprise feature and let the precedent pool
+condition on its sign as well as regime and document class. Level 1 (free, on disk): the
+announcement-day change in DGS2 and the asset's five-session run-up into the meeting. Level 2
+(fed funds futures-implied expectation, Kuttner) and level 3 (30-minute intraday window,
+Gürkaynak–Sack–Swanson) are registered as later variants with their data costs.
+
+**Why.** The 29 Sep observation: a hold when a hike was priced is a dovish surprise; the text
+reads neutral, gold falls into the meeting and rises out of it. Two identical statements can
+have opposite reactions, and the engine cannot currently tell them apart.
+
+**Registration first.** `docs/prereg_surprise.md`: the surprise definition, the sign buckets,
+the split by (reader stance × surprise sign), the null, the criterion, the expected direction —
+on the 131 statements and 125 minutes in the backfill. Extends T9; shares the release calendar
+with T8. Silver is not in the universe and stays out until a metals extension is registered.
+
+### 3.10 Instrument robustness — does the display panel change any verdict? — $0
+
+**What it is.** The model runs on SPY, TLT, GLD, UUP, USO; the app shows the S&P 500 index,
+the 10-year yield, gold futures, DXY and WTI. Rebuild the price panel on the display
+instruments (with a DGS10-derived duration proxy in place of the yield) and re-run Problem 1
+and the report backfill; compare verdicts.
+
+**Criterion, fixed now.** Same PASS/FAIL on the primary cell; estimate signs agree on ≥ 90% of
+cells; non-overlap hit-rate within 2 points. Agreement → the app states "modelled on ETFs,
+shown as desk instruments, results consistent." Disagreement → a finding: attribute it to
+settlement timing (GLD 4 pm vs gold futures 1:30 pm ET, with FOMC at 2 pm), roll (USO), or
+maturity (TLT vs 10Y), and the app shows whichever the record supports. Nothing in
+`models.yaml` or the forward ledger changes either way.
+
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a
