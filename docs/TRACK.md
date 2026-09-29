@@ -247,7 +247,7 @@ baseline every step-8 source is judged against. Step 8 deferred (funded).
 
 ---
 
-### 3.9 T9b — surprise conditioning for scheduled events — $0 (level 1)
+### 3.9 T9b — surprise conditioning — stage A RUN 29 Sep, INCONCLUSIVE (GLD yes, TLT no); next: level 3 registration, then stage B
 
 **What it is.** The reader scores what a statement *says*; the market reacts to what it says
 *relative to what was priced*. Add a per-event surprise feature and let the precedent pool
@@ -284,7 +284,7 @@ precedent pool beside regime and document class. Each class is its own registrat
 `docs/prereg_surprise.md`; a class whose expectation source is unavailable is reported as
 "run-up proxy only" rather than dropped.
 
-### 3.10 Instrument robustness — does the display panel change any verdict? — $0
+### 3.10 Instrument robustness — RUN 29 Sep — CONSISTENT (moved to §5)
 
 **What it is.** The model runs on SPY, TLT, GLD, UUP, USO; the app shows the S&P 500 index,
 the 10-year yield, gold futures, DXY and WTI. Rebuild the price panel on the display
@@ -352,6 +352,7 @@ Kept so that "what was done" stays beside "what was not".
 | 2026-09-13 | Report-level scoreboard pre-registration drafted (`docs/prereg_report_scoreboard.md`, three `[FILL]` placeholders open); eight-step build plan agreed — see §3.8 |
 | 2026-09-14 | Audit recorded: CURRENT_STATE §18, forward-test catch-up amendment, prereg committed with placeholders, TRACK corrections (`202fe37`). `step6` defers a report while its session has unread documents; `--pending` + `daily_run` loop (`e761072`) — tested on 11 Sep: deferred, 2 unread. Reads remain PAUSED for credit; pending reports queue until they resume |
 | 2026-09-24 | Two silent defects (CURRENT_STATE §18.7): the nightly job never had ANTHROPIC_API_KEY (it lived only in `.zshrc`; reads since 14 Sep blocked by the key, not the balance — §18.3's diagnosis corrected); no fetcher for FOMC statements existed, so 16 Sep was never on disk. `src/fetch_fomc_statements.py` added and wired into step 3; decisions CSV extended to 28 Oct and 9 Dec; abort message fixed. Fresh-clone test passed; two derived panels re-tracked; LICENSE added; README clone URL. Wrong-prior candidates #30, #31 |
+| 2026-09-29 | Instrument robustness **CONSISTENT** (C1–C4; hit-rate 58.2→56.5, agreement 94.8%); app may state ETFs modelled / desk instruments shown. Surprise stage A **INCONCLUSIVE**: GLD passes (p 0.039, −0.54%/bucket over 3 sessions), TLT ≈ 0 — the reverse of the registered prior. Stage B authorised; level 3 (Swanson series) next. Wrong-prior candidates #32, #33 (CURRENT_STATE §18.9–18.10) |
 | 2026-09-24 | Statement corpus replaced by a mis-scoped `--refetch` (assistant's error), re-read under identical conditions (132 docs), gate unchanged 0.517. Backfill re-run as `48a6c4e879a1_n2617`: **FAIL** (hit 58.2% vs q95 58.8%; asymmetry 0.880). The 14 Sep INCONCLUSIVE was not robust. New baseline `48a6c4e879a1_n2617` (CURRENT_STATE §18.8) |
 | 2026-09-14 | Report scoreboard steps 1–7 done in one day, $0. Backfill `986e0d65b6df_n2616`: 1,531 as-of reports; **INCONCLUSIVE** (hit 59.4% vs null q95 59.1%, p 0.0497; asymmetry CI includes 1). Coverage baseline 38% of document days. Ledger dtype bug found by the run, fixed. Details prereg §11, CURRENT_STATE §18.6 |
 

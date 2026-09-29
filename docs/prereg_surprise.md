@@ -80,3 +80,4 @@ reaction it is meant to explain.
 | date | change | reason |
 |---|---|---|
 | — | — | — |
+| 2026-09-29 | Stage A run. INCONCLUSIVE — GLD met (b −0.0054, p 0.039), TLT did not (b ≈ 0). Prior reversed; recorded in CURRENT_STATE §18.10. Stage B authorised under §2; level 3 (published surprise series) registered next | Result, no criterion changed |

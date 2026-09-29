@@ -705,7 +705,7 @@ tool that produced a number anyway would be worse than useless.
                 "the estimator was built and tested on. The page shows the instruments a desk quotes — the S&P 500 index, the "
                 "10-year Treasury yield, gold in dollars an ounce, the DXY dollar index, WTI crude — from Yahoo Finance, delayed "
                 "about fifteen minutes. The one translation that matters: the model's Treasury view is on bond *prices*, so a "
-                "positive read means yields expected *lower*. Live prices are display only; nothing on this page feeds the estimator.")
+                "positive read means yields expected *lower*. Live prices are display only; nothing on this page feeds the estimator. **Tested 29 September 2026:** the report was re-run with the five display instruments substituted for the ETFs; the verdict, the hit-rate and the asymmetry were unchanged within the registered tolerances (`docs/instrument_robustness.md`).")
     st.markdown('<div class="rs-section">What this cannot see</div>', unsafe_allow_html=True)
     ixx = load_index()
     R0 = load_report(ixx.iloc[-1].date) if ixx is not None and not ixx.empty else None

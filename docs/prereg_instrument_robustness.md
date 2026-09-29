@@ -71,3 +71,4 @@ what the app may claim.
 | date | change | reason |
 |---|---|---|
 | — | — | — |
+| 2026-09-29 | Run. CONSISTENT on C1–C4 (C3 by 0.3 pts). Priors on FOMC-day concentration and on the Treasury pair being weakest were wrong; recorded in CURRENT_STATE §18.9 | Result, no criterion changed |

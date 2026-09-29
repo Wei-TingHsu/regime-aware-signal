@@ -2026,3 +2026,44 @@ change to the sampler would be an amendment registered before a further run.
 **Baseline.** `48a6c4e879a1_n2617` is the baseline for every future source comparison (prereg §8), because its
 corpus is the more complete one. Both hashes, both folders and both scoreboards are kept.
 
+### 18.9 INSTRUMENT ROBUSTNESS — CONSISTENT (29 Sep)
+
+Registered `docs/prereg_instrument_robustness.md`. The five model ETFs were replaced under their
+original column names by ^GSPC, GC=F, CL=F, DX-Y.NYB and a ^TNX price proxy (D = 8.0 fixed); the
+backfill re-run to `48a6c4e879a1_n2617_altinstr` and scored at 10,000 permutations.
+
+| | baseline | alternative | threshold | met |
+|---|---|---|---|---|
+| C1 verdict | FAIL | FAIL | identical | yes |
+| C2 hit/miss agreement | — | 94.8% (1,060 rows) | ≥ 90% | yes |
+| C3 non-overlap hit-rate | 58.2% | 56.5% | ≤ 2.0 pts | yes — by 0.3 |
+| C4 asymmetry | 0.880 | 0.951 | ≤ 0.15 | yes |
+
+Daily-return correlations: SPY/^GSPC 0.985, UUP/DXY 0.927, GLD/GC=F 0.889, USO/CL=F 0.892,
+TLT/proxy 0.886. Flips were **not** concentrated on FOMC days (5.8% vs 5.0%): the futures
+settlement-time difference is a daily effect, not an announcement effect — wrong prior
+candidate #32. The Treasury proxy was not the weakest pair — a second registered prior wrong.
+CL=F's April 2020 negative print produces one NaN return (logged, not imputed).
+**The app may state: modelled on the ETFs, shown as desk instruments, verdicts unchanged.**
+
+### 18.10 SURPRISE CONDITIONING, STAGE A — INCONCLUSIVE (29 Sep)
+
+Registered `docs/prereg_surprise.md`. 132 FOMC statements; level-1 surprise = same-day ΔDGS2,
+buckets ±2 bp (hawkish 41 / neutral 39 / dovish 52); stance from the reads (hawkish 66 / dovish
+65 / neutral 1); outcome = 3-session forward return; permutation p on the surprise coefficient.
+
+| asset | b(surprise) | p | expected sign | met |
+|---|---|---|---|---|
+| GLD | −0.0054 | 0.039 | − | **yes** |
+| TLT | −0.0003 | 0.895 | − | no |
+| SPY / UUP / USO | ≈ 0 | n.s. | — | reported only |
+
+Verdict INCONCLUSIVE (GLD only). The registered prior had TLT passing trivially and GLD as the
+open question; the reverse happened — wrong prior candidate #33. The mechanism is plain in
+hindsight: the 2-year change on the day is already in the bond price by the close, so it says
+nothing about the three sessions after; gold keeps moving. Descriptive 3×3 for GLD: hawkish
+stance + hawkish surprise −1.55% (n=25) vs hawkish stance + dovish surprise −0.06% (n=25) — the
+same statement text with a 1.5-point difference in what gold did next. Under §2 of the
+registration, INCONCLUSIVE-on-GLD authorises stage B; level 3 (published Swanson / Bauer–Swanson
+surprises) is registered first, to confirm the gold result with a proper surprise measure.
+
