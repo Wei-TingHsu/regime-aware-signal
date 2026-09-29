@@ -314,6 +314,28 @@ settlement timing (GLD 4 pm vs gold futures 1:30 pm ET, with FOMC at 2 pm), roll
 maturity (TLT vs 10Y), and the app shows whichever the record supports. Nothing in
 `models.yaml` or the forward ledger changes either way.
 
+### 3.11 T14 — event-time reading: read the statement when it is published, not after the close
+
+**Why.** The evidence says direction is set within the session and size keeps unfolding; the
+founder observes intraday drift after the press conference. A system that reads the 2:00 pm
+statement at 3:00 am the next day reads yesterday's news. This is the Professional-tier
+intraday feature of the plan, built on the same guardrails.
+
+**Phases, each registered before code.**
+
+| phase | what | data | status |
+|---|---|---|---|
+| A | **Continuation test, historical, $0.** The FRBSF file carries the 30-minute reaction of SP500 and TNOTE2/5/10/TBOND for every meeting 1988–2023. Test whether the initial reaction extends to the same-day close (close-to-close minus the 30-minute move, pre-2 pm drift acknowledged as unobserved) and to the next open. Criterion fixed before the run. | on disk | next runnable item |
+| B | **Statement at publication.** On FOMC days, fetch from 1:59 pm ET every 10 s; read at 2:00; write an *event-time read* (timestamped, write-once, its own ledger — the daily report is untouched). Live surprise from 1-minute fed-funds/2-year futures bars (Yahoo, ~15 min delayed, so by 2:20). Mac must be awake at 2–3 am SGT (`pmset` wake from `fomc_decisions.csv`) or a small cloud runner. | $0 + ~$0.05/meeting | after A |
+| C | **App: event-time panel.** Shows, at 2:02: what the statement says, the live surprise once available, and what past days like this did *by the close* from daily precedents. Says plainly that intraday precedents do not yet exist. Never a "rest-of-day direction" until phase D establishes one. | — | with B |
+| D | **Intraday precedent pool.** Built from S5's forward 1-minute collection; the first honest "rest-of-session" statement is allowed only when the pool passes its own registered floor (ESS ≥ 8 event-days in the same regime). | builds itself, ~8 FOMC days/yr + releases | years |
+| E | **Press conference.** Transcript when the Fed posts it (hours later); live speech-to-text on the stream as the upgrade, with its own audited error rate. Extends the reader's schema to spoken guidance. | open-source transcriber | after B |
+| F | **Regulatory.** Intraday reads are the most advice-like output in the plan; described to counsel as designed, under abstention and no-combination rules. | S$ counsel item | before selling |
+
+**Order inside T14:** A now (it is free and historical) → S5 collection starts tonight →
+B and C → E → D as the pool grows. Nothing here changes the frozen models or the daily
+write-once report.
+
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a
