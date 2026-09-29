@@ -265,6 +265,22 @@ the split by (reader stance × surprise sign), the null, the criterion, the expe
 on the 131 statements and 125 minutes in the backfill. Extends T9; shares the release calendar
 with T8. Silver is not in the universe and stays out until a metals extension is registered.
 
+**Post-mortem, 29 Sep, and five follow-ups (each its own registration before code).** Level 3
+FAIL means "not distinguishable from zero at n = 132 with most surprises inside ±2 bp", not
+"zero": the gold coefficient kept its economic size. The horizon was the failure — close(t) to
+close(t+3) excludes the 2–4 pm reaction and is too short for the multi-week bond drift.
+
+| # | question | window | data | cost |
+|---|---|---|---|---|
+| S1 | initial reaction continues into the next session? | close(t)→open(t+1), close(t)→close(t+1) | daily opens in the raw cache | $0 |
+| S2 | pre-meeting run-up reverses? (the founder's recollection; b(run-up) ≈ −0.8%/SD for SPY and USO was visible as an untested control) | 5-session run-up → next 1/3/5 sessions | on disk | $0 |
+| S3 | slow bond drift (Brooks–Katz–Lustig) | 10/20/40 sessions, TLT — the registered T9 | on disk | $0 |
+| S4 | S1–S3 by regime | as above, once n allows | on disk | $0 |
+| S5 | **collect 1-minute bars on every scheduled event day from now on** (FOMC, CPI, NFP) in the nightly job; Yahoo serves the last 7 days free | intraday | builds itself; the only free route to intraday history | $0 |
+
+Prediction-market and FedWatch odds are the same information as the futures-implied surprise
+for the Fed; they add something only for classes without a published surprise (stages E, G).
+
 **Surprise by event class — registered here so none is forgotten.** A surprise needs an
 expectation to subtract. The Fed is the only class with a published one; every other class
 needs its own, and one class is not yet a source at all.

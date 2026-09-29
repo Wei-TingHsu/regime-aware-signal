@@ -103,4 +103,6 @@ reaction it is meant to explain.
 
 | date | change | reason |
 |---|---|---|
-| — | — | — |
+| 2026-09-29 | Stage A level 1 run. INCONCLUSIVE — GLD met (b −0.0054/bucket, p 0.039), TLT did not. CURRENT_STATE §18.10 | Result, no criterion changed |
+| 2026-09-29 | Level 3 run with the FRBSF Bauer–Swanson series (ends Dec 2023; later statements on the proxy). **FAIL** — GLD b −0.0005/bp p 0.49, TLT p 0.57. The coefficient is the same economic size as level 1; the sample cannot distinguish it from zero (113 of 132 meetings inside ±2 bp). Level-1 result recorded as proxy-driven; stage B not run. CURRENT_STATE §18.11 | Result, no criterion changed |
+| 2026-09-29 | Post-mortem: the failure is the **window**, not the threshold — the 3-session close-to-close horizon excludes the 2–4 pm reaction and is too short for the multi-week bond drift. Five follow-ups registered in TRACK §3.9 (S1–S5); each is a new registration, not a retry | Founder's challenge, accepted |
