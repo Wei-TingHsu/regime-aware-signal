@@ -265,6 +265,25 @@ the split by (reader stance × surprise sign), the null, the criterion, the expe
 on the 131 statements and 125 minutes in the backfill. Extends T9; shares the release calendar
 with T8. Silver is not in the universe and stays out until a metals extension is registered.
 
+**Surprise by event class — registered here so none is forgotten.** A surprise needs an
+expectation to subtract. The Fed is the only class with a published one; every other class
+needs its own, and one class is not yet a source at all.
+
+| event class | in corpus? | expectation source | surprise measure | cost | notes |
+|---|---|---|---|---|---|
+| FOMC statement / minutes | yes | Swanson / Bauer–Swanson published series; DGS2 same-day change; fed funds futures | published factor, else ΔDGS2 | $0 | level 1–3 above |
+| Earnings release (8-K 2.02 / 6-K) | yes | analyst consensus EPS and revenue | reported − consensus, as % and as standardised surprise (SUE) | $0 for recent years via `yfinance` `Ticker.earnings_dates` (estimate, reported, surprise %); deeper history is paid (Refinitiv/I-B-E-S, Zacks) | the reader's own "earnings surprise vs equity direction" audit already agreed 431/442 — this adds the *market's* prior, not the reader's |
+| Scheduled macro releases (NFP, CPI, PPI, GDP) | no — T8 adds the calendar, not the text | economist consensus | actual − consensus, standardised by the release's own history | consensus history is paid (Bloomberg/Refinitiv); free proxies: the asset's run-up over the prior five sessions and the same-day DGS2 move | ties directly to T8 |
+| Executive orders / proclamations | yes | no consensus exists | run-up proxy; prediction-market odds where a contract exists (Polymarket, Kalshi — public APIs); pre-event GDELT tone | $0 | most orders are telegraphed; the surprise is small by construction and should be measured as such, not assumed |
+| **Corporate cooperation, partnerships, M&A, contracts** | **no — not a source** | none; the event is the news | run-up proxy over the prior sessions; options-implied move where available (paid) | new fetcher: 8-K Items 1.01 (material agreements), 2.01 (acquisitions), 7.01 / 8.01 (Reg FD and other events) and their EX-99 press releases, $0 from EDGAR | enters through T13's provisional pool first (dated admission, scored only afterwards); reader profile needs founder review; also the natural universe for T6 |
+| Foreign central banks (BoJ, ECB) | no — T13.6 | no free published surprise series comparable to Swanson's; OIS-implied expectations are paid | run-up proxy; same-day 2-year yield change in that currency | $0 proxy | provisional pool first |
+
+Rule for all of them: the surprise is computed from data available *before* the session's
+close, never from the reaction itself, and its sign becomes a conditioning bucket in the
+precedent pool beside regime and document class. Each class is its own registration under
+`docs/prereg_surprise.md`; a class whose expectation source is unavailable is reported as
+"run-up proxy only" rather than dropped.
+
 ### 3.10 Instrument robustness — does the display panel change any verdict? — $0
 
 **What it is.** The model runs on SPY, TLT, GLD, UUP, USO; the app shows the S&P 500 index,
