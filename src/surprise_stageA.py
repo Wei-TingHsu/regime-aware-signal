@@ -83,6 +83,9 @@ def load_published(path: str, sheet=None, column=None, inspect=False) -> pd.Seri
         column = cands[0] if cands else next(c for c in df.columns if c != dcol)
     out = pd.Series(pd.to_numeric(df[column], errors="coerce").values, index=pd.to_datetime(df[dcol], errors="coerce")).dropna()
     out = out[~out.index.isna()].sort_index()
+    if len(out) < 50:
+        raise SystemExit(f"published series: only {len(out)} usable rows from sheet {sh!r} column {column!r} -- "
+                         "wrong sheet or column; run --inspect and pass --sheet/--column. Refusing to fall back to the proxy.")
     print(f"published surprises: sheet {sh!r}, column {column!r}, {len(out)} announcements, {out.index.min().date()} -> {out.index.max().date()}")
     return out
 

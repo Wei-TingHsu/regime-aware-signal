@@ -2067,3 +2067,33 @@ same statement text with a 1.5-point difference in what gold did next. Under §2
 registration, INCONCLUSIVE-on-GLD authorises stage B; level 3 (published Swanson / Bauer–Swanson
 surprises) is registered first, to confirm the gold result with a proper surprise measure.
 
+### 18.11 SURPRISE CONDITIONING, STAGE A, LEVEL 3 — FAIL (29 Sep)
+
+Registered `docs/prereg_surprise.md` §2b. Surprise = the FRBSF-maintained Bauer–Swanson series
+(`MPS`, 30-minute change in money-market futures around each FOMC statement, bp; sheet
+"FOMC (update 2023)", 360 announcements 1988–Dec 2023; vintage frozen in
+`data_provenance/mps/`). 23 statements after Dec 2023 used the level-1 ΔDGS2 proxy.
+Same 132 statements, stance, run-up, outcome and inference as level 1; the surprise enters
+continuously (per bp).
+
+| asset | b per bp | p | expected sign | met |
+|---|---|---|---|---|
+| GLD | −0.0005 | 0.488 | − | no |
+| TLT | −0.0003 | 0.565 | − | no |
+| SPY / UUP / USO | ≈ 0 | n.s. | — | reported only |
+
+**Verdict FAIL.** Per §2b, the level-1 gold result (§18.10) is recorded as proxy-driven and
+stage B is not run. Mechanism: the proxy was the 2-year yield's whole-day change — it contained
+the press conference and the afternoon — and gold's next three sessions partly continued that
+day's move; the pure pre-press-conference surprise predicts nothing at three sessions. The
+project's recurring finding again: the information is absorbed fast. Registered prior ("GLD
+holds") wrong — candidate #34. The 3×3 cells (e.g. hawkish stance × hawkish surprise −4.24%,
+n = 6) are descriptive by registration and were not tested.
+
+A first run opened the workbook's cover sheet, found nothing, and silently fell back to the
+proxy; the loader now refuses an empty series. The invalid output was deleted, not kept.
+
+What remains open, registered but not run: a same-day (h = 0/1) outcome window, where the
+literature places the surprise's effect, would be a *new* registration — the 3-session horizon
+was chosen to match the estimator's estimand, and that choice, not the surprise, is what failed.
+

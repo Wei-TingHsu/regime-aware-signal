@@ -446,6 +446,7 @@ commit and push the record.
 | 27 | The report's directional calls beat drift, re-run on the corrected statement corpus `48a6c4e879a1_n2617` | 24 Sep | **FAIL** — hit 58.2% vs q95 58.8% (p 0.0879); asymmetry 0.880; row 24's INCONCLUSIVE not robust | CURRENT_STATE §18.8 |
 | 28 | Display instruments change a verdict (instrument robustness) | 29 Sep | **CONSISTENT** — C1–C4 met; hit-rate within 1.7 pts, agreement 94.8% | CURRENT_STATE §18.9 |
 | 29 | The market reacts to the surprise, not the decision (T9b stage A, level-1 proxy) | 29 Sep | **INCONCLUSIVE** — gold yes (p 0.039), Treasuries no; the reverse of the prior | CURRENT_STATE §18.10 |
+| 30 | Same claim, published 30-minute surprise measure (level 3) | 29 Sep | **FAIL** — gold p 0.49, Treasuries p 0.57; level-1 result proxy-driven; stage B not run | CURRENT_STATE §18.11 |
 
 ---
 
@@ -768,6 +769,7 @@ and its full history found nothing to revoke.
 | 2026-09-29 | Two registrations added from the founder's observations (TRACK §3.9–3.10): T9b surprise conditioning — the market reacts to the decision minus what was priced, so precedents must condition on the surprise sign (level 1 from DGS2 and the pre-meeting run-up, $0; the published Swanson/Bauer–Swanson surprise series makes the intraday measure free as well); and an instrument-robustness test — the app displays desk instruments (S&P 500, 10Y yield, gold futures, DXY, WTI) while the model runs on ETFs, and the difference (settlement timing, roll, maturity) must be tested, not assumed. App v3 delivered: live Yahoo quotes, click-through detail charts 1m–1wk, glass design, no buy/sell by design. |
 | 2026-09-29 | §3.9 extended: surprise measures registered per event class — Fed (published series), earnings (analyst consensus, free via yfinance for recent years), scheduled macro releases (consensus paid; run-up proxy free), executive orders (no consensus; prediction-market odds, run-up), foreign central banks (run-up proxy), and **corporate cooperation / partnership / M&A news as a new source class** (8-K Items 1.01/2.01/7.01/8.01 + EX-99, $0 from EDGAR, entering through T13's provisional pool). Rule: the surprise uses only data available before the close, never the reaction. |
 | 2026-09-29 | Both new tests run the same day. Instrument robustness CONSISTENT — the app may say verdicts are unchanged on desk instruments. Surprise stage A INCONCLUSIVE — gold's next three sessions follow the FOMC surprise (hawkish statement + hawkish surprise −1.55% vs + dovish surprise −0.06%); Treasuries show nothing. Register rows 28–29; wrong-prior candidates #32–#33. |
+| 2026-09-29 | Surprise level 3 FAIL with the Fed's own published surprise series: the gold effect was the proxy measuring the whole day's move. Stage B withdrawn. Register row 30; wrong-prior candidate #34. |
 
 *Add a row here whenever a verdict is recorded or a tree changes state, and bump Appendix B's
 version line with it.*
