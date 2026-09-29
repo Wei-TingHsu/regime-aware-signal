@@ -254,7 +254,7 @@ baseline every step-8 source is judged against. Step 8 deferred (funded).
 condition on its sign as well as regime and document class. Level 1 (free, on disk): the
 announcement-day change in DGS2 and the asset's five-session run-up into the meeting. Level 2
 (fed funds futures-implied expectation, Kuttner) and level 3 (30-minute intraday window,
-Gürkaynak–Sack–Swanson) are registered as later variants with their data costs.
+Gürkaynak–Sack–Swanson) are registered as later variants. Level 3 is likely free: Swanson publishes the GSS target/path surprise series and the Bauer–Swanson (2023) update for every FOMC meeting to within a year or two of today; align it to the statement dates and compute levels 1–2 only for meetings after it ends. Paid intraday history (a one-off vendor file or a cancellable monthly feed; never a brokerage deduction) is needed only if the published series must be extended by hand.
 
 **Why.** The 29 Sep observation: a hold when a hike was priced is a dovish surprise; the text
 reads neutral, gold falls into the meeting and rises out of it. Two identical statements can

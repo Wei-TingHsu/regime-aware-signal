@@ -763,6 +763,7 @@ and its full history found nothing to revoke.
 |---|---|
 | 2026-09-21 | Created. Consolidates the journal (Weeks 1–15), the post-submission record to 21 Sep, TRACK, CURRENT_STATE §1–18, MODEL_EVOLUTION, POST_SUBMISSION_STATE, the report-scoreboard addendum, the roadmap (brought to v2.2 with T13 and the US/Japan amendments), the business plan and deck, and the communications drafts. Nothing removed. |
 | 2026-09-24 | Two silent defects found (API key never in `.env`; no FOMC statement fetcher); fetcher built; statement corpus replaced by a mis-scoped refetch and re-read; backfill re-baselined — verdict INCONCLUSIVE → FAIL (register row 27; CURRENT_STATE §18.7–18.8). Repo made runnable from a fresh clone; LICENSE added. |
+| 2026-09-29 | Two registrations added from the founder's observations (TRACK §3.9–3.10): T9b surprise conditioning — the market reacts to the decision minus what was priced, so precedents must condition on the surprise sign (level 1 from DGS2 and the pre-meeting run-up, $0; the published Swanson/Bauer–Swanson surprise series makes the intraday measure free as well); and an instrument-robustness test — the app displays desk instruments (S&P 500, 10Y yield, gold futures, DXY, WTI) while the model runs on ETFs, and the difference (settlement timing, roll, maturity) must be tested, not assumed. App v3 delivered: live Yahoo quotes, click-through detail charts 1m–1wk, glass design, no buy/sell by design. |
 
 *Add a row here whenever a verdict is recorded or a tree changes state, and bump Appendix B's
 version line with it.*
