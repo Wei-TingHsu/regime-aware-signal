@@ -52,6 +52,30 @@ GLD is the informative one. Level 1 is a proxy; if it passes only on TLT, the re
 "the proxy measures the bond market, not the surprise", and level 2/3 (the published
 Swanson / Bauer–Swanson series) is the next registration.
 
+## 2b. Stage A, level 3 — the published surprise in place of the proxy (registered 2026-09-29, after level 1)
+
+**Data.** The San Francisco Fed's *Monetary Policy Surprises* dataset (Bauer & Swanson 2023,
+maintained and updated by the FRBSF Center for Monetary Research; file stamped 2026-09-25):
+for each FOMC announcement, the 30-minute change in money-market futures rates around the
+statement, in basis points — the raw surprise `MPS` — and `MPS_ORTH`, the residual after
+regressing on six pre-announcement variables (including nonfarm payrolls). Source:
+https://www.frbsf.org/research-and-insights/data-and-indicators/monetary-policy-surprises/
+
+**What changes from level 1.** Only the surprise column. Same 132 statements, same stance,
+same run-up, same 3-session outcome, same per-asset model, same permutation inference, same
+criterion (expected sign at p < 0.05 on both TLT and GLD → PASS; one → INCONCLUSIVE).
+
+**Surprise variable, fixed.** Primary: the raw `MPS` in basis points, used **continuously**
+(the coefficient is per basis point; permutation shuffles the bp values across statements).
+Secondary, reported not tested: the ±2 bp buckets as in level 1, and `MPS_ORTH`. Statements
+after the series ends keep the level-1 proxy and are flagged; their count is reported.
+
+**Prior, stated.** GLD holds (the level-1 result was not a proxy artefact); TLT is now a real
+test rather than a tautology, because the 30-minute window closes before the day's cash-bond
+close, and the prior is that TLT's next three sessions show a negative coefficient at p < 0.10
+but not p < 0.05. If GLD fails at level 3, the level-1 result is recorded as proxy-driven and
+stage B is not run.
+
 ## 3. Stage B — conditioning the precedent pool (registered, not run)
 
 If stage A is PASS or INCONCLUSIVE-on-GLD: the precedent pool for FOMC-statement days adds the
@@ -80,4 +104,3 @@ reaction it is meant to explain.
 | date | change | reason |
 |---|---|---|
 | — | — | — |
-| 2026-09-29 | Stage A run. INCONCLUSIVE — GLD met (b −0.0054, p 0.039), TLT did not (b ≈ 0). Prior reversed; recorded in CURRENT_STATE §18.10. Stage B authorised under §2; level 3 (published surprise series) registered next | Result, no criterion changed |
