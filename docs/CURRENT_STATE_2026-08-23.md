@@ -2097,3 +2097,33 @@ What remains open, registered but not run: a same-day (h = 0/1) outcome window, 
 literature places the surprise's effect, would be a *new* registration — the 3-session horizon
 was chosen to match the estimator's estimand, and that choice, not the surprise, is what failed.
 
+### 18.12 T14 PHASE A — THE INITIAL FOMC REACTION NEITHER EXTENDS NOR REVERSES BY THE CLOSE (29 Sep)
+
+Registered `docs/prereg_event_time.md`. 292 scheduled announcements 1988–2023 from the FRBSF
+file (30-minute window reactions of S&P 500 futures and the 10-year yield), daily closes from
+^GSPC and ^TNX (frozen CSVs beside the workbook), 10,000 permutations.
+
+| market | window | n | b | p | verdict | prior |
+|---|---|---|---|---|---|---|
+| S&P 500 | rest of session | 261 | −0.219 | 0.099 | **NULL** | NULL — held |
+| S&P 500 | next session | 261 | −0.079 | 0.618 | NULL | — |
+| 10-year yield | rest of session | 292 | +0.087 | 0.283 | **NULL** | EXTENDS — wrong (#35) |
+| 10-year yield | 2006+ rest of session | 143 | +0.196 | 0.076 | NULL | — |
+
+Two hints below the bar, recorded as hints: the S&P leans toward partial give-back
+(negative b at p ≈ 0.10 in both spans); the 10-year since 2006 leans toward continuation
+(p 0.08), the direction of the documented post-FOMC bond drift. Neither is a finding.
+
+**Limitation that bounds the result.** The rest-of-session proxy is the day's close-to-close
+move minus the 30-minute reaction, so it contains the unobserved open-to-announcement move.
+The S&P's mean rest-of-session is positive after *both* up and down initial moves (+0.14%,
++0.32%) — the pre-announcement drift inside the proxy. Power is low by construction; the
+registration said so. The clean test needs intraday bars, which S5 began collecting tonight
+(73 session files, 11 tickers, write-once per session).
+
+**What the app's second line may say (registration §4):** what the statement said — always;
+for equities and Treasuries, "no measurable rest-of-session pattern (292 meetings)" and no
+number; for gold, oil and the dollar, "no intraday precedents yet — collecting." Phase A2
+(by regime) is not run: NULL permits no number regardless. Phases B/C (read the statement at
+publication; show what it said) keep their value; phase D waits on S5.
+

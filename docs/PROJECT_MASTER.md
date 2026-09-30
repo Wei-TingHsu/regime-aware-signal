@@ -447,6 +447,7 @@ commit and push the record.
 | 28 | Display instruments change a verdict (instrument robustness) | 29 Sep | **CONSISTENT** — C1–C4 met; hit-rate within 1.7 pts, agreement 94.8% | CURRENT_STATE §18.9 |
 | 29 | The market reacts to the surprise, not the decision (T9b stage A, level-1 proxy) | 29 Sep | **INCONCLUSIVE** — gold yes (p 0.039), Treasuries no; the reverse of the prior | CURRENT_STATE §18.10 |
 | 30 | Same claim, published 30-minute surprise measure (level 3) | 29 Sep | **FAIL** — gold p 0.49, Treasuries p 0.57; level-1 result proxy-driven; stage B not run | CURRENT_STATE §18.11 |
+| 31 | The initial FOMC reaction extends (or reverses) by the close (T14 phase A) | 29 Sep | **NULL** both markets; S&P prior held, 10-year prior wrong; low power by construction, clean test needs S5's bars | CURRENT_STATE §18.12 |
 
 ---
 
@@ -771,6 +772,7 @@ and its full history found nothing to revoke.
 | 2026-09-29 | Both new tests run the same day. Instrument robustness CONSISTENT — the app may say verdicts are unchanged on desk instruments. Surprise stage A INCONCLUSIVE — gold's next three sessions follow the FOMC surprise (hawkish statement + hawkish surprise −1.55% vs + dovish surprise −0.06%); Treasuries show nothing. Register rows 28–29; wrong-prior candidates #32–#33. |
 | 2026-09-29 | Surprise level 3 FAIL with the Fed's own published surprise series: the gold effect was the proxy measuring the whole day's move. Stage B withdrawn. Register row 30; wrong-prior candidate #34. |
 | 2026-09-29 | T14 registered (TRACK §3.11): event-time reading — read the FOMC statement at 2:00 pm ET when published, not after the close; phases A (free historical continuation test on the FRBSF 30-minute asset reactions) → S5 forward intraday collection → B/C live read + app panel → E press conference → D intraday precedent pool. Professional-tier feature; counsel item. |
+| 2026-09-29 | T14 phase A NULL: no measurable rest-of-session pattern after the 30-minute reaction, S&P or 10-year, 292 meetings; the app's rest-of-session line may state what the statement said but carry no number. S5 collector running nightly from tonight. Register row 31; wrong-prior candidate #35. |
 
 *Add a row here whenever a verdict is recorded or a tree changes state, and bump Appendix B's
 version line with it.*

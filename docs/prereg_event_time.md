@@ -73,3 +73,4 @@ conference (phase E). Nothing frozen changes.
 | date | change | reason |
 |---|---|---|
 | — | — | — |
+| 2026-09-29 | Run. **NULL** on both markets (S&P b −0.22 p 0.10; 10-year b +0.09 p 0.28). 10-year prior wrong (#35). Proxy contamination by the pre-announcement drift acknowledged as the power limit; clean test deferred to S5's intraday pool. CURRENT_STATE §18.12 | Result, no criterion changed |
