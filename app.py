@@ -109,6 +109,8 @@ a.rs-link {{ text-decoration:none !important; color:inherit !important; display:
 .rs-card svg {{ display:block; width:100%; height:56px; margin-top:8px; }}
 .rs-pill {{ display:inline-block; padding:3px 10px; border-radius:999px; font-size:.74rem; font-weight:600; }}
 .rs-reason {{ color:{INK2}; font-size:.78rem; margin-top:6px; line-height:1.35; min-height:2.6em; }}
+.rs-ev {{ margin-top:8px; padding-top:8px; border-top:1px solid rgba(20,23,31,.08); font-size:.74rem; color:{INK2}; line-height:1.35; }}
+.rs-ev b {{ color:{INK}; }}
 .rs-doc {{ padding:12px 14px; height:100%; border-radius:14px; }}
 .rs-doc .src {{ font-weight:600; font-size:.9rem; }}
 .rs-doc .meta {{ color:{INK3}; font-size:.74rem; margin:2px 0 8px; }}
@@ -151,6 +153,47 @@ DISPLAY = {
                 note="Model asset: USO."),
 }
 AXIS_WORD = {"equity": "US equities", "duration": "Treasuries", "gold": "Gold", "dollar": "US dollar", "oil": "Oil"}
+AXIS_OF = {"SPY": "equity", "TLT": "duration", "GLD": "gold", "UUP": "dollar", "USO": "oil"}
+
+
+@st.cache_data(show_spinner=False)
+def load_fomc_days():
+    p = PROC / "fomc_decisions.csv"
+    if not p.exists():
+        return set()
+    try:
+        return set(pd.to_datetime(pd.read_csv(p).iloc[:, 0], errors="coerce").dropna())
+    except Exception:
+        return set()
+
+
+def event_line(a: str, R: dict, day: str, fomc_days) -> str:
+    """The app's second line, per docs/prereg_event_time.md section 4. What the statement said is always
+    allowed; a number is allowed only on an EXTENDS/REVERSES verdict with a same-regime pool, which no
+    market has (phase A: NULL on S&P and 10-year, 29 Sep 2026); gold, oil and the dollar have no intraday
+    precedents until the forward collection (S5) reaches its floor."""
+    docs = [d for d in R.get("documents", []) if d.get("source") == "fomc_statement"]
+    if not docs and pd.Timestamp(day) not in fomc_days:
+        return '<div class="rs-ev"><b>Rest of session</b> — no scheduled event today</div>'
+    if docs:
+        d = docs[0]; dirs = d.get("direction") or {}
+        v = dirs.get(AXIS_OF[a], dirs.get(a))
+        stance = d.get("stance")
+        st_txt = f"{stance} stance; " if isinstance(stance, str) and stance else ""
+        if v is None or abs(v) <= 0.05:
+            read = f"no clear read for {ASSET[a].lower()}"
+        elif a == "TLT":
+            read = "implies " + ("higher bond prices (yields lower)" if v > 0 else "lower bond prices (yields higher)")
+        else:
+            read = "implies " + ("higher " if v > 0 else "lower ") + ASSET[a].lower()
+        said = f"Statement read: {st_txt}{read}. "
+    else:
+        said = "Fed statement day — statement not yet read. "
+    pattern = ("No measurable rest-of-session pattern (292 meetings, 1988–2023)."
+               if a in ("SPY", "TLT") else "No intraday precedents yet — collecting.")
+    return f'<div class="rs-ev"><b>Rest of session</b> · {said}{pattern}</div>'
+
+
 RANGES = {"1D": ("1d", "1m"), "5D": ("5d", "5m"), "1M": ("1mo", "60m"), "6M": ("6mo", "1d"),
           "1Y": ("1y", "1d"), "5Y": ("5y", "1wk")}
 
@@ -302,7 +345,7 @@ def svg_sparkline(vals, colour: str, w=240, h=56) -> str:
             f'<polyline points="{pts}" fill="none" stroke="{colour}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg>')
 
 
-def market_card(a: str, e: dict, q, href: str) -> str:
+def market_card(a: str, e: dict, q, href: str, ev: str = "") -> str:
     spec = DISPLAY[a]; head, colour, detail = verdict(e)
     if q:
         col = UP if q["chg"] >= 0 else DOWN
@@ -316,7 +359,7 @@ def market_card(a: str, e: dict, q, href: str) -> str:
             f'<div class="px">{px}<span class="chg" style="color:{col}">{chg}</span></div>'
             f'<div class="live">{live}</div>{spark}'
             f'<div style="margin-top:8px"><span class="rs-pill" style="background:{PILL_BG[colour]};color:{colour}">{head}</span></div>'
-            f'<div class="rs-reason">{detail}</div></div></a>')
+            f'<div class="rs-reason">{detail}</div>{ev}</div></a>')
 
 
 def regime_strip_html(reg, day, prof, n=250):
@@ -434,6 +477,9 @@ def detail_dashboard(a: str, R: dict, day: str, reg):
 </div>""", unsafe_allow_html=True)
     if notes:
         st.markdown('<div class="rs-foot">' + " &nbsp;·&nbsp; ".join(notes) + "</div>", unsafe_allow_html=True)
+    st.markdown('<div class="rs-section">Rest of session</div>', unsafe_allow_html=True)
+    st.markdown('<div class="g rs-banner" style="padding:12px 18px">' + event_line(a, R, day, load_fomc_days()).replace('rs-ev', 'rs-ev" style="border:none;margin:0;padding:0;font-size:.86rem') +
+                '<p class="rs-foot" style="margin-top:8px">Whether the first half-hour\'s reaction extends or reverses by the close was tested on 292 meetings since 1988 (docs/event_time_phaseA.md): no measurable pattern for equities or Treasuries. A number appears here only if a registered test establishes one. Intraday bars are being collected every session for the markets that have no history yet.</p></div>', unsafe_allow_html=True)
 
 
 def doc_cards(docs: list):
@@ -524,7 +570,9 @@ with tabs[0]:
         st.markdown(regime_strip_html(reg, T, prof), unsafe_allow_html=True)
 
         st.markdown('<div class="rs-section">The five markets — click a card for the full chart</div>', unsafe_allow_html=True)
-        cards = "".join(market_card(a, e, quote(DISPLAY[a]), f"?focus={a}") for a, e in R["assets"].items())
+        fomc_days = load_fomc_days()
+        cards = "".join(market_card(a, e, quote(DISPLAY[a]), f"?focus={a}", event_line(a, R, day, fomc_days))
+                        for a, e in R["assets"].items())
         st.markdown(f'<div class="rs-cards">{cards}</div>', unsafe_allow_html=True)
         st.markdown('<div class="rs-foot" style="margin-top:8px">Prices are live from Yahoo Finance (delayed about 15 minutes) '
                     'on the instruments a desk watches; the model runs on SPY, TLT, GLD, UUP and USO underneath, and each card '
