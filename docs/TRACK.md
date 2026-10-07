@@ -40,6 +40,8 @@ Known drift corrected on 2026-09-13: automation time is **15:00 SGT** (older fil
 
 ## 1. Running — needs periodic checking, not work
 
+- **Live app:** https://regime-aware-signal.streamlit.app (Streamlit Community Cloud, Python 3.11, no secrets; redeploys on every push to `main`, so the nightly commit updates it). Sleeps after a few idle days; wakes on visit.
+
 | item | what should be true | how to check | if it isn't |
 |---|---|---|---|
 | **Forward test, launchd, 15:00 SGT** | One dated log per weekday since 28 Aug | `ls ~/Projects/regime-aware-signal/logs/` | Since `2296725` the next successful run catches the missed close up (see `logged_at`); a gap becomes permanent only past the 5-day stale guard. Record any catch-up dates here in §5. A run *suspended* mid-way (11 Sep) is not caught up by this — hold the machine awake (`caffeinate -is`) |

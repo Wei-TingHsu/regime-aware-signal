@@ -8,6 +8,8 @@ Faculty supervisor: Dr Lee Yen Teik
 
 ---
 
+**Live:** https://regime-aware-signal.streamlit.app — the same app, redeployed automatically from each night's commit. A dormant app takes about thirty seconds to wake; the first asset lookup takes about a minute.
+
 ## Run the demonstration terminal
 
 ```bash
