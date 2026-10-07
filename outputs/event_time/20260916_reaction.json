@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-16",
+  "recorded_at_et": "2026-10-07 11:54:38",
+  "dry_run": true,
+  "reaction": {
+    "S&P 500": {
+      "ticker": "^GSPC",
+      "window": "open->close (dry run: 1-minute history not available)",
+      "start": 7601.25,
+      "end": 7551.81005859375,
+      "change": -0.006504185680809127
+    },
+    "10-year yield": {
+      "ticker": "^TNX",
+      "window": "open->close (dry run: 1-minute history not available)",
+      "start": 4.979000091552734,
+      "end": 5.00600004196167,
+      "change": 0.026999950408935547
+    },
+    "gold": {
+      "ticker": "GC=F",
+      "window": "open->close (dry run: 1-minute history not available)",
+      "start": 4333.5,
+      "end": 4387.5,
+      "change": 0.012461059190031154
+    },
+    "DXY": {
+      "ticker": "DX-Y.NYB",
+      "window": "open->close (dry run: 1-minute history not available)",
+      "start": 99.69999694824219,
+      "end": 100.30999755859375,
+      "change": 0.006118361374356285
+    },
+    "WTI": {
+      "ticker": "CL=F",
+      "window": "open->close (dry run: 1-minute history not available)",
+      "start": 105.4800033569336,
+      "end": 102.43000030517578,
+      "change": -0.028915462217392163
+    },
+    "fed funds future": {
+      "ticker": "ZQ=F",
+      "window": "open->close (dry run: 1-minute history not available)",
+      "start": 96.26249694824219,
+      "end": 96.25499725341797,
+      "change": -7.790879170987974e-05
+    }
+  }
+}
