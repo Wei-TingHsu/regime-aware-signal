@@ -2127,3 +2127,19 @@ number; for gold, oil and the dollar, "no intraday precedents yet — collecting
 (by regime) is not run: NULL permits no number regardless. Phases B/C (read the statement at
 publication; show what it said) keep their value; phase D waits on S5.
 
+### 18.13 FOURTEEN FAILED NIGHTS — A SECRETS FILE APPENDED WITHOUT A NEWLINE (7 Oct)
+
+From 22 Sep to 6 Oct the nightly job exited 1 at step 1 (FRED download). Cause: on 24 Sep the
+Anthropic key was appended to `.env` with `>>`; the file had no trailing newline, so the new line
+was glued onto the FRED line, producing a 158-character "FRED key" and no Anthropic key at all.
+FRED was not called until the macro cache expired, which is why the failure surfaced a week later.
+Nothing after step 1 ran: no forward rows, no reads, no reports, no commits. Found on 7 Oct from
+`launchctl list` showing exit status 1 and a ledger that stopped on 21 Sep; the error had been in
+every nightly log. Fixed by splitting the line; the job was run by hand and caught up every
+session (catch-up rows carry `logged_at`), read the backlog, and wrote every deferred report.
+
+Wrong prior #36: "the key fix of 24 Sep left the job self-sufficient." Lessons, both now in
+TRACK §7: never append to a secrets file — write it whole and end it with a newline; and
+`launchctl list | grep regimeaware` weekly, because the one failure the job cannot report is
+its own.
+

@@ -393,6 +393,7 @@ Kept so that "what was done" stays beside "what was not".
 | 2026-09-29 | Instrument robustness **CONSISTENT** (C1–C4; hit-rate 58.2→56.5, agreement 94.8%); app may state ETFs modelled / desk instruments shown. Surprise stage A **INCONCLUSIVE**: GLD passes (p 0.039, −0.54%/bucket over 3 sessions), TLT ≈ 0 — the reverse of the registered prior. Stage B authorised; level 3 (Swanson series) next. Wrong-prior candidates #32, #33 (CURRENT_STATE §18.9–18.10) |
 | 2026-09-29 | Surprise stage A level 3 (FRBSF Bauer–Swanson published surprise) **FAIL**: gold's level-1 effect was the proxy's whole-day move, not the surprise; stage B not run. Data vintage frozen in `data_provenance/mps/`. Loader made to refuse an empty series after a silent fallback. Wrong-prior candidate #34 (CURRENT_STATE §18.11) |
 | 2026-09-29 | T14 phase A **NULL** on both S&P and 10-year (292 meetings): the initial 30-minute reaction neither extends nor reverses measurably by the close with free daily data; app's second line may show what the statement said but no number. S5 intraday collector live (11 tickers, 73 sessions on first run, nightly). Wrong-prior candidate #35 (CURRENT_STATE §18.12) |
+| 2026-10-07 | Nightly job had failed 22 Sep–6 Oct: `.env` had no trailing newline and the 24 Sep `>>` glued the Anthropic key onto the FRED key. Split; job run by hand; ledger, reads and reports caught up. GitHub token expired the same week and was replaced. Wrong prior #36 (CURRENT_STATE §18.13). Weekly `launchctl list` check added to §7 |
 | 2026-09-24 | Statement corpus replaced by a mis-scoped `--refetch` (assistant's error), re-read under identical conditions (132 docs), gate unchanged 0.517. Backfill re-run as `48a6c4e879a1_n2617`: **FAIL** (hit 58.2% vs q95 58.8%; asymmetry 0.880). The 14 Sep INCONCLUSIVE was not robust. New baseline `48a6c4e879a1_n2617` (CURRENT_STATE §18.8) |
 | 2026-09-14 | Report scoreboard steps 1–7 done in one day, $0. Backfill `986e0d65b6df_n2616`: 1,531 as-of reports; **INCONCLUSIVE** (hit 59.4% vs null q95 59.1%, p 0.0497; asymmetry CI includes 1). Coverage baseline 38% of document days. Ledger dtype bug found by the run, fixed. Details prereg §11, CURRENT_STATE §18.6 |
 
@@ -415,6 +416,8 @@ Kept so that "what was done" stays beside "what was not".
 ---
 
 ## 7. Backup and restore -- what lives where, and how to rebuild on a new machine
+
+**Two standing rules (7 Oct).** Never append to `.env` with `>>` — rewrite it whole, one `KEY=value` per line, trailing newline. Every week: `launchctl list | grep regimeaware` — a non-zero number after the dash means the job is failing, and the nightly log says where.
 
 *Added 2026-09-14 after an audit found nine unpushed commits and the forward ledger
 untracked since the forward test began. A same-day scan of the repo and its full git history found no key-shaped
