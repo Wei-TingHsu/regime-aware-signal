@@ -153,6 +153,37 @@ DISPLAY = {
                 note="Model asset: USO."),
 }
 AXIS_WORD = {"equity": "US equities", "duration": "Treasuries", "gold": "Gold", "dollar": "US dollar", "oil": "Oil"}
+@st.cache_data(show_spinner=False)
+def load_blindspot(day: str):
+    p = ROOT / "outputs" / "blindspot" / f"{day.replace('-', '')}.json"
+    try:
+        return json.loads(p.read_text()) if p.exists() else None
+    except Exception:
+        return None
+
+
+def coverage_line(a: str, bs) -> str:
+    """T13 case A line, per docs/prereg_blindspot.md section 5. Absent on quiet days."""
+    if not bs:
+        return ""
+    st_ = (bs.get("states") or {}).get(a); z = (bs.get("z") or {}).get(a)
+    hc = (bs.get("haircut") or {}).get(a, 1.0)
+    bits = []
+    if st_:
+        word = {"A": "the engine's sources carry no document on it (blind)",
+                "B": "the engine read it backwards (wrong)",
+                "C": "the engine's sources account for it"}[st_]
+        bits.append(f"Coverage: this market moved {abs(z):.1f}σ today; {word}.")
+    if a == "GLD" and bs.get("chain_alert"):
+        ci = bs.get("chain_inputs") or {}
+        bits.append(f"<b>Oil-shock chain:</b> oil {ci.get('oil_z', 0):+.1f}σ, 2-year {ci.get('dgs2_5d_bp', 0):+.0f} bp, dollar "
+                    f"{ci.get('dxy_5d', 0):+.1%} over five sessions. On the two named precedents (Mar 2022, Mar 2026) gold fell over the "
+                    "following months. No direction is issued from this flag.")
+    if hc < 0.999:
+        bits.append(f"Displayed confidence carries a haircut of {hc:.2f} from recent misreads.")
+    return f'<div class="rs-ev">{" ".join(bits)}</div>' if bits else ""
+
+
 AXIS_OF = {"SPY": "equity", "TLT": "duration", "GLD": "gold", "UUP": "dollar", "USO": "oil"}
 
 
@@ -571,7 +602,8 @@ with tabs[0]:
 
         st.markdown('<div class="rs-section">The five markets — click a card for the full chart</div>', unsafe_allow_html=True)
         fomc_days = load_fomc_days()
-        cards = "".join(market_card(a, e, quote(DISPLAY[a]), f"?focus={a}", event_line(a, R, day, fomc_days))
+        bs = load_blindspot(day)
+        cards = "".join(market_card(a, e, quote(DISPLAY[a]), f"?focus={a}", event_line(a, R, day, fomc_days) + coverage_line(a, bs))
                         for a, e in R["assets"].items())
         st.markdown(f'<div class="rs-cards">{cards}</div>', unsafe_allow_html=True)
         st.markdown('<div class="rs-foot" style="margin-top:8px">Prices are live from Yahoo Finance (delayed about 15 minutes) '

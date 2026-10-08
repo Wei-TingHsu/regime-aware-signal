@@ -278,7 +278,7 @@ close(t+3) excludes the 2–4 pm reaction and is too short for the multi-week bo
 | S2 | pre-meeting run-up reverses? (the founder's recollection; b(run-up) ≈ −0.8%/SD for SPY and USO was visible as an untested control) | 5-session run-up → next 1/3/5 sessions | on disk | $0 |
 | S3 | slow bond drift (Brooks–Katz–Lustig) | 10/20/40 sessions, TLT — the registered T9 | on disk | $0 |
 | S4 | S1–S3 by regime | as above, once n allows | on disk | $0 |
-| S5 | **collect 1-minute bars on every scheduled event day from now on** (FOMC, CPI, NFP) in the nightly job; Yahoo serves the last 7 days free | intraday | builds itself; the only free route to intraday history | $0 |
+| S5 | **collect 1-minute bars on every scheduled event day from now on** — incl. ZQ=F and, from 8 Oct, SR3=F (3-month SOFR, the contract the Fed's surprise series uses since 2023), so the engine builds its own surprise measure for every meeting after Dec 2023 (FOMC, CPI, NFP) in the nightly job; Yahoo serves the last 7 days free | intraday | builds itself; the only free route to intraday history | $0 |
 
 Prediction-market and FedWatch odds are the same information as the futures-implied surprise
 for the Fed; they add something only for classes without a published surprise (stages E, G).

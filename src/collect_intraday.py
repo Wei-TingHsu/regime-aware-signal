@@ -24,7 +24,8 @@ import pandas as pd
 ROOT = Path("data_provenance/intraday")
 TICKERS = ["^GSPC", "^TNX", "GC=F", "DX-Y.NYB", "CL=F",          # shown
            "SPY", "TLT", "GLD", "UUP", "USO",                     # modelled
-           "ZQ=F"]                                                # fed funds front month (phase B surprise)
+           "ZQ=F",                                                # fed funds front month (phase B surprise)
+           "SR3=F"]                                               # 3-month SOFR front quarterly -- the contract the Fed's surprise series uses since 2023
 
 
 def fetch_1m(tk: str) -> pd.DataFrame:

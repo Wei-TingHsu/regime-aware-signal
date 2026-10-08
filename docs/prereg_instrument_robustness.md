@@ -70,5 +70,5 @@ what the app may claim.
 
 | date | change | reason |
 |---|---|---|
-| — | — | — |
+| 2026-10-08 | **Oil column amendment.** `WTI_CONT` (continuous back-adjusted front-month WTI, built from CL=F with the roll on the expiry-day ratio) added to `processed/asset_returns.parquet` beside USO. USO is the one model instrument that is a real compromise (monthly roll drag; part of its −98% in 2020). Every oil result — Problem 1 cross-asset, the referee's USO cell, T1's USO PASS, T13 A2's chain alert — is re-run on both columns and reported side by side; USO stays as the tradeable comparison. The other four pairs were shown consistent on 29 Sep and are not touched | Two-wars review (TRACK §3.14) |
 | 2026-09-29 | Run. CONSISTENT on C1–C4 (C3 by 0.3 pts). Priors on FOMC-day concentration and on the Treasury pair being weakest were wrong; recorded in CURRENT_STATE §18.9 | Result, no criterion changed |
