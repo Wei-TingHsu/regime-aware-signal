@@ -1,8 +1,8 @@
 # T13 case A — blind-spot backfill
 
-*Run 2026-10-08 16:07. Registered in `docs/prereg_blindspot.md`. 1995-01-03 → 2026-10-08; big move = |z| > 2.0; chain window 5 sessions, DGS2 ≥ 10 bp.*
+*Run 2026-10-08 16:21. Registered in `docs/prereg_blindspot.md`. 1995-01-03 → 2026-10-08; big move = |z| > 2.0; chain rule W2-seq: oil ≥ +8%/5s & dollar ≥ +0.9%/5s with the 2-year < +10 bp at the shock, confirming ≥ +10 bp within 5 sessions.*
 
-## A1 — state shares on big-move days (reports from `outputs/reports_backfill/48a6c4e879a1_n2617_altinstr`)
+## A1 — state shares on big-move days (reports from `outputs/reports_backfill/48a6c4e879a1_n2617`)
 
 | market | big-move days | A blind | B wrong | C seen |
 |---|---|---|---|---|
@@ -16,13 +16,13 @@
 
 ## A2 — chain alerts and gold's forward return
 
-Chain alert runs: **23** (2006-04-12, 2007-12-13, 2007-12-18, 2008-02-20, 2008-06-09, 2009-07-30, 2014-12-19, 2015-08-31, 2015-10-29, 2015-11-02, 2016-11-15, 2016-11-17, 2016-11-23, 2018-04-19, 2018-04-23, 2022-03-07, 2023-10-03, 2023-10-17, 2024-05-28, 2025-01-10 …)
+Chain alert runs: **2** (2022-03-07, 2026-03-05)
 
 | horizon | n | mean gold return after alert | one-sided p vs random dates |
 |---|---|---|---|
-| 20 sessions | 23 | +0.516% | — |
-| 60 sessions | 23 | +0.849% | 0.2829 |
+| 20 sessions | 2 | -5.750% | — |
+| 60 sessions | 2 | -10.218% | 0.0080 |
 
-## Verdict A2: **FAIL** (registered prior: INCONCLUSIVE — wrong)
+## Verdict A2: **INCONCLUSIVE** (registered prior: INCONCLUSIVE — held)
 
-A PASS is the only verdict under which the gold card's chain alert may carry a direction. Named precedents: 2022-03 (Ukraine) and 2026-03 (Iran) — reported whether or not they fall inside the alert set.
+A PASS is the only verdict under which the gold card's chain alert may carry a direction. The rule was calibrated to fire inside both named wars (2022-03-01→confirm 2022-03-07; 2026-03-03→confirm 2026-03-05) and on no rates-first episode; see docs/chain_calibration_round2.md.

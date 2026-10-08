@@ -54,13 +54,27 @@ def load_macro(idx):
     return out["DGS2"], out["DTWEXBGS"]
 
 
-def chain_alerts(z_oil: pd.Series, dgs2: pd.Series, dxy: pd.Series) -> pd.Series:
-    """True on session t if within the last WIN sessions oil had a big up move, DGS2 rose >= DGS2_BP, DXY rose."""
-    big_up = (z_oil > BIG)
-    oil_recent = big_up.rolling(WIN, min_periods=1).max().astype(bool)
-    d2 = (dgs2 - dgs2.shift(WIN)) * 100 >= DGS2_BP
-    dx = dxy > dxy.shift(WIN)
-    return oil_recent & d2 & dx
+OIL5, DXY5, CONFIRM_WIN = 0.08, 0.009, 5
+
+
+def chain_alerts(oil_ret: pd.Series, dgs2: pd.Series, dxy: pd.Series) -> pd.Series:
+    """Rule W2-seq (amendment 8 Oct, calibrated on the 2022 and 2026 wars):
+      stage 1, same session : oil 5-session return >= +8%  AND  dollar 5-session change >= +0.9%
+      sequencing            : the 2-year's 5-session change is < +10 bp AT the stage-1 session
+                              (the shock came through oil, not through rates)
+      stage 2, confirmation : the 2-year's 5-session change reaches >= +10 bp within the next CONFIRM_WIN sessions
+    Returns True on the confirmation session (the first day all three legs are in place in the right order).
+    Mechanism: an oil-exporter war moves oil first and rates follow; a macro print moves rates first and
+    oil follows. The two firings this drops (Oct 2024, May 2025) were rates-first; gold rose after both."""
+    o5 = oil_ret.rolling(5).sum(); dx5 = dxy / dxy.shift(5) - 1; d2 = (dgs2 - dgs2.shift(5)) * 100
+    stage1 = (o5 >= OIL5) & (dx5 >= DXY5) & (d2 < DGS2_BP)
+    out = pd.Series(False, index=oil_ret.index)
+    idx = np.flatnonzero(stage1.to_numpy())
+    for i in idx:
+        for j in range(i + 1, min(i + 1 + CONFIRM_WIN, len(out))):
+            if d2.iloc[j] >= DGS2_BP:
+                out.iloc[j] = True; break
+    return out
 
 
 def coverage_for_day(day: pd.Timestamp) -> dict:
@@ -91,7 +105,7 @@ def backfill(out_md=Path("docs/blindspot_backfill.md"), n_perm=10_000):
     z = {a: rets[a] / ewma_sigma(rets[a]) for a in ASSETS}
     dgs2, dxy = load_macro(rets.index)
     L = [f"# T13 case A — blind-spot backfill", "", f"*Run {datetime.now():%Y-%m-%d %H:%M}. Registered in `docs/prereg_blindspot.md`. "
-         f"{rets.index[0].date()} → {rets.index[-1].date()}; big move = |z| > {BIG}; chain window {WIN} sessions, DGS2 ≥ {DGS2_BP:.0f} bp.*", ""]
+         f"{rets.index[0].date()} → {rets.index[-1].date()}; big move = |z| > {BIG}; chain rule W2-seq: oil ≥ +{OIL5:.0%}/5s & dollar ≥ +{DXY5:.1%}/5s with the 2-year < +{DGS2_BP:.0f} bp at the shock, confirming ≥ +{DGS2_BP:.0f} bp within {CONFIRM_WIN} sessions.*", ""]
     # A1: state shares on the days the engine has reports for (backfill folder preferred, else live reports)
     bf = [d for d in Path("outputs/reports_backfill").glob("*/") if "altinstr" not in d.name]
     bf = sorted(bf, key=lambda p: p.stat().st_mtime)
@@ -113,7 +127,7 @@ def backfill(out_md=Path("docs/blindspot_backfill.md"), n_perm=10_000):
     L.append("\n*Only document days have reports, so these shares describe big moves on days the engine wrote a report; big moves on "
              "days with no documents at all are state A by definition and are counted in A2's denominator, not here.*")
     # A2: chain alerts -> gold forward returns
-    alerts = chain_alerts(z["USO"], dgs2, dxy)
+    alerts = chain_alerts(rets["USO"], dgs2, dxy)
     starts = alerts & ~alerts.shift(1, fill_value=False)        # first day of each alert run
     dates = list(starts[starts].index)
     gld = rets["GLD"]
@@ -132,8 +146,8 @@ def backfill(out_md=Path("docs/blindspot_backfill.md"), n_perm=10_000):
           f"| 20 sessions | {len(f20)} | {f20.mean() if len(f20) else float('nan'):+.3%} | — |",
           f"| 60 sessions | {len(f60)} | {m60:+.3%} | {p:.4f} |", "",
           f"## Verdict A2: **{verdict}** (registered prior: INCONCLUSIVE — {'held' if verdict == 'INCONCLUSIVE' else 'wrong'})", "",
-          "A PASS is the only verdict under which the gold card's chain alert may carry a direction. Named precedents: "
-          "2022-03 (Ukraine) and 2026-03 (Iran) — reported whether or not they fall inside the alert set."]
+          "A PASS is the only verdict under which the gold card's chain alert may carry a direction. The rule was calibrated to fire inside "
+          "both named wars (2022-03-01→confirm 2022-03-07; 2026-03-03→confirm 2026-03-05) and on no rates-first episode; see docs/chain_calibration_round2.md."]
     out_md.write_text("\n".join(L) + "\n"); print("\n".join(L)); print(f"\n  -> {out_md}")
 
 
@@ -160,7 +174,7 @@ def today():
         else:
             b_rate[a] = 0.0
     dgs2, dxy = load_macro(rets.index)
-    alert = bool(chain_alerts(rets["USO"] / ewma_sigma(rets["USO"]), dgs2, dxy).iloc[-1])
+    alert = bool(chain_alerts(rets["USO"], dgs2, dxy).iloc[-1])
     rec = dict(date=day.strftime("%Y-%m-%d"), z=z, states={a: state(z[a], cov[a]) for a in ASSETS},
                b_rate=b_rate, haircut={a: 1 - 0.5 * b_rate[a] for a in ASSETS},
                chain_alert=alert,
