@@ -139,28 +139,6 @@ python fomc_gld_forward.py 2>/dev/null | tail -4 || echo "  (no new matured FOMC
 
 step "6c/7 report-level scoreboard (docs/prereg_report_scoreboard.md) -- scores reports on disk; never writes one"
 python -m src.report_scoreboard \
+  || echo "  report scoreboard FAILED -- reports and forward ledger untouched; see traceback above; continuing"
 # T13 case A: per-market coverage state and the oil-shock chain alert for the last completed session
 python -m src.blindspot --today || echo "  blindspot failed -- continuing"
-  || echo "  report scoreboard FAILED -- reports and forward ledger untouched; see traceback above; continuing"
-
-step "7/7  refresh the index the app reads"
-# index-only: reports on disk are frozen; only the index is rebuilt.
-python generate_reports.py --index-only
-
-echo
-echo "DONE  $(date '+%H:%M:%S')"
-python -m src.corpus_status | tail -14
-
-step "8/7  commit the record and push -- ledgers, scoreboards, write-once reports (TRACK section 7)"
-# Only these paths are staged; unrelated working-tree changes are never swept in.
-# outputs/ and processed/ are git-ignored, hence -f. .env is never listed here.
-git add -f processed/forward_ledger.csv processed/report_ledger.csv \
-           processed/asset_returns.parquet processed/macro_pca_scores.parquet processed/pipeline_coverage.json \
-           docs/forward_scoreboard.md docs/report_scoreboard.md docs/fomc_gld_forward.md docs/pipeline_coverage.md docs/fomc_minutes_forward.md \
-           outputs/reports/*.json outputs/reports/*.md 2>/dev/null
-if git diff --cached --quiet; then
-  echo "  nothing new to commit"
-else
-  git commit -qm "nightly record $(date '+%Y-%m-%d'): ledgers, scoreboards, reports" && echo "  committed"
-  git push -q 2>&1 | tail -1 || echo "  PUSH FAILED -- commit is local; push by hand"
-fi
