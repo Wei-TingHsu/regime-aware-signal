@@ -338,6 +338,63 @@ intraday feature of the plan, built on the same guardrails.
 B and C → E → D as the pool grows. Nothing here changes the frozen models or the daily
 write-once report.
 
+### 3.12 T15 — the investor's own risk number, and a strategy block (founder's idea, 8 Oct)
+
+**Origin.** T1 Test A: volatility targeting cut the worst drawdown on every market but improved
+risk-adjusted return only on oil, so nothing entered the product as a *predictor*. The founder's
+point: a drawdown tool that cannot predict can still *fit* — to the investor's own loss
+tolerance rather than to the market. That is a product block, not a forecast.
+
+**What the user sees (Professional / subscribed tier only).**
+1. A slider: *How much are you putting in?* (amount).
+2. A key-in box: *How much of that are you prepared to lose?* (amount or %).
+3. From the two, the user's risk-aversion number: the γ for which the certainty-equivalent
+   calculation (prereg_exposure_dial §4) makes that loss the worst acceptable outcome — shown
+   plainly as "you are a γ ≈ 4 investor: you would give up about X of expected return to avoid
+   that loss."
+4. A block that turns that γ, the measured drawdown/CER figures from T1 (dated, sourced, both
+   universes once Test B runs), and today's report (regime, documents, abstentions) into a
+   *possible plan*: per market, the vol-targeted exposure at the user's γ, the historical worst
+   drawdown at that exposure, and what today's report does or does not say. Written by the
+   Anthropic model from a fixed template that may only cite numbers the record contains.
+
+**Rules, fixed.**
+- Every number the block shows carries its date and the test it came from. The model may
+  phrase; it may not invent a figure, a direction, or a probability the record does not hold.
+- Labelled on screen, every time: *"A possible plan built from your own inputs and this
+  system's recorded tests. Not financial advice; not a recommendation to buy or sell."*
+  Described to counsel as designed (TRACK §3.11 F) before it is sold.
+- The 3-day line, the rest-of-session line and the abstention rule are untouched; the block
+  reads them, never changes them.
+- The block ships only on *measured* figures (T1 Test A drawdowns are measured) — and the
+  drawdown claim itself gets its own registration under Test B so that "cuts the worst loss"
+  becomes a tested sentence, not a read-off.
+- Usage is logged (inputs, plan shown, date) to its own ledger so the plans can be scored later
+  by the same referee as everything else.
+
+**Cost.** One model call per plan (~US$0.02–0.05). Build after Test B and the counsel item.
+
+### 3.13 Instrument amendment — oil (8 Oct, from the two-wars review)
+
+USO is the one model instrument that is a real compromise: monthly roll drag that diverges from
+spot over years (part of its −98% in 2020). Register `WTI_CONT` (continuous back-adjusted
+front-month WTI) as a second oil column beside USO; every oil result (Problem 1 cross-asset,
+the referee's USO cell, T1's USO PASS) re-run on both and reported side by side. USO stays as
+the tradeable comparison. Nothing else in the universe changes: the registered instrument test
+(CURRENT_STATE §18.9) showed the other four pairs agree.
+
+### 3.14 Two-wars case study — the oil → inflation → rates → dollar → gold chain (8 Oct)
+
+Gold rose +7% into 8 Mar 2022 then fell 20% by Sep; in 2026 it peaked a month *before* the
+Iran strikes (29 Jan, 5,318) and fell 25% by 16 Jul with only one up session after the war
+began. Same mechanism both times — an oil-exporter war raises oil, oil raises inflation,
+inflation raises expected rates and the dollar, both lower gold — and it beat the safe-haven
+premium both times (Problem 1's null, with named cases). The engine held zero documents on
+28 Feb–9 Mar 2026: a strike is not a filing (T13 case A). Change registered: T13's blind-spot
+flag fires when oil moves > 2σ with no document; Treasury/OFAC and White House statements admitted
+to the provisional pool first; the commodity-shock chain (oil → DGS2 → DXY, all already in the
+panel) becomes a named detection template. Build T13 case A before T2.
+
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a
