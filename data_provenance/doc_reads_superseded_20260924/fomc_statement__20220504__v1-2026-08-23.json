@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.4,
+    "duration": -0.5,
+    "gold": -0.2,
+    "dollar": 0.4,
+    "oil": -0.1
+  },
+  "magnitude": 0.65,
+  "horizon_days": 40,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.7,
+  "evidence": [
+    "raise the target range for the federal funds rate to 3/4 to 1 percent",
+    "anticipates that ongoing increases in the target range will be appropriate",
+    "begin reducing its holdings of Treasury securities and agency debt"
+  ],
+  "extra": {
+    "stance": 0.6,
+    "guidance": 0.6
+  },
+  "source": "fomc_statement",
+  "date": "2022-05-04",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

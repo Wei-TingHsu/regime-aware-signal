@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": -0.15,
+    "gold": -0.15,
+    "dollar": 0.15,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "make a further measured reduction in the pace of its asset purchases",
+    "will end its current program of asset purchases at its next meeting",
+    "appropriate to maintain the current target range for the federal funds rate for a considerable time"
+  ],
+  "extra": {
+    "stance": 0.15,
+    "guidance": -0.2
+  },
+  "source": "fomc_statement",
+  "date": "2014-09-17",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

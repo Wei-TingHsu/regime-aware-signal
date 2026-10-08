@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 365,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I am continuing for 1 year the national emergency previously declared on September 14, 2001",
+    "Because the terrorist threat continues, the national emergency declared on September 14, 2001... must continue in effect"
+  ],
+  "extra": {
+    "actor": "President (executive notice)",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political",
+  "date": "2026-09-10",
+  "doc_id": "noti202618589",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 262,
+  "max_words": 20000
+}

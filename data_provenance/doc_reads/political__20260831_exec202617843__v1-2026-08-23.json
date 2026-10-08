@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.35,
+  "horizon_days": 120,
+  "specificity": 0.55,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "hereby declare a national emergency with respect to that threat",
+    "any acquisition, importation, transfer, or installation of any foreign-produced bulk-power system electric equipment",
+    "Within 120 days of the date of this order, the Secretary...shall publish rules or regulations"
+  ],
+  "extra": {
+    "actor": "President (Executive Order, Dept. of Energy implementation)",
+    "is_decided": true,
+    "sectors": [
+      "utilities",
+      "electric grid equipment",
+      "renewable energy/inverters/battery storage",
+      "industrial control systems"
+    ]
+  },
+  "source": "political",
+  "date": "2026-08-31",
+  "doc_id": "exec202617843",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2421,
+  "max_words": 20000
+}

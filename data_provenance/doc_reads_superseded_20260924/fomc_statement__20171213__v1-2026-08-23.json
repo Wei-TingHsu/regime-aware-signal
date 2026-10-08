@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": -0.15,
+    "gold": -0.15,
+    "dollar": 0.15,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.15,
+  "confidence": 0.72,
+  "evidence": [
+    "raise the target range for the federal funds rate to 1-1/4 to 1\u20111/2 percent",
+    "warrant gradual increases in the federal funds rate",
+    "stance of monetary policy remains accommodative"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "guidance": 0.2
+  },
+  "source": "fomc_statement",
+  "date": "2017-12-13",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

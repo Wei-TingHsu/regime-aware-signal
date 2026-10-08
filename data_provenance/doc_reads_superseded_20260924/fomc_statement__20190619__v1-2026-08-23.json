@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.5,
+    "gold": 0.3,
+    "dollar": -0.4,
+    "oil": 0.2
+  },
+  "magnitude": 0.6,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "uncertainties about this outlook have increased",
+    "will act as appropriate to sustain the expansion",
+    "Market-based measures of inflation compensation have declined"
+  ],
+  "extra": {
+    "stance": -0.5,
+    "guidance": -0.6
+  },
+  "source": "fomc_statement",
+  "date": "2019-06-19",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

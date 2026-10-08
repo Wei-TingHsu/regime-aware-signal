@@ -93,8 +93,9 @@ def backfill(out_md=Path("docs/blindspot_backfill.md"), n_perm=10_000):
     L = [f"# T13 case A — blind-spot backfill", "", f"*Run {datetime.now():%Y-%m-%d %H:%M}. Registered in `docs/prereg_blindspot.md`. "
          f"{rets.index[0].date()} → {rets.index[-1].date()}; big move = |z| > {BIG}; chain window {WIN} sessions, DGS2 ≥ {DGS2_BP:.0f} bp.*", ""]
     # A1: state shares on the days the engine has reports for (backfill folder preferred, else live reports)
-    bf = sorted(Path("outputs/reports_backfill").glob("*/"), key=lambda p: p.stat().st_mtime)
-    rep_dir = (bf[-1] if bf else REPORTS)
+    bf = [d for d in Path("outputs/reports_backfill").glob("*/") if "altinstr" not in d.name]
+    bf = sorted(bf, key=lambda p: p.stat().st_mtime)
+    rep_dir = (bf[-1] if bf else REPORTS)   # the baseline corpus hash, never the instrument-test copy (8 Oct bug: it has no documents field)
     L += [f"## A1 — state shares on big-move days (reports from `{rep_dir}`)", "", "| market | big-move days | A blind | B wrong | C seen |", "|---|---|---|---|---|"]
     for a in ASSETS:
         cnt = {"A": 0, "B": 0, "C": 0}; n = 0

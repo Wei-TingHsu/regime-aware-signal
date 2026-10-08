@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "growth in economic activity paused in recent months, in large part because of weather-related disruptions",
+    "will continue purchasing additional agency mortgage-backed securities at a pace of $40 billion per month",
+    "highly accommodative stance of monetary policy will remain appropriate for a considerable time"
+  ],
+  "extra": {
+    "stance": -0.3,
+    "guidance": 0.3
+  },
+  "source": "fomc_statement",
+  "date": "2013-01-30",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

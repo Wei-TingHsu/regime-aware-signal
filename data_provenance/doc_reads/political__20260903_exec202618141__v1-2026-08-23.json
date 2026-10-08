@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 365,
+  "specificity": 0.25,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "There is hereby established the Presidential Commission on the United States Space Academy",
+    "Within 120 days of the date of this order, the Commission shall submit to the President",
+    "proposals to establish the United States Space Academy"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14423)",
+    "is_decided": false,
+    "sectors": [
+      "aerospace",
+      "defense",
+      "education"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-03",
+  "doc_id": "exec202618141",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1016,
+  "max_words": 20000
+}

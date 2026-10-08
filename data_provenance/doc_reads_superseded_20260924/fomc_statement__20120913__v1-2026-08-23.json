@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.7,
+    "duration": 0.6,
+    "gold": 0.6,
+    "dollar": -0.6,
+    "oil": 0.4
+  },
+  "magnitude": 0.8,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.6,
+  "confidence": 0.8,
+  "evidence": [
+    "purchasing additional agency mortgage-backed securities at a pace of $40 billion per month",
+    "exceptionally low levels for the federal funds rate are likely to be warranted at least through mid-2015",
+    "undertake additional asset purchases, and employ its other policy tools as appropriate"
+  ],
+  "extra": {
+    "stance": -0.9,
+    "guidance": -0.9
+  },
+  "source": "fomc_statement",
+  "date": "2012-09-13",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

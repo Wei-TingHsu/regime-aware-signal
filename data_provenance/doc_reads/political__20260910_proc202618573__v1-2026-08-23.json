@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.0,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim September 7, 2026, as Labor Day",
+    "we are proposing a new fee on H-1B visa petitions",
+    "Thanks to my protective tariffs, our Nation's workers are being shielded"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": false,
+    "sectors": [
+      "labor",
+      "ceremonial"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-10",
+  "doc_id": "proc202618573",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 572,
+  "max_words": 20000
+}

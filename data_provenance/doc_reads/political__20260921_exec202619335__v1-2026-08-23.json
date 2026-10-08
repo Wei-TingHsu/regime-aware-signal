@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "Executive Order 13508 is hereby revoked.",
+    "take measures to encourage the repeal or rescission of stormwater management fees",
+    "redirecting funding away from activities that do not generate measurable progress"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "water utilities",
+      "homebuilders/real estate",
+      "regional municipal finance",
+      "environmental services"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-21",
+  "doc_id": "exec202619335",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1040,
+  "max_words": 20000
+}

@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "a return to moderate economic growth following a pause late last year",
+    "continue purchasing additional agency mortgage-backed securities at a pace of $40 billion per month",
+    "keep the target range for the federal funds rate at 0 to 1/4 percent"
+  ],
+  "extra": {
+    "stance": -0.5,
+    "guidance": 0.6
+  },
+  "source": "fomc_statement",
+  "date": "2013-03-20",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

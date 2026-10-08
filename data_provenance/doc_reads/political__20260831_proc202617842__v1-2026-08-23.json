@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "increase the quantity of lean beef trimmings subject to the in-quota rate of duty... by 300,000 mt",
+    "administered on a first come, first served basis in three 30 day tranches",
+    "Department of Agriculture forecasts beef output to fall this year by around 4 percent"
+  ],
+  "extra": {
+    "actor": "President of the United States (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "beef/cattle",
+      "agriculture",
+      "food retail",
+      "import tariffs"
+    ]
+  },
+  "source": "political",
+  "date": "2026-08-31",
+  "doc_id": "proc202617842",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2138,
+  "max_words": 20000
+}

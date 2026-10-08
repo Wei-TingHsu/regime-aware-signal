@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.25,
+  "confidence": 0.65,
+  "evidence": [
+    "certain products of Canada... shall be subject to the additional ad valorem duty of 50 percent",
+    "Canada reneged on its commitment, ceased negotiating in good faith",
+    "effective... on or after 12:01 a.m. eastern time on September 15, 2026"
+  ],
+  "extra": {
+    "actor": "President of the United States (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "alcoholic beverages",
+      "Canada trade",
+      "tariffs"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-14",
+  "doc_id": "proc202618838",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1587,
+  "max_words": 20000
+}

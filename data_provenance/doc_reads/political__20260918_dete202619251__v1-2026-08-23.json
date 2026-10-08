@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby designate Afghanistan, Bolivia, Burma, and Colombia as having failed demonstrably",
+    "Venezuela should no longer be designated as having failed demonstrably",
+    "Mexico must take additional action against the narcoterrorist organizations"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": [
+      "narcotics policy",
+      "foreign aid",
+      "diplomacy"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-18",
+  "doc_id": "dete202619251",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1866,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "use the terms ``Super Intelligence'' and ``SI'' in place of ``Artificial Intelligence''",
+    "will not acknowledge the usage of ``Artificial Intelligence'' and ``AI''",
+    "proposed legislative language to establish a Federal definition"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14434)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "government administration"
+    ]
+  },
+  "source": "political",
+  "date": "2026-10-02",
+  "doc_id": "exec202620321",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 779,
+  "max_words": 20000
+}

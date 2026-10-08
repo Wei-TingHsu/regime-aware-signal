@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.15,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.95,
+  "novelty": 0.5,
+  "confidence": 0.75,
+  "evidence": [
+    "are excluded from importation into the United States, effective with respect to goods imported on or after 12:01 a.m. eastern time on September 29, 2026",
+    "Canada has, after the issuance of Proclamation 11046... maintained or increased the discriminations",
+    "an import ban on certain Canadian alcoholic beverages... is consistent with the interests of the United States"
+  ],
+  "extra": {
+    "actor": "President Trump (White House)",
+    "is_decided": true,
+    "sectors": [
+      "alcoholic beverages",
+      "Canada trade",
+      "import/export",
+      "agriculture/consumer goods"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-14",
+  "doc_id": "proc202618835",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2002,
+  "max_words": 20000
+}

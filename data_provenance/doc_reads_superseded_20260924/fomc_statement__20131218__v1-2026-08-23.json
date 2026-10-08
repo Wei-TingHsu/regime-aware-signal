@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": -0.3,
+    "gold": -0.4,
+    "dollar": 0.3,
+    "oil": 0.0
+  },
+  "magnitude": 0.7,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.6,
+  "confidence": 0.7,
+  "evidence": [
+    "will add to its holdings of agency mortgage-backed securities at a pace of $35 billion per month rather than $40 billion",
+    "the Committee decided to modestly reduce the pace of its asset purchases",
+    "likely be appropriate to maintain the current target range for the federal funds rate well past the time that the unemployment rate declines below 6-1/2 percent"
+  ],
+  "extra": {
+    "stance": 0.2,
+    "guidance": -0.3
+  },
+  "source": "fomc_statement",
+  "date": "2013-12-18",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

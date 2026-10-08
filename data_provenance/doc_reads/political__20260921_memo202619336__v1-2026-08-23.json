@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 90,
+  "specificity": 0.35,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Canada has unreasonably imposed new barriers to United States companies",
+    "shall...identify and take all steps permitted by applicable law with respect to Canadian origin items",
+    "to the extent appropriate and consistent with law"
+  ],
+  "extra": {
+    "actor": "President (White House memorandum)",
+    "is_decided": false,
+    "sectors": [
+      "government procurement",
+      "Canada-US trade",
+      "industrials/defense contractors"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-21",
+  "doc_id": "memo202619336",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 717,
+  "max_words": 20000
+}

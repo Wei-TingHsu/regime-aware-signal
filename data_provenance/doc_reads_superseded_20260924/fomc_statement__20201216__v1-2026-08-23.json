@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.3,
+    "gold": 0.3,
+    "dollar": -0.3,
+    "oil": 0.1
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "aim to achieve inflation moderately above 2 percent for some time",
+    "maintain this target range until labor market conditions have reached levels",
+    "continue to increase its holdings of Treasury securities by at least $80 billion"
+  ],
+  "extra": {
+    "stance": -0.6,
+    "guidance": -0.7
+  },
+  "source": "fomc_statement",
+  "date": "2020-12-16",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

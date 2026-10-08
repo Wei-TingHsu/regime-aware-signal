@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.9,
+  "evidence": [
+    "renaming the Lake officially be renamed as Lake America",
+    "Within 30 days of the date of this order, the Secretary of the Interior",
+    "shall take all appropriate actions to rename"
+  ],
+  "extra": {
+    "actor": "President (Executive Order)",
+    "is_decided": true,
+    "sectors": [
+      "symbolic/geographic naming",
+      "no economic sector impact"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-02",
+  "doc_id": "exec202618020",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 960,
+  "max_words": 20000
+}

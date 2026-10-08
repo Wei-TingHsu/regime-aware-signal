@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 250,
+  "specificity": 0.95,
+  "novelty": 0.15,
+  "confidence": 0.8,
+  "evidence": [
+    "I have decided to continue to impose the limitations set forth in Proclamation 10973",
+    "extend the 2025 Proclamation for an additional 12 months",
+    "except for those aliens whose petitions are accompanied or supplemented by a payment of $100,000"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": [
+      "IT services",
+      "H-1B dependent employers",
+      "technology outsourcing"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-23",
+  "doc_id": "proc202619554",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2041,
+  "max_words": 20000
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 365,
+  "specificity": 0.9,
+  "novelty": 0.02,
+  "confidence": 0.95,
+  "evidence": [
+    "I am continuing for 1 year the national emergency",
+    "constituted by the grave acts of terrorism and threats of terrorism"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "national security"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-16",
+  "doc_id": "noti202619053",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 417,
+  "max_words": 20000
+}

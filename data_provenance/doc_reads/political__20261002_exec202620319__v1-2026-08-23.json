@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.03,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "establishment of America.gov as the unified digital front door",
+    "within 90 days of the date of this order, the Director of OMB shall issue a memorandum",
+    "preserve each agency's custody and control of its records"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14432)",
+    "is_decided": true,
+    "sectors": [
+      "government IT services",
+      "software/cloud contractors",
+      "identity verification (Login.gov)"
+    ]
+  },
+  "source": "political",
+  "date": "2026-10-02",
+  "doc_id": "exec202620319",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 995,
+  "max_words": 20000
+}

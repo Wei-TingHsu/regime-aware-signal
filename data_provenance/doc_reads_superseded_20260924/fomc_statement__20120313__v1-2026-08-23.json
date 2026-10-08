@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "economic conditions...are likely to warrant exceptionally low levels for the federal funds rate at least through late 2014",
+    "Labor market conditions have improved further",
+    "Strains in global financial markets have eased, though they continue to pose significant downside risks"
+  ],
+  "extra": {
+    "stance": -0.2,
+    "guidance": -0.1
+  },
+  "source": "fomc_statement",
+  "date": "2012-03-13",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

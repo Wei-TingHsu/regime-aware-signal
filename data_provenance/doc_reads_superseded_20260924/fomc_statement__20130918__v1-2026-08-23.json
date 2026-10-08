@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.6,
+    "gold": 0.5,
+    "dollar": -0.5,
+    "oil": 0.3
+  },
+  "magnitude": 0.7,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.8,
+  "confidence": 0.75,
+  "evidence": [
+    "the Committee decided to await more evidence that progress will be sustained before adjusting the pace of its purchases",
+    "continue purchasing additional agency mortgage-backed securities at a pace of $40 billion per month",
+    "a highly accommodative stance of monetary policy will remain appropriate for a considerable time"
+  ],
+  "extra": {
+    "stance": -0.5,
+    "guidance": -0.4
+  },
+  "source": "fomc_statement",
+  "date": "2013-09-18",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

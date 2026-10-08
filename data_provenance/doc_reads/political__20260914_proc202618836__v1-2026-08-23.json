@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.95,
+  "novelty": 0.4,
+  "confidence": 0.75,
+  "evidence": [
+    "certain products of Canada... are excluded from importation into the United States",
+    "effective... on or after 12:01 a.m. eastern time on September 29, 2026",
+    "Canada reneged on its commitment, ceased negotiating in good faith"
+  ],
+  "extra": {
+    "actor": "President of the United States (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "dairy",
+      "agriculture",
+      "US-Canada trade"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-14",
+  "doc_id": "proc202618836",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1726,
+  "max_words": 20000
+}

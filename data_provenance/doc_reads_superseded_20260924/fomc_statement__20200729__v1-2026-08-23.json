@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "maintain the target range for the federal funds rate at 0 to 1/4 percent",
+    "will increase its holdings of Treasury securities and agency residential and commercial mortgage-backed securities at least at the current pace",
+    "Committee expects to maintain this target range until it is confident that the economy has weathered recent events"
+  ],
+  "extra": {
+    "stance": -0.6,
+    "guidance": -0.5
+  },
+  "source": "fomc_statement",
+  "date": "2020-07-29",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

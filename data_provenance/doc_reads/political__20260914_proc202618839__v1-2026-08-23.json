@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.95,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "shall be subject to the additional ad valorem duty of 50 percent imposed pursuant to Proclamation 11048",
+    "shall no longer be subject to the additional ad valorem duty of 50 percent",
+    "effective... on or after 12:01 a.m. eastern time on September 15, 2026"
+  ],
+  "extra": {
+    "actor": "President of the United States (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "autos",
+      "auto parts",
+      "US-Canada trade"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-14",
+  "doc_id": "proc202618839",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1580,
+  "max_words": 20000
+}

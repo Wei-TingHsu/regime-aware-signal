@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.3,
+    "gold": 0.2,
+    "dollar": -0.2,
+    "oil": -0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "somewhat more slowly than the Committee had expected",
+    "recent labor market indicators have been weaker than anticipated",
+    "exceptionally low levels for the federal funds rate for an extended period"
+  ],
+  "extra": {
+    "stance": -0.3,
+    "guidance": -0.2
+  },
+  "source": "fomc_statement",
+  "date": "2011-06-22",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

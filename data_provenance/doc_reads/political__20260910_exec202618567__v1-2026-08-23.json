@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 120,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "directs more vigorous enforcement of the Packers and Stockyards Act",
+    "prioritize and expand investigations into potential violations",
+    "establish a Strengthening Processing for U.S. Ranchers guaranteed loan program"
+  ],
+  "extra": {
+    "actor": "President (USDA directed)",
+    "is_decided": true,
+    "sectors": [
+      "meat packers",
+      "livestock",
+      "agriculture processing"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-10",
+  "doc_id": "exec202618567",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1020,
+  "max_words": 20000
+}

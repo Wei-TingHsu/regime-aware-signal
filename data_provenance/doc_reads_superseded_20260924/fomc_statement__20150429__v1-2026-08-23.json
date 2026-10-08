@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "economic growth slowed during the winter months, in part reflecting transitory factors",
+    "current 0 to 1/4 percent target range for the federal funds rate remains appropriate",
+    "it will be appropriate to raise the target range for the federal funds rate when it has seen further improvement"
+  ],
+  "extra": {
+    "stance": -0.1,
+    "guidance": -0.15
+  },
+  "source": "fomc_statement",
+  "date": "2015-04-29",
+  "doc_id": "",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5"
+}

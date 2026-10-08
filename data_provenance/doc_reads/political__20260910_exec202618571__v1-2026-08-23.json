@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "Within 90 days of the date of this order, the Secretary of Agriculture... shall submit to the President a report",
+    "shall make a determination as to whether the gray wolf and the Mexican wolf have met the recovery criteria",
+    "may issue or amend regulations... to require mandatory country-of-origin labeling for beef products"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14425)",
+    "is_decided": false,
+    "sectors": [
+      "agriculture",
+      "livestock/ranching",
+      "beef production"
+    ]
+  },
+  "source": "political",
+  "date": "2026-09-10",
+  "doc_id": "exec202618571",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1080,
+  "max_words": 20000
+}
