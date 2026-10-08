@@ -126,3 +126,7 @@ verdict; it does not rescue or revise Test A.
 | date | change | reason |
 |---|---|---|
 | — | — | — |
+| 2026-10-07 | Acceptance tests 1 and 2 re-specified after first-run failure (vol equal to target → half the target; fixed regime blocks → irregular lengths); originals preserved in the self-test report | The tests were wrong, not the dial |
+| 2026-10-07 | Regime multipliers refreshed every 21 sessions from data through t−1 | §3 fixed 'expanding through t−1' without a cadence; monthly makes the 10,000-shift null computable |
+| 2026-10-08 | Variant 4 not run: the frozen pipeline exposes regime labels, not posteriors | Reported, not substituted |
+| 2026-10-08 | Test A run. **NO on both** — vol targeting PASS 1/5 (USO), regime tilt 0/5. Prior (i) half wrong (#37); prior (ii) held. CURRENT_STATE §18.14. Criterion not changed to drawdown after the fact; a drawdown claim is a new registration for Test B | Result |

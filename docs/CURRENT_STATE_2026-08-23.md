@@ -2143,3 +2143,38 @@ TRACK §7: never append to a secrets file — write it whole and end it with a n
 `launchctl list | grep regimeaware` weekly, because the one failure the job cannot report is
 its own.
 
+### 18.14 T1 EXPOSURE DIAL, TEST A — NOTHING ENTERS THE PRODUCT (7–8 Oct)
+
+Registered `docs/prereg_exposure_dial.md` (7 Oct) before the code; dial built blind against six
+acceptance tests (two re-specified after failing on first run — the tests were wrong, the dial
+unchanged; originals preserved in `docs/exposure_dial_selftest.md`). Five model ETFs 2006–2026,
+10% target, EWMA λ 0.94, γ 3, long-only, three-session regime confirmation, 5-point band, one-
+session lag, fixed cost table at 1×/3×, EFFR excess returns; 10,000 bootstrap resamples and
+10,000 label shifts. Variant 4 (posterior tilt) not run: the frozen pipeline exposes labels,
+not posteriors — amendment, not a result. Result in `docs/exposure_dial_testA.md`.
+
+| | (i) vol targeting vs hold | (ii) regime tilt vs vol targeting |
+|---|---|---|
+| SPY | INCONCLUSIVE — CER +0.009 [−0.037, +0.064]; helped before 2017 (+0.029), hurt after (−0.014); drawdown −0.83 → −0.29 | INCONCLUSIVE, p 0.53 |
+| TLT | INCONCLUSIVE — +0.018, all second-half; drawdown −0.80 → −0.57 | INCONCLUSIVE, p 0.41 |
+| GLD | INCONCLUSIVE — +0.007, wide; drawdown −0.61 → −0.48 | FAIL, p 0.72 |
+| UUP | INCONCLUSIVE — ≈ 0; no volatility to target | INCONCLUSIVE, p 0.65 |
+| USO | **PASS** — +0.254 [+0.094, +0.445], stability 0.74; drawdown −4.08 → −1.01 | FAIL, p 0.51 |
+
+**Tree verdict: NO on both** (vol targeting PASS 1 of 5 against a 3-of-5 rule; regime tilt 0 of
+5). No exposure line on the app.
+
+**Reading.** Volatility targeting is a drawdown tool, not a return tool, on this panel: it cuts
+the worst drawdown on every asset and raises the certainty-equivalent return measurably only
+where volatility was extreme (oil, 2020). On equities the gain is entirely the 2008 era and
+reverses after 2017 — the Cederburg–O'Doherty–Wang–Yan finding reproduced here under a
+registered criterion. The regime tilt adds nothing on any asset: the third independent test
+(ranking — kernel family; direction — the referee; sizing — this) to find the labels carry no
+information beyond volatility itself.
+
+**Prior (i) half wrong** ("PASS on SPY and USO"; SPY did not) — wrong-prior candidate #37.
+Prior (ii) held. Decision recorded: the criterion is NOT switched to drawdown because drawdown is
+where the dial shines; a drawdown claim may be registered as its own question, and Test B on the
+thirty-ETF universe is where it is honestly tested, with the prior declared as contaminated by
+this result.
+
