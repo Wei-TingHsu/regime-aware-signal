@@ -1,16 +1,16 @@
 # T13 case A — blind-spot backfill
 
-*Run 2026-10-08 16:21. Registered in `docs/prereg_blindspot.md`. 1995-01-03 → 2026-10-08; big move = |z| > 2.0; chain rule W2-seq: oil ≥ +8%/5s & dollar ≥ +0.9%/5s with the 2-year < +10 bp at the shock, confirming ≥ +10 bp within 5 sessions.*
+*Run 2026-10-08 16:28. Registered in `docs/prereg_blindspot.md`. 1995-01-03 → 2026-10-08; big move = |z| > 2.0; chain rule W2-seq: oil ≥ +8%/5s & dollar ≥ +0.9%/5s with the 2-year < +10 bp at the shock, confirming ≥ +10 bp within 5 sessions.*
 
 ## A1 — state shares on big-move days (reports from `outputs/reports_backfill/48a6c4e879a1_n2617`)
 
 | market | big-move days | A blind | B wrong | C seen |
 |---|---|---|---|---|
-| SPY | 100 | 100% | 0% | 0% |
-| TLT | 82 | 100% | 0% | 0% |
-| GLD | 101 | 100% | 0% | 0% |
-| UUP | 89 | 100% | 0% | 0% |
-| USO | 80 | 100% | 0% | 0% |
+| SPY | 100 | 48% | 31% | 21% |
+| TLT | 82 | 76% | 17% | 7% |
+| GLD | 101 | 70% | 16% | 14% |
+| UUP | 89 | 65% | 15% | 20% |
+| USO | 80 | 86% | 6% | 8% |
 
 *Only document days have reports, so these shares describe big moves on days the engine wrote a report; big moves on days with no documents at all are state A by definition and are counted in A2's denominator, not here.*
 

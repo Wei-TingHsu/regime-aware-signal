@@ -22,6 +22,16 @@ AX = {"SPY": "equity", "TLT": "duration", "GLD": "gold", "UUP": "dollar", "USO":
 OUT = Path("outputs/blindspot"); PROC = Path("processed"); REPORTS = Path("outputs/reports")
 
 
+def dir_of(doc: dict, a: str) -> float:
+    """Report documents key direction by TICKER (SPY, GLD...); reader cache files key it by AXIS (equity, gold...).
+    Accept either. 8 Oct bug: looking up the axis name in a ticker-keyed dict made every day 'blind'."""
+    d = doc.get("direction") or {}
+    v = d.get(a)
+    if v is None:
+        v = d.get(AX[a])
+    return float(v or 0.0)
+
+
 def ewma_sigma(r: pd.Series) -> pd.Series:
     v = r.fillna(0).pow(2).ewm(alpha=1 - LAMBDA, adjust=False).mean().shift(1)
     return np.sqrt(v)
@@ -84,7 +94,7 @@ def coverage_for_day(day: pd.Timestamp) -> dict:
         return {a: dict(covered=False, net=None) for a in ASSETS}
     R = json.loads(f.read_text()); out = {}
     for a in ASSETS:
-        docs = [d for d in R.get("documents", []) if abs((d.get("direction") or {}).get(AX[a]) or 0) > 0.05]
+        docs = [d for d in R.get("documents", []) if abs(dir_of(d, a)) > 0.05]
         out[a] = dict(covered=bool(docs), net=R["assets"][a].get("net_view"))
     return out
 
@@ -120,7 +130,7 @@ def backfill(out_md=Path("docs/blindspot_backfill.md"), n_perm=10_000):
             if not f.exists():
                 continue
             R = json.loads(f.read_text())
-            docs = [x for x in R.get("documents", []) if abs((x.get("direction") or {}).get(AX[a]) or 0) > 0.05]
+            docs = [x for x in R.get("documents", []) if abs(dir_of(x, a)) > 0.05]
             cov = dict(covered=bool(docs), net=R["assets"][a].get("net_view"))
             s = state(zz, cov); cnt[s] += 1; n += 1
         L.append(f"| {a} | {n} | {cnt['A']/max(n,1):.0%} | {cnt['B']/max(n,1):.0%} | {cnt['C']/max(n,1):.0%} |" if n else f"| {a} | 0 | — | — | — |")
@@ -178,7 +188,7 @@ def today():
     rec = dict(date=day.strftime("%Y-%m-%d"), z=z, states={a: state(z[a], cov[a]) for a in ASSETS},
                b_rate=b_rate, haircut={a: 1 - 0.5 * b_rate[a] for a in ASSETS},
                chain_alert=alert,
-               chain_inputs=dict(oil_z=z["USO"], dgs2_5d_bp=float((dgs2.iloc[-1] - dgs2.iloc[-1 - WIN]) * 100), dxy_5d=float(dxy.iloc[-1] / dxy.iloc[-1 - WIN] - 1)))
+               chain_inputs=dict(oil_5d=float(rets["USO"].iloc[-5:].sum()), dgs2_5d_bp=float((dgs2.iloc[-1] - dgs2.iloc[-6]) * 100), dxy_5d=float(dxy.iloc[-1] / dxy.iloc[-6] - 1)))
     f.write_text(json.dumps(rec, indent=2))
     flagged = {a: s for a, s in rec["states"].items() if s}
     print(f"blindspot {rec['date']}: {flagged or 'no big moves'}; chain alert {alert}")

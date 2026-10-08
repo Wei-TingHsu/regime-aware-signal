@@ -2202,3 +2202,38 @@ information in a filed document is absorbed within the session; a surprise must 
 before the reaction; the regime labels carry no information beyond volatility (three
 independent tests: ranking, direction, sizing); a result that lives in one era is not a result.
 
+### 18.16 T13 CASE A — COVERAGE ON BIG-MOVE DAYS, AND THE CHAIN RULE CALIBRATED (8 Oct)
+
+Registered `docs/prereg_blindspot.md`. **A1** (big moves = |z| > 2, on the 1,532 document days of
+the baseline corpus `48a6c4e879a1_n2617`):
+
+| market | big-move days | blind (no document on it) | wrong (read backwards) | seen |
+|---|---|---|---|---|
+| SPY | 100 | 48% | 31% | 21% |
+| TLT | 82 | 76% | 17% | 7% |
+| GLD | 101 | 70% | 16% | 14% |
+| UUP | 89 | 65% | 15% | 20% |
+| USO | 80 | 86% | 6% | 8% |
+
+Document days only; big moves on days with no document are blind by definition and lie outside
+these denominators. Readings: on the days that matter most, a document present is read backwards
+more often than correctly for SPY, TLT and GLD — the referee's FAIL from the other side; oil is
+blind 86% of the time, the two-wars finding as a twenty-year statistic; Treasuries are the
+second-worst covered, not the best — prior wrong (candidate #38): the Fed speaks eight times a
+year and Treasuries' big days are data prints no source carries.
+
+**Chain rule.** The registered v0 (oil z > 2, 2-year +10 bp, dollar up, all within 5 sessions)
+fired 23 times and A2 was FAIL (gold +0.85% at 60 sessions, p 0.28) — recorded. Calibrated
+against the founder's requirement (fire inside both wars, not outside) over two rounds
+(`docs/chain_calibration*.md`): the two war-starts are separated from demand-driven oil rallies by
+the dollar surging with oil (≥ +0.9%/5s) and from rates-first episodes (4 Oct 2024, 12 May 2025;
+gold rose after both) by sequencing — the 2-year must be < +10 bp at the shock and reach +10 bp
+within 5 sessions after. **W2-seq** fires exactly twice in 2006–2026: 7 Mar 2022 and 5 Mar 2026.
+A2 on it: gold −5.8% at 20 sessions, −10.2% at 60, p 0.008 — **INCONCLUSIVE** by the registered
+n ≥ 10 rule, prior declared contaminated. The gold card shows the flag, the three numbers and the
+two named precedents, and issues no direction. The mechanism in one line: an oil-exporter war
+moves oil first and rates follow; a macro print moves rates first and oil follows.
+
+Two bugs found on the way, both mine: A1 first read the instrument-test folder (no documents
+field), then looked up the axis name in a ticker-keyed direction dict — both produced "100% blind".
+

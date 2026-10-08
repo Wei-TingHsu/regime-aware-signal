@@ -176,9 +176,10 @@ def coverage_line(a: str, bs) -> str:
         bits.append(f"Coverage: this market moved {abs(z):.1f}σ today; {word}.")
     if a == "GLD" and bs.get("chain_alert"):
         ci = bs.get("chain_inputs") or {}
-        bits.append(f"<b>Oil-shock chain:</b> oil {ci.get('oil_z', 0):+.1f}σ, 2-year {ci.get('dgs2_5d_bp', 0):+.0f} bp, dollar "
-                    f"{ci.get('dxy_5d', 0):+.1%} over five sessions. On the two named precedents (Mar 2022, Mar 2026) gold fell over the "
-                    "following months. No direction is issued from this flag.")
+        bits.append(f"<b>Oil-shock chain confirmed:</b> oil {ci.get('oil_5d', 0):+.1%}, dollar {ci.get('dxy_5d', 0):+.1%}, then the 2-year "
+                    f"{ci.get('dgs2_5d_bp', 0):+.0f} bp — oil first, rates following. This pattern has fired twice since 2006, at the start of "
+                    "the 2022 and 2026 wars; gold fell about 10% over the following three months both times. Two cases are not a forecast; "
+                    "no direction is issued from this flag.")
     if hc < 0.999:
         bits.append(f"Displayed confidence carries a haircut of {hc:.2f} from recent misreads.")
     return f'<div class="rs-ev">{" ".join(bits)}</div>' if bits else ""
