@@ -576,10 +576,10 @@ def selftest(n_perm_fast=300, reps=200) -> str:
     rec("T3 min-count", c29["too_few"] and ("hit" not in c29["nonoverlap"]) and (not c30["too_few"]) and ("hit" in c30["nonoverlap"]),
         f"29 -> {c29.get('note','printed')}; 30 -> n={c30['nonoverlap']['n']}, hit printed")
 
-    # T4 non-overlap sampler: 20 dates, h=3 -> indices 0,3,...,18 (dates 1,4,...,19), seven rows
+    # T4 non-overlap sampler: 20 dates, every PRIMARY_H-th from the first (h=2 -> ten rows at dates 1,3,...,19; h=3 -> seven at 1,4,...,19)
     dates = pd.bdate_range("2021-01-01", periods=20)
     sel = nonoverlap_dates(dates, PRIMARY_H)
-    hand = [dates[i] for i in (0, 3, 6, 9, 12, 15, 18)]
+    hand = [dates[i] for i in range(0, 20, PRIMARY_H)]   # re-specified 2026-10-09: follows the registered horizon (was the h=3 list by hand)
     rec("T4 non-overlap sampler", sel == hand, f"selected {len(sel)} rows; positions {[dates.get_loc(d)+1 for d in sel]}")
 
     # T5 exclusions
