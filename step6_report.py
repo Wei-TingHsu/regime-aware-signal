@@ -70,6 +70,39 @@ READS = ("read_statement.csv", "read_minutes.csv", "read_8k.csv",
          "read_political_order.csv", "read_political_other.csv")
 NEGLIGIBLE, PRIMARY_H, CONF_WARN = 0.05, 2, 0.60   # h* 3 -> 2 on 2026-10-09 (amendment)
 
+# ---- E4 lever (docs/prereg_asymmetry_levers.md §2), off unless LEVER=E4 ----------------------------------
+import os as _os
+LEVER_E4 = _os.environ.get("LEVER", "") == "E4"
+_E4_BIN = {"fomc_statement": "intraday", "fomc_minutes": "intraday"}       # all other classes: overnight
+_E4_OHLC = None
+_E4_CACHE = {}
+
+
+def _e4_bins(asset):
+    global _E4_OHLC
+    if _E4_OHLC is None:
+        _E4_OHLC = pd.read_parquet("processed/ohlc_core.parquet")
+    o, c = _E4_OHLC[(asset, "Open")], _E4_OHLC[(asset, "Close")]
+    return pd.DataFrame({"overnight": np.log(o / c.shift(1)), "intraday": np.log(c / o)})
+
+
+def e4_aligned(source, asset, axcol, hist, t):
+    """True if this source class, on its precedents for `asset` before t, moved its own bin with the reading
+    at least as often as the other bin. Expanding, through the precedents already in `hist` (<= t - PRIMARY_H)."""
+    key = (source, asset, t)
+    if key in _E4_CACHE: return _E4_CACHE[key]
+    bins = _e4_bins(asset); own = _E4_BIN.get(source, "overnight"); other = "intraday" if own == "overnight" else "overnight"
+    h = hist[hist.source == source]
+    d = pd.to_numeric(h[axcol], errors="coerce")
+    h = h.assign(dir=d)[d.abs() > NEGLIGIBLE]
+    if len(h) < 30:
+        _E4_CACHE[key] = True; return True
+    b = bins.reindex(pd.DatetimeIndex(h.session.values))
+    own_hits = (np.sign(b[own].values) == np.sign(h["dir"].values)).mean()
+    other_hits = (np.sign(b[other].values) == np.sign(h["dir"].values)).mean()
+    ok = bool(np.nan_to_num(own_hits) >= np.nan_to_num(other_hits))
+    _E4_CACHE[key] = ok; return ok
+
 # §8 item 6 -- CURRENT_STATE §8, verbatim. Printed in EVERY report, not linked.
 CANNOT_SEE = [
     ("Manual-collection sources cannot scale to a daily product",
@@ -209,6 +242,12 @@ def build_report(date_str):
         td = today.copy()
         td["dir"] = pd.to_numeric(td[axcol], errors="coerce").fillna(0)
         live = td[td["dir"].abs() > NEGLIGIBLE]
+        if LEVER_E4 and len(live):
+            keep = [e4_aligned(str(r.source), asset, axcol, hist, t) for r in live.itertuples()]
+            dropped = int(len(live) - sum(keep))
+            live = live[keep]
+            if dropped:
+                entry["e4_dropped"] = dropped
         entry["n_docs_today"] = int(len(live))
         if len(live) and live.weight.sum() > 0:
             wsum = live.weight.sum()

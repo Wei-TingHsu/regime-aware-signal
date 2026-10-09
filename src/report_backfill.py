@@ -37,6 +37,7 @@ Usage
 from __future__ import annotations
 
 import argparse
+import os
 import hashlib
 import json
 import sys
@@ -132,6 +133,7 @@ def generate(out_dir: Path, stems: list[str], limit: int | None) -> int:
             print(f"    {stem}: build_report declined ({e}); skipped"); continue
         R["backfill"] = True
         R["estimate_horizon_sessions"] = s6.PRIMARY_H
+        R["lever"] = os.environ.get("LEVER", "")
         for e in R["assets"].values():
             if e.get("estimate"):
                 e["estimate"].setdefault("horizon", s6.PRIMARY_H)
