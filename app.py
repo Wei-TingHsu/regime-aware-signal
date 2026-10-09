@@ -205,6 +205,20 @@ def jload(p):
         return None
 
 
+@st.cache_data(show_spinner=False)
+def referee_numbers():
+    """Hit-rate, benchmark, asymmetry, horizon, verdict, date — from the latest backfill scoreboard. Fixed until the
+    engine's method changes and the backfill is re-run, or the forward ledger reaches 30 matured rows."""
+    bf = sorted(PROC.glob("report_scoreboard_backfill_*.json"), key=lambda p: p.stat().st_mtime)
+    if not bf: return None
+    j = jload(bf[-1]) or {}
+    h = j.get("primary_h", 2)
+    cell = ((j.get("cells") or {}).get(f"h{h}_primary") or {})
+    no = cell.get("nonoverlap") or {}
+    return dict(hit=no.get("hit"), q95=no.get("null_q95") or cell.get("null_q95"), asym=no.get("asym"), n=no.get("n"),
+                h=h, verdict=j.get("verdict", "—"), date=pd.Timestamp(bf[-1].stat().st_mtime, unit="s").strftime("%d %b %Y"))
+
+
 def plain_reason(raw, e=None):
     r = (raw or "").lower()
     if "direction floor" in r or "no document" in r:
@@ -567,6 +581,18 @@ with tabs[0]:
   <div class="g rs-tile"><div class="rs-k">Markets with a view</div><div class="rs-v">{len(views)} <span style="color:{INK3};font-weight:500">of 5</span></div>
     <div class="rs-s">a view needs at least 8 comparable past situations</div></div>
 </div>""", unsafe_allow_html=True)
+        rf = referee_numbers()
+        if rf:
+            hit = f"{rf['hit']:.1%}" if isinstance(rf['hit'], (int, float)) else "—"
+            q95 = f"{rf['q95']:.1%}" if isinstance(rf['q95'], (int, float)) else "—"
+            asym = f"{rf['asym']:.2f}" if isinstance(rf['asym'], (int, float)) else "—"
+            st.markdown(f"""
+<div class="rs-tiles" style="grid-template-columns:repeat(2,1fr)">
+  <div class="g rs-tile"><div class="rs-k">Hit-rate</div><div class="rs-v">{hit} <span style="color:{INK3};font-weight:500;font-size:1rem">vs {q95} benchmark</span></div>
+    <div class="rs-s">share of this engine's directional calls that were right on history ({rf['n']} calls, {rf['h']}-session horizon) — below the benchmark means no edge over the market's drift · {rf['date']} · verdict {rf['verdict']}</div></div>
+  <div class="g rs-tile"><div class="rs-k">Asymmetry</div><div class="rs-v">{asym}</div>
+    <div class="rs-s">size of the move when right ÷ size when wrong; 1.00 means no size edge — fixed until the engine's method changes; see "Reading this page"</div></div>
+</div>""", unsafe_allow_html=True)
         st.markdown(regime_strip_html(reg, T, prof), unsafe_allow_html=True)
 
         st.markdown('<div class="rs-section">The five markets — click a card for the full chart</div>', unsafe_allow_html=True)
@@ -719,20 +745,17 @@ overturned by running code. The full record — every registration, test and dat
 [github.com/Wei-TingHsu/regime-aware-signal](https://github.com/Wei-TingHsu/regime-aware-signal).
 """)
     st.markdown('<div class="rs-section">The referee\'s two numbers</div>', unsafe_allow_html=True)
-    bf_json = (jload(bf[-1]) or {}) if bf else {}
-    cell = ((bf_json.get("cells") or {}).get(f"h{bf_json.get('primary_h', 2)}_primary") or {})
-    no = cell.get("nonoverlap") or {}
-    hit = no.get("hit"); q95 = no.get("null_q95") or cell.get("null_q95"); asym = no.get("asym"); n = no.get("n")
-    hit_txt = f"{hit:.1%}" if isinstance(hit, (int, float)) else "—"; q_txt = f"{q95:.1%}" if isinstance(q95, (int, float)) else "—"
-    asym_txt = f"{asym:.2f}" if isinstance(asym, (int, float)) else "—"
+    rf = referee_numbers() or {}
+    hit_txt = f"{rf['hit']:.1%}" if isinstance(rf.get('hit'), (int, float)) else "—"; q_txt = f"{rf['q95']:.1%}" if isinstance(rf.get('q95'), (int, float)) else "—"
+    asym_txt = f"{rf['asym']:.2f}" if isinstance(rf.get('asym'), (int, float)) else "—"
     st.markdown(f"""
 <div class="rs-tiles">
-  <div class="g rs-tile"><div class="rs-k">Hit-rate</div><div class="rs-v">{hit_txt}</div><div class="rs-s">of {n or '—'} non-overlapping calls on history were in the right direction; the drift-following benchmark is {q_txt}</div></div>
+  <div class="g rs-tile"><div class="rs-k">Hit-rate</div><div class="rs-v">{hit_txt}</div><div class="rs-s">of {rf.get('n') or '—'} non-overlapping calls on history were in the right direction; benchmark {q_txt}</div></div>
   <div class="g rs-tile"><div class="rs-k">Asymmetry</div><div class="rs-v">{asym_txt}</div><div class="rs-s">size of the move when right ÷ size when wrong; 1.00 means no size edge</div></div>
-  <div class="g rs-tile"><div class="rs-k">Horizon</div><div class="rs-v">{bf_json.get('primary_h', 2)} sessions</div><div class="rs-s">how long a call is held before it is marked right or wrong</div></div>
-  <div class="g rs-tile"><div class="rs-k">Verdict</div><div class="rs-v" style="font-size:1.05rem">{bf_verdict}</div><div class="rs-s">against criteria fixed before the test was run</div></div>
+  <div class="g rs-tile"><div class="rs-k">Horizon</div><div class="rs-v">{rf.get('h', 2)} sessions</div><div class="rs-s">how long a call is held before it is marked right or wrong</div></div>
+  <div class="g rs-tile"><div class="rs-k">Verdict</div><div class="rs-v" style="font-size:1.05rem">{rf.get('verdict', '—')}</div><div class="rs-s">against criteria fixed before the test was run · {rf.get('date', '')}</div></div>
 </div>""", unsafe_allow_html=True)
-    with st.expander("What hit-rate and asymmetry mean, and who this engine's numbers are for"):
+    with st.expander("Hit-rate and Asymmetry — definitions"):
         st.markdown("""
 **Hit-rate** is the win rate: of the directional calls the report made, the share that were right. On its own it is
 meaningless — a market that drifts up most days hands a 55% hit-rate to anyone who always says "up". So it is always
@@ -824,20 +847,36 @@ with tabs[4]:
 | **Rest of session** | on a Fed day, what the statement said, and whether any rest-of-day pattern has been found (none has, on 292 meetings) | never a direction for the rest of the day |
 | **Coverage** | on a big-move day, whether the engine's sources carried any document on that market, read it with the move, or against it | "against" mostly means the document was not the driver, not that it was misread — the record splits the two |
 
-### The three words a desk uses, in plain terms
+### Hit-rate
 
-**Hit-rate** — the win rate of the directional calls. Always read beside its benchmark (the same calls shuffled); below the benchmark means no edge.
-**Asymmetry** — the size of the move when right ÷ the size when wrong. Above 1.0 is a size edge; a trader can win with a low hit-rate and a high asymmetry, never the reverse.
-**Horizon** — how long a call is held before it is judged. Two sessions here.
+The share of the engine's directional calls that were right. Always read beside its **benchmark** — the same calls shuffled
+across the same dates, keeping each market's drift. Below the benchmark means no edge over the drift. A 55% hit-rate is
+a coin with a small weight on one side.
 
-### Who a 55% call is for, and who it is not for
+### Asymmetry
+
+The average size of the move when the call was right, divided by the average size when it was wrong. 1.00 means right and
+wrong calls are the same size, so the hit-rate alone decides the money. Above 1.00 is a size edge: a trader can win with a
+low hit-rate and a high asymmetry, never the reverse.
+
+### Horizon
+
+How long a call is held before it is judged. Two sessions here.
+
+### When these two numbers change
+
+They are computed on the whole history and are **fixed** until the engine's method changes (a new filter, a new source,
+a new horizon) and the history is re-scored — or until the live forward record reaches thirty matured calls, when a
+second, live pair appears beside them. Each carries its date.
+
+### Who a 55% Hit-rate is for
 
 A signal that is right 55% of the time with wins the same size as losses is a tool for an operation that makes hundreds
 of independent bets and hedges the rest. For an individual with a few positions it is a coin with a small weight on one
 side, and the weight is eaten by costs. That is why this page leads with the regime, the documents and the abstention,
 and shows the directional line *with* its referee's score.
 
-### How a trader raises asymmetry — three things done at the trade, not in the engine
+### Raising Asymmetry at the trade — three methods
 
 1. **Call less, on bigger days.** Make calls only when a scheduled event or a strong document is present; abstain on quiet days. Trades hit-rate for size.
 2. **Size by expected move, not by confidence in direction.** A right call on a day that moves 1.5σ is worth three wrong calls on days that move 0.5σ. Position size follows the expected size of the move.
