@@ -68,7 +68,7 @@ AX = {"GLD": "dir_gold", "SPY": "dir_eq", "TLT": "dir_dur",
       "UUP": "dir_usd", "USO": "dir_oil"}
 READS = ("read_statement.csv", "read_minutes.csv", "read_8k.csv",
          "read_political_order.csv", "read_political_other.csv")
-NEGLIGIBLE, PRIMARY_H, CONF_WARN = 0.05, 3, 0.60
+NEGLIGIBLE, PRIMARY_H, CONF_WARN = 0.05, 2, 0.60   # h* 3 -> 2 on 2026-10-09 (amendment)
 
 # §8 item 6 -- CURRENT_STATE §8, verbatim. Printed in EVERY report, not linked.
 CANNOT_SEE = [

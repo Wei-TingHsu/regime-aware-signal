@@ -419,3 +419,4 @@ inside the registered band, so this is recorded as a property of the basis, not 
 defect — and it is the first thing to re-check if any real step-3 result looks
 strong.
 
+**Amendment 2026-10-09.** The estimand's horizon is 2 sessions from this date (was 3). See prereg_report_scoreboard §11, 2026-10-09. Results dated before this stand at 3.

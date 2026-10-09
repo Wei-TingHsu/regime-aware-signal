@@ -34,11 +34,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 READS = Path("data_provenance/doc_reads")
 PANEL = Path("processed/asset_returns.parquet")
-OUT = Path("docs/surprise_stageA.md")
+OUT = Path("docs/surprise_stageA_h2.md")
 ASSETS = ["TLT", "GLD", "SPY", "UUP", "USO"]
 EXPECTED = {"TLT": -1, "GLD": -1, "SPY": -1, "UUP": +1, "USO": -1}     # sign of b2 under a hawkish surprise
 CRITERION_ASSETS = ("TLT", "GLD")
-H, RUNUP, THRESH_BP, N_PERM = 3, 5, 2.0, 10_000
+H, RUNUP, THRESH_BP, N_PERM = 2, 5, 2.0, 10_000   # h 3 -> 2 on 2026-10-09
 
 
 def _refuse():
@@ -178,7 +178,7 @@ def main():
     level = 3 if published is not None else 1
     continuous = published is not None                      # registered: level 3 uses the bp value continuously
     global OUT
-    OUT = Path(f"docs/surprise_stageA_level{level}.md") if level == 3 else OUT
+    OUT = Path(f"docs/surprise_stageA_level{level}_h2.md") if level == 3 else OUT
     rets = pd.read_parquet(PANEL); rets.index = pd.to_datetime(rets.index)
     stmts = load_statements(); dgs2 = load_dgs2()
     df = build(stmts, rets, dgs2, published)

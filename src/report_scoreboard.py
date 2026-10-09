@@ -43,8 +43,8 @@ import numpy as np
 import pandas as pd
 
 # ---- registered constants (prereg §2, §3, §5, §6) ----------------------------
-HORIZONS = (3, 5, 20)
-PRIMARY_H = 3
+HORIZONS = (2, 3, 5, 20)   # 2 added 2026-10-09; 3 kept so the old primary stays reported
+PRIMARY_H = 2              # h* 3 -> 2 on 2026-10-09 (amendment)
 MIN_ROWS = 30
 N_PERM = 10_000
 N_BOOT = 2_000          # bootstrap draws for the asymmetry interval (declared here; prereg gives the level, 95%, not the draw count)

@@ -259,7 +259,7 @@ def verdict(e):
     if e["net_view"] is None or est is None or e.get("abstain"):
         return "No view", MUTE, plain_reason(e.get("abstain_reason"), e)
     word = "Clear signal" if est["tier"] == 1 else "Weak signal"
-    return word, (UP if est["tier"] == 1 else WARN), f"{est['estimate']:+.2%} over the next 3 trading days"
+    return word, (UP if est["tier"] == 1 else WARN), f"{est['estimate']:+.2%} over the next {est.get('horizon', 2)} trading days"
 
 
 PILL_BG = {UP: "#E4F4EA", WARN: "#FBF0D9", MUTE: "rgba(20,23,31,.05)"}
