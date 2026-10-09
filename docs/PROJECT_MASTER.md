@@ -556,7 +556,7 @@ does reader–history *agreement* mark already-priced information (three reading
 n = 2,024) · does the compliance function veto an unlicensed vendor (the plan's highest-risk
 assumption; falsifiable in ten conversations) · does the reader's logic match the founder's (the
 prompts in `src/doc_read.py` `PROFILES` were written under deadline and never reviewed line by
-line) · wrong prior #29 (founder to decide).
+line) · wrong priors #29–#38 accepted 9 Oct, tally 38 (CURRENT_STATE §18.15 carries each with its rule and trading reading).
 
 ---
 

@@ -57,24 +57,52 @@ def report_dir():
     return bf[-1] if bf else Path("outputs/reports")
 
 
-def events_on(day: pd.Timestamp, rep_dir: Path):
+PRINT_AXES = {   # fixed sign map, registered 9 Oct (T16 A2): direction per unit of positive surprise; the influence table tests it per regime
+    "empsit": {"SPY": +1, "TLT": -1, "UUP": +1, "GLD": -1}, "unrate": {"SPY": -1, "TLT": +1, "UUP": -1, "GLD": +1},
+    "claims": {"SPY": -1, "TLT": +1, "UUP": -1}, "cpi": {"TLT": -1, "UUP": +1, "GLD": -1}, "cpi_core": {"TLT": -1, "UUP": +1, "GLD": -1},
+    "ppi": {"TLT": -1, "UUP": +1}, "pce": {"TLT": -1, "UUP": +1, "GLD": -1}, "gdp": {"SPY": +1, "TLT": -1, "UUP": +1}, "retail": {"SPY": +1, "TLT": -1},
+}
+_PRINTS = None
+
+
+def prints_on(day: pd.Timestamp) -> list:
+    """Layer-1 prints as data_print events (overnight bin). Reading = sign(surprise) scaled to +-0.5 by the print's own surprise z over history."""
+    global _PRINTS
+    if _PRINTS is None:
+        p = Path("processed/prints.csv")
+        if not p.exists(): _PRINTS = pd.DataFrame(); return []
+        df = pd.read_csv(p, parse_dates=["date"]).dropna(subset=["surprise"])
+        df["z"] = df.groupby("name")["surprise"].transform(lambda x: (x - x.mean()) / (x.std(ddof=0) or 1.0))
+        _PRINTS = df
+    if _PRINTS.empty: return []
+    out = []
+    for _, r in _PRINTS[_PRINTS.date == day].iterrows():
+        axes = PRINT_AXES.get(r["name"], {})
+        if not axes: continue
+        mag = float(min(1.0, abs(r["z"]) / 2))                         # a 2-sigma surprise is magnitude 1
+        out.append(dict(source="data_print", bin="overnight", direction={a: axes.get(a, 0) * np.sign(r["z"]) * 0.5 for a in ASSETS}, mag=mag, spec=0.9, name=r["name"]))
+    return out
+
+
+def events_on(day: pd.Timestamp, rep_dir: Path, with_prints: bool = True):
     f = rep_dir / f"{day:%Y%m%d}.json"
-    if not f.exists(): return None, []
+    if not f.exists():
+        return (None, []) if not with_prints else ({"documents": []}, prints_on(day))
     R = json.loads(f.read_text())
-    ev = []
+    ev = prints_on(day) if with_prints else []
     for d in R.get("documents", []):
         src = d.get("source", ""); b = BIN_OF.get(src, "overnight")
         ev.append(dict(source=src, bin=b, direction={a: dir_of(d, a) for a in ASSETS}, mag=float(d.get("magnitude") or 0), spec=float(d.get("specificity") or 0)))
     return R, ev
 
 
-def states(out_md=Path("docs/attribution_states.md")):
+def states(out_md=Path("docs/attribution_states.md"), with_prints=True):
     if not OHLC.exists(): raise SystemExit("run --build-ohlc first")
     ohlc = pd.read_parquet(OHLC); rets = pd.read_parquet("processed/asset_returns.parquet"); rets.index = pd.to_datetime(rets.index)
     rep = report_dir()
     L = ["# T16 B2 — refined coverage states on big-move days", "",
          f"*Run {datetime.now():%Y-%m-%d %H:%M}. Registered in `docs/prereg_prints_and_attribution.md`. Reports from `{rep.name}`; bins from daily open/close; "
-         f"big move = |z| > {BIG}. Document days only. B = a document in the same bin as the move reading against it (a misread); "
+         f"big move = |z| > {BIG}. Days with any document OR any data print ({'prints included' if with_prints else 'prints excluded'}). B = a document in the same bin as the move reading against it (a misread); "
          f"D = the only document on that axis is in the other bin (not the driver); the 8 Oct 'wrong' column was B + D.*", "",
          "| market | big-move document days | A blind | **B misread** | **D not the driver** | C seen | of which move was mostly overnight |", "|---|---|---|---|---|---|---|"]
     for a in ASSETS:
@@ -82,8 +110,8 @@ def states(out_md=Path("docs/attribution_states.md")):
         cnt = {"A": 0, "B": 0, "C": 0, "D": 0}; n = 0; ovn = 0
         for d, zz in z.items():
             if not np.isfinite(zz) or abs(zz) <= BIG or d not in bb.index: continue
-            R, ev = events_on(d, rep)
-            if R is None: continue
+            R, ev = events_on(d, rep, with_prints)
+            if R is None or (not ev and not R.get("documents")): continue
             n += 1
             big_bin = "overnight" if abs(bb.loc[d, "overnight"]) >= abs(bb.loc[d, "intraday"]) else "intraday"
             if big_bin == "overnight": ovn += 1
@@ -109,8 +137,8 @@ def influence(out_md=Path("docs/attribution_influence.md")):
     cfg = AE.load_config(); sc, _ = AE.load_data(); lab = pd.Series(np.asarray(AE.regime_labels_expanding(sc, cfg)), index=pd.DatetimeIndex(sc.index))
     ohlc = pd.read_parquet(OHLC); rep = report_dir(); rng = np.random.default_rng(0)
     rows = []
-    for f in sorted(rep.glob("*.json")):
-        day = pd.Timestamp(f.stem)
+    days = sorted(set(pd.Timestamp(f.stem) for f in rep.glob("*.json")) | set(pd.read_csv("processed/prints.csv", parse_dates=["date"]).date) if Path("processed/prints.csv").exists() else set(pd.Timestamp(f.stem) for f in rep.glob("*.json")))
+    for day in days:
         if day not in ohlc.index or day not in lab.index or lab.loc[day] < 0: continue
         R, ev = events_on(day, rep)
         for a in ASSETS:
@@ -118,7 +146,7 @@ def influence(out_md=Path("docs/attribution_influence.md")):
             for e in ev:
                 dv = e["direction"][a]
                 if abs(dv) <= 0.05: continue
-                rows.append(dict(date=day, asset=a, source=e["source"], regime=int(lab.loc[day]), reading=dv, move=float(bb[e["bin"]])))
+                rows.append(dict(date=day, asset=a, source=(e["source"] + ":" + e["name"]) if e.get("name") else e["source"], regime=int(lab.loc[day]), reading=dv, move=float(bb[e["bin"]])))
     df = pd.DataFrame(rows)
     L = ["# T16 B4 — influence weights per source class × regime", "",
          f"*Run {datetime.now():%Y-%m-%d %H:%M}. Registered in `docs/prereg_prints_and_attribution.md` B4. An event = one document with a non-zero reading on one asset; "
@@ -140,9 +168,10 @@ def influence(out_md=Path("docs/attribution_influence.md")):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--build-ohlc", action="store_true"); ap.add_argument("--states", action="store_true"); ap.add_argument("--influence", action="store_true")
+    ap.add_argument("--no-prints", action="store_true", help="states without the data_print events (the before picture)")
     a = ap.parse_args()
     if a.build_ohlc: build_ohlc()
-    if a.states: states()
+    if a.states: states(Path("docs/attribution_states_noprints.md") if a.no_prints else Path("docs/attribution_states.md"), with_prints=not a.no_prints)
     if a.influence: influence()
 
 

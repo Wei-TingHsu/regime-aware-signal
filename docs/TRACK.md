@@ -395,6 +395,15 @@ flag fires when oil moves > 2σ with no document; Treasury/OFAC and White House 
 to the provisional pool first; the commodity-shock chain (oil → DGS2 → DXY, all already in the
 panel) becomes a named detection template. Build T13 case A before T2.
 
+### 3.15 T16 Layer 3 — release text behind the BLS bot wall (9 Oct)
+
+bls.gov returns 403 to every scripted request (any user-agent); the API serves numbers only; FRASER dropped the
+connection. Layer 1–2 are complete without it. Layer 3 (the LLM reading the release for named special factors —
+strikes, weather, census/World Cup hiring) needs the text: (a) the 20 most recent releases via the browser for the
+reader-consistency test (prereg A4); (b) the 2006→ backfill via FRASER when it answers, or BLS's bulk download; (c) the
+`data_print` reader prompt for founder review before any paid read. Not blocking: the attribution engine and coverage
+states run on Layers 1–2.
+
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a

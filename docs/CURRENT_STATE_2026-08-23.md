@@ -2242,3 +2242,25 @@ moves oil first and rates follow; a macro print moves rates first and oil follow
 Two bugs found on the way, both mine: A1 first read the instrument-test folder (no documents
 field), then looked up the axis name in a ticker-keyed direction dict — both produced "100% blind".
 
+### 18.17 T16 — PRINTS AS A SOURCE: THE FIRST MEASURED CUT IN THE BLIND RATE, AND THE FIRST EARNED INFLUENCE WEIGHT (9 Oct)
+
+Layer 1 built: 4,887 first-print rows (ALFRED vintages, nine series, 2006→), $0; expectation = naive prior for the
+backfill, as registered. Prints enter the two-bin attribution engine as overnight events with the fixed sign map of
+prereg §A2 (`PRINT_AXES`), magnitude from the surprise's own z, capped at 2σ. No LLM read yet (the release text is
+behind BLS's bot wall; Layer 3 is deferred — see TRACK §3.15).
+
+**Coverage** (|z| > 2 days; 'before' = days with a filed document, 'after' = with a document or a print):
+TLT blind 76% → 21% (n 82 → 165); UUP 65% → 15% (89 → 172); SPY 48% → 27%; GLD 70% → 56%; USO 86% → 92% (prints add
+days to oil's denominator and explain none — EIA/OPEC not yet fetched). 'Not the driver' rose with coverage (TLT 10% → 36%):
+a print in the overnight bin on a day whose move was intraday; the split rule covers same-bin events only. Prior held for
+TLT/UUP; partly wrong for SPY (fell, not by half).
+
+**Influence** (hit share of the bin move vs a within-class permutation null, 10,000 draws; weight earned only at p < 0.05,
+n ≥ 30; displayed, not used in the 3-day line): **Employment Situation → gold earns a weight in regime 0 (65% vs 49%,
+p 0.001, n 100) and regime 2 (70% vs 50%, p 0.007, n 44)**; not in regime 1 (56%, p 0.16). CPI → gold earns nothing in any
+regime (41–62%, p > 0.1) — prior half wrong: an inflation surprise against a naive prior is not readable on gold. The Fed
+statement earns nothing on gold anywhere (42–58%), consistent with every earlier Fed→gold test. Full table
+`docs/attribution_influence.md`.
+
+Every figure above: measured on history, 9 Oct, two-bin daily attribution; none is a forecast.
+
