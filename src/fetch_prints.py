@@ -20,7 +20,7 @@ from pathlib import Path
 import pandas as pd
 
 DOCS = Path("data_provenance/docs/data_print"); CSV = Path("processed/prints.csv")
-UA = "regime-aware-signal research (contact in .env SEC_CONTACT)"
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36 regime-aware-signal-research"
 SERIES = {  # name -> (ALFRED series, agency, archive index page)
     "empsit": ("PAYEMS", "BLS", "https://www.bls.gov/bls/news-release/empsit.htm"),
     "unrate": ("UNRATE", "BLS", None),
@@ -52,6 +52,7 @@ def numbers(since="2006-01-01"):
                 err = e; time.sleep(3 * (attempt + 1)); ar = None
         if ar is None:
             print(f"  {name}: FRED unavailable ({type(err).__name__}); skipped"); continue
+        ar = ar.dropna(subset=["value"]).copy()                      # 9 Oct: ALFRED carries withheld observations as None
         ar["realtime_start"] = pd.to_datetime(ar["realtime_start"]); ar["date"] = pd.to_datetime(ar["date"])
         # first print of each observation = the row with the earliest realtime_start for that observation date
         first = ar.sort_values("realtime_start").groupby("date").first().reset_index()
