@@ -171,8 +171,8 @@ def coverage_line(a: str, bs) -> str:
     bits = []
     if st_:
         word = {"A": "the engine's sources carry no document on it (blind)",
-                "B": "the engine read it backwards (wrong)",
-                "C": "the engine's sources account for it"}[st_]
+                "B": "a document the engine read pointed the other way — on most such days the document was not the driver (see How this works)",
+                "C": "the engine's sources account for it"}[st_]  # B is relabelled 'misread' vs 'not the driver' once T16 attribution runs nightly
         bits.append(f"Coverage: this market moved {abs(z):.1f}σ today; {word}.")
     if a == "GLD" and bs.get("chain_alert"):
         ci = bs.get("chain_inputs") or {}

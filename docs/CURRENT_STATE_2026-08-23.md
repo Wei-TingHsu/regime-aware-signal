@@ -2216,8 +2216,13 @@ the baseline corpus `48a6c4e879a1_n2617`):
 | USO | 80 | 86% | 6% | 8% |
 
 Document days only; big moves on days with no document are blind by definition and lie outside
-these denominators. Readings: on the days that matter most, a document present is read backwards
-more often than correctly for SPY, TLT and GLD — the referee's FAIL from the other side; oil is
+these denominators. Reading, in the form the figure rule requires: *of the 100 days SPY moved more than 2σ and the
+engine had any document, on 31 the document present pointed against the move.* That measures how
+often the engine was looking at a document that did not move the market, not how often it misread
+one: the attribution diagnostic of the same day found that most of those days were scheduled data
+releases or unfiled events the engine does not read. The genuine misread rate is not yet separable
+from this number; it is bounded above by it, and T16 Part B (two-bin attribution) splits it into
+*misread* and *not the driver* from its first run. Measured, 8 Oct, `docs/blindspot_backfill.md`; oil is
 blind 86% of the time, the two-wars finding as a twenty-year statistic; Treasuries are the
 second-worst covered, not the best — prior wrong (candidate #38): the Fed speaks eight times a
 year and Treasuries' big days are data prints no source carries.

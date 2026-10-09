@@ -477,6 +477,16 @@ Kept so that "what was done" stays beside "what was not".
 
 ## 7. Backup and restore -- what lives where, and how to rebuild on a new machine
 
+**Standing rule for every figure shown to the founder or an investor (8 Oct).** A number is never
+shown alone. It carries, in this order: (1) **the population it is over** — the denominator in
+words ("of the 100 days SPY moved more than 2σ *and* the engine had a document"); (2) **what it
+measures and what it does not** ("how often the document present pointed against the move — not
+how often the engine misread one, because on most of those days the document was not the driver");
+(3) **its status** — *measured* (a count on history), *tested* (a registered criterion and a
+verdict), or *registered, not run*; (4) **its date and source file**. A figure that cannot be
+written in that form is not shown. "31% wrong" fails the rule; the sentence that replaces it is
+in CURRENT_STATE §18.16.
+
 **Two standing rules (7 Oct).** Never append to `.env` with `>>` — rewrite it whole, one `KEY=value` per line, trailing newline. Every week: `launchctl list | grep regimeaware` — a non-zero number after the dash means the job is failing, and the nightly log says where.
 
 *Added 2026-09-14 after an audit found nine unpushed commits and the forward ledger
