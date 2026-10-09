@@ -2264,3 +2264,19 @@ statement earns nothing on gold anywhere (42–58%), consistent with every earli
 
 Every figure above: measured on history, 9 Oct, two-bin daily attribution; none is a forecast.
 
+### 18.18 HORIZON AMENDMENT h* 3 → 2, RE-SCORED (9 Oct)
+
+Founder's instruction: a document's drift is strongest the session it lands, weaker the next, gone by the third.
+Registered as an amendment (prereg_report_scoreboard §11, prereg_surprise, prereg_analog_event) before the code
+changed; PRIMARY_H 3 → 2 in the estimator and the referee; horizon set {2, 3, 5, 20}; self-test T4 re-specified to
+follow the registered horizon (its hand list was the h=3 answer); 7/7 pass. Backfill re-run as
+`48a6c4e879a1_n2617_h2`, same corpus, null and criteria.
+
+*Of 1,064 calls on 1,532 document days, on 534 non-overlapping rows at 2 sessions: hit 54.9% vs null 57.5%, p 0.40,
+asymmetry 1.008 — FAIL, and clearer than at 3 sessions (58.2% vs 58.8%, p 0.09; the same run reports h=3 at 61.3%).*
+Prior stated in the amendment ("similar or slightly higher hit-rate") wrong — #39, Claude's. The report's calls do
+better with the third session than without it; on this corpus the extra day helps, which reads as slow drift, not
+fast decay. Caveat: 2- and 3-session windows share two days — one sample seen twice, not two tests. This scores the
+report's *calls*; the price-drift hypothesis itself is S1 (continuation), registered, not yet run. h* = 2 stays the
+primary: the estimand follows the hypothesis, not the score.
+
