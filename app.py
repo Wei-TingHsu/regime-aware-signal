@@ -153,38 +153,6 @@ DISPLAY = {
                 note="Model asset: USO."),
 }
 AXIS_WORD = {"equity": "US equities", "duration": "Treasuries", "gold": "Gold", "dollar": "US dollar", "oil": "Oil"}
-@st.cache_data(show_spinner=False)
-def load_blindspot(day: str):
-    p = ROOT / "outputs" / "blindspot" / f"{day.replace('-', '')}.json"
-    try:
-        return json.loads(p.read_text()) if p.exists() else None
-    except Exception:
-        return None
-
-
-def coverage_line(a: str, bs) -> str:
-    """T13 case A line, per docs/prereg_blindspot.md section 5. Absent on quiet days."""
-    if not bs:
-        return ""
-    st_ = (bs.get("states") or {}).get(a); z = (bs.get("z") or {}).get(a)
-    hc = (bs.get("haircut") or {}).get(a, 1.0)
-    bits = []
-    if st_:
-        word = {"A": "the engine's sources carry no document on it (blind)",
-                "B": "a document the engine read pointed the other way — on most such days the document was not the driver (see How this works)",
-                "C": "the engine's sources account for it"}[st_]  # B is relabelled 'misread' vs 'not the driver' once T16 attribution runs nightly
-        bits.append(f"Coverage: this market moved {abs(z):.1f}σ today; {word}.")
-    if a == "GLD" and bs.get("chain_alert"):
-        ci = bs.get("chain_inputs") or {}
-        bits.append(f"<b>Oil-shock chain confirmed:</b> oil {ci.get('oil_5d', 0):+.1%}, dollar {ci.get('dxy_5d', 0):+.1%}, then the 2-year "
-                    f"{ci.get('dgs2_5d_bp', 0):+.0f} bp — oil first, rates following. This pattern has fired twice since 2006, at the start of "
-                    "the 2022 and 2026 wars; gold fell about 10% over the following three months both times. Two cases are not a forecast; "
-                    "no direction is issued from this flag.")
-    if hc < 0.999:
-        bits.append(f"Displayed confidence carries a haircut of {hc:.2f} from recent misreads.")
-    return f'<div class="rs-ev">{" ".join(bits)}</div>' if bits else ""
-
-
 AXIS_OF = {"SPY": "equity", "TLT": "duration", "GLD": "gold", "UUP": "dollar", "USO": "oil"}
 
 
@@ -259,7 +227,7 @@ def verdict(e):
     if e["net_view"] is None or est is None or e.get("abstain"):
         return "No view", MUTE, plain_reason(e.get("abstain_reason"), e)
     word = "Clear signal" if est["tier"] == 1 else "Weak signal"
-    return word, (UP if est["tier"] == 1 else WARN), f"{est['estimate']:+.2%} over the next {est.get('horizon', 2)} trading days"
+    return word, (UP if est["tier"] == 1 else WARN), f"{est['estimate']:+.2%} over the next 3 trading days"
 
 
 PILL_BG = {UP: "#E4F4EA", WARN: "#FBF0D9", MUTE: "rgba(20,23,31,.05)"}
@@ -540,7 +508,7 @@ def doc_cards(docs: list):
 # ==========================================================================
 st.markdown('<div class="rs-wordmark">◐ Regime-Aware Signal <span>a daily read on five core markets — '
             'and, more often than not, an explicit refusal to call it</span></div>', unsafe_allow_html=True)
-tabs = st.tabs(["Today", "Look up an asset", "The record", "How this works"])
+tabs = st.tabs(["Today", "Look up an asset", "The record", "How this works", "Reading this page"])
 try:
     focus_param = st.query_params.get("focus")
 except Exception:
@@ -603,8 +571,7 @@ with tabs[0]:
 
         st.markdown('<div class="rs-section">The five markets — click a card for the full chart</div>', unsafe_allow_html=True)
         fomc_days = load_fomc_days()
-        bs = load_blindspot(day)
-        cards = "".join(market_card(a, e, quote(DISPLAY[a]), f"?focus={a}", event_line(a, R, day, fomc_days) + coverage_line(a, bs))
+        cards = "".join(market_card(a, e, quote(DISPLAY[a]), f"?focus={a}", event_line(a, R, day, fomc_days))
                         for a, e in R["assets"].items())
         st.markdown(f'<div class="rs-cards">{cards}</div>', unsafe_allow_html=True)
         st.markdown('<div class="rs-foot" style="margin-top:8px">Prices are live from Yahoo Finance (delayed about 15 minutes) '
@@ -751,6 +718,43 @@ are recorded side by side. The next phase leads with exposure, expected move and
 overturned by running code. The full record — every registration, test and date — is in the repository:
 [github.com/Wei-TingHsu/regime-aware-signal](https://github.com/Wei-TingHsu/regime-aware-signal).
 """)
+    st.markdown('<div class="rs-section">The referee\'s two numbers</div>', unsafe_allow_html=True)
+    bf_json = (jload(bf[-1]) or {}) if bf else {}
+    cell = ((bf_json.get("cells") or {}).get(f"h{bf_json.get('primary_h', 2)}_primary") or {})
+    no = cell.get("nonoverlap") or {}
+    hit = no.get("hit"); q95 = no.get("null_q95") or cell.get("null_q95"); asym = no.get("asym"); n = no.get("n")
+    hit_txt = f"{hit:.1%}" if isinstance(hit, (int, float)) else "—"; q_txt = f"{q95:.1%}" if isinstance(q95, (int, float)) else "—"
+    asym_txt = f"{asym:.2f}" if isinstance(asym, (int, float)) else "—"
+    st.markdown(f"""
+<div class="rs-tiles">
+  <div class="g rs-tile"><div class="rs-k">Hit-rate</div><div class="rs-v">{hit_txt}</div><div class="rs-s">of {n or '—'} non-overlapping calls on history were in the right direction; the drift-following benchmark is {q_txt}</div></div>
+  <div class="g rs-tile"><div class="rs-k">Asymmetry</div><div class="rs-v">{asym_txt}</div><div class="rs-s">size of the move when right ÷ size when wrong; 1.00 means no size edge</div></div>
+  <div class="g rs-tile"><div class="rs-k">Horizon</div><div class="rs-v">{bf_json.get('primary_h', 2)} sessions</div><div class="rs-s">how long a call is held before it is marked right or wrong</div></div>
+  <div class="g rs-tile"><div class="rs-k">Verdict</div><div class="rs-v" style="font-size:1.05rem">{bf_verdict}</div><div class="rs-s">against criteria fixed before the test was run</div></div>
+</div>""", unsafe_allow_html=True)
+    with st.expander("What hit-rate and asymmetry mean, and who this engine's numbers are for"):
+        st.markdown("""
+**Hit-rate** is the win rate: of the directional calls the report made, the share that were right. On its own it is
+meaningless — a market that drifts up most days hands a 55% hit-rate to anyone who always says "up". So it is always
+shown beside its **benchmark**: what the same calls score when shuffled across the same dates, keeping each market's own
+drift. A hit-rate below its benchmark means the calls carry no edge over following the drift.
+
+**Asymmetry** is the size question a win rate cannot answer: the average move when the call was right, divided by the
+average move when it was wrong. A trader right only 40% of the time makes money at asymmetry 2.0 (wins twice the size
+of losses) and loses money at 1.0 with a 55% hit-rate once costs are paid. Together: *55% hit-rate at asymmetry 1.0
+against a 57% benchmark loses money after costs.* That is what a FAIL verdict means in money terms.
+
+**Who a number like this is for.** A directional signal in the mid-50s with no size edge is usable only by an
+operation that places many independent bets and hedges the rest — a quantitative fund or a market-making desk. It is
+not usable by an individual holding a few positions, for whom a 55% call is a coin with a small weight on one side.
+That is why this engine's product is not the direction call: it is the regime, the documents, the explicit statement
+of how much evidence exists, and the refusal to call when there is not enough. The directional line is shown with its
+referee's score beside it so that nobody mistakes it for more than it is.
+
+**Why the horizon matters.** A call held for two sessions and the same call held for three are different bets. On this
+corpus the three-session score was higher; the two-session horizon is used because the drift hypothesis behind it was
+registered first, and changing it afterwards to the better-scoring one is the kind of selection this project forbids.
+""")
     with st.expander("Coming: log your own trades against the same referee"):
         st.markdown("A registered route adds a ledger for the user's own rules — entry, size, stop — written down or logged as an "
                     "actual fill, and scored by the same scorer as the models. It is the one action control that belongs on this "
@@ -801,3 +805,68 @@ tool that produced a number anyway would be worse than useless.
 Every threshold in this system was written down and committed to version control before any result was looked at. Where a test
 failed, the failure is recorded rather than the test rerun. No live performance figure is shown anywhere in this tool.</div>""",
                 unsafe_allow_html=True)
+
+# ==========================================================================
+# READING THIS PAGE — the manual, for a reader who is not a quant
+# ==========================================================================
+with tabs[4]:
+    st.markdown('<div class="g rs-banner"><h2>Reading this page</h2><p>What each thing on the Today tab means, what it is not, '
+                'and how a trader would use — or not use — a number like it. Everything here is also in the repository record.</p></div>',
+                unsafe_allow_html=True)
+    st.markdown("""
+### The five things on a market card, top to bottom
+
+| line | what it is | what it is not |
+|---|---|---|
+| **Price and change** | the live quote of the instrument a desk watches (S&P 500, 10-year yield, gold, dollar index, WTI), delayed about 15 minutes | not the model's input — the model runs on five ETFs underneath, and the two were tested to give the same verdicts |
+| **Signal pill** — *No view / Weak / Clear* | whether the engine found at least eight genuinely comparable past situations; *Clear* needs more than *Weak* | not a buy or sell — a statement about how much evidence exists |
+| **"+x% over the next 2 trading days"** | the average of what happened on those comparable days, shrunk toward zero when they are few or disagree | not a forecast of what *will* happen; its own referee scores it at the bottom of The record |
+| **Rest of session** | on a Fed day, what the statement said, and whether any rest-of-day pattern has been found (none has, on 292 meetings) | never a direction for the rest of the day |
+| **Coverage** | on a big-move day, whether the engine's sources carried any document on that market, read it with the move, or against it | "against" mostly means the document was not the driver, not that it was misread — the record splits the two |
+
+### The three words a desk uses, in plain terms
+
+**Hit-rate** — the win rate of the directional calls. Always read beside its benchmark (the same calls shuffled); below the benchmark means no edge.
+**Asymmetry** — the size of the move when right ÷ the size when wrong. Above 1.0 is a size edge; a trader can win with a low hit-rate and a high asymmetry, never the reverse.
+**Horizon** — how long a call is held before it is judged. Two sessions here.
+
+### Who a 55% call is for, and who it is not for
+
+A signal that is right 55% of the time with wins the same size as losses is a tool for an operation that makes hundreds
+of independent bets and hedges the rest. For an individual with a few positions it is a coin with a small weight on one
+side, and the weight is eaten by costs. That is why this page leads with the regime, the documents and the abstention,
+and shows the directional line *with* its referee's score.
+
+### How a trader raises asymmetry — three things done at the trade, not in the engine
+
+1. **Call less, on bigger days.** Make calls only when a scheduled event or a strong document is present; abstain on quiet days. Trades hit-rate for size.
+2. **Size by expected move, not by confidence in direction.** A right call on a day that moves 1.5σ is worth three wrong calls on days that move 0.5σ. Position size follows the expected size of the move.
+3. **Cut the wrong side early.** A stop at a fixed fraction of the day's typical move, no cap on the right side — asymmetry is manufactured with the exit. This engine scores close-to-close and has no exit rule; one is registered to be tested.
+
+Five engine-side ways (filters on which calls are made) are registered in the repository's TRACK §3.16 and will be tested against the same referee.
+
+### Reading the regime line
+
+Four market conditions, found by clustering eight macro series — not chosen by hand, not named by a person. The
+confidence is the model's own probability that today belongs to the one shown. Three independent tests found the
+labels carry no information beyond volatility for ranking, direction or sizing: **the regime is a good description of
+where we are and a poor predictor of where we go.** Treat it as context.
+
+### Reading "No view"
+
+Most days, most markets. A view is withheld unless at least eight past situations are genuinely comparable — a threshold
+fixed in writing before any result was seen — or when nothing the engine reads touched that market, or when two documents
+disagree (both are shown, neither combined). The reason is printed on the card. This is the product working.
+
+### What this engine cannot see
+
+Anything that never becomes a filing: a strike, a speech, a headline, a pipeline accident, a war. Scheduled data releases
+(jobs, inflation, GDP) entered as a source in October 2026; the day they land, Treasuries and the dollar move on them
+three times out of four. Oil's drivers (EIA, OPEC) are not yet read. The coverage line says, each day, whether the engine
+was looking at the right document.
+
+### Not advice
+
+Nothing on this page is a recommendation to buy or sell. Every number carries its date, its source file in the
+repository, and its status — measured, tested, or registered and not yet run.
+""")
