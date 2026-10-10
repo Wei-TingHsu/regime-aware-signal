@@ -424,7 +424,9 @@ Order: E4, E1, E3, E2, E5. Registration file `docs/prereg_asymmetry_levers.md` b
 
 **E4 run (9 Oct): FAIL.** Non-overlap asymmetry 1.128 vs incumbent 1.008 (+0.12, short of the registered +0.20; 95% CI [0.90, 1.49] contains 1.008); non-overlap hit-rate 54.3% on 328 calls, below its own null 56.1% (p 0.19); incumbent 54.9% on 534 calls (null 57.5%, p 0.40). Measured on the 1,532-day h=2 backfill, 10,000 permutations, tag `48a6c4e879a1_n2617_h2_E4`; the lever dropped documents on 644 asset-days, 547 of them SPY. What it does not measure: the forward ledger (untouched by registration) or any horizon but 2. Full row in `prereg_asymmetry_levers.md` §6.
 
-**E1 run (10 Oct): FAIL.** Non-overlap hit-rate 48.5% on 198 calls (incumbent 54.9% on 534), below its own null 54.5% (p 0.90); asymmetry 1.052 vs 1.008 (+0.04; CI [0.84, 1.38] contains 1.008); mean signed move −0.006%. Same backfill, tag `48a6c4e879a1_n2617_h2_E1`. The lever cut 63% of calls and kept the worse ones: days whose precedents moved most are days the pool does not explain. Expected move stays a sizing input (T2), not a direction filter. E3 next.
+**E1 run (10 Oct): FAIL.** Non-overlap hit-rate 48.5% on 198 calls (incumbent 54.9% on 534), below its own null 54.5% (p 0.90); asymmetry 1.052 vs 1.008 (+0.04; CI [0.84, 1.38] contains 1.008); mean signed move −0.006%. Same backfill, tag `48a6c4e879a1_n2617_h2_E1`. The lever cut 63% of calls and kept the worse ones: days whose precedents moved most are days the pool does not explain. Expected move stays a sizing input (T2), not a direction filter.
+
+**E3 run (10 Oct): FAIL.** Non-overlap asymmetry 0.852 [0.70, 1.03] vs incumbent 1.008 — down, not up; hit-rate 54.6% on 377 calls, below its null 58.1% (p 0.63). Tag `48a6c4e879a1_n2617_h2_E3`. Median τ² is 0 on every asset, so the gate removed exactly the pools with regime disagreement (321 of 1,841 asset-days) and the asymmetry went with them: the regime-conditioned pools are where right calls out-pay wrong ones. Hypothesis recorded, not tested. E2 next; E5 waits on earned cells.
 
 ### 3.17 Trading-side asymmetry methods — recorded for the app's manual, not engine changes (9 Oct)
 

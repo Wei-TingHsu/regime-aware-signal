@@ -452,6 +452,7 @@ commit and push the record.
 | 33 | Primary horizon h* = 2 (amendment 9 Oct): the report's calls beat drift at 2 sessions | 9 Oct | **FAIL** — non-overlap 54.9% vs null 57.5%, p 0.40, asymmetry 1.008, n 534; h=3 kept beside; prior #39 wrong | CURRENT_STATE §18.18 |
 | 34 | E4 event-bin alignment raises asymmetry ≥ 0.20 without losing hit-rate (first of five levers) | 9 Oct | **FAIL** — asymmetry 1.128 vs 1.008 (+0.12, CI contains incumbent); hit-rate 54.3% < null 56.1%; n 328; acts almost only on SPY | `prereg_asymmetry_levers.md` §6, TRACK §3.16 |
 | 35 | E1 ESS floor by expected move raises asymmetry ≥ 0.20 without losing hit-rate (second lever) | 10 Oct | **FAIL** — asymmetry 1.052 vs 1.008 (+0.04); hit-rate 48.5% < null 54.5%, p 0.90; n 198 (63% of calls cut); expected move is a sizing input, not a direction filter; prior #41 wrong | `prereg_asymmetry_levers.md` §6, TRACK §3.16 |
+| 36 | E3 precedent dispersion gate raises asymmetry ≥ 0.20 without losing hit-rate (third lever) | 10 Oct | **FAIL** — asymmetry 0.852 vs 1.008 (down 0.16); hit-rate 54.6% < null 58.1%; n 377; median τ² is 0 so the gate removed every regime-disagreeing pool and the asymmetry with it; prior #42 wrong | `prereg_asymmetry_levers.md` §6, TRACK §3.16 |
 
 ---
 
@@ -559,7 +560,7 @@ does reader–history *agreement* mark already-priced information (three reading
 n = 2,024) · does the compliance function veto an unlicensed vendor (the plan's highest-risk
 assumption; falsifiable in ten conversations) · does the reader's logic match the founder's (the
 prompts in `src/doc_read.py` `PROFILES` were written under deadline and never reviewed line by
-line) · wrong priors #29–#39 accepted 9 Oct, tally 39 (#40 E4 prior, #41 E1 prior, both Claude's) (CURRENT_STATE §18.15 carries each with its rule and trading reading).
+line) · wrong priors #29–#39 accepted 9 Oct, tally 39 (#40 E4, #41 E1, #42 E3 priors, all Claude's) (CURRENT_STATE §18.15 carries each with its rule and trading reading).
 
 ---
 
