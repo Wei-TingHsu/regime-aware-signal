@@ -53,4 +53,4 @@ changes the forward ledger.
 
 | date | change | reason |
 |---|---|---|
-| — | — | — |
+| 2026-10-09 | **E4 result recorded, no rule change.** Backfill `48a6c4e879a1_n2617_h2_E4`, 1,532 report days, 10,000 permutations. Non-overlap: 328 calls (incumbent 534), hit-rate 54.3% (incumbent 54.9%) against its own null 56.1%, p 0.19; asymmetry 1.128 [0.899, 1.490] (incumbent 1.008 [0.853, 1.232]). Clause 1: +0.12 < 0.20, not met. Clause 2: 54.3% < 56.1% null, not met. Clause 3: 328 ≥ 30, met. **FAIL.** The lever dropped a document on 644 asset-days (SPY 547, USO 80, TLT 77, GLD 29, UUP 10) — it acts almost only on SPY. Prior (PASS on SPY and GLD) wrong. Asymmetry's interval includes the incumbent's point value, so even the +0.12 is not distinguishable from noise. Next: E1 as registered. | Result, scored against §1 as written |
