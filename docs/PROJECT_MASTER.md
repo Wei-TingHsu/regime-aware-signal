@@ -451,6 +451,7 @@ commit and push the record.
 | 32 | Vol-targeted, regime-tilted sizing improves CER net of costs (T1 Test A) | 8 Oct | **NO** — vol targeting PASS 1/5 (USO; drawdown improves everywhere, CER does not); regime tilt 0/5 | CURRENT_STATE §18.14 |
 | 33 | Primary horizon h* = 2 (amendment 9 Oct): the report's calls beat drift at 2 sessions | 9 Oct | **FAIL** — non-overlap 54.9% vs null 57.5%, p 0.40, asymmetry 1.008, n 534; h=3 kept beside; prior #39 wrong | CURRENT_STATE §18.18 |
 | 34 | E4 event-bin alignment raises asymmetry ≥ 0.20 without losing hit-rate (first of five levers) | 9 Oct | **FAIL** — asymmetry 1.128 vs 1.008 (+0.12, CI contains incumbent); hit-rate 54.3% < null 56.1%; n 328; acts almost only on SPY | `prereg_asymmetry_levers.md` §6, TRACK §3.16 |
+| 35 | E1 ESS floor by expected move raises asymmetry ≥ 0.20 without losing hit-rate (second lever) | 10 Oct | **FAIL** — asymmetry 1.052 vs 1.008 (+0.04); hit-rate 48.5% < null 54.5%, p 0.90; n 198 (63% of calls cut); expected move is a sizing input, not a direction filter; prior #41 wrong | `prereg_asymmetry_levers.md` §6, TRACK §3.16 |
 
 ---
 
@@ -558,7 +559,7 @@ does reader–history *agreement* mark already-priced information (three reading
 n = 2,024) · does the compliance function veto an unlicensed vendor (the plan's highest-risk
 assumption; falsifiable in ten conversations) · does the reader's logic match the founder's (the
 prompts in `src/doc_read.py` `PROFILES` were written under deadline and never reviewed line by
-line) · wrong priors #29–#39 accepted 9 Oct, tally 39 (#40 the E4 prior, Claude's) (CURRENT_STATE §18.15 carries each with its rule and trading reading).
+line) · wrong priors #29–#39 accepted 9 Oct, tally 39 (#40 E4 prior, #41 E1 prior, both Claude's) (CURRENT_STATE §18.15 carries each with its rule and trading reading).
 
 ---
 
