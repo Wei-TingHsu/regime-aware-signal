@@ -75,6 +75,8 @@ import os as _os
 LEVER_E4 = _os.environ.get("LEVER", "") == "E4"
 LEVER_E1 = _os.environ.get("LEVER", "") == "E1"   # prereg_asymmetry_levers §3
 LEVER_E3 = _os.environ.get("LEVER", "") == "E3"   # prereg_asymmetry_levers §4
+LEVER_E2 = _os.environ.get("LEVER", "") == "E2"   # prereg_asymmetry_levers §4
+_E2_MIN_HIST = 30
 _E3_HIST = {}                                      # asset -> [(session, tau2)], expanding
 _E3_MIN_HIST = 30
 _E4_BIN = {"fomc_statement": "intraday", "fomc_minutes": "intraday"}       # all other classes: overnight
@@ -252,6 +254,19 @@ def build_report(date_str):
             live = live[keep]
             if dropped:
                 entry["e4_dropped"] = dropped
+        if LEVER_E2 and len(live):
+            hs = pd.to_numeric(hist.get("specificity"), errors="coerce")
+            med = hs.groupby(hist.source).agg(["median", "count"])
+            def _e2_keep(r):
+                m = med.loc[r.source] if r.source in med.index else None
+                if m is None or m["count"] < _E2_MIN_HIST: return True
+                sp = pd.to_numeric(r.specificity, errors="coerce")
+                return bool(pd.notna(sp) and sp >= m["median"])
+            keep = [_e2_keep(r) for r in live.itertuples()]
+            dropped = int(len(live) - sum(keep))
+            live = live[keep]
+            if dropped:
+                entry["e2_dropped"] = dropped
         entry["n_docs_today"] = int(len(live))
         if len(live) and live.weight.sum() > 0:
             wsum = live.weight.sum()
