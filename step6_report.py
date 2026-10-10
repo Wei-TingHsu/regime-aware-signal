@@ -73,6 +73,7 @@ NEGLIGIBLE, PRIMARY_H, CONF_WARN = 0.05, 2, 0.60   # h* 3 -> 2 on 2026-10-09 (am
 # ---- E4 lever (docs/prereg_asymmetry_levers.md §2), off unless LEVER=E4 ----------------------------------
 import os as _os
 LEVER_E4 = _os.environ.get("LEVER", "") == "E4"
+LEVER_E1 = _os.environ.get("LEVER", "") == "E1"   # prereg_asymmetry_levers §3
 _E4_BIN = {"fomc_statement": "intraday", "fomc_minutes": "intraday"}       # all other classes: overnight
 _E4_OHLC = None
 _E4_CACHE = {}
@@ -307,6 +308,21 @@ def build_report(date_str):
         if est["abstain"]:
             entry["abstain_reason"] = (f"realised ESS {est['ess']:.1f} below "
                                        f"the registered floor of 8 (§3.5)")
+
+        # ---- E1 lever (prereg_asymmetry_levers §3), off unless LEVER=E1 ------
+        if LEVER_E1 and not est["abstain"]:
+            # the asset's own typical |move|: every PRIMARY_H-session window that
+            # had closed by the close of t (position ti - PRIMARY_H is the last)
+            own = np.abs(f[253:ti - PRIMARY_H + 1])
+            own_med = float(np.nanmedian(own)) if np.isfinite(own).any() else float("nan")
+            pool_med = float(np.nanmedian(np.abs(f[ppos])))
+            entry["e1_pool_median_abs"] = pool_med
+            entry["e1_asset_median_abs"] = own_med
+            if not (np.isfinite(own_med) and pool_med >= own_med):
+                entry["abstain"] = True
+                entry["estimate"]["abstain"] = True
+                entry["abstain_reason"] = (f"E1: precedents' median |move| {pool_med:.3%} "
+                                           f"below the asset's own {own_med:.3%}")
 
         # ---- 4. agreement flag, DISPLAY ONLY ---------------------------
         pt = est["estimate"]
