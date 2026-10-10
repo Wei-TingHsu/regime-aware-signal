@@ -453,6 +453,7 @@ commit and push the record.
 | 34 | E4 event-bin alignment raises asymmetry ≥ 0.20 without losing hit-rate (first of five levers) | 9 Oct | **FAIL** — asymmetry 1.128 vs 1.008 (+0.12, CI contains incumbent); hit-rate 54.3% < null 56.1%; n 328; acts almost only on SPY | `prereg_asymmetry_levers.md` §6, TRACK §3.16 |
 | 35 | E1 ESS floor by expected move raises asymmetry ≥ 0.20 without losing hit-rate (second lever) | 10 Oct | **FAIL** — asymmetry 1.052 vs 1.008 (+0.04); hit-rate 48.5% < null 54.5%, p 0.90; n 198 (63% of calls cut); expected move is a sizing input, not a direction filter; prior #41 wrong | `prereg_asymmetry_levers.md` §6, TRACK §3.16 |
 | 36 | E3 precedent dispersion gate raises asymmetry ≥ 0.20 without losing hit-rate (third lever) | 10 Oct | **FAIL** — asymmetry 0.852 vs 1.008 (down 0.16); hit-rate 54.6% < null 58.1%; n 377; median τ² is 0 so the gate removed every regime-disagreeing pool and the asymmetry with it; prior #42 wrong | `prereg_asymmetry_levers.md` §6, TRACK §3.16 |
+| 37 | E2 specificity gate at the source's median raises asymmetry ≥ 0.20 without losing hit-rate (fourth lever) | 10 Oct | **FAIL** — asymmetry 1.056 vs 1.008 (+0.05); hit-rate 54.1% < null 55.9%; n 379; prior said INCONCLUSIVE, #43. Four of five levers done, none moves asymmetry by 0.20; it is a property of the calls (TRACK §3.16 conclusion) | `prereg_asymmetry_levers.md` §6 |
 
 ---
 
@@ -560,7 +561,7 @@ does reader–history *agreement* mark already-priced information (three reading
 n = 2,024) · does the compliance function veto an unlicensed vendor (the plan's highest-risk
 assumption; falsifiable in ten conversations) · does the reader's logic match the founder's (the
 prompts in `src/doc_read.py` `PROFILES` were written under deadline and never reviewed line by
-line) · wrong priors #29–#39 accepted 9 Oct, tally 39 (#40 E4, #41 E1, #42 E3 priors, all Claude's) (CURRENT_STATE §18.15 carries each with its rule and trading reading).
+line) · wrong priors #29–#39 accepted 9 Oct, tally 43 (#40–#43 the E4, E1, E3, E2 lever priors, all Claude's) (CURRENT_STATE §18.15 carries each with its rule and trading reading).
 
 ---
 

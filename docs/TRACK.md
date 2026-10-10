@@ -426,7 +426,11 @@ Order: E4, E1, E3, E2, E5. Registration file `docs/prereg_asymmetry_levers.md` b
 
 **E1 run (10 Oct): FAIL.** Non-overlap hit-rate 48.5% on 198 calls (incumbent 54.9% on 534), below its own null 54.5% (p 0.90); asymmetry 1.052 vs 1.008 (+0.04; CI [0.84, 1.38] contains 1.008); mean signed move −0.006%. Same backfill, tag `48a6c4e879a1_n2617_h2_E1`. The lever cut 63% of calls and kept the worse ones: days whose precedents moved most are days the pool does not explain. Expected move stays a sizing input (T2), not a direction filter.
 
-**E3 run (10 Oct): FAIL.** Non-overlap asymmetry 0.852 [0.70, 1.03] vs incumbent 1.008 — down, not up; hit-rate 54.6% on 377 calls, below its null 58.1% (p 0.63). Tag `48a6c4e879a1_n2617_h2_E3`. Median τ² is 0 on every asset, so the gate removed exactly the pools with regime disagreement (321 of 1,841 asset-days) and the asymmetry went with them: the regime-conditioned pools are where right calls out-pay wrong ones. Hypothesis recorded, not tested. E2 next; E5 waits on earned cells.
+**E3 run (10 Oct): FAIL.** Non-overlap asymmetry 0.852 [0.70, 1.03] vs incumbent 1.008 — down, not up; hit-rate 54.6% on 377 calls, below its null 58.1% (p 0.63). Tag `48a6c4e879a1_n2617_h2_E3`. Median τ² is 0 on every asset, so the gate removed exactly the pools with regime disagreement (321 of 1,841 asset-days) and the asymmetry went with them: the regime-conditioned pools are where right calls out-pay wrong ones. Hypothesis recorded, not tested.
+
+**E2 run (10 Oct): FAIL.** Asymmetry 1.056 vs 1.008 (+0.05); hit-rate 54.1% on 379 calls, below its null 55.9% (p 0.21). Tag `48a6c4e879a1_n2617_h2_E2`; 692 documents dropped on 302 days, survivors no better.
+
+**Conclusion after four of five (10 Oct).** E4 +0.12, E1 +0.04, E2 +0.05, E3 −0.16, all against the registered +0.20 with hit-rate not below null. No engine-side selection of which calls to make raises asymmetry; the one that removes regime-disagreeing pools lowers it. Asymmetry ≈ 1 is a property of the calls themselves. Raising it is therefore a trading-side matter (§3.17: size by expected move, exit the wrong side early), and those are the next registered tests. E5 (influence-weight scaling) stays registered and waits for ≥ 10 earned cells. All four levers remain in `step6_report.py` behind `LEVER=`, off by default; the incumbent and the nightly job were never touched.
 
 ### 3.17 Trading-side asymmetry methods — recorded for the app's manual, not engine changes (9 Oct)
 
