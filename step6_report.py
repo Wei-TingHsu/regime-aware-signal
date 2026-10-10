@@ -74,6 +74,9 @@ NEGLIGIBLE, PRIMARY_H, CONF_WARN = 0.05, 2, 0.60   # h* 3 -> 2 on 2026-10-09 (am
 import os as _os
 LEVER_E4 = _os.environ.get("LEVER", "") == "E4"
 LEVER_E1 = _os.environ.get("LEVER", "") == "E1"   # prereg_asymmetry_levers §3
+LEVER_E3 = _os.environ.get("LEVER", "") == "E3"   # prereg_asymmetry_levers §4
+_E3_HIST = {}                                      # asset -> [(session, tau2)], expanding
+_E3_MIN_HIST = 30
 _E4_BIN = {"fomc_statement": "intraday", "fomc_minutes": "intraday"}       # all other classes: overnight
 _E4_OHLC = None
 _E4_CACHE = {}
@@ -308,6 +311,21 @@ def build_report(date_str):
         if est["abstain"]:
             entry["abstain_reason"] = (f"realised ESS {est['ess']:.1f} below "
                                        f"the registered floor of 8 (§3.5)")
+
+        # ---- E3 lever (prereg_asymmetry_levers §4), off unless LEVER=E3 ------
+        if LEVER_E3:
+            tau2 = float(est["tau2"])
+            past = [v for d, v in _E3_HIST.get(asset, []) if d < t]
+            _E3_HIST.setdefault(asset, []).append((t, tau2))
+            entry["e3_tau2"] = tau2
+            if len(past) >= _E3_MIN_HIST:
+                med = float(np.median(past))
+                entry["e3_tau2_median_hist"] = med
+                if not est["abstain"] and tau2 > med:
+                    entry["abstain"] = True
+                    entry["estimate"]["abstain"] = True
+                    entry["abstain_reason"] = (f"E3: pool dispersion tau2 {tau2:.3g} above the asset's "
+                                               f"median {med:.3g} over {len(past)} prior days")
 
         # ---- E1 lever (prereg_asymmetry_levers §3), off unless LEVER=E1 ------
         if LEVER_E1 and not est["abstain"]:
