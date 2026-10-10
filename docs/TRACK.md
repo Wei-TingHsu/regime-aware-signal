@@ -422,6 +422,8 @@ abstaining on everything is trivial and fails the second clause.
 
 Order: E4, E1, E3, E2, E5. Registration file `docs/prereg_asymmetry_levers.md` before any code.
 
+**E4 run (9 Oct): FAIL.** Non-overlap asymmetry 1.128 vs incumbent 1.008 (+0.12, short of the registered +0.20; 95% CI [0.90, 1.49] contains 1.008); non-overlap hit-rate 54.3% on 328 calls, below its own null 56.1% (p 0.19); incumbent 54.9% on 534 calls (null 57.5%, p 0.40). Measured on the 1,532-day h=2 backfill, 10,000 permutations, tag `48a6c4e879a1_n2617_h2_E4`; the lever dropped documents on 644 asset-days, 547 of them SPY. What it does not measure: the forward ledger (untouched by registration) or any horizon but 2. Full row in `prereg_asymmetry_levers.md` §6. E1 next.
+
 ### 3.17 Trading-side asymmetry methods — recorded for the app's manual, not engine changes (9 Oct)
 
 1. Call less, on bigger days (scheduled-event or strong-document days only). 2. Size by expected move (T2), not by
