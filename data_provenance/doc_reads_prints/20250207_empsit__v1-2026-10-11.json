@@ -1,0 +1,36 @@
+{
+ "release_date": "2025-02-07",
+ "ref_month": "2025-02",
+ "source_file": "data_provenance/docs/data_print/20250207_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 9916,
+  "output": 1307
+ },
+ "read_at": "2026-10-11T09:40:00.818550+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment rose by 143,000 in January, and the unemployment rate edged down to 4.0 percent",
+  "headline_value": 143.0,
+  "revision_note": "The change in total nonfarm payroll employment for November was revised up by 49,000, from +212,000 to +261,000, and the change for December was revised up by 51,000, from +256,000 to +307,000. With these revisions, employment in November and December combined is 100,000 higher than previously reported. Separately, the annual benchmark process revised the seasonally adjusted total nonfarm employment level for March 2024 downward by 589,000.",
+  "special_factors": [],
+  "calendar_factors": [],
+  "transitory_share": 0.0,
+  "underlying_direction": {
+   "equity": 0.3,
+   "duration": -0.3,
+   "gold": -0.1,
+   "dollar": 0.3,
+   "oil": 0.0
+  },
+  "specificity": 0.9,
+  "confidence": 0.65,
+  "evidence": [
+   "Total nonfarm payroll employment rose by 143,000 in January, and the unemployment rate edged down to 4.0 percent, the U.S. Bureau of Labor Statistics reported today.",
+   "These events had no discernible effect on national payroll employment, hours, and earnings from the establishment survey, nor on the national unemployment rate from the household survey.",
+   "In January, average hourly earnings for all employees on private nonfarm payrolls rose by 17 cents, or 0.5 percent, to $35.87. Over the past 12 months, average hourly earnings have increased by 4.1 percent."
+  ]
+ }
+}

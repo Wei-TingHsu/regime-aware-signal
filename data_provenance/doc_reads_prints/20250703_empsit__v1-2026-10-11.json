@@ -1,0 +1,36 @@
+{
+ "release_date": "2025-07-03",
+ "ref_month": "2025-07",
+ "source_file": "data_provenance/docs/data_print/20250703_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 6875,
+  "output": 1085
+ },
+ "read_at": "2026-10-11T09:41:11.139242+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment increased by 147,000 in June, and the unemployment rate changed little at 4.1 percent",
+  "headline_value": 147.0,
+  "revision_note": "The change in total nonfarm payroll employment for April was revised up by 11,000, from +147,000 to +158,000, and the change for May was revised up by 5,000, from +139,000 to +144,000. With these revisions, employment in April and May combined is 16,000 higher than previously reported.",
+  "special_factors": [],
+  "calendar_factors": [],
+  "transitory_share": 0.0,
+  "underlying_direction": {
+   "equity": 0.3,
+   "duration": -0.3,
+   "gold": -0.2,
+   "dollar": 0.2,
+   "oil": 0.1
+  },
+  "specificity": 0.9,
+  "confidence": 0.75,
+  "evidence": [
+   "Total nonfarm payroll employment increased by 147,000 in June, in line with the average monthly gain of 146,000 over the prior 12 months.",
+   "Government employment rose by 73,000 in June. Employment in state government increased by 47,000, largely in education (+40,000).",
+   "Job losses continued in federal government (-7,000), where employment is down by 69,000 since reaching a recent peak in January."
+  ]
+ }
+}

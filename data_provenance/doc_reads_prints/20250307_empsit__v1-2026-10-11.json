@@ -1,0 +1,43 @@
+{
+ "release_date": "2025-03-07",
+ "ref_month": "2025-03",
+ "source_file": "data_provenance/docs/data_print/20250307_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 6815,
+  "output": 1460
+ },
+ "read_at": "2026-10-11T09:40:16.222661+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment rose by 151,000 in February, and the unemployment rate changed little at 4.1 percent",
+  "headline_value": 151.0,
+  "revision_note": "December revised up by 16,000 (from +307,000 to +323,000); January revised down by 18,000 (from +143,000 to +125,000); combined December and January employment is 2,000 lower than previously reported.",
+  "special_factors": [
+   {
+    "factor": "food and beverage retailers decline largely due to strike activity",
+    "sign": -1,
+    "size": -15.0,
+    "quote": "In February, employment in food and beverage retailers declined by 15,000, largely due to strike activity."
+   }
+  ],
+  "calendar_factors": [],
+  "transitory_share": 0.05,
+  "underlying_direction": {
+   "equity": 0.2,
+   "duration": -0.2,
+   "gold": 0.0,
+   "dollar": 0.1,
+   "oil": 0.0
+  },
+  "specificity": 0.9,
+  "confidence": 0.7,
+  "evidence": [
+   "Total nonfarm payroll employment rose by 151,000 in February, similar to the average monthly gain of 168,000 over the prior 12 months.",
+   "Both the unemployment rate, at 4.1 percent, and the number of unemployed people, at 7.1 million, changed little in February.",
+   "In February, employment in food and beverage retailers declined by 15,000, largely due to strike activity."
+  ]
+ }
+}

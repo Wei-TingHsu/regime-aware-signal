@@ -1,0 +1,58 @@
+{
+ "release_date": "2026-09-04",
+ "ref_month": "2026-08",
+ "source_file": "data_provenance/docs/data_print/20260904_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [
+  {
+   "event": "FIFA World Cup 2026 reversal",
+   "expected_sign": -1,
+   "industries": [
+    "leisure and hospitality",
+    "arts entertainment and recreation",
+    "air transportation",
+    "retail trade"
+   ],
+   "status_at_registration": "calibration"
+  }
+ ],
+ "usage": {
+  "input": 6986,
+  "output": 3291
+ },
+ "attempts": 2,
+ "read_at": "2026-10-11T13:02:41.781305+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment increased by 162,000 in August, and the unemployment rate was unchanged at 4.1 percent",
+  "headline_value": 162.0,
+  "revision_note": "June revised up by 11,000 (from +20,000 to +31,000) and July revised up by 44,000 (from -23,000 to +21,000); June and July combined are 55,000 higher than previously reported.",
+  "special_factors": [],
+  "calendar_factors": [
+   {
+    "event": "FIFA World Cup 2026 reversal",
+    "industry_line": "Employment in food services and drinking places increased by 59,000 in August, well above the average monthly gain of 12,000 over the prior 12 months.",
+    "industry_change": 59.0,
+    "text_comparison": "well above the average monthly gain of 12,000 over the prior 12 months",
+    "status": "contradicted"
+   }
+  ],
+  "transitory_share": 0.0,
+  "underlying_direction": {
+   "equity": 0.5,
+   "duration": -0.3,
+   "gold": -0.2,
+   "dollar": 0.3,
+   "oil": 0.2
+  },
+  "specificity": 0.9,
+  "confidence": 0.75,
+  "evidence": [
+   "Total nonfarm payroll employment rose by 162,000 in August, higher than the average monthly gain of 31,000 over the prior 12 months.",
+   "In August, average hourly earnings for all employees on private nonfarm payrolls rose by 10 cents, or 0.3 percent, to $37.75.",
+   "The change in total nonfarm payroll employment for June was revised up by 11,000, from +20,000 to +31,000, and the change for July was revised up by 44,000, from -23,000 to +21,000."
+  ]
+ },
+ "reread_of": "previous read of this date superseded (recorded in CURRENT_STATE)"
+}

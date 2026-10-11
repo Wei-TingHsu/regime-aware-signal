@@ -1,0 +1,50 @@
+{
+ "release_date": "2026-03-06",
+ "ref_month": "2026-02",
+ "source_file": "data_provenance/docs/data_print/20260306_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 9501,
+  "output": 2598
+ },
+ "read_at": "2026-10-11T12:56:46.644342+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment edged down by 92,000 in February, and the unemployment rate changed little at 4.4 percent",
+  "headline_value": -92.0,
+  "revision_note": "The change in total nonfarm payroll employment for December was revised down by 65,000, from +48,000 to -17,000, and the change for January was revised down by 4,000, from +130,000 to +126,000. With these revisions, employment in December and January combined is 69,000 lower than previously reported.",
+  "special_factors": [
+   {
+    "factor": "health care decreased, reflecting strike activity",
+    "sign": -1,
+    "size": -28.0,
+    "quote": "Employment in health care decreased, reflecting strike activity."
+   },
+   {
+    "factor": "offices of physicians job loss primarily due to strike activity",
+    "sign": -1,
+    "size": -37.0,
+    "quote": "Offices of physicians lost 37,000 jobs in February, primarily due to strike activity."
+   }
+  ],
+  "calendar_factors": [],
+  "transitory_share": 0.15,
+  "underlying_direction": {
+   "equity": -0.3,
+   "duration": 0.3,
+   "gold": 0.2,
+   "dollar": -0.2,
+   "oil": -0.2
+  },
+  "specificity": 0.9,
+  "confidence": 0.72,
+  "evidence": [
+   "Total nonfarm payroll employment edged down by 92,000 in February, and the unemployment rate changed little at 4.4 percent, the U.S. Bureau of Labor Statistics reported today.",
+   "Health care employment declined by 28,000 in February, following a large increase in January (+77,000).",
+   "Offices of physicians lost 37,000 jobs in February, primarily due to strike activity."
+  ]
+ },
+ "reread_of": null
+}

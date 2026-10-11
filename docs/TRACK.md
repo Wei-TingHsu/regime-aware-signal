@@ -412,7 +412,7 @@ declined by 61,000 in June, reflecting weaker than usual seasonal hiring"). *Com
 for strikes, weather and shutdowns; no release of the 20 names the World Cup, FIFA or event hiring. Consequence: a cause
 like the World Cup can enter the read only through a declared second source — the founder's event calendar, checked
 against the industry line in the text — registered 11 Oct as prereg_prints_and_attribution §A2b. The reader prompt is
-reviewed and on file as `data_print_profile.md` (v1); A4 not yet run.
+reviewed and on file as `data_print_profile.md` (v1). **A4 run 11 Oct: PASS** — 20/20 headline values equal ALFRED's first print; every named factor is in the text (strikes, furlough, deferred resignations, weak seasonal hiring); World Cup months contradicted ×3, never supported. Cost ~US$0.75 incl. ten wasted calls. The 2006→ backfill read (~US$20) now waits only on a text source for pre-2025 releases (bls.gov 403; FRASER closed).
 
 ### 3.16 Asymmetry — five engine-side levers, each a registered test on the h=2 backfill (9 Oct)
 

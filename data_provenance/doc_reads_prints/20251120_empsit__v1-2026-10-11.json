@@ -1,0 +1,36 @@
+{
+ "release_date": "2025-11-20",
+ "ref_month": "2025-11",
+ "source_file": "data_provenance/docs/data_print/20251120_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 4216,
+  "output": 1396
+ },
+ "read_at": "2026-10-11T09:41:52.537250+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment edged up by 119,000 in September; unemployment rate at 4.4 percent",
+  "headline_value": 119.0,
+  "revision_note": "July revised down by 7,000 (from +79,000 to +72,000) and August revised down by 26,000 (from +22,000 to -4,000); combined July+August 33,000 lower than previously reported.",
+  "special_factors": [],
+  "calendar_factors": [],
+  "transitory_share": 0.0,
+  "underlying_direction": {
+   "equity": 0.1,
+   "duration": 0.4,
+   "gold": 0.3,
+   "dollar": -0.3,
+   "oil": -0.2
+  },
+  "specificity": 0.9,
+  "confidence": 0.55,
+  "evidence": [
+   "Total nonfarm payroll employment edged up by 119,000 in September but has shown little change since April, the U.S. Bureau of Labor Statistics reported today.",
+   "The unemployment rate, at 4.4 percent, also changed little in September.",
+   "The change in total nonfarm payroll employment for July was revised down by 7,000, from +79,000 to +72,000, and the change for August was revised down by 26,000, from +22,000 to -4,000."
+  ]
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "release_date": "2025-08-01",
+ "ref_month": "2025-07",
+ "source_file": "data_provenance/docs/data_print/20250801_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 6946,
+  "output": 917
+ },
+ "read_at": "2026-10-11T09:41:20.969602+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment changed little in July (+73,000), and the unemployment rate, at 4.2 percent, also changed little in July",
+  "headline_value": 73.0,
+  "revision_note": "The change in total nonfarm payroll employment for May was revised down by 125,000, from +144,000 to +19,000, and the change for June was revised down by 133,000, from +147,000 to +14,000; combined, May and June employment is 258,000 lower than previously reported.",
+  "special_factors": [],
+  "calendar_factors": [],
+  "transitory_share": 0.0,
+  "underlying_direction": {
+   "equity": -0.3,
+   "duration": 0.3,
+   "gold": 0.2,
+   "dollar": -0.3,
+   "oil": -0.2
+  },
+  "specificity": 0.9,
+  "confidence": 0.65,
+  "evidence": [
+   "Total nonfarm payroll employment changed little in July (+73,000) and has shown little change since April, the U.S. Bureau of Labor Statistics (BLS) reported today.",
+   "Revisions for May and June were larger than normal.",
+   "The unemployment rate has remained in a narrow range of 4.0 percent to 4.2 percent since May 2024."
+  ]
+ }
+}

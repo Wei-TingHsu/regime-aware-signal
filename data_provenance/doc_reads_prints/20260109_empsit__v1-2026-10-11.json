@@ -1,0 +1,36 @@
+{
+ "release_date": "2026-01-09",
+ "ref_month": "2026-01",
+ "source_file": "data_provenance/docs/data_print/20260109_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 11016,
+  "output": 1333
+ },
+ "read_at": "2026-10-11T09:42:23.847287+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment changed little in December (+50,000); unemployment rate at 4.4 percent",
+  "headline_value": 50.0,
+  "revision_note": "The change in total nonfarm payroll employment for October was revised down by 68,000, from -105,000 to -173,000, and the change for November was revised down by 8,000, from +64,000 to +56,000; combined, October and November are 76,000 lower than previously reported.",
+  "special_factors": [],
+  "calendar_factors": [],
+  "transitory_share": 0.0,
+  "underlying_direction": {
+   "equity": -0.2,
+   "duration": 0.3,
+   "gold": 0.2,
+   "dollar": -0.2,
+   "oil": -0.1
+  },
+  "specificity": 0.9,
+  "confidence": 0.6,
+  "evidence": [
+   "Both total nonfarm payroll employment (+50,000) and the unemployment rate (4.4 percent) changed little in December, the U.S. Bureau of Labor Statistics reported today.",
+   "The change in total nonfarm payroll employment for October was revised down by 68,000, from -105,000 to -173,000, and the change for November was revised down by 8,000, from +64,000 to +56,000.",
+   "In December, average hourly earnings for all employees on private nonfarm payrolls rose by 12 cents, or 0.3 percent, to $37.02."
+  ]
+ }
+}

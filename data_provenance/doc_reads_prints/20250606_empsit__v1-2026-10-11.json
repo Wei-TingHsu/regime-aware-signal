@@ -1,0 +1,36 @@
+{
+ "release_date": "2025-06-06",
+ "ref_month": "2025-06",
+ "source_file": "data_provenance/docs/data_print/20250606_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 7157,
+  "output": 1365
+ },
+ "read_at": "2026-10-11T09:40:59.876238+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment increased by 139,000 in May, and the unemployment rate was unchanged at 4.2 percent",
+  "headline_value": 139.0,
+  "revision_note": "March revised down by 65,000 (from +185,000 to +120,000) and April revised down by 30,000 (from +177,000 to +147,000); combined, March and April are 95,000 lower than previously reported.",
+  "special_factors": [],
+  "calendar_factors": [],
+  "transitory_share": 0.0,
+  "underlying_direction": {
+   "equity": 0.1,
+   "duration": 0.3,
+   "gold": 0.0,
+   "dollar": -0.2,
+   "oil": 0.0
+  },
+  "specificity": 0.9,
+  "confidence": 0.65,
+  "evidence": [
+   "Total nonfarm payroll employment increased by 139,000 in May, and the unemployment rate was unchanged at 4.2 percent, the U.S. Bureau of Labor Statistics reported today.",
+   "Total nonfarm payroll employment increased by 139,000 in May, similar to the average monthly gain of 149,000 over the prior 12 months.",
+   "The change in total nonfarm payroll employment for March was revised down by 65,000, from +185,000 to +120,000, and the change for April was revised down by 30,000, from +177,000 to +147,000."
+  ]
+ }
+}

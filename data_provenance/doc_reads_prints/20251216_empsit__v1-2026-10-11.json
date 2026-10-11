@@ -1,0 +1,37 @@
+{
+ "release_date": "2025-12-16",
+ "ref_month": "2025-11",
+ "source_file": "data_provenance/docs/data_print/20251216_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 5952,
+  "output": 3553
+ },
+ "read_at": "2026-10-11T12:55:58.617839+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment changed little in November (+64,000); unemployment rate at 4.6 percent",
+  "headline_value": 64.0,
+  "revision_note": "August revised down 22,000 (from -4,000 to -26,000); September revised down 11,000 (from +119,000 to +108,000); combined August+September revision is 33,000 lower. No October revision is reported because this release contains the first published estimate for October.",
+  "special_factors": [],
+  "calendar_factors": [],
+  "transitory_share": 0.0,
+  "underlying_direction": {
+   "equity": -0.3,
+   "duration": 0.4,
+   "gold": 0.3,
+   "dollar": -0.3,
+   "oil": -0.2
+  },
+  "specificity": 0.85,
+  "confidence": 0.65,
+  "evidence": [
+   "Total nonfarm payroll employment changed little in November (+64,000) and has shown little net change since April, the U.S. Bureau of Labor Statistics reported today.",
+   "In November, the unemployment rate, at 4.6 percent, was little changed from September.",
+   "The change in total nonfarm payroll employment for August was revised down by 22,000, from -4,000 to -26,000, and the change for September was revised down by 11,000, from +119,000 to +108,000."
+  ]
+ },
+ "reread_of": null
+}

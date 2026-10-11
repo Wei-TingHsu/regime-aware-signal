@@ -1,0 +1,50 @@
+{
+ "release_date": "2026-04-03",
+ "ref_month": "2026-03",
+ "source_file": "data_provenance/docs/data_print/20260403_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 6927,
+  "output": 2246
+ },
+ "read_at": "2026-10-11T12:57:09.379096+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment increased by 178,000 in March, and the unemployment rate changed little at 4.3 percent",
+  "headline_value": 178.0,
+  "revision_note": "The change in total nonfarm payroll employment for January was revised up by 34,000, from +126,000 to +160,000, and the change for February was revised down by 41,000, from -92,000 to -133,000. With these revisions, employment in January and February combined is 7,000 lower than previously reported.",
+  "special_factors": [
+   {
+    "factor": "offices of physicians job gain as workers returned from strike (reversal of February strike-related loss)",
+    "sign": 1,
+    "size": 35.0,
+    "quote": "Employment in ambulatory health care services rose by 54,000, reflecting an increase of 35,000 in offices of physicians as workers returned from a strike."
+   },
+   {
+    "factor": "federal employees on furlough during the partial government shutdown counted as employed because they worked or received pay for the pay period including the 12th",
+    "sign": 1,
+    "size": null,
+    "quote": "Federal employees on furlough during the partial government shutdown were counted as employed in the establishment survey because they worked or received (or will receive) pay for the pay period that included the 12th of the month."
+   }
+  ],
+  "calendar_factors": [],
+  "transitory_share": 0.25,
+  "underlying_direction": {
+   "equity": 0.4,
+   "duration": -0.3,
+   "gold": -0.2,
+   "dollar": 0.3,
+   "oil": 0.1
+  },
+  "specificity": 0.9,
+  "confidence": 0.65,
+  "evidence": [
+   "Total nonfarm payroll employment increased by 178,000 in March, following a decrease in February (-133,000).",
+   "Employment in ambulatory health care services rose by 54,000, reflecting an increase of 35,000 in offices of physicians as workers returned from a strike.",
+   "Federal employees on furlough during the partial government shutdown were counted as employed in the establishment survey because they worked or received (or will receive) pay for the pay period that included the 12th of the month."
+  ]
+ },
+ "reread_of": null
+}

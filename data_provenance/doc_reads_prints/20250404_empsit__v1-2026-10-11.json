@@ -1,0 +1,43 @@
+{
+ "release_date": "2025-04-04",
+ "ref_month": "2025-04",
+ "source_file": "data_provenance/docs/data_print/20250404_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 6818,
+  "output": 1288
+ },
+ "read_at": "2026-10-11T09:40:28.551047+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment rose by 228,000 in March, and the unemployment rate changed little at 4.2 percent",
+  "headline_value": 228.0,
+  "revision_note": "The change in total nonfarm payroll employment for January was revised down by 14,000, from +125,000 to +111,000, and the change for February was revised down by 34,000, from +151,000 to +117,000. With these revisions, employment in January and February combined is 48,000 lower than previously reported.",
+  "special_factors": [
+   {
+    "factor": "return of workers from a strike in retail trade/food and beverage retailers",
+    "sign": 1,
+    "size": 21.0,
+    "quote": "Retail trade added 24,000 jobs in March, as workers returning from a strike contributed to a job gain in food and beverage retailers (+21,000)."
+   }
+  ],
+  "calendar_factors": [],
+  "transitory_share": 0.27,
+  "underlying_direction": {
+   "equity": 0.6,
+   "duration": -0.4,
+   "gold": -0.2,
+   "dollar": 0.3,
+   "oil": 0.1
+  },
+  "specificity": 0.9,
+  "confidence": 0.75,
+  "evidence": [
+   "Total nonfarm payroll employment rose by 228,000 in March, and the unemployment rate changed little at 4.2 percent, the U.S. Bureau of Labor Statistics reported today.",
+   "Employment also increased in retail trade, partially reflecting the return of workers from a strike.",
+   "Total nonfarm payroll employment rose by 228,000 in March, higher than the average monthly gain of 158,000 over the prior 12 months."
+  ]
+ }
+}

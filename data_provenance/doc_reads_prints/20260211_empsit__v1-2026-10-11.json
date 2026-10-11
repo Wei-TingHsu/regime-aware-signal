@@ -1,0 +1,44 @@
+{
+ "release_date": "2026-02-11",
+ "ref_month": "2026-01",
+ "source_file": "data_provenance/docs/data_print/20260211_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 4515,
+  "output": 1995
+ },
+ "read_at": "2026-10-11T12:56:19.102006+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment rose by 130,000 in January, and the unemployment rate changed little at 4.3 percent",
+  "headline_value": 130.0,
+  "revision_note": "The change in total nonfarm payroll employment for November was revised down by 15,000, from +56,000 to +41,000, and the change for December was revised down by 2,000, from +50,000 to +48,000, combining to a 17,000 lower total; additionally, the annual benchmark revised the seasonally adjusted March 2025 total nonfarm employment level downward by 898,000 and the 2025 annual payroll change from +584,000 to +181,000.",
+  "special_factors": [
+   {
+    "factor": "some federal employees who accepted a deferred resignation offer in 2025 came off federal payrolls",
+    "sign": -1,
+    "size": -34.0,
+    "quote": "In January, federal government employment continued to decline (-34,000) as some federal employees who accepted a deferred resignation offer in 2025 came off federal payrolls."
+   }
+  ],
+  "calendar_factors": [],
+  "transitory_share": 0.0,
+  "underlying_direction": {
+   "equity": 0.3,
+   "duration": -0.3,
+   "gold": -0.1,
+   "dollar": 0.2,
+   "oil": 0.1
+  },
+  "specificity": 0.9,
+  "confidence": 0.55,
+  "evidence": [
+   "Total nonfarm payroll employment rose by 130,000 in January, and the unemployment rate changed little at 4.3 percent, the U.S. Bureau of Labor Statistics reported today.",
+   "In January, federal government employment continued to decline (-34,000) as some federal employees who accepted a deferred resignation offer in 2025 came off federal payrolls.",
+   "The change in total nonfarm payroll employment for November was revised down by 15,000, from +56,000 to +41,000, and the change for December was revised down by 2,000, from +50,000 to +48,000."
+  ]
+ },
+ "reread_of": null
+}

@@ -2319,3 +2319,28 @@ causes), field 5 `calendar_factors` added, the draft's wrong claim that the BLS 
 `data_print_profile.md` v1; the DRAFT stays. Next: A4 on the 20 releases (~US$0.50), which now also checks that the
 reader returns contradicted / undetermined / contradicted on the three World Cup months.
 
+### 18.24 A4 — THE FIRST PAID READ OF THE PRINTS READER: PASS, WITH THREE DEFECTS RECORDED (11 Oct)
+
+`src/read_prints.py` takes the prompt from `docs/data_print_profile.md` at run time (the reviewed file is the prompt), reads
+the 20 Employment Situation texts in date order with the previous read as context, writes one JSON per release
+(`data_provenance/doc_reads_prints/`, write-once; `--force` requires `--dates`), and scores. Result: **PASS** — 20/20
+`headline_value` equal ALFRED's first print; the factors named are all in the text (retail strike and return, Mar–May
+2025; transportation-equipment strike, Sep 2025; deferred-resignation federal employees, Feb 2026; physicians' strike and
+shutdown furlough, Mar–May 2026; "weaker than usual seasonal hiring", Jun 2026); the three World Cup months return
+*contradicted* and never *supported*, so the reader stayed off its own knowledge of the event. Cost ~US$0.75.
+
+Three defects in the runner, all mine and all recorded: (1) output cap 1,600 tokens — ten replies cut mid-JSON, ten calls
+(~US$0.25) wasted; cap now 4,000 and a failed reply is saved raw. (2) `ref_month_of` rolled a 4 Sep release to September,
+so the first 4 Sep read was given no calendar entry; re-read under `--force --dates 20260904`, the first read superseded
+and the fact written into the JSON. (3) The re-read looped on whitespace after `"industry_change":` until the cap;
+runner now retries up to three times and records the attempt count (succeeded on attempt 2). Also: the 16 Dec 2025
+release carried two months after the shutdown, so the scorer takes the later month's first print.
+
+One registered expectation was wrong, #44: July 2026 was stated as *undetermined* from a grep of the leisure line; the
+text says "Retail trade lost 19,000 jobs in July", retail is a calendar industry with expected sign +, so the rule gives
+*contradicted* — which the reader returned (citing the weaker leisure line; noted). §A2b corrected with the reason.
+
+What A4 does not say: whether the reader's directions are right (the backfill's job) or anything about pre-2025 text.
+Next for T16: the 2006→ backfill read waits on a text source (bls.gov 403 to scripts, FRASER closed); until one exists,
+Layer 3 runs forward from each new release only.
+

@@ -89,6 +89,13 @@ reference month and, for each, must find that industry's line in the release tex
 - *undetermined* — no industry line, or no comparison in the text.
 Only *supported* entries enter `transitory_share`. Statuses are recorded on every read.
 
+**Admission rule (11 Oct 2026).** An event goes on the calendar only if all three hold: (1) *scheduled and on US
+soil* — the establishment survey counts US payrolls only; (2) *large enough to show in one industry's monthly line* —
+expected temporary hiring at least the size of that industry's average monthly change (leisure and hospitality's is of the
+order of ±20,000), otherwise it is invisible in the number and does not belong here; (3) *registered before the first
+affected release*, otherwise calibration. Hurricanes, strikes and shutdowns never go on the calendar: the BLS names them in
+the text and field 4 carries them. Review once a year, in January, for the coming year's events; most years add nothing.
+
 **Calendar at registration.**
 
 | event | dates | reference months (release) | industries | expected sign | registered |
@@ -99,13 +106,13 @@ Only *supported* entries enter `transitory_share`. Statuses are recorded on ever
 | Decennial Census temporary hiring (2010, 2020, 2030) | spring of census year | Apr–Jun; reversal Jul–Sep | federal government | +, then − | cross-check only — the BLS names it in text, so field 4 carries it |
 
 **Calibration already visible, stated now so it cannot be claimed later.** June 2026 text: leisure and hospitality
-*fell* 61,000 "reflecting weaker than usual seasonal hiring" — the entry is *contradicted*. July 2026: the industry
-line gives no comparison to usual — *undetermined*. August 2026: food services +59,000 "well above the average monthly
+*fell* 61,000 "reflecting weaker than usual seasonal hiring" — the entry is *contradicted*. July 2026: "Retail trade lost 19,000 jobs in July" — retail is a calendar industry with expected sign +, so
+*contradicted* (corrected 11 Oct; the first registration said *undetermined* from a grep of the leisure line only, #44). August 2026: food services +59,000 "well above the average monthly
 gain of 12,000" — the opposite sign to the registered reversal — *contradicted*. On the one event in hand the naive
 calendar expectation was wrong in both months it could be checked. **Prior for the 2028 forward test:** *supported* in
 at most one of the two months.
 
-**Acceptance (added to A4).** On the three World Cup releases the reader must return contradicted / undetermined /
+**Acceptance (added to A4).** On the three World Cup releases the reader must return contradicted / contradicted /
 contradicted. A *supported* on any of them means the reader is using its own knowledge of the event, and it fails.
 
 **What the app may show.** Nothing from this source until an entry has been tested forward.
@@ -225,5 +232,7 @@ rule — never by being better-looking.
 
 | date | change | reason |
 |---|---|---|
+| 2026-10-11 | **A2b calibration, July 2026: undetermined → contradicted.** The text's retail line (−19,000) is against the registered sign; the first statement read only the leisure line. Stated before the 4 Sep re-read, after the 7 Aug read; the reader had already returned contradicted. | Error in the registered expectation, #44 |
+| 2026-10-11 | **§A2b admission rule** added: US soil, at least the industry's average monthly change, registered before the release; yearly January review. | Founder asked how the calendar is checked and what deserves a line |
 | 2026-10-11 | **§A2b added:** founder's event calendar as a second, declared Layer-3 input with the industry-line test; 2026 World Cup entries marked calibration (registered after the fact), LA 2028 the forward test. | The BLS text names no event causes (checked on 20 releases); the founder's deduction method needed a registered form that keeps the reader off its own world knowledge |
 | 2026-10-11 | **Layer-3 field `special_factors` made open-ended:** the reader reports any cause the text itself names, in the text's words, with no list of factor types to match against. Field `calendar_factors` added for §A2b with statuses supported / contradicted / undetermined. A4 gains the World Cup status check. Prompt v1 on file as `data_print_profile.md`, reviewed by the founder 11 Oct; A4 not yet run. | Founder's review: a fixed list would miss new and rare causes and bias the read |

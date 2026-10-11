@@ -1,0 +1,64 @@
+{
+ "release_date": "2026-07-02",
+ "ref_month": "2026-06",
+ "source_file": "data_provenance/docs/data_print/20260702_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [
+  {
+   "event": "FIFA World Cup 2026 (11 US host cities)",
+   "expected_sign": 1,
+   "industries": [
+    "leisure and hospitality",
+    "arts entertainment and recreation",
+    "air transportation",
+    "retail trade"
+   ],
+   "status_at_registration": "calibration"
+  }
+ ],
+ "usage": {
+  "input": 7020,
+  "output": 3250
+ },
+ "read_at": "2026-10-11T12:58:20.655821+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment increased by 57,000 in June, and the unemployment rate changed little at 4.2 percent",
+  "headline_value": 57.0,
+  "revision_note": "April was revised down by 31,000 (from +179,000 to +148,000) and May was revised down by 43,000 (from +172,000 to +129,000); combined, April and May are 74,000 lower than previously reported.",
+  "special_factors": [
+   {
+    "factor": "weaker than usual seasonal hiring in leisure and hospitality",
+    "sign": -1,
+    "size": -61.0,
+    "quote": "Leisure and hospitality employment declined by 61,000 in June, reflecting weaker than usual seasonal hiring."
+   }
+  ],
+  "calendar_factors": [
+   {
+    "event": "FIFA World Cup 2026 (11 US host cities)",
+    "industry_line": "Leisure and hospitality employment declined by 61,000 in June, reflecting weaker than usual seasonal hiring.",
+    "industry_change": -61.0,
+    "text_comparison": "weaker than usual seasonal hiring",
+    "status": "contradicted"
+   }
+  ],
+  "transitory_share": 0.53,
+  "underlying_direction": {
+   "equity": -0.1,
+   "duration": 0.3,
+   "gold": 0.1,
+   "dollar": -0.2,
+   "oil": 0.0
+  },
+  "specificity": 0.9,
+  "confidence": 0.7,
+  "evidence": [
+   "Leisure and hospitality employment declined by 61,000 in June, reflecting weaker than usual seasonal hiring.",
+   "Total nonfarm payroll employment changed little in June (+57,000), roughly in line with the average monthly change over the prior 12 months (+36,000).",
+   "The change in total nonfarm payroll employment for April was revised down by 31,000, from +179,000 to +148,000, and the change for May was revised down by 43,000, from +172,000 to +129,000."
+  ]
+ },
+ "reread_of": null
+}

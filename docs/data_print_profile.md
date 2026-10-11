@@ -2,7 +2,7 @@
 
 *Reviewed line by line by the founder 11 Oct 2026; supersedes `data_print_profile_DRAFT.md` (kept on file). Changes from
 the draft: field 4 is open-ended (no list of factor types), field 5 `calendar_factors` added for prereg §A2b, the wrong
-claim that the BLS names event hiring removed, A4 extended. Not yet run: A4 (~US$0.50) is the next step.*
+claim that the BLS names event hiring removed, A4 extended. A4 run 11 Oct: PASS, 20/20 headline values, calendar statuses as registered (`docs/a4_reader_consistency.md`).*
 
 ---
 
@@ -76,6 +76,6 @@ added last month are leaving this month; a strike ended), report the reversal as
 
 **Acceptance (prereg A4), run before any backfill read:** on the 20 releases on file, `headline_value` equals
 ALFRED's first print within rounding on ≥ 19; `special_factors` empty wherever a human reader finds no cause named;
-`calendar_factors` on the three World Cup months returns contradicted (Jun) / undetermined (Jul) / contradicted (Aug) —
+`calendar_factors` on the three World Cup months returns contradicted (Jun) / contradicted (Jul, corrected 11 Oct) / contradicted (Aug) —
 a *supported* on any of them means the reader is reading from its own knowledge, and it fails. Cost of the 20:
 ~US$0.50. Cost of the 2006→ backfill, once approved: ~US$20.

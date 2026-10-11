@@ -1,0 +1,44 @@
+{
+ "release_date": "2025-09-05",
+ "ref_month": "2025-08",
+ "source_file": "data_provenance/docs/data_print/20250905_empsit.txt",
+ "prompt_file": "docs/data_print_profile.md",
+ "prompt_version": "v1-2026-10-11",
+ "model": "claude-sonnet-5",
+ "calendar_given": [],
+ "usage": {
+  "input": 7074,
+  "output": 1672
+ },
+ "read_at": "2026-10-11T12:55:19.109439+00:00",
+ "read": {
+  "headline": "Total nonfarm payroll employment changed little in August (+22,000), and the unemployment rate, at 4.3 percent, also changed little in August",
+  "headline_value": 22.0,
+  "revision_note": "The change in total nonfarm payroll employment for June was revised down by 27,000, from +14,000 to -13,000, and the change for July was revised up by 6,000, from +73,000 to +79,000. With these revisions, employment in June and July combined is 21,000 lower than previously reported.",
+  "special_factors": [
+   {
+    "factor": "strike activity in transportation equipment manufacturing",
+    "sign": -1,
+    "size": null,
+    "quote": "Employment in transportation equipment manufacturing declined by 15,000 over the month, in part due to strike activity."
+   }
+  ],
+  "calendar_factors": [],
+  "transitory_share": 0.05,
+  "underlying_direction": {
+   "equity": -0.3,
+   "duration": 0.3,
+   "gold": 0.2,
+   "dollar": -0.3,
+   "oil": -0.2
+  },
+  "specificity": 0.85,
+  "confidence": 0.55,
+  "evidence": [
+   "Total nonfarm payroll employment changed little in August (+22,000) and has shown little change since April, the U.S. Bureau of Labor Statistics (BLS) reported today.",
+   "Employment in transportation equipment manufacturing declined by 15,000 over the month, in part due to strike activity.",
+   "The change in total nonfarm payroll employment for June was revised down by 27,000, from +14,000 to -13,000, and the change for July was revised up by 6,000, from +73,000 to +79,000."
+  ]
+ },
+ "reread_of": null
+}

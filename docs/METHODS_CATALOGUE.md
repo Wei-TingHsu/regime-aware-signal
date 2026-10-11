@@ -480,7 +480,20 @@ hit-rate below its null. E3 is the informative one: removing pools where the reg
 calls, so regime conditioning is where the payoff lives. Conclusion recorded: asymmetry ≈ 1 is a property of the
 calls, not of a selection the engine failed to make; raising it is trading-side (T2 sizing, the registered stop test).
 
-## H. What the app prints, and which entry it comes from
+### G7. A4 — reader consistency on the scheduled-release reader (11 October)
+
+**Measures.** Whether the Layer-3 reader reports the headline number exactly, names only causes the text names, and
+keeps its own knowledge of world events out of the calendar check.
+**How the question arose.** TRACK §3.11 step-7 rule: no paid read before the founder reviews the prompt and a
+consistency test passes. The founder's review made field 4 open-ended and added the event calendar (§A2b).
+**Method and data pool.** 20 Employment Situation releases, 7 Feb 2025 → 2 Oct 2026, fetched by hand (bls.gov blocks
+scripts), read once each in date order with the previous read as context, the prompt taken verbatim from
+`docs/data_print_profile.md`; scored against ALFRED first prints and the registered World Cup statuses.
+**Summary.** Direct. Three run defects, all recorded: a 1,600-token cap (ten wasted calls), a reference-month bug that
+gave the 4 Sep read no calendar entry (scoped re-read), a whitespace loop at the cap (retry).
+**Result.** PASS — 20/20 headline values; factors named are all in the text; World Cup months contradicted ×3, never
+supported. Registered expectation for July was wrong (#44): the text's retail line is against the sign.
+
 
 | on the page | measure | from |
 |---|---|---|
