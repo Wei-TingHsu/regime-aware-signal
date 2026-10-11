@@ -2302,3 +2302,20 @@ Fourth lever, `LEVER=E2`, tag `48a6c4e879a1_n2617_h2_E2`, same backfill and refe
 
 Across the four levers run today and yesterday the non-overlap asymmetry moved +0.12 (E4), +0.04 (E1), +0.05 (E2) and −0.16 (E3) against a registered threshold of +0.20, and every lever's hit-rate sat below its own permutation null. Population for all four: the 1,532 report days of the h=2 backfill `48a6c4e879a1_n2617`, non-overlap every 2nd date, 10,000 permutations; none touches the forward ledger or any horizon but 2. The conclusion recorded in TRACK §3.16: asymmetry near 1 is a property of the calls the engine makes, not of a selection it failed to make; the engine-side route is closed for now, the trading-side methods in §3.17 (sizing by expected move = T2; early exit = the registered stop test) are the next tests, and E5 waits for ten earned influence cells. Patches committed before each run: `15f4640` E1, `1cafc16` E3, `1599584` E2.
 
+### 18.23 FOUNDER'S REVIEW: LEVERS IN PLAIN WORDS, THE JOBS REPORT'S DISCLOSURE, THE EVENT CALENDAR, PROMPT v1 (11 Oct)
+
+Three records, no code. (1) The four levers restated for the founder in TRACK §3.16 as the problem each was meant to
+solve, with *calls left* and *FAIL* defined — FAIL is "did not reach the bar written before the run", not "unusable";
+METHODS_CATALOGUE G6 carries the same. (2) What the Employment Situation discloses, checked on the 20 texts: method
+published, composition by industry published every month, composition by cause published only for strikes, weather and
+shutdowns — never an event. The founder's method (deduce from the event calendar, then confirm on the industry line) is
+registered as prereg_prints_and_attribution §A2b, a second Layer-3 input kept apart from text-named factors, with three
+statuses and the rule that the reader may not use its own knowledge of events. The 2026 World Cup entries are
+registered after the fact and marked calibration; LA 2028 is the forward test. The calibration is already against the
+calendar: June 2026 leisure and hospitality fell 61,000 "weaker than usual seasonal hiring" (contradicted), August food
+services +59,000 "well above average" against a registered reversal (contradicted). (3) The reader prompt reviewed line
+by line: field 4 made open-ended at the founder's instruction (a fixed list of factor types would miss new and rare
+causes), field 5 `calendar_factors` added, the draft's wrong claim that the BLS names event hiring removed. On file as
+`data_print_profile.md` v1; the DRAFT stays. Next: A4 on the 20 releases (~US$0.50), which now also checks that the
+reader returns contradicted / undetermined / contradicted on the three World Cup months.
+

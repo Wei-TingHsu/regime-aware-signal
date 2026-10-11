@@ -68,6 +68,48 @@ The reader does not estimate the expectation; that is layer 2's job.
 layer 2, scaled down by `(1 − transitory_share)` from layer 3 — a surprise the release itself
 explains as temporary counts for less. That rule is fixed here and not tuned.
 
+### A2b. Event calendar — a second, declared input to Layer 3 (registered 11 Oct 2026, before code)
+
+**Why.** Checked on the 20 Employment Situation texts of Feb 2025–Oct 2026: the BLS publishes how the number is made
+and its composition by industry, but names a *cause* only for strikes, weather and shutdowns. No release names the
+World Cup, FIFA or event hiring. Under A2's rule ("only factors the text names") such a cause can never enter. The
+founder's method — deduce from the calendar of large events, then check the industry line — is registered here as a
+second source, kept strictly separate from the text-named factors.
+
+**Source.** A founder-maintained calendar of large scheduled events on US soil that hire temporary labour. Each entry:
+event, dates, the reference months whose payroll count it can touch, the industries it should show up in, the expected
+sign per month, and the date registered. An entry registered **before** the first affected release is a test; one
+registered after is calibration only and is marked so.
+
+**Rule.** The reader never reasons from world knowledge. It receives the calendar entries active for the release's
+reference month and, for each, must find that industry's line in the release text. Status:
+- *supported* — the industry moved in the expected sign **and** the text itself says the move was above/below usual, or
+  gives a 12-month average that the move exceeds by 2×;
+- *contradicted* — the industry moved against the expected sign;
+- *undetermined* — no industry line, or no comparison in the text.
+Only *supported* entries enter `transitory_share`. Statuses are recorded on every read.
+
+**Calendar at registration.**
+
+| event | dates | reference months (release) | industries | expected sign | registered |
+|---|---|---|---|---|---|
+| FIFA World Cup 2026, 11 US host cities | 11 Jun–19 Jul 2026 | Jun 2026 (2 Jul), Jul 2026 (7 Aug) | leisure & hospitality; arts, entertainment & recreation; air transportation; retail | + | 11 Oct 2026 — **after the fact: calibration, not a test** |
+| FIFA World Cup 2026, reversal | — | Aug 2026 (4 Sep) | same | − | same |
+| Summer Olympics, Los Angeles | 14–30 Jul 2028 | Jul 2028; reversal Aug 2028 | same | +, then − | 11 Oct 2026 — forward test |
+| Decennial Census temporary hiring (2010, 2020, 2030) | spring of census year | Apr–Jun; reversal Jul–Sep | federal government | +, then − | cross-check only — the BLS names it in text, so field 4 carries it |
+
+**Calibration already visible, stated now so it cannot be claimed later.** June 2026 text: leisure and hospitality
+*fell* 61,000 "reflecting weaker than usual seasonal hiring" — the entry is *contradicted*. July 2026: the industry
+line gives no comparison to usual — *undetermined*. August 2026: food services +59,000 "well above the average monthly
+gain of 12,000" — the opposite sign to the registered reversal — *contradicted*. On the one event in hand the naive
+calendar expectation was wrong in both months it could be checked. **Prior for the 2028 forward test:** *supported* in
+at most one of the two months.
+
+**Acceptance (added to A4).** On the three World Cup releases the reader must return contradicted / undetermined /
+contradicted. A *supported* on any of them means the reader is using its own knowledge of the event, and it fails.
+
+**What the app may show.** Nothing from this source until an entry has been tested forward.
+
 ### A3. Read cost, stated up front
 
 From a 20-release token sample before any paid read (TRACK §3.11 step 7 rule). Expected:
@@ -183,4 +225,5 @@ rule — never by being better-looking.
 
 | date | change | reason |
 |---|---|---|
-| — | — | — |
+| 2026-10-11 | **§A2b added:** founder's event calendar as a second, declared Layer-3 input with the industry-line test; 2026 World Cup entries marked calibration (registered after the fact), LA 2028 the forward test. | The BLS text names no event causes (checked on 20 releases); the founder's deduction method needed a registered form that keeps the reader off its own world knowledge |
+| 2026-10-11 | **Layer-3 field `special_factors` made open-ended:** the reader reports any cause the text itself names, in the text's words, with no list of factor types to match against. Field `calendar_factors` added for §A2b with statuses supported / contradicted / undetermined. A4 gains the World Cup status check. Prompt v1 on file as `data_print_profile.md`, reviewed by the founder 11 Oct; A4 not yet run. | Founder's review: a fixed list would miss new and rare causes and bias the read |

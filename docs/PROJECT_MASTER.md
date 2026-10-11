@@ -454,6 +454,7 @@ commit and push the record.
 | 35 | E1 ESS floor by expected move raises asymmetry ≥ 0.20 without losing hit-rate (second lever) | 10 Oct | **FAIL** — asymmetry 1.052 vs 1.008 (+0.04); hit-rate 48.5% < null 54.5%, p 0.90; n 198 (63% of calls cut); expected move is a sizing input, not a direction filter; prior #41 wrong | `prereg_asymmetry_levers.md` §6, TRACK §3.16 |
 | 36 | E3 precedent dispersion gate raises asymmetry ≥ 0.20 without losing hit-rate (third lever) | 10 Oct | **FAIL** — asymmetry 0.852 vs 1.008 (down 0.16); hit-rate 54.6% < null 58.1%; n 377; median τ² is 0 so the gate removed every regime-disagreeing pool and the asymmetry with it; prior #42 wrong | `prereg_asymmetry_levers.md` §6, TRACK §3.16 |
 | 37 | E2 specificity gate at the source's median raises asymmetry ≥ 0.20 without losing hit-rate (fourth lever) | 10 Oct | **FAIL** — asymmetry 1.056 vs 1.008 (+0.05); hit-rate 54.1% < null 55.9%; n 379; prior said INCONCLUSIVE, #43. Four of five levers done, none moves asymmetry by 0.20; it is a property of the calls (TRACK §3.16 conclusion) | `prereg_asymmetry_levers.md` §6 |
+| 38 | Event calendar as a second Layer-3 input: a registered event shows up in the industry line (prereg_prints §A2b) | registered 11 Oct, not run | 2026 World Cup = calibration (contradicted Jun, undetermined Jul, contradicted Aug on the text); LA 2028 = forward test; prior: supported in ≤ 1 of 2 months | `prereg_prints_and_attribution.md` §A2b, `data_print_profile.md` v1 |
 
 ---
 

@@ -404,6 +404,16 @@ reader-consistency test (prereg A4); (b) the 2006→ backfill via FRASER when it
 `data_print` reader prompt for founder review before any paid read. Not blocking: the attribution engine and coverage
 states run on Layers 1–2.
 
+**What the jobs report does and does not disclose (checked 11 Oct on the 20 texts on file).** *How the number is made* —
+published: a survey of ~120,000 establishments, everyone on payroll in the pay period containing the 12th, seasonally
+adjusted; seasonal adjustment removes the regular yearly pattern, not a one-off event, so event hiring is inside the
+number. *Composition by industry* — published every month (Table B-1 and the text: "Leisure and hospitality employment
+declined by 61,000 in June, reflecting weaker than usual seasonal hiring"). *Composition by cause* — not published except
+for strikes, weather and shutdowns; no release of the 20 names the World Cup, FIFA or event hiring. Consequence: a cause
+like the World Cup can enter the read only through a declared second source — the founder's event calendar, checked
+against the industry line in the text — registered 11 Oct as prereg_prints_and_attribution §A2b. The reader prompt is
+reviewed and on file as `data_print_profile.md` (v1); A4 not yet run.
+
 ### 3.16 Asymmetry — five engine-side levers, each a registered test on the h=2 backfill (9 Oct)
 
 Asymmetry (mean |move| when right ÷ when wrong) is 1.008 at h=2. The trading-side ways to raise it (exit rules, sizing by
@@ -431,6 +441,18 @@ Order: E4, E1, E3, E2, E5. Registration file `docs/prereg_asymmetry_levers.md` b
 **E2 run (10 Oct): FAIL.** Asymmetry 1.056 vs 1.008 (+0.05); hit-rate 54.1% on 379 calls, below its null 55.9% (p 0.21). Tag `48a6c4e879a1_n2617_h2_E2`; 692 documents dropped on 302 days, survivors no better.
 
 **Conclusion after four of five (10 Oct).** E4 +0.12, E1 +0.04, E2 +0.05, E3 −0.16, all against the registered +0.20 with hit-rate not below null. No engine-side selection of which calls to make raises asymmetry; the one that removes regime-disagreeing pools lowers it. Asymmetry ≈ 1 is a property of the calls themselves. Raising it is therefore a trading-side matter (§3.17: size by expected move, exit the wrong side early), and those are the next registered tests. E5 (influence-weight scaling) stays registered and waits for ≥ 10 earned cells. All four levers remain in `step6_report.py` behind `LEVER=`, off by default; the incumbent and the nightly job were never touched.
+
+**In plain words (11 Oct, for the founder's record).** Each lever is a rule for when the engine should stay quiet. *Calls
+left* is how many of the incumbent's 534 non-overlapping calls survived the rule — a lever can only remove calls. *FAIL*
+does not mean unusable; it means the lever did not reach the bar written before the run (asymmetry up ≥ 0.20, hit-rate not
+below chance on the same days, ≥ 30 calls left). A lever that had come back at 60% / 1.4 would have PASSED and gone in.
+
+| lever | the problem it was meant to solve | calls left | hit-rate (chance level) | asymmetry | why it failed |
+|---|---|---|---|---|---|
+| E4 | on 23% of SPY's wrong days the document was not the driver — stop listening to documents that usually aren't | 328 | 54.3% (56.1%) | 1.128 | small gain; acted almost only on SPY |
+| E1 | quiet days pay little when right — only call when precedents were followed by big moves | 198 | 48.5% (54.5%) | 1.052 | the big-move days are the days the pool explains least |
+| E3 | disagreeing precedents make the call a guess — only call when they agree | 377 | 54.6% (58.1%) | 0.852 | the disagreeing pools were the profitable ones |
+| E2 | vague documents give random moves — count only the more specific ones | 379 | 54.1% (55.9%) | 1.056 | the existing near-zero cutoff already did this |
 
 ### 3.17 Trading-side asymmetry methods — recorded for the app's manual, not engine changes (9 Oct)
 

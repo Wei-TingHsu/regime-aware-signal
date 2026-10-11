@@ -465,6 +465,21 @@ days, one file per session, never rewritten. Started 29 September.
 
 ---
 
+### G6. Asymmetry levers E4, E1, E3, E2 (9–10 October)
+
+**Measures.** Whether a rule for *when the engine stays quiet* raises asymmetry (mean |move| when right ÷ when
+wrong) without lowering hit-rate below chance.
+**How the question arose.** Asymmetry at h = 2 is 1.008 — right calls pay the same as wrong calls cost. The founder
+asked for engine-side ways to raise it; five were registered before code.
+**Method and data pool.** Each lever runs beside the incumbent on the same 1,532 report days of the h = 2 backfill,
+non-overlap sampler every 2nd date, 10,000 within-asset block permutations; criterion fixed before the run: asymmetry
+up ≥ 0.20, non-overlap hit-rate not below its own null, ≥ 30 calls left.
+**Summary.** Direct. Four run; E5 waits for ten earned influence cells.
+**Result.** All four FAIL. Calls left 328 / 198 / 377 / 379 of 534; asymmetry 1.128 / 1.052 / 0.852 / 1.056; every
+hit-rate below its null. E3 is the informative one: removing pools where the regimes disagree removed the profitable
+calls, so regime conditioning is where the payoff lives. Conclusion recorded: asymmetry ≈ 1 is a property of the
+calls, not of a selection the engine failed to make; raising it is trading-side (T2 sizing, the registered stop test).
+
 ## H. What the app prints, and which entry it comes from
 
 | on the page | measure | from |
