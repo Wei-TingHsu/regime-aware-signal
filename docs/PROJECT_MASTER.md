@@ -688,6 +688,29 @@ ideas, client-side lock-in, and a regulatory position. The code is not the asset
 **What this does not claim.** That the project is unique. The honest pitch: anyone can build this; here is the dated evidence
 that it was built, tested before it was believed, and where it fails — and here is the client's own state inside it.
 
+
+## 13. Design scorecard — nine signs an ML investment design is too simple (13 Oct 2026)
+
+*Scored 0 / 1 / 2 on what is built and tested, not on the roadmap. Re-score when an item in the last column lands. The
+checklist's own key: A–C low = the ML is cosmetic; D–E low = a paper, not a fund; F–H low = results not trustworthy; I low =
+not usable.*
+
+| | criterion | score | why, today | what lifts it (existing item unless marked new) |
+|---|---|---|---|---|
+| A | the model decides, not a formula | 1 | the output is a direction call with an abstention rule; no stated mapping to a position (T1 NO, T2 unbuilt) | **T2** expected-move → size; **T3** overlay format turns the call into a registered trade rule; app shows "call → position" once T2 passes |
+| B | hard target | 2 | 2-session direction on five assets; our own null is 57.5% | keep |
+| C | feature space needs ML | 1 | two families (macro factors, text fields) × regime; no price/flow features; the estimator is a kernel average a linear rule can express | **T12** price features (vol, correlation, credit, JGB/USDJPY) beside v1; **T4** meta-labelling is the first learned component; ablation each |
+| D | edge story with a why-now | 1 | why-now stated (LLM reading at scale, regime conditioning); who is on the other side not stated; our own finding says the document's direction is absorbed overnight | **new, cheap:** a one-page registered edge statement — the inefficiency, the counterparty (who sells the overnight gap to whom), why it persists, and the dated reason; goes beside §12 and is the first thing a buyer asks |
+| E | a product, not a hypothesis test | 1 | universe, daily cadence, costs (T1) yes; sizing, exposure limits, a held benchmark no | **T1 Test B** (30 ETFs, drawdown claim), **T15** risk block (limits, drawdown by episode), benchmark = 60/40 or the ETF held outright, stated in T15 |
+| F | leakage-proof, real-time | 2 | expanding labels, pool cutoff at t−h, write-once, block permutations, forward ledger | keep; add the purge gap explicitly in prereg_report_scoreboard wording (already implemented by the t−h cutoff) |
+| G | extensions are real components | 2 | every extension has its own prereg, validation and ablation | keep |
+| H | attribution | 2 | hit-rate and asymmetry by asset/horizon, attribution states, influence weights, flip tables | add drawdown-by-episode to the referee output (comes with T15); net vs gross already in T1 |
+| I | leads to an action | 1 | a call exists; it does not beat drift; thresholds set by registration, not net-of-cost utility | **T6** per-name cost model → abstention threshold chosen on net utility; **T2** size; the §3.17 stop test gives the exit |
+
+**Total 13 / 18.** Strong where the discipline is (F–H 6/6); weak where the product is (D–E 2/4, A and I 1 each). The lifting
+items are, in order of cost: the edge statement (D, a page), T2 (A, E, I), T1 Test B + T15 (E, H), T6 cost model (I), T12
+and T4 (C). Every one is already on the list except the edge statement, added to TRACK §3.21.
+
 ## 12. The standing rules (the discipline, in plain words)
 
 1. **Write the rule before the test exists.** Every threshold, criterion and planned amendment

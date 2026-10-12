@@ -483,6 +483,15 @@ Not a redesign; the collector (S5) already holds the bars.
 A file format for a client's own entry/size/stop/exit rules, read by the referee and scored beside the engine's calls on the
 same ledger. This is the per-client state that makes switching costly (PROJECT_MASTER §12). Prereg before code; T7 after.
 
+### 3.21 Edge statement — one registered page (13 Oct)
+
+The design scorecard (PROJECT_MASTER §13) scores D at 1: the why-now is stated, the counterparty is not. Write one page,
+registered like a prereg: the inefficiency the engine sells (documents read late or not at all by the holders of the five
+markets), who is on the other side of a 2-session drift call (the overnight-gap market-makers the literature names, and the
+slow readers), why it persists (reading cost, attention), and the dated reason it is relevant now (LLM reading cost fell
+below the value of a day's drift in 2024–26). It must also state where our own evidence contradicts it (direction absorbed
+in the gap; hit-rate below drift). Cost: a page. First thing a buyer asks.
+
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a
