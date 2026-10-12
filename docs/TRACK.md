@@ -383,6 +383,8 @@ the referee's USO cell, T1's USO PASS) re-run on both and reported side by side.
 the tradeable comparison. Nothing else in the universe changes: the registered instrument test
 (CURRENT_STATE §18.9) showed the other four pairs agree.
 
+**Run 12 Oct (`docs/wti_cont.md`).** Built as `WTI_SPOT` (FRED spot; the back-adjusted series is not buildable from free data) and `WTI_FUT` (CL=F). USO's drag against spot −8.7%/yr over 20.5 years. Referee with the USO column swapped: CONSISTENT on both (C1–C4 met; all flips are oil rows). Chain rule on the commodity fires 4× not 2× — the 2009 pair was hidden by USO's contango — and gold was lower 60 sessions after all four; founder chose to re-define the chain input as WTI_SPOT (prereg_blindspot amendment 12 Oct, contamination stated, live tail on CL=F). Still to do under this item: T1's USO cell on the new column; blindspot.py wiring for the live alarm.
+
 ### 3.14 Two-wars case study — the oil → inflation → rates → dollar → gold chain (8 Oct)
 
 Gold rose +7% into 8 Mar 2022 then fell 20% by Sep; in 2026 it peaked a month *before* the
