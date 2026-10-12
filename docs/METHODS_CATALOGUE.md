@@ -510,7 +510,18 @@ against spot over 2006–2026. The chain alarm fires 4× on spot (two 2009 firin
 after all four — INCONCLUSIVE at n = 4. Founder's decision: the chain reads spot from now on (amendment, contamination
 stated). Open: T1's USO cell on the new column.
 
-## H. What the app prints, and which entry it comes from
+### G9. The 08:30 event-time reader (13 October)
+
+**Measures.** For every scheduled 08:30 release: the headline number as received, the surprise against the prior and
+against the fed-funds market, the twenty-minute reaction on five instruments, and the rest of the session.
+**How the question arose.** The 2 pm FOMC reader gives 8 rows a year; the founder asked for the event-time record to
+accumulate faster. The 08:30 prints are the same shape of event at 15× the rate.
+**Method and data pool.** Release calendar from FRED; number from the BLS API or FRED at 08:30; S5 1-minute bars
+(ES=F for the S&P, since the cash index has no bars before 09:30); text and the A4-passed reader only where the agency
+serves scripts (BEA, Census), BLS/DOL by hand. Write-once per event; criterion as prereg_event_time §4.
+**Summary.** Direct. Registered 13 Oct before code; dry run on 2 Oct payrolls; live from 14 Oct.
+**Result.** None yet — running. Prior: reaction sign agrees with the surprise sign ≥ 70% on payrolls/CPI; rest of session NULL.
+
 
 
 | on the page | measure | from |

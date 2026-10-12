@@ -2375,3 +2375,25 @@ message names row 40 (`8f0c88a`).
 
 Population and status: backfill 1,532 report days; chain firings 2006–2026 daily; measured, no forward verdict.
 
+### 18.26 THE 08:30 EVENT-TIME READER — BUILT, DRY-RUN, SCHEDULED (13 Oct)
+
+Registered first (prereg_event_time amendment 13 Oct, after a fetch probe from the founder's machine: bls.gov and dol.gov text
+403, bea.gov and census.gov 200, api.bls.gov 200). `src/event_time_prints.py`: release calendar from FRED's release-date API
+(ids 50/10/46/180/53/54/9 → `processed/release_calendar.csv`, 154 dates past year + scheduled); the headline number at 08:30
+from the BLS API (payrolls diff, CPI and PPI m/m) or FRED (claims, GDP, PCE, retail); surprise against the naive prior from
+`prints.csv` plus the market-implied sign from ZQ=F 08:25→08:35; the 08:25→08:45 reaction on five instruments from S5 bars;
+text fetched and read with the A4 prompt only where the agency serves scripts (BEA, Census); BLS/DOL rows `unfetchable` with a
+`paste` route; `settle` fills 08:45→16:00 next day. One write-once JSON per event, one ledger row with `event_type=print:<name>`
+(ledger gained the column; existing rows → `fomc`; the 2 pm reader writes `fomc` — the only touch to that path). Self-tests 4/4.
+
+Dry run on 2 Oct payrolls from stored bars: headline +29,000 (BLS API, CES0000000001 diff), surprise vs naive −133,000, fed
+funds priced down on the miss, 10-year −3.2 bp in the window then +9.1 bp over the rest of the session (a reversal), gold
++0.7% then −1.5%. Defect found by the dry run: ^GSPC has no bars before 09:30, so the S&P reaction was None — ES=F added to
+the S5 collector (prereg_surprise amendment) and used for the 08:30 window; the 2 pm path keeps ^GSPC.
+
+Scheduled: `launchd/com.regimeaware.prints.plist`, slots 20:20 and 21:20 SGT (08:20 ET summer/winter); the script exits unless
+the date is in the calendar and the clock is 08:10–08:28 ET. First live firing: CPI, 14 Oct. 15 Oct: PPI, claims, retail
+sales (retail = first automatic text read, Census PDF). Expected rate ~110 events a year against 8 FOMCs; the ledger's 30-row
+floor in ~3 months. Prior stated in the amendment: reaction sign agrees with the surprise sign on ≥ 70% of payrolls/CPI
+events; rest-of-session continuation NULL. Status: running, no verdict; nothing on the app from this source yet.
+

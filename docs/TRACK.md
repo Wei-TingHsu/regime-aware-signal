@@ -49,6 +49,7 @@ Known drift corrected on 2026-09-13: automation time is **15:00 SGT** (older fil
 | **Matured positions** | Count rising weekly; H=5 first, H=20 from ~16 Sep | `tail -3 docs/forward_scoreboard.md` | Too few to report a figure until late October at the earliest; do not report one |
 | **Nightly document reads — PAUSED for credit** | Read count is 2,616 and stays there until the API balance is funded. It was silently dead 29 Aug–13 Sep for a different reason (§5, `8533969`); the pipeline is now correct and idle | `python -m src.corpus_status` | When credit returns the count rises by ≤ 40/night on documents dated ≥ 27 Aug only. If it does not, the flag or the balance is wrong again |
 | **Report scoreboard** (from 14 Sep) | `docs/report_scoreboard.md` regenerated each weekday; `processed/report_ledger.csv` gains rows as write-once reports land; prints "too few to report" until a cell has 30 non-overlap rows | `tail -5 processed/report_ledger.csv`; `head -15 docs/report_scoreboard.md` | Zero rows is correct while reads are paused (reports deferred). The first report to land is also the first time the scorer touches the real price paths (`load_data`, raw yfinance cache) — untested until then; a traceback there is a scorer bug, not a data problem. It never writes a report, so a failure costs nothing |
+| **08:30 event-time reader, launchd 20:20 / 21:20 SGT** (from 14 Oct) | One `logs/prints_<date>.log` per release day with an `event written` line per release; `outputs/event_time/<date>_<name>.json` | `ls outputs/event_time/ \| tail`; `tail -3 logs/prints_$(TZ=America/New_York date +%Y%m%d).log` | No log on a release day = the Mac was asleep or the calendar is stale (`python -m src.event_time_prints calendar` refreshes it); `number NOT received` = the API lagged — the row still carries the reaction; run `settle --date` the next day if the nightly has not |
 | **Supervisor review** | Feedback from Dr Lee on the 28 Aug submission | inbox | When it arrives, log it here before acting on any of it |
 | **Collaborator access** | Dr Lee accepted the invite | GitHub → Settings → Collaborators | Re-invite by email address if the handle failed again |
 
@@ -477,6 +478,8 @@ PPI, retail sales, PCE, GDP, weekly claims) are the same shape — fixed clock, 
 year. Extend `event_time_read.py` to 08:30 releases with the `data_print` prompt (v1, A4 PASS), same ledger, same criterion as
 prereg_event_time §4, as an amendment to that file before code. Purpose: the event-time record compounds at 15× the rate.
 Not a redesign; the collector (S5) already holds the bars.
+
+**Built and scheduled 13 Oct** (CURRENT_STATE §18.26): registered first, dry run on 2 Oct payrolls correct, ES=F added for the S&P window, launchd job installed; first live firing CPI 14 Oct. Open under this item: a referee for the event-time ledger at the close and next open (prereg_event_time §4 names it; not yet written), and the app line once 30 rows exist.
 
 ### 3.20 T3 overlay format — the client's rules as registered files (12 Oct)
 
