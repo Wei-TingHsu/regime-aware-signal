@@ -25,7 +25,8 @@ ROOT = Path("data_provenance/intraday")
 TICKERS = ["^GSPC", "^TNX", "GC=F", "DX-Y.NYB", "CL=F",          # shown
            "SPY", "TLT", "GLD", "UUP", "USO",                     # modelled
            "ZQ=F",                                                # fed funds front month (phase B surprise)
-           "SR3=F"]                                               # 3-month SOFR front quarterly -- the contract the Fed's surprise series uses since 2023
+           "SR3=F",                                               # 3-month SOFR front quarterly
+           "ES=F"]                                                # S&P 500 futures: the 08:30 window (TRACK 3.19); ^GSPC has no bars before 09:30                                               # 3-month SOFR front quarterly -- the contract the Fed's surprise series uses since 2023
 
 
 def fetch_1m(tk: str) -> pd.DataFrame:

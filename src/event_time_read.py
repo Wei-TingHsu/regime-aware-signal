@@ -111,8 +111,8 @@ def write_event(day: str, read: dict, dry: bool) -> Path:
     with LEDGER.open("a", newline="") as h:
         w = csv.writer(h)
         if new:
-            w.writerow(["date", "read_at_et", "dry_run", "stance", *[f"dir_{a}" for a in AXES], "magnitude", "specificity", "novelty", "confidence"])
-        w.writerow([day, rec["read_at_et"], dry, stance, *[direction[a] for a in AXES], rec["magnitude"], rec["specificity"], rec["novelty"], rec["confidence"]])
+            w.writerow(["date", "read_at_et", "dry_run", "stance", *[f"dir_{a}" for a in AXES], "magnitude", "specificity", "novelty", "confidence", "event_type"])
+        w.writerow([day, rec["read_at_et"], dry, stance, *[direction[a] for a in AXES], rec["magnitude"], rec["specificity"], rec["novelty"], rec["confidence"], "fomc"])
     log(f"event file written: {f.name}; stance {stance}; direction {direction}")
     return f
 
