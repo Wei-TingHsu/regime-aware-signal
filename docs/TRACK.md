@@ -463,6 +463,26 @@ direction confidence. 3. Cut the wrong side early — a stop at a fixed fraction
 the engine scores close-to-close and has no exit rule; one is registered to be tested on the 30,640-row h=2 ledger
 (stop at −0.5σ and −1.0σ, fixed, two candidates, both reported). These are on the app under "Reading this page".
 
+
+### 3.18 Private repo for the calibration — additive while marking is open (12 Oct)
+
+Create `regime-aware-signal-private` for reader prompts, the read corpus, influence weights and the event calendar; the public
+repo keeps methods, register and scoreboards; the app reads the private one (Streamlit secret). Additive: new reads and the next
+prompt version go there now; nothing is removed from the public repo until Dr Lee's marking closes. PROJECT_MASTER §12.
+
+### 3.19 Event-time reader extended to the 08:30 prints — registration first (12 Oct)
+
+T14 reads the FOMC statement at 2 pm and records the rest of the session: 8 events a year. The scheduled prints (payrolls, CPI,
+PPI, retail sales, PCE, GDP, weekly claims) are the same shape — fixed clock, a text, a rest-of-session — and come to ~110 a
+year. Extend `event_time_read.py` to 08:30 releases with the `data_print` prompt (v1, A4 PASS), same ledger, same criterion as
+prereg_event_time §4, as an amendment to that file before code. Purpose: the event-time record compounds at 15× the rate.
+Not a redesign; the collector (S5) already holds the bars.
+
+### 3.20 T3 overlay format — the client's rules as registered files (12 Oct)
+
+A file format for a client's own entry/size/stop/exit rules, read by the referee and scored beside the engine's calls on the
+same ledger. This is the per-client state that makes switching costly (PROJECT_MASTER §12). Prereg before code; T7 after.
+
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a
