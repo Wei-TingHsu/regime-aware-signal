@@ -2344,3 +2344,34 @@ What A4 does not say: whether the reader's directions are right (the backfill's 
 Next for T16: the 2006→ backfill read waits on a text source (bls.gov 403 to scripts, FRASER closed); until one exists,
 Layer 3 runs forward from each new release only.
 
+### 18.25 THE OIL COLUMN: USO'S DRAG, A CHAIN RULE PARTLY FITTED TO THE ETF, AND THE FOUNDER'S DECISION (12 Oct)
+
+`src/wti_cont.py` built `processed/wti_cont.parquet` (USO, WTI_SPOT = FRED DCOILWTICO, WTI_FUT = Yahoo CL=F; 5,147 shared
+sessions 2006-04-11 → 2026-10-08). The registered construction (back-adjusted front month) is not buildable from free data —
+expired contracts' prices are not published free — so the construction was amended before code (prereg_instrument_robustness
+11 Oct). Three results, all in `docs/wti_cont.md`:
+
+1. **The instrument.** Daily correlation USO–spot 0.82, USO–CL=F 0.89. Cumulative 20.5 years: USO ×0.24, spot ×1.40 — a drag of
+−8.7% a year; 2020 USO −68% vs spot −21%; 2026 the reverse (USO +113% vs spot +68%, backwardation paying). Level, not direction.
+2. **Referee, USO column swapped only, h = 2.** CONSISTENT on both columns: C1 FAIL/FAIL; C2 98.4% / 98.8% on ~1,060 rows with
+every flip an oil row (17 / 13); C3 54.9% vs 53.9% / 54.3%; C4 1.008 vs 1.097 / 1.061. The oil cell itself: USO 65.5% hit and
+asymmetry 0.744 on 55 calls; spot 56.6% / 1.434 on 53; CL=F 60.0% / 1.089 on 55. Five or six calls apart — inside noise — but
+USO's oil cell had been the board's best hit-rate and worst payoff, and on the commodity it is ordinary.
+3. **Chain rule W2-seq.** On USO 2 firings (the wars). On spot 4: 26 Jan 2009 and 24 Feb 2009 added — the crisis rebound had the
+same shape (oil +8% in five sessions, dollar up, two-year then rising) and USO's super-contango drag kept its weekly return
+under the line. CL=F adds 25 Aug 2022. So the founder's "strict fit inside both wars" (8 Oct) was met on USO partly because of
+the ETF's defect. A2 on each column: gold lower 60 sessions after every firing on every column (spot: −1.8%, −2.6%, −7.6%,
+−11.8%; mean −6.0%, p 0.009, n 4); the three out-of-calibration firings go the same way as the wars, weaker. INCONCLUSIVE
+everywhere by the n ≥ 10 bar.
+
+**Decision (founder, 12 Oct, option 2 of two offered):** the chain rule reads WTI_SPOT from now on; USO's record stays beside
+it. Recorded with the contamination: the instrument argument is clean, the timing is not (taken after seeing the 2009 gold
+paths). Live rule: spot is published late, so the nightly evaluates on spot where published and CL=F for the tail, marking
+tail alerts provisional. Code wiring (blindspot.py) and T1's USO cell on the new column are the next two steps.
+
+Defect note: the 11 Oct `record_a4.py` deleted METHODS_CATALOGUE's "## H." heading by replacing its anchor; restored 12 Oct.
+The 12 Oct `record_wti.py` stopped at that missing anchor, so §18.25, row 40 and G8 landed one commit after the one whose
+message names row 40 (`8f0c88a`).
+
+Population and status: backfill 1,532 report days; chain firings 2006–2026 daily; measured, no forward verdict.
+

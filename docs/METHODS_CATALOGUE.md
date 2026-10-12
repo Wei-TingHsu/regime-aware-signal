@@ -494,6 +494,24 @@ gave the 4 Sep read no calendar entry (scoped re-read), a whitespace loop at the
 **Result.** PASS — 20/20 headline values; factors named are all in the text; World Cup months contradicted ×3, never
 supported. Registered expectation for July was wrong (#44): the text's retail line is against the sign.
 
+### G8. The oil column — WTI spot beside USO (12 October)
+
+**Measures.** Whether the oil ETF (USO) as the model's oil instrument changes any result: the referee's verdict, the
+chain alarm's firings, gold's path after them.
+**How the question arose.** The two-wars review (8 Oct): USO's monthly roll drag diverges from the oil price over
+years (part of its −98% in 2020), so results on USO might be results about the ETF.
+**Method and data pool.** FRED Cushing spot (DCOILWTICO) and Yahoo CL=F as spliced, aligned to the panel; the USO column
+alone swapped in the h = 2 backfill (1,532 report days, 10,000 permutations) and scored on the 29 Sep C1–C4; the W2-seq
+chain rule and the registered A2 gold test re-run on each column.
+**Summary.** Direct. The back-adjusted futures series the 8 Oct amendment named cannot be built from free data; the
+construction was amended before code.
+**Result.** Referee CONSISTENT on both columns (C2 98.4% / 98.8%, every flip an oil row). USO's drag: −8.7% a year
+against spot over 2006–2026. The chain alarm fires 4× on spot (two 2009 firings USO hid) and gold was lower 60 sessions
+after all four — INCONCLUSIVE at n = 4. Founder's decision: the chain reads spot from now on (amendment, contamination
+stated). Open: T1's USO cell on the new column.
+
+## H. What the app prints, and which entry it comes from
+
 
 | on the page | measure | from |
 |---|---|---|
