@@ -1,8 +1,8 @@
 # T13 case A — blind-spot backfill
 
-*Run 2026-10-08 16:28. Registered in `docs/prereg_blindspot.md`. 1995-01-03 → 2026-10-08; big move = |z| > 2.0; chain rule W2-seq: oil ≥ +8%/5s & dollar ≥ +0.9%/5s with the 2-year < +10 bp at the shock, confirming ≥ +10 bp within 5 sessions.*
+*Run 2026-10-13 01:19. Registered in `docs/prereg_blindspot.md`. 1995-01-03 → 2026-10-12; big move = |z| > 2.0; chain rule W2-seq: oil ≥ +8%/5s & dollar ≥ +0.9%/5s with the 2-year < +10 bp at the shock, confirming ≥ +10 bp within 5 sessions.*
 
-## A1 — state shares on big-move days (reports from `outputs/reports_backfill/48a6c4e879a1_n2617`)
+## A1 — state shares on big-move days (reports from `outputs/reports_backfill/48a6c4e879a1_n2617_h2_wtifut`)
 
 | market | big-move days | A blind | B wrong | C seen |
 |---|---|---|---|---|
@@ -14,14 +14,16 @@
 
 *Only document days have reports, so these shares describe big moves on days the engine wrote a report; big moves on days with no documents at all are state A by definition and are counted in A2's denominator, not here.*
 
+*Chain input: WTI_SPOT (amendment 12 Oct); on USO the rule fires on 2022-03-07, 2026-03-05 — kept beside, not scored here.*
+
 ## A2 — chain alerts and gold's forward return
 
-Chain alert runs: **2** (2022-03-07, 2026-03-05)
+Chain alert runs: **5** (2009-01-26, 2009-02-24, 2015-02-06, 2022-03-07, 2026-03-05)
 
 | horizon | n | mean gold return after alert | one-sided p vs random dates |
 |---|---|---|---|
-| 20 sessions | 2 | -5.750% | — |
-| 60 sessions | 2 | -10.218% | 0.0080 |
+| 20 sessions | 5 | -3.012% | — |
+| 60 sessions | 5 | -5.698% | 0.0066 |
 
 ## Verdict A2: **INCONCLUSIVE** (registered prior: INCONCLUSIVE — held)
 

@@ -218,6 +218,9 @@ def selftest(report: Path = Path("docs/exposure_dial_selftest.md")) -> bool:
 
 
 # ----------------------------------------------------------------------------- Test A
+OIL_COLUMN = None   # set by --oil-column: replace USO with WTI_SPOT / WTI_FUT from processed/wti_cont.parquet (TRACK 3.13)
+
+
 def load_inputs():
     import asset_extension as AE
     cfg = AE.load_config(); sc, rt = AE.load_data()
@@ -225,6 +228,10 @@ def load_inputs():
     idx = pd.DatetimeIndex(sc.index)
     rets = pd.read_parquet("processed/asset_returns.parquet"); rets.index = pd.to_datetime(rets.index)
     rets = rets.reindex(idx)
+    if OIL_COLUMN:
+        w = pd.read_parquet("processed/wti_cont.parquet"); w.index = pd.to_datetime(w.index)
+        rets["USO"] = w[OIL_COLUMN].reindex(idx).values
+        print(f"  USO column replaced by {OIL_COLUMN} for this run (docs/exposure_dial_testA_{OIL_COLUMN}.md)")
     post = None
     for name in ("regime_posteriors_expanding", "regime_posterior_expanding"):
         if hasattr(AE, name):
@@ -298,11 +305,13 @@ def run_testA(n_boot: int, n_shift: int, out: Path = Path("docs/exposure_dial_te
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--selftest", action="store_true"); ap.add_argument("--run", action="store_true")
     ap.add_argument("--n-boot", type=int, default=10_000); ap.add_argument("--n-shift", type=int, default=10_000)
+    ap.add_argument("--oil-column", choices=["WTI_SPOT", "WTI_FUT"], help="replace USO with this column for the run")
     a = ap.parse_args()
+    global OIL_COLUMN; OIL_COLUMN = a.oil_column
     if a.selftest:
         ok = selftest(); sys.exit(0 if ok else 1)
     if a.run:
-        run_testA(a.n_boot, a.n_shift)
+        run_testA(a.n_boot, a.n_shift, out=Path(f"docs/exposure_dial_testA_{OIL_COLUMN}.md") if OIL_COLUMN else Path("docs/exposure_dial_testA.md"))
 
 
 if __name__ == "__main__":

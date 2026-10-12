@@ -65,6 +65,34 @@ def load_macro(idx):
 
 
 OIL5, DXY5, CONFIRM_WIN = 0.08, 0.009, 5
+WTI = Path("processed/wti_cont.parquet")
+
+
+def oil_series(idx, refresh=False):
+    """The chain rule's oil input (prereg_blindspot amendment 2026-10-12): WTI_SPOT log returns where FRED has published
+    the spot price, CL=F log returns (Yahoo, same day) for the unpublished tail. Returns (series on idx, source per
+    session: 'spot' | 'clf' | 'none'). With refresh=True (the nightly) spot and CL=F are pulled; otherwise the file is used."""
+    src = pd.Series("none", index=idx)
+    w = pd.read_parquet(WTI) if WTI.exists() else pd.DataFrame(index=idx)
+    w.index = pd.to_datetime(w.index)
+    spot = w["WTI_SPOT"].reindex(idx) if "WTI_SPOT" in w else pd.Series(np.nan, index=idx)
+    fut = w["WTI_FUT"].reindex(idx) if "WTI_FUT" in w else pd.Series(np.nan, index=idx)
+    if refresh:
+        try:
+            from src.wti_cont import _fred_spot, _yahoo_close
+            sp = _fred_spot().dropna(); sp = sp[sp > 0]
+            px = sp.reindex(idx.union(sp.index)).ffill(limit=3).reindex(idx); spot = np.log(px).diff().combine_first(spot)
+        except Exception as e:
+            print(f"  spot refresh failed ({type(e).__name__}); using the file")
+        try:
+            from src.wti_cont import _yahoo_close
+            c = _yahoo_close("CL=F", (idx[-1] - pd.Timedelta(days=90)).strftime("%Y-%m-%d")); c = c[c > 0]
+            px = c.reindex(idx.union(c.index)).ffill(limit=3).reindex(idx); fut = np.log(px).diff().combine_first(fut)
+        except Exception as e:
+            print(f"  CL=F refresh failed ({type(e).__name__}); using the file")
+    out = spot.copy(); src[spot.notna()] = "spot"
+    tail = spot.isna() & fut.notna(); out[tail] = fut[tail]; src[tail] = "clf"
+    return out.fillna(0.0), src
 
 
 def chain_alerts(oil_ret: pd.Series, dgs2: pd.Series, dxy: pd.Series) -> pd.Series:
@@ -136,8 +164,12 @@ def backfill(out_md=Path("docs/blindspot_backfill.md"), n_perm=10_000):
         L.append(f"| {a} | {n} | {cnt['A']/max(n,1):.0%} | {cnt['B']/max(n,1):.0%} | {cnt['C']/max(n,1):.0%} |" if n else f"| {a} | 0 | — | — | — |")
     L.append("\n*Only document days have reports, so these shares describe big moves on days the engine wrote a report; big moves on "
              "days with no documents at all are state A by definition and are counted in A2's denominator, not here.*")
-    # A2: chain alerts -> gold forward returns
-    alerts = chain_alerts(rets["USO"], dgs2, dxy)
+    # A2: chain alerts -> gold forward returns. Primary input WTI_SPOT (amendment 12 Oct); USO reported beside.
+    oil, _src = oil_series(rets.index)
+    alerts = chain_alerts(oil, dgs2, dxy)
+    alerts_uso = chain_alerts(rets["USO"], dgs2, dxy)
+    L.append(f"\n*Chain input: WTI_SPOT (amendment 12 Oct); on USO the rule fires on "
+             f"{', '.join(str(d.date()) for d in alerts_uso[alerts_uso & ~alerts_uso.shift(1, fill_value=False)].index) or 'no dates'} — kept beside, not scored here.*")
     starts = alerts & ~alerts.shift(1, fill_value=False)        # first day of each alert run
     dates = list(starts[starts].index)
     gld = rets["GLD"]
@@ -184,14 +216,18 @@ def today():
         else:
             b_rate[a] = 0.0
     dgs2, dxy = load_macro(rets.index)
-    alert = bool(chain_alerts(rets["USO"], dgs2, dxy).iloc[-1])
+    oil, osrc = oil_series(rets.index, refresh=True)
+    alert = bool(chain_alerts(oil, dgs2, dxy).iloc[-1])
+    provisional = bool(alert and (osrc.iloc[-5:] == "clf").any())
     rec = dict(date=day.strftime("%Y-%m-%d"), z=z, states={a: state(z[a], cov[a]) for a in ASSETS},
                b_rate=b_rate, haircut={a: 1 - 0.5 * b_rate[a] for a in ASSETS},
-               chain_alert=alert,
-               chain_inputs=dict(oil_5d=float(rets["USO"].iloc[-5:].sum()), dgs2_5d_bp=float((dgs2.iloc[-1] - dgs2.iloc[-6]) * 100), dxy_5d=float(dxy.iloc[-1] / dxy.iloc[-6] - 1)))
+               chain_alert=alert, chain_alert_provisional=provisional,
+               oil_source={str(d.date()): s for d, s in osrc.iloc[-5:].items()},
+               chain_inputs=dict(oil_5d=float(oil.iloc[-5:].sum()), oil_5d_uso=float(rets["USO"].iloc[-5:].sum()), dgs2_5d_bp=float((dgs2.iloc[-1] - dgs2.iloc[-6]) * 100), dxy_5d=float(dxy.iloc[-1] / dxy.iloc[-6] - 1)))
     f.write_text(json.dumps(rec, indent=2))
     flagged = {a: s for a, s in rec["states"].items() if s}
-    print(f"blindspot {rec['date']}: {flagged or 'no big moves'}; chain alert {alert}")
+    print(f"blindspot {rec['date']}: {flagged or 'no big moves'}; chain alert {alert}{' (provisional on CL=F tail)' if provisional else ''}; "
+          f"oil source last 5: {list(osrc.iloc[-5:])}")
 
 
 def main():

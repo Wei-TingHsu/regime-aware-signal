@@ -2397,3 +2397,25 @@ sales (retail = first automatic text read, Census PDF). Expected rate ~110 event
 floor in ~3 months. Prior stated in the amendment: reaction sign agrees with the surprise sign on ≥ 70% of payrolls/CPI
 events; rest-of-session continuation NULL. Status: running, no verdict; nothing on the app from this source yet.
 
+### 18.27 OIL AMENDMENT CLOSED: THE CHAIN READS SPOT, T1'S OIL CELL HOLDS ON SPOT (13 Oct)
+
+**blindspot.py** now takes its oil input from `oil_series()`: WTI_SPOT log returns where FRED has published the price, CL=F
+(Yahoo, same day) for the unpublished tail; the nightly JSON records the source of each of the last five sessions and marks a
+chain alert *provisional* if any came from CL=F (confirmed or withdrawn when spot lands). Checked 13 Oct: spot published through
+9 Oct, 12 Oct on CL=F — a one-session lag, not the week I had assumed. USO stays in the panel and everywhere else. Backfill A2
+re-run on spot over the full panel (1995→): **5 firings** — 26 Jan 2009, 24 Feb 2009, 6 Feb 2015 (the rebound off the January
+2015 low: oil +8% in the week, dollar up, two-year jumping after that morning's payrolls — same shape, no war), 7 Mar 2022,
+5 Mar 2026; gold −3.0% at 20 and −5.7% at 60 sessions, p 0.0066, **INCONCLUSIVE** (n < 10), prior held. USO's two dates are
+printed beside, not scored. The 12 Oct `wti_cont a2` count of four was on 2006+ only (USO's start); the fifth is pre-2006 on
+the spot series alone.
+
+**T1 Test A with the USO column replaced by WTI_SPOT** (`docs/exposure_dial_testA_WTI_SPOT.md`; the 8 Oct USO file untouched):
+oil cell (i) vol targeting PASS, CER +0.302 [+0.087, +0.582], both halves positive; (ii) regime tilt INCONCLUSIVE (+0.001).
+On USO (8 Oct): (i) PASS +0.254 [+0.094, +0.445]; (ii) FAIL (−0.002). Same verdicts. Buy-and-hold spot has CER −0.33 and a
+log drawdown of −2.87 (WTI $145 in July 2008 → $10 in April 2020); spot is not a holdable instrument, so the PASS means what it
+meant on USO: vol targeting cuts exposure ahead of the 2008 and 2020 collapses. Robust to the instrument; on both, mostly two
+episodes. Tree-level verdict unchanged: vol targeting NO (1 of 5), regime tilt NO (0 of 5).
+
+Oil amendment (8 Oct, TRACK §3.13) is complete: column built, referee CONSISTENT, chain re-defined to spot, T1 re-run. What
+is not measured: anything about USO as a *display* instrument (the app shows CL=F), and no forward verdict.
+
