@@ -142,3 +142,4 @@ python -m src.report_scoreboard \
   || echo "  report scoreboard FAILED -- reports and forward ledger untouched; see traceback above; continuing"
 # T13 case A: per-market coverage state and the oil-shock chain alert for the last completed session
 python -m src.blindspot --today || echo "  blindspot failed -- continuing"
+python -m src.oil_shock forward || echo "  oil forward failed -- continuing"

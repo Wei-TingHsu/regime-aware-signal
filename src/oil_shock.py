@@ -230,6 +230,78 @@ def cmd_inverse(a):
     Path("docs/oil_shock_inverse.md").write_text("\n".join(L) + "\n"); print("\n".join(L)); print("-> docs/oil_shock_inverse.md")
 
 
+def _inverse_calls(s_, min_hist=10):
+    """Walk-forward conditional sign for one market's shock rows (sorted by date). Returns arrays: dates, conditional sign, realised f20."""
+    dates = list(s_.index); legs = s_[["dxy5", "dgs2_5bp", "oil5"]].to_numpy(float); lab = s_["regime"].to_numpy(int)
+    pos = s_["pos"].to_numpy(int); f20 = s_["f20"].to_numpy(float); out = []
+    for k in range(15, len(dates)):
+        earlier = np.array([j for j in range(k) if pos[j] + HOLD < pos[k] and np.isfinite(f20[j])])
+        if len(earlier) < min_hist: continue
+        mu, sd = np.nanmean(legs[earlier], 0), np.nanstd(legs[earlier], 0) + 1e-12
+        Zp, z = (legs[earlier] - mu) / sd, (legs[k] - mu) / sd
+        if not np.isfinite(z).all(): continue
+        w = _kernel(Zp, z, lab[earlier], lab[k], (pos[k] - pos[earlier]) / 252.0)
+        if w.sum() ** 2 / (w ** 2).sum() < ESS_FLOOR: continue
+        out.append((dates[k], float(np.sign(wmedian(f20[earlier], w))), float(np.sign(np.median(f20[earlier]))), f20[k]))
+    return out
+
+
+def cmd_heldout(a):
+    """USO inverse on the +5%-only shocks (not within 20 sessions of any +8% shock). Registered 16 Oct; one shot."""
+    from math import comb
+    df = pd.read_csv(ROWS) if ROWS.exists() else build_rows()
+    p8pos = set(df[df.pool == "p8"].pos.unique()); p5 = df[(df.pool == "p5") & (df.asset == "USO")].copy()
+    p5 = p5[[all(abs(int(p) - int(q)) > GAP for q in p8pos) for p in p5.pos]].sort_values("date").set_index("date")
+    calls = _inverse_calls(p5)
+    scored = [(d, c, b, r) for d, c, b, r in calls if np.isfinite(r) and r != 0]
+    n = len(scored); inv = np.array([np.sign(-c) == np.sign(r) for _, c, _, r in scored]); base = np.array([np.sign(b) == np.sign(r) for _, _, b, r in scored])
+    k = int(inv.sum()); pb = sum(comb(n, i) for i in range(k, n + 1)) / 2 ** n if n else np.nan
+    hr = inv.mean() if n else np.nan
+    v = "UNTESTED (n < 30)" if n < 30 else "PASS" if (hr >= .60 and pb < .05) else "INCONCLUSIVE" if hr >= .55 else "FAIL"
+    L = ["# USO inverse — held-out check on the +5%-only shocks", "",
+         f"*{datetime.now():%Y-%m-%d}. Shocks in the +5% pool that are not within {GAP} sessions of any +8% shock: {p5.shape[0]} USO rows, never used in A3b "
+         f"or the diagnostic. Same kernel and ESS floor; walk-forward from the 16th. Criterion (prereg 16 Oct): PASS if inverse hit ≥ 60%, one-sided "
+         "binomial p < 0.05, n ≥ 30.*", "",
+         f"| scored | inverse hit | pool-median hit | binomial p | verdict |", "|---|---|---|---|---|",
+         f"| {n} | {hr:.0%} | {base.mean() if n else float('nan'):.0%} | {pb:.3f} | **{v}** |", "",
+         "Reading: milder shocks (+5% to +8% in a week) are a different population from the +8% pool, so a pass here says the pattern is not specific "
+         "to the big shocks; a fail says it may be. Either way the forward test decides."]
+    Path("docs/oil_inverse_heldout.md").write_text("\n".join(L) + "\n"); print("\n".join(L)); print("-> docs/oil_inverse_heldout.md")
+
+
+FWD = Path("processed/oil_inverse_forward.csv")
+
+
+def cmd_forward(a):
+    """Nightly hook. If the last completed session is a new +8% shock (not within GAP sessions of a logged one), log USO's inverse call;
+    mature any open row whose 20th session has closed, with the USO−spot companion. Write-once per shock."""
+    rets, dgs2, dxy = load(); oil = rets["WTI_SPOT"].fillna(0.0); idx = rets.index
+    fwd = pd.read_csv(FWD, parse_dates=["shock_date"]) if FWD.exists() else pd.DataFrame(columns=["shock_date", "logged_at", "pos", "cond_sign", "inverse_call", "pool_median_sign", "f20_uso", "f20_spot", "hit", "matured_at"])
+    i = len(idx) - 1; r5 = float(oil.iloc[i - 4:i + 1].sum())
+    is_shock = r5 >= 0.08 and all(abs(i - int(p)) > GAP for p in fwd.pos) if len(fwd) else r5 >= 0.08
+    if is_shock:
+        df = pd.read_csv(ROWS) if ROWS.exists() else build_rows()
+        s_ = df[(df.pool == "p8") & (df.asset == "USO")].sort_values("date").set_index("date")
+        lab = regime_labels(idx); legs_now = np.array([float(dxy.iloc[i] / dxy.iloc[i - 5] - 1), float((dgs2.iloc[i] - dgs2.iloc[i - 5]) * 100), r5])
+        hist = s_[s_.pos + HOLD < i]; L_ = hist[["dxy5", "dgs2_5bp", "oil5"]].to_numpy(float)
+        mu, sd = np.nanmean(L_, 0), np.nanstd(L_, 0) + 1e-12
+        w = _kernel((L_ - mu) / sd, (legs_now - mu) / sd, hist.regime.to_numpy(int), int(lab.iloc[i]), (i - hist.pos.to_numpy()) / 252.0)
+        ess = w.sum() ** 2 / (w ** 2).sum(); cond = float(np.sign(wmedian(hist.f20.to_numpy(float), w))) if ess >= ESS_FLOOR else 0.0
+        row = dict(shock_date=idx[i], logged_at=datetime.now().strftime("%Y-%m-%d %H:%M"), pos=i, cond_sign=cond, inverse_call=-cond,
+                   pool_median_sign=float(np.sign(hist.f20.median())), f20_uso=np.nan, f20_spot=np.nan, hit=np.nan, matured_at="")
+        fwd = pd.concat([fwd, pd.DataFrame([row])], ignore_index=True)
+        print(f"oil forward: NEW +8% shock {idx[i].date()} (5s {r5:+.1%}); USO conditional sign {cond:+.0f}, inverse call {-cond:+.0f}, ESS {ess:.1f}")
+    for j, r in fwd.iterrows():
+        if pd.isna(r.f20_uso) and int(r.pos) + 20 <= i:
+            p0 = int(r.pos); fu = float(rets["USO"].iloc[p0 + 1:p0 + 21].sum()); fs = float(oil.iloc[p0 + 1:p0 + 21].sum())
+            fwd.loc[j, ["f20_uso", "f20_spot", "matured_at"]] = [fu, fs, idx[i].strftime("%Y-%m-%d")]
+            fwd.loc[j, "hit"] = float(np.sign(r.inverse_call) == np.sign(fu) and fu != 0 and r.inverse_call != 0)
+            print(f"oil forward: matured {pd.Timestamp(r.shock_date).date()}: USO f20 {fu:+.2%}, spot {fs:+.2%}, inverse hit {bool(fwd.loc[j, 'hit'])}")
+    FWD.parent.mkdir(exist_ok=True); fwd.to_csv(FWD, index=False)
+    done = fwd[fwd.hit.notna()]
+    print(f"oil forward: {len(fwd)} shock(s) logged since 16 Oct 2026, {len(done)} matured" + (f", inverse hit {done.hit.mean():.0%}" if len(done) else "") + " (verdict at n ≥ 20)")
+
+
 def cmd_selftest(a):
     idx = pd.bdate_range("2020-01-01", periods=400); r = pd.Series(0.0, index=idx)
     r.iloc[100:105] = 0.02; r.iloc[300:305] = 0.02; r.iloc[150:155] = 0.011     # two +10% shocks, one +5.5%
@@ -247,9 +319,9 @@ def cmd_selftest(a):
 
 def main():
     ap = argparse.ArgumentParser(); sub = ap.add_subparsers(dest="cmd", required=True)
-    for c in ("selftest", "table", "leverage", "inverse"): sub.add_parser(c)
+    for c in ("selftest", "table", "leverage", "inverse", "heldout", "forward"): sub.add_parser(c)
     e = sub.add_parser("estimate"); e.add_argument("--n-perm", type=int, default=2000)
-    a = ap.parse_args(); {"selftest": cmd_selftest, "table": cmd_table, "estimate": cmd_estimate, "leverage": cmd_leverage, "inverse": cmd_inverse}[a.cmd](a)
+    a = ap.parse_args(); {"selftest": cmd_selftest, "table": cmd_table, "estimate": cmd_estimate, "leverage": cmd_leverage, "inverse": cmd_inverse, "heldout": cmd_heldout, "forward": cmd_forward}[a.cmd](a)
 
 
 if __name__ == "__main__":

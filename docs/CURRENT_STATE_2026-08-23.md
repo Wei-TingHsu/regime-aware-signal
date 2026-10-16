@@ -2461,3 +2461,22 @@ after each shock. The inverse rule for all six is a forward-only hypothesis (pri
 Also registered: TRACK §3.24 — implied vs realised volatility after an oil shock (VIX/GVZ/OVX from FRED against the next 20 sessions'
 realised), the founder's premium question, criterion and prior fixed, under T2. A3d (the tail) code next.
 
+### 18.30 A3d — THE TAIL AFTER AN OIL SHOCK: WHAT THE WORST CASES HAD IN COMMON (16 Oct)
+
+`src/oil_tail.py` (self-tests 2/2) on the 116-shock pool. Tail = worst 10% of 60-session paths by interim loss, per market.
+**SPY:** 12 cases, median −19.7% (worst 2008-09-22, −47.5% at session 43), low around session 43, still −12% at 60. Their common
+feature: the S&P was already a median **23% below its 1-year high** when the shock came (2001–02, 2008–09, 2022) — the oil shock was
+the passenger, the bear market the driver. Prior held. **GLD:** 8 cases, median −14.7% (2008 liquidation −24%; the 2026 war months
+Mar–May); **TLT:** 9 cases, median −13.3%, mostly 2022 (the hiking year); **USO:** 7 cases, median −52.5% (2008 −94%: crash plus roll
+drag); **spot:** median −37% (log; −31% simple). **Classifier UNTESTED on every market:** most tail cases fall before the 30th shock,
+so the walk-forward window held 1–8 of them against the registered minimum of 10 — the honest reading is "not enough late tail cases
+to test", not FAIL. **Today's resemblance** to the tail conditions: low on five markets, moderate on TLT (12% vs 11% base — base rate).
+`processed/oil_tail.json` carries the severe-case line for the app's Context block (TRACK §3.23); the app will show simple
+percentages (log −1.095 = −67%).
+
+Also: the founder's question on the USO inverse (70% on 50) answered with a held-out check (the +5%-only shocks, never used) and a
+forward test with a nightly hook, both registered before running (prereg_blindspot 16 Oct). Selection after six markets is the
+reason it is a candidate; the forward log is the cure.
+
+**Held-out result, same day: FAIL** — 47% inverse hit on 34 never-seen shocks (pool-median 53%, p 0.70). The pattern did not survive new data; prior #48 wrong. The forward log runs regardless (`processed/oil_inverse_forward.csv`, nightly hook in daily_run.sh, 0 shocks since 16 Oct); verdict at n ≥ 20. Tally 48.
+
