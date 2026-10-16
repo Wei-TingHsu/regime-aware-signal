@@ -1,21 +1,21 @@
 # Report-level scoreboard — forward
 
-*Generated 2026-10-13 15:23:19 +0800. Registered in `docs/prereg_report_scoreboard.md`. Primary horizon h*=2; minimum 30 non-overlap rows before any figure is printed. Only the primary cell is tested; every other cell and every breakdown is reported, not tested.*
+*Generated 2026-10-15 15:14:57 +0800. Registered in `docs/prereg_report_scoreboard.md`. Primary horizon h*=2; minimum 30 non-overlap rows before any figure is printed. Only the primary cell is tested; every other cell and every breakdown is reported, not tested.*
 
 ## Coverage — before any metric
 
-- report dates scored: **2**
+- report dates scored: **4**
 - dates with ≥1 document: 0
 - dates with ≥1 net view (a call): 0
-- per (date, asset): no_document 10
+- per (date, asset): no_document 20
 
 | asset | call | no_document | abstain | divergence | zero_direction | tiers (1/2/3) |
 |---|---|---|---|---|---|---|
-| GLD | 0 | 2 | 0 | 0 | 0 | 0/0/0 |
-| SPY | 0 | 2 | 0 | 0 | 0 | 0/0/0 |
-| TLT | 0 | 2 | 0 | 0 | 0 | 0/0/0 |
-| USO | 0 | 2 | 0 | 0 | 0 | 0/0/0 |
-| UUP | 0 | 2 | 0 | 0 | 0 | 0/0/0 |
+| GLD | 0 | 4 | 0 | 0 | 0 | 0/0/0 |
+| SPY | 0 | 4 | 0 | 0 | 0 | 0/0/0 |
+| TLT | 0 | 4 | 0 | 0 | 0 | 0/0/0 |
+| USO | 0 | 4 | 0 | 0 | 0 | 0/0/0 |
+| UUP | 0 | 4 | 0 | 0 | 0 | 0/0/0 |
 
 ## Verdict (primary cell, h*=2, close-to-close, non-overlap)
 
@@ -31,7 +31,7 @@
 | h3_tradeable | 5 / 5 | too few to report | — | — | — | — | — | — |
 | h5_primary | 5 / 5 | too few to report | — | — | — | — | — | — |
 | h5_tradeable | 5 / 5 | too few to report | — | — | — | — | — | — |
-| h20_primary | 0 / 0 | too few to report | — | — | — | — | — | — |
+| h20_primary | 5 / 5 | too few to report | — | — | — | — | — | — |
 | h20_tradeable | 0 / 0 | too few to report | — | — | — | — | — | — |
 
 ## Breakdowns at h*=2 (close-to-close, non-overlap) — reported, not tested

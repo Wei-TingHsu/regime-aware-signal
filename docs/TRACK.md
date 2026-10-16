@@ -495,6 +495,14 @@ slow readers), why it persists (reading cost, attention), and the dated reason i
 below the value of a day's drift in 2024–26). It must also state where our own evidence contradicts it (direction absorbed
 in the gap; hit-rate below drift). Cost: a page. First thing a buyer asks.
 
+### 3.22 T13 A3 — after an oil shock: path, duration, leverage (registered 16 Oct, not built)
+
+The chain alarm fires too rarely to fit anything (n = 5). A3 uses its first leg alone — oil +8% in five sessions, ~40–60
+shocks since 1995 — and for each shock measures every market's path to 90 sessions, the worst interim loss, the best gain and
+when it came, and the Sortino. A3b applies the engine's own nearest-neighbour estimator (legs + regime) walk-forward; A3c turns
+the worst-case history into a leverage number, L = min(5, 20% ÷ 90th-percentile worst loss), capped by T1. Founder fixed the
+loss limit (20% of capital) and the ceiling (5×). Nothing shown as a forecast until A3b passes. prereg_blindspot §3b.
+
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a
