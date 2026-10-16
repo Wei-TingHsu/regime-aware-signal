@@ -515,6 +515,17 @@ gold fell in 4 of 5 cases: hypothesis, n 5"); the severe case (A3d) with today's
 paths are computed from its own history against the pool dates. The engine's call is unchanged; the block explains around it.
 Nothing untested gets a number. Build after A3d.
 
+### 3.24 Implied vs realised volatility after an oil shock — the premium question (registered 16 Oct, not built)
+
+Founder's question: if direction after a shock is unpredictable, is the *size* of the move mispriced? Test: for each p8 shock,
+the CBOE implied-volatility index at the shock close (VIX for the S&P, GVZ for gold, OVX for oil — all on FRED) against the
+realised volatility of the next 20 sessions, annualised. Measured: the median gap implied − realised and its inter-quartile range,
+against the same gap on all non-shock days. Criterion, fixed: PASS-sell if the post-shock gap is positive on ≥ 65% of shocks and
+its median exceeds the non-shock median by ≥ 2 vol points (selling options after a shock earns the gap); PASS-buy if the
+mirror holds; INCONCLUSIVE/FAIL otherwise; walk-forward not needed (no fitted parameter). Prior: implied runs above realised
+after shocks as it does on ordinary days (the usual variance premium), by a similar margin → INCONCLUSIVE. Sits under T2.
+Prereg file before code.
+
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a

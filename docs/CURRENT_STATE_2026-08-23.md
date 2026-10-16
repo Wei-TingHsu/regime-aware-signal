@@ -2449,3 +2449,15 @@ dominate; classifier FAILS; the line is history.
 Tally 47. Population for all of it: WTI spot 1995→2026, five ETFs from their launches; measured and tested on the past, no
 forward verdict.
 
+### 18.29 THE COIN-FLIP CHECK ON A3b, §3.24 REGISTERED (16 Oct)
+
+The founder asked whether A3b's below-50% hit rates mean "do the opposite" works. Diagnostic on the same calls (`oil_shock inverse`):
+the inverse hit, the fair-coin p, the six-market bar (0.05/6), and the half-sample split. Five of six are noise — inverse hit 49–58%,
+p ≥ 0.22, and the halves disagree (SPY 48%/68%, TLT 64%/35%). USO is the exception: inverse 70% on 50 shocks, p 0.007, halves 68%/72%.
+Recorded as a *candidate* (found after looking), with the mechanism stated before any test: roll drag in the ETF — spot oil shows no
+such pattern (55%), so whatever it is lives in USO, not in oil. Companion measure registered: USO's 20-session return minus spot's
+after each shock. The inverse rule for all six is a forward-only hypothesis (prior: noise). Nothing from this on the app.
+
+Also registered: TRACK §3.24 — implied vs realised volatility after an oil shock (VIX/GVZ/OVX from FRED against the next 20 sessions'
+realised), the founder's premium question, criterion and prior fixed, under T2. A3d (the tail) code next.
+

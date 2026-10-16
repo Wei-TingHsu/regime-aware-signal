@@ -189,6 +189,47 @@ def cmd_leverage(a):
     Path("docs/oil_shock_leverage.md").write_text("\n".join(L) + "\n"); print("\n".join(L)); print("-> docs/oil_shock_leverage.md")
 
 
+def cmd_inverse(a):
+    """Diagnostic for the founder's coin-flip question: would taking the OPPOSITE of A3b's conditional sign have beaten the pool
+    median on the same historical shocks? Reports the inverse hit, the two-sided binomial p against 0.5, the first-half /
+    second-half split (a real edge shows in both), and the Bonferroni bar for six markets. Not a verdict (prereg: forward-only)."""
+    from math import comb
+    def binom_two_sided(k, n):
+        p0 = sum(comb(n, i) for i in range(0, n + 1) if abs(i - n / 2) >= abs(k - n / 2)) / 2 ** n; return min(1.0, p0)
+    df = pd.read_csv(ROWS) if ROWS.exists() else build_rows(); p8 = df[df.pool == "p8"]
+    L = ["# A3b inverse — the coin-flip check", "",
+         f"*{datetime.now():%Y-%m-%d}. Same walk-forward as A3b; the inverse call is minus the conditional sign. Question: is 'below 50%' a real "
+         "bias worth trading backwards, or binomial noise? Diagnostic only — the registered form is forward-only (prereg_blindspot 16 Oct).*", "",
+         "| market | n | A3b hit | inverse hit | pool-median hit | binomial p (vs 50%) | Bonferroni ×6 | inverse hit 1st half | 2nd half | reading |",
+         "|---|---|---|---|---|---|---|---|---|---|"]
+    for asset in ASSETS:
+        s_ = p8[p8.asset == asset].sort_values("date").set_index("date"); dates = list(s_.index)
+        legs = s_[["dxy5", "dgs2_5bp", "oil5"]].to_numpy(float); lab = s_["regime"].to_numpy(int); pos = s_["pos"].to_numpy(int); f20 = s_["f20"].to_numpy(float)
+        hit, base = [], []
+        for k in range(15, len(dates)):
+            earlier = np.array([j for j in range(k) if pos[j] + HOLD < pos[k] and np.isfinite(f20[j])])
+            if len(earlier) < 10 or not np.isfinite(f20[k]) or f20[k] == 0: continue
+            mu, sd = np.nanmean(legs[earlier], 0), np.nanstd(legs[earlier], 0) + 1e-12
+            Zp, z = (legs[earlier] - mu) / sd, (legs[k] - mu) / sd
+            if not np.isfinite(z).all(): continue
+            w = _kernel(Zp, z, lab[earlier], lab[k], (pos[k] - pos[earlier]) / 252.0)
+            if w.sum() ** 2 / (w ** 2).sum() < ESS_FLOOR: continue
+            est = wmedian(f20[earlier], w)
+            hit.append(np.sign(est) == np.sign(f20[k])); base.append(np.sign(np.median(f20[earlier])) == np.sign(f20[k]))
+        hit, base = np.array(hit, bool), np.array(base, bool); n = len(hit)
+        if n == 0: L.append(f"| {asset} | 0 | — | — | — | — | — | — | — | untested |"); continue
+        inv = ~hit; k_inv = int(inv.sum()); pb = binom_two_sided(k_inv, n); half = n // 2
+        h1, h2 = inv[:half].mean(), inv[half:].mean()
+        reading = ("edge in both halves and p < 0.05/6" if (pb < 0.05 / 6 and h1 > .5 and h2 > .5) else
+                   "one half only — not stable" if (h1 > .55) != (h2 > .55) else "within noise")
+        L.append(f"| {asset} | {n} | {hit.mean():.0%} | {inv.mean():.0%} | {base.mean():.0%} | {pb:.3f} | {'yes' if pb < 0.05/6 else 'no'} | {h1:.0%} | {h2:.0%} | {reading} |")
+    L += ["", "How to read it: the inverse hit is 100% minus A3b's hit on the same calls. 'Binomial p' is the chance a fair coin lands this far from 50% "
+          "on this many trials; six markets were tested, so the bar for any one of them is 0.05 ÷ 6 ≈ 0.008. A real bias shows in both halves of the "
+          "sample. Anything else is the kind of gap that disappears on the next 60 shocks. Forward scoring of the registered inverse hypothesis "
+          "starts with the first shock after 16 Oct 2026."]
+    Path("docs/oil_shock_inverse.md").write_text("\n".join(L) + "\n"); print("\n".join(L)); print("-> docs/oil_shock_inverse.md")
+
+
 def cmd_selftest(a):
     idx = pd.bdate_range("2020-01-01", periods=400); r = pd.Series(0.0, index=idx)
     r.iloc[100:105] = 0.02; r.iloc[300:305] = 0.02; r.iloc[150:155] = 0.011     # two +10% shocks, one +5.5%
@@ -206,9 +247,9 @@ def cmd_selftest(a):
 
 def main():
     ap = argparse.ArgumentParser(); sub = ap.add_subparsers(dest="cmd", required=True)
-    for c in ("selftest", "table", "leverage"): sub.add_parser(c)
+    for c in ("selftest", "table", "leverage", "inverse"): sub.add_parser(c)
     e = sub.add_parser("estimate"); e.add_argument("--n-perm", type=int, default=2000)
-    a = ap.parse_args(); {"selftest": cmd_selftest, "table": cmd_table, "estimate": cmd_estimate, "leverage": cmd_leverage}[a.cmd](a)
+    a = ap.parse_args(); {"selftest": cmd_selftest, "table": cmd_table, "estimate": cmd_estimate, "leverage": cmd_leverage, "inverse": cmd_inverse}[a.cmd](a)
 
 
 if __name__ == "__main__":

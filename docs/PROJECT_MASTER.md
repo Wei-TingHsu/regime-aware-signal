@@ -460,6 +460,7 @@ commit and push the record.
 | 41 | 08:30 event-time extension: the 08:25→08:45 reaction's sign agrees with the surprise's sign (≥ 70% on payrolls/CPI); rest-of-session continuation NULL | registered 13 Oct, running from 14 Oct | dry run on 2 Oct payrolls correct; ES=F added for the S&P window; ~110 events/yr; verdict at 30 rows (~Jan 2027) | `prereg_event_time.md` 13 Oct, CURRENT_STATE §18.26 |
 | 42 | T13 A3: after an oil shock (+8%/5s), the nearest-neighbour path estimate beats the pool median on sign at 20 sessions (≥ 60%) and on time-to-extreme (±10 sessions, ≥ 50%); leverage L = min(5, 20%/q90 worst loss) | 16 Oct | **A3b FAIL** on all six (conditional sign 42–51% vs pool 46–57%); A3a measured: 116 shocks, gold +1.0% at 60 (priors #45 #46 wrong); A3c L_hist GLD 1.6×, SPY 1.45×, UUP 3.1×, oil 0.6×, reading (b); #47 | `docs/oil_shock_*.md`, CURRENT_STATE §18.28 |
 | 43 | T13 A3d: the worst 1-in-10 post-shock outcomes — how far, what preceded them, and whether a nearest-neighbour score finds ≥ 50% of them while flagging ≤ 25% of shocks | registered 16 Oct, not run | prior: 2008 and 2020 dominate; FAIL; the severe-case line is history | `prereg_blindspot.md` §3b A3d |
+| 44 | Inverse rule: the opposite of A3b's conditional sign beats the pool median (forward-only); USO candidate 70% with roll-drag mechanism and USO−spot companion | registered 16 Oct, forward from the next shock | diagnostic: 5 of 6 noise; USO p 0.007 both halves; prior: noise except possibly USO via drag | `docs/oil_shock_inverse.md`, CURRENT_STATE §18.29 |
 
 ---
 
