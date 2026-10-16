@@ -2419,3 +2419,33 @@ episodes. Tree-level verdict unchanged: vol targeting NO (1 of 5), regime tilt N
 Oil amendment (8 Oct, TRACK §3.13) is complete: column built, referee CONSISTENT, chain re-defined to spot, T1 re-run. What
 is not measured: anything about USO as a *display* instrument (the app shows CL=F), and no forward verdict.
 
+### 18.28 AFTER AN OIL SHOCK — THE PATH TABLE, A FAILED CONDITIONAL ESTIMATE, A LEVERAGE NUMBER, AND THE TAIL (16 Oct)
+
+Registered first (prereg_blindspot §3b), then `src/oil_shock.py` (self-tests 5/5 after two corrections: the day-4 firing
+arithmetic in the test, and ETF rows zero-filled before their launch — a defect that made four markets' medians read +0.0%).
+
+**A3a (measured).** 116 oil shocks since 1995 at +8% in five sessions (prior 40–60 wrong, #45: an 8% week is a 1.6-sigma event
+for oil, about four a year). Gold after a shock: +0.3% / +0.8% / +1.0% / +2.4% at 5 / 20 / 60 / 90 sessions (n 74), typical worst
+dip 3.7% (upper quartile 7.5%), typical best +5.9% around session 30. Prior "negative but diluted" wrong, #46: gold is
+flat-to-up after a plain oil shock. SPY +3.3% at 60 with a 3.6% typical dip (Sortino 1.3); oil itself +4.5% at 60 with
+±11% swings; TLT and UUP flat. The five chain firings all fall inside the pool; after four of the five, gold fell 4–13% at 60
+sessions — a hypothesis about the three legs, not a finding (n 5 against 116; see A3b).
+
+**A3b (tested, FAIL).** Walk-forward nearest-neighbour on the legs (dollar 5s, DGS2 5s, oil 5s) and regime, ESS ≥ 8, per
+market's own shocks from the 16th: conditional sign at 20 sessions right on 42% (SPY), 51% (TLT), 44% (GLD), 51% (UUP), 30%
+(USO), 45% (spot) — every one below the plain pool-median share (46–57%) and below the permutation q95; timing within ±10
+sessions 3–22% except UUP 66%. The legs do not predict direction after a shock. Prior (i) wrong, #47; (ii) held. Consequence
+under §3b: no forecast line from this channel; tables may be shown as history.
+
+**A3c (a number, not a verdict).** q90 of the worst 60-session interim loss: GLD 12.5% → L_hist 1.6×; SPY 13.8% → 1.45×; TLT
+9.4% → 2.1× (short); UUP 6.5% → 3.1×; USO/spot ~32% → 0.6×. Reading of "capped by T1" fixed by the founder as (b) multiplier:
+L = L_hist × T1 exposure (today GLD 0.46 → 0.74×). The worst *past* case at that leverage is beyond q90 by construction:
+SPY 69% (the 2008 shock followed by the crash). That column is why A3d exists.
+
+**A3d (registered, not run).** The founder's requirement: measure the worst 1-in-10 outcomes after a shock, what preceded
+them, whether anything predicted them, and show the severe case on the app whatever the verdict. Prior: 2008 and 2020
+dominate; classifier FAILS; the line is history.
+
+Tally 47. Population for all of it: WTI spot 1995→2026, five ETFs from their launches; measured and tested on the past, no
+forward verdict.
+

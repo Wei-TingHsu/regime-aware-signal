@@ -458,7 +458,8 @@ commit and push the record.
 | 39 | A4 reader consistency: the prints reader reports the first print exactly, names only text-named causes, keeps world knowledge out of the calendar check | 11 Oct | **PASS** — 20/20 headline values; factors all in text; World Cup months contradicted ×3, never supported; three runner defects recorded; #44 (July expectation) | `docs/a4_reader_consistency.md`, CURRENT_STATE §18.24 |
 | 40 | Oil column: does USO as the oil instrument change the referee, the chain alarm, or gold's path after it? | 12 Oct | Referee **CONSISTENT** on spot and CL=F (C1–C4; all flips oil rows); chain fires 4× on spot vs 2× on USO (2009 pair hidden by contango), gold lower after all four, A2 INCONCLUSIVE n 4; **decision: chain reads WTI_SPOT** (amendment, contamination stated); USO drag −8.7%/yr; **closed 13 Oct**: chain on spot live (5 firings on the full panel, A2 INCONCLUSIVE), T1 oil cell on spot PASS +0.30 vs +0.25 on USO — same verdicts | `docs/wti_cont.md`, CURRENT_STATE §18.25, §18.27 |
 | 41 | 08:30 event-time extension: the 08:25→08:45 reaction's sign agrees with the surprise's sign (≥ 70% on payrolls/CPI); rest-of-session continuation NULL | registered 13 Oct, running from 14 Oct | dry run on 2 Oct payrolls correct; ES=F added for the S&P window; ~110 events/yr; verdict at 30 rows (~Jan 2027) | `prereg_event_time.md` 13 Oct, CURRENT_STATE §18.26 |
-| 42 | T13 A3: after an oil shock (+8%/5s), the nearest-neighbour path estimate beats the pool median on sign at 20 sessions (≥ 60%) and on time-to-extreme (±10 sessions, ≥ 50%); leverage L = min(5, 20%/q90 worst loss) | registered 16 Oct, not run | prior: A3a gold path negative but diluted by rebounds, q90 8–10% → L ≈ 2–2.5×; A3b (i) PASS-weak, (ii) FAIL | `prereg_blindspot.md` §3b, TRACK §3.22 |
+| 42 | T13 A3: after an oil shock (+8%/5s), the nearest-neighbour path estimate beats the pool median on sign at 20 sessions (≥ 60%) and on time-to-extreme (±10 sessions, ≥ 50%); leverage L = min(5, 20%/q90 worst loss) | 16 Oct | **A3b FAIL** on all six (conditional sign 42–51% vs pool 46–57%); A3a measured: 116 shocks, gold +1.0% at 60 (priors #45 #46 wrong); A3c L_hist GLD 1.6×, SPY 1.45×, UUP 3.1×, oil 0.6×, reading (b); #47 | `docs/oil_shock_*.md`, CURRENT_STATE §18.28 |
+| 43 | T13 A3d: the worst 1-in-10 post-shock outcomes — how far, what preceded them, and whether a nearest-neighbour score finds ≥ 50% of them while flagging ≤ 25% of shocks | registered 16 Oct, not run | prior: 2008 and 2020 dominate; FAIL; the severe-case line is history | `prereg_blindspot.md` §3b A3d |
 
 ---
 
@@ -566,7 +567,7 @@ does reader–history *agreement* mark already-priced information (three reading
 n = 2,024) · does the compliance function veto an unlicensed vendor (the plan's highest-risk
 assumption; falsifiable in ten conversations) · does the reader's logic match the founder's (the
 prompts in `src/doc_read.py` `PROFILES` were written under deadline and never reviewed line by
-line) · wrong priors #29–#39 accepted 9 Oct, tally 44 (#40–#43 the lever priors, #44 the July 2026 calendar expectation, all Claude's) (CURRENT_STATE §18.15 carries each with its rule and trading reading).
+line) · wrong priors #29–#39 accepted 9 Oct, tally 47 (#40–#43 lever priors, #44 July calendar expectation, #45–#47 oil-shock pool size, gold's sign, and the legs' predictive value, all Claude's) (CURRENT_STATE §18.15 carries each with its rule and trading reading).
 
 ---
 

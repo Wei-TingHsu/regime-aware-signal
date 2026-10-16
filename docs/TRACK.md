@@ -503,6 +503,18 @@ when it came, and the Sortino. A3b applies the engine's own nearest-neighbour es
 the worst-case history into a leverage number, L = min(5, 20% ÷ 90th-percentile worst loss), capped by T1. Founder fixed the
 loss limit (20% of capital) and the ceiling (5×). Nothing shown as a forecast until A3b passes. prereg_blindspot §3b.
 
+**Run 16 Oct:** A3a measured (116 shocks; gold flat-to-up after a plain shock, down after 4 of 5 chain cases — hypothesis only); **A3b FAIL on all six** — the legs do not predict direction; A3c leverage numbers informational (GLD 1.6×, SPY 1.45×), reading (b). **A3d registered** (the tail; founder's ask): severe-case line for the app, classifier expected to FAIL. Next: A3d code, then the app Context block (§3.23).
+
+### 3.23 App Context block — every card explains the environment, in words with status (16 Oct, founder's instruction)
+
+Each market card and any searched ticker gets a Context block: the regime and its description; the oil 5-session move and the
+chain alarm's state; today's prints; what history says in this environment ("after 116 oil shocks since 1995, gold's typical
+path was +0.8% after a month …; when the shock came with the dollar rising and short rates following — the three-leg pattern —
+gold fell in 4 of 5 cases: hypothesis, n 5"); the severe case (A3d) with today's resemblance; the status of every sentence
+(measured / tested / hypothesis / registered-not-run); terms explained where first used. For a searched ticker, the oil-shock
+paths are computed from its own history against the pool dates. The engine's call is unchanged; the block explains around it.
+Nothing untested gets a number. Build after A3d.
+
 ## 4. Potential upgrades — not registered, not costed
 
 Improvements with no pre-registration behind them. Worth doing when there is a

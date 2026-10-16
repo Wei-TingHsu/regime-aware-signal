@@ -91,6 +91,19 @@ further capped by the T1 vol-target exposure for that market on that day. Report
 What the rule does not claim: the next drawdown can exceed any past one; L is "what this history supports", never a
 guarantee. Costs: the T1 cost table applied at the entry and exit.
 
+
+**A3d — the tail after an oil shock (registered 2026-10-16, before code; founder's ask).** For each market, the worst 10%
+of the pool's post-shock paths by worst interim loss (the cases beyond A3c's q90 — 2008 among them). *Measured:* how far
+they fell and by which session; the shock's legs, regime, oil level vs its trailing-year median, and the S&P's own
+drawdown from its 1-year high at the shock. *Tested, walk-forward from the 30th shock:* a nearest-neighbour score on those
+features against the earlier shocks' tail labels; **PASS** if, at the threshold that flags ≤ 25% of shocks, it finds ≥ 50%
+of the tail cases (base rate 10%); FAIL otherwise; UNTESTED below 10 tail cases. *Shown on the app regardless of verdict* as
+a "severe case" line: the worst 1-in-10 past outcome and its timing, the conditions that preceded those cases, and today's
+resemblance to them (low / moderate / high by the same score) labelled *measured, not a forecast*; the word "forecast" only
+after a PASS. *Prior:* the tail is dominated by 2008 and 2020 — equity crashes with oil as passenger, not driver — so the
+classifier FAILS on 116 cases; the resemblance line is history. *Why:* the founder's point that a 2008-type sequence is a
+live possibility within five years and investors should see the size of the fall, not only the median path.
+
 **What the app may show.** Nothing from A3b or A3c until A3b PASSES and today's ESS ≥ 8; then one line under the gold
 card's alarm: "after past oil shocks like this one: median −x% by session N (IQR), worst past interim loss y%, history
 supports ≤ L× (n, ESS)". The A3a table may be shown as history at any time.
@@ -127,3 +140,4 @@ quiet days the line is absent. The displayed confidence carries the haircut, sho
 | 2026-10-12 | **Chain-rule input: USO → WTI_SPOT (FRED DCOILWTICO).** The rule W2-seq is about an oil-price shock; USO is a proxy whose roll drag (−8.7%/yr vs spot over 2006–2026; 2020: USO −68% vs spot −21%) kept its 5-session return under +8% in early 2009, hiding two firings. On spot the rule fires 4× (26 Jan 2009, 24 Feb 2009, 7 Mar 2022, 5 Mar 2026); gold was lower 60 sessions after every firing (−1.8%, −2.6%, −7.6%, −11.8%; mean −6.0%, p 0.009, n 4 → still INCONCLUSIVE by the n ≥ 10 bar). USO's two-firing record stays on file beside it. **Contamination stated:** the mechanism argument (read the commodity, not the ETF) is clean; the decision was taken after seeing that gold also fell after the 2009 firings, so the timing is not. A2's prior stays INCONCLUSIVE; forward firings are the test. **Live rule:** FRED publishes spot with a lag of up to a week, so the nightly alarm evaluates on WTI_SPOT where published and on CL=F (Yahoo, same day; daily correlation 0.93) for the unpublished tail; an alert raised on the CL=F tail is marked *provisional* and confirmed or withdrawn when spot lands. Implementation in blindspot.py is the next step. | Founder's decision 12 Oct (option 2 of two offered), instrument correction |
 | 2026-10-13 | **A2 on WTI_SPOT, full panel (1995→), implemented.** 5 firings (26 Jan 2009, 24 Feb 2009, 6 Feb 2015, 7 Mar 2022, 5 Mar 2026); gold −5.7% at 60 sessions, p 0.0066; INCONCLUSIVE (n < 10), prior held. Live rule in `blindspot.py`: spot where published, CL=F tail, alerts on the tail marked provisional; spot lag observed one session. USO's record printed beside. | Result, rule as amended 12 Oct |
 | 2026-10-16 | **§3b A3 added before code:** oil-shock pool (+8% primary, +5% table only), path table with worst interim loss / best gain / time-to-extreme / Sortino, nearest-neighbour conditional estimate with walk-forward criterion, leverage rule L = min(5, 0.20 / q90) capped by T1. Founder set the loss limit (20%, raised from a 10% draft before code) and the ceiling (5×). | Founder's question 16 Oct: how far, how long, how much to hold |
+| 2026-10-16 | **A3 run.** A3a: p8 pool 116 shocks (prior 40–60 wrong, #45); gold after a shock +0.8%/+1.0%/+2.4% at 20/60/90 (prior 'negative' wrong, #46); the five chain cases gold −4% to −13% at 60 in 4 of 5. A3b: **FAIL all six markets** — conditional sign hit 42–51% vs pool median 46–57%, timing 3–22% (UUP 66%); prior (i) PASS-weak wrong, #47; (ii) held. A3c: q90 worst loss GLD 12.5% → L_hist 1.6×, SPY 13.8% → 1.45×, UUP 6.5% → 3.1×, oil 32% → 0.6×; founder's reading of 'capped by T1' = **(b) multiplier** (L_hist × T1 exposure). Consequence: no weighted forecast from the oil channel on the app; A3a tables shown as history. **A3d registered** (tail). | Results scored against §3b as written; A3d added at the founder's request after seeing A3c's worst-case column |
