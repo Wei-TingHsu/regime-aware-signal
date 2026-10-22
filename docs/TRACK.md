@@ -588,6 +588,15 @@ earnings-pool amendment (23 issuers), and the rule that keeps a sweep honest: th
 on shuffled data (reality-check / SPA), the whole curve is published, and a survivor is promoted to its own forward test — recorded verdicts
 never change. Runner `src/spec_grid.py` to build; first family 2.9 (the sample-size rule behind Stage 1's result).
 
+### 3.31 Factor attribution of price episodes — the founder's weight-per-reason method (registered 23 Oct before code; built)
+
+Name the reasons (war, rate-hike speculation, real yields, dollar, oil, volatility, the macro PCA line), measure each one's share of a move
+with a declared prime-factor ordering (Gram–Schmidt: the prime factor keeps what it co-moves with, the next keeps what is left; both orderings
+and the joint fit always shown), state it in dollars at the start price, and when a reason reverses expect that many dollars back — gated by
+two tests: T-A out-of-sample explanatory power (GLD median R² ≥ 0.20) and T-B sign stability per factor (≥ 70% of windows), then T-C the
+reversal test on past geopolitical spikes. Priors #58–#60. War proxy = Caldara–Iacoviello daily GPR (free). `docs/prereg_factor_attribution.md`,
+`src/factor_attribution.py`. Supersedes Stage 2/3 of 3.29 (reasons become measured proxies; the reader names which event drives a proxy).
+
 ## 4. Potential upgrades — not registered, not costed
 - **Reason-weighted path range (founder, 22 Oct) — registered as 3.29 the same day.** Segment past rises and falls per market (episodes ≥ 10% peak-to-trough); have the reader
   label the reasons present in each episode's documents; fit a walk-forward model from reason indicators + macro legs to the forward 60-session
