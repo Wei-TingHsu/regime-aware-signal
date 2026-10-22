@@ -597,6 +597,24 @@ two tests: T-A out-of-sample explanatory power (GLD median R² ≥ 0.20) and T-B
 reversal test on past geopolitical spikes. Priors #58–#60. War proxy = Caldara–Iacoviello daily GPR (free). `docs/prereg_factor_attribution.md`,
 `src/factor_attribution.py`. Supersedes Stage 2/3 of 3.29 (reasons become measured proxies; the reader names which event drives a proxy).
 
+### 3.32 Dynamic issuer pool — issuers chosen by what drives the economy (registered 23 Oct; built)
+
+Founder's rule: adjust the earnings issuers round by round to the largest contributors to the economy (the top few covering 60–70%). Measured
+form: BEA table 1.1.2 contributions to real GDP growth → fixed line-to-sector map → sectors ranked until ≥ 70% of the positive contributions
+are covered → the four largest issuers by market value per sector (S&P 500 list, Yahoo market values), plus the ten largest index weights,
+plus the nine original issuers; cap 35; rebuilt quarterly after the advance GDP release; every build logged in `docs/issuer_pool.md`, a changed
+pool is a dated corpus amendment. Premise corrected at registration: the ~70% in the GDP release is consumption's share of the level, not AI;
+AI investment is a large share of growth, which is what the rule ranks. Registered cell to test the idea rather than assume it: "releases of the
+pool's issuers move SPY at 2 sessions" (prereg_report_scoreboard, corpus tag). `src/issuer_pool.py`; nightly fetch reads the pool file.
+
+### 3.33 Why it moved — daily reasons, episode and target on the app (registered 23 Oct; built, app wiring next)
+
+Founder's picture: an investor opens the site, sees why today's move happened, what the current trend has typically run to, and the day's
+wind direction, and decides for themselves. Nightly per asset incl. silver: adaptive turning points (reversal > max(8%, 1.5 × monthly vol)),
+current episode and last-session attribution with the unexplained share, base-rate target from past episode sizes (labelled), T-D registered
+for the conditional target (prior #62). `src/why_moved.py`, prereg_factor_attribution §4; hooked in daily_run.
+**23 Oct results:** T-A sweep favours 20-session blocks (0.22 at a 3-year window; null pending); T-E fixed-impulse FAIL (#63); **T-F causal window rule PASS** — 53% explained at ~7 sessions vs 31% full leg, 83% of episodes (#64 wrong, tally 55); T-F′ shifted-factor null registered (#65). App paragraph "Why it moved" wired into the Context block the same night.
+
 ## 4. Potential upgrades — not registered, not costed
 - **Reason-weighted path range (founder, 22 Oct) — registered as 3.29 the same day.** Segment past rises and falls per market (episodes ≥ 10% peak-to-trough); have the reader
   label the reasons present in each episode's documents; fit a walk-forward model from reason indicators + macro legs to the forward 60-session

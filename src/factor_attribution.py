@@ -17,10 +17,10 @@ PROC, DOCS = Path("processed"), Path("docs")
 GPR_URL = "https://www.matteoiacoviello.com/gpr_files/data_gpr_daily_recent.xls"
 GPR = PROC / "gpr_daily.parquet"
 WINDOW, STEP, BLOCK = 504, 63, 20
-ORDER_DEFAULT = ["war", "hikes", "real", "dollar", "oil", "vix", "macro1", "macro2"]
+ORDER_DEFAULT = ["war", "hikes", "real", "dollar", "oil", "vix", "btc", "macro1", "macro2"]
 LABEL = {"war": "geopolitical risk (GPR index)", "hikes": "rate-hike speculation (2-yr yield minus fed funds)", "real": "real 10-yr yield",
          "dollar": "US dollar (broad index)", "oil": "oil (WTI spot)", "vix": "equity volatility (VIX)", "macro1": "macro state, PCA line 1",
-         "macro2": "macro state, PCA line 2"}
+         "macro2": "macro state, PCA line 2", "btc": "speculative liquidity (Bitcoin)"}
 
 
 # ---------------------------------------------------------------- data
@@ -51,6 +51,14 @@ def factors(idx: pd.DatetimeIndex) -> pd.DataFrame:
     if w.exists():
         ws = pd.read_parquet(w)["WTI_SPOT"]; ws.index = pd.to_datetime(ws.index); F["oil"] = ws.reindex(idx)
     if "VIXCLS" in m: F["vix"] = np.log(m["VIXCLS"]).diff()
+    bp = PROC / "btc_daily.parquet"
+    if not bp.exists():
+        try:
+            import yfinance as yf
+            b = yf.Ticker("BTC-USD").history(period="max", interval="1d")["Close"]; b.index = pd.to_datetime(b.index).tz_localize(None).normalize(); b.to_frame("BTC").to_parquet(bp)
+        except Exception as e: print(f"  BTC fetch failed: {type(e).__name__}: {str(e)[:80]}")
+    if bp.exists():
+        b = pd.read_parquet(bp)["BTC"]; b.index = pd.to_datetime(b.index); F["btc"] = np.log(b.reindex(idx).ffill()).diff()
     pc = PROC / "macro_pca_scores.parquet"
     if pc.exists():
         s = pd.read_parquet(pc); s.index = pd.to_datetime(s.index); s = s.select_dtypes("number").reindex(idx).ffill()
@@ -59,8 +67,21 @@ def factors(idx: pd.DatetimeIndex) -> pd.DataFrame:
     return F
 
 
+EXTRA = {"SLV": "SLV", "SILVER": "SI=F", "GOLD": "GC=F", "COPPER": "HG=F", "BRENT": "BZ=F"}
+
+
 def returns(asset: str) -> pd.Series:
-    r = pd.read_parquet(PROC / "asset_returns.parquet"); r.index = pd.to_datetime(r.index); return r[asset]
+    """Daily log returns: the panel's assets, or an extra instrument (silver etc.) fetched once from Yahoo into processed/extra_returns.parquet."""
+    r = pd.read_parquet(PROC / "asset_returns.parquet"); r.index = pd.to_datetime(r.index)
+    if asset in r.columns: return r[asset]
+    cache = PROC / "extra_returns.parquet"; ex = pd.read_parquet(cache) if cache.exists() else pd.DataFrame()
+    if cache.exists(): ex.index = pd.to_datetime(ex.index)
+    if asset not in ex.columns or (len(ex) and (r.index[-1] - ex[asset].dropna().index[-1]).days > 3):
+        import yfinance as yf
+        h = yf.Ticker(EXTRA.get(asset, asset)).history(period="max", interval="1d", auto_adjust=True)["Close"]
+        h.index = pd.to_datetime(h.index).tz_localize(None).normalize(); lr = np.log(h).diff().rename(asset)
+        ex = ex.drop(columns=[asset], errors="ignore").join(lr, how="outer") if len(ex) else lr.to_frame(); ex.to_parquet(cache)
+    return ex[asset].reindex(r.index)
 
 
 # ---------------------------------------------------------------- the decomposition
@@ -90,7 +111,10 @@ def joint_fit(r, X):
 def episode(asset, start, end, price_start, prime="war", second="hikes"):
     r = returns(asset); F = factors(r.index); avail = [f for f in ORDER_DEFAULT if f in F.columns and F[f].notna().mean() > 0.5]
     missing = [f for f in ORDER_DEFAULT if f not in avail]
-    s0, s1 = pd.Timestamp(start), pd.Timestamp(end)
+    s1 = pd.Timestamp(end)
+    if str(start) == "peak":                      # the episode's own peak: highest cumulative level in the 300 sessions before the end
+        cum = r.loc[:s1].cumsum().iloc[-300:]; s0 = cum.idxmax(); start = s0.strftime("%Y-%m-%d"); print(f"  peak found: {start}")
+    else: s0 = pd.Timestamp(start)
     win = F.loc[:s0].iloc[-WINDOW - 1:-1][avail].join(r.rename("r")).dropna()
     ep = F.loc[s0:s1][avail].join(r.rename("r")).dropna()
     if len(win) < 250 or len(ep) < 5: sys.exit(f"  not enough data: window {len(win)}, episode {len(ep)}")
@@ -99,7 +123,7 @@ def episode(asset, start, end, price_start, prime="war", second="hikes"):
           f"*{datetime.now():%Y-%m-%d %H:%M}. Actual move {np.expm1(actual):+.1%} ({P0:,.0f} → {P0 * np.exp(actual):,.0f} at the quoted start price); {len(ep)} sessions. "
           f"Sensitivities from the {len(win)} sessions before the episode (walk-forward). Dollars = start price × each factor's share of the log move. "
           f"Two orderings + the joint fit; the spread between them is the attribution's uncertainty. prereg_factor_attribution §1.*", ""]
-    if missing: L.append(f"Proxies unavailable on disk: {', '.join(missing)} (run fetch-gpr for the war factor).\n")
+    if missing: L.append(f"Proxies unavailable on disk: {', '.join(missing)}.\n")
     sums = ep[avail].sum().to_numpy(); res = {"asset": asset, "start": start, "end": end, "price_start": P0, "actual_log": actual, "orderings": {}}
 
     def one(order, title):
@@ -137,30 +161,80 @@ def episode(asset, start, end, price_start, prime="war", second="hikes"):
     out = DOCS / f"factor_attribution_{asset}_{start}_{end}.md"; out.write_text("\n".join(L) + "\n"); print("\n".join(L)); print(f"-> {out}")
 
 
-def tests(asset):
+BLOCKS_GRID = (1, 2, 3, 5, 7, 10, 15, 20, 30, 45, 60)
+WINDOWS_GRID = (252, 504, 756)
+
+
+def _ta(X, y, window, block):
+    """Median out-of-sample R² of the joint fit: betas from the prior `window` sessions, scored on each next `block` sessions."""
+    r2s = []; i = window
+    while i + block <= len(y):
+        Xw, yw = X[i - window:i], y[i - window:i]; bj = joint_fit(yw, Xw)
+        Xb, yb = X[i:i + block], y[i:i + block]; pred = (Xb - Xw.mean(0)) @ bj + yw.mean()
+        ss = ((yb - yb.mean()) ** 2).sum() if block > 1 else np.nan
+        r2s.append(1 - ((yb - pred) ** 2).sum() / ss if (block > 1 and ss > 0) else np.nan); i += block
+    r2s = np.array(r2s); return float(np.nanmedian(r2s)) if np.isfinite(r2s).any() else np.nan, int(np.isfinite(r2s).sum())
+
+
+def tests(asset, sweep=False, n_null=0, seed=0):
+    """T-A (registered cell: window 504, block 20) and T-B. With --sweep: every (window, block) cell of the grid, the curve, and the best cell
+    judged against the best cell of the same sweep on shifted returns (max-statistic null) when n_null > 0. SPEC_GRID rule 2."""
     r = returns(asset); F = factors(r.index); avail = [f for f in ORDER_DEFAULT if f in F.columns and F[f].notna().mean() > 0.5]
-    D = F[avail].join(r.rename("r")).dropna(); D = D[D.index >= "2006-01-01"]; X, y = D[avail].to_numpy(), D.r.to_numpy(); idx = D.index
-    r2s, signs = [], {c: [] for c in avail}; i = WINDOW
+    D = F[avail].join(r.rename("r")).dropna(); D = D[D.index >= "2006-01-01"]; X, y = D[avail].to_numpy(), D.r.to_numpy()
+    med, nb = _ta(X, y, WINDOW, BLOCK); bar = 0.20 if asset == "GLD" else 0.10
+    TA = dict(median_r2=med, blocks=nb, verdict="PASS" if med >= bar else "FAIL", window=WINDOW, block=BLOCK)
+    signs = {c: [] for c in avail}; i = WINDOW
     while i + BLOCK <= len(D):
-        Xw, yw = X[i - WINDOW:i], y[i - WINDOW:i]; bj = joint_fit(yw, Xw)
+        bj = joint_fit(y[i - WINDOW:i], X[i - WINDOW:i])
         for c, b in zip(avail, bj): signs[c].append(np.sign(b))
-        Xb, yb = X[i:i + BLOCK], y[i:i + BLOCK]; pred = (Xb - Xw.mean(0)) @ bj + yw.mean()
-        ss = ((yb - yb.mean()) ** 2).sum(); r2s.append(1 - ((yb - pred) ** 2).sum() / ss if ss > 0 else np.nan)
-        i += BLOCK
-    r2s = np.array(r2s); med = float(np.nanmedian(r2s)); bar = 0.20 if asset == "GLD" else 0.10
-    TA = dict(median_r2=med, blocks=int(np.isfinite(r2s).sum()), verdict="PASS" if med >= bar else "FAIL")
+        i += STEP
     TB = {}
     for c in avail:
-        s = np.array(signs[c]); s = s[s != 0]; share = float(max((s > 0).mean(), (s < 0).mean())) if len(s) else np.nan
-        TB[c] = dict(share=share, stable=bool(share >= 0.7), windows=int(len(s)))
-    J = json.loads((PROC / "factor_attribution.json").read_text()) if (PROC / "factor_attribution.json").exists() else {}
-    J.setdefault("tests", {})[asset] = {"TA": TA, "TB": TB, "run": datetime.now().strftime("%Y-%m-%d %H:%M")}; (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1))
-    L = [f"# Factor attribution — tests for {asset}", "", f"*{J['tests'][asset]['run']}. T-A: betas from the prior {WINDOW} sessions, R² on each next {BLOCK}-session block from 2006 "
-         f"(walk-forward, joint fit). Bar {bar:.2f}. T-B: sign of each factor's beta across rolling windows (step {STEP}); stable if the same sign in ≥ 70%.*", "",
-         f"**T-A:** median out-of-sample R² **{med:.3f}** over {TA['blocks']} blocks → **{TA['verdict']}**", "", "| factor | windows | share with the majority sign | T-B |", "|---|---|---|---|"]
+        sg = np.array(signs[c]); sg = sg[sg != 0]; share = float(max((sg > 0).mean(), (sg < 0).mean())) if len(sg) else np.nan
+        TB[c] = dict(share=share, stable=bool(share >= 0.7), windows=int(len(sg)))
+    rec = {"TA": TA, "TB": TB, "run": datetime.now().strftime("%Y-%m-%d %H:%M")}
+    L = [f"# Factor attribution — tests for {asset}", "", f"*{rec['run']}. T-A registered cell: window {WINDOW}, block {BLOCK}, bar {bar:.2f}. T-B: sign of each beta across rolling windows (step {STEP}); stable if ≥ 70%.*", "",
+         f"**T-A (registered cell):** median out-of-sample R² **{med:.3f}** over {nb} blocks → **{TA['verdict']}**", "", "| factor | windows | share with the majority sign | T-B |", "|---|---|---|---|"]
     for c, v in TB.items(): L.append(f"| {LABEL[c]} | {v['windows']} | {v['share']:.0%} | {'stable' if v['stable'] else 'UNSTABLE — not quotable'} |")
-    out = DOCS / "factor_attribution_tests.md"
-    prev = out.read_text() if out.exists() else ""; out.write_text((prev.rstrip("\n") + "\n\n" if prev else "") + "\n".join(L) + "\n"); print("\n".join(L)); print(f"-> {out}")
+    if sweep:
+        cells = []
+        for w in WINDOWS_GRID:
+            for b in BLOCKS_GRID:
+                m_, n_ = _ta(X, y, w, b); cells.append(dict(window=w, block=b, median_r2=m_, blocks=n_))
+        cdf = pd.DataFrame(cells).dropna(subset=["median_r2"]); best = cdf.loc[cdf.median_r2.idxmax()]
+        L += ["", f"## T-A sweep — {len(cdf)} cells (window × block), SPEC_GRID family 2.10", "", "| window | " + " | ".join(f"b{b}" for b in BLOCKS_GRID) + " |", "|---|" + "---|" * len(BLOCKS_GRID)]
+        for w in WINDOWS_GRID:
+            row = cdf[cdf.window == w].set_index("block").median_r2
+            L.append(f"| {w} | " + " | ".join(f"{row.get(b, float('nan')):.3f}" for b in BLOCKS_GRID) + " |")
+        line = f"Best cell: window {int(best.window)}, block {int(best.block)}, median R² {best.median_r2:.3f}"
+        if n_null > 0:
+            rng = np.random.default_rng(seed); mx = []
+            for _ in range(n_null):
+                ys = np.roll(y, int(rng.integers(120, len(y) - 120)))
+                vals = [v for v in (_ta(X, ys, w, b)[0] for w in WINDOWS_GRID for b in BLOCKS_GRID) if np.isfinite(v)]
+                if vals: mx.append(max(vals))
+            mx = np.array(mx); p = float((mx >= best.median_r2).mean()) if len(mx) else np.nan
+            line += f"; best-of-sweep null ({len(mx)} shifted draws): median best {np.median(mx):.3f}, p = {p:.3f} → " + ("survives the sweep" if p < 0.05 else "does not beat the best noise cell")
+            rec["TA_sweep_null"] = dict(n=int(len(mx)), null_best_median=float(np.median(mx)), p=p)
+        rec["TA_sweep"] = dict(best=dict(window=int(best.window), block=int(best.block), median_r2=float(best.median_r2)), cells=cells)
+        L += ["", line, "", "Reading: a block of 1 has no R² (one point); short blocks are noisier per block but closer to the founder's 'purest window' idea. "
+              "The registered verdict is the 504/20 cell; the sweep is the alternatives track and a survivor is promoted to its own forward test, never adopted in place."]
+    J = json.loads((PROC / "factor_attribution.json").read_text()) if (PROC / "factor_attribution.json").exists() else {}
+    J.setdefault("tests", {})[asset] = rec; (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1))
+    out = DOCS / "factor_attribution_tests.md"; prev = out.read_text() if out.exists() else ""
+    out.write_text((prev.rstrip("\n") + "\n\n" if prev else "") + "\n".join(L) + "\n"); print("\n".join(L)); print(f"-> {out}")
+
+
+def impulse_window(r: pd.Series, s0, direction: int, thr: float, max_len: int = 40):
+    """The purest stretch of an episode: from the turning point s0 while the pullback from the running extreme (in the episode's direction)
+    stays under thr/4; ends at that extreme. Dynamic by construction (founder, 23 Oct)."""
+    seg = r.loc[s0:].iloc[1:max_len + 1]
+    if seg.empty: return s0, s0, 0.0
+    c = seg.cumsum().to_numpy(); ext = 0
+    for i in range(len(c)):
+        if direction * c[i] >= direction * c[ext]: ext = i
+        elif direction * (c[ext] - c[i]) >= thr / 4: break
+    return s0, seg.index[ext], float(c[ext])
 
 
 def selftest():
@@ -179,9 +253,9 @@ if __name__ == "__main__":
     for c in ("selftest", "fetch-gpr"): sub.add_parser(c)
     e = sub.add_parser("episode"); e.add_argument("asset"); e.add_argument("--start", required=True); e.add_argument("--end", required=True)
     e.add_argument("--price-start", type=float, required=True); e.add_argument("--prime", default="war"); e.add_argument("--second", default="hikes")
-    t = sub.add_parser("tests"); t.add_argument("asset")
+    t = sub.add_parser("tests"); t.add_argument("asset"); t.add_argument("--sweep", action="store_true"); t.add_argument("--null", type=int, default=0)
     a = ap.parse_args()
     if a.cmd == "selftest": selftest()
     elif a.cmd == "fetch-gpr": fetch_gpr()
     elif a.cmd == "episode": episode(a.asset, a.start, a.end, a.price_start, a.prime, a.second)
-    else: tests(a.asset)
+    else: tests(a.asset, sweep=a.sweep, n_null=a.null)

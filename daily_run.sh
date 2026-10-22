@@ -116,7 +116,8 @@ python -m src.fetch_sources political --start "$(date -v-14d +%Y-%m-%d 2>/dev/nu
 # and presidential documents landing in political/ which step 6 never reads. Earnings: SEC submissions feed, free, skips files on disk.
 # Executive orders -> political_order/, proclamations/memoranda/determinations -> political_other/ (the two folders step 6 reads).
 SINCE14="$(date -v-14d +%Y-%m-%d 2>/dev/null || date -d '14 days ago' +%Y-%m-%d)"
-python -m src.fetch_sources edgar --tickers NVDA,TSM,ASML,MU,INTC,MSFT,ORCL,TSLA,LMT,META,GOOGL,AMZN,AAPL,AVGO,AMD,JPM,GS,XOM,CVX,NEM,FCX,WMT,CAT --limit 4 --sleep 0.5 || echo "  8-K fetch failed -- continuing, the corpus is additive"
+POOL="$(cat processed/issuer_pool_tickers.txt 2>/dev/null || echo NVDA,TSM,ASML,MU,INTC,MSFT,ORCL,TSLA,LMT)"
+python -m src.fetch_sources edgar --tickers "$POOL" --limit 4 --sleep 0.5 || echo "  8-K fetch failed -- continuing, the corpus is additive"
 python -m src.fetch_sources political --start "$SINCE14" --limit 100000 --max-pages 3 --types "executive order" --out political_order \
   || echo "  executive-order fetch failed -- continuing"
 python -m src.fetch_sources political --start "$SINCE14" --limit 100000 --max-pages 3 --types "proclamation,memorandum,determination,presidential order" --out political_other \
@@ -160,3 +161,5 @@ python -m src.blindspot --today || echo "  blindspot failed -- continuing"
 python -m src.wti_cont build || echo "  wti_cont rebuild failed -- continuing"
 python -m src.oil_shock forward || echo "  oil forward failed -- continuing"
 python -m src.latency_audit || echo "  latency audit failed -- continuing"
+# TRACK 3.33: turning points, episode and last-session attribution, base-rate target, every asset incl. silver
+python -m src.why_moved run > /dev/null || echo "  why_moved failed -- continuing"

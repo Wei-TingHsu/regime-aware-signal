@@ -200,6 +200,40 @@ def history_sentences(asset, name, ticker=None):
     return out
 
 
+def why_moved_sentences(asset, name, ticker=None):
+    """The founder's daily picture (TRACK 3.33): the current leg, how far along a typical leg it is, the rule-found window and its reasons,
+    yesterday's reasons, and the pill as today's wind. Reads processed/why_moved.json (nightly)."""
+    W = _j(PROC / "why_moved.json"); key = asset if asset in MODEL else ticker
+    A = ((W or {}).get("assets") or {}).get(key)
+    if not A: return None
+    ep, tg, wd, ls, tf = A["episode"], A.get("target"), A.get("windows") or {}, A.get("last_session") or {}, A.get("window_test") or {}
+    up = ep["direction"] > 0; S = []
+    S.append(f"{name} has been <b>{'rising' if up else 'falling'} since {ep['start']}</b> — {ep['sessions']} sessions, {_pct(ep['move'])} so far, furthest point "
+             f"{_pct(ep['extreme_so_far']['move'])} on {ep['extreme_so_far']['date']}; a move of {ep['threshold_now']:.1%} against the trend would end this leg "
+             f"(the reversal rule: 1.5 × the asset's own monthly volatility, floor 8%) {tag('measured')}.")
+    if tg:
+        kind = "rises" if up else "falls"; sgn = 1 if up else -1
+        if tg.get("share_of_typical") is not None and tg["share_of_typical"] < 1:
+            S.append(f"Past {kind} of this kind ran a median {_pct(sgn * tg['med_size'])} from their start over {tg['med_length']:.0f} sessions (n {tg['n']}); this one is at "
+                     f"{tg['share_of_typical']:.0%} of that, so the typical level is <b>{_pct(tg['target_from_now'])} from here</b> (middle half of past legs: {_pct(tg['band_from_now'][0])} to "
+                     f"{_pct(tg['band_from_now'][1])}) {tag('measured')} — a base rate of past legs, not a forecast; the reason-conditioned version {tag('registered, not run')}.")
+        else:
+            S.append(f"Past {kind} of this kind ran a median {_pct(sgn * tg['med_size'])} (n {tg['n']}); this one is already larger than {tg.get('pct_rank', 0):.0%} of them — the base rate gives no further level {tag('measured')}.")
+    r5 = wd.get("R5_causal"); rows = A.get("r5_rows") or []
+    if r5 and r5.get("explained") is not None:
+        top = ", ".join(f"{d['label']} {d['share']:+.0%}" for d in rows[:3]) or "—"
+        v = tf.get("verdict", "not run"); extra = f" (this rule beat the full-leg window in {tf['share']:.0%} of past legs)" if tf.get("share") is not None else ""
+        S.append(f"<b>Why it moved.</b> Over the window where the named reasons explain most on a forward-walking rule — the first {r5['sessions']} sessions to {r5['end']}, "
+                 f"{_pct(r5['move'])} — they account for <b>{r5['explained']:.0%}</b> of the move: {top}; the rest is unexplained by rates, the dollar, oil, volatility, geopolitical risk, "
+                 f"liquidity or the macro state {tag('tested: ' + v)}{extra}. Each reason's share is its sensitivity (from the two years before the leg) × how far that series moved.")
+    la = ls.get("attribution")
+    if la:
+        top = ", ".join(f"{d['label']} {d['contrib']:+.2%}" for d in la["rows"][:3])
+        S.append(f"Last session {ls['date']}: {_pct(ls['ret'])} — {top}; unexplained {la['resid']:+.2%} {tag('measured')}.")
+    S.append("Today's wind is the engine's two-session call — the pill above — scored separately on the track record at the top of the page.")
+    return " ".join(S)
+
+
 # ---------------------------------------------------------------- the block
 def context_block(asset, day, prof=None, reg=None, R=None, ticker=None):
     """asset: SPY/TLT/GLD/UUP/USO (model key) or None with ticker=... for a searched ticker. Returns HTML."""
@@ -224,6 +258,10 @@ def context_block(asset, day, prof=None, reg=None, R=None, ticker=None):
         surprise = (f", {'above' if su > 0 else 'below'} the last print by {abs(su):.1f}" if isinstance(su, (int, float)) else "")
         s1.append(f"Today's scheduled release <b>{r['event_type'].split(':')[1]}</b>: {h.get('value')} ({h.get('unit')}){surprise} {tag('measured')}.")
     if s1: P.append(("Where we are", " ".join(s1)))
+
+    # 1a. why it moved (TRACK 3.33)
+    wm = why_moved_sentences(asset, name, ticker=ticker)
+    if wm: P.append(("Why it moved, and where this leg stands", wm))
 
     # 1b. today's condition (H0)
     h0 = h0_sentence(asset, k, label, name, ticker=ticker, reg=reg)

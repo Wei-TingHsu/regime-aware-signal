@@ -4,51 +4,637 @@
    "TA": {
     "median_r2": 0.17688007822843843,
     "blocks": 235,
-    "verdict": "FAIL"
+    "verdict": "FAIL",
+    "window": 504,
+    "block": 20
    },
    "TB": {
     "war": {
-     "share": 0.5361702127659574,
+     "share": 0.52,
      "stable": false,
-     "windows": 235
+     "windows": 75
     },
     "hikes": {
-     "share": 0.6638297872340425,
+     "share": 0.6666666666666666,
      "stable": false,
-     "windows": 235
+     "windows": 75
     },
     "real": {
-     "share": 0.6297872340425532,
+     "share": 0.68,
      "stable": false,
-     "windows": 235
+     "windows": 75
     },
     "dollar": {
      "share": 1.0,
      "stable": true,
-     "windows": 235
+     "windows": 75
     },
     "oil": {
-     "share": 0.8978723404255319,
+     "share": 0.9066666666666666,
      "stable": true,
-     "windows": 235
+     "windows": 75
     },
     "vix": {
-     "share": 0.5914893617021276,
+     "share": 0.6,
      "stable": false,
-     "windows": 235
+     "windows": 75
     },
     "macro1": {
-     "share": 0.8340425531914893,
+     "share": 0.8133333333333334,
      "stable": true,
-     "windows": 235
+     "windows": 75
     },
     "macro2": {
-     "share": 0.8765957446808511,
+     "share": 0.88,
      "stable": true,
-     "windows": 235
+     "windows": 75
     }
    },
-   "run": "2026-10-23 00:30"
+   "run": "2026-10-23 02:04",
+   "TA_sweep_null": {
+    "n": 50,
+    "null_best_median": -0.023843668112902505,
+    "p": 0.0
+   },
+   "TA_sweep": {
+    "best": {
+     "window": 756,
+     "block": 20,
+     "median_r2": 0.22438202585462313
+    },
+    "cells": [
+     {
+      "window": 252,
+      "block": 1,
+      "median_r2": NaN,
+      "blocks": 0
+     },
+     {
+      "window": 252,
+      "block": 2,
+      "median_r2": -0.8405570189040668,
+      "blocks": 2481
+     },
+     {
+      "window": 252,
+      "block": 3,
+      "median_r2": -0.1487037841598956,
+      "blocks": 1654
+     },
+     {
+      "window": 252,
+      "block": 5,
+      "median_r2": 0.07079747960009047,
+      "blocks": 992
+     },
+     {
+      "window": 252,
+      "block": 7,
+      "median_r2": 0.1277882851163592,
+      "blocks": 709
+     },
+     {
+      "window": 252,
+      "block": 10,
+      "median_r2": 0.1582767484343054,
+      "blocks": 496
+     },
+     {
+      "window": 252,
+      "block": 15,
+      "median_r2": 0.1814939919609072,
+      "blocks": 330
+     },
+     {
+      "window": 252,
+      "block": 20,
+      "median_r2": 0.19618714768624562,
+      "blocks": 248
+     },
+     {
+      "window": 252,
+      "block": 30,
+      "median_r2": 0.1830350767195068,
+      "blocks": 165
+     },
+     {
+      "window": 252,
+      "block": 45,
+      "median_r2": 0.18191301606051619,
+      "blocks": 110
+     },
+     {
+      "window": 252,
+      "block": 60,
+      "median_r2": 0.17950330561798356,
+      "blocks": 82
+     },
+     {
+      "window": 504,
+      "block": 1,
+      "median_r2": NaN,
+      "blocks": 0
+     },
+     {
+      "window": 504,
+      "block": 2,
+      "median_r2": -0.867403133555311,
+      "blocks": 2355
+     },
+     {
+      "window": 504,
+      "block": 3,
+      "median_r2": -0.16423921446312628,
+      "blocks": 1570
+     },
+     {
+      "window": 504,
+      "block": 5,
+      "median_r2": 0.04130438015748944,
+      "blocks": 942
+     },
+     {
+      "window": 504,
+      "block": 7,
+      "median_r2": 0.11658342714580106,
+      "blocks": 673
+     },
+     {
+      "window": 504,
+      "block": 10,
+      "median_r2": 0.1619868285058499,
+      "blocks": 471
+     },
+     {
+      "window": 504,
+      "block": 15,
+      "median_r2": 0.17839023856632674,
+      "blocks": 314
+     },
+     {
+      "window": 504,
+      "block": 20,
+      "median_r2": 0.17688007822843843,
+      "blocks": 235
+     },
+     {
+      "window": 504,
+      "block": 30,
+      "median_r2": 0.1820319806839773,
+      "blocks": 157
+     },
+     {
+      "window": 504,
+      "block": 45,
+      "median_r2": 0.1890067976513809,
+      "blocks": 104
+     },
+     {
+      "window": 504,
+      "block": 60,
+      "median_r2": 0.19974762373283173,
+      "blocks": 78
+     },
+     {
+      "window": 756,
+      "block": 1,
+      "median_r2": NaN,
+      "blocks": 0
+     },
+     {
+      "window": 756,
+      "block": 2,
+      "median_r2": -0.8790707627703609,
+      "blocks": 2229
+     },
+     {
+      "window": 756,
+      "block": 3,
+      "median_r2": -0.1370818346055508,
+      "blocks": 1486
+     },
+     {
+      "window": 756,
+      "block": 5,
+      "median_r2": 0.06051224231695618,
+      "blocks": 891
+     },
+     {
+      "window": 756,
+      "block": 7,
+      "median_r2": 0.1463213790578496,
+      "blocks": 637
+     },
+     {
+      "window": 756,
+      "block": 10,
+      "median_r2": 0.17684912465915703,
+      "blocks": 445
+     },
+     {
+      "window": 756,
+      "block": 15,
+      "median_r2": 0.19621581223341622,
+      "blocks": 297
+     },
+     {
+      "window": 756,
+      "block": 20,
+      "median_r2": 0.22438202585462313,
+      "blocks": 222
+     },
+     {
+      "window": 756,
+      "block": 30,
+      "median_r2": 0.21865206311590824,
+      "blocks": 148
+     },
+     {
+      "window": 756,
+      "block": 45,
+      "median_r2": 0.18383929526624865,
+      "blocks": 99
+     },
+     {
+      "window": 756,
+      "block": 60,
+      "median_r2": 0.21090094332451098,
+      "blocks": 74
+     }
+    ]
+   },
+   "TFnull": {
+    "real": 0.5272235854159105,
+    "null_median": 0.04808386634472364,
+    "null_p95": 0.09328349668915825,
+    "n_shift": 20,
+    "verdict": "PASS",
+    "run": "2026-10-23 02:08"
+   }
+  },
+  "SPY": {
+   "TA": {
+    "median_r2": 0.6264957747926472,
+    "blocks": 235,
+    "verdict": "PASS",
+    "window": 504,
+    "block": 20
+   },
+   "TB": {
+    "war": {
+     "share": 0.88,
+     "stable": true,
+     "windows": 75
+    },
+    "hikes": {
+     "share": 0.7066666666666667,
+     "stable": true,
+     "windows": 75
+    },
+    "real": {
+     "share": 0.9466666666666667,
+     "stable": true,
+     "windows": 75
+    },
+    "dollar": {
+     "share": 0.8666666666666667,
+     "stable": true,
+     "windows": 75
+    },
+    "oil": {
+     "share": 0.8933333333333333,
+     "stable": true,
+     "windows": 75
+    },
+    "vix": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 75
+    },
+    "macro1": {
+     "share": 0.88,
+     "stable": true,
+     "windows": 75
+    },
+    "macro2": {
+     "share": 0.8,
+     "stable": true,
+     "windows": 75
+    }
+   },
+   "run": "2026-10-23 01:53"
+  },
+  "TLT": {
+   "TA": {
+    "median_r2": 0.8410901342327328,
+    "blocks": 235,
+    "verdict": "PASS",
+    "window": 504,
+    "block": 20
+   },
+   "TB": {
+    "war": {
+     "share": 0.5466666666666666,
+     "stable": false,
+     "windows": 75
+    },
+    "hikes": {
+     "share": 0.84,
+     "stable": true,
+     "windows": 75
+    },
+    "real": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 75
+    },
+    "dollar": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 75
+    },
+    "oil": {
+     "share": 0.68,
+     "stable": false,
+     "windows": 75
+    },
+    "vix": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 75
+    },
+    "macro1": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 75
+    },
+    "macro2": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 75
+    }
+   },
+   "run": "2026-10-23 01:53"
+  },
+  "SLV": {
+   "TA": {
+    "median_r2": 0.1898602103658903,
+    "blocks": 231,
+    "verdict": "PASS",
+    "window": 504,
+    "block": 20
+   },
+   "TB": {
+    "war": {
+     "share": 0.6621621621621622,
+     "stable": false,
+     "windows": 74
+    },
+    "hikes": {
+     "share": 0.6621621621621622,
+     "stable": false,
+     "windows": 74
+    },
+    "real": {
+     "share": 0.6081081081081081,
+     "stable": false,
+     "windows": 74
+    },
+    "dollar": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 74
+    },
+    "oil": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 74
+    },
+    "vix": {
+     "share": 0.8378378378378378,
+     "stable": true,
+     "windows": 74
+    },
+    "macro1": {
+     "share": 0.7162162162162162,
+     "stable": true,
+     "windows": 74
+    },
+    "macro2": {
+     "share": 0.581081081081081,
+     "stable": false,
+     "windows": 74
+    }
+   },
+   "run": "2026-10-23 01:53"
+  },
+  "UUP": {
+   "TA": {
+    "median_r2": 0.4961543469401417,
+    "blocks": 221,
+    "verdict": "PASS",
+    "window": 504,
+    "block": 20
+   },
+   "TB": {
+    "war": {
+     "share": 0.7285714285714285,
+     "stable": true,
+     "windows": 70
+    },
+    "hikes": {
+     "share": 0.6142857142857143,
+     "stable": false,
+     "windows": 70
+    },
+    "real": {
+     "share": 0.7285714285714285,
+     "stable": true,
+     "windows": 70
+    },
+    "dollar": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 70
+    },
+    "oil": {
+     "share": 0.6,
+     "stable": false,
+     "windows": 70
+    },
+    "vix": {
+     "share": 0.9142857142857143,
+     "stable": true,
+     "windows": 70
+    },
+    "macro1": {
+     "share": 0.9,
+     "stable": true,
+     "windows": 70
+    },
+    "macro2": {
+     "share": 0.6428571428571429,
+     "stable": false,
+     "windows": 70
+    }
+   },
+   "run": "2026-10-23 01:53"
+  },
+  "USO": {
+   "TA": {
+    "median_r2": 0.8699416152344567,
+    "blocks": 232,
+    "verdict": "PASS",
+    "window": 504,
+    "block": 20
+   },
+   "TB": {
+    "war": {
+     "share": 0.5540540540540541,
+     "stable": false,
+     "windows": 74
+    },
+    "hikes": {
+     "share": 0.6081081081081081,
+     "stable": false,
+     "windows": 74
+    },
+    "real": {
+     "share": 0.8513513513513513,
+     "stable": true,
+     "windows": 74
+    },
+    "dollar": {
+     "share": 0.5675675675675675,
+     "stable": false,
+     "windows": 74
+    },
+    "oil": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 74
+    },
+    "vix": {
+     "share": 0.972972972972973,
+     "stable": true,
+     "windows": 74
+    },
+    "macro1": {
+     "share": 0.8243243243243243,
+     "stable": true,
+     "windows": 74
+    },
+    "macro2": {
+     "share": 0.7972972972972973,
+     "stable": true,
+     "windows": 74
+    }
+   },
+   "run": "2026-10-23 01:53"
+  },
+  "NVDA": {
+   "TA": {
+    "median_r2": 0.16720868840301084,
+    "blocks": 235,
+    "verdict": "PASS",
+    "window": 504,
+    "block": 20
+   },
+   "TB": {
+    "war": {
+     "share": 0.56,
+     "stable": false,
+     "windows": 75
+    },
+    "hikes": {
+     "share": 0.6133333333333333,
+     "stable": false,
+     "windows": 75
+    },
+    "real": {
+     "share": 0.6933333333333334,
+     "stable": false,
+     "windows": 75
+    },
+    "dollar": {
+     "share": 0.84,
+     "stable": true,
+     "windows": 75
+    },
+    "oil": {
+     "share": 0.72,
+     "stable": true,
+     "windows": 75
+    },
+    "vix": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 75
+    },
+    "macro1": {
+     "share": 0.8533333333333334,
+     "stable": true,
+     "windows": 75
+    },
+    "macro2": {
+     "share": 0.5866666666666667,
+     "stable": false,
+     "windows": 75
+    }
+   },
+   "run": "2026-10-23 01:53"
+  },
+  "META": {
+   "TA": {
+    "median_r2": 0.14652382869803438,
+    "blocks": 155,
+    "verdict": "PASS",
+    "window": 504,
+    "block": 20
+   },
+   "TB": {
+    "war": {
+     "share": 0.64,
+     "stable": false,
+     "windows": 50
+    },
+    "hikes": {
+     "share": 0.66,
+     "stable": false,
+     "windows": 50
+    },
+    "real": {
+     "share": 0.94,
+     "stable": true,
+     "windows": 50
+    },
+    "dollar": {
+     "share": 0.62,
+     "stable": false,
+     "windows": 50
+    },
+    "oil": {
+     "share": 0.78,
+     "stable": true,
+     "windows": 50
+    },
+    "vix": {
+     "share": 1.0,
+     "stable": true,
+     "windows": 50
+    },
+    "macro1": {
+     "share": 0.78,
+     "stable": true,
+     "windows": 50
+    },
+    "macro2": {
+     "share": 0.72,
+     "stable": true,
+     "windows": 50
+    }
+   },
+   "run": "2026-10-23 01:53"
   }
  },
  "episodes": {
@@ -268,6 +854,225 @@
     "macro2": {
      "beta": 0.04658219419785663,
      "contrib": -0.020823154646718803
+    }
+   }
+  },
+  "GLD_2026-01-29_2026-10-21": {
+   "asset": "GLD",
+   "start": "2026-01-29",
+   "end": "2026-10-21",
+   "price_start": 5600.0,
+   "actual_log": -0.2515166786401653,
+   "orderings": {
+    "Prime factor geopolitical risk (GPR index)": {
+     "order": [
+      "war",
+      "hikes",
+      "real",
+      "dollar",
+      "oil",
+      "vix",
+      "macro1",
+      "macro2"
+     ],
+     "rows": {
+      "war": {
+       "beta": -0.0005961641958788005,
+       "se": 0.0014380652544455804,
+       "raw_sum": 0.29387401847380445,
+       "orth_sum": 0.29387401847380445,
+       "contrib": -0.0001751971679131074,
+       "usd": -0.9811041403134014,
+       "band": 2.36661608484827
+      },
+      "hikes": {
+       "beta": -0.00021259780629396703,
+       "se": 7.132020538142691e-05,
+       "raw_sum": 100.0,
+       "orth_sum": 99.88083173413662,
+       "contrib": -0.02123444571749429,
+       "usd": -118.91289601796802,
+       "band": 39.891720024499655
+      },
+      "real": {
+       "beta": -0.00027237907520004845,
+       "se": 0.00014136770473378185,
+       "raw_sum": 101.00000000000003,
+       "orth_sum": 59.55882349441904,
+       "contrib": -0.016222577263412776,
+       "usd": -90.84643267511154,
+       "band": 47.15028737468258
+      },
+      "dollar": {
+       "beta": -1.436172460680718,
+       "se": 0.16993670297768937,
+       "raw_sum": 0.034217980731783726,
+       "orth_sum": 0.015447625388729135,
+       "contrib": -0.022185454166205057,
+       "usd": -124.23854333074831,
+       "band": 14.700663753412428
+      },
+      "oil": {
+       "beta": 0.1056508000584531,
+       "se": 0.025437522468763255,
+       "raw_sum": 0.42768649365453015,
+       "orth_sum": 0.3771484743215615,
+       "contrib": 0.03984603805289793,
+       "usd": 223.1378130962284,
+       "band": 53.724847621841214
+      },
+      "vix": {
+       "beta": 0.0011848245408457346,
+       "se": 0.00567515983724213,
+       "raw_sum": -0.09690165960402819,
+       "orth_sum": -0.10505806213549693,
+       "contrib": -0.0001244753702318328,
+       "usd": -0.6970620732982636,
+       "band": 3.3388392509352176
+      },
+      "macro1": {
+       "beta": -0.039182548418261125,
+       "se": 0.01869076173027166,
+       "raw_sum": 1.3401147479946638,
+       "orth_sum": 0.1530790438081846,
+       "contrib": -0.005998027045835309,
+       "usd": -33.588951456677734,
+       "band": 16.022518028812936
+      },
+      "macro2": {
+       "beta": 0.041651361531057036,
+       "se": 0.038074984579637615,
+       "raw_sum": -0.4444108570913481,
+       "orth_sum": 0.2608814909206869,
+       "contrib": 0.010866069295098705,
+       "usd": 60.849988052552746,
+       "band": 55.62512896594094
+      }
+     },
+     "drift": 0.32084830068653164,
+     "resid": -0.5571369099436012
+    },
+    "Prime factor rate-hike speculation (2-yr yield minus fed funds)": {
+     "order": [
+      "hikes",
+      "war",
+      "real",
+      "dollar",
+      "oil",
+      "vix",
+      "macro1",
+      "macro2"
+     ],
+     "rows": {
+      "hikes": {
+       "beta": -0.00021310622657982388,
+       "se": 7.130578696000059e-05,
+       "raw_sum": 100.0,
+       "orth_sum": 100.0,
+       "contrib": -0.02131062265798239,
+       "usd": -119.33948688470137,
+       "band": 39.93124069760033
+      },
+      "war": {
+       "beta": -0.0005099540843691685,
+       "se": 0.0014383560391316636,
+       "raw_sum": 0.29387401847380445,
+       "orth_sum": 0.194174790358797,
+       "contrib": -9.902022742499558e-05,
+       "usd": -0.5545132735799753,
+       "band": 1.5640379012143222
+      },
+      "real": {
+       "beta": -0.00027237907520004856,
+       "se": 0.00014136770473378182,
+       "raw_sum": 101.00000000000003,
+       "orth_sum": 59.55882349441905,
+       "contrib": -0.016222577263412787,
+       "usd": -90.8464326751116,
+       "band": 47.15028737468258
+      },
+      "dollar": {
+       "beta": -1.436172460680718,
+       "se": 0.16993670297768937,
+       "raw_sum": 0.034217980731783726,
+       "orth_sum": 0.015447625388729139,
+       "contrib": -0.02218545416620506,
+       "usd": -124.23854333074834,
+       "band": 14.70066375341243
+      },
+      "oil": {
+       "beta": 0.105650800058451,
+       "se": 0.025437522468763255,
+       "raw_sum": 0.42768649365453015,
+       "orth_sum": 0.3771484743215723,
+       "contrib": 0.039846038052898276,
+       "usd": 223.13781309623036,
+       "band": 53.72484762184275
+      },
+      "vix": {
+       "beta": 0.0011848245408454825,
+       "se": 0.005675159837242128,
+       "raw_sum": -0.09690165960402819,
+       "orth_sum": -0.10505806213547328,
+       "contrib": -0.0001244753702317783,
+       "usd": -0.6970620732979584,
+       "band": 3.338839250934465
+      },
+      "macro1": {
+       "beta": -0.039182548418264886,
+       "se": 0.018690761730271656,
+       "raw_sum": 1.3401147479946638,
+       "orth_sum": 0.15307904380823212,
+       "contrib": -0.005998027045837746,
+       "usd": -33.588951456691376,
+       "band": 16.022518028817906
+      },
+      "macro2": {
+       "beta": 0.04165136153103785,
+       "se": 0.0380749845796376,
+       "raw_sum": -0.4444108570913481,
+       "orth_sum": 0.26088149092072577,
+       "contrib": 0.010866069295095317,
+       "usd": 60.849988052533774,
+       "band": 55.6251289659492
+      }
+     },
+     "drift": 0.32084830068653175,
+     "resid": -0.5571369099435959
+    }
+   },
+   "joint": {
+    "war": {
+     "beta": -0.00018441123829488057,
+     "contrib": -5.419367164944689e-05
+    },
+    "hikes": {
+     "beta": 7.211357338385552e-05,
+     "contrib": 0.007211357338385552
+    },
+    "real": {
+     "beta": 0.0005277150913151563,
+     "contrib": 0.0532992242228308
+    },
+    "dollar": {
+     "beta": -1.4762406438269677,
+     "contrib": -0.05051397390594718
+    },
+    "oil": {
+     "beta": 0.12592113448772352,
+     "contrib": 0.053854768486055
+    },
+    "vix": {
+     "beta": -0.007568075251826059,
+     "contrib": 0.0007333590519101186
+    },
+    "macro1": {
+     "beta": -0.045703768068598064,
+     "contrib": -0.06124829362765585
+    },
+    "macro2": {
+     "beta": 0.04165136153103809,
+     "contrib": -0.018510317277030244
     }
    }
   }

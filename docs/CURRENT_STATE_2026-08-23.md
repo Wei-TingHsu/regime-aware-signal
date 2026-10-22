@@ -2517,3 +2517,11 @@ calibrated unconditional number (gold at 4,090: 32% chance of touching 4,500 wit
 Latency audit: Yahoo serves the last close one session late at the nightly hour; the nightly now refreshes first, fills the missing session
 from Stooq (provisional, logged), then writes the forward row with --no-refresh; step 6 requires the five model assets' prices. Oil columns
 rebuilt nightly. 8-K pool 23 issuers (corpus amendment). `docs/SPEC_GRID.md` registered as the alternatives track (TRACK 3.30).
+
+### 18.35 Factor attribution first run; dynamic issuer pool (23 Oct)
+
+Factor attribution (3.31) built and tested the same night: T-A out-of-sample R² 0.177 FAIL (#58 wrong), T-B dollar/oil/macro stable, real
+yields/hikes/VIX/war unstable (#59 wrong), tally 53. The GLD 2026 episode, with pre-episode sensitivities: named reasons ≈ $90 of a $1,200
+fall, prior uptrend +$1,700, unexplained ≈ $2,800 — 2026 broke gold's 2024–25 sensitivities; the unexplained part is where positioning and
+forced selling live, for which the model had no proxy. Amendment: `--start peak`, Bitcoin as a speculative-liquidity proxy, ETF flows and CFTC
+positioning registered (prior #61). Dynamic issuer pool (3.32) built from BEA contributions to growth; the nightly 8-K fetch reads it.
