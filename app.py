@@ -207,16 +207,23 @@ def jload(p):
 
 @st.cache_data(show_spinner=False)
 def referee_numbers():
-    """Hit-rate, benchmark, asymmetry, horizon, verdict, date — from the latest backfill scoreboard. Fixed until the
-    engine's method changes and the backfill is re-run, or the forward ledger reaches 30 matured rows."""
-    bf = sorted(PROC.glob("report_scoreboard_backfill_*.json"), key=lambda p: p.stat().st_mtime)
+    """Hit-rate, chance bar, asymmetry, horizon, verdict — from the BASELINE backfill scoreboard (PROJECT_MASTER: h=2 primary),
+    the same file the Context block reads. Fixed until the engine's method changes and the backfill is re-run."""
+    BASE = "48a6c4e879a1_n2617_h2"
+    bf = [p for p in PROC.glob("report_scoreboard_backfill_*.json") if BASE in p.name] or \
+         sorted(PROC.glob("report_scoreboard_backfill_*.json"), key=lambda p: p.stat().st_mtime)[-1:]
     if not bf: return None
-    j = jload(bf[-1]) or {}
+    j = jload(bf[0]) or {}
     h = j.get("primary_h", 2)
     cell = ((j.get("cells") or {}).get(f"h{h}_primary") or {})
     no = cell.get("nonoverlap") or {}
-    return dict(hit=no.get("hit"), q95=no.get("null_q95") or cell.get("null_q95"), asym=no.get("asym"), n=no.get("n"),
-                h=h, verdict=j.get("verdict", "—"), date=pd.Timestamp(bf[-1].stat().st_mtime, unit="s").strftime("%d %b %Y"))
+    return dict(hit=no.get("hit"), q95=cell.get("null_hit_q95") or cell.get("null_q95"), asym=no.get("asym"), n=no.get("n"), h=h,
+                days=j.get("n_reports"), pass_hit=cell.get("pass_hit"), pass_asym=cell.get("pass_asym"),
+                verdict=cell.get("verdict") or j.get("verdict", "—"), date=pd.Timestamp(bf[0].stat().st_mtime, unit="s").strftime("%d %b %Y"))
+
+
+from src.context import context_block, CSS as CTX_CSS
+st.markdown(CTX_CSS, unsafe_allow_html=True)
 
 
 def plain_reason(raw, e=None):
@@ -494,6 +501,7 @@ def detail_dashboard(a: str, R: dict, day: str, reg):
     st.markdown('<div class="rs-section">Rest of session</div>', unsafe_allow_html=True)
     st.markdown('<div class="g rs-banner" style="padding:12px 18px">' + event_line(a, R, day, load_fomc_days()).replace('rs-ev', 'rs-ev" style="border:none;margin:0;padding:0;font-size:.86rem') +
                 '<p class="rs-foot" style="margin-top:8px">Whether the first half-hour\'s reaction extends or reverses by the close was tested on 292 meetings since 1988 (docs/event_time_phaseA.md): no measurable pattern for equities or Treasuries. A number appears here only if a registered test establishes one. Intraday bars are being collected every session for the markets that have no history yet.</p></div>', unsafe_allow_html=True)
+    st.markdown(context_block(a, day, prof=load_profile(), reg=reg, R=R), unsafe_allow_html=True)
 
 
 def doc_cards(docs: list):
@@ -515,6 +523,37 @@ def doc_cards(docs: list):
                         f'<div>{chips}</div>{bar("specific", d.get("specificity"))}{bar("new", d.get("novelty"))}'
                         f'{bar("confident", d.get("confidence"))}</div>', unsafe_allow_html=True)
             st.write("")
+
+
+def documents_view(R: dict, day: str):
+    """?focus=docs — every document that landed for the day, then how each market's direction was built from them."""
+    st.markdown('<a class="rs-back rs-link" href="?" target="_self">← Back to overview</a>', unsafe_allow_html=True)
+    docs = R.get("documents", [])
+    n_dir = sum(1 for d in docs if any(v is not None and abs(v) > 0.05 for v in (d.get("direction") or {}).values()))
+    st.markdown(f'<div class="g rs-banner"><h2>Documents with a direction · {day}</h2>'
+                f'<p>{len(docs)} document(s) landed from the five sources we read; {n_dir} carried a usable direction for at least one market. '
+                'Each document is read once by the same reader with the same prompt and scored per market from −1 (pushes it down) to +1 (pushes it up), '
+                'with how specific, how new and how confident the text is. A market gets a direction only when its documents clear the direction floor '
+                'and enough past situations in the same condition with the same kind of document exist to compare against (at least 8 comparable).</p></div>',
+                unsafe_allow_html=True)
+    st.markdown('<div class="rs-section">What landed</div>', unsafe_allow_html=True)
+    doc_cards(docs)
+    st.markdown('<div class="rs-section">How each market\'s direction was built</div>', unsafe_allow_html=True)
+    rows = []
+    for a_, e in R["assets"].items():
+        name = DISPLAY[a_]["name"]
+        if e.get("abstain") or not e.get("estimate"):
+            rows.append(f"<p class=\"rs-ctx-p\"><b>{name}</b> — abstains: {e.get('abstain_reason') or 'no estimate'}.</p>"); continue
+        est = e.get("estimate") or {}; nv = e.get("net_view")
+        tone = "up" if (nv or 0) > 0 else "down"
+        src = SOURCE.get(e.get("dominant_source"), e.get("dominant_source") or "mixed sources")
+        rows.append(f"<p class=\"rs-ctx-p\"><b>{name}</b> — read <b>{tone}</b> (net {nv:+.2f}) from {e.get('n_docs_today', 0)} document(s), mostly {src}; "
+                    f"matched {est.get('n_matched', '—')} past situations, {est.get('ess', 0):.0f} comparable, history weight {est.get('w_shrink', 0):.2f}; "
+                    f"documents and history {str(e.get('agreement', '')).lower() or '—'}"
+                    + (" — <span style=\"color:%s\">two documents point opposite ways; both shown, neither combined</span>" % WARN if e.get("sources_disagree") else "") + ".</p>")
+    st.markdown('<div class="g rs-ctx">' + "".join(rows) +
+                '<p class="rs-foot">Direction floor and the 8-comparable rule are fixed in the registration (docs/prereg_report_scoreboard.md); nothing here is tuned to the day.</p></div>',
+                unsafe_allow_html=True)
 
 
 # ==========================================================================
@@ -550,7 +589,9 @@ with tabs[0]:
     T = pd.Timestamp(day)
     prof, reg = load_profile(), load_regimes()
 
-    if focus_param in R["assets"]:
+    if focus_param == "docs":
+        documents_view(R, day)
+    elif focus_param in R["assets"]:
         detail_dashboard(focus_param, R, day, reg)
     else:
         views = [a for a, e in R["assets"].items() if e.get("estimate") and not e.get("abstain")]
@@ -569,6 +610,7 @@ with tabs[0]:
         post = g.get("posterior") or 0
         warn = (f'<div class="rs-s" style="color:{WARN}">The model is not confident which condition today belongs to.</div>'
                 if g.get("warning") else '<div class="rs-s">that today belongs to this condition</div>')
+        n_dir = sum(1 for d in R["documents"] if any(v is not None and abs(v) > 0.05 for v in (d.get("direction") or {}).values()))
         st.markdown(f"""
 <div class="rs-tiles">
   <div class="g rs-tile"><div class="rs-k">Market condition</div>
@@ -578,21 +620,24 @@ with tabs[0]:
     <div class="rs-bar"><div style="width:{int(post*100)}%"></div></div>{warn}</div>
   <div class="g rs-tile"><div class="rs-k">Documents today</div><div class="rs-v">{len(R['documents'])}</div>
     <div class="rs-s">from five sources we read; not the news</div></div>
-  <div class="g rs-tile"><div class="rs-k">Markets with a view</div><div class="rs-v">{len(views)} <span style="color:{INK3};font-weight:500">of 5</span></div>
-    <div class="rs-s">a view needs at least 8 comparable past situations</div></div>
+  <a class="rs-link" href="?focus=docs" target="_self"><div class="g rs-tile rs-hover"><div class="rs-k">Documents with a direction</div><div class="rs-v">{n_dir} <span style="color:{INK3};font-weight:500">of {len(R['documents'])}</span></div>
+    <div class="rs-s">click to see each document and how every market's direction was built · {len(views)} of 5 markets have a view</div></div></a>
 </div>""", unsafe_allow_html=True)
         rf = referee_numbers()
-        if rf:
-            hit = f"{rf['hit']:.1%}" if isinstance(rf['hit'], (int, float)) else "—"
-            q95 = f"{rf['q95']:.1%}" if isinstance(rf['q95'], (int, float)) else "—"
-            asym = f"{rf['asym']:.2f}" if isinstance(rf['asym'], (int, float)) else "—"
-            st.markdown(f"""
-<div class="rs-tiles" style="grid-template-columns:repeat(2,1fr)">
-  <div class="g rs-tile"><div class="rs-k">Hit-rate</div><div class="rs-v">{hit} <span style="color:{INK3};font-weight:500;font-size:1rem">vs {q95} benchmark</span></div>
-    <div class="rs-s">share of this engine's directional calls that were right on history ({rf['n']} calls, {rf['h']}-session horizon) — below the benchmark means no edge over the market's drift · {rf['date']} · verdict {rf['verdict']}</div></div>
-  <div class="g rs-tile"><div class="rs-k">Asymmetry</div><div class="rs-v">{asym}</div>
-    <div class="rs-s">size of the move when right ÷ size when wrong; 1.00 means no size edge — fixed until the engine's method changes; see "Reading this page"</div></div>
-</div>""", unsafe_allow_html=True)
+        if rf and all(isinstance(rf.get(k), (int, float)) for k in ("hit", "q95", "n")):
+            days = f"{rf['days']:,}" if isinstance(rf.get("days"), int) else "the scored"
+            if rf.get("pass_hit"):
+                verdict_line = ("<b>The calls cleared the chance bar on how often they were right, but not the test on how much a right call pays "
+                                "against a wrong one</b> — scoreboard verdict " + str(rf["verdict"]) + ".")
+            else:
+                verdict_line = "<b>So far this engine has not shown it beats a coin</b> — scoreboard verdict " + str(rf["verdict"]) + "."
+            st.markdown(f'<div class="g rs-banner"><h2>Track record, in one breath</h2>'
+                        f'<p>Over <b>{days}</b> scored days the engine\'s direction calls were right <b>{rf["hit"]:.0%}</b> of the time. '
+                        f'Chance alone would have reached up to {rf["q95"]:.0%}. {verdict_line} Read the Up/Down pills as the engine\'s reading, not as advice.</p>'
+                        '<p><b>What you can rely on here:</b> the market condition, the oil-shock alarm and the history tables are counts of what actually '
+                        'happened — not predictions — and every sentence in the context blocks carries a tag: <i>measured</i>, <i>tested</i> (with its verdict), '
+                        '<i>hypothesis</i>, or <i>running</i>. The full scoreboard, including the size test (asymmetry), is on “The record”.</p></div>',
+                        unsafe_allow_html=True)
         st.markdown(regime_strip_html(reg, T, prof), unsafe_allow_html=True)
 
         st.markdown('<div class="rs-section">The five markets — click a card for the full chart</div>', unsafe_allow_html=True)
@@ -603,6 +648,10 @@ with tabs[0]:
         st.markdown('<div class="rs-foot" style="margin-top:8px">Prices are live from Yahoo Finance (delayed about 15 minutes) '
                     'on the instruments a desk watches; the model runs on SPY, TLT, GLD, UUP and USO underneath, and each card '
                     'says which. The signal pill and its reason are for the selected report day.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="rs-section">Context, in words — each market</div>', unsafe_allow_html=True)
+        for _i, _a in enumerate(R['assets']):
+            with st.expander(f"{DISPLAY[_a]['name']} — the environment, what history says here, the severe case", expanded=(_i == 0)):
+                st.markdown(context_block(_a, day, prof=prof, reg=reg, R=R).replace('<div class="rs-section">Context, in words</div>', ''), unsafe_allow_html=True)
 
         st.markdown('<div class="rs-section">What landed today</div>', unsafe_allow_html=True)
         doc_cards(R["documents"])
@@ -704,6 +753,7 @@ with tabs[1]:
         if not e.get("is_proxy"):
             st.markdown(f'<div class="rs-foot">The documents we read describe {nice[e["axis"]]} broadly. They say nothing specific to '
                         f'{tk}\'s own industry, so treat this as a market-level read, not a company-level one.</div>', unsafe_allow_html=True)
+        st.markdown(context_block(tk if tk in ('SPY','TLT','GLD','UUP','USO') else None, lday, prof=load_profile(), reg=load_regimes(), ticker=tk), unsafe_allow_html=True)
 
 # ==========================================================================
 # THE RECORD

@@ -225,6 +225,19 @@ def today():
                oil_source={str(d.date()): s for d, s in osrc.iloc[-5:].items()},
                chain_inputs=dict(oil_5d=float(oil.iloc[-5:].sum()), oil_5d_uso=float(rets["USO"].iloc[-5:].sum()), dgs2_5d_bp=float((dgs2.iloc[-1] - dgs2.iloc[-6]) * 100), dxy_5d=float(dxy.iloc[-1] / dxy.iloc[-6] - 1)))
     f.write_text(json.dumps(rec, indent=2))
+    # chain firings get a forward row (TRACK 3.23): gold's 20/60-session return filled when matured; counts toward A2's ten
+    CF = PROC / "chain_forward.csv"
+    cf = pd.read_csv(CF, parse_dates=["fire_date"]) if CF.exists() else pd.DataFrame(columns=["fire_date", "logged_at", "pos", "provisional", "gld_f20", "gld_f60", "matured_at"])
+    i = len(rets.index) - 1
+    if alert and (cf.empty or (i - int(cf.pos.max())) > 5):
+        cf = pd.concat([cf, pd.DataFrame([dict(fire_date=rets.index[i], logged_at=datetime.now().strftime("%Y-%m-%d %H:%M"), pos=i, provisional=provisional,
+                                               gld_f20=np.nan, gld_f60=np.nan, matured_at="")])], ignore_index=True)
+        print(f"chain forward: firing logged {rets.index[i].date()}{' (provisional)' if provisional else ''}")
+    for j, r in cf.iterrows():
+        p0 = int(r.pos)
+        if pd.isna(r.gld_f20) and p0 + 20 <= i: cf.loc[j, "gld_f20"] = float(rets["GLD"].iloc[p0 + 1:p0 + 21].sum())
+        if pd.isna(r.gld_f60) and p0 + 60 <= i: cf.loc[j, ["gld_f60", "matured_at"]] = [float(rets["GLD"].iloc[p0 + 1:p0 + 61].sum()), rets.index[i].strftime("%Y-%m-%d")]
+    cf.to_csv(CF, index=False)
     flagged = {a: s for a, s in rec["states"].items() if s}
     print(f"blindspot {rec['date']}: {flagged or 'no big moves'}; chain alert {alert}{' (provisional on CL=F tail)' if provisional else ''}; "
           f"oil source last 5: {list(osrc.iloc[-5:])}")
