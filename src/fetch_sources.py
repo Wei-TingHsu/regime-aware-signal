@@ -72,6 +72,8 @@ def get(url, retries=3):
             except Exception:
                 pass
             last = RuntimeError(f"HTTP {e.code} for {url}\n    server said: {body}")
+            if e.code == 429:                   # SEC rate threshold: back off and retry (22 Oct)
+                time.sleep(12 * (i + 1)); continue
             if e.code < 500:
                 raise last                      # client error: retrying will not help
         except Exception as e:
@@ -413,7 +415,7 @@ def cmd_political(args):
       low-specificity end, which is exactly where a market-moving threat lives
       -- are NOT here. Their absence is a gap, not evidence.
     """
-    out = DOCS / "political"; out.mkdir(parents=True, exist_ok=True)
+    out = DOCS / args.out; out.mkdir(parents=True, exist_ok=True)
     want = {t.strip().lower() for t in args.types.split(",") if t.strip()}
 
     docs, page = [], 1
@@ -521,6 +523,7 @@ def main():
     p = sub.add_parser("political")
     p.add_argument("--types",
                    default="executive_order,proclamation,presidential_memorandum")
+    p.add_argument("--out", default="political", help="folder under data_provenance/docs; the report reads political_order and political_other")
     p.add_argument("--start", default="2011-01-01")
     p.add_argument("--limit", type=int, default=400)
     p.add_argument("--max-pages", type=int, default=6)

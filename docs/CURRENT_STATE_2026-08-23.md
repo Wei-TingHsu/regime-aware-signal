@@ -2480,3 +2480,40 @@ reason it is a candidate; the forward log is the cure.
 
 **Held-out result, same day: FAIL** — 47% inverse hit on 34 never-seen shocks (pool-median 53%, p 0.70). The pattern did not survive new data; prior #48 wrong. The forward log runs regardless (`processed/oil_inverse_forward.csv`, nightly hook in daily_run.sh, 0 shocks since 16 Oct); verdict at n ≥ 20. Tally 48.
 
+### 18.31 History tables H0–H7 registered; H0 measured (19 Oct)
+
+The app's Context block was fed by one study (oil shocks). `docs/prereg_history_tables.md` registers eight conditional path tables with one
+shared engine and one uniform test (20-session sign share vs the market's own base rate, ≥ 15 pts, n ≥ 30, random-date null); priors #49–#53.
+H0 (each market inside each regime label, measured only by design): gold in regime 3 ran +2.4% at 20 sessions against +0.7% over all history
+and +7.5% vs +2.4% at 60; WTI −1.3% in regime 3, +2.6% in regime 1; SPY, TLT and the dollar within a point of their all-history rows. Prior #49
+(nothing beyond 1 pt) wrong — tally 49. Session counts are overlapping windows; the app states the independent-case count (÷20). Also found
+this day: the live document feed has delivered zero documents on 29 of the last 30 report days (political source 0; earnings 8-K live status
+to confirm), so the "0 of 5" on Today is the feed, not the engine; and `daily_run.sh` has no git step — the cloud app shows the last manual push.
+
+### 18.32 Live feed repaired (19 Oct)
+
+Earnings 8-Ks were never fetched nightly (last document 14 Aug); presidential documents were fetched into a folder the report does not read.
+Both routes fixed in `daily_run.sh` step 3 (TRACK 3.26). Past reports are not regenerated — the zero-document stretch 15 Aug – 19 Oct is
+recorded as a feed outage, not as engine abstention. Scoreboard cells counted over live days should be read with that gap in mind.
+
+**H1, H3, H4, H5 ran the same day** (18.31 cont.): every cell that could be tested failed the uniform test — Fed days (132), rate shocks (56 up / 60 down), regime changes (32). The dollar table at 3% produced 6 / 3 events (prior #51 wrong on size, tally 50); amended to 2% before any rerun. Measured rows worth reading on the page: gold +2.4% / month after 25 bp+ yield drops (65% positive vs 56%), oil +3.7% / month after a label change (69% vs 52%, p 0.07). All on the app under "What history says after shocks and events", each with its tag.
+H3 rerun at 2%: 21 up / 15 down — INCONCLUSIVE everywhere; the measured directions are the textbook ones (gold down after dollar jumps, oil up after dollar drops) and too few to test. Not lowered again.
+Founder's horizon amendment (5 sessions beside 20, 10-point floor, per-table Bonferroni) run the same afternoon: no PASS in 72 cells; prior #54 right. The Today tab was rewritten the same day: a plain-words track-record banner replaces the bare hit-rate/asymmetry tiles, and "Documents with a direction" is a clickable count opening each document and how every market's direction was built.
+
+### 18.33 Latency audit and blind-spot fill plan (22 Oct)
+
+The 20–22 Oct week (gold −2%, silver −4% on the day and −53% from its January record, Brent $110 on the Shaybah drone and the Hormuz stalemate,
+December-hike odds ~90% after a hot core CPI, Meta −10% on *raised* capex, Tesla's deck showing a capex cut) was outside the engine's sight by
+construction: no sector axis, no silver, no positioning data, Meta not in the 8-K list, and the live reports still carrying zero documents.
+Three things registered: an input latency audit running nightly (3.27), a fill plan for the holes (3.28), and the founder's reason-weighted
+path-range idea as a §4 design note with its risk and prior stated. Two faults to diagnose from the audit: the price download missing the latest
+close at run time (16 and 21 Oct) and the nightly 8-K fetch printing nothing on 22 Oct.
+
+### 18.34 Target-range Stage 1 result, price-source fix, alternatives track (22 Oct)
+
+Stage 1 calibration: 0 of 24 cells PASS (15 FAIL, 9 INCONCLUSIVE) — regime-conditional reach probabilities were worse than unconditional
+ones out of sample; prior #55 wrong (tally 51); cause: a 100-session floor that admits under two independent cases. `ask` now leads with the
+calibrated unconditional number (gold at 4,090: 32% chance of touching 4,500 within 60 sessions; the regime's 58% marked uncalibrated).
+Latency audit: Yahoo serves the last close one session late at the nightly hour; the nightly now refreshes first, fills the missing session
+from Stooq (provisional, logged), then writes the forward row with --no-refresh; step 6 requires the five model assets' prices. Oil columns
+rebuilt nightly. 8-K pool 23 issuers (corpus amendment). `docs/SPEC_GRID.md` registered as the alternatives track (TRACK 3.30).

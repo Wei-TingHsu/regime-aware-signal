@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "directing the Secretary of the Treasury...to defer certain diesel fuel tax payment obligations",
+    "Restricted global diesel supply has led to rising prices",
+    "explore avenues, including legislation, to eliminate the obligation to pay the amounts deferred"
+  ],
+  "extra": {
+    "actor": "Secretary of the Treasury",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "transportation",
+      "agriculture"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-10-09",
+  "doc_id": "exec202620855",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 993,
+  "max_words": 20000
+}

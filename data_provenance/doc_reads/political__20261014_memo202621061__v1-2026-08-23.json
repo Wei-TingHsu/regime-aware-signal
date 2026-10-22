@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.15,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "I hereby establish a committee of inquiry",
+    "shall recommend whether there is cause to remove Governor Cook",
+    "The Committee shall, on November 5, 2026, conduct an in-person hearing"
+  ],
+  "extra": {
+    "actor": "President (Executive Office)",
+    "is_decided": true,
+    "sectors": [
+      "Federal Reserve",
+      "monetary policy governance"
+    ]
+  },
+  "source": "political",
+  "date": "2026-10-14",
+  "doc_id": "memo202621061",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 715,
+  "max_words": 20000
+}

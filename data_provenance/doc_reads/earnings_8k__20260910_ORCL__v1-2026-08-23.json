@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.65,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "Q1 Cloud Infra (IaaS) Revenue up 121% in USD",
+    "Oracle booked more than $30 billion of additional AI cloud contracts in Q1",
+    "we now expect total revenue to be at least $90 billion, and non-GAAP EPS to be at $8.10"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.4,
+    "ticker": "ORCL"
+  },
+  "source": "earnings_8k",
+  "date": "2026-09-10",
+  "doc_id": "ORCL",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 4694,
+  "max_words": 20000
+}

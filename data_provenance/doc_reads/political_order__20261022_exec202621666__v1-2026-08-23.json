@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "establish a Women's Health Division within an appropriate institute or center within 90 days",
+    "There is hereby established the White House Women's Health Task Force",
+    "prioritize grantmaking focused on prevention, treatment, and long-term health"
+  ],
+  "extra": {
+    "actor": "President (HHS/NIH)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "biotech/pharma",
+      "women's health research"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-10-22",
+  "doc_id": "exec202621666",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1438,
+  "max_words": 20000
+}

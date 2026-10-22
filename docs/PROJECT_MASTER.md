@@ -461,6 +461,8 @@ commit and push the record.
 | 42 | T13 A3: after an oil shock (+8%/5s), the nearest-neighbour path estimate beats the pool median on sign at 20 sessions (≥ 60%) and on time-to-extreme (±10 sessions, ≥ 50%); leverage L = min(5, 20%/q90 worst loss) | 16 Oct | **A3b FAIL** on all six (conditional sign 42–51% vs pool 46–57%); A3a measured: 116 shocks, gold +1.0% at 60 (priors #45 #46 wrong); A3c L_hist GLD 1.6×, SPY 1.45×, UUP 3.1×, oil 0.6×, reading (b); #47 | `docs/oil_shock_*.md`, CURRENT_STATE §18.28 |
 | 43 | T13 A3d: the worst 1-in-10 post-shock outcomes — how far, what preceded them, and whether a nearest-neighbour score finds ≥ 50% of them while flagging ≤ 25% of shocks | 16 Oct | **UNTESTED on all six** (1–8 tail cases in the scored window vs 10 required); measured: SPY tail median −19.7%, came with the S&P already −23% from its high (prior held); today's resemblance low (TLT base-rate) | `docs/oil_tail.md`, CURRENT_STATE §18.30 |
 | 44 | Inverse rule: the opposite of A3b's conditional sign beats the pool median (forward-only); USO candidate 70% with roll-drag mechanism and USO−spot companion | 16 Oct held-out; forward from the next shock | **held-out FAIL 47%** on 34 never-seen shocks (#48); diagnostic 5 of 6 noise, USO 70% in-sample only; forward log live, 0 shocks, verdict at n ≥ 20 | `docs/oil_shock_inverse.md`, CURRENT_STATE §18.29 |
+| 45 | History tables H0–H7: conditional path tables (Fed days, prints, dollar/rate shocks, regime changes, drawdown entries, vol spikes, today's regime) feed the app's Context block as `measured`; one uniform test per table (20-session sign share vs base rate ≥ 15 pts, n ≥ 30, random-date null p < 0.05) | registered 19 Oct before code; build H0, H1, H3, H4, H5 first | H0 measured; H1, H4, H5 FAIL on every testable cell (#50, #52, #53 right); H3 6/3 → 21/15 events at 2% (#51 wrong), INCONCLUSIVE; horizon amendment (5 s, 10 pts, p < 0.05/6): no PASS in 72 cells (#54 right). Event tables closed as measured-only | `docs/prereg_history_tables.md`, TRACK 3.25 |
+| 46 | Target-range engine (T2 + T13): regime-conditional reach probabilities and path quantiles beat the unconditional ones out of sample (Brier skill ≥ 0.05, ≥ 60% of years); reasons (Stage 2 lift test) and weights (Stage 3 pinball/Brier) each earn their place | registered 22 Oct before code; Stage 1 built | priors #55 INCONCLUSIVE, #56 < 3 reasons, #57 reasons add < 1% | `docs/prereg_target_range.md`, TRACK 3.29 |
 
 ---
 
@@ -568,7 +570,7 @@ does reader–history *agreement* mark already-priced information (three reading
 n = 2,024) · does the compliance function veto an unlicensed vendor (the plan's highest-risk
 assumption; falsifiable in ten conversations) · does the reader's logic match the founder's (the
 prompts in `src/doc_read.py` `PROFILES` were written under deadline and never reviewed line by
-line) · wrong priors #29–#39 accepted 9 Oct, tally 48 (#40–#43 lever priors, #44 July calendar, #45–#48 oil-shock pool size, gold's sign, the legs' value, the USO held-out, all Claude's) (CURRENT_STATE §18.15 carries each with its rule and trading reading).
+line) · wrong priors #29–#39 accepted 9 Oct, tally 50 (#40–#43 lever priors, #44 July calendar, #45–#48 oil-shock pool size, gold's sign, the legs' value, the USO held-out, #49 H0 regime spread, #51 H3 dollar-shock count, all Claude's) (CURRENT_STATE §18.15 carries each with its rule and trading reading).
 
 ---
 

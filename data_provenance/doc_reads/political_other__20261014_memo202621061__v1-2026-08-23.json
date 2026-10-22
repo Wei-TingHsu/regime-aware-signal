@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": -0.15,
+    "gold": 0.15,
+    "dollar": -0.2,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "investigate allegations that Federal Reserve Governor Lisa D. Cook made false statements",
+    "report to me whether there is \u2018\u2018cause'' for Governor Cook's removal within the meaning of 12 U.S.C. 242",
+    "The Committee shall, on November 5, 2026, conduct an in-person hearing"
+  ],
+  "extra": {
+    "actor": "President (Executive Office)",
+    "is_decided": true,
+    "sectors": [
+      "Federal Reserve",
+      "monetary policy",
+      "financial regulation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-10-14",
+  "doc_id": "memo202621061",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 715,
+  "max_words": 20000
+}

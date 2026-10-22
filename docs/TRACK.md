@@ -526,7 +526,77 @@ mirror holds; INCONCLUSIVE/FAIL otherwise; walk-forward not needed (no fitted pa
 after shocks as it does on ordinary days (the usual variance premium), by a similar margin → INCONCLUSIVE. Sits under T2.
 Prereg file before code.
 
+### 3.25 History tables H0–H7 — conditional path tables for the app (registered 19 Oct, not built)
+
+The Context block (§3.23) is fed by one study, oil shocks. This programme adds tables for Fed days (H1), jobs/CPI days (H2), dollar shocks
+(H3), rate shocks (H4), regime changes (H5), equity drawdown entries (H6), volatility spikes (H7), and the current regime's own return
+table (H0). One shared engine, one uniform test (20-session sign share vs the market's base rate, ≥ 15 points, n ≥ 30, random-date null
+p < 0.05), priors #49–#53. Tables enter the app as `measured`; tests as `tested: <verdict>`. `docs/prereg_history_tables.md`.
+Build order H0, H1, H3, H4, H5; H2 after the 08:30 reader's first month; H6, H7 after.
+**H0 measured 19 Oct:** gold regime 3 +2.4% vs +0.7% all-history at 20 sessions, oil ±1.5–2.2 pts by regime, SPY/TLT/UUP flat; prior #49 wrong (tally 49). In the app as `measured` under "What history says in today's condition". H1, H3, H4, H5 next.
+**H1/H4/H5 run 19 Oct:** every testable cell FAIL (H1 132 days, H4 56/60 shocks, H5 32 changes); H3 at 3% gave 6/3 events (#51 wrong, tally 50) → amended to 2% before rerun. Measured and on the page: gold +2.4%/month after 25 bp+ yield drops (65% vs 56%); oil +3.7%/month after a label change (69% vs 52%, p 0.07). H2 waits for the reader's first month; H6, H7 after. H3 at 2%: 21/15 events, INCONCLUSIVE, not lowered again. Open: gold/dollar/oil cells in H4up need pre-ETF spot series; H3 needs a dollar series that starts before the one the engine reads.
+**Horizon amendment 19 Oct** (founder): every table also at 5 sessions, gap floor 10 points, PASS needs p < 0.05/6 within its table; prior #54. **Data item:** a dollar series from the 1990s (the engine's FRED broad index starts 2006; DXY runs from the 1970s) — needed before H3 can reach 30 events. **Pipeline fix:** step 6 now defers a session until the panel has its prices (16 Oct report had been written over an all-NaN row).
+**Amended rerun 19 Oct: no PASS in 72 cells** (#54 right); the six event tables are closed as measured-only. Remaining under 3.25: H2 (after the reader's first month), H6, H7, and the dollar-series data item.
+
+### 3.26 Live document feed repaired (19 Oct)
+
+Found while building §3.23: 29 of the last 30 report days carried zero documents. Two routing faults, not the engine: (1) no nightly 8-K
+fetch existed — the earnings source, the only one scoring above chance in the backfill (62%), last received a document on 14 Aug 2026;
+(2) `fetch_sources political` wrote every presidential document to `political/`, a folder step 6 never reads; the report reads
+`political_order/` and `political_other/`, last filled 14 Aug. Fix: `--out` on the political fetch; nightly step 3 now fetches 8-Ks
+(SEC submissions feed, 9 registered tickers, skips files on disk) and routes executive orders / proclamations to the two read folders.
+Reading stays under step 4's 40-per-source cap. **Reports for 15 Aug – 19 Oct keep their as-of state** (zero documents): regenerating them
+with documents read later would make the record look better than the engine was on the day. Forward from 20 Oct the feed is live.
+Also noted: the 16 Oct run died inside step 2 with no error text and 17 Oct never ran (scheduler outside the repo); `daily_run.sh` has no
+git step, so the cloud app shows the last manual push.
+
+### 3.27 Input latency audit (registered 22 Oct, running nightly)
+
+Founder's check after the 20–22 Oct week: are the engine's inputs stale at the moment it acts? `src/latency_audit.py` logs, every run, how many
+sessions each input series is behind the last completed NYSE session (price panel, macro panel, oil columns, Yahoo live quotes) to
+`processed/latency_log.csv` and `docs/latency_audit.md`. Criterion, fixed: a series ≥ 2 sessions behind on ≥ 20% of the last 20 runs is STALE;
+every live rule reading it must state the lag on the app, and the backfill alignment for that series is re-checked (tests are unaffected by
+latency only where the backfill used the same as-of alignment the live engine sees). Known at registration: FRED daily series publish one
+session late (declared on the oil leg as "provisional"); the price download missed the latest close on 16 and 21 Oct (no 21 Oct report was
+written at the 22 Oct run) and the nightly 8-K fetch printed nothing on 22 Oct — both to be diagnosed from the first audit rows.
+
+### 3.28 Blind-spot fill plan (registered 22 Oct as a plan; built after the current list is cleared)
+
+What the 20–22 Oct week showed the engine cannot see, and the fill for each, in order:
+1. **8-K ticker list** — add the AI-capex bellwethers (META, GOOGL, AMZN, AAPL, AVGO, AMD) as a dated corpus amendment; backfill read ~US$15.
+2. **Metals and a long dollar series** — silver (SI=F / spot), LBMA gold spot, DXY from the 1970s as display + history columns, the §3.13 pattern;
+   unlocks H3 (dollar events) and the gold/dollar/oil cells of H4up; free, ~1 day.
+3. **Positioning** — CFTC Commitments of Traders (gold, silver, oil; free, weekly) as a blind-spot input, registered before any use.
+4. **Sector axis** — schema v2 (§3.3, US$200–400) so "capex up / capex cut" can be scored; until then the reader's five axes cannot represent it.
+5. **Rhetoric** — GDELT trigger (§3.4) / source expansion (§3.2), as costed.
+Every fill is a corpus or population change and goes in as a dated amendment with its own prior; nothing above alters a recorded verdict.
+
+### 3.29 Target-range engine — how far, how likely (registered 22 Oct at the founder's direction; Stage 1 built)
+
+Founder: attribution, magnitude and a point target are to be designed and tested, not discussed. A3b failed on *direction*; this engine answers
+*how far and how likely*: per market, horizon and regime, the probability of touching ±X% within h sessions and the path-end quantiles, applied to
+today's price (median = the point target, the probability = the claim). Stage 1 statistics with a walk-forward Brier calibration test (prior #55);
+Stage 2 reader-labelled reasons per episode with a lift test (prior #56); Stage 3 regularised quantile weights (prior #57). `docs/prereg_target_range.md`,
+`src/target_range.py`. The §4 design note of 22 Oct is superseded by this registration.
+
+### 3.30 Specification grid — the alternatives track (registered 22 Oct as a plan; runs after the main list)
+
+Founder: sweep every variable every main-track test fixed (horizons 1–120 one by one, every threshold, gap, sample start, regime definition,
+feature subset, sample-size rule, scoring), so no possibility is missed by convention; design it as a track beside this one. `docs/SPEC_GRID.md`
+holds the variable inventory, the per-test grids with cell counts (≈ 800k cells over 14 families), the data sources to add (free first), the
+earnings-pool amendment (23 issuers), and the rule that keeps a sweep honest: the best cell is judged against the best cell of the same sweep
+on shuffled data (reality-check / SPA), the whole curve is published, and a survivor is promoted to its own forward test — recorded verdicts
+never change. Runner `src/spec_grid.py` to build; first family 2.9 (the sample-size rule behind Stage 1's result).
+
 ## 4. Potential upgrades — not registered, not costed
+- **Reason-weighted path range (founder, 22 Oct) — registered as 3.29 the same day.** Segment past rises and falls per market (episodes ≥ 10% peak-to-trough); have the reader
+  label the reasons present in each episode's documents; fit a walk-forward model from reason indicators + macro legs to the forward 60-session
+  path; apply today's reasons to give a path **range** (median, worst, best — never a point target) under the current regime. Pieces already in
+  the repo: `episode_rotation.py`, `attribution.py` (T13 influence cells, 1 earned), the A3b nearest-neighbour estimate (FAIL vs the plain median),
+  T2 expected-move (registered, not built). Risk stated at registration: an LLM asked why a market rose always produces a story, and the same
+  stories precede falls; ~40 swings since 1995 against dozens of labels fits the stories, not the market. Criterion if built: beats the
+  unconditional path range on held-out episodes (MAE of the median, coverage of the range). Prior (Claude): attribution earns cells slowly;
+  the magnitude model fails as A3b did. Taken up after the list, with the founder choosing whether the prior is worth the test.
 
 Improvements with no pre-registration behind them. Worth doing when there is a
 reason; none has one yet.

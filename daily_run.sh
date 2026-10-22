@@ -88,13 +88,18 @@ source .venv/bin/activate
 step () { echo; echo "--- $1 ---"; }
 
 step "1/7  prices and macro"
-python -m src.data_io || echo "  (data_io has no CLI entry point; skipped)"
+# 22 Oct (TRACK 3.27): the refresh moved here from inside forward_log, followed by the Stooq fallback for the session Yahoo has not
+# served yet at this hour, so the forward row's signal bar is the actual last close. forward_log then runs --no-refresh.
+python -m src.download_data --force || echo "  download failed -- cached history kept"
+python -m src.build_panel || echo "  build_panel failed"
+python -m src.price_fallback || echo "  price fallback failed -- continuing"
+python -m src.pca_macro || echo "  pca_macro failed"
 
 step "2/7  forward-test row  [THE REGISTERED EXPERIMENT]"
 # The one step whose absence cannot be repaired later. It is deliberately NOT
 # guarded by || true: if the forward log cannot be written, the run must fail
 # loudly so the gap is noticed the same day rather than at submission.
-python -m src.forward_log
+python -m src.forward_log --no-refresh
 
 step "3/7  new policy documents (free)"
 # FOMC statements were never auto-fetched before 2026-09-24 (no writer existed);
@@ -107,6 +112,15 @@ python -m src.fetch_sources political --start "$(date -v-14d +%Y-%m-%d 2>/dev/nu
   --limit 100000 --max-pages 3 \
   --types "executive order,proclamation,notice,memorandum,determination,presidential order" \
   || echo "  fetch failed -- continuing, the corpus is additive"
+# 19 Oct (TRACK 3.26): the live feed had two routing faults -- no nightly 8-K fetch since the backfill (last earnings document 14 Aug),
+# and presidential documents landing in political/ which step 6 never reads. Earnings: SEC submissions feed, free, skips files on disk.
+# Executive orders -> political_order/, proclamations/memoranda/determinations -> political_other/ (the two folders step 6 reads).
+SINCE14="$(date -v-14d +%Y-%m-%d 2>/dev/null || date -d '14 days ago' +%Y-%m-%d)"
+python -m src.fetch_sources edgar --tickers NVDA,TSM,ASML,MU,INTC,MSFT,ORCL,TSLA,LMT,META,GOOGL,AMZN,AAPL,AVGO,AMD,JPM,GS,XOM,CVX,NEM,FCX,WMT,CAT --limit 4 --sleep 0.5 || echo "  8-K fetch failed -- continuing, the corpus is additive"
+python -m src.fetch_sources political --start "$SINCE14" --limit 100000 --max-pages 3 --types "executive order" --out political_order \
+  || echo "  executive-order fetch failed -- continuing"
+python -m src.fetch_sources political --start "$SINCE14" --limit 100000 --max-pages 3 --types "proclamation,memorandum,determination,presidential order" --out political_other \
+  || echo "  proclamation fetch failed -- continuing"
 
 step "4/7  read new documents"
 if [[ "$NO_READ" -eq 1 ]]; then
@@ -142,4 +156,7 @@ python -m src.report_scoreboard \
   || echo "  report scoreboard FAILED -- reports and forward ledger untouched; see traceback above; continuing"
 # T13 case A: per-market coverage state and the oil-shock chain alert for the last completed session
 python -m src.blindspot --today || echo "  blindspot failed -- continuing"
+# 22 Oct (TRACK 3.27 audit): the oil columns were built once on 12 Oct and read stale ever since; rebuild nightly before the oil forward row
+python -m src.wti_cont build || echo "  wti_cont rebuild failed -- continuing"
 python -m src.oil_shock forward || echo "  oil forward failed -- continuing"
+python -m src.latency_audit || echo "  latency audit failed -- continuing"

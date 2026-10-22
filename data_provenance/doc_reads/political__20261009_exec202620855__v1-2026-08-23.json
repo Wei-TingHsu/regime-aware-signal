@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 60,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "directing the Secretary of the Treasury...to defer certain diesel fuel tax payment obligations",
+    "Restricted global diesel supply has led to rising prices",
+    "The Secretary shall explore avenues, including legislation, to eliminate the obligation to pay"
+  ],
+  "extra": {
+    "actor": "President (Executive Order 14435)",
+    "is_decided": true,
+    "sectors": [
+      "trucking",
+      "agriculture",
+      "energy/fuel distribution"
+    ]
+  },
+  "source": "political",
+  "date": "2026-10-09",
+  "doc_id": "exec202620855",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 993,
+  "max_words": 20000
+}

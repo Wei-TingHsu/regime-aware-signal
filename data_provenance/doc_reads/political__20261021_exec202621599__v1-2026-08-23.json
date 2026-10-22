@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.5,
+  "evidence": [
+    "I am hereby waiving the application of such sanctions, restrictions, and duties",
+    "The rate of duty on goods from the Russian Federation shall be increased by 500 percent",
+    "I hereby waive the application of any duties provided for in sections 112 and 113"
+  ],
+  "extra": {
+    "actor": "President (executing Graham Act via EO 14436)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "trade",
+      "sanctions",
+      "Russia",
+      "Iran"
+    ]
+  },
+  "source": "political",
+  "date": "2026-10-21",
+  "doc_id": "exec202621599",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1861,
+  "max_words": 20000
+}

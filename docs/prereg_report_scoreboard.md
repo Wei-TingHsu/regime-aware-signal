@@ -273,3 +273,12 @@ T7 is added at registration, not later: the earlier plan listed six, and the
 seventh is the one that guards the null itself. Nothing is built until all
 seven are written.
 | 2026-10-09 | **Primary horizon h* = 3 → 2 sessions.** Founder's hypothesis: a document's drift is strongest on the session it lands, weaker the next, and by the third session new documents overwrite or extend it, so a 3-session outcome mixes the effect with its successor's. Horizon set becomes {2, 3, 5, 20} so h=3 stays reported beside h=2; the non-overlap sampler takes every 2nd report date; the permutation block is 2. Every result on file at h*=3 stands as written and is not rerun; the backfill is re-scored at h*=2 under a new tag and the two are shown side by side. Prior, stated: hit-rate similar or slightly higher at h=2 (less time for intervening news), non-overlap n larger (~1.5×), asymmetry unchanged within 0.1 | Founder's instruction; the estimand follows the drift evidence |
+
+## Corpus amendment 2026-10-22 — earnings 8-K/6-K pool
+
+The nightly 8-K fetch (added 19 Oct; none existed before) now covers 23 issuers instead of 9, chosen by which of the five markets their
+results inform: AI capex (META, GOOGL, AMZN, AAPL, AVGO, AMD beside NVDA, MSFT, ORCL, TSM, ASML, MU, INTC, TSLA), rates and credit (JPM, GS),
+oil (XOM, CVX), gold and copper (NEM, FCX), consumer (WMT), industry (CAT), defence (LMT). Backfill read of the new issuers' past releases is
+a dedicated run (~560 filings, ~US$40) and is reported with its own date; scoreboard cells computed before and after the amendment are
+labelled with the corpus tag. Foreign private issuers (TSM, ASML) file 6-K; their results exhibits need a parser of their own (two TSM
+filings rejected as cover-page-only in Oct 2026) — SPEC_GRID §3.

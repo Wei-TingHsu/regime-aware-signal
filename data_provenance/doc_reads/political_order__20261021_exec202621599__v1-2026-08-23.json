@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.1,
+    "gold": -0.15,
+    "dollar": -0.05,
+    "oil": -0.2
+  },
+  "magnitude": 0.45,
+  "horizon_days": 10,
+  "specificity": 0.8,
+  "novelty": 0.55,
+  "confidence": 0.55,
+  "evidence": [
+    "I hereby waive the application of such sanctions, restrictions, and duties provided for in the Graham Act.",
+    "The rate of duty on goods from the Russian Federation shall be increased by 500 percent ad valorem, subject to... waivers",
+    "I have submitted to the Congress a certification that the issuance of such a waiver is in the national interests"
+  ],
+  "extra": {
+    "actor": "President (executive branch, delegating to State/Treasury/USTR/Energy)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "trade",
+      "sanctions",
+      "oil and gas imports"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-10-21",
+  "doc_id": "exec202621599",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1861,
+  "max_words": 20000
+}

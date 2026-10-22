@@ -517,13 +517,24 @@ def main():
         dates = pd.DatetimeIndex(s.index)
         done = dates[(dates <= last_completed_session())
                      & (dates >= pd.Timestamp(WRITE_ONCE_FROM))]
+        # 19 Oct: a calendar-completed session is reportable only once the panel HAS its prices. On 16 Oct the download lagged a
+        # session and a report was written over an all-NaN row; the forward log had already guarded against this, step 6 had not.
+        MODEL5 = ["SPY", "TLT", "GLD", "UUP", "USO"]
+        rp = pd.read_parquet(PROCESSED_DIR / "asset_returns.parquet")
         for d in done:
             stem = d.strftime("%Y%m%d")
-            if not (REPORT_DIR / f"{stem}.json").exists():
-                print(f"PENDING {stem}")
+            if (REPORT_DIR / f"{stem}.json").exists():
+                continue
+            if d not in rp.index or not rp.loc[d, MODEL5].notna().all():
+                print(f"DEFERRED {stem}: panel has no prices for this session yet"); continue
+            print(f"PENDING {stem}")
         return
     if not a.date:
         raise SystemExit("give --date YYYYMMDD, --latest or --pending")
+    if not a.force:
+        _rp = pd.read_parquet(PROCESSED_DIR / "asset_returns.parquet"); _d = pd.Timestamp(a.date)
+        if _d not in _rp.index or not _rp.loc[_d, ["SPY", "TLT", "GLD", "UUP", "USO"]].notna().all():
+            raise SystemExit(f"  {a.date}: panel has no prices for this session yet -- deferred (--force overrides)")
 
     # DEFER WHILE UNREAD (2026-09-14, CURRENT_STATE §18.5). Reads are paused
     # for credit; a report written now for a session whose documents were

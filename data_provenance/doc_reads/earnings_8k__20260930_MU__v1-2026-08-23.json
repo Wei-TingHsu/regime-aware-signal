@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.8,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.85,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.55,
+  "confidence": 0.7,
+  "evidence": [
+    "Revenue of $54.23 billion versus $41.46 billion for the prior quarter",
+    "we expect an even stronger fiscal 2027",
+    "Revenue $61.5 billion \u00b1 $1.5 billion"
+  ],
+  "extra": {
+    "surprise": 0.6,
+    "guidance_change": 0.7,
+    "ticker": "MU"
+  },
+  "source": "earnings_8k",
+  "date": "2026-09-30",
+  "doc_id": "MU",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2937,
+  "max_words": 20000
+}
