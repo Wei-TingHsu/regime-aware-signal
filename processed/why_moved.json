@@ -1,5 +1,5 @@
 {
- "run": "2026-10-23 18:34",
+ "run": "2026-10-23 18:43",
  "rule": {
   "mult": 1.5,
   "floor": 0.08
@@ -18,7 +18,7 @@
      "move": 0.21433774858555651
     },
     "threshold_now": 0.013880362510886939,
-    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 1.0\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions; extremes taken from the high and low of the day (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-03-30",
      "direction": 1,
@@ -27,19 +27,19 @@
     }
    },
    "target": {
-    "n": 87,
-    "med_size": 0.08554229487770931,
-    "q25": 0.05800710665927235,
-    "q75": 0.16004301951087557,
-    "med_length": 15.0,
-    "target_from_start": 0.08554229487770931,
-    "target_from_now": -0.10918430784239497,
+    "n": 73,
+    "med_size": 0.09565653492606566,
+    "q25": 0.06858940809933092,
+    "q75": 0.16971713735763258,
+    "med_length": 35.0,
+    "target_from_start": 0.09565653492606566,
+    "target_from_now": -0.09907006779403862,
     "band_from_now": [
-     -0.13671949606083195,
-     -0.03468358320922871
+     -0.12613719462077336,
+     -0.0250094653624717
     ],
-    "share_of_typical": 2.2763780536690548,
-    "pct_rank": 0.8390804597701149,
+    "share_of_typical": 2.035685307549676,
+    "pct_rank": 0.7671232876712328,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
@@ -280,7 +280,7 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 194,
+   "n_past_episodes": 146,
    "windows": {
     "R1_full": {
      "sessions": 120,
@@ -355,17 +355,17 @@
   "TLT": {
    "name": "long Treasuries",
    "episode": {
-    "start": "2026-10-05",
+    "start": "2026-10-07",
     "kind": "trough",
     "direction": 1,
-    "sessions": 13,
-    "move": 0.05831047024146923,
+    "sessions": 11,
+    "move": 0.0577918534144242,
     "extreme_so_far": {
      "date": "2026-10-22",
-     "move": 0.05831047024146923
+     "move": 0.0577918534144242
     },
     "threshold_now": 0.015719957416180444,
-    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 1.0\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions; extremes taken from the high and low of the day (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-08-28",
      "direction": -1,
@@ -374,170 +374,170 @@
     }
    },
    "target": {
-    "n": 133,
-    "med_size": 0.04942018693929581,
-    "q25": 0.035148945839888084,
-    "q75": 0.07391453597361612,
-    "med_length": 13.0,
-    "target_from_start": 0.04942018693929581,
-    "target_from_now": -0.008890283302173417,
+    "n": 84,
+    "med_size": 0.0638720808699426,
+    "q25": 0.047353135277023506,
+    "q75": 0.09900491595769992,
+    "med_length": 24.5,
+    "target_from_start": 0.0638720808699426,
+    "target_from_now": 0.006080227455518401,
     "band_from_now": [
-     -0.023161524401581146,
-     0.015604065732146892
+     -0.010438718137400695,
+     0.04121306254327572
     ],
-    "share_of_typical": 1.1798917376232023,
-    "pct_rank": 0.6390977443609023,
+    "share_of_typical": 0.9048061786510594,
+    "pct_rank": 0.4523809523809524,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
-    "actual": 0.058310470241468945,
-    "sessions": 13,
+    "actual": 0.05779185341442403,
+    "sessions": 11,
     "rows": [
      {
       "factor": "macro2",
       "label": "macro state, PCA line 2",
-      "beta": 0.2506771511180448,
-      "move": 0.18599053901310925,
-      "contrib": 0.04662357845471579,
-      "share": 0.7995747292320458
+      "beta": 0.2519432547948647,
+      "move": 0.1713273350683109,
+      "contrib": 0.04316476643244061,
+      "share": 0.7469005384358774
      },
      {
       "factor": "real",
       "label": "real 10-yr yield",
-      "beta": 0.0009234640709948267,
-      "move": -19.000000000000036,
-      "contrib": -0.01754581734890174,
-      "share": -0.300903375950201
+      "beta": 0.0009247187203309762,
+      "move": -16.000000000000014,
+      "contrib": -0.014795499525295634,
+      "share": -0.2560135841153502
      },
      {
       "factor": "vix",
       "label": "equity volatility (VIX)",
-      "beta": 0.021625771347766446,
-      "move": 0.07208088217552788,
-      "contrib": 0.00155880467647326,
-      "share": 0.026732843518807316
-     },
-     {
-      "factor": "macro1",
-      "label": "macro state, PCA line 1",
-      "beta": -0.017853980154584594,
-      "move": -0.08212791196874614,
-      "contrib": 0.001466310110427464,
-      "share": 0.025146600676608177
+      "beta": 0.022129696649068793,
+      "move": 0.10084103435079061,
+      "contrib": 0.002231581499961322,
+      "share": 0.03861411891324377
      },
      {
       "factor": "dollar",
       "label": "US dollar (broad index)",
-      "beta": -1.2048831657930101,
-      "move": 0.0011043550618099474,
-      "contrib": -0.0013306188230331048,
-      "share": -0.022819552260904288
+      "beta": -1.2052251467434507,
+      "move": 0.0012280528336763297,
+      "contrib": -0.001480080156676265,
+      "share": -0.025610532786734575
+     },
+     {
+      "factor": "macro1",
+      "label": "macro state, PCA line 1",
+      "beta": -0.01764900190120563,
+      "move": -0.030235388860431645,
+      "contrib": 0.0005336244354814495,
+      "share": 0.009233558087414868
      },
      {
       "factor": "hikes",
       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-      "beta": -0.00011087022146141077,
-      "move": -3.000000000000025,
-      "contrib": 0.0003326106643842351,
-      "share": 0.005704132774214719
+      "beta": -0.00011173698276890758,
+      "move": 4.0000000000000036,
+      "contrib": -0.0004469479310756307,
+      "share": -0.007733753196502932
      },
      {
       "factor": "war",
       "label": "geopolitical risk (GPR index)",
-      "beta": -0.0006070972169325441,
-      "move": 0.4529815755700728,
-      "contrib": -0.00027500385385031013,
-      "share": -0.004716200241766088
+      "beta": -0.0006320656342570091,
+      "move": 0.6462037052910459,
+      "contrib": -0.0004084431548440143,
+      "share": -0.0070674866908157115
      },
      {
       "factor": "oil",
       "label": "oil (WTI spot)",
-      "beta": -0.0006743781115028412,
-      "move": 0.11541074748552393,
-      "contrib": -7.783048193641892e-05,
-      "share": -0.0013347599773096638
+      "beta": -0.0003217757407589961,
+      "move": 0.1270247938044733,
+      "contrib": -4.087349712119313e-05,
+      "share": -0.0007072536128594153
      }
     ],
-    "drift": 0.00016046269390862695,
-    "resid": 0.027397974149281138,
-    "unexplained_share": 0.46986371462661236
+    "drift": 0.00024328138643652566,
+    "resid": 0.028790443925116847,
+    "unexplained_share": 0.4981747811176992
    },
    "impulse": {
     "end": "2026-10-16",
-    "sessions": 9,
-    "move": 0.03741849580566321,
+    "sessions": 7,
+    "move": 0.0368998789786183,
     "attribution": {
-     "actual": 0.03741849580566321,
-     "sessions": 9,
+     "actual": 0.0368998789786183,
+     "sessions": 7,
      "rows": [
       {
        "factor": "macro2",
        "label": "macro state, PCA line 2",
-       "beta": 0.2506771511180448,
-       "move": 0.18031680575957332,
-       "contrib": 0.04520130316651569,
-       "share": 1.207993592293856
+       "beta": 0.2519432547948647,
+       "move": 0.16565360181477495,
+       "contrib": 0.0417353076097069,
+       "share": 1.1310418560963438
       },
       {
        "factor": "real",
        "label": "real 10-yr yield",
-       "beta": 0.0009234640709948267,
-       "move": -20.999999999999993,
-       "contrib": -0.019392745490891355,
-       "share": -0.518266303156855
+       "beta": 0.0009247187203309762,
+       "move": -17.99999999999997,
+       "contrib": -0.016644936965957546,
+       "share": -0.45108378202547716
       },
       {
        "factor": "vix",
        "label": "equity volatility (VIX)",
-       "beta": 0.021625771347766446,
-       "move": 0.2531026337572362,
-       "contrib": 0.005473539685151463,
-       "share": 0.14627898763164748
+       "beta": 0.022129696649068793,
+       "move": 0.2818627859324989,
+       "contrib": 0.006237537949347616,
+       "share": 0.16903952321800209
       },
       {
        "factor": "macro1",
        "label": "macro state, PCA line 1",
-       "beta": -0.017853980154584594,
-       "move": -0.17846217027587086,
-       "contrib": 0.0031862600464494946,
-       "share": 0.0851520077930888
+       "beta": -0.01764900190120563,
+       "move": -0.12656964716755637,
+       "contrib": 0.002233827943495128,
+       "share": 0.06053754118785927
       },
       {
        "factor": "dollar",
        "label": "US dollar (broad index)",
-       "beta": -1.2048831657930101,
-       "move": 0.0011043550618099474,
-       "contrib": -0.0013306188230331048,
-       "share": -0.03556045731885669
+       "beta": -1.2052251467434507,
+       "move": 0.0012280528336763297,
+       "contrib": -0.001480080156676265,
+       "share": -0.04011070490323017
       },
       {
        "factor": "hikes",
        "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": -0.00011087022146141077,
-       "move": -9.999999999999964,
-       "contrib": 0.0011087022146141039,
-       "share": 0.029629791116464497
+       "beta": -0.00011173698276890758,
+       "move": -2.999999999999936,
+       "contrib": 0.0003352109483067156,
+       "share": 0.00908433733619978
       },
       {
        "factor": "war",
        "label": "geopolitical risk (GPR index)",
-       "beta": -0.0006070972169325441,
-       "move": -0.4150120538315374,
-       "contrib": 0.0002519526628745855,
-       "share": 0.0067333722922248785
+       "beta": -0.0006320656342570091,
+       "move": -0.2217899241105643,
+       "contrib": 0.00014018578905475776,
+       "share": 0.0037990853340193515
       },
       {
        "factor": "oil",
        "label": "oil (WTI spot)",
-       "beta": -0.0006743781115028412,
-       "move": 0.11837234150583242,
-       "contrib": -7.982771611887266e-05,
-       "share": -0.0021333758720143664
+       "beta": -0.0003217757407589961,
+       "move": 0.12998638782478178,
+       "contrib": -4.1826466230905305e-05,
+       "share": -0.0011335122875373582
       }
      ],
-     "drift": 0.00011108955732135712,
-     "resid": 0.0028888405027798565,
-     "unexplained_share": 0.07720354441245703
+     "drift": 0.0001548154277323345,
+     "resid": 0.004229836899839561,
+     "unexplained_share": 0.11463010223666445
     }
    },
    "last_session": {
@@ -625,92 +625,92 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 294,
+   "n_past_episodes": 168,
    "windows": {
     "R1_full": {
-     "sessions": 13,
-     "explained": 0.5273844177714948,
-     "move": 0.058310470241468945,
+     "sessions": 11,
+     "explained": 0.49761560503427327,
+     "move": 0.05779185341442403,
      "end": "2026-10-22"
     },
     "R2_impulse": {
-     "sessions": 9,
-     "explained": 0.9198276147795557,
-     "move": 0.03741849580566321,
+     "sessions": 7,
+     "explained": 0.8811743439561797,
+     "move": 0.0368998789786183,
      "end": "2026-10-16"
     },
     "R3_half": {
-     "sessions": 6,
-     "explained": 0.8966661777532294,
-     "move": 0.016208254350911843,
-     "end": "2026-10-13"
+     "sessions": 5,
+     "explained": 0.8338204093171457,
+     "move": 0.02230287078300598,
+     "end": "2026-10-14"
     },
     "R4_ceiling": {
-     "sessions": 9,
-     "explained": 0.9198276147795557,
-     "move": 0.03741849580566321,
+     "sessions": 7,
+     "explained": 0.8811743439561797,
+     "move": 0.0368998789786183,
      "end": "2026-10-16"
     },
     "R5_causal": {
-     "sessions": 9,
-     "explained": 0.9198276147795557,
-     "move": 0.03741849580566321,
+     "sessions": 7,
+     "explained": 0.8811743439561797,
+     "move": 0.0368998789786183,
      "end": "2026-10-16"
     }
    },
    "window_test": {},
-   "ceiling_null": 0.0828545491169575,
+   "ceiling_null": 0.08862764792906958,
    "best_rule": null,
    "r5_rows": [
     {
      "factor": "macro2",
      "label": "macro state, PCA line 2",
-     "beta": 0.2506771511180448,
-     "move": 0.18031680575957332,
-     "contrib": 0.04520130316651569,
-     "share": 1.207993592293856
+     "beta": 0.2519432547948647,
+     "move": 0.16565360181477495,
+     "contrib": 0.0417353076097069,
+     "share": 1.1310418560963438
     },
     {
      "factor": "real",
      "label": "real 10-yr yield",
-     "beta": 0.0009234640709948267,
-     "move": -20.999999999999993,
-     "contrib": -0.019392745490891355,
-     "share": -0.518266303156855
+     "beta": 0.0009247187203309762,
+     "move": -17.99999999999997,
+     "contrib": -0.016644936965957546,
+     "share": -0.45108378202547716
     },
     {
      "factor": "vix",
      "label": "equity volatility (VIX)",
-     "beta": 0.021625771347766446,
-     "move": 0.2531026337572362,
-     "contrib": 0.005473539685151463,
-     "share": 0.14627898763164748
+     "beta": 0.022129696649068793,
+     "move": 0.2818627859324989,
+     "contrib": 0.006237537949347616,
+     "share": 0.16903952321800209
     },
     {
      "factor": "macro1",
      "label": "macro state, PCA line 1",
-     "beta": -0.017853980154584594,
-     "move": -0.17846217027587086,
-     "contrib": 0.0031862600464494946,
-     "share": 0.0851520077930888
+     "beta": -0.01764900190120563,
+     "move": -0.12656964716755637,
+     "contrib": 0.002233827943495128,
+     "share": 0.06053754118785927
     }
    ],
-   "r5_unexplained": 0.07720354441245703
+   "r5_unexplained": 0.11463010223666445
   },
   "GLD": {
    "name": "gold",
    "episode": {
-    "start": "2026-08-25",
+    "start": "2026-08-24",
     "kind": "peak",
     "direction": -1,
-    "sessions": 41,
-    "move": -0.14849010667992638,
+    "sessions": 42,
+    "move": -0.1452611159314503,
     "extreme_so_far": {
      "date": "2026-10-22",
-     "move": -0.14849010667992638
+     "move": -0.1452611159314503
     },
     "threshold_now": 0.031344802698632095,
-    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 1.0\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions; extremes taken from the high and low of the day (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-08-24",
      "direction": -1,
@@ -719,186 +719,186 @@
     }
    },
    "target": {
-    "n": 108,
-    "med_size": 0.06690099459826039,
-    "q25": 0.04746398995086824,
-    "q75": 0.09518208967321035,
-    "med_length": 14.0,
-    "target_from_start": -0.06690099459826039,
-    "target_from_now": 0.08158911208166598,
+    "n": 72,
+    "med_size": 0.07542853077718069,
+    "q25": 0.05217693945301209,
+    "q75": 0.1178548281470665,
+    "med_length": 22.0,
+    "target_from_start": -0.07542853077718069,
+    "target_from_now": 0.06983258515426961,
     "band_from_now": [
-     0.10102611672905813,
-     0.05330801700671603
+     0.09308417647843821,
+     0.027406287784383795
     ],
-    "share_of_typical": 2.2195500615739356,
-    "pct_rank": 0.9074074074074074,
+    "share_of_typical": 1.925811286985799,
+    "pct_rank": 0.8611111111111112,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
-    "actual": -0.1484901066799282,
-    "sessions": 41,
+    "actual": -0.14526111593145194,
+    "sessions": 42,
     "rows": [
      {
       "factor": "dollar",
       "label": "US dollar (broad index)",
-      "beta": -2.1301708722078923,
-      "move": 0.02651291554038604,
-      "contrib": -0.056477040421438314,
-      "share": 0.38034210954656456
-     },
-     {
-      "factor": "real",
-      "label": "real 10-yr yield",
-      "beta": 0.0012669566825022364,
-      "move": 43.99999999999999,
-      "contrib": 0.05574609403009839,
-      "share": -0.3754195836781208
+      "beta": -2.113908587490076,
+      "move": 0.025741823993402413,
+      "contrib": -0.05441586279731144,
+      "share": 0.3746072198907658
      },
      {
       "factor": "macro1",
       "label": "macro state, PCA line 1",
-      "beta": -0.08054545457555276,
-      "move": 0.677851528511261,
-      "contrib": -0.054597859498672775,
-      "share": 0.3676868494435051
+      "beta": -0.08113414721625993,
+      "move": 0.6154047090754897,
+      "contrib": -0.0499303362637104,
+      "share": 0.3437281611362004
+     },
+     {
+      "factor": "real",
+      "label": "real 10-yr yield",
+      "beta": 0.0012577490397065942,
+      "move": 37.99999999999999,
+      "contrib": 0.04779446350885057,
+      "share": -0.3290244825835192
      },
      {
       "factor": "oil",
       "label": "oil (WTI spot)",
-      "beta": 0.08205655297077132,
-      "move": 0.2514865760900875,
-      "contrib": 0.020636121552374178,
-      "share": -0.13897304011543024
+      "beta": 0.08298120424672785,
+      "move": 0.222819199435917,
+      "contrib": 0.018489805498484214,
+      "share": -0.12728668219242836
      },
      {
       "factor": "macro2",
       "label": "macro state, PCA line 2",
-      "beta": 0.10295317163532679,
-      "move": -0.20031441809514833,
-      "contrib": -0.020623004667180415,
-      "share": 0.13888470503717457
+      "beta": 0.10055627304723616,
+      "move": -0.15796036693251803,
+      "contrib": -0.015883905787907895,
+      "share": 0.10934726534390275
      },
      {
       "factor": "btc",
       "label": "speculative liquidity (Bitcoin)",
-      "beta": 0.06604272247723414,
-      "move": 0.031228529224588186,
-      "contrib": 0.0020624170889516733,
-      "share": -0.013889255890947888
-     },
-     {
-      "factor": "vix",
-      "label": "equity volatility (VIX)",
-      "beta": -0.01860604837198165,
-      "move": 0.07660139358684592,
-      "contrib": -0.0014252492344380603,
-      "share": 0.009598277395747302
+      "beta": 0.06533355375640619,
+      "move": 0.026156352037757458,
+      "contrib": 0.0017088874319303115,
+      "share": -0.011764245517270622
      },
      {
       "factor": "war",
       "label": "geopolitical risk (GPR index)",
-      "beta": 0.002907404861303291,
-      "move": 0.39981515241240384,
-      "contrib": 0.0011624245177465392,
-      "share": -0.00782829606454628
+      "beta": 0.0028736922581977815,
+      "move": 0.47757092047378524,
+      "contrib": 0.001372391856905905,
+      "share": -0.009447757908961203
+     },
+     {
+      "factor": "vix",
+      "label": "equity volatility (VIX)",
+      "beta": -0.019342874074543836,
+      "move": 0.05104089660731104,
+      "contrib": -0.0009872776357270291,
+      "share": 0.006796572017200535
      },
      {
       "factor": "hikes",
       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-      "beta": 7.3906665795811826e-06,
-      "move": 38.99999999999997,
-      "contrib": 0.00028823599660366593,
-      "share": -0.001941112462293271
+      "beta": 5.718241203558097e-06,
+      "move": 31.999999999999943,
+      "contrib": 0.00018298371851385877,
+      "share": -0.0012596882334306723
      }
     ],
-    "drift": 0.04027161290356652,
-    "resid": -0.1355338589475396,
-    "unexplained_share": 0.9127467275626927
+    "drift": 0.03956954829031825,
+    "resid": -0.13316181375179828,
+    "unexplained_share": 0.9167065315306867
    },
    "impulse": {
     "end": "2026-09-01",
-    "sessions": 5,
-    "move": -0.07598039131393719,
+    "sessions": 6,
+    "move": -0.07275140056546092,
     "attribution": {
-     "actual": -0.07598039131393719,
-     "sessions": 5,
+     "actual": -0.07275140056546092,
+     "sessions": 6,
      "rows": [
-      {
-       "factor": "real",
-       "label": "real 10-yr yield",
-       "beta": 0.0012669566825022364,
-       "move": 12.00000000000001,
-       "contrib": 0.01520348019002685,
-       "share": -0.20009741891442528
-      },
       {
        "factor": "macro1",
        "label": "macro state, PCA line 1",
-       "beta": -0.08054545457555276,
-       "move": 0.18210466839014172,
-       "contrib": -0.01466770329581426,
-       "share": 0.19304590358333337
+       "beta": -0.08113414721625993,
+       "move": 0.11965784895437048,
+       "contrib": -0.00970833753264489,
+       "share": 0.13344536953497455
+      },
+      {
+       "factor": "real",
+       "label": "real 10-yr yield",
+       "beta": 0.0012577490397065942,
+       "move": 6.000000000000005,
+       "contrib": 0.007546494238239572,
+       "share": -0.10372988258073902
       },
       {
        "factor": "dollar",
        "label": "US dollar (broad index)",
-       "beta": -2.1301708722078923,
-       "move": 0.003617791641310042,
-       "contrib": -0.007706514376035834,
-       "share": 0.10142767420338643
-      },
-      {
-       "factor": "macro2",
-       "label": "macro state, PCA line 2",
-       "beta": 0.10295317163532679,
-       "move": -0.07315081472387208,
-       "contrib": -0.007531108383530792,
-       "share": 0.09911910498609594
+       "beta": -2.113908587490076,
+       "move": 0.0028467000943264154,
+       "contrib": -0.006017663775405419,
+       "share": 0.08271543542300316
       },
       {
        "factor": "oil",
        "label": "oil (WTI spot)",
-       "beta": 0.08205655297077132,
-       "move": 0.08649475568141973,
-       "contrib": 0.007097461501266341,
-       "share": -0.09341175240781426
+       "beta": 0.08298120424672785,
+       "move": 0.057827379027249215,
+       "contrib": 0.004798585550113113,
+       "share": -0.06595866901277589
       },
       {
-       "factor": "vix",
-       "label": "equity volatility (VIX)",
-       "beta": -0.01860604837198165,
-       "move": 0.05600708608810212,
-       "contrib": -0.0010420705529289686,
-       "share": 0.013714993235864267
+       "factor": "macro2",
+       "label": "macro state, PCA line 2",
+       "beta": 0.10055627304723616,
+       "move": -0.030796763561241725,
+       "contrib": -0.003096807765635396,
+       "share": 0.042566984849300896
       },
       {
        "factor": "btc",
        "label": "speculative liquidity (Bitcoin)",
-       "beta": 0.06604272247723414,
-       "move": -0.014892395197890096,
-       "contrib": -0.00098353432307555,
-       "share": 0.012944580911827165
+       "beta": 0.06533355375640619,
+       "move": -0.019964572384720825,
+       "contrib": -0.0013043564631208206,
+       "share": 0.017928953298255404
       },
       {
-       "factor": "hikes",
-       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 7.3906665795811826e-06,
-       "move": 21.999999999999975,
-       "contrib": 0.00016259466475078584,
-       "share": -0.002139955611428404
+       "factor": "vix",
+       "label": "equity volatility (VIX)",
+       "beta": -0.019342874074543836,
+       "move": 0.030446589108567235,
+       "contrib": -0.0005889245391263939,
+       "share": 0.008095026824899213
       },
       {
        "factor": "war",
        "label": "geopolitical risk (GPR index)",
-       "beta": 0.002907404861303291,
-       "move": 0.044750179776588794,
-       "contrib": 0.00013010689022665048,
-       "share": -0.0017123745742381401
+       "beta": 0.0028736922581977815,
+       "move": 0.1225059478379702,
+       "contrib": 0.0003520443938851562,
+       "share": -0.004839005038375728
+      },
+      {
+       "factor": "hikes",
+       "label": "rate-hike speculation (2-yr yield minus fed funds)",
+       "beta": 5.718241203558097e-06,
+       "move": 14.999999999999947,
+       "contrib": 8.577361805337114e-05,
+       "share": -0.0011789961071085218
       }
      ],
-     "drift": 0.00491117230531299,
-     "resid": -0.07155427593413541,
-     "unexplained_share": 0.941746609838927
+     "drift": 0.005652792612902607,
+     "resid": -0.07047100090272182,
+     "unexplained_share": 0.9686549036167733
     }
    },
    "last_session": {
@@ -992,37 +992,37 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 238,
+   "n_past_episodes": 146,
    "windows": {
     "R1_full": {
-     "sessions": 41,
-     "explained": 0.358460653211653,
-     "move": -0.1484901066799282,
+     "sessions": 42,
+     "explained": 0.35569636195245946,
+     "move": -0.14526111593145197,
      "end": "2026-10-22"
     },
     "R2_impulse": {
-     "sessions": 5,
-     "explained": 0.12289075541260097,
-     "move": -0.07598039131393719,
+     "sessions": 6,
+     "explained": 0.10904521719143412,
+     "move": -0.07275140056546092,
      "end": "2026-09-01"
     },
     "R3_half": {
-     "sessions": 20,
-     "explained": 0.495454958806792,
-     "move": -0.08578251656121223,
+     "sessions": 21,
+     "explained": 0.49850480215711646,
+     "move": -0.08255352581273596,
      "end": "2026-09-23"
     },
     "R4_ceiling": {
-     "sessions": 22,
-     "explained": 0.6094119165124656,
-     "move": -0.08443441635949431,
+     "sessions": 23,
+     "explained": 0.616313404860161,
+     "move": -0.08120542561101804,
      "end": "2026-09-25"
     },
     "R5_causal": {
      "sessions": 5,
-     "explained": 0.12289075541260097,
-     "move": -0.07598039131393719,
-     "end": "2026-09-01"
+     "explained": 0.11843648815506669,
+     "move": -0.043761670406795475,
+     "end": "2026-08-31"
     }
    },
    "window_test": {
@@ -1038,10 +1038,10 @@
     },
     "run": "2026-10-23 16:29"
    },
-   "ceiling_null": 0.11870517784633322,
+   "ceiling_null": 0.21728920687278902,
    "best_rule": {
-    "sessions": 3,
-    "explained": 0.46694630345682964,
+    "sessions": 4,
+    "explained": 0.4339584305140771,
     "params": {
      "mult": 1.5,
      "floor": 0.08,
@@ -1060,87 +1060,87 @@
      {
       "factor": "macro1",
       "label": "macro state, PCA line 1",
-      "beta": -0.08054545457555276,
-      "move": 0.1696164206828934,
-      "contrib": -0.013661831707381838,
-      "share": 0.298029443158294
-     },
-     {
-      "factor": "real",
-      "label": "real 10-yr yield",
-      "beta": 0.0012669566825022364,
-      "move": 10.000000000000009,
-      "contrib": 0.012669566825022375,
-      "share": -0.2763834328216761
+      "beta": -0.08113414721625993,
+      "move": 0.10716960124712216,
+      "contrib": -0.008695114204691884,
+      "share": 0.20405532317537745
      },
      {
       "factor": "dollar",
       "label": "US dollar (broad index)",
-      "beta": -2.1301708722078923,
-      "move": 0.004385257529487596,
-      "contrib": -0.00934134785644482,
-      "share": 0.20377916809646454
+      "beta": -2.113908587490076,
+      "move": 0.0036141659825039696,
+      "contrib": -0.0076400165070296495,
+      "share": 0.17929448661708486
      },
      {
-      "factor": "macro2",
-      "label": "macro state, PCA line 2",
-      "beta": 0.10295317163532679,
-      "move": -0.024979166132789277,
-      "contrib": -0.0025716843781763963,
-      "share": 0.05610065177370535
+      "factor": "real",
+      "label": "real 10-yr yield",
+      "beta": 0.0012577490397065942,
+      "move": 4.0000000000000036,
+      "contrib": 0.005030996158826381,
+      "share": -0.11806648226994483
+     },
+     {
+      "factor": "vix",
+      "label": "equity volatility (VIX)",
+      "beta": -0.019342874074543836,
+      "move": -0.09386012753751016,
+      "contrib": 0.0018155246275786832,
+      "share": -0.04260639433735335
      }
     ]
    },
    "r5_rows": [
     {
-     "factor": "real",
-     "label": "real 10-yr yield",
-     "beta": 0.0012669566825022364,
-     "move": 12.00000000000001,
-     "contrib": 0.01520348019002685,
-     "share": -0.20009741891442528
-    },
-    {
      "factor": "macro1",
      "label": "macro state, PCA line 1",
-     "beta": -0.08054545457555276,
-     "move": 0.18210466839014172,
-     "contrib": -0.01466770329581426,
-     "share": 0.19304590358333337
+     "beta": -0.08113414721625993,
+     "move": 0.10315754121178333,
+     "contrib": -0.00836959913514423,
+     "share": 0.1912541056441156
+    },
+    {
+     "factor": "real",
+     "label": "real 10-yr yield",
+     "beta": 0.0012577490397065942,
+     "move": 6.000000000000005,
+     "contrib": 0.007546494238239572,
+     "share": -0.17244529671947176
     },
     {
      "factor": "dollar",
      "label": "US dollar (broad index)",
-     "beta": -2.1301708722078923,
-     "move": 0.003617791641310042,
-     "contrib": -0.007706514376035834,
-     "share": 0.10142767420338643
+     "beta": -2.113908587490076,
+     "move": 0.0020971996910237323,
+     "contrib": -0.004433288436536602,
+     "share": 0.101305283718059
     },
     {
      "factor": "macro2",
      "label": "macro state, PCA line 2",
-     "beta": 0.10295317163532679,
-     "move": -0.07315081472387208,
-     "contrib": -0.007531108383530792,
-     "share": 0.09911910498609594
+     "beta": 0.10055627304723616,
+     "move": -0.013919253165857903,
+     "contrib": -0.0013996682219596136,
+     "share": 0.03198388473174616
     }
    ],
-   "r5_unexplained": 0.941746609838927
+   "r5_unexplained": 0.9892070379481026
   },
   "SLV": {
    "name": "silver",
    "episode": {
-    "start": "2026-09-22",
+    "start": "2026-09-09",
     "kind": "peak",
     "direction": -1,
-    "sessions": 22,
-    "move": -0.20770268817800763,
+    "sessions": 31,
+    "move": -0.20753803899739023,
     "extreme_so_far": {
      "date": "2026-10-22",
-     "move": -0.20770268817800763
+     "move": -0.20753803899739023
     },
     "threshold_now": 0.05873448933888869,
-    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 1.0\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions; extremes taken from the high and low of the day (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-09-09",
      "direction": -1,
@@ -1149,186 +1149,186 @@
     }
    },
    "target": {
-    "n": 103,
-    "med_size": 0.11730609125952991,
-    "q25": 0.08091109527430718,
-    "q75": 0.16485132817782927,
-    "med_length": 15.0,
-    "target_from_start": -0.11730609125952991,
-    "target_from_now": 0.09039659691847772,
+    "n": 78,
+    "med_size": 0.13681314465987615,
+    "q25": 0.10681177661846546,
+    "q75": 0.203105770304676,
+    "med_length": 22.5,
+    "target_from_start": -0.13681314465987615,
+    "target_from_now": 0.07072489433751408,
     "band_from_now": [
-     0.12679159290370046,
-     0.04285136000017836
+     0.10072626237892478,
+     0.004432268692714236
     ],
-    "share_of_typical": 1.770604458369368,
-    "pct_rank": 0.8155339805825242,
+    "share_of_typical": 1.5169451700956036,
+    "pct_rank": 0.7564102564102564,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
-    "actual": -0.20770268817800752,
-    "sessions": 22,
+    "actual": -0.2075380389973902,
+    "sessions": 31,
     "rows": [
      {
       "factor": "dollar",
       "label": "US dollar (broad index)",
-      "beta": -3.5510244060638425,
-      "move": 0.015033596678295957,
-      "contrib": -0.053384668715549255,
-      "share": 0.257024447703811
+      "beta": -3.700344166489094,
+      "move": 0.029434416214133563,
+      "contrib": -0.10891747033198113,
+      "share": 0.5248072635655517
      },
      {
       "factor": "real",
       "label": "real 10-yr yield",
-      "beta": 0.0012011743752798573,
-      "move": 12.999999999999993,
-      "contrib": 0.015615266878638135,
-      "share": -0.0751808607563874
-     },
-     {
-      "factor": "oil",
-      "label": "oil (WTI spot)",
-      "beta": 0.10073569278044522,
-      "move": 0.11250225888695908,
-      "contrib": 0.011332992988342824,
-      "share": -0.054563535444616416
-     },
-     {
-      "factor": "vix",
-      "label": "equity volatility (VIX)",
-      "beta": -0.06349571716362434,
-      "move": 0.16026445482159124,
-      "contrib": -0.01017610649473421,
-      "share": 0.04899361960117231
-     },
-     {
-      "factor": "btc",
-      "label": "speculative liquidity (Bitcoin)",
-      "beta": 0.1458343810007659,
-      "move": -0.061194024185272866,
-      "contrib": -0.008924192638005167,
-      "share": 0.042966187468680535
+      "beta": 0.0013534255852726143,
+      "move": 29.999999999999986,
+      "contrib": 0.04060276755817841,
+      "share": -0.19564012339294096
      },
      {
       "factor": "macro1",
       "label": "macro state, PCA line 1",
-      "beta": -0.0647782691818677,
-      "move": 0.11548925846798941,
-      "contrib": -0.007481194272653711,
-      "share": 0.036018764794426256
+      "beta": -0.07688482165393075,
+      "move": 0.4816098915649034,
+      "contrib": -0.03702849061973652,
+      "share": 0.17841784955962775
+     },
+     {
+      "factor": "oil",
+      "label": "oil (WTI spot)",
+      "beta": 0.10378041993874085,
+      "move": 0.10372438458760858,
+      "contrib": 0.010764560190389476,
+      "share": -0.051867890061950715
      },
      {
       "factor": "macro2",
       "label": "macro state, PCA line 2",
-      "beta": 0.09321535213726045,
-      "move": -0.06688527560074378,
-      "contrib": -0.006234734517921047,
-      "share": 0.030017591840591343
+      "beta": 0.1079600118194124,
+      "move": -0.06956293900028929,
+      "contrib": -0.007510015716664295,
+      "share": 0.036186213153718456
      },
      {
-      "factor": "war",
-      "label": "geopolitical risk (GPR index)",
-      "beta": 0.006826381203522795,
-      "move": 0.303132262339334,
-      "contrib": 0.0020692963778145704,
-      "share": -0.00996278091519509
+      "factor": "btc",
+      "label": "speculative liquidity (Bitcoin)",
+      "beta": 0.14862202733077998,
+      "move": 0.035124011260434074,
+      "contrib": 0.005220201761514856,
+      "share": -0.025152987793146203
      },
      {
       "factor": "hikes",
       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-      "beta": 2.541496294320336e-05,
-      "move": 9.999999999999964,
-      "contrib": 0.0002541496294320327,
-      "share": -0.001223622244186935
+      "beta": 0.00018891844124341756,
+      "move": 12.999999999999986,
+      "contrib": 0.0024559397361644257,
+      "share": -0.011833684793539507
+     },
+     {
+      "factor": "war",
+      "label": "geopolitical risk (GPR index)",
+      "beta": 0.00634647006160629,
+      "move": 0.17340109929900827,
+      "contrib": 0.0011004848853507754,
+      "share": -0.0053025695466102675
+     },
+     {
+      "factor": "vix",
+      "label": "equity volatility (VIX)",
+      "beta": -0.06116716590509193,
+      "move": 0.013277201681676676,
+      "contrib": -0.0008121287980184827,
+      "share": 0.003913156363729038
      }
     ],
-    "drift": 0.02529081844793422,
-    "resid": -0.17606431586130591,
-    "unexplained_share": 0.8476747094886583
+    "drift": 0.03389953133466461,
+    "resid": -0.14731341899725234,
+    "unexplained_share": 0.7098140644911115
    },
    "impulse": {
-    "end": "2026-09-30",
-    "sessions": 6,
-    "move": -0.10805366208751496,
+    "end": "2026-09-14",
+    "sessions": 3,
+    "move": -0.06603284727776466,
     "attribution": {
-     "actual": -0.10805366208751496,
-     "sessions": 6,
+     "actual": -0.06603284727776466,
+     "sessions": 3,
      "rows": [
       {
        "factor": "dollar",
        "label": "US dollar (broad index)",
-       "beta": -3.5510244060638425,
-       "move": 0.011439974515904616,
-       "contrib": -0.04062362871072568,
-       "share": 0.37595790763503917
+       "beta": -3.700344166489094,
+       "move": 0.006838429748186492,
+       "contrib": -0.025304543626647368,
+       "share": 0.3832114571738027
       },
       {
        "factor": "real",
        "label": "real 10-yr yield",
-       "beta": 0.0012011743752798573,
-       "move": 30.00000000000003,
-       "contrib": 0.03603523125839575,
-       "share": -0.3334938452082267
-      },
-      {
-       "factor": "macro2",
-       "label": "macro state, PCA line 2",
-       "beta": 0.09321535213726045,
-       "move": -0.2391634094548411,
-       "contrib": -0.02229370143068082,
-       "share": 0.20632064661190916
+       "beta": 0.0013534255852726143,
+       "move": 14.000000000000012,
+       "contrib": 0.018947958193816616,
+       "share": -0.2869474659196922
       },
       {
        "factor": "macro1",
        "label": "macro state, PCA line 1",
-       "beta": -0.0647782691818677,
-       "move": 0.20344300559386053,
-       "contrib": -0.013178685779527313,
-       "share": 0.12196426779921272
+       "beta": -0.07688482165393075,
+       "move": 0.2009278922853066,
+       "contrib": -0.015448305163656006,
+       "share": 0.2339487967052715
       },
       {
-       "factor": "vix",
-       "label": "equity volatility (VIX)",
-       "beta": -0.06349571716362434,
-       "move": 0.13967014732284744,
-       "contrib": -0.008868456170613265,
-       "share": 0.08207455443232006
-      },
-      {
-       "factor": "btc",
-       "label": "speculative liquidity (Bitcoin)",
-       "beta": 0.1458343810007659,
-       "move": -0.03085720986029017,
-       "contrib": -0.004500042099386147,
-       "share": 0.04164636359794513
-      },
-      {
-       "factor": "war",
-       "label": "geopolitical risk (GPR index)",
-       "beta": 0.006826381203522795,
-       "move": -0.1599213330061353,
-       "contrib": -0.0010916839816753918,
-       "share": 0.010103165043968743
+       "factor": "macro2",
+       "label": "macro state, PCA line 2",
+       "beta": 0.1079600118194124,
+       "move": -0.05654284687008562,
+       "contrib": -0.006104366416397669,
+       "share": 0.09244439196631767
       },
       {
        "factor": "oil",
        "label": "oil (WTI spot)",
-       "beta": 0.10073569278044522,
-       "move": 0.007954998301467953,
-       "contrib": 0.0008013522649656392,
-       "share": -0.007416243461666362
+       "beta": 0.10378041993874085,
+       "move": 0.051694201058764655,
+       "contrib": 0.005364845894276298,
+       "share": -0.0812451092970333
       },
       {
        "factor": "hikes",
        "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 2.541496294320336e-05,
-       "move": 16.999999999999993,
-       "contrib": 0.0004320543700344569,
-       "share": -0.0039985166785418795
+       "beta": 0.00018891844124341756,
+       "move": 22.000000000000064,
+       "contrib": 0.004156205707355198,
+       "share": -0.06294148864840368
+      },
+      {
+       "factor": "vix",
+       "label": "equity volatility (VIX)",
+       "beta": -0.06116716590509193,
+       "move": 0.03814526825969056,
+       "contrib": -0.0023332379521347297,
+       "share": 0.03533450469461135
+      },
+      {
+       "factor": "war",
+       "label": "geopolitical risk (GPR index)",
+       "beta": 0.00634647006160629,
+       "move": -0.17186946039007722,
+       "contrib": -0.0010907643848700533,
+       "share": 0.016518512071451264
+      },
+      {
+       "factor": "btc",
+       "label": "speculative liquidity (Bitcoin)",
+       "beta": 0.14862202733077998,
+       "move": -0.0012292398781070801,
+       "contrib": -0.00018269212276011512,
+       "share": 0.0027666855253360143
       }
      ],
-     "drift": 0.006897495940345696,
-     "resid": -0.06166359774864788,
-     "unexplained_share": 0.5706756861114547
+     "drift": 0.0032805998065804465,
+     "resid": -0.04731854721332728,
+     "unexplained_share": 0.7165910476990884
     }
    },
    "last_session": {
@@ -1422,92 +1422,92 @@
     "vix",
     "macro1"
    ],
-   "n_past_episodes": 238,
+   "n_past_episodes": 156,
    "windows": {
     "R1_full": {
-     "sessions": 22,
-     "explained": 0.2740898120482955,
-     "move": -0.20770268817800752,
+     "sessions": 31,
+     "explained": 0.45352722705443926,
+     "move": -0.2075380389973902,
      "end": "2026-10-22"
     },
     "R2_impulse": {
-     "sessions": 6,
-     "explained": 0.4931582997719599,
-     "move": -0.10805366208751496,
-     "end": "2026-09-30"
+     "sessions": 3,
+     "explained": 0.3330902842716613,
+     "move": -0.06603284727776466,
+     "end": "2026-09-14"
     },
     "R3_half": {
-     "sessions": 11,
-     "explained": 0.4821988233291895,
-     "move": -0.12079266274334272,
-     "end": "2026-10-07"
+     "sessions": 15,
+     "explained": 0.8330561538560829,
+     "move": -0.10788901290689762,
+     "end": "2026-09-30"
     },
     "R4_ceiling": {
-     "sessions": 3,
-     "explained": 0.8836281693958861,
-     "move": -0.04358391773903111,
-     "end": "2026-09-25"
+     "sessions": 14,
+     "explained": 0.9906585622861747,
+     "move": -0.09025056599551719,
+     "end": "2026-09-29"
     },
     "R5_causal": {
-     "sessions": 7,
-     "explained": 0.6879284538884038,
-     "move": -0.0987410385554191,
-     "end": "2026-10-01"
+     "sessions": 14,
+     "explained": 0.9906585622861747,
+     "move": -0.09025056599551719,
+     "end": "2026-09-29"
     }
    },
    "window_test": {},
-   "ceiling_null": 0.15758583999178244,
+   "ceiling_null": 0.2514583587401018,
    "best_rule": null,
    "r5_rows": [
     {
      "factor": "dollar",
      "label": "US dollar (broad index)",
-     "beta": -3.5510244060638425,
-     "move": 0.018186650570791052,
-     "contrib": -0.06458124004143394,
-     "share": 0.6540465948733896
+     "beta": -3.700344166489094,
+     "move": 0.026339143434718437,
+     "contrib": -0.09746389575897989,
+     "share": 1.0799255903150897
     },
     {
      "factor": "real",
      "label": "real 10-yr yield",
-     "beta": 0.0012011743752798573,
-     "move": 25.0,
-     "contrib": 0.030029359381996433,
-     "share": -0.30412237729444425
+     "beta": 0.0013534255852726143,
+     "move": 45.00000000000002,
+     "contrib": 0.060904151337267676,
+     "share": -0.6748340097977094
+    },
+    {
+     "factor": "macro1",
+     "label": "macro state, PCA line 1",
+     "beta": -0.07688482165393075,
+     "move": 0.5764175051512233,
+     "contrib": -0.04431775708175551,
+     "share": 0.4910524005351589
     },
     {
      "factor": "macro2",
      "label": "macro state, PCA line 2",
-     "beta": 0.09321535213726045,
-     "move": -0.1780181202971392,
-     "contrib": -0.016594021770311024,
-     "share": 0.16805597766725444
-    },
-    {
-     "factor": "vix",
-     "label": "equity volatility (VIX)",
-     "beta": -0.06349571716362434,
-     "move": 0.14272545064672926,
-     "contrib": -0.009062454846315546,
-     "share": 0.09178002357377657
+     "beta": 0.1079600118194124,
+     "move": -0.20764737695729754,
+     "contrib": -0.022417613270579822,
+     "share": 0.24839304909947396
     }
    ],
-   "r5_unexplained": 0.39356834536344404
+   "r5_unexplained": 0.17897434355956304
   },
   "UUP": {
    "name": "the dollar",
    "episode": {
-    "start": "2026-09-09",
+    "start": "2026-08-20",
     "kind": "trough",
     "direction": 1,
-    "sessions": 31,
-    "move": 0.03235162904179551,
+    "sessions": 44,
+    "move": 0.03485653983765142,
     "extreme_so_far": {
-     "date": "2026-10-12",
-     "move": 0.040278589284461694
+     "date": "2026-10-14",
+     "move": 0.04244021006722249
     },
     "threshold_now": 0.007265693013781125,
-    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 1.0\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions; extremes taken from the high and low of the day (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-01-27",
      "direction": 1,
@@ -1516,186 +1516,186 @@
     }
    },
    "target": {
-    "n": 79,
-    "med_size": 0.02821981966001457,
-    "q25": 0.018501006132212422,
-    "q75": 0.04953679515461233,
-    "med_length": 16.0,
-    "target_from_start": 0.02821981966001457,
-    "target_from_now": -0.00413180938178094,
+    "n": 56,
+    "med_size": 0.03509476885620698,
+    "q25": 0.021146303162945978,
+    "q75": 0.06252398821234496,
+    "med_length": 24.0,
+    "target_from_start": 0.03509476885620698,
+    "target_from_now": 0.0002382290185555594,
     "band_from_now": [
-     -0.01385062290958309,
-     0.01718516611281682
+     -0.013710236674705441,
+     0.027667448374693544
     ],
-    "share_of_typical": 1.1464151589754987,
-    "pct_rank": 0.5822784810126582,
+    "share_of_typical": 0.99321183679734,
+    "pct_rank": 0.5,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
-    "actual": 0.03235162904179554,
-    "sessions": 31,
+    "actual": 0.034856539837651516,
+    "sessions": 44,
     "rows": [
      {
       "factor": "dollar",
       "label": "US dollar (broad index)",
-      "beta": 1.121032541321477,
-      "move": 0.029434416214133563,
-      "contrib": 0.03299693841084424,
-      "share": 1.0199467349299478
+      "beta": 1.110953783735584,
+      "move": 0.02628879804437112,
+      "contrib": 0.029205639657254718,
+      "share": 0.8378812066052299
      },
      {
       "factor": "macro1",
       "label": "macro state, PCA line 1",
-      "beta": 0.03616596862516128,
-      "move": 0.4816098915649034,
-      "contrib": 0.017417888227903622,
-      "share": 0.5383929262233194
+      "beta": 0.03603314838823228,
+      "move": 0.6631642764015706,
+      "contrib": 0.02389589677735248,
+      "share": 0.6855498821354749
      },
      {
       "factor": "real",
       "label": "real 10-yr yield",
-      "beta": -0.0005070347447356759,
-      "move": 29.999999999999986,
-      "contrib": -0.015211042342070269,
-      "share": -0.47017855955318055
+      "beta": -0.0004986556704811978,
+      "move": 40.99999999999997,
+      "contrib": -0.020444882489729095,
+      "share": -0.586543661102151
      },
      {
       "factor": "macro2",
       "label": "macro state, PCA line 2",
-      "beta": -0.03193334504075663,
-      "move": -0.06956293900028929,
-      "contrib": 0.002221377333145344,
-      "share": 0.06866353871316694
+      "beta": -0.03124437423141429,
+      "move": -0.1593918305283865,
+      "contrib": 0.004980098002459073,
+      "share": 0.14287413569030297
      },
      {
       "factor": "oil",
       "label": "oil (WTI spot)",
-      "beta": -0.017667703233963123,
-      "move": 0.10372438458760858,
-      "contrib": -0.0018325716450193266,
-      "share": -0.056645420935428036
+      "beta": -0.016805816828706133,
+      "move": 0.18408416219485968,
+      "contrib": -0.003093684710912642,
+      "share": -0.08875478533789775
      },
      {
       "factor": "hikes",
       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-      "beta": 5.4503784358930294e-05,
-      "move": 12.999999999999986,
-      "contrib": 0.0007085491966660931,
-      "share": 0.02190149979003246
+      "beta": 5.5612540121125934e-05,
+      "move": 36.99999999999993,
+      "contrib": 0.0020576639844816554,
+      "share": 0.059032365061634645
      },
      {
       "factor": "war",
       "label": "geopolitical risk (GPR index)",
-      "beta": 0.0007430971079117545,
-      "move": 0.17340109929900827,
-      "contrib": 0.000128853855397812,
-      "share": 0.003982917065206943
+      "beta": 0.0007004957460906787,
+      "move": 0.38889908161642595,
+      "contrib": 0.00027242215233087803,
+      "share": 0.00781552482259331
      },
      {
       "factor": "vix",
       "label": "equity volatility (VIX)",
-      "beta": 0.0053619137462064025,
-      "move": 0.013277201681676676,
-      "contrib": 7.119121020813694e-05,
-      "share": 0.0022005448355062423
+      "beta": 0.005365789334467213,
+      "move": 0.04099686992197693,
+      "contrib": 0.0002199805673738835,
+      "share": 0.006311027095588637
      },
      {
       "factor": "btc",
       "label": "speculative liquidity (Bitcoin)",
-      "beta": 0.0006662418839884798,
-      "move": 0.035124011260434074,
-      "contrib": 2.3401087435384174e-05,
-      "share": 0.0007233356751572531
+      "beta": 0.001005047960809962,
+      "move": 0.1042464608932594,
+      "contrib": 0.0001047726929424258,
+      "share": 0.0030058259778628946
      }
     ],
-    "drift": 0.007008692410850547,
-    "resid": -0.011181648703566036,
-    "unexplained_share": -0.34562861391370125
+    "drift": 0.008749379610003053,
+    "resid": -0.011090746405904916,
+    "unexplained_share": -0.3181826554661302
    },
    "impulse": {
-    "end": "2026-09-24",
-    "sessions": 11,
-    "move": 0.02505869573109215,
+    "end": "2026-08-28",
+    "sessions": 6,
+    "move": 0.009627475218960506,
     "attribution": {
-     "actual": 0.02505869573109215,
-     "sessions": 11,
+     "actual": 0.009627475218960506,
+     "sessions": 6,
      "rows": [
+      {
+       "factor": "macro1",
+       "label": "macro state, PCA line 1",
+       "beta": 0.03603314838823228,
+       "move": 0.15492916857320305,
+       "contrib": 0.005582585720863679,
+       "share": 0.579859786070313
+      },
       {
        "factor": "dollar",
        "label": "US dollar (broad index)",
-       "beta": 1.121032541321477,
-       "move": 0.02238602428843972,
-       "contrib": 0.02509546169815389,
-       "share": 1.0014671939615802
+       "beta": 1.110953783735584,
+       "move": 0.004161140033472677,
+       "contrib": 0.004622834264840085,
+       "share": 0.4801709856116586
       },
       {
        "factor": "real",
        "label": "real 10-yr yield",
-       "beta": -0.0005070347447356759,
-       "move": 39.000000000000014,
-       "contrib": -0.019774355044691366,
-       "share": -0.7891214793017293
-      },
-      {
-       "factor": "macro1",
-       "label": "macro state, PCA line 1",
-       "beta": 0.03616596862516128,
-       "move": 0.5414947268525094,
-       "contrib": 0.019583681302038133,
-       "share": 0.7815123944275851
-      },
-      {
-       "factor": "macro2",
-       "label": "macro state, PCA line 2",
-       "beta": -0.03193334504075663,
-       "move": -0.15611666647563424,
-       "contrib": 0.004985327377179151,
-       "share": 0.19894600384143266
-      },
-      {
-       "factor": "hikes",
-       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 5.4503784358930294e-05,
-       "move": 19.00000000000004,
-       "contrib": 0.0010355719028196776,
-       "share": 0.04132585007346444
-      },
-      {
-       "factor": "war",
-       "label": "geopolitical risk (GPR index)",
-       "beta": 0.0007430971079117545,
-       "move": -0.3727190916741856,
-       "contrib": -0.0002769664790865834,
-       "share": -0.01105270928937179
-      },
-      {
-       "factor": "vix",
-       "label": "equity volatility (VIX)",
-       "beta": 0.0053619137462064025,
-       "move": -0.049185138880994295,
-       "contrib": -0.0002637264722750743,
-       "share": -0.01052434951543985
+       "beta": -0.0004986556704811978,
+       "move": 6.999999999999984,
+       "contrib": -0.0034905896933683763,
+       "share": -0.3625654300822247
       },
       {
        "factor": "oil",
        "label": "oil (WTI spot)",
-       "beta": -0.017667703233963123,
-       "move": -0.014290395409456202,
-       "contrib": 0.00025247846519026114,
-       "share": 0.010075483093758655
+       "beta": -0.016805816828706133,
+       "move": -0.059448433574258,
+       "contrib": 0.0009990794854024838,
+       "share": 0.10377377896905726
+      },
+      {
+       "factor": "hikes",
+       "label": "rate-hike speculation (2-yr yield minus fed funds)",
+       "beta": 5.5612540121125934e-05,
+       "move": 14.999999999999947,
+       "contrib": 0.000834188101816886,
+       "share": 0.08664661116696748
+      },
+      {
+       "factor": "vix",
+       "label": "equity volatility (VIX)",
+       "beta": 0.005365789334467213,
+       "move": -0.10390415422284427,
+       "contrib": -0.0005575278025357742,
+       "share": -0.05791007401792839
+      },
+      {
+       "factor": "macro2",
+       "label": "macro state, PCA line 2",
+       "beta": -0.03124437423141429,
+       "move": 0.015943421433972593,
+       "contrib": -0.0004981422258121916,
+       "share": -0.051741730254588676
+      },
+      {
+       "factor": "war",
+       "label": "geopolitical risk (GPR index)",
+       "beta": 0.0007004957460906787,
+       "move": -0.12593986640325472,
+       "contrib": -8.822034067870831e-05,
+       "share": -0.00916339317134421
       },
       {
        "factor": "btc",
        "label": "speculative liquidity (Bitcoin)",
-       "beta": 0.0006662418839884798,
-       "move": 0.07528876889541536,
-       "contrib": 5.0160531232054786e-05,
-       "share": 0.0020017215488919863
+       "beta": 0.001005047960809962,
+       "move": 0.06362259733503706,
+       "contrib": 6.394376171301232e-05,
+       "share": 0.006641799668004384
       }
      ],
-     "drift": 0.0024869553715921294,
-     "resid": -0.008115892921060118,
-     "unexplained_share": -0.3238753129114433
+     "drift": 0.0011930972195458708,
+     "resid": 0.0009662267271735398,
+     "unexplained_share": 0.10036138293772362
     }
    },
    "last_session": {
@@ -1790,77 +1790,77 @@
     "vix",
     "macro1"
    ],
-   "n_past_episodes": 184,
+   "n_past_episodes": 115,
    "windows": {
     "R1_full": {
-     "sessions": 31,
-     "explained": 0.8710124832562719,
-     "move": 0.03235162904179554,
+     "sessions": 44,
+     "explained": 0.9328284790513617,
+     "move": 0.034856539837651516,
      "end": "2026-10-22"
     },
     "R2_impulse": {
-     "sessions": 11,
-     "explained": 0.7753698911598278,
-     "move": 0.02505869573109215,
-     "end": "2026-09-24"
+     "sessions": 6,
+     "explained": null,
+     "move": 0.009627475218960506,
+     "end": "2026-08-28"
     },
     "R3_half": {
-     "sessions": 15,
-     "explained": 0.7661958330090277,
-     "move": 0.027843240597656128,
-     "end": "2026-09-30"
+     "sessions": 22,
+     "explained": 0.9587316996705897,
+     "move": 0.020217028389521823,
+     "end": "2026-09-22"
     },
     "R4_ceiling": {
      "sessions": 19,
-     "explained": 0.9939119494945735,
-     "move": 0.032351629041795435,
-     "end": "2026-10-06"
+     "explained": 0.9949284401483098,
+     "move": 0.01669960007950904,
+     "end": "2026-09-17"
     },
     "R5_causal": {
      "sessions": 8,
-     "explained": 0.8734356343583836,
-     "move": 0.017712117593665838,
-     "end": "2026-09-21"
+     "explained": 0.6832398805979718,
+     "move": 0.01069145047881391,
+     "end": "2026-09-01"
     }
    },
    "window_test": {},
-   "ceiling_null": 0.06377887652768771,
+   "ceiling_null": 0.04927474425827327,
    "best_rule": null,
    "r5_rows": [
     {
-     "factor": "dollar",
-     "label": "US dollar (broad index)",
-     "beta": 1.121032541321477,
-     "move": 0.012794925838271354,
-     "contrib": 0.014343528228497165,
-     "share": 0.8098144195715289
-    },
-    {
      "factor": "macro1",
      "label": "macro state, PCA line 1",
-     "beta": 0.03616596862516128,
-     "move": 0.38517941341821826,
-     "contrib": 0.013930386580741307,
-     "share": 0.7864890523154079
+     "beta": 0.03603314838823228,
+     "move": 0.16741741628045137,
+     "contrib": 0.006032576603607959,
+     "share": 0.5642430478036692
     },
     {
      "factor": "real",
      "label": "real 10-yr yield",
-     "beta": -0.0005070347447356759,
-     "move": 16.000000000000014,
-     "contrib": -0.00811255591577082,
-     "share": -0.4580229254277316
+     "beta": -0.0004986556704811978,
+     "move": 8.999999999999986,
+     "contrib": -0.0044879010343307725,
+     "share": -0.4197654044438554
     },
     {
-     "factor": "vix",
-     "label": "equity volatility (VIX)",
-     "beta": 0.0053619137462064025,
-     "move": -0.10158743477686016,
-     "contrib": -0.0005447030629718929,
-     "share": -0.030753130453847494
+     "factor": "dollar",
+     "label": "US dollar (broad index)",
+     "beta": 1.110953783735584,
+     "move": 0.0033936741452951225,
+     "contrib": 0.0037702151324812408,
+     "share": 0.3526383197445723
+    },
+    {
+     "factor": "hikes",
+     "label": "rate-hike speculation (2-yr yield minus fed funds)",
+     "beta": 5.5612540121125934e-05,
+     "move": 19.99999999999993,
+     "contrib": 0.0011122508024225147,
+     "share": 0.10403179667964994
     }
    ],
-   "r5_unexplained": -0.22868060364300546
+   "r5_unexplained": 0.16796868124495706
   },
   "USO": {
    "name": "oil",
@@ -1875,7 +1875,7 @@
      "move": 0.3468514231442664
     },
     "threshold_now": 0.045842449644256926,
-    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 1.0\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions; extremes taken from the high and low of the day (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-07-10",
      "direction": 1,
@@ -1884,19 +1884,19 @@
     }
    },
    "target": {
-    "n": 111,
-    "med_size": 0.10964700371891717,
-    "q25": 0.07410205383998514,
-    "q75": 0.1807149793615685,
-    "med_length": 15.0,
-    "target_from_start": 0.10964700371891717,
-    "target_from_now": -0.23720441942534926,
+    "n": 74,
+    "med_size": 0.1593240779801758,
+    "q25": 0.09979233016844119,
+    "q75": 0.2373240724948748,
+    "med_length": 30.5,
+    "target_from_start": 0.1593240779801758,
+    "target_from_now": -0.18752734516409061,
     "band_from_now": [
-     -0.2727493693042813,
-     -0.16613644378269793
+     -0.24705909297582523,
+     -0.10952735064939162
     ],
-    "share_of_typical": 3.163346114166774,
-    "pct_rank": 0.9279279279279279,
+    "share_of_typical": 2.1770182356707193,
+    "pct_rank": 0.9054054054054054,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
@@ -2158,7 +2158,7 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 240,
+   "n_past_episodes": 152,
    "windows": {
     "R1_full": {
      "sessions": 55,
@@ -2243,7 +2243,7 @@
      "move": -0.11989087307644822
     },
     "threshold_now": 0.041685307497986476,
-    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 1.0\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions; extremes taken from the high and low of the day (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-10-06",
      "direction": -1,
@@ -2252,19 +2252,19 @@
     }
    },
    "target": {
-    "n": 127,
-    "med_size": 0.1915437288307124,
-    "q25": 0.11533342625983312,
-    "q75": 0.3176622426050586,
-    "med_length": 13.0,
-    "target_from_start": -0.1915437288307124,
-    "target_from_now": -0.0716528557542642,
+    "n": 104,
+    "med_size": 0.18750539870093635,
+    "q25": 0.11524675201555379,
+    "q75": 0.3144554614854563,
+    "med_length": 20.0,
+    "target_from_start": -0.18750539870093635,
+    "target_from_now": -0.06761452562448814,
     "band_from_now": [
-     0.004557446816615102,
-     -0.19777136952861038
+     0.0046441210608944294,
+     -0.19456458840900806
     ],
-    "share_of_typical": 0.625919072414052,
-    "pct_rank": 0.25984251968503935,
+    "share_of_typical": 0.639399579463146,
+    "pct_rank": 0.27884615384615385,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
@@ -2501,7 +2501,7 @@
     "vix",
     "macro1"
    ],
-   "n_past_episodes": 290,
+   "n_past_episodes": 216,
    "windows": {
     "R1_full": {
      "sessions": 12,
@@ -2586,7 +2586,7 @@
      "move": -0.1843478571105031
     },
     "threshold_now": 0.0658857529019245,
-    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the leg definition; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 1.0\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions; extremes taken from the high and low of the day (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-09-24",
      "direction": -1,
@@ -2595,19 +2595,19 @@
     }
    },
    "target": {
-    "n": 67,
-    "med_size": 0.1408816995707163,
-    "q25": 0.08767193074642624,
-    "q75": 0.2063154852864924,
-    "med_length": 15.0,
-    "target_from_start": -0.1408816995707163,
-    "target_from_now": 0.043466157539786804,
+    "n": 42,
+    "med_size": 0.19628962150622586,
+    "q25": 0.12553076773248562,
+    "q75": 0.269682224094234,
+    "med_length": 27.5,
+    "target_from_start": -0.19628962150622586,
+    "target_from_now": -0.011941764395722754,
     "band_from_now": [
-     0.09667592636407688,
-     -0.021967628175989296
+     0.058817089378017495,
+     -0.08533436698373087
     ],
-    "share_of_typical": 1.3085294802109393,
-    "pct_rank": 0.6567164179104478,
+    "share_of_typical": 0.9391625277786579,
+    "pct_rank": 0.47619047619047616,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
@@ -2869,7 +2869,7 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 158,
+   "n_past_episodes": 84,
    "windows": {
     "R1_full": {
      "sessions": 19,

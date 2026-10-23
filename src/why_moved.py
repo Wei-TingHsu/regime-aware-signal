@@ -248,6 +248,23 @@ def run_rule(r: pd.Series, spec: dict, asset: str):
     return turning_points(r)[:4]
 
 
+def turning_points_swing(r: pd.Series, k: int = 10):
+    """Swing highs/lows: a peak is the highest close within k sessions either side (confirmed k sessions later); alternation enforced."""
+    rr = r.fillna(0.0); px = np.exp(rr.cumsum().to_numpy()); n = len(px); cand = []
+    for i in range(k, n - k):
+        w = px[i - k:i + k + 1]
+        if px[i] == w.max(): cand.append((i, "peak"))
+        elif px[i] == w.min(): cand.append((i, "trough"))
+    tps = []
+    for i, kind in cand:
+        if tps and tps[-1][1] == kind:
+            j, _ = tps[-1]
+            if (kind == "peak" and px[i] > px[j]) or (kind == "trough" and px[i] < px[j]): tps[-1] = (i, kind)
+        else: tps.append((i, kind))
+    trend = 0 if not tps else (-1 if tps[-1][1] == "peak" else 1)
+    return tps, trend, (int(np.argmax(px[tps[-1][0]:])) + tps[-1][0] if trend > 0 else int(np.argmin(px[tps[-1][0]:])) + tps[-1][0]) if tps else 0, px
+
+
 SEGMENTERS = [("zigzag 1.5× / 8% (registered)", lambda r: turning_points(r)[:4])] + \
              [(f"persist-time N={n}, X={x:.0%}", (lambda n, x: (lambda r: turning_points_persist(r, n, x, "time")))(n, x)) for n in (2, 3, 5, 10) for x in (0.02, 0.04, 0.08)] + \
              [(f"persist-closes N={n}, X={x:.0%}", (lambda n, x: (lambda r: turning_points_persist(r, n, x, "closes")))(n, x)) for n in (2, 3, 5) for x in (0.0, 0.02, 0.04, 0.08)] + \
