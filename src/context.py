@@ -209,7 +209,7 @@ def why_moved_sentences(asset, name, ticker=None):
     ep, tg, wd, ls, tf = A["episode"], A.get("target"), A.get("windows") or {}, A.get("last_session") or {}, A.get("window_test") or {}
     up = ep["direction"] > 0; S = []
     S.append(f"{name} has been <b>{'rising' if up else 'falling'} since {ep['start']}</b> — {ep['sessions']} sessions, {_pct(ep['move'])} so far, furthest point "
-             f"{_pct(ep['extreme_so_far']['move'])} on {ep['extreme_so_far']['date']}; how a leg ends: {ep.get('rule', 'a counter-move of 1.5 × the asset\'s monthly volatility, floor 8%')} {tag('measured')}.")
+             f"{_pct(ep['extreme_so_far']['move'])} on {ep['extreme_so_far']['date']}; how a leg ends: {ep.get('rule', 'a counter-move of 1.5 × its own monthly volatility, floor 8%')} {tag('measured')}.")
     bp = ep.get("big_picture")
     if bp: S.append(f"Big picture ({bp.get('scale', 'coarser rule')}): {'rising' if bp['direction'] > 0 else 'falling'} since {bp['start']} ({bp['sessions']} sessions, {_pct(bp['move'])}) {tag('measured')}. The current leg below is cut at a finer scale, so 'typical' there means typical for legs of that scale.")
     if tg:
