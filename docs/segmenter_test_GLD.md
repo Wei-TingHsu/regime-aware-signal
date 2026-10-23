@@ -1,10 +1,10 @@
 # T-I turning-point rules — GLD
 
-*2026-10-23 18:14. Window rule used on every segmentation: patience 10, min window 3, look-back 252 (the promoted cell). 'short' = share of legs under 5 sessions (noise legs); 'missed' = legs hiding a counter-move above the zigzag threshold (a reversal the rule did not see — fidelity, added 23 Oct after the consecutive-closes rule missed gold's August peak). Verdict rule: another segmentation replaces the zigzag only if its median explained share is ≥ 5 points higher, with at least as many scored legs, and no more missed reversals.*
+*2026-10-23 18:24. Window rule used on every segmentation: patience 10, min window 3, look-back 252 (the promoted cell). 'short' = share of legs under 5 sessions (noise legs); 'missed' = legs hiding a counter-move above the zigzag threshold (a reversal the rule did not see — fidelity, added 23 Oct after the consecutive-closes rule missed gold's August peak). Verdict rule: another segmentation replaces the zigzag only if its median explained share is ≥ 5 points higher, with at least as many scored legs, and no more missed reversals.*
 
-**PASS for retrace f=38%, N=3, c=1.0, retrace f=38%, N=5, c=1.0**
+**PASS for retrace-hl-oc f=38%, N=3, c=0.5, retrace-hl-oc f=38%, N=3, c=1.0**
 
-**T-J fine scale: PASS — retrace f=38%, N=3, c=0.5** (0 missed, lag 6 sessions, 215 legs, explained 70%); promoted as the fine scale inside the zigzag's legs.
+**T-J fine scale: no retracement rule meets 0 missed, lag ≤ 10, share within 5 points, legs ≥ zigzag.**
 
 | rule | legs since 2006 | median length | share < 5 sessions | median size | legs scored | median explained share | missed reversals (worst) | confirmation lag (sessions) |
 |---|---|---|---|---|---|---|---|---|
@@ -40,13 +40,21 @@
 | retrace f=25%, N=3, c=1.0 | 160 | 28 | 2% | 8.7% | 79 | 64% | 1 (15%) | 10 |
 | retrace f=25%, N=5, c=0.5 | 310 | 14 | 0% | 6.0% | 148 | 61% | 0 (8%) | 5 |
 | retrace f=25%, N=5, c=1.0 | 148 | 28 | 0% | 9.2% | 70 | 66% | 2 (15%) | 11 |
-| retrace f=38%, N=3, c=0.5 | 215 | 13 | 10% | 6.3% | 64 | 70% | 0 (7%) | 6 |
-| retrace f=38%, N=3, c=1.0 | 109 | 29 | 1% | 9.3% | 40 | 74% | 1 (15%) | 12 |
-| retrace f=38%, N=5, c=0.5 | 193 | 16 | 0% | 6.6% | 65 | 70% | 0 (8%) | 7 |
-| retrace f=38%, N=5, c=1.0 | 107 | 29 | 0% | 9.7% | 39 | 76% | 1 (15%) | 12 |
-| retrace f=50%, N=3, c=0.5 | 9 | 20 | 0% | 5.1% | 0 | nan% | 0 (2%) | 6 |
-| retrace f=50%, N=3, c=1.0 | 9 | 20 | 0% | 5.1% | 0 | nan% | 0 (2%) | 7 |
-| retrace f=50%, N=5, c=0.5 | 9 | 20 | 0% | 5.1% | 0 | nan% | 0 (2%) | 6 |
-| retrace f=50%, N=5, c=1.0 | 9 | 20 | 0% | 5.1% | 0 | nan% | 0 (2%) | 7 |
+| retrace f=38%, N=3, c=0.5 | 238 | 13 | 11% | 6.3% | 82 | 63% | 2 (15%) | 5 |
+| retrace f=38%, N=3, c=1.0 | 124 | 29 | 1% | 9.8% | 53 | 63% | 2 (15%) | 11 |
+| retrace f=38%, N=5, c=0.5 | 210 | 16 | 0% | 6.9% | 80 | 62% | 2 (15%) | 7 |
+| retrace f=38%, N=5, c=1.0 | 122 | 29 | 0% | 10.2% | 52 | 64% | 2 (15%) | 11 |
+| retrace f=50%, N=3, c=0.5 | 130 | 22 | 3% | 9.3% | 39 | 61% | 2 (15%) | 9 |
+| retrace f=50%, N=3, c=1.0 | 92 | 38 | 0% | 13.7% | 32 | 61% | 2 (15%) | 14 |
+| retrace f=50%, N=5, c=0.5 | 128 | 22 | 0% | 9.6% | 40 | 58% | 2 (15%) | 9 |
+| retrace f=50%, N=5, c=1.0 | 92 | 38 | 0% | 13.7% | 32 | 61% | 2 (15%) | 14 |
+| retrace-hl f=38%, N=3, c=0.5 | 259 | 11 | 15% | 5.3% | 79 | 63% | 2 (15%) | 5 |
+| retrace-hl f=38%, N=3, c=1.0 | 146 | 24 | 1% | 7.9% | 60 | 65% | 2 (15%) | 10 |
+| retrace-hl f=38%, N=5, c=0.5 | 221 | 15 | 0% | 5.9% | 80 | 62% | 2 (15%) | 6 |
+| retrace-hl f=38%, N=5, c=1.0 | 144 | 24 | 0% | 7.9% | 60 | 65% | 2 (15%) | 10 |
+| retrace-hl-oc f=38%, N=3, c=0.5 | 114 | 25 | 5% | 9.6% | 36 | 79% | 2 (15%) | 11 |
+| retrace-hl-oc f=38%, N=3, c=1.0 | 94 | 41 | 1% | 12.8% | 36 | 79% | 2 (15%) | 16 |
+| retrace-hl-oc f=38%, N=5, c=0.5 | 34 | 105 | 0% | 18.8% | 13 | 85% | 8 (23%) | 55 |
+| retrace-hl-oc f=38%, N=5, c=1.0 | 34 | 105 | 0% | 18.8% | 13 | 85% | 8 (23%) | 55 |
 
 Reading: X = 0% is the pure gradient rule — direction flips with N consecutive closes; its legs are counted in days and mostly noise. Adding a minimum counter-move X turns it into a zigzag with a persistence condition; swing k is the local-extremum family. The founder's point stands as a rule in the grid; the data says which scale is useful.

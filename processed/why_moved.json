@@ -1,5 +1,5 @@
 {
- "run": "2026-10-23 18:14",
+ "run": "2026-10-23 18:24",
  "rule": {
   "mult": 1.5,
   "floor": 0.08
@@ -18,7 +18,7 @@
      "move": 0.21433774858555651
     },
     "threshold_now": 0.08,
-    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-03-30",
      "direction": 1,
@@ -26,7 +26,22 @@
      "sessions": 143
     }
    },
-   "target": null,
+   "target": {
+    "n": 87,
+    "med_size": 0.08554229487770931,
+    "q25": 0.05800710665927235,
+    "q75": 0.16004301951087557,
+    "med_length": 15.0,
+    "target_from_start": 0.08554229487770931,
+    "target_from_now": -0.10918430784239497,
+    "band_from_now": [
+     -0.13671949606083195,
+     -0.03468358320922871
+    ],
+    "share_of_typical": 2.2763780536690548,
+    "pct_rank": 0.8390804597701149,
+    "status": "base rate of past episodes, UNTESTED as a conditional claim"
+   },
    "attribution": {
     "actual": 0.1947266027201053,
     "sessions": 143,
@@ -265,7 +280,7 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 6,
+   "n_past_episodes": 194,
    "windows": {
     "R1_full": {
      "sessions": 120,
@@ -350,7 +365,7 @@
      "move": 0.05831047024146923
     },
     "threshold_now": 0.08,
-    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-02-27",
      "direction": -1,
@@ -359,19 +374,19 @@
     }
    },
    "target": {
-    "n": 107,
-    "med_size": 0.04889101872001023,
-    "q25": 0.033237599725648645,
-    "q75": 0.06862150725461766,
+    "n": 133,
+    "med_size": 0.04942018693929581,
+    "q25": 0.035148945839888084,
+    "q75": 0.07391453597361612,
     "med_length": 13.0,
-    "target_from_start": 0.04889101872001023,
-    "target_from_now": -0.009419451521458996,
+    "target_from_start": 0.04942018693929581,
+    "target_from_now": -0.008890283302173417,
     "band_from_now": [
-     -0.025072870515820585,
-     0.010311037013148429
+     -0.023161524401581146,
+     0.015604065732146892
     ],
-    "share_of_typical": 1.1926622060260688,
-    "pct_rank": 0.6448598130841121,
+    "share_of_typical": 1.1798917376232023,
+    "pct_rank": 0.6390977443609023,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
@@ -610,7 +625,7 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 230,
+   "n_past_episodes": 294,
    "windows": {
     "R1_full": {
      "sessions": 13,
@@ -695,7 +710,7 @@
      "move": -0.14849010667992638
     },
     "threshold_now": 0.09403440809589628,
-    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-08-25",
      "direction": -1,
@@ -704,19 +719,19 @@
     }
    },
    "target": {
-    "n": 98,
-    "med_size": 0.06156325211223125,
-    "q25": 0.04620110720651564,
-    "q75": 0.08819252830827108,
+    "n": 108,
+    "med_size": 0.06690099459826039,
+    "q25": 0.04746398995086824,
+    "q75": 0.09518208967321035,
     "med_length": 14.0,
-    "target_from_start": -0.06156325211223125,
-    "target_from_now": 0.08692685456769512,
+    "target_from_start": -0.06690099459826039,
+    "target_from_now": 0.08158911208166598,
     "band_from_now": [
-     0.10228899947341073,
-     0.060297578371655294
+     0.10102611672905813,
+     0.05330801700671603
     ],
-    "share_of_typical": 2.4119925700030502,
-    "pct_rank": 0.8877551020408163,
+    "share_of_typical": 2.2195500615739356,
+    "pct_rank": 0.9074074074074074,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
@@ -977,7 +992,7 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 215,
+   "n_past_episodes": 238,
    "windows": {
     "R1_full": {
      "sessions": 41,
@@ -1125,7 +1140,7 @@
      "move": -0.20770268817800763
     },
     "threshold_now": 0.17620346801666606,
-    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-08-27",
      "direction": -1,
@@ -1134,19 +1149,19 @@
     }
    },
    "target": {
-    "n": 87,
-    "med_size": 0.11458479253387185,
-    "q25": 0.0759139455429926,
+    "n": 103,
+    "med_size": 0.11730609125952991,
+    "q25": 0.08091109527430718,
     "q75": 0.16485132817782927,
     "med_length": 15.0,
-    "target_from_start": -0.11458479253387185,
-    "target_from_now": 0.09311789564413578,
+    "target_from_start": -0.11730609125952991,
+    "target_from_now": 0.09039659691847772,
     "band_from_now": [
-     0.13178874263501503,
+     0.12679159290370046,
      0.04285136000017836
     ],
-    "share_of_typical": 1.8126549220448225,
-    "pct_rank": 0.8275862068965517,
+    "share_of_typical": 1.770604458369368,
+    "pct_rank": 0.8155339805825242,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
@@ -1407,7 +1422,7 @@
     "vix",
     "macro1"
    ],
-   "n_past_episodes": 200,
+   "n_past_episodes": 238,
    "windows": {
     "R1_full": {
      "sessions": 22,
@@ -1492,7 +1507,7 @@
      "move": 0.040278589284461694
     },
     "threshold_now": 0.08,
-    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
     "big_picture": {
      "start": "2025-07-02",
      "direction": 1,
@@ -1501,19 +1516,19 @@
     }
    },
    "target": {
-    "n": 73,
-    "med_size": 0.028961410390978708,
-    "q25": 0.018804037692112797,
-    "q75": 0.050021360686808986,
+    "n": 79,
+    "med_size": 0.02821981966001457,
+    "q25": 0.018501006132212422,
+    "q75": 0.04953679515461233,
     "med_length": 16.0,
-    "target_from_start": 0.028961410390978708,
-    "target_from_now": -0.0033902186508168036,
+    "target_from_start": 0.02821981966001457,
+    "target_from_now": -0.00413180938178094,
     "band_from_now": [
-     -0.013547591349682715,
-     0.017669731645013474
+     -0.01385062290958309,
+     0.01718516611281682
     ],
-    "share_of_typical": 1.1170598601742419,
-    "pct_rank": 0.5753424657534246,
+    "share_of_typical": 1.1464151589754987,
+    "pct_rank": 0.5822784810126582,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
@@ -1775,7 +1790,7 @@
     "vix",
     "macro1"
    ],
-   "n_past_episodes": 166,
+   "n_past_episodes": 184,
    "windows": {
     "R1_full": {
      "sessions": 31,
@@ -1860,7 +1875,7 @@
      "move": 0.3468514231442664
     },
     "threshold_now": 0.13752734893277077,
-    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-07-01",
      "direction": 1,
@@ -1869,19 +1884,19 @@
     }
    },
    "target": {
-    "n": 33,
-    "med_size": 0.08279370306981126,
-    "q25": 0.05186198522359167,
-    "q75": 0.16929701910006414,
-    "med_length": 20.0,
-    "target_from_start": 0.08279370306981126,
-    "target_from_now": -0.26405772007445516,
+    "n": 111,
+    "med_size": 0.10964700371891717,
+    "q25": 0.07410205383998514,
+    "q75": 0.1807149793615685,
+    "med_length": 15.0,
+    "target_from_start": 0.10964700371891717,
+    "target_from_now": -0.23720441942534926,
     "band_from_now": [
-     -0.2949894379206748,
-     -0.17755440404420228
+     -0.2727493693042813,
+     -0.16613644378269793
     ],
-    "share_of_typical": 4.189345448793405,
-    "pct_rank": 0.8787878787878788,
+    "share_of_typical": 3.163346114166774,
+    "pct_rank": 0.9279279279279279,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
@@ -2143,7 +2158,7 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 70,
+   "n_past_episodes": 240,
    "windows": {
     "R1_full": {
      "sessions": 55,
@@ -2228,7 +2243,7 @@
      "move": -0.11989087307644822
     },
     "threshold_now": 0.12505592249395941,
-    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-10-06",
      "direction": -1,
@@ -2237,19 +2252,19 @@
     }
    },
    "target": {
-    "n": 47,
-    "med_size": 0.203428610658394,
-    "q25": 0.1317229995154276,
-    "q75": 0.32202120737871726,
-    "med_length": 12.0,
-    "target_from_start": -0.203428610658394,
-    "target_from_now": -0.08353773758194577,
+    "n": 127,
+    "med_size": 0.1915437288307124,
+    "q25": 0.11533342625983312,
+    "q75": 0.3176622426050586,
+    "med_length": 13.0,
+    "target_from_start": -0.1915437288307124,
+    "target_from_now": -0.0716528557542642,
     "band_from_now": [
-     -0.011832126438979379,
-     -0.20213033430226904
+     0.004557446816615102,
+     -0.19777136952861038
     ],
-    "share_of_typical": 0.5893510882683758,
-    "pct_rank": 0.23404255319148937,
+    "share_of_typical": 0.625919072414052,
+    "pct_rank": 0.25984251968503935,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
@@ -2486,7 +2501,7 @@
     "vix",
     "macro1"
    ],
-   "n_past_episodes": 109,
+   "n_past_episodes": 290,
    "windows": {
     "R1_full": {
      "sessions": 12,
@@ -2571,7 +2586,7 @@
      "move": -0.1843478571105031
     },
     "threshold_now": 0.1976572587057735,
-    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility) and stayed there 3 sessions (promoted 2026-10-23)",
+    "rule": "big picture by the zigzag; the current leg by the founder's retracement rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and stayed there 3 sessions (promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-07-30",
      "direction": 1,
@@ -2580,19 +2595,19 @@
     }
    },
    "target": {
-    "n": 8,
-    "med_size": 0.24568900787262657,
-    "q25": 0.1824739246744001,
-    "q75": 0.3616874644915247,
-    "med_length": 17.5,
-    "target_from_start": -0.24568900787262657,
-    "target_from_now": -0.06134115076212346,
+    "n": 67,
+    "med_size": 0.1408816995707163,
+    "q25": 0.08767193074642624,
+    "q75": 0.2063154852864924,
+    "med_length": 15.0,
+    "target_from_start": -0.1408816995707163,
+    "target_from_now": 0.043466157539786804,
     "band_from_now": [
-     0.0018739324361030096,
-     -0.1773396073810216
+     0.09667592636407688,
+     -0.021967628175989296
     ],
-    "share_of_typical": 0.7503300970065182,
-    "pct_rank": 0.25,
+    "share_of_typical": 1.3085294802109393,
+    "pct_rank": 0.6567164179104478,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
@@ -2854,7 +2869,7 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 17,
+   "n_past_episodes": 158,
    "windows": {
     "R1_full": {
      "sessions": 19,
