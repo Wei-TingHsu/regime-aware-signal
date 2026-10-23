@@ -207,36 +207,45 @@ def turning_points_persist(r: pd.Series, n_days: int = 3, x: float = 0.02, mode:
 
 
 def missed_reversals(tps, px, r: pd.Series):
-    """Fidelity: inside each leg, the largest counter-move against the leg's direction; a counter-move above the zigzag threshold (max(FLOOR, MULT x monthly vol))
-    is a turning point the rule failed to see. Returns the count and the worst one."""
+    """Fidelity: inside each leg, the largest counter-move against the leg's direction, compared with the zigzag threshold AT THE DATE OF THAT MOVE
+    (max(FLOOR, MULT x monthly vol at the time)); a counter-move above it is a turning point the rule failed to see. Returns the count and the worst one."""
     rr = r.fillna(0.0); thr = np.maximum(FLOOR, MULT * rr.rolling(20).std().bfill().fillna(rr.std()).to_numpy() * np.sqrt(20))
     missed, worst = 0, 0.0
     for (a, ka), (b, kb) in zip(tps[:-1], tps[1:]):
         seg = px[a:b + 1]
-        if ka == "trough":   # up leg: largest drawdown inside
-            dd = (seg / np.maximum.accumulate(seg) - 1).min()
-        else:                # down leg: largest rally inside
-            dd = -(seg / np.minimum.accumulate(seg) - 1).max()
-        if -dd >= thr[b]: missed += 1
+        if ka == "trough": cm = seg / np.maximum.accumulate(seg) - 1          # up leg: drawdowns (negative)
+        else: cm = -(seg / np.minimum.accumulate(seg) - 1)                     # down leg: rallies, as negatives
+        t = int(np.argmin(cm)); dd = float(cm[t])
+        if -dd >= thr[a + t]: missed += 1
         worst = min(worst, dd)
     return missed, float(-worst)
 
 
-def turning_points_swing(r: pd.Series, k: int = 10):
-    """Swing highs/lows: a peak is the highest close within k sessions either side (confirmed k sessions later); alternation enforced."""
-    rr = r.fillna(0.0); px = np.exp(rr.cumsum().to_numpy()); n = len(px); cand = []
-    for i in range(k, n - k):
-        w = px[i - k:i + k + 1]
-        if px[i] == w.max(): cand.append((i, "peak"))
-        elif px[i] == w.min(): cand.append((i, "trough"))
-    tps = []
-    for i, kind in cand:
-        if tps and tps[-1][1] == kind:
-            j, _ = tps[-1]
-            if (kind == "peak" and px[i] > px[j]) or (kind == "trough" and px[i] < px[j]): tps[-1] = (i, kind)
-        else: tps.append((i, kind))
-    trend = 0 if not tps else (-1 if tps[-1][1] == "peak" else 1)
-    return tps, trend, (int(np.argmax(px[tps[-1][0]:])) + tps[-1][0] if trend > 0 else int(np.argmin(px[tps[-1][0]:])) + tps[-1][0]) if tps else 0, px
+def segmenters(asset: str):
+    """Every turning-point rule in the grid, for one asset (the high/low cells need its OHLC)."""
+    HL = ohlc(asset)
+    hl_cells = ([(f"retrace-hl f=38%, N={n}, c={c}", (lambda n, c: (lambda rr_: turning_points_retrace(rr_, 0.382, n, c, True, HL, "close")))(n, c)) for n in (3, 5) for c in (0.5, 1.0)]
+                + [(f"retrace-hl-oc f=38%, N={n}, c={c}", (lambda n, c: (lambda rr_: turning_points_retrace(rr_, 0.382, n, c, True, HL, "oc")))(n, c)) for n in (2, 3) for c in (0.5, 1.0)]) if HL is not None else []
+    return SEGMENTERS + hl_cells
+
+
+def rule_from_name(name: str):
+    """Parse a grid rule name into the spec the dispatcher runs."""
+    import re
+    m = re.match(r"persist-(time|closes) N=(\d+), X=(\d+)%", name)
+    if m: return dict(rule="persist", mode=m.group(1), n=int(m.group(2)), x=int(m.group(3)) / 100)
+    m = re.match(r"retrace(-hl)?(-oc)? f=(\d+)%, N=(\d+), c=([\d.]+)", name)
+    if m: return dict(rule="retrace", hl=bool(m.group(1)), daysign=("oc" if m.group(2) else "close"), f={25: 0.25, 38: 0.382, 50: 0.5}.get(int(m.group(3)), int(m.group(3)) / 100), n=int(m.group(4)), c=float(m.group(5)))
+    m = re.match(r"swing k=(\d+)", name)
+    if m: return dict(rule="swing", k=int(m.group(1)))
+    return None
+
+
+def run_rule(r: pd.Series, spec: dict, asset: str):
+    if spec["rule"] == "persist": return turning_points_persist(r, spec["n"], spec["x"], spec.get("mode", "time"))[:4]
+    if spec["rule"] == "retrace": return turning_points_retrace(r, spec["f"], spec["n"], spec["c"], True, (ohlc(asset) if spec.get("hl") else None), spec.get("daysign", "close"))[:4]
+    if spec["rule"] == "swing": return turning_points_swing(r, spec["k"])[:4]
+    return turning_points(r)[:4]
 
 
 SEGMENTERS = [("zigzag 1.5× / 8% (registered)", lambda r: turning_points(r)[:4])] + \
@@ -250,9 +259,7 @@ def segmenter_test(asset, patience=None, min_k=None, window=None):
     """T-I: every turning-point rule side by side — legs found, median length, share of legs under 5 sessions, and the explained share the
     promoted window rule reaches on each rule's legs. Descriptive comparison (same factor series for all); the registered zigzag stays the
     recorded rule unless another beats it by >= 5 points on median explained share with at least as many legs."""
-    r = returns(asset).dropna(); F = factors(r.index); idx = r.index; HL = ohlc(asset)
-    SEGS = SEGMENTERS + ([(f"retrace-hl f=38%, N={n}, c={c}", (lambda n, c: (lambda rr_: turning_points_retrace(rr_, 0.382, n, c, True, HL, "close")))(n, c)) for n in (3, 5) for c in (0.5, 1.0)]
-                        + [(f"retrace-hl-oc f=38%, N={n}, c={c}", (lambda n, c: (lambda rr_: turning_points_retrace(rr_, 0.382, n, c, True, HL, "oc")))(n, c)) for n in (3, 5) for c in (0.5, 1.0)] if HL is not None else [])
+    r = returns(asset).dropna(); F = factors(r.index); idx = r.index; SEGS = segmenters(asset)
     J = json.loads((PROC / "factor_attribution.json").read_text()) if (PROC / "factor_attribution.json").exists() else {}
     bb = ((J.get("tests", {}).get(asset, {}).get("TG", {}) or {}).get("by_rule") or {}).get(f"{MULT},{FLOOR}") or {}
     patience = patience or bb.get("patience", 20); min_k = min_k or bb.get("min_k", 3); window = window or bb.get("window", 252)
@@ -292,6 +299,10 @@ def segmenter_test(asset, patience=None, min_k=None, window=None):
         J["tests"][asset]["TJ"] = dict(rule=fine_best.rule, legs=int(fine_best.legs), lag=float(fine_best.lag), r5=float(fine_best.r5), verdict="PASS")
     else:
         J["tests"][asset]["TJ"] = dict(verdict="FAIL")
+        fr = PROC / "fine_rule.json"
+        if fr.exists():   # the earlier fine promotion no longer qualifies under the current measure: withdraw, keep the file with the reason
+            fj = json.loads(fr.read_text()); fj["withdrawn"] = datetime.now().strftime("%Y-%m-%d %H:%M"); fj["reason"] = "no retracement cell met 0 missed / lag <= 10 / share within 5 / legs >= zigzag on re-run"
+            fr.replace(PROC / f"fine_rule_withdrawn_{datetime.now():%Y%m%d%H%M}.json"); (PROC / f"fine_rule_withdrawn_{datetime.now():%Y%m%d%H%M}.json").write_text(json.dumps(fj, indent=1)); print("  fine promotion withdrawn (no qualifying cell)")
     (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1))
     (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1)); out = DOCS / f"segmenter_test_{asset}.md"; out.write_text("\n".join(L) + "\n"); print("\n".join(L)); print(f"-> {out}")
 
@@ -346,10 +357,10 @@ def turning_points_retrace(r: pd.Series, f: float = 0.382, n: int = 5, c: float 
     return tps, trend, (hi if trend > 0 else lo), px, lags
 
 
-def two_scale(r: pd.Series, fine=None, hl=None, daysign: str = "close"):
+def two_scale(r: pd.Series, fine=None, hl=None, daysign: str = "close", coarse_fn=None):
     """Coarse legs by the zigzag (the big picture); fine legs by the promoted fine rule inside the current coarse leg (where the move is now).
     fine = (f, n, c) or None (then fine == coarse)."""
-    tps_c, trend_c, ext_c, px, thr = turning_points(r); idx = r.index
+    tps_c, trend_c, ext_c, px = (coarse_fn(r)[:4] if coarse_fn else turning_points(r)[:4]); idx = r.index
     if not tps_c or fine is None: return dict(coarse=(tps_c, trend_c, ext_c), fine=None)
     c0 = tps_c[-1][0]; sub = r.iloc[c0:]
     tps_f, trend_f, ext_f, _, lags = turning_points_retrace(sub, *fine, hl=hl, daysign=daysign)
@@ -362,31 +373,35 @@ def two_scale(r: pd.Series, fine=None, hl=None, daysign: str = "close"):
 LEG_RULE = PROC / "leg_rule.json"
 
 
-def segment(r: pd.Series):
+def segment(r: pd.Series, asset: str = ""):
     """Turning points under the promoted leg rule if one is on file (processed/leg_rule.json), else the registered zigzag.
     Returns tps, trend, extreme position, price path, per-session reversal threshold array, and the rule's label for the page."""
     if LEG_RULE.exists():
-        j = json.loads(LEG_RULE.read_text())
-        if j.get("rule") == "persist":
-            n, x, mode = int(j["n"]), float(j["x"]), j.get("mode", "time"); tps, trend, ext, px = turning_points_persist(r, n, x, mode)
-            thr = np.full(len(r), x if x > 0 else FLOOR)
-            how = (f"{n} consecutive sessions against the trend" if mode == "closes" else f"the price staying off its extreme for {n} sessions")
+        j = json.loads(LEG_RULE.read_text()); tps, trend, ext, px = run_rule(r, j, asset)
+        if j["rule"] == "persist":
+            x = j["x"]; thr = np.full(len(r), x if x > 0 else FLOOR)
+            how = (f"{j['n']} consecutive sessions against the trend" if j.get("mode") == "closes" else f"the price staying off its extreme for {j['n']} sessions")
             return tps, trend, ext, px, thr, f"a reversal needs {how} and a counter-move of at least {x:.0%} (persistence rule, promoted {j.get('promoted', '')})"
+        if j["rule"] == "retrace":
+            rr = r.fillna(0.0); sig = rr.rolling(20).std().bfill().fillna(rr.std()).to_numpy() * np.sqrt(20)
+            thr = np.maximum(j["c"] * sig, 0.0)   # the floor the rule applies today; the leg-relative part depends on the leg
+            how = (f"{j['n']} open-to-close days against the trend" if j.get("daysign") == "oc" else f"{j['n']} sessions off the extreme")
+            ex = "; extremes from the high and low of the day" if j.get("hl") else ""
+            return tps, trend, ext, px, thr, (f"the founder's retracement rule — a turn is confirmed when the price has given back {j['f']:.0%} of the leg's own move "
+                                              f"(floor {j['c']}× monthly volatility, never more than the zigzag's threshold) and {how}{ex} (promoted {j.get('promoted', '')}, superseding the zigzag)")
     tps, trend, ext, px, thr = turning_points(r)
     return tps, trend, ext, px, thr, "a reversal needs a counter-move of 1.5 × the asset's own monthly volatility, floor 8% (zigzag rule)"
 
 
 def segmenter_null(asset, rule_name=None, n_shift: int = 20, seed: int = 0):
-    """T-I′: the winning segmentation's median explained share on time-shifted factors (legs do not depend on the factors; the attribution does).
-    PASS if the real share beats the null median by >= 10 points and its 95th percentile -> the rule is promoted (processed/leg_rule.json)."""
+    """T-I′: a winning segmentation's median explained share on time-shifted factors (legs do not depend on the factors; the attribution does).
+    PASS if the real share beats the null median by >= 10 points and its 95th percentile -> promoted as the leg definition (processed/leg_rule.json)."""
     J = json.loads((PROC / "factor_attribution.json").read_text()); TI = J["tests"][asset]["TI"]
     rule_name = rule_name or (TI["better"][0] if TI.get("better") else None)
     if not rule_name: print("  no rule passed T-I; nothing to test"); return
-    import re
-    mm = re.match(r"persist-(time|closes) N=(\d+), X=(\d+)%", rule_name)
-    if not mm: print(f"  only persistence rules are promotable here ({rule_name})"); return
-    mode_, n_, x_ = mm.group(1), int(mm.group(2)), int(mm.group(3)) / 100; P = TI["params"]
-    r = returns(asset).dropna(); F = factors(r.index); idx = r.index; tps, trend, ext, px = turning_points_persist(r, n_, x_, mode_)
+    spec = rule_from_name(rule_name)
+    if not spec: print(f"  cannot parse rule {rule_name}"); return
+    P = TI["params"]; r = returns(asset).dropna(); F = factors(r.index); idx = r.index; tps, trend, ext, px = run_rule(r, spec, asset)
     legs = [(a, b) for (a, ka), (b, kb) in zip(tps[:-1], tps[1:]) if b - a >= MIN_EP and a >= P["window"] + 10]
     def med_share(Fx):
         v = []
@@ -402,14 +417,12 @@ def segmenter_null(asset, rule_name=None, n_shift: int = 20, seed: int = 0):
     nulls = np.array([v for v in nulls if np.isfinite(v)]); med0, p95 = float(np.median(nulls)), float(np.quantile(nulls, .95))
     verdict = "PASS" if (real - med0 >= 0.10 and real > p95) else "FAIL"
     L = [f"# T-I′ null for the winning leg rule — {asset}: {rule_name}", "", f"*{datetime.now():%Y-%m-%d %H:%M}. Real median explained share {real:.0%} over {n} legs; on {len(nulls)} time-shifted factor series: median {med0:.0%}, 95th pct {p95:.0%}.*",
-         "", f"**{verdict}** — the rule's share on noise is {med0:.0%}; the real series adds {real - med0:+.0%} points." + (f" **Promoted**: legs are cut by this rule from the next run (processed/leg_rule.json); the zigzag stays on record as the superseded rule." if verdict == "PASS" else "")]
+         "", f"**{verdict}** — the rule's share on noise is {med0:.0%}; the real series adds {real - med0:+.0%} points." + (" **Promoted** as the leg definition from the next run (processed/leg_rule.json); the zigzag stays on record as superseded." if verdict == "PASS" else "")]
     J["tests"][asset]["TInull"] = dict(rule=rule_name, real=real, null_median=med0, null_p95=p95, n_shift=int(len(nulls)), verdict=verdict, run=datetime.now().strftime("%Y-%m-%d %H:%M"))
     (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1))
     if verdict == "PASS":
-        LEG_RULE.write_text(json.dumps(dict(rule="persist", mode=mode_, n=n_, x=x_, promoted=datetime.now().strftime("%Y-%m-%d"), asset_tested=asset, real=real, null_median=med0, superseded="zigzag 1.5x / 8%"), indent=1))
+        LEG_RULE.write_text(json.dumps(dict(spec, name=rule_name, promoted=datetime.now().strftime("%Y-%m-%d"), asset_tested=asset, real=real, null_median=med0, superseded="zigzag 1.5x / 8%"), indent=1))
     out = DOCS / f"segmenter_null_{asset}.md"; out.write_text("\n".join(L) + "\n"); print("\n".join(L)); print(f"-> {out}")
-
-
 
 def window_test(asset):
     """T-F (prereg_factor_attribution §4): does the causal window rule (R5) explain more than the full episode (R1) on past episodes?
@@ -452,17 +465,18 @@ def run():
             r = returns(a).dropna()
         except Exception as e:
             print(f"  {a}: returns unavailable ({type(e).__name__})"); continue
-        F = factors(r.index); tps, trend, ext, px, thr, rule_label = segment(r); idx = r.index
+        F = factors(r.index); tps, trend, ext, px, thr, rule_label = segment(r, a); idx = r.index
         if not tps: continue
         tps_hist = tps                                  # legs used for the base-rate target: whole history at the scale the page describes
         FINE = PROC / "fine_rule.json"; big = None
         if FINE.exists():
-            fj = json.loads(FINE.read_text()); ts = two_scale(r, (fj["f"], fj["n"], fj["c"]), hl=(ohlc(a) if fj.get("hl") else None), daysign=fj.get("daysign", "close"))
+            fj = json.loads(FINE.read_text()); ts = two_scale(r, (fj["f"], fj["n"], fj["c"]), hl=(ohlc(a) if fj.get("hl") else None), daysign=fj.get("daysign", "close"),
+                                                                coarse_fn=((lambda rr_: run_rule(rr_, json.loads(LEG_RULE.read_text()), a)) if LEG_RULE.exists() else None))
             if ts["fine"] and ts["fine"][0]:
                 c_pos, c_kind = ts["coarse"][0][-1]; big = dict(start=idx[c_pos].strftime("%Y-%m-%d"), direction=(1 if c_kind == "trough" else -1), move=float(np.log(px[-1] / px[c_pos])), sessions=int(len(idx) - 1 - c_pos))
                 tps_f, trend_f, ext_f, lags_f = ts["fine"]; tps, trend, ext = tps_f, trend_f, ext_f
                 tps_hist = turning_points_retrace(r, fj["f"], fj["n"], fj["c"], True, (ohlc(a) if fj.get("hl") else None), fj.get("daysign", "close"))[0]
-                rule_label = (f"big picture by the zigzag; the current leg by the founder's retracement rule — a turn is confirmed when the price has given back "
+                rule_label = (f"big picture by the leg definition; the current leg by the founder's retracement rule — a turn is confirmed when the price has given back "
                               f"{fj['f']:.0%} of the leg's own move (floor {fj['c']}× monthly volatility, never more than the zigzag's threshold) and "
                               f"{'stayed there ' + str(fj['n']) + ' sessions' if fj.get('daysign', 'close') == 'close' else str(fj['n']) + ' open-to-close days have gone against the trend'}"
                               f"{'; extremes taken from the high and low of the day' if fj.get('hl') else ''} (promoted {fj['promoted']})")
@@ -512,7 +526,7 @@ def run():
         pc = lambda v: f"{np.expm1(v):+.1%}"
         L += [f"## {NAME.get(a, a)} ({a})", "",
               f"- Current episode: **{'up' if direction > 0 else 'down'} since {s0.date()}** ({kind} confirmed; {len(idx) - 1 - s0_pos} sessions), move so far {pc(move)}; extreme so far {pc(ext_move)} on {idx[ext].date()}; {rule_label}."
-              + (f" Big picture (zigzag): {'up' if big['direction'] > 0 else 'down'} since {big['start']} ({big['sessions']} sessions, {pc(big['move'])})." if big else ""),
+              + (f" Big picture (leg definition): {'up' if big['direction'] > 0 else 'down'} since {big['start']} ({big['sessions']} sessions, {pc(big['move'])})." if big else ""),
               (f"- Typical {'rise' if direction > 0 else 'fall'} of this kind for {NAME.get(a, a)}: {pc(direction * tgt['med_size'])} from the start (middle half of past episodes {pc(direction * tgt['q25'])} to {pc(direction * tgt['q75'])}), "
                f"median {tgt['med_length']:.0f} sessions, n {tgt['n']} — this one is at {tgt['share_of_typical']:.0%} of the typical size; "
                + (f"the typical level is {pc(tgt['target_from_now'])} from here (band {pc(tgt['band_from_now'][0])} to {pc(tgt['band_from_now'][1])})." if tgt['share_of_typical'] < 1
