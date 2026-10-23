@@ -565,16 +565,10 @@ def run():
         best_leg = None
         bb = (tg.get("by_rule") or {}).get((json.loads(LEG_RULE.read_text()).get("name") if LEG_RULE.exists() else f"{MULT},{FLOOR}"))   # the window cell swept on the legs actually shown
         if wr and bb and bb.get("p") is not None and bb["p"] < 0.05:
-            if (bb["mult"], bb["floor"]) != (MULT, FLOOR):      # the cell's legs are cut by its own reversal rule: re-cut the current leg with it
-                tps_b, trend_b, ext_b, px_b, thr_b = turning_points(r, bb["mult"], bb["floor"])
-                if tps_b:
-                    pb, kb_ = tps_b[-1]; s0b, db = idx[pb], (1 if kb_ == "trough" else -1); Lb = len(idx) - 1 - pb
-                    best_leg = dict(start=s0b.strftime("%Y-%m-%d"), direction=db, sessions=int(Lb), move=float(np.log(px_b[-1] / px_b[pb])))
-                else: s0b, db, Lb = s0, direction, Lnow
-            else: s0b, db, Lb = s0, direction, Lnow
+            s0b, db, Lb = s0, direction, Lnow        # no re-cut (founder, 23 Oct): the cell was swept on the legs the page shows
             cvb = attr_curve(r, F, s0b, max_k=MAX_K, window=bb["window"])
             if cvb is not None:
-                ib0, ib1, _ = impulse_window(r, s0b, db, float(max(bb["floor"], bb["mult"] * r.rolling(20).std().iloc[-1] * np.sqrt(20))))
+                ib0, ib1, _ = impulse_window(r, s0b, db, float(thr[s0_pos]))
                 wr_best = window_rules(cvb, min(Lb, MAX_K), max(len(r.loc[ib0:ib1]) - 1, 1), bb["patience"], bb["min_k"])
                 if wr_best: wr_best["_attr"] = attribute(r, F, s0b, cvb["dates"][wr_best["R5_causal"][0] - 1])
         c_null = ceiling_null(r, F, s0, min(Lnow, MAX_K)) if cv is not None else np.nan
