@@ -2538,3 +2538,12 @@ model's 3-year/20-session cell survived its null (T-A sweep, 0.224 vs noise ≈ 
 the fund's alpha? — was registered with three conditions (TRACK 3.34) and tested as residual momentum / reversal on five assets (T-H): FAIL on
 all five, nothing beyond noise; prior #67 wrong, tally 56. Gold's 22 Oct session (−2.6%) was 95% unexplained. The dynamic issuer pool (3.32)
 built from FRED's copy of the BEA growth-contribution table: 25 issuers. Wrong-prior tally 56; the register runs to row 48.
+
+### 18.37 The founder's turning-point rule wins (23 Oct, evening)
+
+The founder objected to the zigzag's logic — a reversal should be a trend, at least two sessions, not one bounce — and proposed a gradient /
+persistence rule. Seventeen segmentations were compared under the registered criterion: his rule at N = 5 consecutive sessions with a 4%
+counter-move explains a median 74% of gold's legs against the zigzag's 68%, on more legs — PASS, prior #68 wrong (tally 57). The pure gradient
+versions (no minimum move) cut gold into hundreds of noise legs, as predicted. Before promotion the winning rule faces the same shifted-factor
+null the window rule did (T-I′); on PASS the nightly cuts legs with it and the page says so. PROJECT_MASTER brought to date the same day
+(story to 23 Oct, wrong priors to #68, numbering fixed, Appendix A marked superseded).

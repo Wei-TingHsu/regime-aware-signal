@@ -261,6 +261,58 @@ def segmenter_test(asset, patience=None, min_k=None, window=None):
 
 
 
+# ---------------------------------------------------------------- promoted leg rule (T-I) and the dispatcher every nightly step uses
+LEG_RULE = PROC / "leg_rule.json"
+
+
+def segment(r: pd.Series):
+    """Turning points under the promoted leg rule if one is on file (processed/leg_rule.json), else the registered zigzag.
+    Returns tps, trend, extreme position, price path, per-session reversal threshold array, and the rule's label for the page."""
+    if LEG_RULE.exists():
+        j = json.loads(LEG_RULE.read_text())
+        if j.get("rule") == "persist":
+            n, x = int(j["n"]), float(j["x"]); tps, trend, ext, px = turning_points_persist(r, n, x)
+            thr = np.full(len(r), x if x > 0 else FLOOR)
+            return tps, trend, ext, px, thr, f"a reversal needs {n} consecutive sessions against the trend and a counter-move of at least {x:.0%} (persistence rule, promoted {j.get('promoted', '')})"
+    tps, trend, ext, px, thr = turning_points(r)
+    return tps, trend, ext, px, thr, "a reversal needs a counter-move of 1.5 × the asset's own monthly volatility, floor 8% (zigzag rule)"
+
+
+def segmenter_null(asset, rule_name=None, n_shift: int = 20, seed: int = 0):
+    """T-I′: the winning segmentation's median explained share on time-shifted factors (legs do not depend on the factors; the attribution does).
+    PASS if the real share beats the null median by >= 10 points and its 95th percentile -> the rule is promoted (processed/leg_rule.json)."""
+    J = json.loads((PROC / "factor_attribution.json").read_text()); TI = J["tests"][asset]["TI"]
+    rule_name = rule_name or (TI["better"][0] if TI.get("better") else None)
+    if not rule_name: print("  no rule passed T-I; nothing to test"); return
+    import re
+    mm = re.match(r"persist N=(\d+), X=(\d+)%", rule_name)
+    if not mm: print(f"  only persistence rules are promotable here ({rule_name})"); return
+    n_, x_ = int(mm.group(1)), int(mm.group(2)) / 100; P = TI["params"]
+    r = returns(asset).dropna(); F = factors(r.index); idx = r.index; tps, trend, ext, px = turning_points_persist(r, n_, x_)
+    legs = [(a, b) for (a, ka), (b, kb) in zip(tps[:-1], tps[1:]) if b - a >= MIN_EP and a >= P["window"] + 10]
+    def med_share(Fx):
+        v = []
+        for a, b in legs:
+            cv = attr_curve(r, Fx, idx[a], max_k=min(b - a, MAX_K), window=P["window"])
+            if cv is None: continue
+            wr = window_rules(cv, min(b - a, MAX_K), 1, P["patience"], P["min_k"])
+            if wr and np.isfinite(wr["R5_causal"][1]): v.append(wr["R5_causal"][1])
+        return float(np.median(v)) if v else np.nan, len(v)
+    real, n = med_share(F); rng = np.random.default_rng(seed); nulls = []
+    for _ in range(n_shift):
+        sh = int(rng.integers(120, len(F) - 120)); Fx = pd.DataFrame(np.roll(F.to_numpy(), sh, axis=0), index=F.index, columns=F.columns); nulls.append(med_share(Fx)[0])
+    nulls = np.array([v for v in nulls if np.isfinite(v)]); med0, p95 = float(np.median(nulls)), float(np.quantile(nulls, .95))
+    verdict = "PASS" if (real - med0 >= 0.10 and real > p95) else "FAIL"
+    L = [f"# T-I′ null for the winning leg rule — {asset}: {rule_name}", "", f"*{datetime.now():%Y-%m-%d %H:%M}. Real median explained share {real:.0%} over {n} legs; on {len(nulls)} time-shifted factor series: median {med0:.0%}, 95th pct {p95:.0%}.*",
+         "", f"**{verdict}** — the rule's share on noise is {med0:.0%}; the real series adds {real - med0:+.0%} points." + (f" **Promoted**: legs are cut by this rule from the next run (processed/leg_rule.json); the zigzag stays on record as the superseded rule." if verdict == "PASS" else "")]
+    J["tests"][asset]["TInull"] = dict(rule=rule_name, real=real, null_median=med0, null_p95=p95, n_shift=int(len(nulls)), verdict=verdict, run=datetime.now().strftime("%Y-%m-%d %H:%M"))
+    (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1))
+    if verdict == "PASS":
+        LEG_RULE.write_text(json.dumps(dict(rule="persist", n=n_, x=x_, promoted=datetime.now().strftime("%Y-%m-%d"), asset_tested=asset, real=real, null_median=med0, superseded="zigzag 1.5x / 8%"), indent=1))
+    out = DOCS / f"segmenter_null_{asset}.md"; out.write_text("\n".join(L) + "\n"); print("\n".join(L)); print(f"-> {out}")
+
+
+
 def window_test(asset):
     """T-F (prereg_factor_attribution §4): does the causal window rule (R5) explain more than the full episode (R1) on past episodes?
     PASS if R5 > R1 in >= 60% of episodes (n >= 15). R4 is reported as the after-the-fact ceiling, never as a result."""
@@ -302,7 +354,7 @@ def run():
             r = returns(a).dropna()
         except Exception as e:
             print(f"  {a}: returns unavailable ({type(e).__name__})"); continue
-        F = factors(r.index); tps, trend, ext, px, thr = turning_points(r); idx = r.index
+        F = factors(r.index); tps, trend, ext, px, thr, rule_label = segment(r); idx = r.index
         if not tps: continue
         s0_pos, kind = tps[-1]; s0, s1 = idx[s0_pos], idx[-1]; direction = 1 if kind == "trough" else -1
         move = float(np.log(px[-1] / px[s0_pos])); ext_move = float(np.log(px[ext] / px[s0_pos]))
@@ -342,14 +394,14 @@ def run():
         tf = tb_all.get(a, {}).get("TF", {})
         r5_attr = attribute(r, F, s0, cv["dates"][wr["R5_causal"][0] - 1]) if wr else None
         J["assets"][a] = dict(name=NAME.get(a, a), episode=dict(start=s0.strftime("%Y-%m-%d"), kind=kind, direction=direction, sessions=int(len(idx) - 1 - s0_pos), move=move,
-                                                               extreme_so_far=dict(date=idx[ext].strftime("%Y-%m-%d"), move=ext_move), threshold_now=float(thr[-1])),
+                                                               extreme_so_far=dict(date=idx[ext].strftime("%Y-%m-%d"), move=ext_move), threshold_now=float(thr[-1]), rule=rule_label),
                               target=tgt, attribution=ep_attr, impulse=dict(end=i1.strftime("%Y-%m-%d"), sessions=int(len(r.loc[i0:i1]) - 1), move=imp_move, attribution=imp_attr), last_session=dict(date=s1.strftime("%Y-%m-%d"), ret=float(r.iloc[-1]), attribution=day_attr),
                               stable_factors=[f for f, v in TB.items() if v.get("stable")], n_past_episodes=len(eps),
                               windows=({k: dict(sessions=int(v[0]), explained=(None if not np.isfinite(v[1]) else float(v[1])), move=float(cv["move"][v[0] - 1]), end=cv["dates"][v[0] - 1].strftime("%Y-%m-%d")) for k, v in wr.items()} if wr else None),
                               window_test=tf, ceiling_null=(None if not np.isfinite(c_null) else float(c_null)), best_rule=(dict(sessions=int(wr_best['R5_causal'][0]), explained=float(wr_best['R5_causal'][1]), params=bb, p=bb['p'], leg=best_leg, rows=(wr_best['_attr']['rows'][:4] if wr_best.get('_attr') else None)) if wr_best and np.isfinite(wr_best['R5_causal'][1]) else None), r5_rows=(r5_attr["rows"][:4] if r5_attr else None), r5_unexplained=(r5_attr["unexplained_share"] if r5_attr else None))
         pc = lambda v: f"{np.expm1(v):+.1%}"
         L += [f"## {NAME.get(a, a)} ({a})", "",
-              f"- Current episode: **{'up' if direction > 0 else 'down'} since {s0.date()}** ({kind} confirmed; {len(idx) - 1 - s0_pos} sessions), move so far {pc(move)}; extreme so far {pc(ext_move)} on {idx[ext].date()}; reversal threshold now {thr[-1]:.1%}.",
+              f"- Current episode: **{'up' if direction > 0 else 'down'} since {s0.date()}** ({kind} confirmed; {len(idx) - 1 - s0_pos} sessions), move so far {pc(move)}; extreme so far {pc(ext_move)} on {idx[ext].date()}; {rule_label}.",
               (f"- Typical {'rise' if direction > 0 else 'fall'} of this kind for {NAME.get(a, a)}: {pc(direction * tgt['med_size'])} from the start (middle half of past episodes {pc(direction * tgt['q25'])} to {pc(direction * tgt['q75'])}), "
                f"median {tgt['med_length']:.0f} sessions, n {tgt['n']} — this one is at {tgt['share_of_typical']:.0%} of the typical size; "
                + (f"the typical level is {pc(tgt['target_from_now'])} from here (band {pc(tgt['band_from_now'][0])} to {pc(tgt['band_from_now'][1])})." if tgt['share_of_typical'] < 1
@@ -451,4 +503,5 @@ if __name__ == "__main__":
     elif cmd == "window-null": window_null(sys.argv[2])
     elif cmd == "window-grid": window_grid(sys.argv[2])
     elif cmd == "segmenter-test": segmenter_test(sys.argv[2])
+    elif cmd == "segmenter-null": segmenter_null(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
     else: {"selftest": selftest, "run": run}[cmd]()

@@ -73,6 +73,8 @@ have run, with every line tagged.
   and the explained share the promoted window rule reaches on each. A rule replaces the zigzag only if its median explained share is ≥ 5 points
   higher with at least as many scored legs. **Prior #68:** X = 0 rules produce hundreds of 3–6-session legs and lower shares; persistence with
   X = 4% and swing k = 10 land within 5 points of the zigzag; nothing replaces it.
+- **T-I′ (registered 23 Oct after T-I passed, before running):** the winning rule's median explained share on 20 time-shifted factor series; PASS if
+  real ≥ null median + 10 points and > 95th pct → promoted automatically (processed/leg_rule.json), the zigzag superseded on record. **Prior #69:** PASS.
 - Nightly: `src/why_moved.py`; app: the "Why it moved" paragraph beside the day's Up/Down pill, every sentence tagged.
 
 ## 5. The unexplained part as a signal — residual momentum / reversal (registered 2026-10-23, before code)
@@ -111,3 +113,4 @@ price pressure unwinds (Campbell–Grossman–Wang; Nagel), information diffuses
 | 2026-10-23 | T-H (GLD, SLV, USO, SPY, NVDA) | **FAIL on all five.** Best cells: GLD 60→60 reversal IC −0.19 (null best 0.24, p 0.77); SLV 20→60 reversal −0.22 (p 0.56); USO 20→20 continuation +0.17, hit 59%, Sharpe +0.5 (p 0.82); SPY 20→60 reversal −0.21 (p 0.31); NVDA 20→60 continuation +0.25 (p 0.19; plain momentum +0.20). No cell distinguishable from noise; where the residual leaned (oil continuation, metals reversal at 60) it did not beat the price trend. The unexplained part, as measured with the current factor set, is not a tradable signal at 5–60 sessions. Re-run after the flow/positioning proxies land. | **#67 wrong** (expected INCONCLUSIVE metals, PASS NVDA). Tally 56 |
 | 2026-10-23 | T-A sweep null (GLD) | Best cell 756/20 median R² 0.224 vs best-of-sweep noise median −0.024 over 50 shifts, p = 0.000 → survives. Amendment: the T-A gate for quotable sensitivities is treated as met by the surviving swept cell (tag 'swept cell' on the page); the registered 504/20 verdict (0.177 FAIL) stands as recorded. | no prior |
 | 2026-10-23 | T-G amendment | The app uses the best cell *within its registered leg definition* (1.5×/8%), judged against that sub-grid's null — legs are never re-cut to fit a cell (founder's objection: integrity must not cost the leg's meaning). | — |
+| 2026-10-23 | T-I (GLD) | 17 rules. **Founder's persistence rule N = 5 sessions, X = 4%: median explained share 74% on 34 legs vs the zigzag's 68% on 24 → PASS** (≥ 5 points, more legs). Pure gradient rules (X = 0, N = 2–3): 350–900 legs, 16–49% under five sessions, 48–61%; N = 10 never fires; swing k = 5: 554 legs, 53%. `docs/segmenter_test_GLD.md` | **#68 wrong** (predicted nothing replaces the zigzag). Tally 57 |

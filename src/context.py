@@ -209,8 +209,7 @@ def why_moved_sentences(asset, name, ticker=None):
     ep, tg, wd, ls, tf = A["episode"], A.get("target"), A.get("windows") or {}, A.get("last_session") or {}, A.get("window_test") or {}
     up = ep["direction"] > 0; S = []
     S.append(f"{name} has been <b>{'rising' if up else 'falling'} since {ep['start']}</b> — {ep['sessions']} sessions, {_pct(ep['move'])} so far, furthest point "
-             f"{_pct(ep['extreme_so_far']['move'])} on {ep['extreme_so_far']['date']}; a move of {ep['threshold_now']:.1%} against the trend would end this leg "
-             f"(the reversal rule: 1.5 × the asset's own monthly volatility, floor 8%) {tag('measured')}.")
+             f"{_pct(ep['extreme_so_far']['move'])} on {ep['extreme_so_far']['date']}; how a leg ends: {ep.get('rule', 'a counter-move of 1.5 × the asset\'s monthly volatility, floor 8%')} {tag('measured')}.")
     if tg:
         kind = "rises" if up else "falls"; sgn = 1 if up else -1
         if tg.get("share_of_typical") is not None and tg["share_of_typical"] < 1:
