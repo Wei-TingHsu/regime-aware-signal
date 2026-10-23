@@ -220,7 +220,7 @@ def tests(asset, sweep=False, n_null=0, seed=0):
         L += ["", line, "", "Reading: a block of 1 has no R² (one point); short blocks are noisier per block but closer to the founder's 'purest window' idea. "
               "The registered verdict is the 504/20 cell; the sweep is the alternatives track and a survivor is promoted to its own forward test, never adopted in place."]
     J = json.loads((PROC / "factor_attribution.json").read_text()) if (PROC / "factor_attribution.json").exists() else {}
-    J.setdefault("tests", {})[asset] = rec; (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1))
+    J.setdefault("tests", {}).setdefault(asset, {}).update(rec); (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1))   # merge: T-E/T-F/T-G records survive
     out = DOCS / "factor_attribution_tests.md"; prev = out.read_text() if out.exists() else ""
     out.write_text((prev.rstrip("\n") + "\n\n" if prev else "") + "\n".join(L) + "\n"); print("\n".join(L)); print(f"-> {out}")
 

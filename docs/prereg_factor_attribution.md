@@ -61,7 +61,27 @@ have run, with every line tagged.
   (R5 ≈ R1 within noise; the ceiling's gap over them is the overfitting margin).
 - **T-F′ (registered 23 Oct after T-F passed, before running):** the causal rule's median share on episodes with time-shifted factor series
   (20 shifts) — PASS if the real share beats the null median by ≥ 10 points and its 95th percentile. **Prior #65:** PASS.
+- **T-G (registered 23 Oct, founder's rule — "why are we satisfied with 53%; sweep the variables"):** the window rule's own variables swept —
+  patience {2,3,5,7,10,15,20,30} × min window {3,5,10} × look-back {252,504,756} × reversal rule {(1.0, 5%), (1.5, 8%), (2.0, 12%)} = 216 cells;
+  statistic = median R5 share over past episodes; the best cell vs the best cell of the same sweep on 10 time-shifted factor series (p < 0.05
+  survives) → promoted as the app's rule by dated amendment, the registered 5/5 cell staying the recorded verdict. The after-the-fact ceiling on
+  the current leg is reported with its own noise calibration (median R4 on 20 shifted series). **Prior #66:** patience 10–20 wins, median
+  share 58–65%, survives the null; the ceiling's excess over noise on gold's current leg ≈ 30 points.
 - Nightly: `src/why_moved.py`; app: the "Why it moved" paragraph beside the day's Up/Down pill, every sentence tagged.
+
+## 5. The unexplained part as a signal — residual momentum / reversal (registered 2026-10-23, before code)
+Founder: the share no reason explains is the crowd — emotion, trend-following, differing valuation standards; if it can be measured
+consistently it may be the fund's alpha. Literature: residual momentum (Blitz, Huij & Martens 2011), noise-trader and slow-diffusion models;
+price pressure unwinds (Campbell–Grossman–Wang; Nagel), information diffuses (Hong–Stein). The test is predictability, not the label.
+- Residual e_t from a rolling 252-session fit of the named reasons (refit every 20 sessions). Signal = cumulative residual over the past w ∈ {5,10,20,40,60};
+  forward return over h ∈ {5,10,20,40,60}; non-overlapping samples. Statistics: rank IC, sign hit-rate, long-short Sharpe. The same grid on total
+  returns (plain momentum) beside it.
+- **T-H:** best cell by |IC| vs the best |IC| of the same grid on 200 shifted residual series (p < 0.05), AND |IC| ≥ plain momentum's on that cell + 0.02
+  → PASS; predictable but not better than the trend → INCONCLUSIVE; else FAIL. Sign of IC reports the shape (continuation / reversal) by horizon.
+  Assets: GLD, SLV, USO, SPY, TLT, UUP, NVDA, META.
+- **Prior #67:** GLD and SLV continuation at 20–60 sessions, IC 0.03–0.06, not beating plain momentum (INCONCLUSIVE); SPY, TLT, UUP FAIL; NVDA and META
+  residual beats total (PASS) — the equity result of the literature.
+- Before quoting any of it as strategy: the omitted-factor proxies (flows, positioning) go in first so the residual is the unmeasured part, not the unmodelled part.
 
 ## Amendments
 | date | change | reason |
@@ -77,3 +97,8 @@ have run, with every line tagged.
 | 2026-10-23 | T-A sweep (GLD) | 30 cells: blocks 2–3 negative, 5 ≈ 0.05, 15–20 ≈ 0.18, best 756/20 = 0.224 (above the bar; best-of-sweep null pending, background run). Explanatory power rises with block length — day-to-day noise swamps short windows. | sweep, no prior |
 | 2026-10-23 | T-E (GLD) | Impulse better explained than the full leg in **46%** of 24 episodes → **FAIL**; median unexplained impulse 81% vs full 63%; current impulse 25 Aug → 1 Sep, 5 sessions, −7.3%, 94% unexplained. | **#63 wrong** (expected PASS for GLD). Tally 54 |
 | 2026-10-23 | T-F (GLD) | Causal stop beats the full-leg window in **83%** of 24 episodes → **PASS**; median explained share 53% at a median 7 sessions vs 31% over the full leg (102 sessions); fixed impulse 17%; after-the-fact ceiling 71% at 11 sessions. `docs/window_test_GLD.md` | **#64 wrong** (expected FAIL). Tally 55 |
+| 2026-10-23 | T-F′ (GLD) | Real median R5 share 53% vs 5% on time-shifted factors (20 shifts; 95th pct 9%) → **PASS**. Gold's current leg: ceiling 61% at 22 sessions, the 5/5 rule stopped at 5 sessions (12%) — patience too short, swept under T-G. | **#65 right** |
+| 2026-10-23 | T-G (GLD) | 216 cells. Share rises with patience (2: 43%, 5: 54%, 15: 60%, 20–30: 64%); look-back 252 > 504 > 756 (62 / 54 / 51%); reversal rule flat. Best cell (2.0×/12%, 252, patience 10, min 3) 71% on 13 legs, best-of-sweep null p = 0.00 → **promoted** as the app's rule by this amendment; registered 5/5 cell stays the recorded verdict. Gold's current leg: ceiling 61% vs 12% on shifted series (excess +49 pts). | **#66 right** on patience and survival (predicted 10–20 / 58–65%; actual 20–30 / 64%); excess predicted ≈ 30, actual 49 |
+| 2026-10-23 | T-H (GLD, SLV, USO, SPY, NVDA) | **FAIL on all five.** Best cells: GLD 60→60 reversal IC −0.19 (null best 0.24, p 0.77); SLV 20→60 reversal −0.22 (p 0.56); USO 20→20 continuation +0.17, hit 59%, Sharpe +0.5 (p 0.82); SPY 20→60 reversal −0.21 (p 0.31); NVDA 20→60 continuation +0.25 (p 0.19; plain momentum +0.20). No cell distinguishable from noise; where the residual leaned (oil continuation, metals reversal at 60) it did not beat the price trend. The unexplained part, as measured with the current factor set, is not a tradable signal at 5–60 sessions. Re-run after the flow/positioning proxies land. | **#67 wrong** (expected INCONCLUSIVE metals, PASS NVDA). Tally 56 |
+| 2026-10-23 | T-A sweep null (GLD) | Best cell 756/20 median R² 0.224 vs best-of-sweep noise median −0.024 over 50 shifts, p = 0.000 → survives. Amendment: the T-A gate for quotable sensitivities is treated as met by the surviving swept cell (tag 'swept cell' on the page); the registered 504/20 verdict (0.177 FAIL) stands as recorded. | no prior |
+| 2026-10-23 | T-G amendment | The app uses the best cell *within its registered leg definition* (1.5×/8%), judged against that sub-grid's null — legs are never re-cut to fit a cell (founder's objection: integrity must not cost the leg's meaning). | — |

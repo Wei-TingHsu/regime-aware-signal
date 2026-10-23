@@ -614,6 +614,24 @@ wind direction, and decides for themselves. Nightly per asset incl. silver: adap
 current episode and last-session attribution with the unexplained share, base-rate target from past episode sizes (labelled), T-D registered
 for the conditional target (prior #62). `src/why_moved.py`, prereg_factor_attribution §4; hooked in daily_run.
 **23 Oct results:** T-A sweep favours 20-session blocks (0.22 at a 3-year window; null pending); T-E fixed-impulse FAIL (#63); **T-F causal window rule PASS** — 53% explained at ~7 sessions vs 31% full leg, 83% of episodes (#64 wrong, tally 55); T-F′ shifted-factor null registered (#65). App paragraph "Why it moved" wired into the Context block the same night.
+**T-G:** patience and a one-year look-back lift the explained share to 64–71%; best cell survives its null and is promoted (#66 right). **T-H residual momentum / reversal registered** (prereg §5, prior #67): is the unexplained part predictable, and better than plain momentum — the founder's 'crowd as alpha' question, tested as predictability across every window × horizon on all eight assets.
+
+### 3.34 The unexplained part as alpha — the founder's question, and the three conditions (23 Oct)
+
+Founder: if the reasons explain 80% of a leg and 20% never yields to any clue, that 20% is the crowd — emotion, trend-followers, institutions
+valuing differently; if we can measure it consistently and lean on it, that is the fund's alpha. In the literature this is *residual momentum*
+(Blitz, Huij & Martens 2011) on top of noise-trader and slow-diffusion models; price pressure tends to unwind, slow information to continue.
+It becomes **our** alpha only if three things hold, in plain words:
+1. **The label is not the test.** The unexplained part mixes crowd behaviour with information the model has no series for (positioning, flows,
+   central-bank buying) and plain model error. Gold's 91% unexplained today is mostly the last two. The measurable omitted factors go in first;
+   only what is left afterwards may honestly be called the crowd.
+2. **Predictability, not cause.** Markets also move on information we cannot see. The fund question is whether today's unexplained move says
+   anything about tomorrow's — tested at every window × horizon (T-H), with the shape read off the sign: continuation = slow information,
+   reversal = a stampede unwinding.
+3. **It must beat the price trend itself.** If the residual's sign predicts no better than plain momentum, the decomposition added nothing tradable.
+**Result 23 Oct (T-H): FAIL on GLD, SLV, USO, SPY, NVDA** — no cell beats noise; prior #67 wrong (tally 56). Re-run after the flow and positioning
+proxies (3.28) shrink the residual to its unmeasured part. Until then the unexplained share is shown on the page as a measurement of what the
+model cannot see, never as a signal.
 
 ## 4. Potential upgrades — not registered, not costed
 - **Reason-weighted path range (founder, 22 Oct) — registered as 3.29 the same day.** Segment past rises and falls per market (episodes ≥ 10% peak-to-trough); have the reader

@@ -219,7 +219,15 @@ def why_moved_sentences(asset, name, ticker=None):
                      f"{_pct(tg['band_from_now'][1])}) {tag('measured')} — a base rate of past legs, not a forecast; the reason-conditioned version {tag('registered, not run')}.")
         else:
             S.append(f"Past {kind} of this kind ran a median {_pct(sgn * tg['med_size'])} (n {tg['n']}); this one is already larger than {tg.get('pct_rank', 0):.0%} of them — the base rate gives no further level {tag('measured')}.")
-    r5 = wd.get("R5_causal"); rows = A.get("r5_rows") or []
+    r5 = wd.get("R5_causal"); rows = A.get("r5_rows") or []; br = A.get("best_rule")
+    if br and br.get("explained") is not None:      # the swept rule that survived its null (T-G) replaces the registered 5/5 cell on the page
+        rows = br.get("rows") or rows
+        leg = br.get("leg"); pre = (f"Under the promoted window rule the leg is cut as {'rising' if leg['direction'] > 0 else 'falling'} since {leg['start']} ({leg['sessions']} sessions, {_pct(leg['move'])}). " if leg else "")
+        top = ", ".join(f"{d['label']} {d['share']:+.0%}" for d in rows[:3]) or "—"
+        S.append(f"<b>Why it moved.</b> {pre}Over the window where the named reasons explain most on a forward-walking rule (first {br['sessions']} sessions), they account for <b>{br['explained']:.0%}</b> "
+                 f"of the move: {top}; the rest is unexplained by rates, the dollar, oil, volatility, geopolitical risk, liquidity or the macro state "
+                 f"{tag('tested: PASS')} (rule promoted after a 216-cell sweep beat its noise null, p {br['p']:.2f}; patience {br['params']['patience']}, look-back {br['params']['window']}).")
+        r5 = None
     if r5 and r5.get("explained") is not None:
         top = ", ".join(f"{d['label']} {d['share']:+.0%}" for d in rows[:3]) or "—"
         v = tf.get("verdict", "not run"); extra = f" (this rule beat the full-leg window in {tf['share']:.0%} of past legs)" if tf.get("share") is not None else ""

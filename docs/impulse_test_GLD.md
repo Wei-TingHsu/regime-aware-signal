@@ -1,6 +1,6 @@
 # T-E impulse vs full episode — GLD
 
-*2026-10-23 01:53. 24 past episodes. Unexplained share = |residual / actual| with the same pre-episode sensitivities. PASS if the impulse's share is lower in ≥ 60% of episodes.*
+*2026-10-23 16:29. 24 past episodes. Unexplained share = |residual / actual| with the same pre-episode sensitivities. PASS if the impulse's share is lower in ≥ 60% of episodes.*
 
 **Impulse better in 46% of episodes → FAIL**
 

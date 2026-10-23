@@ -2525,3 +2525,16 @@ yields/hikes/VIX/war unstable (#59 wrong), tally 53. The GLD 2026 episode, with 
 fall, prior uptrend +$1,700, unexplained ≈ $2,800 — 2026 broke gold's 2024–25 sensitivities; the unexplained part is where positioning and
 forced selling live, for which the model had no proxy. Amendment: `--start peak`, Bitcoin as a speculative-liquidity proxy, ETF flows and CFTC
 positioning registered (prior #61). Dynamic issuer pool (3.32) built from BEA contributions to growth; the nightly 8-K fetch reads it.
+
+### 18.36 Why it moved: window rules, the sweep, and the alpha question (23 Oct)
+
+Overnight and through the day: the daily "why it moved" engine (3.33) found gold falling since 25 Aug (−13.8%, 98% of a typical gold fall), silver
+since 27 Aug (beyond its typical fall), oil up since 1 Jul (twice a typical rise). The founder's two rules — every fixed number is a variable, and
+analyse the purest short window — were tested rather than assumed: a fixed first-plunge window failed (T-E, 17% explained); a forward-walking rule
+that stops when the explained share stalls passed (T-F: 53% vs 31% for the full leg, 83% of legs) and beat time-shifted noise by 48 points (T-F′);
+sweeping the rule's own variables (T-G, 216 cells) showed patience 20–30 and a one-year look-back lift the share to 64–71%, surviving the
+sweep-wide null; the founder objected to re-cutting legs to fit a cell, so the app uses the best cell within its own leg definition. The daily
+model's 3-year/20-session cell survived its null (T-A sweep, 0.224 vs noise ≈ 0). The founder's question — is the unexplained part the crowd, and
+the fund's alpha? — was registered with three conditions (TRACK 3.34) and tested as residual momentum / reversal on five assets (T-H): FAIL on
+all five, nothing beyond noise; prior #67 wrong, tally 56. Gold's 22 Oct session (−2.6%) was 95% unexplained. The dynamic issuer pool (3.32)
+built from FRED's copy of the BEA growth-contribution table: 25 issuers. Wrong-prior tally 56; the register runs to row 48.

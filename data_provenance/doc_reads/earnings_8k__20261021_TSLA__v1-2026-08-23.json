@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.45,
+  "evidence": [
+    "we achieved our second consecutive quarter of TTM revenue in excess of $100B",
+    "we have made additional progress in securing future supply",
+    "we expect rising data center demand to continue driving demand for our products"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2026-10-21",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 228940,
+  "max_words": 20000
+}

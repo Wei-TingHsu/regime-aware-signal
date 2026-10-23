@@ -28,10 +28,10 @@ NAME = {"SPY": "US equities", "TLT": "long Treasuries", "GLD": "gold", "SLV": "s
 MULT, FLOOR, MIN_EP = 1.5, 0.08, 5
 
 
-def turning_points(r: pd.Series):
+def turning_points(r: pd.Series, mult: float = MULT, floor: float = FLOOR):
     """Zigzag with an adaptive threshold. Returns list of (position, 'peak'|'trough'), current trend (+1/-1/0), provisional extreme position."""
     rr = r.fillna(0.0); px = np.exp(rr.cumsum().to_numpy())
-    sig = rr.rolling(20).std().bfill().fillna(rr.std()).to_numpy() * np.sqrt(20); thr = np.maximum(FLOOR, MULT * sig)
+    sig = rr.rolling(20).std().bfill().fillna(rr.std()).to_numpy() * np.sqrt(20); thr = np.maximum(floor, mult * sig)
     hi = lo = 0; trend = 0; tps = []
     for i in range(1, len(px)):
         if trend >= 0 and px[i] > px[hi]: hi = i
@@ -69,11 +69,11 @@ def attribute(r: pd.Series, F: pd.DataFrame, s0, s1):
 PATIENCE, MIN_K, MAX_K = 5, 5, 120
 
 
-def attr_curve(r: pd.Series, F: pd.DataFrame, s0, max_k: int = MAX_K):
+def attr_curve(r: pd.Series, F: pd.DataFrame, s0, max_k: int = MAX_K, window: int = WINDOW):
     """For windows of 1..max_k sessions after the turning point s0: cumulative move, the reasons' explained part (pre-episode sensitivities,
     drift excluded), residual, and the explained share 1 - |resid|/|move| (NaN while the move is under 1%)."""
     avail = [f for f in ORDER_DEFAULT if f in F.columns and F[f].notna().mean() > 0.5]
-    win = F.loc[:s0].iloc[-WINDOW - 1:-1][avail].join(r.rename("r")).dropna(); ep = F.loc[s0:][avail].join(r.rename("r")).dropna().iloc[1:max_k + 1]
+    win = F.loc[:s0].iloc[-window - 1:-1][avail].join(r.rename("r")).dropna(); ep = F.loc[s0:][avail].join(r.rename("r")).dropna().iloc[1:max_k + 1]
     if len(win) < 250 or len(ep) < 3: return None
     b = joint_fit(win.r.to_numpy(), win[avail].to_numpy())
     cF = ep[avail].cumsum().to_numpy(); cr = ep.r.cumsum().to_numpy(); explained = cF @ b; resid = cr - explained
@@ -81,7 +81,7 @@ def attr_curve(r: pd.Series, F: pd.DataFrame, s0, max_k: int = MAX_K):
     return dict(k=np.arange(1, len(ep) + 1), move=cr, explained=explained, score=score, dates=ep.index)
 
 
-def window_rules(curve, L: int, k_imp: int):
+def window_rules(curve, L: int, k_imp: int, patience: int = PATIENCE, min_k: int = MIN_K):
     """Scores under each rule for an episode of L sessions. R4 is chosen after the fact (a ceiling); R5 walks forward and stops when the
     score has not improved for PATIENCE sessions (causal, usable live)."""
     sc = curve["score"][:L]; n = len(sc)
@@ -89,16 +89,99 @@ def window_rules(curve, L: int, k_imp: int):
     out = {"R1_full": (n, float(sc[n - 1])), "R2_impulse": (min(k_imp, n), float(sc[min(k_imp, n) - 1]) if k_imp >= 1 else np.nan), "R3_half": (max(n // 2, 1), float(sc[max(n // 2, 1) - 1]))}
     fin = np.where(np.isfinite(sc))[0]
     out["R4_ceiling"] = (int(fin[np.nanargmax(sc[fin])]) + 1, float(np.nanmax(sc[fin]))) if len(fin) else (n, np.nan)
-    if n < MIN_K:
+    if n < min_k:
         out["R5_causal"] = (n, float(sc[n - 1])); return out
-    best, kb, since = -np.inf, MIN_K, 0
-    for k in range(MIN_K, n + 1):
+    best, kb, since = -np.inf, min_k, 0
+    for k in range(min_k, n + 1):
         v = sc[k - 1]
         if np.isfinite(v) and v > best: best, kb, since = v, k, 0
         else: since += 1
-        if since >= PATIENCE: break
+        if since >= patience: break
     out["R5_causal"] = (kb, float(best) if np.isfinite(best) else np.nan)
     return out
+
+
+# ---------------------------------------------------------------- T-G: the window rule's own variables, swept (founder's rule, 23 Oct)
+GRID_PATIENCE = (2, 3, 5, 7, 10, 15, 20, 30)
+GRID_MINK = (3, 5, 10)
+GRID_WINDOW = (252, 504, 756)
+GRID_REVERSAL = ((1.0, 0.05), (1.5, 0.08), (2.0, 0.12))
+
+
+def _r5_cells(r, F, cells, idx):
+    """Median R5 share and share-beating-R1 for every cell; episodes depend on the reversal rule, curves on the look-back; rules are cheap on top."""
+    out = {}; cache = {}
+    for (mult, floor, window, patience, min_k) in cells:
+        key = (mult, floor)
+        if key not in cache:
+            tps, _, _, px, thr = turning_points(r, mult, floor)
+            cache[key] = [(a, b, 1 if ka == "trough" else -1, float(thr[a])) for (a, ka), (b, kb) in zip(tps[:-1], tps[1:]) if b - a >= MIN_EP]
+        eps = cache[key]; ckey = (mult, floor, window)
+        if ckey not in cache:
+            cache[ckey] = [(attr_curve(r, F, idx[a], max_k=min(b - a, MAX_K), window=window), a, b, d, t) for a, b, d, t in eps if a >= window + 10]
+        v5, v1 = [], []
+        for cv, a, b, d, t in cache[ckey]:
+            if cv is None: continue
+            i0, i1, _ = impulse_window(r, idx[a], d, t); wr = window_rules(cv, min(b - a, MAX_K), max(len(r.loc[i0:i1]) - 1, 1), patience, min_k)
+            if wr and np.isfinite(wr["R5_causal"][1]): v5.append(wr["R5_causal"][1]); v1.append(wr["R1_full"][1])
+        v5, v1 = np.array(v5), np.array(v1)
+        out[(mult, floor, window, patience, min_k)] = dict(n=int(len(v5)), r5=float(np.median(v5)) if len(v5) else np.nan, beat=float((v5 > v1).mean()) if len(v5) else np.nan)
+    return out
+
+
+def window_grid(asset, n_shift: int = 10, seed: int = 0):
+    """Every cell of the window rule's variables; the best cell judged against the best cell of the same sweep on time-shifted factors."""
+    r = returns(asset).dropna(); F = factors(r.index); idx = r.index
+    cells = [(m, f, w, p, k) for (m, f) in GRID_REVERSAL for w in GRID_WINDOW for p in GRID_PATIENCE for k in GRID_MINK]
+    real = _r5_cells(r, F, cells, idx); df = pd.DataFrame([dict(mult=c[0], floor=c[1], window=c[2], patience=c[3], min_k=c[4], **v) for c, v in real.items()]).dropna(subset=["r5"])
+    best = df.loc[df.r5.idxmax()]; rng = np.random.default_rng(seed); mx = []; mx_rule = {k: [] for k in GRID_REVERSAL}
+    for _ in range(n_shift):
+        sh = int(rng.integers(120, len(F) - 120)); Fx = pd.DataFrame(np.roll(F.to_numpy(), sh, axis=0), index=F.index, columns=F.columns); nc = _r5_cells(r, Fx, cells, idx)
+        vals = [v["r5"] for v in nc.values() if np.isfinite(v["r5"])]
+        if vals: mx.append(max(vals))
+        for (m, f) in GRID_REVERSAL:
+            vr = [v["r5"] for c, v in nc.items() if (c[0], c[1]) == (m, f) and np.isfinite(v["r5"])]
+            if vr: mx_rule[(m, f)].append(max(vr))
+    mx = np.array(mx); p = float((mx >= best.r5).mean()) if len(mx) else np.nan; reg = real.get((MULT, FLOOR, WINDOW, PATIENCE, MIN_K), {})
+    by_rule = {}   # best cell within each leg definition, judged against the null of ITS sub-grid: the app uses the one for its registered rule, so legs are never re-cut
+    for (m, f) in GRID_REVERSAL:
+        sub = df[(df.mult == m) & (df.floor == f)]
+        if sub.empty: continue
+        b = sub.loc[sub.r5.idxmax()]; arr = np.array(mx_rule[(m, f)]); pr = float((arr >= b.r5).mean()) if len(arr) else np.nan
+        by_rule[f"{m},{f}"] = dict(mult=m, floor=f, window=int(b.window), patience=int(b.patience), min_k=int(b.min_k), r5=float(b.r5), beat=float(b.beat), n=int(b.n), p=pr, null_median=(float(np.median(arr)) if len(arr) else None))
+    L = [f"# T-G window-rule grid — {asset}", "", f"*{datetime.now():%Y-%m-%d %H:%M}. {len(df)} cells: reversal rule (mult, floor) × look-back × patience × min window. "
+         f"Statistic: median R5 explained share over past episodes. Best cell judged against the best cell of the same sweep on {len(mx)} time-shifted factor series (SPEC_GRID rule 2).*", "",
+         f"**Registered cell** (1.5, 8%, 504, patience 5, min 5): median {reg.get('r5', float('nan')):.0%}, beats full leg in {reg.get('beat', float('nan')):.0%} (n {reg.get('n', 0)}).", "",
+         f"**Best cell:** mult {best.mult}, floor {best.floor:.0%}, look-back {int(best.window)}, patience {int(best.patience)}, min window {int(best.min_k)} → median **{best.r5:.0%}**, beats full leg in {best.beat:.0%} (n {int(best.n)}); "
+         f"best-of-sweep null median {np.median(mx) if len(mx) else float('nan'):.0%}, **p = {p:.2f}** → " + ("survives the sweep" if p < 0.05 else "does not beat the best noise cell"), "",
+         "| rank | mult | floor | look-back | patience | min k | median R5 | beats full | n |", "|---|---|---|---|---|---|---|---|---|"]
+    L += ["", "**Best cell within each leg definition** (the app uses the one for its registered rule — legs are never re-cut to fit a cell):", "",
+          "| leg definition | look-back | patience | min k | median R5 | beats full | n | p (sub-grid null) |", "|---|---|---|---|---|---|---|---|"]
+    L += [f"| {v['mult']}× / {v['floor']:.0%} | {v['window']} | {v['patience']} | {v['min_k']} | {v['r5']:.0%} | {v['beat']:.0%} | {v['n']} | {v['p']:.2f} |" for v in by_rule.values()]
+    L += ["", "All cells, top 15:", ""]
+    for i, (_, q) in enumerate(df.sort_values("r5", ascending=False).head(15).iterrows(), 1):
+        L.append(f"| {i} | {q.mult} | {q.floor:.0%} | {int(q.window)} | {int(q.patience)} | {int(q.min_k)} | {q.r5:.0%} | {q.beat:.0%} | {int(q.n)} |")
+    L += ["", "By patience (median over the other variables): " + ", ".join(f"{int(pp)}: {df[df.patience == pp].r5.median():.0%}" for pp in GRID_PATIENCE),
+          "By look-back: " + ", ".join(f"{int(w)}: {df[df.window == w].r5.median():.0%}" for w in GRID_WINDOW),
+          "By reversal rule: " + ", ".join(f"({m}, {f:.0%}): {df[(df.mult == m) & (df.floor == f)].r5.median():.0%}" for m, f in GRID_REVERSAL),
+          "", "Reading: the registered 5/5 cell stays the recorded verdict; a surviving best cell is promoted (dated amendment) as the rule the app uses, with its p shown."]
+    J = json.loads((PROC / "factor_attribution.json").read_text()) if (PROC / "factor_attribution.json").exists() else {}
+    J.setdefault("tests", {}).setdefault(asset, {})["TG"] = dict(best=dict(mult=float(best.mult), floor=float(best.floor), window=int(best.window), patience=int(best.patience), min_k=int(best.min_k), r5=float(best.r5), beat=float(best.beat), n=int(best.n)),
+                                                               null_median=(float(np.median(mx)) if len(mx) else None), p=p, n_cells=int(len(df)), by_rule=by_rule, run=datetime.now().strftime("%Y-%m-%d %H:%M"))
+    (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1)); out = DOCS / f"window_grid_{asset}.md"; out.write_text("\n".join(L) + "\n"); print("\n".join(L)); print(f"-> {out}")
+
+
+def ceiling_null(r, F, s0, L, n_shift: int = 20, seed: int = 0):
+    """What the after-the-fact best window (R4) scores on time-shifted factors for the same leg — the noise part of a chosen-after-the-fact share."""
+    rng = np.random.default_rng(seed); vals = []
+    for _ in range(n_shift):
+        sh = int(rng.integers(120, len(F) - 120)); Fx = pd.DataFrame(np.roll(F.to_numpy(), sh, axis=0), index=F.index, columns=F.columns)
+        cv = attr_curve(r, Fx, s0, max_k=min(L, MAX_K))
+        if cv is None: continue
+        sc = cv["score"][:L]; fin = sc[np.isfinite(sc)]
+        if len(fin): vals.append(float(np.nanmax(fin)))
+    return float(np.median(vals)) if vals else np.nan
+
 
 
 def window_test(asset):
@@ -162,6 +245,23 @@ def run():
         TB = tb_all.get(a, {}).get("TB", {})
         cv = attr_curve(r, F, s0, max_k=MAX_K); Lnow = len(idx) - 1 - s0_pos
         wr = window_rules(cv, min(Lnow, MAX_K), max(len(r.loc[i0:i1]) - 1, 1)) if cv is not None else None
+        tg = tb_all.get(a, {}).get("TG", {}); wr_best = None
+        best_leg = None
+        bb = (tg.get("by_rule") or {}).get(f"{MULT},{FLOOR}")       # best cell under the registered leg definition -> no re-cut
+        if wr and bb and bb.get("p") is not None and bb["p"] < 0.05:
+            if (bb["mult"], bb["floor"]) != (MULT, FLOOR):      # the cell's legs are cut by its own reversal rule: re-cut the current leg with it
+                tps_b, trend_b, ext_b, px_b, thr_b = turning_points(r, bb["mult"], bb["floor"])
+                if tps_b:
+                    pb, kb_ = tps_b[-1]; s0b, db = idx[pb], (1 if kb_ == "trough" else -1); Lb = len(idx) - 1 - pb
+                    best_leg = dict(start=s0b.strftime("%Y-%m-%d"), direction=db, sessions=int(Lb), move=float(np.log(px_b[-1] / px_b[pb])))
+                else: s0b, db, Lb = s0, direction, Lnow
+            else: s0b, db, Lb = s0, direction, Lnow
+            cvb = attr_curve(r, F, s0b, max_k=MAX_K, window=bb["window"])
+            if cvb is not None:
+                ib0, ib1, _ = impulse_window(r, s0b, db, float(max(bb["floor"], bb["mult"] * r.rolling(20).std().iloc[-1] * np.sqrt(20))))
+                wr_best = window_rules(cvb, min(Lb, MAX_K), max(len(r.loc[ib0:ib1]) - 1, 1), bb["patience"], bb["min_k"])
+                if wr_best: wr_best["_attr"] = attribute(r, F, s0b, cvb["dates"][wr_best["R5_causal"][0] - 1])
+        c_null = ceiling_null(r, F, s0, min(Lnow, MAX_K)) if cv is not None else np.nan
         tf = tb_all.get(a, {}).get("TF", {})
         r5_attr = attribute(r, F, s0, cv["dates"][wr["R5_causal"][0] - 1]) if wr else None
         J["assets"][a] = dict(name=NAME.get(a, a), episode=dict(start=s0.strftime("%Y-%m-%d"), kind=kind, direction=direction, sessions=int(len(idx) - 1 - s0_pos), move=move,
@@ -169,7 +269,7 @@ def run():
                               target=tgt, attribution=ep_attr, impulse=dict(end=i1.strftime("%Y-%m-%d"), sessions=int(len(r.loc[i0:i1]) - 1), move=imp_move, attribution=imp_attr), last_session=dict(date=s1.strftime("%Y-%m-%d"), ret=float(r.iloc[-1]), attribution=day_attr),
                               stable_factors=[f for f, v in TB.items() if v.get("stable")], n_past_episodes=len(eps),
                               windows=({k: dict(sessions=int(v[0]), explained=(None if not np.isfinite(v[1]) else float(v[1])), move=float(cv["move"][v[0] - 1]), end=cv["dates"][v[0] - 1].strftime("%Y-%m-%d")) for k, v in wr.items()} if wr else None),
-                              window_test=tf, r5_rows=(r5_attr["rows"][:4] if r5_attr else None), r5_unexplained=(r5_attr["unexplained_share"] if r5_attr else None))
+                              window_test=tf, ceiling_null=(None if not np.isfinite(c_null) else float(c_null)), best_rule=(dict(sessions=int(wr_best['R5_causal'][0]), explained=float(wr_best['R5_causal'][1]), params=bb, p=bb['p'], leg=best_leg, rows=(wr_best['_attr']['rows'][:4] if wr_best.get('_attr') else None)) if wr_best and np.isfinite(wr_best['R5_causal'][1]) else None), r5_rows=(r5_attr["rows"][:4] if r5_attr else None), r5_unexplained=(r5_attr["unexplained_share"] if r5_attr else None))
         pc = lambda v: f"{np.expm1(v):+.1%}"
         L += [f"## {NAME.get(a, a)} ({a})", "",
               f"- Current episode: **{'up' if direction > 0 else 'down'} since {s0.date()}** ({kind} confirmed; {len(idx) - 1 - s0_pos} sessions), move so far {pc(move)}; extreme so far {pc(ext_move)} on {idx[ext].date()}; reversal threshold now {thr[-1]:.1%}.",
@@ -186,7 +286,12 @@ def run():
             r4, r5 = wr["R4_ceiling"], wr["R5_causal"]; vtf = tf.get("verdict", "not run")
             L.append(f"- Window where the reasons explain most, chosen after the fact (a ceiling, not a result): first {r4[0]} sessions to {cv['dates'][r4[0] - 1].date()}, "
                      f"{pc(float(cv['move'][r4[0] - 1]))}, explained {r4[1]:.0%}. Causal rule (stop after {PATIENCE} sessions without improvement): first {r5[0]} sessions, "
-                     f"{pc(float(cv['move'][r5[0] - 1]))}, explained {r5[1] if np.isfinite(r5[1]) else float('nan'):.0%} — T-F {vtf}.")
+                     f"{pc(float(cv['move'][r5[0] - 1]))}, explained {r5[1] if np.isfinite(r5[1]) else float('nan'):.0%} — T-F {vtf}. "
+                     f"Noise calibration of the ceiling: a time-shifted series reaches {c_null:.0%} by the same after-the-fact choice, so the ceiling's excess over noise is {r4[1] - c_null:+.0%} points."
+                     + (f" Best swept rule (same leg definition; look-back {bb['window']}, patience {bb['patience']}, min {bb['min_k']}; sub-grid p {bb['p']:.2f})"
+                        + (f" cuts the leg as {'up' if best_leg['direction'] > 0 else 'down'} since {best_leg['start']} ({best_leg['sessions']} sessions, {pc(best_leg['move'])})" if best_leg else "")
+                        + f": first {wr_best['R5_causal'][0]} sessions, explained {wr_best['R5_causal'][1]:.0%}"
+                        + (": " + ", ".join(f"{d['label']} {d['share']:+.0%}" for d in wr_best['_attr']['rows'][:3]) if wr_best.get('_attr') else "") + "." if wr_best else ""))
         if ep_attr:
             top = ", ".join(f"{d['label']} {d['share']:+.0%}" for d in ep_attr["rows"][:4])
             L.append(f"- Episode attribution (joint fit): {top}; prior-trend drift {ep_attr['drift'] / ep_attr['actual'] if ep_attr['actual'] else 0:+.0%}; **unexplained {ep_attr['unexplained_share']:+.0%}**. Stable sensitivities: {', '.join(LABEL[f] for f in J['assets'][a]['stable_factors']) or 'none on record'}.")
@@ -267,4 +372,5 @@ if __name__ == "__main__":
     if cmd == "impulse-test": impulse_test(sys.argv[2])
     elif cmd == "window-test": window_test(sys.argv[2])
     elif cmd == "window-null": window_null(sys.argv[2])
+    elif cmd == "window-grid": window_grid(sys.argv[2])
     else: {"selftest": selftest, "run": run}[cmd]()
