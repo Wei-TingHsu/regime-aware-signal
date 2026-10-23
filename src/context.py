@@ -211,15 +211,15 @@ def why_moved_sentences(asset, name, ticker=None):
     S.append(f"{name} has been <b>{'rising' if up else 'falling'} since {ep['start']}</b> — {ep['sessions']} sessions, {_pct(ep['move'])} so far, furthest point "
              f"{_pct(ep['extreme_so_far']['move'])} on {ep['extreme_so_far']['date']}; how a leg ends: {ep.get('rule', 'a counter-move of 1.5 × the asset\'s monthly volatility, floor 8%')} {tag('measured')}.")
     bp = ep.get("big_picture")
-    if bp: S.append(f"Big picture, by the coarser rule: {'rising' if bp['direction'] > 0 else 'falling'} since {bp['start']} ({bp['sessions']} sessions, {_pct(bp['move'])}) {tag('measured')}.")
+    if bp: S.append(f"Big picture ({bp.get('scale', 'coarser rule')}): {'rising' if bp['direction'] > 0 else 'falling'} since {bp['start']} ({bp['sessions']} sessions, {_pct(bp['move'])}) {tag('measured')}. The current leg below is cut at a finer scale, so 'typical' there means typical for legs of that scale.")
     if tg:
         kind = "rises" if up else "falls"; sgn = 1 if up else -1
         if tg.get("share_of_typical") is not None and tg["share_of_typical"] < 1:
-            S.append(f"Past {kind} of this kind ran a median {_pct(sgn * tg['med_size'])} from their start over {tg['med_length']:.0f} sessions (n {tg['n']}); this one is at "
+            S.append(f"Past {kind} at this scale ran a median {_pct(sgn * tg['med_size'])} from their start over {tg['med_length']:.0f} sessions (n {tg['n']}); this one is at "
                      f"{tg['share_of_typical']:.0%} of that, so the typical level is <b>{_pct(tg['target_from_now'])} from here</b> (middle half of past legs: {_pct(tg['band_from_now'][0])} to "
                      f"{_pct(tg['band_from_now'][1])}) {tag('measured')} — a base rate of past legs, not a forecast; the reason-conditioned version {tag('registered, not run')}.")
         else:
-            S.append(f"Past {kind} of this kind ran a median {_pct(sgn * tg['med_size'])} (n {tg['n']}); this one is already larger than {tg.get('pct_rank', 0):.0%} of them — the base rate gives no further level {tag('measured')}.")
+            S.append(f"Past {kind} at this scale ran a median {_pct(sgn * tg['med_size'])} (n {tg['n']}); this one is already larger than {tg.get('pct_rank', 0):.0%} of them — at this scale the base rate gives no further level {tag('measured')}.")
     r5 = wd.get("R5_causal"); rows = A.get("r5_rows") or []; br = A.get("best_rule")
     if br and br.get("explained") is not None:      # the swept rule that survived its null (T-G) replaces the registered 5/5 cell on the page
         rows = br.get("rows") or rows

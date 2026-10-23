@@ -2555,3 +2555,11 @@ withdrawn (file kept with the reason), the zigzag reinstated, a fidelity criteri
 threshold — and the founder's rule re-specified as he meant it: a trend that has failed to resume for N sessions, up days inside allowed. Prior #70:
 that form finds the August peak and lands within five points of the zigzag; no promotion. The lesson goes in the standing rules: a test criterion must
 include what a human would check first.
+
+### 18.38 Two scales — the founder's decision (23 Oct, evening)
+
+With fidelity measured at the move's own date the zigzag misses nothing at its scale and the founder's two-step rule misses one counter-move in 114
+legs while explaining 79% of them against the zigzag's 68%. Neither replaces the other; the founder chose two scales: the zigzag on top as the
+quarter-scale context, his rule underneath as the current leg where "why it moved" is computed. The third scale that T-J had promoted is withdrawn
+as redundant. The page names the scale wherever it says "typical", because a 14% gold fall is 78% of a typical quarter-scale fall and 193% of a
+typical five-week leg at the same time. PROJECT_MASTER §2.1 holds the day's ideas as a story in eight blocks. Tally 61; register row 50.
