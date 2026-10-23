@@ -1,4 +1,4 @@
-# Why it moved — 2026-10-23 16:56
+# Why it moved — 2026-10-23 16:59
 
 *Turning points: reversal > max(8%, 1.5 × 20-session volatility scaled to a month). Attribution: joint fit, sensitivities from the two years before the episode. Target: base rate of this asset's past episodes in the same direction (median size; quartiles), UNTESTED as a conditional claim (prereg_factor_attribution §4, prior #62).*
 

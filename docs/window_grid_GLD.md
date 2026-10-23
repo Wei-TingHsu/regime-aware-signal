@@ -1,6 +1,6 @@
 # T-G window-rule grid — GLD
 
-*2026-10-23 16:56. 216 cells: reversal rule (mult, floor) × look-back × patience × min window. Statistic: median R5 explained share over past episodes. Best cell judged against the best cell of the same sweep on 10 time-shifted factor series (SPEC_GRID rule 2).*
+*2026-10-23 16:59. 216 cells: reversal rule (mult, floor) × look-back × patience × min window. Statistic: median R5 explained share over past episodes. Best cell judged against the best cell of the same sweep on 10 time-shifted factor series (SPEC_GRID rule 2).*
 
 **Registered cell** (1.5, 8%, 504, patience 5, min 5): median 53%, beats full leg in 83% (n 24).
 
