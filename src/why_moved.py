@@ -185,21 +185,41 @@ def ceiling_null(r, F, s0, L, n_shift: int = 20, seed: int = 0):
 
 
 # ---------------------------------------------------------------- alternative turning-point rules (founder, 23 Oct) — T-I
-def turning_points_persist(r: pd.Series, n_days: int = 3, x: float = 0.02):
-    """Founder's rule: a turning point needs the direction to PERSIST — n_days consecutive sessions against the trend — and a minimum
-    counter-move x from the extreme (x = 0 is the pure gradient rule)."""
+def turning_points_persist(r: pd.Series, n_days: int = 3, x: float = 0.02, mode: str = "time"):
+    """Founder's rule: a reversal is a trend, not one bounce. mode='time' (the meant reading): the price has stayed off its extreme for n_days sessions
+    AND is at least x against it. mode='closes' (the first, literal reading, withdrawn 23 Oct): n_days CONSECUTIVE closes against the trend and x —
+    it never confirmed gold's Aug 2026 peak because the fall had no five-day losing streak."""
     rr = r.fillna(0.0); px = np.exp(rr.cumsum().to_numpy()); d = np.sign(rr.to_numpy())
     hi = lo = 0; trend = 0; tps = []; run_ = 0
     for i in range(1, len(px)):
         if trend >= 0 and px[i] > px[hi]: hi = i
         if trend <= 0 and px[i] < px[lo]: lo = i
-        against = (d[i] < 0) if trend >= 0 else (d[i] > 0)
-        run_ = run_ + 1 if against else 0
-        if trend >= 0 and run_ >= n_days and px[i] <= px[hi] * np.exp(-x):
+        if mode == "closes":
+            against = (d[i] < 0) if trend >= 0 else (d[i] > 0); run_ = run_ + 1 if against else 0
+            ok_up, ok_dn = run_ >= n_days, run_ >= n_days
+        else:
+            ok_up, ok_dn = (i - hi) >= n_days, (i - lo) >= n_days          # sessions since the extreme, up days inside allowed
+        if trend >= 0 and ok_up and px[i] <= px[hi] * np.exp(-x):
             tps.append((hi, "peak")); trend = -1; lo = i; run_ = 0
-        elif trend <= 0 and run_ >= n_days and px[i] >= px[lo] * np.exp(x):
+        elif trend <= 0 and ok_dn and px[i] >= px[lo] * np.exp(x):
             tps.append((lo, "trough")); trend = 1; hi = i; run_ = 0
     return tps, trend, (hi if trend > 0 else lo), px
+
+
+def missed_reversals(tps, px, r: pd.Series):
+    """Fidelity: inside each leg, the largest counter-move against the leg's direction; a counter-move above the zigzag threshold (max(FLOOR, MULT x monthly vol))
+    is a turning point the rule failed to see. Returns the count and the worst one."""
+    rr = r.fillna(0.0); thr = np.maximum(FLOOR, MULT * rr.rolling(20).std().bfill().fillna(rr.std()).to_numpy() * np.sqrt(20))
+    missed, worst = 0, 0.0
+    for (a, ka), (b, kb) in zip(tps[:-1], tps[1:]):
+        seg = px[a:b + 1]
+        if ka == "trough":   # up leg: largest drawdown inside
+            dd = (seg / np.maximum.accumulate(seg) - 1).min()
+        else:                # down leg: largest rally inside
+            dd = -(seg / np.minimum.accumulate(seg) - 1).max()
+        if -dd >= thr[b]: missed += 1
+        worst = min(worst, dd)
+    return missed, float(-worst)
 
 
 def turning_points_swing(r: pd.Series, k: int = 10):
@@ -220,7 +240,8 @@ def turning_points_swing(r: pd.Series, k: int = 10):
 
 
 SEGMENTERS = [("zigzag 1.5× / 8% (registered)", lambda r: turning_points(r)[:4])] + \
-             [(f"persist N={n}, X={x:.0%}", (lambda n, x: (lambda r: turning_points_persist(r, n, x)))(n, x)) for n in (2, 3, 5, 10) for x in (0.0, 0.02, 0.04, 0.08)] + \
+             [(f"persist-time N={n}, X={x:.0%}", (lambda n, x: (lambda r: turning_points_persist(r, n, x, "time")))(n, x)) for n in (2, 3, 5, 10) for x in (0.02, 0.04, 0.08)] + \
+             [(f"persist-closes N={n}, X={x:.0%}", (lambda n, x: (lambda r: turning_points_persist(r, n, x, "closes")))(n, x)) for n in (2, 3, 5) for x in (0.0, 0.02, 0.04, 0.08)] + \
              [(f"swing k={k}", (lambda k: (lambda r: turning_points_swing(r, k)))(k)) for k in (5, 10, 20)]
 
 
@@ -238,6 +259,7 @@ def segmenter_test(asset, patience=None, min_k=None, window=None):
         legs = [(a, b, 1 if ka == "trough" else -1) for (a, ka), (b, kb) in zip(tps[:-1], tps[1:])]
         if not legs: rows.append(dict(rule=name, legs=0)); continue
         lengths = np.array([b - a for a, b, _ in legs]); sizes = np.array([abs(np.log(px[b] / px[a])) for a, b, _ in legs]); shares = []
+        missed, worst = missed_reversals(tps, px, r)
         for a, b, d_ in legs:
             if b - a < MIN_EP or a < window + 10: continue
             cv = attr_curve(r, F, idx[a], max_k=min(b - a, MAX_K), window=window)
@@ -245,15 +267,15 @@ def segmenter_test(asset, patience=None, min_k=None, window=None):
             wr = window_rules(cv, min(b - a, MAX_K), 1, patience, min_k)
             if wr and np.isfinite(wr["R5_causal"][1]): shares.append(wr["R5_causal"][1])
         rows.append(dict(rule=name, legs=len(legs), med_len=float(np.median(lengths)), short=float((lengths < 5).mean()), med_size=float(np.median(sizes)),
-                         scored=len(shares), r5=float(np.median(shares)) if shares else np.nan))
+                         scored=len(shares), r5=float(np.median(shares)) if shares else np.nan, missed=int(missed), worst_missed=float(worst)))
     df = pd.DataFrame(rows); reg = df.iloc[0]
-    better = df[(df.r5 >= reg.r5 + 0.05) & (df.scored >= reg.scored)] if np.isfinite(reg.r5) else df.iloc[0:0]
+    better = df[(df.r5 >= reg.r5 + 0.05) & (df.scored >= reg.scored) & (df.missed <= reg.missed)] if np.isfinite(reg.r5) else df.iloc[0:0]   # fidelity: may not hide more reversals than the zigzag
     L = [f"# T-I turning-point rules — {asset}", "", f"*{datetime.now():%Y-%m-%d %H:%M}. Window rule used on every segmentation: patience {patience}, min window {min_k}, look-back {window} "
-         f"(the promoted cell). 'short' = share of legs under 5 sessions (noise legs). Verdict rule: another segmentation replaces the zigzag only if its median explained share is "
-         f"≥ 5 points higher with at least as many scored legs.*", "", f"**{'PASS for ' + ', '.join(better.rule) if len(better) else 'FAIL — no rule beats the registered zigzag by 5 points'}**", "",
-         "| rule | legs since 2006 | median length (sessions) | share < 5 sessions | median size | legs scored | median explained share |", "|---|---|---|---|---|---|---|"]
+         f"(the promoted cell). 'short' = share of legs under 5 sessions (noise legs); 'missed' = legs hiding a counter-move above the zigzag threshold (a reversal the rule did not see — fidelity, added 23 Oct after the "
+         f"consecutive-closes rule missed gold's August peak). Verdict rule: another segmentation replaces the zigzag only if its median explained share is ≥ 5 points higher, with at least as many scored legs, and no more missed reversals.*", "", f"**{'PASS for ' + ', '.join(better.rule) if len(better) else 'FAIL — no rule beats the registered zigzag by 5 points'}**", "",
+         "| rule | legs since 2006 | median length | share < 5 sessions | median size | legs scored | median explained share | missed reversals (worst) |", "|---|---|---|---|---|---|---|---|"]
     for _, q in df.iterrows():
-        L.append(f"| {q.rule} | {q.legs} | {q.get('med_len', float('nan')):.0f} | {q.get('short', float('nan')):.0%} | {np.expm1(q.get('med_size', 0)):.1%} | {q.get('scored', 0)} | {q.r5 if 'r5' in q and np.isfinite(q.r5) else float('nan'):.0%} |")
+        L.append(f"| {q.rule} | {q.legs} | {q.get('med_len', float('nan')):.0f} | {q.get('short', float('nan')):.0%} | {np.expm1(q.get('med_size', 0)):.1%} | {q.get('scored', 0)} | {q.r5 if 'r5' in q and np.isfinite(q.r5) else float('nan'):.0%} | {int(q.get('missed', 0)) if 'missed' in q and pd.notna(q.get('missed')) else '—'} ({q.get('worst_missed', 0) if pd.notna(q.get('worst_missed', 0)) else 0:.0%}) |")
     L += ["", "Reading: X = 0% is the pure gradient rule — direction flips with N consecutive closes; its legs are counted in days and mostly noise. Adding a minimum counter-move X "
           "turns it into a zigzag with a persistence condition; swing k is the local-extremum family. The founder's point stands as a rule in the grid; the data says which scale is useful."]
     J.setdefault("tests", {}).setdefault(asset, {})["TI"] = dict(rows=rows, better=list(better.rule), params=dict(patience=patience, min_k=min_k, window=window), run=datetime.now().strftime("%Y-%m-%d %H:%M"))
@@ -271,9 +293,10 @@ def segment(r: pd.Series):
     if LEG_RULE.exists():
         j = json.loads(LEG_RULE.read_text())
         if j.get("rule") == "persist":
-            n, x = int(j["n"]), float(j["x"]); tps, trend, ext, px = turning_points_persist(r, n, x)
+            n, x, mode = int(j["n"]), float(j["x"]), j.get("mode", "time"); tps, trend, ext, px = turning_points_persist(r, n, x, mode)
             thr = np.full(len(r), x if x > 0 else FLOOR)
-            return tps, trend, ext, px, thr, f"a reversal needs {n} consecutive sessions against the trend and a counter-move of at least {x:.0%} (persistence rule, promoted {j.get('promoted', '')})"
+            how = (f"{n} consecutive sessions against the trend" if mode == "closes" else f"the price staying off its extreme for {n} sessions")
+            return tps, trend, ext, px, thr, f"a reversal needs {how} and a counter-move of at least {x:.0%} (persistence rule, promoted {j.get('promoted', '')})"
     tps, trend, ext, px, thr = turning_points(r)
     return tps, trend, ext, px, thr, "a reversal needs a counter-move of 1.5 × the asset's own monthly volatility, floor 8% (zigzag rule)"
 
@@ -285,10 +308,10 @@ def segmenter_null(asset, rule_name=None, n_shift: int = 20, seed: int = 0):
     rule_name = rule_name or (TI["better"][0] if TI.get("better") else None)
     if not rule_name: print("  no rule passed T-I; nothing to test"); return
     import re
-    mm = re.match(r"persist N=(\d+), X=(\d+)%", rule_name)
+    mm = re.match(r"persist-(time|closes) N=(\d+), X=(\d+)%", rule_name)
     if not mm: print(f"  only persistence rules are promotable here ({rule_name})"); return
-    n_, x_ = int(mm.group(1)), int(mm.group(2)) / 100; P = TI["params"]
-    r = returns(asset).dropna(); F = factors(r.index); idx = r.index; tps, trend, ext, px = turning_points_persist(r, n_, x_)
+    mode_, n_, x_ = mm.group(1), int(mm.group(2)), int(mm.group(3)) / 100; P = TI["params"]
+    r = returns(asset).dropna(); F = factors(r.index); idx = r.index; tps, trend, ext, px = turning_points_persist(r, n_, x_, mode_)
     legs = [(a, b) for (a, ka), (b, kb) in zip(tps[:-1], tps[1:]) if b - a >= MIN_EP and a >= P["window"] + 10]
     def med_share(Fx):
         v = []
@@ -308,7 +331,7 @@ def segmenter_null(asset, rule_name=None, n_shift: int = 20, seed: int = 0):
     J["tests"][asset]["TInull"] = dict(rule=rule_name, real=real, null_median=med0, null_p95=p95, n_shift=int(len(nulls)), verdict=verdict, run=datetime.now().strftime("%Y-%m-%d %H:%M"))
     (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1))
     if verdict == "PASS":
-        LEG_RULE.write_text(json.dumps(dict(rule="persist", n=n_, x=x_, promoted=datetime.now().strftime("%Y-%m-%d"), asset_tested=asset, real=real, null_median=med0, superseded="zigzag 1.5x / 8%"), indent=1))
+        LEG_RULE.write_text(json.dumps(dict(rule="persist", mode=mode_, n=n_, x=x_, promoted=datetime.now().strftime("%Y-%m-%d"), asset_tested=asset, real=real, null_median=med0, superseded="zigzag 1.5x / 8%"), indent=1))
     out = DOCS / f"segmenter_null_{asset}.md"; out.write_text("\n".join(L) + "\n"); print("\n".join(L)); print(f"-> {out}")
 
 

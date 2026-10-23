@@ -2547,3 +2547,11 @@ counter-move explains a median 74% of gold's legs against the zigzag's 68%, on m
 versions (no minimum move) cut gold into hundreds of noise legs, as predicted. Before promotion the winning rule faces the same shifted-factor
 null the window rule did (T-I′); on PASS the nightly cuts legs with it and the page says so. PROJECT_MASTER brought to date the same day
 (story to 23 Oct, wrong priors to #68, numbering fixed, Appendix A marked superseded).
+
+**Addendum, 23 Oct evening — withdrawn two hours later.** The promoted rule (five consecutive closes against the trend, 4% counter-move) passed both
+registered tests and then failed by eye: it showed gold "up since 16 July" with an "extreme of +17% on 25 Aug", because the 14% fall since August
+never contained five straight down closes. A segmentation scored only on explained share can win by refusing to see messy legs. The promotion was
+withdrawn (file kept with the reason), the zigzag reinstated, a fidelity criterion added — no leg may hide a counter-move larger than the zigzag's
+threshold — and the founder's rule re-specified as he meant it: a trend that has failed to resume for N sessions, up days inside allowed. Prior #70:
+that form finds the August peak and lands within five points of the zigzag; no promotion. The lesson goes in the standing rules: a test criterion must
+include what a human would check first.
