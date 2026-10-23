@@ -375,6 +375,22 @@ document.*
 
 ---
 
+### Post-submission · 22 Sep–23 Oct · The engine learns what it cannot see
+
+- **24 Sep:** two more silent defects — the API key and the FOMC statements nobody had fetched; the statement corpus replaced, re-read, re-baselined (CURRENT_STATE §18.7–18.8).
+- **29 Sep:** instrument robustness **CONSISTENT** (verdicts unchanged on desk instruments); surprise conditioning stage A **INCONCLUSIVE**, level 3 **FAIL**; T14 phase A — the initial FOMC reaction neither extends nor reverses by the close (§18.9–18.12).
+- **7 Oct:** fourteen failed nights traced to a secrets file appended without a newline (§18.13). **7–8 Oct:** T1 exposure dial Test A — nothing enters the product; vol-targeting PASS on one of five (USO), regime tilt 0/5 (§18.14); wrong priors #29–#37 written in human terms (§18.15).
+- **8 Oct:** T13 case A — coverage on big-move days measured, the oil → dollar → rates chain rule calibrated to the two wars (§18.16); the two-wars case study and the oil instrument amendment registered (TRACK 3.13–3.14).
+- **9 Oct:** T16 prints as a source — first measured cut in the blind rate, first earned influence weight (payrolls → gold); primary horizon amended 3 → 2 and re-scored (§18.17–18.18); E4 event-bin alignment **FAIL**; twenty BLS releases transferred to disk behind the bot wall (§18.19).
+- **10 Oct:** E1, E3, E2 asymmetry levers **FAIL**; the lever programme closed — asymmetry ≈ 1 is a property of the calls; priors #40–#43 wrong (§18.20–18.22).
+- **11 Oct:** founder's review of the levers in plain words; the jobs report's World Cup disclosure; the event calendar registered with an admission rule; prompt v1 approved; A4 reader consistency **PASS 20/20** with three runner defects recorded; #44 (§18.23–18.24).
+- **12 Oct:** the oil column — USO's drag, a chain rule partly fitted to the ETF, the founder's decision to read spot with a futures tail (§18.25); the edge analysis (§12) and the four moat items agreed.
+- **13 Oct:** the 08:30 event-time reader built and scheduled; the oil amendment closed, T1's oil cell holds on spot; design scorecard 13/18 (§13); §18.26–18.27.
+- **16 Oct:** after an oil shock — the path table (116 shocks since 1995; gold flat-to-up after plain shocks, lower after all five chain firings), the nearest-neighbour estimate **FAIL** on all six markets, a leverage number under the founder's 20%/5× limits, the tail (A3d, severe cases inside bear markets); the coin-flip check; §3.24 implied-vs-realised registered; USO inverse held-out **FAIL 47%**; #45–#48; the app Context block ordered (§18.28–18.30).
+- **19 Oct:** history tables H0–H7 registered; H0 measured (gold +2.4%/month in regime 3, #49 wrong); H1, H4, H5 **FAIL** on every testable cell, H3 too few events (#51 wrong); the founder's horizon amendment (5 sessions, 10-point floor, per-table Bonferroni): no PASS in 72 cells. **The live document feed found dry** — zero documents on 29 of 30 report days — and repaired (nightly 8-K fetch, presidential documents routed); the Today tab rewritten in plain words (§18.31–18.32).
+- **22 Oct:** the gold/silver/oil week outside the engine's sight; input latency audit registered and running (Yahoo a session late at the nightly hour; Stooq/short-window fallback); target-range Stage 1 **0 of 24 cells PASS** (#55 wrong); SPEC_GRID — the alternatives track — written; blind-spot fill plan; 8-K pool amended (§18.33–18.34).
+- **23 Oct:** factor attribution built at the founder's direction — T-A **FAIL 0.177** (swept 3-year cell 0.224 survives its null), T-B dollar/oil/macro stable, real/hikes/VIX/war unstable (#58–#59 wrong); gold's 2026 fall ≈ 90% outside the standard factors; dynamic issuer pool from BEA growth contributions (25 issuers); "why it moved" daily engine — adaptive legs, impulse **FAIL** (#63), **causal window rule PASS** 53% vs 31% (#64 wrong) and **beats noise by 48 points**, patience/look-back sweep → 64–71%, promoted within the registered leg definition (#66 right); the founder's "crowd as alpha" question registered with three conditions and tested as residual momentum — **FAIL on five assets** (#67 wrong). Tally 56, register row 48 (§18.35–18.36).
+
 ## 3. What the machine does today
 
 **Five steps, every trading day, nothing hand-adjusted.**
@@ -410,6 +426,17 @@ every pending complete report → FOMC→GLD forward ledger → report scoreboar
 commit and push the record.
 
 ---
+
+### 3.A What runs and what the page shows, as of 23 Oct 2026
+
+Nightly (weekdays ~15:10 SGT, `daily_run.sh`): prices refreshed with a forced pull, the missing session filled from a second source if Yahoo is
+a session behind, macro and PCA rebuilt → the registered forward row (`--no-refresh`) → documents fetched (8-K/6-K for the dynamic issuer pool,
+FOMC statements, presidential documents routed to the folders the report reads) → read under the 40-per-source cap → reports for completed
+sessions whose prices exist → blind-spot monitor and chain alarm (spot oil, futures tail) → oil columns rebuilt, oil forward rows → input latency
+audit → "why it moved" (legs, impulse, window rule, base-rate target, last-session reasons, for the five markets, silver, Nvidia, Meta).
+The page: a plain-words track-record banner; "Documents with a direction" as a clickable count; per market the Context block — why it moved and
+where this leg stands, today's condition's own return table, what history says after shocks and events with each table's verdict, the severe case,
+what is not known — every sentence tagged measured / tested / hypothesis / running. Nothing is a forecast unless a PASS says so.
 
 ## 4. Everything that has been tested — the complete register
 
@@ -503,6 +530,20 @@ backwards" (four regex false positives; six real, all with dovish guidance, stan
 
 **Candidate #29** (14 Sep, founder to decide). "The nightly reads are running and the count is
 creeping up" (TRACK §1, 7 Sep) — they had been dead since 29 Aug.
+
+
+**24 Sep–23 Oct** (#29–#67, tally 56 — each with its rule and trading reading in CURRENT_STATE §18.15 and the test's prereg file).
+#29–#39 (14 Sep–9 Oct): the dead nightly reads · the surprise-conditioning and T14 candidates (#32–#33) · the exposure-dial and chain-rule
+priors of 7–9 Oct. **#40–#43** the four asymmetry levers would lift asymmetry by +0.20 — none did. **#44** the July 2026 jobs calendar
+expectation ("undetermined"; the text contradicted it). **#45** the oil-shock pool would be small (116). **#46** gold would fall after a plain oil
+shock (flat-to-up; it fell only after the five chain firings). **#47** the shock-week legs would carry direction (A3b FAIL). **#48** the USO inverse
+rule would hold out at 55–60% (47%). **#49** no regime's gold return would sit more than a point from all-history (+2.4% vs +0.7%). **#51** sixty to
+eighty dollar shocks (six and three; the series starts 2006). **#55** regime-conditional reach probabilities would be about as good as
+unconditional (worse, on 15 of 24 cells — a 100-session floor admitting under two independent cases). **#58** the factor model would explain
+25–40% of gold's daily variance out of sample (17.7%). **#59** real yields and hike speculation would be stable in sign, oil not (the reverse).
+**#63** the initial plunge would be the best-explained window (it was not: 17%). **#64** a forward-walking window rule would do no better than the
+full leg (it did: 53% vs 31%, and 48 points above noise). **#67** the unexplained part would carry predictability in metals and single names (none
+beyond noise on five assets). Right along the way: #50, #52–#54 (history tables fail), #65 (the rule beats noise), #66 (patience 20–30 wins).
 
 ---
 
@@ -719,7 +760,7 @@ not usable.*
 items are, in order of cost: the edge statement (D, a page), T2 (A, E, I), T1 Test B + T15 (E, H), T6 cost model (I), T12
 and T4 (C). Every one is already on the list except the edge statement, added to TRACK §3.21.
 
-## 12. The standing rules (the discipline, in plain words)
+## 14. The standing rules (the discipline, in plain words)
 
 1. **Write the rule before the test exists.** Every threshold, criterion and planned amendment
    is committed before the code that uses it. An amendment after a result is read is declared as
@@ -747,7 +788,7 @@ and T4 (C). Every one is already on the list except the edge statement, added to
 
 ---
 
-## 13. Backup and restore (summary of TRACK §7)
+## 15. Backup and restore (summary of TRACK §7)
 
 On GitHub: code, docs, registrations, the forward ledger (force-tracked since 14 Sep), the
 report ledger and scoreboards, write-once reports, the 2,616 document reads (10 MB),
@@ -761,7 +802,7 @@ and its full history found nothing to revoke.
 
 ---
 
-## 14. Glossary — for anyone
+## 16. Glossary — for anyone
 
 - **Regime / season.** One of four market "weather" states, found by the machine from eight
   economic dials, not chosen by a person.
@@ -811,7 +852,7 @@ and its full history found nothing to revoke.
 
 ---
 
-## 15. File map — what is live, what is superseded
+## 17. File map — what is live, what is superseded
 
 | file | status | job |
 |---|---|---|
@@ -829,7 +870,7 @@ and its full history found nothing to revoke.
 
 ---
 
-## 16. Change log of this master file
+## 18. Change log of this master file
 
 | date | change |
 |---|---|
@@ -842,6 +883,18 @@ and its full history found nothing to revoke.
 | 2026-09-29 | T14 registered (TRACK §3.11): event-time reading — read the FOMC statement at 2:00 pm ET when published, not after the close; phases A (free historical continuation test on the FRBSF 30-minute asset reactions) → S5 forward intraday collection → B/C live read + app panel → E press conference → D intraday precedent pool. Professional-tier feature; counsel item. |
 | 2026-09-29 | T14 phase A NULL: no measurable rest-of-session pattern after the 30-minute reaction, S&P or 10-year, 292 meetings; the app's rest-of-session line may state what the statement said but carry no number. S5 collector running nightly from tonight. Register row 31; wrong-prior candidate #35. |
 | 2026-10-07/08 | Token expired and replaced; 14 failed nights found and fixed (glued .env line, §18.13); live app deployed at regime-aware-signal.streamlit.app; app's rest-of-session line added; T1 registered, built blind and run — NO on both (§18.14); T14 phase B built and scheduled for 28 Oct. Register row 32; wrong-prior candidates #36–#37. |
+| 2026-10-07 | Fourteen failed nights (secrets file newline); T1 Test A: nothing enters the product; wrong priors #29–#37 in human terms. |
+| 2026-10-08 | T13 case A coverage; chain rule calibrated; oil instrument amendment and two-wars study registered. |
+| 2026-10-09 | T16 prints: first measured blind-rate cut, first earned influence weight; h* 3 → 2 re-scored; E4 FAIL; 20 BLS texts on disk. |
+| 2026-10-10 | E1, E3, E2 FAIL; lever programme closed; #40–#43. |
+| 2026-10-11 | Prompt v1 and event calendar registered; A4 PASS 20/20; #44. |
+| 2026-10-12 | Oil column built; chain re-defined to spot (founder's option 2); §12 edge written. |
+| 2026-10-13 | 08:30 reader built and scheduled; oil amendment closed; §13 scorecard 13/18. |
+| 2026-10-16 | T13 A3: path table, A3b FAIL, A3c leverage, A3d tail; inverse diagnostic; held-out FAIL; §3.24 registered; rows 42–44; #45–#48. |
+| 2026-10-19 | History tables H0–H5 (all testable cells FAIL; horizon amendment); live feed repaired; Today tab rewritten; rows 45; #49, #51. |
+| 2026-10-22 | Latency audit; price fallback; target-range Stage 1 0/24 PASS; SPEC_GRID; blind-spot plan; 8-K pool; row 46; #55. |
+| 2026-10-23 | Factor attribution (T-A/T-B, sweeps), dynamic issuer pool, why-it-moved engine (T-E FAIL, T-F PASS, T-F′ PASS, T-G promoted), residual momentum FAIL ×5; rows 47–48; #58–#59, #63–#64, #67; §2 story and §5 log brought to date; sections renumbered. |
+
 
 *Add a row here whenever a verdict is recorded or a tree changes state, and bump Appendix B's
 version line with it.*
@@ -857,7 +910,8 @@ version line with it.*
 
 ---
 
-# APPENDIX A — TRACK.md (status board, as of 21 Sep 2026)
+
+# APPENDIX A — TRACK.md (status board, as of 21 Sep 2026 — superseded by the live docs/TRACK.md, §3.1–3.34 as of 23 Oct 2026; kept as the submission-time snapshot)
 
 > *Live file; the copy here is a snapshot. The repo's docs/TRACK.md is authoritative for anything after this date.*
 

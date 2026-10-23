@@ -67,6 +67,12 @@ have run, with every line tagged.
   survives) → promoted as the app's rule by dated amendment, the registered 5/5 cell staying the recorded verdict. The after-the-fact ceiling on
   the current leg is reported with its own noise calibration (median R4 on 20 shifted series). **Prior #66:** patience 10–20 wins, median
   share 58–65%, survives the null; the ceiling's excess over noise on gold's current leg ≈ 30 points.
+- **T-I turning-point rules (founder, 23 Oct: "a reversal should be a trend — at least two sessions, not one bounce").** Alternatives to the
+  zigzag: persistence — N consecutive sessions against the trend AND a counter-move ≥ X (X = 0 is the pure gradient rule), N ∈ {2,3,5,10},
+  X ∈ {0, 2, 4, 8%}; swing highs/lows within k sessions, k ∈ {5,10,20}. Compared on legs found, median length, share of noise legs (< 5 sessions)
+  and the explained share the promoted window rule reaches on each. A rule replaces the zigzag only if its median explained share is ≥ 5 points
+  higher with at least as many scored legs. **Prior #68:** X = 0 rules produce hundreds of 3–6-session legs and lower shares; persistence with
+  X = 4% and swing k = 10 land within 5 points of the zigzag; nothing replaces it.
 - Nightly: `src/why_moved.py`; app: the "Why it moved" paragraph beside the day's Up/Down pill, every sentence tagged.
 
 ## 5. The unexplained part as a signal — residual momentum / reversal (registered 2026-10-23, before code)

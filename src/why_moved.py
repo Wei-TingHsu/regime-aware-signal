@@ -184,6 +184,83 @@ def ceiling_null(r, F, s0, L, n_shift: int = 20, seed: int = 0):
 
 
 
+# ---------------------------------------------------------------- alternative turning-point rules (founder, 23 Oct) — T-I
+def turning_points_persist(r: pd.Series, n_days: int = 3, x: float = 0.02):
+    """Founder's rule: a turning point needs the direction to PERSIST — n_days consecutive sessions against the trend — and a minimum
+    counter-move x from the extreme (x = 0 is the pure gradient rule)."""
+    rr = r.fillna(0.0); px = np.exp(rr.cumsum().to_numpy()); d = np.sign(rr.to_numpy())
+    hi = lo = 0; trend = 0; tps = []; run_ = 0
+    for i in range(1, len(px)):
+        if trend >= 0 and px[i] > px[hi]: hi = i
+        if trend <= 0 and px[i] < px[lo]: lo = i
+        against = (d[i] < 0) if trend >= 0 else (d[i] > 0)
+        run_ = run_ + 1 if against else 0
+        if trend >= 0 and run_ >= n_days and px[i] <= px[hi] * np.exp(-x):
+            tps.append((hi, "peak")); trend = -1; lo = i; run_ = 0
+        elif trend <= 0 and run_ >= n_days and px[i] >= px[lo] * np.exp(x):
+            tps.append((lo, "trough")); trend = 1; hi = i; run_ = 0
+    return tps, trend, (hi if trend > 0 else lo), px
+
+
+def turning_points_swing(r: pd.Series, k: int = 10):
+    """Swing highs/lows: a peak is the highest close within k sessions either side (confirmed k sessions later); alternation enforced."""
+    rr = r.fillna(0.0); px = np.exp(rr.cumsum().to_numpy()); n = len(px); cand = []
+    for i in range(k, n - k):
+        w = px[i - k:i + k + 1]
+        if px[i] == w.max(): cand.append((i, "peak"))
+        elif px[i] == w.min(): cand.append((i, "trough"))
+    tps = []
+    for i, kind in cand:
+        if tps and tps[-1][1] == kind:
+            j, _ = tps[-1]
+            if (kind == "peak" and px[i] > px[j]) or (kind == "trough" and px[i] < px[j]): tps[-1] = (i, kind)
+        else: tps.append((i, kind))
+    trend = 0 if not tps else (-1 if tps[-1][1] == "peak" else 1)
+    return tps, trend, (int(np.argmax(px[tps[-1][0]:])) + tps[-1][0] if trend > 0 else int(np.argmin(px[tps[-1][0]:])) + tps[-1][0]) if tps else 0, px
+
+
+SEGMENTERS = [("zigzag 1.5× / 8% (registered)", lambda r: turning_points(r)[:4])] + \
+             [(f"persist N={n}, X={x:.0%}", (lambda n, x: (lambda r: turning_points_persist(r, n, x)))(n, x)) for n in (2, 3, 5, 10) for x in (0.0, 0.02, 0.04, 0.08)] + \
+             [(f"swing k={k}", (lambda k: (lambda r: turning_points_swing(r, k)))(k)) for k in (5, 10, 20)]
+
+
+def segmenter_test(asset, patience=None, min_k=None, window=None):
+    """T-I: every turning-point rule side by side — legs found, median length, share of legs under 5 sessions, and the explained share the
+    promoted window rule reaches on each rule's legs. Descriptive comparison (same factor series for all); the registered zigzag stays the
+    recorded rule unless another beats it by >= 5 points on median explained share with at least as many legs."""
+    r = returns(asset).dropna(); F = factors(r.index); idx = r.index
+    J = json.loads((PROC / "factor_attribution.json").read_text()) if (PROC / "factor_attribution.json").exists() else {}
+    bb = ((J.get("tests", {}).get(asset, {}).get("TG", {}) or {}).get("by_rule") or {}).get(f"{MULT},{FLOOR}") or {}
+    patience = patience or bb.get("patience", 20); min_k = min_k or bb.get("min_k", 3); window = window or bb.get("window", 252)
+    rows = []
+    for name, fn in SEGMENTERS:
+        tps, trend, ext, px = fn(r)[:4]
+        legs = [(a, b, 1 if ka == "trough" else -1) for (a, ka), (b, kb) in zip(tps[:-1], tps[1:])]
+        if not legs: rows.append(dict(rule=name, legs=0)); continue
+        lengths = np.array([b - a for a, b, _ in legs]); sizes = np.array([abs(np.log(px[b] / px[a])) for a, b, _ in legs]); shares = []
+        for a, b, d_ in legs:
+            if b - a < MIN_EP or a < window + 10: continue
+            cv = attr_curve(r, F, idx[a], max_k=min(b - a, MAX_K), window=window)
+            if cv is None: continue
+            wr = window_rules(cv, min(b - a, MAX_K), 1, patience, min_k)
+            if wr and np.isfinite(wr["R5_causal"][1]): shares.append(wr["R5_causal"][1])
+        rows.append(dict(rule=name, legs=len(legs), med_len=float(np.median(lengths)), short=float((lengths < 5).mean()), med_size=float(np.median(sizes)),
+                         scored=len(shares), r5=float(np.median(shares)) if shares else np.nan))
+    df = pd.DataFrame(rows); reg = df.iloc[0]
+    better = df[(df.r5 >= reg.r5 + 0.05) & (df.scored >= reg.scored)] if np.isfinite(reg.r5) else df.iloc[0:0]
+    L = [f"# T-I turning-point rules — {asset}", "", f"*{datetime.now():%Y-%m-%d %H:%M}. Window rule used on every segmentation: patience {patience}, min window {min_k}, look-back {window} "
+         f"(the promoted cell). 'short' = share of legs under 5 sessions (noise legs). Verdict rule: another segmentation replaces the zigzag only if its median explained share is "
+         f"≥ 5 points higher with at least as many scored legs.*", "", f"**{'PASS for ' + ', '.join(better.rule) if len(better) else 'FAIL — no rule beats the registered zigzag by 5 points'}**", "",
+         "| rule | legs since 2006 | median length (sessions) | share < 5 sessions | median size | legs scored | median explained share |", "|---|---|---|---|---|---|---|"]
+    for _, q in df.iterrows():
+        L.append(f"| {q.rule} | {q.legs} | {q.get('med_len', float('nan')):.0f} | {q.get('short', float('nan')):.0%} | {np.expm1(q.get('med_size', 0)):.1%} | {q.get('scored', 0)} | {q.r5 if 'r5' in q and np.isfinite(q.r5) else float('nan'):.0%} |")
+    L += ["", "Reading: X = 0% is the pure gradient rule — direction flips with N consecutive closes; its legs are counted in days and mostly noise. Adding a minimum counter-move X "
+          "turns it into a zigzag with a persistence condition; swing k is the local-extremum family. The founder's point stands as a rule in the grid; the data says which scale is useful."]
+    J.setdefault("tests", {}).setdefault(asset, {})["TI"] = dict(rows=rows, better=list(better.rule), params=dict(patience=patience, min_k=min_k, window=window), run=datetime.now().strftime("%Y-%m-%d %H:%M"))
+    (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1)); out = DOCS / f"segmenter_test_{asset}.md"; out.write_text("\n".join(L) + "\n"); print("\n".join(L)); print(f"-> {out}")
+
+
+
 def window_test(asset):
     """T-F (prereg_factor_attribution §4): does the causal window rule (R5) explain more than the full episode (R1) on past episodes?
     PASS if R5 > R1 in >= 60% of episodes (n >= 15). R4 is reported as the after-the-fact ceiling, never as a result."""
@@ -373,4 +450,5 @@ if __name__ == "__main__":
     elif cmd == "window-test": window_test(sys.argv[2])
     elif cmd == "window-null": window_null(sys.argv[2])
     elif cmd == "window-grid": window_grid(sys.argv[2])
+    elif cmd == "segmenter-test": segmenter_test(sys.argv[2])
     else: {"selftest": selftest, "run": run}[cmd]()
