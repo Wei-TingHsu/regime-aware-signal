@@ -242,7 +242,8 @@ def turning_points_swing(r: pd.Series, k: int = 10):
 SEGMENTERS = [("zigzag 1.5× / 8% (registered)", lambda r: turning_points(r)[:4])] + \
              [(f"persist-time N={n}, X={x:.0%}", (lambda n, x: (lambda r: turning_points_persist(r, n, x, "time")))(n, x)) for n in (2, 3, 5, 10) for x in (0.02, 0.04, 0.08)] + \
              [(f"persist-closes N={n}, X={x:.0%}", (lambda n, x: (lambda r: turning_points_persist(r, n, x, "closes")))(n, x)) for n in (2, 3, 5) for x in (0.0, 0.02, 0.04, 0.08)] + \
-             [(f"swing k={k}", (lambda k: (lambda r: turning_points_swing(r, k)))(k)) for k in (5, 10, 20)]
+             [(f"swing k={k}", (lambda k: (lambda r: turning_points_swing(r, k)))(k)) for k in (5, 10, 20)] + \
+             [(f"retrace f={f:.0%}, N={n}, c={c}", (lambda f, n, c: (lambda r: turning_points_retrace(r, f, n, c)))(f, n, c)) for f in (0.25, 0.382, 0.5) for n in (3, 5) for c in (0.5, 1.0)]
 
 
 def segmenter_test(asset, patience=None, min_k=None, window=None):
@@ -255,7 +256,7 @@ def segmenter_test(asset, patience=None, min_k=None, window=None):
     patience = patience or bb.get("patience", 20); min_k = min_k or bb.get("min_k", 3); window = window or bb.get("window", 252)
     rows = []
     for name, fn in SEGMENTERS:
-        tps, trend, ext, px = fn(r)[:4]
+        res = fn(r); tps, trend, ext, px = res[:4]; lags = res[4] if len(res) > 4 else None
         legs = [(a, b, 1 if ka == "trough" else -1) for (a, ka), (b, kb) in zip(tps[:-1], tps[1:])]
         if not legs: rows.append(dict(rule=name, legs=0)); continue
         lengths = np.array([b - a for a, b, _ in legs]); sizes = np.array([abs(np.log(px[b] / px[a])) for a, b, _ in legs]); shares = []
@@ -267,19 +268,64 @@ def segmenter_test(asset, patience=None, min_k=None, window=None):
             wr = window_rules(cv, min(b - a, MAX_K), 1, patience, min_k)
             if wr and np.isfinite(wr["R5_causal"][1]): shares.append(wr["R5_causal"][1])
         rows.append(dict(rule=name, legs=len(legs), med_len=float(np.median(lengths)), short=float((lengths < 5).mean()), med_size=float(np.median(sizes)),
-                         scored=len(shares), r5=float(np.median(shares)) if shares else np.nan, missed=int(missed), worst_missed=float(worst)))
+                         scored=len(shares), r5=float(np.median(shares)) if shares else np.nan, missed=int(missed), worst_missed=float(worst), lag=(float(np.median(lags)) if lags else np.nan)))
     df = pd.DataFrame(rows); reg = df.iloc[0]
-    better = df[(df.r5 >= reg.r5 + 0.05) & (df.scored >= reg.scored) & (df.missed <= reg.missed)] if np.isfinite(reg.r5) else df.iloc[0:0]   # fidelity: may not hide more reversals than the zigzag
+    better = df[(df.r5 >= reg.r5 + 0.05) & (df.scored >= reg.scored) & (df.missed <= reg.missed)] if np.isfinite(reg.r5) else df.iloc[0:0]   # replaces the zigzag outright
+    fine_ok = df[(df.rule.str.startswith("retrace")) & (df.missed == 0) & (df.lag <= 10) & (df.r5 >= reg.r5 - 0.05) & (df.legs >= reg.legs)] if np.isfinite(reg.r5) else df.iloc[0:0]   # T-J fine scale: sees every turn, confirms fast, explains nearly as well
+    fine_best = fine_ok.sort_values(["missed", "lag", "r5"], ascending=[True, True, False]).iloc[0] if len(fine_ok) else None
     L = [f"# T-I turning-point rules — {asset}", "", f"*{datetime.now():%Y-%m-%d %H:%M}. Window rule used on every segmentation: patience {patience}, min window {min_k}, look-back {window} "
          f"(the promoted cell). 'short' = share of legs under 5 sessions (noise legs); 'missed' = legs hiding a counter-move above the zigzag threshold (a reversal the rule did not see — fidelity, added 23 Oct after the "
          f"consecutive-closes rule missed gold's August peak). Verdict rule: another segmentation replaces the zigzag only if its median explained share is ≥ 5 points higher, with at least as many scored legs, and no more missed reversals.*", "", f"**{'PASS for ' + ', '.join(better.rule) if len(better) else 'FAIL — no rule beats the registered zigzag by 5 points'}**", "",
-         "| rule | legs since 2006 | median length | share < 5 sessions | median size | legs scored | median explained share | missed reversals (worst) |", "|---|---|---|---|---|---|---|---|"]
+         (f"**T-J fine scale: PASS — {fine_best.rule}** (0 missed, lag {fine_best.lag:.0f} sessions, {fine_best.legs} legs, explained {fine_best.r5:.0%}); promoted as the fine scale inside the zigzag's legs." if fine_best is not None else "**T-J fine scale: no retracement rule meets 0 missed, lag ≤ 10, share within 5 points, legs ≥ zigzag.**"), "",
+         "| rule | legs since 2006 | median length | share < 5 sessions | median size | legs scored | median explained share | missed reversals (worst) | confirmation lag (sessions) |", "|---|---|---|---|---|---|---|---|---|"]
     for _, q in df.iterrows():
-        L.append(f"| {q.rule} | {q.legs} | {q.get('med_len', float('nan')):.0f} | {q.get('short', float('nan')):.0%} | {np.expm1(q.get('med_size', 0)):.1%} | {q.get('scored', 0)} | {q.r5 if 'r5' in q and np.isfinite(q.r5) else float('nan'):.0%} | {int(q.get('missed', 0)) if 'missed' in q and pd.notna(q.get('missed')) else '—'} ({q.get('worst_missed', 0) if pd.notna(q.get('worst_missed', 0)) else 0:.0%}) |")
+        L.append(f"| {q.rule} | {q.legs} | {q.get('med_len', float('nan')):.0f} | {q.get('short', float('nan')):.0%} | {np.expm1(q.get('med_size', 0)):.1%} | {q.get('scored', 0)} | {q.r5 if 'r5' in q and np.isfinite(q.r5) else float('nan'):.0%} | {int(q.get('missed', 0)) if 'missed' in q and pd.notna(q.get('missed')) else '—'} ({q.get('worst_missed', 0) if pd.notna(q.get('worst_missed', 0)) else 0:.0%}) | {q.get('lag', float('nan')) if 'lag' in q and pd.notna(q.get('lag')) else float('nan'):.0f} |")
     L += ["", "Reading: X = 0% is the pure gradient rule — direction flips with N consecutive closes; its legs are counted in days and mostly noise. Adding a minimum counter-move X "
           "turns it into a zigzag with a persistence condition; swing k is the local-extremum family. The founder's point stands as a rule in the grid; the data says which scale is useful."]
     J.setdefault("tests", {}).setdefault(asset, {})["TI"] = dict(rows=rows, better=list(better.rule), params=dict(patience=patience, min_k=min_k, window=window), run=datetime.now().strftime("%Y-%m-%d %H:%M"))
+    if fine_best is not None:
+        import re as _re; mm = _re.match(r"retrace f=(\d+)%, N=(\d+), c=([\d.]+)", fine_best.rule)
+        (PROC / "fine_rule.json").write_text(json.dumps(dict(rule="retrace", f={25: 0.25, 38: 0.382, 50: 0.5}.get(int(mm.group(1)), int(mm.group(1)) / 100), n=int(mm.group(2)), c=float(mm.group(3)), promoted=datetime.now().strftime("%Y-%m-%d"),
+                                                             asset_tested=asset, legs=int(fine_best.legs), lag=float(fine_best.lag), r5=float(fine_best.r5)), indent=1))
+        J["tests"][asset]["TJ"] = dict(rule=fine_best.rule, legs=int(fine_best.legs), lag=float(fine_best.lag), r5=float(fine_best.r5), verdict="PASS")
+    else:
+        J["tests"][asset]["TJ"] = dict(verdict="FAIL")
+    (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1))
     (PROC / "factor_attribution.json").write_text(json.dumps(J, indent=1)); out = DOCS / f"segmenter_test_{asset}.md"; out.write_text("\n".join(L) + "\n"); print("\n".join(L)); print(f"-> {out}")
+
+
+
+# ---------------------------------------------------------------- T-J: the founder's gradient method as a retracement rule; two-scale legs
+def turning_points_retrace(r: pd.Series, f: float = 0.382, n: int = 5, c: float = 1.0):
+    """Founder's gradient test made operational: the sign of every back-gradient from today equals the sign of (today - that day), so 'all one sign'
+    means today is the leg's extreme; a change of sign is a drawdown from the extreme. A turn is confirmed when that drawdown exceeds
+    max(f x the leg's own move so far, c x monthly volatility) and has persisted n sessions since the extreme. Returns tps, trend, extreme, px, lags."""
+    rr = r.fillna(0.0); px = np.exp(rr.cumsum().to_numpy()); lp = np.log(px)
+    sig = rr.rolling(20).std().bfill().fillna(rr.std()).to_numpy() * np.sqrt(20)
+    hi = lo = 0; trend = 0; start = 0; tps = []; lags = []
+    for i in range(1, len(px)):
+        if trend >= 0 and px[i] > px[hi]: hi = i
+        if trend <= 0 and px[i] < px[lo]: lo = i
+        if trend >= 0:
+            leg = lp[hi] - lp[start]; dd = lp[hi] - lp[i]; thr = max(f * max(leg, 0.0), c * sig[i])
+            if dd >= thr and i - hi >= n:
+                tps.append((hi, "peak")); lags.append(i - hi); trend = -1; start = hi; lo = i; continue
+        if trend <= 0:
+            leg = lp[start] - lp[lo]; up = lp[i] - lp[lo]; thr = max(f * max(leg, 0.0), c * sig[i])
+            if up >= thr and i - lo >= n:
+                tps.append((lo, "trough")); lags.append(i - lo); trend = 1; start = lo; hi = i
+    return tps, trend, (hi if trend > 0 else lo), px, lags
+
+
+def two_scale(r: pd.Series, fine=None):
+    """Coarse legs by the zigzag (the big picture); fine legs by the promoted fine rule inside the current coarse leg (where the move is now).
+    fine = (f, n, c) or None (then fine == coarse)."""
+    tps_c, trend_c, ext_c, px, thr = turning_points(r); idx = r.index
+    if not tps_c or fine is None: return dict(coarse=(tps_c, trend_c, ext_c), fine=None)
+    c0 = tps_c[-1][0]; sub = r.iloc[c0:]
+    tps_f, trend_f, ext_f, _, lags = turning_points_retrace(sub, *fine)
+    tps_f = [(p + c0, k) for p, k in tps_f]
+    return dict(coarse=(tps_c, trend_c, ext_c), fine=(tps_f, trend_f, ext_f + c0, lags))
 
 
 
@@ -379,9 +425,19 @@ def run():
             print(f"  {a}: returns unavailable ({type(e).__name__})"); continue
         F = factors(r.index); tps, trend, ext, px, thr, rule_label = segment(r); idx = r.index
         if not tps: continue
+        tps_hist = tps                                  # legs used for the base-rate target: whole history at the scale the page describes
+        FINE = PROC / "fine_rule.json"; big = None
+        if FINE.exists():
+            fj = json.loads(FINE.read_text()); ts = two_scale(r, (fj["f"], fj["n"], fj["c"]))
+            if ts["fine"] and ts["fine"][0]:
+                c_pos, c_kind = ts["coarse"][0][-1]; big = dict(start=idx[c_pos].strftime("%Y-%m-%d"), direction=(1 if c_kind == "trough" else -1), move=float(np.log(px[-1] / px[c_pos])), sessions=int(len(idx) - 1 - c_pos))
+                tps_f, trend_f, ext_f, lags_f = ts["fine"]; tps, trend, ext = tps_f, trend_f, ext_f
+                tps_hist = turning_points_retrace(r, fj["f"], fj["n"], fj["c"])[0]
+                rule_label = (f"big picture by the zigzag; the current leg by the founder's retracement rule — a turn is confirmed when the price has given back "
+                              f"{fj['f']:.0%} of the leg's own move (floor {fj['c']}× monthly volatility) and stayed there {fj['n']} sessions (promoted {fj['promoted']})")
         s0_pos, kind = tps[-1]; s0, s1 = idx[s0_pos], idx[-1]; direction = 1 if kind == "trough" else -1
         move = float(np.log(px[-1] / px[s0_pos])); ext_move = float(np.log(px[ext] / px[s0_pos]))
-        eps = past_episodes(tps, px); same = [e for e in eps if e["direction"] == direction and e["length"] >= MIN_EP]
+        eps = past_episodes(tps_hist, px); same = [e for e in eps if e["direction"] == direction and e["length"] >= MIN_EP]
         sizes = np.array([abs(e["size"]) for e in same]); lengths = np.array([e["length"] for e in same])
         tgt = None
         if len(sizes) >= 5:
@@ -417,14 +473,15 @@ def run():
         tf = tb_all.get(a, {}).get("TF", {})
         r5_attr = attribute(r, F, s0, cv["dates"][wr["R5_causal"][0] - 1]) if wr else None
         J["assets"][a] = dict(name=NAME.get(a, a), episode=dict(start=s0.strftime("%Y-%m-%d"), kind=kind, direction=direction, sessions=int(len(idx) - 1 - s0_pos), move=move,
-                                                               extreme_so_far=dict(date=idx[ext].strftime("%Y-%m-%d"), move=ext_move), threshold_now=float(thr[-1]), rule=rule_label),
+                                                               extreme_so_far=dict(date=idx[ext].strftime("%Y-%m-%d"), move=ext_move), threshold_now=float(thr[-1]), rule=rule_label, big_picture=big),
                               target=tgt, attribution=ep_attr, impulse=dict(end=i1.strftime("%Y-%m-%d"), sessions=int(len(r.loc[i0:i1]) - 1), move=imp_move, attribution=imp_attr), last_session=dict(date=s1.strftime("%Y-%m-%d"), ret=float(r.iloc[-1]), attribution=day_attr),
                               stable_factors=[f for f, v in TB.items() if v.get("stable")], n_past_episodes=len(eps),
                               windows=({k: dict(sessions=int(v[0]), explained=(None if not np.isfinite(v[1]) else float(v[1])), move=float(cv["move"][v[0] - 1]), end=cv["dates"][v[0] - 1].strftime("%Y-%m-%d")) for k, v in wr.items()} if wr else None),
                               window_test=tf, ceiling_null=(None if not np.isfinite(c_null) else float(c_null)), best_rule=(dict(sessions=int(wr_best['R5_causal'][0]), explained=float(wr_best['R5_causal'][1]), params=bb, p=bb['p'], leg=best_leg, rows=(wr_best['_attr']['rows'][:4] if wr_best.get('_attr') else None)) if wr_best and np.isfinite(wr_best['R5_causal'][1]) else None), r5_rows=(r5_attr["rows"][:4] if r5_attr else None), r5_unexplained=(r5_attr["unexplained_share"] if r5_attr else None))
         pc = lambda v: f"{np.expm1(v):+.1%}"
         L += [f"## {NAME.get(a, a)} ({a})", "",
-              f"- Current episode: **{'up' if direction > 0 else 'down'} since {s0.date()}** ({kind} confirmed; {len(idx) - 1 - s0_pos} sessions), move so far {pc(move)}; extreme so far {pc(ext_move)} on {idx[ext].date()}; {rule_label}.",
+              f"- Current episode: **{'up' if direction > 0 else 'down'} since {s0.date()}** ({kind} confirmed; {len(idx) - 1 - s0_pos} sessions), move so far {pc(move)}; extreme so far {pc(ext_move)} on {idx[ext].date()}; {rule_label}."
+              + (f" Big picture (zigzag): {'up' if big['direction'] > 0 else 'down'} since {big['start']} ({big['sessions']} sessions, {pc(big['move'])})." if big else ""),
               (f"- Typical {'rise' if direction > 0 else 'fall'} of this kind for {NAME.get(a, a)}: {pc(direction * tgt['med_size'])} from the start (middle half of past episodes {pc(direction * tgt['q25'])} to {pc(direction * tgt['q75'])}), "
                f"median {tgt['med_length']:.0f} sessions, n {tgt['n']} — this one is at {tgt['share_of_typical']:.0%} of the typical size; "
                + (f"the typical level is {pc(tgt['target_from_now'])} from here (band {pc(tgt['band_from_now'][0])} to {pc(tgt['band_from_now'][1])})." if tgt['share_of_typical'] < 1

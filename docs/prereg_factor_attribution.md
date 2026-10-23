@@ -75,6 +75,13 @@ have run, with every line tagged.
   X = 4% and swing k = 10 land within 5 points of the zigzag; nothing replaces it.
 - **T-I′ (registered 23 Oct after T-I passed, before running):** the winning rule's median explained share on 20 time-shifted factor series; PASS if
   real ≥ null median + 10 points and > 95th pct → promoted automatically (processed/leg_rule.json), the zigzag superseded on record. **Prior #69:** PASS.
+- **T-J two-scale legs (founder, 23 Oct evening).** His gradient method — every back-gradient from today must have one sign — equals "today is the leg's
+  extreme"; a sign change is a drawdown from the extreme. Operational form: a turn is confirmed when the drawdown exceeds max(f × the leg's own
+  move, c × monthly volatility) and has persisted N sessions since the extreme; f ∈ {25, 38.2, 50%}, N ∈ {3, 5}, c ∈ {0.5, 1.0}. Coarse legs stay
+  the zigzag (big picture); the fine rule runs inside the current coarse leg (where the move is now); the page shows both. Columns added: missed
+  reversals, confirmation lag. **Fine-scale promotion:** 0 missed, lag ≤ 10 sessions, explained share within 5 points of the zigzag, legs ≥ zigzag.
+  Caveats registered with their fills: closes vs intraday extremes (grid variable, highs/lows from the raw cache); the coarse rule's own misses
+  (repaired by the fine scale); choosing f and N by looking (sweep null). **Prior #71:** f = 38%, N = 5, c = 1 → ~120 legs, 0 missed, lag ≈ 6, share ≈ 62%; promoted.
 - Nightly: `src/why_moved.py`; app: the "Why it moved" paragraph beside the day's Up/Down pill, every sentence tagged.
 
 ## 5. The unexplained part as a signal — residual momentum / reversal (registered 2026-10-23, before code)
@@ -116,3 +123,4 @@ price pressure unwinds (Campbell–Grossman–Wang; Nagel), information diffuses
 | 2026-10-23 | T-G amendment | The app uses the best cell *within its registered leg definition* (1.5×/8%), judged against that sub-grid's null — legs are never re-cut to fit a cell (founder's objection: integrity must not cost the leg's meaning). | — |
 | 2026-10-23 | T-I (GLD) | 17 rules. **Founder's persistence rule N = 5 sessions, X = 4%: median explained share 74% on 34 legs vs the zigzag's 68% on 24 → PASS** (≥ 5 points, more legs). Pure gradient rules (X = 0, N = 2–3): 350–900 legs, 16–49% under five sessions, 48–61%; N = 10 never fires; swing k = 5: 554 legs, 53%. `docs/segmenter_test_GLD.md` | **#68 wrong** (predicted nothing replaces the zigzag). Tally 57 |
 | 2026-10-23 | T-I′ (GLD, consecutive-closes N=5/4%) | 74% vs 11% on shifted factors → PASS and promoted — **withdrawn two hours later**: the rule missed gold's August peak (no five-day losing streak in a 14% fall). A criterion that scores only explanation can be passed by a rule that declines to see messy legs. Fidelity added; see amendment. | **#69 right** on the null; the criterion was wrong, not the prior |
+| 2026-10-23 | T-I re-run with fidelity | Zigzag: 54 legs, 68%, **3 missed** (worst 23%). Persist-time (founder's meaning): **0 missed at every N = 2–5**; N = 5 / X = 4%: 196 legs, median 19 sessions, 61%. Consecutive-closes N = 5: 5–6 missed (worst 40%) — the withdrawn rule. No rule replaces the zigzag outright (share −7 points at the fine scale). | **#70 wrong** on share (predicted within ±5; −7); right on fidelity and the August peak. Tally 58 |
