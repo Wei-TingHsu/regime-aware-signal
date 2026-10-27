@@ -2563,3 +2563,29 @@ legs while explaining 79% of them against the zigzag's 68%. Neither replaces the
 quarter-scale context, his rule underneath as the current leg where "why it moved" is computed. The third scale that T-J had promoted is withdrawn
 as redundant. The page names the scale wherever it says "typical", because a 14% gold fall is 78% of a typical quarter-scale fall and 193% of a
 typical five-week leg at the same time. PROJECT_MASTER §2.1 holds the day's ideas as a story in eight blocks. Tally 61; register row 50.
+
+### 18.39 Flows run; the liquidity question; the few-shot chair (27 Oct)
+
+Flows and positioning (amendment #61) ran: the SPDR archive endpoint served a PDF, so there is no ETF-flow series yet; CFTC positioning for gold,
+silver and WTI is in. T-A fell from 0.177 to 0.160 (FAIL either way) and the three positioning factors are sign-unstable (52–61%): a weekly series
+placed as zeros on four sessions in five cannot explain daily moves. #61 wrong, tally 62. The founder asked whether "gold is sold when liquidity
+drains" was ever tested as time-dependent. It was not: P1 (11 Aug) was one pooled gap, NULL, and its "dash-for-cash" line is the sign of a gap not
+distinguishable from zero; T-B is the only time-dependence check and shows the rate proxies flipping sign across windows. T-L registers the direct
+test (Fed net liquidity, weekly; stability, change-point, recent-vs-history). He also asked how a new chair's pattern can be learned from a few
+announcements. T-K registers the answer: a chair's actions are measured without noise and can be learned from few (T-K3, exact permutation); the
+market's reaction to them cannot be estimated per chair within a tenure (T-K0 power), so the page carries the pooled coefficient shrunk toward the
+chair (T-K2). Priors #76–#79 on file; code written for T-L and T-K0–K2; nothing run.
+
+### 18.40 The chair's reaction and the liquidity link, first numbers (27 Oct, night)
+
+T-K ran on 131 FOMC statement days (2011–2026). Gold moves −0.11% per basis point of same-day 2-year-yield surprise (residual 1.07% a day). To detect a chair
+whose reaction is half the pooled one takes 62 meetings — about eight years, two terms — and a vanished reaction 16; prior #77 (more than 100) wrong, the
+conclusion holding in a weaker form: not within one term. Bernanke, Yellen and Powell differ per basis point (permutation p 0.016; #78 wrong) but not on
+bonds (p 0.61), and each chair sits in one yield era, so the per-bp difference is confounded with the era's yield scale; T-K1′ in volatility units registered
+and run next. Warsh's three statement days averaged a +6 bp hawkish surprise and −0.82% on gold, of which the pooled slope explains −0.68%. The first T-L run
+failed on a units error (the Treasury account is in millions on FRED); fixed, with the founder's exact conditional — gold after other asset classes have had a
+huge sell-off — added as T-L5 before the first valid run. Tally 64.
+
+T-L result (27 Oct): 1144 weeks 2004-11-24 → 2026-10-21: pooled β +0.080 (t +1.96); T-L1 73% windows share the majority sign (+) → UNSTABLE; T-L2 sup-F 8.41 at 2008-09-24, p 0.002 → BREAK (β +0.615 → +0.031); T-L3 last two years β +0.194 vs range -0.235..+0.355 → nothing new; T-L5b (-8%, 20 sessions): 30 events, 30% negative vs base 45% (gap -15 pts, p 0.611) → FAIL; T-L5a β after a sell-off +0.021 (n 38) vs other weeks +0.107, difference t -0.52. #76 wrong (no_break did not hold); #80 right.
+
+T-K1′ result (27 Oct): T-K1′: interaction F 2.10, permutation p 0.118 → FAIL — no chair difference once the surprise is in volatility units; β per σ of the yield — Bernanke -0.80, Yellen -0.35, Powell -0.45% (per bp they were -0.332, -0.144, -0.096). T-K2 with the pooled-σ se: Warsh weight on own data 65% (was 92%), posterior -0.1324% ± 0.0643 per bp. #81 right.

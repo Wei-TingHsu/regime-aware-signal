@@ -208,3 +208,23 @@ Reading: a block of 1 has no R² (one point); short blocks are noisier per block
 Best cell: window 756, block 20, median R² 0.224; best-of-sweep null (50 shifted draws): median best -0.024, p = 0.000 → survives the sweep
 
 Reading: a block of 1 has no R² (one point); short blocks are noisier per block but closer to the founder's 'purest window' idea. The registered verdict is the 504/20 cell; the sweep is the alternatives track and a survivor is promoted to its own forward test, never adopted in place.
+
+# Factor attribution — tests for GLD
+
+*2026-10-27 23:13. T-A registered cell: window 504, block 20, bar 0.20. T-B: sign of each beta across rolling windows (step 63); stable if ≥ 70%.*
+
+**T-A (registered cell):** median out-of-sample R² **0.160** over 236 blocks → **FAIL**
+
+| factor | windows | share with the majority sign | T-B |
+|---|---|---|---|
+| geopolitical risk (GPR index) | 75 | 51% | UNSTABLE — not quotable |
+| rate-hike speculation (2-yr yield minus fed funds) | 75 | 67% | UNSTABLE — not quotable |
+| real 10-yr yield | 75 | 65% | UNSTABLE — not quotable |
+| US dollar (broad index) | 75 | 100% | stable |
+| oil (WTI spot) | 75 | 89% | stable |
+| equity volatility (VIX) | 75 | 59% | UNSTABLE — not quotable |
+| speculative positioning in gold (CFTC) | 75 | 52% | UNSTABLE — not quotable |
+| speculative positioning in silver (CFTC) | 75 | 61% | UNSTABLE — not quotable |
+| speculative positioning in oil (CFTC) | 75 | 61% | UNSTABLE — not quotable |
+| macro state, PCA line 1 | 75 | 83% | stable |
+| macro state, PCA line 2 | 75 | 87% | stable |

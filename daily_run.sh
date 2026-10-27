@@ -162,4 +162,5 @@ python -m src.wti_cont build || echo "  wti_cont rebuild failed -- continuing"
 python -m src.oil_shock forward || echo "  oil forward failed -- continuing"
 python -m src.latency_audit || echo "  latency audit failed -- continuing"
 # TRACK 3.33: turning points, episode and last-session attribution, base-rate target, every asset incl. silver
+python -m src.flows update || echo "  flows update failed -- continuing"
 python -m src.why_moved run > /dev/null || echo "  why_moved failed -- continuing"

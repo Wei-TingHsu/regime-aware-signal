@@ -193,7 +193,8 @@ def window_grid_rule(asset, n_shift: int = 10, seed: int = 0):
             out[(w, p, k)] = dict(n=int(len(v5)), r5=float(np.median(v5)) if len(v5) else np.nan, beat=float((v5 > v1).mean()) if len(v5) else np.nan)
         return out
     real = sweep(F); df = pd.DataFrame([dict(window=c[0], patience=c[1], min_k=c[2], **v) for c, v in real.items()]).dropna(subset=["r5"])
-    best = df.loc[df.r5.idxmax()]; rng = np.random.default_rng(seed); mx = []
+    best = df.sort_values(["r5", "patience", "min_k"], ascending=[False, False, True]).iloc[0]   # tie-break (23 Oct): longest patience, then smallest min window
+    rng = np.random.default_rng(seed); mx = []
     for _ in range(n_shift):
         sh = int(rng.integers(120, len(F) - 120)); Fx = pd.DataFrame(np.roll(F.to_numpy(), sh, axis=0), index=F.index, columns=F.columns)
         vals = [v["r5"] for v in sweep(Fx).values() if np.isfinite(v["r5"])]

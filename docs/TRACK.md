@@ -783,3 +783,10 @@ RunAtLoad false; StartCalendarInterval weekdays 1-5 at Hour 15 Minute 0.
 `caffeinate -is` holds the machine awake for the job's duration (the 11 Sep run was
 suspended mid-way for ten hours without it).
 
+### 3.35 The liquidity–gold link through time (T-L) and the few-shot chair (T-K) — registered 27 Oct
+
+Origin: the founder's question (27 Oct). Record: `docs/prereg_liquidity_and_chair.md`; code `src/liquidity_link.py`, `src/chair_power.py`; T-K3
+(LLM rubric reads of every statement, exact permutation) follows T-K0/T-K1. Open: the 16 Sep 2026 FOMC statement is not in the corpus (feed gap);
+the SPDR ETF-flow archive must be downloaded by hand.
+
+Status 27 Oct night: T-K0–K2 run and recorded (#77, #78 wrong, tally 64); units error in the first T-L run fixed (WTREGEN is millions); T-L5 (after an equity sell-off) and T-K1′ (volatility units) added before running; `record` subcommands write the verdicts into the register. Open after this: T-K3 LLM rubric reads; the 16 Sep statement into the corpus; GLD flows by hand.

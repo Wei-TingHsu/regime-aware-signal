@@ -17,10 +17,10 @@ PROC, DOCS = Path("processed"), Path("docs")
 GPR_URL = "https://www.matteoiacoviello.com/gpr_files/data_gpr_daily_recent.xls"
 GPR = PROC / "gpr_daily.parquet"
 WINDOW, STEP, BLOCK = 504, 63, 20
-ORDER_DEFAULT = ["war", "hikes", "real", "dollar", "oil", "vix", "btc", "macro1", "macro2"]
+ORDER_DEFAULT = ["war", "hikes", "real", "dollar", "oil", "vix", "btc", "gldflow", "cot_gold", "cot_silver", "cot_oil", "macro1", "macro2"]
 LABEL = {"war": "geopolitical risk (GPR index)", "hikes": "rate-hike speculation (2-yr yield minus fed funds)", "real": "real 10-yr yield",
          "dollar": "US dollar (broad index)", "oil": "oil (WTI spot)", "vix": "equity volatility (VIX)", "macro1": "macro state, PCA line 1",
-         "macro2": "macro state, PCA line 2", "btc": "speculative liquidity (Bitcoin)"}
+         "macro2": "macro state, PCA line 2", "btc": "speculative liquidity (Bitcoin)", "gldflow": "gold ETF flows (tonnes held)", "cot_gold": "speculative positioning in gold (CFTC)", "cot_silver": "speculative positioning in silver (CFTC)", "cot_oil": "speculative positioning in oil (CFTC)"}
 
 
 # ---------------------------------------------------------------- data
@@ -59,6 +59,11 @@ def factors(idx: pd.DatetimeIndex) -> pd.DataFrame:
         except Exception as e: print(f"  BTC fetch failed: {type(e).__name__}: {str(e)[:80]}")
     if bp.exists():
         b = pd.read_parquet(bp)["BTC"]; b.index = pd.to_datetime(b.index); F["btc"] = np.log(b.reindex(idx).ffill()).diff()
+    fp = PROC / "flows.parquet"
+    if fp.exists():
+        fl = pd.read_parquet(fp); fl.index = pd.to_datetime(fl.index); fl = fl.reindex(idx)      # a flow/positioning change lands on the session it became public; other sessions 0
+        for c in ("gldflow", "cot_gold", "cot_silver", "cot_oil"):
+            if c in fl.columns and fl[c].notna().sum() > 200: F[c] = fl[c].fillna(0.0)
     pc = PROC / "macro_pca_scores.parquet"
     if pc.exists():
         s = pd.read_parquet(pc); s.index = pd.to_datetime(s.index); s = s.select_dtypes("number").reindex(idx).ffill()
