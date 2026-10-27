@@ -1,6 +1,6 @@
 # T-L — the liquidity–gold link through time (GLD)
 
-*2026-10-27 23:47. 1144 weeks, 2004-11-24 → 2026-10-21; x = weekly Δlog(Fed assets − TGA − RRP), y = GLD weekly log return, Thursday-to-Wednesday; contemporaneous, not a trading signal. Net liquidity now 5,801 bn (2026-10-21). prereg_liquidity_and_chair §2.*
+*2026-10-27 23:57. 1144 weeks, 2004-11-24 → 2026-10-21; x = weekly Δlog(Fed assets − TGA − RRP), y = GLD weekly log return, Thursday-to-Wednesday; contemporaneous, not a trading signal. Net liquidity now 5,801 bn (2026-10-21). prereg_liquidity_and_chair §2.*
 
 **Pooled:** β = +0.080 (t +1.96) — a 1% weekly rise in net liquidity goes with +0.080% on GLD the same week.
 

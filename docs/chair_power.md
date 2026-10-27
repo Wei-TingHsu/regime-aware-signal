@@ -1,6 +1,6 @@
 # T-K — the few-shot chair problem (GLD on the 2-yr surprise, statement days)
 
-*2026-10-27 23:47. 131 statement days 2011-01-26 → 2026-09-16; s = ΔDGS2 bp on the day, s/σ = the same in units of the yield's trailing two-year daily volatility; y = GLD log return on the day (%). prereg_liquidity_and_chair §3.*
+*2026-10-27 23:57. 131 statement days 2011-01-26 → 2026-09-16; s = ΔDGS2 bp on the day, s/σ = the same in units of the yield's trailing two-year daily volatility; y = GLD log return on the day (%). prereg_liquidity_and_chair §3.*
 
 **Pooled:** β = -0.1138% per bp (se 0.0141); in volatility units β = -0.443% per σ (se 0.054); residual σ = 1.07% a day; sd of the surprise 6.7 bp.
 
