@@ -790,3 +790,5 @@ Origin: the founder's question (27 Oct). Record: `docs/prereg_liquidity_and_chai
 the SPDR ETF-flow archive must be downloaded by hand.
 
 Status 27 Oct night: T-K0–K2 run and recorded (#77, #78 wrong, tally 64); units error in the first T-L run fixed (WTREGEN is millions); T-L5 (after an equity sell-off) and T-K1′ (volatility units) added before running; `record` subcommands write the verdicts into the register. Open after this: T-K3 LLM rubric reads; the 16 Sep statement into the corpus; GLD flows by hand.
+
+27 Oct 23:50: T-L5b events before GLD existed (1995–2004) had been counted as zero gold returns — fixed, re-run, records replaced, #80 re-judged; T-K2σ (chair posterior in volatility units) added. Commit after the re-run closes the night.

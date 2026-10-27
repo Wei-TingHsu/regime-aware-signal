@@ -1,7 +1,7 @@
 """T-L: is the liquidity-gold link constant through time? Weekly Fed net liquidity (WALCL - TGA - RRP, FRED) against GLD's weekly return.
 T-L1 stability (sign share across 104-week windows); T-L2 change-point (sup-F, block-bootstrap null); T-L3 recent vs history; T-L4 by the P1 liquidity
 state; T-L5 after an equity sell-off (the founder's sentence): conditional beta, and gold's forward return after SPY's 20-session drawdown crosses a
-threshold, against the base rate with a random-date null.  docs/prereg_liquidity_and_chair.md section 2.
+threshold, against the base rate with a random-date null -- events and null dates restricted to GLD's history (v3).  docs/prereg_liquidity_and_chair.md section 2.
     python -m src.liquidity_link run ; python -m src.liquidity_link record"""
 from __future__ import annotations
 import json, os, re, sys, urllib.request, urllib.parse
@@ -100,20 +100,26 @@ def block_bootstrap_p(x, y, F_obs, n_draw=NDRAW, block=BLOCK, seed=SEED):
     return float((out >= F_obs).mean()), out
 
 
+def gold_range(r: pd.DataFrame):
+    """SPY's sessions with GLD's valid history: (spy, gld on spy's index, first valid index, last valid index)."""
+    spy = r["SPY"].dropna(); g = r["GLD"].reindex(spy.index); v = g.notna().to_numpy(); i0 = int(np.argmax(v)); i1 = len(v) - 1 - int(np.argmax(v[::-1])); return spy, g, i0, i1
+
+
 def sell_off_events(r: pd.DataFrame, thr: float):
-    spy = r["SPY"].dropna(); g = r["GLD"].reindex(spy.index); dd = spy.rolling(LOOK).sum().to_numpy(); ev = []; last = -10 ** 9
-    for i in range(LOOK, len(spy) - max(HORIZONS) - 1):
+    """First session on which SPY's 20-session log return crosses below thr, one event per COOL sessions, only where GLD exists for the full forward window (v3)."""
+    spy, g, i0, i1 = gold_range(r); dd = spy.rolling(LOOK).sum().to_numpy(); ev = []; last = -10 ** 9
+    for i in range(max(LOOK, i0), i1 - max(HORIZONS)):
         if dd[i] <= thr and dd[i - 1] > thr and i - last >= COOL: ev.append(i); last = i
-    return ev, g
+    return ev, g, i0, i1
 
 
 def event_test(r: pd.DataFrame, thr: float, rng) -> tuple[list, dict]:
-    ev, g = sell_off_events(r, thr); gv = g.to_numpy(); out = {}
+    ev, g, i0, i1 = sell_off_events(r, thr); gv = g.to_numpy(); out = {}
     def fwd(starts, h): return np.array([np.nansum(gv[i + 1:i + 1 + h]) for i in starts])
     for h in HORIZONS:
         f = fwd(ev, h); n = len(f); share = float((f < 0).mean()) if n else np.nan
         allv = g.rolling(h).sum().shift(-h).dropna(); base = float((allv < 0).mean()); gap = (share - base) * 100 if n else np.nan
-        pool = np.arange(LOOK, len(gv) - h - 1); nulls = np.array([(fwd(rng.choice(pool, n, replace=False), h) < 0).mean() for _ in range(NNULL)]) if n else np.array([])
+        pool = np.arange(max(LOOK, i0), i1 - h); nulls = np.array([(fwd(rng.choice(pool, n, replace=False), h) < 0).mean() for _ in range(NNULL)]) if n else np.array([])
         p = float((nulls >= share).mean()) if n else np.nan
         verdict = "INCONCLUSIVE (n < 30)" if n < 30 else ("PASS" if (gap >= 10 and p < 0.05) else "FAIL")
         out[h] = dict(n=n, share_neg=share, base_neg=base, gap_pts=gap, p=p, median=float(np.median(f)) if n else np.nan, verdict=verdict)
@@ -128,7 +134,7 @@ def run(asset: str = "GLD"):
         _, bw, sew, _ = ols(X[s0:s0 + WIN], Y[s0:s0 + WIN]); rows.append(dict(start=dates[s0], end=dates[s0 + WIN - 1], beta=bw, t=bw / sew))
     W = pd.DataFrame(rows); pos = float((W.beta > 0).mean()); share = max(pos, 1 - pos); maj = "+" if pos >= 0.5 else "-"
     F_obs, j = sup_f(X, Y); p_break, null = block_bootstrap_p(X, Y, F_obs); bdate = dates[j]
-    _, b1, se1, _ = ols(X[:j], Y[:j]); _, b2, se2, _ = ols(X[j:], Y[j:])
+    _, b1, se1, _ = ols(X[:j], Y[:j]); _, b2, se2, _ = ols(X[j:], Y[j:]); sdx1, sdx2 = float(X[:j].std()), float(X[j:].std())
     _, b_last, se_last, _ = ols(X[-WIN:], Y[-WIN:]); earlier = W[W.end < dates[-WIN]].beta
     lo5, hi95 = (float(np.percentile(earlier, 5)), float(np.percentile(earlier, 95))) if len(earlier) >= 5 else (np.nan, np.nan)
     recent_diff = bool(len(earlier) >= 5 and (b_last < lo5 or b_last > hi95))
@@ -146,12 +152,12 @@ def run(asset: str = "GLD"):
                     _, bs, ses, _ = ols(X[m1], Y[m1]); _, ba, sea, _ = ols(X[m0], Y[m0]); cond = dict(col=col, n_stress=int(m1.sum()), beta_stress=bs, t_stress=bs / ses, n_abundant=int(m0.sum()), beta_abundant=ba, t_abundant=ba / sea)
             else: cond = dict(note=f"no stress column in liquidity_states.parquet (columns {list(L.columns)[:6]})")
         except Exception as ex: cond = dict(note=f"liquidity_states.parquet not usable ({type(ex).__name__})")
-    # T-L5 — after an equity sell-off
     rng = np.random.default_rng(SEED); after = None; events = {}
     if "dd" in df.columns:
         m_a = (df["dd"] <= SELL[SELL_REG]).to_numpy(); m_o = ~m_a
         if m_a.sum() >= 20: _, ba5, sea5, _ = ols(X[m_a], Y[m_a]); _, bo5, seo5, _ = ols(X[m_o], Y[m_o]); after = dict(thr=SELL_REG, n_after=int(m_a.sum()), beta_after=ba5, t_after=ba5 / sea5, n_other=int(m_o.sum()), beta_other=bo5, t_other=bo5 / seo5, diff_t=(ba5 - bo5) / float(np.sqrt(sea5 ** 2 + seo5 ** 2)))
         else: after = dict(thr=SELL_REG, n_after=int(m_a.sum()), note="fewer than 20 weeks after a sell-off")
+        _, _, i0, i1 = gold_range(r); gstart, gend = r["SPY"].dropna().index[i0].date(), r["SPY"].dropna().index[i1].date()
         for lab, thr in SELL.items():
             ev, out = event_test(r, thr, rng); events[lab] = dict(n_events=len(ev), by_h={str(h): v for h, v in out.items()})
     v1 = "STABLE" if share >= STABLE else "UNSTABLE"; v2 = "BREAK" if p_break < 0.05 else "no break"
@@ -160,7 +166,7 @@ def run(asset: str = "GLD"):
          f"*{datetime.now():%Y-%m-%d %H:%M}. {n} weeks, {dates[0].date()} → {dates[-1].date()}; x = weekly Δlog(Fed assets − TGA − RRP), y = {asset} weekly log return, Thursday-to-Wednesday; contemporaneous, not a trading signal. Net liquidity now {nl['NL'].iloc[-1]:,.0f} bn ({nl.index[-1].date()}). prereg_liquidity_and_chair §2.*", "",
          f"**Pooled:** β = {b:+.3f} (t {t_pool:+.2f}) — a 1% weekly rise in net liquidity goes with {b:+.3f}% on {asset} the same week.", "",
          f"**T-L1 stability:** {len(W)} windows of {WIN} weeks; majority sign {maj}, share {share:.0%} → **{v1}** (bar {STABLE:.0%}).", "",
-         f"**T-L2 change-point:** sup-F {F_obs:.2f} at {bdate.date()}; bootstrap null median {np.median(null):.2f}, 95th {np.percentile(null, 95):.2f}; **p = {p_break:.3f} → {v2}**. β before {b1:+.3f} (t {b1 / se1:+.2f}), after {b2:+.3f} (t {b2 / se2:+.2f}).", "",
+         f"**T-L2 change-point:** sup-F {F_obs:.2f} at {bdate.date()}; bootstrap null median {np.median(null):.2f}, 95th {np.percentile(null, 95):.2f}; **p = {p_break:.3f} → {v2}**. β before {b1:+.3f} (t {b1 / se1:+.2f}), after {b2:+.3f} (t {b2 / se2:+.2f}); weekly sd of Δlog net liquidity before {sdx1:.2%}, after {sdx2:.2%}.", "",
          f"**T-L3 recent-only:** last {WIN} weeks β = {b_last:+.3f} (t {b_last / se_last:+.2f}); earlier windows' 5–95% range {lo5:+.3f} to {hi95:+.3f} → " + ("**recent is different** (outside the range)" if recent_diff else "inside the range — nothing new"), ""]
     if cond and "beta_stress" in cond: L += [f"**T-L4 conditional (P1 state '{cond['col']}'):** stress weeks β = {cond['beta_stress']:+.3f} (t {cond['t_stress']:+.2f}, n {cond['n_stress']}); abundant weeks β = {cond['beta_abundant']:+.3f} (t {cond['t_abundant']:+.2f}, n {cond['n_abundant']}).", ""]
     elif cond: L += [f"T-L4: {cond['note']}", ""]
@@ -168,54 +174,73 @@ def run(asset: str = "GLD"):
         L += [f"**T-L5a after an equity sell-off (SPY's trailing 20 sessions ≤ {SELL_REG} at the week's start):** β = {after['beta_after']:+.3f} (t {after['t_after']:+.2f}, n {after['n_after']} weeks) vs other weeks {after['beta_other']:+.3f} (t {after['t_other']:+.2f}, n {after['n_other']}); difference t = {after['diff_t']:+.2f}.", ""]
     elif after: L += [f"T-L5a: {after['note']} (n {after['n_after']})", ""]
     if events:
-        L += [f"**T-L5b gold after SPY's 20-session drawdown first crosses the threshold (one event per {COOL} sessions; share of forward returns negative vs the base rate; random-date null, {NNULL:,} draws). Registered cell: {SELL_REG}, 20 sessions → {v5}.**", "",
-              "| threshold | events | horizon | share negative | base rate | gap (pts) | median | p | verdict |", "|---|---|---|---|---|---|---|---|---|"]
+        L += [f"**T-L5b gold after SPY's 20-session drawdown first crosses the threshold (events and the random-date null within GLD's history {gstart} → {gend}; one event per {COOL} sessions; share of forward returns negative vs the base rate; {NNULL:,} null draws). Registered cell: {SELL_REG}, 20 sessions → {v5}.**", "",
+              "| threshold | events | horizon | share negative | base rate | gap (pts) | median | p (share negative ≥ observed) | verdict |", "|---|---|---|---|---|---|---|---|---|"]
         for lab, ev in events.items():
             for h, v in ev["by_h"].items(): L.append(f"| {lab} | {ev['n_events']} | {h} | {v['share_neg']:.0%} | {v['base_neg']:.0%} | {v['gap_pts']:+.0f} | {v['median']:+.2%} | {v['p']:.3f} | {v['verdict']} |" if v["n"] else f"| {lab} | 0 | {h} | — | — | — | — | — | no events |")
         L.append("")
-    L += ["| period | n weeks | β | t |", "|---|---|---|---|"] + [f"| {q['period']} | {q['n']} | {q['beta']:+.3f} | {q['t']:+.2f} |" for q in per]
+    k = len(L); L += ["| period | n weeks | β | t |", "|---|---|---|---|"] + [f"| {q['period']} | {q['n']} | {q['beta']:+.3f} | {q['t']:+.2f} |" for q in per]
     L += ["", "| window start | end | β | t |", "|---|---|---|---|"] + [f"| {q.start.date()} | {q.end.date()} | {q.beta:+.3f} | {q.t:+.2f} |" for q in W.itertuples()]
-    out = DOCS / f"liquidity_link_{asset}.md"; out.write_text("\n".join(L) + "\n"); print("\n".join(L[:26])); print(f"-> {out}")
+    out = DOCS / f"liquidity_link_{asset}.md"; out.write_text("\n".join(L) + "\n"); print("\n".join(L[:k])); print(f"-> {out}")
     J = json.loads((PROC / "liquidity_link.json").read_text()) if (PROC / "liquidity_link.json").exists() else {}
     J[asset] = dict(run=datetime.now().strftime("%Y-%m-%d %H:%M"), n=n, start=str(dates[0].date()), end=str(dates[-1].date()), beta=b, t=t_pool, TL1=dict(windows=len(W), share=share, majority=maj, verdict=v1),
-                    TL2=dict(supF=F_obs, date=str(bdate.date()), p=p_break, beta_before=b1, beta_after=b2, verdict=v2), TL3=dict(beta_last=b_last, lo5=lo5, hi95=hi95, recent_is_different=recent_diff),
+                    TL2=dict(supF=F_obs, date=str(bdate.date()), p=p_break, beta_before=b1, beta_after=b2, sdx_before=sdx1, sdx_after=sdx2, verdict=v2), TL3=dict(beta_last=b_last, lo5=lo5, hi95=hi95, recent_is_different=recent_diff),
                     TL4=cond, TL5a=after, TL5b=events, TL5_verdict=v5, periods=per,
                     nl_latest=dict(date=str(nl.index[-1].date()), NL_bn=float(nl["NL"].iloc[-1]), walcl_bn=float(nl["walcl"].iloc[-1]), tga_bn=float(nl["tga"].iloc[-1]), rrp_bn=float(nl["rrp"].iloc[-1])))
     (PROC / "liquidity_link.json").write_text(json.dumps(J, indent=1, default=float))
 
 
 def _bump_tally(text: str, note: str) -> str:
+    """Advance the wrong-prior tally once for `note` (idempotent: no second bump if the note is already on the line)."""
+    if note in text: return text
     m = re.search(r"tally (\d+) \(#40–#43 lever priors", text)
     if not m: return text
     k = int(m.group(1)) + 1; text = text.replace(m.group(0), f"tally {k} (#40–#43 lever priors", 1)
     anchor = "#78 chairs differ (p 0.016)"; return text.replace(anchor, anchor + ", " + note, 1) if anchor in text else text
 
 
+def _replace_line(text: str, pattern: str, new: str) -> tuple[str, bool]:
+    m = re.search(pattern, text, flags=re.M); return (text[:m.start()] + new + text[m.end():], True) if m else (text, False)
+
+
 def record(asset: str = "GLD"):
-    """Write T-L's verdicts against prior #76 into the register, the pre-registration and the state record."""
-    J = json.loads((PROC / "liquidity_link.json").read_text())[asset]; t1, t2, t3, t5 = J["TL1"], J["TL2"], J["TL3"], J.get("TL5b", {}).get(SELL_REG, {}).get("by_h", {}).get("20")
-    clauses = dict(pooled_small_positive=(J["beta"] > 0 and abs(J["t"]) < 3), unstable=(t1["verdict"] == "UNSTABLE"), no_break=(t2["verdict"] == "no break"), nothing_new=(not t3["recent_is_different"]))
-    right76 = all(clauses.values()); missed = [k for k, v in clauses.items() if not v]
-    right80 = bool(t5 and t5["verdict"] != "PASS")
-    pri = ("**#76 right**" if right76 else f"**#76 wrong** ({', '.join(missed)} did not hold)") + "; " + ("**#80 right**" if right80 else "**#80 wrong** (gold is sold after an equity sell-off more often than the base rate)")
-    res = (f"{J['n']} weeks {J['start']} → {J['end']}: pooled β {J['beta']:+.3f} (t {J['t']:+.2f}); T-L1 {t1['share']:.0%} windows share the majority sign ({t1['majority']}) → {t1['verdict']}; "
-           f"T-L2 sup-F {t2['supF']:.2f} at {t2['date']}, p {t2['p']:.3f} → {t2['verdict']} (β {t2['beta_before']:+.3f} → {t2['beta_after']:+.3f}); T-L3 last two years β {t3['beta_last']:+.3f} vs range {t3['lo5']:+.3f}..{t3['hi95']:+.3f} → "
-           + ("recent is different" if t3["recent_is_different"] else "nothing new") + (f"; T-L5b ({SELL_REG}, 20 sessions): {t5['n']} events, {t5['share_neg']:.0%} negative vs base {t5['base_neg']:.0%} (gap {t5['gap_pts']:+.0f} pts, p {t5['p']:.3f}) → {t5['verdict']}" if t5 else ""))
-    a5 = J.get("TL5a") or {}
-    if "beta_after" in a5: res += f"; T-L5a β after a sell-off {a5['beta_after']:+.3f} (n {a5['n_after']}) vs other weeks {a5['beta_other']:+.3f}, difference t {a5['diff_t']:+.2f}"
-    p = DOCS / "prereg_liquidity_and_chair.md"; s = p.read_text()
-    if f"| {datetime.now():%Y-%m-%d} | T-L ({asset}) |" not in s:
-        s = s.rstrip("\n") + f"\n| {datetime.now():%Y-%m-%d} | T-L ({asset}) | {res}. docs/liquidity_link_{asset}.md | {pri} |\n"; p.write_text(s); print("  prereg: T-L result row")
-    m = DOCS / "PROJECT_MASTER.md"; s = m.read_text(); old = "| registered 27 Oct, not run; prior #76: unstable, no break, nothing new | — |"
-    if old in s:
-        s = s.replace(old, f"| 27 Oct, {J['n']} weeks | **T-L1 {t1['verdict']} ({t1['share']:.0%}), T-L2 {t2['verdict']} (p {t2['p']:.2f}), T-L3 " + ("recent differs" if t3["recent_is_different"] else "nothing new") + (f", T-L5b {t5['verdict']}" if t5 else "") + f"** — {pri} |", 1)
-        if not right76: s = _bump_tally(s, "#76 liquidity link")
-        if not right80: s = _bump_tally(s, "#80 gold after equity sell-offs")
-        ph = "[T-L: registered, result to be written by `liquidity_link record`.]"
-        if ph in s: s = s.replace(ph, f"T-L: {res} ({pri.replace('**', '')}).", 1)
-        m.write_text(s); print("  MASTER: row 51 result" + ("" if right76 else ", tally advanced"))
-    cs = DOCS / "CURRENT_STATE_2026-08-23.md"; s = cs.read_text()
-    if "T-L result:" not in s: cs.write_text(s.rstrip("\n") + f"\n\nT-L result ({datetime.now():%d %b}): {res}. {pri.replace('**', '')}.\n"); print("  CURRENT_STATE: T-L line")
+    """Write T-L's verdicts against priors #76 and #80 into the register, the pre-registration and the state record; replaces rows written earlier."""
+    J = json.loads((PROC / "liquidity_link.json").read_text())[asset]; t1, t2, t3 = J["TL1"], J["TL2"], J["TL3"]; b5 = J.get("TL5b", {}); a5 = J.get("TL5a") or {}
+    c8 = b5.get("-8%", {}).get("by_h", {}).get("20"); c5 = b5.get("-5%", {}).get("by_h", {}).get("20")
+    clauses76 = dict(pooled_small_positive=(J["beta"] > 0 and abs(J["t"]) < 3), unstable=(t1["verdict"] == "UNSTABLE"), no_break=(t2["verdict"] == "no break"), nothing_new=(not t3["recent_is_different"]))
+    clauses80 = {"-8% inconclusive (n < 30)": bool(c8 and c8["n"] < 30), "-5% within 10 points of base": bool(c5 and abs(c5["gap_pts"]) < 10), "T-L5a |t| < 2": bool("diff_t" in a5 and abs(a5["diff_t"]) < 2)}
+    right76, right80 = all(clauses76.values()), all(clauses80.values()); miss76 = [k for k, v in clauses76.items() if not v]; miss80 = [k for k, v in clauses80.items() if not v]
+    pri = ("**#76 right**" if right76 else f"**#76 wrong** ({', '.join(miss76)} did not hold)") + "; " + ("**#80 right**" if right80 else f"**#80 wrong** ({', '.join(miss80)} did not hold)")
+    brk = (f"T-L2 sup-F {t2['supF']:.2f} at {t2['date']}, p {t2['p']:.3f} → {t2['verdict']} (β {t2['beta_before']:+.3f} → {t2['beta_after']:+.3f}"
+           + (f"; the link was stronger before the break, when net liquidity barely moved week to week — sd {t2.get('sdx_before', float('nan')):.2%} → {t2.get('sdx_after', float('nan')):.2%} after — the opposite of 'absent before, present now'" if (t2["verdict"] == "BREAK" and abs(t2["beta_before"]) > abs(t2["beta_after"])) else "") + ")")
+    res = (f"{J['n']} weeks {J['start']} → {J['end']}: pooled β {J['beta']:+.3f} (t {J['t']:+.2f}); T-L1 {t1['share']:.0%} of windows share the majority sign ({t1['majority']}) → {t1['verdict']}; {brk}; "
+           f"T-L3 last two years β {t3['beta_last']:+.3f} vs the earlier range {t3['lo5']:+.3f}..{t3['hi95']:+.3f} → " + ("recent is different" if t3["recent_is_different"] else "nothing new"))
+    c4 = J.get("TL4") or {}
+    if "beta_stress" in c4: res += f"; T-L4 stress weeks β {c4['beta_stress']:+.3f} (t {c4['t_stress']:+.2f}, n {c4['n_stress']}) vs abundant {c4['beta_abundant']:+.3f} (t {c4['t_abundant']:+.2f}, n {c4['n_abundant']})"
+    if "beta_after" in a5: res += f"; T-L5a β after a sell-off {a5['beta_after']:+.3f} (n {a5['n_after']} weeks) vs other weeks {a5['beta_other']:+.3f}, difference t {a5['diff_t']:+.2f}"
+    if c8: res += f"; T-L5b (−8%, 20 sessions, events within GLD's history): {c8['n']} events, {c8['share_neg']:.0%} negative vs base {c8['base_neg']:.0%} (gap {c8['gap_pts']:+.0f} pts, p {c8['p']:.3f}) → {c8['verdict']}"
+    if c5: res += f"; at −5%: {c5['n']} events, {c5['share_neg']:.0%} vs {c5['base_neg']:.0%} (gap {c5['gap_pts']:+.0f}, p {c5['p']:.3f}) → {c5['verdict']}"
+    short = f"**T-L1 {t1['verdict']} ({t1['share']:.0%}), T-L2 {t2['verdict']} (p {t2['p']:.3f}, {t2['date']}), T-L3 " + ("recent differs" if t3["recent_is_different"] else "nothing new") + (f", T-L5b {c8['verdict']}" if c8 else "") + "**"
+    stamp = datetime.now().strftime("%Y-%m-%d")
+    p = DOCS / "prereg_liquidity_and_chair.md"; s = p.read_text(); row = f"| {stamp} | T-L ({asset}) | {res}. docs/liquidity_link_{asset}.md | {pri} |"
+    s, done = _replace_line(s, r"^\| \d{4}-\d{2}-\d{2} \| T-L \(" + re.escape(asset) + r"\) \|.*$", row)
+    if not done: s = s.rstrip("\n") + "\n" + row + "\n"
+    p.write_text(s); print("  prereg: T-L result row " + ("replaced" if done else "added"))
+    m = DOCS / "PROJECT_MASTER.md"; s = m.read_text(); lines = s.split("\n"); hit = False
+    for i, ln in enumerate(lines):
+        if ln.startswith("| 51 |"):
+            cells = ln.strip().strip("|").split(" | ")
+            if len(cells) >= 4: lines[i] = f"| 51 | {cells[1].strip()} | 27 Oct, {J['n']} weeks (T-L5b events within GLD's history) | {short} — {pri} |"; hit = True
+    s = "\n".join(lines)
+    s = re.sub(r"Liquidity: T-L: .*?(?=\n\n)", lambda _: f"Liquidity: T-L: {res} ({pri.replace('**', '')}).", s, count=1, flags=re.S)
+    s = s.replace("[T-L: registered, result to be written by `liquidity_link record`.]", f"T-L: {res} ({pri.replace('**', '')}).", 1)
+    if not right76: s = _bump_tally(s, "#76 liquidity link")
+    if not right80: s = _bump_tally(s, "#80 gold after equity sell-offs")
+    m.write_text(s); print("  MASTER: row 51 " + ("rewritten" if hit else "not found") + ", Block 9 updated")
+    cs = DOCS / "CURRENT_STATE_2026-08-23.md"; s = cs.read_text(); line = f"T-L result ({datetime.now():%d %b}): {res}. {pri.replace('**', '')}."
+    s, done = _replace_line(s, r"^T-L result \(.*$", line)
+    if not done: s = s.rstrip("\n") + "\n\n" + line + "\n"
+    cs.write_text(s); print("  CURRENT_STATE: T-L line " + ("replaced" if done else "added"))
 
 
 if __name__ == "__main__":

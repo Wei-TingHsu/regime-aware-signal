@@ -1,12 +1,12 @@
 # T-L — the liquidity–gold link through time (GLD)
 
-*2026-10-27 23:57. 1144 weeks, 2004-11-24 → 2026-10-21; x = weekly Δlog(Fed assets − TGA − RRP), y = GLD weekly log return, Thursday-to-Wednesday; contemporaneous, not a trading signal. Net liquidity now 5,801 bn (2026-10-21). prereg_liquidity_and_chair §2.*
+*2026-10-27 23:59. 1144 weeks, 2004-11-24 → 2026-10-21; x = weekly Δlog(Fed assets − TGA − RRP), y = GLD weekly log return, Thursday-to-Wednesday; contemporaneous, not a trading signal. Net liquidity now 5,801 bn (2026-10-21). prereg_liquidity_and_chair §2.*
 
 **Pooled:** β = +0.080 (t +1.96) — a 1% weekly rise in net liquidity goes with +0.080% on GLD the same week.
 
 **T-L1 stability:** 81 windows of 104 weeks; majority sign +, share 73% → **UNSTABLE** (bar 80%).
 
-**T-L2 change-point:** sup-F 8.41 at 2008-09-24; bootstrap null median 2.51, 95th 6.22; **p = 0.002 → BREAK**. β before +0.615 (t +3.94), after +0.031 (t +0.75).
+**T-L2 change-point:** sup-F 8.41 at 2008-09-24; bootstrap null median 2.51, 95th 6.22; **p = 0.002 → BREAK**. β before +0.615 (t +3.94), after +0.031 (t +0.75); weekly sd of Δlog net liquidity before 1.27%, after 1.92%.
 
 **T-L3 recent-only:** last 104 weeks β = +0.194 (t +0.81); earlier windows' 5–95% range -0.235 to +0.355 → inside the range — nothing new
 
@@ -14,19 +14,19 @@
 
 **T-L5a after an equity sell-off (SPY's trailing 20 sessions ≤ -8% at the week's start):** β = +0.021 (t +0.13, n 38 weeks) vs other weeks +0.107 (t +2.33, n 1106); difference t = -0.52.
 
-**T-L5b gold after SPY's 20-session drawdown first crosses the threshold (one event per 40 sessions; share of forward returns negative vs the base rate; random-date null, 1,000 draws). Registered cell: -8%, 20 sessions → FAIL.**
+**T-L5b gold after SPY's 20-session drawdown first crosses the threshold (events and the random-date null within GLD's history 2004-11-19 → 2026-10-26; one event per 40 sessions; share of forward returns negative vs the base rate; 1,000 null draws). Registered cell: -8%, 20 sessions → INCONCLUSIVE (n < 30).**
 
-| threshold | events | horizon | share negative | base rate | gap (pts) | median | p | verdict |
+| threshold | events | horizon | share negative | base rate | gap (pts) | median | p (share negative ≥ observed) | verdict |
 |---|---|---|---|---|---|---|---|---|
-| -5% | 64 | 5 | 23% | 45% | -21 | +0.00% | 0.932 | FAIL |
-| -5% | 64 | 10 | 27% | 44% | -18 | +0.00% | 0.814 | FAIL |
-| -5% | 64 | 20 | 22% | 45% | -23 | +0.00% | 0.958 | FAIL |
-| -8% | 30 | 5 | 33% | 45% | -11 | +0.00% | 0.462 | FAIL |
-| -8% | 30 | 10 | 30% | 44% | -14 | +0.00% | 0.596 | FAIL |
-| -8% | 30 | 20 | 30% | 45% | -15 | +0.00% | 0.611 | FAIL |
-| -10% | 23 | 5 | 22% | 45% | -23 | +0.00% | 0.899 | INCONCLUSIVE (n < 30) |
-| -10% | 23 | 10 | 35% | 44% | -10 | +0.00% | 0.409 | INCONCLUSIVE (n < 30) |
-| -10% | 23 | 20 | 30% | 45% | -14 | +0.00% | 0.581 | INCONCLUSIVE (n < 30) |
+| -5% | 43 | 5 | 35% | 45% | -10 | +0.64% | 0.922 | FAIL |
+| -5% | 43 | 10 | 40% | 44% | -5 | +0.92% | 0.788 | FAIL |
+| -5% | 43 | 20 | 33% | 45% | -12 | +3.27% | 0.972 | FAIL |
+| -8% | 20 | 5 | 50% | 45% | +5 | +0.24% | 0.440 | INCONCLUSIVE (n < 30) |
+| -8% | 20 | 10 | 45% | 44% | +1 | +1.02% | 0.571 | INCONCLUSIVE (n < 30) |
+| -8% | 20 | 20 | 45% | 45% | +0 | +1.66% | 0.572 | INCONCLUSIVE (n < 30) |
+| -10% | 16 | 5 | 31% | 45% | -13 | +0.66% | 0.906 | INCONCLUSIVE (n < 30) |
+| -10% | 16 | 10 | 50% | 44% | +6 | +0.74% | 0.430 | INCONCLUSIVE (n < 30) |
+| -10% | 16 | 20 | 44% | 45% | -1 | +1.51% | 0.608 | INCONCLUSIVE (n < 30) |
 
 | period | n weeks | β | t |
 |---|---|---|---|

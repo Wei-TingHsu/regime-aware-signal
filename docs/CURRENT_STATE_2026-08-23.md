@@ -766,7 +766,6 @@ schedules it. This is the gap between a study and a product.
    scrutiny had its criterion written first; every one that collapsed was found
    by a test registered in advance.
 
-
 ---
 
 ## 15. SESSION 2026-08-24/25 — STEP 1 CLOSED, GATE PASSED, ESTIMATOR BUILT
@@ -1162,7 +1161,6 @@ decorative.** Every null came from an instrument demonstrated to detect a plante
 effect first. Every retracted claim was retracted by a criterion written before
 the number was seen. That is the negative-results moat argument, evidenced.
 
-
 ---
 
 ## 16. DEMONSTRATION TERMINAL — `app.py` (2026-08-25)
@@ -1269,7 +1267,6 @@ Estimated cost to finish: **~$8.91**. Cached reads are never re-billed — a re-
 **The read is INCOMPLETE.** It has been interrupted three times: twice by API credit exhaustion (the second time it aborted correctly on the first error instead of retrying) and once by a cache file corrupted by an accidental double launch, since fixed by atomic writes.
 
 Finish with a **single** launch of `./run_corpus.sh`, then re-run `python -m src.gate_check` — the gate was measured before the corpus was complete and before over-cap documents were truncated rather than skipped, so both the `political_other` and `earnings_8k` arms will move.
-
 
 ---
 
@@ -2586,10 +2583,7 @@ and run next. Warsh's three statement days averaged a +6 bp hawkish surprise and
 failed on a units error (the Treasury account is in millions on FRED); fixed, with the founder's exact conditional — gold after other asset classes have had a
 huge sell-off — added as T-L5 before the first valid run. Tally 64.
 
-T-L result (27 Oct): 1144 weeks 2004-11-24 → 2026-10-21: pooled β +0.080 (t +1.96); T-L1 73% windows share the majority sign (+) → UNSTABLE; T-L2 sup-F 8.41 at 2008-09-24, p 0.002 → BREAK (β +0.615 → +0.031); T-L3 last two years β +0.194 vs range -0.235..+0.355 → nothing new; T-L5b (-8%, 20 sessions): 30 events, 30% negative vs base 45% (gap -15 pts, p 0.611) → FAIL; T-L5a β after a sell-off +0.021 (n 38) vs other weeks +0.107, difference t -0.52. #76 wrong (no_break did not hold); #80 right.
+T-L result (27 Oct): 1144 weeks 2004-11-24 → 2026-10-21: pooled β +0.080 (t +1.96); T-L1 73% of windows share the majority sign (+) → UNSTABLE; T-L2 sup-F 8.41 at 2008-09-24, p 0.002 → BREAK (β +0.615 → +0.031; the link was stronger before the break, when net liquidity barely moved week to week — sd 1.27% → 1.92% after — the opposite of 'absent before, present now'); T-L3 last two years β +0.194 vs the earlier range -0.235..+0.355 → nothing new; T-L4 stress weeks β -0.053 (t -0.64, n 117) vs abundant +0.200 (t +3.66, n 1014); T-L5a β after a sell-off +0.021 (n 38 weeks) vs other weeks +0.107, difference t -0.52; T-L5b (−8%, 20 sessions, events within GLD's history): 20 events, 45% negative vs base 45% (gap +0 pts, p 0.572) → INCONCLUSIVE (n < 30); at −5%: 43 events, 33% vs 45% (gap -12, p 0.972) → FAIL. #76 wrong (no_break did not hold); #80 wrong (-5% within 10 points of base did not hold).
 
-T-K1′ result (27 Oct): T-K1′: interaction F 2.10, permutation p 0.118 → FAIL — no chair difference once the surprise is in volatility units; β per σ of the yield — Bernanke -0.80, Yellen -0.35, Powell -0.45% (per bp they were -0.332, -0.144, -0.096). T-K2 with the pooled-σ se: Warsh weight on own data 65% (was 92%), posterior -0.1324% ± 0.0643 per bp. #81 right.
+T-K1′ result (27 Oct): T-K1′: interaction F 2.10, permutation p 0.118 → FAIL — no chair difference once the surprise is in volatility units; β per σ of the yield — Bernanke -0.80, Yellen -0.35, Powell -0.45% (per bp they were -0.332, -0.144, -0.096). T-K2 per bp with the pooled-σ se: Warsh weight on own data 65% (was 92%), posterior -0.1324% ± 0.0643 per bp. T-K2σ in volatility units, the scale on which chairs are exchangeable: weight on own data 15%, posterior -0.491% ± 0.166 per σ (≈ -0.0931% per bp at today's 5.3 bp/day) — the page quotes this one. #81 right.
 
-T-L result (27 Oct): 1144 weeks 2004-11-24 → 2026-10-21: pooled β +0.080 (t +1.96); T-L1 73% windows share the majority sign (+) → UNSTABLE; T-L2 sup-F 8.41 at 2008-09-24, p 0.002 → BREAK (β +0.615 → +0.031); T-L3 last two years β +0.194 vs range -0.235..+0.355 → nothing new; T-L5b (-8%, 20 sessions): 30 events, 30% negative vs base 45% (gap -15 pts, p 0.611) → FAIL; T-L5a β after a sell-off +0.021 (n 38) vs other weeks +0.107, difference t -0.52. #76 wrong (no_break did not hold); #80 right.
-
-T-K1′ result (27 Oct): T-K1′: interaction F 2.10, permutation p 0.118 → FAIL — no chair difference once the surprise is in volatility units; β per σ of the yield — Bernanke -0.80, Yellen -0.35, Powell -0.45% (per bp they were -0.332, -0.144, -0.096). T-K2 with the pooled-σ se: Warsh weight on own data 65% (was 92%), posterior -0.1324% ± 0.0643 per bp. #81 right.
