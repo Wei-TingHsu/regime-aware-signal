@@ -16,6 +16,13 @@ transitions, prior #82).
 
 The read never writes under data_provenance/doc_reads/ -- that folder is the v1 corpus and its hash. Rubric reads live in
 data_provenance/doc_reads_style/ and are never pooled with v1 reads.
+
+v2 (28 Oct, after the first run): 4 of 132 replies failed to parse (an unescaped quote inside an evidence clause, or prose
+around the object) and the test ran on Warsh's 2 readable statements with the comparison sets shifted to the next statement
+read. Now: lenient JSON (strict=False, inner-quote repair, one corrective retry); a reply that still fails is written to
+<stem>.failed.txt beside the cache so the cause is on disk; acceptance/test REFUSE to run unless every statement in the
+registered sets (last 8 / first 8 / all of the current chair, from the folder listing) has a read; prior #79 is written as
+'not yet judged' below n = 4; the dissent cross-check reads wrapped text.
 """
 from __future__ import annotations
 
@@ -27,7 +34,6 @@ import sys
 import time
 from datetime import datetime
 from itertools import combinations
-from math import comb
 from pathlib import Path
 
 import numpy as np
@@ -83,15 +89,21 @@ def cache_path(stem: str) -> Path:
 
 
 def dissents_from_text(t: str) -> int | None:
-    """Two formats: 'Voting against the action were A; and B.' (to 2026) and 'by a 9 - 3 vote' (the 2026 preamble)."""
-    m = re.search(r"by a\s+(\d+)\s*[–\-]\s*(\d+)\s+vote", t)
+    """Cross-check only (the rubric value comes from the model). Two formats: 'Voting against the action were A, who ...; and B,
+    who ...' (to 2026) and 'by a 9 - 3 vote' (the 2026 preamble). Line breaks inside the sentence are collapsed first."""
+    t1 = re.sub(r"\s+", " ", t)
+    m = re.search(r"by a (\d+) ?[–\-] ?(\d+) vote", t1)
     if m:
         return int(m.group(2))
-    m = re.search(r"Voting against (?:this|the) action (?:was|were)\s+([^.]*)\.", t)
+    m = re.search(r"Voting against (?:this|the) action (?:was|were):? (.*)", t1)
     if not m:
-        return 0 if re.search(r"Voting for (?:this|the) (?:FOMC )?(?:monetary policy )?action", t) else None
-    names = re.split(r";\s*|,\s*and\s+|\s+and\s+", m.group(1))
-    return max(1, len([x for x in names if re.search(r"[A-Z][a-z]+", x)]))
+        return 0 if re.search(r"Voting for (?:this|the) (?:FOMC )?(?:monetary policy )?action", t1) else None
+    region = re.split(r"(?<![A-Z])\.\s+(?=[A-Z])|Voting for", m.group(1), maxsplit=1)[0]
+    n = 0
+    for part in re.split(r";\s*(?:and\s+)?", region):
+        head = re.split(r",?\s+who\b", part, maxsplit=1)[0]
+        n += len([x for x in re.split(r",\s*(?:and\s+)?|\s+and\s+", head) if re.search(r"[A-Z][a-z]+", x)])
+    return max(1, n)
 
 
 def is_fatal(exc) -> bool:
@@ -130,18 +142,52 @@ def cost() -> dict:
 
 
 # ----------------------------------------------------------------------------------------------- the read
-def call(client, model, text, prev):
-    body = f"PREVIOUS STATEMENT:\n{prev}\n\nSTATEMENT:\n{text}" if prev else f"STATEMENT:\n{text}"
-    r = client.messages.create(model=model, max_tokens=900, system=SYSTEM, messages=[{"role": "user", "content": body}])
-    t = "".join(b.text for b in r.content if b.type == "text").strip()
-    t = re.sub(r"^```(?:json)?|```$", "", t, flags=re.M).strip()
+def parse_reply(t: str) -> dict:
+    """Strict JSON first; then control characters allowed; then unescaped quotes inside the evidence clauses turned into
+    apostrophes. Raises JSONDecodeError when none of that gives an object."""
+    t = re.sub(r"^```(?:json)?|```$", "", t.strip(), flags=re.M).strip()
+    i, j = t.find("{"), t.rfind("}")
+    if i != -1 and j > i:
+        t = t[i:j + 1]
     try:
-        return json.loads(t), r.usage.input_tokens, r.usage.output_tokens
+        return json.loads(t)
     except json.JSONDecodeError:
-        i, j = t.find("{"), t.rfind("}")
-        if i != -1 and j > i:
-            return json.loads(t[i:j + 1]), r.usage.input_tokens, r.usage.output_tokens
-        raise
+        pass
+    try:
+        return json.loads(t, strict=False)
+    except json.JSONDecodeError:
+        pass
+    def fix(m):
+        return '"%s": "%s"' % (m.group(1), m.group(2).replace('\\"', '"').replace('"', "'").replace("\n", " "))
+    t2 = re.sub(r'"(hedging|balance_sheet|novelty)":\s*"(.*?)"(?=\s*[,}])', fix, t, flags=re.S)
+    return json.loads(t2, strict=False)
+
+
+FIX_MSG = ("Your previous reply was not valid JSON. Reply again with the JSON object only: no text before or after it, every string on one "
+           "line, and inside the three evidence strings use single quotes (') instead of double quotes.")
+
+
+def call(client, model, text, prev, stem=""):
+    body = f"PREVIOUS STATEMENT:\n{prev}\n\nSTATEMENT:\n{text}" if prev else f"STATEMENT:\n{text}"
+    msgs = [{"role": "user", "content": body}]
+    r = client.messages.create(model=model, max_tokens=900, system=SYSTEM, messages=msgs)
+    t = "".join(b.text for b in r.content if b.type == "text")
+    tin, tout = r.usage.input_tokens, r.usage.output_tokens
+    try:
+        return parse_reply(t), tin, tout
+    except json.JSONDecodeError as e1:
+        msgs += [{"role": "assistant", "content": t or "(empty)"}, {"role": "user", "content": FIX_MSG}]
+        r2 = client.messages.create(model=model, max_tokens=900, system=SYSTEM, messages=msgs)
+        t2 = "".join(b.text for b in r2.content if b.type == "text")
+        tin += r2.usage.input_tokens; tout += r2.usage.output_tokens
+        try:
+            d = parse_reply(t2); d["_corrective_retry"] = True
+            return d, tin, tout
+        except json.JSONDecodeError as e2:
+            READS.mkdir(parents=True, exist_ok=True)
+            (READS / f"fomc_statement__{stem}__{PROMPT_VERSION}.failed.txt").write_text(
+                f"first reply ({e1}):\n{t}\n\n---- corrective retry ({e2}):\n{t2}\n")
+            raise
 
 
 def read(limit: int | None, model: str, sleep: float):
@@ -163,7 +209,7 @@ def read(limit: int | None, model: str, sleep: float):
         data = None
         for attempt in range(2):
             try:
-                data, a, b = call(client, model, texts[i], prev)
+                data, a, b = call(client, model, texts[i], prev, p.stem)
                 tin += a; tout += b
                 break
             except Exception as e:
@@ -245,13 +291,31 @@ def compare(df: pd.DataFrame, Z: np.ndarray, cur_idx: list[int], prev_idx: list[
                 cur_dates=[str(d.date()) for d in df.loc[cur_idx, "date"]], prev_dates=[str(d.date()) for d in df.loc[prev_idx, "date"]])
 
 
+def registered_sets() -> dict:
+    """The sets the registration names, from the FOLDER LISTING (every statement on disk), not from what happens to be read."""
+    disk = pd.DataFrame([(p.stem, d, chair_of(d)) for p, d in statements()], columns=["stem", "date", "chair"]).sort_values("date")
+    out = {}
+    for name in [c[0] for c in CHAIRS]:
+        g = disk[disk.chair == name]
+        if len(g):
+            out[name] = dict(all=list(g.stem), first8=list(g.stem[:LAST_K]), last8=list(g.stem[-LAST_K:]))
+    return out
+
+
+def _require_read(df: pd.DataFrame, stems: list[str], label: str) -> list[int]:
+    have = {d.strftime("%Y%m%d"): i for i, d in zip(df.index, df["date"])}
+    missing = [s for s in stems if s not in have]
+    if missing:
+        raise SystemExit(f"{label}: {len(missing)} statement(s) in the registered set have no rubric read: {', '.join(missing)} -- run "
+                         f"`python -m src.chair_style read` first (a read that failed to parse leaves <stem>.failed.txt in doc_reads_style/)")
+    return [have[s] for s in stems]
+
+
 def acceptance() -> dict:
-    df = frame(); Z = zscore(df)
+    df = frame(); Z = zscore(df); R = registered_sets()
     out = {}
     for a, b in (("Bernanke", "Yellen"), ("Yellen", "Powell")):
-        ia = list(df.index[df.chair == a][-LAST_K:]); ib = list(df.index[df.chair == b][:LAST_K])
-        if len(ia) < LAST_K or len(ib) < LAST_K:
-            print(f"{a}->{b}: too few statements read ({len(ia)}, {len(ib)})"); continue
+        ia = _require_read(df, R[a]["last8"], f"{a}'s last {LAST_K}"); ib = _require_read(df, R[b]["first8"], f"{b}'s first {LAST_K}")
         out[f"{a}->{b}"] = compare(df, Z, ib, ia, f"{a}->{b}: {b}'s first {LAST_K} vs {a}'s last {LAST_K}")
     sep = {k: v["p"] < 0.05 for k, v in out.items()}
     power = any(sep.values())
@@ -264,14 +328,14 @@ def acceptance() -> dict:
 
 
 def test() -> dict:
-    df = frame(); Z = zscore(df)
-    names = [c[0] for c in CHAIRS if (df.chair == c[0]).any()]
+    df = frame(); Z = zscore(df); R = registered_sets()
+    names = [c[0] for c in CHAIRS if c[0] in R]
     cur, prev = names[-1], names[-2]
-    ic = list(df.index[df.chair == cur]); ip = list(df.index[df.chair == prev][-LAST_K:])
+    ic = _require_read(df, R[cur]["all"], f"{cur}'s statements"); ip = _require_read(df, R[prev]["last8"], f"{prev}'s last {LAST_K}")
     res = compare(df, Z, ic, ip, f"{cur} ({len(ic)} statements) vs {prev}'s last {LAST_K}")
     means = df.groupby("chair")[DIMS + ["words"]].mean().round(3)
     J = _load(); J.update(test=res, chair=cur, previous=prev, n=len(ic), chair_means=json.loads(means.to_json(orient="index")),
-                          run=datetime.now().strftime("%Y-%m-%d %H:%M"), n_read=int(len(df)))
+                          run=datetime.now().strftime("%Y-%m-%d %H:%M"), n_read=int(len(df)), n_on_disk=len(statements()))
     _save(J); _write_md(J); return J
 
 
@@ -286,7 +350,8 @@ def _save(J: dict):
 
 def _write_md(J: dict):
     L = [f"# T-K3 — chair style on the rubric (exact permutation) — run {J.get('run')}", "",
-         f"Rubric reads: {J.get('n_read')} statements under `{PROMPT_VERSION}`, own cache folder, never pooled with v1.", ""]
+         f"Rubric reads: {J.get('n_read')} of {J.get('n_on_disk', '?')} statements on disk under `{PROMPT_VERSION}`, own cache folder, never pooled with v1; "
+         f"the comparison sets are the registered ones (folder listing), every member read.", ""]
     if "acceptance" in J:
         L += ["## Acceptance check (registered 28 Oct 2026, prior #82)", "", "| transition | n | energy | exact p | arrangements | separates | dimensions by p |", "|---|---|---|---|---|---|---|"]
         for k, v in J["acceptance"].items():
@@ -350,7 +415,7 @@ def record():
            f"strongest dimension {top} (p {t['per_dim'][top]['p']:.3f}; balance_sheet ranked {t['dim_rank'].index('balance_sheet') + 1} of {len(DIMS)}). "
            f"Acceptance on past transitions: {acc_txt} → {J.get('acceptance_verdict', 'not run')}")
     n4 = t["n_cur"] >= 4
-    p79 = ("**#79 " + ("wrong" if sep else "right") + "**" + ("" if n4 else " (judged at n = " + str(t["n_cur"]) + "; re-judged at n = 4)"))
+    p79 = ("**#79 " + ("wrong" if sep else "right") + "**") if n4 else f"#79 not yet judged (n = {t['n_cur']} read; judged at n = 4 as registered)"
     p82 = "**#82 right**" if J.get("right82") else ("**#82 wrong**" if acc else "#82 not yet judged")
     pri = f"{p79}; {p82}"
     p = DOCSDIR / "prereg_liquidity_and_chair.md"; s = p.read_text()
@@ -368,7 +433,7 @@ def record():
             else:
                 lines[i] = re.sub(r"T-K3 \(.*?\)\. \|$", lambda _: txt + " |", ln, count=1) if re.search(r"T-K3 \(.*?\)\. \|$", ln) else ln
     s2 = "\n".join(lines)
-    wrong = (sep and "#79" in pri and "wrong" in p79) or ("#82 wrong" in p82)
+    wrong = (n4 and sep) or ("#82 wrong" in p82)
     if wrong:
         for note in (["#79 chair style separates at n = " + str(t["n_cur"])] if (sep and n4) else []) + (["#82 past transitions"] if "#82 wrong" in p82 else []):
             s2 = _bump_tally(s2, note)

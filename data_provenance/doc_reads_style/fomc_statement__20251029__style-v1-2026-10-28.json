@@ -1,0 +1,25 @@
+{
+  "hawk_dove": -0.1,
+  "guidance_strength": 0.15,
+  "balance_sheet": 0.3,
+  "balance_sheet_stance": -0.2,
+  "inflation_vs_labour": -0.3,
+  "hedging_density": 0.4,
+  "dissents": 2,
+  "novelty_vs_prev": 0.35,
+  "evidence": {
+    "hedging": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge",
+    "balance_sheet": "The Committee decided to conclude the reduction of its aggregate securities holdings on December 1.",
+    "novelty": "The Committee decided to conclude the reduction of its aggregate securities holdings on December 1."
+  },
+  "_corrective_retry": true,
+  "source": "fomc_statement",
+  "date": "2025-10-29",
+  "prompt_version": "style-v1-2026-10-28",
+  "model": "claude-sonnet-5",
+  "words": 373,
+  "prev_words": 342,
+  "dissents_text": 1,
+  "chair": "Powell",
+  "read_at": "2026-10-28 15:44"
+}
