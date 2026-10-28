@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "extend this policy until such time that the economy has stabilized",
+    "waiver of all interest on student loans held by the Department of Education until December 31, 2020",
+    "it is therefore appropriate to extend this policy"
+  ],
+  "extra": {
+    "actor": "President (Secretary of Education directed)",
+    "is_decided": true,
+    "sectors": [
+      "consumer finance",
+      "education"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-08-13",
+  "doc_id": "memo202017897",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 727,
+  "max_words": 20000
+}

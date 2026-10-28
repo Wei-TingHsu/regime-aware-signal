@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "there is a sufficient supply of petroleum and petroleum products from countries other than Iran",
+    "consistent with my determinations of March 30, 2012, June 11, 2012, and December 7, 2012",
+    "permit a significant reduction in the volume of petroleum and petroleum products purchased from Iran"
+  ],
+  "extra": {
+    "actor": "President (NDAA Section 1245 determination)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "sanctions",
+      "Iran oil exports"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-06-12",
+  "doc_id": "dete201314131",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 308,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "I hereby proclaim May 22, 2024, as National Maritime Day",
+    "enforcing the Jones Act",
+    "My Budget proposes $191 million for the United States Merchant Marine Academy"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "maritime",
+      "shipping"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-05-24",
+  "doc_id": "proc202411641",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 634,
+  "max_words": 20000
+}

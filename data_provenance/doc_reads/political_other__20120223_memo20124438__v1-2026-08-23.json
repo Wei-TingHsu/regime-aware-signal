@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.25,
+  "novelty": 0.15,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby direct the following",
+    "present to the Director of OMB... a proposed unified Federal trade budget",
+    "Pending passage of legislation providing Consolidation Authority"
+  ],
+  "extra": {
+    "actor": "President (White House/OMB, Export Promotion Cabinet)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "exports",
+      "small business",
+      "foreign investment"
+    ]
+  },
+  "source": "political_other",
+  "date": "2012-02-23",
+  "doc_id": "memo20124438",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1250,
+  "max_words": 20000
+}

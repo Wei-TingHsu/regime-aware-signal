@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.2,
+  "novelty": 0.1,
+  "confidence": 0.3,
+  "evidence": [
+    "Also from a financial point of view 2014 was a good year for ASML with net sales of EUR 5,856.3 million and net income of EUR 1,418.3 million.",
+    "ASML returned EUR 968.0 million to its shareholders through combined dividend and share buybacks.",
+    "The semiconductor industry has historically been cyclical."
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2015-02-11",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 126041,
+  "max_words": 20000
+}

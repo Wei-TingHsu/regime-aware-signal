@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.25
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "there is a sufficient supply of petroleum and petroleum products from countries other than Iran",
+    "permit a significant reduction in the volume of petroleum and petroleum products purchased from Iran",
+    "I will closely monitor this situation to assure that the market can continue to accommodate a reduction"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "sanctions",
+      "Iran"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-04-10",
+  "doc_id": "dete20128671",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 307,
+  "max_words": 20000
+}

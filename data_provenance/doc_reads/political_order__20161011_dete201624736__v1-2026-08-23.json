@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "The admission of up to 110,000 refugees to the United States during Fiscal Year (FY) 2017",
+    "Africa......................... 35,000",
+    "Near East and South Asia....... 40,000"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "refugee resettlement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-10-11",
+  "doc_id": "dete201624736",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 558,
+  "max_words": 20000
+}

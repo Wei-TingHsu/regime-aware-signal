@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.3,
+  "evidence": [
+    "Seven research groups have cut forecasts, to 6% growth on average",
+    "Credit crunch hits Capex plans Consumer demand slow-down impacts NAND and foundry",
+    "Klaus Fuchs, Executive Vice President Operations, has confirmed... he has decided to resign"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": -0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-11-10",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 130816,
+  "max_words": 20000
+}

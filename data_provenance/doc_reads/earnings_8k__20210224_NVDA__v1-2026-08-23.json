@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.3,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue is expected to be $5.30 billion, plus or minus 2 percent.",
+    "Record quarterly and full-year revenue for company, Gaming and Data Center",
+    "Our A100 universal AI data center GPUs are ramping strongly across cloud-service providers"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2021-02-24",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 20973,
+  "max_words": 20000
+}

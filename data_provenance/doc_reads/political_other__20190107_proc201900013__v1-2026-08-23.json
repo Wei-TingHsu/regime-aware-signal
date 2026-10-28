@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I have decided to terminate the designation of Mauritania as a beneficiary sub-Saharan African country",
+    "modify certain USMFTA rules of origin and to apply the modified rules to their bilateral trade",
+    "the HTS is modified as provided in Annex I of this proclamation"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "trade/tariffs",
+      "agriculture",
+      "textiles",
+      "automotive"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-01-07",
+  "doc_id": "proc201900013",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3802,
+  "max_words": 20000
+}

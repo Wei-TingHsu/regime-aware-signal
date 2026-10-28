@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate to the President of the Overseas Private Investment Corporation",
+    "to submit a reorganization plan, including any modifications or revisions thereto"
+  ],
+  "extra": {
+    "actor": "President (OPIC delegation)",
+    "is_decided": true,
+    "sectors": [
+      "development finance",
+      "government administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-10-01",
+  "doc_id": "memo201921504",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 323,
+  "max_words": 20000
+}

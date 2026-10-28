@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.15,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 20,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.75,
+  "evidence": [
+    "certain products of Canada... are excluded from importation into the United States",
+    "effective with respect to goods imported on or after 12:01 a.m. eastern time on September 29, 2026",
+    "Canada has... maintained the discriminations against the commerce of the United States"
+  ],
+  "extra": {
+    "actor": "President (Trump), via Section 338 Tariff Act/CBP",
+    "is_decided": true,
+    "sectors": [
+      "autos",
+      "auto parts",
+      "US-Canada trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-09-14",
+  "doc_id": "proc202618837",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1739,
+  "max_words": 20000
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim October 2020 as National Energy Awareness Month",
+    "the United States is finally energy independent",
+    "we will sustain our energy dominance and independence for years to come"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "energy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-10-06",
+  "doc_id": "proc202022195",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 758,
+  "max_words": 20000
+}

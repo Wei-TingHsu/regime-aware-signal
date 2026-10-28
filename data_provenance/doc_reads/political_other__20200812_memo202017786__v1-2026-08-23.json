@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.15,
+  "confidence": 0.75,
+  "evidence": [
+    "shall provide the State of California with 100 percent Federal cost share",
+    "extend to, and shall be available for orders of any length authorizing duty through September 30, 2020"
+  ],
+  "extra": {
+    "actor": "President (DoD/DHS/FEMA)",
+    "is_decided": true,
+    "sectors": [
+      "California emergency response",
+      "National Guard funding"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-08-12",
+  "doc_id": "memo202017786",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 756,
+  "max_words": 20000
+}

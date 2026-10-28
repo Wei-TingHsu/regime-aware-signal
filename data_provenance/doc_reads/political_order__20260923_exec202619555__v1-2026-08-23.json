@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.25,
+  "confidence": 0.5,
+  "evidence": [
+    "the Secretary of Labor... shall begin reviewing data related to previously submitted labor condition applications",
+    "shall take into account... whether the employer sponsor directly or indirectly engaged in layoffs",
+    "ensure the compliance of such petitions, applications, and visas with statutory requirements"
+  ],
+  "extra": {
+    "actor": "President (DHS, DOL, DOS, Commerce, Education, SBA)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "outsourcing/IT services",
+      "staffing firms",
+      "H-1B-dependent employers"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-09-23",
+  "doc_id": "exec202619555",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1255,
+  "max_words": 20000
+}

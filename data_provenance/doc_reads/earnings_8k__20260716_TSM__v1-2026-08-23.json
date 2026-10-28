@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "Revenue is expected to be between US$44.6 billion and US$45.8 billion",
+    "we expect our business to be supported by continued strong demand for our leading-edge process technologies, including the steep ramp-up of our 2-nanometer technology",
+    "2026 revenue to increase by slightly above 40% in US dollar terms"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.4,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2026-07-16",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 59589,
+  "max_words": 20000
+}

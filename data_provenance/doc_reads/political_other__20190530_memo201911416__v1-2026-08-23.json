@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate to the Secretary of the Treasury",
+    "the function vested in the President by section 102(d)",
+    "exercised in coordination with departments and agencies"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of Treasury/State)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions administration",
+      "national security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-05-30",
+  "doc_id": "memo201911416",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 273,
+  "max_words": 20000
+}

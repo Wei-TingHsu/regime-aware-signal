@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.2,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Ending the conservatorships of the GSEs upon the completion of specified reforms",
+    "develop a plan for administrative and legislative reforms",
+    "shall be submitted to the President for approval"
+  ],
+  "extra": {
+    "actor": "President (Treasury, HUD, FHFA directed)",
+    "is_decided": false,
+    "sectors": [
+      "housing finance",
+      "GSEs",
+      "mortgage",
+      "financial regulation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-04-01",
+  "doc_id": "memo201906441",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1581,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.35,
+  "horizon_days": 90,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "development, manufacturing, and deployment of large-scale energy and energy-related infrastructure... are industrial resources, materials, and critical technology items essential to the national defense",
+    "I waive the requirements of section 303(a)(1)-(a)(6) of the Act for the purpose of expanding such capability",
+    "making necessary purchases, commitments, and financial instruments to enable these projects"
+  ],
+  "extra": {
+    "actor": "President (DOE implementation)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "energy infrastructure manufacturing",
+      "industrial base"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-04-23",
+  "doc_id": "dete202608011",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 555,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby direct the following:",
+    "agencies shall make available to the general public information on the state of diversity",
+    "No later than 120 days after the date of this memorandum...shall report to the President"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum to agencies)",
+    "is_decided": true,
+    "sectors": [
+      "federal workforce policy",
+      "national security agencies"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-10-07",
+  "doc_id": "memo201624582",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2723,
+  "max_words": 20000
+}

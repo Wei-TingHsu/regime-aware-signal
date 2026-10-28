@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": -0.15
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.55,
+  "evidence": [
+    "there is a sufficient supply of petroleum and petroleum products from countries other than Iran",
+    "consistent with my prior determinations",
+    "I will continue to monitor this situation closely."
+  ],
+  "extra": {
+    "actor": "President (via Secretary of State, Treasury, Energy)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "sanctions",
+      "Iran oil exports"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-12-02",
+  "doc_id": "dete201428481",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 328,
+  "max_words": 20000
+}

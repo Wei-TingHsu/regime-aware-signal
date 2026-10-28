@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Q1 net sales came in at \u20ac3.5 billion which is at the high end of our guidance",
+    "For the full year, we continue to expect a revenue growth of around 20%",
+    "we expect to revisit our scenarios for 2025 and growth opportunities beyond"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2022-04-20",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 89212,
+  "max_words": 20000
+}

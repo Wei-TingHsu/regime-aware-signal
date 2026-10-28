@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.2,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "recommend appropriate measures, such as a global supplemental tariff or other policies, to remedy such deficits",
+    "up to and including the imposition of tariffs or other measures as needed",
+    "shall be delivered to me in a unified report coordinated by the Secretary of Commerce by April 1, 2025"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum)",
+    "is_decided": false,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "manufacturing",
+      "technology export controls",
+      "currency policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-30",
+  "doc_id": "memo202502032",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2221,
+  "max_words": 20000
+}

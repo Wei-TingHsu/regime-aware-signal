@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.0,
+  "confidence": 0.95,
+  "evidence": [
+    "I, JOSEPH R. BIDEN JR., President of the United States of America, do hereby proclaim November 9, 2022, as World Freedom Day",
+    "Russia's unjust war against Ukraine...is the latest battle in a long struggle between liberty and repression",
+    "We will continue marshaling security, humanitarian, and economic support to Ukraine"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2022-11-14",
+  "doc_id": "proc202224844",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 670,
+  "max_words": 20000
+}

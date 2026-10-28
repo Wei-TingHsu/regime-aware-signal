@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.5,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate to you, in coordination with the Secretary of Defense, the function and authority",
+    "to make the specified report to the Committees on Armed Services, Foreign Relations, and Appropriations"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "government administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-12-08",
+  "doc_id": "memo201131740",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 304,
+  "max_words": 20000
+}

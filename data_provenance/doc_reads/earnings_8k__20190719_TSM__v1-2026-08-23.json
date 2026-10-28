@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.3,
+  "confidence": 0.45,
+  "evidence": [
+    "Revenue to be between US$ 9.1 billion and US$ 9.2 billion",
+    "Gross profit margin to be between 46% and 48%",
+    "2Q19 Revenue (US$ billions) 7.75 ... 7.55-7.65"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.3,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2019-07-19",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 43449,
+  "max_words": 20000
+}

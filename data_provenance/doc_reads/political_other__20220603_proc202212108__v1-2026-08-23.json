@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "establish a tariff-rate quota on imports of steel articles that are melted and poured in the UK",
+    "totaling 500,000 metric tons, is consistent with the objective",
+    "I have determined that it is necessary and appropriate, at this time, to maintain the current tariff level as it applies to other countries"
+  ],
+  "extra": {
+    "actor": "President (Biden) / Commerce Dept via Section 232",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "UK trade",
+      "metals tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-06-03",
+  "doc_id": "proc202212108",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3329,
+  "max_words": 20000
+}

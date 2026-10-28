@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.15
+  },
+  "magnitude": 0.4,
+  "horizon_days": 500,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "I therefore direct you to issue a new proposal by no later than September 20, 2013.",
+    "issue proposed carbon pollution standards...for modified, reconstructed, and existing power plants by no later than June 1, 2014",
+    "States submit to EPA the implementation plans required under section 111(d)...by no later than June 30, 2016"
+  ],
+  "extra": {
+    "actor": "President/EPA",
+    "is_decided": true,
+    "sectors": [
+      "utilities",
+      "coal",
+      "energy",
+      "power generation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-07-01",
+  "doc_id": "memo201315941",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1128,
+  "max_words": 20000
+}

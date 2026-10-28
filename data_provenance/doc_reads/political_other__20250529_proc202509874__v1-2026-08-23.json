@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I have enacted reciprocal tariffs to stop the hollowing out of American manufacturing",
+    "do hereby proclaim May 18 through May 24, 2025, as World Trade Week",
+    "new trade deals like the recent United States-United Kingdom trade agreement"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": false,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2025-05-29",
+  "doc_id": "proc202509874",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 555,
+  "max_words": 20000
+}

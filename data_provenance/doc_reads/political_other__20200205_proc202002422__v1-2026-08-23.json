@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.8,
+  "evidence": [
+    "I have decided to leave unaltered the existing entry restrictions imposed by Proclamation 9645",
+    "suspend entry into the United States for nationals of six new countries",
+    "This proclamation is effective at 12:01 a.m. eastern standard time on February 21, 2020"
+  ],
+  "extra": {
+    "actor": "President (via DHS/State recommendation)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "travel/visa",
+      "national security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-02-05",
+  "doc_id": "proc202002422",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 5049,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "ASML expects sales growth in 2019 despite challenging environment",
+    "Due to a fire at a supplier, the expected impact on Q1 2019 sales is around EUR 300 million",
+    "proposes to raise dividend by 50%"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2019-01-23",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 109958,
+  "max_words": 20000
+}

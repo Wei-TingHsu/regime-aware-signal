@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Revenue is expected to be between US$18.0 billion and US$18.8 billion",
+    "Gross profit margin is expected to be between 52% and 54%",
+    "management further expects the 2024 capital budget to be between US$28 billion and US$32 billion"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.2,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2024-01-18",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 63575,
+  "max_words": 20000
+}

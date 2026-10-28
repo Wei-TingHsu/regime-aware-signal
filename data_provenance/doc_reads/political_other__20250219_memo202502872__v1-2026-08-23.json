@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.2,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.2,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "I will introduce the \"Fair and Reciprocal Plan\"",
+    "determining the equivalent of a reciprocal tariff with respect to each foreign trading partner",
+    "shall initiate...all necessary actions to investigate the harm to the United States"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": false,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-02-19",
+  "doc_id": "memo202502872",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1097,
+  "max_words": 20000
+}

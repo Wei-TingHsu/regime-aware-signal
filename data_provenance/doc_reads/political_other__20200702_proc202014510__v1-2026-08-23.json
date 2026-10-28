@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby amend Proclamation 10052 of June 22, 2020",
+    "does not have a nonimmigrant visa...that is valid on the effective date"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "labor market",
+      "visa-dependent employers"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-07-02",
+  "doc_id": "proc202014510",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 382,
+  "max_words": 20000
+}

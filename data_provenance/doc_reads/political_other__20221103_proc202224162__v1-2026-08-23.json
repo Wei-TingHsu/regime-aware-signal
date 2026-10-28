@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.02,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim the month of November 2022 as National Diabetes Month",
+    "caps the cost of a month's supply of insulin at $35 per prescription",
+    "I call upon all Americans...to join in activities that raise diabetes awareness"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare/commemorative"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-11-03",
+  "doc_id": "proc202224162",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 865,
+  "max_words": 20000
+}

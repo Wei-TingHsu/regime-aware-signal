@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby approve the proposed Agreement and authorize the Secretary of State to arrange for its execution.",
+    "performance of the proposed Agreement will promote, and will not constitute an unreasonable risk"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "nuclear energy",
+      "defense/security cooperation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-05-08",
+  "doc_id": "dete201809885",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 309,
+  "max_words": 20000
+}

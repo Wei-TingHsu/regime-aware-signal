@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "record vehicle deliveries globally, showing strength and growth across all regions",
+    "Operating income decreased 40% YoY to $1.6B",
+    "Cybercab, Tesla Semi and Megapack 3 are on schedule for volume production starting in 2026"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2025-10-22",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 163622,
+  "max_words": 20000
+}

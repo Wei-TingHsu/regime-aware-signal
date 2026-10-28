@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "defer for 18 months the removal of any national of Venezuela",
+    "authorize employment for aliens whose removal has been deferred"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "immigration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-01-25",
+  "doc_id": "memo202101718",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 557,
+  "max_words": 20000
+}

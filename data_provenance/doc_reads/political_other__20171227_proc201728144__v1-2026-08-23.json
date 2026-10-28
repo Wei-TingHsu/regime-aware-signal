@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.03,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "The Gambia and the Kingdom of Swaziland are designated as beneficiary sub-Saharan African countries.",
+    "I have determined that it is appropriate to suspend the duty-free treatment accorded under the GSP... Ukraine",
+    "the suspension pursuant to Proclamation 8788 of Argentina's designation as a GSP beneficiary developing country should end"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "trade/tariffs",
+      "agriculture",
+      "GSP beneficiary countries"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-12-27",
+  "doc_id": "proc201728144",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3442,
+  "max_words": 20000
+}

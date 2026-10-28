@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.0,
+  "confidence": 0.97,
+  "evidence": [
+    "I hereby proclaim May 22, 2021, as National Maritime Day.",
+    "my Administration strongly supports protecting the Jones Act",
+    "Called the \"fourth arm of defense\" by President Franklin D. Roosevelt"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "maritime",
+      "shipping"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-05-28",
+  "doc_id": "proc202111458",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 730,
+  "max_words": 20000
+}

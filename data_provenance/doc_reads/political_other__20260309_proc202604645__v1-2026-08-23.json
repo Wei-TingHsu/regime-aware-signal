@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.25,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "seven leading technology companies have accepted the terms of the Ratepayer Protection Pledge",
+    "must pay for the full cost of the energy and infrastructure needed to build and operate data centers",
+    "will voluntarily negotiate new, separate rate structures with their utilities"
+  ],
+  "extra": {
+    "actor": "President (Executive Proclamation)",
+    "is_decided": false,
+    "sectors": [
+      "utilities",
+      "technology",
+      "data centers",
+      "AI",
+      "power generation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-03-09",
+  "doc_id": "proc202604645",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 574,
+  "max_words": 20000
+}

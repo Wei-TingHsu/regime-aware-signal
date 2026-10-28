@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.4,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "Guidance for lower revenue 2008 (may see - 20% versus 2007) unchanged",
+    "Global macro-economic uncertainty drives minimum CAPEX build",
+    "Weakness in capacity order bookings from all customers, all sectors, all regions"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": -0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-10-03",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 43100,
+  "max_words": 20000
+}

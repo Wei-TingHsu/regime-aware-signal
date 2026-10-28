@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.45,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.65,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.55,
+  "confidence": 0.7,
+  "evidence": [
+    "We will revisit our 2025 guidance in our Q2 update.",
+    "Our operating income decreased 66% YoY to $0.4B, resulting in a 2.1% operating margin.",
+    "Total revenue decreased 9% YoY to $19.3B."
+  ],
+  "extra": {
+    "surprise": -0.6,
+    "guidance_change": -0.7,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2025-04-22",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 186291,
+  "max_words": 20000
+}

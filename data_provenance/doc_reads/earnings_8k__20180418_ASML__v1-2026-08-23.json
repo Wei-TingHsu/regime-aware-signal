@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "Q1 net sales were somewhat stronger than expected and our gross margin was above our guidance",
+    "ASML expects Q2 2018 net sales between EUR 2.5 billion and EUR 2.6 billion",
+    "we reiterate our expectation for continued solid growth in 2018, both in sales and profitability"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2018-04-18",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 124308,
+  "max_words": 20000
+}

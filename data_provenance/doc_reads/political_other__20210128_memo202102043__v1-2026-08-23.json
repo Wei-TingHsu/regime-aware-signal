@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "FEMA shall fund 100 percent of the cost of activities associated with all mission assignments",
+    "FEMA shall make assistance under this section available at a 100 percent Federal cost share until September 30, 2021",
+    "extend to, and shall be available for, orders of any length authorizing duty through September 30, 2021"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "state and local government",
+      "defense/National Guard",
+      "emergency services"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-01-28",
+  "doc_id": "memo202102043",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 804,
+  "max_words": 20000
+}

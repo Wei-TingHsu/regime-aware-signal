@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "shall act as and perform the functions and duties of the Director of National Intelligence",
+    "The Presidential Memorandum of March 8, 2011... is hereby revoked"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": [
+      "intelligence/government administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-09-25",
+  "doc_id": "memo201323545",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 585,
+  "max_words": 20000
+}

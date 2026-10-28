@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "approximately $128 million in assistance to Ukraine",
+    "direct the drawdown of approximately $128 million in defense articles",
+    "delegate to the Secretary of State"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid",
+      "Ukraine"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-10-11",
+  "doc_id": "memo202322631",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 311,
+  "max_words": 20000
+}

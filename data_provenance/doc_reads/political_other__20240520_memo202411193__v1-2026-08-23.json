@@ -1,0 +1,40 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 20,
+  "specificity": 0.75,
+  "novelty": 0.3,
+  "confidence": 0.65,
+  "evidence": [
+    "Electric vehicles: Increase rate to 100 percent in 2024",
+    "Semiconductors: Increase rate to 50 percent in 2025",
+    "the Trade Representative shall modify the two actions to increase section 301 ad valorem rates of duty"
+  ],
+  "extra": {
+    "actor": "President/USTR",
+    "is_decided": true,
+    "sectors": [
+      "EVs",
+      "batteries",
+      "semiconductors",
+      "solar",
+      "steel/aluminum",
+      "critical minerals",
+      "medical equipment"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-05-20",
+  "doc_id": "memo202411193",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1073,
+  "max_words": 20000
+}

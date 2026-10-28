@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "The admission of up to 125,000 refugees to the United States during Fiscal Year (FY) 2024",
+    "total admissions among all of the regions may not exceed 125,000",
+    "after appropriate consultations with the Congress"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch, Dept. of State)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "refugee resettlement",
+      "humanitarian services"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-10-25",
+  "doc_id": "dete202323733",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 530,
+  "max_words": 20000
+}

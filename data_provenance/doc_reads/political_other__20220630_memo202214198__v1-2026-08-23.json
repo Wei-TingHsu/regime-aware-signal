@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.15,
+  "novelty": 0.1,
+  "confidence": 0.75,
+  "evidence": [
+    "it is hereby ordered as follows",
+    "shall submit a report to the President within 180 days",
+    "mobilize public and private resources to meet key infrastructure needs"
+  ],
+  "extra": {
+    "actor": "President (White House/NSC, State, Treasury, Commerce, DFC, EXIM, MCC)",
+    "is_decided": false,
+    "sectors": [
+      "infrastructure",
+      "clean energy",
+      "digital/telecom",
+      "healthcare",
+      "development finance"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-06-30",
+  "doc_id": "memo202214198",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2994,
+  "max_words": 20000
+}

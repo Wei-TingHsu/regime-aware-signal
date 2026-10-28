@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "I determine that it is necessary and appropriate to impose a 100 percent ad valorem duty rate",
+    "25 percent ad valorem duty rate on imports of UAS with a maximum take-off weight of 25 kilograms or less",
+    "This duty will take effect 180 days from the date of this proclamation"
+  ],
+  "extra": {
+    "actor": "President (Section 232 action, Commerce Dept implementation)",
+    "is_decided": true,
+    "sectors": [
+      "drones/UAS manufacturing",
+      "aerospace/defense components",
+      "electronics/batteries supply chain",
+      "import/trade logistics"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-08-19",
+  "doc_id": "proc202616979",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3924,
+  "max_words": 20000
+}

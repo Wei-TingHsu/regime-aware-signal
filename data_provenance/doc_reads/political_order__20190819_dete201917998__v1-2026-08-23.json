@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 20,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby designate the Federative Republic of Brazil as a major Non-NATO Ally",
+    "for the purposes of the Act and the Arms Export Control Act"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch, via Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "aerospace",
+      "foreign relations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-08-19",
+  "doc_id": "dete201917998",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 234,
+  "max_words": 20000
+}

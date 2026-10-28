@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "I proclaim that all Venezuelan citizens 14 years of age or older who are members of TdA",
+    "are liable to be apprehended, restrained, secured, and removed as Alien Enemies",
+    "subject to immediate apprehension, detention, and removal"
+  ],
+  "extra": {
+    "actor": "President (DHS/DOJ to execute)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "law enforcement",
+      "national security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-03-20",
+  "doc_id": "proc202504865",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1762,
+  "max_words": 20000
+}

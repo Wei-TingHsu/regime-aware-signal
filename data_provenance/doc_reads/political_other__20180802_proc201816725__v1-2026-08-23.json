@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.8,
+  "evidence": [
+    "I have decided to suspend the application of duty-free treatment for all AGOA-eligible goods in the apparel sector from Rwanda",
+    "modifications to the HTS are necessary to correct them",
+    "effective July 31, 2018"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "apparel",
+      "trade/tariffs",
+      "solar/photovoltaic"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-08-02",
+  "doc_id": "proc201816725",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1749,
+  "max_words": 20000
+}

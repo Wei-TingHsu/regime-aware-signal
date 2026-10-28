@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "the furnishing of defense articles and defense services to the Republic of South Sudan will strengthen the security of the United States"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "aerospace & defense"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-01-24",
+  "doc_id": "dete20121545",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 249,
+  "max_words": 20000
+}

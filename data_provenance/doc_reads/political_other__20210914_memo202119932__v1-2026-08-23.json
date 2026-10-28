@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "direct the drawdown of up to $25 million in commodities and services",
+    "direct the drawdown of up to $22 million in defense articles and services",
+    "to provide immediate assistance to the Lebanese Armed Forces"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-09-14",
+  "doc_id": "memo202119932",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 285,
+  "max_words": 20000
+}

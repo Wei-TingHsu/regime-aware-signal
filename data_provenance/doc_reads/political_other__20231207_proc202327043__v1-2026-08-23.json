@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "Death of Sandra Day O'Connor",
+    "the flag of the United States shall be flown at half-staff",
+    "As a mark of respect for the memory and longstanding service"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2023-12-07",
+  "doc_id": "proc202327043",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 469,
+  "max_words": 20000
+}

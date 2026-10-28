@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "establish transparent principles that govern the Federal Government's use of UAS",
+    "multi-stakeholder engagement process to develop and communicate best practices",
+    "Information collected using UAS that may contain PII shall not be retained for more than 180 days"
+  ],
+  "extra": {
+    "actor": "President/Executive Agencies",
+    "is_decided": true,
+    "sectors": [
+      "drones/UAS",
+      "aerospace/defense",
+      "technology",
+      "agriculture"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-02-20",
+  "doc_id": "memo201503727",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2034,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "Within 45 days of the date of this memorandum, the Secretary of Homeland Security...shall submit a report",
+    "directing the Secretary of Homeland Security to issue new policy guidance regarding the appropriate and consistent use of detention authority",
+    "Ending \"Catch and Release\" at the Border of the United States"
+  ],
+  "extra": {
+    "actor": "President (DHS, DOJ, DOD, HHS, State)",
+    "is_decided": false,
+    "sectors": [
+      "immigration",
+      "private_prisons",
+      "defense_facilities"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-04-13",
+  "doc_id": "memo201807962",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1109,
+  "max_words": 20000
+}

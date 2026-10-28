@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.05,
+  "confidence": 0.85,
+  "evidence": [
+    "I am continuing for 1 year the national emergency with respect to Iran.",
+    "unusual and extraordinary threat to the national security, foreign policy, and economy"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "sanctions",
+      "Iran"
+    ]
+  },
+  "source": "political_other",
+  "date": "2012-03-14",
+  "doc_id": "noti20126426",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 397,
+  "max_words": 20000
+}

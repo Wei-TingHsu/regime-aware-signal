@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.5,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby identify the following countries as major drug transit or major illicit drug producing countries",
+    "I hereby designate Bolivia and the illegitimate regime of Nicolas Maduro in Venezuela as having failed demonstrably",
+    "Mexico will be at serious risk of being found to have failed demonstrably"
+  ],
+  "extra": {
+    "actor": "President (via Secretary of State memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "counternarcotics",
+      "foreign aid",
+      "Venezuela sanctions-related policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-09-25",
+  "doc_id": "dete202021390",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1509,
+  "max_words": 20000
+}

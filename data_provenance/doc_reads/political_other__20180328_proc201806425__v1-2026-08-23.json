@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "the tariff set forth in clause 2 of Proclamation 9705 shall be effective May 1, 2018",
+    "steel articles imports from these countries from the tariff, at least at this time",
+    "If necessary and appropriate, I will consider directing U.S. Customs and Border Protection"
+  ],
+  "extra": {
+    "actor": "President (Trump) via Section 232 proclamation",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "trade",
+      "metals",
+      "manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-03-28",
+  "doc_id": "proc201806425",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2344,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.0,
+  "confidence": 0.95,
+  "evidence": [
+    "I hereby proclaim November 20, 2022, as National Child's Day.",
+    "That is why I signed the American Rescue Plan at the start of my Presidency",
+    "I call upon all government officials, educators, volunteers"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2022-11-23",
+  "doc_id": "proc202225740",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 893,
+  "max_words": 20000
+}

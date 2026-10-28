@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 365,
+  "specificity": 0.2,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby direct you to propose revisions to modernize and streamline the existing overtime regulations",
+    "regulations regarding exemptions from the Act's overtime requirement...have not kept up with our modern economy"
+  ],
+  "extra": {
+    "actor": "President (directing Secretary of Labor)",
+    "is_decided": false,
+    "sectors": [
+      "labor",
+      "employment regulation",
+      "retail",
+      "services"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-03-18",
+  "doc_id": "memo201406138",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 384,
+  "max_words": 20000
+}

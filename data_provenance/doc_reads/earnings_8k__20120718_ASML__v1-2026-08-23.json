@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "ASML on track for 2012 second half sales between EUR 2.2 and 2.4 billion",
+    "For the third quarter 2012, ASML expects net sales of about EUR 1.2 billion",
+    "received customer commitment to purchase four additional NXE:3300 systems"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2012-07-18",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 37031,
+  "max_words": 20000
+}

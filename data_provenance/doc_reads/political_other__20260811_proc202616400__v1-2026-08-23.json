@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 30,
+  "specificity": 0.85,
+  "novelty": 0.6,
+  "confidence": 0.6,
+  "evidence": [
+    "15 percent ad valorem rate of duty on imports of polysilicon derivatives",
+    "$21 per kilogram for polysilicon",
+    "effective...on or after 12:01 a.m. eastern time on December 4, 2026"
+  ],
+  "extra": {
+    "actor": "President (Section 232 action via Secretary of Commerce)",
+    "is_decided": true,
+    "sectors": [
+      "semiconductors",
+      "solar",
+      "polysilicon manufacturing",
+      "import/export trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-08-11",
+  "doc_id": "proc202616400",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3606,
+  "max_words": 20000
+}

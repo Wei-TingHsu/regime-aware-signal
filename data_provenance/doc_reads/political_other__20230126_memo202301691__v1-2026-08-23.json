@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.2,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "shall consider: issuing guidance for patients seeking legal access to mifepristone",
+    "within 60 days of the date of this memorandum",
+    "My Administration remains committed to supporting safe access to mifepristone"
+  ],
+  "extra": {
+    "actor": "President (HHS, DOJ, DHS)",
+    "is_decided": false,
+    "sectors": [
+      "healthcare",
+      "pharmaceuticals"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-01-26",
+  "doc_id": "memo202301691",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1180,
+  "max_words": 20000
+}

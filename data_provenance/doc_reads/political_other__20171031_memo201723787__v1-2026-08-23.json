@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "shall, consistent with section 319 of the Public Health Service Act, consider declaring",
+    "exercise all appropriate emergency authorities",
+    "This memorandum shall be implemented consistent with applicable law and subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "President/HHS Secretary",
+    "is_decided": false,
+    "sectors": [
+      "healthcare",
+      "pharmaceuticals"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-10-31",
+  "doc_id": "memo201723787",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 843,
+  "max_words": 20000
+}

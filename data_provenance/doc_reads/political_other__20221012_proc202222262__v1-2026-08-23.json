@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "do hereby grant a full, complete, and unconditional pardon",
+    "shall administer and effectuate the issuance of certificates of pardon",
+    "This pardon does not apply to individuals who were non-citizens not lawfully present"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "cannabis",
+      "criminal justice"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-10-12",
+  "doc_id": "proc202222262",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 561,
+  "max_words": 20000
+}

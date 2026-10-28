@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby assign to you the functions of the President",
+    "to appoint commissioned officers of the Ready Reserve Corps",
+    "My memorandum of May 31, 2011... is hereby revoked"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of HHS)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-04-04",
+  "doc_id": "memo201307926",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 349,
+  "max_words": 20000
+}

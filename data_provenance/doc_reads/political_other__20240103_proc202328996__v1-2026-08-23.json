@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.15,
+  "confidence": 0.7,
+  "evidence": [
+    "have decided to exclude such imports from the EU up to a designated quota from the tariff proclaimed in Proclamation 9705 through December 31, 2025",
+    "I have determined that it is necessary and appropriate, at this time, to maintain the current tariff level as it applies to other countries",
+    "The United States will renew for 2 calendar years all exclusions that were utilized to import steel products"
+  ],
+  "extra": {
+    "actor": "President (Biden) via Section 232 proclamation",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "metals",
+      "trade/tariffs",
+      "EU-US trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-01-03",
+  "doc_id": "proc202328996",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3383,
+  "max_words": 20000
+}

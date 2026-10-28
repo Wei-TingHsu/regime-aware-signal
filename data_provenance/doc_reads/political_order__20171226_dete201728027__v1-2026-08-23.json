@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "suspend for a period of 6 months the limitations set forth in sections 3(b) and 7(b) of the Act",
+    "necessary, in order to protect the national security interests of the United States"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "geopolitics",
+      "Middle East policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-12-26",
+  "doc_id": "dete201728027",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 233,
+  "max_words": 20000
+}

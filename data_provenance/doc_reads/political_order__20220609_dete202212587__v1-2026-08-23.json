@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "transformers and electric power grid components are industrial resources, materials, or critical technology items essential to the national defense",
+    "I waive the requirements of section 303(a)(1)-(a)(6) of the Act",
+    "necessary to avert an industrial resource or critical technology item shortfall"
+  ],
+  "extra": {
+    "actor": "President (DPA Section 303)",
+    "is_decided": true,
+    "sectors": [
+      "electrical equipment",
+      "grid infrastructure",
+      "utilities",
+      "industrial manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-06-09",
+  "doc_id": "dete202212587",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 386,
+  "max_words": 20000
+}

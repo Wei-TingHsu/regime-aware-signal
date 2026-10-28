@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.02
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "increasing the column 2 rates of duty to 35 percent ad valorem on certain additional products",
+    "increasing the column 2 rates of duty from 35 percent ad valorem to 70 percent ad valorem",
+    "effective with respect to goods entered for consumption...on or after...April 1, 2023"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "Russia sanctions",
+      "tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-03-02",
+  "doc_id": "proc202304471",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 937,
+  "max_words": 20000
+}

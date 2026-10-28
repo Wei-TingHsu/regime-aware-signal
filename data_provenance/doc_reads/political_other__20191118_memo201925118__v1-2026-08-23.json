@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "is delegated the authority under 5 U.S.C. 7119(c)(3) to remove the Chairman",
+    "The authority delegated by this section may not be redelegated.",
+    "Within 10 days of exercising the authority delegated by this section"
+  ],
+  "extra": {
+    "actor": "President (FLRA delegation)",
+    "is_decided": true,
+    "sectors": [
+      "federal labor relations",
+      "government administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-11-18",
+  "doc_id": "memo201925118",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 496,
+  "max_words": 20000
+}

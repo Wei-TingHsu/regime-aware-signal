@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "shall be transferred to the Department of Health and Human Services, Office of Refugee Resettlement",
+    "I direct the Department of State and the Department of Health and Human Services to coordinate the orderly transfer"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch, via State/HHS)",
+    "is_decided": true,
+    "sectors": [
+      "immigration/refugee resettlement",
+      "government administration"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-10-31",
+  "doc_id": "dete202519753",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 393,
+  "max_words": 20000
+}

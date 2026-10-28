@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.02,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim May 2016 as National Building Safety Month",
+    "During National Building Safety Month, we recognize and pay tribute",
+    "Later this month, the White House will bring together collaborators"
+  ],
+  "extra": {
+    "actor": "President (Barack Obama)",
+    "is_decided": true,
+    "sectors": [
+      "ceremonial",
+      "construction"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-05-04",
+  "doc_id": "proc201610648",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 654,
+  "max_words": 20000
+}

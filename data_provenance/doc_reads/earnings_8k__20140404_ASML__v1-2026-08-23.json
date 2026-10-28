@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.2,
+  "novelty": 0.05,
+  "confidence": 0.3,
+  "evidence": [
+    "Annual General Meeting of Shareholders 2014",
+    "Proposal to adopt a dividend of EUR 0.61 per ordinary share",
+    "Update on share buy-back program 2"
+  ],
+  "confidence_explanation": "",
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2014-04-04",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 421345,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "Net sales now expected to grow by around 35% in 2021",
+    "ASML expects Q3 2021 net sales between \u20ac5.2 billion and \u20ac5.4 billion",
+    "ASML announces a new share buyback program of up to \u20ac9 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.5,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2021-07-21",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 416449,
+  "max_words": 20000
+}

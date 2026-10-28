@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established within the Executive Office of the President the White House Task Force",
+    "Within 180 days of the date of this memorandum, the Co-Chairs of the Task Force shall submit",
+    "develop concrete recommendations to improve prevention, response, and protection efforts"
+  ],
+  "extra": {
+    "actor": "White House / Executive Office of the President",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "social media"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-06-22",
+  "doc_id": "memo202213496",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1741,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.1,
+    "gold": -0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "We expect that 2020 will be another growth year, both in sales and in profitability",
+    "ASML also announces a new three-year share buyback program...up to \u20ac6 billion",
+    "For the first quarter of 2020, ASML expects net sales of between \u20ac3.1 billion and \u20ac3.3 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2020-01-22",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 102540,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "The LAIR is hereby reconvened as a White House initiative",
+    "Attorney General shall consider expanding DOJ's planning, development, and coordination of access-to-justice policy initiatives",
+    "This memorandum is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President/DOJ/White House",
+    "is_decided": true,
+    "sectors": [
+      "legal services",
+      "government administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-05-21",
+  "doc_id": "memo202110973",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1824,
+  "max_words": 20000
+}

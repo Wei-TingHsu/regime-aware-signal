@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I am continuing for 1 year the national emergency declared in Executive Order 14064",
+    "the potential for a deepening economic collapse in Afghanistan continue to pose an unusual and extraordinary threat"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "Afghan central bank assets",
+      "sanctions/blocked property"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-17",
+  "doc_id": "noti202501439",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 415,
+  "max_words": 20000
+}

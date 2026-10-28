@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.15,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.6,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "Revenue is expected to be between US$34.6 billion and US$35.8 billion",
+    "2026 revenue to increase by close to 30% in US dollar terms",
+    "2026 capital budget to be between US$52 billion and US$56 billion"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.5,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2026-01-15",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 71375,
+  "max_words": 20000
+}

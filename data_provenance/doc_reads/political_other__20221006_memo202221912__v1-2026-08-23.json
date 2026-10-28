@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "I waive the requirements of sections 303(a)(5) and 303(a)(6) of the Act",
+    "expanding and accelerating the domestic production capability of critical weapons and equipment",
+    "action is necessary to increase the production capacity of material critical to support the defense"
+  ],
+  "extra": {
+    "actor": "President (DPA Title III waiver, Defense Dept.)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "industrials"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-10-06",
+  "doc_id": "memo202221912",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 247,
+  "max_words": 20000
+}

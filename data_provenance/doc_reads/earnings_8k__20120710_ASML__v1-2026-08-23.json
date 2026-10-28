@@ -1,0 +1,28 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": -0.2,
+    "gold": -0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.55,
+  "confidence": 0.55,
+  "evidence": [
+    "ASML announces customer co-investment program aimed at accelerating innovation",
+    "Intel is the first participant in the customer co-investment program, and has committed to acquire up to a 15% equity ownership interest",
+    "ASML has suspended its regular share buy-back programs until further notice"
+  ],
+  "extra": {},
+  "source": "earnings_8k",
+  "date": "2012-07-10",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 133057,
+  "max_words": 20000
+}

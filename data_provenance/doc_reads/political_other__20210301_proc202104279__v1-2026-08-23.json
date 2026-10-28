@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Proclamation 10014, section 1 of Proclamation 10052, and section 1 of Proclamation 10131 are revoked.",
+    "harms industries in the United States that utilize talent from around the world",
+    "unrestricted entry into the United States of persons described in section 1 of Proclamation 10014 is not detrimental"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "labor market"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-03-01",
+  "doc_id": "proc202104279",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 642,
+  "max_words": 20000
+}

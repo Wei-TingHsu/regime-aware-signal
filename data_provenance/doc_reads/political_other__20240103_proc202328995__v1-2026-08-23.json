@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "extend the tariff-rate quota that restricts the quantity of aluminum articles imported into the United States from the EU",
+    "have decided to exclude such imports from the EU up to a designated quota from the tariff proclaimed in Proclamation 9704 through December 31, 2025",
+    "I have determined that it is necessary and appropriate, at this time, to maintain the current tariff level as it applies to other countries"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-01-03",
+  "doc_id": "proc202328995",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2204,
+  "max_words": 20000
+}

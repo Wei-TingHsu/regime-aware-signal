@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby determine that it is in the national interest of the United States to waive",
+    "to allow for provision of International Military Education and Training (IMET) and Peacekeeping Operations (PKO) assistance",
+    "I hereby waive such provisions accordingly."
+  ],
+  "extra": {
+    "actor": "President (Executive Branch, State Dept implementation)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid",
+      "military assistance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-10-21",
+  "doc_id": "dete201625685",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 442,
+  "max_words": 20000
+}

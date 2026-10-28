@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.05,
+    "oil": 0.2
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "review and approve in an expedited manner... requests for approvals to construct and operate the DAPL",
+    "At this time, the DAPL is more than 90% complete across its entire route",
+    "issue, to the extent permitted by law and as warranted, any approved easements or rights-of-way immediately"
+  ],
+  "extra": {
+    "actor": "President (via Secretary of the Army/USACE)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "pipelines",
+      "midstream oil infrastructure"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-01-30",
+  "doc_id": "memo201702032",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 835,
+  "max_words": 20000
+}

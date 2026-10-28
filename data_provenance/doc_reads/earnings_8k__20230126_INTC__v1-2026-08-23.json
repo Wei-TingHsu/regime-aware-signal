@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "Forecasting first-quarter 2023 revenue of $10.5 billion to $11.5 billion; expecting first-quarter EPS of $(0.80)",
+    "delivering at the low-end of our guided range",
+    "These actions underpin our cost-reduction targets of $3 billion in 2023"
+  ],
+  "extra": {
+    "surprise": -0.4,
+    "guidance_change": -0.6,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2023-01-26",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 22761,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "For 2018 we expect continued solid growth of sales and profitability.",
+    "ASML expects Q1 2018 net sales around EUR 2.2 billion and a gross margin between 47 and 48 percent",
+    "ASML announces 2018-2019 share buyback program for EUR 2.5 billion and proposes 17 percent dividend increase"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2018-01-17",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 117237,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "Our second quarter sales were above expectations including higher than forecasted EUV sales",
+    "we expect the second half to be stronger, with improved profitability and continued growth from Q3 to Q4",
+    "support a 2019 shipment plan of at least 30 systems"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2018-07-18",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 157317,
+  "max_words": 20000
+}

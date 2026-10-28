@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "Presidential Policy Directive-6 of September 22, 2010... is hereby revoked",
+    "does not accord with my recent executive actions and views on the proper role and scale of U.S. foreign assistance"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "development policy",
+      "USAID"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-07-31",
+  "doc_id": "memo202514587",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 489,
+  "max_words": 20000
+}

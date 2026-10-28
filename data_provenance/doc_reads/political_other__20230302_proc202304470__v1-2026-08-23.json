@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.02,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.95,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "a 200 percent ad valorem tariff on aluminum articles that are the product of Russia",
+    "beginning on March 10, 2023",
+    "Russia remains the fifth largest source of imported aluminum"
+  ],
+  "extra": {
+    "actor": "President (Biden) via Section 232 proclamation",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "Russia trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-03-02",
+  "doc_id": "proc202304470",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3302,
+  "max_words": 20000
+}

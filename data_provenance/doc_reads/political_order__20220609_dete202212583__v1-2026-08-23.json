@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.5,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "solar photovoltaic modules and module components... are industrial resources, materials, or critical technology items essential to the national defense",
+    "I waive the requirements of section 303(a)(1)-(a)(6) of the Act",
+    "action to expand the domestic production capability for solar photovoltaic modules"
+  ],
+  "extra": {
+    "actor": "President (DPA Title III)",
+    "is_decided": true,
+    "sectors": [
+      "solar",
+      "clean energy",
+      "manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-06-09",
+  "doc_id": "dete202212583",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 393,
+  "max_words": 20000
+}

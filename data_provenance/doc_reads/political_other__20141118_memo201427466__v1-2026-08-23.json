@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "Administrator of the United States Agency for International Development (USAID) is authorized to exercise authority under Public Law 85-804",
+    "to the same extent and subject to the same conditions and limitations as the head of an executive department",
+    "This authority may be exercised solely for the purpose of holding harmless and indemnifying contractors"
+  ],
+  "extra": {
+    "actor": "President (USAID Administrator)",
+    "is_decided": true,
+    "sectors": [
+      "government contracting",
+      "humanitarian aid",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-11-18",
+  "doc_id": "memo201427466",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 418,
+  "max_words": 20000
+}

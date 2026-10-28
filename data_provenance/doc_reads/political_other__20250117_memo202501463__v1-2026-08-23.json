@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby withdraw from disposition by oil or natural gas leasing",
+    "remaining areas that are part of the Northern Bering Sea Climate Resilience Area",
+    "Nothing in this withdrawal affects rights under existing leases"
+  ],
+  "extra": {
+    "actor": "President (Biden, dated prior to transition)",
+    "is_decided": true,
+    "sectors": [
+      "oil & gas",
+      "offshore leasing",
+      "environment"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-17",
+  "doc_id": "memo202501463",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 648,
+  "max_words": 20000
+}

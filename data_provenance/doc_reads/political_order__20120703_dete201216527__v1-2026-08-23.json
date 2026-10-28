@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "extend a loan in the amount of approximately $125,870,890 to the Vietnam Post and Telecommunications Group",
+    "it is in the national interest of the United States for the Export Import Bank"
+  ],
+  "extra": {
+    "actor": "President (Export-Import Bank determination)",
+    "is_decided": true,
+    "sectors": [
+      "telecommunications",
+      "satellite",
+      "export finance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-07-03",
+  "doc_id": "dete201216527",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 230,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby approve the proposed Agreement and authorize the Secretary of State to arrange for its execution.",
+    "will promote, and will not constitute an unreasonable risk to, the common defense and security"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "nuclear energy",
+      "utilities",
+      "defense cooperation"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-11-24",
+  "doc_id": "dete202326134",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 281,
+  "max_words": 20000
+}

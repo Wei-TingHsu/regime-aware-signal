@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.95,
+  "novelty": 0.4,
+  "confidence": 0.7,
+  "evidence": [
+    "impose a 50 percent ad valorem tariff on steel articles imported from Turkey, beginning on August 13, 2018",
+    "to adjust the tariff imposed by previous proclamations",
+    "all steel articles imports from Turkey specified in the Annex shall be subject to a 50 percent ad valorem rate of duty"
+  ],
+  "extra": {
+    "actor": "President (Trump) via Section 232",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "Turkey trade",
+      "metals tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-08-15",
+  "doc_id": "proc201817703",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1650,
+  "max_words": 20000
+}

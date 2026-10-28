@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.25,
+  "novelty": 0.15,
+  "confidence": 0.75,
+  "evidence": [
+    "This directive supersedes Presidential Policy Directive-4 (June 29, 2010)",
+    "Promote and incentivize private industry to facilitate the creation of new global and domestic markets",
+    "The United States Space Force will pursue these objectives as the primary branch"
+  ],
+  "extra": {
+    "actor": "President (National Space Council / multiple agencies)",
+    "is_decided": true,
+    "sectors": [
+      "aerospace/defense",
+      "satellite/space commercial sector",
+      "NASA contractors"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-12-16",
+  "doc_id": "memo202027892",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 8798,
+  "max_words": 20000
+}

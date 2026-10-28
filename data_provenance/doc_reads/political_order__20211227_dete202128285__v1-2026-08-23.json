@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "Radiation-Hardened and Strategic Radiation-Hardened Microelectronics... are industrial resources... essential to the national defense",
+    "I waive the requirements of section 303(a)(l)-(a)(6) of the Act",
+    "necessary to avert an industrial resource or critical technology item shortfall"
+  ],
+  "extra": {
+    "actor": "Secretary of Defense / DPA Title III",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "semiconductors",
+      "microelectronics"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-12-27",
+  "doc_id": "dete202128285",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 344,
+  "max_words": 20000
+}

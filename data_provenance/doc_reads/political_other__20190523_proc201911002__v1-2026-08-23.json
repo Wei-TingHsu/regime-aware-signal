@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": -0.05,
+    "gold": -0.1,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.9,
+  "novelty": 0.4,
+  "confidence": 0.75,
+  "evidence": [
+    "I have decided to exclude Canada and Mexico from the tariff proclaimed in Proclamation 9705",
+    "it is necessary and appropriate, at this time, to maintain the current tariff level as it applies to other countries",
+    "The United States has successfully concluded discussions with Canada and Mexico"
+  ],
+  "extra": {
+    "actor": "President (Trump), via Section 232 authority",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "trade",
+      "Canada",
+      "Mexico"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-05-23",
+  "doc_id": "proc201911002",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1696,
+  "max_words": 20000
+}

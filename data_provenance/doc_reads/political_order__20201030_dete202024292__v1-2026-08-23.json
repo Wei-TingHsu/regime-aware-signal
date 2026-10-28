@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "waive the application of the prohibition under section 404(a) of the CSPA with respect to Afghanistan, Cameroon, Iraq, Libya, and Nigeria",
+    "Certify that the governments of the above countries are taking effective and continuing steps to address the problems of child soldiers",
+    "I hereby waive such applications of section 404(a) of the CSPA"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid",
+      "military assistance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-10-30",
+  "doc_id": "dete202024292",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 457,
+  "max_words": 20000
+}

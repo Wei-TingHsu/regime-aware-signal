@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.05,
+  "confidence": 0.6,
+  "evidence": [
+    "there is a sufficient supply of petroleum and petroleum products from countries other than Iran",
+    "to permit a significant reduction in the volume of petroleum and petroleum products purchased from Iran",
+    "I will continue to monitor this situation closely."
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "sanctions",
+      "oil"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-11-24",
+  "doc_id": "dete202326130",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 368,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "domestic manufacturing capability for F135 Integrally Bladed Rotors is essential to the national defense",
+    "purchases, purchase commitments, or other action pursuant to section 303 of the Act are the most cost-effective"
+  ],
+  "extra": {
+    "actor": "President (DPA Title III)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "aerospace",
+      "jet engine manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-07-25",
+  "doc_id": "dete201915994",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 260,
+  "max_words": 20000
+}

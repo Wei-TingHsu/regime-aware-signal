@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby extend the waiver of section 907 of the FREEDOM Support Act.",
+    "is important to Azerbaijan's border security",
+    "will not undermine or hamper ongoing efforts to negotiate a peaceful settlement"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "foreign policy",
+      "defense",
+      "energy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-08-15",
+  "doc_id": "dete202515682",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 299,
+  "max_words": 20000
+}

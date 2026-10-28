@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby delegate to the Secretary of State the authorities",
+    "Eastern Mediterranean Security and Energy Partnership Act of 2019",
+    "You are authorized and directed to publish this memorandum"
+  ],
+  "extra": {
+    "actor": "President delegating to Secretary of State",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "foreign policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-06-12",
+  "doc_id": "memo202012859",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 253,
+  "max_words": 20000
+}

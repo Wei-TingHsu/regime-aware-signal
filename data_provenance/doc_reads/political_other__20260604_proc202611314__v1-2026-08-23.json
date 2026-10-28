@@ -1,0 +1,39 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 20,
+  "specificity": 0.85,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "agricultural equipment and certain HVAC systems...shall be included in the category of derivative products subject to the temporarily-reduced 15 percent ad valorem duty",
+    "The current threshold of 95 percent shall be modified to 85 percent",
+    "effective...on or after 12:01 a.m. eastern daylight time on June 8, 2026"
+  ],
+  "extra": {
+    "actor": "President (Section 232 tariff proclamation)",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "aluminum",
+      "copper",
+      "agricultural equipment",
+      "HVAC",
+      "industrial machinery"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-06-04",
+  "doc_id": "proc202611314",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2920,
+  "max_words": 20000
+}

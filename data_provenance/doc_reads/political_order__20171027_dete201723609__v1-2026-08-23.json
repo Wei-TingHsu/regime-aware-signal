@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "the United States will not provide nonhumanitarian, nontrade-related assistance to the governments",
+    "vote against and use best efforts to deny all loans to",
+    "would promote the purposes of the Act or is otherwise in the national interest"
+  ],
+  "extra": {
+    "actor": "President (Trafficking Victims Protection Act determination)",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "multilateral development banks",
+      "diplomacy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-10-27",
+  "doc_id": "dete201723609",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1142,
+  "max_words": 20000
+}

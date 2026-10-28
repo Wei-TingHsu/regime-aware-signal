@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim August 25 through August 31, 2024, as Overdose Awareness Week",
+    "we mourn those who have lost their lives to overdose deaths",
+    "My Fiscal Year 2025 Budget requests $22 billion to expand substance use treatment"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-08-28",
+  "doc_id": "proc202419441",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1062,
+  "max_words": 20000
+}

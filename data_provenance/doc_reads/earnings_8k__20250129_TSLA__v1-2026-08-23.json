@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.4,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "2025 will be a seminal year in Tesla\u2019s history as FSD (Supervised) continues to rapidly improve",
+    "we expect the vehicle business to return to growth in 2025",
+    "This approach will result in achieving less cost reduction than previously expected"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": -0.1,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2025-01-29",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 205603,
+  "max_words": 20000
+}

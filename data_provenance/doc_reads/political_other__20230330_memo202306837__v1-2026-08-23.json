@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.03,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.12,
+  "horizon_days": 90,
+  "specificity": 0.25,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "the Secretary of Commerce should consider initiating designation of a National Marine Sanctuary",
+    "protection of United States waters around these remote islands from industrial fishing, oil drilling, and mining",
+    "Within 2 years of the date of this memorandum"
+  ],
+  "extra": {
+    "actor": "President (Interior/Commerce Secretaries directed)",
+    "is_decided": false,
+    "sectors": [
+      "fishing",
+      "oil & gas",
+      "mining",
+      "marine conservation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-03-30",
+  "doc_id": "memo202306837",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1235,
+  "max_words": 20000
+}

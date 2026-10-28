@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 15,
+  "specificity": 0.7,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "First-quarter GAAP revenue of $18.4 billion ... exceeded January guidance",
+    "Reaffirming full-year 2022 revenue guidance",
+    "Adjusted free cash flow ($1-2 billion)"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2022-04-28",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 50533,
+  "max_words": 20000
+}

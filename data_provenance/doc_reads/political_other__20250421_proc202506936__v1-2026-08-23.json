@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.2,
+  "horizon_days": 250,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "are exempt from compliance with the Rule for a period of 2 years",
+    "The technology to implement the Rule is not available.",
+    "Coal-fired electricity generation is essential to ensuring that our Nation's grid is reliable"
+  ],
+  "extra": {
+    "actor": "President (EPA/Clean Air Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "coal",
+      "utilities",
+      "energy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-04-21",
+  "doc_id": "proc202506936",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 690,
+  "max_words": 20000
+}

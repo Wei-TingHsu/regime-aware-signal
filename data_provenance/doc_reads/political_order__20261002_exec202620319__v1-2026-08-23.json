@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 120,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "directs the establishment of America.gov as the unified digital front door",
+    "within 90 days of the date of this order, the Director of OMB shall issue a memorandum",
+    "covered services... serve more than 100,000 users in a 12-month period"
+  ],
+  "extra": {
+    "actor": "Office of Management and Budget / General Services Administration",
+    "is_decided": true,
+    "sectors": [
+      "government technology",
+      "IT services",
+      "digital identity/authentication"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-10-02",
+  "doc_id": "exec202620319",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 995,
+  "max_words": 20000
+}

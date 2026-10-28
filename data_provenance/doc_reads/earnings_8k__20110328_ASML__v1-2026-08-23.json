@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 10,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.35,
+  "evidence": [
+    "Revenue growth of 160% YoY and 30% QoQ",
+    "Record bookings of \u20ac 2,315 million",
+    "Proposed a doubling of dividend and announced a \u20ac 1B share buy back program"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2011-03-28",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 37960,
+  "max_words": 20000
+}

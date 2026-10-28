@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.5,
+  "evidence": [
+    "NET REVENUE $ 592,644,201 100 $ 508,632,973 100",
+    "Basic earnings per share $ 8.70 $ 7.98",
+    "On April 3, 2024, an earthquake struck Taiwan...estimated related earthquake losses to be approximately NT$3 billion"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2024-05-15",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 64653,
+  "max_words": 20000
+}

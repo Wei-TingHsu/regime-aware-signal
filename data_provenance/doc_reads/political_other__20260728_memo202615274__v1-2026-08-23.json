@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.4,
+    "duration": 0.3,
+    "gold": 0.3,
+    "dollar": -0.2,
+    "oil": -0.1
+  },
+  "magnitude": 0.6,
+  "horizon_days": 20,
+  "specificity": 0.9,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "the Trade Representative shall impose a tariff of 10 percent on goods of Argentina, Bangladesh, Cambodia, Canada",
+    "For goods of all other investigated economies, the Trade Representative shall impose a tariff rate of 12.5 percent",
+    "this memorandum contains separate directives with respect to 60 separate economies"
+  ],
+  "extra": {
+    "actor": "President (via USTR)",
+    "is_decided": true,
+    "sectors": [
+      "textiles/apparel",
+      "broad imports from 60 economies",
+      "trade/tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-07-28",
+  "doc_id": "memo202615274",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3588,
+  "max_words": 20000
+}

@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.5,
+  "confidence": 0.75,
+  "evidence": [
+    "the entry into the United States of nationals of Iran as immigrants and as nonimmigrants is hereby suspended",
+    "I have determined to restrict and limit the entry of nationals of 7 countries",
+    "entry restrictions, limitations, and other measures designed to ensure proper screening and vetting for nationals of Somalia"
+  ],
+  "extra": {
+    "actor": "President (DHS/State implementation)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "travel",
+      "energy (minor, Libya/Iran/Venezuela linkage)",
+      "diplomacy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-09-27",
+  "doc_id": "proc201720899",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 6614,
+  "max_words": 20000
+}

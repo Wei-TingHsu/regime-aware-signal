@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "direct spending budgetary resources for fiscal year 2026 in each non-exempt budget account be reduced",
+    "All sequestrations shall be made in strict accordance with the requirements of section 251A"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "federal budget",
+      "mandatory spending"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-06-05",
+  "doc_id": "pres202510392",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 291,
+  "max_words": 20000
+}

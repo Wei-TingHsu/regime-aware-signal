@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 10,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "I therefore direct the drawdown of up to $10 million in nonlethal commodities and services",
+    "to provide food and medical supplies to the SOC and the SMC",
+    "such an unforeseen emergency requires the immediate provision of assistance"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch, Foreign Assistance Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid",
+      "geopolitics"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-04-24",
+  "doc_id": "dete201309860",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 521,
+  "max_words": 20000
+}

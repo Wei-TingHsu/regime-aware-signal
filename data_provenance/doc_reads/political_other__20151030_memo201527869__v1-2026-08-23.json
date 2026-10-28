@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.0,
+    "oil": -0.2
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "Today, October 18, 2015, marks Adoption Day under the JCPOA",
+    "I hereby direct you to take all appropriate additional measures to ensure the prompt and effective implementation",
+    "to take effect upon confirmation by the Secretary of State that Iran has implemented the nuclear-related measures"
+  ],
+  "extra": {
+    "actor": "President (directing State, Treasury, Commerce, Energy)",
+    "is_decided": false,
+    "sectors": [
+      "energy",
+      "financial sanctions",
+      "Iran-related trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-10-30",
+  "doc_id": "memo201527869",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 406,
+  "max_words": 20000
+}

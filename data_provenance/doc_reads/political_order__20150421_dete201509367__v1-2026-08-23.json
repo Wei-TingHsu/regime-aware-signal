@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby approve the proposed Agreement and authorize the Secretary of State to arrange for its execution.",
+    "performance of the Agreement will promote, and will not constitute an unreasonable risk to, the common defense and security"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "nuclear energy",
+      "US-China trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-04-21",
+  "doc_id": "dete201509367",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 277,
+  "max_words": 20000
+}

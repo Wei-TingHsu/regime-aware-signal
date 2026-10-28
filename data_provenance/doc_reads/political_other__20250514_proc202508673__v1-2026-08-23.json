@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "establishes Project Homecoming, which will present illegal aliens with a choice",
+    "provide financial incentives in the form of an \"exit bonus\"",
+    "increase the enforcement and removal operations force of the Department of Homeland Security by no less than 20,000 officers"
+  ],
+  "extra": {
+    "actor": "President (DHS/State directed)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "labor",
+      "government services"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-05-14",
+  "doc_id": "proc202508673",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 966,
+  "max_words": 20000
+}

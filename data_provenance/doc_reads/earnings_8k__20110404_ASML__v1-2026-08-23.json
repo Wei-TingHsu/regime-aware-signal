@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.5,
+  "evidence": [
+    "ASML proposes to declare a dividend of EUR 0.40 per ordinary share",
+    "a 100% increase as compared to the dividend paid in 2010",
+    "ASML also intends to repurchase shares up to an amount of EUR 1 billion within two years"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2011-04-04",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 200031,
+  "max_words": 20000
+}

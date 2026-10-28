@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.97,
+  "evidence": [
+    "I hereby proclaim October 2021 as National Youth Justice Action Month",
+    "I proposed an $800 million investment to more than double our current funding",
+    "we need to shift our approach from a default stance of incarceration to one of prevention"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2021-10-05",
+  "doc_id": "proc202121896",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 966,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby delegate to the Attorney General... all authorities vested in the President by the Protecting Americans from Foreign Adversary Controlled Applications Act",
+    "There is established a Committee for the Review of Foreign Adversary Controlled Applications",
+    "Not later than 180 days after the date of this memorandum... shall determine rules and procedures"
+  ],
+  "extra": {
+    "actor": "President (delegating to Attorney General and interagency Committee)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "media/internet",
+      "China-exposed tech (e.g., TikTok/ByteDance)"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-07-29",
+  "doc_id": "memo202416741",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 498,
+  "max_words": 20000
+}

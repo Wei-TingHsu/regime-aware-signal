@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "There is established within the Executive Office of the President the China Censorship Monitor and Action Group",
+    "to monitor and address the effects of any efforts by the PRC...to censor or intimidate",
+    "the Task Force shall submit to the President...the strategy described in section 5515(b)(3)(A)"
+  ],
+  "extra": {
+    "actor": "White House/National Security Council, NEC, interagency Task Force",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "media",
+      "national security",
+      "China-related trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-12-17",
+  "doc_id": "memo202430203",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 959,
+  "max_words": 20000
+}

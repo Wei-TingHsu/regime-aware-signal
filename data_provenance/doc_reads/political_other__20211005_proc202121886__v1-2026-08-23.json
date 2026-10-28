@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim October 2021 as National Clean Energy Action Month",
+    "achieving a 100 percent clean electricity sector by 2035",
+    "reaching net zero emissions economy-wide by no later than 2050"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": false,
+    "sectors": [
+      "energy",
+      "clean energy",
+      "fossil fuels"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-10-05",
+  "doc_id": "proc202121886",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 797,
+  "max_words": 20000
+}

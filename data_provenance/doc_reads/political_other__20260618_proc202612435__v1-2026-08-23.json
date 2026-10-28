@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim June 2026 as National Homeownership Month",
+    "directed Fannie Mae and Freddie Mac to purchase $200 billion in mortgage-backed securities",
+    "took unprecedented action to ban large institutional investors from purchasing single-family homes"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": false,
+    "sectors": [
+      "housing",
+      "real estate",
+      "mortgage finance"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-06-18",
+  "doc_id": "proc202612435",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 607,
+  "max_words": 20000
+}

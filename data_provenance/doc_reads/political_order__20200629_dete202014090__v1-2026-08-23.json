@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "industrial base production capability for ultra-high and high temperature composites",
+    "essential to the national defense",
+    "purchases, purchase commitments, or other action pursuant to section 303"
+  ],
+  "extra": {
+    "actor": "President/Secretary of Defense",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "aerospace",
+      "advanced materials"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-06-29",
+  "doc_id": "dete202014090",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 278,
+  "max_words": 20000
+}

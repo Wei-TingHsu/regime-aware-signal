@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "Q2 2017 net sales between \u20ac 1.9 and 2.0 billion",
+    "Net bookings of \u20ac 1,894 million, including 3 new EUV systems",
+    "Share buyback program is currently paused"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2017-04-28",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 113346,
+  "max_words": 20000
+}

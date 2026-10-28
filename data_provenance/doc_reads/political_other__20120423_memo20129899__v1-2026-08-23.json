@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby direct the following",
+    "Within 240 days of the date of this memorandum, the Director of the Office of Personnel Management (OPM) shall",
+    "each agency shall develop or modify, as appropriate, agency-specific polices"
+  ],
+  "extra": {
+    "actor": "President (OPM directive)",
+    "is_decided": true,
+    "sectors": [
+      "federal workforce policy",
+      "labor/HR"
+    ]
+  },
+  "source": "political_other",
+  "date": "2012-04-23",
+  "doc_id": "memo20129899",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 953,
+  "max_words": 20000
+}

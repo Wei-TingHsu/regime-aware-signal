@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Fourth-quarter GAAP revenue was $20.5 billion, exceeding October guidance by $1.3 billion",
+    "Forecasting first-quarter 2022 revenue of approximately $18.3 billion; expecting first-quarter EPS of $0.70",
+    "Announces five percent increase to quarterly cash dividend"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": -0.3,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2022-01-26",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 20026,
+  "max_words": 20000
+}

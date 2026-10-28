@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I delegate to the Secretary of the Treasury the authority to administer financial sanctions",
+    "I also delegate to the Secretary of State the authority to administer visa sanctions"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State and Secretary of Treasury)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-09-28",
+  "doc_id": "memo201721026",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 324,
+  "max_words": 20000
+}

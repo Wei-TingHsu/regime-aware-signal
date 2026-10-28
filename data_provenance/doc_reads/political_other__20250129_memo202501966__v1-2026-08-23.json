@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.3
+  },
+  "magnitude": 0.5,
+  "horizon_days": 180,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby withdraw from disposition for wind energy leasing all areas within the Offshore Continental Shelf",
+    "shall not issue new or renewed approvals, rights of way, permits, leases, or loans for onshore or offshore wind projects",
+    "place a temporary moratorium on all activities and rights of Magic Valley Energy, LLC"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "wind energy",
+      "renewable energy",
+      "offshore leasing",
+      "oil and gas (indirect beneficiary)"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-29",
+  "doc_id": "memo202501966",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1126,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "there is a sufficient supply of petroleum and petroleum products from countries other than Iran",
+    "to permit a significant reduction in the volume of petroleum and petroleum products purchased from Iran"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "sanctions",
+      "Iran oil"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-12-19",
+  "doc_id": "dete202523567",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 387,
+  "max_words": 20000
+}

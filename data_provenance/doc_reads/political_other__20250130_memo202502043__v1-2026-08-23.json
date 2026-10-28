@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 90,
+  "specificity": 0.4,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "the Global Tax Deal has no force or effect in the United States",
+    "develop and present to the President...a list of options for protective measures",
+    "deliver findings and recommendations to the President...within 60 days"
+  ],
+  "extra": {
+    "actor": "President (Treasury, USTR, OECD Representative)",
+    "is_decided": true,
+    "sectors": [
+      "multinational corporations",
+      "technology",
+      "cross-border taxation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-30",
+  "doc_id": "memo202502043",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 575,
+  "max_words": 20000
+}

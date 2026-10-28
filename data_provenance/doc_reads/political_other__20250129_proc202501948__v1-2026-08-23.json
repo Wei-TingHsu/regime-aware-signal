@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby declare that a national emergency exists at the southern border",
+    "the construction authority provided in section 2808",
+    "whether to invoke the Insurrection Act of 1807"
+  ],
+  "extra": {
+    "actor": "President (DHS/DoD)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "construction",
+      "homeland security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-29",
+  "doc_id": "proc202501948",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1247,
+  "max_words": 20000
+}

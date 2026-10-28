@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.3,
+  "horizon_days": 10,
+  "specificity": 0.8,
+  "novelty": 0.6,
+  "confidence": 0.6,
+  "evidence": [
+    "the United States recognizes that the Golan Heights are part of the State of Israel",
+    "aggressive acts by Iran and terrorist groups, including Hizballah, in southern Syria"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": [
+      "geopolitics",
+      "Middle East",
+      "energy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-03-28",
+  "doc_id": "proc201906199",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 330,
+  "max_words": 20000
+}

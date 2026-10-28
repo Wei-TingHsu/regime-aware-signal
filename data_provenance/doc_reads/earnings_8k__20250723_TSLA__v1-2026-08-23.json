@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.45,
+  "confidence": 0.55,
+  "evidence": [
+    "Our first Robotaxi service launched in Austin in June.",
+    "Free cash flow of $0.1B",
+    "the actual results will depend on a variety of factors"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2025-07-23",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 174377,
+  "max_words": 20000
+}

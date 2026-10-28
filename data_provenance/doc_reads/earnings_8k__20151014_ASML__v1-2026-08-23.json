@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "ASML guides Q4 2015 net sales at approximately \u20ac 1.4 billion and a gross margin of around 45%",
+    "foundry customers are slightly more cautious with their investment plans. As a result, we expect Q4 sales below the Q3 level",
+    "Memory customers indicate that their system demand will continue at a healthy level throughout the first half of 2016, albeit somewhat below the Q3 level"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": -0.15,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2015-10-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 133899,
+  "max_words": 20000
+}

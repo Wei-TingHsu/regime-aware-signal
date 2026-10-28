@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.15,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": -0.2
+  },
+  "magnitude": 0.3,
+  "horizon_days": 10,
+  "specificity": 0.8,
+  "novelty": 0.6,
+  "confidence": 0.6,
+  "evidence": [
+    "a new B.1.1.529 (Omicron) variant of SARS-CoV-2",
+    "suspend and restrict the entry into the United States",
+    "effective at 12:01 a.m. eastern standard time on November 29, 2021"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "travel",
+      "airlines",
+      "energy",
+      "hospitality"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-12-01",
+  "doc_id": "proc202126253",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1860,
+  "max_words": 20000
+}

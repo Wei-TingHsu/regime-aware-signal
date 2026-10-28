@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": -0.05,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 120,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "it shall be the policy of the United States to rebuild the U.S. Armed Forces",
+    "conduct a 30-day Readiness Review",
+    "initiate a new Nuclear Posture Review"
+  ],
+  "extra": {
+    "actor": "President (Defense Dept/OMB directed)",
+    "is_decided": false,
+    "sectors": [
+      "defense",
+      "aerospace"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-02-01",
+  "doc_id": "memo201702282",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 692,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "ASML reports Q2 results in line with guidance, on track for record 2015 sales",
+    "We expect to see continued overall business strength in the second half of 2015 due to increased demand from memory and foundry customers compared with our previous expectations",
+    "ASML guides Q3 2015 net sales at between EUR 1.5 and 1.6 billion and a gross margin of around 45 percent"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2015-07-15",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 131560,
+  "max_words": 20000
+}

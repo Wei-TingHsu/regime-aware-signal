@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.15
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "I hereby withdraw from disposition by oil or natural gas leasing for a time period without specific expiration",
+    "Nothing in this withdrawal affects rights under existing leases",
+    "prevents consideration of withdrawn areas for any future oil or natural gas leasing"
+  ],
+  "extra": {
+    "actor": "President (Biden) via Secretary of the Interior",
+    "is_decided": true,
+    "sectors": [
+      "oil and gas exploration",
+      "offshore energy",
+      "renewable energy (offshore wind mentioned)"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-17",
+  "doc_id": "memo202501464",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 454,
+  "max_words": 20000
+}

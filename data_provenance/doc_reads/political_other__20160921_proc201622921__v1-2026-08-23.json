@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "Exploring for, developing, or producing oil and gas or minerals...within the monument",
+    "Fishing commercially or possessing commercial fishing gear except when stowed",
+    "Commercial fishing for red crab and American lobster for a period of not more than 7 years"
+  ],
+  "extra": {
+    "actor": "President (Obama) via Antiquities Act",
+    "is_decided": true,
+    "sectors": [
+      "fishing",
+      "oil_and_gas",
+      "marine_conservation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-09-21",
+  "doc_id": "proc201622921",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3176,
+  "max_words": 20000
+}

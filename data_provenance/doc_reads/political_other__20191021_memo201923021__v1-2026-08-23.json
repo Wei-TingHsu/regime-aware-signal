@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "Agencies shall adhere to the terms of collective bargaining agreements executed while the injunction was in effect.",
+    "this memorandum should be construed to amend Executive Orders 13836, 13837, and 13839",
+    "an agency may execute the new collective bargaining agreement containing such terms"
+  ],
+  "extra": {
+    "actor": "President (via OPM directive)",
+    "is_decided": true,
+    "sectors": [
+      "federal workforce",
+      "labor relations",
+      "government administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-10-21",
+  "doc_id": "memo201923021",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 597,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.2,
+  "novelty": 0.1,
+  "confidence": 0.3,
+  "evidence": [
+    "In 2019, we spent \u20ac2.0 billion on R&D, compared to \u20ac1.6 billion in 2018",
+    "our focus in 2019 was to bring EUV to high-volume manufacturing at customer sites",
+    "we ranked 3rd (2018: 3rd) on the list of large suppliers of chipmaking equipment"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2020-02-12",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 2530281,
+  "max_words": 20000
+}

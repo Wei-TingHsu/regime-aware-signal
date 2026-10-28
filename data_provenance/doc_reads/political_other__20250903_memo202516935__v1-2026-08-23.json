@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby direct the Attorney General...to investigate whether Federal grant funds are being used to illegally support lobbying activities",
+    "The Attorney General shall report to the President within 180 days",
+    "taxpayer funds are being spent on grants with highly political overtones"
+  ],
+  "extra": {
+    "actor": "Attorney General",
+    "is_decided": true,
+    "sectors": [
+      "nonprofits",
+      "federal grantees",
+      "government contractors"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-09-03",
+  "doc_id": "memo202516935",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 440,
+  "max_words": 20000
+}

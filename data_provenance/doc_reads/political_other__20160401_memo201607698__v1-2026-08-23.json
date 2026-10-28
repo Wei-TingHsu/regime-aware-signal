@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established an interagency Mental Health and Substance Use Disorder Parity Task Force",
+    "The Task Force shall present to the President a report before October 31, 2016",
+    "identify and promote best practices for executive departments and agencies"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "mental health",
+      "insurance"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-04-01",
+  "doc_id": "memo201607698",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 904,
+  "max_words": 20000
+}

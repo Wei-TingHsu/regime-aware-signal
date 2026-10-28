@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "ASML expects Q3 2019 net sales of around EUR 3.0 billion and a gross margin between 43 percent and 44 percent",
+    "stronger Logic compensates for Memory weakness; 2019 total sales view unchanged",
+    "we continue to see 2019 as a growth year"
+  ],
+  "confidence_note": "",
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2019-07-17",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 84306,
+  "max_words": 20000
+}

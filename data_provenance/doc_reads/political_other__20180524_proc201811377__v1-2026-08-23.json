@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "flag of the United States shall be flown at half-staff",
+    "the terrible act of violence perpetrated on May 18, 2018"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2018-05-24",
+  "doc_id": "proc201811377",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 328,
+  "max_words": 20000
+}

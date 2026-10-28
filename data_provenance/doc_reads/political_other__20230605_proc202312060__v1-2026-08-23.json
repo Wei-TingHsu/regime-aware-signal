@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim June 2023 as National Homeownership Month",
+    "my Administration is committed to removing barriers to homeownership",
+    "Fiscal Year 2024 Budget calls for $175 billion to build on this progress"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "housing",
+      "real estate"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-06-05",
+  "doc_id": "proc202312060",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 917,
+  "max_words": 20000
+}

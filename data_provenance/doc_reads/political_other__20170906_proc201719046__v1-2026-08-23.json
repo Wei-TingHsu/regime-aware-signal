@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "I hereby proclaim September 2017 as National Alcohol and Drug Addiction Recovery Month",
+    "we have dedicated more than $500 million to strengthening prevention programs",
+    "requested $2.6 billion in my 2018 budget proposal for border security"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2017-09-06",
+  "doc_id": "proc201719046",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 593,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "fund 100 percent of the emergency assistance activities",
+    "shall terminate 30 days from the date of this memorandum",
+    "providing Federal Support for Governors' Use of the National Guard"
+  ],
+  "extra": {
+    "actor": "President (DoD/DHS/FEMA directive)",
+    "is_decided": true,
+    "sectors": [
+      "disaster relief",
+      "state/local government support",
+      "healthcare logistics"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-04-01",
+  "doc_id": "memo202006987",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 844,
+  "max_words": 20000
+}

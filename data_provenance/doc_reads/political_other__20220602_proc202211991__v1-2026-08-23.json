@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "suspend the tariffs set forth in Proclamation 9705 for the import of steel articles and derivative steel articles from Ukraine for 1 year",
+    "maintain the current tariff level as it applies to products of other countries",
+    "Ukraine's steel industry has been significantly disrupted by the Russian Federation's...war"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-06-02",
+  "doc_id": "proc202211991",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2340,
+  "max_words": 20000
+}

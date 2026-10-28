@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.03
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I am continuing for 1 year the national emergency with respect to the stabilization of Iraq",
+    "must continue in effect beyond May 22, 2016"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "Iraq sanctions",
+      "national emergency"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-05-20",
+  "doc_id": "noti201612142",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 380,
+  "max_words": 20000
+}

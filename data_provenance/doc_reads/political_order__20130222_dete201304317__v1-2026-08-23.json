@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby certify that it is important to the national security interests",
+    "to waive the provisions of section 7040(a) of the Act",
+    "to provide funds appropriated to carry out chapter 4 of part II"
+  ],
+  "extra": {
+    "actor": "President (State Department implementation)",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "Palestinian Authority",
+      "diplomacy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-02-22",
+  "doc_id": "dete201304317",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 327,
+  "max_words": 20000
+}

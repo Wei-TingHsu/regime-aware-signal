@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "hereby declare that the national emergency declared by Proclamation 9844... is terminated",
+    "pause work on each construction project on the southern border wall",
+    "no more American taxpayer dollars be diverted to construct a border wall"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "construction",
+      "defense contractors",
+      "homeland security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-01-27",
+  "doc_id": "proc202101922",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1061,
+  "max_words": 20000
+}

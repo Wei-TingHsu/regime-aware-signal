@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "direct the drawdown of up to an aggregate value of $700 million in defense articles",
+    "to provide assistance to Ukraine"
+  ],
+  "extra": {
+    "actor": "President (delegated to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign policy",
+      "Ukraine"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-06-09",
+  "doc_id": "memo202212557",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 219,
+  "max_words": 20000
+}

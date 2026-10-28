@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "This proclamation shall expire on March 31, 2021, and may be continued as necessary.",
+    "I therefore hereby proclaim the following",
+    "an extension of Proclamations 10014 and 10052 is appropriate"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "labor market",
+      "visas"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-01-06",
+  "doc_id": "proc202100039",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1113,
+  "max_words": 20000
+}

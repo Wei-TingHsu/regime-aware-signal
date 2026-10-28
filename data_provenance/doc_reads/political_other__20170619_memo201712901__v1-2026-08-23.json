@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "declare the effective date of each enjoined provision to be the date and time at which the referenced injunctions are lifted",
+    "begin implementation of each relevant provision of sections 2 and 6 of the Executive Order 72 hours after all applicable injunctions are lifted",
+    "no immigrant or nonimmigrant visa issued before the effective date of section 2(c) shall be revoked"
+  ],
+  "extra": {
+    "actor": "President (White House memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "travel",
+      "legal/regulatory"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-06-19",
+  "doc_id": "memo201712901",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 600,
+  "max_words": 20000
+}

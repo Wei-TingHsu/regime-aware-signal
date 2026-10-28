@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "declare that an invasion is ongoing at the southern border",
+    "suspending the physical entry of aliens involved in an invasion",
+    "entry into the United States of such aliens be suspended"
+  ],
+  "extra": {
+    "actor": "President (DHS/State/DOJ directed)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "border security",
+      "homeland security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-29",
+  "doc_id": "proc202501951",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2227,
+  "max_words": 20000
+}

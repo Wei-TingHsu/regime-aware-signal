@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.15,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "Revising full-year revenue guidance to $63 billion to $64 billion, reflecting continued macroeconomic headwinds.",
+    "Q4 2022... Revenue $14-15 billion",
+    "the company is focused on driving $3 billion in cost reductions in 2023"
+  ],
+  "extra": {
+    "surprise": -0.3,
+    "guidance_change": -0.5,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2022-10-27",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 20648,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "establishing a process, provided below, for considering requests for Presidential exemptions",
+    "duration of which shall be as short as possible and no longer than two years",
+    "to safeguard the reliability of our Nation's supply of safe medical products"
+  ],
+  "extra": {
+    "actor": "President (EPA/HHS implementation)",
+    "is_decided": true,
+    "sectors": [
+      "medical devices",
+      "pharmaceuticals",
+      "chemical manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-17",
+  "doc_id": "memo202501471",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2059,
+  "max_words": 20000
+}

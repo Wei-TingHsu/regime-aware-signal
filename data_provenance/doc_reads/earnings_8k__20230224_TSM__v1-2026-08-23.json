@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 3,
+  "specificity": 0.2,
+  "novelty": 0.05,
+  "confidence": 0.3,
+  "evidence": [
+    "NET REVENUE $ 2,263,891,292 100 $ 1,587,415,037 100",
+    "NET INCOME 1,016,900,515 45 597,073,134 38",
+    "Basic earnings per share $ 39.20 $ 23.01"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2023-02-24",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 83420,
+  "max_words": 20000
+}

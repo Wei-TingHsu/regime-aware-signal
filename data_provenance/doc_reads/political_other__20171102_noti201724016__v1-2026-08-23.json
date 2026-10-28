@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.05,
+  "confidence": 0.85,
+  "evidence": [
+    "I have, therefore, determined that it is necessary to continue the national emergency",
+    "posed by the actions and policies of the Government of Sudan",
+    "has not been resolved"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Sudan-related trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-11-02",
+  "doc_id": "noti201724016",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 557,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "Cymer has established Tuesday, 5 February 2013 as the date on which it will hold a special shareholders meeting",
+    "a request for additional information from the Antitrust Division of the U.S. Department of Justice",
+    "ASML and Cymer continue to anticipate completion of the transaction in the first half of 2013"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2012-12-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 62375,
+  "max_words": 20000
+}

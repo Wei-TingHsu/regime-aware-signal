@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "the national emergency first declared on November 14, 1994, and extended in each subsequent year, must continue",
+    "I am continuing the national emergency declared in Executive Order 12938"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2014-11-12",
+  "doc_id": "noti201426896",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 309,
+  "max_words": 20000
+}

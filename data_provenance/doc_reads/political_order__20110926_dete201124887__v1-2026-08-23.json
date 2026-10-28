@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby designate Bolivia, Burma, and Venezuela as countries that have failed demonstrably",
+    "support for programs to aid Bolivia and Venezuela are vital to the national interests",
+    "I hereby identify the following countries as major drug transit or major illicit drug producing countries"
+  ],
+  "extra": {
+    "actor": "President (via Secretary of State memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "foreign_aid",
+      "counternarcotics",
+      "diplomacy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-09-26",
+  "doc_id": "dete201124887",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1455,
+  "max_words": 20000
+}

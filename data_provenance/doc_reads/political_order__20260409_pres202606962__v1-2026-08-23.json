@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 20,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "direct spending budgetary resources for fiscal year 2027",
+    "be reduced by the amount calculated by the Office of Management and Budget",
+    "in strict accordance with the requirements of section 251A"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "federal budget",
+      "mandatory spending"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-04-09",
+  "doc_id": "pres202606962",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 246,
+  "max_words": 20000
+}

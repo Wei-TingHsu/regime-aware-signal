@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "whether to investigate any of China's laws, policies, practices, or actions",
+    "may encourage or require the transfer of American technology and intellectual property",
+    "The United States Trade Representative shall determine...whether to investigate"
+  ],
+  "extra": {
+    "actor": "USTR/White House",
+    "is_decided": false,
+    "sectors": [
+      "technology",
+      "trade",
+      "intellectual property"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-08-17",
+  "doc_id": "memo201717528",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 503,
+  "max_words": 20000
+}

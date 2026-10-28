@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby delegate to the Secretary of the Treasury...the functions and authorities vested in the President by sections 3(a), 3(c)(1), and 3(e) of the Stop Harboring Iranian Petroleum Act",
+    "Mahsa Amini Human Rights and Security Accountability Act",
+    "Illicit Captagon Trafficking Suppression Act of 2023"
+  ],
+  "extra": {
+    "actor": "President (delegating to State/Treasury/Defense/Commerce)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions administration",
+      "Iran-related energy",
+      "terrorism financing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-09-24",
+  "doc_id": "memo202421946",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1398,
+  "max_words": 20000
+}

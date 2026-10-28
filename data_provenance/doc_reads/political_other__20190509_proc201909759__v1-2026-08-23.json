@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim May 5 through May 11, 2019, as National Small Business Week",
+    "Most small businesses are now able to deduct 20 percent from their taxable business income"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "small business"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-05-09",
+  "doc_id": "proc201909759",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 682,
+  "max_words": 20000
+}

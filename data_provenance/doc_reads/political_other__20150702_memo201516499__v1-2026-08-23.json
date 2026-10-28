@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate to the Secretary of Defense the authority to fulfill the certification requirement",
+    "specified in section 1035 of the National Defense Authorization Act for Fiscal Year 2013"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of Defense)",
+    "is_decided": true,
+    "sectors": [
+      "defense"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-07-02",
+  "doc_id": "memo201516499",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 244,
+  "max_words": 20000
+}

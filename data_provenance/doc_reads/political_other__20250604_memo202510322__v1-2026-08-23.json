@@ -1,0 +1,41 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.15,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "I waive the requirements of section 303(a)(2) through (a)(6) of the Act",
+    "increase production capacity of munitions, missiles and associated equipment, and minerals",
+    "critical minerals... as well as uranium, copper, potash, and gold"
+  ],
+  "extra": {
+    "actor": "President (DPA Section 303 waiver to Secretary of Defense)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "munitions",
+      "mining",
+      "critical minerals",
+      "uranium",
+      "copper",
+      "potash",
+      "gold"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-06-04",
+  "doc_id": "memo202510322",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 354,
+  "max_words": 20000
+}

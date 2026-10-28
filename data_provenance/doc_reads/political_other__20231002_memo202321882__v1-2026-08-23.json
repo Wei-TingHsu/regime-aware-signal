@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.2,
+  "novelty": 0.15,
+  "confidence": 0.8,
+  "evidence": [
+    "it is the policy of my Administration to work with the Congress and with Tribal Nations",
+    "secure a clean and resilient energy future for the region",
+    "review their programs affecting salmon, steelhead, and other native fish populations"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum)",
+    "is_decided": false,
+    "sectors": [
+      "energy/hydropower",
+      "agriculture",
+      "environment/fisheries"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-10-02",
+  "doc_id": "memo202321882",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1372,
+  "max_words": 20000
+}

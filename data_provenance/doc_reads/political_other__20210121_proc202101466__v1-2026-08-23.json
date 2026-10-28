@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "continuation of the tariff-rate quota on imports of washers... for an additional period of 2 years",
+    "annual reductions in the rates of duties entered within those quantities in the fourth and fifth years",
+    "this safeguard measure shall apply to imports from all countries, except for products of Canada"
+  ],
+  "extra": {
+    "actor": "President (Trade Act section 203/204)",
+    "is_decided": true,
+    "sectors": [
+      "appliances",
+      "consumer durables",
+      "trade/tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-01-21",
+  "doc_id": "proc202101466",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1972,
+  "max_words": 20000
+}

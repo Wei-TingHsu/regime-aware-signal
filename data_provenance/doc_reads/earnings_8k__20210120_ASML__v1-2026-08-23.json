@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "Q4 net sales of \u20ac4.3 billion... above our guidance",
+    "For 2021, we expect another year of growth driven by strong Logic demand and continued recovery in Memory",
+    "ASML expects first-quarter revenue between \u20ac3.9 billion and \u20ac4.1 billion with a gross margin between 50% and 51%"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.5,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2021-01-20",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 102149,
+  "max_words": 20000
+}

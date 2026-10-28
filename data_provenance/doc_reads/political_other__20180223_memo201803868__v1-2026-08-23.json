@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "directing the Department of Justice to dedicate all available resources",
+    "propose for notice and comment a rule banning all devices that turn legal weapons into machineguns",
+    "Public comment concluded on January 25, 2018"
+  ],
+  "extra": {
+    "actor": "President (DOJ directive)",
+    "is_decided": false,
+    "sectors": [
+      "firearms manufacturers",
+      "sporting goods retailers"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-02-23",
+  "doc_id": "memo201803868",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 367,
+  "max_words": 20000
+}

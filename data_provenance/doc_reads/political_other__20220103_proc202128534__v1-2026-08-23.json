@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Section 1. Revocation. Proclamation 10315 is revoked.",
+    "The travel restrictions imposed by that proclamation are no longer necessary",
+    "effective at 12:01 a.m. eastern standard time on December 31, 2021"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "travel",
+      "airlines",
+      "tourism"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-01-03",
+  "doc_id": "proc202128534",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 989,
+  "max_words": 20000
+}

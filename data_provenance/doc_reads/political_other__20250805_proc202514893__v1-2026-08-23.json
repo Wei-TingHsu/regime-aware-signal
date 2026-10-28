@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 30,
+  "specificity": 0.85,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "shall be subject to a 50 percent tariff",
+    "effective...on or after 12:01 a.m...August 1, 2025",
+    "phased universal import duty on refined copper of 15 percent starting on January 1, 2027"
+  ],
+  "extra": {
+    "actor": "President (Section 232 copper tariff proclamation)",
+    "is_decided": true,
+    "sectors": [
+      "copper",
+      "metals",
+      "manufacturing",
+      "industrials",
+      "defense"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-08-05",
+  "doc_id": "proc202514893",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2433,
+  "max_words": 20000
+}

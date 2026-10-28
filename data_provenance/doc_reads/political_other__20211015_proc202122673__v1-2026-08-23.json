@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.15,
+  "confidence": 0.75,
+  "evidence": [
+    "Restoring the Grand Staircase-Escalante National Monument to its size and boundaries as they existed prior to December 4, 2017",
+    "hereby appropriated and withdrawn from all forms of entry, location, selection, sale, or other disposition under the public land laws",
+    "withdrawn...from disposition under all laws relating to mineral and geothermal leasing"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "mining",
+      "oil_gas",
+      "land_management",
+      "tourism"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-10-15",
+  "doc_id": "proc202122673",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 7527,
+  "max_words": 20000
+}

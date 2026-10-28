@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 0,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "I am establishing the My Brother's Keeper initiative",
+    "There is established a My Brother's Keeper Task Force",
+    "This memorandum shall be implemented consistent with applicable law and subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "education",
+      "social policy",
+      "government administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-03-07",
+  "doc_id": "memo201405073",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1550,
+  "max_words": 20000
+}

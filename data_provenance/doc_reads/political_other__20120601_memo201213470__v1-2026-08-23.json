@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby direct each agency to take the following actions",
+    "implement the requirements of the Strategy within 12 months",
+    "create a page on its website ... to publicly report progress"
+  ],
+  "extra": {
+    "actor": "President (via OMB/Federal CIO)",
+    "is_decided": true,
+    "sectors": [
+      "government IT",
+      "technology",
+      "federal agencies"
+    ]
+  },
+  "source": "political_other",
+  "date": "2012-06-01",
+  "doc_id": "memo201213470",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 669,
+  "max_words": 20000
+}

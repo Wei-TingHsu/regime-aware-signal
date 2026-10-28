@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "Order of Succession Within the Council on Environmental Quality",
+    "the following officials...shall act as and perform the functions and duties of the office of the Chairman",
+    "The Presidential Memorandum of March 13, 2015...is hereby revoked"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": true,
+    "sectors": [
+      "administrative"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-01-19",
+  "doc_id": "memo201701500",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 495,
+  "max_words": 20000
+}

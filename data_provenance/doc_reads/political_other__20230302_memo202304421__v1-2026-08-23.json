@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "I waive the requirements of section 303(a)(1)-(a)(6) of the Act",
+    "critical supply chains for electronics, kinetic capabilities, castings and forgings, minerals and materials, and power and energy storage",
+    "action is necessary to avert shortfalls in critical Department of Defense supply chains"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "industrials",
+      "materials",
+      "electronics",
+      "energy storage"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-03-02",
+  "doc_id": "memo202304421",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 345,
+  "max_words": 20000
+}

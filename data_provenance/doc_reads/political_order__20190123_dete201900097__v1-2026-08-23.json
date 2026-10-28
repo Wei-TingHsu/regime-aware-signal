@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "domestic capability for advanced manufacturing techniques for the production of chemicals in munitions is essential to the national defense",
+    "United States industry cannot reasonably be expected to provide the capability",
+    "purchases, purchase commitments, or other action pursuant to section 303 of the Act are the most cost-effective"
+  ],
+  "extra": {
+    "actor": "President (DoD)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "chemicals",
+      "munitions manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-01-23",
+  "doc_id": "dete201900097",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 274,
+  "max_words": 20000
+}

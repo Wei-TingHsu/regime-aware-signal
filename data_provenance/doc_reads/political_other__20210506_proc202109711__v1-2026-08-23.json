@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 10,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "suspend the entry into the United States, as nonimmigrants, of noncitizens",
+    "the Republic of India accounts for over one-third of new global cases",
+    "This proclamation is effective at 12:01 a.m. eastern daylight time on May 4, 2021"
+  ],
+  "extra": {
+    "actor": "President (Biden) / CDC / DHS",
+    "is_decided": true,
+    "sectors": [
+      "travel",
+      "airlines",
+      "immigration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-05-06",
+  "doc_id": "proc202109711",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1707,
+  "max_words": 20000
+}

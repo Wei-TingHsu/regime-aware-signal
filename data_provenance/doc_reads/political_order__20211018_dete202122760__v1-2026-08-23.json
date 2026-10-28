@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "The admission of up to 125,000 refugees to the United States during Fiscal Year (FY) 2022",
+    "Africa................................................. 40,000",
+    "may, if otherwise qualified, be considered refugees for the purpose of admission"
+  ],
+  "extra": {
+    "actor": "President (INA Section 207 refugee ceiling determination)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "humanitarian",
+      "foreign policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2021-10-18",
+  "doc_id": "dete202122760",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 485,
+  "max_words": 20000
+}

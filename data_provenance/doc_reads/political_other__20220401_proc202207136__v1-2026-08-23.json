@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.02,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.85,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "totaling 1.25 million metric tons, is consistent with the objective",
+    "I have decided to exclude such imports from Japan up to a designated quota",
+    "necessary and appropriate, at this time, to maintain the current tariff level"
+  ],
+  "extra": {
+    "actor": "President Biden / Commerce Dept (Section 232)",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "trade/tariffs",
+      "Japan-US trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-04-01",
+  "doc_id": "proc202207136",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2500,
+  "max_words": 20000
+}

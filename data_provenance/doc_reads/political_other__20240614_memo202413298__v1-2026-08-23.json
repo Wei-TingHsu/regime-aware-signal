@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "direct the drawdown of up to $275 million in defense articles and services",
+    "furnish up to $24 million in assistance to Ukraine",
+    "delegate to the Secretary of State"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-06-14",
+  "doc_id": "memo202413298",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 276,
+  "max_words": 20000
+}

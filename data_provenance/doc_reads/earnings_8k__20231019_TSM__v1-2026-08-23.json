@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue is expected to be between US$18.8 billion and US$19.6 billion",
+    "Gross profit margin is expected to be between 51.5% and 53.5%",
+    "the continued strong ramp of our 3-nanometer technology, partially offset by customers\u2019 continued inventory adjustment"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.15,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2023-10-19",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 54713,
+  "max_words": 20000
+}

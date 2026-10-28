@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby delegate to you the functions and authorities vested in the President",
+    "section 106(b)(6)(B) and (C) of the Bipartisan Congressional Trade Priorities",
+    "You are authorized and directed to publish this memorandum"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "trade administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-06-03",
+  "doc_id": "memo201613290",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 299,
+  "max_words": 20000
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.85,
+  "evidence": [
+    "I am continuing for 1 year the national emergency with respect to Iran",
+    "certain actions and policies of the Government of Iran continue to pose an unusual and extraordinary threat"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "financial sanctions"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-03-14",
+  "doc_id": "noti201405879",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 445,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim September 17 through September 23, 2017, as Prescription Opioid and Heroin Epidemic Awareness Week",
+    "The Commission will release its final recommendations this fall",
+    "my FY 2018 Budget commits significant resources to fighting this epidemic"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-09-21",
+  "doc_id": "proc201720380",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 549,
+  "max_words": 20000
+}

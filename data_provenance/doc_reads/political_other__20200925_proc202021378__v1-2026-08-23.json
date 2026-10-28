@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim September 20 through September 26, 2020, as National Farm Safety and Health Week",
+    "my Administration is providing $34 billion to America's farmers through a variety of programs"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "agriculture"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-09-25",
+  "doc_id": "proc202021378",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 719,
+  "max_words": 20000
+}

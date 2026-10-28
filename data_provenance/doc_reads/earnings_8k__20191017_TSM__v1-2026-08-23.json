@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue is expected to be between US$10.2 billion and US$10.3 billion",
+    "We expect the strength of demand for our 7-nanometer technology will continue",
+    "Gross profit margin is expected to be between 48% and 50%"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2019-10-17",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 105387,
+  "max_words": 20000
+}

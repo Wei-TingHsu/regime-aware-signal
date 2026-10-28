@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "fund 100 percent of the emergency assistance activities",
+    "shall extend to...through, June 24, 2020",
+    "facilitating its economic recovery"
+  ],
+  "extra": {
+    "actor": "President (FEMA/DoD directive)",
+    "is_decided": true,
+    "sectors": [
+      "state/local government",
+      "National Guard",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-05-26",
+  "doc_id": "memo202011427",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 879,
+  "max_words": 20000
+}

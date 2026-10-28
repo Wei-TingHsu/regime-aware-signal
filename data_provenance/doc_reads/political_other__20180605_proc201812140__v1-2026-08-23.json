@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.85,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "have decided to exclude these countries from the tariff proclaimed in Proclamation 9705",
+    "it is necessary and appropriate, at this time, to maintain the current tariff level as it applies to other countries",
+    "quantitative limitations applicable to subheadings 9903.80.05 through 9903.80.58 for Argentina and Brazil"
+  ],
+  "extra": {
+    "actor": "President (Trump) via Section 232 proclamation",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "trade/tariffs",
+      "metals imports"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-06-05",
+  "doc_id": "proc201812140",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1731,
+  "max_words": 20000
+}

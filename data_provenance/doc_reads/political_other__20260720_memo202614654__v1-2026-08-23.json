@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.2,
+    "gold": 0.2,
+    "dollar": 0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.6,
+  "horizon_days": 20,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "The Trade Representative shall impose a tariff of 25 percent on all goods of Brazil",
+    "with exemptions for certain goods as discussed in subsection (b)",
+    "those consultations have not satisfactorily resolved United States concerns"
+  ],
+  "extra": {
+    "actor": "President (USTR directed)",
+    "is_decided": true,
+    "sectors": [
+      "Brazil trade",
+      "tariffs",
+      "digital trade",
+      "ethanol",
+      "agriculture"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-07-20",
+  "doc_id": "memo202614654",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1204,
+  "max_words": 20000
+}

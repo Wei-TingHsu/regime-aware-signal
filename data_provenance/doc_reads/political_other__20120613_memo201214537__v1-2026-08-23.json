@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "create a streamlined online application process for IBR",
+    "cap their monthly loan repayments at 10 percent of their discretionary income",
+    "By September 30, 2012, the Secretary of Education... shall create"
+  ],
+  "extra": {
+    "actor": "President (Education/Treasury Secretaries)",
+    "is_decided": true,
+    "sectors": [
+      "education",
+      "consumer finance",
+      "student loans"
+    ]
+  },
+  "source": "political_other",
+  "date": "2012-06-13",
+  "doc_id": "memo201214537",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 931,
+  "max_words": 20000
+}

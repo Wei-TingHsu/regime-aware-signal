@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.02,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.75,
+  "evidence": [
+    "I conclude that Ukraine's present situation remains a special case",
+    "I have determined that it is necessary and appropriate, at this time, to maintain the current tariff level",
+    "an extension of the suspension of tariffs in Proclamation 10403... is warranted"
+  ],
+  "extra": {
+    "actor": "President (Biden) / Dept. of Commerce",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "metals",
+      "trade/tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-06-05",
+  "doc_id": "proc202412503",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3339,
+  "max_words": 20000
+}

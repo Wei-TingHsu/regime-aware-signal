@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": -0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.3,
+  "confidence": 0.65,
+  "evidence": [
+    "2020 sales growth expectations unchanged",
+    "We expect Q3 revenue between \u20ac3.6 billion and \u20ac3.8 billion with a gross margin between 47% and 48%",
+    "We therefore expect a year of double-digit growth in sales and profitability"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2020-07-15",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 99973,
+  "max_words": 20000
+}

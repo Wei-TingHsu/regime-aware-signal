@@ -1,0 +1,31 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.1,
+    "gold": -0.1,
+    "dollar": 0.2,
+    "oil": 0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "Repurchased 17% of total program",
+    "ASML Holding N.V. Report of Foreign Issuer"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2014-09-04",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 77614,
+  "max_words": 20000
+}

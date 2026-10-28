@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.02,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim October 2018 as National Cybersecurity Awareness Month",
+    "I call upon the people, companies, and institutions of the United States to recognize the importance of cybersecurity",
+    "the Federal Government will use all means available to keep our country safe from cyber threats"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "cybersecurity"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-10-04",
+  "doc_id": "proc201821812",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 619,
+  "max_words": 20000
+}

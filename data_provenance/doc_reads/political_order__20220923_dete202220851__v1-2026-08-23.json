@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby identify the following countries as major drug transit or major illicit drug producing countries",
+    "designate Afghanistan, Bolivia, Burma, and Venezuela as having failed demonstrably",
+    "United States programs that support Afghanistan, Bolivia, Burma, and Venezuela are vital to the national interests"
+  ],
+  "extra": {
+    "actor": "President (via Secretary of State memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "foreign policy",
+      "drug control",
+      "national security"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-09-23",
+  "doc_id": "dete202220851",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 901,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "I direct the Secretary of the Interior and the Secretary of Commerce to build upon the success of the Plan and ROD",
+    "implement the relevant authorities of subtitle J of the Water Infrastructure Improvements for the Nation Act",
+    "A Plan and ROD were issued today"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": false,
+    "sectors": [
+      "agriculture",
+      "water utilities",
+      "California regional economy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-02-26",
+  "doc_id": "memo202004089",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 683,
+  "max_words": 20000
+}

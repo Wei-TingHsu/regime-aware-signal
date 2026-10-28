@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "The admission of up to 70,000 refugees to the United States during fiscal year (FY) 2014",
+    "Africa......................... 15,000",
+    "Near East/South Asia........... 33,000"
+  ],
+  "extra": {
+    "actor": "President (via Presidential Determination to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "refugee resettlement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-10-21",
+  "doc_id": "dete201324779",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 551,
+  "max_words": 20000
+}

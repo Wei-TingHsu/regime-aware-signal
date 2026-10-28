@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 10,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "direct the drawdown of up to an aggregate value of $350 million in defense articles",
+    "to provide assistance to Ukraine",
+    "delegate to the Secretary of State the authority under section 506(a)(1)"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign policy",
+      "Ukraine aid"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-06-24",
+  "doc_id": "memo202213745",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 257,
+  "max_words": 20000
+}

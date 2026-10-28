@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.02,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "I have decided to designate Mauritania as a beneficiary sub-Saharan African country.",
+    "I have decided to terminate the designations of the Central African Republic, Gabon, Niger, and Uganda",
+    "to provide duty-free access into the United States for an additional 1-year period"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "apparel/textiles",
+      "agriculture",
+      "trade-AGOA beneficiaries"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-01-04",
+  "doc_id": "proc202400051",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1745,
+  "max_words": 20000
+}

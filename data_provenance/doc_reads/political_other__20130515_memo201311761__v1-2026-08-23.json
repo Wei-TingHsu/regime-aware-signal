@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "Within 180 days of the date of this memorandum, the Director of the Office of Personnel Management",
+    "each agency shall, within 90 days of the date of this memorandum, provide to the Office of Personnel Management",
+    "This memorandum is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (OPM Director, agency heads)",
+    "is_decided": true,
+    "sectors": [
+      "federal workforce",
+      "labor policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-05-15",
+  "doc_id": "memo201311761",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 732,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.75,
+  "novelty": 0.45,
+  "confidence": 0.6,
+  "evidence": [
+    "The entry of any noncitizen into the United States across the southern border is hereby suspended and limited",
+    "This suspension and limitation on entry shall be effective at 12:01 a.m. eastern daylight time on June 5, 2024",
+    "shall be discontinued...after the Secretary makes a factual determination that there has been a 7-consecutive-calendar-day average of less than 1,500 encounters"
+  ],
+  "extra": {
+    "actor": "President (DHS/DOJ implementation)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "border security",
+      "labor supply"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-06-07",
+  "doc_id": "proc202412647",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3830,
+  "max_words": 20000
+}

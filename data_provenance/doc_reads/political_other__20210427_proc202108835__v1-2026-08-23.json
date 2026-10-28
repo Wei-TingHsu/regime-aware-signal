@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim April 22, 2021, as Earth Day",
+    "the United States will be able to cut our greenhouse gas emissions in half by 2030",
+    "my Administration is advancing the most ambitious climate agenda in our Nation's history"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": false,
+    "sectors": [
+      "energy",
+      "environment"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-04-27",
+  "doc_id": "proc202108835",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 964,
+  "max_words": 20000
+}

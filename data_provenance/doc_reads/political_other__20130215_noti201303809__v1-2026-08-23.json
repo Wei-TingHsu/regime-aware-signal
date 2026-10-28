@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.05,
+  "confidence": 0.8,
+  "evidence": [
+    "I am continuing for 1 year the national emergency declared in Executive Order 13566.",
+    "We are in the process of winding down the sanctions in response to developments in Libya",
+    "continues to pose an unusual and extraordinary threat to the national security"
+  ],
+  "extra": {
+    "actor": "President (via Federal Register notice)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Libya",
+      "energy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-02-15",
+  "doc_id": "noti201303809",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 480,
+  "max_words": 20000
+}

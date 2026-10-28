@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "establish a tariff-rate quota on imports of aluminum articles from member countries of the EU",
+    "The United States has successfully concluded discussions with the EU",
+    "maintain the current tariff level as it applies to other countries"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "EU trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-01-03",
+  "doc_id": "proc202128514",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1780,
+  "max_words": 20000
+}

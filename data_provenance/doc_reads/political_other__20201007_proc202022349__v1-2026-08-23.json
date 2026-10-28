@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.0,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim October 2, 2020, as National Manufacturing Day",
+    "celebrate our dedicated American workers who carry on this legacy",
+    "we added 29,000 manufacturing jobs in August alone"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-10-07",
+  "doc_id": "proc202022349",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 848,
+  "max_words": 20000
+}

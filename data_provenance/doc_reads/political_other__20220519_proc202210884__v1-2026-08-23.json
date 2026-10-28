@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.0,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim May 15 through May 21, 2022, as World Trade Week",
+    "American workers are the finest in the world",
+    "We reached a groundbreaking deal with the European Union"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-05-19",
+  "doc_id": "proc202210884",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 924,
+  "max_words": 20000
+}

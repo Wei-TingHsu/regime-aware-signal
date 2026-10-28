@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.3,
+    "gold": 0.05,
+    "dollar": -0.1,
+    "oil": -0.3
+  },
+  "magnitude": 0.5,
+  "horizon_days": 20,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.4,
+  "evidence": [
+    "We continue to expect a total revenue level for 2011 clearly above \u20ac 5 billion",
+    "Resulting adjustments are only affecting potential litho system demand above what is currently the analyst\u2019s consensus",
+    "Net system bookings of 40 systems, \u20ac 845 million"
+  ],
+  "extra": {
+    "surprise": -0.3,
+    "guidance_change": -0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2011-05-12",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 23891,
+  "max_words": 20000
+}

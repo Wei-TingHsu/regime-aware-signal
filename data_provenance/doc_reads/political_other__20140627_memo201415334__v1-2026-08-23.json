@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "it is the policy of the Federal Government to promote a culture in which managers and employees understand the workplace flexibilities",
+    "Agencies shall make Federal employees aware, on a periodic basis, that they have the right to request work schedule flexibilities",
+    "This memorandum is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (internal federal workforce policy memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "federal workforce/human resources"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-06-27",
+  "doc_id": "memo201415334",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1544,
+  "max_words": 20000
+}

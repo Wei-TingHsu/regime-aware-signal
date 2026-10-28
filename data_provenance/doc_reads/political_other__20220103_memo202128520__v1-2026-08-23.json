@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "FEMA shall fund 100 percent of the cost of activities associated with the mission assignments to HHS",
+    "to get COVID-19 testing to the places that need it most"
+  ],
+  "extra": {
+    "actor": "President (FEMA/HHS/DHS directive)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "government services"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-01-03",
+  "doc_id": "memo202128520",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 530,
+  "max_words": 20000
+}

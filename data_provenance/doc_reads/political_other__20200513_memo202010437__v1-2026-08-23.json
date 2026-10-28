@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I am directing the Federal Emergency Management Agency (FEMA)... to fund 100 percent",
+    "shall be available for orders of any length authorizing duty through June 24, 2020",
+    "facilitate Federal support with respect to the use of National Guard units"
+  ],
+  "extra": {
+    "actor": "President (FEMA/DoD directive)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "public health/emergency management"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-05-13",
+  "doc_id": "memo202010437",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 910,
+  "max_words": 20000
+}

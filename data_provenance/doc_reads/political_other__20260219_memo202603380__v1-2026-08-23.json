@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "I waive the requirements of section 303(a)(2)-(a)(6) of the Act",
+    "action is necessary to avert shortfalls in critical Department of War supply chains",
+    "shipbuilding industrial base; soldier systems...space...electronics for defense systems"
+  ],
+  "extra": {
+    "actor": "President (DPA Title III waiver)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "aerospace",
+      "shipbuilding",
+      "electronics",
+      "industrials"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-02-19",
+  "doc_id": "memo202603380",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 499,
+  "max_words": 20000
+}

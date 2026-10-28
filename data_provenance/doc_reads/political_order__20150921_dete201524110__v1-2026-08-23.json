@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby designate Bolivia, Burma, and Venezuela as countries that have failed demonstrably",
+    "support for programs to aid Burma and Venezuela are vital to the national interests",
+    "I hereby identify the following countries as major drug transit and/or major illicit drug producing countries"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "narcotics policy",
+      "diplomacy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-09-21",
+  "doc_id": "dete201524110",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2106,
+  "max_words": 20000
+}

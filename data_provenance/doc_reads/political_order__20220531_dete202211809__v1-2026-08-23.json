@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby designate Colombia as a Major Non-NATO Ally of the United States",
+    "for the purposes of the Act and the Arms Export Control Act"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "aerospace"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-05-31",
+  "doc_id": "dete202211809",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 238,
+  "max_words": 20000
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "I direct the establishment, consistent with United States law, of United States Space Command as a functional Unified Combatant Command.",
+    "the space-related responsibilities previously assigned to the Commander, United States Strategic Command"
+  ],
+  "extra": {
+    "actor": "President (DoD directive)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "aerospace"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-12-21",
+  "doc_id": "memo201827953",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 304,
+  "max_words": 20000
+}

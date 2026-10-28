@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "SES officials ... must serve at the pleasure of the President",
+    "shall immediately take all appropriate actions, up to and including removal of that official",
+    "Director of OPM ... shall issue SES Performance Plans that agencies must adopt"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch personnel policy)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "federal workforce"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-30",
+  "doc_id": "memo202502042",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 701,
+  "max_words": 20000
+}

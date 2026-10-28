@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate to you the functions and authorities vested in the President",
+    "pursuant to section 4 and section 7 of the Electrify Africa Act of 2015"
+  ],
+  "extra": {
+    "actor": "President (delegating to USAID Administrator)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "foreign aid",
+      "Africa development"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-08-08",
+  "doc_id": "memo201618879",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 230,
+  "max_words": 20000
+}

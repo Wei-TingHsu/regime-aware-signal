@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "natural gas and LNG capacity... are industrial resources, materials, or critical technology items essential to the national defense",
+    "I waive the requirements of section 303(a)(1)-(a)(6) of the Act for the purpose of expanding such capability",
+    "making necessary purchases, commitments, and financial instruments to enable these projects"
+  ],
+  "extra": {
+    "actor": "President (DPA Title III determination directing Secretary of Energy)",
+    "is_decided": true,
+    "sectors": [
+      "natural gas",
+      "LNG",
+      "pipelines",
+      "energy infrastructure"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-04-23",
+  "doc_id": "dete202608017",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 567,
+  "max_words": 20000
+}

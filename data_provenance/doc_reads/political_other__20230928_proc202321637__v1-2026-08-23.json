@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim September 24 through September 30, 2023, as National Historically Black Colleges and Universities Week",
+    "my Administration has delivered more than $7 billion to HBCUs",
+    "we finalized the Saving on a Valuable Education Program (SAVE)"
+  ],
+  "extra": {
+    "actor": "President (ceremonial proclamation)",
+    "is_decided": true,
+    "sectors": [
+      "education"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-09-28",
+  "doc_id": "proc202321637",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1151,
+  "max_words": 20000
+}

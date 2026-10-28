@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.95,
+  "novelty": 0.5,
+  "confidence": 0.8,
+  "evidence": [
+    "The Transaction is hereby prohibited",
+    "shall sell or transfer all direct and indirect legal and beneficial ownership interests",
+    "remove from the Real Estate all items, structures, or other physical objects"
+  ],
+  "extra": {
+    "actor": "President (CFIUS/Treasury enforcement)",
+    "is_decided": true,
+    "sectors": [
+      "cryptocurrency mining",
+      "Chinese-owned US real estate",
+      "national security/CFIUS"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-05-16",
+  "doc_id": "noti202410966",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2297,
+  "max_words": 20000
+}

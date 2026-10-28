@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 90,
+  "specificity": 0.55,
+  "novelty": 0.35,
+  "confidence": 0.6,
+  "evidence": [
+    "allow the company to annually import primary aluminum ... at half the section 232 rate of duty",
+    "establish an investment incentive program for companies investing in new U.S. production capacity for primary aluminum",
+    "commitment that construction will start by January 20, 2029"
+  ],
+  "extra": {
+    "actor": "President (Secretary of Commerce implementation)",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-07-23",
+  "doc_id": "proc202614990",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1997,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "I have notified the Congress of my intention to enter into a free trade agreement",
+    "known as the Trans-Pacific Partnership (TPP) Agreement",
+    "generate export opportunities for U.S. manufacturers, service suppliers, farmers, ranchers, and businesses"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": false,
+    "sectors": [
+      "trade",
+      "manufacturing",
+      "agriculture"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-11-09",
+  "doc_id": "noti201528709",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 285,
+  "max_words": 20000
+}

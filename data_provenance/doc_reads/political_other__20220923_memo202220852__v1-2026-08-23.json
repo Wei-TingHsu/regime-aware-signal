@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "transfer of up to $130 million of Fiscal Year 2020 Foreign Military Financing funds",
+    "assistance for international energy and climate security objectives ($90 million)",
+    "assistance for the Pacific Islands ($40 million)"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "defense financing",
+      "energy/climate"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-09-23",
+  "doc_id": "memo202220852",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 235,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.2
+  },
+  "magnitude": 0.2,
+  "horizon_days": 10,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "sufficient supply of petroleum and petroleum products from countries other than Iran",
+    "permit a significant reduction in the volume of petroleum and petroleum products purchased from Iran",
+    "I will continue to monitor this situation closely."
+  ],
+  "extra": {
+    "actor": "President (via Secretaries of State, Treasury, Energy)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "sanctions",
+      "Iran oil trade"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-06-06",
+  "doc_id": "dete201812332",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 337,
+  "max_words": 20000
+}

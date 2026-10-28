@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.55,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "Cybercab, Tesla Semi and Megapack 3 are on schedule for volume production starting in 2026.",
+    "We began removing safety monitor from our Robotaxis in Austin in January",
+    "we expect our hardware-related profits to be accompanied by an acceleration of AI, software and fleet-based profits"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": 0.1,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2026-01-28",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 195265,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 20,
+  "specificity": 0.95,
+  "novelty": 0.3,
+  "confidence": 0.8,
+  "evidence": [
+    "The transaction resulting in the acquisition of StayNTouch by the Purchaser is hereby prohibited",
+    "the Purchaser shall divest all interests in: (i) StayNTouch",
+    "might take action that threatens to impair the national security of the United States"
+  ],
+  "extra": {
+    "actor": "President (CFIUS/Treasury)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "hospitality software",
+      "China-US investment/CFIUS"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-03-10",
+  "doc_id": "pres202005011",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1261,
+  "max_words": 20000
+}

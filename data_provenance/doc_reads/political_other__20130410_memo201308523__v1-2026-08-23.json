@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "continue through December 31, 2013, to adhere to the policy",
+    "deny statutory adjustments to any pay systems or pay schedules"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "federal employment",
+      "government pay"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-04-10",
+  "doc_id": "memo201308523",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 309,
+  "max_words": 20000
+}

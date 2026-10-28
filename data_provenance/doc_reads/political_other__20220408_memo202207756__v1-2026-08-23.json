@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "shall coordinate the Government-wide response to the long-term effects of COVID-19",
+    "shall publish a public report within 120 days",
+    "develop the first-ever interagency national research agenda on long COVID"
+  ],
+  "extra": {
+    "actor": "President / HHS Secretary",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "public health",
+      "pharma/biotech"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-04-08",
+  "doc_id": "memo202207756",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1604,
+  "max_words": 20000
+}

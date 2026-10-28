@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "NET INCOME 202,873,374",
+    "INCOME FROM OPERATIONS 223,790,118",
+    "Basic earnings per share $ 7.82"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2022-05-13",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 30984,
+  "max_words": 20000
+}

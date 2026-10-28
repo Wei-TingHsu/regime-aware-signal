@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "I hereby proclaim October 2025 as National Cybersecurity Awareness Month",
+    "My Administration will do whatever it takes to make America cyber secure",
+    "earlier this year, I signed an Executive Order to strengthen our Nation's cybersecurity"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": false,
+    "sectors": [
+      "technology",
+      "cybersecurity"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-10-22",
+  "doc_id": "proc202519640",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 591,
+  "max_words": 20000
+}

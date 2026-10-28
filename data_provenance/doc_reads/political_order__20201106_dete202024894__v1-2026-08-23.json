@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "the United States will not provide nonhumanitarian, nontrade-related assistance to the Governments of Burundi, China, Cuba",
+    "vote against and use best efforts to deny any loan or other utilization of the funds",
+    "a partial waiver to allow assistance ... would promote the purposes of the Act"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch)",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "sanctions",
+      "trafficking policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2020-11-06",
+  "doc_id": "dete202024894",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1077,
+  "max_words": 20000
+}

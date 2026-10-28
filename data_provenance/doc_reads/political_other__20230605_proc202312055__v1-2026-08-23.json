@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.15,
+  "confidence": 0.75,
+  "evidence": [
+    "extension of the suspension of tariffs in Proclamation 10403",
+    "I have determined that it is necessary and appropriate, at this time, to maintain the current tariff level",
+    "duty-free treatment on imports of steel articles when such are the products of Ukraine"
+  ],
+  "extra": {
+    "actor": "President (Biden) / Section 232 steel tariff regime",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "metals",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-06-05",
+  "doc_id": "proc202312055",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3233,
+  "max_words": 20000
+}

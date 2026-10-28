@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "you shall finalize the development of a new retirement savings security",
+    "protects the principal contributed while earning interest at a rate based on yields on outstanding Treasury securities",
+    "begin work with employers, stakeholders... to develop a pilot project"
+  ],
+  "extra": {
+    "actor": "Secretary of the Treasury",
+    "is_decided": true,
+    "sectors": [
+      "financial services",
+      "retirement/savings"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-02-04",
+  "doc_id": "memo201402423",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 645,
+  "max_words": 20000
+}

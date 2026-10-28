@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.45,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "recoverable CMMs are scarce and critical materials essential to the national defense",
+    "You are authorized and directed to implement this determination by taking all appropriate action",
+    "It is imperative that the United States takes immediate action to secure the supply"
+  ],
+  "extra": {
+    "actor": "Secretary of Commerce",
+    "is_decided": true,
+    "sectors": [
+      "critical minerals",
+      "rare earths",
+      "recycling",
+      "defense industrial base"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-08-04",
+  "doc_id": "dete202615859",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 602,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.12,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "critical to national defense",
+    "trusted advanced photomasks",
+    "most cost effective, expedient, and practical alternative method"
+  ],
+  "extra": {
+    "actor": "President/Secretary of Defense",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "semiconductors"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-01-25",
+  "doc_id": "dete201801552",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 251,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby order the Secretary of Transportation and the Federal Aviation Administrator to immediately return to non-discriminatory, merit-based hiring",
+    "All so-called DEI initiatives...shall immediately be rescinded",
+    "review the past performance and performance standards of all individuals in critical safety positions"
+  ],
+  "extra": {
+    "actor": "President (DOT/FAA)",
+    "is_decided": true,
+    "sectors": [
+      "aviation",
+      "transportation",
+      "government personnel policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-31",
+  "doc_id": "memo202502099",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 414,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Q4 order intake...we expect to be at least of similar value, is for deliveries in the first half of 2010 and will translate into significant sales growth versus Q3 levels",
+    "This substantial order increase does not factor in a full worldwide economic recovery, which, if it materializes, could sustain the first half sales level into the second half of 2010",
+    "ASML expects Q4 2009 net sales of around EUR 550 million and gross margin in Q4 2009 of about 37 percent"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2009-10-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 38019,
+  "max_words": 20000
+}

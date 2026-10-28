@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.15,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Revenue is expected to be between US$16.7 billion and US$17.5 billion",
+    "customers' ongoing inventory adjustment",
+    "net income and diluted EPS both decreased 23.3%"
+  ],
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": -0.15,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2023-07-20",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 54089,
+  "max_words": 20000
+}

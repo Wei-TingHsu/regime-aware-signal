@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim June 2024 as National Homeownership Month",
+    "My plan proposes a tax credit of $5,000 per year",
+    "a record 1.7 million new housing units are now under construction"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": false,
+    "sectors": [
+      "housing",
+      "real estate"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-06-05",
+  "doc_id": "proc202412485",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 820,
+  "max_words": 20000
+}

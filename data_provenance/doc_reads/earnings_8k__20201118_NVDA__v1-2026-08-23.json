@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.6,
+  "confidence": 0.75,
+  "evidence": [
+    "Record revenue of $4.73 billion, up 57 percent from a year earlier",
+    "Revenue is expected to be $4.80 billion, plus or minus 2 percent.",
+    "NVIDIA is firing on all cylinders, achieving record revenues in Gaming, Data Center, and overall"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.3,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2020-11-18",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 20618,
+  "max_words": 20000
+}

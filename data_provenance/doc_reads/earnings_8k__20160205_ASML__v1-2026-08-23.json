@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.5,
+  "evidence": [
+    "ASML returned EUR 867.2 million to its shareholders through combined dividend and share buybacks",
+    "a dividend increase by 50% compared to the 2014 dividend",
+    "we intend to purchase shares up to EUR 1.5 billion"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2016-02-05",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 405511,
+  "max_words": 20000
+}

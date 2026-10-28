@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.75,
+  "evidence": [
+    "this proclamation restores access to hundreds of thousands of square miles of Pacific waters for commercial fishing",
+    "Only United States flagged vessels shall be allowed to fish commercially within the boundaries of these monuments",
+    "Proclamations 8031, 8335, 8337, and 9478 are modified to remove certain monument-based prohibitions on commercial fishing"
+  ],
+  "extra": {
+    "actor": "President (executive proclamation)",
+    "is_decided": true,
+    "sectors": [
+      "commercial fishing",
+      "seafood",
+      "marine conservation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-06-17",
+  "doc_id": "proc202612283",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1162,
+  "max_words": 20000
+}

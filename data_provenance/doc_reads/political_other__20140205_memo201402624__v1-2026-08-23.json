@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "shall develop a specific action plan... to make the workforce and training system more job-driven",
+    "Within 180 days of the date of this memorandum",
+    "I have asked the Vice President to lead a Government-wide review"
+  ],
+  "extra": {
+    "actor": "President (Labor, Commerce, Education Secretaries directed)",
+    "is_decided": false,
+    "sectors": [
+      "education",
+      "labor/workforce training"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-02-05",
+  "doc_id": "memo201402624",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 979,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "There is hereby established the Pollinator Health Task Force",
+    "the Task Force shall develop a National Pollinator Health Strategy",
+    "assess the effect of pesticides, including neonicotinoids, on bee and other pollinator health"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "agriculture",
+      "environment",
+      "pesticides/chemicals"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-06-24",
+  "doc_id": "memo201414946",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2058,
+  "max_words": 20000
+}

@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.15,
+  "confidence": 0.75,
+  "evidence": [
+    "USMCA will enter into force on July 1, 2020",
+    "the HTS is modified as set forth in Annex I of Publication 5060",
+    "Any provisions of previous proclamations ... are superseded to the extent of such inconsistency"
+  ],
+  "extra": {
+    "actor": "President (USTR, CITA, Commerce, Treasury implementation)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "automotive",
+      "textiles/apparel",
+      "agriculture",
+      "trucking services"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-07-01",
+  "doc_id": "proc202014448",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 4242,
+  "max_words": 20000
+}

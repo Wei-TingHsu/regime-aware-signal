@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "I am directing the undertaking of a Quadrennial Energy Review",
+    "The initial focus for the Quadrennial Energy Review will be our Nation's infrastructure",
+    "shall submit a Quadrennial Energy Review Report to the President every 4 years"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "infrastructure"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-01-14",
+  "doc_id": "memo201400708",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1328,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.2,
+  "novelty": 0.1,
+  "confidence": 0.75,
+  "evidence": [
+    "directs certain officials to assess the potential effects of efforts to ban or restrict the use of such technologies",
+    "Within 70 days of the date of this memorandum, the Secretary of Energy...shall submit a report to the President",
+    "aggressively protect and enhance American jobs, economic opportunities, and national security"
+  ],
+  "extra": {
+    "actor": "President (via Secretary of Energy, USTR, OMB)",
+    "is_decided": false,
+    "sectors": [
+      "energy",
+      "oil & gas",
+      "fracking"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-11-04",
+  "doc_id": "memo202024601",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2166,
+  "max_words": 20000
+}

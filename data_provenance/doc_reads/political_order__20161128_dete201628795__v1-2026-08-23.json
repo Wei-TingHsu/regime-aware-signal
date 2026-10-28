@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "the United States is no longer pursuing efforts to reduce Iran's sales of crude oil",
+    "sufficient supply of petroleum and petroleum products from countries other than Iran",
+    "I will continue to monitor this situation closely."
+  ],
+  "extra": {
+    "actor": "President (via Secretaries of State, Treasury, Energy)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "oil",
+      "sanctions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-11-28",
+  "doc_id": "dete201628795",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 452,
+  "max_words": 20000
+}

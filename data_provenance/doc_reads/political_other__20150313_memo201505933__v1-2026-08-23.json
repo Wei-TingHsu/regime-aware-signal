@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "Now is the time for stronger protections for the more than 40 million Americans with student loan debt.",
+    "By January 1, 2016, the Secretary of Education shall require all Federal Direct student loan servicers to provide enhanced disclosures",
+    "Raising Standards for Student Loan Debt Collectors"
+  ],
+  "extra": {
+    "actor": "President (Memorandum to multiple agency heads)",
+    "is_decided": true,
+    "sectors": [
+      "student loan servicing",
+      "consumer finance",
+      "education finance"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-03-13",
+  "doc_id": "memo201505933",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2026,
+  "max_words": 20000
+}

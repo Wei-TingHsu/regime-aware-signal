@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.02,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim April 22, 2023, as Earth Day",
+    "today I signed an Executive Order committing the Federal Government to incorporating environmental justice",
+    "set groundbreaking goals to cut America's greenhouse gas emissions in half by 2030"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": false,
+    "sectors": [
+      "energy",
+      "environment"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-04-26",
+  "doc_id": "proc202308938",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1171,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.15,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "directing the Director of OMB... to begin a process with the goal of producing a set of recommendations",
+    "identify ways to modernize and improve the regulatory review process",
+    "This memorandum is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (OMB Director directed)",
+    "is_decided": false,
+    "sectors": [
+      "regulatory policy",
+      "environmental",
+      "economic"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-01-26",
+  "doc_id": "memo202101866",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 745,
+  "max_words": 20000
+}

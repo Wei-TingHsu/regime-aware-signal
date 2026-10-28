@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "terminate Turkey's designation as a beneficiary developing country effective May 17, 2019",
+    "The exemption for Turkey from application of the safeguard measures on CSPV products and large residential washers is removed",
+    "I notified the Congress and Turkey on March 4, 2019, of my intent to terminate"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "solar panels/CSPV",
+      "washing machines",
+      "Turkey trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-05-21",
+  "doc_id": "proc201910761",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1074,
+  "max_words": 20000
+}

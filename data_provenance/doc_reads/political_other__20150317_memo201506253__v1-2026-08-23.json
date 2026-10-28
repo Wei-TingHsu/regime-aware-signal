@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate the functions and authorities vested in the President",
+    "to the Director of the National Counterterrorism Center"
+  ],
+  "extra": {
+    "actor": "President (delegating to NCTC Director)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "intelligence"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-03-17",
+  "doc_id": "memo201506253",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 205,
+  "max_words": 20000
+}

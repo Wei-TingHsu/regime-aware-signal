@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I direct all agencies that have property management responsibilities to ensure that agency officials...issue permits and contracts in compliance with the Randolph-Sheppard Program",
+    "submit a report to the President on agencies' implementation of the Randolph-Sheppard Program not later than 1 year",
+    "This memorandum is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum to agency heads)",
+    "is_decided": true,
+    "sectors": [
+      "disability services",
+      "federal procurement",
+      "food service"
+    ]
+  },
+  "source": "political_other",
+  "date": "2012-01-25",
+  "doc_id": "memo20121750",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 582,
+  "max_words": 20000
+}

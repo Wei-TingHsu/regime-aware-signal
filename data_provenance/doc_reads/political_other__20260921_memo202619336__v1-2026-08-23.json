@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.35,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "identify and take all steps permitted by applicable law with respect to Canadian origin items",
+    "remove or made non-available for purchase",
+    "Canada has unreasonably imposed new barriers to United States companies"
+  ],
+  "extra": {
+    "actor": "President (via OMB, USTR, agencies)",
+    "is_decided": true,
+    "sectors": [
+      "Canadian exporters/government contractors",
+      "US-Canada trade relations",
+      "defense/federal procurement suppliers"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-09-21",
+  "doc_id": "memo202619336",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 717,
+  "max_words": 20000
+}

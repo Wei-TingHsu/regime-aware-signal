@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.85,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "establish a tariff-rate quota on imports of eligible aluminum articles from the UK",
+    "maintain the current tariff level as it applies to other countries",
+    "aggregate tariff-rate quota volume, totaling 900 metric tons of unwrought aluminum"
+  ],
+  "extra": {
+    "actor": "President Biden / Commerce Dept (Section 232)",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "US-UK trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-06-03",
+  "doc_id": "proc202212097",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1653,
+  "max_words": 20000
+}

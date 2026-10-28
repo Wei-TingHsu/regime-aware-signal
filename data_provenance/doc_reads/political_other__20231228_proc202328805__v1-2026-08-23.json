@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "I am pardoning additional individuals who may continue to experience the unnecessary collateral consequences",
+    "grant a full, complete, and unconditional pardon to all current United States citizens",
+    "pardon only the offenses of simple possession of marijuana, attempted simple possession"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "cannabis",
+      "criminal justice"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-12-28",
+  "doc_id": "proc202328805",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 744,
+  "max_words": 20000
+}

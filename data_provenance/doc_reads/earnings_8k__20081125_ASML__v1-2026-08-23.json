@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.3,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.2
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.45,
+  "confidence": 0.55,
+  "evidence": [
+    "Demand for capacity expansion remains extremely weak",
+    "Significant weakening in the last 2 to 3 months",
+    "The current economic turmoil and the reassessment by some of our customers of their investments and strategic alliances make it difficult for us to guide on short term bookings"
+  ],
+  "extra": {
+    "surprise": -0.5,
+    "guidance_change": -0.7,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2008-11-25",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 20662,
+  "max_words": 20000
+}

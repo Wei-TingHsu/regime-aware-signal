@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 2,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.3,
+  "evidence": [
+    "UBS Technology Conference 2011, presentation dated March 10, 2011",
+    "Q1 2011 outlook Net sales expected around \u20ac1.4 billion",
+    "Current backlog plus expected Q1 bookings confirm a potential for more than \u20ac5 billion of net sales in 2011"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.05,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2011-03-10",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 24612,
+  "max_words": 20000
+}

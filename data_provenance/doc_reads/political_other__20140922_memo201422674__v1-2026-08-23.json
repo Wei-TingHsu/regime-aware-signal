@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "direct the drawdown of up to $25 million in defense articles and services",
+    "to provide immediate military assistance to the Government of Iraq",
+    "aid their efforts to combat the Islamic State of Iraq and the Levant"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "geopolitics",
+      "Iraq"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-09-22",
+  "doc_id": "memo201422674",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 303,
+  "max_words": 20000
+}

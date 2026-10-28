@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "domestic production capability for separation and processing of Light Rare Earth Elements is essential to the national defense",
+    "You are authorized and directed to publish this memorandum"
+  ],
+  "extra": {
+    "actor": "President/Secretary of Defense",
+    "is_decided": true,
+    "sectors": [
+      "rare earth elements",
+      "defense industrial base",
+      "materials/mining"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-07-25",
+  "doc_id": "dete201915998",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 267,
+  "max_words": 20000
+}

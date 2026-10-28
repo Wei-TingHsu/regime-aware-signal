@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": -0.2,
+    "gold": -0.05,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "net bookings in the fourth quarter to exceed the Q3 level, confirming our potential for 2011 sales growth",
+    "ASML expects Q4 2010 net sales of around EUR 1.3 billion, confirming our full year 2010 forecast for sales to grow 10 to 15 percent",
+    "Bookings level confirms strong lithography demand for structural capacity"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2010-10-13",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 37825,
+  "max_words": 20000
+}

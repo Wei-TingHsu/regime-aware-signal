@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "domestic production capability for inert materials for munitions is essential to the national defense",
+    "You are authorized and directed to publish this memorandum"
+  ],
+  "extra": {
+    "actor": "Secretary of Defense",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "munitions manufacturing"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-01-23",
+  "doc_id": "dete201900099",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 259,
+  "max_words": 20000
+}

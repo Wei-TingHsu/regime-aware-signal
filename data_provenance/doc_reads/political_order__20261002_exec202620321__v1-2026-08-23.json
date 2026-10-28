@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 3,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "use the terms ``Super Intelligence'' and ``SI'' in place of ``Artificial Intelligence'' and ``AI''",
+    "proposed legislative language to establish a Federal definition of ``Super Intelligence''",
+    "Nothing in this order shall be construed to impair or otherwise affect"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "artificial intelligence"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-10-02",
+  "doc_id": "exec202620321",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 779,
+  "max_words": 20000
+}

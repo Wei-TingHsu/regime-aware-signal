@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby revoke my memorandum of August 25, 2017",
+    "are disqualified from military service except under certain limited circumstances",
+    "may exercise their authority to implement any appropriate policies"
+  ],
+  "extra": {
+    "actor": "President (DoD/DHS)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "social policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-03-28",
+  "doc_id": "memo201806426",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 459,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Q3 net sales of \u20ac5.2 billion, gross margin of 51.7%, net income of \u20ac1.7 billion",
+    "ASML expects fourth-quarter net sales between \u20ac4.9 billion and \u20ac5.2 billion with a gross margin between 51% and 52%",
+    "For the full year, we are on track to achieving growth approaching 35%"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2021-10-20",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 84664,
+  "max_words": 20000
+}

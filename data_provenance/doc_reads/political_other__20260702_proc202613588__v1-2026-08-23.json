@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "declare an emergency to exist with respect to the threats to the availability of sufficient supplies of fertilizers",
+    "permit... the importation, free of the collection of duties... of phosphate fertilizers of the Kingdom of Morocco",
+    "United States production of phosphate fertilizer is insufficient to support domestic agricultural food production"
+  ],
+  "extra": {
+    "actor": "President (Treasury/Commerce implementation)",
+    "is_decided": true,
+    "sectors": [
+      "agriculture",
+      "fertilizer",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-07-02",
+  "doc_id": "proc202613588",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1308,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "the entry into the United States of aliens as immigrants is hereby suspended and limited",
+    "This proclamation shall expire 60 days from its effective date and may be continued as necessary",
+    "I have determined that, without intervention, the United States faces a potentially protracted economic recovery"
+  ],
+  "extra": {
+    "actor": "President (DHS/State implementation)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "labor market"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-04-27",
+  "doc_id": "proc202009068",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1912,
+  "max_words": 20000
+}

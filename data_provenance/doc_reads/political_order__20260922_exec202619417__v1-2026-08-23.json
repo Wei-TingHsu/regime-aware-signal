@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 365,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "modernizes Federal management by shifting the Federal posture from restricting recreational access to fishing",
+    "Secretary shall establish a Federal Outer Continental Shelf Reef-in-Place Program",
+    "shall consider establishing a data-replacement threshold tethered to the Percent Standard Error"
+  ],
+  "extra": {
+    "actor": "President (Secretaries of Commerce, Interior, Agriculture, Army Civil Works, NOAA)",
+    "is_decided": false,
+    "sectors": [
+      "recreational fishing",
+      "charter boat/marine tourism",
+      "offshore oil and gas (decommissioning/reef conversion)",
+      "seafood/fisheries management"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-09-22",
+  "doc_id": "exec202619417",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2148,
+  "max_words": 20000
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.9,
+  "evidence": [
+    "I have decided that it is in the foreign policy interest of the United States to extend the wind-down period",
+    "The termination of DED for all Liberian beneficiaries effective March 31, 2020",
+    "A continuation of the wind-down period through March 30, 2020"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum to Sec. State/DHS)",
+    "is_decided": true,
+    "sectors": [
+      "immigration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-04-02",
+  "doc_id": "memo201906556",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 683,
+  "max_words": 20000
+}

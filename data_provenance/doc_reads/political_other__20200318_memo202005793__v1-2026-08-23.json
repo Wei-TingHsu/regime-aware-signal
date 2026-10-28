@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "the Secretary shall take appropriate action, consistent with law, to facilitate the request",
+    "allowed the State flexibility in expediting State-approved COVID-19 testing"
+  ],
+  "extra": {
+    "actor": "President (directive to HHS Secretary)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "diagnostics",
+      "public health policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-03-18",
+  "doc_id": "memo202005793",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 289,
+  "max_words": 20000
+}

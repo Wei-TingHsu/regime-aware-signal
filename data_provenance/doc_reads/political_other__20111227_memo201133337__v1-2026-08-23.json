@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.25,
+  "horizon_days": 90,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "Flexible Implementation of the Mercury and Air Toxics Standards Rule",
+    "make the additional year for compliance with the MATS Rule provided under section 112(i)(3)(B)",
+    "the MATS Rule is not anticipated to compromise electric generating resource adequacy"
+  ],
+  "extra": {
+    "actor": "President (White House memorandum to EPA Administrator)",
+    "is_decided": true,
+    "sectors": [
+      "utilities",
+      "power generation",
+      "coal"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-12-27",
+  "doc_id": "memo201133337",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 946,
+  "max_words": 20000
+}

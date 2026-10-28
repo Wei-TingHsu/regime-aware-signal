@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.95,
+  "evidence": [
+    "hereby proclaim the objects identified above ... to be the Birmingham Civil Rights National Monument",
+    "The reserved Federal lands and interests in lands encompass approximately 0.88 acres.",
+    "appropriated and withdrawn from all forms of entry, location, selection, sale, or other disposition"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "commemorative/historic preservation",
+      "National Park Service"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-01-18",
+  "doc_id": "proc201701342",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2972,
+  "max_words": 20000
+}

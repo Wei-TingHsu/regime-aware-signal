@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate to you the reporting functions conferred upon the President by section 491 of title 10",
+    "You are authorized and directed to publish this memorandum in the Federal Register."
+  ],
+  "extra": {
+    "actor": "President (to Secretary of Defense)",
+    "is_decided": true,
+    "sectors": [
+      "defense administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-06-24",
+  "doc_id": "memo201315234",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 237,
+  "max_words": 20000
+}

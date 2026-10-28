@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.1,
+    "gold": -0.1,
+    "dollar": 0.15,
+    "oil": 0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "expect our business to be supported by strong demand for our leading-edge process technologies",
+    "Revenue is expected to be between US$31.8 billion and US$33.0 billion",
+    "Gross profit margin is expected to be between 55.5% and 57.5%"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.3,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2025-07-17",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 56521,
+  "max_words": 20000
+}

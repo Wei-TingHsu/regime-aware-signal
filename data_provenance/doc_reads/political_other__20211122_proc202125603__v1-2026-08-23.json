@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby proclaim November 18, 2021, as National Rural Health Day",
+    "My Administration is committed to improving the health of rural communities",
+    "$8.5 billion to rural health providers to keep their doors open"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "rural development"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-11-22",
+  "doc_id": "proc202125603",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 748,
+  "max_words": 20000
+}

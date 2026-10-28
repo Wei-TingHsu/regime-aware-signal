@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "This proclamation is effective at 11:59 p.m. eastern daylight time on May 26, 2020.",
+    "I hereby amend the Proclamation of May 24, 2020"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "travel",
+      "immigration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-05-28",
+  "doc_id": "proc202011670",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 477,
+  "max_words": 20000
+}

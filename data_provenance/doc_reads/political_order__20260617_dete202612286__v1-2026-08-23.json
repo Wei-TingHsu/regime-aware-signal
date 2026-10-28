@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 60,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "systemic constraints in the munitions industrial base",
+    "authority under sections 708(c)(1) and 708(d) of the Act to provide for the making of voluntary agreements",
+    "may impair the ability of the United States to produce, sustain, and expand the availability of munitions"
+  ],
+  "extra": {
+    "actor": "Secretary of War",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "munitions",
+      "industrials"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-06-17",
+  "doc_id": "dete202612286",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 313,
+  "max_words": 20000
+}

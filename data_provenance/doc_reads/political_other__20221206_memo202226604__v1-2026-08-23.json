@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.2,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "It is the policy of the United States to fully exercise existing authorities to impose economic sanctions",
+    "directed to use existing authorities to the fullest extent possible to promote accountability",
+    "Heads of agencies...are directed to use existing authorities to the fullest extent possible"
+  ],
+  "extra": {
+    "actor": "President (White House memorandum to agency heads)",
+    "is_decided": true,
+    "sectors": [
+      "human rights policy",
+      "sanctions administration",
+      "foreign affairs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-12-06",
+  "doc_id": "memo202226604",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1496,
+  "max_words": 20000
+}

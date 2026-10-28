@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.0,
+  "confidence": 0.95,
+  "evidence": [
+    "I, DONALD J. TRUMP, President of the United States of America, do hereby proclaim November 11, 2018, as Veterans Day.",
+    "In June, I signed into law the VA MISSION Act of 2018",
+    "the Congress has provided (5 U.S.C. 6103(a)) that November 11 of each year shall be set aside as a legal public holiday"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2018-11-15",
+  "doc_id": "proc201825127",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 805,
+  "max_words": 20000
+}

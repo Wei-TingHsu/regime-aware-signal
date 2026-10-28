@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "hereby declare that a national emergency exists at the southern border",
+    "the construction authority provided in section 2808 of title 10",
+    "it is necessary for the Armed Forces to provide additional support"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "construction",
+      "immigration/border security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-02-20",
+  "doc_id": "proc201903011",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 746,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 10,
+  "specificity": 0.3,
+  "novelty": 0.15,
+  "confidence": 0.5,
+  "evidence": [
+    "Our results for 2024 were in line with the previous year, consistent with guidance.",
+    "We expect that global semiconductor sales will grow by 9% compound annual growth rate over the period 2025 to 2030",
+    "After fulfilling this backlog, we anticipate a shift to more normalized sales levels to China"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.05,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2025-03-05",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 3051497,
+  "max_words": 20000
+}

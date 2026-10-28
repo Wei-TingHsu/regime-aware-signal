@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.85,
+  "evidence": [
+    "suspend for a period of 6 months the limitations set forth in sections 3(b) and 7(b) of the Act",
+    "necessary, in order to protect the national security interests of the United States"
+  ],
+  "extra": {
+    "actor": "President (Executive)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "diplomacy",
+      "energy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2012-12-14",
+  "doc_id": "dete201230347",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 263,
+  "max_words": 20000
+}

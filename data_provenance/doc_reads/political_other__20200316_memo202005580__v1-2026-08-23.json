@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": -0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "shall take all appropriate and necessary steps with respect to general use respirators",
+    "public health experts anticipate shortages in the supply of personal respiratory devices",
+    "Secretary of Labor shall consider all appropriate and necessary steps to increase the availability"
+  ],
+  "extra": {
+    "actor": "President (HHS/DOL directive)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "medical supplies",
+      "labor"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-03-16",
+  "doc_id": "memo202005580",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 391,
+  "max_words": 20000
+}

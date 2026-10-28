@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 90,
+  "specificity": 0.75,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "suspends...entry of any alien seeking entry pursuant to any of the following nonimmigrant visas",
+    "an H-1B or H-2B visa",
+    "This proclamation shall expire on December 31, 2020"
+  ],
+  "extra": {
+    "actor": "President (DHS/State/Labor implementation)",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "staffing/labor-intensive services",
+      "agriculture-adjacent/seasonal work (H-2B exempted for food supply)"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-06-25",
+  "doc_id": "proc202013888",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2590,
+  "max_words": 20000
+}

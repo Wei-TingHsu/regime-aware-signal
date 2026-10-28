@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.5,
+  "evidence": [
+    "Intel has committed to acquire up to a 15% equity ownership",
+    "the proceeds...will be returned to shareholders...through a Synthetic Buyback",
+    "no share dilution on an earnings per share basis"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2012-07-24",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 21449,
+  "max_words": 20000
+}

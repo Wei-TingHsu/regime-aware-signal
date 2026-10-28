@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.15,
+  "horizon_days": 10,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "direct the drawdown of up to $150 million in defense articles and services",
+    "to provide assistance to Ukraine",
+    "the authority under section 614(a)(1) of the FAA to determine"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-05-16",
+  "doc_id": "memo202210576",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 299,
+  "max_words": 20000
+}

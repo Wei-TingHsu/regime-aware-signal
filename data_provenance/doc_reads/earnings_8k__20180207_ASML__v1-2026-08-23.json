@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.4,
+  "evidence": [
+    "Our net sales grew to a record EUR 9.1 billion over 2017",
+    "We expect growth in profitability and sales in 2018",
+    "well on our way to achieve our stated 2020 ambitions"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2018-02-07",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 1364003,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "I hereby proclaim September 25, 2021, as National Public Lands Day.",
+    "My Administration is committed to conserving our precious public lands and waters.",
+    "conserving 30 percent of our Nation's lands and waters by 2030"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2021-09-29",
+  "doc_id": "proc202121362",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 626,
+  "max_words": 20000
+}

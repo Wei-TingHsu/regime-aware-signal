@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "shall terminate on August 21, 2020",
+    "I am directing the Federal Emergency Management Agency (FEMA)... to fund 75 percent",
+    "shall be available for orders of any length authorizing duty through December 31, 2020"
+  ],
+  "extra": {
+    "actor": "President (DoD/DHS/FEMA)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "state/local government",
+      "healthcare"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-08-06",
+  "doc_id": "memo202017370",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 891,
+  "max_words": 20000
+}

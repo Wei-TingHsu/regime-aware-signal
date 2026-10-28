@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "entry into the United States, as immigrants or nonimmigrants, of the following persons is hereby suspended",
+    "members of the Government of Nicaragua, led by President Daniel Ortega",
+    "The repressive and abusive acts of the Ortega government"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "foreign policy",
+      "Nicaragua sanctions"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-11-19",
+  "doc_id": "proc202125418",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1685,
+  "max_words": 20000
+}

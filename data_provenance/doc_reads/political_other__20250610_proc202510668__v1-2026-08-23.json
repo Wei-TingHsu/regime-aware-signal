@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.03,
+    "gold": 0.02,
+    "dollar": -0.03,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "entry of any alien into the United States as a nonimmigrant to pursue a course of study at Harvard University... is suspended",
+    "That suspension and limitation shall expire, absent extension, 6 months after the date of this proclamation",
+    "it is in the national interest to deny foreign nationals access to Harvard"
+  ],
+  "extra": {
+    "actor": "President (DHS/State/DOJ implementation)",
+    "is_decided": true,
+    "sectors": [
+      "higher education",
+      "immigration",
+      "international student visas"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-06-10",
+  "doc_id": "proc202510668",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1871,
+  "max_words": 20000
+}

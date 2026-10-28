@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.75,
+  "evidence": [
+    "I hereby extend this authorization to the Secretary of Homeland Security.",
+    "declaring a national emergency at the southern border",
+    "Support of the United States Coast Guard is critical"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "homeland security",
+      "border policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-08-04",
+  "doc_id": "noti202514789",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 302,
+  "max_words": 20000
+}

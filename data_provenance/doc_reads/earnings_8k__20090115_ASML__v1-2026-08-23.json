@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.25,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.65,
+  "evidence": [
+    "net bookings were very weak, confirming the major impact of the worldwide recession on the semiconductor equipment industry",
+    "makes a semiconductor equipment market pick-up prediction impossible",
+    "ASML expects Q1 2009 net sales between EUR 180 million to EUR 200 million, and gross margin in Q1 2009 of about 8 percent"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": -0.5,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2009-01-15",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 48896,
+  "max_words": 20000
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "proclaim October 22 through October 28, 2017, as National Minority Enterprise Development Week",
+    "calls for a steep reduction to the corporate tax rate from 35 to 20 percent",
+    "Unemployment is at a 16-year low, businesses are expanding, and wages are rising"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": false,
+    "sectors": [
+      "commemorative"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-10-26",
+  "doc_id": "proc201723525",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 558,
+  "max_words": 20000
+}

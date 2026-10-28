@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "ASML sees full-year 2014 net sales of around EUR 5.6 billion",
+    "3 EUV systems will now ship in 2015 due to customer requests",
+    "some customers continue to evaluate the timing of their deliveries"
+  ],
+  "extra": {
+    "surprise": -0.4,
+    "guidance_change": -0.4,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2014-07-16",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 64075,
+  "max_words": 20000
+}

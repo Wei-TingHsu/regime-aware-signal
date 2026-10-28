@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 2,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.5,
+  "evidence": [
+    "NET REVENUE $414,670,379",
+    "NET INCOME 156,479,154",
+    "Basic earnings per share $6.03"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2021-11-12",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 31890,
+  "max_words": 20000
+}

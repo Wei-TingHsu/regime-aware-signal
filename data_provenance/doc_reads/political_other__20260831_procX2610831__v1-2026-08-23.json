@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 90,
+  "specificity": 0.8,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "temporarily increase the quantity of lean beef trimmings subject to the in-quota rate of duty... by 300,000 mt",
+    "administered on a first come, first served basis in three 30 day tranches",
+    "Department of Agriculture forecasts beef output to fall this year by around 4 percent"
+  ],
+  "extra": {
+    "actor": "President (USTR/USDA/CBP implementation)",
+    "is_decided": true,
+    "sectors": [
+      "agriculture",
+      "beef/meatpacking",
+      "food retail",
+      "trade/tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-08-31",
+  "doc_id": "procX2610831",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2116,
+  "max_words": 20000
+}

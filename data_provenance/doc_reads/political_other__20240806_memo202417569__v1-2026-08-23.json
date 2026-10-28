@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby delegate to the Secretary of State... the functions and authorities vested in the President by section 2(a)",
+    "the authority to select the types of sanctions to be imposed under section 2(b)(1) of the Act",
+    "The Secretary of State is authorized and directed to publish this memorandum"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State, Treasury, and other agencies)",
+    "is_decided": true,
+    "sectors": [
+      "intellectual property",
+      "sanctions administration",
+      "foreign policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-08-06",
+  "doc_id": "memo202417569",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 482,
+  "max_words": 20000
+}

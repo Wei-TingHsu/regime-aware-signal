@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.1,
+  "novelty": 0.1,
+  "confidence": 0.75,
+  "evidence": [
+    "Criminal cartels and foreign terrorist organizations in the Western Hemisphere should be demolished",
+    "The United States will train and mobilize partner nation militaries",
+    "use of any necessary resources and legally available authorities"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": false,
+    "sectors": [
+      "defense",
+      "security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-03-12",
+  "doc_id": "proc202604924",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 452,
+  "max_words": 20000
+}

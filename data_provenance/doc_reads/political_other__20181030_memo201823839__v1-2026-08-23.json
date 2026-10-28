@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.08,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "directed to develop a long-term National Spectrum Strategy",
+    "Within 270 days of the date of this memorandum, the Secretary...shall submit...a long-term National Spectrum Strategy",
+    "it is imperative that America be first in fifth-generation (5G) wireless technologies"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum via Commerce/NTIA)",
+    "is_decided": false,
+    "sectors": [
+      "telecommunications",
+      "wireless",
+      "5G",
+      "technology"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-10-30",
+  "doc_id": "memo201823839",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1477,
+  "max_words": 20000
+}

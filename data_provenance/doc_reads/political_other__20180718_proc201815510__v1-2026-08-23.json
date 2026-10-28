@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim July 17, 2018, as Made in America Day",
+    "My trade agenda is focused on defending our workers and businesses",
+    "That era is over."
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "manufacturing",
+      "agriculture",
+      "mining"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-07-18",
+  "doc_id": "proc201815510",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 582,
+  "max_words": 20000
+}

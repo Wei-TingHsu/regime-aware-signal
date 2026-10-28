@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.5,
+    "duration": 0.2,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "Revenue is expected to be $6.50 billion, plus or minus 2%.",
+    "AI is at an inflection point, setting up for broad adoption reaching into every industry",
+    "Data Center revenue for the fourth quarter was up 11% from a year ago"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.5,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2023-02-22",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 20854,
+  "max_words": 20000
+}

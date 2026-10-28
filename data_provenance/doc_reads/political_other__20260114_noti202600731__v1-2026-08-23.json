@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.05,
+  "confidence": 0.85,
+  "evidence": [
+    "I am continuing for 1 year the national emergencies declared or expanded",
+    "Mexico's failure to address the sustained influx of illegal aliens and illicit drugs",
+    "Canada's failure to do more to address drug and human traffickers"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "border security",
+      "tariffs/IEEPA authority"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-01-14",
+  "doc_id": "noti202600731",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 678,
+  "max_words": 20000
+}

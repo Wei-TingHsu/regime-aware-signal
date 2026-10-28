@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.02,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "I have decided to allocate, on a quarterly basis, within-quota quantities of 1.2 million washers",
+    "modification of the action is warranted",
+    "effective with respect to goods entered for consumption...on or after 12:01 a.m. eastern standard time on February 7, 2020"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "appliances",
+      "import trade",
+      "manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-01-28",
+  "doc_id": "proc202001650",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1028,
+  "max_words": 20000
+}

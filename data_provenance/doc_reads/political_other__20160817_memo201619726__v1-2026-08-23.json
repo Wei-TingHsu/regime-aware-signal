@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "Designation of Officers of the Office of Personnel Management To Act as Director",
+    "the following officials of the Office of Personnel Management (OPM)... shall act as and perform the functions and duties of the Director",
+    "Presidential Memorandum of May 21, 2012... is hereby revoked"
+  ],
+  "extra": {
+    "actor": "President (OPM succession order)",
+    "is_decided": true,
+    "sectors": [
+      "government administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-08-17",
+  "doc_id": "memo201619726",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 475,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.02
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.8,
+  "evidence": [
+    "Restoring the prohibition on commercial fishing will ensure that the unique, fragile, and largely pristine canyons",
+    "hereby proclaim that... management of lands and interests in lands owned or controlled by the Federal Government within the Northeast Canyons and Seamounts Marine National Monument shall be governed",
+    "provide for the prohibition of all commercial fishing in the monument, except for red crab and American lobster"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "commercial fishing",
+      "marine conservation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-10-15",
+  "doc_id": "proc202122674",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2571,
+  "max_words": 20000
+}

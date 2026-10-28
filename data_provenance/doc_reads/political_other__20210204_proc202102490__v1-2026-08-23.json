@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "I am terminating the modifications contained in that proclamation before they take effect",
+    "Proclamation 10139, including the Annex, is revoked",
+    "maintain, at this time, the tariff treatment applied to aluminum article imports from the United Arab Emirates"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-02-04",
+  "doc_id": "proc202102490",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 766,
+  "max_words": 20000
+}

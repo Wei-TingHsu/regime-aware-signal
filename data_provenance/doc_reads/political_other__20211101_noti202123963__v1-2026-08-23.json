@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "must continue in effect beyond November 3, 2021",
+    "the military takeover of the government and arrest of civilian leaders now threaten those positive gains"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "Sudan sanctions"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-11-01",
+  "doc_id": "noti202123963",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 630,
+  "max_words": 20000
+}

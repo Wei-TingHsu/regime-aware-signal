@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "The 100 percent Federal cost share for the State's use of National Guard forces for the State of Texas shall extend",
+    "authorizing duty through December 31, 2020",
+    "to facilitate their economic recovery"
+  ],
+  "extra": {
+    "actor": "President (DoD/DHS)",
+    "is_decided": true,
+    "sectors": [
+      "Texas state government",
+      "healthcare/logistics support"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-08-06",
+  "doc_id": "memo202017371",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 605,
+  "max_words": 20000
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "the national emergency declared on May 15, 2019, must continue in effect beyond May 15, 2025",
+    "I am continuing for 1 year the national emergency declared in Executive Order 13873"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "technology",
+      "telecommunications"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-05-14",
+  "doc_id": "noti202508785",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 392,
+  "max_words": 20000
+}

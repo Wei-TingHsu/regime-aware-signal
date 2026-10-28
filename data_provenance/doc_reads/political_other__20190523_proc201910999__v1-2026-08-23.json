@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 10,
+  "specificity": 0.95,
+  "novelty": 0.5,
+  "confidence": 0.8,
+  "evidence": [
+    "I have decided to exclude Canada and Mexico from the tariff proclaimed in Proclamation 9704",
+    "it is necessary and appropriate, at this time, to maintain the current tariff level as it applies to other countries",
+    "effective ... on or after 12:01 a.m. eastern daylight time on May 20, 2019"
+  ],
+  "extra": {
+    "actor": "President (Trump), Section 232 aluminum tariff",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "trade",
+      "Canada",
+      "Mexico"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-05-23",
+  "doc_id": "proc201910999",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1190,
+  "max_words": 20000
+}

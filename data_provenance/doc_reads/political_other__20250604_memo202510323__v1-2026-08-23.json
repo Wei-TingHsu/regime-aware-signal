@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby approve and direct implementation of the revised 2022 Unified Command Plan",
+    "you are directed to notify Congress on my behalf"
+  ],
+  "extra": {
+    "actor": "President (Commander in Chief)",
+    "is_decided": true,
+    "sectors": [
+      "defense"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-06-04",
+  "doc_id": "memo202510323",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 165,
+  "max_words": 20000
+}

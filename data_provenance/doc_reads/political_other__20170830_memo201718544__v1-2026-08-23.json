@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "halt all use of DoD or DHS resources to fund sex-reassignment surgical procedures",
+    "return to the longstanding policy and practice on military service by transgender individuals",
+    "maintain the currently effective policy regarding accession of transgender individuals into military service beyond January 1, 2018"
+  ],
+  "extra": {
+    "actor": "President (DoD/DHS)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "social policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-08-30",
+  "doc_id": "memo201718544",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 883,
+  "max_words": 20000
+}

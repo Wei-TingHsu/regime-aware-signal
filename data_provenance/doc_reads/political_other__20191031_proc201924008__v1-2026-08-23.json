@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "The duty-free treatment accorded under the GSP to certain eligible articles that are the product of Thailand is suspended",
+    "The suspension of the duty-free treatment accorded under the GSP to certain eligible articles that are the product of Ukraine is terminated",
+    "Mali is a lesser developed beneficiary sub-Saharan African country"
+  ],
+  "extra": {
+    "actor": "President (Trump) via GSP statutory authority",
+    "is_decided": true,
+    "sectors": [
+      "trade/tariffs",
+      "GSP beneficiary countries",
+      "textiles/apparel"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-10-31",
+  "doc_id": "proc201924008",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2262,
+  "max_words": 20000
+}

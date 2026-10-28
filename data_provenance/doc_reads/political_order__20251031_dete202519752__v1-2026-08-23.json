@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "admissions of up to 7,500 refugees to the United States during Fiscal Year 2026",
+    "primarily be allocated among Afrikaners from South Africa pursuant to Executive Order 14204"
+  ],
+  "extra": {
+    "actor": "President (via Secretary of State/DHS/HHS)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "refugee policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-10-31",
+  "doc_id": "dete202519752",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 462,
+  "max_words": 20000
+}

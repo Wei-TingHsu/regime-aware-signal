@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 20,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "the tariff set forth in clause 2 of Proclamation 9705 shall be effective June 1, 2018, for these countries",
+    "Imports of all steel articles from Argentina, Australia, Brazil, and South Korea shall be exempt",
+    "The United States and South Korea have agreed on a range of measures, including a quota"
+  ],
+  "extra": {
+    "actor": "President (Trump) via Section 232 proclamation",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "trade",
+      "manufacturing",
+      "metals"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-05-07",
+  "doc_id": "proc201809841",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2202,
+  "max_words": 20000
+}

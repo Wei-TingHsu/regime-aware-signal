@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.0,
+  "confidence": 0.95,
+  "evidence": [
+    "I hereby proclaim Monday, October 3, 2022, as Child Health Day.",
+    "This is just the beginning; I will continue to push for an assault weapon ban",
+    "My Inflation Reduction Act will also lower health insurance premiums for 13 million Americans."
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "ceremonial",
+      "healthcare policy rhetoric"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-10-05",
+  "doc_id": "proc202221790",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 995,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.0,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim May 15 through May 21, 2016, as National Hurricane Preparedness Week",
+    "I urge all Americans to visit www.Ready.gov",
+    "Hurricane intensity and rainfall are projected to increase as a result of climate change"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "emergency preparedness",
+      "insurance"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-05-18",
+  "doc_id": "proc201611924",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 648,
+  "max_words": 20000
+}

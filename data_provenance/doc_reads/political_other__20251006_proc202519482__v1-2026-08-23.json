@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.15,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.9,
+  "novelty": 0.4,
+  "confidence": 0.7,
+  "evidence": [
+    "imports of softwood timber and lumber...shall be subject to a 10 percent ad valorem duty rate",
+    "kitchen cabinets and vanities...will be subject to a 25 percent ad valorem duty rate",
+    "the duty rate in clause 2 shall increase to 30 percent and the duty rate in clause 3 shall increase to 50 percent"
+  ],
+  "extra": {
+    "actor": "President (Section 232 action)",
+    "is_decided": true,
+    "sectors": [
+      "timber",
+      "lumber",
+      "wood products",
+      "furniture",
+      "construction materials"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-10-06",
+  "doc_id": "proc202519482",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3425,
+  "max_words": 20000
+}

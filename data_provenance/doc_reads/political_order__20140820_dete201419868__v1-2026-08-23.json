@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby determine that an unforeseen emergency exists",
+    "direct the drawdown of up to $10 million in defense services",
+    "to support its counterterrorism efforts in Mali, Niger, and Chad"
+  ],
+  "extra": {
+    "actor": "President (Foreign Assistance Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid"
+    ]
+  },
+  "source": "political_order",
+  "date": "2014-08-20",
+  "doc_id": "dete201419868",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 278,
+  "max_words": 20000
+}

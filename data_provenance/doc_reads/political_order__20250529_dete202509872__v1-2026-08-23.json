@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "sufficient supply of petroleum and petroleum products from countries other than Iran",
+    "permit a significant reduction in the volume of petroleum and petroleum products purchased from Iran",
+    "consistent with prior determinations"
+  ],
+  "extra": {
+    "actor": "President (Secretary of State/Treasury/Energy)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "sanctions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2025-05-29",
+  "doc_id": "dete202509872",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 347,
+  "max_words": 20000
+}

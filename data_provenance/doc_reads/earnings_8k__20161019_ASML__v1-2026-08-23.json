@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "ASML guides Q4 2016 net sales between EUR 1.7 and 1.8 billion and a gross margin between 47 and 48 percent",
+    "This lifted third-quarter net sales above guidance but also decreased our gross margin by 1.4 percentage points",
+    "orders for three NXE:3400 EUV systems in the quarter... six customers are now actively engaged"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2016-10-19",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 107651,
+  "max_words": 20000
+}

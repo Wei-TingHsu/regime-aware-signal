@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "the boundaries of the monument are hereby modified and reduced to those lands",
+    "approximately 861,974 acres of land that I find are no longer necessary",
+    "the public lands excluded from the monument reservation shall be open to entry, location, selection, sale or other disposition"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch)",
+    "is_decided": true,
+    "sectors": [
+      "mining",
+      "energy",
+      "land management",
+      "natural resources"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-12-08",
+  "doc_id": "proc201726714",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3611,
+  "max_words": 20000
+}

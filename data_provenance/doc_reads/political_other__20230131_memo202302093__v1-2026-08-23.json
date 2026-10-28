@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I have determined that it is in the foreign policy interest of the United States to defer for 24 months the removal",
+    "The PRC has continued its assault on Hong Kong's autonomy",
+    "directing an extension and expansion of the deferral of removal of certain Hong Kong residents"
+  ],
+  "extra": {
+    "actor": "President (DHS/State directed)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "foreign policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-01-31",
+  "doc_id": "memo202302093",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 783,
+  "max_words": 20000
+}

@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 20,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "a tariff-rate quota on imports of solar cells",
+    "an increase in duties on imports of modules, imposed for a period of 4 years",
+    "This safeguard measure shall apply to imports from all countries"
+  ],
+  "extra": {
+    "actor": "President (Trump) via USTR/ITC Section 201 safeguard",
+    "is_decided": true,
+    "sectors": [
+      "solar",
+      "renewable energy",
+      "trade/tariffs",
+      "manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-01-25",
+  "doc_id": "proc201801592",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2256,
+  "max_words": 20000
+}

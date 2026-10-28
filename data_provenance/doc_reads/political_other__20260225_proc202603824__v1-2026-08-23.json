@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.6,
+    "duration": 0.3,
+    "gold": 0.5,
+    "dollar": -0.4,
+    "oil": -0.2
+  },
+  "magnitude": 0.8,
+  "horizon_days": 20,
+  "specificity": 0.9,
+  "novelty": 0.7,
+  "confidence": 0.6,
+  "evidence": [
+    "I impose, for a period of 150 days, a temporary import surcharge of 10 percent ad valorem",
+    "fundamental international payments problems within the meaning of section 122 exist",
+    "all articles imported into the United States shall be subject to a 10 percent ad valorem duty rate"
+  ],
+  "extra": {
+    "actor": "President (Trump), via Section 122 Trade Act authority",
+    "is_decided": true,
+    "sectors": [
+      "broad imports",
+      "exemptions: critical minerals, energy, pharmaceuticals, autos, electronics, agriculture"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-02-25",
+  "doc_id": "proc202603824",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3823,
+  "max_words": 20000
+}

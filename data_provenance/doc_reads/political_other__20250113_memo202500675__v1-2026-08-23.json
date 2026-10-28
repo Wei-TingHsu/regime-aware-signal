@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.97,
+  "evidence": [
+    "shall act as and perform the functions and duties of the office of the Administrator",
+    "The Presidential Memorandum of December 9, 2008 ... is hereby revoked",
+    "No individual who is serving in an office listed in section 1 ... in an acting capacity"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "USAID"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-13",
+  "doc_id": "memo202500675",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 553,
+  "max_words": 20000
+}

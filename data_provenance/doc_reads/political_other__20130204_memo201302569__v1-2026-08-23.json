@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby direct the following",
+    "shall designate a coordinator (Coordinator)",
+    "chair an interagency working group to develop and coordinate"
+  ],
+  "extra": {
+    "actor": "President (Executive Office)",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2013-02-04",
+  "doc_id": "memo201302569",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1303,
+  "max_words": 20000
+}

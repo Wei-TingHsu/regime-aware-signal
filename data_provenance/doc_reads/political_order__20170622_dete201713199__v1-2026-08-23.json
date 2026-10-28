@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 3,
+  "specificity": 0.5,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "the United States is not pursuing efforts to reduce Iran's sales of crude oil at this time",
+    "sufficient supply of petroleum and petroleum products from countries other than Iran"
+  ],
+  "extra": {
+    "actor": "President (NDAA Sec. 1245 determination)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "oil",
+      "Iran sanctions"
+    ]
+  },
+  "source": "political_order",
+  "date": "2017-06-22",
+  "doc_id": "dete201713199",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 337,
+  "max_words": 20000
+}

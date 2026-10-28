@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "Proclamation 10287 is revoked and the Northeast Canyons and Seamounts Marine National Monument shall be managed in accordance with Proclamation 10049",
+    "which allows for commercial fishing within the monument",
+    "I find that appropriately managed commercial fishing would not put the objects of historic and scientific interest...at risk"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch)",
+    "is_decided": true,
+    "sectors": [
+      "commercial fishing",
+      "marine conservation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-02-11",
+  "doc_id": "proc202602812",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1258,
+  "max_words": 20000
+}

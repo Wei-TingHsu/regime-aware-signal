@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.02,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim April 1 through April 7, 2024, as National Public Health Week",
+    "During National Public Health Week, we celebrate the life-saving care",
+    "I call on all citizens, government agencies, private businesses"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-04-03",
+  "doc_id": "proc202407195",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1275,
+  "max_words": 20000
+}

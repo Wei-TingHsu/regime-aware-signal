@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby delegate the functions and authorities vested in the President",
+    "Section 135(a)(1) to the Secretary of State",
+    "The Secretary of State is authorized and directed to publish this memorandum"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State and Secretary of Treasury)",
+    "is_decided": true,
+    "sectors": [
+      "Iran sanctions administration",
+      "nuclear nonproliferation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-07-24",
+  "doc_id": "memo201518344",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 428,
+  "max_words": 20000
+}

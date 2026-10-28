@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 15,
+  "specificity": 0.55,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "expect bookings of the same order of magnitude for the first quarter of 2010, confirming an upturn",
+    "Rise in bookings confirms strong 2010 first half year",
+    "backlog increased to EUR 1,853 million, 69 systems including 51 immersion tools"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2010-01-20",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 42981,
+  "max_words": 20000
+}

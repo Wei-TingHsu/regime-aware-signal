@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.3,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.3
+  },
+  "magnitude": 0.5,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.45,
+  "evidence": [
+    "Q1 cash flow expected positive, at sales level of \u20ac 180 - 200 million",
+    "ASML can ramp production fast with short lead times when market recovers",
+    "No IC production capacity added due to virtual capex freeze"
+  ],
+  "extra": {
+    "surprise": -0.3,
+    "guidance_change": -0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2009-02-11",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 23889,
+  "max_words": 20000
+}

@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.03
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby delegate functions and authorities vested in the President by the Iran Freedom and Counter-Proliferation Act of 2012",
+    "Section 1244(c)(1) and (c)(2) to the Secretary of the Treasury, in consultation with the Secretary of State"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretaries of State, Treasury, etc.)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions_administration",
+      "Iran-related energy and financial sanctions implementation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-06-13",
+  "doc_id": "memo201314160",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1934,
+  "max_words": 20000
+}

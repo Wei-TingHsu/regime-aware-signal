@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.03,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "Approve provision by the Secretary of Transportation of insurance or reinsurance to U.S.-certificated air carriers",
+    "continuation of U.S. air transportation is necessary in the interest of air commerce, national security",
+    "Delegate to the Secretary of Transportation the authority...to extend this approval"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of Transportation)",
+    "is_decided": true,
+    "sectors": [
+      "airlines",
+      "insurance"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-01-03",
+  "doc_id": "memo201400004",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 403,
+  "max_words": 20000
+}

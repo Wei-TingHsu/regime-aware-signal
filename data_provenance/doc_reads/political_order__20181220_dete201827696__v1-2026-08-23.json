@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "the United States will not provide nonhumanitarian, nontrade-related assistance to the Governments of Belarus, Belize, Bolivia",
+    "vote against and use best efforts to deny any loan or other utilization of the funds",
+    "a partial waiver to allow International Military Education and Training (IMET), Foreign Military Financing (FMF)"
+  ],
+  "extra": {
+    "actor": "President (State Dept implementation)",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "multilateral development banks",
+      "defense assistance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-12-20",
+  "doc_id": "dete201827696",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 771,
+  "max_words": 20000
+}

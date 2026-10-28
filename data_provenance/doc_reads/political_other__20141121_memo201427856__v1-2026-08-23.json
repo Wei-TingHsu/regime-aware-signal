@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "delegate to the Secretary of State the authority under section 614",
+    "furnish up to $123,000,000 in funds",
+    "without regard to any provision of law within the scope of section 614(a)(1)"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "foreign assistance",
+      "diplomacy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-11-21",
+  "doc_id": "memo201427856",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 249,
+  "max_words": 20000
+}

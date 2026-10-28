@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.1,
+  "novelty": 0.1,
+  "confidence": 0.55,
+  "evidence": [
+    "I hereby order the heads of all executive departments and agencies to deliver emergency price relief",
+    "eliminate harmful, coercive ``climate'' policies that increase the costs of food and fuel",
+    "Within 30 days of the date of this memorandum, the Assistant to the President for Economic Policy shall report"
+  ],
+  "extra": {
+    "actor": "President (Executive Departments and Agencies)",
+    "is_decided": false,
+    "sectors": [
+      "housing",
+      "healthcare",
+      "energy",
+      "autos",
+      "labor"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-28",
+  "doc_id": "memo202501904",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 467,
+  "max_words": 20000
+}

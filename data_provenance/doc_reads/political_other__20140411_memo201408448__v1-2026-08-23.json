@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby direct you to propose, within 120 days of the date of this memorandum, a rule",
+    "require Federal contractors and subcontractors to submit to DOL summary data on the compensation paid their employees",
+    "This memorandum is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "Secretary of Labor / Federal contractors",
+    "is_decided": true,
+    "sectors": [
+      "labor/employment",
+      "federal contracting"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-04-11",
+  "doc_id": "memo201408448",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 591,
+  "max_words": 20000
+}

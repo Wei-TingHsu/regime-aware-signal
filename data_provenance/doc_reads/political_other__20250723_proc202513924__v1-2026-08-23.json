@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "exempt from compliance with the EtO Rule for a period of 2 years",
+    "The technology to implement the EtO Rule is not available",
+    "It is in the national security interests of the United States to issue this Exemption"
+  ],
+  "extra": {
+    "actor": "President (EPA regulatory exemption)",
+    "is_decided": true,
+    "sectors": [
+      "medical devices",
+      "sterilization",
+      "healthcare equipment"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-07-23",
+  "doc_id": "proc202513924",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 699,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I am continuing for 1 year the national emergency declared in Executive Order 13338.",
+    "must continue in effect beyond May 11, 2025",
+    "The United States will consider changes in policies and actions of Syria"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Syria"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-05-09",
+  "doc_id": "noti202508310",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 468,
+  "max_words": 20000
+}

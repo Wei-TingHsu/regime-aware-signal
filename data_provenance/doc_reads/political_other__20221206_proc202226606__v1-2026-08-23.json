@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.0,
+  "confidence": 0.97,
+  "evidence": [
+    "I hereby proclaim December 1, 2022, as World AIDS Day.",
+    "I have asked the Congress for $850 million to increase the use of preexposure prophylaxis",
+    "My Administration has also pledged up to $6 billion to the Seventh Replenishment of the Global Fund"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": false,
+    "sectors": [
+      "healthcare",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-12-06",
+  "doc_id": "proc202226606",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 814,
+  "max_words": 20000
+}

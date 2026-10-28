@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.45,
+  "novelty": 0.15,
+  "confidence": 0.5,
+  "evidence": [
+    "we see an opportunity to achieve a step-up in our previously communicated revenue potential, which is now at \u20ac30 billion",
+    "We expect continued growth in our Logic business assuming that customer demand remains strong",
+    "We expect continued strong cash returns to shareholders for next year"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2022-02-09",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 2892343,
+  "max_words": 20000
+}

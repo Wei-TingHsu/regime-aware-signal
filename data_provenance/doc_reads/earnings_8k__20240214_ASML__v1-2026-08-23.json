@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.5,
+  "evidence": [
+    "Our expectation is that our net sales in 2024 will be broadly in line with our net sales in 2023.",
+    "this will be a year of transition",
+    "the upturn that we expect in 2025 and 2026"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2024-02-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 2541166,
+  "max_words": 20000
+}

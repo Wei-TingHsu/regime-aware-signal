@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate the reporting requirement conferred upon the President by section 8",
+    "The Secretary of State is authorized and directed to publish this memorandum"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-07-20",
+  "doc_id": "memo201517922",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 312,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.02,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "the United States will lower, for the remainder of 2020, one of the quantitative limitations",
+    "steel article imports from Brazil will not threaten to impair the national security",
+    "The volume of imports for which the Secretary grants relief under this clause shall not exceed 60,000,000 kilograms"
+  ],
+  "extra": {
+    "actor": "President (Section 232 steel tariff/quota adjustment on Brazil)",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "metals",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-09-02",
+  "doc_id": "proc202019595",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2451,
+  "max_words": 20000
+}

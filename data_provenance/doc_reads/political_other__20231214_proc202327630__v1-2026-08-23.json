@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "suspended: entry of persons who have enabled, facilitated, or otherwise been involved in significant corruption",
+    "This proclamation shall remain in effect until terminated by the President",
+    "additional authority is needed to fully address the supporting networks of enablers of corruption"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "anti-corruption",
+      "financial services/legal enablers"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-12-14",
+  "doc_id": "proc202327630",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1305,
+  "max_words": 20000
+}

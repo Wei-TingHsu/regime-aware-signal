@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "We closed the second quarter with weak but better than anticipated sales",
+    "We expect this pattern of technology transitions to result in minimum quarterly net sales of between EUR 400 million and EUR 500 million",
+    "ASML expects Q3 2009 net sales of around EUR 450 million and gross margin in Q3 2009 of about 30 percent"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2009-07-15",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 36716,
+  "max_words": 20000
+}

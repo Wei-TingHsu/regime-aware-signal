@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.2,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.6,
+  "evidence": [
+    "direct spending budgetary resources for fiscal year 2014 in each non-exempt budget account be reduced",
+    "on October 1, 2013"
+  ],
+  "extra": {
+    "actor": "President (via OMB sequestration mechanism)",
+    "is_decided": true,
+    "sectors": [
+      "government spending",
+      "federal budget",
+      "defense",
+      "entitlements"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-04-15",
+  "doc_id": "pres201308971",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 291,
+  "max_words": 20000
+}

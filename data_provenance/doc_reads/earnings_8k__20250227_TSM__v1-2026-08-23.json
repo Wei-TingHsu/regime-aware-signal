@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.5,
+  "evidence": [
+    "NET REVENUE $2,894,307,699 100 $2,161,735,841",
+    "NET INCOME 1,172,431,759 41 837,767,517 39",
+    "INCOME FROM OPERATIONS 1,322,053,050 46 921,465,606 43"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2025-02-27",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 95532,
+  "max_words": 20000
+}

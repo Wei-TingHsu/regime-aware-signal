@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "directed to develop as soon as practicable a process",
+    "Only half of the approximately 50,000 totally and permanently disabled veterans",
+    "subject to the availability of appropriations"
+  ],
+  "extra": {
+    "actor": "President (Secretaries of Education and Veterans Affairs directed)",
+    "is_decided": false,
+    "sectors": [
+      "education",
+      "student loans",
+      "veterans affairs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-08-26",
+  "doc_id": "memo201918520",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 972,
+  "max_words": 20000
+}

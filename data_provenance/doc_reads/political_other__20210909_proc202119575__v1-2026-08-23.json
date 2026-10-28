@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "proclaim September 5 through September 11, 2021, as National Historically Black Colleges and Universities Week",
+    "my Administration has proposed approximately $239 million in new institutional aid funding for HBCUs",
+    "I today signed an Executive Order establishing the White House Initiative"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": false,
+    "sectors": [
+      "education"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-09-09",
+  "doc_id": "proc202119575",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1114,
+  "max_words": 20000
+}

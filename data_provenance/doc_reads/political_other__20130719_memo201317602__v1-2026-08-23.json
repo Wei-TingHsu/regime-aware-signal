@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established a Task Force on Expanding National Service",
+    "Within 18 months of the date of this memorandum, the Task Force shall provide the President with a report",
+    "This memorandum is not intended to, and does not, create any right or benefit"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "national service",
+      "nonprofit"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-07-19",
+  "doc_id": "memo201317602",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1253,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "delegated the authority to make final suitability determinations and take suitability actions",
+    "shall propose regulations... to implement appropriate rules and procedures",
+    "The delegation described in subsection (a)... shall not be effective until the completion of this rulemaking"
+  ],
+  "extra": {
+    "actor": "OPM Director / President",
+    "is_decided": false,
+    "sectors": [
+      "federal workforce",
+      "government administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-03-25",
+  "doc_id": "memo202505217",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 547,
+  "max_words": 20000
+}

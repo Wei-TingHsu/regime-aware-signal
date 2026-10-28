@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "I am establishing a White House Task Force on New Americans",
+    "develop a coordinated Federal strategy to better integrate new Americans",
+    "does not, create any right or benefit, substantive or procedural"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": true,
+    "sectors": [
+      "immigration policy",
+      "administrative"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-11-26",
+  "doc_id": "memo201428191",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1339,
+  "max_words": 20000
+}

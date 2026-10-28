@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.5,
+  "evidence": [
+    "printed circuit boards and advanced packaging...are industrial resources...essential to national defense",
+    "I waive the requirements of section 303(a)(1)-(a)(6) of the Act",
+    "purchases, purchase commitments, or other action pursuant to section 303 of the Act"
+  ],
+  "extra": {
+    "actor": "President (DoD/DPA Title III)",
+    "is_decided": true,
+    "sectors": [
+      "electronics manufacturing",
+      "semiconductors/PCB supply chain",
+      "defense industrial base"
+    ]
+  },
+  "source": "political_order",
+  "date": "2023-03-31",
+  "doc_id": "dete202306921",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 429,
+  "max_words": 20000
+}

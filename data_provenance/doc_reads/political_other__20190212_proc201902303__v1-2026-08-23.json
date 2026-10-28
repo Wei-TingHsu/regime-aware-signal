@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "suspension and limitation for an additional 90 days",
+    "An average of approximately 2,000 inadmissible aliens continue to enter",
+    "entry of any alien into the United States across the international boundary... is hereby suspended"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "border security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-02-12",
+  "doc_id": "proc201902303",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1423,
+  "max_words": 20000
+}

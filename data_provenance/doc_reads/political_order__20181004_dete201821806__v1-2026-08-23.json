@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.5,
+  "novelty": 0.1,
+  "confidence": 0.75,
+  "evidence": [
+    "designate Bolivia and Venezuela as countries that have failed demonstrably",
+    "illicit drug crops have expanded over successive years in Colombia, Mexico, and Afghanistan",
+    "support for programs to aid the promotion of democracy in Venezuela are vital to the national interests"
+  ],
+  "extra": {
+    "actor": "President (via Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "narcotics policy",
+      "Venezuela sanctions-adjacent"
+    ]
+  },
+  "source": "political_order",
+  "date": "2018-10-04",
+  "doc_id": "dete201821806",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 764,
+  "max_words": 20000
+}

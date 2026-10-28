@@ -1,0 +1,40 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "I have decided to terminate the designation of Cameroon as a beneficiary sub-Saharan African country",
+    "Niger, the Central African Republic, and The Gambia are not eligible for the treatment provided for under section 112(a)",
+    "to modify tariffs on certain goods to carry out the Trade Agreement between the United States and Japan"
+  ],
+  "extra": {
+    "actor": "President (Trump), implementing Trade Act/AGOA/USIFTA/Japan trade agreement provisions",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "agriculture",
+      "textiles/apparel",
+      "sub-Saharan Africa AGOA beneficiaries",
+      "US-Japan trade",
+      "US-Israel trade",
+      "US-Chile trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-12-30",
+  "doc_id": "proc201928285",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2850,
+  "max_words": 20000
+}

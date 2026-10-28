@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": -0.6,
+    "duration": 0.3,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.6,
+  "confidence": 0.7,
+  "evidence": [
+    "Revising full-year revenue guidance to $65 billion to $68 billion",
+    "This quarter's results were below the standards we have set for the company and our shareholders",
+    "The sudden and rapid decline in economic activity was the largest driver"
+  ],
+  "extra": {
+    "surprise": -0.6,
+    "guidance_change": -0.6,
+    "ticker": "INTC"
+  },
+  "source": "earnings_8k",
+  "date": "2022-07-28",
+  "doc_id": "INTC",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 20335,
+  "max_words": 20000
+}

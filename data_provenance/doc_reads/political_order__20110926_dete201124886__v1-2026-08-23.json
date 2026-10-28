@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.02
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "waive the provisions of section 7040(a) of the Act",
+    "to provide funds appropriated to carry out Chapter 4 of Part II of the Foreign Assistance Act",
+    "important to the national security interests of the United States"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "Palestinian Authority",
+      "Middle East policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-09-26",
+  "doc_id": "dete201124886",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 299,
+  "max_words": 20000
+}

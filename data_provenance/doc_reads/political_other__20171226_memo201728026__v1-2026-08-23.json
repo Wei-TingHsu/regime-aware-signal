@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby delegate to the Secretary of State",
+    "up to a total of $22 million in articles and services",
+    "in order to provide assistance to Iraq"
+  ],
+  "extra": {
+    "actor": "President (delegated to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid",
+      "Iraq"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-12-26",
+  "doc_id": "memo201728026",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 355,
+  "max_words": 20000
+}

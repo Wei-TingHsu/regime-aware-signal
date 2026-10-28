@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I declared the entire United States Arctic Ocean off-limits to new oil and gas development",
+    "proclaim September 23, 2023, as National Public Lands Day",
+    "all of our country's national parks, forests, refuges, and grasslands will have a Fee-Free Day"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": false,
+    "sectors": [
+      "conservation",
+      "public lands",
+      "energy/oil-gas (minor)"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-09-28",
+  "doc_id": "proc202321651",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 960,
+  "max_words": 20000
+}

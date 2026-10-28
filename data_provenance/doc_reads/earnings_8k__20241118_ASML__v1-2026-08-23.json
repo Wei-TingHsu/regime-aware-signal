@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "we expect global semi sales to grow at 9% CAGR (2025-2030) & surpass $1tn by 2030",
+    "we now expect overall wafer demand growth of ~780Kwspm/yr. (2025-2030)",
+    "EUV litho spending CAGR (2025-2030): 10-20%"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2024-11-18",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 1061413,
+  "max_words": 20000
+}

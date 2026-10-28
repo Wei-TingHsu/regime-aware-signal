@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "use of the Exchange Stabilization Fund in an aggregate amount of up to $50 billion",
+    "I hereby delegate the functions and authorities conferred upon the President by section 5302"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of the Treasury)",
+    "is_decided": true,
+    "sectors": [
+      "financial stability",
+      "currency markets",
+      "Treasury operations"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-03-25",
+  "doc_id": "memo202006398",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 366,
+  "max_words": 20000
+}

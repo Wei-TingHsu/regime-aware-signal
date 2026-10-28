@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 90,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "no immediate tariffs be imposed under section 232",
+    "pursue negotiation of agreements or continue any current negotiations",
+    "I may consider alternative remedies in the future"
+  ],
+  "extra": {
+    "actor": "President (Commerce Secretary/USTR directed)",
+    "is_decided": true,
+    "sectors": [
+      "aerospace",
+      "commercial aircraft",
+      "jet engines",
+      "aircraft parts"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-07-15",
+  "doc_id": "proc202614334",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1788,
+  "max_words": 20000
+}

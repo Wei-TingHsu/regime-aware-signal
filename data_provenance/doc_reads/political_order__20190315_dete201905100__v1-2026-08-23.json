@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "domestic production capability for AN/SSQ series sonobuoys is essential to the national defense",
+    "purchases, purchase commitments, or other action pursuant to section 303 of the Act are the most cost-effective"
+  ],
+  "extra": {
+    "actor": "President (DoD)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "sonobuoys",
+      "military equipment"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-03-15",
+  "doc_id": "dete201905100",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 300,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.02,
+  "confidence": 0.95,
+  "evidence": [
+    "I hereby proclaim April 2023 as Care Workers Recognition Month.",
+    "my most recent budget proposes investing $600 billion over 10 years",
+    "My Budget calls on the Congress to invest $150 billion over the next decade"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": false,
+    "sectors": [
+      "care_workers",
+      "child_care",
+      "healthcare"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-04-05",
+  "doc_id": "proc202307308",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 736,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "FEMA shall provide a 100 percent Federal cost share for all work eligible",
+    "performed from January 20, 2020, through April 1, 2022",
+    "to combat and respond to the coronavirus disease 2019 (COVID-19) pandemic"
+  ],
+  "extra": {
+    "actor": "FEMA/DHS",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "state and local government finance",
+      "disaster relief"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-11-17",
+  "doc_id": "memo202125185",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 484,
+  "max_words": 20000
+}

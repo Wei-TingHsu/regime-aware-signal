@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.02,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "develop a proposed strategy to map the U.S. EEZ",
+    "only about 40 percent of the U.S. EEZ has been mapped",
+    "within 180 days of the date of this memorandum"
+  ],
+  "extra": {
+    "actor": "President (NOAA, OSTP, CEQ, Ocean Policy Committee)",
+    "is_decided": false,
+    "sectors": [
+      "energy",
+      "fisheries",
+      "critical minerals",
+      "maritime/ocean research",
+      "Alaska"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-11-22",
+  "doc_id": "memo201925618",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1359,
+  "max_words": 20000
+}

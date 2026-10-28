@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": -0.3,
+    "gold": -0.1,
+    "dollar": 0.2,
+    "oil": 0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "expect our business to be further impacted by continued end market demand softness, and customers' further inventory adjustment",
+    "Revenue is expected to be between US$16.7 billion and US$17.5 billion",
+    "management further expects the 2023 capital budget to be between US$32 billion and US$36 billion"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": -0.1,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2023-01-12",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 77894,
+  "max_words": 20000
+}

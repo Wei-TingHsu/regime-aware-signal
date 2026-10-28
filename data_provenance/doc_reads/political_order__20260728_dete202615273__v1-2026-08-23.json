@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby approve the proposed Agreement and authorize the Secretary of State to arrange for its execution.",
+    "will promote, and will not constitute an unreasonable risk to, the common defense and security",
+    "Agreement for Cooperation...Concerning Peaceful Uses of Nuclear Energy"
+  ],
+  "extra": {
+    "actor": "President (via Atomic Energy Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "nuclear energy",
+      "defense/security cooperation",
+      "US-Saudi relations"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-07-28",
+  "doc_id": "dete202615273",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 449,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "ASML expects fourth-quarter net sales between \u20ac6.1 billion and \u20ac6.6 billion",
+    "There is uncertainty in the market due to a number of global macro-economic concerns",
+    "we expect the direct impact on ASML's overall 2023 shipment plan to be limited"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2022-10-19",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 97220,
+  "max_words": 20000
+}

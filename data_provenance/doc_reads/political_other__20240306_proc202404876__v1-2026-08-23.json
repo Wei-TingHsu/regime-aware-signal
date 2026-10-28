@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim March 3, 2024, through March 9, 2024, as National Consumer Protection Week",
+    "The FTC is working on a rule that would, if finalized as proposed, put an end to noncompete agreements",
+    "fraud, cybercrimes, or unfair business practices interrupt the progress we have made"
+  ],
+  "extra": {
+    "actor": "President (ceremonial proclamation)",
+    "is_decided": false,
+    "sectors": [
+      "consumer finance",
+      "banking",
+      "airlines",
+      "healthcare insurance"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-03-06",
+  "doc_id": "proc202404876",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1107,
+  "max_words": 20000
+}

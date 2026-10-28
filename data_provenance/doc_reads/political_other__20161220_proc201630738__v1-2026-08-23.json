@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.02,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 90,
+  "specificity": 0.9,
+  "novelty": 0.15,
+  "confidence": 0.85,
+  "evidence": [
+    "I have determined to designate the Central African Republic as a beneficiary sub-Saharan African country.",
+    "the HTS is modified as provided in Annex I to this proclamation",
+    "to maintain the general level of reciprocal and mutually advantageous concessions with respect to Israel"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "trade/tariffs",
+      "textiles/apparel (Nepal)",
+      "agriculture (Israel)",
+      "Central African Republic trade preference"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-12-20",
+  "doc_id": "proc201630738",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3724,
+  "max_words": 20000
+}

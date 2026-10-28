@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "it is necessary to continue the national emergency declared in Executive Order 13067",
+    "the crisis... has not been resolved",
+    "These actions and policies continue to pose an unusual and extraordinary threat"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Sudan"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-11-01",
+  "doc_id": "noti201924109",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 618,
+  "max_words": 20000
+}

@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.5,
+    "duration": 0.3,
+    "gold": 0.3,
+    "dollar": -0.1,
+    "oil": -0.1
+  },
+  "magnitude": 0.75,
+  "horizon_days": 15,
+  "specificity": 0.95,
+  "novelty": 0.5,
+  "confidence": 0.75,
+  "evidence": [
+    "shall be subject to a 25 percent tariff",
+    "on or after 12:01 a.m. eastern daylight time on April 3, 2025, for automobiles",
+    "No drawback shall be available with respect to the duties imposed"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch, Section 232 action)",
+    "is_decided": true,
+    "sectors": [
+      "automobiles",
+      "automobile parts",
+      "trade",
+      "manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-04-03",
+  "doc_id": "proc202505930",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2149,
+  "max_words": 20000
+}

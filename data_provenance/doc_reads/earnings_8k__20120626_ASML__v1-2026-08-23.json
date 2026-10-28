@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.2,
+  "novelty": 0.05,
+  "confidence": 0.3,
+  "evidence": [
+    "Financially, because ASML's revenues, margins, net income all showed record numbers",
+    "the increasing uncertainty of the macro-economic outlook in the second half of 2011",
+    "ASML has the intention to increase the size of the current share buy back program"
+  ],
+  "confidence_note": "",
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2012-06-26",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 105929,
+  "max_words": 20000
+}

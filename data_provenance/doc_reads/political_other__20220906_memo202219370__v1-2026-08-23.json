@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 1,
+  "specificity": 0.5,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby delegate to the Secretary of State the authority under section 614",
+    "up to $205 million from the Economic Support Fund",
+    "to advance food security and energy resilience and to counter the People's Republic of China's efforts"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "food security",
+      "energy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-09-06",
+  "doc_id": "memo202219370",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 261,
+  "max_words": 20000
+}

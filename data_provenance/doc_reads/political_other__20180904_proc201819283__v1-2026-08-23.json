@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.03,
+    "gold": 0.05,
+    "dollar": 0.02,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 10,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "it is necessary and appropriate, at this time, to maintain the current tariff and quota levels",
+    "authorize the Secretary to provide relief from quantitative limitations on aluminum articles",
+    "The United States continues to hold discussions with countries on satisfactory alternative means"
+  ],
+  "extra": {
+    "actor": "President Trump / Department of Commerce",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-09-04",
+  "doc_id": "proc201819283",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2056,
+  "max_words": 20000
+}

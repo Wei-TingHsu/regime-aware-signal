@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.8,
+    "duration": 0.6,
+    "gold": 0.5,
+    "dollar": 0.2,
+    "oil": -0.6
+  },
+  "magnitude": 0.9,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "the COVID-19 outbreak in the United States constitutes a national emergency, beginning March 1, 2020",
+    "The spread of COVID-19 within our Nation's communities threatens to strain our Nation's healthcare systems",
+    "On March 11, 2020, the World Health Organization announced that the COVID-19 outbreak can be characterized as a pandemic"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "government",
+      "economy-wide"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-03-18",
+  "doc_id": "proc202005794",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 759,
+  "max_words": 20000
+}

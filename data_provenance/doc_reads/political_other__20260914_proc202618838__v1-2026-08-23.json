@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "certain products of Canada... shall be subject to the additional ad valorem duty of 50 percent",
+    "shall no longer be subject to the additional ad valorem duty of 50 percent imposed pursuant to Proclamation 11046",
+    "effective with respect to goods entered for consumption... on or after 12:01 a.m. eastern time on September 15, 2026"
+  ],
+  "extra": {
+    "actor": "President (Trump), via CBP/USTR/Treasury/Commerce",
+    "is_decided": true,
+    "sectors": [
+      "alcoholic beverages",
+      "Canada trade",
+      "tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-09-14",
+  "doc_id": "proc202618838",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1587,
+  "max_words": 20000
+}

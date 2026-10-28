@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "Delegation of Authority to Re-establish the Presidential Advisory Council on Combating Antibiotic-Resistant Bacteria",
+    "The Secretary of Health and Human Services is delegated the authority"
+  ],
+  "extra": {
+    "actor": "President (delegating to HHS Secretary)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "public health policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-03-06",
+  "doc_id": "memo202004809",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 419,
+  "max_words": 20000
+}

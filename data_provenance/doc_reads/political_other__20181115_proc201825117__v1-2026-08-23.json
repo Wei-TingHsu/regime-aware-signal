@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.75,
+  "evidence": [
+    "entry of any alien into the United States across the international boundary between the United States and Mexico is hereby suspended",
+    "That suspension and limitation shall expire 90 days after the date of this proclamation",
+    "aliens who enter the United States unlawfully through the southern border in contravention of this proclamation will be ineligible to be granted asylum"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "border security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-11-15",
+  "doc_id": "proc201825117",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2241,
+  "max_words": 20000
+}

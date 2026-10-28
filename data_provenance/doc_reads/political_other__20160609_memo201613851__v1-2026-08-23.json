@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby delegate to the Secretary of State... functions and authorities vested in the President by section 103(a)",
+    "functions and authorities vested in the President by sections 208(b), 208(c), 401(a), 401(b), and 402",
+    "The Secretary of State is authorized and directed to publish this memorandum"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretaries of State, Treasury, Commerce, DNI)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions administration",
+      "North Korea policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-06-09",
+  "doc_id": "memo201613851",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 736,
+  "max_words": 20000
+}

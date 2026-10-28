@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "the Attorney General finalized a rule adopting national standards",
+    "I hereby direct all agencies with Federal confinement facilities",
+    "propose, within 120 days of the date of this memorandum"
+  ],
+  "extra": {
+    "actor": "President (via OMB/DOJ)",
+    "is_decided": true,
+    "sectors": [
+      "prisons",
+      "private corrections",
+      "federal agencies"
+    ]
+  },
+  "source": "political_other",
+  "date": "2012-05-23",
+  "doc_id": "memo201212743",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 565,
+  "max_words": 20000
+}

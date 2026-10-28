@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "I continue for 1 year, until September 14, 2016, the exercise of those authorities with respect to Cuba",
+    "the exercise of certain authorities under the Trading With the Enemy Act is scheduled to terminate"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "Cuba sanctions",
+      "Trading with the Enemy Act"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-09-16",
+  "doc_id": "dete201523374",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 268,
+  "max_words": 20000
+}

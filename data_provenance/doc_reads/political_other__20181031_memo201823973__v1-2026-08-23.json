@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate to the Secretary of Energy",
+    "the authority to provide the briefing to the Congress",
+    "called for by section 3132(d)"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of Energy)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "energy",
+      "national security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-10-31",
+  "doc_id": "memo201823973",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 269,
+  "max_words": 20000
+}

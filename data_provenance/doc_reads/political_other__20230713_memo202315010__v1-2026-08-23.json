@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.03,
+    "dollar": 0.0,
+    "oil": 0.02
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "direct the drawdown of up to $800 million in defense articles and services",
+    "furnish up to $122 million in assistance to Ukraine",
+    "delegate to the Secretary of State"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign assistance"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-07-13",
+  "doc_id": "memo202315010",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 277,
+  "max_words": 20000
+}

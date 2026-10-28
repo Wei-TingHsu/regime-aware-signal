@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.5,
+  "evidence": [
+    "NET REVENUE ... $ 310,698,367 ... $ 240,998,475",
+    "Basic earnings per share $ 4.66 $ 2.57",
+    "7-nanometer $ 100,229,077 $ 43,852,620"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2020-08-14",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 32046,
+  "max_words": 20000
+}

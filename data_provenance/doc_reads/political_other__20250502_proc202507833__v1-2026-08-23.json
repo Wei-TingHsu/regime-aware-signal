@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 90,
+  "specificity": 0.7,
+  "novelty": 0.4,
+  "confidence": 0.65,
+  "evidence": [
+    "reducing duties assessed on automobile parts accounting for 15 percent of the value of an automobile assembled in the United States",
+    "import adjustment offset amount equal to 3.75 percent of the aggregate Manufacturer's Suggested Retail Price",
+    "Only automobiles that undergo final assembly in the United States are eligible"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch/Commerce)",
+    "is_decided": true,
+    "sectors": [
+      "automobiles",
+      "auto parts",
+      "manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-05-02",
+  "doc_id": "proc202507833",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2277,
+  "max_words": 20000
+}

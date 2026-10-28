@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 10,
+  "specificity": 0.9,
+  "novelty": 0.4,
+  "confidence": 0.7,
+  "evidence": [
+    "10 percent ad valorem tariff on such articles imported from most countries",
+    "from all countries except Argentina and Australia",
+    "maintain the current tariff level as it applies to other countries"
+  ],
+  "extra": {
+    "actor": "President Trump / Section 232",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "trade",
+      "manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-06-05",
+  "doc_id": "proc201812137",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1803,
+  "max_words": 20000
+}

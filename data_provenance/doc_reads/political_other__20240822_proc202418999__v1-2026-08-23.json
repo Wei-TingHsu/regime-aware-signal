@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.95,
+  "evidence": [
+    "hereby proclaim the objects identified above ... to be part of the Springfield 1908 Race Riot National Monument",
+    "The reserved Federal lands and interests in lands within the monument's boundaries encompass approximately 1.57 acres.",
+    "The Secretary of the Interior shall manage the monument through the National Park Service"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "commemorative",
+      "national parks"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-08-22",
+  "doc_id": "proc202418999",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3375,
+  "max_words": 20000
+}

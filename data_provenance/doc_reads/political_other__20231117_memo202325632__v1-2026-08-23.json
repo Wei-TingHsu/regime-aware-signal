@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 180,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "There is established, within the Office of the First Lady, a White House Initiative on Women's Health Research",
+    "The functions of the Initiative are advisory only",
+    "recommendations to the President, through the Chair, on concrete actions"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "biotech/pharma",
+      "women's health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-11-17",
+  "doc_id": "memo202325632",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1347,
+  "max_words": 20000
+}

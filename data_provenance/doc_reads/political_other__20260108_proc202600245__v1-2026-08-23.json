@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "provide duty-free access into the United States through the close of December 31, 2026",
+    "necessary modifications to the HTSUS are necessary or appropriate to correct these errors",
+    "The HTSUS is modified as set forth in Annex I"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "agriculture",
+      "trade/tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-01-08",
+  "doc_id": "proc202600245",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2338,
+  "max_words": 20000
+}

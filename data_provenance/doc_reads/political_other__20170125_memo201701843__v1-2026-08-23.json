@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby revoke the Presidential Memorandum of January 23, 2009",
+    "reinstate the Presidential Memorandum of January 22, 2001",
+    "ensure that U.S. taxpayer dollars do not fund organizations"
+  ],
+  "extra": {
+    "actor": "President (via memorandum to Secretary of State, HHS, USAID)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "foreign aid",
+      "NGOs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-01-25",
+  "doc_id": "memo201701843",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 324,
+  "max_words": 20000
+}

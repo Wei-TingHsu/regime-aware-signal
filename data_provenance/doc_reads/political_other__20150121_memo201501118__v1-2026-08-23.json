@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "Agencies shall ensure that, to the extent permitted by law, their policies offer 240 hours of advanced sick leave",
+    "Within 90 days of the date of this memorandum, OPM shall issue guidance to agencies"
+  ],
+  "extra": {
+    "actor": "President (OPM/Executive agencies)",
+    "is_decided": true,
+    "sectors": [
+      "federal workforce policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-01-21",
+  "doc_id": "memo201501118",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1301,
+  "max_words": 20000
+}

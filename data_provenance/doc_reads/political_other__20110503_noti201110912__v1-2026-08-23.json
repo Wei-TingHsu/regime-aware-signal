@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "I am continuing for 1 year the national emergency declared with respect to certain actions of the Government of Syria.",
+    "The United States condemns the use of violence against peacefully demonstrating citizens in Syria"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Syria",
+      "foreign policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2011-05-03",
+  "doc_id": "noti201110912",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 539,
+  "max_words": 20000
+}

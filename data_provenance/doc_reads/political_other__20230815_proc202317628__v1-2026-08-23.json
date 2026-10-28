@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "These reserved Federal lands and interests in lands encompass approximately 917,618 acres.",
+    "withdrawn from all forms of entry, location, selection, sale, or other disposition",
+    "from disposition under all laws relating to mineral and geothermal leasing"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "mining",
+      "uranium",
+      "land management",
+      "tourism/recreation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-08-15",
+  "doc_id": "proc202317628",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 7452,
+  "max_words": 20000
+}

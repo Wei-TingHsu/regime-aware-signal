@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 20,
+  "specificity": 0.9,
+  "novelty": 0.4,
+  "confidence": 0.7,
+  "evidence": [
+    "shall be subject to an additional 10 percent ad valorem rate of duty",
+    "all imports of derivative steel articles specified in Annex II to this proclamation shall be subject to an additional 25 percent ad valorem rate of duty",
+    "This action is necessary and appropriate to address circumvention"
+  ],
+  "extra": {
+    "actor": "President (Trump) via Section 232",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "aluminum",
+      "manufacturing",
+      "autos",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-01-29",
+  "doc_id": "proc202001806",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2700,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.55,
+    "duration": -0.1,
+    "gold": -0.05,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.35,
+  "confidence": 0.65,
+  "evidence": [
+    "Q3 sales strong across the full product portfolio",
+    "ASML expects Q4 2017 net sales around EUR 2.1 billion and a gross margin around 44 percent",
+    "we are confirming our view that 2017 net sales will be at least 25 percent higher than 2016 net sales"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2017-10-18",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 100018,
+  "max_words": 20000
+}

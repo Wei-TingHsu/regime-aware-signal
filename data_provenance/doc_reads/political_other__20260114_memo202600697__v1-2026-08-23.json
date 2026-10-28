@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby deny the requested Presidential Permit submitted by the Applicant",
+    "the project described in the Application is not in the United States national interest"
+  ],
+  "extra": {
+    "actor": "President (via Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "infrastructure",
+      "border crossing",
+      "transportation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-01-14",
+  "doc_id": "memo202600697",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 356,
+  "max_words": 20000
+}

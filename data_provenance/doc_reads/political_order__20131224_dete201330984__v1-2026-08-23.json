@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "I hereby find that the furnishing of defense articles and defense services to the Gulf Cooperation Council will strengthen the security of the United States",
+    "You are authorized and directed to transmit this determination"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "aerospace"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-12-24",
+  "doc_id": "dete201330984",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 238,
+  "max_words": 20000
+}

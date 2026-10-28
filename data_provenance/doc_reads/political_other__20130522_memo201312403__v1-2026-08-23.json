@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.35,
+  "novelty": 0.15,
+  "confidence": 0.7,
+  "evidence": [
+    "reduce aggregate timelines for major infrastructure projects by half",
+    "Within 60 days of the date of this memorandum, the Steering Committee shall identify and prioritize opportunities",
+    "Infrastructure sectors covered by the modernization effort include: surface transportation"
+  ],
+  "extra": {
+    "actor": "President (via memorandum to agencies)",
+    "is_decided": true,
+    "sectors": [
+      "infrastructure",
+      "transportation",
+      "energy",
+      "water resources",
+      "telecommunications"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-05-22",
+  "doc_id": "memo201312403",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1399,
+  "max_words": 20000
+}

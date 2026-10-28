@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "commercial fishing within the boundaries of the Monument and the Monument Expansion",
+    "Only United States flagged vessels shall be allowed to commercially fish",
+    "I find that a prohibition on commercial fishing is not, at this time, necessary"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch/NOAA/DOI)",
+    "is_decided": true,
+    "sectors": [
+      "commercial fishing",
+      "seafood",
+      "marine conservation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-04-22",
+  "doc_id": "proc202507060",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1499,
+  "max_words": 20000
+}

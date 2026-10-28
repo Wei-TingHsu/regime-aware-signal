@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "do hereby proclaim August 28 through September 3, 2022, as Overdose Awareness Week",
+    "beating the opioid overdose epidemic is an urgent priority for the Nation",
+    "my budget calls for an historic investment of $42.5 billion"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-08-31",
+  "doc_id": "proc202218933",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 752,
+  "max_words": 20000
+}

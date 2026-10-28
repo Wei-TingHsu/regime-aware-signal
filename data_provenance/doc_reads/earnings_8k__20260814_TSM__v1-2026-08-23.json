@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.6,
+  "horizon_days": 5,
+  "specificity": 0.75,
+  "novelty": 0.3,
+  "confidence": 0.45,
+  "evidence": [
+    "NET REVENUE... $1,270,380,250 ... $933,791,869",
+    "INCOME FROM OPERATIONS... 766,602,651 ... 463,423,638",
+    "2-nanometer $31,934,248 $ - $31,934,248 $ -"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2026-08-14",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 43770,
+  "max_words": 20000
+}

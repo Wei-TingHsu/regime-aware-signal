@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "ingredients necessary to manufacture infant formula meet the criteria specified in section 101(b)",
+    "is delegated to the Secretary of Health and Human Services",
+    "to determine... the proper nationwide priorities and allocation of all ingredients"
+  ],
+  "extra": {
+    "actor": "Secretary of Health and Human Services",
+    "is_decided": true,
+    "sectors": [
+      "infant formula manufacturing",
+      "consumer staples",
+      "food supply chain"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-05-24",
+  "doc_id": "dete202211273",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 616,
+  "max_words": 20000
+}

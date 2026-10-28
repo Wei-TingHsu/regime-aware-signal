@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim November 15, 2022, as America Recycles Day",
+    "my Administration has released a National Recycling Strategy",
+    "I call upon the people of the United States of America to observe this day"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "commemorative",
+      "environment"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-11-17",
+  "doc_id": "proc202225195",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 621,
+  "max_words": 20000
+}

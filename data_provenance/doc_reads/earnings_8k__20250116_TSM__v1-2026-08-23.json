@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "Revenue is expected to be between US$25.0 billion and US$25.8 billion",
+    "we expect our business to be impacted by smartphone seasonality, partially offset by continued growth in AI-related demand",
+    "management further expects the 2025 capital budget to be between US$38 billion and US$42 billion"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.1,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2025-01-16",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 64810,
+  "max_words": 20000
+}

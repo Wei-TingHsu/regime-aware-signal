@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.35,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.05,
+    "oil": 0.15
+  },
+  "magnitude": 0.3,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.15,
+  "confidence": 0.45,
+  "evidence": [
+    "Q2 net sales expected around Euro 1 billion",
+    "ASML on track to surpass our 2007 revenue peak of Euro 3.8 billion in 2010",
+    "Booked 50 systems, valued at Euro 1,004 million",
+    "Overall IC demand at high levels"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2010-06-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 75748,
+  "max_words": 20000
+}

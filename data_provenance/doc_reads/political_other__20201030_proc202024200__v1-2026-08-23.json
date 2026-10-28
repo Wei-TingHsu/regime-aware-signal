@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": -0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "I have decided to reinstate Canada's exclusion from the tariff on these articles",
+    "I may consider re-imposing the tariff proclaimed in Proclamation 9704",
+    "a monthly average of approximately 77,000 tons in September through December"
+  ],
+  "extra": {
+    "actor": "President (Trump), Section 232 aluminum tariff",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "US-Canada trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-10-30",
+  "doc_id": "proc202024200",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1897,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby direct as follows",
+    "reduce the number of Federal inmates and detainees held in restrictive housing",
+    "shall report back to me not later than 180 days"
+  ],
+  "extra": {
+    "actor": "President (DOJ and executive agencies)",
+    "is_decided": true,
+    "sectors": [
+      "criminal justice",
+      "corrections",
+      "private prisons"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-03-07",
+  "doc_id": "memo201605232",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 736,
+  "max_words": 20000
+}

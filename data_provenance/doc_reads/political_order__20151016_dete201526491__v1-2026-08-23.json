@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby determine that it is in the national interest of the United States to waive the application of the prohibition",
+    "with respect to the Democratic Republic of the Congo, Nigeria, and Somalia",
+    "to allow for the provision of International Military Education and Training, and Peacekeeping Operations assistance"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch) / Secretary of State",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign_aid",
+      "diplomacy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-10-16",
+  "doc_id": "dete201526491",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 268,
+  "max_words": 20000
+}

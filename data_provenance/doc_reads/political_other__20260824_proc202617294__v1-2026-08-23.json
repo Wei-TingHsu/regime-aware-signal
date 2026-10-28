@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": -0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 10,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Canada has expressed a commitment to remove the discriminations or unreasonable and unequal impositions",
+    "suspending for a period of 3 days the additional duties imposed in Proclamations 11046, 11047, and 11048",
+    "The effective date of the additional ad valorem duties imposed in Proclamations 11046, 11047, and 11048 shall be 12:01 a.m. eastern time on August 22, 2026"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "alcoholic beverages",
+      "dairy",
+      "motor vehicles",
+      "Canada trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-08-24",
+  "doc_id": "proc202617294",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1427,
+  "max_words": 20000
+}

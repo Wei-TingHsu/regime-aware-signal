@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 10,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "entry into the United States...is hereby suspended and limited",
+    "CDC has reexamined its policies on international travel",
+    "effective at 12:01 a.m. eastern standard time on January 26, 2021"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "travel",
+      "airlines",
+      "immigration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-01-28",
+  "doc_id": "proc202102024",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2212,
+  "max_words": 20000
+}

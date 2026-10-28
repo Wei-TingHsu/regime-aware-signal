@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.25,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "imposing tariffs and taking such other responsive actions necessary to mitigate the harm",
+    "shall determine...whether to renew investigations under section 301",
+    "whether any foreign country subjects United States citizens or companies...to discriminatory or extraterritorial taxes"
+  ],
+  "extra": {
+    "actor": "President/USTR/Treasury/Commerce",
+    "is_decided": false,
+    "sectors": [
+      "technology",
+      "digital services",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-02-26",
+  "doc_id": "memo202503188",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1322,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby delegate to you the functions and authorities vested in the President",
+    "section 102(b) of the Hizballah International Financing Prevention Act of 2015",
+    "You are authorized and directed to publish this memorandum in the Federal Register"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions administration",
+      "foreign policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-04-01",
+  "doc_id": "memo201607615",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 225,
+  "max_words": 20000
+}

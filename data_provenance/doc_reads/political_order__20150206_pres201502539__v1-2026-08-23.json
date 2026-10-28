@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "direct spending budgetary resources for fiscal year 2016 in each non-exempt budget account be reduced",
+    "on October 1, 2015"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "government spending",
+      "fiscal policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2015-02-06",
+  "doc_id": "pres201502539",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 250,
+  "max_words": 20000
+}

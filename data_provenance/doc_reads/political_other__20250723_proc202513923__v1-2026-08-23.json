@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.05
+  },
+  "magnitude": 0.25,
+  "horizon_days": 250,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "exempt from compliance with the Taconite Rule for a period of 2 years",
+    "The technology to implement the Taconite Rule is not available",
+    "Preserving and enhancing domestic taconite processing capabilities is vital"
+  ],
+  "extra": {
+    "actor": "President (via EPA Clean Air Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "mining",
+      "iron ore processing",
+      "industrial materials"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-07-23",
+  "doc_id": "proc202513923",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 769,
+  "max_words": 20000
+}

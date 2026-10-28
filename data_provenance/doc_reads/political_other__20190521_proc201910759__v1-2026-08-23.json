@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 10,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "impose a 25 percent ad valorem tariff on steel imports from Turkey, commensurate with the tariff imposed on such articles imported from most countries",
+    "Maintaining the existing 25 percent ad valorem tariff on most countries is necessary and appropriate at this time",
+    "remove the higher tariff on steel imports from Turkey imposed by Proclamation 9772"
+  ],
+  "extra": {
+    "actor": "President (Trump), via Section 232",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "trade/tariffs",
+      "Turkey imports"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-05-21",
+  "doc_id": "proc201910759",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1755,
+  "max_words": 20000
+}

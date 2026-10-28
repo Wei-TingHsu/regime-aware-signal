@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 365,
+  "specificity": 0.35,
+  "novelty": 0.25,
+  "confidence": 0.6,
+  "evidence": [
+    "By 2030, our space transportation ranges must grow to support more than 1,000 launches",
+    "shall develop a lunar logistics architecture that facilitates commercial transportation",
+    "favor commercial space transportation services for meeting United States Government needs"
+  ],
+  "extra": {
+    "actor": "President (NSPM-17)",
+    "is_decided": true,
+    "sectors": [
+      "aerospace",
+      "space launch",
+      "satellite/commercial space"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-08-25",
+  "doc_id": "memo202617372",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2454,
+  "max_words": 20000
+}

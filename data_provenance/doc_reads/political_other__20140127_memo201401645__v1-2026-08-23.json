@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 0,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "There is established a White House Task Force to Protect Students from Sexual Assault",
+    "The functions of the Task Force are advisory only",
+    "Within 90 days of the date of this memorandum, the Task Force shall develop and submit proposals"
+  ],
+  "extra": {
+    "actor": "White House / Office of the Vice President / Departments of Education and Justice",
+    "is_decided": true,
+    "sectors": [
+      "for-profit education",
+      "higher education"
+    ]
+  },
+  "source": "political_other",
+  "date": "2014-01-27",
+  "doc_id": "memo201401645",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1284,
+  "max_words": 20000
+}

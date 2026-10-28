@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.1,
+    "gold": 0.1,
+    "dollar": -0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.4,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.65,
+  "evidence": [
+    "the tariff set forth in clause 2 of Proclamation 9704 shall be effective June 1, 2018, for these countries",
+    "Imports of all aluminum articles from Argentina, Australia, and Brazil shall be exempt from the duty",
+    "if the satisfactory alternative means are not finalized shortly, I will consider re-imposing the tariff"
+  ],
+  "extra": {
+    "actor": "President (Trump) via Section 232 authority",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-05-07",
+  "doc_id": "proc201809840",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1793,
+  "max_words": 20000
+}

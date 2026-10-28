@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.2,
+    "gold": 0.2,
+    "dollar": 0.1,
+    "oil": -0.1
+  },
+  "magnitude": 0.5,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.6,
+  "confidence": 0.75,
+  "evidence": [
+    "impose an additional ad valorem duty of 50 percent on certain products of Canada",
+    "effective as of 12:01 a.m. eastern time on August 19, 2026",
+    "Canada is discriminating against the commerce of the United States through Canada's motor vehicle tariff scheme"
+  ],
+  "extra": {
+    "actor": "President (via Section 338 Tariff Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "automotive",
+      "trade",
+      "manufacturing"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-07-23",
+  "doc_id": "proc202614997",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2169,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.03,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I am continuing for 1 year the national emergency declared in Executive Order 13660.",
+    "continue to pose an unusual and extraordinary threat to the national security and foreign policy",
+    "must continue in effect beyond March 6, 2022"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "Russia",
+      "Ukraine"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-03-03",
+  "doc_id": "noti202204744",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 637,
+  "max_words": 20000
+}

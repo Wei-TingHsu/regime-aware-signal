@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.15
+  },
+  "magnitude": 0.35,
+  "horizon_days": 90,
+  "specificity": 0.9,
+  "novelty": 0.4,
+  "confidence": 0.7,
+  "evidence": [
+    "the boundaries of the Bears Ears National Monument are hereby modified and reduced",
+    "excluded from the monument reservation shall be open to... disposition under all laws relating to mineral and geothermal leasing",
+    "approximately 1,150,860 acres of land"
+  ],
+  "extra": {
+    "actor": "President Trump",
+    "is_decided": true,
+    "sectors": [
+      "mining",
+      "energy",
+      "land management",
+      "public lands"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-12-08",
+  "doc_id": "proc201726709",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3457,
+  "max_words": 20000
+}

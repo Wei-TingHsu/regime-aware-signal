@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.3,
+    "duration": 0.2,
+    "gold": 0.3,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.7,
+  "horizon_days": 60,
+  "specificity": 0.95,
+  "novelty": 0.6,
+  "confidence": 0.75,
+  "evidence": [
+    "increase the tariff rate from 10 percent ad valorem to 25 percent ad valorem",
+    "terminate these agreements as of March 12, 2025",
+    "all general approved exclusions shall be ineffective as of March 12, 2025"
+  ],
+  "extra": {
+    "actor": "President (Trump), via Section 232 authority",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "manufacturing",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-02-18",
+  "doc_id": "proc202502832",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 4792,
+  "max_words": 20000
+}

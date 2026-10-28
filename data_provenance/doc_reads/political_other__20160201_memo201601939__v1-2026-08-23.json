@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 180,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "establishes within the Office of the Vice President, a White House Cancer Moonshot Task Force",
+    "The functions of the Task Force are advisory only",
+    "present to the President a report before December 31, 2016"
+  ],
+  "extra": {
+    "actor": "White House / Executive Branch",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "biotech/pharmaceuticals"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-02-01",
+  "doc_id": "memo201601939",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1117,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.2,
+  "horizon_days": 180,
+  "specificity": 0.5,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "electric heat pumps are industrial resources, materials, or critical technology items essential to the national defense",
+    "I waive the requirements of section 303(a)(1)-(a)(6) of the Act",
+    "action to expand the domestic production capability for electric heat pumps is necessary"
+  ],
+  "extra": {
+    "actor": "President (DPA Title III, Dept. of Energy)",
+    "is_decided": true,
+    "sectors": [
+      "clean energy manufacturing",
+      "HVAC/heat pumps",
+      "critical minerals supply chain"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-06-09",
+  "doc_id": "dete202212586",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 371,
+  "max_words": 20000
+}

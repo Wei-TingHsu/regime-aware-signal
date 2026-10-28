@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "delegate to the Secretary of the Treasury...functions and authorities vested in the President",
+    "with respect to the imposition of the sanctions in section 5(c)(1)(A)",
+    "exercised in coordination with departments and agencies through the National Security Presidential Memorandum-4 process"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State and Treasury)",
+    "is_decided": true,
+    "sectors": [
+      "Nicaragua sanctions",
+      "foreign policy administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-06-13",
+  "doc_id": "memo201912695",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 527,
+  "max_words": 20000
+}

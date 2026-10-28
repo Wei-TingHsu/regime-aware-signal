@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": -0.02,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "to provide immediate military assistance to Ukraine",
+    "up to $250 million in assistance",
+    "up to an aggregate value of $350 million in defense articles"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid",
+      "Ukraine"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-03-15",
+  "doc_id": "memo202205615",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 339,
+  "max_words": 20000
+}

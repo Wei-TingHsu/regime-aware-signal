@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.3,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.3,
+  "novelty": 0.3,
+  "confidence": 0.35,
+  "evidence": [
+    "Global Model 3 cost normalized* ~30% decline",
+    "Operating Margin... Autos Industry includes: Tesla, BMW, Mercedes-Benz, Ford, GM...",
+    "Energy Storage deployments (GWh)"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2023-04-19",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 467738,
+  "max_words": 20000
+}

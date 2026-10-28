@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "The admission of up to 18,000 refugees to the United States during Fiscal Year 2020",
+    "persons in Honduras, Guatemala, and El Salvador",
+    "you are further authorized to transfer unused admissions"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch, Dept. of State)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "refugee resettlement"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-11-29",
+  "doc_id": "dete201926082",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 510,
+  "max_words": 20000
+}

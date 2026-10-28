@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.15,
+  "confidence": 0.6,
+  "evidence": [
+    "It is my judgment that it is necessary and appropriate, at this time, to maintain the current tariff and quota levels.",
+    "is hereby authorized to provide relief from the quantitative limitations applicable to steel articles",
+    "The United States continues to hold discussions with countries on satisfactory alternative means"
+  ],
+  "extra": {
+    "actor": "President (Commerce Secretary implementation)",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "metals",
+      "manufacturing",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-09-04",
+  "doc_id": "proc201819284",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 3036,
+  "max_words": 20000
+}

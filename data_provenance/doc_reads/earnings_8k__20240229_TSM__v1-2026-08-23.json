@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.3,
+  "novelty": 0.1,
+  "confidence": 0.3,
+  "evidence": [
+    "NET REVENUE $2,161,735,841 100 $2,263,891,292 100",
+    "Basic earnings per share $32.34 $39.20",
+    "The accompanying consolidated financial statements were approved and authorized for issue by the Board of Directors on February 6, 2024"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2024-02-29",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 176607,
+  "max_words": 20000
+}

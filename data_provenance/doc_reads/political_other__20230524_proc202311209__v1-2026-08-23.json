@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "I, JOSEPH R. BIDEN JR., President of the United States of America, do hereby proclaim May 22, 2023, as National Maritime Day",
+    "My Administration remains steadfast in its support of the Merchant Marine as well as the Jones Act",
+    "requesting $196 million in my 2024 Budget to upgrade the United States Merchant Marine Academy's campus"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "maritime",
+      "shipping"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-05-24",
+  "doc_id": "proc202311209",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 634,
+  "max_words": 20000
+}

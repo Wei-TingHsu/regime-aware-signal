@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby delegate to the Secretary of Commerce the functions and authorities",
+    "vested in the President by section 1757 of the National Defense Authorization Act"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of Commerce)",
+    "is_decided": true,
+    "sectors": [
+      "export controls/administrative"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-11-29",
+  "doc_id": "memo201826153",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 277,
+  "max_words": 20000
+}

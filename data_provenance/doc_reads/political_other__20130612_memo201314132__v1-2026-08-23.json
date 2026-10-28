@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.02
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "we must modernize and expand our electric transmission grid",
+    "focus on facilitating renewable energy resources and improving grid resiliency",
+    "By November 12, 2014, provide to the Steering Committee and the Office of Management and Budget (OMB) an implementation plan"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "utilities",
+      "renewable energy",
+      "electric transmission",
+      "infrastructure permitting"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-06-12",
+  "doc_id": "memo201314132",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2524,
+  "max_words": 20000
+}

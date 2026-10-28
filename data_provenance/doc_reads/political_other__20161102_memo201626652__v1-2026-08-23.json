@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate to the Administrator of the United States Agency for International Development the functions and authorities",
+    "These functions shall be exercised consistent with the Secretary of State's responsibility",
+    "The Secretary of State is authorized and directed to publish this memorandum"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State and USAID Administrator)",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "food security",
+      "international development"
+    ]
+  },
+  "source": "political_other",
+  "date": "2016-11-02",
+  "doc_id": "memo201626652",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 404,
+  "max_words": 20000
+}

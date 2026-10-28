@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.85,
+  "evidence": [
+    "directing the deferral of removal of certain Hong Kong residents",
+    "defer for 18 months the removal of any Hong Kong resident",
+    "There are compelling foreign policy reasons to defer enforced departure"
+  ],
+  "extra": {
+    "actor": "President (via DHS/State)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "US-China relations"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-08-10",
+  "doc_id": "memo202117122",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 734,
+  "max_words": 20000
+}

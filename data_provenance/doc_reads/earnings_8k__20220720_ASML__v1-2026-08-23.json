@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.6,
+  "confidence": 0.65,
+  "evidence": [
+    "record quarterly net bookings in Q2 of \u20ac8.5 billion",
+    "This growth is lower than previously guided as a result of an increase in the number of fast shipments",
+    "Some customers are indicating signs of slowing demand in certain consumer-driven market segments"
+  ],
+  "extra": {
+    "surprise": -0.2,
+    "guidance_change": -0.3,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2022-07-20",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 430072,
+  "max_words": 20000
+}

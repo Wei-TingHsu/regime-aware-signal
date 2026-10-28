@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.45,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.5,
+  "confidence": 0.7,
+  "evidence": [
+    "\"Stronger than expected demand drives ASML Q1 sales. Positive momentum expected to continue throughout 2017\"",
+    "ASML expects Q2 2017 net sales between EUR 1.9 and 2.0 billion",
+    "healthy demand is expected to continue throughout the rest of the year"
+  ],
+  "extra": {
+    "surprise": 0.5,
+    "guidance_change": 0.4,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2017-04-19",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 99453,
+  "max_words": 20000
+}

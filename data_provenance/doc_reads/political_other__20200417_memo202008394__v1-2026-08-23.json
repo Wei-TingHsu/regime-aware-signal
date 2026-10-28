@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "authorized to exercise authority under Public Law 85-804",
+    "with respect to contracts performed in support of efforts",
+    "This memorandum shall terminate on September 30, 2020"
+  ],
+  "extra": {
+    "actor": "President (Secretary of Veterans Affairs)",
+    "is_decided": true,
+    "sectors": [
+      "defense contracting",
+      "healthcare",
+      "government procurement"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-04-17",
+  "doc_id": "memo202008394",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 561,
+  "max_words": 20000
+}

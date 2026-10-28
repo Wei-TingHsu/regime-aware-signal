@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 30,
+  "specificity": 0.4,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "shall jointly propose the amended regulations",
+    "does not, create any right or benefit",
+    "authorized and directed to publish this memorandum"
+  ],
+  "extra": {
+    "actor": "President (directing DNI and OPM)",
+    "is_decided": true,
+    "sectors": [
+      "government administration",
+      "national security personnel policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-01-31",
+  "doc_id": "memo201302306",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 321,
+  "max_words": 20000
+}

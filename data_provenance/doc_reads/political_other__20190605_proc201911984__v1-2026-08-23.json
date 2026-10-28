@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim June 2019 as National Homeownership Month",
+    "we must also reform our Nation's housing finance system",
+    "Earlier this year, I signed a Presidential Memorandum instructing the Secretaries"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "housing",
+      "mortgage finance"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-06-05",
+  "doc_id": "proc201911984",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 464,
+  "max_words": 20000
+}

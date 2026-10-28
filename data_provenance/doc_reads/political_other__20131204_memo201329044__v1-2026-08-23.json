@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate to the Secretary of State the authority",
+    "whether to waive the application to Somalia of the prohibition",
+    "for fiscal year 2013"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "foreign policy",
+      "defense/child soldiers prevention"
+    ]
+  },
+  "source": "political_other",
+  "date": "2013-12-04",
+  "doc_id": "memo201329044",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 238,
+  "max_words": 20000
+}

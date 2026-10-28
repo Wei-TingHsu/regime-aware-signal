@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.3,
+  "novelty": 0.05,
+  "confidence": 0.5,
+  "evidence": [
+    "2012 was ASML's second best year, with net sales of EUR 4,731.5 million and net income of EUR 1,302.3 million",
+    "We expect the transaction to close in the first half of 2013",
+    "ASML will acquire all outstanding shares of common stock of Cymer"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2013-02-13",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 90727,
+  "max_words": 20000
+}

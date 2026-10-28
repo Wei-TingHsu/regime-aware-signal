@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.55,
+  "horizon_days": 60,
+  "specificity": 0.8,
+  "novelty": 0.5,
+  "confidence": 0.6,
+  "evidence": [
+    "Record backlog supports a strong 2011",
+    "ASML expects Q1 2011 net sales of around EUR 1.4 billion",
+    "This record-breaking backlog and the additional expected Q1 bookings 2011 confirm a potential for more than EUR 5 billion of net sales in 2011"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.6,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2011-01-19",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 38094,
+  "max_words": 20000
+}

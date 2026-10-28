@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.2,
+  "horizon_days": 250,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "these stationary sources are exempt from compliance with certain requirements of the Coke Oven Rule for a period of 2 years",
+    "The technology to implement the Coke Oven Rule is not available",
+    "It is in the national security interests of the United States to issue this Exemption"
+  ],
+  "extra": {
+    "actor": "President (EPA Clean Air Act authority)",
+    "is_decided": true,
+    "sectors": [
+      "steel",
+      "coke production",
+      "industrials",
+      "materials"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-11-26",
+  "doc_id": "proc202521418",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 868,
+  "max_words": 20000
+}

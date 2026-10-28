@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.05,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "increasing the column 2 rates of duty to 35 percent ad valorem on certain other products",
+    "shall be effective with respect to goods entered for consumption...30 days after the date of this proclamation",
+    "Suspending Normal Trade Relations with Russia and Belarus Act"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "Russia sanctions",
+      "tariffs"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-06-30",
+  "doc_id": "proc202214145",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 832,
+  "max_words": 20000
+}

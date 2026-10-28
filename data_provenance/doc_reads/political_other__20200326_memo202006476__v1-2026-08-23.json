@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "fund 100 percent of the emergency assistance activities",
+    "National Guard units under State control",
+    "profound and unique public health risks posed by the ongoing outbreak of COVID-19"
+  ],
+  "extra": {
+    "actor": "President/DoD/FEMA",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "emergency management",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-03-26",
+  "doc_id": "memo202006476",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 794,
+  "max_words": 20000
+}

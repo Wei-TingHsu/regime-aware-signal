@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": -0.1,
+    "gold": 0.0,
+    "dollar": -0.1,
+    "oil": 0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "directing the Secretary of the Treasury to use his authority to defer certain payroll tax obligations",
+    "wages or compensation, as applicable, paid during the period of September 1, 2020, through December 31, 2020",
+    "shall explore avenues, including legislation, to eliminate the obligation to pay the taxes deferred"
+  ],
+  "extra": {
+    "actor": "President (Treasury Secretary directed)",
+    "is_decided": true,
+    "sectors": [
+      "consumer",
+      "payroll/employment",
+      "tax policy"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-08-13",
+  "doc_id": "memo202017899",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 649,
+  "max_words": 20000
+}

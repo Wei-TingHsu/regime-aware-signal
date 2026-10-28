@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 5,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Senior officials of the Government of Iran",
+    "suspended: entry into the United States, as immigrants or nonimmigrants",
+    "Government of Iran is a state sponsor of terrorism"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "foreign policy",
+      "Iran sanctions-adjacent"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-09-30",
+  "doc_id": "proc201921400",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 924,
+  "max_words": 20000
+}

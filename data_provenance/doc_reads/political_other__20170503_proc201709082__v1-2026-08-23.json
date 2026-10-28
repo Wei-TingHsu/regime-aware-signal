@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.02,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.0,
+  "confidence": 0.98,
+  "evidence": [
+    "I, DONALD J. TRUMP, President of the United States of America, do hereby proclaim May 1, 2017, as Loyalty Day.",
+    "Through the Department of Defense and other national security agencies, we are working to destroy ISIS",
+    "we call on all Americans to observe this day with appropriate ceremonies"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2017-05-03",
+  "doc_id": "proc201709082",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 536,
+  "max_words": 20000
+}

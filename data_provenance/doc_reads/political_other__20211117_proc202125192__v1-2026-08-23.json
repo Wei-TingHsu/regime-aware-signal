@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim November 15, 2021, as America Recycles Day",
+    "my Administration is releasing a National Recycling Strategy",
+    "Climate change is a blinking code red for our Nation"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": false,
+    "sectors": [
+      "waste management",
+      "recycling"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-11-17",
+  "doc_id": "proc202125192",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 781,
+  "max_words": 20000
+}

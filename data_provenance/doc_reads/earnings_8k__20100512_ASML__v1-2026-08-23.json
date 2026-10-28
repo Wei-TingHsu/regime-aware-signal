@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": -0.2,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.3,
+  "confidence": 0.3,
+  "evidence": [
+    "Net sales expected around \u20ac 1 billion",
+    "Gross margin expected of about 42% in Q2",
+    "ASML on track to surpass our 2007 revenue peak of \u20ac 3.8 billion in 2010"
+  ],
+  "extra": {
+    "surprise": 0.2,
+    "guidance_change": 0.2,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2010-05-12",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 25443,
+  "max_words": 20000
+}

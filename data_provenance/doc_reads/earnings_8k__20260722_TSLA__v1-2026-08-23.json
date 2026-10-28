@@ -1,0 +1,33 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 60,
+  "specificity": 0.45,
+  "novelty": 0.4,
+  "confidence": 0.5,
+  "evidence": [
+    "Tesla generated over $100B in revenue on a trailing twelve-month basis for the first time",
+    "Quarterly operating income decreased 57% YoY to $0.4B",
+    "Scaling will be non-linear, and we are focused on long-term value creation"
+  ],
+  "confidence_detail": {},
+  "extra": {
+    "surprise": -0.1,
+    "guidance_change": 0.1,
+    "ticker": "TSLA"
+  },
+  "source": "earnings_8k",
+  "date": "2026-07-22",
+  "doc_id": "TSLA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 196830,
+  "max_words": 20000
+}

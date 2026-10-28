@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.35,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "shall initiate a process to adjust current regulations regarding transactions with Cuba",
+    "regulatory changes described in this subsection shall prohibit direct or indirect financial transactions with those entities",
+    "Secretary of the Treasury shall adjust the Department of the Treasury's current regulation defining the term 'prohibited officials'"
+  ],
+  "extra": {
+    "actor": "President (NSPM reissuance)",
+    "is_decided": true,
+    "sectors": [
+      "travel/airlines to Cuba",
+      "agriculture exports",
+      "telecommunications"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-08-12",
+  "doc_id": "memo202515338",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2589,
+  "max_words": 20000
+}

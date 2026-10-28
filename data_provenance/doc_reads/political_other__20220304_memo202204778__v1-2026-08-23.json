@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.75,
+  "evidence": [
+    "100 percent Federal cost share for all work eligible for assistance under Public Assistance Category B",
+    "performed from January 20, 2020, through July 1, 2022"
+  ],
+  "extra": {
+    "actor": "President/FEMA",
+    "is_decided": true,
+    "sectors": [
+      "healthcare",
+      "government services",
+      "disaster relief"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-03-04",
+  "doc_id": "memo202204778",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 480,
+  "max_words": 20000
+}

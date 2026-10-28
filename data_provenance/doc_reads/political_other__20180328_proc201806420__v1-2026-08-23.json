@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": -0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.35,
+  "horizon_days": 30,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "the tariff set forth in clause 2 of Proclamation 9704 shall be effective May 1, 2018, for the countries listed as excepted",
+    "Imports of all aluminum articles... shall be exempt from the duty... until 12:01 a.m. eastern daylight time on May 1, 2018",
+    "unless I determine by further proclamation that the United States has reached a satisfactory alternative means"
+  ],
+  "extra": {
+    "actor": "President (Trump) via Section 232 proclamation",
+    "is_decided": true,
+    "sectors": [
+      "aluminum",
+      "metals",
+      "trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-03-28",
+  "doc_id": "proc201806420",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2356,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby delegate to the Secretary of State the authority under section 614(a)(1)",
+    "to furnish up to $215 million from the Economic Support Fund",
+    "in order to provide assistance in response to the global COVID-19 pandemic"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "government administration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-09-06",
+  "doc_id": "memo202219372",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 252,
+  "max_words": 20000
+}

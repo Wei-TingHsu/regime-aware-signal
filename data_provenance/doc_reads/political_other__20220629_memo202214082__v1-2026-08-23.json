@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 1,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.9,
+  "evidence": [
+    "defer through June 30, 2024, the removal of any Liberian national",
+    "continued employment authorization through June 30, 2024",
+    "deferral of enforced departure from the United States through June 30, 2024"
+  ],
+  "extra": {
+    "actor": "President (via DHS/State)",
+    "is_decided": true,
+    "sectors": [
+      "immigration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2022-06-29",
+  "doc_id": "memo202214082",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1213,
+  "max_words": 20000
+}

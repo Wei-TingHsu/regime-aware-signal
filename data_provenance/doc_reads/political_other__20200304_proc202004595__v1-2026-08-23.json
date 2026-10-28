@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.2,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.3,
+  "horizon_days": 10,
+  "specificity": 0.8,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "suspended and limited the entry into the United States, as immigrants or nonimmigrants, of all aliens who were physically present within the Islamic Republic of Iran",
+    "CDC has determined that the Islamic Republic of Iran is experiencing sustained person-to-person transmission of SARS-CoV-2",
+    "This proclamation is effective at 5:00 p.m. eastern standard time on March 2, 2020"
+  ],
+  "extra": {
+    "actor": "President (Trump) via CDC/DHS/State",
+    "is_decided": true,
+    "sectors": [
+      "travel",
+      "airlines",
+      "immigration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-03-04",
+  "doc_id": "proc202004595",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2064,
+  "max_words": 20000
+}

@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.6,
+    "duration": 0.5,
+    "gold": 0.3,
+    "dollar": -0.1,
+    "oil": -0.4
+  },
+  "magnitude": 0.7,
+  "horizon_days": 10,
+  "specificity": 0.9,
+  "novelty": 0.7,
+  "confidence": 0.75,
+  "evidence": [
+    "entry into the United States of all aliens who were physically present within the Schengen Area",
+    "This proclamation is effective at 11:59 p.m. eastern daylight time on March 13, 2020",
+    "sustained person-to-person transmission of SARS-CoV-2"
+  ],
+  "extra": {
+    "actor": "President (Trump)",
+    "is_decided": true,
+    "sectors": [
+      "travel",
+      "airlines",
+      "tourism",
+      "transportation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-03-16",
+  "doc_id": "proc202005578",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1985,
+  "max_words": 20000
+}

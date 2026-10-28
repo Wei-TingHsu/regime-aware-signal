@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 120,
+  "specificity": 0.25,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "Nonimmigrant visa (visa) overstay rates are unacceptably high for nationals of certain countries.",
+    "shall provide to the President recommendations to reduce B-1 and B-2 nonimmigrant visa overstay rates",
+    "may include...a proclamation...suspending or limiting entry of nationals of those countries"
+  ],
+  "extra": {
+    "actor": "Department of State / DOJ / DHS",
+    "is_decided": false,
+    "sectors": [
+      "travel",
+      "immigration",
+      "tourism"
+    ]
+  },
+  "source": "political_other",
+  "date": "2019-05-07",
+  "doc_id": "memo201909470",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 818,
+  "max_words": 20000
+}

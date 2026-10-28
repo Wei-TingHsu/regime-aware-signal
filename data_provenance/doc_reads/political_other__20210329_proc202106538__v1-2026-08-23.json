@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "I hereby proclaim March 24, 2021, as National Equal Pay Day.",
+    "We must begin by passing the Paycheck Fairness Act",
+    "This day is a symbolic representation of how far into this year women must work"
+  ],
+  "extra": {
+    "actor": "President (Biden)",
+    "is_decided": false,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2021-03-29",
+  "doc_id": "proc202106538",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 913,
+  "max_words": 20000
+}

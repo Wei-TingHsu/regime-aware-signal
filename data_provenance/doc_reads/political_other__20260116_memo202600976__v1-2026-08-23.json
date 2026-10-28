@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": -0.05,
+    "oil": 0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.75,
+  "novelty": 0.35,
+  "confidence": 0.55,
+  "evidence": [
+    "I hereby direct all executive departments and agencies ... to take immediate steps to effectuate the withdrawal",
+    "have determined that it is contrary to the interests of the United States to remain a member",
+    "Intergovernmental Panel on Climate Change",
+    "UN Framework Convention on Climate Change"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "climate_policy",
+      "international_organizations"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-01-16",
+  "doc_id": "memo202600976",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1105,
+  "max_words": 20000
+}

@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 5,
+  "specificity": 0.7,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "interdiction of aircraft reasonably suspected to be primarily engaged in illicit drug trafficking",
+    "Colombia has appropriate procedures in place to protect against innocent loss of life",
+    "continuation of U.S. Drug Interdiction Assistance to the Government of Colombia"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign policy"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-08-10",
+  "doc_id": "dete202616312",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 315,
+  "max_words": 20000
+}

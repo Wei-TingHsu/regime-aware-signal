@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate to the Secretary of Homeland Security the authority to submit the report",
+    "The delegation in this memorandum shall apply to any provision of any future public law"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "administrative",
+      "homeland security",
+      "state department"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-07-05",
+  "doc_id": "memo201714252",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 264,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "shall extend to, and shall be available for orders of any length authorizing duty through August 21, 2020",
+    "continue to provide maximum support to the States and territories",
+    "100 percent Federal cost share for the States' and territories' use of National Guard forces"
+  ],
+  "extra": {
+    "actor": "President (DoD/DHS directed)",
+    "is_decided": true,
+    "sectors": [
+      "government",
+      "healthcare",
+      "state_local_fiscal"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-06-05",
+  "doc_id": "memo202012431",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 687,
+  "max_words": 20000
+}

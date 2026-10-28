@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.1,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.7,
+  "evidence": [
+    "determine that the transaction... is essential to the national security interests of the United States",
+    "waive the prohibitions in sections 40 and 40A of the AECA",
+    "to Support U.S. Special Operations to Combat Terrorism in Syria"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State and Secretary of Defense)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign policy",
+      "Syria conflict"
+    ]
+  },
+  "source": "political_order",
+  "date": "2016-12-13",
+  "doc_id": "dete201630107",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 410,
+  "max_words": 20000
+}

@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.2,
+  "novelty": 0.15,
+  "confidence": 0.8,
+  "evidence": [
+    "actively support nonfederal predevelopment activities with all available tools",
+    "Agencies shall take the following actions to support predevelopment activities",
+    "does not create any right or benefit, substantive or procedural"
+  ],
+  "extra": {
+    "actor": "President (Executive Memorandum to agency heads)",
+    "is_decided": true,
+    "sectors": [
+      "infrastructure",
+      "transportation",
+      "water utilities",
+      "construction",
+      "public-private partnerships"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-01-22",
+  "doc_id": "memo201501256",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1334,
+  "max_words": 20000
+}

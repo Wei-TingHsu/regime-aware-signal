@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.05
+  },
+  "magnitude": 0.1,
+  "horizon_days": 250,
+  "specificity": 0.3,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby direct the following",
+    "agencies shall each adopt a clear and consistent approach for avoidance and minimization",
+    "Within 180 days of the date of this memorandum, the Department of Agriculture...shall develop"
+  ],
+  "extra": {
+    "actor": "President (interagency directive to DoD, Interior, Agriculture, EPA, NOAA)",
+    "is_decided": true,
+    "sectors": [
+      "land development",
+      "mining/extraction",
+      "forestry",
+      "conservation/mitigation banking",
+      "infrastructure permitting"
+    ]
+  },
+  "source": "political_other",
+  "date": "2015-11-06",
+  "doc_id": "memo201528466",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2452,
+  "max_words": 20000
+}

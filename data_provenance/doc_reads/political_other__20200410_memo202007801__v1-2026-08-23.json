@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "fund 100 percent of the emergency assistance activities",
+    "order National Guard forces to perform duty to fulfill mission assignments",
+    "effective for orders of duty of a duration of 31 days or fewer"
+  ],
+  "extra": {
+    "actor": "President (DoD/DHS/FEMA)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "state and local government support",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-04-10",
+  "doc_id": "memo202007801",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 885,
+  "max_words": 20000
+}

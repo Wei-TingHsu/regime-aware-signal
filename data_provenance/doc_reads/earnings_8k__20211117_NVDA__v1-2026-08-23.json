@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.6,
+    "duration": -0.2,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.75,
+  "horizon_days": 60,
+  "specificity": 0.85,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "Record revenue of $7.10 billion, up 50 percent from a year earlier",
+    "Revenue is expected to be $7.40 billion, plus or minus 2 percent.",
+    "Record Data Center revenue of $2.94 billion, up 55 percent from a year earlier"
+  ],
+  "extra": {
+    "surprise": 0.3,
+    "guidance_change": 0.4,
+    "ticker": "NVDA"
+  },
+  "source": "earnings_8k",
+  "date": "2021-11-17",
+  "doc_id": "NVDA",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 20246,
+  "max_words": 20000
+}

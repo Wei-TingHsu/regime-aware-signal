@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": -0.1
+  },
+  "magnitude": 0.2,
+  "horizon_days": 90,
+  "specificity": 0.8,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "hereby proclaim the objects identified above... to be the Bears Ears National Monument",
+    "reserved Federal lands and interests in lands encompass approximately 1.35 million acres",
+    "appropriated and withdrawn from all forms of entry, location, selection, sale... from location, entry, and patent under the mining laws, and from disposition under all laws relating to mineral and geothermal leasing"
+  ],
+  "extra": {
+    "actor": "President (Obama)",
+    "is_decided": true,
+    "sectors": [
+      "mining",
+      "oil and gas leasing",
+      "land use",
+      "tourism/recreation"
+    ]
+  },
+  "source": "political_other",
+  "date": "2017-01-05",
+  "doc_id": "proc201700038",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 4287,
+  "max_words": 20000
+}

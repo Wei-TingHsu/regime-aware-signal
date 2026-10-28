@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 1,
+  "specificity": 0.3,
+  "novelty": 0.05,
+  "confidence": 0.3,
+  "evidence": [
+    "NET REVENUE $ 759,692,143 100 $ 546,732,758",
+    "NET INCOME 325,080,170 43 210,795,274 39",
+    "TSMC Arizona signed an agreement with the U.S. Department of Commerce"
+  ],
+  "extra": {
+    "surprise": 0.0,
+    "guidance_change": 0.0,
+    "ticker": "TSM"
+  },
+  "source": "earnings_8k",
+  "date": "2024-11-14",
+  "doc_id": "TSM",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 73968,
+  "max_words": 20000
+}

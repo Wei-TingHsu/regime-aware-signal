@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.1,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.25,
+  "horizon_days": 60,
+  "specificity": 0.7,
+  "novelty": 0.3,
+  "confidence": 0.55,
+  "evidence": [
+    "I hereby order a freeze on the hiring of Federal civilian employees",
+    "no Federal civilian position that is vacant at noon on January 20, 2025, may be filled",
+    "shall submit a plan to reduce the size of the Federal Government's workforce"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "government",
+      "federal employment"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-01-28",
+  "doc_id": "memo202501905",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 564,
+  "max_words": 20000
+}

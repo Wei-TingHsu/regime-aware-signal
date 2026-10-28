@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.85,
+  "evidence": [
+    "I hereby determine that it is in the national interest of the United States to waive the application of the prohibition",
+    "to waive in part the application of the prohibition in section 404(a) of the CSPA with respect to the Democratic Republic of the Congo",
+    "I hereby waive such provisions accordingly."
+  ],
+  "extra": {
+    "actor": "President (via Secretary of State)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid",
+      "military assistance"
+    ]
+  },
+  "source": "political_order",
+  "date": "2013-10-23",
+  "doc_id": "dete201325122",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 346,
+  "max_words": 20000
+}

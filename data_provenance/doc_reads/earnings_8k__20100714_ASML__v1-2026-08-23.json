@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.4,
+    "duration": -0.1,
+    "gold": -0.1,
+    "dollar": 0.1,
+    "oil": 0.0
+  },
+  "magnitude": 0.5,
+  "horizon_days": 60,
+  "specificity": 0.75,
+  "novelty": 0.5,
+  "confidence": 0.65,
+  "evidence": [
+    "we now expect full year 2010 sales to grow 10 to 15 percent above our historical peak sales of EUR 3.8 billion",
+    "we anticipate bookings levels of around EUR 1.3 billion in the third quarter",
+    "ASML expects Q3 2010 net sales of around EUR 1.1 billion, and gross margin in Q3 2010 of about 43 percent"
+  ],
+  "extra": {
+    "surprise": 0.4,
+    "guidance_change": 0.5,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2010-07-14",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 48299,
+  "max_words": 20000
+}

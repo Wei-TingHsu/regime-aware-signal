@@ -1,0 +1,34 @@
+{
+  "direction": {
+    "equity": 0.02,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "I hereby delegate to the United States Trade Representative the functions and authorities",
+    "to make and submit the required certification to the Congress"
+  ],
+  "extra": {
+    "actor": "President (delegating to USTR)",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "Taiwan"
+    ]
+  },
+  "source": "political_other",
+  "date": "2024-08-08",
+  "doc_id": "memo202417783",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 259,
+  "max_words": 20000
+}

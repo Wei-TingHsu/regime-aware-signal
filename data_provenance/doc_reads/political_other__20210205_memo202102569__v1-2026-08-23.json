@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.6,
+  "evidence": [
+    "FEMA shall provide a 100 percent Federal cost share for all work eligible for assistance under Public Assistance Category B",
+    "it is the policy of my Administration to combat and respond to COVID-19 with the full capacity"
+  ],
+  "extra": {
+    "actor": "President (FEMA/DHS)",
+    "is_decided": true,
+    "sectors": [
+      "disaster relief",
+      "state/local government funding",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2021-02-05",
+  "doc_id": "memo202102569",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 541,
+  "max_words": 20000
+}

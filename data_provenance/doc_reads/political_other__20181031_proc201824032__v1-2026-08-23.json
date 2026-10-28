@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.2,
+  "confidence": 0.8,
+  "evidence": [
+    "I hereby terminate the duty-free treatment for such articles from such beneficiary developing countries.",
+    "a waiver of the application of section 503(c)(2) of the 1974 Act shall apply",
+    "effective with respect to articles entered for consumption ... on or after 12:01 a.m. ... November 1, 2018"
+  ],
+  "extra": {
+    "actor": "President (Trump) / USTR GSP program",
+    "is_decided": true,
+    "sectors": [
+      "trade",
+      "tariffs",
+      "GSP beneficiary countries"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-10-31",
+  "doc_id": "proc201824032",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1051,
+  "max_words": 20000
+}

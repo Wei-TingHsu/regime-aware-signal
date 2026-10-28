@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.75,
+  "evidence": [
+    "the United States will not provide nonhumanitarian, nontrade-related assistance to the Governments of Burundi, China, Equatorial Guinea",
+    "vote against and use best efforts to deny any loan or other utilization of the funds",
+    "a partial waiver to allow FMS with respect to Saudi Arabia"
+  ],
+  "extra": {
+    "actor": "President (Trafficking Victims Protection Act determination)",
+    "is_decided": true,
+    "sectors": [
+      "foreign aid",
+      "defense sales",
+      "multilateral development banks"
+    ]
+  },
+  "source": "political_order",
+  "date": "2019-11-04",
+  "doc_id": "dete201924196",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 975,
+  "max_words": 20000
+}

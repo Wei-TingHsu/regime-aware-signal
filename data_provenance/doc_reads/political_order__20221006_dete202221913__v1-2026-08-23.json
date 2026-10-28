@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 365,
+  "specificity": 0.9,
+  "novelty": 0.1,
+  "confidence": 0.9,
+  "evidence": [
+    "The admission of up to 125,000 refugees to the United States during Fiscal Year (FY) 2023",
+    "Africa................................................. 40,000",
+    "You are authorized and directed to publish this determination"
+  ],
+  "extra": {
+    "actor": "President (Immigration/State Department)",
+    "is_decided": true,
+    "sectors": [
+      "immigration",
+      "refugee resettlement",
+      "humanitarian"
+    ]
+  },
+  "source": "political_order",
+  "date": "2022-10-06",
+  "doc_id": "dete202221913",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 490,
+  "max_words": 20000
+}

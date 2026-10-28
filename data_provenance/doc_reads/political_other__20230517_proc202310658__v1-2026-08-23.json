@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.02,
+  "confidence": 0.95,
+  "evidence": [
+    "I hereby proclaim Friday, May 19, 2023, as National Defense Transportation Day",
+    "We are embarking on an infrastructure decade",
+    "I signed the Bipartisan Infrastructure Law"
+  ],
+  "extra": {
+    "actor": "President Biden",
+    "is_decided": true,
+    "sectors": [
+      "transportation",
+      "infrastructure"
+    ]
+  },
+  "source": "political_other",
+  "date": "2023-05-17",
+  "doc_id": "proc202310658",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1153,
+  "max_words": 20000
+}

@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.2,
+    "duration": 0.1,
+    "gold": -0.05,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.15,
+  "horizon_days": 20,
+  "specificity": 0.25,
+  "novelty": 0.1,
+  "confidence": 0.3,
+  "evidence": [
+    "ASML confirms its strategy",
+    "The lithography market offers significant growth potential; the company target of EUR 5 billion in annual revenues is still achievable",
+    "Litho system utilization at leading edge improving across all sectors"
+  ],
+  "extra": {
+    "surprise": 0.1,
+    "guidance_change": 0.1,
+    "ticker": "ASML"
+  },
+  "source": "earnings_8k",
+  "date": "2009-06-05",
+  "doc_id": "ASML",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": true,
+  "orig_words": 29720,
+  "max_words": 20000
+}

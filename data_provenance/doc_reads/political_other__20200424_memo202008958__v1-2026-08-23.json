@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.8,
+  "novelty": 0.1,
+  "confidence": 0.8,
+  "evidence": [
+    "I am directing the Federal Emergency Management Agency (FEMA)... to fund 100 percent",
+    "shall extend to... through, May 31, 2020",
+    "Governors of the States of Alabama, Alaska, and Delaware"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "state/local government",
+      "public health"
+    ]
+  },
+  "source": "political_other",
+  "date": "2020-04-24",
+  "doc_id": "memo202008958",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 894,
+  "max_words": 20000
+}

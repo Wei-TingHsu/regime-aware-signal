@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.15,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.15,
+  "horizon_days": 250,
+  "specificity": 0.25,
+  "novelty": 0.15,
+  "confidence": 0.55,
+  "evidence": [
+    "this memorandum directs the Administrator to take specific actions to ensure efficient and cost-effective implementation",
+    "The Administrator shall endeavor to take final action on SIPs within 18 months",
+    "The Administrator shall endeavor to take final action on applications for preconstruction permits...within 1 year"
+  ],
+  "extra": {
+    "actor": "EPA Administrator / President",
+    "is_decided": true,
+    "sectors": [
+      "industrials",
+      "manufacturing",
+      "energy",
+      "utilities"
+    ]
+  },
+  "source": "political_other",
+  "date": "2018-04-16",
+  "doc_id": "memo201808094",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2298,
+  "max_words": 20000
+}

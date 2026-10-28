@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "I am continuing for 1 year the national emergency",
+    "blocking property and interests in property of the Government of the Russian Federation",
+    "to provide continued protection from attachment, judgment, decree, lien, execution"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "nuclear materials",
+      "sanctions"
+    ]
+  },
+  "source": "political_other",
+  "date": "2012-06-21",
+  "doc_id": "noti201215272",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 451,
+  "max_words": 20000
+}

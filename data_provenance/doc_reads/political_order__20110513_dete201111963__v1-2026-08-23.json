@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.1
+  },
+  "magnitude": 0.15,
+  "horizon_days": 5,
+  "specificity": 0.8,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "I therefore direct the drawdown of up to $25 million in nonlethal commodities and services",
+    "to support key U.S. Government partners such as the Transitional National Council",
+    "under threat of attack in Libya"
+  ],
+  "extra": {
+    "actor": "President (via Secretary of State/Defense)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "foreign aid",
+      "energy/oil-geopolitics"
+    ]
+  },
+  "source": "political_order",
+  "date": "2011-05-13",
+  "doc_id": "dete201111963",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 380,
+  "max_words": 20000
+}

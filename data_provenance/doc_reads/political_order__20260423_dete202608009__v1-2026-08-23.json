@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.9,
+  "novelty": 0.3,
+  "confidence": 0.7,
+  "evidence": [
+    "I hereby exempt the Air Force's jet fighter training operations",
+    "from Federal, State, interstate, and local requirements",
+    "The exemption granted by this memorandum shall be for the 1-year period"
+  ],
+  "extra": {
+    "actor": "President (EPA/Air Force)",
+    "is_decided": true,
+    "sectors": [
+      "defense",
+      "aerospace"
+    ]
+  },
+  "source": "political_order",
+  "date": "2026-04-23",
+  "doc_id": "dete202608009",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 625,
+  "max_words": 20000
+}

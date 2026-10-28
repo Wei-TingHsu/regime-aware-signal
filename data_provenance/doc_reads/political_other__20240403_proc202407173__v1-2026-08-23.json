@@ -1,0 +1,32 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.03,
+  "horizon_days": 1,
+  "specificity": 0.1,
+  "novelty": 0.05,
+  "confidence": 0.95,
+  "evidence": [
+    "I, JOSEPH R. BIDEN JR., President of the United States of America... do hereby proclaim April 2024 as Arab American Heritage Month.",
+    "establish an immediate ceasefire that would last at least six weeks",
+    "developing our country's first-ever National Strategy to Counter Islamophobia"
+  ],
+  "extra": {
+    "actor": "President (White House)",
+    "is_decided": true,
+    "sectors": []
+  },
+  "source": "political_other",
+  "date": "2024-04-03",
+  "doc_id": "proc202407173",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1018,
+  "max_words": 20000
+}

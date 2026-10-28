@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.05,
+  "novelty": 0.02,
+  "confidence": 0.9,
+  "evidence": [
+    "do hereby proclaim May 4 through May 10, 2025, as National Small Business Week",
+    "On Liberation Day, we implemented targeted tariffs to protect American businesses",
+    "cutting $100 billion in regulations that disproportionately burden small businesses"
+  ],
+  "extra": {
+    "actor": "President",
+    "is_decided": true,
+    "sectors": [
+      "small business",
+      "commemorative"
+    ]
+  },
+  "source": "political_other",
+  "date": "2025-05-08",
+  "doc_id": "proc202508265",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 606,
+  "max_words": 20000
+}
