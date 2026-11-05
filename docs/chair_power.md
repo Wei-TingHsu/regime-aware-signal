@@ -1,15 +1,15 @@
 # T-K — the few-shot chair problem (GLD on the 2-yr surprise, statement days)
 
-*2026-10-27 23:59. 131 statement days 2011-01-26 → 2026-09-16; s = ΔDGS2 bp on the day, s/σ = the same in units of the yield's trailing two-year daily volatility; y = GLD log return on the day (%). prereg_liquidity_and_chair §3.*
+*2026-11-05 17:11. 132 statement days 2011-01-26 → 2026-10-28; s = ΔDGS2 bp on the day, s/σ = the same in units of the yield's trailing two-year daily volatility; y = GLD log return on the day (%). prereg_liquidity_and_chair §3.*
 
-**Pooled:** β = -0.1138% per bp (se 0.0141); in volatility units β = -0.443% per σ (se 0.054); residual σ = 1.07% a day; sd of the surprise 6.7 bp.
+**Pooled:** β = -0.1138% per bp (se 0.0140); in volatility units β = -0.443% per σ (se 0.054); residual σ = 1.07% a day; sd of the surprise 6.7 bp.
 
 | chair | statements | mean surprise (bp) | sd (bp) | yield vol (bp/day) | mean GLD day (%) | β (% per bp) | se (own) | β (% per σ) | se |
 |---|---|---|---|---|---|---|---|---|---|
 | Bernanke | 25 | -0.4 | 2.6 | 2.9 | +0.12 | -0.3317 | 0.0995 | -0.796 | 0.236 |
 | Yellen | 32 | -0.5 | 5.7 | 2.8 | +0.13 | -0.1444 | 0.0226 | -0.354 | 0.058 |
 | Powell | 71 | -1.6 | 7.8 | 5.1 | +0.21 | -0.0964 | 0.0170 | -0.447 | 0.084 |
-| Warsh | 3 | +6.0 | 9.5 | 5.3 | -0.82 | -0.1423 | 0.0315 | -0.757 | 0.183 |
+| Warsh | 4 | +3.8 | 9.0 | 5.2 | -0.53 | -0.1386 | 0.0198 | -0.733 | 0.115 |
 
 **T-K0 power:** meetings needed to detect a chair-specific difference at α 5%, power 80% — delta = beta/2: **62**; delta = beta/1: **16**. A tenure is 8 meetings a year; a four-year term 32.
 
@@ -17,8 +17,8 @@
 
 **T-K1′ chairs differ (per σ of the yield)?** F = 2.10; permutation p = **0.118** → **FAIL — no chair difference once the surprise is in volatility units**; between-chair τ in these units 0.180% per σ.
 
-**T-K2 Warsh so far (3 statements), per bp:** own slope -0.1423% per bp; standard error from the pooled residual σ 0.0795 (the own 1-dof se was 0.0315); weight on own data **65%** (would be 92% on the own se); posterior -0.1324% ± 0.0643 per bp. His statement days averaged -0.82% on gold; the pooled slope times his average surprise gives -0.68% — most of it: gold fell on his days because the statements surprised hawkish, not because gold reacts to him differently.
+**T-K2 Warsh so far (4 statements), per bp:** own slope -0.1386% per bp; standard error from the pooled residual σ 0.0686 (the own 1-dof se was 0.0198); weight on own data **72%** (would be 97% on the own se); posterior -0.1316% ± 0.0581 per bp. His statement days averaged -0.53% on gold; the pooled slope times his average surprise gives -0.43% — most of it: gold fell on his days because the statements surprised hawkish, not because gold reacts to him differently.
 
-**T-K2σ in volatility units (the scale on which chairs are exchangeable, T-K1′):** own -0.757% per σ, pooled-σ se 0.424, between-chair τ 0.180; weight on own data **15%**; posterior **-0.491% ± 0.166 per σ**, i.e. about -0.0931% ± 0.0314 per bp at today's yield volatility (5.3 bp a day). **The page quotes this one.**
+**T-K2σ in volatility units (the scale on which chairs are exchangeable, T-K1′):** own -0.733% per σ, pooled-σ se 0.363, between-chair τ 0.180; weight on own data **20%**; posterior **-0.500% ± 0.161 per σ**, i.e. about -0.0955% ± 0.0308 per bp at today's yield volatility (5.2 bp a day). **The page quotes this one.**
 
 **T-K3 (not run):** smallest attainable exact-permutation p for n statements against the previous chair's last 8 — n = 3: 0.0061, n = 4: 0.0020, n = 5: 0.0008, n = 6: 0.0003, n = 8: 0.0001.

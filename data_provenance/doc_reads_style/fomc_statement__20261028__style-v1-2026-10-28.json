@@ -1,0 +1,25 @@
+{
+  "hawk_dove": 0.1,
+  "guidance_strength": 0.1,
+  "balance_sheet": 0.1,
+  "balance_sheet_stance": 0.0,
+  "inflation_vs_labour": 0.2,
+  "hedging_density": 0.3,
+  "dissents": 2,
+  "novelty_vs_prev": 0.4,
+  "evidence": {
+    "hedging": "The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal.",
+    "balance_sheet": "The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+    "novelty": "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent"
+  },
+  "_corrective_retry": true,
+  "source": "fomc_statement",
+  "date": "2026-10-28",
+  "prompt_version": "style-v1-2026-10-28",
+  "model": "claude-sonnet-5",
+  "words": 173,
+  "prev_words": 131,
+  "dissents_text": 2,
+  "chair": "Warsh",
+  "read_at": "2026-11-05 17:11"
+}

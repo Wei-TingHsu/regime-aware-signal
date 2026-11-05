@@ -123,6 +123,9 @@ python -m src.fetch_sources political --start "$SINCE14" --limit 100000 --max-pa
 python -m src.fetch_sources political --start "$SINCE14" --limit 100000 --max-pages 3 --types "proclamation,memorandum,determination,presidential order" --out political_other \
   || echo "  proclamation fetch failed -- continuing"
 
+# 28 Oct: new Federal Register documents are routed into the typed folders the report reads (TRACK 3.1 / prereg_political_backfill);
+# the `political` profile is retired from the read loop below -- it fed no report and its orphan reads broke the gate on 28 Oct.
+python -m src.political_route --apply || echo "  political routing failed -- continuing"
 step "4/7  read new documents"
 if [[ "$NO_READ" -eq 1 ]]; then
   echo "  --no-read: skipped. No API spend this run."
@@ -134,7 +137,7 @@ else
   # 4,595 political; 163 over-cap 6-Ks). They are read as dedicated, funded
   # runs -- never by the nightly cap, which would spend it oldest-first.
   READ_SINCE=20260827
-  for SRC in fomc_statement fomc_minutes earnings_8k political_order political_other political; do
+  for SRC in fomc_statement fomc_minutes earnings_8k political_order political_other; do
     python -m src.doc_read --source "$SRC" --unread-only --since "$READ_SINCE" --limit "$MAX_NEW" \
       --out "processed/read_$(echo $SRC | sed 's/fomc_//;s/political_//;s/earnings_//').csv" \
       || { echo "  READ ABORTED on $SRC -- see the line above: a missing ANTHROPIC_API_KEY prints \"set ANTHROPIC_API_KEY\"; an empty balance prints an API error. They are not the same fault."; break; }
