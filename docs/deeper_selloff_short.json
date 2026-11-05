@@ -2,22 +2,22 @@
  "label": "D1 short gold after the drawdown \u2014 net Sharpe",
  "best": {
   "thr": -0.04,
-  "look": 20,
-  "h": 5,
-  "delay": 0,
-  "filter": "none",
+  "look": 10,
+  "h": 15,
+  "delay": 1,
+  "filter": "gold_up",
   "cost": 0.001
  },
- "best_stat": 0.10507527656598849,
- "p_family": 0.94,
- "q95": 2.510038254137467,
+ "best_stat": -0.17944531956635681,
+ "p_family": 0.98,
+ "q95": 2.4620207201999755,
  "n_null": 200,
  "survivors": [],
  "null_max_quantiles": {
-  "0.5": 1.3219046610041116,
-  "0.9": 2.2597066615298917,
-  "0.95": 2.510038254137467,
-  "0.99": 2.8121704703488537
+  "0.5": 1.301021908140382,
+  "0.9": 2.23124091484509,
+  "0.95": 2.4620207201999755,
+  "0.99": 3.1964105825064264
  },
  "surface": [
   {
@@ -27,9 +27,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.2058891108,
+   "stat": -2.2235241249,
    "n": 67,
-   "local_p": 0.675
+   "local_p": 0.97
   },
   {
    "thr": -0.04,
@@ -38,9 +38,9 @@
    "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -1.3425223428,
+   "stat": -2.2905478951,
    "n": 33,
-   "local_p": 0.295
+   "local_p": 0.41
   },
   {
    "thr": -0.04,
@@ -49,9 +49,9 @@
    "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -1.0440166788,
+   "stat": -2.4014284945,
    "n": 34,
-   "local_p": 0.565
+   "local_p": 0.875
   },
   {
    "thr": -0.04,
@@ -60,9 +60,9 @@
    "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.3412640015,
+   "stat": -2.6342016206,
    "n": 42,
-   "local_p": 0.7
+   "local_p": 0.955
   },
   {
    "thr": -0.04,
@@ -82,9 +82,9 @@
    "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -1.8849287224,
+   "stat": -3.1069472765,
    "n": 42,
-   "local_p": 0.82
+   "local_p": 0.98
   },
   {
    "thr": -0.04,
@@ -115,9 +115,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.2058891108,
+   "stat": -2.2235241249,
    "n": 67,
-   "local_p": 0.675
+   "local_p": 0.97
   },
   {
    "thr": -0.04,
@@ -181,7 +181,7 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -2.2235241249,
+   "stat": -2.5772990284,
    "n": 67,
    "local_p": 0.97
   },
@@ -192,9 +192,9 @@
    "delay": 1,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -2.2371717123,
+   "stat": -2.8210169754,
    "n": 35,
-   "local_p": 0.445
+   "local_p": 0.5
   },
   {
    "thr": -0.04,
@@ -203,9 +203,9 @@
    "delay": 1,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -2.4671206573,
+   "stat": -2.2544464448,
    "n": 32,
-   "local_p": 0.895
+   "local_p": 0.845
   },
   {
    "thr": -0.04,
@@ -214,9 +214,9 @@
    "delay": 1,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -2.1225094409,
+   "stat": -2.2522039732,
    "n": 38,
-   "local_p": 0.885
+   "local_p": 0.87
   },
   {
    "thr": -0.04,
@@ -236,9 +236,9 @@
    "delay": 1,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -3.3992631304,
+   "stat": -3.2930337458,
    "n": 41,
-   "local_p": 0.99
+   "local_p": 0.975
   },
   {
    "thr": -0.04,
@@ -269,7 +269,7 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -2.2235241249,
+   "stat": -2.5772990284,
    "n": 67,
    "local_p": 0.97
   },
@@ -335,9 +335,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -2.4382653303,
+   "stat": -1.428776963,
    "n": 67,
-   "local_p": 0.95
+   "local_p": 0.785
   },
   {
    "thr": -0.04,
@@ -346,9 +346,9 @@
    "delay": 3,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -2.6300077049,
+   "stat": -1.1031041646,
    "n": 34,
-   "local_p": 0.5
+   "local_p": 0.31
   },
   {
    "thr": -0.04,
@@ -357,9 +357,9 @@
    "delay": 3,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -2.1956051651,
+   "stat": -1.6980145324,
    "n": 33,
-   "local_p": 0.835
+   "local_p": 0.705
   },
   {
    "thr": -0.04,
@@ -368,9 +368,9 @@
    "delay": 3,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -2.272987783,
+   "stat": -1.0205952727,
    "n": 40,
-   "local_p": 0.91
+   "local_p": 0.615
   },
   {
    "thr": -0.04,
@@ -390,9 +390,9 @@
    "delay": 3,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -3.2630412868,
+   "stat": -2.343298025,
    "n": 42,
-   "local_p": 0.985
+   "local_p": 0.9
   },
   {
    "thr": -0.04,
@@ -423,9 +423,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -2.4382653303,
+   "stat": -1.428776963,
    "n": 67,
-   "local_p": 0.95
+   "local_p": 0.785
   },
   {
    "thr": -0.04,
@@ -489,9 +489,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.0251238939,
+   "stat": -1.3556743077,
    "n": 67,
-   "local_p": 0.755
+   "local_p": 0.89
   },
   {
    "thr": -0.04,
@@ -500,9 +500,9 @@
    "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -1.0905760498,
+   "stat": -2.150139285,
    "n": 33,
-   "local_p": 0.295
+   "local_p": 0.45
   },
   {
    "thr": -0.04,
@@ -511,9 +511,9 @@
    "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -0.9444681363,
+   "stat": -0.6082234849,
    "n": 34,
-   "local_p": 0.645
+   "local_p": 0.52
   },
   {
    "thr": -0.04,
@@ -522,9 +522,9 @@
    "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.9427733188,
+   "stat": -2.3562743426,
    "n": 42,
-   "local_p": 0.96
+   "local_p": 0.975
   },
   {
    "thr": -0.04,
@@ -544,7 +544,315 @@
    "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -1.4538499714,
+   "stat": -1.7555583613,
+   "n": 42,
+   "local_p": 0.915
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -1.3556743077,
+   "n": 67,
+   "local_p": 0.89
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 7,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 14,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -1.5545413067,
+   "n": 67,
+   "local_p": 0.93
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": -1.84190416,
+   "n": 35,
+   "local_p": 0.475
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": -1.2834253338,
+   "n": 32,
+   "local_p": 0.77
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": -1.2935275258,
+   "n": 38,
+   "local_p": 0.81
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 29,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": -1.8037107814,
+   "n": 41,
+   "local_p": 0.905
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 26,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -1.5545413067,
+   "n": 67,
+   "local_p": 0.93
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 7,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 14,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -1.403261798,
+   "n": 67,
+   "local_p": 0.86
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": -2.1759310413,
+   "n": 34,
+   "local_p": 0.5
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": -0.8356219147,
+   "n": 33,
+   "local_p": 0.58
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": -1.6685830364,
+   "n": 40,
+   "local_p": 0.85
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": -1.5568516172,
    "n": 42,
    "local_p": 0.86
   },
@@ -552,314 +860,6 @@
    "thr": -0.04,
    "look": 10,
    "h": 10,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 25,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.0251238939,
-   "n": 67,
-   "local_p": 0.755
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 7,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 14,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.3556743077,
-   "n": 67,
-   "local_p": 0.89
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": -1.8763062183,
-   "n": 35,
-   "local_p": 0.485
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": -0.8026445818,
-   "n": 32,
-   "local_p": 0.59
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": -1.3269643392,
-   "n": 38,
-   "local_p": 0.825
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 29,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": -1.8610158249,
-   "n": 41,
-   "local_p": 0.925
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 26,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.3556743077,
-   "n": 67,
-   "local_p": 0.89
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 7,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 14,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.4517428377,
-   "n": 67,
-   "local_p": 0.895
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": -1.7540452046,
-   "n": 34,
-   "local_p": 0.47
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": -1.1768521786,
-   "n": 33,
-   "local_p": 0.725
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": -1.4246215188,
-   "n": 40,
-   "local_p": 0.81
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": -1.5527319926,
-   "n": 42,
-   "local_p": 0.875
-  },
-  {
-   "thr": -0.04,
-   "look": 10,
-   "h": 10,
    "delay": 3,
    "filter": "rates_up",
    "cost": 0.001,
@@ -885,9 +885,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.4517428377,
+   "stat": -1.403261798,
    "n": 67,
-   "local_p": 0.895
+   "local_p": 0.86
   },
   {
    "thr": -0.04,
@@ -951,9 +951,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.1100431951,
+   "stat": -1.0119926516,
    "n": 67,
-   "local_p": 0.845
+   "local_p": 0.815
   },
   {
    "thr": -0.04,
@@ -962,9 +962,9 @@
    "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -1.7862296013,
+   "stat": -2.1337222987,
    "n": 33,
-   "local_p": 0.45
+   "local_p": 0.465
   },
   {
    "thr": -0.04,
@@ -973,9 +973,9 @@
    "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -0.5280336993,
+   "stat": -0.1805122528,
    "n": 34,
-   "local_p": 0.47
+   "local_p": 0.33
   },
   {
    "thr": -0.04,
@@ -984,7 +984,7 @@
    "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.9747322573,
+   "stat": -2.1626377191,
    "n": 42,
    "local_p": 0.975
   },
@@ -1006,9 +1006,9 @@
    "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -1.0507839886,
+   "stat": -1.0618406461,
    "n": 42,
-   "local_p": 0.75
+   "local_p": 0.785
   },
   {
    "thr": -0.04,
@@ -1039,9 +1039,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.1100431951,
+   "stat": -1.0119926516,
    "n": 67,
-   "local_p": 0.845
+   "local_p": 0.815
   },
   {
    "thr": -0.04,
@@ -1105,9 +1105,9 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.0119926516,
+   "stat": -0.7574204185,
    "n": 67,
-   "local_p": 0.815
+   "local_p": 0.6
   },
   {
    "thr": -0.04,
@@ -1116,9 +1116,9 @@
    "delay": 1,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -1.8712922335,
+   "stat": -1.290886958,
    "n": 35,
-   "local_p": 0.5
+   "local_p": 0.4
   },
   {
    "thr": -0.04,
@@ -1127,9 +1127,9 @@
    "delay": 1,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -0.2916737767,
+   "stat": -0.1794453196,
    "n": 32,
-   "local_p": 0.375
+   "local_p": 0.32
   },
   {
    "thr": -0.04,
@@ -1138,9 +1138,9 @@
    "delay": 1,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.2602966843,
+   "stat": -1.066413781,
    "n": 38,
-   "local_p": 0.855
+   "local_p": 0.785
   },
   {
    "thr": -0.04,
@@ -1160,9 +1160,9 @@
    "delay": 1,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -1.3026527721,
+   "stat": -1.1067176214,
    "n": 41,
-   "local_p": 0.885
+   "local_p": 0.82
   },
   {
    "thr": -0.04,
@@ -1193,9 +1193,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.0119926516,
+   "stat": -0.7574204185,
    "n": 67,
-   "local_p": 0.815
+   "local_p": 0.6
   },
   {
    "thr": -0.04,
@@ -1259,9 +1259,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -0.5941236393,
+   "stat": -0.8177715856,
    "n": 67,
-   "local_p": 0.465
+   "local_p": 0.65
   },
   {
    "thr": -0.04,
@@ -1270,9 +1270,9 @@
    "delay": 3,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -0.9721394674,
+   "stat": -1.242429141,
    "n": 34,
-   "local_p": 0.355
+   "local_p": 0.4
   },
   {
    "thr": -0.04,
@@ -1281,9 +1281,9 @@
    "delay": 3,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -0.2174284543,
+   "stat": -0.4912468461,
    "n": 33,
-   "local_p": 0.25
+   "local_p": 0.43
   },
   {
    "thr": -0.04,
@@ -1292,9 +1292,9 @@
    "delay": 3,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.1787865545,
+   "stat": -1.0726762493,
    "n": 40,
-   "local_p": 0.815
+   "local_p": 0.77
   },
   {
    "thr": -0.04,
@@ -1314,9 +1314,9 @@
    "delay": 3,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -0.9794560274,
+   "stat": -1.1680191639,
    "n": 42,
-   "local_p": 0.75
+   "local_p": 0.83
   },
   {
    "thr": -0.04,
@@ -1347,9 +1347,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.5941236393,
+   "stat": -0.8177715856,
    "n": 67,
-   "local_p": 0.465
+   "local_p": 0.65
   },
   {
    "thr": -0.04,
@@ -1413,9 +1413,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -0.8075835799,
+   "stat": -1.0055595063,
    "n": 67,
-   "local_p": 0.71
+   "local_p": 0.86
   },
   {
    "thr": -0.04,
@@ -1424,9 +1424,9 @@
    "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -1.4725502886,
+   "stat": -1.8543503017,
    "n": 33,
-   "local_p": 0.415
+   "local_p": 0.47
   },
   {
    "thr": -0.04,
@@ -1435,9 +1435,9 @@
    "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -0.1307648078,
+   "stat": -0.2154381977,
    "n": 34,
-   "local_p": 0.26
+   "local_p": 0.295
   },
   {
    "thr": -0.04,
@@ -1446,9 +1446,9 @@
    "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.9063335652,
+   "stat": -2.184691195,
    "n": 42,
-   "local_p": 0.98
+   "local_p": 0.995
   },
   {
    "thr": -0.04,
@@ -1468,9 +1468,9 @@
    "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -0.7985846768,
+   "stat": -0.9724425477,
    "n": 42,
-   "local_p": 0.66
+   "local_p": 0.815
   },
   {
    "thr": -0.04,
@@ -1501,9 +1501,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.8075835799,
+   "stat": -1.0055595063,
    "n": 67,
-   "local_p": 0.71
+   "local_p": 0.86
   },
   {
    "thr": -0.04,
@@ -1567,9 +1567,9 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.0055595063,
+   "stat": -1.2162981969,
    "n": 67,
-   "local_p": 0.86
+   "local_p": 0.95
   },
   {
    "thr": -0.04,
@@ -1578,9 +1578,9 @@
    "delay": 1,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -1.5549853925,
+   "stat": -1.6524615126,
    "n": 35,
-   "local_p": 0.48
+   "local_p": 0.505
   },
   {
    "thr": -0.04,
@@ -1589,9 +1589,9 @@
    "delay": 1,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -0.4213774724,
+   "stat": -0.7605880801,
    "n": 32,
-   "local_p": 0.45
+   "local_p": 0.695
   },
   {
    "thr": -0.04,
@@ -1600,7 +1600,7 @@
    "delay": 1,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.4766094384,
+   "stat": -1.5521344683,
    "n": 38,
    "local_p": 0.915
   },
@@ -1622,9 +1622,9 @@
    "delay": 1,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -1.3036495806,
+   "stat": -1.5011231729,
    "n": 41,
-   "local_p": 0.93
+   "local_p": 0.96
   },
   {
    "thr": -0.04,
@@ -1655,9 +1655,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.0055595063,
+   "stat": -1.2162981969,
    "n": 67,
-   "local_p": 0.86
+   "local_p": 0.95
   },
   {
    "thr": -0.04,
@@ -1721,9 +1721,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.1876383931,
+   "stat": -1.135350833,
    "n": 67,
-   "local_p": 0.93
+   "local_p": 0.915
   },
   {
    "thr": -0.04,
@@ -1732,9 +1732,9 @@
    "delay": 3,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -1.732929303,
+   "stat": -1.832729212,
    "n": 34,
-   "local_p": 0.52
+   "local_p": 0.51
   },
   {
    "thr": -0.04,
@@ -1743,9 +1743,9 @@
    "delay": 3,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -0.6877879086,
+   "stat": -0.5600237257,
    "n": 33,
-   "local_p": 0.6
+   "local_p": 0.495
   },
   {
    "thr": -0.04,
@@ -1754,9 +1754,9 @@
    "delay": 3,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.2574577231,
+   "stat": -1.1561415029,
    "n": 40,
-   "local_p": 0.87
+   "local_p": 0.83
   },
   {
    "thr": -0.04,
@@ -1776,9 +1776,9 @@
    "delay": 3,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -1.5567675908,
+   "stat": -1.3786521618,
    "n": 42,
-   "local_p": 0.96
+   "local_p": 0.93
   },
   {
    "thr": -0.04,
@@ -1809,9 +1809,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.1876383931,
+   "stat": -1.135350833,
    "n": 67,
-   "local_p": 0.93
+   "local_p": 0.915
   },
   {
    "thr": -0.04,
@@ -1875,9 +1875,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.163976883,
+   "stat": -1.2582884821,
    "n": 67,
-   "local_p": 0.98
+   "local_p": 0.995
   },
   {
    "thr": -0.04,
@@ -1886,9 +1886,9 @@
    "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -1.780112798,
+   "stat": -2.0378189266,
    "n": 33,
-   "local_p": 0.48
+   "local_p": 0.49
   },
   {
    "thr": -0.04,
@@ -1897,9 +1897,9 @@
    "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -0.6494985376,
+   "stat": -0.6343928863,
    "n": 34,
-   "local_p": 0.625
+   "local_p": 0.605
   },
   {
    "thr": -0.04,
@@ -1908,7 +1908,7 @@
    "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.8496598041,
+   "stat": -1.8268378071,
    "n": 42,
    "local_p": 0.995
   },
@@ -1930,9 +1930,9 @@
    "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -1.169401685,
+   "stat": -1.2682270747,
    "n": 42,
-   "local_p": 0.93
+   "local_p": 0.975
   },
   {
    "thr": -0.04,
@@ -1963,9 +1963,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.163976883,
+   "stat": -1.2582884821,
    "n": 67,
-   "local_p": 0.98
+   "local_p": 0.995
   },
   {
    "thr": -0.04,
@@ -2029,7 +2029,7 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.2582884821,
+   "stat": -1.3311690534,
    "n": 67,
    "local_p": 0.995
   },
@@ -2040,9 +2040,9 @@
    "delay": 1,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -1.9727928379,
+   "stat": -2.0339116643,
    "n": 35,
-   "local_p": 0.535
+   "local_p": 0.53
   },
   {
    "thr": -0.04,
@@ -2051,9 +2051,9 @@
    "delay": 1,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -0.648249327,
+   "stat": -0.727095963,
    "n": 32,
-   "local_p": 0.62
+   "local_p": 0.675
   },
   {
    "thr": -0.04,
@@ -2062,9 +2062,9 @@
    "delay": 1,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.1765654065,
+   "stat": -1.1374292904,
    "n": 38,
-   "local_p": 0.885
+   "local_p": 0.865
   },
   {
    "thr": -0.04,
@@ -2084,9 +2084,9 @@
    "delay": 1,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -1.3135255967,
+   "stat": -1.4199749376,
    "n": 41,
-   "local_p": 0.975
+   "local_p": 0.995
   },
   {
    "thr": -0.04,
@@ -2117,7 +2117,7 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.2582884821,
+   "stat": -1.3311690534,
    "n": 67,
    "local_p": 0.995
   },
@@ -2183,9 +2183,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.1708502358,
+   "stat": -1.0623454719,
    "n": 67,
-   "local_p": 0.96
+   "local_p": 0.91
   },
   {
    "thr": -0.04,
@@ -2194,9 +2194,9 @@
    "delay": 3,
    "filter": "gold_down",
    "cost": 0.001,
-   "stat": -2.0551118987,
+   "stat": -2.0859633269,
    "n": 34,
-   "local_p": 0.55
+   "local_p": 0.545
   },
   {
    "thr": -0.04,
@@ -2205,9 +2205,9 @@
    "delay": 3,
    "filter": "gold_up",
    "cost": 0.001,
-   "stat": -0.5349459562,
+   "stat": -0.3757869562,
    "n": 33,
-   "local_p": 0.49
+   "local_p": 0.385
   },
   {
    "thr": -0.04,
@@ -2216,9 +2216,9 @@
    "delay": 3,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.163677792,
+   "stat": -0.9802551352,
    "n": 40,
-   "local_p": 0.9
+   "local_p": 0.825
   },
   {
    "thr": -0.04,
@@ -2238,9 +2238,9 @@
    "delay": 3,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -1.3607560044,
+   "stat": -1.1702505812,
    "n": 42,
-   "local_p": 0.975
+   "local_p": 0.935
   },
   {
    "thr": -0.04,
@@ -2271,9 +2271,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.1708502358,
+   "stat": -1.0623454719,
    "n": 67,
-   "local_p": 0.96
+   "local_p": 0.91
   },
   {
    "thr": -0.04,
@@ -2337,9 +2337,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": 0.1050752766,
+   "stat": -1.308604945,
    "n": 49,
-   "local_p": 0.175
+   "local_p": 0.66
   },
   {
    "thr": -0.04,
@@ -2370,9 +2370,9 @@
    "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -0.7176807936,
+   "stat": -1.9232135376,
    "n": 30,
-   "local_p": 0.43
+   "local_p": 0.765
   },
   {
    "thr": -0.04,
@@ -2425,9 +2425,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": 0.1050752766,
+   "stat": -1.308604945,
    "n": 49,
-   "local_p": 0.175
+   "local_p": 0.66
   },
   {
    "thr": -0.04,
@@ -2491,9 +2491,9 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.308604945,
+   "stat": -2.1023289098,
    "n": 49,
-   "local_p": 0.66
+   "local_p": 0.865
   },
   {
    "thr": -0.04,
@@ -2524,9 +2524,9 @@
    "delay": 1,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.7959558673,
+   "stat": -2.774586446,
    "n": 32,
-   "local_p": 0.745
+   "local_p": 0.93
   },
   {
    "thr": -0.04,
@@ -2579,9 +2579,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.308604945,
+   "stat": -2.1023289098,
    "n": 49,
-   "local_p": 0.66
+   "local_p": 0.865
   },
   {
    "thr": -0.04,
@@ -2645,9 +2645,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.810009076,
+   "stat": -1.2542301061,
    "n": 49,
-   "local_p": 0.795
+   "local_p": 0.685
   },
   {
    "thr": -0.04,
@@ -2678,9 +2678,9 @@
    "delay": 3,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -3.2493427115,
+   "stat": -2.3281309007,
    "n": 33,
-   "local_p": 0.95
+   "local_p": 0.845
   },
   {
    "thr": -0.04,
@@ -2733,9 +2733,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.810009076,
+   "stat": -1.2542301061,
    "n": 49,
-   "local_p": 0.795
+   "local_p": 0.685
   },
   {
    "thr": -0.04,
@@ -2799,9 +2799,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -0.7746609688,
+   "stat": -1.2089809068,
    "n": 49,
-   "local_p": 0.555
+   "local_p": 0.735
   },
   {
    "thr": -0.04,
@@ -2832,9 +2832,9 @@
    "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.8452832818,
+   "stat": -1.9351450631,
    "n": 30,
-   "local_p": 0.855
+   "local_p": 0.875
   },
   {
    "thr": -0.04,
@@ -2887,9 +2887,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.7746609688,
+   "stat": -1.2089809068,
    "n": 49,
-   "local_p": 0.555
+   "local_p": 0.735
   },
   {
    "thr": -0.04,
@@ -2953,9 +2953,9 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.2089809068,
+   "stat": -1.6568454145,
    "n": 49,
-   "local_p": 0.735
+   "local_p": 0.865
   },
   {
    "thr": -0.04,
@@ -2986,9 +2986,9 @@
    "delay": 1,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.7192939867,
+   "stat": -1.844191736,
    "n": 32,
-   "local_p": 0.88
+   "local_p": 0.915
   },
   {
    "thr": -0.04,
@@ -3041,9 +3041,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.2089809068,
+   "stat": -1.6568454145,
    "n": 49,
-   "local_p": 0.735
+   "local_p": 0.865
   },
   {
    "thr": -0.04,
@@ -3107,9 +3107,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.6554226948,
+   "stat": -1.5195872402,
    "n": 49,
-   "local_p": 0.88
+   "local_p": 0.84
   },
   {
    "thr": -0.04,
@@ -3140,9 +3140,9 @@
    "delay": 3,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -2.3219576429,
+   "stat": -2.0038804308,
    "n": 33,
-   "local_p": 0.94
+   "local_p": 0.885
   },
   {
    "thr": -0.04,
@@ -3195,9 +3195,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.6554226948,
+   "stat": -1.5195872402,
    "n": 49,
-   "local_p": 0.88
+   "local_p": 0.84
   },
   {
    "thr": -0.04,
@@ -3259,160 +3259,6 @@
    "look": 20,
    "h": 15,
    "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -0.6544174063,
-   "n": 49,
-   "local_p": 0.505
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 24,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 25,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": -1.337983784,
-   "n": 30,
-   "local_p": 0.785
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 19,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 28,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -0.6544174063,
-   "n": 49,
-   "local_p": 0.505
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.04,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
    "filter": "none",
    "cost": 0.001,
    "stat": -0.7927234862,
@@ -3423,6 +3269,160 @@
    "thr": -0.04,
    "look": 20,
    "h": 15,
+   "delay": 0,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 24,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": -1.297400569,
+   "n": 30,
+   "local_p": 0.765
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 19,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 28,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -0.7927234862,
+   "n": 49,
+   "local_p": 0.575
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -0.908981328,
+   "n": 49,
+   "local_p": 0.67
+  },
+  {
+   "thr": -0.04,
+   "look": 20,
+   "h": 15,
    "delay": 1,
    "filter": "gold_down",
    "cost": 0.001,
@@ -3448,7 +3448,7 @@
    "delay": 1,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.1216601178,
+   "stat": -1.0756893339,
    "n": 32,
    "local_p": 0.705
   },
@@ -3503,9 +3503,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.7927234862,
+   "stat": -0.908981328,
    "n": 49,
-   "local_p": 0.575
+   "local_p": 0.67
   },
   {
    "thr": -0.04,
@@ -3569,9 +3569,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -0.9459618828,
+   "stat": -0.9634000858,
    "n": 49,
-   "local_p": 0.7
+   "local_p": 0.72
   },
   {
    "thr": -0.04,
@@ -3602,7 +3602,7 @@
    "delay": 3,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.2146508586,
+   "stat": -1.2375829338,
    "n": 33,
    "local_p": 0.76
   },
@@ -3657,9 +3657,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.9459618828,
+   "stat": -0.9634000858,
    "n": 49,
-   "local_p": 0.7
+   "local_p": 0.72
   },
   {
    "thr": -0.04,
@@ -3723,9 +3723,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -0.8465830253,
+   "stat": -1.2054220629,
    "n": 49,
-   "local_p": 0.73
+   "local_p": 0.895
   },
   {
    "thr": -0.04,
@@ -3756,9 +3756,9 @@
    "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.2959981652,
+   "stat": -1.4967245183,
    "n": 30,
-   "local_p": 0.825
+   "local_p": 0.89
   },
   {
    "thr": -0.04,
@@ -3811,9 +3811,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.8465830253,
+   "stat": -1.2054220629,
    "n": 49,
-   "local_p": 0.73
+   "local_p": 0.895
   },
   {
    "thr": -0.04,
@@ -3877,9 +3877,9 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.2054220629,
+   "stat": -1.5711430769,
    "n": 49,
-   "local_p": 0.895
+   "local_p": 0.97
   },
   {
    "thr": -0.04,
@@ -3910,9 +3910,9 @@
    "delay": 1,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.4025850946,
+   "stat": -1.753325134,
    "n": 32,
-   "local_p": 0.88
+   "local_p": 0.945
   },
   {
    "thr": -0.04,
@@ -3965,9 +3965,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.2054220629,
+   "stat": -1.5711430769,
    "n": 49,
-   "local_p": 0.895
+   "local_p": 0.97
   },
   {
    "thr": -0.04,
@@ -4031,9 +4031,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.695171097,
+   "stat": -1.8096891832,
    "n": 49,
-   "local_p": 0.975
+   "local_p": 0.995
   },
   {
    "thr": -0.04,
@@ -4064,9 +4064,9 @@
    "delay": 3,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.9557452166,
+   "stat": -1.9731637238,
    "n": 33,
-   "local_p": 0.96
+   "local_p": 0.97
   },
   {
    "thr": -0.04,
@@ -4119,9 +4119,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.695171097,
+   "stat": -1.8096891832,
    "n": 49,
-   "local_p": 0.975
+   "local_p": 0.995
   },
   {
    "thr": -0.04,
@@ -4185,9 +4185,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.2319505826,
+   "stat": -1.4286785483,
    "n": 49,
-   "local_p": 0.94
+   "local_p": 0.96
   },
   {
    "thr": -0.04,
@@ -4218,9 +4218,9 @@
    "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.2289150316,
+   "stat": -1.2666128306,
    "n": 30,
-   "local_p": 0.875
+   "local_p": 0.885
   },
   {
    "thr": -0.04,
@@ -4273,9 +4273,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.2319505826,
+   "stat": -1.4286785483,
    "n": 49,
-   "local_p": 0.94
+   "local_p": 0.96
   },
   {
    "thr": -0.04,
@@ -4339,9 +4339,9 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.4286785483,
+   "stat": -1.5319763571,
    "n": 49,
-   "local_p": 0.96
+   "local_p": 0.99
   },
   {
    "thr": -0.04,
@@ -4372,7 +4372,7 @@
    "delay": 1,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.0849622871,
+   "stat": -1.050417171,
    "n": 32,
    "local_p": 0.785
   },
@@ -4427,9 +4427,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.4286785483,
+   "stat": -1.5319763571,
    "n": 49,
-   "local_p": 0.96
+   "local_p": 0.99
   },
   {
    "thr": -0.04,
@@ -4493,9 +4493,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.3778422569,
+   "stat": -1.5913124138,
    "n": 49,
-   "local_p": 0.96
+   "local_p": 0.985
   },
   {
    "thr": -0.04,
@@ -4526,9 +4526,9 @@
    "delay": 3,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -1.1940558748,
+   "stat": -1.1991836288,
    "n": 33,
-   "local_p": 0.85
+   "local_p": 0.865
   },
   {
    "thr": -0.04,
@@ -4581,9 +4581,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.3778422569,
+   "stat": -1.5913124138,
    "n": 49,
-   "local_p": 0.96
+   "local_p": 0.985
   },
   {
    "thr": -0.04,
@@ -6957,9 +6957,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.0073595188,
+   "stat": -1.9954476623,
    "n": 46,
-   "local_p": 0.585
+   "local_p": 0.87
   },
   {
    "thr": -0.05,
@@ -7045,9 +7045,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.0073595188,
+   "stat": -1.9954476623,
    "n": 46,
-   "local_p": 0.585
+   "local_p": 0.87
   },
   {
    "thr": -0.05,
@@ -7111,9 +7111,9 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.9954476623,
+   "stat": -2.9015966467,
    "n": 46,
-   "local_p": 0.87
+   "local_p": 0.95
   },
   {
    "thr": -0.05,
@@ -7166,9 +7166,9 @@
    "delay": 1,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -2.8067957966,
+   "stat": -3.5988013444,
    "n": 30,
-   "local_p": 0.92
+   "local_p": 0.975
   },
   {
    "thr": -0.05,
@@ -7199,9 +7199,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.9954476623,
+   "stat": -2.9015966467,
    "n": 46,
-   "local_p": 0.87
+   "local_p": 0.95
   },
   {
    "thr": -0.05,
@@ -7265,9 +7265,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -2.4015578989,
+   "stat": -1.4730375162,
    "n": 46,
-   "local_p": 0.915
+   "local_p": 0.73
   },
   {
    "thr": -0.05,
@@ -7320,9 +7320,9 @@
    "delay": 3,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -2.7055767047,
+   "stat": -1.8070451009,
    "n": 32,
-   "local_p": 0.945
+   "local_p": 0.79
   },
   {
    "thr": -0.05,
@@ -7353,9 +7353,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -2.4015578989,
+   "stat": -1.4730375162,
    "n": 46,
-   "local_p": 0.915
+   "local_p": 0.73
   },
   {
    "thr": -0.05,
@@ -7417,160 +7417,6 @@
    "look": 10,
    "h": 10,
    "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.5785106101,
-   "n": 46,
-   "local_p": 0.87
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 26,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 19,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 28,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 18,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.5785106101,
-   "n": 46,
-   "local_p": 0.87
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 4,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
    "filter": "none",
    "cost": 0.001,
    "stat": -1.9835089025,
@@ -7581,7 +7427,7 @@
    "thr": -0.05,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
    "stat": null,
@@ -7592,7 +7438,7 @@
    "thr": -0.05,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
    "stat": null,
@@ -7603,7 +7449,7 @@
    "thr": -0.05,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
    "stat": null,
@@ -7614,7 +7460,7 @@
    "thr": -0.05,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_down",
    "cost": 0.001,
    "stat": null,
@@ -7625,11 +7471,110 @@
    "thr": -0.05,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -3.1046127831,
-   "n": 30,
+   "stat": null,
+   "n": 28,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 18,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -1.9835089025,
+   "n": 46,
+   "local_p": 0.955
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 4,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -2.4631358283,
+   "n": 46,
    "local_p": 0.995
   },
   {
@@ -7637,259 +7582,6 @@
    "look": 10,
    "h": 10,
    "delay": 1,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.9835089025,
-   "n": 46,
-   "local_p": 0.955
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 4,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.8043173009,
-   "n": 46,
-   "local_p": 0.91
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 25,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 25,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": -2.2387080795,
-   "n": 32,
-   "local_p": 0.925
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 14,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.8043173009,
-   "n": 46,
-   "local_p": 0.91
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 4,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 10,
-   "delay": 3,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -0.3994605476,
-   "n": 46,
-   "local_p": 0.325
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
    "stat": null,
@@ -7899,161 +7591,7 @@
   {
    "thr": -0.05,
    "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 26,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 19,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 28,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 18,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -0.3994605476,
-   "n": 46,
-   "local_p": 0.325
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 4,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 1,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -0.565639225,
-   "n": 46,
-   "local_p": 0.465
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
-   "delay": 1,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 15,
+   "h": 10,
    "delay": 1,
    "filter": "gold_up",
    "cost": 0.001,
@@ -8064,7 +7602,7 @@
   {
    "thr": -0.05,
    "look": 10,
-   "h": 15,
+   "h": 10,
    "delay": 1,
    "filter": "dollar_up",
    "cost": 0.001,
@@ -8075,7 +7613,7 @@
   {
    "thr": -0.05,
    "look": 10,
-   "h": 15,
+   "h": 10,
    "delay": 1,
    "filter": "dollar_down",
    "cost": 0.001,
@@ -8086,13 +7624,475 @@
   {
    "thr": -0.05,
    "look": 10,
-   "h": 15,
+   "h": 10,
    "delay": 1,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -1.6418731674,
+   "stat": -3.572262215,
    "n": 30,
-   "local_p": 0.915
+   "local_p": 1.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -2.4631358283,
+   "n": 46,
+   "local_p": 0.995
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 4,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -0.8867458042,
+   "n": 46,
+   "local_p": 0.595
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": -1.2872891305,
+   "n": 32,
+   "local_p": 0.745
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 14,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -0.8867458042,
+   "n": 46,
+   "local_p": 0.595
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 4,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 10,
+   "delay": 3,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -0.565639225,
+   "n": 46,
+   "local_p": 0.465
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 20,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 26,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 19,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 28,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 18,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -0.565639225,
+   "n": 46,
+   "local_p": 0.465
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 4,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -0.9076519068,
+   "n": 46,
+   "local_p": 0.69
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 20,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 26,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 19,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": -2.1455720004,
+   "n": 30,
+   "local_p": 0.98
   },
   {
    "thr": -0.05,
@@ -8123,9 +8123,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.565639225,
+   "stat": -0.9076519068,
    "n": 46,
-   "local_p": 0.465
+   "local_p": 0.69
   },
   {
    "thr": -0.05,
@@ -8189,9 +8189,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -0.568661645,
+   "stat": -0.56931607,
    "n": 46,
-   "local_p": 0.45
+   "local_p": 0.44
   },
   {
    "thr": -0.05,
@@ -8244,9 +8244,9 @@
    "delay": 3,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -1.0081004003,
+   "stat": -0.9970648503,
    "n": 32,
-   "local_p": 0.71
+   "local_p": 0.675
   },
   {
    "thr": -0.05,
@@ -8277,9 +8277,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.568661645,
+   "stat": -0.56931607,
    "n": 46,
-   "local_p": 0.45
+   "local_p": 0.44
   },
   {
    "thr": -0.05,
@@ -8341,160 +8341,6 @@
    "look": 10,
    "h": 20,
    "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -0.5662075655,
-   "n": 46,
-   "local_p": 0.44
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 26,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 19,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 28,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 18,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -0.5662075655,
-   "n": 46,
-   "local_p": 0.44
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 4,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 1,
    "filter": "none",
    "cost": 0.001,
    "stat": -0.9473843345,
@@ -8505,6 +8351,160 @@
    "thr": -0.05,
    "look": 10,
    "h": 20,
+   "delay": 0,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 20,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 26,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 19,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 28,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 18,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -0.9473843345,
+   "n": 46,
+   "local_p": 0.74
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 4,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -1.1903021924,
+   "n": 46,
+   "local_p": 0.89
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
    "delay": 1,
    "filter": "gold_down",
    "cost": 0.001,
@@ -8552,112 +8552,2422 @@
    "delay": 1,
    "filter": "rates_down",
    "cost": 0.001,
-   "stat": -2.0606162502,
+   "stat": -2.5286109804,
    "n": 30,
+   "local_p": 1.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -1.1903021924,
+   "n": 46,
+   "local_p": 0.89
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 1,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 1,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 1,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 1,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 4,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 1,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -0.850649576,
+   "n": 46,
+   "local_p": 0.655
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": -1.4399037013,
+   "n": 32,
+   "local_p": 0.915
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 14,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -0.850649576,
+   "n": 46,
+   "local_p": 0.655
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 4,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 20,
+   "delay": 3,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -0.9335954887,
+   "n": 46,
+   "local_p": 0.77
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 20,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 26,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 19,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 28,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 18,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -0.9335954887,
+   "n": 46,
+   "local_p": 0.77
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 4,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -1.0674269129,
+   "n": 46,
+   "local_p": 0.87
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 20,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 26,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 19,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": -1.8107306724,
+   "n": 30,
+   "local_p": 0.985
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -1.0674269129,
+   "n": 46,
+   "local_p": 0.87
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 4,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 1,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -0.6576162345,
+   "n": 46,
+   "local_p": 0.5
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": -0.8412114546,
+   "n": 32,
+   "local_p": 0.695
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 14,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -0.6576162345,
+   "n": 46,
+   "local_p": 0.5
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 4,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 10,
+   "h": 30,
+   "delay": 3,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -1.4460925583,
+   "n": 43,
+   "local_p": 0.72
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 28,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 26,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 17,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -1.4460925583,
+   "n": 43,
+   "local_p": 0.72
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 8,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -2.6641732673,
+   "n": 43,
+   "local_p": 0.935
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 18,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -2.6641732673,
+   "n": 43,
+   "local_p": 0.935
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 8,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -2.566190818,
+   "n": 43,
+   "local_p": 0.9
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": -3.1079989998,
+   "n": 30,
+   "local_p": 0.915
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 13,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -2.566190818,
+   "n": 43,
+   "local_p": 0.9
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 8,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 5,
+   "delay": 3,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -1.2973303435,
+   "n": 43,
+   "local_p": 0.75
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 28,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 26,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 17,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -1.2973303435,
+   "n": 43,
+   "local_p": 0.75
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 8,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -1.7089028767,
+   "n": 43,
+   "local_p": 0.895
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 18,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -1.7089028767,
+   "n": 43,
+   "local_p": 0.895
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 8,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -1.4639557733,
+   "n": 43,
+   "local_p": 0.81
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": -1.4153206946,
+   "n": 30,
+   "local_p": 0.73
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 13,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -1.4639557733,
+   "n": 43,
+   "local_p": 0.81
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 8,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 10,
+   "delay": 3,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -0.6401713341,
+   "n": 43,
+   "local_p": 0.46
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 28,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 26,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 17,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -0.6401713341,
+   "n": 43,
+   "local_p": 0.46
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 8,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -1.1944885021,
+   "n": 43,
+   "local_p": 0.83
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 18,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -1.1944885021,
+   "n": 43,
+   "local_p": 0.83
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 8,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -2.037499446,
+   "n": 43,
+   "local_p": 0.975
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": -1.5742178793,
+   "n": 30,
+   "local_p": 0.855
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 13,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -2.037499446,
+   "n": 43,
+   "local_p": 0.975
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 8,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 15,
+   "delay": 3,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -1.7574558854,
+   "n": 43,
+   "local_p": 0.98
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 28,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 26,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 17,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -1.7574558854,
+   "n": 43,
+   "local_p": 0.98
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 8,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -2.1930060467,
+   "n": 43,
+   "local_p": 1.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 22,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 27,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 18,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -2.1930060467,
+   "n": 43,
+   "local_p": 1.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 12,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 8,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 1,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.05,
+   "look": 20,
+   "h": 20,
+   "delay": 3,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -1.9655301612,
+   "n": 43,
    "local_p": 0.99
   },
   {
    "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 1,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 1,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 1,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -0.9473843345,
-   "n": 46,
-   "local_p": 0.74
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 1,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 1,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 1,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 1,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 4,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 1,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 3,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.0374301879,
-   "n": 46,
-   "local_p": 0.785
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
+   "look": 20,
    "h": 20,
    "delay": 3,
    "filter": "gold_down",
@@ -8668,954 +10978,30 @@
   },
   {
    "thr": -0.05,
-   "look": 10,
+   "look": 20,
    "h": 20,
    "delay": 3,
    "filter": "gold_up",
    "cost": 0.001,
    "stat": null,
-   "n": 25,
+   "n": 22,
    "local_p": 0.0
   },
   {
    "thr": -0.05,
-   "look": 10,
+   "look": 20,
    "h": 20,
    "delay": 3,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": null,
-   "n": 25,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 3,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 3,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": -1.8448206943,
-   "n": 32,
-   "local_p": 0.96
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 3,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 14,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 3,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 3,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.0374301879,
-   "n": 46,
-   "local_p": 0.785
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 3,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 3,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 3,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 3,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 4,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 20,
-   "delay": 3,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -0.8583742177,
-   "n": 46,
-   "local_p": 0.72
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 26,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 19,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 28,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 18,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -0.8583742177,
-   "n": 46,
-   "local_p": 0.72
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 4,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -0.9335954887,
-   "n": 46,
-   "local_p": 0.77
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 26,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 19,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": -1.6203353492,
+   "stat": -1.4820801798,
    "n": 30,
-   "local_p": 0.965
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -0.9335954887,
-   "n": 46,
-   "local_p": 0.77
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 4,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 1,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -0.7999044391,
-   "n": 46,
-   "local_p": 0.63
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 25,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 25,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": -1.1181426563,
-   "n": 32,
-   "local_p": 0.85
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 14,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -0.7999044391,
-   "n": 46,
-   "local_p": 0.63
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 4,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 10,
-   "h": 30,
-   "delay": 3,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
+   "local_p": 0.875
   },
   {
    "thr": -0.05,
    "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": 0.0738378745,
-   "n": 43,
-   "local_p": 0.225
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 28,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 26,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 17,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": 0.0738378745,
-   "n": 43,
-   "local_p": 0.225
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 8,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.4460925583,
-   "n": 43,
-   "local_p": 0.72
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 25,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 18,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.4460925583,
-   "n": 43,
-   "local_p": 0.72
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 8,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 3,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -3.0487063419,
-   "n": 43,
-   "local_p": 0.965
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 3,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 3,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
-   "delay": 3,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": -4.2221163658,
-   "n": 30,
-   "local_p": 0.975
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 5,
+   "h": 20,
    "delay": 3,
    "filter": "dollar_down",
    "cost": 0.001,
@@ -9626,7 +11012,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 5,
+   "h": 20,
    "delay": 3,
    "filter": "rates_down",
    "cost": 0.001,
@@ -9637,7 +11023,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 5,
+   "h": 20,
    "delay": 3,
    "filter": "rates_up",
    "cost": 0.001,
@@ -9648,7 +11034,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 5,
+   "h": 20,
    "delay": 3,
    "filter": "stress",
    "cost": 0.001,
@@ -9659,18 +11045,18 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 5,
+   "h": 20,
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -3.0487063419,
+   "stat": -1.9655301612,
    "n": 43,
-   "local_p": 0.965
+   "local_p": 0.99
   },
   {
    "thr": -0.05,
    "look": 20,
-   "h": 5,
+   "h": 20,
    "delay": 3,
    "filter": "era=2004-08",
    "cost": 0.001,
@@ -9681,7 +11067,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 5,
+   "h": 20,
    "delay": 3,
    "filter": "era=2009-14",
    "cost": 0.001,
@@ -9692,7 +11078,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 5,
+   "h": 20,
    "delay": 3,
    "filter": "era=2015-19",
    "cost": 0.001,
@@ -9703,7 +11089,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 5,
+   "h": 20,
    "delay": 3,
    "filter": "era=2020-21",
    "cost": 0.001,
@@ -9714,7 +11100,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 5,
+   "h": 20,
    "delay": 3,
    "filter": "era=2022-26",
    "cost": 0.001,
@@ -9725,18 +11111,18 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.5630669423,
+   "stat": -1.4512665625,
    "n": 43,
-   "local_p": 0.85
+   "local_p": 0.97
   },
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
@@ -9747,7 +11133,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
@@ -9758,7 +11144,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
@@ -9769,7 +11155,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "dollar_down",
    "cost": 0.001,
@@ -9780,7 +11166,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
@@ -9791,7 +11177,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "rates_up",
    "cost": 0.001,
@@ -9802,7 +11188,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "stress",
    "cost": 0.001,
@@ -9813,18 +11199,18 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.5630669423,
+   "stat": -1.4512665625,
    "n": 43,
-   "local_p": 0.85
+   "local_p": 0.97
   },
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "era=2004-08",
    "cost": 0.001,
@@ -9835,7 +11221,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "era=2009-14",
    "cost": 0.001,
@@ -9846,7 +11232,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "era=2015-19",
    "cost": 0.001,
@@ -9857,7 +11243,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "era=2020-21",
    "cost": 0.001,
@@ -9868,7 +11254,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 0,
    "filter": "era=2022-26",
    "cost": 0.001,
@@ -9879,18 +11265,18 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.2973303435,
+   "stat": -1.8161407292,
    "n": 43,
-   "local_p": 0.75
+   "local_p": 0.99
   },
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "gold_down",
    "cost": 0.001,
@@ -9901,7 +11287,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "gold_up",
    "cost": 0.001,
@@ -9912,7 +11298,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "dollar_up",
    "cost": 0.001,
@@ -9923,7 +11309,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "dollar_down",
    "cost": 0.001,
@@ -9934,7 +11320,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "rates_down",
    "cost": 0.001,
@@ -9945,7 +11331,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "rates_up",
    "cost": 0.001,
@@ -9956,7 +11342,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "stress",
    "cost": 0.001,
@@ -9967,18 +11353,18 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.2973303435,
+   "stat": -1.8161407292,
    "n": 43,
-   "local_p": 0.75
+   "local_p": 0.99
   },
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "era=2004-08",
    "cost": 0.001,
@@ -9989,7 +11375,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "era=2009-14",
    "cost": 0.001,
@@ -10000,7 +11386,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "era=2015-19",
    "cost": 0.001,
@@ -10011,7 +11397,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "era=2020-21",
    "cost": 0.001,
@@ -10022,7 +11408,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 1,
    "filter": "era=2022-26",
    "cost": 0.001,
@@ -10033,18 +11419,18 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.6092217255,
+   "stat": -1.7211849321,
    "n": 43,
-   "local_p": 0.855
+   "local_p": 0.99
   },
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 3,
    "filter": "gold_down",
    "cost": 0.001,
@@ -10055,7 +11441,7 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 3,
    "filter": "gold_up",
    "cost": 0.001,
@@ -10066,1403 +11452,17 @@
   {
    "thr": -0.05,
    "look": 20,
-   "h": 10,
+   "h": 30,
    "delay": 3,
    "filter": "dollar_up",
    "cost": 0.001,
-   "stat": -2.0823077132,
-   "n": 30,
-   "local_p": 0.905
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 10,
-   "delay": 3,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 13,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 10,
-   "delay": 3,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 10,
-   "delay": 3,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 10,
-   "delay": 3,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 10,
-   "delay": 3,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.6092217255,
-   "n": 43,
-   "local_p": 0.855
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 10,
-   "delay": 3,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 10,
-   "delay": 3,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 10,
-   "delay": 3,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 8,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 10,
-   "delay": 3,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 10,
-   "delay": 3,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -0.7537915865,
-   "n": 43,
-   "local_p": 0.54
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 28,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 26,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 17,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -0.7537915865,
-   "n": 43,
-   "local_p": 0.54
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 8,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -0.6401713341,
-   "n": 43,
-   "local_p": 0.46
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 25,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 18,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -0.6401713341,
-   "n": 43,
-   "local_p": 0.46
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 8,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.578833435,
-   "n": 43,
-   "local_p": 0.915
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": -1.6328618242,
+   "stat": -1.3117195187,
    "n": 30,
    "local_p": 0.895
   },
   {
    "thr": -0.05,
    "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 13,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.578833435,
-   "n": 43,
-   "local_p": 0.915
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 8,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 15,
-   "delay": 3,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.6647827095,
-   "n": 43,
-   "local_p": 0.97
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 28,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 26,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 17,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.6647827095,
-   "n": 43,
-   "local_p": 0.97
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 8,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.7574558854,
-   "n": 43,
-   "local_p": 0.98
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 25,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 18,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.7574558854,
-   "n": 43,
-   "local_p": 0.98
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 8,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 1,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -2.1046979816,
-   "n": 43,
-   "local_p": 1.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": -2.0248111869,
-   "n": 30,
-   "local_p": 0.97
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 13,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -2.1046979816,
-   "n": 43,
-   "local_p": 1.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 8,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 20,
-   "delay": 3,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.5551506321,
-   "n": 43,
-   "local_p": 0.97
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 28,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 26,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 17,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.5551506321,
-   "n": 43,
-   "local_p": 0.97
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 8,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.4512665625,
-   "n": 43,
-   "local_p": 0.97
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 27,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 25,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 18,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.4512665625,
-   "n": 43,
-   "local_p": 0.97
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 8,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 1,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 3,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.7502201381,
-   "n": 43,
-   "local_p": 0.98
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 3,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 21,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 3,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
-   "h": 30,
-   "delay": 3,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": -1.7136893402,
-   "n": 30,
-   "local_p": 0.97
-  },
-  {
-   "thr": -0.05,
-   "look": 20,
    "h": 30,
    "delay": 3,
    "filter": "dollar_down",
@@ -11511,9 +11511,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.7502201381,
+   "stat": -1.7211849321,
    "n": 43,
-   "local_p": 0.98
+   "local_p": 0.99
   },
   {
    "thr": -0.05,
@@ -13885,160 +13885,6 @@
    "look": 10,
    "h": 5,
    "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.1629612784,
-   "n": 36,
-   "local_p": 0.61
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.1629612784,
-   "n": 36,
-   "local_p": 0.61
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 7,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 5,
-   "delay": 1,
    "filter": "none",
    "cost": 0.001,
    "stat": -2.5240419173,
@@ -14049,7 +13895,7 @@
    "thr": -0.06,
    "look": 10,
    "h": 5,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
    "stat": null,
@@ -14060,7 +13906,7 @@
    "thr": -0.06,
    "look": 10,
    "h": 5,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
    "stat": null,
@@ -14071,51 +13917,51 @@
    "thr": -0.06,
    "look": 10,
    "h": 5,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
    "stat": null,
-   "n": 25,
+   "n": 20,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 5,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_down",
    "cost": 0.001,
    "stat": null,
-   "n": 11,
+   "n": 16,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 5,
-   "delay": 1,
+   "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
    "stat": null,
-   "n": 21,
+   "n": 20,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 5,
-   "delay": 1,
+   "delay": 0,
    "filter": "rates_up",
    "cost": 0.001,
    "stat": null,
-   "n": 15,
+   "n": 16,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 5,
-   "delay": 1,
+   "delay": 0,
    "filter": "stress",
    "cost": 0.001,
    "stat": null,
@@ -14126,7 +13972,7 @@
    "thr": -0.06,
    "look": 10,
    "h": 5,
-   "delay": 1,
+   "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
    "stat": -2.5240419173,
@@ -14137,6 +13983,160 @@
    "thr": -0.06,
    "look": 10,
    "h": 5,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 7,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -2.4381561973,
+   "n": 36,
+   "local_p": 0.91
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 20,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -2.4381561973,
+   "n": 36,
+   "local_p": 0.91
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 5,
    "delay": 1,
    "filter": "era=2004-08",
    "cost": 0.001,
@@ -14195,9 +14195,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.7182272888,
+   "stat": -1.553649212,
    "n": 36,
-   "local_p": 0.785
+   "local_p": 0.755
   },
   {
    "thr": -0.06,
@@ -14283,9 +14283,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.7182272888,
+   "stat": -1.553649212,
    "n": 36,
-   "local_p": 0.785
+   "local_p": 0.755
   },
   {
    "thr": -0.06,
@@ -14347,160 +14347,6 @@
    "look": 10,
    "h": 10,
    "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.5963302257,
-   "n": 36,
-   "local_p": 0.835
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.5963302257,
-   "n": 36,
-   "local_p": 0.835
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 7,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 10,
-   "delay": 1,
    "filter": "none",
    "cost": 0.001,
    "stat": -2.1554343795,
@@ -14511,7 +14357,7 @@
    "thr": -0.06,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
    "stat": null,
@@ -14522,7 +14368,7 @@
    "thr": -0.06,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
    "stat": null,
@@ -14533,51 +14379,51 @@
    "thr": -0.06,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
    "stat": null,
-   "n": 25,
+   "n": 20,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_down",
    "cost": 0.001,
    "stat": null,
-   "n": 11,
+   "n": 16,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
    "stat": null,
-   "n": 21,
+   "n": 20,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "rates_up",
    "cost": 0.001,
    "stat": null,
-   "n": 15,
+   "n": 16,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "stress",
    "cost": 0.001,
    "stat": null,
@@ -14588,7 +14434,7 @@
    "thr": -0.06,
    "look": 10,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
    "stat": -2.1554343795,
@@ -14599,6 +14445,160 @@
    "thr": -0.06,
    "look": 10,
    "h": 10,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 7,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -2.1379998977,
+   "n": 36,
+   "local_p": 0.955
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 20,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -2.1379998977,
+   "n": 36,
+   "local_p": 0.955
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 10,
    "delay": 1,
    "filter": "era=2004-08",
    "cost": 0.001,
@@ -14657,9 +14657,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.4164801074,
+   "stat": -0.4457205107,
    "n": 36,
-   "local_p": 0.79
+   "local_p": 0.32
   },
   {
    "thr": -0.06,
@@ -14745,9 +14745,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.4164801074,
+   "stat": -0.4457205107,
    "n": 36,
-   "local_p": 0.79
+   "local_p": 0.32
   },
   {
    "thr": -0.06,
@@ -14809,160 +14809,6 @@
    "look": 10,
    "h": 15,
    "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -0.2685734672,
-   "n": 36,
-   "local_p": 0.255
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 20,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -0.2685734672,
-   "n": 36,
-   "local_p": 0.255
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 7,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 3,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 10,
-   "h": 15,
-   "delay": 1,
    "filter": "none",
    "cost": 0.001,
    "stat": -0.5388010682,
@@ -14973,7 +14819,7 @@
    "thr": -0.06,
    "look": 10,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
    "stat": null,
@@ -14984,7 +14830,7 @@
    "thr": -0.06,
    "look": 10,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
    "stat": null,
@@ -14995,51 +14841,51 @@
    "thr": -0.06,
    "look": 10,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
    "stat": null,
-   "n": 25,
+   "n": 20,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_down",
    "cost": 0.001,
    "stat": null,
-   "n": 11,
+   "n": 16,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
    "stat": null,
-   "n": 21,
+   "n": 20,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "rates_up",
    "cost": 0.001,
    "stat": null,
-   "n": 15,
+   "n": 16,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 10,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "stress",
    "cost": 0.001,
    "stat": null,
@@ -15050,7 +14896,7 @@
    "thr": -0.06,
    "look": 10,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
    "stat": -0.5388010682,
@@ -15061,6 +14907,160 @@
    "thr": -0.06,
    "look": 10,
    "h": 15,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 7,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 3,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -0.824644709,
+   "n": 36,
+   "local_p": 0.555
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 20,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 25,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 21,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -0.824644709,
+   "n": 36,
+   "local_p": 0.555
+  },
+  {
+   "thr": -0.06,
+   "look": 10,
+   "h": 15,
    "delay": 1,
    "filter": "era=2004-08",
    "cost": 0.001,
@@ -15119,9 +15119,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -0.5801746657,
+   "stat": -0.6377691277,
    "n": 36,
-   "local_p": 0.42
+   "local_p": 0.435
   },
   {
    "thr": -0.06,
@@ -15207,9 +15207,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.5801746657,
+   "stat": -0.6377691277,
    "n": 36,
-   "local_p": 0.42
+   "local_p": 0.435
   },
   {
    "thr": -0.06,
@@ -15273,9 +15273,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -0.6846939201,
+   "stat": -1.1509897353,
    "n": 36,
-   "local_p": 0.475
+   "local_p": 0.785
   },
   {
    "thr": -0.06,
@@ -15361,9 +15361,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.6846939201,
+   "stat": -1.1509897353,
    "n": 36,
-   "local_p": 0.475
+   "local_p": 0.785
   },
   {
    "thr": -0.06,
@@ -15427,9 +15427,9 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.1509897353,
+   "stat": -1.213711285,
    "n": 36,
-   "local_p": 0.785
+   "local_p": 0.835
   },
   {
    "thr": -0.06,
@@ -15515,9 +15515,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.1509897353,
+   "stat": -1.213711285,
    "n": 36,
-   "local_p": 0.785
+   "local_p": 0.835
   },
   {
    "thr": -0.06,
@@ -15581,9 +15581,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.0186921368,
+   "stat": -0.8651699286,
    "n": 36,
-   "local_p": 0.735
+   "local_p": 0.62
   },
   {
    "thr": -0.06,
@@ -15669,9 +15669,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.0186921368,
+   "stat": -0.8651699286,
    "n": 36,
-   "local_p": 0.735
+   "local_p": 0.62
   },
   {
    "thr": -0.06,
@@ -15735,9 +15735,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -0.8011676961,
+   "stat": -0.8965892099,
    "n": 36,
-   "local_p": 0.63
+   "local_p": 0.68
   },
   {
    "thr": -0.06,
@@ -15823,9 +15823,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.8011676961,
+   "stat": -0.8965892099,
    "n": 36,
-   "local_p": 0.63
+   "local_p": 0.68
   },
   {
    "thr": -0.06,
@@ -15889,9 +15889,9 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -0.8965892099,
+   "stat": -0.9282885707,
    "n": 36,
-   "local_p": 0.68
+   "local_p": 0.705
   },
   {
    "thr": -0.06,
@@ -15977,9 +15977,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.8965892099,
+   "stat": -0.9282885707,
    "n": 36,
-   "local_p": 0.68
+   "local_p": 0.705
   },
   {
    "thr": -0.06,
@@ -16043,9 +16043,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -0.7327421294,
+   "stat": -0.7713074407,
    "n": 36,
-   "local_p": 0.55
+   "local_p": 0.6
   },
   {
    "thr": -0.06,
@@ -16131,9 +16131,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -0.7327421294,
+   "stat": -0.7713074407,
    "n": 36,
-   "local_p": 0.55
+   "local_p": 0.6
   },
   {
    "thr": -0.06,
@@ -16197,9 +16197,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -2.3710360047,
+   "stat": -2.9224601236,
    "n": 34,
-   "local_p": 0.85
+   "local_p": 0.945
   },
   {
    "thr": -0.06,
@@ -16283,160 +16283,6 @@
    "look": 20,
    "h": 5,
    "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -2.3710360047,
-   "n": 34,
-   "local_p": 0.85
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 7,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 2,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -2.9224601236,
-   "n": 34,
-   "local_p": 0.945
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 16,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 18,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 23,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 11,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 19,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 5,
-   "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
    "stat": -2.9224601236,
@@ -16447,6 +16293,160 @@
    "thr": -0.06,
    "look": 20,
    "h": 5,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 7,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 2,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -3.8737175358,
+   "n": 34,
+   "local_p": 0.99
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 18,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 23,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 19,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -3.8737175358,
+   "n": 34,
+   "local_p": 0.99
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 5,
    "delay": 1,
    "filter": "era=2004-08",
    "cost": 0.001,
@@ -16505,9 +16505,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -4.8457041163,
+   "stat": -3.0385694293,
    "n": 34,
-   "local_p": 0.995
+   "local_p": 0.925
   },
   {
    "thr": -0.06,
@@ -16593,9 +16593,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -4.8457041163,
+   "stat": -3.0385694293,
    "n": 34,
-   "local_p": 0.995
+   "local_p": 0.925
   },
   {
    "thr": -0.06,
@@ -16657,160 +16657,6 @@
    "look": 20,
    "h": 10,
    "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -2.448530186,
-   "n": 34,
-   "local_p": 0.97
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 17,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 17,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 19,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -2.448530186,
-   "n": 34,
-   "local_p": 0.97
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 7,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 2,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 10,
-   "delay": 1,
    "filter": "none",
    "cost": 0.001,
    "stat": -2.385430868,
@@ -16821,51 +16667,51 @@
    "thr": -0.06,
    "look": 20,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
    "stat": null,
-   "n": 16,
+   "n": 17,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 20,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
    "stat": null,
-   "n": 18,
+   "n": 17,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 20,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
    "stat": null,
-   "n": 23,
+   "n": 22,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 20,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_down",
    "cost": 0.001,
    "stat": null,
-   "n": 11,
+   "n": 12,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 20,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
    "stat": null,
@@ -16876,7 +16722,7 @@
    "thr": -0.06,
    "look": 20,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "rates_up",
    "cost": 0.001,
    "stat": null,
@@ -16887,7 +16733,7 @@
    "thr": -0.06,
    "look": 20,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "stress",
    "cost": 0.001,
    "stat": null,
@@ -16898,7 +16744,7 @@
    "thr": -0.06,
    "look": 20,
    "h": 10,
-   "delay": 1,
+   "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
    "stat": -2.385430868,
@@ -16909,6 +16755,160 @@
    "thr": -0.06,
    "look": 20,
    "h": 10,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 7,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 2,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -2.8228501572,
+   "n": 34,
+   "local_p": 0.975
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 18,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 23,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 19,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -2.8228501572,
+   "n": 34,
+   "local_p": 0.975
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 10,
    "delay": 1,
    "filter": "era=2004-08",
    "cost": 0.001,
@@ -16967,9 +16967,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -2.1948027044,
+   "stat": -1.3247918563,
    "n": 34,
-   "local_p": 0.92
+   "local_p": 0.74
   },
   {
    "thr": -0.06,
@@ -17055,9 +17055,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -2.1948027044,
+   "stat": -1.3247918563,
    "n": 34,
-   "local_p": 0.92
+   "local_p": 0.74
   },
   {
    "thr": -0.06,
@@ -17119,160 +17119,6 @@
    "look": 20,
    "h": 15,
    "delay": 0,
-   "filter": "none",
-   "cost": 0.001,
-   "stat": -1.4209439746,
-   "n": 34,
-   "local_p": 0.805
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "gold_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 17,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "gold_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 17,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "dollar_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 22,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "dollar_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 12,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "rates_down",
-   "cost": 0.001,
-   "stat": null,
-   "n": 19,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "rates_up",
-   "cost": 0.001,
-   "stat": null,
-   "n": 15,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "stress",
-   "cost": 0.001,
-   "stat": null,
-   "n": 0,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "abundant",
-   "cost": 0.001,
-   "stat": -1.4209439746,
-   "n": 34,
-   "local_p": 0.805
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2004-08",
-   "cost": 0.001,
-   "stat": null,
-   "n": 6,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2009-14",
-   "cost": 0.001,
-   "stat": null,
-   "n": 10,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2015-19",
-   "cost": 0.001,
-   "stat": null,
-   "n": 7,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2020-21",
-   "cost": 0.001,
-   "stat": null,
-   "n": 2,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 0,
-   "filter": "era=2022-26",
-   "cost": 0.001,
-   "stat": null,
-   "n": 9,
-   "local_p": 0.0
-  },
-  {
-   "thr": -0.06,
-   "look": 20,
-   "h": 15,
-   "delay": 1,
    "filter": "none",
    "cost": 0.001,
    "stat": -1.7051518052,
@@ -17283,51 +17129,51 @@
    "thr": -0.06,
    "look": 20,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_down",
    "cost": 0.001,
    "stat": null,
-   "n": 16,
+   "n": 17,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 20,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "gold_up",
    "cost": 0.001,
    "stat": null,
-   "n": 18,
+   "n": 17,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 20,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_up",
    "cost": 0.001,
    "stat": null,
-   "n": 23,
+   "n": 22,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 20,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "dollar_down",
    "cost": 0.001,
    "stat": null,
-   "n": 11,
+   "n": 12,
    "local_p": 0.0
   },
   {
    "thr": -0.06,
    "look": 20,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "rates_down",
    "cost": 0.001,
    "stat": null,
@@ -17338,7 +17184,7 @@
    "thr": -0.06,
    "look": 20,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "rates_up",
    "cost": 0.001,
    "stat": null,
@@ -17349,7 +17195,7 @@
    "thr": -0.06,
    "look": 20,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "stress",
    "cost": 0.001,
    "stat": null,
@@ -17360,7 +17206,7 @@
    "thr": -0.06,
    "look": 20,
    "h": 15,
-   "delay": 1,
+   "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
    "stat": -1.7051518052,
@@ -17371,6 +17217,160 @@
    "thr": -0.06,
    "look": 20,
    "h": 15,
+   "delay": 0,
+   "filter": "era=2004-08",
+   "cost": 0.001,
+   "stat": null,
+   "n": 6,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2009-14",
+   "cost": 0.001,
+   "stat": null,
+   "n": 10,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2015-19",
+   "cost": 0.001,
+   "stat": null,
+   "n": 7,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2020-21",
+   "cost": 0.001,
+   "stat": null,
+   "n": 2,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 0,
+   "filter": "era=2022-26",
+   "cost": 0.001,
+   "stat": null,
+   "n": 9,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "none",
+   "cost": 0.001,
+   "stat": -2.1982540387,
+   "n": 34,
+   "local_p": 0.96
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "gold_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 16,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "gold_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 18,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "dollar_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 23,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "dollar_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 11,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "rates_down",
+   "cost": 0.001,
+   "stat": null,
+   "n": 19,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "rates_up",
+   "cost": 0.001,
+   "stat": null,
+   "n": 15,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "stress",
+   "cost": 0.001,
+   "stat": null,
+   "n": 0,
+   "local_p": 0.0
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
+   "delay": 1,
+   "filter": "abundant",
+   "cost": 0.001,
+   "stat": -2.1982540387,
+   "n": 34,
+   "local_p": 0.96
+  },
+  {
+   "thr": -0.06,
+   "look": 20,
+   "h": 15,
    "delay": 1,
    "filter": "era=2004-08",
    "cost": 0.001,
@@ -17429,9 +17429,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -2.4219638564,
+   "stat": -2.3445452329,
    "n": 34,
-   "local_p": 0.98
+   "local_p": 0.975
   },
   {
    "thr": -0.06,
@@ -17517,9 +17517,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -2.4219638564,
+   "stat": -2.3445452329,
    "n": 34,
-   "local_p": 0.98
+   "local_p": 0.975
   },
   {
    "thr": -0.06,
@@ -17583,9 +17583,9 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.9528684145,
+   "stat": -2.3108134739,
    "n": 34,
-   "local_p": 0.955
+   "local_p": 0.995
   },
   {
    "thr": -0.06,
@@ -17671,9 +17671,9 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.9528684145,
+   "stat": -2.3108134739,
    "n": 34,
-   "local_p": 0.955
+   "local_p": 0.995
   },
   {
    "thr": -0.06,
@@ -17737,9 +17737,9 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -2.3108134739,
+   "stat": -2.6005443684,
    "n": 34,
-   "local_p": 0.995
+   "local_p": 1.0
   },
   {
    "thr": -0.06,
@@ -17825,9 +17825,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -2.3108134739,
+   "stat": -2.6005443684,
    "n": 34,
-   "local_p": 0.995
+   "local_p": 1.0
   },
   {
    "thr": -0.06,
@@ -17891,9 +17891,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -2.2579991907,
+   "stat": -1.5553224446,
    "n": 34,
-   "local_p": 0.995
+   "local_p": 0.92
   },
   {
    "thr": -0.06,
@@ -17979,9 +17979,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -2.2579991907,
+   "stat": -1.5553224446,
    "n": 34,
-   "local_p": 0.995
+   "local_p": 0.92
   },
   {
    "thr": -0.06,
@@ -18045,7 +18045,7 @@
    "delay": 0,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.7984570357,
+   "stat": -1.7645999637,
    "n": 34,
    "local_p": 0.985
   },
@@ -18133,7 +18133,7 @@
    "delay": 0,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.7984570357,
+   "stat": -1.7645999637,
    "n": 34,
    "local_p": 0.985
   },
@@ -18199,9 +18199,9 @@
    "delay": 1,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.7645999637,
+   "stat": -1.9823380914,
    "n": 34,
-   "local_p": 0.985
+   "local_p": 1.0
   },
   {
    "thr": -0.06,
@@ -18287,9 +18287,9 @@
    "delay": 1,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.7645999637,
+   "stat": -1.9823380914,
    "n": 34,
-   "local_p": 0.985
+   "local_p": 1.0
   },
   {
    "thr": -0.06,
@@ -18353,9 +18353,9 @@
    "delay": 3,
    "filter": "none",
    "cost": 0.001,
-   "stat": -1.5434967189,
+   "stat": -1.3170787534,
    "n": 34,
-   "local_p": 0.97
+   "local_p": 0.92
   },
   {
    "thr": -0.06,
@@ -18441,9 +18441,9 @@
    "delay": 3,
    "filter": "abundant",
    "cost": 0.001,
-   "stat": -1.5434967189,
+   "stat": -1.3170787534,
    "n": 34,
-   "local_p": 0.97
+   "local_p": 0.92
   },
   {
    "thr": -0.06,

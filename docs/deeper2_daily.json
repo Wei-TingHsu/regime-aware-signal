@@ -1,0 +1,2430 @@
+[
+ {
+  "label": "D2c gold's next sessions after a daily liquidity change (RRP same-day; weekly NL interpolated) \u2014 net Sharpe, dir +1 = buy gold when liquidity is added",
+  "best": {
+   "driver": "d_nl_interp",
+   "bar": 1.5,
+   "h": 5,
+   "dir": 1,
+   "regime": "2"
+  },
+  "best_stat": 2.478290384410752,
+  "p_family": 0.255,
+  "q95": 3.8863542740343986,
+  "n_null": 200,
+  "survivors": [],
+  "null_max_quantiles": {
+   "0.5": 1.9358466974797877,
+   "0.9": 3.2743750185538323,
+   "0.95": 3.8863542740343986,
+   "0.99": 5.596627830687199
+  },
+  "surface": [
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "all",
+    "stat": -1.7492200108,
+    "n": 1099,
+    "local_p": 0.59
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "0",
+    "stat": -2.7161008907,
+    "n": 345,
+    "local_p": 0.855
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "1",
+    "stat": 0.0162107014,
+    "n": 237,
+    "local_p": 0.065
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "2",
+    "stat": -1.4856927613,
+    "n": 325,
+    "local_p": 0.42
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "3",
+    "stat": -2.4257686062,
+    "n": 192,
+    "local_p": 0.63
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "all",
+    "stat": -1.5432248423,
+    "n": 1099,
+    "local_p": 0.61
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "0",
+    "stat": -0.8092269241,
+    "n": 345,
+    "local_p": 0.265
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "1",
+    "stat": -3.670222134,
+    "n": 237,
+    "local_p": 0.96
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "2",
+    "stat": -1.9774713659,
+    "n": 325,
+    "local_p": 0.715
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "3",
+    "stat": -0.1660309222,
+    "n": 192,
+    "local_p": 0.145
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.9374282899,
+    "n": 1099,
+    "local_p": 0.555
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.9013636215,
+    "n": 345,
+    "local_p": 0.465
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "1",
+    "stat": -0.1502349545,
+    "n": 237,
+    "local_p": 0.12
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "2",
+    "stat": -1.271817038,
+    "n": 325,
+    "local_p": 0.785
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "3",
+    "stat": -1.3894074303,
+    "n": 192,
+    "local_p": 0.76
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "all",
+    "stat": -0.7344921196,
+    "n": 1099,
+    "local_p": 0.55
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "0",
+    "stat": -0.8432647897,
+    "n": 345,
+    "local_p": 0.59
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "1",
+    "stat": -1.5144624805,
+    "n": 237,
+    "local_p": 0.885
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "2",
+    "stat": -0.5336784357,
+    "n": 325,
+    "local_p": 0.33
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "3",
+    "stat": -0.0323606034,
+    "n": 192,
+    "local_p": 0.1
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.2608796176,
+    "n": 1099,
+    "local_p": 0.265
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.3987780169,
+    "n": 345,
+    "local_p": 0.455
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "1",
+    "stat": 0.289124696,
+    "n": 237,
+    "local_p": 0.065
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "2",
+    "stat": -0.3141364637,
+    "n": 325,
+    "local_p": 0.51
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "3",
+    "stat": -0.5639013278,
+    "n": 192,
+    "local_p": 0.62
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "all",
+    "stat": -0.4179396855,
+    "n": 1099,
+    "local_p": 0.81
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "0",
+    "stat": -0.2930582786,
+    "n": 345,
+    "local_p": 0.605
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "1",
+    "stat": -0.9785317855,
+    "n": 237,
+    "local_p": 0.945
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "2",
+    "stat": -0.39954375,
+    "n": 325,
+    "local_p": 0.58
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "3",
+    "stat": -0.0381246511,
+    "n": 192,
+    "local_p": 0.27
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.3443112033,
+    "n": 1099,
+    "local_p": 0.84
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.2155983742,
+    "n": 345,
+    "local_p": 0.48
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "1",
+    "stat": -0.2048325266,
+    "n": 237,
+    "local_p": 0.465
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "2",
+    "stat": -0.3716473697,
+    "n": 325,
+    "local_p": 0.82
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "3",
+    "stat": -0.6789958705,
+    "n": 192,
+    "local_p": 0.965
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "all",
+    "stat": 0.007866682,
+    "n": 1099,
+    "local_p": 0.185
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "0",
+    "stat": -0.1166174724,
+    "n": 345,
+    "local_p": 0.51
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "1",
+    "stat": -0.1615460323,
+    "n": 237,
+    "local_p": 0.57
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "2",
+    "stat": 0.0439191978,
+    "n": 325,
+    "local_p": 0.165
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "3",
+    "stat": 0.3528721437,
+    "n": 192,
+    "local_p": 0.02
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": 1,
+    "regime": "all",
+    "stat": -1.3268802299,
+    "n": 528,
+    "local_p": 0.335
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": 1,
+    "regime": "0",
+    "stat": -2.854721731,
+    "n": 163,
+    "local_p": 0.8
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": 1,
+    "regime": "1",
+    "stat": 1.391471329,
+    "n": 116,
+    "local_p": 0.025
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": 1,
+    "regime": "2",
+    "stat": -1.014627148,
+    "n": 156,
+    "local_p": 0.275
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": 1,
+    "regime": "3",
+    "stat": -2.2716824134,
+    "n": 93,
+    "local_p": 0.505
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": -1,
+    "regime": "all",
+    "stat": -1.8088874077,
+    "n": 528,
+    "local_p": 0.685
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": -1,
+    "regime": "0",
+    "stat": -0.5368033555,
+    "n": 163,
+    "local_p": 0.21
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": -1,
+    "regime": "1",
+    "stat": -4.9345820503,
+    "n": 116,
+    "local_p": 0.98
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": -1,
+    "regime": "2",
+    "stat": -2.0276386727,
+    "n": 156,
+    "local_p": 0.63
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": -1,
+    "regime": "3",
+    "stat": -0.3775019545,
+    "n": 93,
+    "local_p": 0.24
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.9210272332,
+    "n": 528,
+    "local_p": 0.57
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": 1,
+    "regime": "0",
+    "stat": -1.5311797918,
+    "n": 163,
+    "local_p": 0.805
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": 1,
+    "regime": "1",
+    "stat": 0.9032576491,
+    "n": 116,
+    "local_p": 0.04
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": 1,
+    "regime": "2",
+    "stat": -1.8098613029,
+    "n": 156,
+    "local_p": 0.885
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": 1,
+    "regime": "3",
+    "stat": -0.6013327198,
+    "n": 93,
+    "local_p": 0.365
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": -1,
+    "regime": "all",
+    "stat": -0.7277620962,
+    "n": 528,
+    "local_p": 0.505
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": -1,
+    "regime": "0",
+    "stat": -0.1599754501,
+    "n": 163,
+    "local_p": 0.235
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": -1,
+    "regime": "1",
+    "stat": -2.6448196078,
+    "n": 116,
+    "local_p": 0.96
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": -1,
+    "regime": "2",
+    "stat": 0.1485067607,
+    "n": 156,
+    "local_p": 0.12
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": -1,
+    "regime": "3",
+    "stat": -0.8866922826,
+    "n": 93,
+    "local_p": 0.51
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.3791901724,
+    "n": 528,
+    "local_p": 0.555
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": 1,
+    "regime": "0",
+    "stat": -1.2391676288,
+    "n": 163,
+    "local_p": 0.94
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": 1,
+    "regime": "1",
+    "stat": 0.4837681834,
+    "n": 116,
+    "local_p": 0.045
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": 1,
+    "regime": "2",
+    "stat": -0.4974356407,
+    "n": 156,
+    "local_p": 0.675
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": 1,
+    "regime": "3",
+    "stat": 0.066048185,
+    "n": 93,
+    "local_p": 0.195
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": -1,
+    "regime": "all",
+    "stat": -0.2989022641,
+    "n": 528,
+    "local_p": 0.51
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": -1,
+    "regime": "0",
+    "stat": 0.5325471595,
+    "n": 163,
+    "local_p": 0.07
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": -1,
+    "regime": "1",
+    "stat": -1.1505087983,
+    "n": 116,
+    "local_p": 0.955
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": -1,
+    "regime": "2",
+    "stat": -0.2473898844,
+    "n": 156,
+    "local_p": 0.42
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": -1,
+    "regime": "3",
+    "stat": -0.6451798111,
+    "n": 93,
+    "local_p": 0.725
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.3223260512,
+    "n": 528,
+    "local_p": 0.795
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.4836701557,
+    "n": 163,
+    "local_p": 0.795
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": 1,
+    "regime": "1",
+    "stat": -0.0014272215,
+    "n": 116,
+    "local_p": 0.275
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": 1,
+    "regime": "2",
+    "stat": -0.5465115429,
+    "n": 156,
+    "local_p": 0.92
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": 1,
+    "regime": "3",
+    "stat": -0.0463448505,
+    "n": 93,
+    "local_p": 0.31
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": -1,
+    "regime": "all",
+    "stat": -0.0161946323,
+    "n": 528,
+    "local_p": 0.23
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": -1,
+    "regime": "0",
+    "stat": 0.1492742998,
+    "n": 163,
+    "local_p": 0.19
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": -1,
+    "regime": "1",
+    "stat": -0.3626843053,
+    "n": 116,
+    "local_p": 0.795
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": -1,
+    "regime": "2",
+    "stat": 0.2095205496,
+    "n": 156,
+    "local_p": 0.065
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": -1,
+    "regime": "3",
+    "stat": -0.2721748173,
+    "n": 93,
+    "local_p": 0.625
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.6396811842,
+    "n": 272,
+    "local_p": 0.17
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "0",
+    "stat": -2.214287695,
+    "n": 75,
+    "local_p": 0.56
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "1",
+    "stat": 0.9079506845,
+    "n": 72,
+    "local_p": 0.1
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "2",
+    "stat": -0.8391698017,
+    "n": 81,
+    "local_p": 0.36
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "3",
+    "stat": -0.3641606105,
+    "n": 44,
+    "local_p": 0.235
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "all",
+    "stat": -2.3947437751,
+    "n": 272,
+    "local_p": 0.775
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "0",
+    "stat": -1.1122347042,
+    "n": 75,
+    "local_p": 0.415
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "1",
+    "stat": -4.0473129157,
+    "n": 72,
+    "local_p": 0.89
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "2",
+    "stat": -2.3021172716,
+    "n": 81,
+    "local_p": 0.64
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "3",
+    "stat": -2.0631048996,
+    "n": 44,
+    "local_p": 0.585
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.647898758,
+    "n": 272,
+    "local_p": 0.385
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "0",
+    "stat": -1.6887208405,
+    "n": 75,
+    "local_p": 0.745
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "1",
+    "stat": 0.5366406452,
+    "n": 72,
+    "local_p": 0.115
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "2",
+    "stat": -1.9468290604,
+    "n": 81,
+    "local_p": 0.885
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "3",
+    "stat": 1.3743002657,
+    "n": 44,
+    "local_p": 0.065
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "all",
+    "stat": -0.8942098834,
+    "n": 272,
+    "local_p": 0.59
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "0",
+    "stat": 0.1812979707,
+    "n": 75,
+    "local_p": 0.18
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "1",
+    "stat": -2.1521842516,
+    "n": 72,
+    "local_p": 0.87
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "2",
+    "stat": 0.3277917529,
+    "n": 81,
+    "local_p": 0.1
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "3",
+    "stat": -2.7732242708,
+    "n": 44,
+    "local_p": 0.91
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.5834963009,
+    "n": 272,
+    "local_p": 0.745
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "0",
+    "stat": -2.1885769491,
+    "n": 75,
+    "local_p": 1.0
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "1",
+    "stat": 0.3490731637,
+    "n": 72,
+    "local_p": 0.14
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "2",
+    "stat": -0.8636181431,
+    "n": 81,
+    "local_p": 0.82
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "3",
+    "stat": 0.5938516828,
+    "n": 44,
+    "local_p": 0.07
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "all",
+    "stat": -0.0626964181,
+    "n": 272,
+    "local_p": 0.255
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "0",
+    "stat": 1.5081155092,
+    "n": 75,
+    "local_p": 0.0
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "1",
+    "stat": -0.9525473463,
+    "n": 72,
+    "local_p": 0.855
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "2",
+    "stat": 0.1108228334,
+    "n": 81,
+    "local_p": 0.2
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "3",
+    "stat": -1.1510916074,
+    "n": 44,
+    "local_p": 0.865
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.7274166073,
+    "n": 272,
+    "local_p": 0.995
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "0",
+    "stat": -1.1315133167,
+    "n": 75,
+    "local_p": 0.98
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "1",
+    "stat": -0.2334514033,
+    "n": 72,
+    "local_p": 0.52
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "2",
+    "stat": -1.242890521,
+    "n": 81,
+    "local_p": 1.0
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "3",
+    "stat": 0.1052916396,
+    "n": 44,
+    "local_p": 0.26
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "all",
+    "stat": 0.3941180987,
+    "n": 272,
+    "local_p": 0.01
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "0",
+    "stat": 0.80019337,
+    "n": 75,
+    "local_p": 0.02
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "1",
+    "stat": -0.1219241742,
+    "n": 72,
+    "local_p": 0.495
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "2",
+    "stat": 0.91280651,
+    "n": 81,
+    "local_p": 0.0
+   },
+   {
+    "driver": "d_rrp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "3",
+    "stat": -0.4183849239,
+    "n": 44,
+    "local_p": 0.71
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "all",
+    "stat": -1.3212158565,
+    "n": 1984,
+    "local_p": 0.22
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.80843399,
+    "n": 553,
+    "local_p": 0.07
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "1",
+    "stat": -1.7063237309,
+    "n": 540,
+    "local_p": 0.595
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "2",
+    "stat": -1.8158542404,
+    "n": 521,
+    "local_p": 0.61
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "3",
+    "stat": -1.1947946735,
+    "n": 370,
+    "local_p": 0.255
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "all",
+    "stat": -1.7023935229,
+    "n": 1984,
+    "local_p": 0.73
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "0",
+    "stat": -2.410207131,
+    "n": 553,
+    "local_p": 0.87
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "1",
+    "stat": -1.969937399,
+    "n": 540,
+    "local_p": 0.735
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "2",
+    "stat": -1.6894971208,
+    "n": 521,
+    "local_p": 0.61
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "3",
+    "stat": -0.9355415363,
+    "n": 370,
+    "local_p": 0.15
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.5198891568,
+    "n": 1984,
+    "local_p": 0.16
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.585800096,
+    "n": 553,
+    "local_p": 0.285
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "1",
+    "stat": -1.0582096998,
+    "n": 540,
+    "local_p": 0.665
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "2",
+    "stat": -0.7614490331,
+    "n": 521,
+    "local_p": 0.465
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "3",
+    "stat": 0.2063943072,
+    "n": 370,
+    "local_p": 0.09
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "all",
+    "stat": -1.0013889989,
+    "n": 1984,
+    "local_p": 0.81
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "0",
+    "stat": -1.0498354828,
+    "n": 553,
+    "local_p": 0.645
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "1",
+    "stat": -0.6945396103,
+    "n": 540,
+    "local_p": 0.475
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "2",
+    "stat": -1.0114373661,
+    "n": 521,
+    "local_p": 0.695
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "3",
+    "stat": -1.3001025831,
+    "n": 370,
+    "local_p": 0.72
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.2403522851,
+    "n": 1981,
+    "local_p": 0.36
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.9387993295,
+    "n": 553,
+    "local_p": 0.855
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "1",
+    "stat": -0.9203429373,
+    "n": 540,
+    "local_p": 0.86
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "2",
+    "stat": 0.0672562794,
+    "n": 521,
+    "local_p": 0.2
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "3",
+    "stat": 0.9143082017,
+    "n": 367,
+    "local_p": 0.03
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "all",
+    "stat": -0.4025610369,
+    "n": 1981,
+    "local_p": 0.655
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "0",
+    "stat": 0.25060321,
+    "n": 553,
+    "local_p": 0.17
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "1",
+    "stat": 0.2130936409,
+    "n": 540,
+    "local_p": 0.17
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "2",
+    "stat": -0.7727874911,
+    "n": 521,
+    "local_p": 0.82
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "3",
+    "stat": -1.4175235569,
+    "n": 367,
+    "local_p": 0.94
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.3779097323,
+    "n": 1976,
+    "local_p": 0.77
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "0",
+    "stat": -1.2488132303,
+    "n": 553,
+    "local_p": 0.995
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "1",
+    "stat": -0.7897997937,
+    "n": 540,
+    "local_p": 0.935
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "2",
+    "stat": 0.4019057221,
+    "n": 521,
+    "local_p": 0.115
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "3",
+    "stat": 0.2080849712,
+    "n": 362,
+    "local_p": 0.305
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "all",
+    "stat": 0.0373062737,
+    "n": 1976,
+    "local_p": 0.245
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "0",
+    "stat": 0.889310342,
+    "n": 553,
+    "local_p": 0.01
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "1",
+    "stat": 0.4100442596,
+    "n": 540,
+    "local_p": 0.075
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "2",
+    "stat": -0.7640625559,
+    "n": 521,
+    "local_p": 0.92
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 0.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "3",
+    "stat": -0.4835792593,
+    "n": 362,
+    "local_p": 0.67
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": 1,
+    "regime": "all",
+    "stat": -1.1244927857,
+    "n": 1044,
+    "local_p": 0.13
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.4502717846,
+    "n": 304,
+    "local_p": 0.065
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": 1,
+    "regime": "1",
+    "stat": -1.7948870427,
+    "n": 290,
+    "local_p": 0.625
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": 1,
+    "regime": "2",
+    "stat": -1.1363636557,
+    "n": 241,
+    "local_p": 0.295
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": 1,
+    "regime": "3",
+    "stat": -1.2436449543,
+    "n": 209,
+    "local_p": 0.3
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": -1,
+    "regime": "all",
+    "stat": -1.8751322807,
+    "n": 1044,
+    "local_p": 0.785
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": -1,
+    "regime": "0",
+    "stat": -2.7530239902,
+    "n": 304,
+    "local_p": 0.895
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": -1,
+    "regime": "1",
+    "stat": -1.6299387043,
+    "n": 290,
+    "local_p": 0.49
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": -1,
+    "regime": "2",
+    "stat": -2.1194045259,
+    "n": 241,
+    "local_p": 0.71
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 1,
+    "dir": -1,
+    "regime": "3",
+    "stat": -1.0659379097,
+    "n": 209,
+    "local_p": 0.275
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.3933961266,
+    "n": 1044,
+    "local_p": 0.165
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.390728315,
+    "n": 304,
+    "local_p": 0.275
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": 1,
+    "regime": "1",
+    "stat": -1.1457264466,
+    "n": 290,
+    "local_p": 0.71
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": 1,
+    "regime": "2",
+    "stat": -0.0720096406,
+    "n": 241,
+    "local_p": 0.195
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": 1,
+    "regime": "3",
+    "stat": 0.1084185311,
+    "n": 209,
+    "local_p": 0.17
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": -1,
+    "regime": "all",
+    "stat": -1.0763924537,
+    "n": 1044,
+    "local_p": 0.77
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": -1,
+    "regime": "0",
+    "stat": -1.1695632369,
+    "n": 304,
+    "local_p": 0.67
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": -1,
+    "regime": "1",
+    "stat": -0.40809493,
+    "n": 290,
+    "local_p": 0.295
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": -1,
+    "regime": "2",
+    "stat": -1.7344433729,
+    "n": 241,
+    "local_p": 0.855
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 2,
+    "dir": -1,
+    "regime": "3",
+    "stat": -1.233663956,
+    "n": 209,
+    "local_p": 0.7
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": 1,
+    "regime": "all",
+    "stat": 0.0033377694,
+    "n": 1044,
+    "local_p": 0.2
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.5929539851,
+    "n": 304,
+    "local_p": 0.6
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": 1,
+    "regime": "1",
+    "stat": -0.8553889597,
+    "n": 290,
+    "local_p": 0.785
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": 1,
+    "regime": "2",
+    "stat": 0.9507277631,
+    "n": 241,
+    "local_p": 0.045
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": 1,
+    "regime": "3",
+    "stat": 0.8243528147,
+    "n": 209,
+    "local_p": 0.1
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": -1,
+    "regime": "all",
+    "stat": -0.6062210721,
+    "n": 1044,
+    "local_p": 0.76
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": -1,
+    "regime": "0",
+    "stat": -0.0814222855,
+    "n": 304,
+    "local_p": 0.435
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": -1,
+    "regime": "1",
+    "stat": 0.242878682,
+    "n": 290,
+    "local_p": 0.2
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": -1,
+    "regime": "2",
+    "stat": -1.6976533688,
+    "n": 241,
+    "local_p": 0.98
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 5,
+    "dir": -1,
+    "regime": "3",
+    "stat": -1.2883559873,
+    "n": 209,
+    "local_p": 0.84
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.2505082109,
+    "n": 1041,
+    "local_p": 0.555
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": 1,
+    "regime": "0",
+    "stat": -1.0829959026,
+    "n": 304,
+    "local_p": 0.92
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": 1,
+    "regime": "1",
+    "stat": -0.5431100276,
+    "n": 290,
+    "local_p": 0.765
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": 1,
+    "regime": "2",
+    "stat": 0.4905069056,
+    "n": 241,
+    "local_p": 0.095
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": 1,
+    "regime": "3",
+    "stat": 0.3833084803,
+    "n": 206,
+    "local_p": 0.24
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": -1,
+    "regime": "all",
+    "stat": -0.0801327087,
+    "n": 1041,
+    "local_p": 0.46
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": -1,
+    "regime": "0",
+    "stat": 0.735002503,
+    "n": 304,
+    "local_p": 0.09
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": -1,
+    "regime": "1",
+    "stat": 0.1931278097,
+    "n": 290,
+    "local_p": 0.245
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": -1,
+    "regime": "2",
+    "stat": -0.8633029006,
+    "n": 241,
+    "local_p": 0.94
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.0,
+    "h": 10,
+    "dir": -1,
+    "regime": "3",
+    "stat": -0.6553009906,
+    "n": 206,
+    "local_p": 0.725
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "all",
+    "stat": -0.5106404709,
+    "n": 528,
+    "local_p": 0.085
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.9228903089,
+    "n": 135,
+    "local_p": 0.255
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "1",
+    "stat": -0.8153471529,
+    "n": 155,
+    "local_p": 0.305
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "2",
+    "stat": 0.2672362003,
+    "n": 132,
+    "local_p": 0.05
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": 1,
+    "regime": "3",
+    "stat": -0.5906613705,
+    "n": 106,
+    "local_p": 0.18
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "all",
+    "stat": -2.275898594,
+    "n": 528,
+    "local_p": 0.845
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "0",
+    "stat": -2.2083897283,
+    "n": 135,
+    "local_p": 0.67
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "1",
+    "stat": -2.3037502337,
+    "n": 155,
+    "local_p": 0.67
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "2",
+    "stat": -3.1209962128,
+    "n": 132,
+    "local_p": 0.895
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 1,
+    "dir": -1,
+    "regime": "3",
+    "stat": -1.5824209472,
+    "n": 106,
+    "local_p": 0.455
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "all",
+    "stat": 0.1715612442,
+    "n": 528,
+    "local_p": 0.055
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.4445053158,
+    "n": 135,
+    "local_p": 0.32
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "1",
+    "stat": -0.3964455859,
+    "n": 155,
+    "local_p": 0.385
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "2",
+    "stat": 1.2565050985,
+    "n": 132,
+    "local_p": 0.03
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": 1,
+    "regime": "3",
+    "stat": 0.5579813147,
+    "n": 106,
+    "local_p": 0.115
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "all",
+    "stat": -1.5898147481,
+    "n": 528,
+    "local_p": 0.91
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "0",
+    "stat": -1.0665672709,
+    "n": 135,
+    "local_p": 0.615
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "1",
+    "stat": -0.9578606681,
+    "n": 155,
+    "local_p": 0.505
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "2",
+    "stat": -2.9056607745,
+    "n": 132,
+    "local_p": 0.975
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 2,
+    "dir": -1,
+    "regime": "3",
+    "stat": -1.7804131864,
+    "n": 106,
+    "local_p": 0.78
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "all",
+    "stat": 0.8321302043,
+    "n": 528,
+    "local_p": 0.02
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.056570182,
+    "n": 135,
+    "local_p": 0.35
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "1",
+    "stat": 0.439672475,
+    "n": 155,
+    "local_p": 0.255
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "2",
+    "stat": 2.4782903844,
+    "n": 132,
+    "local_p": 0.005
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": 1,
+    "regime": "3",
+    "stat": 0.7258089291,
+    "n": 106,
+    "local_p": 0.175
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "all",
+    "stat": -1.4213971937,
+    "n": 528,
+    "local_p": 0.98
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "0",
+    "stat": -0.6907697825,
+    "n": 135,
+    "local_p": 0.685
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "1",
+    "stat": -1.0224825977,
+    "n": 155,
+    "local_p": 0.73
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "2",
+    "stat": -3.1830941743,
+    "n": 132,
+    "local_p": 0.995
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 5,
+    "dir": -1,
+    "regime": "3",
+    "stat": -1.16607175,
+    "n": 106,
+    "local_p": 0.81
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "all",
+    "stat": 0.7260689254,
+    "n": 528,
+    "local_p": 0.01
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "0",
+    "stat": -0.0753623518,
+    "n": 135,
+    "local_p": 0.35
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "1",
+    "stat": 0.4763956839,
+    "n": 155,
+    "local_p": 0.28
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "2",
+    "stat": 1.5835298211,
+    "n": 132,
+    "local_p": 0.01
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": 1,
+    "regime": "3",
+    "stat": 1.0093183154,
+    "n": 106,
+    "local_p": 0.105
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "all",
+    "stat": -1.053842325,
+    "n": 528,
+    "local_p": 0.985
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "0",
+    "stat": -0.2944755368,
+    "n": 135,
+    "local_p": 0.665
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "1",
+    "stat": -0.8018970605,
+    "n": 155,
+    "local_p": 0.72
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "2",
+    "stat": -1.9435184419,
+    "n": 132,
+    "local_p": 0.99
+   },
+   {
+    "driver": "d_nl_interp",
+    "bar": 1.5,
+    "h": 10,
+    "dir": -1,
+    "regime": "3",
+    "stat": -1.2839197905,
+    "n": 106,
+    "local_p": 0.875
+   }
+  ],
+  "meta": {
+   "tag": "sweep",
+   "rows": "bar",
+   "cols": "h"
+  }
+ }
+]

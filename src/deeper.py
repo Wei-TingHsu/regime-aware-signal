@@ -1,4 +1,4 @@
-"""deeper.py -- the deeper tests of 5 Nov (docs/prereg_deeper_signals.md): seven candidate patterns taken from "measured" to
+"""deeper.py (v2, 5 Nov evening: forward windows start the session AFTER the event) -- the deeper tests of 5 Nov (docs/prereg_deeper_signals.md): seven candidate patterns taken from "measured" to
 "could this be a weak trading signal", all through one recipe and one engine (src.sweep).
 
 The recipe, stated once: (1) the entry condition becomes a grid; (2) confirmation filters are axes too; (3) every cell is scored on
@@ -72,7 +72,9 @@ def path_stats(f: np.ndarray, h: int, cost: float = COST, sign: int = 1) -> dict
 
 
 def fwd(cum: np.ndarray, starts: np.ndarray, h: int) -> np.ndarray:
-    starts = starts[starts + h < len(cum)]; return cum[starts + h] - cum[starts]
+    """Return over the h sessions AFTER the event session (entry at the event's close, so the event day itself is excluded).
+    cum has a leading zero: cum[k] = sum of the first k returns. v2 (5 Nov evening): the first version included the event day."""
+    starts = np.asarray(starts, int) + 1; starts = starts[starts + h < len(cum)]; return cum[starts + h] - cum[starts]
 
 
 def _md_table(rows: list[dict], cols: list[str], fmt: dict) -> list[str]:
@@ -273,11 +275,12 @@ def cmd_oil():
 
 # ================================================================================================ D6 COT positioning
 def cmd_cot():
-    files = sorted(glob.glob(str(PROC / "*cot*")) + glob.glob(str(PROC / "*positioning*")))
+    files = sorted(glob.glob(str(PROC / "flows_levels.parquet")) + glob.glob(str(PROC / "flows.parquet")) + glob.glob(str(PROC / "*cot*")) + glob.glob(str(PROC / "*positioning*")))
     if not files: print("D6: no COT file under processed/ (looked for *cot*, *positioning*) -- skipped"); return
     p = Path(files[0]); cot = pd.read_parquet(p) if p.suffix == ".parquet" else pd.read_csv(p, index_col=0, parse_dates=True); cot.index = pd.to_datetime(cot.index)
     r = returns(); assets = {"GLD": [c for c in cot.columns if "gold" in c.lower()], "SLV": [c for c in cot.columns if "silver" in c.lower()], "USO": [c for c in cot.columns if "oil" in c.lower() or "wti" in c.lower()]}
     assets = {a: cs[0] for a, cs in assets.items() if cs and a in r.columns}
+    print(f"D6: columns in {p.name}: {list(cot.columns)[:12]}")
     if not assets: print(f"D6: no gold/silver/oil column recognised in {p.name}: {list(cot.columns)[:8]} -- skipped"); return
     print(f"D6: using {p.name}, columns {assets}")
     def stat(dd, c):
@@ -325,7 +328,8 @@ def cmd_calls(csv: str):
 
 
 # ================================================================================================ forward log
-REGISTERED = [dict(name="D1-5nov", rule="long GLD 15 sessions after SPY's 20-session return first crosses −6% (one entry per 40 sessions)", thr=-0.06, look=20, h=15, cool=40)]
+REGISTERED = [dict(name="D1-5nov", rule="long GLD 15 sessions after SPY's 20-session return first crosses −6% (one entry per 40 sessions)", thr=-0.06, look=20, h=15, cool=40),
+              dict(name="D1-5nov-b", rule="long GLD 5 sessions, entered 3 sessions after SPY's 20-session return first crosses −6% (the D1 grid's best cell)", thr=-0.06, look=20, h=5, cool=40, delay=3)]
 
 
 def cmd_forward():
@@ -337,11 +341,12 @@ def cmd_forward():
         if len(dd) < 2 or not (dd.iloc[-1] <= R["thr"] and dd.iloc[-2] > R["thr"]): continue
         recent = log[(log["name"] == R["name"]) & (log["entry"] > today - pd.Timedelta(days=R["cool"] * 1.5))]
         if len(recent): continue
-        rows.append(dict(name=R["name"], entry=today, exit_due=today + pd.tseries.offsets.BDay(R["h"]), h=R["h"], status="pending", ret=np.nan, logged_at=datetime.now().strftime("%Y-%m-%d %H:%M")))
+        entry = today + pd.tseries.offsets.BDay(R.get("delay", 0))
+        rows.append(dict(name=R["name"], entry=entry, exit_due=entry + pd.tseries.offsets.BDay(R["h"]), h=R["h"], status="pending", ret=np.nan, logged_at=datetime.now().strftime("%Y-%m-%d %H:%M")))
     if rows: log = pd.concat([log, pd.DataFrame(rows)], ignore_index=True); print(f"forward: {len(rows)} new entr{'y' if len(rows) == 1 else 'ies'} logged for {today.date()}")
     for i, row in log[log["status"] == "pending"].iterrows():
-        pos = gld.index.searchsorted(row["entry"])
-        if pos + row["h"] < len(gld):
+        pos = gld.index.searchsorted(pd.Timestamp(row["entry"]))
+        if pos + int(row["h"]) < len(gld):
             log.loc[i, "ret"] = float(gld.iloc[pos + 1:pos + 1 + int(row["h"])].sum()); log.loc[i, "status"] = "matured"
     log.to_csv(p, index=False)
     m = log[log.status == "matured"]
