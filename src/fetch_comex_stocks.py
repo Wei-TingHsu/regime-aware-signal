@@ -28,8 +28,26 @@ URLS = {"silver": "https://www.cmegroup.com/delivery_reports/Silver_stocks.xls",
         "gold": "https://www.cmegroup.com/delivery_reports/Gold_Stocks.xls"}
 RAW = Path("data_provenance/comex_stocks/raw")
 OUT = Path("processed")
-UA = {"User-Agent": "Mozilla/5.0 (regime-aware-signal research; depository report collector)"}
+UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15",
+      "Accept": "application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,*/*;q=0.8",
+      "Accept-Language": "en-US,en;q=0.9", "Referer": "https://www.cmegroup.com/", "Connection": "keep-alive"}
+# v2 (28 Oct): the first probe got HTTP 403 with a JSON body from a plain Python client. v2 sends a browser's header set and, on a
+# 403, retries once through the system curl (a different TLS fingerprint); the probe prints the denial body so the reason is on record.
 COLS = ["registered", "eligible", "total", "received", "withdrawn", "adjustment"]
+
+
+def _curl(url: str) -> tuple[int, str, bytes]:
+    import subprocess, tempfile
+    with tempfile.NamedTemporaryFile(delete=False) as tmp:
+        hdr = sum([["-H", f"{k}: {v}"] for k, v in UA.items() if k != "User-Agent"], [])
+        r = subprocess.run(["curl", "-sS", "-L", "--max-time", "60", "-A", UA["User-Agent"], *hdr, "-o", tmp.name, "-w", "%{http_code} %{content_type}", url],
+                           capture_output=True, text=True)
+        code, _, ctype = (r.stdout.strip() + " ").partition(" ")
+        body = Path(tmp.name).read_bytes(); Path(tmp.name).unlink(missing_ok=True)
+    try:
+        return int(code), ctype.strip(), body
+    except ValueError:
+        return 0, r.stderr.strip()[:120], b""
 
 
 def fetch(url: str) -> tuple[int, str, bytes]:
@@ -38,14 +56,28 @@ def fetch(url: str) -> tuple[int, str, bytes]:
         with urllib.request.urlopen(req, timeout=60) as r:
             return r.status, r.headers.get("Content-Type", ""), r.read()
     except urllib.error.HTTPError as e:
-        return e.code, e.headers.get("Content-Type", "") if e.headers else "", b""
+        body = b""
+        try:
+            body = e.read()
+        except Exception:
+            pass
+        if e.code in (403, 429):
+            code2, ctype2, body2 = _curl(url)
+            if code2 == 200 and len(body2) > 1000:
+                return code2, ctype2 + " (via curl)", body2
+            return e.code, (e.headers.get("Content-Type", "") if e.headers else "") + f"; curl said {code2}", body
+        return e.code, e.headers.get("Content-Type", "") if e.headers else "", body
+    except Exception as e:
+        return 0, f"{type(e).__name__}: {e}", b""
 
 
 def probe():
     for metal, url in URLS.items():
         code, ctype, body = fetch(url)
-        kind = "xls (BIFF)" if body[:4] == b"\xd0\xcf\x11\xe0" else "xlsx (zip)" if body[:2] == b"PK" else "html/text" if body[:1] in (b"<", b"\n", b" ") else "unknown"
+        kind = "xls (BIFF)" if body[:4] == b"\xd0\xcf\x11\xe0" else "xlsx (zip)" if body[:2] == b"PK" else "html/text/json" if body[:1] in (b"<", b"{", b"\n", b" ") else "unknown"
         print(f"{metal:6s} HTTP {code}  {len(body):>9,} bytes  type {ctype or '?'}  looks like {kind}  <- {url}")
+        if code != 200 and body:
+            print("        body: " + body[:300].decode("utf-8", "ignore").replace("\n", " "))
     print("A 200 with an xls/xlsx body means the URL is right; a 403/404 or html means the address or the host's rules differ -- fix URLS before scheduling.")
 
 
