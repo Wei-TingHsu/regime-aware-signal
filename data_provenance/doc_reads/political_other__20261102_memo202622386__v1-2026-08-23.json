@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.1,
+  "horizon_days": 30,
+  "specificity": 0.6,
+  "novelty": 0.2,
+  "confidence": 0.75,
+  "evidence": [
+    "I hereby delegate to the Secretary of the Treasury...the functions and authorities vested in the President by section 8335(a)",
+    "Once sanctionable foreign persons are identified by the Secretary of State, I delegate...the authority to implement such sanctions"
+  ],
+  "extra": {
+    "actor": "President (delegating to Secretary of State and Secretary of Treasury)",
+    "is_decided": true,
+    "sectors": [
+      "sanctions",
+      "foreign policy",
+      "national security"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-11-02",
+  "doc_id": "memo202622386",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 416,
+  "max_words": 20000
+}

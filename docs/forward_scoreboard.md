@@ -9,9 +9,9 @@ Signal = last completed US close; **entry = next US session**; exit = H trading 
 
 | model | matured trades | mean spread | hit-rate | NON-OVERLAP trades | NON-OVERLAP mean spread |
 |---|---|---|---|---|---|
-| model_1_baseline | 43 | +1.382% | 60% | 9 | +1.401% |
-| model_2_horizon_trend | 38 | -0.275% | 58% | 4 | +0.751% |
-| model_3_overfit | 28 | +6.149% | 75% | 2 | +1.038% |
+| model_1_baseline | 47 | +1.135% | 57% | 10 | +1.256% |
+| model_2_horizon_trend | 42 | -0.729% | 55% | 5 | +1.170% |
+| model_3_overfit | 32 | +3.669% | 66% | 2 | +1.038% |
 
 *Naive column counts overlapping daily entries (they share most of their days, so significance would be inflated). The NON-OVERLAP column samples every H-th trade and is the statistically honest one.*
 
@@ -19,38 +19,50 @@ Signal = last completed US close; **entry = next US session**; exit = H trading 
 
 | signal date | entry date | model | regime | longs | shorts | H | status | spread |
 |---|---|---|---|---|---|---|---|---|
+| 2026-11-02 | 2026-11-03 | model_1_baseline | 3 | PLTR, ARM, MU, FLY, HACK | SLV, IAU, GLD, SPCX, USO | 5 | pending | pending |
+| 2026-11-02 | 2026-11-03 | model_2_horizon_trend | 3 | SNDK, PLTR, INTC, MU, NVDA | XLP, AMLP, TLT, JETS, FLY | 10 | pending | pending |
+| 2026-11-02 | 2026-11-03 | model_3_overfit | 3 | SNDK, MU, INTC, PLTR, USO | WCLD, TLT, XLP, JETS, FLY | 20 | pending | pending |
+| 2026-10-30 | 2026-11-02 | model_1_baseline | 3 | PLTR, MSFT, LMT, HACK, WCLD | SLV, TSLA, DRAM, REMX, SNDK | 5 | pending | pending |
+| 2026-10-30 | 2026-11-02 | model_2_horizon_trend | 3 | SNDK, PLTR, DRAM, TSLA, SLV | ARM, MLPA, AMLP, XLE, FLY | 10 | pending | pending |
+| 2026-10-30 | 2026-11-02 | model_3_overfit | 3 | SNDK, INTC, MU, DRAM, NVDA | WCLD, LMT, XLE, URNM, FLY | 20 | pending | pending |
+| 2026-10-29 | 2026-10-30 | model_1_baseline | 3 | PLTR, MSFT, LMT, HACK, WCLD | URNM, TSLA, REMX, DRAM, SNDK | 5 | pending | pending |
+| 2026-10-29 | 2026-10-30 | model_2_horizon_trend | 3 | SNDK, PLTR, MU, ORCL, TSM | SPCX, JETS, REMX, UUP, FLY | 10 | pending | pending |
+| 2026-10-29 | 2026-10-30 | model_3_overfit | 3 | SNDK, MU, PLTR, INTC, SLV | MLPA, JETS, UUP, XLP, FLY | 20 | pending | pending |
+| 2026-10-28 | 2026-10-29 | model_1_baseline | 3 | PLTR, MSFT, LMT, HACK, WCLD | TSLA, SPCX, REMX, DRAM, SNDK | 5 | pending | pending |
+| 2026-10-28 | 2026-10-29 | model_2_horizon_trend | 3 | SNDK, PLTR, MU, INTC, NVDA | UUP, XLP, MLPA, AMLP, FLY | 10 | pending | pending |
+| 2026-10-28 | 2026-10-29 | model_3_overfit | 3 | SNDK, MU, INTC, REMX, PLTR | TLT, AMLP, MLPA, XLP, FLY | 20 | pending | pending |
 | 2026-10-27 | 2026-10-28 | model_1_baseline | 3 | PLTR, MSFT, WCLD, LMT, HACK | FLY, USO, REMX, SNDK, DRAM | 5 | pending | pending |
 | 2026-10-27 | 2026-10-28 | model_2_horizon_trend | 3 | SNDK, PLTR, MU, INTC, NVDA | XLV, XLP, TLT, JETS, FLY | 10 | pending | pending |
 | 2026-10-27 | 2026-10-28 | model_3_overfit | 3 | SNDK, MU, PLTR, USO, INTC | XLP, ARM, ORCL, JETS, FLY | 20 | pending | pending |
 | 2026-10-26 | 2026-10-27 | model_1_baseline | 3 | PLTR, ARM, MU, WCLD, SKYY | GLD, REMX, SPCX, FLY, USO | 5 | pending | pending |
 | 2026-10-26 | 2026-10-27 | model_2_horizon_trend | 3 | SNDK, PLTR, MU, INTC, NVDA | UUP, XLP, TLT, JETS, FLY | 10 | pending | pending |
 | 2026-10-26 | 2026-10-27 | model_3_overfit | 3 | SNDK, PLTR, MU, USO, REMX | TLT, ORCL, JETS, ARM, FLY | 20 | pending | pending |
-| 2026-10-23 | 2026-10-26 | model_1_baseline | 3 | PLTR, ARM, MU, WCLD, MSFT | SPCX, DRAM, REMX, FLY, USO | 5 | pending | pending |
+| 2026-10-23 | 2026-10-26 | model_1_baseline | 3 | PLTR, ARM, MU, WCLD, MSFT | SPCX, DRAM, REMX, FLY, USO | 5 | matured | -2.214% |
 | 2026-10-23 | 2026-10-26 | model_2_horizon_trend | 3 | SNDK, INTC, MU, PLTR, NVDA | XLP, UUP, TLT, JETS, FLY | 10 | pending | pending |
 | 2026-10-23 | 2026-10-26 | model_3_overfit | 3 | SNDK, PLTR, MU, USO, INTC | TSLA, ORCL, JETS, ARM, FLY | 20 | pending | pending |
-| 2026-10-22 | 2026-10-23 | model_1_baseline | 3 | PLTR, MSFT, LMT, SPCX, WCLD | FLY, ARM, REMX, DRAM, SNDK | 5 | pending | pending |
+| 2026-10-22 | 2026-10-23 | model_1_baseline | 3 | PLTR, MSFT, LMT, SPCX, WCLD | FLY, ARM, REMX, DRAM, SNDK | 5 | matured | -0.051% |
 | 2026-10-22 | 2026-10-23 | model_2_horizon_trend | 3 | SNDK, PLTR, USO, ASML, MU | URA, URNM, DRAM, SPCX, FLY | 10 | pending | pending |
 | 2026-10-22 | 2026-10-23 | model_3_overfit | 3 | SNDK, USO, PLTR, XLE, LMT | URNM, ORCL, DRAM, FLY, SPCX | 20 | pending | pending |
-| 2026-10-21 | 2026-10-22 | model_1_baseline | 3 | PLTR, MSFT, LMT, SPCX, ORCL | FLY, ARM, REMX, DRAM, SNDK | 5 | pending | pending |
+| 2026-10-21 | 2026-10-22 | model_1_baseline | 3 | PLTR, MSFT, LMT, SPCX, ORCL | FLY, ARM, REMX, DRAM, SNDK | 5 | matured | -4.106% |
 | 2026-10-21 | 2026-10-22 | model_2_horizon_trend | 3 | PLTR, SNDK, TSLA, USO, INTC | ORCL, URA, URNM, DRAM, FLY | 10 | pending | pending |
 | 2026-10-21 | 2026-10-22 | model_3_overfit | 3 | SNDK, USO, PLTR, TSLA, INTC | URA, URNM, ORCL, FLY, DRAM | 20 | pending | pending |
-| 2026-10-20 | 2026-10-21 | model_1_baseline | 3 | PLTR, MSFT, MU, NVDA, HACK | SPCX, SNDK, REMX, DRAM, USO | 5 | pending | pending |
+| 2026-10-20 | 2026-10-21 | model_1_baseline | 3 | PLTR, MSFT, MU, NVDA, HACK | SPCX, SNDK, REMX, DRAM, USO | 5 | matured | +0.290% |
 | 2026-10-20 | 2026-10-21 | model_2_horizon_trend | 3 | SNDK, PLTR, MU, USO, INTC | REMX, URA, JETS, URNM, FLY | 10 | pending | pending |
 | 2026-10-20 | 2026-10-21 | model_3_overfit | 3 | SNDK, USO, PLTR, MU, TSLA | URA, URNM, ORCL, DRAM, FLY | 20 | pending | pending |
 | 2026-10-19 | 2026-10-20 | model_1_baseline | 3 | PLTR, ARM, MU, NVDA, MSFT | SLV, REMX, SPCX, FLY, USO | 5 | matured | -1.661% |
 | 2026-10-19 | 2026-10-20 | model_2_horizon_trend | 3 | SNDK, PLTR, MU, INTC, NVDA | XLP, UUP, TLT, JETS, FLY | 10 | pending | pending |
 | 2026-10-19 | 2026-10-20 | model_3_overfit | 3 | SNDK, PLTR, MU, USO, REMX | TLT, ORCL, JETS, ARM, FLY | 20 | pending | pending |
 | 2026-10-16 | 2026-10-19 | model_1_baseline | 3 | PLTR, MSFT, SPCX, SKYY, HACK | FLY, ARM, REMX, DRAM, SNDK | 5 | matured | +4.580% |
-| 2026-10-16 | 2026-10-19 | model_2_horizon_trend | 3 | SNDK, PLTR, INTC, MU, TSLA | XLP, TLT, URNM, JETS, FLY | 10 | pending | pending |
+| 2026-10-16 | 2026-10-19 | model_2_horizon_trend | 3 | SNDK, PLTR, INTC, MU, TSLA | XLP, TLT, URNM, JETS, FLY | 10 | matured | -15.983% |
 | 2026-10-16 | 2026-10-19 | model_3_overfit | 3 | SNDK, INTC, PLTR, MU, USO | URA, JETS, URNM, ORCL, FLY | 20 | pending | pending |
 | 2026-10-15 | 2026-10-16 | model_1_baseline | 3 | PLTR, SPCX, MSFT, SKYY, ORCL | ARM, JETS, DRAM, REMX, SNDK | 5 | matured | +5.081% |
-| 2026-10-15 | 2026-10-16 | model_2_horizon_trend | 3 | SNDK, USO, PLTR, AMLP, MLPA | URA, REMX, URNM, SPCX, FLY | 10 | pending | pending |
+| 2026-10-15 | 2026-10-16 | model_2_horizon_trend | 3 | SNDK, USO, PLTR, AMLP, MLPA | URA, REMX, URNM, SPCX, FLY | 10 | matured | +2.848% |
 | 2026-10-15 | 2026-10-16 | model_3_overfit | 3 | SNDK, PLTR, INTC, USO, MU | URA, ORCL, URNM, SPCX, FLY | 20 | pending | pending |
 | 2026-10-14 | 2026-10-15 | model_1_baseline | 3 | PLTR, SPCX, NVDA, MSFT, HACK | DRAM, UFO, FLY, JETS, REMX | 5 | matured | +1.385% |
-| 2026-10-14 | 2026-10-15 | model_2_horizon_trend | 3 | SNDK, PLTR, USO, SLV, MAGS | URNM, DRAM, REMX, SPCX, FLY | 10 | pending | pending |
+| 2026-10-14 | 2026-10-15 | model_2_horizon_trend | 3 | SNDK, PLTR, USO, SLV, MAGS | URNM, DRAM, REMX, SPCX, FLY | 10 | matured | -4.309% |
 | 2026-10-14 | 2026-10-15 | model_3_overfit | 3 | SNDK, PLTR, NVDA, INTC, USO | REMX, URNM, DRAM, SPCX, FLY | 20 | pending | pending |
 | 2026-10-13 | 2026-10-14 | model_1_baseline | 3 | PLTR, SPCX, NVDA, TSM, MSFT | SLV, FLY, UFO, JETS, REMX | 5 | matured | -0.467% |
-| 2026-10-13 | 2026-10-14 | model_2_horizon_trend | 3 | SNDK, DRAM, PLTR, MU, SLV | JETS, REMX, TSLA, SPCX, FLY | 10 | pending | pending |
+| 2026-10-13 | 2026-10-14 | model_2_horizon_trend | 3 | SNDK, DRAM, PLTR, MU, SLV | JETS, REMX, TSLA, SPCX, FLY | 10 | matured | -2.732% |
 | 2026-10-13 | 2026-10-14 | model_3_overfit | 3 | SNDK, MU, PLTR, INTC, DRAM | URA, REMX, URNM, SPCX, FLY | 20 | pending | pending |
 | 2026-10-12 | 2026-10-13 | model_1_baseline | 3 | PLTR, SPCX, NVDA, TSM, MSFT | ITA, UFO, FLY, JETS, REMX | 5 | matured | -0.737% |
 | 2026-10-12 | 2026-10-13 | model_2_horizon_trend | 3 | SNDK, PLTR, MU, DRAM, SLV | XAR, TSLA, LMT, JETS, FLY | 10 | matured | -14.904% |
@@ -72,16 +84,16 @@ Signal = last completed US close; **entry = next US session**; exit = H trading 
 | 2026-10-05 | 2026-10-06 | model_3_overfit | 3 | DRAM, SNDK, MU, PLTR, NVDA | XLP, UFO, JETS, REMX, FLY | 20 | pending | pending |
 | 2026-10-02 | 2026-10-05 | model_1_baseline | 3 | PLTR, MSFT, SPCX, NVDA, TSM | ARM, TLT, UFO, JETS, REMX | 5 | matured | +5.206% |
 | 2026-10-02 | 2026-10-05 | model_2_horizon_trend | 3 | ARM, PLTR, MU, DRAM, NVDA | XLP, USO, SPCX, REMX, TSLA | 10 | matured | -11.333% |
-| 2026-10-02 | 2026-10-05 | model_3_overfit | 3 | SNDK, DRAM, SPCX, PLTR, MU | USO, JETS, UFO, REMX, FLY | 20 | pending | pending |
+| 2026-10-02 | 2026-10-05 | model_3_overfit | 3 | SNDK, DRAM, SPCX, PLTR, MU | USO, JETS, UFO, REMX, FLY | 20 | matured | -12.962% |
 | 2026-10-01 | 2026-10-02 | model_1_baseline | 3 | PLTR, FLY, MSFT, SPCX, MU | TLT, DRAM, SNDK, TSLA, REMX | 5 | matured | +2.468% |
 | 2026-10-01 | 2026-10-02 | model_2_horizon_trend | 3 | DRAM, PLTR, ARM, MU, NVDA | XLP, SLV, SPCX, USO, REMX | 10 | matured | -14.067% |
-| 2026-10-01 | 2026-10-02 | model_3_overfit | 3 | DRAM, SNDK, PLTR, MU, NVDA | LMT, UFO, REMX, USO, FLY | 20 | pending | pending |
+| 2026-10-01 | 2026-10-02 | model_3_overfit | 3 | DRAM, SNDK, PLTR, MU, NVDA | LMT, UFO, REMX, USO, FLY | 20 | matured | -16.020% |
 | 2026-09-30 | 2026-10-01 | model_1_baseline | 3 | PLTR, FLY, MSFT, MU, SPCX | XLP, TLT, TSLA, JETS, REMX | 5 | matured | -1.048% |
 | 2026-09-30 | 2026-10-01 | model_2_horizon_trend | 3 | DRAM, ARM, NVDA, PLTR, MU | XLE, LMT, USO, REMX, SPCX | 10 | matured | -11.629% |
-| 2026-09-30 | 2026-10-01 | model_3_overfit | 3 | DRAM, SNDK, PLTR, NVDA, MU | REMX, XLV, LMT, USO, FLY | 20 | pending | pending |
+| 2026-09-30 | 2026-10-01 | model_3_overfit | 3 | DRAM, SNDK, PLTR, NVDA, MU | REMX, XLV, LMT, USO, FLY | 20 | matured | -16.719% |
 | 2026-09-29 | 2026-09-30 | model_1_baseline | 3 | PLTR, SPCX, FLY, MSFT, ORCL | XLP, UFO, TLT, JETS, REMX | 5 | matured | +3.571% |
 | 2026-09-29 | 2026-09-30 | model_2_horizon_trend | 3 | DRAM, ARM, FLY, NVDA, SNDK | SLV, LMT, XLE, REMX, USO | 10 | matured | -16.429% |
-| 2026-09-29 | 2026-09-30 | model_3_overfit | 3 | SNDK, NVDA, PLTR, ARM, TSLA | XLE, REMX, LMT, USO, FLY | 20 | pending | pending |
+| 2026-09-29 | 2026-09-30 | model_3_overfit | 3 | SNDK, NVDA, PLTR, ARM, TSLA | XLE, REMX, LMT, USO, FLY | 20 | matured | -9.066% |
 | 2026-09-28 | 2026-09-29 | model_1_baseline | 3 | PLTR, SPCX, FLY, MSFT, SNDK | XLP, UUP, TLT, JETS, REMX | 5 | matured | +4.095% |
 | 2026-09-28 | 2026-09-29 | model_2_horizon_trend | 3 | DRAM, FLY, ARM, NVDA, PLTR | LMT, ASML, XLE, REMX, USO | 10 | matured | -6.425% |
 | 2026-09-28 | 2026-09-29 | model_3_overfit | 3 | SNDK, NVDA, PLTR, ARM, TSLA | XLE, REMX, LMT, FLY, USO | 20 | matured | -9.618% |

@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.25
+  },
+  "magnitude": 0.35,
+  "horizon_days": 90,
+  "specificity": 0.6,
+  "novelty": 0.4,
+  "confidence": 0.55,
+  "evidence": [
+    "domestic petroleum production, refining, and logistics capacity... are industrial resources... essential to the national defense",
+    "I waive the requirements of section 303(a)(1)-(a)(6) of the Act",
+    "making necessary purchases, commitments, and financial instruments to enable these projects"
+  ],
+  "extra": {
+    "actor": "President (DPA Title III determination)",
+    "is_decided": true,
+    "sectors": [
+      "oil & gas exploration/production",
+      "refining",
+      "pipelines/logistics",
+      "marine terminals"
+    ]
+  },
+  "source": "political",
+  "date": "2026-10-28",
+  "doc_id": "dete202622052",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 558,
+  "max_words": 20000
+}

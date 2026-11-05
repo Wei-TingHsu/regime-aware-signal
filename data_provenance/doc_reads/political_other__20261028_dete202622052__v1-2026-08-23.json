@@ -1,0 +1,38 @@
+{
+  "direction": {
+    "equity": 0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.3
+  },
+  "magnitude": 0.3,
+  "horizon_days": 60,
+  "specificity": 0.4,
+  "novelty": 0.3,
+  "confidence": 0.5,
+  "evidence": [
+    "domestic petroleum production, refining, and logistics capacity... are industrial resources... essential to the national defense",
+    "I waive the requirements of section 303(a)(1)-(a)(6) of the Act for the purpose of expanding such capability",
+    "making necessary purchases, commitments, and financial instruments to enable these projects"
+  ],
+  "extra": {
+    "actor": "President (DPA Title III authority, via Secretary of War)",
+    "is_decided": true,
+    "sectors": [
+      "energy",
+      "oil & gas",
+      "refining",
+      "pipelines",
+      "defense industrial base"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-10-28",
+  "doc_id": "dete202622052",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 558,
+  "max_words": 20000
+}

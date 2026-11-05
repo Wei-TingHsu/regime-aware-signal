@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.05,
+    "gold": 0.05,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.2,
+  "horizon_days": 30,
+  "specificity": 0.95,
+  "novelty": 0.2,
+  "confidence": 0.7,
+  "evidence": [
+    "certain products of Canada... shall no longer be subject to the additional ad valorem duty of 50 percent",
+    "certain products of Canada... shall be subject to the additional ad valorem duty of 50 percent",
+    "effective... on or after 12:01 a.m. eastern time on October 30, 2026"
+  ],
+  "extra": {
+    "actor": "President of the United States",
+    "is_decided": true,
+    "sectors": [
+      "autos",
+      "auto parts",
+      "trade/tariffs Canada"
+    ]
+  },
+  "source": "political",
+  "date": "2026-10-30",
+  "doc_id": "proc202622292",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1741,
+  "max_words": 20000
+}

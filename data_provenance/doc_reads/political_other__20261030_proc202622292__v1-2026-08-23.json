@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.15,
+    "duration": 0.05,
+    "gold": 0.1,
+    "dollar": 0.05,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 5,
+  "specificity": 0.85,
+  "novelty": 0.3,
+  "confidence": 0.6,
+  "evidence": [
+    "certain products of Canada... shall no longer be subject to the additional ad valorem duty of 50 percent",
+    "certain products of Canada... shall be subject to the additional ad valorem duty of 50 percent",
+    "effective with respect to goods entered for consumption... on or after 12:01 a.m. eastern time on October 30, 2026"
+  ],
+  "extra": {
+    "actor": "President (Trump), via CBP/Treasury/Commerce/USTR implementation",
+    "is_decided": true,
+    "sectors": [
+      "autos",
+      "auto parts",
+      "US-Canada trade"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-10-30",
+  "doc_id": "proc202622292",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1741,
+  "max_words": 20000
+}

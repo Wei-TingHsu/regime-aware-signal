@@ -1,0 +1,37 @@
+{
+  "direction": {
+    "equity": -0.2,
+    "duration": 0.1,
+    "gold": 0.15,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.3,
+  "horizon_days": 120,
+  "specificity": 0.25,
+  "novelty": 0.4,
+  "confidence": 0.6,
+  "evidence": [
+    "I determine that it is necessary and appropriate to enter into negotiations with trading partners to adjust imports",
+    "I may consider alternative remedies in the future, including imposing or modifying tariffs, duties, quotas, and fees",
+    "directs the Secretary and the United States Trade Representative to jointly pursue negotiations"
+  ],
+  "extra": {
+    "actor": "President Trump / Section 232 proclamation",
+    "is_decided": false,
+    "sectors": [
+      "robotics",
+      "industrial machinery",
+      "manufacturing",
+      "defense industrial base"
+    ]
+  },
+  "source": "political",
+  "date": "2026-11-02",
+  "doc_id": "proc202622385",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 1889,
+  "max_words": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "direction": {
+    "equity": -0.1,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.05
+  },
+  "magnitude": 0.3,
+  "horizon_days": 90,
+  "specificity": 0.35,
+  "novelty": 0.5,
+  "confidence": 0.55,
+  "evidence": [
+    "wind turbines and their components and subcomponents are being imported into the United States under such circumstances as to threaten to impair the national security",
+    "I direct the Secretary and the United States Trade Representative ... to jointly pursue negotiation of agreements",
+    "Nothing in this proclamation modifies the tariffs imposed pursuant to Proclamation 9704, as amended"
+  ],
+  "extra": {
+    "actor": "President (Section 232, Dept. of Commerce/USTR)",
+    "is_decided": false,
+    "sectors": [
+      "wind turbine manufacturing",
+      "renewable energy",
+      "clean energy equipment imports"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-10-28",
+  "doc_id": "proc202622049",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 2112,
+  "max_words": 20000
+}
