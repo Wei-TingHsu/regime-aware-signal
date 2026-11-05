@@ -147,6 +147,7 @@ fi
 step "5/7  rebuild read CSVs from cache (free)"
 python rebuild_csv.py --all
 
+python -m src.deeper forward || echo "  forward-signal log failed -- continuing"   # 5 Nov: registered rules (prereg_deeper_signals §4) logged daily
 step "6/7  decision reports -- every completed session since 11 Sep with no report; deferred while its documents are unread"
 for D in $(python step6_report.py --pending | awk '/^PENDING /{print $2}'); do
   python step6_report.py --date "$D"

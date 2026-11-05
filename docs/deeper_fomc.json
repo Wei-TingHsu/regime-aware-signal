@@ -1,0 +1,281 @@
+[
+ {
+  "label": "D4 Fed-day gold from the surprise and the statement's rubric \u2014 leave-one-out, per-meeting Sharpe",
+  "best": {
+   "target": "gld",
+   "features": "surprise",
+   "state": "highvol"
+  },
+  "best_stat": 1.342373159923975,
+  "p_family": 0.0,
+  "q95": 0.8945161591046182,
+  "n_null": 200,
+  "survivors": [
+   {
+    "target": "gld",
+    "features": "surprise",
+    "state": "all",
+    "stat": 1.285501367471408
+   },
+   {
+    "target": "gld",
+    "features": "surprise",
+    "state": "highvol",
+    "stat": 1.342373159923975
+   },
+   {
+    "target": "gld",
+    "features": "surprise",
+    "state": "lowvol",
+    "stat": 1.337230251096297
+   },
+   {
+    "target": "gld",
+    "features": "both",
+    "state": "all",
+    "stat": 1.0233589953791657
+   },
+   {
+    "target": "gld",
+    "features": "both",
+    "state": "highvol",
+    "stat": 1.2763418700621456
+   },
+   {
+    "target": "gld",
+    "features": "both",
+    "state": "lowvol",
+    "stat": 1.1309328158466982
+   }
+  ],
+  "null_max_quantiles": {
+   "0.5": 0.5258118185169687,
+   "0.9": 0.7990456887427887,
+   "0.95": 0.8945161591046182,
+   "0.99": 1.0895818142605935
+  },
+  "surface": [
+   {
+    "target": "gld",
+    "features": "surprise",
+    "state": "all",
+    "stat": 1.2855013675,
+    "n": 132,
+    "local_p": 0.0
+   },
+   {
+    "target": "gld",
+    "features": "surprise",
+    "state": "highvol",
+    "stat": 1.3423731599,
+    "n": 66,
+    "local_p": 0.0
+   },
+   {
+    "target": "gld",
+    "features": "surprise",
+    "state": "lowvol",
+    "stat": 1.3372302511,
+    "n": 66,
+    "local_p": 0.0
+   },
+   {
+    "target": "gld",
+    "features": "rubric",
+    "state": "all",
+    "stat": -0.393796687,
+    "n": 118,
+    "local_p": 0.875
+   },
+   {
+    "target": "gld",
+    "features": "rubric",
+    "state": "highvol",
+    "stat": -0.1674486834,
+    "n": 58,
+    "local_p": 0.545
+   },
+   {
+    "target": "gld",
+    "features": "rubric",
+    "state": "lowvol",
+    "stat": -0.5249073853,
+    "n": 60,
+    "local_p": 0.785
+   },
+   {
+    "target": "gld",
+    "features": "both",
+    "state": "all",
+    "stat": 1.0233589954,
+    "n": 118,
+    "local_p": 0.0
+   },
+   {
+    "target": "gld",
+    "features": "both",
+    "state": "highvol",
+    "stat": 1.2763418701,
+    "n": 58,
+    "local_p": 0.0
+   },
+   {
+    "target": "gld",
+    "features": "both",
+    "state": "lowvol",
+    "stat": 1.1309328158,
+    "n": 60,
+    "local_p": 0.0
+   },
+   {
+    "target": "gld_next",
+    "features": "surprise",
+    "state": "all",
+    "stat": 0.3976495396,
+    "n": 132,
+    "local_p": 0.0
+   },
+   {
+    "target": "gld_next",
+    "features": "surprise",
+    "state": "highvol",
+    "stat": 0.3078408604,
+    "n": 66,
+    "local_p": 0.17
+   },
+   {
+    "target": "gld_next",
+    "features": "surprise",
+    "state": "lowvol",
+    "stat": 0.3230464522,
+    "n": 66,
+    "local_p": 0.135
+   },
+   {
+    "target": "gld_next",
+    "features": "rubric",
+    "state": "all",
+    "stat": 0.1960365145,
+    "n": 118,
+    "local_p": 0.095
+   },
+   {
+    "target": "gld_next",
+    "features": "rubric",
+    "state": "highvol",
+    "stat": -0.3014922993,
+    "n": 58,
+    "local_p": 0.625
+   },
+   {
+    "target": "gld_next",
+    "features": "rubric",
+    "state": "lowvol",
+    "stat": 0.3103267142,
+    "n": 60,
+    "local_p": 0.11
+   },
+   {
+    "target": "gld_next",
+    "features": "both",
+    "state": "all",
+    "stat": 0.2852360668,
+    "n": 118,
+    "local_p": 0.04
+   },
+   {
+    "target": "gld_next",
+    "features": "both",
+    "state": "highvol",
+    "stat": -0.0967140912,
+    "n": 58,
+    "local_p": 0.47
+   },
+   {
+    "target": "gld_next",
+    "features": "both",
+    "state": "lowvol",
+    "stat": 0.2057459348,
+    "n": 60,
+    "local_p": 0.185
+   },
+   {
+    "target": "gld_2",
+    "features": "surprise",
+    "state": "all",
+    "stat": 0.3901608459,
+    "n": 132,
+    "local_p": 0.015
+   },
+   {
+    "target": "gld_2",
+    "features": "surprise",
+    "state": "highvol",
+    "stat": 0.2300960737,
+    "n": 66,
+    "local_p": 0.41
+   },
+   {
+    "target": "gld_2",
+    "features": "surprise",
+    "state": "lowvol",
+    "stat": 0.5564236135,
+    "n": 66,
+    "local_p": 0.05
+   },
+   {
+    "target": "gld_2",
+    "features": "rubric",
+    "state": "all",
+    "stat": 0.3125369813,
+    "n": 118,
+    "local_p": 0.1
+   },
+   {
+    "target": "gld_2",
+    "features": "rubric",
+    "state": "highvol",
+    "stat": 0.4262899414,
+    "n": 58,
+    "local_p": 0.155
+   },
+   {
+    "target": "gld_2",
+    "features": "rubric",
+    "state": "lowvol",
+    "stat": 0.0051633628,
+    "n": 60,
+    "local_p": 0.505
+   },
+   {
+    "target": "gld_2",
+    "features": "both",
+    "state": "all",
+    "stat": 0.313788513,
+    "n": 118,
+    "local_p": 0.1
+   },
+   {
+    "target": "gld_2",
+    "features": "both",
+    "state": "highvol",
+    "stat": 0.4340146264,
+    "n": 58,
+    "local_p": 0.16
+   },
+   {
+    "target": "gld_2",
+    "features": "both",
+    "state": "lowvol",
+    "stat": 0.483195744,
+    "n": 60,
+    "local_p": 0.135
+   }
+  ],
+  "meta": {
+   "tag": "sweep",
+   "rows": "target",
+   "cols": "features"
+  }
+ }
+]

@@ -1,0 +1,329 @@
+[
+ {
+  "label": "D3 next-period GLD\u2013SPY correlation from realised correlation (+ stress state): out-of-sample skill vs the long-run mean",
+  "best": {
+   "win": 20,
+   "H": 20,
+   "state": false
+  },
+  "best_stat": 0.25935793567506915,
+  "p_family": 0.0,
+  "q95": 0.08935705073263595,
+  "n_null": 200,
+  "survivors": [
+   {
+    "win": 20,
+    "H": 20,
+    "state": false,
+    "stat": 0.25935793567506915
+   },
+   {
+    "win": 20,
+    "H": 20,
+    "state": true,
+    "stat": 0.23006011901357293
+   },
+   {
+    "win": 20,
+    "H": 40,
+    "state": false,
+    "stat": 0.20512334030101387
+   },
+   {
+    "win": 20,
+    "H": 40,
+    "state": true,
+    "stat": 0.17615086828360804
+   },
+   {
+    "win": 20,
+    "H": 60,
+    "state": false,
+    "stat": 0.15287579416075625
+   },
+   {
+    "win": 20,
+    "H": 60,
+    "state": true,
+    "stat": 0.10111158075070259
+   },
+   {
+    "win": 40,
+    "H": 20,
+    "state": false,
+    "stat": 0.22578318231151195
+   },
+   {
+    "win": 40,
+    "H": 20,
+    "state": true,
+    "stat": 0.19190299079100548
+   },
+   {
+    "win": 40,
+    "H": 40,
+    "state": false,
+    "stat": 0.1709924131695284
+   },
+   {
+    "win": 40,
+    "H": 40,
+    "state": true,
+    "stat": 0.1415987906325198
+   },
+   {
+    "win": 40,
+    "H": 60,
+    "state": false,
+    "stat": 0.12644712585224416
+   },
+   {
+    "win": 60,
+    "H": 20,
+    "state": false,
+    "stat": 0.1872452990794119
+   },
+   {
+    "win": 60,
+    "H": 20,
+    "state": true,
+    "stat": 0.143848636835345
+   },
+   {
+    "win": 60,
+    "H": 40,
+    "state": false,
+    "stat": 0.13680523440055026
+   },
+   {
+    "win": 60,
+    "H": 40,
+    "state": true,
+    "stat": 0.09547428069836472
+   },
+   {
+    "win": 60,
+    "H": 60,
+    "state": false,
+    "stat": 0.09814380639049869
+   },
+   {
+    "win": 120,
+    "H": 20,
+    "state": false,
+    "stat": 0.13138765716137746
+   },
+   {
+    "win": 120,
+    "H": 40,
+    "state": false,
+    "stat": 0.09980238635122163
+   }
+  ],
+  "null_max_quantiles": {
+   "0.5": 0.03233145509394397,
+   "0.9": 0.07556040955981991,
+   "0.95": 0.08935705073263595,
+   "0.99": 0.11874367818831584
+  },
+  "surface": [
+   {
+    "win": 20,
+    "H": 20,
+    "state": false,
+    "stat": 0.2593579357,
+    "n": 2194,
+    "local_p": 0.0
+   },
+   {
+    "win": 20,
+    "H": 20,
+    "state": true,
+    "stat": 0.230060119,
+    "n": 2194,
+    "local_p": 0.0
+   },
+   {
+    "win": 20,
+    "H": 40,
+    "state": false,
+    "stat": 0.2051233403,
+    "n": 2186,
+    "local_p": 0.0
+   },
+   {
+    "win": 20,
+    "H": 40,
+    "state": true,
+    "stat": 0.1761508683,
+    "n": 2186,
+    "local_p": 0.0
+   },
+   {
+    "win": 20,
+    "H": 60,
+    "state": false,
+    "stat": 0.1528757942,
+    "n": 2178,
+    "local_p": 0.0
+   },
+   {
+    "win": 20,
+    "H": 60,
+    "state": true,
+    "stat": 0.1011115808,
+    "n": 2178,
+    "local_p": 0.0
+   },
+   {
+    "win": 40,
+    "H": 20,
+    "state": false,
+    "stat": 0.2257831823,
+    "n": 2186,
+    "local_p": 0.0
+   },
+   {
+    "win": 40,
+    "H": 20,
+    "state": true,
+    "stat": 0.1919029908,
+    "n": 2186,
+    "local_p": 0.0
+   },
+   {
+    "win": 40,
+    "H": 40,
+    "state": false,
+    "stat": 0.1709924132,
+    "n": 2178,
+    "local_p": 0.0
+   },
+   {
+    "win": 40,
+    "H": 40,
+    "state": true,
+    "stat": 0.1415987906,
+    "n": 2178,
+    "local_p": 0.0
+   },
+   {
+    "win": 40,
+    "H": 60,
+    "state": false,
+    "stat": 0.1264471259,
+    "n": 2170,
+    "local_p": 0.0
+   },
+   {
+    "win": 40,
+    "H": 60,
+    "state": true,
+    "stat": 0.0701456468,
+    "n": 2170,
+    "local_p": 0.045
+   },
+   {
+    "win": 60,
+    "H": 20,
+    "state": false,
+    "stat": 0.1872452991,
+    "n": 2178,
+    "local_p": 0.0
+   },
+   {
+    "win": 60,
+    "H": 20,
+    "state": true,
+    "stat": 0.1438486368,
+    "n": 2178,
+    "local_p": 0.0
+   },
+   {
+    "win": 60,
+    "H": 40,
+    "state": false,
+    "stat": 0.1368052344,
+    "n": 2170,
+    "local_p": 0.0
+   },
+   {
+    "win": 60,
+    "H": 40,
+    "state": true,
+    "stat": 0.0954742807,
+    "n": 2170,
+    "local_p": 0.005
+   },
+   {
+    "win": 60,
+    "H": 60,
+    "state": false,
+    "stat": 0.0981438064,
+    "n": 2162,
+    "local_p": 0.01
+   },
+   {
+    "win": 60,
+    "H": 60,
+    "state": true,
+    "stat": 0.0293746875,
+    "n": 2162,
+    "local_p": 0.21
+   },
+   {
+    "win": 120,
+    "H": 20,
+    "state": false,
+    "stat": 0.1313876572,
+    "n": 2154,
+    "local_p": 0.0
+   },
+   {
+    "win": 120,
+    "H": 20,
+    "state": true,
+    "stat": 0.0730512003,
+    "n": 2154,
+    "local_p": 0.045
+   },
+   {
+    "win": 120,
+    "H": 40,
+    "state": false,
+    "stat": 0.0998023864,
+    "n": 2146,
+    "local_p": 0.0
+   },
+   {
+    "win": 120,
+    "H": 40,
+    "state": true,
+    "stat": 0.059152242,
+    "n": 2146,
+    "local_p": 0.095
+   },
+   {
+    "win": 120,
+    "H": 60,
+    "state": false,
+    "stat": 0.0707708669,
+    "n": 2138,
+    "local_p": 0.025
+   },
+   {
+    "win": 120,
+    "H": 60,
+    "state": true,
+    "stat": 0.0111236473,
+    "n": 2138,
+    "local_p": 0.395
+   }
+  ],
+  "meta": {
+   "tag": "sweep",
+   "rows": "win",
+   "cols": "H"
+  }
+ }
+]
