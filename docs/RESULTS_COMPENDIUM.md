@@ -76,3 +76,9 @@ Three relationships clear their bars; none is alpha on its own.
 3. **Dollar and oil carry stable gold sensitivities; rates do not.** Quant: a dollar- and oil-hedged gold position isolates the unexplained part. Institutional: attribution of a client's gold P&L into dollar, oil and gold-itself — a product in itself. Hedge fund: long gold / long dollar to hold gold's own move without the currency. Market maker: live hedge ratios off dollar and oil moves. Discretionary: a move the dollar and oil don't explain points to positioning or geopolitics — the "why it moved" block says which question to ask.
 
 Everything else tested — liquidity drains, oil shocks, chair personality, residual momentum, sudden sell-offs, positioning extremes, factor combinations, document-driven calls — is null on the data we have, and is recorded here so it is not searched twice.
+
+## 6. Added 6 Nov afternoon
+
+- Factor eras on the full 2006–26 span (Bitcoin dropped): the factors explain 18% of gold's daily moves overall, 32% in 2006–08 and 2015–19, 18% in 2009–14; the 2026 fall is explained 29% by 2009–21 sensitivities and 13% by 2022→ ones — **discretionary input (attribution)**, unchanged.
+- Residual momentum by era: null in every era (p_family 0.93) — **neither**; closed.
+- The oil → rates → gold chain with tradeable timing (D5c): null (p_family 0.905) — **neither**; closed.
