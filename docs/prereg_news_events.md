@@ -39,3 +39,4 @@ Cost: a few hundred event-day reads and ~200 release reads, measured on disk bef
 
 | date | step | result | prior |
 |---|---|---|---|
+| 2026-11-06 | S0 events + fetch + digest + cost | 539 index-events on 476 sessions (SOXX stand-in for SOX; QQQ not in panel; SPY for S&P); 40 digests on disk; cost ≈ US$0.29 / 40 digests | — |

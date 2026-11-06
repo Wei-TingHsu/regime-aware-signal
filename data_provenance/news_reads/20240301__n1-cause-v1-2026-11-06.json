@@ -1,0 +1,11 @@
+{
+ "cause": "no_identifiable_news_positioning",
+ "confidence": 0.75,
+ "secondary": "earnings_guidance",
+ "story": "Digest is dominated by geopolitical/conflict and political events (Iran, Israel/Gaza, Navalny funeral, Texas disputes) with broadly negative tone, none of which plausibly explains a +4.3% semiconductor index rally, suggesting the move was driven by chip-sector-specific demand/earnings optimism not captured in this general news digest.",
+ "reason": "Top events are overwhelmingly geopolitical/judicial (e.g. 'ISRAEL | threaten', 'IRAN | public statement', 'VLADIMIR PUTIN | RUSGOV | yield' re Navalny funeral, 'HAMAS | ISR | fight') with negative mean tone (-1.88), none referencing semiconductors, AI demand, or tech earnings.",
+ "story_direction_for_equities": 1,
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-cause-v1-2026-11-06",
+ "_read_at": "2026-11-06 23:51"
+}

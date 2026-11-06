@@ -83,3 +83,5 @@ Everything else tested — liquidity drains, oil shocks, chair personality, resi
 - Residual momentum by era: null in every era (p_family 0.93) — **neither**; closed.
 - The oil → rates → gold chain with tradeable timing (D5c): null (p_family 0.905) — **neither**; closed.
 - T1 by era: vol-targeting adds +18.6 pts CER for the S&P in 2004–08 and +6.6 for Treasuries in 2022–26, costs 1–3 pts in calm bull eras; regime tilt adds nothing — **discretionary input (risk tool)**. H-tables by era: no era cell passes — **neither**.
+
+**Regime count (decided 2026-11-06):** fixed k = 4 for the product's labels; a second fixed six-state fit (`k6`, `processed/regime_labels_by_k.parquet`) as the attribution lens only. Neither is a predictor; both are conditioning variables for the relationships above.

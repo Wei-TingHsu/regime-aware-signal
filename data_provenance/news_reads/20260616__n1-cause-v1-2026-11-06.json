@@ -1,0 +1,11 @@
+{
+ "cause": "no_identifiable_news_positioning",
+ "confidence": 0.3,
+ "secondary": "earnings_guidance",
+ "reason": "The digest shows only generic diplomatic/legal/police events (e.g. 'JUDGE | public statement | tone -12.4', 'PROSECUTOR | LAB | assault | tone -12.6') with a lone semiconductor-relevant mention 'NVIDIA | public statement | tone +2.4' that is positive, giving no clear negative driver for a -5.9% SOX move.",
+ "story": "No coherent sector-specific catalyst found in the digest despite a sharp semiconductor selloff, suggesting the move was driven by information not captured in this GDELT sample (e.g. a specific earnings/guidance shock or supply-chain scare).",
+ "story_direction_for_equities": -1,
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-cause-v1-2026-11-06",
+ "_read_at": "2026-11-06 23:38"
+}

@@ -75,3 +75,10 @@ state on the statement day is mostly the statement's own move). **#116 F4:** sta
 | 2026-11-06 | R3 conditioning | Fed-day β per σ by regime −0.40 / −0.55 / −0.36 / −0.80, interaction p **0.242** (no); factor R² for gold 0.18 / 0.27 / **0.33** / 0.17, spread vs block-permuted labels p **0.023** (yes — the factors explain gold best in the tightening regime); call hit-rate 56.7 / 54.8 / 55.5 / 54.3%, p 0.882 (no). docs/regime_conditioning.md | **#107c wrong** (one relationship differs) |
 | 2026-11-06 | R4 k by time | four wins only in 2017; three or five win 13 of 17 years; five every year since 2021; every winner since 2014 has a median run of 2–8 sessions. docs/regime_kbytime.md | **#107d wrong** |
 | 2026-11-06 | Y1–Y4 day-types | founder's pattern 67 sessions (flat threshold 0.25 sd); Y2 no clustering before regime changes (best `00000` −1.9 pts, p_family 0.438); Y3 no survivor (best all-flat day → SPY +5.28 vs q95 6.17, p_family 0.100); Y4 0 of 7 types beat their null. docs/daytype_*.md | #108a wrong (count), #108b–d right |
+
+### Amendment 2026-11-06 23:02 — regime count decided (founder)
+**Fixed k = 4 for the product's labels, plus a second fixed six-state fit as the attribution lens.** The lens is the `k6` column of
+`processed/regime_labels_by_k.parquet` (R6b: expanding refit every 20 sessions, first 504 unlabelled, canonical PC1 order, confirmed as the product
+applies labels — no hindsight). k never changes with time; a change of k is only ever a dated amendment here. Grounds (R6b honest method): four
+competitive on the Fed-day job (p 0.008), six ahead only on the factor-R² spread; three the most stable but least informative. The six-state
+labels are used to *explain* (which sub-environment a relationship held in) and never to *trade*; the product's precedent pools stay on k = 4.
