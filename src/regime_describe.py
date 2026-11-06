@@ -26,7 +26,7 @@ ANN = 252
 
 def inputs():
     import src.exposure_dial as ED
-    idx, rets, lab, post, rf = ED.load_inputs(); idx = pd.DatetimeIndex(idx)
+    idx, rets, lab, post, rf = ED.load_inputs(); idx = pd.DatetimeIndex(idx); lab = ED.confirmed_labels(np.asarray(lab))   # v2: the product's confirmed label, not the raw expanding one
     m = pd.read_parquet(PROC / "macro_panel.parquet"); m.index = pd.to_datetime(m.index); m = m.reindex(idx).ffill()
     return idx, rets, np.asarray(lab), post, m
 

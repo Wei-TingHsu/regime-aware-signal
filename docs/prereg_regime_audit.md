@@ -43,3 +43,8 @@ slow one* — never a fifth cluster.
 
 | date | part | result | prior |
 |---|---|---|---|
+| 2026-11-06 | R1 describe (raw expanding labels) | 0 (45%): low rates, steep curve, weak dollar; 1 (21%): low rates, M2 growth +0.8 sd; 2 (20%): 2-yr +0.6, curve −1.0 (inverted), dollar +0.8, M2 −0.8; 3 (13%): 10-yr +1.2, 2-yr +1.2, real +1.1, EFFR +1.2, dollar +1.2. Median raw run 13 / 2 / 3 / 2 sessions — the raw label flickers; the ~52-session persistence on record is the confirmed label's. Re-run on confirmed labels follows. docs/regime_describe.md | #107a roughly right (easy-money / stimulus / tightening-inverted / high-rates) |
+| 2026-11-06 | R2 lag | not measured: the engine exposes no full-sample label function under the names tried; 91 live changes. | #107b not judged |
+| 2026-11-06 | R3 conditioning | Fed-day β per σ by regime −0.40 / −0.55 / −0.36 / −0.80, interaction p **0.242** (no); factor R² for gold 0.18 / 0.27 / **0.33** / 0.17, spread vs block-permuted labels p **0.023** (yes — the factors explain gold best in the tightening regime); call hit-rate 56.7 / 54.8 / 55.5 / 54.3%, p 0.882 (no). docs/regime_conditioning.md | **#107c wrong** (one relationship differs) |
+| 2026-11-06 | R4 k by time | four wins only in 2017; three or five win 13 of 17 years; five every year since 2021; every winner since 2014 has a median run of 2–8 sessions. docs/regime_kbytime.md | **#107d wrong** |
+| 2026-11-06 | Y1–Y4 day-types | founder's pattern 67 sessions (flat threshold 0.25 sd); Y2 no clustering before regime changes (best `00000` −1.9 pts, p_family 0.438); Y3 no survivor (best all-flat day → SPY +5.28 vs q95 6.17, p_family 0.100); Y4 0 of 7 types beat their null. docs/daytype_*.md | #108a wrong (count), #108b–d right |
