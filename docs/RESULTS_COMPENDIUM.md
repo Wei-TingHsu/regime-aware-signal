@@ -82,3 +82,4 @@ Everything else tested — liquidity drains, oil shocks, chair personality, resi
 - Factor eras on the full 2006–26 span (Bitcoin dropped): the factors explain 18% of gold's daily moves overall, 32% in 2006–08 and 2015–19, 18% in 2009–14; the 2026 fall is explained 29% by 2009–21 sensitivities and 13% by 2022→ ones — **discretionary input (attribution)**, unchanged.
 - Residual momentum by era: null in every era (p_family 0.93) — **neither**; closed.
 - The oil → rates → gold chain with tradeable timing (D5c): null (p_family 0.905) — **neither**; closed.
+- T1 by era: vol-targeting adds +18.6 pts CER for the S&P in 2004–08 and +6.6 for Treasuries in 2022–26, costs 1–3 pts in calm bull eras; regime tilt adds nothing — **discretionary input (risk tool)**. H-tables by era: no era cell passes — **neither**.
