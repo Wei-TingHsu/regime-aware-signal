@@ -1,4 +1,4 @@
-"""era_adapters.py -- the last two era adapters of the sub-period audit (prereg_subperiod_audit.md group B, items B6 and B10).
+"""era_adapters.py (v2: index mask fix; missing forward returns dropped) -- the last two era adapters of the sub-period audit (prereg_subperiod_audit.md group B, items B6 and B10).
 
   python -m src.era_adapters t1          # B6: the exposure dial (T1) by era -- certainty-equivalent return of always-in (v1), vol-targeting (v2) and
                                          #     regime-tilted (v3) per asset per era, with the paired bootstrap test v2/v3 vs v1 inside each era
@@ -24,7 +24,7 @@ ASSETS = ["SPY", "TLT", "GLD", "UUP", "USO"]
 
 def era_mask(idx: pd.DatetimeIndex, name: str) -> np.ndarray:
     a, b = [e for e in ERAS if e[0] == name][0][1:]
-    return ((idx >= pd.Timestamp(a)) & (idx <= pd.Timestamp(b))).to_numpy()
+    return np.asarray((idx >= pd.Timestamp(a)) & (idx <= pd.Timestamp(b)))
 
 
 # ------------------------------------------------------------------------------------------------ B6 T1 by era
@@ -76,11 +76,15 @@ def cmd_htables():
                 pos = [p for p in pos_all if pd.Timestamp(lo) <= rets.index[p] <= pd.Timestamp(hi)]
                 prow = [dict(HT.paths(r, p), pos=p) for p in pos]; prow = [d for d in prow if d]
                 if len(prow) < 5: continue
-                df = pd.DataFrame(prow); r_era = r[(r.index >= lo) & (r.index <= hi)] if name != "all" else r
+                df = pd.DataFrame(prow); r_era = (r[(r.index >= lo) & (r.index <= hi)] if name != "all" else r).dropna()
                 for h in (5, 20):
-                    te = HT.cond_test(df, r_era, h) if len(df) >= HT.MIN_N else dict(verdict="measured (n < 30)", n=len(df))
-                    rows.append(dict(table=tid, asset=a, era=name, h=h, n=len(df), median=float(df[f"f{h}"].median()) if f"f{h}" in df else np.nan,
-                                     positive=float((df[f"f{h}"] > 0).mean()) if f"f{h}" in df else np.nan, base=te.get("base", np.nan), gap=te.get("gap", np.nan), p=te.get("p", np.nan), verdict=te["verdict"]))
+                    col = f"f{h}"
+                    if col not in df: continue
+                    dh = df[np.isfinite(df[col])]                         # v2: events with no forward return (asset history not yet started) are dropped,
+                    if len(dh) < 5: continue                             #     not counted as 'not positive' -- the v1 bug that printed spurious PASSes
+                    te = HT.cond_test(dh, r_era, h) if len(dh) >= HT.MIN_N else dict(verdict="measured (n < 30)", n=len(dh))
+                    rows.append(dict(table=tid, asset=a, era=name, h=h, n=len(dh), median=float(dh[col].median()), positive=float((dh[col] > 0).mean()),
+                                     base=te.get("base", np.nan), gap=te.get("gap", np.nan), p=te.get("p", np.nan), verdict=te["verdict"]))
     tab = pd.DataFrame(rows)
     out = DOCS / "era_htables.md"
     L = ["# History tables H0–H5 by era", "", "Each table's recorded events re-cut by era; 'positive' = share of events with a higher price h sessions later; 'base' = that era's own share; random-date null. Under 30 events: measured, not judged.", ""]
