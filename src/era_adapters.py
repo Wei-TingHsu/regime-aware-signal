@@ -45,7 +45,7 @@ def cmd_t1(cost_bp: float, n_boot: int):
                 if key not in out["ret"]: continue
                 x = out["ret"][key][m]; row[f"cer_{label}"] = ED.cer(x)
                 try:
-                    t = ED.paired_cer_test(x, v1, rng, n_boot); row[f"p_{label}"] = t.get("p", t.get("p_value", np.nan)); row[f"d_{label}"] = t.get("diff", t.get("delta", row[f"cer_{label}"] - row["cer_v1"]))
+                    t = ED.paired_cer_test(x, v1, rng, n_boot); row[f"d_{label}"] = t["diff"]; row[f"lo_{label}"] = t["lo"]; row[f"hi_{label}"] = t["hi"]; row[f"p_{label}"] = 0.0 if (t["lo"] > 0 or t["hi"] < 0) else 1.0   # 95% interval excludes zero -> 0, else 1 (a flag, not a p)
                 except Exception as e:
                     row[f"p_{label}"] = np.nan; row[f"d_{label}"] = row[f"cer_{label}"] - row["cer_v1"]; row["note"] = f"{type(e).__name__}"
             rows.append(row)
@@ -53,9 +53,9 @@ def cmd_t1(cost_bp: float, n_boot: int):
     out = DOCS / "era_t1.md"
     L = ["# T1 — the exposure dial by era (certainty-equivalent return, annualised; 1× cost)", "",
          f"v1 always-in, v2 vol-targeting, v3 regime-tilted; paired stationary-bootstrap test of v2 and v3 against v1 inside each era ({n_boot} draws). Rows under 250 sessions are omitted.", "",
-         "| asset | era | n | CER v1 | CER vol-target | Δ | p | CER regime-tilt | Δ | p |", "|---|---|---|---|---|---|---|---|---|---|"]
+         "| asset | era | n | CER v1 | CER vol-target | Δ | 95% excludes 0 | CER regime-tilt | Δ | 95% excludes 0 |", "|---|---|---|---|---|---|---|---|---|---|"]
     for _, r_ in tab.iterrows():
-        f = lambda k: (f"{r_[k]:+.2%}" if k in r_ and np.isfinite(r_[k]) else "·"); g = lambda k: (f"{r_[k]:.3f}" if k in r_ and np.isfinite(r_[k]) else "·")
+        f = lambda k: (f"{r_[k]:+.2%}" if k in r_ and np.isfinite(r_[k]) else "·"); g = lambda k: (("yes" if r_[k] == 0.0 else "no") if k in r_ and np.isfinite(r_[k]) else "·")
         L.append(f"| {r_['asset']} | {r_['era']} | {r_['n']} | {f('cer_v1')} | {f('cer_vol_target')} | {f('d_vol_target')} | {g('p_vol_target')} | {f('cer_regime_tilt')} | {f('d_regime_tilt')} | {g('p_regime_tilt')} |")
     L += ["", "Reading: vol-targeting that helps only in one era (2008, 2020) is a crisis tool, not a standing improvement; the pooled verdict (1 of 5 assets, oil) stands unless an era row beats v1 at p < 0.05 in both halves of the record."]
     out.write_text("\n".join(L) + "\n"); out.with_suffix(".json").write_text(tab.to_json(orient="records", indent=1)); print(tab.to_string(index=False)); print(f"-> {out}")
