@@ -47,10 +47,17 @@ def oos_r2(X: np.ndarray, y: np.ndarray, dates: pd.DatetimeIndex, W: int, block:
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--asset", default="GLD"); ap.add_argument("--episode-start"); ap.add_argument("--episode-end"); ap.add_argument("--n-null", type=int, default=100)
+    ap.add_argument("--drop-late", action="store_true", help="drop every factor whose series starts after 2006-01-01, so the 2004-14 eras enter (v2, 6 Nov)")
+    ap.add_argument("--drop", default="", help="comma-separated factor names to drop")
     a = ap.parse_args()
     from src.factor_attribution import factors, returns
     r = returns(a.asset); r.index = pd.to_datetime(r.index)
     F = factors(r.index); F.index = pd.to_datetime(F.index)
+    starts = {c: F[c].first_valid_index() for c in F.columns}
+    late = [c for c, d0 in starts.items() if d0 is not None and d0 > pd.Timestamp("2006-01-01")]
+    print("factor start dates: " + ", ".join(f"{c} {d0.date() if d0 is not None else '—'}" for c, d0 in starts.items()))
+    drop = set(x for x in a.drop.split(",") if x) | (set(late) if a.drop_late else set())
+    if drop: print(f"dropped: {sorted(drop)}"); F = F.drop(columns=[c for c in drop if c in F.columns])
     d = pd.concat([r.rename("y"), F], axis=1).dropna(); names = [c for c in d.columns if c != "y"]
     X, y, dates = d[names].to_numpy(float), d["y"].to_numpy(float), d.index
     era = np.array([era_of(t) for t in dates])
@@ -85,15 +92,15 @@ def main():
             b, _, _ = fit(X[lo:hi], y[lo:hi]); contrib = b * dF; expl = float(contrib.sum())
             ep["attributions"][k] = dict(window=(str(dates[lo].date()), str(dates[min(hi, len(y)) - 1].date())), explained_log=expl, explained_share=float(expl / move) if move else np.nan,
                                          by_factor={n: float(v) for n, v in zip(names, contrib)})
-    out = DOCS / f"era_factors_{a.asset}.md"
-    L = [f"# Factor sensitivities by era — {a.asset} ({dates[0].date()} → {dates[-1].date()}, {len(names)} reasons)", "",
+    tag = a.asset + ("_full" if drop else ""); out = DOCS / f"era_factors_{tag}.md"
+    L = [f"# Factor sensitivities by era — {a.asset} ({dates[0].date()} → {dates[-1].date()}, {len(names)} reasons" + (f"; dropped {sorted(drop)}" if drop else "") + ")", "",
          "Joint OLS per era (no ordering: the question is whether the sensitivities moved, not how to split shared variance). `r2` is in-sample within the era.", "",
          "| era | n | R² | " + " | ".join(names) + " |", "|---|---|---|" + "---|" * len(names)]
     for _, r_ in tab.iterrows(): L.append(f"| {r_['era']} | {r_['n']} | {r_['r2']:.3f} | " + " | ".join(f"{r_[k]:+.4f}" for k in names) + " |")
     L += ["", "Sign agreement with the pooled beta (✓ same sign):", "", "| era | " + " | ".join(names) + " |", "|---|" + "---|" * len(names)]
     for e_, row in signs.iterrows(): L.append(f"| {e_} | " + " | ".join("✓" if v else "✗" for v in row) + " |")
     L += ["", f"## T-A by era × window (median out-of-sample R², blocks of {BLOCK} sessions)", "",
-          f"Best `{sw.best}` = {sw.best_stat:.3f}; best-of-sweep null (factors time-shifted together) q95 {sw.q95:.3f}; p_family {sw.p_family:.3f}. Surface in `era_factors_{a.asset}_sweep.md`.", ""]
+          f"Best `{sw.best}` = {sw.best_stat:.3f}; best-of-sweep null (factors time-shifted together) q95 {sw.q95:.3f}; p_family {sw.p_family:.3f}. Surface in `era_factors_{tag}_sweep.md`.", ""]
     if ep:
         L += [f"## The current episode re-attributed: {ep['start']} → {ep['end']}, move {ep['move_log'] * 100:+.1f}% (log)", "",
               "| betas from | window | explained (log %) | explained share | largest contributions |", "|---|---|---|---|---|"]
@@ -101,7 +108,7 @@ def main():
             top = sorted(v["by_factor"].items(), key=lambda kv: -abs(kv[1]))[:3]
             L.append(f"| {k} | {v['window'][0]} → {v['window'][1]} | {v['explained_log'] * 100:+.2f} | {v['explained_share']:+.2f} | " + ", ".join(f"{n} {c * 100:+.2f}" for n, c in top) + " |")
         L += ["", "If the 2022→ betas explain much more of the episode than the 2009–21 betas, the sensitivities changed (a habit); if neither explains it, the move sits outside the named reasons in every era (T-A's reading of 23 Oct)."]
-    out.write_text("\n".join(L) + "\n"); write_md(sw, DOCS / f"era_factors_{a.asset}_sweep.md", axis_rows="era", axis_cols="W", fmt="{:.3f}")
+    out.write_text("\n".join(L) + "\n"); write_md(sw, DOCS / f"era_factors_{tag}_sweep.md", axis_rows="era", axis_cols="W", fmt="{:.3f}")
     out.with_suffix(".json").write_text(json.dumps(dict(eras=json.loads(tab.to_json(orient="records")), signs=json.loads(signs.astype(int).to_json()), sweep=sw.to_json(), episode=ep), indent=1, default=float))
     print(tab[["era", "n", "r2"]].to_string(index=False)); print(f"T-A sweep: best {sw.best} {sw.best_stat:.3f}, q95 {sw.q95:.3f}, p_family {sw.p_family:.3f}")
     if ep: print("episode:", {k: round(v["explained_share"], 2) for k, v in ep["attributions"].items()})
