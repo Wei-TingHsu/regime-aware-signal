@@ -1,6 +1,6 @@
 # Sweep — D1 short gold after the drawdown — net Sharpe
 
-Best cell: `{'thr': -0.04, 'look': 10, 'h': 15, 'delay': 1, 'filter': 'gold_up', 'cost': 0.001}` with statistic -0.18; best-of-grid null over 200 draws: 95th percentile +2.46, **p_family = 0.980**
+Best cell: `{'thr': -0.04, 'look': 10, 'h': 15, 'delay': 1, 'filter': 'gold_up', 'cost': 0.001}` with statistic -0.18; best-of-grid null over 200 draws: 95th percentile +2.39, **p_family = 0.970**
 
 ### look = 10, delay = 0, filter = abundant, cost = 0.001
 

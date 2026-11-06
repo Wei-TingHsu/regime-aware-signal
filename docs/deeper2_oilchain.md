@@ -1,4 +1,4 @@
-# Deeper test oilchain — 2026-11-05 20:54
+# Deeper test oilchain — 2026-11-06 12:39
 
 226 oil shocks (GLD rows). The founder's chain, 5 Nov: oil up → inflation expectations → hawkish policy → higher real rates → gold down. Each link measured separately.
 
