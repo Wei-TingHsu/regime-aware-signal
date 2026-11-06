@@ -66,6 +66,7 @@ by era and asset (a risk input, not alpha).
 
 | date | test | result | prior |
 |---|---|---|---|
+| 2026-11-06 | D5c oil → rates → gold, tradeable timing | rate move over sessions 1–5, gold over 6–20 / 11–20: best 0.78 vs q95 1.43, **p_family 0.905 → null**. The chain is a same-window relation, not a forecast from the shock. | **#105 right** |
 | 2026-11-06 | D1 re-run (v2: windows start the session after the event) | long: best −6% / 20 / hold 5 / enter +1, Sharpe 3.46 vs q95 4.23, **p_family 0.140, no survivor**; short: −0.18 vs 2.39, p 0.97. The 5 Nov 0.045 / 0.050 readings included the sell-off day's gold return. Rules D1-5nov and D1-5nov-b stay in the forward log as registered experiments (both triggered 5 Nov). | **#93 wrong** |
 | 2026-11-06 | D6 positioning (flows.parquet) | fade/follow z-extremes, GLD/SLV/USO: best USO 0.90 vs q95 1.81, p_family 0.730 → **null** | **#98** right on no survivor, wrong on p (said 0.05–0.20) |
 | 2026-11-06 | D1b sudden one-day sell-off | gold continues 3.71 vs 4.96 (p 0.235); gold reverses 2.54 vs 6.58 (0.915); S&P continues 2.50 vs 4.66 (0.395); S&P reverses 4.17 vs 7.44 (0.540) → **null, all four** | **#100** right on no survivor, wrong on the gold-reversal clause |
