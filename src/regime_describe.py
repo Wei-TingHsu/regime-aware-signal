@@ -175,12 +175,87 @@ def cmd_kbytime():
     out.write_text("\n".join(L) + "\n"); out.with_suffix(".json").write_text(tab.to_json(orient="records", indent=1)); print(win.to_string(index=False)); print(f"-> {out}")
 
 
+# ------------------------------------------------------------------------------------------------ R5 the favoured-asset map, tested
+def asset_map(idx, rets, lab, label_name="confirmed k=4", rng=None, n_perm=300):
+    """Per regime: annualised Sharpe of each asset; stability = rank correlation of the asset ranking between the first and second half of the
+    regime's own sessions (by date); null = labels permuted in blocks of 60 sessions."""
+    rng = rng or np.random.default_rng(0); assets = [a for a in ASSETS if a in rets.columns]; R = rets[assets].to_numpy(float); ok = lab >= 0
+    def sharpe_table(labels, half=None):
+        out = {}
+        for g in sorted(set(int(x) for x in labels[labels >= 0])):
+            mk = labels == g
+            if half is not None:
+                pos = np.where(mk)[0]; cut = pos[len(pos) // 2]; mk = mk & ((np.arange(len(mk)) < cut) if half == 0 else (np.arange(len(mk)) >= cut))
+            if mk.sum() < 120: continue
+            x = R[mk]; out[g] = [float(np.nanmean(x[:, j]) / np.nanstd(x[:, j], ddof=1) * np.sqrt(ANN)) if np.isfinite(x[:, j]).sum() > 60 else np.nan for j in range(len(assets))]
+        return out
+    def stability(labels):
+        a, b = sharpe_table(labels, 0), sharpe_table(labels, 1); cors = []
+        for g in a:
+            if g in b:
+                x, y = np.array(a[g]), np.array(b[g]); m = np.isfinite(x) & np.isfinite(y)
+                if m.sum() >= 4: cors.append(float(pd.Series(x[m]).rank().corr(pd.Series(y[m]).rank())))
+        return float(np.mean(cors)) if cors else np.nan
+    full = sharpe_table(lab); stab = stability(lab); null = []
+    for _ in range(n_perm):
+        n = len(lab); starts = np.arange(0, n, 60); order = rng.permutation(len(starts)); lp = lab[np.concatenate([np.arange(s_, min(s_ + 60, n)) for s_ in starts[order]])]; null.append(stability(lp))
+    null = np.array([v for v in null if np.isfinite(v)]); p = float((null >= stab).mean()) if len(null) else np.nan
+    return dict(label=label_name, assets=assets, sharpe=full, stability=stab, null_q95=float(np.quantile(null, 0.95)) if len(null) else np.nan, p=p)
+
+
+def cmd_assets():
+    idx, rets, lab, post, m = inputs(); res = asset_map(idx, rets, lab)
+    out = DOCS / "regime_assets.md"
+    L = ["# R5 — the environment → favoured-asset map, and whether it holds out of sample", "",
+         "Annualised Sharpe of each asset inside each regime (confirmed labels). Stability = rank correlation of the asset ranking between the first and second half of each regime's own sessions, averaged; null = labels permuted in 60-session blocks.", "",
+         "| regime | " + " | ".join(res["assets"]) + " |", "|---|" + "---|" * len(res["assets"])]
+    for g, row in res["sharpe"].items(): L.append(f"| {g} | " + " | ".join(f"{v:+.2f}" if np.isfinite(v) else "·" for v in row) + " |")
+    L += ["", f"Ranking stability first half vs second half: **{res['stability']:+.2f}** (null 95th percentile {res['null_q95']:+.2f}, p {res['p']:.3f}). "
+          "A map that holds (p < 0.05) is a discretionary input: 'in this season, these assets have led'. One that does not is a description of the past."]
+    out.write_text("\n".join(L) + "\n"); out.with_suffix(".json").write_text(json.dumps(res, indent=1, default=float)); print(json.dumps({k: res[k] for k in ("stability", "null_q95", "p")})); print(f"-> {out}")
+
+
+# ------------------------------------------------------------------------------------------------ R6 choose k on usefulness
+def cmd_kcompare(csv: str):
+    try:
+        from sklearn.decomposition import PCA; from sklearn.mixture import GaussianMixture
+    except ImportError:
+        print("scikit-learn not installed"); return
+    import src.exposure_dial as ED
+    idx, rets, lab4, post, m = inputs(); dials = [c for c in DIALS if c in m.columns]; X = m[dials].copy()
+    if "M2SL" in X.columns: X["M2SL"] = X["M2SL"].pct_change(252)
+    X = X.dropna(); Z = (X - X.mean()) / X.std(); P = PCA(3).fit_transform(Z.to_numpy()); pos = idx.get_indexer(X.index)
+    from src.chair_power import table, interaction_F; from src.factor_attribution import factors, returns as fret; from src.era_factors import fit
+    t = table().dropna(subset=["s_norm", "gld"]).copy(); r = fret("GLD"); r.index = pd.to_datetime(r.index); F = factors(r.index); F.index = pd.to_datetime(F.index); F = F.drop(columns=[c for c in F.columns if c == "btc"])
+    d = pd.concat([r.rename("y"), F], axis=1).dropna(); names = [c for c in d.columns if c != "y"]; rng = np.random.default_rng(0); rows = []
+    for k in (3, 4, 5, 6):
+        g = GaussianMixture(k, covariance_type="full", random_state=0, n_init=3).fit(P); raw = np.full(len(idx), -1); raw[pos] = g.predict(P); labk = ED.confirmed_labels(raw)
+        labs = pd.Series(labk, index=idx)
+        # Fed-day interaction
+        tt = t.copy(); tt["regime"] = labs.reindex(pd.DatetimeIndex(tt["date"])).ffill().to_numpy(); tt = tt[tt.regime >= 0]
+        Fv = interaction_F(tt, "gld", tt["regime"].to_numpy(), "s_norm"); null = [interaction_F(tt, "gld", rng.permutation(tt["regime"].to_numpy()), "s_norm") for _ in range(500)]; fed_p = float((np.array(null) >= Fv).mean())
+        # factor R2 spread
+        dd = d.copy(); dd["regime"] = labs.reindex(dd.index).ffill().to_numpy(); dd = dd[dd.regime >= 0]; r2 = {}
+        for gg, sub in dd.groupby("regime"):
+            if len(sub) >= 250: _, rr, _ = fit(sub[names].to_numpy(float), sub["y"].to_numpy(float)); r2[int(gg)] = rr
+        spread = max(r2.values()) - min(r2.values()) if len(r2) > 1 else np.nan
+        # asset map stability
+        am = asset_map(idx, rets, labk, f"k={k}", rng, n_perm=150)
+        rows.append(dict(k=k, median_run=float(np.median(np.diff(np.where(np.diff(np.concatenate([[-9], labk, [-9]])) != 0)[0]))), fed_interaction_p=fed_p, factor_r2_spread=spread, asset_stability=am["stability"], asset_stability_p=am["p"]))
+        print(rows[-1])
+    tab = pd.DataFrame(rows); out = DOCS / "regime_kcompare.md"
+    L = ["# R6 — choosing k on usefulness, not tidiness", "", "Each k refit once on the full panel (PCA 3 → Gaussian mixture, confirmed labels as the product applies them). Lower Fed-day p = the labels condition gold's Fed-day reaction better; wider factor-R² spread = they separate 'gold is a macro asset' from 'it is not'; higher asset-ranking stability with a low p = the favoured-asset map holds out of sample.", "",
+         "| k | median run | Fed-day interaction p | factor R² spread | asset-map stability | p |", "|---|---|---|---|---|---|"] + [f"| {int(r.k)} | {r.median_run:.0f} | {r.fed_interaction_p:.3f} | {r.factor_r2_spread:.3f} | {r.asset_stability:+.2f} | {r.asset_stability_p:.3f} |" for _, r in tab.iterrows()]
+    L += ["", "The engine's own k = 4 labels differ from this refit (expanding vs full-sample); the comparison is between k's on equal footing, not a reproduction of the live labels. A switch is a founder decision by dated amendment."]
+    out.write_text("\n".join(L) + "\n"); out.with_suffix(".json").write_text(tab.to_json(orient="records", indent=1)); print(f"-> {out}")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["describe", "lag", "conditioning", "kbytime", "all"]); ap.add_argument("--csv", default="processed/report_backfill_97d9bf07dd2c_n5793.csv")
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["describe", "lag", "conditioning", "kbytime", "assets", "kcompare", "all"]); ap.add_argument("--csv", default="processed/report_backfill_97d9bf07dd2c_n5793.csv")
     a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
-    for c in (["describe", "lag", "conditioning", "kbytime"] if a.cmd == "all" else [a.cmd]):
+    for c in (["describe", "lag", "conditioning", "kbytime", "assets", "kcompare"] if a.cmd == "all" else [a.cmd]):
         try:
-            {"describe": cmd_describe, "lag": cmd_lag, "conditioning": lambda: cmd_conditioning(a.csv), "kbytime": cmd_kbytime}[c]()
+            {"describe": cmd_describe, "lag": cmd_lag, "conditioning": lambda: cmd_conditioning(a.csv), "kbytime": cmd_kbytime, "assets": cmd_assets, "kcompare": lambda: cmd_kcompare(a.csv)}[c]()
         except Exception as e:
             print(f"{c}: did not run -- {type(e).__name__}: {e}")
             if a.cmd != "all": raise
