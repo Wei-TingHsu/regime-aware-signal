@@ -199,13 +199,39 @@ def cmd_oilchain():
     _finish("oilchain", [sw], [f"{len(g)} oil shocks (GLD rows). The founder's chain, 5 Nov: oil up → inflation expectations → hawkish policy → higher real rates → gold down. Each link measured separately."], L)
 
 
+# ================================================================================================ D5c the chain with tradeable timing
+def cmd_oilchain_timed():
+    df = pd.read_csv(PROC / "oil_shocks.csv"); df["date"] = pd.to_datetime(df["date"]); g = df[df.asset == "GLD"].copy().reset_index(drop=True)
+    m = macro(); r = returns(); idx = r.index
+    if m is None or "DFII10" not in m.columns: print("D5c: DFII10 not in macro_panel -- skipped"); return
+    for ser in ("DFII10", "DGS2"):
+        s = m[ser].reindex(idx).ffill(); ch = []
+        for d_ in g["date"]:
+            pos = idx.searchsorted(d_); ch.append(float(s.iloc[pos + 5] - s.iloc[pos]) * 100 if pos + 5 < len(s) else np.nan)
+        g[f"{ser}_first5"] = ch
+    for a, b in ((5, 20), (5, 40), (10, 20), (10, 40)):
+        g[f"gold_{a}_{b}"] = g[f"f{b}"] - g[f"f{a}"]           # gold from session a to session b after the shock: entry after the rate move is known
+    def stat(dd, c):
+        f = dd["g"]; col = f"{c['series']}_first5"; m_ = (f[col] > 0).to_numpy() if c["rates"] == "up" else (f[col] <= 0).to_numpy() if c["rates"] == "down" else np.ones(len(f), bool)
+        v = f.loc[m_, c["window"]].dropna().to_numpy(); a, b = [int(x) for x in c["window"].split("_")[1:]]; ps = path_stats(v, b - a, COST, c["sign"]); return ps["sharpe"], ps["n"]
+    cells = grid(series=["DFII10", "DGS2"], rates=["any", "up", "down"], window=["gold_5_20", "gold_5_40", "gold_10_20", "gold_10_40"], sign=[1, -1])
+    wins = [c for c in g.columns if c.startswith("gold_")]
+    def null_gen(dd, rng):
+        f = dd["g"].copy(); p = rng.permutation(len(f))
+        for w in wins: f[w] = f[w].to_numpy()[p]
+        return dict(g=f)
+    sw = run(cells, stat, dict(g=g), null_gen, n_null=N_NULL, seed=0, label="D5c gold from session 6 (or 11) after an oil shock, conditioned on the rate move over the first 5 sessions — net Sharpe", meta=dict(tag="sweep", rows="rates", cols="window"))
+    print(f"D5c: best {sw.best} {sw.best_stat:+.2f}, q95 {sw.q95:+.2f}, p_family {sw.p_family:.3f}")
+    _finish("oilchain_timed", [sw], [f"{len(g)} shocks; the rate condition uses only sessions 1–5 after the shock, the gold return starts after it (tradeable timing). Prior #105: inside the null."])
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["sudden", "regimes", "daily", "combo", "oilchain", "all"]); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["sudden", "regimes", "daily", "combo", "oilchain", "oilchain_timed", "all"]); a = ap.parse_args()
     DOCS.mkdir(exist_ok=True)
     todo = ["sudden", "regimes", "daily", "combo", "oilchain"] if a.cmd == "all" else [a.cmd]
     for c in todo:
         try:
-            {"sudden": cmd_sudden, "regimes": cmd_regimes, "daily": cmd_daily, "combo": cmd_combo, "oilchain": cmd_oilchain}[c]()
+            {"sudden": cmd_sudden, "regimes": cmd_regimes, "daily": cmd_daily, "combo": cmd_combo, "oilchain": cmd_oilchain, "oilchain_timed": cmd_oilchain_timed}[c]()
         except SystemExit:
             raise
         except Exception as e:
