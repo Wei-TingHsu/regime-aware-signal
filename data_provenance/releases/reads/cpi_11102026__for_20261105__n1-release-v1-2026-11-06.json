@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Shelter",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Energy",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Used cars and trucks",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Core services (medical, recreation, insurance)",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "contradiction": 0,
+ "evidence": "The index for shelter rose 0.3 percent in October, accounting for over thirty percent of the monthly all items increase.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:48"
+}

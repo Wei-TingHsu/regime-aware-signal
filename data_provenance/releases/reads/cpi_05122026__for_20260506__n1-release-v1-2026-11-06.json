@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Energy",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Food",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "New vehicles",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Medical care",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.6,
+ "contradiction": 0,
+ "evidence": "the index for energy rose 3.8 percent in April, accounting for over forty percent of the monthly all items increase",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:47"
+}

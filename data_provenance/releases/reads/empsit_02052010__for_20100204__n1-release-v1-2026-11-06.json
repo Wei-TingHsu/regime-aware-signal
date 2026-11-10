@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "unemployment rate",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "construction",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "temporary help services",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "retail trade",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "transportation and warehousing",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.5,
+ "contradiction": 1,
+ "evidence": "The unemployment rate fell from 10.0 to 9.7 percent in January, and nonfarm payroll employment was essentially unchanged (-20,000)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:40"
+}

@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Shelter",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Medical care services",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI (ex food/energy)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Gasoline/Energy",
+   "contribution": "moderate",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.8,
+ "contradiction": 1,
+ "evidence": "The index for all items less food and energy rose 6.6 percent over the past 12 months, the largest 12-month increase in that index since August 1982.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:44"
+}

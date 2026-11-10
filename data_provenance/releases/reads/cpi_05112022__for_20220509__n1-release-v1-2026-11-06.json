@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Shelter",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Airline fares",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "New vehicles",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Gasoline/Energy",
+   "contribution": "moderate",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.75,
+ "contradiction": 0.2,
+ "evidence": "The all items index increased 8.3 percent for the 12 months ending April, a smaller increase than the 8.5-percent figure for the period ending in March",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:44"
+}

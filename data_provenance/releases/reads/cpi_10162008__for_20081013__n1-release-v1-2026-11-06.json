@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Energy",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Food",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core (ex food/energy)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Transportation/used vehicles",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Shelter/OER",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.4,
+ "contradiction": 0,
+ "evidence": "The September level of 218.783 (1982-84=100) was 4.9 percent higher than in September 2007.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:38"
+}

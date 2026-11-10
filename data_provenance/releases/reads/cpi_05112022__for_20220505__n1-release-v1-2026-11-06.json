@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Shelter",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Airline fares",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "New vehicles",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Food",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Gasoline/Energy",
+   "contribution": "large",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.7,
+ "contradiction": -1,
+ "evidence": "The index for all items less food and energy rose 0.6 percent in April following a 0.3-percent advance in March.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:44"
+}

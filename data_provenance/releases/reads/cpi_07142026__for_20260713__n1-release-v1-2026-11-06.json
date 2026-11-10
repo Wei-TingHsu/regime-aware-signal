@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Motor vehicle insurance",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Food",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Core goods (apparel, used cars)",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.3,
+ "contradiction": 1,
+ "evidence": "The index for energy fell 5.7 percent in June...the largest contributor to the monthly all items decrease",
+ "note": "This CPI report shows a sharp, energy-driven disinflation (largest monthly drop since 2020) unrelated to the Iran-US-Jordan geopolitical risk-off story that hit chip stocks; the composition contradicts the equity-move narrative since falling energy/gasoline prices would normally be disinflationary/dovish for risk assets rather than part of a geopolitics-driven selloff.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:47"
+}

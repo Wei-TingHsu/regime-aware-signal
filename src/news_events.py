@@ -22,7 +22,10 @@ import numpy as np
 import pandas as pd
 
 PROC, DOCS = Path("processed"), Path("docs")
-GD = Path("data_provenance/gdelt_days"); RAW, DIG = GD / "raw", GD / "digest"
+GD = Path("data_provenance/gdelt_days"); RAW, DIG = GD / "raw", GD / "digest"; DIG2 = GD / "digest_v2"
+FIN = ("stock", "share", "market", "wall street", "dow", "nasdaq", "s p 500", "sp500", "selloff", "sell off", "rout", "plunge", "tumble", "rally", "fed", "federal reserve", "fomc", "rate", "yield", "bond", "treasury",
+       "earnings", "guidance", "profit", "forecast", "chip", "semiconductor", "nvidia", "intel", "qualcomm", "apple", "tesla", "bank", "credit", "default", "bailout", "liquidity", "recession", "inflation", "cpi", "jobs", "payroll",
+       "tariff", "trade war", "oil", "opec", "crude", "investor", "hedge fund", "volatility", "vix", "crash", "margin", "debt ceiling", "downgrade", "ecb", "boj", "yuan", "devalu", "brexit", "pandemic", "lockdown", "virus")
 THRESH = 0.04
 INDEX_CANDIDATES = {"SOX": ["^SOX", "SOX", "SOXX"], "QQQ": ["QQQ", "^NDX"], "SPX": ["^GSPC", "SPY", "SPX"]}
 EVENTS_URL = "http://data.gdeltproject.org/events/{d}.export.CSV.zip"               # GDELT 1.0 daily, 2013-04-01 -> ; earlier years are monthly/yearly files
@@ -103,10 +106,12 @@ def _events_for_day(ds: pd.Timestamp) -> pd.DataFrame | None:
     return out
 
 
-def cmd_digest():
-    ev = pd.read_csv(PROC / "news_events.csv", parse_dates=["date"]); DIG.mkdir(parents=True, exist_ok=True); n_ok = 0
+def cmd_digest(v2: bool = False):
+    """v1: top-50 events by mentions. v2 (7 Nov): the same plus a FINANCE section -- records whose source slug carries a market / macro / earnings term -- because
+    v1's mention ranking is dominated by geopolitics and read 68% of event days as 'no identifiable news' (prereg_news_events §4). v1 files are never rewritten."""
+    ev = pd.read_csv(PROC / "news_events.csv", parse_dates=["date"]); folder = DIG2 if v2 else DIG; folder.mkdir(parents=True, exist_ok=True); n_ok = 0
     for d, g in ev.groupby(ev["date"].dt.date):
-        ds = pd.Timestamp(d); out = DIG / f"{ds:%Y%m%d}.txt"
+        ds = pd.Timestamp(d); out = folder / f"{ds:%Y%m%d}.txt"
         if out.exists(): n_ok += 1; continue
         df = _events_for_day(ds)
         if df is None or df.empty: continue
@@ -118,18 +123,24 @@ def cmd_digest():
         for _, r_ in top.iterrows():
             slug = str(r_.get("url", "") or "").rsplit("/", 1)[-1][:90].replace("-", " ")
             L.append(f"- {r_['a1'] or '?'} | {r_['a2'] or '?'} | {CAMEO_TOP.get(str(r_['root']).zfill(2), r_['root'])} ({r_['code']}) | tone {r_['tone']:+.1f} | {slug}")
+        if v2 and "url" in df.columns:
+            slugs = df["url"].fillna("").str.rsplit("/", n=1).str[-1].str.replace("-", " ").str.replace("_", " ").str.lower(); hit = slugs.apply(lambda t: any(k in t for k in FIN))
+            fin = df[hit].sort_values("mentions", ascending=False).drop_duplicates("url").head(40)
+            L += ["", f"FINANCE / MACRO / EARNINGS RECORDS ({len(fin)} shown of {int(hit.sum()):,} matching; mean tone {fin['tone'].mean():+.1f}):"]
+            for _, r_ in fin.iterrows(): L.append(f"- {r_['a1'] or '?'} | {r_['a2'] or '?'} | tone {r_['tone']:+.1f} | {str(r_['url']).rsplit('/', 1)[-1][:110].replace('-', ' ')}")
+        elif v2: L += ["", "FINANCE section unavailable: this GDELT archive carries no source URL (pre-2013 files)."]
         out.write_text("\n".join(L) + "\n"); n_ok += 1
-    print(f"digests on disk: {n_ok} of {ev['date'].nunique()} event days -> {DIG}")
+    print(f"digests on disk: {n_ok} of {ev['date'].nunique()} event days -> {folder}")
 
 
-def cmd_cost():
-    files = sorted(DIG.glob("*.txt")); words = sum(len(p.read_text().split()) for p in files); tok = words * 1.6 + SYSTEM_TOK * len(files)
+def cmd_cost(v2: bool = False):
+    files = sorted((DIG2 if v2 else DIG).glob("*.txt")); words = sum(len(p.read_text().split()) for p in files); tok = words * 1.6 + SYSTEM_TOK * len(files)
     usd = tok / 1e6 * IN_RATE + len(files) * OUT_TOK / 1e6 * OUT_RATE
     print(f"{len(files)} digests, {words:,} words -> ~{tok:,.0f} input tokens; about US${usd:.2f} for the cause read at {IN_RATE}/{OUT_RATE} $/M. Counted on disk. "
           f"Release reads (S2) are priced separately once the release texts are fetched.")
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["events", "fetch", "digest", "cost"]); ap.add_argument("--limit", type=int); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["events", "fetch", "digest", "cost"]); ap.add_argument("--limit", type=int); ap.add_argument("--v2", action="store_true", help="finance-section digest (digest_v2/)"); a = ap.parse_args()
     DOCS.mkdir(exist_ok=True)
-    {"events": cmd_events, "fetch": lambda: cmd_fetch(a.limit), "digest": cmd_digest, "cost": cmd_cost}[a.cmd]()
+    {"events": cmd_events, "fetch": lambda: cmd_fetch(a.limit), "digest": lambda: cmd_digest(a.v2), "cost": lambda: cmd_cost(a.v2)}[a.cmd]()

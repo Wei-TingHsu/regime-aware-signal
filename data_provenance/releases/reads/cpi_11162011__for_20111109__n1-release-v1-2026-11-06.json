@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline/household energy)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Food",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Core (shelter, medical care)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "New/used vehicles",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Airline fares/recreation",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.4,
+ "contradiction": 0,
+ "evidence": "A decline in the energy index more than offset small increases in the indexes for food and all items less food and energy to create the all items decline.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:40"
+}

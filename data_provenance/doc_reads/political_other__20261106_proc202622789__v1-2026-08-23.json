@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.05,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 90,
+  "specificity": 0.1,
+  "novelty": 0.1,
+  "confidence": 0.85,
+  "evidence": [
+    "We will return to the Moon by 2028",
+    "the solar system and all of outer space beyond Earth are the province of all humans",
+    "unleashing a competitive and thriving commercial space industry"
+  ],
+  "extra": {
+    "actor": "President (Executive Branch)",
+    "is_decided": false,
+    "sectors": [
+      "aerospace",
+      "space exploration"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-11-06",
+  "doc_id": "proc202622789",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 677,
+  "max_words": 20000
+}

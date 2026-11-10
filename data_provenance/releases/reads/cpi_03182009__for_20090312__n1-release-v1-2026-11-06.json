@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Gasoline/motor fuel",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Apparel",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Energy (overall)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Core CPI (ex food/energy)",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.5,
+ "contradiction": 1,
+ "evidence": "The energy index rose 3.3 percent in February following a 1.7 percent increase in January as the gasoline index rose 8.3 percent in February after a 6.0 percent increase in January",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:39"
+}

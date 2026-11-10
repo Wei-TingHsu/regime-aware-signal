@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "medical care",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "energy/electricity",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "apparel",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "airline fares",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.4,
+ "contradiction": 0,
+ "evidence": "Component indexes were mixed, with many offsetting increases and decreases.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:43"
+}

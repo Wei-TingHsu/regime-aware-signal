@@ -25,10 +25,12 @@ import numpy as np
 import pandas as pd
 
 from src.sweep import grid, run, write_md
-from src.news_events import DIG, _returns, UA
+from src.news_events import DIG, DIG2, _returns, UA
 
 PROC, DOCS = Path("processed"), Path("docs")
-READS = Path("data_provenance/news_reads"); RELS = Path("data_provenance/releases"); PV = "n1-cause-v1-2026-11-06"; PV_REL = "n1-release-v1-2026-11-06"
+READS = Path("data_provenance/news_reads"); RELS = Path("data_provenance/releases")
+PV_V1, PV_V2 = "n1-cause-v1-2026-11-06", "n1-cause-v2-2026-11-07"; PV_REL = "n1-release-v1-2026-11-06"
+BLS_UA = {"User-Agent": f"regime-aware-signal research ({os.environ.get('BLS_CONTACT', 'no contact set')})"}   # BLS refuses scripted clients without a contact address: export BLS_CONTACT=you@example.com
 MODEL = "claude-sonnet-5"; COST = 0.0010; MIN_N = 30
 CLASSES = ["macro_release", "central_bank", "earnings_guidance", "geopolitics", "election_regulation", "credit_liquidity", "health", "no_identifiable_news_positioning"]
 FATAL = ("credit balance is too low", "invalid x-api-key", "authentication_error", "permission_error", "insufficient_quota")
@@ -65,7 +67,7 @@ def _parse(t: str) -> dict:
 
 
 def _ask(client, system: str, body: str, stem: str, folder: Path, pv: str) -> tuple[dict | None, int, int]:
-    out = folder / f"{stem}__{pv}.json"
+    folder.mkdir(parents=True, exist_ok=True); out = folder / f"{stem}__{pv}.json"
     if out.exists(): return json.loads(out.read_text()), 0, 0
     try:
         r = client.messages.create(model=MODEL, max_tokens=700, system=system, messages=[{"role": "user", "content": body}])
@@ -84,8 +86,9 @@ def _ask(client, system: str, body: str, stem: str, folder: Path, pv: str) -> tu
 
 
 # ------------------------------------------------------------------------------------------------ S1
-def cmd_read(limit: int | None):
-    client = _client(); READS.mkdir(parents=True, exist_ok=True); files = sorted(DIG.glob("*.txt"))
+def cmd_read(limit: int | None, v2: bool = False):
+    PV = PV_V2 if v2 else PV_V1; src = DIG2 if v2 else DIG
+    client = _client(); READS.mkdir(parents=True, exist_ok=True); files = sorted(src.glob("*.txt"))
     todo = [p for p in files if not (READS / f"{p.stem}__{PV}.json").exists()]; todo = todo[-limit:] if limit else todo
     print(f"cause read: {len(todo)} of {len(files)} digests unread under {PV}"); tin = tout = 0
     for k, p in enumerate(todo):
@@ -94,15 +97,21 @@ def cmd_read(limit: int | None):
         time.sleep(0.2)
     print(f"done: ~US${tin / 1e6 * 2 + tout / 1e6 * 10:.2f}")
     rows = [dict(date=f.name[:8], **{k: v for k, v in json.loads(f.read_text()).items() if not k.startswith("_")}) for f in sorted(READS.glob(f"*__{PV}.json"))]
-    df = pd.DataFrame(rows); df.to_csv(PROC / "news_causes.csv", index=False)
-    if len(df): print(df["cause"].value_counts().to_string()); print(f"mean confidence {df['confidence'].astype(float).mean():.2f}; share no-identifiable-news {(df['cause'] == 'no_identifiable_news_positioning').mean():.0%}")
+    df = pd.DataFrame(rows); df.to_csv(PROC / ("news_causes_v2.csv" if v2 else "news_causes.csv"), index=False)
+    if len(df):
+        print(df["cause"].value_counts().to_string()); print(f"mean confidence {df['confidence'].astype(float).mean():.2f}; share no-identifiable-news {(df['cause'] == 'no_identifiable_news_positioning').mean():.0%}")
+        yr = pd.to_datetime(df["date"], format="%Y%m%d").dt.year; print("share no-identifiable-news before / after 2017: " + " / ".join(f"{(df.loc[m, 'cause'] == 'no_identifiable_news_positioning').mean():.0%} (n {int(m.sum())})" for m in (yr < 2017, yr >= 2017)))
 
 
 # ------------------------------------------------------------------------------------------------ S2a
+_ERRS: list[str] = []
 def _get(url: str) -> bytes | None:
     try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r: return r.read()
-    except Exception: return None
+        with urllib.request.urlopen(urllib.request.Request(url, headers=BLS_UA), timeout=60) as r: return r.read()
+    except Exception as e:
+        msg = f"{url.rsplit('/', 1)[-1]}: {type(e).__name__}: {str(e)[:80]}"
+        if len(_ERRS) < 5: _ERRS.append(msg); print("    " + msg)
+        return None
 
 
 def _html_text(b: bytes) -> str:
@@ -127,6 +136,7 @@ def cmd_releases():
             if fs.exists(): rows.append(dict(event_date=pd.Timestamp(d).date(), release_date=w.date(), kind="fomc", sessions_after=int(idx.get_loc(w) - pos), file=str(fs)))
         time.sleep(0.05)
     df = pd.DataFrame(rows); df.to_csv(PROC / "news_releases_in_window.csv", index=False)
+    if fetched == 0 and _ERRS: print("  BLS fetched nothing -- see the errors above. A 403 means BLS wants a contact address in the User-Agent: `export BLS_CONTACT=<your email>` and rerun.")
     print(f"{fetched} release(s) fetched; {len(df)} event-release pairs in the +1..+5 window ({df['kind'].value_counts().to_dict() if len(df) else {}}); "
           f"{ev['date'].nunique() - df['event_date'].nunique() if len(df) else ev['date'].nunique()} event days with no release in the window")
 
@@ -141,14 +151,15 @@ def cmd_read_releases():
         text = Path(p.file).read_text()[:40000]; stem = f"{Path(p.file).stem}__for_{ed}"
         d, a, b = _ask(client, SYS_REL, f"MARKET MOVE {p.event_date}, STORY: {story}\n\nRELEASE ({p.kind}, {p.release_date}):\n{text}", stem, RELS / "reads", PV_REL); tin += a; tout += b
         if d: rows.append(dict(event_date=p.event_date, release_date=p.release_date, kind=p.kind, sessions_after=p.sessions_after, **{k: v for k, v in d.items() if not k.startswith("_") and k != "drivers"}, drivers=json.dumps(d.get("drivers"))))
-    pd.DataFrame(rows).to_csv(PROC / "news_release_reads.csv", index=False); print(f"{len(rows)} release reads, ~US${tin / 1e6 * 2 + tout / 1e6 * 10:.2f} -> processed/news_release_reads.csv")
+    if rows: pd.DataFrame(rows).to_csv(PROC / "news_release_reads.csv", index=False)
+    print(f"{len(rows)} release reads, ~US${tin / 1e6 * 2 + tout / 1e6 * 10:.2f} -> processed/news_release_reads.csv")
 
 
 # ------------------------------------------------------------------------------------------------ S3 / S4
-def _frame() -> pd.DataFrame:
-    ev = pd.read_csv(PROC / "news_events.csv", parse_dates=["date"]); causes = pd.read_csv(PROC / "news_causes.csv", dtype={"date": str}); causes["date"] = pd.to_datetime(causes["date"], format="%Y%m%d")
+def _frame(v2: bool = False) -> pd.DataFrame:
+    ev = pd.read_csv(PROC / "news_events.csv", parse_dates=["date"]); causes = pd.read_csv(PROC / ("news_causes_v2.csv" if v2 else "news_causes.csv"), dtype={"date": str}); causes["date"] = pd.to_datetime(causes["date"], format="%Y%m%d")
     ev = ev.merge(causes[["date", "cause", "confidence", "story_direction_for_equities"]], on="date", how="left"); r = _returns(); idx = r.index
-    rel = pd.read_csv(PROC / "news_release_reads.csv", parse_dates=["event_date"]) if (PROC / "news_release_reads.csv").exists() else None
+    rp = PROC / "news_release_reads.csv"; rel = pd.read_csv(rp, parse_dates=["event_date"]) if rp.exists() and rp.stat().st_size > 10 else None
     for h in (1, 3, 5):
         f = []
         for _, e in ev.iterrows():
@@ -161,13 +172,14 @@ def _frame() -> pd.DataFrame:
     ev["cause"] = ev["cause"].fillna("unread"); return ev
 
 
-def cmd_tables():
-    ev = _frame(); r = _returns(); rows = []
+def cmd_tables(v2: bool = False):
+    ev = _frame(v2); r = _returns(); rows = []; tag = "_v2" if v2 else ""
     for (ix, sg), g in ev.groupby(["index", "sign"]):
         col = g["column"].iloc[0]; s = r[col].dropna()
         for h in (1, 3, 5):
             base_series = s.rolling(h).sum().shift(-h).dropna(); base = float((np.sign(base_series) == -sg).mean())
-            for cls, gg in list(g.groupby("cause")) + [("ALL", g)] + [("with contradicting release", g[g.contra > 0.3]), ("without", g[~(g.contra > 0.3)])]:
+            splits = [("with contradicting release", g[g.contra > 0.3]), ("without", g[~(g.contra > 0.3)])] if ev["has_release"].any() else []
+            for cls, gg in list(g.groupby("cause")) + [("ALL", g)] + splits:
                 v = gg[f"f{h}"].dropna(); n = len(v)
                 if n == 0: continue
                 rev = float((np.sign(v) == -sg).mean()); gap = (rev - base) * 100
@@ -176,8 +188,8 @@ def cmd_tables():
                     verdict = "PASS" if (abs(gap) >= 10 and p < 0.05) else "FAIL"
                 else: p, verdict = np.nan, "measured (n < 30)"
                 rows.append(dict(index=ix, direction="fall" if sg < 0 else "rise", h=h, cause=cls, n=n, reversal=rev, base=base, gap=gap, p=p, verdict=verdict))
-    tab = pd.DataFrame(rows); out = DOCS / "news_events_tables.md"
-    L = ["# N1 — reversal after ≥ 4% moves, by cause class", "", "Reversal = the next h sessions' return has the opposite sign to the event; base = how often that sign occurs over any h sessions. H-table standard: n ≥ 30, |gap| ≥ 10 points, random-date p < 0.05.", ""]
+    tab = pd.DataFrame(rows); out = DOCS / f"news_events_tables{tag}.md"
+    L = [f"# N1 — reversal after ≥ 4% moves, by cause class (cause read {'v2, finance-section digest' if v2 else 'v1'})", "", f"Index-events with a cause read: {int(ev['cause'].ne('unread').sum())} of {len(ev)}; with a release read in the window: {int(ev['has_release'].sum())}.", "", "Reversal = the next h sessions' return has the opposite sign to the event; base = how often that sign occurs over any h sessions. H-table standard: n ≥ 30, |gap| ≥ 10 points, random-date p < 0.05.", ""]
     for (ix, dr), g in tab.groupby(["index", "direction"]):
         L += [f"## {ix} — {dr}", "", "| cause | h | n | reversal | base | gap | p | verdict |", "|---|---|---|---|---|---|---|---|"]
         for _, r_ in g.sort_values(["cause", "h"]).iterrows(): L.append(f"| {r_['cause']} | {r_['h']} | {r_['n']} | {r_['reversal']:.0%} | {r_['base']:.0%} | {r_['gap']:+.0f} | {('%.3f' % r_['p']) if np.isfinite(r_['p']) else '·'} | {r_['verdict']} |")
@@ -185,8 +197,8 @@ def cmd_tables():
     out.write_text("\n".join(L) + "\n"); out.with_suffix(".json").write_text(tab.to_json(orient="records", indent=1)); print(tab[(tab.cause == "ALL")].to_string(index=False)); print(f"-> {out}")
 
 
-def cmd_learn():
-    ev = _frame().dropna(subset=["f5"]).sort_values("date").reset_index(drop=True); r = _returns()
+def cmd_learn(v2: bool = False):
+    tag = "_v2" if v2 else ""; ev = _frame(v2).dropna(subset=["f5"]).sort_values("date").reset_index(drop=True); r = _returns()
     vix = None
     try:
         m = pd.read_parquet(PROC / "macro_panel.parquet"); m.index = pd.to_datetime(m.index); vix = m["VIXCLS"].reindex(ev["date"]).ffill().to_numpy() if "VIXCLS" in m.columns else None
@@ -209,11 +221,11 @@ def cmd_learn():
         sw = run(cells, stat, dict(y=y), lambda dd, rg: dict(y=np.asarray(dd["y"])[rg.permutation(len(dd["y"]))]), n_null=200, seed=h, label=f"N1 learner → {h}-session return after the event", meta=dict(tag=f"h{h}", rows="train", cols="ridge")); sws.append(sw)
         plain = ev[ev.sign < 0][f"f{h}"].to_numpy(float) - COST; plain_sh = float(plain.mean() / plain.std(ddof=1) * np.sqrt(252 / h)) if len(plain) > 10 else np.nan
         print(f"h={h}: learner best {sw.best} Sharpe {sw.best_stat:+.2f} vs null q95 {sw.q95:+.2f}, p_family {sw.p_family:.3f}; plain 'buy after a fall' Sharpe {plain_sh:+.2f} (n {len(plain)})")
-        write_md(sw, DOCS / f"news_events_learn_h{h}.md", axis_rows="train", axis_cols="ridge", fmt="{:+.2f}", note=f"Plain rule 'long the session after a ≥ 4% fall', {h} sessions: Sharpe {plain_sh:+.2f} on n {len(plain)}.")
-    (DOCS / "news_events_learn.json").write_text(json.dumps([s.to_json() for s in sws], indent=1, default=float))
+        write_md(sw, DOCS / f"news_events_learn{tag}_h{h}.md", axis_rows="train", axis_cols="ridge", fmt="{:+.2f}", note=f"Plain rule 'long the session after a ≥ 4% fall', {h} sessions: Sharpe {plain_sh:+.2f} on n {len(plain)}.")
+    (DOCS / f"news_events_learn{tag}.json").write_text(json.dumps([s.to_json() for s in sws], indent=1, default=float))
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["read", "releases", "read_releases", "tables", "learn", "all"]); ap.add_argument("--limit", type=int); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["read", "releases", "read_releases", "tables", "learn", "all"]); ap.add_argument("--limit", type=int); ap.add_argument("--v2", action="store_true", help="use the finance-section digests / v2 cause reads"); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
     for c in (["read", "releases", "read_releases", "tables", "learn"] if a.cmd == "all" else [a.cmd]):
-        {"read": lambda: cmd_read(a.limit), "releases": cmd_releases, "read_releases": cmd_read_releases, "tables": cmd_tables, "learn": cmd_learn}[c]()
+        {"read": lambda: cmd_read(a.limit, a.v2), "releases": cmd_releases, "read_releases": cmd_read_releases, "tables": lambda: cmd_tables(a.v2), "learn": lambda: cmd_learn(a.v2)}[c]()

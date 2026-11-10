@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline/motor fuel)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Transportation",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Household energy (fuel oil, natural gas)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Core (ex food/energy)",
+   "contribution": "small",
+   "direction": "0"
+  },
+  {
+   "component": "Food",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.25,
+ "contradiction": 0,
+ "evidence": "Falling energy prices, particularly gasoline, drove the decline in the overall index. Excluding energy, the index was virtually unchanged.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:39"
+}

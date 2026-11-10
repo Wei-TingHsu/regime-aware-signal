@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Food",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Transportation (ex-energy)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Core CPI (ex food & energy)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.45,
+ "contradiction": 0,
+ "evidence": "The index for energy fell 3.1 percent in August after three consecutive sharp increases.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:38"
+}

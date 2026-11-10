@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Shelter",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food (food at home)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Energy (gasoline, fuel oil)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Medical care services",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Used cars/apparel",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.5,
+ "contradiction": -1,
+ "evidence": "The index for energy fell 2.0 percent in February, with all of its major component indexes declining, more than offsetting a decline in the energy index",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:42"
+}

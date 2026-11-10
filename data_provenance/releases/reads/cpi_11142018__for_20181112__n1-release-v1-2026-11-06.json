@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Gasoline index",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Used cars and trucks",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Electricity",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Food",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.55,
+ "contradiction": 1,
+ "evidence": "broad risk-off from unrelated geopolitical/wildfire headlines rather than semiconductor-specific news",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:41"
+}

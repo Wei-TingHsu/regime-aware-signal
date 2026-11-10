@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Medical care services",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Apparel",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.4,
+ "contradiction": 0,
+ "evidence": "The energy index fell 2.4 percent as all major component energy indexes declined",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:41"
+}

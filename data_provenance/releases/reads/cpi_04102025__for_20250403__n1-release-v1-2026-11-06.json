@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Food at home (eggs)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Airline fares",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Used cars and trucks",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.5,
+ "contradiction": 0.6,
+ "evidence": "The Consumer Price Index for All Urban Consumers (CPI-U) decreased 0.1 percent on a seasonally adjusted basis in March",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:46"
+}

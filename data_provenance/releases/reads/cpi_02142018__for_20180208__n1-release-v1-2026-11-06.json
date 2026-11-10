@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "gasoline/energy",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "apparel",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "medical care",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "motor vehicle insurance",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.8,
+ "contradiction": 1,
+ "evidence": "the increase in the all items index was broad-based, with increases in the indexes for gasoline, shelter, apparel, medical care, and food all contributing",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:41"
+}

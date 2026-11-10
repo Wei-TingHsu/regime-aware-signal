@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Unemployment rate",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Labor force participation rate",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Average hourly earnings",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Professional and business services payrolls",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Average workweek hours",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.6,
+ "contradiction": 0.5,
+ "evidence": "the unemployment rate rose by 0.2 percentage point to 3.7 percent...as the labor force participation rate increased by 0.3 percentage point",
+ "note": "release softened via rising unemployment/participation and cooling wage growth, mixed relative to hawkish-hike fear narrative",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:44"
+}

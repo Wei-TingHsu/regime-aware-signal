@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Gasoline",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Used cars and trucks",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Airline fares",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.85,
+ "contradiction": 1,
+ "evidence": "The 12-month increase has been steadily rising and is now the largest since the period ending January 1982",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:43"
+}

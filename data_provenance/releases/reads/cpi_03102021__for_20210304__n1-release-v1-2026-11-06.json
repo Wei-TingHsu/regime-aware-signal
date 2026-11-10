@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Gasoline/Energy",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI (ex food/energy)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Used cars/trucks",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Airline fares",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.35,
+ "contradiction": 1,
+ "evidence": "The index for all items less food and energy rose 0.1 percent in February",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:43"
+}

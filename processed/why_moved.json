@@ -1,5 +1,5 @@
 {
- "run": "2026-11-06 22:29",
+ "run": "2026-11-10 15:02",
  "rule": {
   "mult": 1.5,
   "floor": 0.08
@@ -11,337 +11,241 @@
     "start": "2026-03-30",
     "kind": "trough",
     "direction": 1,
-    "sessions": 153,
-    "move": 0.15335684407027564,
+    "sessions": 155,
+    "move": 0.1798646018739185,
     "extreme_so_far": {
      "date": "2026-10-06",
-     "move": 0.2143377485855567
+     "move": 0.21433774858555707
     },
-    "threshold_now": 0.08603285308901706,
+    "threshold_now": 0.09409499972601931,
     "rule": "the founder's rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and 3 open-to-close days against the trend; extremes from the high and low of the day (current-leg scale, promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-03-30",
      "direction": 1,
-     "move": 0.15335684407027564,
-     "sessions": 153,
+     "move": 0.1798646018739185,
+     "sessions": 155,
      "scale": "quarter scale, zigzag"
     }
    },
    "target": {
-    "n": 64,
-    "med_size": 0.10521715062620979,
-    "q25": 0.0617079034581615,
-    "q75": 0.2210478269692671,
-    "med_length": 26.5,
-    "target_from_start": 0.10521715062620979,
-    "target_from_now": -0.04813969344406585,
+    "n": 63,
+    "med_size": 0.09490306360465357,
+    "q25": 0.06152364437773147,
+    "q75": 0.19754774478339662,
+    "med_length": 26.0,
+    "target_from_start": 0.09490306360465357,
+    "target_from_now": -0.08496153826926493,
     "band_from_now": [
-     -0.09164894061211414,
-     0.06769098289899148
+     -0.11834095749618703,
+     0.017683142909478117
     ],
-    "share_of_typical": 1.4575270586359537,
-    "pct_rank": 0.640625,
+    "share_of_typical": 1.8952454751428998,
+    "pct_rank": 0.7301587301587301,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
-    "actual": 0.15335684407027636,
-    "sessions": 153,
+    "actual": 0.15647609151914144,
+    "sessions": 154,
     "rows": [
-     {
-      "factor": "macro1",
-      "label": "macro state, PCA line 1",
-      "beta": 0.06802414822254763,
-      "move": 0.9488049018097522,
-      "contrib": 0.06454164527498633,
-      "share": 0.4208592428089475
-     },
      {
       "factor": "real",
       "label": "real 10-yr yield",
-      "beta": -0.0010258697869390248,
-      "move": 60.000000000000014,
-      "contrib": -0.0615521872163415,
-      "share": -0.401365766161274
+      "beta": -0.0010255967991326987,
+      "move": 58.99999999999999,
+      "contrib": -0.06051021114882922,
+      "share": -0.3867057935903717
+     },
+     {
+      "factor": "macro1",
+      "label": "macro state, PCA line 1",
+      "beta": 0.067973669302801,
+      "move": 0.8201544912141268,
+      "contrib": 0.05574891016299605,
+      "share": 0.3562774965923557
      },
      {
       "factor": "vix",
       "label": "equity volatility (VIX)",
-      "beta": -0.07596000696828765,
-      "move": -0.6113218293321174,
-      "contrib": 0.046436010415933995,
-      "share": 0.3027971180383349
+      "beta": -0.07611881016774608,
+      "move": -0.1771731209048517,
+      "contrib": 0.01348620715698353,
+      "share": 0.08618701442535576
      },
      {
       "factor": "macro2",
       "label": "macro state, PCA line 2",
-      "beta": -0.023809030829481097,
-      "move": -0.2200696623308087,
-      "contrib": 0.005239645375067719,
-      "share": 0.034166361513455715
+      "beta": -0.02381751208895922,
+      "move": -0.22951606557037368,
+      "contrib": 0.005466501666332732,
+      "share": 0.03493506013130463
      },
      {
       "factor": "hikes",
       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-      "beta": 6.0328136387716166e-05,
-      "move": 52.00000000000004,
-      "contrib": 0.0031370630921612433,
-      "share": 0.020455970590550702
+      "beta": 6.0591845582987036e-05,
+      "move": 45.000000000000014,
+      "contrib": 0.0027266330512344173,
+      "share": 0.017425237458087155
      },
      {
       "factor": "cot_oil",
       "label": "speculative positioning in oil (CFTC)",
-      "beta": 0.04123494136661178,
-      "move": -0.060548189286278906,
-      "contrib": -0.002496701035074222,
-      "share": -0.016280336558895925
-     },
-     {
-      "factor": "cot_silver",
-      "label": "speculative positioning in silver (CFTC)",
-      "beta": 0.014126547237218639,
-      "move": -0.08428246933348554,
-      "contrib": -0.0011906202843089148,
-      "share": -0.007763724478858658
+      "beta": 0.04119497046667374,
+      "move": -0.05789663282105523,
+      "contrib": -0.0023850500791832235,
+      "share": -0.01524226516669778
      },
      {
       "factor": "dollar",
       "label": "US dollar (broad index)",
-      "beta": -0.20309516716300025,
-      "move": 0.0031323252915518296,
-      "contrib": -0.0006361601286966123,
-      "share": -0.004148234352065105
+      "beta": -0.20299140240033464,
+      "move": 0.004895443090846996,
+      "contrib": -0.0009937328583820605,
+      "share": -0.006350700920085922
      },
      {
-      "factor": "oil",
-      "label": "oil (WTI spot)",
-      "beta": 0.0020255665411313406,
-      "move": -0.049439911937283476,
-      "contrib": -0.00010014383141664136,
-      "share": -0.0006530118171364434
-     },
-     {
-      "factor": "war",
-      "label": "geopolitical risk (GPR index)",
-      "beta": 0.0002857986752735002,
-      "move": -0.06937603824744976,
-      "contrib": -1.982757982684482e-05,
-      "share": -0.00012929047899393884
+      "factor": "cot_silver",
+      "label": "speculative positioning in silver (CFTC)",
+      "beta": 0.014145139783185092,
+      "move": -0.06994642165734719,
+      "contrib": -0.000989401911676781,
+      "share": -0.006323022910856316
      },
      {
       "factor": "cot_gold",
       "label": "speculative positioning in gold (CFTC)",
-      "beta": -0.01351693002326695,
-      "move": -0.00041620297802941186,
-      "contrib": 5.625786529498872e-06,
-      "share": 3.668428731436879e-05
+      "beta": -0.013550191405754032,
+      "move": -0.020486485334475113,
+      "contrib": 0.0002775957975133107,
+      "share": 0.0017740460847295186
+     },
+     {
+      "factor": "oil",
+      "label": "oil (WTI spot)",
+      "beta": 0.002060430208586769,
+      "move": -0.049439911937283476,
+      "contrib": -0.0001018674880654485,
+      "share": -0.000651009921557168
+     },
+     {
+      "factor": "war",
+      "label": "geopolitical risk (GPR index)",
+      "beta": 0.00028616961519323394,
+      "move": -0.06937603824744976,
+      "contrib": -1.9853314168903777e-05,
+      "share": -0.00012687762057550598
      }
     ],
-    "drift": 0.11174541934221714,
-    "resid": -0.011752925140954842,
-    "unexplained_share": -0.07663776085251872
+    "drift": 0.11245391157046483,
+    "resid": 0.031316448913922185,
+    "unexplained_share": 0.20013567957818848
    },
    "impulse": {
     "end": "2026-05-26",
     "sessions": 39,
-    "move": 0.1720176911025229,
+    "move": 0.1720176911025234,
     "attribution": {
-     "actual": 0.1720176911025229,
+     "actual": 0.17201769110252346,
      "sessions": 39,
      "rows": [
       {
        "factor": "vix",
        "label": "equity volatility (VIX)",
-       "beta": -0.07596000696828765,
+       "beta": -0.07611881016774608,
        "move": -0.5875253465495507,
-       "contrib": 0.04462842941794949,
-       "share": 0.2594409280342616
+       "contrib": 0.04472173032274448,
+       "share": 0.2599833193673672
       },
       {
        "factor": "macro1",
        "label": "macro state, PCA line 1",
-       "beta": 0.06802414822254763,
-       "move": 0.281482429952578,
-       "contrib": 0.019147602537137046,
-       "share": 0.11131182155982454
+       "beta": 0.067973669302801,
+       "move": 0.2800810530883595,
+       "contrib": 0.0190381368806084,
+       "share": 0.11067545877744382
       },
       {
        "factor": "real",
        "label": "real 10-yr yield",
-       "beta": -0.0010258697869390248,
+       "beta": -0.0010255967991326987,
        "move": 6.000000000000005,
-       "contrib": -0.006155218721634154,
-       "share": -0.035782474943031474
+       "contrib": -0.006153580794796198,
+       "share": -0.03577295309195047
       },
       {
        "factor": "dollar",
        "label": "US dollar (broad index)",
-       "beta": -0.20309516716300025,
+       "beta": -0.20299140240033464,
        "move": -0.017596283913496436,
-       "contrib": 0.0035737202228591706,
-       "share": 0.020775306306891575
+       "contrib": 0.0035718943486350904,
+       "share": 0.02076469185082959
       },
       {
        "factor": "hikes",
        "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 6.0328136387716166e-05,
+       "beta": 6.0591845582987036e-05,
        "move": 21.000000000000004,
-       "contrib": 0.0012668908641420397,
-       "share": 0.007364887041687881
+       "contrib": 0.0012724287572427279,
+       "share": 0.007397080783303582
       },
       {
        "factor": "cot_oil",
        "label": "speculative positioning in oil (CFTC)",
-       "beta": 0.04123494136661178,
+       "beta": 0.04119497046667374,
        "move": -0.018953364781349194,
-       "contrib": -0.0007815408854589388,
-       "share": -0.004543375047355675
-      },
-      {
-       "factor": "cot_silver",
-       "label": "speculative positioning in silver (CFTC)",
-       "beta": 0.014126547237218639,
-       "move": 0.03731516594652051,
-       "contrib": 0.0005271344544081743,
-       "share": 0.0030644200083699597
+       "contrib": -0.0007807833024117742,
+       "share": -0.00453897094774062
       },
       {
        "factor": "macro2",
        "label": "macro state, PCA line 2",
-       "beta": -0.023809030829481097,
-       "move": -0.02181207104734506,
-       "contrib": 0.0005193242720210705,
-       "share": 0.003019016641210189
+       "beta": -0.02381751208895922,
+       "move": -0.022202947169688236,
+       "contrib": 0.0005288189626245725,
+       "share": 0.0030742126535659264
+      },
+      {
+       "factor": "cot_silver",
+       "label": "speculative positioning in silver (CFTC)",
+       "beta": 0.014145139783185092,
+       "move": 0.03731516594652051,
+       "contrib": 0.0005278282383462809,
+       "share": 0.0030684532210799903
       },
       {
        "factor": "cot_gold",
        "label": "speculative positioning in gold (CFTC)",
-       "beta": -0.01351693002326695,
+       "beta": -0.013550191405754032,
        "move": -0.03020985904867457,
-       "contrib": 0.00040834455077369205,
-       "share": 0.002373852062287697
+       "contrib": 0.00040934937245039083,
+       "share": 0.0023796934479629562
       },
       {
        "factor": "oil",
        "label": "oil (WTI spot)",
-       "beta": 0.0020255665411313406,
+       "beta": 0.002060430208586769,
        "move": -0.0698187790936835,
-       "contrib": -0.00014142258287480565,
-       "share": -0.00082213975765154
+       "contrib": -0.00014385672157127185,
+       "share": -0.0008362902713624523
       },
       {
        "factor": "war",
        "label": "geopolitical risk (GPR index)",
-       "beta": 0.0002857986752735002,
+       "beta": 0.00028616961519323394,
        "move": -0.48720671741738464,
-       "contrib": -0.0001392430344222391,
-       "share": -0.0008094692675490566
+       "contrib": -0.00013942375884289164,
+       "share": -0.000810519882863643
       }
      ],
-     "drift": 0.028484126498996527,
-     "resid": 0.08067954350862584,
-     "unexplained_share": 0.46901887237017187
+     "drift": 0.028478587995117717,
+     "resid": 0.08068656080237593,
+     "unexplained_share": 0.4690596663937683
     }
    },
    "last_session": {
-    "date": "2026-11-05",
-    "ret": -0.04509334722617872,
-    "attribution": {
-     "actual": -0.04509334722617872,
-     "sessions": 1,
-     "rows": [
-      {
-       "factor": "macro1",
-       "label": "macro state, PCA line 1",
-       "beta": 0.0959566491527944,
-       "move": -0.024458132954295664,
-       "contrib": -0.0023469204828277476,
-       "share": 0.052045825541760946
-      },
-      {
-       "factor": "macro2",
-       "label": "macro state, PCA line 2",
-       "beta": -0.009349513907498348,
-       "move": -0.018954419536470812,
-       "contrib": 0.00017721460906479225,
-       "share": -0.003929950202541434
-      },
-      {
-       "factor": "war",
-       "label": "geopolitical risk (GPR index)",
-       "beta": 0.00078723329488786,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "hikes",
-       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": -5.834434369904527e-05,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "real",
-       "label": "real 10-yr yield",
-       "beta": -0.000983358147543549,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "dollar",
-       "label": "US dollar (broad index)",
-       "beta": -0.32717212942796053,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "oil",
-       "label": "oil (WTI spot)",
-       "beta": -0.02272736456787006,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "vix",
-       "label": "equity volatility (VIX)",
-       "beta": -0.07203560648440223,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_gold",
-       "label": "speculative positioning in gold (CFTC)",
-       "beta": 0.021708753041063466,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "cot_silver",
-       "label": "speculative positioning in silver (CFTC)",
-       "beta": -0.005789019499246443,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_oil",
-       "label": "speculative positioning in oil (CFTC)",
-       "beta": 0.0484271785774783,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      }
-     ],
-     "drift": 0.0006540806127400735,
-     "resid": -0.04357772196515584,
-     "unexplained_share": 0.9663891603916466
-    }
+    "date": "2026-11-09",
+    "ret": 0.02338851035477838,
+    "attribution": null
    },
    "stable_factors": [
     "war",
@@ -353,415 +257,319 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 139,
+   "n_past_episodes": 137,
    "windows": {
     "R1_full": {
      "sessions": 120,
-     "explained": 0.3785066695916479,
-     "move": 0.20713681219674604,
+     "explained": 0.37843287020266625,
+     "move": 0.20713681219674654,
      "end": "2026-09-21"
     },
     "R2_impulse": {
      "sessions": 39,
-     "explained": 0.36539277263894576,
-     "move": 0.1720176911025229,
+     "explained": 0.36538417590763594,
+     "move": 0.1720176911025234,
      "end": "2026-05-26"
     },
     "R3_half": {
      "sessions": 60,
-     "explained": 0.29223288265422587,
-     "move": 0.15264865216316062,
+     "explained": 0.29211652145531863,
+     "move": 0.15264865216316112,
      "end": "2026-06-25"
     },
     "R4_ceiling": {
      "sessions": 3,
-     "explained": 0.750938654792642,
-     "move": 0.03705979040521019,
+     "explained": 0.7508438875533777,
+     "move": 0.037059696868245076,
      "end": "2026-04-02"
     },
     "R5_causal": {
      "sessions": 8,
-     "explained": 0.7105807932080741,
-     "move": 0.07245649401324664,
+     "explained": 0.710485018419712,
+     "move": 0.07245649401324689,
      "end": "2026-04-10"
     }
    },
    "window_test": {},
-   "ceiling_null": 0.06124663980739764,
+   "ceiling_null": 0.06010027844991228,
    "best_rule": null,
    "r5_rows": [
     {
      "factor": "vix",
      "label": "equity volatility (VIX)",
-     "beta": -0.07596000696828765,
+     "beta": -0.07611881016774608,
      "move": -0.4648551933566325,
-     "contrib": 0.03531040372661451,
-     "share": 0.4873324911381855
+     "contrib": 0.035384224218604404,
+     "share": 0.48835131619997046
     },
     {
      "factor": "real",
      "label": "real 10-yr yield",
-     "beta": -0.0010258697869390248,
+     "beta": -0.0010255967991326987,
      "move": -9.000000000000007,
-     "contrib": 0.00923282808245123,
-     "share": 0.12742581887502405
+     "contrib": 0.009230371192194296,
+     "share": 0.12739191038565498
     },
     {
      "factor": "macro1",
      "label": "macro state, PCA line 1",
-     "beta": 0.06802414822254763,
-     "move": 0.06532390336547333,
-     "contrib": 0.004443602885008336,
-     "share": 0.06132787606582162
+     "beta": 0.067973669302801,
+     "move": 0.06417385139985887,
+     "contrib": 0.004362132152941099,
+     "share": 0.06020346709217796
     },
     {
      "factor": "dollar",
      "label": "US dollar (broad index)",
-     "beta": -0.20309516716300025,
+     "beta": -0.20299140240033464,
      "move": -0.020238026982662305,
-     "contrib": 0.00411024547309311,
-     "share": 0.056727081941636136
+     "contrib": 0.0041081454790264345,
+     "share": 0.05669809911414373
     }
    ],
-   "r5_unexplained": 0.20877912307057314
+   "r5_unexplained": 0.2088905776592797
   },
   "TLT": {
    "name": "long Treasuries",
    "episode": {
-    "start": "2026-08-28",
-    "kind": "peak",
-    "direction": -1,
-    "sessions": 48,
-    "move": -0.007703938214781384,
+    "start": "2026-10-07",
+    "kind": "trough",
+    "direction": 1,
+    "sessions": 23,
+    "move": 0.06047971361303209,
     "extreme_so_far": {
-     "date": "2026-10-07",
-     "move": -0.06781756750609007
+     "date": "2026-11-06",
+     "move": 0.059991540352205344
     },
     "threshold_now": 0.08,
     "rule": "the founder's rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and 3 open-to-close days against the trend; extremes from the high and low of the day (current-leg scale, promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-02-27",
      "direction": -1,
-     "move": -0.07656422258745105,
-     "sessions": 174,
+     "move": -0.07217859019802358,
+     "sessions": 176,
      "scale": "quarter scale, zigzag"
     }
    },
    "target": {
-    "n": 64,
-    "med_size": 0.06365125999752164,
-    "q25": 0.039341443607950916,
-    "q75": 0.10041888333745612,
-    "med_length": 23.0,
-    "target_from_start": -0.06365125999752164,
-    "target_from_now": -0.055947321782740256,
+    "n": 71,
+    "med_size": 0.05423582871953288,
+    "q25": 0.03665681939953852,
+    "q75": 0.11995515355577055,
+    "med_length": 24.0,
+    "target_from_start": 0.05423582871953288,
+    "target_from_now": -0.00624388489349921,
     "band_from_now": [
-     -0.031637505393169535,
-     -0.09271494512267474
+     -0.023822894213493567,
+     0.05947543994273846
     ],
-    "share_of_typical": 0.12103355401104941,
-    "pct_rank": 0.0,
+    "share_of_typical": 1.1151247254981187,
+    "pct_rank": 0.5492957746478874,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
-    "actual": -0.00770393821478141,
-    "sessions": 48,
+    "actual": 0.059991540352205275,
+    "sessions": 22,
     "rows": [
      {
-      "factor": "dollar",
-      "label": "US dollar (broad index)",
-      "beta": -1.1983806211924843,
-      "move": 0.024273539204806127,
-      "contrib": -0.02908893899079569,
-      "share": 3.775853100039569
+      "factor": "macro2",
+      "label": "macro state, PCA line 2",
+      "beta": 0.25203834914938034,
+      "move": 0.28819764480687926,
+      "contrib": 0.07263685862586533,
+      "share": 1.21078502401206
      },
      {
       "factor": "real",
       "label": "real 10-yr yield",
-      "beta": 0.0009382342007421719,
-      "move": 22.00000000000002,
-      "contrib": 0.0206411524163278,
-      "share": -2.679298800284248
-     },
-     {
-      "factor": "macro1",
-      "label": "macro state, PCA line 1",
-      "beta": -0.02192209664650609,
-      "move": 0.3105880550661775,
-      "contrib": -0.006808741360411099,
-      "share": 0.8838000994539763
-     },
-     {
-      "factor": "macro2",
-      "label": "macro state, PCA line 2",
-      "beta": 0.252960331546557,
-      "move": -0.02549202617709967,
-      "contrib": -0.006448471393552643,
-      "share": 0.837035710019075
+      "beta": 0.0009249052592808035,
+      "move": -29.000000000000007,
+      "contrib": -0.026822252519143306,
+      "share": -0.4471005805430586
      },
      {
       "factor": "vix",
       "label": "equity volatility (VIX)",
-      "beta": 0.021139727147991342,
-      "move": 0.1406955508394243,
-      "contrib": 0.0029742655556817743,
-      "share": -0.38607079558025315
+      "beta": 0.02146697890830234,
+      "move": 0.5307842694726594,
+      "contrib": 0.011394334717628246,
+      "share": 0.1899323579746922
      },
      {
-      "factor": "cot_oil",
-      "label": "speculative positioning in oil (CFTC)",
-      "beta": -0.05247911238434737,
-      "move": -0.02533099445330294,
-      "contrib": 0.0013293481047221647,
-      "share": -0.1725543569614263
+      "factor": "macro1",
+      "label": "macro state, PCA line 1",
+      "beta": -0.018570188230418127,
+      "move": -0.3635817309914451,
+      "contrib": 0.006751781181652383,
+      "share": 0.11254555462342265
      },
      {
-      "factor": "cot_silver",
-      "label": "speculative positioning in silver (CFTC)",
-      "beta": -0.014694423292187541,
-      "move": -0.0524520319519097,
-      "contrib": 0.000770752360036707,
-      "share": -0.1000465396461615
-     },
-     {
-      "factor": "cot_gold",
-      "label": "speculative positioning in gold (CFTC)",
-      "beta": -0.007017084455709621,
-      "move": -0.09871975718642689,
-      "contrib": 0.0006927248736243043,
-      "share": -0.0899182800162111
-     },
-     {
-      "factor": "oil",
-      "label": "oil (WTI spot)",
-      "beta": 0.00205816789229279,
-      "move": 0.16398409659984914,
-      "contrib": 0.0003375068024684488,
-      "share": -0.043809645542182626
-     },
-     {
-      "factor": "war",
-      "label": "geopolitical risk (GPR index)",
-      "beta": -0.0006220304421887353,
-      "move": 0.5148389480196807,
-      "contrib": -0.00032024549849266526,
-      "share": 0.0415690637131819
+      "factor": "dollar",
+      "label": "US dollar (broad index)",
+      "beta": -1.191711885545523,
+      "move": 0.00513705182687918,
+      "contrib": -0.0061218857187552616,
+      "share": -0.10204581650703061
      },
      {
       "factor": "hikes",
       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-      "beta": -0.00010829635980052978,
-      "move": -0.9999999999999787,
-      "contrib": 0.00010829635980052747,
-      "share": -0.014057272628788892
+      "beta": -0.00010979107947307738,
+      "move": -25.99999999999998,
+      "contrib": 0.0028545680663000094,
+      "share": 0.047582843339928946
+     },
+     {
+      "factor": "cot_oil",
+      "label": "speculative positioning in oil (CFTC)",
+      "beta": -0.04898235166318342,
+      "move": -0.016205084872212547,
+      "contrib": 0.0007937631659424486,
+      "share": 0.013231251627851728
+     },
+     {
+      "factor": "cot_gold",
+      "label": "speculative positioning in gold (CFTC)",
+      "beta": -0.007579178878806576,
+      "move": -0.08809385231358802,
+      "contrib": 0.0006676790648078521,
+      "share": 0.011129553615192486
+     },
+     {
+      "factor": "war",
+      "label": "geopolitical risk (GPR index)",
+      "beta": -0.0006124446931668096,
+      "move": 0.6462037052910459,
+      "contrib": -0.00039576403001023003,
+      "share": -0.006596997304732181
+     },
+     {
+      "factor": "cot_silver",
+      "label": "speculative positioning in silver (CFTC)",
+      "beta": -0.01010426786765885,
+      "move": -0.022433345028671225,
+      "contrib": 0.00022667252733730704,
+      "share": 0.0037784081889968442
+     },
+     {
+      "factor": "oil",
+      "label": "oil (WTI spot)",
+      "beta": -0.00015869173929152923,
+      "move": 0.04747629463520475,
+      "contrib": -7.534095770777741e-06,
+      "share": -0.00012558596973082705
      }
     ],
-    "drift": -0.0007312873715255774,
-    "resid": 0.008839699927334535,
-    "unexplained_share": -1.1474261190690702
+    "drift": 7.23229078538174e-05,
+    "resid": -0.0020590035415025388,
+    "unexplained_share": -0.03432156483087953
    },
    "impulse": {
-    "end": "2026-10-05",
-    "sessions": 25,
-    "move": -0.06833618433313496,
+    "end": "2026-11-09",
+    "sessions": 23,
+    "move": 0.060479713613031984,
     "attribution": {
-     "actual": -0.06833618433313496,
-     "sessions": 25,
+     "actual": 0.059991540352205275,
+     "sessions": 22,
      "rows": [
       {
        "factor": "macro2",
        "label": "macro state, PCA line 2",
-       "beta": 0.252960331546557,
-       "move": -0.3373474596136276,
-       "contrib": -0.085335525230252,
-       "share": 1.2487604636256282
+       "beta": 0.25203834914938034,
+       "move": 0.28819764480687926,
+       "contrib": 0.07263685862586533,
+       "share": 1.21078502401206
       },
       {
        "factor": "real",
        "label": "real 10-yr yield",
-       "beta": 0.0009382342007421719,
-       "move": 53.00000000000003,
-       "contrib": 0.04972641263933514,
-       "share": -0.7276732396547303
-      },
-      {
-       "factor": "dollar",
-       "label": "US dollar (broad index)",
-       "beta": -1.1983806211924843,
-       "move": 0.021023302949088496,
-       "contrib": -0.02519391884764646,
-       "share": 0.3686761134456609
-      },
-      {
-       "factor": "macro1",
-       "label": "macro state, PCA line 1",
-       "beta": -0.02192209664650609,
-       "move": 0.5990921321296767,
-       "contrib": -0.01313335562070817,
-       "share": 0.1921874296739165
-      },
-      {
-       "factor": "hikes",
-       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": -0.00010829635980052978,
-       "move": 25.0,
-       "contrib": -0.0027074089950132442,
-       "share": 0.03961896645874727
+       "beta": 0.0009249052592808035,
+       "move": -29.000000000000007,
+       "contrib": -0.026822252519143306,
+       "share": -0.4471005805430586
       },
       {
        "factor": "vix",
        "label": "equity volatility (VIX)",
-       "beta": 0.021139727147991342,
-       "move": 0.07282014196929332,
-       "contrib": 0.0015393979321088537,
-       "share": -0.02252683475279184
+       "beta": 0.02146697890830234,
+       "move": 0.5307842694726594,
+       "contrib": 0.011394334717628246,
+       "share": 0.1899323579746922
+      },
+      {
+       "factor": "macro1",
+       "label": "macro state, PCA line 1",
+       "beta": -0.018570188230418127,
+       "move": -0.3635817309914451,
+       "contrib": 0.006751781181652383,
+       "share": 0.11254555462342265
+      },
+      {
+       "factor": "dollar",
+       "label": "US dollar (broad index)",
+       "beta": -1.191711885545523,
+       "move": 0.00513705182687918,
+       "contrib": -0.0061218857187552616,
+       "share": -0.10204581650703061
+      },
+      {
+       "factor": "hikes",
+       "label": "rate-hike speculation (2-yr yield minus fed funds)",
+       "beta": -0.00010979107947307738,
+       "move": -25.99999999999998,
+       "contrib": 0.0028545680663000094,
+       "share": 0.047582843339928946
       },
       {
        "factor": "cot_oil",
        "label": "speculative positioning in oil (CFTC)",
-       "beta": -0.05247911238434737,
-       "move": -0.006474353115866714,
-       "contrib": 0.00033976830478351885,
-       "share": -0.004972011652379769
-      },
-      {
-       "factor": "oil",
-       "label": "oil (WTI spot)",
-       "beta": 0.00205816789229279,
-       "move": 0.12812184828359374,
-       "contrib": 0.00026369627443850074,
-       "share": -0.0038588088728073637
-      },
-      {
-       "factor": "cot_silver",
-       "label": "speculative positioning in silver (CFTC)",
-       "beta": -0.014694423292187541,
-       "move": -0.015682639247100116,
-       "contrib": 0.00023044733943556245,
-       "share": -0.003372259392068848
+       "beta": -0.04898235166318342,
+       "move": -0.016205084872212547,
+       "contrib": 0.0007937631659424486,
+       "share": 0.013231251627851728
       },
       {
        "factor": "cot_gold",
        "label": "speculative positioning in gold (CFTC)",
-       "beta": -0.007017084455709621,
-       "move": -0.030696187229284577,
-       "contrib": 0.00021539773825616498,
-       "share": -0.003152030514406737
+       "beta": -0.007579178878806576,
+       "move": -0.08809385231358802,
+       "contrib": 0.0006676790648078521,
+       "share": 0.011129553615192486
       },
       {
        "factor": "war",
        "label": "geopolitical risk (GPR index)",
-       "beta": -0.0006220304421887353,
-       "move": 0.06185737244960787,
-       "contrib": -3.847716873746288e-05,
-       "share": 0.0005630570262730634
+       "beta": -0.0006124446931668096,
+       "move": 0.6462037052910459,
+       "contrib": -0.00039576403001023003,
+       "share": -0.006596997304732181
+      },
+      {
+       "factor": "cot_silver",
+       "label": "speculative positioning in silver (CFTC)",
+       "beta": -0.01010426786765885,
+       "move": -0.022433345028671225,
+       "contrib": 0.00022667252733730704,
+       "share": 0.0037784081889968442
+      },
+      {
+       "factor": "oil",
+       "label": "oil (WTI spot)",
+       "beta": -0.00015869173929152923,
+       "move": 0.04747629463520475,
+       "contrib": -7.534095770777741e-06,
+       "share": -0.00012558596973082705
       }
      ],
-     "drift": -0.00038087883933623823,
-     "resid": 0.006138260140200869,
-     "unexplained_share": -0.08982444952263072
+     "drift": 7.23229078538174e-05,
+     "resid": -0.0020590035415025388,
+     "unexplained_share": -0.03432156483087953
     }
    },
    "last_session": {
-    "date": "2026-11-05",
-    "ret": 0.0020770752951014258,
-    "attribution": {
-     "actual": 0.0020770752951014258,
-     "sessions": 1,
-     "rows": [
-      {
-       "factor": "macro2",
-       "label": "macro state, PCA line 2",
-       "beta": 0.2456638628262973,
-       "move": -0.018954419536470812,
-       "contrib": -0.0046564159209596554,
-       "share": -2.241813732964494
-      },
-      {
-       "factor": "macro1",
-       "label": "macro state, PCA line 1",
-       "beta": -0.018531880045465174,
-       "move": -0.024458132954295664,
-       "contrib": 0.00045325518604504597,
-       "share": 0.2182179852189292
-      },
-      {
-       "factor": "war",
-       "label": "geopolitical risk (GPR index)",
-       "beta": -0.0006000531311939757,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "hikes",
-       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": -0.00010614736932382288,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "real",
-       "label": "real 10-yr yield",
-       "beta": 0.000886173932125681,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "dollar",
-       "label": "US dollar (broad index)",
-       "beta": -1.171092759671523,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "oil",
-       "label": "oil (WTI spot)",
-       "beta": 0.0013930467902986971,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "vix",
-       "label": "equity volatility (VIX)",
-       "beta": 0.020221088767727203,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_gold",
-       "label": "speculative positioning in gold (CFTC)",
-       "beta": -0.008676564962355937,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "cot_silver",
-       "label": "speculative positioning in silver (CFTC)",
-       "beta": -0.009261565932064562,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "cot_oil",
-       "label": "speculative positioning in oil (CFTC)",
-       "beta": -0.04253386649127271,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      }
-     ],
-     "drift": -1.621648675741207e-05,
-     "resid": 0.006296452516773447,
-     "unexplained_share": 3.031403113610277
-    }
+    "date": "2026-11-09",
+    "ret": 0.000488173260826711,
+    "attribution": null
    },
    "stable_factors": [
     "hikes",
@@ -771,77 +579,77 @@
     "macro1",
     "macro2"
    ],
-   "n_past_episodes": 142,
+   "n_past_episodes": 143,
    "windows": {
     "R1_full": {
-     "sessions": 48,
-     "explained": null,
-     "move": -0.007703938214781417,
-     "end": "2026-11-05"
+     "sessions": 22,
+     "explained": 0.9668839869424073,
+     "move": 0.059991540352205275,
+     "end": "2026-11-06"
     },
     "R2_impulse": {
-     "sessions": 25,
-     "explained": 0.9157491546089592,
-     "move": -0.06833618433313496,
-     "end": "2026-10-05"
+     "sessions": 22,
+     "explained": 0.9668839869424073,
+     "move": 0.059991540352205275,
+     "end": "2026-11-06"
     },
     "R3_half": {
-     "sessions": 24,
-     "explained": 0.9063796962983053,
-     "move": -0.0635492842280928,
-     "end": "2026-10-02"
+     "sessions": 11,
+     "explained": 0.8804033225521317,
+     "move": 0.05779185341442403,
+     "end": "2026-10-22"
     },
     "R4_ceiling": {
-     "sessions": 8,
-     "explained": 0.9683976959154048,
-     "move": -0.02183977106952597,
-     "end": "2026-09-10"
+     "sessions": 18,
+     "explained": 0.9930993891721401,
+     "move": 0.05766957401424361,
+     "end": "2026-11-02"
     },
     "R5_causal": {
-     "sessions": 8,
-     "explained": 0.9683976959154048,
-     "move": -0.02183977106952597,
-     "end": "2026-09-10"
+     "sessions": 7,
+     "explained": 0.8892801859761287,
+     "move": 0.0368998789786183,
+     "end": "2026-10-16"
     }
    },
    "window_test": {},
-   "ceiling_null": 0.22588442967021477,
+   "ceiling_null": 0.08796771232696982,
    "best_rule": null,
    "r5_rows": [
     {
      "factor": "macro2",
      "label": "macro state, PCA line 2",
-     "beta": 0.252960331546557,
-     "move": -0.15991349802685315,
-     "contrib": -0.04045177147964246,
-     "share": 1.8522067539474656
+     "beta": 0.25203834914938034,
+     "move": 0.16565805624148416,
+     "contrib": 0.04175218301839887,
+     "share": 1.1314991857450873
     },
     {
      "factor": "real",
      "label": "real 10-yr yield",
-     "beta": 0.0009382342007421719,
-     "move": 12.99999999999999,
-     "contrib": 0.012197044609648225,
-     "share": -0.5584785926015186
-    },
-    {
-     "factor": "dollar",
-     "label": "US dollar (broad index)",
-     "beta": -1.1983806211924843,
-     "move": -0.005651407241394679,
-     "contrib": 0.0067725369205542596,
-     "share": -0.31010109487842985
+     "beta": 0.0009249052592808035,
+     "move": -17.99999999999997,
+     "contrib": -0.016648294667054437,
+     "share": -0.45117477693358615
     },
     {
      "factor": "vix",
      "label": "equity volatility (VIX)",
-     "beta": 0.021139727147991342,
-     "move": 0.21213375436608395,
-     "contrib": 0.004484449686178032,
-     "share": -0.20533409768362404
+     "beta": 0.02146697890830234,
+     "move": 0.2818627859324989,
+     "contrib": 0.006050742480648292,
+     "share": 0.16397729879153275
+    },
+    {
+     "factor": "macro1",
+     "label": "macro state, PCA line 1",
+     "beta": -0.018570188230418127,
+     "move": -0.1256778828649523,
+     "contrib": 0.002333861941202605,
+     "share": 0.06324849852637635
     }
    ],
-   "r5_unexplained": -0.037183004917016614
+   "r5_unexplained": 0.11009618503228415
   },
   "GLD": {
    "name": "gold",
@@ -849,19 +657,19 @@
     "start": "2026-08-24",
     "kind": "peak",
     "direction": -1,
-    "sessions": 52,
-    "move": -0.12782594628854352,
+    "sessions": 54,
+    "move": -0.1171241180936456,
     "extreme_so_far": {
      "date": "2026-10-30",
      "move": -0.18174520110591574
     },
-    "threshold_now": 0.10803438262845569,
+    "threshold_now": 0.10942386879573973,
     "rule": "the founder's rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and 3 open-to-close days against the trend; extremes from the high and low of the day (current-leg scale, promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-08-25",
      "direction": -1,
-     "move": -0.13105493703701956,
-     "sessions": 51,
+     "move": -0.12035310884212162,
+     "sessions": 53,
      "scale": "quarter scale, zigzag"
     }
    },
@@ -872,119 +680,119 @@
     "q75": 0.13635927153626407,
     "med_length": 24.5,
     "target_from_start": -0.08930772256152131,
-    "target_from_now": 0.03851822372702221,
+    "target_from_now": 0.027816395532124297,
     "band_from_now": [
-     0.07322061770650444,
-     -0.008533325247720547
+     0.06251878951160653,
+     -0.01923515344261846
     ],
-    "share_of_typical": 1.4312977939896319,
-    "pct_rank": 0.7222222222222222,
+    "share_of_typical": 1.3114668556569948,
+    "pct_rank": 0.6296296296296297,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
-    "actual": -0.1278259462885445,
-    "sessions": 52,
+    "actual": -0.13576706181043757,
+    "sessions": 53,
     "rows": [
      {
       "factor": "dollar",
       "label": "US dollar (broad index)",
-      "beta": -2.158365578979729,
-      "move": 0.027887705187310097,
-      "contrib": -0.06019186295302455,
-      "share": 0.4708892419787142
-     },
-     {
-      "factor": "macro1",
-      "label": "macro state, PCA line 1",
-      "beta": -0.08247687491785297,
-      "move": 0.4176571531482285,
-      "contrib": -0.034447056778753,
-      "share": 0.2694840740783163
+      "beta": -2.157508735705841,
+      "move": 0.029650822986605263,
+      "contrib": -0.06397190961446841,
+      "share": 0.4711887313565649
      },
      {
       "factor": "real",
       "label": "real 10-yr yield",
-      "beta": 0.001305015917627757,
-      "move": 26.00000000000002,
-      "contrib": 0.03393041385832171,
-      "share": -0.2654423052869861
+      "beta": 0.0013056572105501854,
+      "move": 25.0,
+      "contrib": 0.032641430263754635,
+      "share": -0.2404223073585379
+     },
+     {
+      "factor": "macro1",
+      "label": "macro state, PCA line 1",
+      "beta": -0.08263280329992354,
+      "move": 0.2905915601774116,
+      "contrib": -0.024012395232757947,
+      "share": 0.17686466004755147
      },
      {
       "factor": "oil",
       "label": "oil (WTI spot)",
-      "beta": 0.08273760191648327,
+      "beta": 0.08275406156848483,
       "move": 0.14327070026664845,
-      "contrib": 0.011853874164957754,
-      "share": -0.09273449177680819
-     },
-     {
-      "factor": "cot_gold",
-      "label": "speculative positioning in gold (CFTC)",
-      "beta": 0.09387009833073062,
-      "move": -0.07703855560902806,
-      "contrib": -0.007231616790276923,
-      "share": 0.056573935106670956
-     },
-     {
-      "factor": "btc",
-      "label": "speculative liquidity (Bitcoin)",
-      "beta": 0.06570607196123578,
-      "move": 0.026156352037757458,
-      "contrib": 0.0017186311492363075,
-      "share": -0.013445088412307165
-     },
-     {
-      "factor": "war",
-      "label": "geopolitical risk (GPR index)",
-      "beta": 0.0028024719405987633,
-      "move": 0.47757092047378524,
-      "contrib": 0.0013383791042737066,
-      "share": -0.010470324242721053
-     },
-     {
-      "factor": "cot_oil",
-      "label": "speculative positioning in oil (CFTC)",
-      "beta": 0.037241761799292825,
-      "move": -0.02522095466019305,
-      "contrib": -0.0009392727858056739,
-      "share": 0.007348060492237089
+      "contrib": 0.011856232350826163,
+      "share": -0.08732775234821111
      },
      {
       "factor": "vix",
       "label": "equity volatility (VIX)",
-      "beta": -0.019833266439872158,
-      "move": 0.04683542330191415,
-      "contrib": -0.0009288994291710603,
-      "share": 0.007266908293205465
+      "beta": -0.019756076113363018,
+      "move": 0.48098413172917986,
+      "contrib": -0.009502359115761501,
+      "share": 0.06999016542781936
      },
      {
-      "factor": "cot_silver",
-      "label": "speculative positioning in silver (CFTC)",
-      "beta": 0.033159232764692674,
-      "move": -0.027160063472040058,
-      "contrib": -0.0009006068665732034,
-      "share": 0.00704557167556767
+      "factor": "cot_gold",
+      "label": "speculative positioning in gold (CFTC)",
+      "beta": 0.09387758416928645,
+      "move": -0.09710883796547376,
+      "contrib": -0.009116343109685362,
+      "share": 0.06714694262452184
      },
      {
       "factor": "macro2",
       "label": "macro state, PCA line 2",
-      "beta": 0.10453733413879204,
-      "move": -0.008186556598050981,
-      "contrib": -0.0008558008025365881,
-      "share": 0.006695047659610272
+      "beta": 0.10450835961196372,
+      "move": -0.017210165343317874,
+      "contrib": -0.0017986061486808195,
+      "share": 0.013247735678275873
+     },
+     {
+      "factor": "btc",
+      "label": "speculative liquidity (Bitcoin)",
+      "beta": 0.06571465907698458,
+      "move": 0.026156352037757458,
+      "contrib": 0.0017188557568588222,
+      "share": -0.012660329640621854
+     },
+     {
+      "factor": "war",
+      "label": "geopolitical risk (GPR index)",
+      "beta": 0.002801790698746069,
+      "move": 0.47757092047378524,
+      "contrib": 0.0013380537629750502,
+      "share": -0.00985551094007827
+     },
+     {
+      "factor": "cot_oil",
+      "label": "speculative positioning in oil (CFTC)",
+      "beta": 0.03720866978016521,
+      "move": -0.02256939819496937,
+      "contrib": -0.0008397772845736721,
+      "share": 0.006185427255884765
+     },
+     {
+      "factor": "cot_silver",
+      "label": "speculative positioning in silver (CFTC)",
+      "beta": 0.0331607356786567,
+      "move": -0.0128240157959017,
+      "contrib": -0.00042525379814681454,
+      "share": 0.0031322309879591257
      },
      {
       "factor": "hikes",
       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-      "beta": 8.85385772933728e-06,
-      "move": 8.99999999999999,
-      "contrib": 7.968471956403542e-05,
-      "share": -0.0006233845465470777
+      "beta": 9.113023620848857e-06,
+      "move": 1.999999999999961,
+      "contrib": 1.8226047241697358e-05,
+      "share": -0.0001342449854821574
      }
     ],
-    "drift": 0.049907377924470586,
-    "resid": -0.1211591908032276,
-    "unexplained_share": 0.9478450527542517
+    "drift": 0.0508547039283179,
+    "resid": -0.1245279196163373,
+    "unexplained_share": 0.9172174602276307
    },
    "impulse": {
     "end": "2026-09-01",
@@ -997,213 +805,109 @@
       {
        "factor": "macro1",
        "label": "macro state, PCA line 1",
-       "beta": -0.08247687491785297,
-       "move": 0.12913539943356467,
-       "contrib": -0.010650684186549094,
-       "share": 0.14639833877790057
+       "beta": -0.08263280329992354,
+       "move": 0.12917687533181565,
+       "contrib": -0.010674247330192668,
+       "share": 0.1467222245513761
       },
       {
        "factor": "real",
        "label": "real 10-yr yield",
-       "beta": 0.001305015917627757,
+       "beta": 0.0013056572105501854,
        "move": 6.000000000000005,
-       "contrib": 0.007830095505766549,
-       "share": -0.10762810674306007
+       "contrib": 0.00783394326330112,
+       "share": -0.10768099586278373
       },
       {
        "factor": "dollar",
        "label": "US dollar (broad index)",
-       "beta": -2.158365578979729,
+       "beta": -2.157508735705841,
        "move": 0.0028467000943264154,
-       "contrib": -0.006144219497272482,
-       "share": 0.08445499948477253
+       "contrib": -0.006141780321443883,
+       "share": 0.0844214719401529
       },
       {
        "factor": "oil",
        "label": "oil (WTI spot)",
-       "beta": 0.08273760191648327,
+       "beta": 0.08275406156848483,
        "move": 0.057827379027249215,
-       "contrib": 0.004784498665830139,
-       "share": -0.06576503859228248
+       "contrib": 0.00478545048436509,
+       "share": -0.06577812175669653
       },
       {
        "factor": "cot_gold",
        "label": "speculative positioning in gold (CFTC)",
-       "beta": 0.09387009833073062,
+       "beta": 0.09387758416928645,
        "move": 0.021681201577398834,
-       "contrib": 0.0020352165239988203,
-       "share": -0.027974946299041414
+       "contrib": 0.0020353788259735253,
+       "share": -0.027977177211071194
       },
       {
        "factor": "btc",
        "label": "speculative liquidity (Bitcoin)",
-       "beta": 0.06570607196123578,
+       "beta": 0.06571465907698458,
        "move": -0.019964572384720825,
-       "contrib": -0.001311793629785767,
-       "share": 0.01803118042525421
+       "contrib": -0.00131196506787971,
+       "share": 0.01803353691726138
       },
       {
        "factor": "cot_silver",
        "label": "speculative positioning in silver (CFTC)",
-       "beta": 0.033159232764692674,
+       "beta": 0.0331607356786567,
        "move": 0.025291968479869642,
-       "contrib": 0.0008386622699012678,
-       "share": -0.011527781779907433
+       "contrib": 0.0008387002815538738,
+       "share": -0.01152830426679168
       },
       {
        "factor": "macro2",
        "label": "macro state, PCA line 2",
-       "beta": 0.10453733413879204,
-       "move": -0.006768695973061956,
-       "contrib": -0.0007075814326198738,
-       "share": 0.009726018016425673
+       "beta": 0.10450835961196372,
+       "move": -0.006779911971797281,
+       "contrib": -0.0007085574784860483,
+       "share": 0.009739434196163632
       },
       {
        "factor": "vix",
        "label": "equity volatility (VIX)",
-       "beta": -0.019833266439872158,
+       "beta": -0.019756076113363018,
        "move": 0.030446589108567235,
-       "contrib": -0.0006038553139755237,
-       "share": 0.00830025689240417
+       "contrib": -0.0006015051318211437,
+       "share": 0.008267952604979967
       },
       {
        "factor": "war",
        "label": "geopolitical risk (GPR index)",
-       "beta": 0.0028024719405987633,
+       "beta": 0.002801790698746069,
        "move": 0.1225059478379702,
-       "contrib": 0.00034331948137236723,
-       "share": -0.004719077278291736
+       "contrib": 0.000343236025193496,
+       "share": -0.0047179301364054975
       },
       {
        "factor": "hikes",
        "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 8.85385772933728e-06,
+       "beta": 9.113023620848857e-06,
        "move": 14.999999999999947,
-       "contrib": 0.00013280786594005873,
-       "share": -0.0018255025320173686
+       "contrib": 0.00013669535431273236,
+       "share": -0.0018789377695861038
       },
       {
        "factor": "cot_oil",
        "label": "speculative positioning in oil (CFTC)",
-       "beta": 0.037241761799292825,
+       "beta": 0.03720866978016521,
        "move": 0.00011003979310988954,
-       "contrib": 4.09807576344197e-06,
-       "share": -5.6329853880332735e-05
+       "contrib": 4.094434324503579e-06,
+       "share": -5.627980070046144e-05
       }
      ],
-     "drift": 0.005758543606669683,
-     "resid": -0.0750605085005005,
-     "unexplained_share": 1.0317397042131424
+     "drift": 0.005757136293771838,
+     "resid": -0.07504798019843364,
+     "unexplained_share": 1.0315674971907418
     }
    },
    "last_session": {
-    "date": "2026-11-05",
-    "ret": 0.008021648078902089,
-    "attribution": {
-     "actual": 0.008021648078902089,
-     "sessions": 1,
-     "rows": [
-      {
-       "factor": "macro1",
-       "label": "macro state, PCA line 1",
-       "beta": -0.07811653274730442,
-       "move": -0.024458132954295664,
-       "contrib": 0.0019105845438621624,
-       "share": 0.23817855446528904
-      },
-      {
-       "factor": "macro2",
-       "label": "macro state, PCA line 2",
-       "beta": 0.0686256734592963,
-       "move": -0.018954419536470812,
-       "contrib": -0.0013007598057203523,
-       "share": -0.16215617949402553
-      },
-      {
-       "factor": "war",
-       "label": "geopolitical risk (GPR index)",
-       "beta": 0.002955410417163352,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "hikes",
-       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": -8.111411756498491e-05,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "real",
-       "label": "real 10-yr yield",
-       "beta": 0.0010316442770462678,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "dollar",
-       "label": "US dollar (broad index)",
-       "beta": -1.9355160537392995,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "oil",
-       "label": "oil (WTI spot)",
-       "beta": 0.05480431424899341,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "vix",
-       "label": "equity volatility (VIX)",
-       "beta": -0.031026773918261943,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "btc",
-       "label": "speculative liquidity (Bitcoin)",
-       "beta": 0.07000588622517928,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_gold",
-       "label": "speculative positioning in gold (CFTC)",
-       "beta": 0.11154081452847046,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_silver",
-       "label": "speculative positioning in silver (CFTC)",
-       "beta": 0.03169333548302399,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_oil",
-       "label": "speculative positioning in oil (CFTC)",
-       "beta": 0.05579190999816663,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      }
-     ],
-     "drift": 0.0006009871615588547,
-     "resid": 0.006810836179201424,
-     "unexplained_share": 0.8490569658764703
-    }
+    "date": "2026-11-09",
+    "ret": 0.018642943716791302,
+    "attribution": null
    },
    "stable_factors": [
     "dollar",
@@ -1214,32 +918,32 @@
    "n_past_episodes": 114,
    "windows": {
     "R1_full": {
-     "sessions": 52,
-     "explained": 0.4425872450189521,
-     "move": -0.12782594628854452,
-     "end": "2026-11-05"
+     "sessions": 53,
+     "explained": 0.45735574810564594,
+     "move": -0.13576706181043757,
+     "end": "2026-11-06"
     },
     "R2_impulse": {
      "sessions": 6,
-     "explained": 0.04741401051827632,
+     "explained": 0.047566873405898824,
      "move": -0.07275140056546092,
      "end": "2026-09-01"
     },
     "R3_half": {
      "sessions": 26,
-     "explained": 0.45415828648583967,
+     "explained": 0.4544343660007648,
      "move": -0.11367843017036222,
      "end": "2026-09-30"
     },
     "R4_ceiling": {
      "sessions": 23,
-     "explained": 0.5756875971470401,
+     "explained": 0.5761626416471304,
      "move": -0.08120542561101804,
      "end": "2026-09-25"
     },
     "R5_causal": {
      "sessions": 5,
-     "explained": 0.051259963131382036,
+     "explained": 0.05139427754111037,
      "move": -0.043761670406795475,
      "end": "2026-08-31"
     }
@@ -1257,10 +961,10 @@
     },
     "run": "2026-10-23 16:29"
    },
-   "ceiling_null": 0.04095559103939944,
+   "ceiling_null": 0.20555379471285928,
    "best_rule": {
     "sessions": 4,
-    "explained": 0.3361277807578167,
+    "explained": 0.3363184082490549,
     "params": {
      "window": 252,
      "patience": 7,
@@ -1279,34 +983,34 @@
      {
       "factor": "macro1",
       "label": "macro state, PCA line 1",
-      "beta": -0.08247687491785297,
-      "move": 0.107069098082051,
-      "contrib": -0.008830724610080653,
-      "share": 0.20723780295035468
+      "beta": -0.08263280329992354,
+      "move": 0.10692120040199038,
+      "contrib": -0.008835198521409376,
+      "share": 0.20734279586942964
      },
      {
       "factor": "dollar",
       "label": "US dollar (broad index)",
-      "beta": -2.158365578979729,
+      "beta": -2.157508735705841,
       "move": 0.0036141659825039696,
-      "contrib": -0.007800691453356021,
-      "share": 0.18306517637767739
+      "contrib": -0.007797594679543198,
+      "share": 0.18299250186572724
      },
      {
       "factor": "real",
       "label": "real 10-yr yield",
-      "beta": 0.001305015917627757,
+      "beta": 0.0013056572105501854,
       "move": 4.0000000000000036,
-      "contrib": 0.005220063670511033,
-      "share": -0.12250348347436353
+      "contrib": 0.005222628842200746,
+      "share": -0.1225636824465475
      },
      {
       "factor": "cot_gold",
       "label": "speculative positioning in gold (CFTC)",
-      "beta": 0.09387009833073062,
+      "beta": 0.09387758416928645,
       "move": 0.021681201577398834,
-      "contrib": 0.0020352165239988203,
-      "share": -0.0477620829077039
+      "contrib": 0.0020353788259735253,
+      "share": -0.047765891780263914
      }
     ]
    },
@@ -1314,37 +1018,37 @@
     {
      "factor": "macro1",
      "label": "macro state, PCA line 1",
-     "beta": -0.08247687491785297,
-     "move": 0.1030237985723148,
-     "contrib": -0.008497080948410887,
-     "share": 0.1941671985878178
+     "beta": -0.08263280329992354,
+     "move": 0.10291762057023579,
+     "contrib": -0.008504371496676459,
+     "share": 0.1943337952510119
     },
     {
      "factor": "real",
      "label": "real 10-yr yield",
-     "beta": 0.001305015917627757,
+     "beta": 0.0013056572105501854,
      "move": 6.000000000000005,
-     "contrib": 0.007830095505766549,
-     "share": -0.17892588269552578
+     "contrib": 0.00783394326330112,
+     "share": -0.17901380798491268
     },
     {
      "factor": "dollar",
      "label": "US dollar (broad index)",
-     "beta": -2.158365578979729,
+     "beta": -2.157508735705841,
      "move": 0.0020971996910237323,
-     "contrib": -0.004526523625352547,
-     "share": 0.10343580542687994
+     "contrib": -0.004524726653903293,
+     "share": 0.10339474274731243
     },
     {
      "factor": "cot_gold",
      "label": "speculative positioning in gold (CFTC)",
-     "beta": 0.09387009833073062,
+     "beta": 0.09387758416928645,
      "move": 0.021681201577398834,
-     "contrib": 0.0020352165239988203,
-     "share": -0.04650682903737569
+     "contrib": 0.0020353788259735253,
+     "share": -0.046510537807475105
     }
    ],
-   "r5_unexplained": 1.0583973304381575
+   "r5_unexplained": 1.058236217217111
   },
   "SLV": {
    "name": "silver",
@@ -1352,19 +1056,19 @@
     "start": "2026-09-09",
     "kind": "peak",
     "direction": -1,
-    "sessions": 41,
-    "move": -0.25761601688206764,
+    "sessions": 43,
+    "move": -0.2321597335149328,
     "extreme_so_far": {
      "date": "2026-10-30",
      "move": -0.3085393283776942
     },
-    "threshold_now": 0.20063773053709183,
+    "threshold_now": 0.20158179584201086,
     "rule": "the founder's rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and 3 open-to-close days against the trend; extremes from the high and low of the day (current-leg scale, promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-08-27",
      "direction": -1,
-     "move": -0.29082012331304147,
-     "sessions": 49,
+     "move": -0.26536383994590673,
+     "sessions": 51,
      "scale": "quarter scale, zigzag"
     }
    },
@@ -1375,119 +1079,119 @@
     "q75": 0.20517484228404828,
     "med_length": 24.0,
     "target_from_start": -0.13766434318079318,
-    "target_from_now": 0.11995167370127446,
+    "target_from_now": 0.09449539033413962,
     "band_from_now": [
-     0.151121099320479,
-     0.05244117459801936
+     0.12566481595334417,
+     0.026984891230884517
     ],
-    "share_of_typical": 1.8713343697412128,
+    "share_of_typical": 1.6864187788266987,
     "pct_rank": 0.8153846153846154,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
-    "actual": -0.25761601688206787,
-    "sessions": 41,
+    "actual": -0.25889536404545554,
+    "sessions": 42,
     "rows": [
      {
       "factor": "dollar",
       "label": "US dollar (broad index)",
-      "beta": -3.7774251055753933,
-      "move": 0.03158029740804125,
-      "contrib": -0.11929220827067252,
-      "share": 0.46306207864894683
-     },
-     {
-      "factor": "real",
-      "label": "real 10-yr yield",
-      "beta": 0.0014213036236608483,
-      "move": 18.000000000000014,
-      "contrib": 0.025583465225895288,
-      "share": -0.09930851946060075
-     },
-     {
-      "factor": "macro1",
-      "label": "macro state, PCA line 1",
-      "beta": -0.08282078056124405,
-      "move": 0.27451630717194053,
-      "contrib": -0.022735654836770352,
-      "share": 0.08825404224450198
-     },
-     {
-      "factor": "cot_gold",
-      "label": "speculative positioning in gold (CFTC)",
-      "beta": 0.2555769480193285,
-      "move": -0.07956214131526707,
-      "contrib": -0.02033424925523848,
-      "share": 0.07893239520331201
-     },
-     {
-      "factor": "macro2",
-      "label": "macro state, PCA line 2",
-      "beta": 0.11319547952152789,
-      "move": 0.056165216284541214,
-      "contrib": 0.0063576485897589696,
-      "share": -0.024678778387717214
-     },
-     {
-      "factor": "btc",
-      "label": "speculative liquidity (Bitcoin)",
-      "beta": 0.14967554290065285,
-      "move": 0.035124011260434074,
-      "contrib": 0.005257205454254114,
-      "share": -0.02040713740505029
-     },
-     {
-      "factor": "cot_silver",
-      "label": "speculative positioning in silver (CFTC)",
-      "beta": -0.03883609328552851,
-      "move": -0.08669077723049112,
-      "contrib": 0.0033667311115183245,
-      "share": -0.013068795769245805
-     },
-     {
-      "factor": "oil",
-      "label": "oil (WTI spot)",
-      "beta": 0.10771597468862748,
-      "move": 0.024175885418340037,
-      "contrib": 0.0026041290617970737,
-      "share": -0.010108568144616562
-     },
-     {
-      "factor": "hikes",
-      "label": "rate-hike speculation (2-yr yield minus fed funds)",
-      "beta": 0.00019713148286408405,
-      "move": -9.999999999999964,
-      "contrib": -0.0019713148286408335,
-      "share": 0.007652143886469866
-     },
-     {
-      "factor": "cot_oil",
-      "label": "speculative positioning in oil (CFTC)",
-      "beta": -0.06251247347440587,
-      "move": -0.02821127026198344,
-      "contrib": 0.001763556283931535,
-      "share": -0.006845677940664926
-     },
-     {
-      "factor": "war",
-      "label": "geopolitical risk (GPR index)",
-      "beta": 0.006412060379438599,
-      "move": 0.17340109929900827,
-      "contrib": 0.0011118583185662691,
-      "share": -0.004315951826377545
+      "beta": -3.776814469204207,
+      "move": 0.03334341520733641,
+      "contrib": -0.12593189300775176,
+      "share": 0.4864200387367356
      },
      {
       "factor": "vix",
       "label": "equity volatility (VIX)",
-      "beta": -0.06489747605839236,
-      "move": 0.009071728376279786,
-      "contrib": -0.000588732275107856,
-      "share": 0.0022853092840782775
+      "beta": -0.06480946792118134,
+      "move": 0.4432204368035455,
+      "contrib": -0.02872488068103136,
+      "share": 0.11095169968353698
+     },
+     {
+      "factor": "cot_gold",
+      "label": "speculative positioning in gold (CFTC)",
+      "beta": 0.255584460245598,
+      "move": -0.09963242367171277,
+      "contrib": -0.025464499227095448,
+      "share": 0.09835826655677202
+     },
+     {
+      "factor": "real",
+      "label": "real 10-yr yield",
+      "beta": 0.0014219093497401661,
+      "move": 16.999999999999993,
+      "contrib": 0.024172458945582814,
+      "share": -0.09336767784431527
+     },
+     {
+      "factor": "macro1",
+      "label": "macro state, PCA line 1",
+      "beta": -0.08293551897400234,
+      "move": 0.14742073055864102,
+      "contrib": -0.012226414796407459,
+      "share": 0.04722531375363217
+     },
+     {
+      "factor": "macro2",
+      "label": "macro state, PCA line 2",
+      "beta": 0.11319143781933129,
+      "move": 0.047148849121877,
+      "contrib": 0.005336846023631973,
+      "share": -0.020613911119300523
+     },
+     {
+      "factor": "btc",
+      "label": "speculative liquidity (Bitcoin)",
+      "beta": 0.1496827921039965,
+      "move": 0.035124011260434074,
+      "contrib": 0.0052574600753539855,
+      "share": -0.020307277786677198
+     },
+     {
+      "factor": "hikes",
+      "label": "rate-hike speculation (2-yr yield minus fed funds)",
+      "beta": 0.00019726985951150832,
+      "move": -16.999999999999993,
+      "contrib": -0.00335358761169564,
+      "share": 0.012953447907652894
+     },
+     {
+      "factor": "cot_silver",
+      "label": "speculative positioning in silver (CFTC)",
+      "beta": -0.03883437422675704,
+      "move": -0.07235472955435276,
+      "contrib": 0.002809850644589533,
+      "share": -0.010853228890171217
+     },
+     {
+      "factor": "oil",
+      "label": "oil (WTI spot)",
+      "beta": 0.10772649620739759,
+      "move": 0.024175885418340037,
+      "contrib": 0.002604383428829287,
+      "share": -0.010059598550293168
+     },
+     {
+      "factor": "cot_oil",
+      "label": "speculative positioning in oil (CFTC)",
+      "beta": -0.06253389021178231,
+      "move": -0.02555971379675976,
+      "contrib": 0.0015983483364111525,
+      "share": -0.006173723281234663
+     },
+     {
+      "factor": "war",
+      "label": "geopolitical risk (GPR index)",
+      "beta": 0.006411527772385014,
+      "move": 0.17340109929900827,
+      "contrib": 0.001111765963917683,
+      "share": -0.004294267562560467
      }
     ],
-    "drift": 0.04476602160750521,
-    "resid": -0.18350447306886458,
-    "unexplained_share": 0.7123177948709212
+    "drift": 0.0458532029522044,
+    "resid": -0.1519384050919947,
+    "unexplained_share": 0.5868718648253513
    },
    "impulse": {
     "end": "2026-09-14",
@@ -1500,213 +1204,109 @@
       {
        "factor": "dollar",
        "label": "US dollar (broad index)",
-       "beta": -3.7774251055753933,
+       "beta": -3.776814469204207,
        "move": 0.006838429748186492,
-       "contrib": -0.02583165621351327,
-       "share": 0.3911940387009724
+       "contrib": -0.025827480419587222,
+       "share": 0.39113080056876703
       },
       {
        "factor": "real",
        "label": "real 10-yr yield",
-       "beta": 0.0014213036236608483,
+       "beta": 0.0014219093497401661,
        "move": 14.000000000000012,
-       "contrib": 0.019898250731251895,
-       "share": -0.3013386753951508
+       "contrib": 0.019906730896362343,
+       "share": -0.3014670988307597
       },
       {
        "factor": "macro1",
        "label": "macro state, PCA line 1",
-       "beta": -0.08282078056124405,
-       "move": 0.20067646828738583,
-       "contrib": -0.016620181743835033,
-       "share": 0.2516956700946556
+       "beta": -0.08293551897400234,
+       "move": 0.20071203395195614,
+       "contrib": -0.016646156700133058,
+       "share": 0.25208903426671325
       },
       {
        "factor": "macro2",
        "label": "macro state, PCA line 2",
-       "beta": 0.11319547952152789,
-       "move": -0.05660311467829232,
-       "contrib": -0.006407216708421333,
-       "share": 0.09703075018815438
+       "beta": 0.11319143781933129,
+       "move": -0.056593995490475724,
+       "contrib": -0.006405955721507698,
+       "share": 0.09701165382981727
       },
       {
        "factor": "oil",
        "label": "oil (WTI spot)",
-       "beta": 0.10771597468862748,
+       "beta": 0.10772649620739759,
        "move": 0.051694201058764655,
-       "contrib": 0.0055682912527947135,
-       "share": -0.08432608137237983
+       "contrib": 0.005568835154301459,
+       "share": -0.08433431820494375
       },
       {
        "factor": "hikes",
        "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 0.00019713148286408405,
+       "beta": 0.00019726985951150832,
        "move": 22.000000000000064,
-       "contrib": 0.004336892623009862,
-       "share": -0.06567780736103787
+       "contrib": 0.004339936909253196,
+       "share": -0.06572390996555724
       },
       {
        "factor": "cot_gold",
        "label": "speculative positioning in gold (CFTC)",
-       "beta": 0.2555769480193285,
+       "beta": 0.255584460245598,
        "move": 0.014631128369869462,
-       "contrib": 0.00373937913485025,
-       "share": -0.056629076119051686
+       "contrib": 0.0037394890471971424,
+       "share": -0.0566307406292375
       },
       {
        "factor": "vix",
        "label": "equity volatility (VIX)",
-       "beta": -0.06489747605839236,
+       "beta": -0.06480946792118134,
        "move": 0.03814526825969056,
-       "contrib": -0.0024755316336242217,
-       "share": 0.037489397105822074
+       "contrib": -0.002472174539621272,
+       "share": 0.03743855734740868
       },
       {
        "factor": "war",
        "label": "geopolitical risk (GPR index)",
-       "beta": 0.006412060379438599,
+       "beta": 0.006411527772385014,
        "move": -0.17186946039007722,
-       "contrib": -0.001102037357402706,
-       "share": 0.01668922972179327
+       "contrib": -0.0011019458185158061,
+       "share": 0.016687843458885136
       },
       {
        "factor": "btc",
        "label": "speculative liquidity (Bitcoin)",
-       "beta": 0.14967554290065285,
+       "beta": 0.1496827921039965,
        "move": -0.0012292398781070801,
-       "contrib": -0.00018398714611080955,
-       "share": 0.002786297330734121
+       "contrib": -0.00018399605712064406,
+       "share": 0.0027864322788728408
       },
       {
        "factor": "cot_oil",
        "label": "speculative positioning in oil (CFTC)",
-       "beta": -0.06251247347440587,
+       "beta": -0.06253389021178231,
        "move": 0.002781011606121639,
-       "contrib": -0.00017384791425969383,
-       "share": 0.0026327490245636265
+       "contrib": -0.00017390747445490296,
+       "share": 0.0026336510028617693
       },
       {
        "factor": "cot_silver",
        "label": "speculative positioning in silver (CFTC)",
-       "beta": -0.03883609328552851,
+       "beta": -0.03883437422675704,
        "move": -0.003923390704723861,
-       "contrib": 0.00015236916740423134,
-       "share": -0.0023074753503100694
+       "contrib": 0.00015236242286502646,
+       "share": -0.002307373211155347
       }
      ],
-     "drift": 0.0032755625566467227,
-     "resid": -0.050209134026555274,
-     "unexplained_share": 0.7603660313987743
+     "drift": 0.0032752287823003146,
+     "resid": -0.050203813759103544,
+     "unexplained_share": 0.7602854613844396
     }
    },
    "last_session": {
-    "date": "2026-11-05",
-    "ret": -0.004888936124520941,
-    "attribution": {
-     "actual": -0.004888936124520941,
-     "sessions": 1,
-     "rows": [
-      {
-       "factor": "macro1",
-       "label": "macro state, PCA line 1",
-       "beta": -0.0626002843427933,
-       "move": -0.024458132954295664,
-       "contrib": 0.0015310860774327517,
-       "share": -0.31317367182472244
-      },
-      {
-       "factor": "macro2",
-       "label": "macro state, PCA line 2",
-       "beta": 0.07840521123791806,
-       "move": -0.018954419536470812,
-       "contrib": -0.001486125267649115,
-       "share": 0.3039772314052759
-      },
-      {
-       "factor": "war",
-       "label": "geopolitical risk (GPR index)",
-       "beta": 0.0067990950066555665,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "hikes",
-       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 2.4241171226209427e-05,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "real",
-       "label": "real 10-yr yield",
-       "beta": 0.0011514000388383753,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "dollar",
-       "label": "US dollar (broad index)",
-       "beta": -3.5219067889118594,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "oil",
-       "label": "oil (WTI spot)",
-       "beta": 0.06353276509993531,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "vix",
-       "label": "equity volatility (VIX)",
-       "beta": -0.07369071192014344,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "btc",
-       "label": "speculative liquidity (Bitcoin)",
-       "beta": 0.14989213545562444,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "cot_gold",
-       "label": "speculative positioning in gold (CFTC)",
-       "beta": 0.28345113162929214,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "cot_silver",
-       "label": "speculative positioning in silver (CFTC)",
-       "beta": -0.030632951076293373,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_oil",
-       "label": "speculative positioning in oil (CFTC)",
-       "beta": -0.0346573099983692,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      }
-     ],
-     "drift": 0.0005254633255234672,
-     "resid": -0.005459360259828045,
-     "unexplained_share": 1.1166765367307798
-    }
+    "date": "2026-11-09",
+    "ret": 0.02673563053052248,
+    "attribution": null
    },
    "stable_factors": [
     "dollar",
@@ -1717,74 +1317,74 @@
    "n_past_episodes": 140,
    "windows": {
     "R1_full": {
-     "sessions": 41,
-     "explained": 0.46145254033303584,
-     "move": -0.2576160168820678,
-     "end": "2026-11-05"
+     "sessions": 42,
+     "explained": 0.590239081603777,
+     "move": -0.2588953640454555,
+     "end": "2026-11-06"
     },
     "R2_impulse": {
      "sessions": 3,
-     "explained": 0.28923901656876516,
+     "explained": 0.28931453191167245,
      "move": -0.06603284727776466,
      "end": "2026-09-14"
     },
     "R3_half": {
-     "sessions": 20,
-     "explained": 0.828972426067351,
-     "move": -0.12062801356272537,
-     "end": "2026-10-07"
+     "sessions": 21,
+     "explained": 0.8121211166417304,
+     "move": -0.12752650144623603,
+     "end": "2026-10-08"
     },
     "R4_ceiling": {
      "sessions": 18,
-     "explained": 0.9909511890230461,
+     "explained": 0.9910445218975434,
      "move": -0.09657910121510599,
      "end": "2026-10-05"
     },
     "R5_causal": {
      "sessions": 18,
-     "explained": 0.9909511890230461,
+     "explained": 0.9910445218975434,
      "move": -0.09657910121510599,
      "end": "2026-10-05"
     }
    },
    "window_test": {},
-   "ceiling_null": 0.16956457443596418,
+   "ceiling_null": 0.020433196904999507,
    "best_rule": null,
    "r5_rows": [
     {
      "factor": "dollar",
      "label": "US dollar (broad index)",
-     "beta": -3.7774251055753933,
+     "beta": -3.776814469204207,
      "move": 0.028330061152323616,
-     "contrib": -0.10701468423927338,
-     "share": 1.1080521861652521
+     "contrib": -0.10699738487353584,
+     "share": 1.1078730649524857
     },
     {
      "factor": "real",
      "label": "real 10-yr yield",
-     "beta": 0.0014213036236608483,
+     "beta": 0.0014219093497401661,
      "move": 49.000000000000014,
-     "contrib": 0.06964387755938159,
-     "share": -0.7211071203102948
+     "contrib": 0.06967355813726817,
+     "share": -0.7214144391558126
     },
     {
      "factor": "macro1",
      "label": "macro state, PCA line 1",
-     "beta": -0.08282078056124405,
-     "move": 0.5630203842354398,
-     "contrib": -0.04662978769427067,
-     "share": 0.4828144713255756
+     "beta": -0.08293551897400234,
+     "move": 0.562850538628143,
+     "contrib": -0.04668030152592179,
+     "share": 0.4833375019917921
     },
     {
      "factor": "macro2",
      "label": "macro state, PCA line 2",
-     "beta": 0.11319547952152789,
-     "move": -0.2556902171519867,
-     "contrib": -0.02894297673948273,
-     "share": 0.29968157060210593
+     "beta": 0.11319143781933129,
+     "move": -0.2557279573823215,
+     "contrib": -0.02894621518670565,
+     "share": 0.2997151021548143
     }
    ],
-   "r5_unexplained": 0.21254392630327426
+   "r5_unexplained": 0.2124298576168541
   },
   "UUP": {
    "name": "the dollar",
@@ -1792,8 +1392,8 @@
     "start": "2026-01-27",
     "kind": "trough",
     "direction": 1,
-    "sessions": 196,
-    "move": 0.08852140963017552,
+    "sessions": 198,
+    "move": 0.09024879778081629,
     "extreme_so_far": {
      "date": "2026-10-14",
      "move": 0.09541326184982117
@@ -1803,131 +1403,131 @@
     "big_picture": {
      "start": "2025-07-02",
      "direction": 1,
-     "move": 0.10784981115521909,
-     "sessions": 339,
+     "move": 0.10957719930586002,
+     "sessions": 341,
      "scale": "quarter scale, zigzag"
     }
    },
    "target": {
     "n": 23,
-    "med_size": 0.048702894678255636,
-    "q25": 0.02487461630620308,
-    "q75": 0.10392029970868363,
+    "med_size": 0.04870289467825606,
+    "q25": 0.02487461630620319,
+    "q75": 0.10392024524411705,
     "med_length": 78.0,
-    "target_from_start": 0.048702894678255636,
-    "target_from_now": -0.03981851495191988,
+    "target_from_start": 0.04870289467825606,
+    "target_from_now": -0.04154590310256023,
     "band_from_now": [
-     -0.06364679332397244,
-     0.015398890078508115
+     -0.0653741814746131,
+     0.013671447463300762
     ],
-    "share_of_typical": 1.8175800476536694,
+    "share_of_typical": 1.853047922038787,
     "pct_rank": 0.6521739130434783,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
-    "actual": 0.08852140963017543,
-    "sessions": 196,
+    "actual": 0.09575655186291628,
+    "sessions": 197,
     "rows": [
      {
       "factor": "dollar",
       "label": "US dollar (broad index)",
-      "beta": 1.087430010510684,
-      "move": 0.0352440040382902,
-      "contrib": 0.038325387681796504,
-      "share": 0.4329504900781882
+      "beta": 1.0871877704578452,
+      "move": 0.037007121837585366,
+      "contrib": 0.04023369028166627,
+      "share": 0.4201664481325962
      },
      {
       "factor": "macro1",
       "label": "macro state, PCA line 1",
-      "beta": 0.030319465313142863,
-      "move": 1.1008227070156602,
-      "contrib": 0.033376355881281336,
-      "share": 0.37704275181248254
+      "beta": 0.030356462146661087,
+      "move": 0.9736256586428782,
+      "contrib": 0.0295558304516105,
+      "share": 0.3086559601051864
      },
      {
       "factor": "real",
       "label": "real 10-yr yield",
-      "beta": -0.0003880538369642853,
-      "move": 74.00000000000001,
-      "contrib": -0.028715983935357115,
-      "share": -0.32439591795167627
+      "beta": -0.00038812773197087946,
+      "move": 72.99999999999999,
+      "contrib": -0.028333324433874197,
+      "share": -0.29588914682763207
      },
      {
       "factor": "macro2",
       "label": "macro state, PCA line 2",
-      "beta": -0.020860211245753556,
-      "move": -0.18190927926825048,
-      "contrib": 0.0037946659930984832,
-      "share": 0.042867211547486996
+      "beta": -0.020847682517017237,
+      "move": -0.1910164942443427,
+      "contrib": 0.003982251227519707,
+      "share": 0.04158724546828547
      },
      {
       "factor": "hikes",
       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-      "beta": 3.834341949084412e-05,
-      "move": 81.00000000000006,
-      "contrib": 0.003105816978758376,
-      "share": 0.03508548939441714
-     },
-     {
-      "factor": "oil",
-      "label": "oil (WTI spot)",
-      "beta": -0.0024414865925264165,
-      "move": 0.47378435208564174,
-      "contrib": -0.0011567381433659095,
-      "share": -0.013067326290877288
-     },
-     {
-      "factor": "cot_gold",
-      "label": "speculative positioning in gold (CFTC)",
-      "beta": -0.008942235447254011,
-      "move": -0.04726388345709115,
-      "contrib": 0.00042264477402488294,
-      "share": 0.0047744921346215274
-     },
-     {
-      "factor": "cot_silver",
-      "label": "speculative positioning in silver (CFTC)",
-      "beta": 0.01250516360848034,
-      "move": -0.0321135229215847,
-      "contrib": -0.0004015848581791003,
-      "share": -0.004536584537648471
-     },
-     {
-      "factor": "cot_oil",
-      "label": "speculative positioning in oil (CFTC)",
-      "beta": -0.022066698760323748,
-      "move": 0.016030534374495385,
-      "contrib": -0.00035374097300900454,
-      "share": -0.003996106416367101
-     },
-     {
-      "factor": "btc",
-      "label": "speculative liquidity (Bitcoin)",
-      "beta": 0.002285075366715961,
-      "move": -0.09463364301671184,
-      "contrib": -0.00021624500652008016,
-      "share": -0.0024428554337702947
-     },
-     {
-      "factor": "war",
-      "label": "geopolitical risk (GPR index)",
-      "beta": 0.0007293267160774874,
-      "move": 0.18688444270139382,
-      "contrib": 0.0001362998168813789,
-      "share": 0.0015397384367331248
+      "beta": 3.828117223051822e-05,
+      "move": 74.00000000000003,
+      "contrib": 0.0028328067450583494,
+      "share": 0.029583424736447858
      },
      {
       "factor": "vix",
       "label": "equity volatility (VIX)",
-      "beta": 0.0036380555734835634,
-      "move": 0.015777026281940998,
-      "contrib": 5.739769839801211e-05,
-      "share": 0.0006484047038768147
+      "beta": 0.00359349759262783,
+      "move": 0.4499257347092067,
+      "contrib": 0.0016168070445388419,
+      "share": 0.016884557903185986
+     },
+     {
+      "factor": "oil",
+      "label": "oil (WTI spot)",
+      "beta": -0.0024370037623510357,
+      "move": 0.47378435208564174,
+      "contrib": -0.0011546142485757568,
+      "share": -0.01205780937296788
+     },
+     {
+      "factor": "cot_gold",
+      "label": "speculative positioning in gold (CFTC)",
+      "beta": -0.008953633456872528,
+      "move": -0.06733416581353685,
+      "contrib": 0.000602885439818686,
+      "share": 0.00629602286308062
+     },
+     {
+      "factor": "cot_oil",
+      "label": "speculative positioning in oil (CFTC)",
+      "beta": -0.02207027507678313,
+      "move": 0.018682090839719064,
+      "contrib": -0.00041231888384205006,
+      "share": -0.00430590780286575
+     },
+     {
+      "factor": "cot_silver",
+      "label": "speculative positioning in silver (CFTC)",
+      "beta": 0.01251084053369332,
+      "move": -0.017777475245446345,
+      "contrib": -0.00022241115788745972,
+      "share": -0.0023226730031576364
+     },
+     {
+      "factor": "btc",
+      "label": "speculative liquidity (Bitcoin)",
+      "beta": 0.0022868602757357918,
+      "move": -0.09463364301671184,
+      "contrib": -0.00021641391896308013,
+      "share": -0.0022600429396507013
+     },
+     {
+      "factor": "war",
+      "label": "geopolitical risk (GPR index)",
+      "beta": 0.000729483298158403,
+      "move": 0.18688444270139382,
+      "contrib": 0.00013632907963630783,
+      "share": 0.0014237049787619192
      }
     ],
-    "drift": 0.03470251048046791,
-    "resid": 0.005444623241899767,
-    "unexplained_share": 0.06150628717556919
+    "drift": 0.03489520106946476,
+    "resid": 0.012239833166745394,
+    "unexplained_share": 0.12782240931427613
    },
    "impulse": {
     "end": "2026-03-13",
@@ -1940,213 +1540,109 @@
       {
        "factor": "dollar",
        "label": "US dollar (broad index)",
-       "beta": 1.087430010510684,
+       "beta": 1.0871877704578452,
        "move": 0.026047242364999335,
-       "contrib": 0.02832455303874556,
-       "share": 0.5420325005181674
+       "contrib": 0.028318243353378757,
+       "share": 0.5419117552929145
       },
       {
        "factor": "macro1",
        "label": "macro state, PCA line 1",
-       "beta": 0.030319465313142863,
-       "move": 0.07793700227823486,
-       "contrib": 0.002363008237185278,
-       "share": 0.04521968137659582
+       "beta": 0.030356462146661087,
+       "move": 0.07905844135052309,
+       "contrib": 0.0023999345822311798,
+       "share": 0.04592632197610846
       },
       {
        "factor": "macro2",
        "label": "macro state, PCA line 2",
-       "beta": -0.020860211245753556,
-       "move": 0.0937220909474829,
-       "contrib": -0.0019550626155582203,
-       "share": -0.037413034434507116
+       "beta": -0.020847682517017237,
+       "move": 0.09397176649641059,
+       "contrib": -0.0019590935534804454,
+       "share": -0.0374901724341228
       },
       {
        "factor": "vix",
        "label": "equity volatility (VIX)",
-       "beta": 0.0036380555734835634,
+       "beta": 0.00359349759262783,
        "move": 0.5086213613011168,
-       "contrib": 0.0018503927782743252,
-       "share": 0.03541002123411481
+       "contrib": 0.0018277296373946528,
+       "share": 0.03497632828567532
       },
       {
        "factor": "cot_oil",
        "label": "speculative positioning in oil (CFTC)",
-       "beta": -0.022066698760323748,
+       "beta": -0.02207027507678313,
        "move": 0.07104440752878738,
-       "contrib": -0.0015677155395434276,
-       "share": -0.03000057133602508
+       "contrib": -0.0015679696168274197,
+       "share": -0.030005433483201015
       },
       {
        "factor": "oil",
        "label": "oil (WTI spot)",
-       "beta": -0.0024414865925264165,
+       "beta": -0.0024370037623510357,
        "move": 0.46207414356786014,
-       "contrib": -0.0011281478262740571,
-       "share": -0.02158878858187074
+       "contrib": -0.0011260764263600078,
+       "share": -0.02154914925999161
       },
       {
        "factor": "real",
        "label": "real 10-yr yield",
-       "beta": -0.0003880538369642853,
+       "beta": -0.00038812773197087946,
        "move": 2.0000000000000018,
-       "contrib": -0.0007761076739285712,
-       "share": -0.01485197604337812
+       "contrib": -0.0007762554639417596,
+       "share": -0.014854804225354745
       },
       {
        "factor": "hikes",
        "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 3.834341949084412e-05,
+       "beta": 3.828117223051822e-05,
        "move": 20.000000000000014,
-       "contrib": 0.000766868389816883,
-       "share": 0.014675168583673261
+       "contrib": 0.0007656234446103649,
+       "share": 0.01465134470329732
       },
       {
        "factor": "cot_gold",
        "label": "speculative positioning in gold (CFTC)",
-       "beta": -0.008942235447254011,
+       "beta": -0.008953633456872528,
        "move": -0.06949550321699155,
-       "contrib": 0.000621445152291737,
-       "share": 0.011892278383733385
+       "contrib": 0.000622237262705848,
+       "share": 0.01190743659603985
       },
       {
        "factor": "cot_silver",
        "label": "speculative positioning in silver (CFTC)",
-       "beta": 0.01250516360848034,
+       "beta": 0.01251084053369332,
        "move": 0.047014190208636925,
-       "contrib": 0.0005879201404792192,
-       "share": 0.011250727360570447
+       "contrib": 0.0005881870365209824,
+       "share": 0.011255834813764763
       },
       {
        "factor": "btc",
        "label": "speculative liquidity (Bitcoin)",
-       "beta": 0.002285075366715961,
+       "beta": 0.0022868602757357918,
        "move": -0.22755536746809035,
-       "contrib": -0.0005199811647653319,
-       "share": -0.009950613892284901
+       "contrib": -0.0005203873303932365,
+       "share": -0.009958386476396519
       },
       {
        "factor": "war",
        "label": "geopolitical risk (GPR index)",
-       "beta": 0.0007293267160774874,
+       "beta": 0.000729483298158403,
        "move": 0.4461857584248161,
-       "contrib": 0.0003254151939525143,
-       "share": 0.006227304312389514
+       "contrib": 0.0003254850586470433,
+       "share": 0.006228641277354918
       }
      ],
-     "drift": 0.005665715996811087,
-     "resid": 0.017697885349174925,
-     "unexplained_share": 0.33867539009618114
+     "drift": 0.005668256011283616,
+     "resid": 0.01769027546089235,
+     "unexplained_share": 0.33852976355200143
     }
    },
    "last_session": {
-    "date": "2026-11-05",
-    "ret": 0.0006918180099253128,
-    "attribution": {
-     "actual": 0.0006918180099253128,
-     "sessions": 1,
-     "rows": [
-      {
-       "factor": "macro1",
-       "label": "macro state, PCA line 1",
-       "beta": 0.033156258137957924,
-       "move": -0.024458132954295664,
-       "contrib": -0.0008109401698051224,
-       "share": -1.1721871332789815
-      },
-      {
-       "factor": "macro2",
-       "label": "macro state, PCA line 2",
-       "beta": -0.026429491620058195,
-       "move": -0.018954419536470812,
-       "contrib": 0.0005009556723022227,
-       "share": 0.7241148179364465
-      },
-      {
-       "factor": "war",
-       "label": "geopolitical risk (GPR index)",
-       "beta": 0.0006442033804810595,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "hikes",
-       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 7.884111382717316e-05,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "real",
-       "label": "real 10-yr yield",
-       "beta": -0.0004577232186703918,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "dollar",
-       "label": "US dollar (broad index)",
-       "beta": 1.0962025400967719,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "oil",
-       "label": "oil (WTI spot)",
-       "beta": -0.01731244102574561,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "vix",
-       "label": "equity volatility (VIX)",
-       "beta": 0.005986589701290201,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "btc",
-       "label": "speculative liquidity (Bitcoin)",
-       "beta": 0.0020584829405874607,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_gold",
-       "label": "speculative positioning in gold (CFTC)",
-       "beta": -0.010314203571259761,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "cot_silver",
-       "label": "speculative positioning in silver (CFTC)",
-       "beta": 0.007826966588336825,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_oil",
-       "label": "speculative positioning in oil (CFTC)",
-       "beta": -0.01099004063424553,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      }
-     ],
-     "drift": 0.00020067900510721816,
-     "resid": 0.0008011235023209945,
-     "unexplained_share": 1.1579974658472423
-    }
+    "date": "2026-11-09",
+    "ret": -0.005507754082099889,
+    "attribution": null
    },
    "stable_factors": [
     "war",
@@ -2159,73 +1655,73 @@
    "windows": {
     "R1_full": {
      "sessions": 120,
-     "explained": 0.4763284366587899,
+     "explained": 0.47652429864398604,
      "move": 0.07319008017212086,
      "end": "2026-07-21"
     },
     "R2_impulse": {
      "sessions": 32,
-     "explained": 0.5529026974811788,
+     "explained": 0.5529997170660883,
      "move": 0.052256189456661925,
      "end": "2026-03-13"
     },
     "R3_half": {
      "sessions": 60,
-     "explained": 0.3945804109973252,
+     "explained": 0.39479263483349414,
      "move": 0.03926435379774235,
      "end": "2026-04-23"
     },
     "R4_ceiling": {
      "sessions": 44,
-     "explained": 0.6811719883444283,
+     "explained": 0.6812790098734047,
      "move": 0.04830437174496682,
      "end": "2026-03-31"
     },
     "R5_causal": {
      "sessions": 6,
-     "explained": 0.36068054107201486,
+     "explained": 0.3606241855765794,
      "move": 0.02019518597999911,
      "end": "2026-02-04"
     }
    },
    "window_test": {},
-   "ceiling_null": 0.10832238360227525,
+   "ceiling_null": 0.09971171484295976,
    "best_rule": null,
    "r5_rows": [
     {
      "factor": "dollar",
      "label": "US dollar (broad index)",
-     "beta": 1.087430010510684,
+     "beta": 1.0871877704578452,
      "move": 0.006854987865787088,
-     "contrib": 0.007454319526943464,
-     "share": 0.3691136855251576
+     "contrib": 0.007452658974320647,
+     "share": 0.36903146035404694
     },
     {
      "factor": "real",
      "label": "real 10-yr yield",
-     "beta": -0.0003880538369642853,
+     "beta": -0.00038812773197087946,
      "move": 4.0000000000000036,
-     "contrib": -0.0015522153478571424,
-     "share": -0.07686066121868965
+     "contrib": -0.0015525109278835192,
+     "share": -0.07687529738132115
     },
     {
      "factor": "macro1",
      "label": "macro state, PCA line 1",
-     "beta": 0.030319465313142863,
-     "move": 0.02777730077863172,
-     "contrib": 0.0008421929074504607,
-     "share": 0.041702656676920476
+     "beta": 0.030356462146661087,
+     "move": 0.028009158164697734,
+     "contrib": 0.0008502589495864901,
+     "share": 0.04210206087869499
     },
     {
      "factor": "vix",
      "label": "equity volatility (VIX)",
-     "beta": 0.0036380555734835634,
+     "beta": 0.00359349759262783,
      "move": 0.1310819119141824,
-     "contrib": 0.0004768832802222728,
-     "share": 0.023613710747431
+     "contrib": 0.00047104253490066767,
+     "share": 0.02332449601440553
     }
    ],
-   "r5_unexplained": 0.5867167371479441
+   "r5_unexplained": 0.5867495101562428
   },
   "USO": {
    "name": "oil",
@@ -2233,19 +1729,19 @@
     "start": "2026-07-10",
     "kind": "trough",
     "direction": 1,
-    "sessions": 83,
-    "move": 0.3100384662163991,
+    "sessions": 85,
+    "move": 0.27187243646796766,
     "extreme_so_far": {
      "date": "2026-10-30",
      "move": 0.44030053628254073
     },
-    "threshold_now": 0.20606371841067578,
+    "threshold_now": 0.21187910385607933,
     "rule": "the founder's rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and 3 open-to-close days against the trend; extremes from the high and low of the day (current-leg scale, promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-07-01",
      "direction": 1,
-     "move": 0.36128334709157883,
-     "sessions": 89,
+     "move": 0.3231173173431475,
+     "sessions": 91,
      "scale": "quarter scale, zigzag"
     }
    },
@@ -2256,119 +1752,119 @@
     "q75": 0.21341652414765772,
     "med_length": 33.0,
     "target_from_start": 0.156012645777733,
-    "target_from_now": -0.15402582043866608,
+    "target_from_now": -0.11585979069023467,
     "band_from_now": [
-     -0.20572379616609884,
-     -0.09662194206874136
+     -0.16755776641766743,
+     -0.058455912320309944
     ],
-    "share_of_typical": 1.9872649724696196,
-    "pct_rank": 0.8448275862068966,
+    "share_of_typical": 1.742630766324526,
+    "pct_rank": 0.8275862068965517,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
-    "actual": 0.3100384662163985,
-    "sessions": 83,
+    "actual": 0.31138697253123576,
+    "sessions": 84,
     "rows": [
      {
       "factor": "oil",
       "label": "oil (WTI spot)",
-      "beta": 0.7808909934202968,
+      "beta": 0.7809043163535706,
       "move": 0.318667021627288,
-      "contrib": 0.24884420708882013,
-      "share": 0.8026236554632339
+      "contrib": 0.24884845266828584,
+      "share": 0.799161412070068
      },
      {
       "factor": "real",
       "label": "real 10-yr yield",
-      "beta": -0.0012691197287796143,
-      "move": 32.00000000000003,
-      "contrib": -0.04061183132094769,
-      "share": -0.13098965369220258
+      "beta": -0.0012687113517835364,
+      "move": 31.000000000000007,
+      "contrib": -0.03933005190528964,
+      "share": -0.12630602875123292
      },
      {
       "factor": "macro2",
       "label": "macro state, PCA line 2",
-      "beta": -0.11611883480645027,
-      "move": -0.21453233057385132,
-      "contrib": 0.024911244254547823,
-      "share": 0.08034888237758357
+      "beta": -0.11614350638769033,
+      "move": -0.22352351061960654,
+      "contrib": 0.02596080428344724,
+      "share": 0.08337151703044694
      },
      {
       "factor": "macro1",
       "label": "macro state, PCA line 1",
-      "beta": 0.030802071837988575,
-      "move": 0.3957600874202556,
-      "contrib": 0.012190230643327351,
-      "share": 0.039318445843487364
+      "beta": 0.03071812113276441,
+      "move": 0.2687115337889061,
+      "contrib": 0.008254313444698534,
+      "share": 0.026508217018843105
      },
      {
       "factor": "btc",
       "label": "speculative liquidity (Bitcoin)",
-      "beta": -0.02209394862525686,
+      "beta": -0.022091448862332032,
       "move": 0.23428685354673462,
-      "contrib": -0.005176321705834632,
-      "share": -0.016695740270569196
-     },
-     {
-      "factor": "dollar",
-      "label": "US dollar (broad index)",
-      "beta": 0.2797437312488337,
-      "move": 0.009588371276713303,
-      "contrib": 0.002682286757546923,
-      "share": 0.00865146441433741
-     },
-     {
-      "factor": "hikes",
-      "label": "rate-hike speculation (2-yr yield minus fed funds)",
-      "beta": 0.00018686376227447125,
-      "move": 11.000000000000032,
-      "contrib": 0.0020555013850191897,
-      "share": 0.0066298269698718765
-     },
-     {
-      "factor": "cot_silver",
-      "label": "speculative positioning in silver (CFTC)",
-      "beta": 0.016379084648425107,
-      "move": -0.09764512228470767,
-      "contrib": -0.0015993377234070477,
-      "share": -0.005158513854505889
-     },
-     {
-      "factor": "cot_gold",
-      "label": "speculative positioning in gold (CFTC)",
-      "beta": 0.020661672202858198,
-      "move": -0.05260652790940612,
-      "contrib": -0.0010869388353946603,
-      "share": -0.0035058192896490663
+      "contrib": -0.005175736044244362,
+      "share": -0.016621556136954877
      },
      {
       "factor": "vix",
       "label": "equity volatility (VIX)",
-      "beta": -0.008361673928011607,
-      "move": 0.0999567198603204,
-      "contrib": -0.000835805498385601,
-      "share": -0.0026958122602833137
+      "beta": -0.00839195049386494,
+      "move": 0.5341054282875861,
+      "contrib": -0.004482186312693954,
+      "share": -0.014394264076813098
      },
      {
-      "factor": "war",
-      "label": "geopolitical risk (GPR index)",
-      "beta": 0.0002018982636688286,
-      "move": 0.47263137520660514,
-      "contrib": 9.542345400962423e-05,
-      "share": 0.000307779402904868
+      "factor": "dollar",
+      "label": "US dollar (broad index)",
+      "beta": 0.28002655988081815,
+      "move": 0.01135148907600847,
+      "contrib": 0.003178718435479339,
+      "share": 0.010208257621183802
+     },
+     {
+      "factor": "cot_gold",
+      "label": "speculative positioning in gold (CFTC)",
+      "beta": 0.020666570989624558,
+      "move": -0.07267681026585182,
+      "contrib": -0.0015019804586587015,
+      "share": -0.004823517331021404
+     },
+     {
+      "factor": "cot_silver",
+      "label": "speculative positioning in silver (CFTC)",
+      "beta": 0.01638285541049086,
+      "move": -0.08330907460856932,
+      "contrib": -0.0013648405236939864,
+      "share": -0.004383100913308366
+     },
+     {
+      "factor": "hikes",
+      "label": "rate-hike speculation (2-yr yield minus fed funds)",
+      "beta": 0.00018711717821369078,
+      "move": 4.0000000000000036,
+      "contrib": 0.0007484687128547638,
+      "share": 0.002403660971332651
      },
      {
       "factor": "cot_oil",
       "label": "speculative positioning in oil (CFTC)",
-      "beta": 0.1291170736792737,
-      "move": -0.00033488207384935187,
-      "contrib": -4.323899340307474e-05,
-      "share": -0.00013946331863509828
+      "beta": 0.12909622661065429,
+      "move": 0.0023166743913743265,
+      "contrib": 0.00029907392221195964,
+      "share": 0.0009604574005804274
+     },
+     {
+      "factor": "war",
+      "label": "geopolitical risk (GPR index)",
+      "beta": 0.000201909724504847,
+      "move": 0.47263137520660514,
+      "contrib": 9.542887076031262e-05,
+      "share": 0.0003064639152517531
      }
     ],
-    "drift": 0.07315384254183592,
-    "resid": -0.004540795831335723,
-    "unexplained_share": -0.014645911156605868
+    "drift": 0.0740220010588921,
+    "resid": 0.0018345063791862931,
+    "unexplained_share": 0.005891403754864121
    },
    "impulse": {
     "end": "2026-07-23",
@@ -2381,213 +1877,109 @@
       {
        "factor": "oil",
        "label": "oil (WTI spot)",
-       "beta": 0.7808909934202968,
+       "beta": 0.7809043163535706,
        "move": 0.25056266966739926,
-       "contrib": 0.19566213203061708,
-       "share": 0.7845276682320261
+       "contrib": 0.19566547026034598,
+       "share": 0.784541053211317
       },
       {
        "factor": "real",
        "label": "real 10-yr yield",
-       "beta": -0.0012691197287796143,
+       "beta": -0.0012687113517835364,
        "move": 11.000000000000032,
-       "contrib": -0.013960317016575798,
-       "share": -0.055975343021818266
+       "contrib": -0.013955824869618941,
+       "share": -0.055957331291388655
       },
       {
        "factor": "macro2",
        "label": "macro state, PCA line 2",
-       "beta": -0.11611883480645027,
-       "move": -0.10167280316821431,
-       "contrib": 0.01180612743539861,
-       "share": 0.04733789584943332
+       "beta": -0.11614350638769033,
+       "move": -0.10158298310161701,
+       "contrib": 0.011798203846743294,
+       "share": 0.047306125396626375
       },
       {
        "factor": "macro1",
        "label": "macro state, PCA line 1",
-       "beta": 0.030802071837988575,
-       "move": 0.10538499718995853,
-       "contrib": 0.0032460762540913266,
-       "share": 0.013015480349192568
+       "beta": 0.03071812113276441,
+       "move": 0.10572087803922647,
+       "contrib": 0.0032475467378711717,
+       "share": 0.013021376406845636
       },
       {
        "factor": "hikes",
        "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 0.00018686376227447125,
+       "beta": 0.00018711717821369078,
        "move": 15.000000000000036,
-       "contrib": 0.0028029564341170753,
-       "share": 0.01123874534429445
+       "contrib": 0.0028067576732053686,
+       "share": 0.01125398680776713
       },
       {
        "factor": "vix",
        "label": "equity volatility (VIX)",
-       "beta": -0.008361673928011607,
+       "beta": -0.00839195049386494,
        "move": 0.21847532009565773,
-       "contrib": -0.0018268193879578515,
-       "share": -0.0073248223345096005
+       "contrib": -0.0018334340703740559,
+       "share": -0.007351344591617932
       },
       {
        "factor": "dollar",
        "label": "US dollar (broad index)",
-       "beta": 0.2797437312488337,
+       "beta": 0.28002655988081815,
        "move": 0.003337863960176435,
-       "contrib": 0.0009337465186207644,
-       "share": 0.003743953780789282
+       "contrib": 0.0009346905621183712,
+       "share": 0.0037477390213782537
       },
       {
        "factor": "cot_oil",
        "label": "speculative positioning in oil (CFTC)",
-       "beta": 0.1291170736792737,
+       "beta": 0.12909622661065429,
        "move": -0.006325284431427963,
-       "contrib": -0.0008167022159750472,
-       "share": -0.0032746524761294742
+       "contrib": -0.0008165703523364679,
+       "share": -0.003274123755156103
       },
       {
        "factor": "cot_gold",
        "label": "speculative positioning in gold (CFTC)",
-       "beta": 0.020661672202858198,
+       "beta": 0.020666570989624558,
        "move": -0.03593618653993125,
-       "contrib": -0.0007425017065088243,
-       "share": -0.002977137816194893
+       "contrib": -0.0007426777502238796,
+       "share": -0.0029778436817798474
       },
       {
        "factor": "cot_silver",
        "label": "speculative positioning in silver (CFTC)",
-       "beta": 0.016379084648425107,
+       "beta": 0.01638285541049086,
        "move": -0.02842058977553666,
-       "contrib": -0.00046550324569168003,
-       "share": -0.0018664836783020815
+       "contrib": -0.0004656104129734919,
+       "share": -0.0018669133766644477
       },
       {
        "factor": "btc",
        "label": "speculative liquidity (Bitcoin)",
-       "beta": -0.02209394862525686,
+       "beta": -0.022091448862332032,
        "move": 0.014208770429601003,
-       "contrib": -0.00031392784389967337,
-       "share": -0.0012587263402055729
+       "contrib": -0.0003138923253421461,
+       "share": -0.0012585839248550569
       },
       {
        "factor": "war",
        "label": "geopolitical risk (GPR index)",
-       "beta": 0.0002018982636688286,
+       "beta": 0.000201909724504847,
        "move": 0.5555080802734844,
-       "contrib": 0.00011215611686122076,
-       "share": 0.000449701615360726
+       "contrib": 0.00011216248344823567,
+       "share": 0.0004497271428535197
       }
      ],
-     "drift": 0.007932344372006303,
-     "resid": 0.0450314196872682,
-     "unexplained_share": 0.18055816073241043
+     "drift": 0.007930928684881298,
+     "resid": 0.045033436964627,
+     "unexplained_share": 0.18056624921578765
     }
    },
    "last_session": {
-    "date": "2026-11-05",
-    "ret": 0.019072868558404704,
-    "attribution": {
-     "actual": 0.019072868558404704,
-     "sessions": 1,
-     "rows": [
-      {
-       "factor": "macro2",
-       "label": "macro state, PCA line 2",
-       "beta": -0.2790817072227735,
-       "move": -0.018954419536470812,
-       "contrib": 0.005289831763654965,
-       "share": 0.27734851459058224
-      },
-      {
-       "factor": "macro1",
-       "label": "macro state, PCA line 1",
-       "beta": 0.10574152720816674,
-       "move": -0.024458132954295664,
-       "contrib": -0.0025862403312476145,
-       "share": -0.13559786894813755
-      },
-      {
-       "factor": "war",
-       "label": "geopolitical risk (GPR index)",
-       "beta": 0.0009271782453470229,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "hikes",
-       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 0.00019738920970274542,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "real",
-       "label": "real 10-yr yield",
-       "beta": -0.0031698418658555557,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "dollar",
-       "label": "US dollar (broad index)",
-       "beta": 1.0123567743741337,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "oil",
-       "label": "oil (WTI spot)",
-       "beta": 0.6912141980272247,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "vix",
-       "label": "equity volatility (VIX)",
-       "beta": 0.0031738893046612806,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "btc",
-       "label": "speculative liquidity (Bitcoin)",
-       "beta": -0.016814208383713287,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "cot_gold",
-       "label": "speculative positioning in gold (CFTC)",
-       "beta": -0.022082378029962973,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "cot_silver",
-       "label": "speculative positioning in silver (CFTC)",
-       "beta": 0.022503228767578674,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_oil",
-       "label": "speculative positioning in oil (CFTC)",
-       "beta": 0.2536711563426698,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": 0.0
-      }
-     ],
-     "drift": 0.0010804899268550508,
-     "resid": 0.015288787199142301,
-     "unexplained_share": 0.8015987292276022
-    }
+    "date": "2026-11-09",
+    "ret": -0.039514536063268525,
+    "attribution": null
    },
    "stable_factors": [
     "real",
@@ -2599,74 +1991,74 @@
    "n_past_episodes": 127,
    "windows": {
     "R1_full": {
-     "sessions": 83,
-     "explained": 0.7786950517855744,
-     "move": 0.3100384662163983,
-     "end": "2026-11-05"
+     "sessions": 84,
+     "explained": 0.7563915188183764,
+     "move": 0.31138697253123554,
+     "end": "2026-11-06"
     },
     "R2_impulse": {
      "sessions": 9,
-     "explained": 0.7876362795039366,
+     "explained": 0.7876338673653257,
      "move": 0.24940118743237175,
      "end": "2026-07-23"
     },
     "R3_half": {
-     "sessions": 41,
-     "explained": 0.7405492032737531,
-     "move": 0.2952203056410025,
-     "end": "2026-09-08"
+     "sessions": 42,
+     "explained": 0.7581806083789657,
+     "move": 0.3218435161811225,
+     "end": "2026-09-09"
     },
     "R4_ceiling": {
      "sessions": 20,
-     "explained": 0.9792867104635608,
+     "explained": 0.9793156164424417,
      "move": 0.08192338097622658,
      "end": "2026-08-07"
     },
     "R5_causal": {
      "sessions": 5,
-     "explained": 0.8141817443994708,
+     "explained": 0.8141820714042547,
      "move": 0.13136715948176553,
      "end": "2026-07-17"
     }
    },
    "window_test": {},
-   "ceiling_null": 0.08697435738988546,
+   "ceiling_null": 0.18163194344635192,
    "best_rule": null,
    "r5_rows": [
     {
      "factor": "oil",
      "label": "oil (WTI spot)",
-     "beta": 0.7808909934202968,
+     "beta": 0.7809043163535706,
      "move": 0.14111128814729135,
-     "contrib": 0.11019253398415609,
-     "share": 0.8388134022145116
+     "contrib": 0.11019441400043226,
+     "share": 0.8388277133732791
     },
     {
      "factor": "macro1",
      "label": "macro state, PCA line 1",
-     "beta": 0.030802071837988575,
-     "move": -0.06538267872007708,
-     "contrib": -0.002013921966895941,
-     "share": -0.015330482708469343
+     "beta": 0.03071812113276441,
+     "move": -0.06500421279393098,
+     "contrib": -0.001996807282743966,
+     "share": -0.015200201409707223
     },
     {
      "factor": "macro2",
      "label": "macro state, PCA line 2",
-     "beta": -0.11611883480645027,
-     "move": -0.0170898863725385,
-     "contrib": 0.0019844576925538036,
-     "share": 0.015106193209797286
+     "beta": -0.11614350638769033,
+     "move": -0.016994080744751783,
+     "contrib": 0.001973752125531004,
+     "share": 0.015024699729501052
     },
     {
      "factor": "vix",
      "label": "equity volatility (VIX)",
-     "beta": -0.008361673928011607,
+     "beta": -0.00839195049386494,
      "move": 0.22221164683353445,
-     "contrib": -0.001858061333828488,
-     "share": -0.014144032200729718
+     "contrib": -0.0018647891393872211,
+     "share": -0.014195245956018893
     }
    ],
-   "r5_unexplained": 0.1522721394948549
+   "r5_unexplained": 0.15227779947228426
   },
   "NVDA": {
    "name": "Nvidia",
@@ -2674,134 +2066,134 @@
     "start": "2026-10-06",
     "kind": "peak",
     "direction": -1,
-    "sessions": 22,
-    "move": -0.2756607553603913,
+    "sessions": 24,
+    "move": -0.2919267364404252,
     "extreme_so_far": {
-     "date": "2026-11-05",
-     "move": -0.2756607553603913
+     "date": "2026-11-09",
+     "move": -0.2919267364404252
     },
-    "threshold_now": 0.19326337583671027,
+    "threshold_now": 0.20804202624423498,
     "rule": "the founder's rule \u2014 a turn is confirmed when the price has given back 38% of the leg's own move (floor 0.5\u00d7 monthly volatility, never more than the zigzag's threshold) and 3 open-to-close days against the trend; extremes from the high and low of the day (current-leg scale, promoted 2026-10-23)",
     "big_picture": {
      "start": "2026-10-06",
      "direction": -1,
-     "move": -0.2756607553603913,
-     "sessions": 22,
+     "move": -0.2919267364404252,
+     "sessions": 24,
      "scale": "quarter scale, zigzag"
     }
    },
    "target": {
-    "n": 90,
-    "med_size": 0.20322108473833994,
-    "q25": 0.12847707091129879,
-    "q75": 0.38336756077690176,
-    "med_length": 20.5,
-    "target_from_start": -0.20322108473833994,
-    "target_from_now": 0.07243967062205137,
+    "n": 91,
+    "med_size": 0.1995925652057822,
+    "q25": 0.12811047938296485,
+    "q75": 0.38270120729050927,
+    "med_length": 20.0,
+    "target_from_start": -0.1995925652057822,
+    "target_from_now": 0.09233417123464302,
     "band_from_now": [
-     0.14718368444909252,
-     -0.10770680541651045
+     0.16381625705746036,
+     -0.09077447085008405
     ],
-    "share_of_typical": 1.3564574547730717,
-    "pct_rank": 0.6333333333333333,
+    "share_of_typical": 1.4626132799057192,
+    "pct_rank": 0.6593406593406593,
     "status": "base rate of past episodes, UNTESTED as a conditional claim"
    },
    "attribution": {
-    "actual": -0.27566075536038914,
-    "sessions": 22,
+    "actual": -0.24828563069428225,
+    "sessions": 23,
     "rows": [
+     {
+      "factor": "vix",
+      "label": "equity volatility (VIX)",
+      "beta": -0.14856516735833347,
+      "move": 0.5354369864070989,
+      "contrib": -0.07954728549541237,
+      "share": 0.3203861829336395
+     },
      {
       "factor": "macro1",
       "label": "macro state, PCA line 1",
-      "beta": 0.15465848787724448,
-      "move": -0.24096094331626672,
-      "contrib": -0.03726665513076823,
-      "share": 0.13519028155475785
+      "beta": 0.15476063262186787,
+      "move": -0.36784029883749136,
+      "contrib": -0.05692719735190709,
+      "share": 0.22928107918578014
      },
      {
       "factor": "real",
       "label": "real 10-yr yield",
-      "beta": -0.0013584236859304764,
-      "move": -27.000000000000007,
-      "contrib": 0.036677439520122875,
-      "share": -0.13305281512477932
+      "beta": -0.0013589021851188724,
+      "move": -28.00000000000003,
+      "contrib": 0.038049261183328464,
+      "share": -0.15324793898435096
      },
      {
       "factor": "macro2",
       "label": "macro state, PCA line 2",
-      "beta": -0.06270217701356981,
-      "move": 0.2967122958112024,
-      "contrib": -0.0186045068940567,
-      "share": 0.06749058954632053
-     },
-     {
-      "factor": "vix",
-      "label": "equity volatility (VIX)",
-      "beta": -0.14828699554393435,
-      "move": 0.1012882779798332,
-      "contrib": -0.015019734425448308,
-      "share": 0.05448629931312507
+      "beta": -0.06267554657586588,
+      "move": 0.2877455921159485,
+      "contrib": -0.01803461226066324,
+      "share": 0.0726365525472939
      },
      {
       "factor": "cot_gold",
       "label": "speculative positioning in gold (CFTC)",
-      "beta": -0.12742824267312503,
-      "move": -0.06802356995714232,
-      "contrib": 0.008668123979991027,
-      "share": -0.03144489671247773
+      "beta": -0.1274432059541933,
+      "move": -0.08809385231358802,
+      "contrib": 0.011226962963698886,
+      "share": -0.045217932799030205
      },
      {
       "factor": "dollar",
       "label": "US dollar (broad index)",
-      "beta": -0.5239190896326952,
-      "move": 0.006332391445577734,
-      "contrib": -0.003317660761364953,
-      "share": 0.01203530316467268
+      "beta": -0.5247677698578911,
+      "move": 0.0080955092448729,
+      "contrib": -0.004248262332295892,
+      "share": 0.01711038339357963
      },
      {
       "factor": "cot_silver",
       "label": "speculative positioning in silver (CFTC)",
-      "beta": 0.07223972035918039,
-      "move": -0.036769392704809584,
-      "contrib": -0.002656210646772332,
-      "share": 0.009635795430146362
-     },
-     {
-      "factor": "oil",
-      "label": "oil (WTI spot)",
-      "beta": 0.018490783022807943,
-      "move": 0.034718618727556105,
-      "contrib": 0.0006419744457428363,
-      "share": -0.0023288568766473183
+      "beta": 0.07226542625054126,
+      "move": -0.022433345028671225,
+      "contrib": -0.001621155240722387,
+      "share": 0.00652939614825531
      },
      {
       "factor": "hikes",
       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-      "beta": 3.0192362851507875e-05,
-      "move": -20.999999999999996,
-      "contrib": -0.0006340396198816653,
-      "share": 0.002300072126889242
+      "beta": 3.0337834469552256e-05,
+      "move": -28.000000000000025,
+      "contrib": -0.0008494593651474639,
+      "share": 0.0034212989401445296
+     },
+     {
+      "factor": "oil",
+      "label": "oil (WTI spot)",
+      "beta": 0.018514742930270504,
+      "move": 0.034718618727556105,
+      "contrib": 0.0006428063006347765,
+      "share": -0.0025889790675251495
      },
      {
       "factor": "cot_oil",
       "label": "speculative positioning in oil (CFTC)",
-      "beta": 0.01108557137139391,
-      "move": -0.018856641337436225,
-      "contrib": -0.000209036643370926,
-      "share": 0.0007583112187936903
+      "beta": 0.011066038929944544,
+      "move": -0.016205084872212547,
+      "contrib": -0.00017932610005895943,
+      "share": 0.000722257262965678
      },
      {
       "factor": "war",
       "label": "geopolitical risk (GPR index)",
-      "beta": 0.0008458805270807874,
+      "beta": 0.0008470960546505966,
       "move": 0.21061372162978476,
-      "contrib": 0.00017815404586264856,
-      "share": -0.0006462800467543385
+      "contrib": 0.0001784100526478697,
+      "share": -0.0007185677727260367
      }
     ],
-    "drift": 0.02727359723945134,
-    "resid": -0.27139220046989676,
-    "unexplained_share": 0.9845151882976166
+    "drift": 0.028512103692308128,
+    "resid": -0.16548787674069296,
+    "unexplained_share": 0.666522167545252
    },
    "impulse": {
     "end": "2026-10-16",
@@ -2814,197 +2206,101 @@
       {
        "factor": "vix",
        "label": "equity volatility (VIX)",
-       "beta": -0.14828699554393435,
+       "beta": -0.14856516735833347,
        "move": 0.2865155028669384,
-       "contrib": -0.0424865230968978,
-       "share": 0.38316214953984057
+       "contrib": -0.042566223634183775,
+       "share": 0.38388092403490404
       },
       {
        "factor": "real",
        "label": "real 10-yr yield",
-       "beta": -0.0013584236859304764,
+       "beta": -0.0013589021851188724,
        "move": -16.999999999999993,
-       "contrib": 0.023093202660818088,
-       "share": -0.20826465726785498
+       "contrib": 0.023101337147020822,
+       "share": -0.20833801764172538
       },
       {
        "factor": "macro1",
        "label": "macro state, PCA line 1",
-       "beta": 0.15465848787724448,
-       "move": -0.13048333500612896,
-       "contrib": -0.020180355285227828,
-       "share": 0.18199531865506224
+       "beta": 0.15476063262186787,
+       "move": -0.12993645071099857,
+       "contrib": -0.020109047312674294,
+       "share": 0.181352231999545
       },
       {
        "factor": "macro2",
        "label": "macro state, PCA line 2",
-       "beta": -0.06270217701356981,
-       "move": 0.16509786842399293,
-       "contrib": -0.010351995770484262,
-       "share": 0.09335885034413903
+       "beta": -0.06267554657586588,
+       "move": 0.16520600355055348,
+       "contrib": -0.010354376570145379,
+       "share": 0.09338032144248466
       },
       {
        "factor": "dollar",
        "label": "US dollar (broad index)",
-       "beta": -0.5239190896326952,
+       "beta": -0.5247677698578911,
        "move": 0.00418651025167005,
-       "contrib": -0.0021933926397929185,
-       "share": 0.019780979411546256
+       "contrib": -0.002196945648256091,
+       "share": 0.01981302200436981
       },
       {
        "factor": "oil",
        "label": "oil (WTI spot)",
-       "beta": 0.018490783022807943,
+       "beta": 0.018514742930270504,
        "move": 0.11722871191713313,
-       "contrib": 0.0021676506761029684,
-       "share": -0.019548827062474936
+       "contrib": 0.0021704594651924584,
+       "share": -0.019574157957702076
       },
       {
        "factor": "cot_gold",
        "label": "speculative positioning in gold (CFTC)",
-       "beta": -0.12742824267312503,
+       "beta": -0.1274432059541933,
        "move": -0.0134082934700408,
-       "contrib": 0.0017085952741328367,
-       "share": -0.01540886356921384
+       "contrib": 0.001708795906196675,
+       "share": -0.015410672957397278
       },
       {
        "factor": "war",
        "label": "geopolitical risk (GPR index)",
-       "beta": 0.0008458805270807874,
+       "beta": 0.0008470960546505966,
        "move": -0.6573799077718254,
-       "contrib": -0.000556064862878351,
-       "share": 0.005014837473476447
+       "contrib": -0.0005568639262800864,
+       "share": 0.005022043778636539
       },
       {
        "factor": "cot_silver",
        "label": "speculative positioning in silver (CFTC)",
-       "beta": 0.07223972035918039,
+       "beta": 0.07226542625054126,
        "move": 0.0024169626181276826,
-       "contrib": 0.00017460070365213628,
-       "share": -0.001574625929496359
+       "contrib": 0.00017466283383062118,
+       "share": -0.001575186246768857
       },
       {
        "factor": "hikes",
        "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 3.0192362851507875e-05,
+       "beta": 3.0337834469552256e-05,
        "move": -4.999999999999982,
-       "contrib": -0.00015096181425753883,
-       "share": 0.0013614400292872209
+       "contrib": -0.00015168917234776073,
+       "share": 0.0013679996644143176
       },
       {
        "factor": "cot_oil",
        "label": "speculative positioning in oil (CFTC)",
-       "beta": 0.01108557137139391,
+       "beta": 0.011066038929944544,
        "move": -0.005462005495302957,
-       "contrib": -6.054945174912667e-05,
-       "share": 0.0005460615836401126
+       "contrib": -6.0442765446593555e-05,
+       "share": 0.0005450994396465498
       }
      ],
-     "drift": 0.009917671723436852,
-     "resid": -0.07196580323295038,
-     "unexplained_share": 0.6490192618777003
+     "drift": 0.009917253458194131,
+     "resid": -0.07196084489719605,
+     "unexplained_share": 0.6489745454253458
     }
    },
    "last_session": {
-    "date": "2026-11-05",
-    "ret": -0.09716068001087719,
-    "attribution": {
-     "actual": -0.09716068001087719,
-     "sessions": 1,
-     "rows": [
-      {
-       "factor": "macro1",
-       "label": "macro state, PCA line 1",
-       "beta": 0.17484232603321073,
-       "move": -0.024458132954295664,
-       "contrib": -0.004276316856158578,
-       "share": 0.04401283374797132
-      },
-      {
-       "factor": "macro2",
-       "label": "macro state, PCA line 2",
-       "beta": -0.09407655104309245,
-       "move": -0.018954419536470812,
-       "contrib": 0.0017831664170149851,
-       "share": -0.018352757687732927
-      },
-      {
-       "factor": "war",
-       "label": "geopolitical risk (GPR index)",
-       "beta": 0.00047293974223269384,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "hikes",
-       "label": "rate-hike speculation (2-yr yield minus fed funds)",
-       "beta": 8.516520823236859e-05,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "real",
-       "label": "real 10-yr yield",
-       "beta": -0.0018381551133343096,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "dollar",
-       "label": "US dollar (broad index)",
-       "beta": -0.5009809104004213,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "oil",
-       "label": "oil (WTI spot)",
-       "beta": -0.016039163132417832,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "vix",
-       "label": "equity volatility (VIX)",
-       "beta": -0.141050945379749,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_gold",
-       "label": "speculative positioning in gold (CFTC)",
-       "beta": -0.11029816744441184,
-       "move": 0.0,
-       "contrib": -0.0,
-       "share": 0.0
-      },
-      {
-       "factor": "cot_silver",
-       "label": "speculative positioning in silver (CFTC)",
-       "beta": 0.04202518798289799,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      },
-      {
-       "factor": "cot_oil",
-       "label": "speculative positioning in oil (CFTC)",
-       "beta": 0.09037610855840637,
-       "move": 0.0,
-       "contrib": 0.0,
-       "share": -0.0
-      }
-     ],
-     "drift": 0.0007003198828002095,
-     "resid": -0.0953678494545338,
-     "unexplained_share": 0.9815477767740749
-    }
+    "date": "2026-11-09",
+    "ret": -0.04364110574614022,
+    "attribution": null
    },
    "stable_factors": [
     "dollar",
@@ -3015,74 +2311,74 @@
    "n_past_episodes": 192,
    "windows": {
     "R1_full": {
-     "sessions": 22,
-     "explained": 0.1144238035940468,
-     "move": -0.27566075536038914,
-     "end": "2026-11-05"
+     "sessions": 23,
+     "explained": 0.44831373178802625,
+     "move": -0.24828563069428225,
+     "end": "2026-11-06"
     },
     "R2_impulse": {
      "sessions": 8,
-     "explained": 0.44042266320795176,
+     "explained": 0.44046360756040726,
      "move": -0.11088392511609532,
      "end": "2026-10-16"
     },
     "R3_half": {
      "sessions": 11,
-     "explained": 0.1358479802517889,
+     "explained": 0.13574158865820996,
      "move": -0.07492501203227395,
      "end": "2026-10-21"
     },
     "R4_ceiling": {
-     "sessions": 20,
-     "explained": 0.44567830468524217,
-     "move": -0.14624715710158223,
-     "end": "2026-11-03"
+     "sessions": 22,
+     "explained": 0.4894720622490055,
+     "move": -0.27566075536038914,
+     "end": "2026-11-05"
     },
     "R5_causal": {
      "sessions": 8,
-     "explained": 0.44042266320795176,
+     "explained": 0.44046360756040726,
      "move": -0.11088392511609532,
      "end": "2026-10-16"
     }
    },
    "window_test": {},
-   "ceiling_null": 0.11297395617809364,
+   "ceiling_null": 0.1244496201909312,
    "best_rule": null,
    "r5_rows": [
     {
      "factor": "vix",
      "label": "equity volatility (VIX)",
-     "beta": -0.14828699554393435,
+     "beta": -0.14856516735833347,
      "move": 0.2865155028669384,
-     "contrib": -0.0424865230968978,
-     "share": 0.38316214953984057
+     "contrib": -0.042566223634183775,
+     "share": 0.38388092403490404
     },
     {
      "factor": "real",
      "label": "real 10-yr yield",
-     "beta": -0.0013584236859304764,
+     "beta": -0.0013589021851188724,
      "move": -16.999999999999993,
-     "contrib": 0.023093202660818088,
-     "share": -0.20826465726785498
+     "contrib": 0.023101337147020822,
+     "share": -0.20833801764172538
     },
     {
      "factor": "macro1",
      "label": "macro state, PCA line 1",
-     "beta": 0.15465848787724448,
-     "move": -0.13048333500612896,
-     "contrib": -0.020180355285227828,
-     "share": 0.18199531865506224
+     "beta": 0.15476063262186787,
+     "move": -0.12993645071099857,
+     "contrib": -0.020109047312674294,
+     "share": 0.181352231999545
     },
     {
      "factor": "macro2",
      "label": "macro state, PCA line 2",
-     "beta": -0.06270217701356981,
-     "move": 0.16509786842399293,
-     "contrib": -0.010351995770484262,
-     "share": 0.09335885034413903
+     "beta": -0.06267554657586588,
+     "move": 0.16520600355055348,
+     "contrib": -0.010354376570145379,
+     "share": 0.09338032144248466
     }
    ],
-   "r5_unexplained": 0.6490192618777003
+   "r5_unexplained": 0.6489745454253458
   }
  }
 }

@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline/motor fuel)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Transportation (motor fuel, autos)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Food and beverages",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter/housing",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Core CPI (ex food & energy)",
+   "contribution": "small",
+   "direction": "0"
+  }
+ ],
+ "breadth": 0.3,
+ "contradiction": 0,
+ "evidence": "Excluding energy, the index was virtually unchanged.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:39"
+}

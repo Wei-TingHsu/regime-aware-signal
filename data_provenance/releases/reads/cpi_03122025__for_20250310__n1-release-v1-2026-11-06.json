@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Shelter",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Energy (ex-gasoline)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Airline fares",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Gasoline",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.55,
+ "contradiction": 0.6,
+ "evidence": "The index for all items less food and energy rose 0.2 percent in February, following a 0.4-percent increase in January",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:46"
+}

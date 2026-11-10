@@ -1,0 +1,36 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Energy",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Food",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core (all items less food & energy)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "New and used motor vehicles",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Apparel",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.5,
+ "contradiction": 0,
+ "evidence": "The index for energy fell 1.9 percent in September following a 3.1 percent decline in August.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:38"
+}

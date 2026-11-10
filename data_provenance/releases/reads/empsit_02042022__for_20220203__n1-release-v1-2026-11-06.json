@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Leisure and hospitality",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Professional and business services (incl. computer systems design)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Retail trade",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Transportation and warehousing",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Average hourly earnings",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.8,
+ "contradiction": 1,
+ "evidence": "Total nonfarm payroll employment increased by 467,000 in January, compared with an average monthly gain of 555,000 in 2021",
+ "note": "The release is unrelated to chip-sector earnings guidance story; contradiction score reflects that this is a broad, strong labor market report rather than confirming tech/semiconductor demand doubts.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-release-v1-2026-11-06",
+ "_read_at": "2026-11-11 00:43"
+}
