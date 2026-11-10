@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Final demand energy (gasoline)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Final demand foods",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core goods (less food/energy)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Final demand services",
+   "contribution": "small",
+   "direction": "0"
+  },
+  {
+   "component": "Core final demand (less foods, energy, trade)",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": -0.2,
+ "implication_rates": 1,
+ "evidence": "Two-thirds of the broad-based rise in September can be traced to prices for final demand energy, which climbed 3.5 percent",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:24"
+}

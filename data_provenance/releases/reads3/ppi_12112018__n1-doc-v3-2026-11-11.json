@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Final demand energy",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Final demand services",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core (less foods, energy, trade)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Final demand goods (ex food/energy)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Unprocessed intermediate goods",
+   "contribution": "moderate",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0.3,
+ "implication_rates": -0.2,
+ "evidence": "The Producer Price Index for final demand edged up 0.1 percent in November, seasonally adjusted",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:24"
+}

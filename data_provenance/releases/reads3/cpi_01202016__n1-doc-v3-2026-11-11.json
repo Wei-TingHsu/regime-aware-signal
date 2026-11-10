@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline, fuel oil, natural gas)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Core CPI (shelter, medical, insurance)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Apparel, airline fares, new vehicles",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Shelter/rent acceleration",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": 0,
+ "implication_rates": -1,
+ "evidence": "The indexes for energy and food both declined for the second month in a row, leading to the decline in the seasonally adjusted all items index.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:08"
+}

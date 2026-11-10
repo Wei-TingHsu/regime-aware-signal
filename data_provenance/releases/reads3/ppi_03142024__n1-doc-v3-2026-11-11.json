@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Energy prices (goods)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Core goods ex food/energy",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Services ex trade/transport",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Trade margins",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Core (ex food, energy, trade)",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": -0.5,
+ "implication_rates": 1,
+ "evidence": "The Producer Price Index for final demand rose 0.6 percent in February, seasonally adjusted",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:21"
+}

@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Finished energy (gasoline)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Crude energy (natural gas, petroleum)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Intermediate energy (diesel)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core finished goods (light trucks, pharma)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Core intermediate (chemicals, steel)",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": -0.3,
+ "implication_rates": 1,
+ "evidence": "The Producer Price Index for Finished Goods rose 1.4 percent in January... prices for finished goods moved up 4.6 percent for the 12 months ended January 2010",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:20"
+}

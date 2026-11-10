@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Hires",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Job openings",
+   "contribution": "small",
+   "direction": "0"
+  },
+  {
+   "component": "Quits",
+   "contribution": "small",
+   "direction": "0"
+  },
+  {
+   "component": "Layoffs and discharges",
+   "contribution": "small",
+   "direction": "0"
+  },
+  {
+   "component": "Prior month upward revisions",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.4,
+ "implication_equities": 0.3,
+ "implication_rates": 0.2,
+ "evidence": "The number of hires increased to 5.6 million (+655,000) and the rate increased to 3.5 percent in March, more than offsetting decreases in those measures the previous month.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:17"
+}

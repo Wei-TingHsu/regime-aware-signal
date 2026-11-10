@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Finished core goods (light motor trucks)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Crude goods index (energy, steel scrap)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Intermediate core (industrial chemicals)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Finished energy (electric power)",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Finished foods (meats)",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0.3,
+ "implication_rates": -0.2,
+ "evidence": "the crude goods index fell 3.6 percent",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:22"
+}

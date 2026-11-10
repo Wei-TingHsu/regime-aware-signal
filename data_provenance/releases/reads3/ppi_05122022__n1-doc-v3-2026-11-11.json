@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Final demand goods (energy, food)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Final demand construction",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Final demand services (unchanged)",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Core (less food, energy, trade)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Unprocessed/intermediate goods (energy)",
+   "contribution": "large",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": -0.4,
+ "implication_rates": 1,
+ "evidence": "This rise followed advances of 1.6 percent in March and 1.1 percent in February... final demand prices moved up 11.0 percent for the 12 months ended in April",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:21"
+}

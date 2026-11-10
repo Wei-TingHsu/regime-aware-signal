@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Energy/gasoline prices",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core goods (apparel, furnishings)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Medical care/used cars",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.35,
+ "implication_equities": -0.6,
+ "implication_rates": 0.65,
+ "evidence": "The gasoline index increased 21.2 percent over the month, the largest monthly increase since the series was first published in 1967.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:09"
+}

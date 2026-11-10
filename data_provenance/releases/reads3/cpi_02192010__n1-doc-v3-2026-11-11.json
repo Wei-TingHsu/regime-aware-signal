@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Energy (gasoline)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI (shelter, new vehicles, airfares)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Medical care",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Used cars and trucks",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0.2,
+ "implication_rates": -0.2,
+ "evidence": "The index for all items less food and energy fell 0.1 percent in January",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:08"
+}

@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy (final demand goods)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Gasoline prices",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Final demand services (trade margins)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core (less food/energy/trade)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Unprocessed intermediate goods/energy materials",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0.5,
+ "implication_rates": -0.5,
+ "evidence": "The Producer Price Index for final demand fell 0.1 percent in August, seasonally adjusted",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:23"
+}

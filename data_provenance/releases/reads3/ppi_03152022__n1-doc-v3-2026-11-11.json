@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "final demand energy prices",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "gasoline prices",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "final demand goods (ex food/energy)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "final demand services (flat)",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "core less foods/energy/trade",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": -1,
+ "implication_rates": 1,
+ "evidence": "Prices for final demand goods jumped 2.4 percent in February, the largest advance since data were first calculated in December 2009.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:21"
+}

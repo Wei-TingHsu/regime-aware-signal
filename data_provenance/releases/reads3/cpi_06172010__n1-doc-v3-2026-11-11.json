@@ -1,0 +1,32 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Core CPI (shelter, used cars)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Food",
+   "contribution": "small",
+   "direction": "0"
+  },
+  {
+   "component": "Core YoY trend",
+   "contribution": "moderate",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.35,
+ "implication_equities": 0.2,
+ "implication_rates": -1,
+ "evidence": "the index for all items less food and energy has risen 0.9 percent, well below the 2.0 percent average annual increase over the past 10 years",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:10"
+}

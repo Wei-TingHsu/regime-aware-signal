@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline, diesel, natural gas)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Final demand goods",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Transportation and warehousing services",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core (less foods, energy, trade)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Food/beef and veal",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.75,
+ "implication_equities": -0.6,
+ "implication_rates": 1,
+ "evidence": "The Producer Price Index for final demand increased 0.8 percent in May, seasonally adjusted",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:22"
+}

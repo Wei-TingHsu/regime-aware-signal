@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline, natural gas)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Core CPI (shelter, medical care)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Food",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "New/used vehicles, airfare, recreation",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "12-month headline deceleration (3.9%\u21923.5%)",
+   "contribution": "moderate",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0.3,
+ "implication_rates": -0.3,
+ "evidence": "The Consumer Price Index for All Urban Consumers (CPI-U) decreased 0.1 percent in October on a seasonally adjusted basis",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:11"
+}

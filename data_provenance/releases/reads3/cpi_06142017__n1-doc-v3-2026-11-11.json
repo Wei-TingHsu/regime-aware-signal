@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy/gasoline",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Core CPI (all items less food & energy)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Medical care services/apparel/communication",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Food",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": 0.3,
+ "implication_rates": -1,
+ "evidence": "The all items index rose 1.9 percent for the 12 months ending May, a smaller increase than the 2.2-percent rise for the 12 months ending April",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:10"
+}

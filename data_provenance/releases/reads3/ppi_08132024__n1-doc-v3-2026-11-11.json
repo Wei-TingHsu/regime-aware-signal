@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Final demand energy/goods",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Trade services margins",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Core (less foods, energy, trade)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Unprocessed intermediate goods (energy, food)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Services ex-trade/transport",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0.3,
+ "implication_rates": -0.3,
+ "evidence": "The Producer Price Index for final demand increased 0.1 percent in July, seasonally adjusted",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:23"
+}

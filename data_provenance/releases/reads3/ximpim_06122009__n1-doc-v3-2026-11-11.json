@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Petroleum import prices",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Nonpetroleum import prices (industrial supplies)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Export prices - agricultural (soybeans)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Export prices - nonagricultural industrial supplies",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Air passenger fares",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": 0.2,
+ "implication_rates": 0.4,
+ "evidence": "rising 1.3 percent... An 8.3 percent increase in petroleum prices was the primary contributor to the overall advance",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:37"
+}

@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "final demand energy",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "final demand goods ex food/energy",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "final demand services",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "core less foods, energy, trade services",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "guestroom rental/trade margins",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.45,
+ "implication_equities": 0.3,
+ "implication_rates": -0.2,
+ "evidence": "The index for final demand less foods, energy, and trade services fell 0.1 percent in July, the first decrease since declining 0.1 percent in October 2015.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:22"
+}

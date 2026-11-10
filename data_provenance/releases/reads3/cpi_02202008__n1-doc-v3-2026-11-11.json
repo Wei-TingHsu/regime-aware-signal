@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Food and energy (headline)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Core (ex food & energy)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Medical care",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Apparel",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Transportation/gasoline",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.75,
+ "implication_equities": -0.6,
+ "implication_rates": 0.6,
+ "evidence": "The index for all items less food and energy rose 0.3 percent, following increases of 0.2 percent in each of the preceding nine months.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:08"
+}

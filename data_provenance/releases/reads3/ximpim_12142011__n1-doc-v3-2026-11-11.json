@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Fuel import prices",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Petroleum/natural gas prices",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Nonfuel import prices",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Agricultural export prices (corn, soybeans)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Nonagricultural export prices",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.4,
+ "implication_equities": 0,
+ "implication_rates": 0,
+ "evidence": "an upturn in fuel prices more than offset decreasing prices for nonfuel imports",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:40"
+}

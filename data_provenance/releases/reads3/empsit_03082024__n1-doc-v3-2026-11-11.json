@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Nonfarm payrolls (+275k, above prior 12-mo avg)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Unemployment rate rose to 3.9%",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Prior two months revised down (-167k combined)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Average hourly earnings growth slowed (+0.1% m/m)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Job gains concentrated in health care, government, leisure/hospitality",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.45,
+ "implication_equities": 0.3,
+ "implication_rates": -0.2,
+ "evidence": "Total nonfarm payroll employment rose by 275,000 in February, above the average monthly gain of 230,000 over the prior 12 months",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:12"
+}

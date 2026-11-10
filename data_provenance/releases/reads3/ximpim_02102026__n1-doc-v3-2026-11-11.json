@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Export prices",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Import prices",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Year-over-year export prices",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Year-over-year import prices",
+   "contribution": "small",
+   "direction": "0"
+  },
+  {
+   "component": "Shutdown-related data suppression/delay",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.3,
+ "implication_equities": 0,
+ "implication_rates": 0,
+ "evidence": "U.S. import prices increased 0.1 percent in December... Prices for U.S. exports advanced 0.3 percent in December.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:35"
+}

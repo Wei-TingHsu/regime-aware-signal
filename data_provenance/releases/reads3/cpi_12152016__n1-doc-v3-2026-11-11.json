@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Shelter",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Gasoline/Energy",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core services (medical, insurance)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Apparel/Airline fares/Household furnishings",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0,
+ "implication_rates": 1,
+ "evidence": "The all items index rose 1.7 percent for the 12 months ending November; the 12-month all items increase has been rising since it was 0.8 percent in July.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:11"
+}

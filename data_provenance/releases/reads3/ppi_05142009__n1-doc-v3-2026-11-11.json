@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Consumer foods",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Crude goods (energy, food)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core finished goods (ex food & energy)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Finished energy",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Intermediate goods (ex food & energy)",
+   "contribution": "moderate",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0.3,
+ "implication_rates": 0.2,
+ "evidence": "The Producer Price Index for Finished Goods increased 0.3 percent in April...This rise followed a 1.2-percent decline in March",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-11 02:22"
+}
