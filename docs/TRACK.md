@@ -835,3 +835,6 @@ N1 stage 1 (`src/news_events.py`, no LLM): 539 index-events on 476 sessions with
 
 ### 3.44 N1 first pass (7 Nov 00:25)
 v1 cause read on 246 event days: "no identifiable news — positioning" 68% → prior #117 (20–35%) wrong, counted; caveat that the mention-ranked GDELT digest under-represents finance, so a v2 digest with a finance section is registered (prompt n1-cause-v2, prior #123, own cache). BLS release fetch returned nothing (no contact address in the User-Agent — fixed, `BLS_CONTACT`); 38 FOMC pairs in window. GDELT 2022-11-10 absent (404). `news_events2` v2: `reads/` folder bug and empty-CSV crash in tables/learn fixed.
+
+### 3.45 N1 second pass (11 Nov 00:51)
+v2 cause read: "no identifiable news" 49% (#123 right), but the finance section is a noisy slug-keyword match and GDELT missed the day's earnings story on 5 Nov 2026 — recorded as an instrument limit; a v3 would read the project's own corpus. 192 release-composition reads; #119 right; #121 see table; #118 counted wrong (S&P does not reverse below 50% after rises at five sessions); #120 right (learner loses to the plain post-fall rule). One PASS cell — S&P falls the session after a ≥ 4% rise, n 42 — becomes forward-log candidate N1-a, not a product rule. Total N1 spend ≈ US$10.3. Open: QQQ absent from the panel; 2001–2012 archives not fetched; v3 corpus-based cause read not registered.

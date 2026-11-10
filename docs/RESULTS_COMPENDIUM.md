@@ -85,3 +85,9 @@ Everything else tested — liquidity drains, oil shocks, chair personality, resi
 - T1 by era: vol-targeting adds +18.6 pts CER for the S&P in 2004–08 and +6.6 for Treasuries in 2022–26, costs 1–3 pts in calm bull eras; regime tilt adds nothing — **discretionary input (risk tool)**. H-tables by era: no era cell passes — **neither**.
 
 **Regime count (decided 2026-11-06):** fixed k = 4 for the product's labels; a second fixed six-state fit (`k6`, `processed/regime_labels_by_k.parquet`) as the attribution lens only. Neither is a predictor; both are conditioning variables for the relationships above.
+
+### N1 — news-attributed ≥ 4% days (SOXX, SPY; 2009 → 2026; recorded 2026-11-11)
+- **Cause of a ≥ 4% day, read from GDELT:** about half of event days show no identifiable same-day news in GDELT even with a finance filter; earnings, central bank, macro and election/regulation classes share the rest. Instrument-limited (GDELT misses company news); not a tradeable fact. — *neither*
+- **Reversal after a ≥ 4% day:** after falls, the next five sessions are up 57–60% of the time, which is only 2–4 points above how often any five sessions are up — no signal. After a ≥ 4% *rise* the S&P falls the next session 67% vs 45% base (n 42, p 0.006) — one cell of twelve, on the forward log as candidate N1-a. — *discretionary at most, after the forward test*
+- **A contradicting bureau release in the next five sessions:** does not lift the reversal rate past the standard. — *neither*
+- **Learner on cause class, move size, trend, VIX, release scores:** does not beat "buy the session after a ≥ 4% fall". — *neither*
