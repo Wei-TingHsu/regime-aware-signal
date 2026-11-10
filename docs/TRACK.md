@@ -838,3 +838,17 @@ v1 cause read on 246 event days: "no identifiable news — positioning" 68% → 
 
 ### 3.45 N1 second pass (11 Nov 00:51)
 v2 cause read: "no identifiable news" 49% (#123 right), but the finance section is a noisy slug-keyword match and GDELT missed the day's earnings story on 5 Nov 2026 — recorded as an instrument limit; a v3 would read the project's own corpus. 192 release-composition reads; #119 right; #121 see table; #118 counted wrong (S&P does not reverse below 50% after rises at five sessions); #120 right (learner loses to the plain post-fall rule). One PASS cell — S&P falls the session after a ≥ 4% rise, n 42 — becomes forward-log candidate N1-a, not a product rule. Total N1 spend ≈ US$10.3. Open: QQQ absent from the panel; 2001–2012 archives not fetched; v3 corpus-based cause read not registered.
+
+### 3.46 Agenda from 11 Nov 01:40 — N1 v3 registered; the signal-creation redirect put to the founder
+
+| # | step | why it matters to the business | founder decides |
+|---|---|---|---|
+| 1 | **N1 v3a** — wider official documents (PPI, JOLTS, import prices, Chair / Vice Chair speeches), window to 10 sessions, one story-free read per document, cutoff × window × horizon × family grid, reversal SIZE test (`src/news_events3.py`; prereg_news_events §5; priors #124–#127) | tests the founder's two explanations for the N1 null directly; if a document family passes, it is a "what to watch after a crash" product line | nothing — registered, running tonight |
+| 2 | **N1 v3b** — corpus survey: event days with a same-day 8-K / FOMC / Federal Register document | decides whether the cause read moves from GDELT to primary filings | after the survey: register the corpus cause read or not |
+| 3 | **N1-a forward log** — short SPY at the close of a ≥ 4% up session, one session (the single PASS cell, n 42) | the only candidate trade rule N1 produced; needs live evidence before any claim | whether to wire it into `deeper forward` |
+| 4 | **QQQ into the price panel** | N1 has no Nasdaq-100 events without it | yes / no |
+| 5 | **S1 — risk signals from the survivors**: sell the forecast of correlation, volatility and regime change (gold–equity correlation persistence, skill 0.26; abnormal-day runs before regime changes, p 0.000) as a hedge-ratio / exposure signal rather than a direction call | the relationships that survived are about risk, which institutions buy and which is far more predictable than direction | whether to register S1 |
+| 6 | **S2 — cross-sectional filing signal**: each issuer's 8-K read scored, then that stock's return relative to its sector over the next 1–20 sessions; thousands of stock-events instead of 40 macro events | the LLM document layer is the project's own data; one stock at a time is where a text edge is most plausible and where the statistics have power | whether to register S2 (needs single-stock prices) |
+| 7 | **S3 — conditional event trades**: the Fed-day reaction that differs by regime (p 0.005), traded only in the regime and volatility state where it is strong, entry after the announcement | turns the strongest surviving relationship into a rule with an entry and exit | whether to register S3 |
+| 8 | Carried: F2b lead time of the abnormal-day signal; Group C returns-only tests; R7 every event class by regime; regime × fast-state hierarchy | completes the regime audit | order |
+| 9 | Buyer conversation (TRACK §3.7 customer interviews) | tells which of 5–7 a buyer would pay for before weeks are spent on the wrong one | when, and with whom |

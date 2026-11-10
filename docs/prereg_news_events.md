@@ -48,3 +48,32 @@ Cost: a few hundred event-day reads and ~200 release reads, measured on disk bef
 | 2026-11-11 | S3 tables, v1 and v2 (identical ALL rows; the cause classes change only the sub-rows) | 12 index × direction × horizon cells, H-table standard. **One PASS:** S&P the session after a ≥ 4% *rise* — reversal 67% vs base 45%, n 42, p 0.006. SOX after a fall: 60% vs 53% at one session (p 0.029) but gap 7 < 10 → FAIL. All 3- and 5-session cells FAIL. Release split: SOX fall h1 with contradicting release: n 30, reversal 57% vs base 53%, gap +4, p 0.710 → FAIL<br>SOX fall h1 without: n 201, reversal 60% vs base 53%, gap +7, p 0.033 → FAIL<br>SOX fall h3 with contradicting release: n 30, reversal 50% vs base 54%, gap -4, p 0.710 → FAIL<br>SOX fall h3 without: n 201, reversal 58% vs base 54%, gap +3, p 0.338 → FAIL<br>SOX fall h5 with contradicting release: n 30, reversal 50% vs base 55%, gap -5, p 0.573 → FAIL<br>SOX fall h5 without: n 200, reversal 58% vs base 55%, gap +3, p 0.388 → FAIL<br>SOX rise h1 without: n 199, reversal 51% vs base 47%, gap +4, p 0.276 → FAIL<br>SOX rise h3 without: n 199, reversal 45% vs base 46%, gap -0, p 0.939 → FAIL<br>SOX rise h5 without: n 199, reversal 49% vs base 45%, gap +5, p 0.193 → FAIL<br>SPX fall h1 without: n 43, reversal 63% vs base 54%, gap +8, p 0.280 → FAIL<br>SPX fall h3 without: n 43, reversal 58% vs base 58%, gap +0, p 1.000 → FAIL<br>SPX fall h5 without: n 42, reversal 62% vs base 59%, gap +3, p 0.729 → FAIL<br>SPX rise h1 without: n 40, reversal 68% vs base 45%, gap +22, p 0.008 → PASS<br>SPX rise h3 without: n 40, reversal 57% vs base 42%, gap +16, p 0.045 → PASS<br>SPX rise h5 without: n 40, reversal 52% vs base 41%, gap +11, p 0.149 → FAIL. | **#118** half: after falls both indices reverse > 50% at five sessions (SOX 57%, SPX 60%) as predicted, but after rises SPX is 55%, not below 50% — **counted wrong**. **#119** right: a contradicting release in the window does not lift the reversal rate past the standard. The PASS cell is one of twelve: **forward-log candidate N1-a** — "short SPY at the close of a session that rose ≥ 4%, one session" — logged, not promoted. |
 | 2026-11-11 | S4 learner, v2 features | h = 1: best {'train': 200, 'ridge': 100.0, 'h': 1} Sharpe +1.42 vs null q95 +1.53, p_family 0.075; plain "buy the session after a ≥ 4% fall" +1.87 (n 278, from the run log). h = 3 and 5: null. v1 features did better at h = 1 (+2.12, p 0.005) and still lost to the plain rule — more cause detail added noise. | **#120 right.** Compendium tag: **neither** quant nor discretionary. |
 | 2026-11-11 | Cost | ≈ US$10.3 of the US$25 cap (cause reads 0.31 + 1.58 + 2.73; release reads 5.72). | — |
+
+## 5. N1 v3 — the founder's two explanations for the null, registered 2026-11-11 01:40 before any run
+
+Origin (founder, 11 Nov): the contradicting releases we read did not explain the rebound, so either **(1) we missed the information source that is the
+real reason**, or **(2) the document read was aimed wrong and the critical information was not captured**. Recorded beside them, Claude's third reading:
+after a ≥ 4% fall the five-session rebound rate (57–60%) is only 2–4 points above how often any five sessions rise, so there may be no rebound to explain.
+
+| step | what changes vs v1/v2 | fixed numbers now grid axes |
+|---|---|---|
+| **v3a documents** (explanation 1) | BLS: jobs, CPI, **PPI, JOLTS, import/export prices**; FOMC statements; **speeches by the Fed Chair and Vice Chairs**; every event day back to the BLS archive, not only the GDELT era; fetched from the agencies' own archives (index pages, write-once) | window +1 … **1, 2, 3, 5, 7, 10** sessions; document family all / BLS / labour / prices / Fed |
+| **v3a read** (explanation 2) | each document read **once, on its own**, prompt `n1-doc-v3-2026-11-11`, own cache: surprise sign, drivers, breadth, **implication for equities −1…+1**, implication for rates. No GDELT story is needed, so a wrong story cannot spoil the score. Contradiction = −(event sign) × (equity implication): a fall then a supportive document, or a rise then a negative one | cutoff **0.1 … 0.7** in steps of 0.1 |
+| **v3a grid** | statistic = reversal rate WITH a contradicting document minus WITHOUT, points, each side n ≥ 20; per index × direction; horizons 1, 3, 5, 10 | judged against the best cell of the same grid on outcomes shuffled within index-and-direction (300 draws); four groups, so a group counts only at **p_family < 0.0125**; best cell reported by era |
+| **v3a size** | does the SIZE of the reversal (not only its sign) rise with the contradiction score: rank correlation, 1,000 shuffles; mean score in the largest quarter of reversals vs the rest | windows 3, 5, 10 × horizons 1, 3, 5, 10 (48 cells; ~2.4 below 0.05 by chance) |
+| **v3b corpus survey** (no LLM) | how many event days have a same-day document in the project's own corpus (8-K, 6-K, FOMC, Federal Register), by source — decides whether a corpus-based CAUSE read replaces GDELT | — |
+| not in v3a (listed, not fetched) | retail sales (Census), GDP (BEA), other issuers' earnings in the window (needs v3b), QQQ events (QQQ not in the panel), 2001–2012 GDELT archives | — |
+
+Code check before delivery (not a result): on five synthetic noise datasets the grid returned p_family < 0.05 in 2 of 16 groups — as chance allows — which is why the bar is 0.0125 per group.
+Cost: one read per document, text capped at 15,000 characters; measured on disk by `news_events3 cost` before reading; `--max-usd 12`; N1 total stays under the US$25 cap (US$10.3 spent).
+
+Priors (Claude, before any run; counted if wrong):
+- **#124** no index × direction group reaches p_family < 0.0125 in the v3 grid — a contradicting official document in the window does not raise the reversal rate, at any cutoff, window, horizon or family.
+- **#125** in the size test at most 5 of 48 cells show p < 0.05, and they do not share a sign pattern.
+- **#126** fewer than 40% of event days have a same-day document in the project's own corpus; from 2020 the share is above 50%.
+- **#127** the documents' mean equity implication is positive after falls and after rises alike (official text leans reassuring), within 0.1 of each other.
+
+### v3 results
+
+| date | step | result | prior |
+|---|---|---|---|
