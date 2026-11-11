@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path("data_provenance/intraday"); PROC, DOCS = Path("processed"), Path("docs")
-SYMS = ["NQ", "ES", "GC", "GCv", "ZN"]; PROXY = {"ES": "SPY", "NQ": "SOXX", "GC": "GLD", "GCv": "GLD", "ZN": "TLT"}      # GCv = gold, most-traded contract (see intraday_fetch gold)
+SYMS = ["NQ", "ES", "GC", "GCv", "ZN", "ZNv"]; PROXY = {"ES": "SPY", "NQ": "SOXX", "GC": "GLD", "GCv": "GLD", "ZN": "TLT", "ZNv": "TLT"}      # GCv = gold, most-traded contract (see intraday_fetch gold)
 SESSION_MIN, W0830, W1400 = 390, 15, 35
 
 
@@ -94,7 +94,7 @@ def cmd_audit():
     for sym in [s for s in SYMS if (Q.symbol == s).any()]:
         g = Q[(Q.symbol == sym) & Q["date"].isin(ref)]; miss = len(ref - set(g["date"])); cons = "n/a"
         if PROXY[sym] in r.columns:
-            fut = np.log(g.set_index("date")["close_16"]).diff(); fut[g.set_index("date")["roll_day"]] = np.nan; x = pd.concat([fut.rename("f"), r[PROXY[sym]].rename("e")], axis=1).dropna()
+            fut = np.log(g.set_index("date")["close_16"]).diff(); fut[g.set_index("date")["roll_day"]] = np.nan; x = pd.concat([fut.rename("f"), r[PROXY[sym]].rename("e")], axis=1, sort=True).dropna()
             if len(x) > 100: cons = f"{x.f.corr(x.e):+.2f} with {PROXY[sym]} / {(np.abs(x.f - x.e) > 0.005).mean():.0%}"
         L.append(f"| {sym} | {len(g):,} | {miss} | {g.n_session.median():.0f} | {g.usable_session.mean():.1%} | {g.usable_0830.mean():.1%} | {g.usable_1400.mean():.1%} | {int(g.bad_ohlc.sum())} | {int(g.duplicates.sum())} | {int(g.moves_over_1pct.sum())} | {int(g.spikes.sum())} | {cons} |")
         print(f"{sym:5} {len(g):>5,} {miss:>7} {g.n_session.median():>7.0f} {g.usable_session.mean():>10.1%} {g.usable_0830.mean():>8.1%} {g.usable_1400.mean():>8.1%} {int(g.bad_ohlc.sum()):>7} {int(g.duplicates.sum()):>5} {int(g.moves_over_1pct.sum()):>4} {int(g.spikes.sum()):>6}  {cons}")
