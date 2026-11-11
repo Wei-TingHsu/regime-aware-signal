@@ -145,6 +145,50 @@ def cmd_missing():
     (DOCS / "intraday_quality_missing.md").write_text("\n".join(L) + "\n"); print("-> docs/intraday_quality_missing.md, processed/intraday_failing_needed_days.csv")
 
 
+FINAL = {"NQ": ("NQ", "NQ_alt"), "ES": ("ES", "ES_alt"), "GC": ("GCv", "GC_alt"), "ZN": ("ZNv", "ZN_alt")}
+
+
+def cmd_final():
+    """The table the tests use. Per instrument and day: the main file, or the patch file (the neighbouring contract) when that one has more session minutes.
+    One contract per day -- two contracts are never spliced inside a day. Rules, revised 11 Nov after the missing-day check: a session is usable when at
+    least 90% of its 390 minutes are present; a gap alone no longer fails a day, because the gaps found on the needed days are exchange trading halts
+    (9, 12, 16, 18 March 2020), which are real market states. The two release windows keep their own rules."""
+    Q = pd.read_parquet(PROC / "intraday_quality.parquet"); rows = []
+    for sym, (main, alt) in FINAL.items():
+        g = Q[Q.symbol == main].copy(); g["source"] = "main"; ap = ROOT / alt / "all.parquet"
+        if ap.exists():
+            d = pd.read_parquet(ap)
+            if "ts_event" in d.columns: d = d.set_index("ts_event")
+            d.index = pd.to_datetime(d.index, utc=True); d = d[["open", "high", "low", "close", "volume"] + [c for c in ("instrument_id",) if c in d.columns]]; d["ny"] = d.index.tz_convert("America/New_York")
+            A = pd.DataFrame(_day_rows(alt, d)).set_index("date"); g = g.set_index("date"); better = A.index[A.index.isin(g.index)]; better = [x for x in better if A.loc[x, "n_session"] > g.loc[x, "n_session"]]
+            new_days = [x for x in A.index if x not in g.index and x.dayofweek < 5]
+            for col in ("n_bars", "n_session", "n_0830", "n_1400", "max_gap_session", "bad_ohlc", "duplicates", "moves_over_1pct", "spikes", "max_abs_ret", "close_16"): g.loc[better, col] = A.loc[better, col]
+            g.loc[better, "source"] = "patch"; g = g.reset_index()
+            if new_days:
+                extra = A.loc[new_days].reset_index(); extra["source"] = "patch"; extra["vendor"] = "unknown"; extra["needed"] = False; g = pd.concat([g, extra], ignore_index=True)
+            print(f"  {sym}: {len(better)} days taken from the patch file, {len(new_days)} days added")
+        else: print(f"  {sym}: no patch file ({ap}) -- main file only")
+        g["symbol"] = sym; rows.append(g)
+    F = pd.concat(rows, ignore_index=True); F["usable_session"] = F.n_session >= 0.9 * SESSION_MIN; F["usable_0830"] = F.n_0830 >= 12; F["usable_1400"] = F.n_1400 >= 28
+    try:
+        from src.intraday_fetch import needed_days
+        need = set(pd.Timestamp(x) for x in needed_days() if pd.Timestamp(x) >= pd.Timestamp("2010-06-07")); F["needed"] = F["date"].isin(need)
+    except Exception: pass
+    F.to_parquet(PROC / "intraday_quality_final.parquet"); ref = set(F[(F.symbol == "ES") & (F.n_session >= 300)]["date"])
+    L = ["# Intraday data — the final table the tests use", "", "Main file or patch file per day (never both inside a day). Usable session = at least 90% of the 390 session minutes; trading halts are kept. 'Needed' = Fed statement days, document days and event days from June 2010.", "",
+         "| instrument | trading days | usable session | on needed days: usable session | usable 08:30 window | usable 14:00 window | days from the patch file |", "|---|---|---|---|---|---|---|"]
+    print(f"\n{'instr':5} {'days':>5} {'session ok':>10} | needed: {'session':>7} {'08:30':>6} {'14:00':>6} | patched")
+    for sym in FINAL:
+        g = F[(F.symbol == sym) & F["date"].isin(ref)]; n = g[g.needed]
+        L.append(f"| {sym} | {len(g):,} | {g.usable_session.mean():.2%} | {n.usable_session.mean():.2%} ({int((~n.usable_session).sum())} fail of {len(n)}) | {n.usable_0830.mean():.2%} | {n.usable_1400.mean():.2%} | {int((g.source == 'patch').sum())} |")
+        print(f"{sym:5} {len(g):>5,} {g.usable_session.mean():>10.2%} |         {n.usable_session.mean():>7.2%} {n.usable_0830.mean():>6.2%} {n.usable_1400.mean():>6.2%} | {int((g.source == 'patch').sum())}")
+    bad = F[F.needed & F["date"].isin(ref) & ~(F.usable_session & F.usable_1400 & F.usable_0830)].sort_values(["date", "symbol"])
+    L += ["", f"## Needed days still short on the session or a release window ({len(bad)} instrument-days)", "", "| instrument | date | session minutes | 08:30 window minutes (of 15) | 14:00 window minutes (of 35) | longest gap | source | vendor flag |", "|---|---|---|---|---|---|---|---|"]
+    for w in bad.itertuples(): L.append(f"| {w.symbol} | {w.date.date()} | {int(w.n_session)} | {int(w.n_0830)} | {int(w.n_1400)} | {int(w.max_gap_session)} | {w.source} | {w.vendor} |")
+    if len(bad): print("\nneeded days still short on the session or a release window:"); print(bad[["symbol", "date", "n_session", "n_0830", "n_1400", "max_gap_session", "source", "vendor"]].to_string(index=False))
+    (DOCS / "intraday_quality_final.md").write_text("\n".join(L) + "\n"); print("\n-> processed/intraday_quality_final.parquet, docs/intraday_quality_final.md")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["condition", "audit", "missing"]); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
-    {"condition": cmd_condition, "audit": cmd_audit, "missing": cmd_missing}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["condition", "audit", "missing", "final"]); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
+    {"condition": cmd_condition, "audit": cmd_audit, "missing": cmd_missing, "final": cmd_final}[a.cmd]()

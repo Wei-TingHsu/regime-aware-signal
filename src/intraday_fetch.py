@@ -124,6 +124,55 @@ def cmd_volume(root: str, max_usd: float):
     print(f"done -> data_provenance/intraday/{root}v")
 
 
+def _third_friday(y: int, m: int) -> pd.Timestamp:
+    d = pd.Timestamp(year=y, month=m, day=15); return d + pd.Timedelta(days=(4 - d.dayofweek) % 7)
+
+
+def patch_ranges(s: str, e: str) -> dict:
+    """Days where the main file follows a contract that is expiring or being left, and the neighbouring contract is the one actually trading.
+    ES / NQ: the nearest-expiry contract stops trading on the morning of the third Friday of Mar/Jun/Sep/Dec (no session bars at all that day) and thins
+    out in the week before -> second-nearest contract (.c.1) from 8 days before each expiry through expiry day.
+    Gold / 10-year note: around each roll the most-traded series switches a day or two late -> second most-traded contract (.v.1) on every weekday that
+    fails the session rule in processed/intraday_quality.parquet."""
+    out = {}; s_, e_ = pd.Timestamp(s), pd.Timestamp(e)
+    for root in ("ES", "NQ"):
+        rr = []
+        for y in range(s_.year, e_.year + 1):
+            for m in (3, 6, 9, 12):
+                tf = _third_friday(y, m); a_, b_ = max(tf - pd.Timedelta(days=8), s_), min(tf + pd.Timedelta(days=1), e_)
+                if a_ < b_: rr.append((str(a_.date()), str(b_.date())))
+        out[(f"{root}_alt", f"{root}.c.1")] = rr
+    qp = PROC / "intraday_quality.parquet"
+    if qp.exists():
+        Q = pd.read_parquet(qp)
+        for sym, root in (("GCv", "GC"), ("ZNv", "ZN")):
+            g = Q[(Q.symbol == sym) & (Q.n_session < 351)]; days = sorted(d for d in pd.to_datetime(g["date"]) if s_ <= d < e_ and d.dayofweek < 5); rr = []
+            for d in days:
+                if rr and pd.Timestamp(rr[-1][1]) >= d: rr[-1] = (rr[-1][0], str((d + pd.Timedelta(days=1)).date()))
+                else: rr.append((str(d.date()), str((d + pd.Timedelta(days=1)).date())))
+            out[(f"{root}_alt", f"{root}.v.1")] = rr
+    return out
+
+
+def cmd_patch(max_usd: float):
+    c = _client(); s, e = _range(c); plan = patch_ranges(s, e); total = 0.0; quotes = {}
+    for (folder, sym), rr in plan.items():
+        q = 0.0
+        for a_, b_ in rr: q += float(c.metadata.get_cost(dataset=DATASET, symbols=[sym], stype_in="continuous", schema=SCHEMA, start=a_, end=b_))
+        quotes[(folder, sym)] = q; total += q; print(f"  {sym}: {len(rr)} date ranges, quoted US${q:.2f}")
+    print(f"patch total: US${total:.2f}; cap US${max_usd:.2f}")
+    if total > max_usd: raise SystemExit("quoted price above the cap -- nothing downloaded")
+    for (folder, sym), rr in plan.items():
+        out = OUT / folder / "all.parquet"
+        if out.exists(): print(f"  {folder}: already on disk"); continue
+        parts = []
+        for a_, b_ in rr:
+            try: parts.append(c.timeseries.get_range(dataset=DATASET, symbols=[sym], stype_in="continuous", schema=SCHEMA, start=a_, end=b_).to_df())
+            except Exception as ex: print(f"    {sym} {a_}: {type(ex).__name__}: {str(ex)[:80]}")
+        if parts: out.parent.mkdir(parents=True, exist_ok=True); df = pd.concat(parts).sort_index(); df.to_parquet(out); print(f"  {folder}: {len(df):,} bars over {len(parts)} ranges")
+    print("done")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["check", "cost", "fetch", "gold", "note"]); ap.add_argument("--max-usd", type=float, default=20.0); ap.add_argument("--full", action="store_true"); a = ap.parse_args()
-    {"check": cmd_check, "cost": cmd_cost, "fetch": lambda: cmd_fetch(a.max_usd, a.full), "gold": lambda: cmd_volume("GC", a.max_usd), "note": lambda: cmd_volume("ZN", a.max_usd)}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["check", "cost", "fetch", "gold", "note", "patch"]); ap.add_argument("--max-usd", type=float, default=20.0); ap.add_argument("--full", action="store_true"); a = ap.parse_args()
+    {"check": cmd_check, "cost": cmd_cost, "fetch": lambda: cmd_fetch(a.max_usd, a.full), "gold": lambda: cmd_volume("GC", a.max_usd), "note": lambda: cmd_volume("ZN", a.max_usd), "patch": lambda: cmd_patch(a.max_usd)}[a.cmd]()
