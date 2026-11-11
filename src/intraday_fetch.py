@@ -110,6 +110,19 @@ def cmd_fetch(max_usd: float, full: bool):
     print(f"done -> {OUT}")
 
 
+def cmd_gold(max_usd: float):
+    """Gold again, as the MOST-TRADED contract (GC.v.0) instead of the nearest-expiry one (GC.c.0). Gold's nearest-expiry month is often a thinly traded
+    one, which is why the first download has only ~10-25 thousand bars a year for gold against ~350 thousand for the index futures."""
+    c = _client(); s, e = _range(c)
+    price = float(c.metadata.get_cost(dataset=DATASET, symbols=["GC.v.0"], stype_in="continuous", schema=SCHEMA, start=s, end=e)); print(f"gold, most-traded contract, whole history: US${price:.2f}; cap US${max_usd:.2f}")
+    if price > max_usd: raise SystemExit("quoted price above the cap -- nothing downloaded")
+    for y in range(int(s[:4]), int(e[:4]) + 1):
+        a_, b_ = max(s, f"{y}-01-01"), min(e, f"{y + 1}-01-01"); out = OUT / "GCv" / f"{y}.parquet"
+        if a_ >= b_ or out.exists(): continue
+        out.parent.mkdir(parents=True, exist_ok=True); df = c.timeseries.get_range(dataset=DATASET, symbols=["GC.v.0"], stype_in="continuous", schema=SCHEMA, start=a_, end=b_).to_df(); df.to_parquet(out); print(f"  GCv {y}: {len(df):,} bars")
+    print("done -> data_provenance/intraday/GCv")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["check", "cost", "fetch"]); ap.add_argument("--max-usd", type=float, default=20.0); ap.add_argument("--full", action="store_true"); a = ap.parse_args()
-    {"check": cmd_check, "cost": cmd_cost, "fetch": lambda: cmd_fetch(a.max_usd, a.full)}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["check", "cost", "fetch", "gold"]); ap.add_argument("--max-usd", type=float, default=20.0); ap.add_argument("--full", action="store_true"); a = ap.parse_args()
+    {"check": cmd_check, "cost": cmd_cost, "fetch": lambda: cmd_fetch(a.max_usd, a.full), "gold": lambda: cmd_gold(a.max_usd)}[a.cmd]()
