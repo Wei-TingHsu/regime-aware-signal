@@ -1,0 +1,634 @@
+{
+ "name": "resid",
+ "title": "after a large unexplained move, does the asset continue (+) or reverse (\u2212) over the next 1\u20135 sessions (T-H)",
+ "kind": "price move",
+ "label": "NEITHER",
+ "n_variants": 15,
+ "family": {
+  "before": {
+   "p": NaN,
+   "best": null
+  },
+  "day0": {
+   "p": NaN,
+   "best": null
+  },
+  "after": {
+   "p": 0.106,
+   "q95": 4.867739849303284,
+   "best": {
+    "variant": "SPY: unexplained move over 20 session(s) beyond 1.5 sd",
+    "span": "days +1..+5",
+    "n": 731,
+    "mean_bp": -55.385284578749435,
+    "t": -4.368311258344237,
+    "hit": 0.4473324213406293
+   }
+  }
+ },
+ "eras": {
+  "after": "2004-08: -47 bp (n 74); 2009-14: -86 bp (n 184); 2015-19: -32 bp (n 202); 2020-21: -97 bp (n 53); 2022-26: -45 bp (n 218)"
+ },
+ "cells": [
+  {
+   "variant": "GLD: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 292,
+   "mean_bp": -8.655069100577249,
+   "t": -1.1563589484490353,
+   "hit": 0.4897260273972603,
+   "p": 0.275
+  },
+  {
+   "variant": "GLD: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 292,
+   "mean_bp": -8.64734601736449,
+   "t": -0.8053952718308851,
+   "hit": 0.4726027397260274,
+   "p": 0.435
+  },
+  {
+   "variant": "GLD: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 292,
+   "mean_bp": -13.09506185491023,
+   "t": -0.9820947011928768,
+   "hit": 0.5136986301369864,
+   "p": 0.342
+  },
+  {
+   "variant": "GLD: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 292,
+   "mean_bp": -8.472594974074056,
+   "t": -0.4919789599971839,
+   "hit": 0.4931506849315068,
+   "p": 0.626
+  },
+  {
+   "variant": "GLD: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 360,
+   "mean_bp": 0.8768342840779028,
+   "t": 0.11310219305587817,
+   "hit": 0.5083333333333333,
+   "p": 0.909
+  },
+  {
+   "variant": "GLD: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 360,
+   "mean_bp": -5.469393826278784,
+   "t": -0.5090054811472917,
+   "hit": 0.5111111111111111,
+   "p": 0.677
+  },
+  {
+   "variant": "GLD: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 360,
+   "mean_bp": -14.05975531316505,
+   "t": -1.0806439094788831,
+   "hit": 0.48055555555555557,
+   "p": 0.423
+  },
+  {
+   "variant": "GLD: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 360,
+   "mean_bp": -28.589258751044614,
+   "t": -1.9453042702798462,
+   "hit": 0.45,
+   "p": 0.201
+  },
+  {
+   "variant": "GLD: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 398,
+   "mean_bp": -10.43272577761324,
+   "t": -1.5603776315707913,
+   "hit": 0.48743718592964824,
+   "p": 0.087
+  },
+  {
+   "variant": "GLD: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 398,
+   "mean_bp": -17.271151754975712,
+   "t": -1.8332704424308979,
+   "hit": 0.4899497487437186,
+   "p": 0.135
+  },
+  {
+   "variant": "GLD: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 398,
+   "mean_bp": -23.142215929538683,
+   "t": -2.1145304234957356,
+   "hit": 0.4547738693467337,
+   "p": 0.143
+  },
+  {
+   "variant": "GLD: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 398,
+   "mean_bp": -37.44101125973557,
+   "t": -2.8098177951010164,
+   "hit": 0.40703517587939697,
+   "p": 0.103
+  },
+  {
+   "variant": "SLV: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 300,
+   "mean_bp": -0.5994721789335345,
+   "t": -0.04436612917778138,
+   "hit": 0.44333333333333336,
+   "p": 0.957
+  },
+  {
+   "variant": "SLV: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 300,
+   "mean_bp": 1.3790556346942004,
+   "t": 0.06029260135390763,
+   "hit": 0.5066666666666667,
+   "p": 0.946
+  },
+  {
+   "variant": "SLV: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 300,
+   "mean_bp": -24.78729697378541,
+   "t": -0.8780448819841811,
+   "hit": 0.5166666666666667,
+   "p": 0.382
+  },
+  {
+   "variant": "SLV: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 300,
+   "mean_bp": -35.22571260872119,
+   "t": -1.011369275043019,
+   "hit": 0.5133333333333333,
+   "p": 0.322
+  },
+  {
+   "variant": "SLV: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 372,
+   "mean_bp": -2.5938478503422195,
+   "t": -0.15979672208787674,
+   "hit": 0.5080645161290323,
+   "p": 0.857
+  },
+  {
+   "variant": "SLV: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 372,
+   "mean_bp": -6.056815356708324,
+   "t": -0.2591352453584819,
+   "hit": 0.5295698924731183,
+   "p": 0.839
+  },
+  {
+   "variant": "SLV: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 372,
+   "mean_bp": -29.61325243064999,
+   "t": -1.0810060593144286,
+   "hit": 0.5188172043010753,
+   "p": 0.46
+  },
+  {
+   "variant": "SLV: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 372,
+   "mean_bp": -68.57522066740566,
+   "t": -2.094446892162237,
+   "hit": 0.4731182795698925,
+   "p": 0.209
+  },
+  {
+   "variant": "SLV: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 403,
+   "mean_bp": 1.3483593545185262,
+   "t": 0.08399371347373623,
+   "hit": 0.48635235732009924,
+   "p": 0.937
+  },
+  {
+   "variant": "SLV: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 403,
+   "mean_bp": -7.314260441715567,
+   "t": -0.32357275387994744,
+   "hit": 0.5012406947890818,
+   "p": 0.799
+  },
+  {
+   "variant": "SLV: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 403,
+   "mean_bp": -7.288893012643639,
+   "t": -0.2632064128429515,
+   "hit": 0.511166253101737,
+   "p": 0.842
+  },
+  {
+   "variant": "SLV: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 403,
+   "mean_bp": -2.0008875413787783,
+   "t": -0.05682356045206686,
+   "hit": 0.4640198511166253,
+   "p": 0.971
+  },
+  {
+   "variant": "USO: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 184,
+   "mean_bp": -7.727578340820393,
+   "t": -0.24484272026415552,
+   "hit": 0.4891304347826087,
+   "p": 0.797
+  },
+  {
+   "variant": "USO: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 184,
+   "mean_bp": 12.533712014191714,
+   "t": 0.2758635224730435,
+   "hit": 0.5054347826086957,
+   "p": 0.766
+  },
+  {
+   "variant": "USO: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 183,
+   "mean_bp": -21.555925409504795,
+   "t": -0.4092722884454987,
+   "hit": 0.46994535519125685,
+   "p": 0.647
+  },
+  {
+   "variant": "USO: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 183,
+   "mean_bp": 53.139855043467755,
+   "t": 0.791091382467737,
+   "hit": 0.5245901639344263,
+   "p": 0.309
+  },
+  {
+   "variant": "USO: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 283,
+   "mean_bp": 21.28199901506578,
+   "t": 0.9482907379121841,
+   "hit": 0.4911660777385159,
+   "p": 0.337
+  },
+  {
+   "variant": "USO: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 282,
+   "mean_bp": 19.533780285422782,
+   "t": 0.5796299674035829,
+   "hit": 0.5035460992907801,
+   "p": 0.597
+  },
+  {
+   "variant": "USO: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 281,
+   "mean_bp": 25.000365543856788,
+   "t": 0.610804869694067,
+   "hit": 0.5231316725978647,
+   "p": 0.615
+  },
+  {
+   "variant": "USO: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 281,
+   "mean_bp": 114.06210452571564,
+   "t": 1.9495077868400317,
+   "hit": 0.501779359430605,
+   "p": 0.133
+  },
+  {
+   "variant": "USO: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 337,
+   "mean_bp": 8.9271018056502,
+   "t": 0.41717119687591947,
+   "hit": 0.49851632047477745,
+   "p": 0.667
+  },
+  {
+   "variant": "USO: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 337,
+   "mean_bp": 17.89143776215693,
+   "t": 0.5992493764857264,
+   "hit": 0.5103857566765578,
+   "p": 0.614
+  },
+  {
+   "variant": "USO: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 337,
+   "mean_bp": 30.669882164918732,
+   "t": 0.8541488314135005,
+   "hit": 0.5074183976261127,
+   "p": 0.543
+  },
+  {
+   "variant": "USO: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 335,
+   "mean_bp": 93.11320722146944,
+   "t": 1.9001859106736696,
+   "hit": 0.5194029850746269,
+   "p": 0.29
+  },
+  {
+   "variant": "SPY: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 492,
+   "mean_bp": -7.912717474450029,
+   "t": -0.8588419668744414,
+   "hit": 0.48577235772357724,
+   "p": 0.383
+  },
+  {
+   "variant": "SPY: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 492,
+   "mean_bp": -20.781391428953572,
+   "t": -1.7227255429738988,
+   "hit": 0.4898373983739837,
+   "p": 0.085
+  },
+  {
+   "variant": "SPY: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 492,
+   "mean_bp": -30.098630499334252,
+   "t": -2.0780884250880085,
+   "hit": 0.491869918699187,
+   "p": 0.032
+  },
+  {
+   "variant": "SPY: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 492,
+   "mean_bp": -33.93594016860893,
+   "t": -1.897664016735649,
+   "hit": 0.49796747967479676,
+   "p": 0.051
+  },
+  {
+   "variant": "SPY: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 575,
+   "mean_bp": -18.14982238322482,
+   "t": -1.9889662027300665,
+   "hit": 0.4573913043478261,
+   "p": 0.034
+  },
+  {
+   "variant": "SPY: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 575,
+   "mean_bp": -28.36148615221046,
+   "t": -2.5827022374652326,
+   "hit": 0.47304347826086957,
+   "p": 0.041
+  },
+  {
+   "variant": "SPY: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 575,
+   "mean_bp": -32.48010542910547,
+   "t": -2.35894978494644,
+   "hit": 0.4782608695652174,
+   "p": 0.096
+  },
+  {
+   "variant": "SPY: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 575,
+   "mean_bp": -51.987632479211186,
+   "t": -3.124569122501657,
+   "hit": 0.4504347826086956,
+   "p": 0.062
+  },
+  {
+   "variant": "SPY: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 731,
+   "mean_bp": -10.954036538952954,
+   "t": -1.496287346034249,
+   "hit": 0.4473324213406293,
+   "p": 0.13
+  },
+  {
+   "variant": "SPY: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 731,
+   "mean_bp": -22.5415775138923,
+   "t": -2.4344147853188236,
+   "hit": 0.454172366621067,
+   "p": 0.078
+  },
+  {
+   "variant": "SPY: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 731,
+   "mean_bp": -30.502685295095834,
+   "t": -2.7437777984781087,
+   "hit": 0.44049247606019154,
+   "p": 0.105
+  },
+  {
+   "variant": "SPY: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 731,
+   "mean_bp": -55.385284578749435,
+   "t": -4.368311258344237,
+   "hit": 0.4473324213406293,
+   "p": 0.036
+  },
+  {
+   "variant": "NVDA: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 471,
+   "mean_bp": -10.338864061832451,
+   "t": -0.572424232377252,
+   "hit": 0.49044585987261147,
+   "p": 0.559
+  },
+  {
+   "variant": "NVDA: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 471,
+   "mean_bp": 11.860850261653473,
+   "t": 0.509302856292113,
+   "hit": 0.524416135881104,
+   "p": 0.581
+  },
+  {
+   "variant": "NVDA: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 470,
+   "mean_bp": -5.91571254291447,
+   "t": -0.20977911750618286,
+   "hit": 0.49361702127659574,
+   "p": 0.831
+  },
+  {
+   "variant": "NVDA: unexplained move over 1 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 470,
+   "mean_bp": -0.00442456524898288,
+   "t": -0.00012407967421842672,
+   "hit": 0.5276595744680851,
+   "p": 1.0
+  },
+  {
+   "variant": "NVDA: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 565,
+   "mean_bp": -39.416262052089,
+   "t": -2.60046602869682,
+   "hit": 0.45132743362831856,
+   "p": 0.007
+  },
+  {
+   "variant": "NVDA: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 564,
+   "mean_bp": -51.14263086735682,
+   "t": -2.7329032437071805,
+   "hit": 0.46099290780141844,
+   "p": 0.023
+  },
+  {
+   "variant": "NVDA: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 563,
+   "mean_bp": -64.45119583755631,
+   "t": -2.821330165222267,
+   "hit": 0.43872113676731794,
+   "p": 0.04
+  },
+  {
+   "variant": "NVDA: unexplained move over 5 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 563,
+   "mean_bp": -112.61525754353887,
+   "t": -3.749281712792204,
+   "hit": 0.42628774422735344,
+   "p": 0.012
+  },
+  {
+   "variant": "NVDA: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "day +1",
+   "group": "after",
+   "n": 657,
+   "mean_bp": 1.1509834545190525,
+   "t": 0.07761966823039354,
+   "hit": 0.4627092846270928,
+   "p": 0.94
+  },
+  {
+   "variant": "NVDA: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 656,
+   "mean_bp": 15.638028677883145,
+   "t": 0.7917565123970526,
+   "hit": 0.48628048780487804,
+   "p": 0.58
+  },
+  {
+   "variant": "NVDA: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 655,
+   "mean_bp": 16.714650412466924,
+   "t": 0.677870519233208,
+   "hit": 0.4900763358778626,
+   "p": 0.669
+  },
+  {
+   "variant": "NVDA: unexplained move over 20 session(s) beyond 1.5 sd",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 653,
+   "mean_bp": 18.894474661218542,
+   "t": 0.6165008244804158,
+   "hit": 0.5206738131699847,
+   "p": 0.763
+  }
+ ]
+}

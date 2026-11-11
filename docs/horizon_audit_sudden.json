@@ -1,0 +1,451 @@
+{
+ "name": "sudden",
+ "title": "gold and the S&P around a sudden one-day S&P fall (D1b)",
+ "kind": "price move",
+ "label": "NEITHER",
+ "n_variants": 8,
+ "family": {
+  "before": {
+   "p": 0.062,
+   "q95": 2.566417340457085,
+   "best": {
+    "variant": "S&P falls \u2265 2.0% in one session \u2192 gold",
+    "span": "day -1",
+    "n": 214,
+    "mean_bp": 24.90263675024712,
+    "t": 2.4760116545592292,
+    "hit": 0.5607476635514018
+   }
+  },
+  "day0": {
+   "p": 0.613,
+   "q95": 2.6668035060035713,
+   "best": {
+    "variant": "S&P falls \u2265 4.0% in one session \u2192 gold",
+    "span": "day 0",
+    "n": 43,
+    "mean_bp": 50.90944265471805,
+    "t": 1.16379210229115,
+    "hit": 0.6046511627906976
+   }
+  },
+  "after": {
+   "p": 0.876,
+   "q95": 4.406141314229383,
+   "best": {
+    "variant": "S&P falls \u2265 1.5% in one session \u2192 S&P itself",
+    "span": "days +1..+3",
+    "n": 362,
+    "mean_bp": 35.45706689382911,
+    "t": 1.917667323239248,
+    "hit": 0.585635359116022
+   }
+  }
+ },
+ "eras": {
+  "day0": "2004-08: +62 bp (n 16); 2009-14: +189 bp (n 10)",
+  "after": "2004-08: +35 bp (n 71); 2009-14: +30 bp (n 108); 2015-19: +57 bp (n 57); 2020-21: +3 bp (n 42); 2022-26: +45 bp (n 84)"
+ },
+ "cells": [
+  {
+   "variant": "S&P falls \u2265 1.5% in one session \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 362,
+   "mean_bp": 17.27061520508383,
+   "t": 2.424122184726876,
+   "hit": 0.5524861878453039,
+   "p": 0.03
+  },
+  {
+   "variant": "S&P falls \u2265 1.5% in one session \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 362,
+   "mean_bp": -8.119864725015706,
+   "t": -0.8369124346459561,
+   "hit": 0.47790055248618785,
+   "p": 0.475
+  },
+  {
+   "variant": "S&P falls \u2265 1.5% in one session \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 362,
+   "mean_bp": 3.472329995852188,
+   "t": 0.41914020592399015,
+   "hit": 0.5165745856353591,
+   "p": 0.704
+  },
+  {
+   "variant": "S&P falls \u2265 1.5% in one session \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 362,
+   "mean_bp": 5.819956346443791,
+   "t": 0.4727957861641422,
+   "hit": 0.5386740331491713,
+   "p": 0.719
+  },
+  {
+   "variant": "S&P falls \u2265 1.5% in one session \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 362,
+   "mean_bp": 12.13725175972425,
+   "t": 0.846288816230516,
+   "hit": 0.5165745856353591,
+   "p": 0.61
+  },
+  {
+   "variant": "S&P falls \u2265 1.5% in one session \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 361,
+   "mean_bp": 26.29431462745837,
+   "t": 1.413376571387178,
+   "hit": 0.5401662049861495,
+   "p": 0.504
+  },
+  {
+   "variant": "S&P falls \u2265 1.5% in one session \u2192 S&P itself",
+   "span": "day +1",
+   "group": "after",
+   "n": 362,
+   "mean_bp": 19.647275964805683,
+   "t": 1.6131827851287779,
+   "hit": 0.5607734806629834,
+   "p": 0.206
+  },
+  {
+   "variant": "S&P falls \u2265 1.5% in one session \u2192 S&P itself",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 362,
+   "mean_bp": 28.306985809169866,
+   "t": 1.894813220643313,
+   "hit": 0.5552486187845304,
+   "p": 0.225
+  },
+  {
+   "variant": "S&P falls \u2265 1.5% in one session \u2192 S&P itself",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 362,
+   "mean_bp": 35.45706689382911,
+   "t": 1.917667323239248,
+   "hit": 0.585635359116022,
+   "p": 0.311
+  },
+  {
+   "variant": "S&P falls \u2265 1.5% in one session \u2192 S&P itself",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 361,
+   "mean_bp": 41.981312132984804,
+   "t": 1.883891679778534,
+   "hit": 0.5844875346260388,
+   "p": 0.469
+  },
+  {
+   "variant": "S&P falls \u2265 2.0% in one session \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 214,
+   "mean_bp": 24.90263675024712,
+   "t": 2.4760116545592292,
+   "hit": 0.5607476635514018,
+   "p": 0.021
+  },
+  {
+   "variant": "S&P falls \u2265 2.0% in one session \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 214,
+   "mean_bp": -7.962163330193947,
+   "t": -0.5374752927289381,
+   "hit": 0.45794392523364486,
+   "p": 0.63
+  },
+  {
+   "variant": "S&P falls \u2265 2.0% in one session \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 214,
+   "mean_bp": -10.373608846931896,
+   "t": -0.8605603371571551,
+   "hit": 0.5046728971962616,
+   "p": 0.435
+  },
+  {
+   "variant": "S&P falls \u2265 2.0% in one session \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 214,
+   "mean_bp": 1.6841332622491927,
+   "t": 0.09268349040735803,
+   "hit": 0.5420560747663551,
+   "p": 0.929
+  },
+  {
+   "variant": "S&P falls \u2265 2.0% in one session \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 214,
+   "mean_bp": 10.300596715931604,
+   "t": 0.5059472409738553,
+   "hit": 0.514018691588785,
+   "p": 0.741
+  },
+  {
+   "variant": "S&P falls \u2265 2.0% in one session \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 213,
+   "mean_bp": 17.11679810668801,
+   "t": 0.646531485829057,
+   "hit": 0.5305164319248826,
+   "p": 0.732
+  },
+  {
+   "variant": "S&P falls \u2265 2.0% in one session \u2192 S&P itself",
+   "span": "day +1",
+   "group": "after",
+   "n": 214,
+   "mean_bp": 29.5394676372837,
+   "t": 1.595904406747917,
+   "hit": 0.5654205607476636,
+   "p": 0.185
+  },
+  {
+   "variant": "S&P falls \u2265 2.0% in one session \u2192 S&P itself",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 214,
+   "mean_bp": 31.84414230622368,
+   "t": 1.398335992275178,
+   "hit": 0.5514018691588785,
+   "p": 0.333
+  },
+  {
+   "variant": "S&P falls \u2265 2.0% in one session \u2192 S&P itself",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 214,
+   "mean_bp": 40.60059257427475,
+   "t": 1.4493575620502852,
+   "hit": 0.5841121495327103,
+   "p": 0.38
+  },
+  {
+   "variant": "S&P falls \u2265 2.0% in one session \u2192 S&P itself",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 213,
+   "mean_bp": 52.467409239735076,
+   "t": 1.5573465806472218,
+   "hit": 0.5868544600938967,
+   "p": 0.452
+  },
+  {
+   "variant": "S&P falls \u2265 3.0% in one session \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 88,
+   "mean_bp": 14.828357012545322,
+   "t": 0.8738219469562827,
+   "hit": 0.5568181818181818,
+   "p": 0.409
+  },
+  {
+   "variant": "S&P falls \u2265 3.0% in one session \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 88,
+   "mean_bp": -3.2710093241945666,
+   "t": -0.12358086048398596,
+   "hit": 0.48863636363636365,
+   "p": 0.908
+  },
+  {
+   "variant": "S&P falls \u2265 3.0% in one session \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 88,
+   "mean_bp": -25.709970550294614,
+   "t": -1.059506531599919,
+   "hit": 0.5113636363636364,
+   "p": 0.31
+  },
+  {
+   "variant": "S&P falls \u2265 3.0% in one session \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 88,
+   "mean_bp": 2.992685093776691,
+   "t": 0.08106290636258956,
+   "hit": 0.5568181818181818,
+   "p": 0.942
+  },
+  {
+   "variant": "S&P falls \u2265 3.0% in one session \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 88,
+   "mean_bp": 5.706703579344571,
+   "t": 0.14553163579429526,
+   "hit": 0.4772727272727273,
+   "p": 0.912
+  },
+  {
+   "variant": "S&P falls \u2265 3.0% in one session \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 87,
+   "mean_bp": -0.9540884554150516,
+   "t": -0.018277429335725192,
+   "hit": 0.5057471264367817,
+   "p": 0.995
+  },
+  {
+   "variant": "S&P falls \u2265 3.0% in one session \u2192 S&P itself",
+   "span": "day +1",
+   "group": "after",
+   "n": 88,
+   "mean_bp": 28.162370893880237,
+   "t": 0.8276670507338045,
+   "hit": 0.5681818181818182,
+   "p": 0.453
+  },
+  {
+   "variant": "S&P falls \u2265 3.0% in one session \u2192 S&P itself",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 88,
+   "mean_bp": 28.97762369885869,
+   "t": 0.6939059385746861,
+   "hit": 0.5681818181818182,
+   "p": 0.551
+  },
+  {
+   "variant": "S&P falls \u2265 3.0% in one session \u2192 S&P itself",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 88,
+   "mean_bp": 0.81637306059728,
+   "t": 0.014423932143926876,
+   "hit": 0.5113636363636364,
+   "p": 0.991
+  },
+  {
+   "variant": "S&P falls \u2265 3.0% in one session \u2192 S&P itself",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 87,
+   "mean_bp": 39.56240677007021,
+   "t": 0.5889620352772938,
+   "hit": 0.6091954022988506,
+   "p": 0.724
+  },
+  {
+   "variant": "S&P falls \u2265 4.0% in one session \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 43,
+   "mean_bp": 10.127963783050557,
+   "t": 0.32751777378252794,
+   "hit": 0.4883720930232558,
+   "p": 0.757
+  },
+  {
+   "variant": "S&P falls \u2265 4.0% in one session \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 43,
+   "mean_bp": 50.90944265471805,
+   "t": 1.16379210229115,
+   "hit": 0.6046511627906976,
+   "p": 0.264
+  },
+  {
+   "variant": "S&P falls \u2265 4.0% in one session \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 43,
+   "mean_bp": -33.40666945495079,
+   "t": -0.804896038232077,
+   "hit": 0.4418604651162791,
+   "p": 0.438
+  },
+  {
+   "variant": "S&P falls \u2265 4.0% in one session \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 43,
+   "mean_bp": 45.06568625881425,
+   "t": 0.6855717489833786,
+   "hit": 0.5348837209302325,
+   "p": 0.52
+  },
+  {
+   "variant": "S&P falls \u2265 4.0% in one session \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 43,
+   "mean_bp": 47.8036711735135,
+   "t": 0.6767378204258109,
+   "hit": 0.5116279069767442,
+   "p": 0.593
+  },
+  {
+   "variant": "S&P falls \u2265 4.0% in one session \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 42,
+   "mean_bp": 64.99606599133858,
+   "t": 0.6895066638778969,
+   "hit": 0.5238095238095238,
+   "p": 0.633
+  },
+  {
+   "variant": "S&P falls \u2265 4.0% in one session \u2192 S&P itself",
+   "span": "day +1",
+   "group": "after",
+   "n": 43,
+   "mean_bp": 53.119633476669314,
+   "t": 0.914962605520439,
+   "hit": 0.5813953488372093,
+   "p": 0.407
+  },
+  {
+   "variant": "S&P falls \u2265 4.0% in one session \u2192 S&P itself",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 43,
+   "mean_bp": 69.22229013780215,
+   "t": 1.010177035713534,
+   "hit": 0.6046511627906976,
+   "p": 0.404
+  },
+  {
+   "variant": "S&P falls \u2265 4.0% in one session \u2192 S&P itself",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 43,
+   "mean_bp": 47.96112198956341,
+   "t": 0.5004083992933611,
+   "hit": 0.5813953488372093,
+   "p": 0.705
+  },
+  {
+   "variant": "S&P falls \u2265 4.0% in one session \u2192 S&P itself",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 42,
+   "mean_bp": 103.3258186906957,
+   "t": 0.9959978474706834,
+   "hit": 0.6190476190476191,
+   "p": 0.507
+  }
+ ]
+}

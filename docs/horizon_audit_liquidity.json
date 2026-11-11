@@ -1,0 +1,231 @@
+{
+ "name": "liquidity",
+ "title": "gold around a large daily change in the Fed's reverse-repo balance (D2c)",
+ "kind": "information",
+ "label": "NEITHER",
+ "n_variants": 3,
+ "family": {
+  "before": {
+   "p": 0.446,
+   "q95": 2.2980594917442914,
+   "best": {
+    "variant": "reverse-repo balance change beyond 0.5 sd \u2192 gold",
+    "span": "day -1",
+    "n": 1100,
+    "mean_bp": 3.549950899468664,
+    "t": 1.2182297521893843,
+    "hit": 0.5272727272727272
+   }
+  },
+  "day0": {
+   "p": 0.231,
+   "q95": 2.353810129212561,
+   "best": {
+    "variant": "reverse-repo balance change beyond 1.5 sd \u2192 gold",
+    "span": "day 0",
+    "n": 273,
+    "mean_bp": 9.742757946929297,
+    "t": 1.601078982862745,
+    "hit": 0.5238095238095238
+   }
+  },
+  "after": {
+   "p": 0.838,
+   "q95": 2.517380202087499,
+   "best": {
+    "variant": "reverse-repo balance change beyond 1.5 sd \u2192 gold",
+    "span": "day +1",
+    "n": 273,
+    "mean_bp": 7.087333452353013,
+    "t": 1.0981617491776274,
+    "hit": 0.5128205128205128
+   }
+  }
+ },
+ "eras": {
+  "day0": "2009-14: +11 bp (n 17); 2015-19: -0 bp (n 107); 2020-21: +42 bp (n 55); 2022-26: +2 bp (n 94)",
+  "after": "2009-14: +31 bp (n 17); 2015-19: +5 bp (n 107); 2020-21: +9 bp (n 55); 2022-26: +4 bp (n 94)"
+ },
+ "cells": [
+  {
+   "variant": "reverse-repo balance change beyond 0.5 sd \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 1100,
+   "mean_bp": 3.549950899468664,
+   "t": 1.2182297521893843,
+   "hit": 0.5272727272727272,
+   "p": 0.226
+  },
+  {
+   "variant": "reverse-repo balance change beyond 0.5 sd \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 1100,
+   "mean_bp": 2.3884509941887244,
+   "t": 0.8095786415891237,
+   "hit": 0.4863636363636364,
+   "p": 0.432
+  },
+  {
+   "variant": "reverse-repo balance change beyond 0.5 sd \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 1100,
+   "mean_bp": -0.3657591201218916,
+   "t": -0.12494119212275377,
+   "hit": 0.5118181818181818,
+   "p": 0.916
+  },
+  {
+   "variant": "reverse-repo balance change beyond 0.5 sd \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 1100,
+   "mean_bp": -0.7401181926707436,
+   "t": -0.18208930148000574,
+   "hit": 0.49454545454545457,
+   "p": 0.846
+  },
+  {
+   "variant": "reverse-repo balance change beyond 0.5 sd \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 1100,
+   "mean_bp": 1.158072422136186,
+   "t": 0.23703530891629918,
+   "hit": 0.51,
+   "p": 0.791
+  },
+  {
+   "variant": "reverse-repo balance change beyond 0.5 sd \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 1100,
+   "mean_bp": 2.464128993091643,
+   "t": 0.3902319547745592,
+   "hit": 0.48818181818181816,
+   "p": 0.684
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.0 sd \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 529,
+   "mean_bp": 2.321511544368563,
+   "t": 0.5304543265795981,
+   "hit": 0.5103969754253308,
+   "p": 0.57
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.0 sd \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 529,
+   "mean_bp": 4.607997941649458,
+   "t": 1.0251595681871386,
+   "hit": 0.4914933837429111,
+   "p": 0.306
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.0 sd \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 529,
+   "mean_bp": 2.073475149273523,
+   "t": 0.4651009256548314,
+   "hit": 0.5160680529300568,
+   "p": 0.641
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.0 sd \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 529,
+   "mean_bp": -0.18729000809318733,
+   "t": -0.031387443701908116,
+   "hit": 0.497164461247637,
+   "p": 0.977
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.0 sd \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 529,
+   "mean_bp": -0.178207276455509,
+   "t": -0.024411610305415873,
+   "hit": 0.502835538752363,
+   "p": 0.974
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.0 sd \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 529,
+   "mean_bp": -0.864663114504385,
+   "t": -0.09472757130786491,
+   "hit": 0.4914933837429111,
+   "p": 0.934
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.5 sd \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 273,
+   "mean_bp": 5.0861563739270785,
+   "t": 0.8536977878498256,
+   "hit": 0.5311355311355311,
+   "p": 0.379
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.5 sd \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 273,
+   "mean_bp": 9.742757946929297,
+   "t": 1.601078982862745,
+   "hit": 0.5238095238095238,
+   "p": 0.101
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.5 sd \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 273,
+   "mean_bp": 7.087333452353013,
+   "t": 1.0981617491776274,
+   "hit": 0.5128205128205128,
+   "p": 0.271
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.5 sd \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 273,
+   "mean_bp": 3.2098989787834853,
+   "t": 0.35899707629489624,
+   "hit": 0.4981684981684982,
+   "p": 0.687
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.5 sd \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 273,
+   "mean_bp": 5.725093940659806,
+   "t": 0.5343534574452117,
+   "hit": 0.5091575091575091,
+   "p": 0.544
+  },
+  {
+   "variant": "reverse-repo balance change beyond 1.5 sd \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 273,
+   "mean_bp": -7.014410671520417,
+   "t": -0.5268017378236898,
+   "hit": 0.47619047619047616,
+   "p": 0.54
+  }
+ ]
+}

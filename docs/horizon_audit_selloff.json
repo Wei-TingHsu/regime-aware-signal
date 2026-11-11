@@ -1,0 +1,451 @@
+{
+ "name": "selloff",
+ "title": "gold (and the S&P) around the day an S&P drawdown is completed (D1, T-L5b)",
+ "kind": "price move",
+ "label": "NEITHER",
+ "n_variants": 12,
+ "family": {
+  "before": {
+   "p": 0.49,
+   "q95": 2.743134084349236,
+   "best": {
+    "variant": "S&P 20-session return crosses -6% \u2192 gold",
+    "span": "day -1",
+    "n": 34,
+    "mean_bp": 29.6999182281442,
+    "t": 1.4558071043231233,
+    "hit": 0.5294117647058824
+   }
+  },
+  "day0": {
+   "p": 0.704,
+   "q95": 2.596244963161289,
+   "best": {
+    "variant": "S&P 20-session return crosses -4% \u2192 gold",
+    "span": "day 0",
+    "n": 50,
+    "mean_bp": -26.531809138199215,
+    "t": -1.1660347788827046,
+    "hit": 0.5
+   }
+  },
+  "after": {
+   "p": 0.16,
+   "q95": 3.6328538557599557,
+   "best": {
+    "variant": "S&P 10-session return crosses -4% \u2192 S&P itself",
+    "span": "days +1..+5",
+    "n": 67,
+    "mean_bp": 128.2155498124087,
+    "t": 3.1230989176018134,
+    "hit": 0.6716417910447762
+   }
+  }
+ },
+ "eras": {
+  "day0": "2004-08: -18 bp (n 10); 2009-14: -68 bp (n 15); 2022-26: -58 bp (n 13)",
+  "after": "2004-08: +253 bp (n 15); 2009-14: +148 bp (n 22); 2022-26: -82 bp (n 14)"
+ },
+ "cells": [
+  {
+   "variant": "S&P 10-session return crosses -4% \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 68,
+   "mean_bp": -0.34311363045324095,
+   "t": -0.0227129950844617,
+   "hit": 0.47058823529411764,
+   "p": 0.982
+  },
+  {
+   "variant": "S&P 10-session return crosses -4% \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 68,
+   "mean_bp": -6.6965000925118305,
+   "t": -0.3559354981680093,
+   "hit": 0.5147058823529411,
+   "p": 0.73
+  },
+  {
+   "variant": "S&P 10-session return crosses -4% \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 68,
+   "mean_bp": 1.6877216818655296,
+   "t": 0.11080624527213144,
+   "hit": 0.47058823529411764,
+   "p": 0.928
+  },
+  {
+   "variant": "S&P 10-session return crosses -4% \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 68,
+   "mean_bp": 28.97783358652293,
+   "t": 1.0677439252963548,
+   "hit": 0.6176470588235294,
+   "p": 0.324
+  },
+  {
+   "variant": "S&P 10-session return crosses -4% \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 68,
+   "mean_bp": 29.6663215980552,
+   "t": 1.0386542912250702,
+   "hit": 0.5735294117647058,
+   "p": 0.345
+  },
+  {
+   "variant": "S&P 10-session return crosses -4% \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 67,
+   "mean_bp": 75.81852812602642,
+   "t": 2.264948160474709,
+   "hit": 0.6268656716417911,
+   "p": 0.046
+  },
+  {
+   "variant": "S&P 10-session return crosses -4% \u2192 S&P itself",
+   "span": "day +1",
+   "group": "after",
+   "n": 68,
+   "mean_bp": 46.41910519683696,
+   "t": 1.8859171047593197,
+   "hit": 0.6911764705882353,
+   "p": 0.088
+  },
+  {
+   "variant": "S&P 10-session return crosses -4% \u2192 S&P itself",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 68,
+   "mean_bp": 52.19877741709935,
+   "t": 1.7214727580693994,
+   "hit": 0.6176470588235294,
+   "p": 0.124
+  },
+  {
+   "variant": "S&P 10-session return crosses -4% \u2192 S&P itself",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 68,
+   "mean_bp": 57.02637853794682,
+   "t": 1.5644968740259728,
+   "hit": 0.6176470588235294,
+   "p": 0.201
+  },
+  {
+   "variant": "S&P 10-session return crosses -4% \u2192 S&P itself",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 67,
+   "mean_bp": 128.2155498124087,
+   "t": 3.1230989176018134,
+   "hit": 0.6716417910447762,
+   "p": 0.024
+  },
+  {
+   "variant": "S&P 10-session return crosses -6% \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 36,
+   "mean_bp": 8.384724248362593,
+   "t": 0.3682128345559696,
+   "hit": 0.5,
+   "p": 0.73
+  },
+  {
+   "variant": "S&P 10-session return crosses -6% \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 36,
+   "mean_bp": -21.762968962595796,
+   "t": -0.7149205669646778,
+   "hit": 0.4166666666666667,
+   "p": 0.511
+  },
+  {
+   "variant": "S&P 10-session return crosses -6% \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 36,
+   "mean_bp": 3.6521617492085863,
+   "t": 0.19607727619413834,
+   "hit": 0.5,
+   "p": 0.848
+  },
+  {
+   "variant": "S&P 10-session return crosses -6% \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 36,
+   "mean_bp": 47.79051503110948,
+   "t": 1.1927398280227304,
+   "hit": 0.5555555555555556,
+   "p": 0.232
+  },
+  {
+   "variant": "S&P 10-session return crosses -6% \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 36,
+   "mean_bp": 59.108721911629964,
+   "t": 1.6109412292562153,
+   "hit": 0.6111111111111112,
+   "p": 0.135
+  },
+  {
+   "variant": "S&P 10-session return crosses -6% \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 36,
+   "mean_bp": 116.34713918603937,
+   "t": 1.9643679577470834,
+   "hit": 0.5833333333333334,
+   "p": 0.068
+  },
+  {
+   "variant": "S&P 10-session return crosses -6% \u2192 S&P itself",
+   "span": "day +1",
+   "group": "after",
+   "n": 36,
+   "mean_bp": 39.20527510225579,
+   "t": 1.6034286807022515,
+   "hit": 0.6111111111111112,
+   "p": 0.123
+  },
+  {
+   "variant": "S&P 10-session return crosses -6% \u2192 S&P itself",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 36,
+   "mean_bp": -27.834467461625415,
+   "t": -0.6505894941534226,
+   "hit": 0.5555555555555556,
+   "p": 0.566
+  },
+  {
+   "variant": "S&P 10-session return crosses -6% \u2192 S&P itself",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 36,
+   "mean_bp": 52.836967189610945,
+   "t": 1.0532609898729828,
+   "hit": 0.5833333333333334,
+   "p": 0.366
+  },
+  {
+   "variant": "S&P 10-session return crosses -6% \u2192 S&P itself",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 36,
+   "mean_bp": 60.988222313086425,
+   "t": 1.378896714515559,
+   "hit": 0.5833333333333334,
+   "p": 0.276
+  },
+  {
+   "variant": "S&P 20-session return crosses -4% \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 50,
+   "mean_bp": -10.316682766090999,
+   "t": -0.517085908511227,
+   "hit": 0.38,
+   "p": 0.618
+  },
+  {
+   "variant": "S&P 20-session return crosses -4% \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 50,
+   "mean_bp": -26.531809138199215,
+   "t": -1.1660347788827046,
+   "hit": 0.5,
+   "p": 0.267
+  },
+  {
+   "variant": "S&P 20-session return crosses -4% \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 50,
+   "mean_bp": -21.883234800079673,
+   "t": -1.034685232677578,
+   "hit": 0.5,
+   "p": 0.291
+  },
+  {
+   "variant": "S&P 20-session return crosses -4% \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 50,
+   "mean_bp": -7.002304665337955,
+   "t": -0.22974421269755935,
+   "hit": 0.56,
+   "p": 0.805
+  },
+  {
+   "variant": "S&P 20-session return crosses -4% \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 50,
+   "mean_bp": 6.2662918338022635,
+   "t": 0.205539118583237,
+   "hit": 0.5,
+   "p": 0.86
+  },
+  {
+   "variant": "S&P 20-session return crosses -4% \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 49,
+   "mean_bp": 40.40007539857345,
+   "t": 1.0342899824379854,
+   "hit": 0.5918367346938775,
+   "p": 0.372
+  },
+  {
+   "variant": "S&P 20-session return crosses -4% \u2192 S&P itself",
+   "span": "day +1",
+   "group": "after",
+   "n": 50,
+   "mean_bp": -2.155238546920249,
+   "t": -0.11362529218270193,
+   "hit": 0.62,
+   "p": 0.927
+  },
+  {
+   "variant": "S&P 20-session return crosses -4% \u2192 S&P itself",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 50,
+   "mean_bp": -10.375265759553786,
+   "t": -0.303320537269569,
+   "hit": 0.54,
+   "p": 0.771
+  },
+  {
+   "variant": "S&P 20-session return crosses -4% \u2192 S&P itself",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 50,
+   "mean_bp": 38.41316436883865,
+   "t": 1.2607623525856781,
+   "hit": 0.54,
+   "p": 0.279
+  },
+  {
+   "variant": "S&P 20-session return crosses -4% \u2192 S&P itself",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 49,
+   "mean_bp": 55.301971545747605,
+   "t": 1.4298595827914766,
+   "hit": 0.7142857142857143,
+   "p": 0.265
+  },
+  {
+   "variant": "S&P 20-session return crosses -6% \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 34,
+   "mean_bp": 29.6999182281442,
+   "t": 1.4558071043231233,
+   "hit": 0.5294117647058824,
+   "p": 0.166
+  },
+  {
+   "variant": "S&P 20-session return crosses -6% \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 34,
+   "mean_bp": 8.965256049397103,
+   "t": 0.33200068634554686,
+   "hit": 0.5,
+   "p": 0.761
+  },
+  {
+   "variant": "S&P 20-session return crosses -6% \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 34,
+   "mean_bp": -11.072822125699895,
+   "t": -0.4188490024126989,
+   "hit": 0.47058823529411764,
+   "p": 0.678
+  },
+  {
+   "variant": "S&P 20-session return crosses -6% \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 34,
+   "mean_bp": 12.382966996018403,
+   "t": 0.2829115744755234,
+   "hit": 0.47058823529411764,
+   "p": 0.777
+  },
+  {
+   "variant": "S&P 20-session return crosses -6% \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 34,
+   "mean_bp": 70.7967486102341,
+   "t": 1.8759009655976342,
+   "hit": 0.6470588235294118,
+   "p": 0.073
+  },
+  {
+   "variant": "S&P 20-session return crosses -6% \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 34,
+   "mean_bp": 141.5284524828996,
+   "t": 2.2419315791955183,
+   "hit": 0.7058823529411765,
+   "p": 0.047
+  },
+  {
+   "variant": "S&P 20-session return crosses -6% \u2192 S&P itself",
+   "span": "day +1",
+   "group": "after",
+   "n": 34,
+   "mean_bp": 23.867527373415925,
+   "t": 0.9828785306845443,
+   "hit": 0.5882352941176471,
+   "p": 0.364
+  },
+  {
+   "variant": "S&P 20-session return crosses -6% \u2192 S&P itself",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 34,
+   "mean_bp": 18.722465674442073,
+   "t": 0.42317867559344274,
+   "hit": 0.5294117647058824,
+   "p": 0.683
+  },
+  {
+   "variant": "S&P 20-session return crosses -6% \u2192 S&P itself",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 34,
+   "mean_bp": 100.18433638624273,
+   "t": 2.5481234757379165,
+   "hit": 0.6764705882352942,
+   "p": 0.026
+  },
+  {
+   "variant": "S&P 20-session return crosses -6% \u2192 S&P itself",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 34,
+   "mean_bp": 95.16329594322733,
+   "t": 1.6833966025087759,
+   "hit": 0.7647058823529411,
+   "p": 0.163
+  }
+ ]
+}

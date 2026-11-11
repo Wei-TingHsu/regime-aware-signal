@@ -1,0 +1,291 @@
+{
+ "name": "fomc",
+ "title": "gold and Treasuries around Fed statement days, signed by the rate surprise (row 14, T9b)",
+ "kind": "information",
+ "label": "SUBJECTIVE grade B candidate",
+ "n_variants": 4,
+ "family": {
+  "before": {
+   "p": 0.187,
+   "q95": 2.5178664064766263,
+   "best": {
+    "variant": "larger-than-median rate surprise \u2192 gold",
+    "span": "day -1",
+    "n": 66,
+    "mean_bp": 18.567938564969573,
+    "t": 1.9201154357219588,
+    "hit": 0.5303030303030303
+   }
+  },
+  "day0": {
+   "p": 0.0,
+   "q95": 2.5054242936585207,
+   "best": {
+    "variant": "all statement days \u2192 gold",
+    "span": "day 0",
+    "n": 114,
+    "mean_bp": 75.86615673713302,
+    "t": 7.640040432011307,
+    "hit": 0.7982456140350878
+   }
+  },
+  "after": {
+   "p": 0.403,
+   "q95": 2.888568066990757,
+   "best": {
+    "variant": "larger-than-median rate surprise \u2192 gold",
+    "span": "day +1",
+    "n": 66,
+    "mean_bp": 37.6053763535131,
+    "t": 1.906141242442463,
+    "hit": 0.5303030303030303
+   }
+  }
+ },
+ "eras": {
+  "day0": "2009-14: +86 bp (n 27); 2015-19: +57 bp (n 37); 2020-21: +112 bp (n 12); 2022-26: +75 bp (n 38)",
+  "after": "2009-14: +56 bp (n 16); 2015-19: +10 bp (n 23); 2022-26: +19 bp (n 23)"
+ },
+ "cells": [
+  {
+   "variant": "all statement days \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 114,
+   "mean_bp": 7.002010265283318,
+   "t": 0.8537044466347339,
+   "hit": 0.5789473684210527,
+   "p": 0.405
+  },
+  {
+   "variant": "all statement days \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 114,
+   "mean_bp": 75.86615673713302,
+   "t": 7.640040432011307,
+   "hit": 0.7982456140350878,
+   "p": 0.0
+  },
+  {
+   "variant": "all statement days \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 114,
+   "mean_bp": 24.547168353667544,
+   "t": 1.8532006128023504,
+   "hit": 0.5,
+   "p": 0.061
+  },
+  {
+   "variant": "all statement days \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 114,
+   "mean_bp": 32.10224234645883,
+   "t": 1.6201640450427441,
+   "hit": 0.5789473684210527,
+   "p": 0.097
+  },
+  {
+   "variant": "all statement days \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 114,
+   "mean_bp": 36.90458086670856,
+   "t": 1.529147204273929,
+   "hit": 0.5263157894736842,
+   "p": 0.113
+  },
+  {
+   "variant": "all statement days \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 114,
+   "mean_bp": 41.65044464836631,
+   "t": 1.6153182415423017,
+   "hit": 0.5263157894736842,
+   "p": 0.095
+  },
+  {
+   "variant": "all statement days \u2192 long Treasuries",
+   "span": "day -1",
+   "group": "before",
+   "n": 114,
+   "mean_bp": 8.509947303050948,
+   "t": 0.9050637220327099,
+   "hit": 0.5263157894736842,
+   "p": 0.378
+  },
+  {
+   "variant": "all statement days \u2192 long Treasuries",
+   "span": "day 0",
+   "group": "day0",
+   "n": 114,
+   "mean_bp": 43.17293626228548,
+   "t": 4.964924672328743,
+   "hit": 0.6929824561403509,
+   "p": 0.0
+  },
+  {
+   "variant": "all statement days \u2192 long Treasuries",
+   "span": "day +1",
+   "group": "after",
+   "n": 114,
+   "mean_bp": 7.02017037194992,
+   "t": 0.6358176293192633,
+   "hit": 0.5,
+   "p": 0.519
+  },
+  {
+   "variant": "all statement days \u2192 long Treasuries",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 114,
+   "mean_bp": 13.82181283655117,
+   "t": 1.0512959535631603,
+   "hit": 0.5789473684210527,
+   "p": 0.295
+  },
+  {
+   "variant": "all statement days \u2192 long Treasuries",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 114,
+   "mean_bp": 11.633381034340763,
+   "t": 0.728472311250047,
+   "hit": 0.49122807017543857,
+   "p": 0.451
+  },
+  {
+   "variant": "all statement days \u2192 long Treasuries",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 114,
+   "mean_bp": 23.95471782271163,
+   "t": 1.2723555534118083,
+   "hit": 0.5263157894736842,
+   "p": 0.205
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 gold",
+   "span": "day -1",
+   "group": "before",
+   "n": 66,
+   "mean_bp": 18.567938564969573,
+   "t": 1.9201154357219588,
+   "hit": 0.5303030303030303,
+   "p": 0.051
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 gold",
+   "span": "day 0",
+   "group": "day0",
+   "n": 66,
+   "mean_bp": 95.63916789460283,
+   "t": 7.174474101769146,
+   "hit": 0.8333333333333334,
+   "p": 0.0
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 gold",
+   "span": "day +1",
+   "group": "after",
+   "n": 66,
+   "mean_bp": 37.6053763535131,
+   "t": 1.906141242442463,
+   "hit": 0.5303030303030303,
+   "p": 0.054
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 gold",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 66,
+   "mean_bp": 36.700006259767754,
+   "t": 1.5945107793034605,
+   "hit": 0.6363636363636364,
+   "p": 0.108
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 gold",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 66,
+   "mean_bp": 46.78969570383931,
+   "t": 1.6994414987460265,
+   "hit": 0.5303030303030303,
+   "p": 0.09
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 gold",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 66,
+   "mean_bp": 49.656819172979986,
+   "t": 1.5153010677357999,
+   "hit": 0.5454545454545454,
+   "p": 0.137
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 long Treasuries",
+   "span": "day -1",
+   "group": "before",
+   "n": 66,
+   "mean_bp": 15.381865647488995,
+   "t": 1.0656003946438353,
+   "hit": 0.5,
+   "p": 0.306
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 long Treasuries",
+   "span": "day 0",
+   "group": "day0",
+   "n": 66,
+   "mean_bp": 58.165912000406415,
+   "t": 5.336390556514852,
+   "hit": 0.7575757575757576,
+   "p": 0.0
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 long Treasuries",
+   "span": "day +1",
+   "group": "after",
+   "n": 66,
+   "mean_bp": 8.1037729504044,
+   "t": 0.5499650999403388,
+   "hit": 0.48484848484848486,
+   "p": 0.61
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 long Treasuries",
+   "span": "days +1..+2",
+   "group": "after",
+   "n": 66,
+   "mean_bp": -0.266134909611289,
+   "t": -0.014368525349513142,
+   "hit": 0.5151515151515151,
+   "p": 0.991
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 long Treasuries",
+   "span": "days +1..+3",
+   "group": "after",
+   "n": 66,
+   "mean_bp": 0.19153057790305236,
+   "t": 0.008312443570476,
+   "hit": 0.4696969696969697,
+   "p": 0.995
+  },
+  {
+   "variant": "larger-than-median rate surprise \u2192 long Treasuries",
+   "span": "days +1..+5",
+   "group": "after",
+   "n": 66,
+   "mean_bp": 25.265623606566407,
+   "t": 1.0352923260815832,
+   "hit": 0.5303030303030303,
+   "p": 0.304
+  }
+ ]
+}
