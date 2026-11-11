@@ -193,6 +193,28 @@ def cmd_equities():
     print("Nothing was downloaded.")
 
 
+def cmd_equities_fetch(max_usd: float):
+    """Downloads 1-minute bars for the AI-chain list from XNAS.ITCH (trades on the Nasdaq exchange, 04:00-20:00 New York, from May 2018) after quoting the
+    price. One file per symbol per year under data_provenance/intraday/eq/<SYMBOL>/ (the ignored folder). Prices are as traded -- not adjusted for share
+    splits -- which does not matter inside a day. META traded as FB until June 2022; both tickers are fetched and kept in the META folder."""
+    c = _client(); d = "XNAS.ITCH"; r = c.metadata.get_dataset_range(dataset=d); s_, e_ = str(r.get("start", r.get("start_date", "")))[:10], str(r.get("end", r.get("end_date", "")))[:10]; syms = AI_CHAIN + ["FB"]
+    price = float(c.metadata.get_cost(dataset=d, symbols=syms, stype_in="raw_symbol", schema="ohlcv-1m", start=s_, end=e_)); print(f"{d} {s_} -> {e_}, {len(syms)} symbols, 1-minute bars: quoted US${price:.2f}; cap US${max_usd:.2f}")
+    if price > max_usd: raise SystemExit("quoted price above the cap -- nothing downloaded")
+    for sym in syms:
+        folder = OUT / "eq" / ("META" if sym == "FB" else sym); n = 0
+        for y in range(int(s_[:4]), int(e_[:4]) + 1):
+            a_, b_ = max(s_, f"{y}-01-01"), min(e_, f"{y + 1}-01-01"); out = folder / (f"{y}_FB.parquet" if sym == "FB" else f"{y}.parquet")
+            if a_ >= b_ or out.exists(): continue
+            try:
+                import warnings
+                with warnings.catch_warnings():
+                    warnings.simplefilter("ignore"); df = c.timeseries.get_range(dataset=d, symbols=[sym], stype_in="raw_symbol", schema="ohlcv-1m", start=a_, end=b_).to_df()
+            except Exception as ex: print(f"    {sym} {y}: {type(ex).__name__}: {str(ex)[:90]}"); continue
+            if len(df): folder.mkdir(parents=True, exist_ok=True); df.to_parquet(out); n += len(df)
+        print(f"  {sym}: {n:,} bars")
+    print(f"done -> {OUT / 'eq'}")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["check", "cost", "fetch", "gold", "note", "patch", "equities"]); ap.add_argument("--max-usd", type=float, default=20.0); ap.add_argument("--full", action="store_true"); a = ap.parse_args()
-    {"check": cmd_check, "cost": cmd_cost, "fetch": lambda: cmd_fetch(a.max_usd, a.full), "gold": lambda: cmd_volume("GC", a.max_usd), "note": lambda: cmd_volume("ZN", a.max_usd), "patch": lambda: cmd_patch(a.max_usd), "equities": cmd_equities}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["check", "cost", "fetch", "gold", "note", "patch", "equities", "equities_fetch"]); ap.add_argument("--max-usd", type=float, default=20.0); ap.add_argument("--full", action="store_true"); a = ap.parse_args()
+    {"check": cmd_check, "cost": cmd_cost, "fetch": lambda: cmd_fetch(a.max_usd, a.full), "gold": lambda: cmd_volume("GC", a.max_usd), "note": lambda: cmd_volume("ZN", a.max_usd), "patch": lambda: cmd_patch(a.max_usd), "equities": cmd_equities, "equities_fetch": lambda: cmd_equities_fetch(a.max_usd)}[a.cmd]()
