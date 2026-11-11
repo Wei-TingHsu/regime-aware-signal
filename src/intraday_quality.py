@@ -174,7 +174,7 @@ def cmd_final():
         from src.intraday_fetch import needed_days
         need = set(pd.Timestamp(x) for x in needed_days() if pd.Timestamp(x) >= pd.Timestamp("2010-06-07")); F["needed"] = F["date"].isin(need)
     except Exception: pass
-    F.to_parquet(PROC / "intraday_quality_final.parquet"); ref = set(F[(F.symbol == "ES") & (F.n_session >= 300)]["date"])
+    F.to_parquet(PROC / "intraday_quality_final.parquet"); ref = set(F[F.n_session >= 300]["date"])      # a trading day = a day on which ANY of the four traded a full session (an expiry day empties one instrument, not the market)
     L = ["# Intraday data — the final table the tests use", "", "Main file or patch file per day (never both inside a day). Usable session = at least 90% of the 390 session minutes; trading halts are kept. 'Needed' = Fed statement days, document days and event days from June 2010.", "",
          "| instrument | trading days | usable session | on needed days: usable session | usable 08:30 window | usable 14:00 window | days from the patch file |", "|---|---|---|---|---|---|---|"]
     print(f"\n{'instr':5} {'days':>5} {'session ok':>10} | needed: {'session':>7} {'08:30':>6} {'14:00':>6} | patched")
