@@ -114,6 +114,9 @@ def _cells_md(cells):
 
 
 # ------------------------------------------------------------------------------------------------ E1 Fed statement days
+SCHEDULE = False      # --schedule: from March 2013 the statement time is fixed at 14:00 (the published schedule); earlier days are still dated by the note
+
+
 def fed_days(px) -> pd.DataFrame:
     dates = set(pd.to_datetime(pd.read_csv(PROC / "fomc_decisions.csv")["date"]).dt.normalize())
     fs = Path("data_provenance/docs/fomc_statement")
@@ -122,7 +125,7 @@ def fed_days(px) -> pd.DataFrame:
     for d in sorted(x for x in dates if x in px.d["ZN"]):
         mv = {c: abs(px.r("ZN", d, c, c + 5)) for c in FED_TIMES}; mv = {c: v for c, v in mv.items() if np.isfinite(v)}
         if not mv: rows.append(dict(date=d, t0=np.nan, zn5=np.nan)); continue
-        t0 = max(mv, key=mv.get); rows.append(dict(date=d, t0=t0, zn5=mv[t0]))
+        t0 = 840 if (SCHEDULE and d >= pd.Timestamp('2013-03-01') and 840 in mv) else max(mv, key=mv.get); rows.append(dict(date=d, t0=t0, zn5=mv[t0]))
     return pd.DataFrame(rows)
 
 
@@ -177,7 +180,8 @@ def cmd_fed():
             L += [f"### {lab} ({len(ss)} days), Nasdaq-100", ""] + _cells_md(cells) + ["", f"Best cell {best['mean']:+.1f} bp, t {best['t']:+.2f}; family p {pf:.3f}.", ""]; out.setdefault("score", {})[lab] = dict(n=len(ss), cells=cells, p_family=pf, best=best)
     except Exception as e: print(f"\n  (c) document scores unavailable ({type(e).__name__}: {e})")
     L += ["## Days left out", "", f"No 10-year-note price at any candidate release time: {', '.join(str(x.date()) for x in left['date']) or 'none'}. Inside each cell, a day is left out only when the entry or exit minute has no price within {TOL} minutes (a halt or a closed market); the cell's n shows how many days it used."]
-    (DOCS / "intraday_v3e_fed.md").write_text("\n".join(L) + "\n"); (DOCS / "intraday_v3e_fed.json").write_text(json.dumps(out, indent=1, default=float)); F.to_csv(PROC / "fed_release_times.csv", index=False); print("\n-> docs/intraday_v3e_fed.md, processed/fed_release_times.csv")
+    tag = "_sched" if SCHEDULE else ""; out["n_days"] = len(F); out["schedule"] = SCHEDULE
+    (DOCS / f"intraday_v3e_fed{tag}.md").write_text("\n".join(L) + "\n"); (DOCS / f"intraday_v3e_fed{tag}.json").write_text(json.dumps(out, indent=1, default=float)); F.to_csv(PROC / f"fed_release_times{tag}.csv", index=False); print(f"\n-> docs/intraday_v3e_fed{tag}.md")
 
 
 # ------------------------------------------------------------------------------------------------ E2 the 08:30 data releases
@@ -207,6 +211,22 @@ def cmd_releases():
     (DOCS / "intraday_v3e_releases.md").write_text("\n".join(L) + "\n"); (DOCS / "intraday_v3e_releases.json").write_text(json.dumps(out, indent=1, default=float)); print("-> docs/intraday_v3e_releases.md")
 
 
+def cmd_score(max_usd: float):
+    """Scores EVERY Fed statement in the corpus with the same reader, prompt and cache as the N1 v3 documents (n1-doc-v3), not only those that fell inside
+    an event window -- so part (c) of E1 can run on all statement days instead of 45."""
+    from src.news_events2 import _client, _ask
+    from src.news_events3 import SYS_DOC, PV3, READS3, CHARS, IN_RATE, OUT_RATE
+    fs = Path("data_provenance/docs/fomc_statement"); files = sorted(p for p in fs.glob("*.txt") if re.fullmatch(r"\d{8}", p.stem)); todo = [p for p in files if not (READS3 / f"fomc_{p.stem}__{PV3}.json").exists()]
+    print(f"statements: {len(files)} in the corpus, {len(todo)} not yet scored under {PV3}; cap US${max_usd:.2f}")
+    if not todo: return
+    client = _client(); tin = tout = 0
+    for k, p in enumerate(todo):
+        d, a, b = _ask(client, SYS_DOC, f"DOCUMENT (fomc, {p.stem[:4]}-{p.stem[4:6]}-{p.stem[6:]}):\n{p.read_text()[:CHARS]}", f"fomc_{p.stem}", READS3, PV3); tin += a; tout += b; usd = tin / 1e6 * IN_RATE + tout / 1e6 * OUT_RATE
+        if usd >= max_usd: print(f"  cap reached after {k + 1} reads (~US${usd:.2f})"); break
+    print(f"done: ~US${tin / 1e6 * IN_RATE + tout / 1e6 * OUT_RATE:.2f}")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["cache", "fed", "releases", "all"]); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
-    for c in (["cache", "fed", "releases"] if a.cmd == "all" else [a.cmd]): {"cache": cmd_cache, "fed": cmd_fed, "releases": cmd_releases}[c]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["cache", "fed", "releases", "score", "all"]); ap.add_argument("--schedule", action="store_true", help="fed: statement time fixed at 14:00 from March 2013"); ap.add_argument("--max-usd", type=float, default=3.0); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
+    SCHEDULE = a.schedule
+    for c in (["cache", "fed", "releases"] if a.cmd == "all" else [a.cmd]): {"cache": cmd_cache, "fed": cmd_fed, "releases": cmd_releases, "score": lambda: cmd_score(a.max_usd)}[c]()
