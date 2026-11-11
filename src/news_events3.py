@@ -10,6 +10,7 @@
   python -m src.news_events3 cost            # documents unread, tokens and US$ counted on disk
   python -m src.news_events3 read [--max-usd 12]   # one read per document, prompt n1-doc-v3, own cache; stops at the cap
   python -m src.news_events3 grid            # reversal(with contradicting doc) - reversal(without), in points: index x direction x cutoff x window x horizon x family
+  python -m src.news_events3 decay           # v3d: re-aligned on the document's release day: day-0 link, decay over days +1..+5, tradeable drift, placebo before release
   python -m src.news_events3 joint           # v3c: one joint size test per index x direction (mean rank correlation over windows x horizons), 2,000 shuffles
   python -m src.news_events3 size            # does the SIZE of the reversal line up with the contradiction score (rank correlation, permutation p)
 Nothing here writes the register.
@@ -283,7 +284,60 @@ def cmd_joint():
             print(f"  {ix} {'fall' if sg < 0 else 'rise'}: lowest {mu[0]:+.2%}, middle {mu[1]:+.2%}, highest {mu[2]:+.2%} (n {int(ok.sum())})"); L.append(f"| {ix} | {'fall' if sg < 0 else 'rise'} | {mu[0]:+.2%} | {mu[1]:+.2%} | {mu[2]:+.2%} | {int(ok.sum())} |")
     (DOCS / "news_events_v3_joint.md").write_text("\n".join(L) + "\n"); tab.to_json(DOCS / "news_events_v3_joint.json", orient="records", indent=1); print("-> docs/news_events_v3_joint.md")
 
+LAGS = [-2, -1, 0, 1, 2, 3, 4, 5]
+
+
+def cmd_decay():
+    """v3d (founder, 11 Nov): 'news has its strongest effect the day it is released, then weakens day by day'. Everything is re-aligned on the DOCUMENT's
+    release day (day 0), not the crash day. For each (event, document day) pair inside the 10-session window: score = -(event sign) x the day's mean equity
+    implication; return on day 0, on each of days +1..+5, and on the two days BEFORE the document (placebo: a document cannot move prices before it exists;
+    placebo days must still fall after the event day). All returns signed so that positive = prices going back against the event.
+    Three statistics per index x direction x family, each against 2,000 shuffles of the implication scores across document days (clusters of events that
+    share a document keep sharing it):  (a) day-0 rank correlation;  (b) decay = day-0 minus the mean of days +1..+5;  (c) drift = rank correlation of the
+    score with the CUMULATIVE return over days +1..+5 -- the only part someone who reads the document at the close of day 0 can still trade."""
+    ev, idx, r = _events(); rd = _reads(); rd["pos"] = idx.searchsorted(rd["date"]); rng = np.random.default_rng(0); rows = []; lagrows = []
+    L = ["# N1 v3d — is the effect on the document's release day, and does it fade?", "",
+         "Day 0 = the session the document was released. Returns are signed so that positive = back against the ≥ 4% event. rank corr = Spearman correlation between the contradiction score and that day's return across (event, document-day) pairs. p from 2,000 shuffles of the scores across document days, one-sided for day 0, decay and drift; two-sided for the placebo.", ""]
+    for fam, kinds in (("all", None), ("fed", FAMILY["fed"]), ("bls", FAMILY["bls"])):
+        sub = rd if kinds is None else rd[rd["kind"].isin(kinds)]; day_imp = sub.groupby("pos")["implication"].mean(); dpos = day_imp.index.to_numpy(); dimp = day_imp.to_numpy()
+        for ix in sorted(ev["index"].unique()):
+            for sg in (-1, 1):
+                g = ev[(ev["index"] == ix) & (ev["sign"] == sg)]
+                if g.empty: continue
+                col = g["column"].iloc[0]; x = r[col].to_numpy(); E, D = [], []
+                for p_ in g["pos"].to_numpy():
+                    m = np.where((dpos > p_) & (dpos <= p_ + MAXW))[0]; E.extend([p_] * len(m)); D.extend(m.tolist())
+                E, D = np.array(E, int), np.array(D, int)
+                if len(D) < 40: continue
+                R = np.full((len(D), len(LAGS)), np.nan)
+                for j, lag in enumerate(LAGS):
+                    day = dpos[D] + lag; ok = (day > E) & (day < len(x)); R[ok, j] = -sg * x[day[ok]]
+                cum = np.nansum(R[:, [LAGS.index(k) for k in (1, 2, 3, 4, 5)]], axis=1); cum[~np.isfinite(R[:, LAGS.index(5)])] = np.nan
+                def stats(imp):
+                    sc = -sg * imp[D]; rho = [(_spearman(sc[np.isfinite(R[:, j])], R[np.isfinite(R[:, j]), j]) if np.isfinite(R[:, j]).sum() >= 30 else np.nan) for j in range(len(LAGS))]
+                    r0 = rho[LAGS.index(0)]; later = np.nanmean([rho[LAGS.index(k)] for k in (1, 2, 3, 4, 5)]); plc = np.nanmean([rho[LAGS.index(k)] for k in (-2, -1)]); okc = np.isfinite(cum)
+                    return rho, r0, r0 - later, _spearman(sc[okc], cum[okc]), plc
+                rho, r0, dec, drift, plc = stats(dimp); nn = np.array([stats(rng.permutation(dimp))[1:] for _ in range(2000)], float)
+                p0, pd_, pdr, ppl = [float((nn[:, 0] >= r0 - 1e-12).mean()), float((nn[:, 1] >= dec - 1e-12).mean()), float((nn[:, 2] >= drift - 1e-12).mean()), float((np.abs(nn[:, 3]) >= abs(plc) - 1e-12).mean())]
+                sc = -sg * dimp[D]; j0 = LAGS.index(0); ok0 = np.isfinite(R[:, j0]); q = pd.qcut(pd.Series(sc[ok0]).rank(method="first"), 3, labels=False).to_numpy(); t0 = [float(R[ok0, j0][q == k].mean()) for k in range(3)]; okc = np.isfinite(cum); qc = pd.qcut(pd.Series(sc[okc]).rank(method="first"), 3, labels=False).to_numpy(); tc = [float(cum[okc][qc == k].mean()) for k in range(3)]
+                rows.append(dict(family=fam, index=ix, direction="fall" if sg < 0 else "rise", pairs=int(len(D)), doc_days=int(len(set(D.tolist()))), day0=r0, p_day0=p0, decay=dec, p_decay=pd_, drift_1to5=drift, p_drift=pdr, placebo=plc, p_placebo=ppl, day0_low=t0[0], day0_mid=t0[1], day0_high=t0[2], drift_low=tc[0], drift_mid=tc[1], drift_high=tc[2]))
+                lagrows.append(dict(family=fam, index=ix, direction="fall" if sg < 0 else "rise", **{f"lag{l:+d}": v for l, v in zip(LAGS, rho)}))
+    tab = pd.DataFrame(rows); lt = pd.DataFrame(lagrows)
+    if tab.empty: print("no group reaches 40 pairs"); return
+    ff = lambda v: f"{v:+.3f}"
+    print("rank correlation by day relative to the document (day 0 = release day; -2, -1 = placebo days before it):"); print(lt.to_string(index=False, float_format=ff))
+    print("\nthe three tests:"); print(tab[["family", "index", "direction", "pairs", "doc_days", "day0", "p_day0", "decay", "p_decay", "drift_1to5", "p_drift", "placebo", "p_placebo"]].to_string(index=False, float_format=ff))
+    print("\nwhat it is worth in returns, by third of the contradiction score (lowest / middle / highest):")
+    for _, r_ in tab.iterrows(): print(f"  {r_['family']:>3} {r_['index']} {r_['direction']}: day 0  {r_['day0_low']:+.2%} / {r_['day0_mid']:+.2%} / {r_['day0_high']:+.2%};   days +1..+5 cumulative  {r_['drift_low']:+.2%} / {r_['drift_mid']:+.2%} / {r_['drift_high']:+.2%}")
+    L += ["## Rank correlation by day", "", "| family | index | direction | " + " | ".join(f"day {l:+d}" for l in LAGS) + " |", "|---|---|---|" + "---|" * len(LAGS)]
+    for _, r_ in lt.iterrows(): L.append(f"| {r_['family']} | {r_['index']} | {r_['direction']} | " + " | ".join(f"{r_[f'lag{l:+d}']:+.3f}" for l in LAGS) + " |")
+    L += ["", "## The three tests", "", "| family | index | direction | pairs | document days | day 0 | p | decay (day 0 − mean of +1..+5) | p | drift (cumulative +1..+5) | p | placebo (days −2, −1) | p |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for _, r_ in tab.iterrows(): L.append(f"| {r_['family']} | {r_['index']} | {r_['direction']} | {r_['pairs']} | {r_['doc_days']} | {r_['day0']:+.3f} | {r_['p_day0']:.4f} | {r_['decay']:+.3f} | {r_['p_decay']:.4f} | {r_['drift_1to5']:+.3f} | {r_['p_drift']:.4f} | {r_['placebo']:+.3f} | {r_['p_placebo']:.4f} |")
+    L += ["", "## Returns by third of the score (lowest / middle / highest)", "", "| family | index | direction | day 0 | days +1..+5 cumulative |", "|---|---|---|---|---|"]
+    for _, r_ in tab.iterrows(): L.append(f"| {r_['family']} | {r_['index']} | {r_['direction']} | {r_['day0_low']:+.2%} / {r_['day0_mid']:+.2%} / {r_['day0_high']:+.2%} | {r_['drift_low']:+.2%} / {r_['drift_mid']:+.2%} / {r_['drift_high']:+.2%} |")
+    (DOCS / "news_events_v3_decay.md").write_text("\n".join(L) + "\n"); (DOCS / "news_events_v3_decay.json").write_text(json.dumps(dict(tests=rows, lags=lagrows), indent=1, default=float)); print("-> docs/news_events_v3_decay.md")
+
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["survey", "fetch", "cost", "read", "grid", "size", "joint"]); ap.add_argument("--max-usd", type=float, default=12.0); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
-    {"survey": cmd_survey, "fetch": cmd_fetch, "cost": cmd_cost, "read": lambda: cmd_read(a.max_usd), "grid": cmd_grid, "size": cmd_size, "joint": cmd_joint}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["survey", "fetch", "cost", "read", "grid", "size", "joint", "decay"]); ap.add_argument("--max-usd", type=float, default=12.0); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
+    {"survey": cmd_survey, "fetch": cmd_fetch, "cost": cmd_cost, "read": lambda: cmd_read(a.max_usd), "grid": cmd_grid, "size": cmd_size, "joint": cmd_joint, "decay": cmd_decay}[a.cmd]()

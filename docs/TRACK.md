@@ -852,3 +852,6 @@ v2 cause read: "no identifiable news" 49% (#123 right), but the finance section 
 | 7 | **S3 — conditional event trades**: the Fed-day reaction that differs by regime (p 0.005), traded only in the regime and volatility state where it is strong, entry after the announcement | turns the strongest surviving relationship into a rule with an entry and exit | whether to register S3 |
 | 8 | Carried: F2b lead time of the abnormal-day signal; Group C returns-only tests; R7 every event class by regime; regime × fast-state hierarchy | completes the regime audit | order |
 | 9 | Buyer conversation (TRACK §3.7 customer interviews) | tells which of 5–7 a buyer would pay for before weeks are spent on the wrong one | when, and with whom |
+
+### 3.47 N1 v3a/v3b on record; v3c registered (11 Nov 14:45)
+Grid on the reversal RATE: null in every testable group (#124 right). Size test: 4 of 32 cells below 0.05, all positive, and SOX rank correlations positive in 21 of 24 cells — the first non-flat N1 result (#125 counted wrong on its sign clause). Joint size test v3c registered before running (prior #128; bar 0.0125). Corpus covers 34% of event days, 74% from 2020 (#126 right); #127 counted wrong. Hindsight-leak caveat on LLM implication scores recorded. N1 spend ≈ US$18.9 of 25.
