@@ -173,6 +173,26 @@ def cmd_patch(max_usd: float):
     print("done")
 
 
+AI_CHAIN = ["AMD", "NVDA", "MU", "INTC", "AVGO", "SNDK", "ORCL", "TSM", "CRWD", "GOOG", "META", "AMZN", "MSFT", "SOXX", "SMH", "QQQ"]     # founder's list (12 Nov) + the two semiconductor ETFs and QQQ; SK Hynix trades in Korea and is handled separately
+
+
+def cmd_equities():
+    """Quote only -- nothing is downloaded. Which Databento US-equity datasets this account can see, what dates each covers, and the price of 1-minute bars
+    for the founder's AI-chain list: the whole history, and one sample month (the test needs only the days around earnings releases, so the real bill is a
+    small fraction of the whole-history figure)."""
+    c = _client(); ds = c.metadata.list_datasets(); cands = [d for d in ("XNAS.ITCH", "EQUS.MINI", "DBEQ.BASIC", "XNAS.BASIC", "EQUS.SUMMARY", "XNYS.PILLAR", "ARCX.PILLAR") if d in ds]
+    print("equity datasets visible to this account: " + (", ".join(cands) or "none of the expected ones") + f"   (all visible: {', '.join(ds)})")
+    for d in cands:
+        try:
+            r = c.metadata.get_dataset_range(dataset=d); s_, e_ = str(r.get("start", r.get("start_date", "")))[:10], str(r.get("end", r.get("end_date", "")))[:10]; sch = c.metadata.list_schemas(dataset=d)
+            if "ohlcv-1m" not in sch: print(f"  {d}: {s_} -> {e_}; no 1-minute bars (schemas: {sch})"); continue
+            full = float(c.metadata.get_cost(dataset=d, symbols=AI_CHAIN, stype_in="raw_symbol", schema="ohlcv-1m", start=s_, end=e_))
+            m_end = e_; m_start = str((pd.Timestamp(e_) - pd.Timedelta(days=30)).date()); month = float(c.metadata.get_cost(dataset=d, symbols=AI_CHAIN, stype_in="raw_symbol", schema="ohlcv-1m", start=m_start, end=m_end))
+            print(f"  {d}: {s_} -> {e_}; {len(AI_CHAIN)} symbols, 1-minute bars: whole history US${full:.2f}; the last 30 days US${month:.2f}")
+        except Exception as ex: print(f"  {d}: {type(ex).__name__}: {str(ex)[:160]}")
+    print("Nothing was downloaded.")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["check", "cost", "fetch", "gold", "note", "patch"]); ap.add_argument("--max-usd", type=float, default=20.0); ap.add_argument("--full", action="store_true"); a = ap.parse_args()
-    {"check": cmd_check, "cost": cmd_cost, "fetch": lambda: cmd_fetch(a.max_usd, a.full), "gold": lambda: cmd_volume("GC", a.max_usd), "note": lambda: cmd_volume("ZN", a.max_usd), "patch": lambda: cmd_patch(a.max_usd)}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["check", "cost", "fetch", "gold", "note", "patch", "equities"]); ap.add_argument("--max-usd", type=float, default=20.0); ap.add_argument("--full", action="store_true"); a = ap.parse_args()
+    {"check": cmd_check, "cost": cmd_cost, "fetch": lambda: cmd_fetch(a.max_usd, a.full), "gold": lambda: cmd_volume("GC", a.max_usd), "note": lambda: cmd_volume("ZN", a.max_usd), "patch": lambda: cmd_patch(a.max_usd), "equities": cmd_equities}[a.cmd]()

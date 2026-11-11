@@ -217,7 +217,7 @@ def cmd_releases():
         print(f"  replication on the {len(new)} NEW release days (cells fixed from the first run):")
         f5 = {d: px.r("ES", d, T0, T0 + 5) for d in new}; scn = {d: day.loc[d, "score"] for d in new}; dis = [d for d in new if np.isfinite(f5[d]) and np.sign(scn[d]) != 0 and np.sign(f5[d]) != np.sign(scn[d])]
         for lab, dd, a, k, x in (("first 5 minutes against the score → enter with the score at 5 min, hold 60", dis, "NQ", 5, 60), ("same", dis, "ES", 5, 60), ("enter with the score at 5 min, hold 30 (all days)", new, "NQ", 5, 30), ("same", new, "ES", 5, 30)):
-            sg = np.array([np.sign(scn[d]) for d in dd], float); r_ = np.array([px.r(a, d, T0 + k, T0 + k + x) for d in dd], float); st, pv = _perm_p(sg, r_, rng, two_sided=False); out["replication"][f"{lab} / {a}"] = dict(**st, p=pv)
+            sg = np.array([np.sign(scn[d]) for d in dd], float); r_ = np.array([px.r(a, d, T0 + k, T0 + k + x) for d in dd], float); st, pv = _perm_p(sg, r_, rng, two_sided=False); out["replication"][f"cell {len(out['replication']) + 1}: {lab} / {a}"] = dict(**st, p=pv)      # numbered: two rows share the label "same"
             print(f"    {lab[:60]:60} {NAME[a]:11} {st['mean']:+6.1f} bp, t {st['t']:+.2f}, hit {st['hit']:.0%}, n {st['n']}, p {pv:.3f}"); L.append(f"| {lab} | {NAME[a]} | {st['n']} | {st['mean']:+.1f} bp | {st['t']:+.2f} | {st['hit']:.0%} | {pv:.3f} |")
         L.append("")
     L += ["## Days left out", "", f"No S&P future price at 08:30 or 08:35 (overnight price-limit halts): {', '.join(str(x.date()) for x in left) or 'none'}."]; tag = "_all" if ALLDAYS else ""
