@@ -285,6 +285,7 @@ def cmd_joint():
     (DOCS / "news_events_v3_joint.md").write_text("\n".join(L) + "\n"); tab.to_json(DOCS / "news_events_v3_joint.json", orient="records", indent=1); print("-> docs/news_events_v3_joint.md")
 
 LAGS = [-2, -1, 0, 1, 2, 3, 4, 5]
+KEND = 5          # last day of the 'after day 0' span; `decayk` reruns the test with 1, 2 and 3 (founder's short-window rule, 11 Nov)
 
 
 def cmd_decay():
@@ -312,10 +313,10 @@ def cmd_decay():
                 R = np.full((len(D), len(LAGS)), np.nan)
                 for j, lag in enumerate(LAGS):
                     day = dpos[D] + lag; ok = (day > E) & (day < len(x)); R[ok, j] = -sg * x[day[ok]]
-                cum = np.nansum(R[:, [LAGS.index(k) for k in (1, 2, 3, 4, 5)]], axis=1); cum[~np.isfinite(R[:, LAGS.index(5)])] = np.nan
+                cum = np.nansum(R[:, [LAGS.index(k) for k in range(1, KEND + 1)]], axis=1); cum[~np.isfinite(R[:, LAGS.index(KEND)])] = np.nan
                 def stats(imp):
                     sc = -sg * imp[D]; rho = [(_spearman(sc[np.isfinite(R[:, j])], R[np.isfinite(R[:, j]), j]) if np.isfinite(R[:, j]).sum() >= 30 else np.nan) for j in range(len(LAGS))]
-                    r0 = rho[LAGS.index(0)]; later = np.nanmean([rho[LAGS.index(k)] for k in (1, 2, 3, 4, 5)]); plc = np.nanmean([rho[LAGS.index(k)] for k in (-2, -1)]); okc = np.isfinite(cum)
+                    r0 = rho[LAGS.index(0)]; later = np.nanmean([rho[LAGS.index(k)] for k in range(1, KEND + 1)]); plc = np.nanmean([rho[LAGS.index(k)] for k in (-2, -1)]); okc = np.isfinite(cum)
                     return rho, r0, r0 - later, _spearman(sc[okc], cum[okc]), plc
                 rho, r0, dec, drift, plc = stats(dimp); nn = np.array([stats(rng.permutation(dimp))[1:] for _ in range(2000)], float)
                 p0, pd_, pdr, ppl = [float((nn[:, 0] >= r0 - 1e-12).mean()), float((nn[:, 1] >= dec - 1e-12).mean()), float((nn[:, 2] >= drift - 1e-12).mean()), float((np.abs(nn[:, 3]) >= abs(plc) - 1e-12).mean())]
@@ -326,7 +327,7 @@ def cmd_decay():
     if tab.empty: print("no group reaches 40 pairs"); return
     ff = lambda v: f"{v:+.3f}"
     print("rank correlation by day relative to the document (day 0 = release day; -2, -1 = placebo days before it):"); print(lt.to_string(index=False, float_format=ff))
-    print("\nthe three tests:"); print(tab[["family", "index", "direction", "pairs", "doc_days", "day0", "p_day0", "decay", "p_decay", "drift_1to5", "p_drift", "placebo", "p_placebo"]].to_string(index=False, float_format=ff))
+    print(f"\nthe three tests (span after day 0: days +1..+{KEND}):"); print(tab[["family", "index", "direction", "pairs", "doc_days", "day0", "p_day0", "decay", "p_decay", "drift_1to5", "p_drift", "placebo", "p_placebo"]].to_string(index=False, float_format=ff))
     print("\nwhat it is worth in returns, by third of the contradiction score (lowest / middle / highest):")
     for _, r_ in tab.iterrows(): print(f"  {r_['family']:>3} {r_['index']} {r_['direction']}: day 0  {r_['day0_low']:+.2%} / {r_['day0_mid']:+.2%} / {r_['day0_high']:+.2%};   days +1..+5 cumulative  {r_['drift_low']:+.2%} / {r_['drift_mid']:+.2%} / {r_['drift_high']:+.2%}")
     L += ["## Rank correlation by day", "", "| family | index | direction | " + " | ".join(f"day {l:+d}" for l in LAGS) + " |", "|---|---|---|" + "---|" * len(LAGS)]
@@ -335,9 +336,19 @@ def cmd_decay():
     for _, r_ in tab.iterrows(): L.append(f"| {r_['family']} | {r_['index']} | {r_['direction']} | {r_['pairs']} | {r_['doc_days']} | {r_['day0']:+.3f} | {r_['p_day0']:.4f} | {r_['decay']:+.3f} | {r_['p_decay']:.4f} | {r_['drift_1to5']:+.3f} | {r_['p_drift']:.4f} | {r_['placebo']:+.3f} | {r_['p_placebo']:.4f} |")
     L += ["", "## Returns by third of the score (lowest / middle / highest)", "", "| family | index | direction | day 0 | days +1..+5 cumulative |", "|---|---|---|---|---|"]
     for _, r_ in tab.iterrows(): L.append(f"| {r_['family']} | {r_['index']} | {r_['direction']} | {r_['day0_low']:+.2%} / {r_['day0_mid']:+.2%} / {r_['day0_high']:+.2%} | {r_['drift_low']:+.2%} / {r_['drift_mid']:+.2%} / {r_['drift_high']:+.2%} |")
-    (DOCS / "news_events_v3_decay.md").write_text("\n".join(L) + "\n"); (DOCS / "news_events_v3_decay.json").write_text(json.dumps(dict(tests=rows, lags=lagrows), indent=1, default=float)); print("-> docs/news_events_v3_decay.md")
+    tag = "" if KEND == 5 else f"_k{KEND}"; L.insert(2, f"Span after day 0 in this file: days +1..+{KEND} (the columns headed +1..+5 below are over this span)."); L.insert(3, "")
+    (DOCS / f"news_events_v3_decay{tag}.md").write_text("\n".join(L) + "\n"); (DOCS / f"news_events_v3_decay{tag}.json").write_text(json.dumps(dict(span=KEND, tests=rows, lags=lagrows), indent=1, default=float)); print(f"-> docs/news_events_v3_decay{tag}.md")
+
+
+def cmd_decayk():
+    """The founder's short-window rule (11 Nov): news arrives every day, so the longer the span the more unrelated news is mixed in -- the same test with
+    the span after day 0 cut to +1, +1..+2 and +1..+3 (the +1..+5 run is `decay`)."""
+    global KEND
+    for k in (1, 2, 3):
+        KEND = k; print(f"\n================ span after day 0: days +1..+{k} ================"); cmd_decay()
+    KEND = 5
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["survey", "fetch", "cost", "read", "grid", "size", "joint", "decay"]); ap.add_argument("--max-usd", type=float, default=12.0); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
-    {"survey": cmd_survey, "fetch": cmd_fetch, "cost": cmd_cost, "read": lambda: cmd_read(a.max_usd), "grid": cmd_grid, "size": cmd_size, "joint": cmd_joint, "decay": cmd_decay}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["survey", "fetch", "cost", "read", "grid", "size", "joint", "decay", "decayk"]); ap.add_argument("--max-usd", type=float, default=12.0); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
+    {"survey": cmd_survey, "fetch": cmd_fetch, "cost": cmd_cost, "read": lambda: cmd_read(a.max_usd), "grid": cmd_grid, "size": cmd_size, "joint": cmd_joint, "decay": cmd_decay, "decayk": cmd_decayk}[a.cmd]()

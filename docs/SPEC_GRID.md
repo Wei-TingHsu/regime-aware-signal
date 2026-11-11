@@ -102,3 +102,7 @@ If you try N specifications and pick the best, its apparent p-value is meaningle
 p < 0.001 under pure noise. The fix is to ask "how good does the best of 1,000 *noise* cells look?" — run the identical 1,000-cell sweep on
 shuffled data many times, record the best statistic each time, and compare. That distribution is the only fair bar for a cell found by
 searching. It is why the main track pre-registers a single cell, and why this track can search freely without lying to itself.
+
+### Standing rule — short windows first
+
+**Short-window rule (founder, 11 Nov 2026; standing).** News arrives every day. The longer the span of sessions a test measures, the more unrelated news is mixed into it, which adds noise and can hide or fake an effect. So: (1) every test of a reaction to news is run at several span lengths, the shortest first (the release day itself, then +1, +1…+2, +1…+3, and only then 5, 10, 20); (2) no conclusion — pass or null — is written from one span length alone; (3) where a long span fails, the short spans are run before the idea is called null; (4) this applies back to earlier tests whose verdict rests on a single span of five sessions or more (horizon audit, TRACK §3.49). It sits beside the grid-by-default rule (28 Oct) and the sub-period rule; the search over span lengths is judged against the best the same search finds on shuffled data.

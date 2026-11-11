@@ -6335,3 +6335,7 @@ have. If it isn't, that's the most useful thing you could tell me." Then listen.
 
 **Avoid.** Opening with "most of it didn't work"; quoting Sharpe or hit-rates; counting routes as a
 selling point; claiming the routes fix gaps in published research.
+
+### Standing rule — short windows first
+
+**Short-window rule (founder, 11 Nov 2026; standing).** News arrives every day. The longer the span of sessions a test measures, the more unrelated news is mixed into it, which adds noise and can hide or fake an effect. So: (1) every test of a reaction to news is run at several span lengths, the shortest first (the release day itself, then +1, +1…+2, +1…+3, and only then 5, 10, 20); (2) no conclusion — pass or null — is written from one span length alone; (3) where a long span fails, the short spans are run before the idea is called null; (4) this applies back to earlier tests whose verdict rests on a single span of five sessions or more (horizon audit, TRACK §3.49). It sits beside the grid-by-default rule (28 Oct) and the sub-period rule; the search over span lengths is judged against the best the same search finds on shuffled data.

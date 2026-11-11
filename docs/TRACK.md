@@ -855,3 +855,16 @@ v2 cause read: "no identifiable news" 49% (#123 right), but the finance section 
 
 ### 3.47 N1 v3a/v3b on record; v3c registered (11 Nov 14:45)
 Grid on the reversal RATE: null in every testable group (#124 right). Size test: 4 of 32 cells below 0.05, all positive, and SOX rank correlations positive in 21 of 24 cells — the first non-flat N1 result (#125 counted wrong on its sign clause). Joint size test v3c registered before running (prior #128; bar 0.0125). Corpus covers 34% of event days, 74% from 2020 (#126 right); #127 counted wrong. Hindsight-leak caveat on LLM implication scores recorded. N1 spend ≈ US$18.9 of 25.
+
+### 3.49 N1 v3d result; the short-window rule; next steps (11 Nov 15:40)
+v3d: after ≥ 4% semiconductor falls the link between official documents and price is on the document's release day (all documents +0.169, p 0.004; Fed documents +0.382, p 0.001) and is gone on days +1…+5 (p 0.59); the two days before the document show nothing. Priors #129–#131 all right; #128 counted wrong. Not a daily-close trading signal: the move is finished by the close of the release day.
+
+**Short-window rule (founder, 11 Nov 2026; standing).** News arrives every day. The longer the span of sessions a test measures, the more unrelated news is mixed into it, which adds noise and can hide or fake an effect. So: (1) every test of a reaction to news is run at several span lengths, the shortest first (the release day itself, then +1, +1…+2, +1…+3, and only then 5, 10, 20); (2) no conclusion — pass or null — is written from one span length alone; (3) where a long span fails, the short spans are run before the idea is called null; (4) this applies back to earlier tests whose verdict rests on a single span of five sessions or more (horizon audit, TRACK §3.49). It sits beside the grid-by-default rule (28 Oct) and the sub-period rule; the search over span lengths is judged against the best the same search finds on shuffled data.
+
+| # | step | why it matters to the business | founder decides |
+|---|---|---|---|
+| 1 | `decayk` — v3d with spans +1, +1…+2, +1…+3 | the short-window rule applied to the test that prompted it | nothing — run |
+| 2 | **v3e intraday** — from the release minute to the close of the same day, for Fed statements and Chair / Vice Chair speeches after ≥ 4% semiconductor moves (needs intraday prices and the release time of each document) | the only place a tradeable signal can still be; also decides whether showing the score on the app at release is useful or only explanatory | whether to register; which intraday data source |
+| 3 | Reader consistency — read 30 documents a second time and compare the scores | the score is one model judgement per document; this shows how much it wobbles | yes / no (≈ US$0.50) |
+| 4 | **Horizon audit** — list every past test whose verdict rests on one span of five sessions or more; rerun each at 0, 1, 2, 3 | the short-window rule applied backwards | nothing — Claude prepares the list from RESULTS_COMPENDIUM |
+| 5 | Then the agenda of §3.46 from item 3 (N1-a forward log, QQQ, S1, S2, S3, carried items, buyer conversation), then back to the main track | — | — |
