@@ -10,6 +10,7 @@
   python -m src.news_events3 cost            # documents unread, tokens and US$ counted on disk
   python -m src.news_events3 read [--max-usd 12]   # one read per document, prompt n1-doc-v3, own cache; stops at the cap
   python -m src.news_events3 grid            # reversal(with contradicting doc) - reversal(without), in points: index x direction x cutoff x window x horizon x family
+  python -m src.news_events3 joint           # v3c: one joint size test per index x direction (mean rank correlation over windows x horizons), 2,000 shuffles
   python -m src.news_events3 size            # does the SIZE of the reversal line up with the contradiction score (rank correlation, permutation p)
 Nothing here writes the register.
 """
@@ -187,7 +188,7 @@ def _gap(y, sg, with_mask, grp):
 
 
 def cmd_grid():
-    ev, P = _panel(); idxs = sorted(set(P["index"])); sws = []; L = ["# N1 v3 — does a contradicting official document in the window raise the reversal rate?", "",
+    ev, P = _panel(); idxs = sorted(set(P["index"])); sws = []; untestable = []; L = ["# N1 v3 — does a contradicting official document in the window raise the reversal rate?", "",
         "Statistic: reversal rate of events WITH a contradicting document in the window minus the rate WITHOUT, in percentage points (each side n ≥ 20). 'Contradicting' = max over documents in the window of (−event sign × the document's equity implication) ≥ cutoff. Null: forward outcomes shuffled among the same index-and-direction events, best cell of the whole grid, 300 draws.", ""]
     def stat(dd, c):
         grp = (P["index"] == c["index"]) & (P["sign"] == c["sign"]); cv = P["C"][(c["family"], c["window"])]; g, na, nb = _gap(dd[c["h"]], c["sign"], np.nan_to_num(cv, nan=-9) >= c["cutoff"], grp); return g, na
@@ -201,7 +202,10 @@ def cmd_grid():
     for ix in idxs:
         for sg in (-1, 1):
             name = f"{ix} {'fall' if sg < 0 else 'rise'}"; cells = grid(index=[ix], sign=[sg], family=list(FAMILY), cutoff=CUTOFFS, window=WINDOWS, h=HORIZONS)
-            sw = run(cells, stat, P["F"], null_gen, n_null=300, seed=sum(map(ord, name)) % 1000, label=f"N1 v3 {name}: reversal gap, with − without", meta=dict(tag=name.replace(" ", "_"))); sws.append(sw)
+            try: sw = run(cells, stat, P["F"], null_gen, n_null=300, seed=sum(map(ord, name)) % 1000, label=f"N1 v3 {name}: reversal gap, with − without", meta=dict(tag=name.replace(" ", "_")))
+            except ValueError:
+                print(f"{name}: no cell reaches {MIN_SIDE} events on both sides -- not testable"); L += [f"## {name}", "", f"Not testable: no cell reaches {MIN_SIDE} events on both sides.", ""]; untestable.append(name); continue
+            sws.append(sw)
             valid = int(np.isfinite(sw.surface["stat"]).sum())
             if not valid: print(f"{name}: no cell reaches {MIN_SIDE} events on both sides"); L += [f"## {name}", "", "No cell reaches the minimum on both sides.", ""]; continue
             b = sw.best; grp = (P["index"] == ix) & (P["sign"] == sg); cv = np.nan_to_num(P["C"][(b["family"], b["window"])], nan=-9) >= b["cutoff"]; g, na, nb = _gap(P["F"][b["h"]], sg, cv, grp)
@@ -212,7 +216,7 @@ def cmd_grid():
             print(f"{name}: {valid} valid cells; best {b} gap {sw.best_stat:+.1f} pts (n with {na}, without {nb}) vs null q95 {sw.q95:+.1f}, p_family {sw.p_family:.3f}; survivors {len(sw.survivors)}; by era: {'; '.join(eras) or 'too few per era'}")
             L += [f"## {name}", "", f"{valid} valid cells. Best cell `{b}`: gap **{sw.best_stat:+.1f} points** (n with {na}, without {nb}); best-of-grid null 95th percentile {sw.q95:+.1f}; **p_family {sw.p_family:.3f}**; survivors {len(sw.survivors)}.", f"Best cell by era (gap, n with/without): {'; '.join(eras) or 'too few events per era'}.", ""]
             write_md(sw, DOCS / f"news_events_v3_grid_{name.replace(' ', '_')}.md", fmt="{:+.1f}")
-    (DOCS / "news_events_v3_grid.md").write_text("\n".join(L) + "\n"); (DOCS / "news_events_v3_grid.json").write_text(json.dumps([s.to_json() for s in sws], indent=1, default=float)); print("-> docs/news_events_v3_grid.md")
+    (DOCS / "news_events_v3_grid.md").write_text("\n".join(L) + "\n"); (DOCS / "news_events_v3_grid.json").write_text(json.dumps(dict(groups=[s.to_json() for s in sws], untestable=untestable), indent=1, default=float)); print("-> docs/news_events_v3_grid.md")
 
 
 def _spearman(a, b):
@@ -240,7 +244,46 @@ def cmd_size():
     L += ["", f"Cells with p < 0.05: {int((tab.p < 0.05).sum())} of {len(tab)}; about {len(tab) * 0.05:.1f} expected by chance."]
     (DOCS / "news_events_v3_size.md").write_text("\n".join(L) + "\n"); tab.to_json(DOCS / "news_events_v3_size.json", orient="records", indent=1); print("-> docs/news_events_v3_size.md")
 
+def cmd_joint():
+    """v3c (registered 11 Nov, after the size table showed 22 of 24 SOX cells with a positive rank correlation): ONE number per index x direction -- the mean
+    rank correlation between the contradiction score and the reversal return across windows 3, 5, 10 x horizons 1, 3, 5, 10 -- against 2,000 shuffles of the
+    outcomes (the same shuffle for every horizon, so the overlap between horizons is kept). Primary family: all documents. Bar: p < 0.0125 (four groups)."""
+    ev, P = _panel(); rng = np.random.default_rng(0); rows = []; hmax = max(HORIZONS); L = ["# N1 v3c — reversal SIZE vs contradiction score, one joint test per group", "",
+        "Statistic: mean rank correlation across windows 3, 5, 10 × horizons 1, 3, 5, 10 (cells with n ≥ 30). p: share of 2,000 shuffles of the outcomes whose mean is at least as large (one-sided: a contradicting document goes with a larger reversal). Primary = all documents; Fed-only and BLS-only are measured beside it. Bar p < 0.0125.", "",
+        "| family | index | direction | events | cells | mean rank corr | p | before 2020 | from 2020 |", "|---|---|---|---|---|---|---|---|---|"]
+    def mean_rho(Y, fam, grp, extra=None):
+        v = []
+        for w in (3, 5, 10):
+            cv = P["C"][(fam, w)]
+            for h in HORIZONS:
+                ok = grp & np.isfinite(cv) & np.isfinite(Y[h]) & (extra if extra is not None else True)
+                if ok.sum() >= 30: v.append(_spearman(cv[ok], Y[h][ok]))
+        v = [x for x in v if np.isfinite(x)]; return (float(np.mean(v)) if v else np.nan), len(v)
+    for fam in ("all", "fed", "bls"):
+        for ix in sorted(set(P["index"])):
+            for sg in (-1, 1):
+                grp = (P["index"] == ix) & (P["sign"] == sg) & np.isfinite(P["F"][hmax]); m = np.where(grp)[0]
+                Y = {h: -sg * P["F"][h] for h in HORIZONS}; obs, k = mean_rho(Y, fam, grp)
+                if not np.isfinite(obs) or k < 4: continue
+                null = []
+                for _ in range(2000):
+                    pm = rng.permutation(m); Y2 = {h: Y[h].copy() for h in HORIZONS}
+                    for h in HORIZONS: Y2[h][m] = Y[h][pm]
+                    null.append(mean_rho(Y2, fam, grp)[0])
+                pval = float((np.array(null) >= obs - 1e-12).mean()); early = P["date"] < np.datetime64("2020-01-01"); a, _ = mean_rho(Y, fam, grp, early); b, _ = mean_rho(Y, fam, grp, ~early)
+                rows.append(dict(family=fam, index=ix, direction="fall" if sg < 0 else "rise", events=int(grp.sum()), cells=k, mean_rank_corr=obs, p=pval, before_2020=a, from_2020=b))
+                L.append(f"| {fam} | {ix} | {'fall' if sg < 0 else 'rise'} | {int(grp.sum())} | {k} | {obs:+.3f} | {pval:.4f} | {a:+.3f} | {b:+.3f} |")
+    tab = pd.DataFrame(rows); print(tab.to_string(index=False, float_format=lambda v: f"{v:+.4f}"))
+    L += ["", "## What the score is worth in returns (all documents, window 5; reversal return over the next 5 sessions, by third of the contradiction score)", "", "| index | direction | lowest third | middle third | highest third | n |", "|---|---|---|---|---|---|"]; print("\nreversal return over 5 sessions by third of the contradiction score (window 5, all documents):")
+    for ix in sorted(set(P["index"])):
+        for sg in (-1, 1):
+            cv = P["C"][("all", 5)]; y = -sg * P["F"][5]; ok = (P["index"] == ix) & (P["sign"] == sg) & np.isfinite(cv) & np.isfinite(y)
+            if ok.sum() < 30: continue
+            q = pd.qcut(pd.Series(cv[ok]).rank(method="first"), 3, labels=False).to_numpy(); mu = [float(y[ok][q == j].mean()) for j in range(3)]
+            print(f"  {ix} {'fall' if sg < 0 else 'rise'}: lowest {mu[0]:+.2%}, middle {mu[1]:+.2%}, highest {mu[2]:+.2%} (n {int(ok.sum())})"); L.append(f"| {ix} | {'fall' if sg < 0 else 'rise'} | {mu[0]:+.2%} | {mu[1]:+.2%} | {mu[2]:+.2%} | {int(ok.sum())} |")
+    (DOCS / "news_events_v3_joint.md").write_text("\n".join(L) + "\n"); tab.to_json(DOCS / "news_events_v3_joint.json", orient="records", indent=1); print("-> docs/news_events_v3_joint.md")
+
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["survey", "fetch", "cost", "read", "grid", "size"]); ap.add_argument("--max-usd", type=float, default=12.0); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
-    {"survey": cmd_survey, "fetch": cmd_fetch, "cost": cmd_cost, "read": lambda: cmd_read(a.max_usd), "grid": cmd_grid, "size": cmd_size}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["survey", "fetch", "cost", "read", "grid", "size", "joint"]); ap.add_argument("--max-usd", type=float, default=12.0); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
+    {"survey": cmd_survey, "fetch": cmd_fetch, "cost": cmd_cost, "read": lambda: cmd_read(a.max_usd), "grid": cmd_grid, "size": cmd_size, "joint": cmd_joint}[a.cmd]()
