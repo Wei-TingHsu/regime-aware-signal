@@ -36,6 +36,7 @@ BLS_KINDS = {"empsit": "Employment Situation", "cpi": "Consumer Price Index", "p
 FAMILY = {"all": None, "bls": tuple(BLS_KINDS), "labour": ("empsit", "jolts"), "prices": ("cpi", "ppi", "ximpim"), "fed": ("fomc", "speech")}
 WINDOWS, CUTOFFS, HORIZONS, MAXW = [1, 2, 3, 5, 7, 10], [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7], [1, 3, 5, 10], 10
 ERAS = [("1994-01-01", "2003-12-31"), ("2004-01-01", "2008-12-31"), ("2009-01-01", "2014-12-31"), ("2015-01-01", "2019-12-31"), ("2020-01-01", "2021-12-31"), ("2022-01-01", "2026-12-31")]
+ALL = False          # --all: every archived BLS release from June 2010 (for the intraday 08:30 test on all release days), not only those inside an event window
 PV3 = "n1-doc-v3-2026-11-11"; READS3 = RELS / "reads3"; MIN_SIDE = 20; IN_RATE, OUT_RATE = 2.0, 10.0; CHARS = 15000
 UA = {"User-Agent": f"regime-aware-signal research ({os.environ.get('BLS_CONTACT', 'no contact set')})"}
 
@@ -93,8 +94,8 @@ def cmd_fetch():
     for kind in BLS_KINDS:
         b = _get(f"https://www.bls.gov/bls/news-release/{kind}.htm")
         dates = sorted(set(re.findall(rf"archives/{kind}_(\d{{8}})\.htm", b.decode("utf-8", "ignore")))) if b else []
-        hit = [s for s in dates if pd.Timestamp(year=int(s[4:]), month=int(s[:2]), day=int(s[2:4])).date() in want]
-        print(f"  {kind}: {len(dates)} archived releases listed, {len(hit)} inside an event window")
+        hit = [s for s in dates if (pd.Timestamp(year=int(s[4:]), month=int(s[:2]), day=int(s[2:4])) >= pd.Timestamp('2010-06-07') if ALL else pd.Timestamp(year=int(s[4:]), month=int(s[:2]), day=int(s[2:4])).date() in want)]
+        print(f"  {kind}: {len(dates)} archived releases listed, {len(hit)} " + ("from June 2010" if ALL else "inside an event window"))
         for s in hit:
             p = RELS / f"{kind}_{s}.txt"
             if p.exists(): continue
@@ -131,6 +132,7 @@ def _inventory() -> pd.DataFrame:
 
 
 def _in_window(inv: pd.DataFrame) -> pd.DataFrame:
+    if ALL and len(inv): return inv[(inv["kind"].isin(list(BLS_KINDS)) & (inv["date"] >= "2010-06-07")) | inv["date"].dt.date.isin(_window_dates(*_events()[:2]))].reset_index(drop=True)
     ev, idx, _ = _events(); want = _window_dates(ev, idx); return inv[inv["date"].dt.date.isin(want)].reset_index(drop=True) if len(inv) else inv
 
 
@@ -350,5 +352,5 @@ def cmd_decayk():
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["survey", "fetch", "cost", "read", "grid", "size", "joint", "decay", "decayk"]); ap.add_argument("--max-usd", type=float, default=12.0); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["survey", "fetch", "cost", "read", "grid", "size", "joint", "decay", "decayk"]); ap.add_argument("--max-usd", type=float, default=12.0); ap.add_argument("--all", action="store_true", help="fetch / cost / read: every archived BLS release from June 2010"); a = ap.parse_args(); DOCS.mkdir(exist_ok=True); ALL = a.all
     {"survey": cmd_survey, "fetch": cmd_fetch, "cost": cmd_cost, "read": lambda: cmd_read(a.max_usd), "grid": cmd_grid, "size": cmd_size, "joint": cmd_joint, "decay": cmd_decay, "decayk": cmd_decayk}[a.cmd]()

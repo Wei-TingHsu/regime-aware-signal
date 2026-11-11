@@ -163,6 +163,20 @@ Method and label rule: `docs/prereg_horizon_audit.md`; code `src/horizon_audit.p
 
 After the audit the lists read — **QUANT:** gold–equity correlation persistence (confirmed, a risk forecast); candidates: calm days rarer before regime changes; S&P the session after a ≥ 4% rise; the report's calls over the next 1–3 sessions (narrow, drift-sensitive); calm-type fast state → S&P next sessions (small, cost-sensitive). **SUBJECTIVE grade B:** gold on Fed statement days by the rate surprise (re-confirmed: 76 bp, 80% of days); Fed documents after ≥ 4% semiconductor falls. **Dropped from SUBJECTIVE:** gold on the day an S&P drawdown completes (no day-0 move found). **CONTEXT added:** gold rises with oil on oil-shock days; the dollar moves with the 2-year yield on Fed days. Everything else audited: NEITHER.
 
+### B8. Intraday results (12 Nov 2026) — CME futures, 1-minute bars, June 2010 → Nov 2026
+
+Registration and full tables: `docs/prereg_intraday_v3e.md`, `docs/intraday_v3e_*.md`; code `src/intraday_v3e.py`; data steps `src/intraday_fetch.py`, `src/intraday_quality.py` (TRACK §3.53–3.54).
+
+| id | claim tested | result | category |
+|---|---|---|---|
+| E1(a) | where in the day gold's Fed-day move sits | about a quarter before the release, a fifth in the first five minutes, over half after — the largest piece after 14:30 (press conference) | CONTEXT (timing) |
+| E1(b) | follow the 10-year note's first minutes into gold / S&P / Nasdaq / the note | nothing (gold family p 0.16–0.36) | NEITHER — gold on Fed days stays **SUBJECTIVE grade B** |
+| **E1(c)** | **enter the Nasdaq future 1 minute after a Fed statement in the direction of the statement's score, hold 60 minutes** | **+30.0 bp per trade, 74% of days, n 101, p 0.000; S&P future +27.4 bp; all checks pass (no link before the release, four periods, dose, without the ten largest days)** | **SUBJECTIVE grade A candidate** — rule-based, about six trades a year; live confirmation pending (FA-1) |
+| E1(d) | after the press conference, the move drifts on | gold's own move to 15:15 continues to the next morning (+40.3 bp, 67%, family p 0.010) — misses the bar; nothing for the note's direction or the score | NEITHER as registered; forward rule FA-2 |
+| E2 | 08:30 releases: first move continues / reverses; the score gives the direction | no family passes; near miss when the first five minutes went against the score (Nasdaq +14.6 bp over 60 minutes, p 0.017, n 91) | NEITHER; replication on new days registered (E2-all) |
+
+**Lists after the intraday tests.** QUANT — confirmed: gold–equity correlation persistence (risk forecast); candidates: calm days rarer before regime changes, S&P the session after a ≥ 4% rise, the report's calls over 1–3 sessions, calm-state tilt. SUBJECTIVE — **grade A candidate: Fed statement score → Nasdaq / S&P futures for the next hour**; grade B: gold on Fed statement days by the rate surprise, Fed documents after ≥ 4% semiconductor falls. Where a rule is intraday it is filed under SUBJECTIVE by the founder's two-category rule even when, like E1(c), it is fully rule-based and could be automated.
+
 ---
 
 ## Part C — rebuild cards

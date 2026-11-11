@@ -185,6 +185,9 @@ def cmd_fed():
 
 
 # ------------------------------------------------------------------------------------------------ E2 the 08:30 data releases
+ALLDAYS = False       # releases --all-days: every scored release day from June 2010, with the first run's exact cells re-tested on the NEW days only
+
+
 def cmd_releases():
     px = Px(); rng = np.random.default_rng(1); T0 = 510
     from src.news_events3 import _reads, BLS_KINDS
@@ -207,8 +210,18 @@ def cmd_releases():
             ptxt = f"; placebo days {plc['mean']:+.1f} bp, p vs placebo {plc['p']:.3f}" if plc else ""
             print(f"  {name:16} {NAME[a]:11} ({len(dd)} days) best: enter {best['entry']} min, hold {best['exit']}: {best['mean']:+.1f} bp, t {best['t']:+.2f}, hit {best['hit']:.0%}, n {best['n']}; family p {pf:.3f}{ptxt}")
             L += [f"### {NAME[a]} ({len(dd)} days)", ""] + _cells_md(cells) + ["", f"Best cell: enter {best['entry']} min, hold {best['exit']}: {best['mean']:+.1f} bp, t {best['t']:+.2f}, hit {best['hit']:.0%}; **family p {pf:.3f}**{ptxt}.", ""]
-    L += ["## Days left out", "", f"No S&P future price at 08:30 or 08:35 (overnight price-limit halts): {', '.join(str(x.date()) for x in left) or 'none'}."]
-    (DOCS / "intraday_v3e_releases.md").write_text("\n".join(L) + "\n"); (DOCS / "intraday_v3e_releases.json").write_text(json.dumps(out, indent=1, default=float)); print("-> docs/intraday_v3e_releases.md")
+    if ALLDAYS:
+        from src.news_events3 import _events, _window_dates
+        ev, ix, _ = _events(); old = set(pd.Timestamp(x) for x in _window_dates(ev, ix)); new = [d for d in days if d not in old]; seen = [d for d in days if d in old]
+        L += ["## Replication on NEW days only (release days that were not in the first run)", "", f"The first run used the {len(seen)} release days within ten sessions after a ≥ 4% move. The {len(new)} other release days were never looked at. The exact cells the first run pointed to are tested on them alone — no search over cells, one-sided p from 2,000 shuffles of the scores.", "", "| rule (fixed from the first run) | future | days | mean | t | hit | p |", "|---|---|---|---|---|---|---|"]; out["replication"] = {}
+        print(f"  replication on the {len(new)} NEW release days (cells fixed from the first run):")
+        f5 = {d: px.r("ES", d, T0, T0 + 5) for d in new}; scn = {d: day.loc[d, "score"] for d in new}; dis = [d for d in new if np.isfinite(f5[d]) and np.sign(scn[d]) != 0 and np.sign(f5[d]) != np.sign(scn[d])]
+        for lab, dd, a, k, x in (("first 5 minutes against the score → enter with the score at 5 min, hold 60", dis, "NQ", 5, 60), ("same", dis, "ES", 5, 60), ("enter with the score at 5 min, hold 30 (all days)", new, "NQ", 5, 30), ("same", new, "ES", 5, 30)):
+            sg = np.array([np.sign(scn[d]) for d in dd], float); r_ = np.array([px.r(a, d, T0 + k, T0 + k + x) for d in dd], float); st, pv = _perm_p(sg, r_, rng, two_sided=False); out["replication"][f"{lab} / {a}"] = dict(**st, p=pv)
+            print(f"    {lab[:60]:60} {NAME[a]:11} {st['mean']:+6.1f} bp, t {st['t']:+.2f}, hit {st['hit']:.0%}, n {st['n']}, p {pv:.3f}"); L.append(f"| {lab} | {NAME[a]} | {st['n']} | {st['mean']:+.1f} bp | {st['t']:+.2f} | {st['hit']:.0%} | {pv:.3f} |")
+        L.append("")
+    L += ["## Days left out", "", f"No S&P future price at 08:30 or 08:35 (overnight price-limit halts): {', '.join(str(x.date()) for x in left) or 'none'}."]; tag = "_all" if ALLDAYS else ""
+    (DOCS / f"intraday_v3e_releases{tag}.md").write_text("\n".join(L) + "\n"); (DOCS / f"intraday_v3e_releases{tag}.json").write_text(json.dumps(out, indent=1, default=float)); print(f"-> docs/intraday_v3e_releases{tag}.md")
 
 
 def cmd_score(max_usd: float):
@@ -310,6 +323,6 @@ def cmd_check():
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["cache", "fed", "releases", "score", "after", "check", "all"]); ap.add_argument("--schedule", action="store_true", help="fed: statement time fixed at 14:00 from March 2013"); ap.add_argument("--max-usd", type=float, default=3.0); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
-    SCHEDULE = a.schedule
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["cache", "fed", "releases", "score", "after", "check", "all"]); ap.add_argument("--schedule", action="store_true", help="fed: statement time fixed at 14:00 from March 2013"); ap.add_argument("--max-usd", type=float, default=3.0); ap.add_argument("--all-days", action="store_true", help="releases: every scored release day, with a replication on the new days"); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
+    SCHEDULE = a.schedule; ALLDAYS = a.all_days
     for c in (["cache", "fed", "releases"] if a.cmd == "all" else [a.cmd]): {"cache": cmd_cache, "fed": cmd_fed, "releases": cmd_releases, "score": lambda: cmd_score(a.max_usd), "after": cmd_after, "check": cmd_check}[c]()

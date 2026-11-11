@@ -928,3 +928,14 @@ Gold on Fed statement days stays SUBJECTIVE grade B: entering after the release 
 
 ### 3.57 v3e-2 result; v3e-3 registered (12 Nov 00:50)
 With the statement time fixed at 14:00, gold is still not a grade A candidate (enter 1 min, hold 15: +7.2 bp, t +2.36, hit 55%, n 132; family p 0.160) — #140 right. With every statement scored, entering the Nasdaq future one minute after the release in the direction of the statement's score: enter 1 min, hold 60: +23.0 bp, t +4.44, hit 57%, n 132; family p 0.000 — clears the secondary bar; **first SUBJECTIVE grade A candidate**; #141 counted wrong. Caveats recorded: hindsight in the reader (it was given the dates), one cell of 16, a Nasdaq future. Registered before running: (d) the founder's after-the-press-conference drift test; (e) checks on the score result, including the before-the-release placebo; forward rule FA-1 (live scoring at each coming statement). Founder's question answered in the record: "no grade A" never meant "no usable signal" — grades apply only to SUBJECTIVE findings (B = same-day link at daily closes, A = shown catchable with minute prices); QUANT is a separate list (one confirmed risk forecast, candidates on the forward log).
+
+### 3.58 v3e-3 result; E2-all registered; forward rules FA-1, FA-2 (12 Nov 01:10)
+Checks on the Fed-statement-score rule all pass (+30.0 bp over the hour after the release on the Nasdaq future, 74% of 101 days; no link before the release; similar in four periods; larger for stronger scores; survives dropping the ten largest days) — **SUBJECTIVE grade A candidate, confirmed on history, live confirmation pending** (#143 right). After the press conference: no family reaches its bar; gold's own move to 15:15 continuing overnight is the near miss (p 0.010) (#142 right). Founder's decision: fund the larger 08:30 test — registered as E2-all with a replication on new days only (prior #144). TEST_BOOK Part B updated (B8).
+
+| # | step | why it matters to the business | founder decides |
+|---|---|---|---|
+| 1 | E2-all: fetch and score every data release from June 2010, replicate on new days | settles whether "price comes round to the document" is real | nothing — funded |
+| 2 | FA-1 live scorer for the 9 Dec Fed statement (score at release, log the next hour) | the only way to remove the hindsight doubt from the grade A candidate | nothing — Claude builds it before 9 Dec |
+| 3 | Confirm E1(c) on semiconductors themselves (ETF minute data for statement days) | the product claim is about semiconductors, the test used the Nasdaq future | whether to buy one month of ETF minute data (≈ US$50) |
+| 4 | Costed rules for the two QUANT candidates from the horizon audit (QC-1, QC-2) | decides whether either is a signal | — |
+| 5 | Test book parts 2–6; reader consistency; §3.46 items; app redesign | — | — |
