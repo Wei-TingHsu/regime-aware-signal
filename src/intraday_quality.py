@@ -117,6 +117,34 @@ def cmd_audit():
     Q.to_parquet(PROC / "intraday_quality.parquet"); (DOCS / "intraday_quality.md").write_text("\n".join(L) + "\n"); print("\n-> processed/intraday_quality.parquet, docs/intraday_quality.md")
 
 
+def cmd_missing():
+    """Founder, 11 Nov: 'if the 0.2% that fails is the critical data because it is extreme, how do we avoid losing it?' This measures whether the days that
+    fail the rules are the EXTREME days, and why each one fails, so that nothing is dropped silently.
+    For the instruments the tests use (NQ, ES, GCv, ZNv): every needed day that fails the session rule, with a cause -- 'market-wide' (every instrument is
+    short that day: an early close before a holiday, or a trading halt -- both are real market states, not bad data), 'vendor' (Databento marks the day
+    degraded), or 'this instrument only'. Then: are failing days bigger-move days than passing days?"""
+    Q = pd.read_parquet(PROC / "intraday_quality.parquet"); use = [s_ for s_ in ("NQ", "ES", "GCv", "ZNv") if (Q.symbol == s_).any()]; Q = Q[Q.symbol.isin(use)]
+    r = pd.read_parquet(PROC / "asset_returns.parquet"); r.index = pd.to_datetime(r.index); spy = r["SPY"].abs() if "SPY" in r.columns else None
+    wide = Q.pivot_table(index="date", columns="symbol", values="n_session"); all_short = (wide < 0.9 * SESSION_MIN).sum(axis=1) >= max(len(use) - 1, 1)
+    L = ["# Intraday data — are the days that fail the quality rules the extreme days?", "", "Instruments the tests use: " + ", ".join(use) + ". 'Needed' = Fed statement days, official-document days and ≥ 4% event days from June 2010.", ""]; rows = []
+    for sym in use:
+        g = Q[(Q.symbol == sym)].set_index("date"); g["abs_spy"] = spy.reindex(g.index) if spy is not None else np.nan; g["market_wide"] = all_short.reindex(g.index).fillna(False)
+        g["cause"] = np.where(g.usable_session, "", np.where(g.market_wide, "market-wide (early close or halt)", np.where(g.vendor == "degraded", "vendor: degraded day", "this instrument only")))
+        f, ok = g[~g.usable_session], g[g.usable_session]; fn = f[f.needed]
+        thr = g["abs_spy"].quantile(0.95); big = g[g["abs_spy"] >= thr]
+        txt = (f"{sym}: {len(f)} of {len(g)} weekdays fail the session rule ({len(f) / len(g):.1%}); causes: " + ", ".join(f"{k} {v}" for k, v in f["cause"].value_counts().items()) +
+               f". Median S&P move on failing days {f['abs_spy'].median():.2%} vs {ok['abs_spy'].median():.2%} on passing days. Of the {len(big)} largest-move days (top 5% by S&P move), {int((~big.usable_session).sum())} fail ({(~big.usable_session).mean():.1%}). Needed days failing: {len(fn)}.")
+        print(txt); L.append("- " + txt)
+        for d, w in fn.iterrows(): rows.append(dict(instrument=sym, date=d.date(), session_minutes=int(w.n_session), longest_gap=int(w.max_gap_session), usable_0830=bool(w.usable_0830), usable_1400=bool(w.usable_1400), vendor=w.vendor, cause=w.cause, spy_move=w.abs_spy))
+    T = pd.DataFrame(rows)
+    if len(T):
+        T = T.sort_values(["date", "instrument"]); print("\nneeded days that fail the session rule:"); print(T.to_string(index=False, formatters=dict(spy_move=lambda v: f"{v:.2%}" if v == v else "n/a")))
+        L += ["", "## Needed days that fail the session rule", "", "| instrument | date | session minutes (of 390) | longest gap | 08:30 window ok | 14:00 window ok | vendor flag | cause | S&P move that day |", "|---|---|---|---|---|---|---|---|---|"]
+        for w in T.itertuples(): L.append(f"| {w.instrument} | {w.date} | {w.session_minutes} | {w.longest_gap} | {w.usable_0830} | {w.usable_1400} | {w.vendor} | {w.cause} | {w.spy_move:.2%} |" if w.spy_move == w.spy_move else f"| {w.instrument} | {w.date} | {w.session_minutes} | {w.longest_gap} | {w.usable_0830} | {w.usable_1400} | {w.vendor} | {w.cause} | n/a |")
+        T.to_csv(PROC / "intraday_failing_needed_days.csv", index=False)
+    (DOCS / "intraday_quality_missing.md").write_text("\n".join(L) + "\n"); print("-> docs/intraday_quality_missing.md, processed/intraday_failing_needed_days.csv")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["condition", "audit"]); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
-    {"condition": cmd_condition, "audit": cmd_audit}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["condition", "audit", "missing"]); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
+    {"condition": cmd_condition, "audit": cmd_audit, "missing": cmd_missing}[a.cmd]()
