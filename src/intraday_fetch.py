@@ -47,6 +47,10 @@ def needed_days() -> list:
     return sorted(days)
 
 
+def _next(d) -> str:
+    return str((pd.Timestamp(d) + pd.Timedelta(days=1)).date())
+
+
 def _range(c):
     r = c.metadata.get_dataset_range(dataset=DATASET); start = str(r.get("start", r.get("start_date", "")))[:10]; end = str(r.get("end", r.get("end_date", "")))[:10]; return start, end
 
@@ -72,7 +76,7 @@ def cmd_cost():
     except Exception as ex: print(f"cost request failed: {type(ex).__name__}: {ex}"); return
     sample = days[:: max(1, len(days) // 12)][:12]; per = []
     for d in sample:
-        try: per.append(_cost(c, d, pd.Timestamp(d) + pd.Timedelta(days=1)))
+        try: per.append(_cost(c, d, _next(d)))
         except Exception as ex: print(f"  {d}: {type(ex).__name__}: {str(ex)[:100]}")
     if per:
         est = sum(per) / len(per) * len(days); print(f"only the {len(days)} needed days: about US${est:.2f} (from {len(per)} sample days at US${sum(per) / len(per):.4f} each)")
@@ -94,11 +98,11 @@ def cmd_fetch(max_usd: float, full: bool):
                 out.parent.mkdir(parents=True, exist_ok=True); df = c.timeseries.get_range(dataset=DATASET, symbols=[sym], stype_in="continuous", schema=SCHEMA, start=a, end=b).to_df(); df.to_parquet(out); print(f"  {name} {y}: {len(df):,} bars")
         print(f"done; quoted price US${price:.2f}"); return
     days = [d for d in needed_days() if str(d) >= s and str(d) < e]; todo = [d for d in days if not all((OUT / n / f"{d}.parquet").exists() for n in SYMBOLS)]
-    sample = todo[:: max(1, len(todo) // 8)][:8]; est = (sum(_cost(c, d, pd.Timestamp(d) + pd.Timedelta(days=1)) for d in sample) / max(len(sample), 1)) * len(todo)
+    sample = todo[:: max(1, len(todo) // 8)][:8]; est = (sum(_cost(c, d, _next(d)) for d in sample) / max(len(sample), 1)) * len(todo)
     print(f"{len(todo)} of {len(days)} days to download; estimated US${est:.2f}; cap US${max_usd:.2f}")
     if est > max_usd: raise SystemExit("estimate above the cap -- nothing downloaded")
     for k, d in enumerate(todo):
-        df = c.timeseries.get_range(dataset=DATASET, symbols=list(SYMBOLS.values()), stype_in="continuous", schema=SCHEMA, start=str(d), end=str(pd.Timestamp(d) + pd.Timedelta(days=1))).to_df()
+        df = c.timeseries.get_range(dataset=DATASET, symbols=list(SYMBOLS.values()), stype_in="continuous", schema=SCHEMA, start=str(d), end=_next(d)).to_df()
         for name, sym in SYMBOLS.items():
             out = OUT / name / f"{d}.parquet"; out.parent.mkdir(parents=True, exist_ok=True); sub = df[df["symbol"] == sym] if "symbol" in df.columns else df
             if not out.exists(): sub.to_parquet(out)
