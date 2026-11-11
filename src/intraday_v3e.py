@@ -32,7 +32,7 @@ FED_TIMES = [750, 840, 855]                  # 12:30, 14:00, 14:15
 # ------------------------------------------------------------------------------------------------ data
 def _slim(d: pd.DataFrame) -> pd.DataFrame:
     if "ts_event" in d.columns: d = d.set_index("ts_event")
-    ny = pd.to_datetime(d.index, utc=True).tz_convert("America/New_York"); m = ny.hour * 60 + ny.minute; keep = (m >= 480) & (m <= 975)
+    ny = pd.to_datetime(d.index, utc=True).tz_convert("America/New_York"); m = ny.hour * 60 + ny.minute; keep = (m >= 480) & (m <= 1019)          # 08:00 -> 16:59 New York (the futures' day ends at 17:00)
     return pd.DataFrame(dict(date=ny.normalize().tz_localize(None)[keep], minute=np.asarray(m)[keep].astype(np.int16), close=d["close"].to_numpy(float)[keep]))
 
 
@@ -226,7 +226,90 @@ def cmd_score(max_usd: float):
     print(f"done: ~US${tin / 1e6 * IN_RATE + tout / 1e6 * OUT_RATE:.2f}")
 
 
+# ------------------------------------------------------------------------------------------------ E1(d) after the press conference; hindsight checks
+def _fed_set(px):
+    global SCHEDULE
+    SCHEDULE = True; F = fed_days(px).dropna(subset=["t0"]); F["t0"] = F["t0"].astype(int); return list(F["date"]), list(F["t0"])
+
+
+def _perm_p(sig, ret, rng, two_sided=True):
+    ok = np.isfinite(sig) & np.isfinite(ret) & (sig != 0); sig, ret = sig[ok], ret[ok]; st = _stat(sig * ret)
+    if not np.isfinite(st["t"]): return st, np.nan
+    nt = np.array([_stat(sig[rng.permutation(len(sig))] * ret)["t"] for _ in range(N_NULL)]); p = float((np.abs(nt) >= abs(st["t"]) - 1e-12).mean()) if two_sided else float((nt >= st["t"] - 1e-12).mean()); return st, p
+
+
+def cmd_after():
+    """Founder, 12 Nov: the first-minutes rule ignores the press conference. Wait until the statement AND the press conference are over, then ask whether the
+    move they produced drifts on -- over the rest of the afternoon, into the futures' last hour, to the next morning, to the next close."""
+    px = Px(); rng = np.random.default_rng(2); days, t0s = _fed_set(px); nxt = {d: px.days[i + 1] for i, d in enumerate(px.days[:-1])}
+    ENT = [(915, "15:15"), (930, "15:30"), (945, "15:45")]; EX = [("16:00 close", lambda d: (d, CLOSE)), ("16:55", lambda d: (d, 1015)), ("next day 09:30", lambda d: (nxt.get(d), OPEN)), ("next day 16:00", lambda d: (nxt.get(d), CLOSE))]
+    def ret(a, d, m_in, ex):
+        d2, m2 = ex(d)
+        if d2 is None: return np.nan
+        pa, pb = px.p(a, d, m_in), px.p(a, d2, m2, 15); return np.log(pb / pa) * 1e4 if (np.isfinite(pa) and np.isfinite(pb)) else np.nan
+    try:
+        from src.news_events3 import _reads
+        rd = _reads(); score = rd[rd["kind"] == "fomc"].set_index("date")["implication"]
+    except Exception: score = pd.Series(dtype=float)
+    rules = [("note", "the direction the 10-year note moved from the release to the entry time (note up -> buy)", lambda a, d, t0, m: px.r("ZN", d, t0, m)),
+             ("own", "the direction the asset itself moved from the release to the entry time (does its own move continue?)", lambda a, d, t0, m: px.r(a, d, t0, m)),
+             ("score", "the direction of the statement's score (what it means for stocks)", lambda a, d, t0, m: score.get(d, np.nan))]
+    L = ["# E1(d) — after the statement AND the press conference: does the move drift on?", "", f"{len(days)} statement days. Entry at 15:15, 15:30 or 15:45 New York (the press conference starts at 14:30 and usually ends by about 15:20); exit at the 16:00 close, at 16:55 (the futures' last hour), the next morning at 09:30, or the next day's 16:00 close. Mean per trade in basis points before a 2 bp cost. Family p: best of the 12 cells against the best with the directions shuffled across days.", ""]; out = {}
+    for name, desc, fn in rules:
+        L += [f"## Direction = {desc}", "", "| asset | best cell | mean | t | hit | n | family p |", "|---|---|---|---|---|---|---|"]; out[name] = {}
+        for a in ("GC", "ES", "NQ", "ZN"):
+            if name == "score" and a in ("GC", "ZN"): continue
+            cells = []; SG = {}; RT = {}
+            for m, ml in ENT:
+                SG[m] = np.array([np.sign(fn(a, d, t0, m)) if (t0 < m and np.isfinite(fn(a, d, t0, m))) else np.nan for d, t0 in zip(days, t0s)], float)
+                for xl, ex in EX:
+                    RT[(m, xl)] = np.array([ret(a, d, m, ex) for d in days], float); st = _stat(SG[m] * RT[(m, xl)]); cells.append(dict(entry=ml, exit=xl, m=m, **st))
+            ok = [c for c in cells if np.isfinite(c["t"])]
+            if not ok: continue
+            best = max(ok, key=lambda c: abs(c["t"])); nmax = np.zeros(N_NULL)
+            for i in range(N_NULL):
+                perm = rng.permutation(len(days)); nmax[i] = max(abs(t) for t in (_stat(SG[c["m"]][perm] * RT[(c["m"], c["exit"])])["t"] for c in ok) if np.isfinite(t))
+            pf = float((nmax >= abs(best["t"]) - 1e-12).mean()); out[name][a] = dict(cells=[{k: v for k, v in c.items() if k != "m"} for c in cells], best={k: v for k, v in best.items() if k != "m"}, p_family=pf)
+            print(f"  after / {name:5} / {NAME[a]:13} best: enter {best['entry']}, exit {best['exit']}: {best['mean']:+.1f} bp, t {best['t']:+.2f}, hit {best['hit']:.0%}, n {best['n']}; family p {pf:.3f}")
+            L.append(f"| {NAME[a]} | enter {best['entry']}, exit {best['exit']} | {best['mean']:+.1f} bp | {best['t']:+.2f} | {best['hit']:.0%} | {best['n']} | **{pf:.3f}** |")
+        L.append("")
+    (DOCS / "intraday_v3e_after.md").write_text("\n".join(L) + "\n"); (DOCS / "intraday_v3e_after.json").write_text(json.dumps(out, indent=1, default=float)); print("-> docs/intraday_v3e_after.md")
+
+
+def cmd_check():
+    """Is the 'statement score -> Nasdaq for the next hour' result real, or is the reader remembering what happened? Checks that do not depend on trust:
+    (1) the score against the Nasdaq's move BEFORE the release that day -- a document cannot move prices before it exists, so a link there means the score
+    carries the day's known outcome; (2) the first minute; (3) by period; (4) without the ten largest days; (5) by how strong the score is; (6) days the
+    score says 'good' vs 'bad' for stocks, and what the Nasdaq does on statement days regardless of any score."""
+    px = Px(); rng = np.random.default_rng(3); days, t0s = _fed_set(px); idx = {d: i for i, d in enumerate(px.days)}
+    from src.news_events3 import _reads
+    rd = _reads(); score = rd[rd["kind"] == "fomc"].set_index("date")["implication"]; keep = [(d, t0) for d, t0 in zip(days, t0s) if d in score.index]; days, t0s = [k[0] for k in keep], [k[1] for k in keep]
+    sc = np.array([score[d] for d in days], float); sg = np.sign(sc); L = ["# E1(c) checks — statement score → Nasdaq future, entering 1 minute after the release, holding 60 minutes", "", f"{len(days)} scored statement days; score positive on {int((sg > 0).sum())}, negative on {int((sg < 0).sum())}, zero on {int((sg == 0).sum())}.", ""]; out = {}
+    def R(a, m1, m2, prev=False):
+        v = []
+        for d, t0 in zip(days, t0s):
+            if prev:
+                i = idx[d]; pa = px.p(a, px.days[i - 1], CLOSE, 15) if i > 0 else np.nan; pb = px.p(a, d, t0); v.append(np.log(pb / pa) * 1e4 if (np.isfinite(pa) and np.isfinite(pb)) else np.nan)
+            else: v.append(px.r(a, d, m1(t0), m2(t0)))
+        return np.array(v, float)
+    main = R("NQ", lambda t: t + 1, lambda t: t + 61); rows = []
+    for lab, a, r_ in (("MAIN: 1 → 61 minutes after the release, Nasdaq", "NQ", main), ("same, S&P 500", "ES", R("ES", lambda t: t + 1, lambda t: t + 61)),
+                       ("CHECK before the release: prior close → release, Nasdaq", "NQ", R("NQ", None, None, prev=True)), ("CHECK before the release: 09:30 → release, Nasdaq", "NQ", R("NQ", lambda t: OPEN, lambda t: t)),
+                       ("first minute: release → +1 minute, Nasdaq", "NQ", R("NQ", lambda t: t, lambda t: t + 1)), ("61 minutes after → 16:00 close, Nasdaq", "NQ", R("NQ", lambda t: t + 61, lambda t: CLOSE))):
+        st, p = _perm_p(sg, r_, rng); rows.append((lab, st, p)); out[lab] = dict(**st, p=p); print(f"  {lab:58} {st['mean']:+7.1f} bp, t {st['t']:+.2f}, hit {st['hit']:.0%}, n {st['n']}, p {p:.3f}")
+    L += ["| span (signed by the score) | mean | t | hit | n | p (scores shuffled) |", "|---|---|---|---|---|---|"] + [f"| {lab} | {st['mean']:+.1f} bp | {st['t']:+.2f} | {st['hit']:.0%} | {st['n']} | {p:.3f} |" for lab, st, p in rows]
+    yr = np.array([d.year for d in days]); L += ["", "## The main cell by period, by score strength, and without the largest days", "", "| cut | mean | t | hit | n |", "|---|---|---|---|---|"]; print("  the main cell, cut:")
+    cuts = [(f"{a}–{b}", (yr >= a) & (yr <= b)) for a, b in ((2011, 2015), (2016, 2019), (2020, 2022), (2023, 2026))] + [("score strength under 0.3", np.abs(sc) < 0.3), ("score strength 0.3 or more", np.abs(sc) >= 0.3)]
+    order = np.argsort(-np.abs(np.nan_to_num(main))); drop = np.ones(len(days), bool); drop[order[:10]] = False; cuts.append(("without the ten largest Nasdaq moves", drop))
+    for lab, m in cuts:
+        st = _stat((sg * main)[m & (sg != 0)]); out[lab] = st; L.append(f"| {lab} | {st['mean']:+.1f} bp | {st['t']:+.2f} | {st['hit']:.0%} | {st['n']} |" if np.isfinite(st["t"]) else f"| {lab} | n {st['n']} — too few | | | |"); print(f"    {lab:40} " + (f"{st['mean']:+7.1f} bp, t {st['t']:+.2f}, hit {st['hit']:.0%}, n {st['n']}" if np.isfinite(st["t"]) else f"n {st['n']} -- too few"))
+    un = _stat(main); pos = _stat(main[sg > 0]); neg = _stat(main[sg < 0]); out["unsigned"] = dict(all=un, score_positive=pos, score_negative=neg)
+    txt = f"Nasdaq over the same hour with NO score: all statement days {un['mean']:+.1f} bp (t {un['t']:+.2f}, n {un['n']}); days scored good for stocks {pos['mean']:+.1f} bp (n {pos['n']}); days scored bad for stocks {neg['mean']:+.1f} bp (n {neg['n']})."
+    print("  " + txt); L += ["", txt, "", "Reading: if the two 'before the release' rows show a link, the score carries the day's outcome and the main result cannot be trusted; if they show none, the result is not explained that way — but only statements scored live, before the market reacts, can settle it (forward log)."]
+    (DOCS / "intraday_v3e_check.md").write_text("\n".join(L) + "\n"); (DOCS / "intraday_v3e_check.json").write_text(json.dumps(out, indent=1, default=float)); print("-> docs/intraday_v3e_check.md")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["cache", "fed", "releases", "score", "all"]); ap.add_argument("--schedule", action="store_true", help="fed: statement time fixed at 14:00 from March 2013"); ap.add_argument("--max-usd", type=float, default=3.0); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["cache", "fed", "releases", "score", "after", "check", "all"]); ap.add_argument("--schedule", action="store_true", help="fed: statement time fixed at 14:00 from March 2013"); ap.add_argument("--max-usd", type=float, default=3.0); a = ap.parse_args(); DOCS.mkdir(exist_ok=True)
     SCHEDULE = a.schedule
-    for c in (["cache", "fed", "releases"] if a.cmd == "all" else [a.cmd]): {"cache": cmd_cache, "fed": cmd_fed, "releases": cmd_releases, "score": lambda: cmd_score(a.max_usd)}[c]()
+    for c in (["cache", "fed", "releases"] if a.cmd == "all" else [a.cmd]): {"cache": cmd_cache, "fed": cmd_fed, "releases": cmd_releases, "score": lambda: cmd_score(a.max_usd), "after": cmd_after, "check": cmd_check}[c]()
