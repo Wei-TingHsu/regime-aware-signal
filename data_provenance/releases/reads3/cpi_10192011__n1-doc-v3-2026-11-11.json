@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Energy (gasoline, electricity, natural gas)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI deceleration (apparel, used cars, recreation declines)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Shelter deceleration",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Medical care, airline fares, tobacco increases",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0.1,
+ "implication_rates": -0.2,
+ "evidence": "The index for all items less food and energy increased 0.1 percent in September, its smallest increase since March.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:35"
+}

@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Final demand goods (eggs, food, energy)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Trade services margins",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Core (less foods, energy, trade)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Transportation and warehousing services",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Unprocessed intermediate goods (energy, food)",
+   "contribution": "moderate",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.55,
+ "implication_equities": 0.4,
+ "implication_rates": -0.4,
+ "evidence": "The Producer Price Index for Final Demand decreased 0.1 percent in February, seasonally adjusted",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:53"
+}

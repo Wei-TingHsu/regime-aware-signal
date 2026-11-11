@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Import fuel prices",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Nonfuel import prices",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Export nonagricultural industrial supplies",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Export consumer goods",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Agricultural exports",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0,
+ "implication_rates": 1,
+ "evidence": "The price index for overall imports has trended up since March 2016 and rose 3.7 percent over the past year, the largest 12-month rise since the index increased 5.1 percent in February 2012.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 02:00"
+}

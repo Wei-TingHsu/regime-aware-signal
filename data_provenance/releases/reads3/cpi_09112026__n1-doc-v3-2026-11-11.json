@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Gasoline/Energy",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Core services (shelter, airfares, communication)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core goods (used cars, new vehicles)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Medical care & motor vehicle insurance",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Food",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.55,
+ "implication_equities": -1,
+ "implication_rates": 1,
+ "evidence": "The Consumer Price Index for All Urban Consumers (CPI-U) increased 0.4 percent on a seasonally adjusted basis in August after rising 0.1 percent in July",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:34"
+}

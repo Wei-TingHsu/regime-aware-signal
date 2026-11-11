@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Energy prices (gasoline, diesel)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Final demand goods",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Unprocessed goods (crude petroleum)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Final demand services",
+   "contribution": "small",
+   "direction": "0"
+  },
+  {
+   "component": "Core (less foods/energy/trade)",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.35,
+ "implication_equities": 0,
+ "implication_rates": 0,
+ "evidence": "Eighty percent of the broad-based advance is attributable to prices for final demand energy, which increased 5.9 percent",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:55"
+}

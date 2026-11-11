@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Shelter",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI (12-month, largest since 2008)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Energy",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Used cars and trucks / airline fares",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Medical care / apparel",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.55,
+ "implication_equities": -0.2,
+ "implication_rates": 0.3,
+ "evidence": "The index for all items less food and energy rose 2.4 percent for the 12 months ending July; this was the largest 12-month increase since the period ending September 2008.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:33"
+}

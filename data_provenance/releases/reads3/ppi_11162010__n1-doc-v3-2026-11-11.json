@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Finished energy (gasoline)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Finished core (light trucks/cars)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Intermediate goods (broad-based)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Crude goods (energy, food, metals)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Finished foods",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": 0,
+ "implication_rates": 0,
+ "evidence": "the increase in the index for finished goods can be traced to prices for finished energy goods, which moved up 3.7 percent... By contrast, the indexes for both finished goods less foods and energy and for finished consumer foods decreased",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:59"
+}

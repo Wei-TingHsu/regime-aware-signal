@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Gasoline/Energy",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI (ex food & energy)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Food",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "New vehicles/used cars",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.35,
+ "implication_equities": 0.4,
+ "implication_rates": -0.3,
+ "evidence": "the June seasonally adjusted increase in the all items index was primarily driven by the gasoline index... the index for all items less food and energy also decelerated in June, increasing 0.1 percent after a 0.3 percent increase in May",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:33"
+}

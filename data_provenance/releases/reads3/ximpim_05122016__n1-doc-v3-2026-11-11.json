@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Fuel imports",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Nonagricultural export prices (industrial supplies, capital goods)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Agricultural export prices (soybeans)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Nonfuel import prices",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Consumer/capital goods import prices",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": 0.3,
+ "implication_rates": 0.4,
+ "evidence": "U.S. export prices increased 0.5 percent in April, after recording no change the previous month. Both agricultural and nonagricultural export prices contributed to the April advance.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 02:02"
+}

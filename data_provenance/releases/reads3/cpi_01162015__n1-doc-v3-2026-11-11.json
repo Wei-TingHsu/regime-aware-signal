@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy/Gasoline",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Core CPI (ex food & energy)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Food",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Apparel/Used cars/Airline fares",
+   "contribution": "moderate",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": 0.3,
+ "implication_rates": -1,
+ "evidence": "The all items index increased 0.8 percent over the last 12 months. This is notably lower than the 1.3 percent change for the 12 months ending November.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:29"
+}

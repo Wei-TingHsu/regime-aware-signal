@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline, diesel, jet fuel)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food prices",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core services (deposit services, trade services)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core goods ex food/energy",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Transportation/warehousing services",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": -0.4,
+ "implication_rates": 1,
+ "evidence": "Final demand prices rose 0.7 percent in August and 0.6 percent in July... the index for final demand advanced 2.2 percent for the 12 months ended in September, the largest increase since moving up 2.3 percent for the 12 months ended in April",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:57"
+}

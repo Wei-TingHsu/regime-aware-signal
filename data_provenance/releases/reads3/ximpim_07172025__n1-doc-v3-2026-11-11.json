@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Nonfuel import prices (industrial supplies, consumer goods)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Fuel import prices",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Export prices (agricultural and nonagricultural)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "China import prices",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Air passenger fares/freight (import & export)",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": -0.2,
+ "implication_rates": 1,
+ "evidence": "Prices for U.S. exports increased 0.5 percent in June... the largest over-the-year rise since the index advanced 2.8 percent for the year ended January 2025",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 02:04"
+}

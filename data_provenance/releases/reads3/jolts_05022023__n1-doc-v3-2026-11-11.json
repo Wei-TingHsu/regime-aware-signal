@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Job openings",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Layoffs and discharges",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Quits",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Hires",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Total separations",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0,
+ "implication_rates": -1,
+ "evidence": "the number of job openings decreased to 9.6 million (-384,000) and was 1.6 million lower than in December",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:47"
+}

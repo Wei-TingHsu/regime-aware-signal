@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Shelter",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Used cars and trucks",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Gasoline",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Airline fares",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.55,
+ "implication_equities": 0.3,
+ "implication_rates": -0.3,
+ "evidence": "the all items index increased 4.9 percent for the 12 months ending April; this was the smallest 12-month increase since the period ending April 2021",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:31"
+}

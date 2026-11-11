@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Energy/gasoline",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Used cars/apparel",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0.3,
+ "implication_rates": -0.2,
+ "evidence": "Gasoline and other energy indexes declined, offsetting increases in shelter and an array of other indexes to leave the seasonally adjusted all items index unchanged",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:35"
+}

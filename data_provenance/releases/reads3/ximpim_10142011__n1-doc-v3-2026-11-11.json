@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Fuel import prices (12-month)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Nonfuel import prices",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Agricultural export prices",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Nonagricultural industrial supplies/materials exports",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Consumer goods import prices",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.7,
+ "implication_equities": -0.2,
+ "implication_rates": 1,
+ "evidence": "Import prices advanced 0.3 percent in September after falling 0.2 percent the previous month.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 02:05"
+}

@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline, diesel)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Final demand goods",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Core (ex food/energy/trade)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Foods",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Trade services margins",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.4,
+ "implication_equities": -1,
+ "implication_rates": 1,
+ "evidence": "The August advance is the largest increase in final demand prices since moving up 0.9 percent in June 2022.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:57"
+}

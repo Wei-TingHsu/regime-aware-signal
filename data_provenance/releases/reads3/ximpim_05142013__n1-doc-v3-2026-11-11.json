@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Fuel/petroleum import prices",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Nonfuel import prices (industrial supplies, capital goods, autos)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Agricultural export prices (corn, soybeans)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Nonagricultural export prices",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Consumer goods import prices",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.75,
+ "implication_equities": -0.2,
+ "implication_rates": -0.6,
+ "evidence": "U.S. import prices fell 0.5 percent in April... following a 0.2 percent decrease in March... Prices for U.S. exports decreased 0.7 percent in April after a 0.5 percent decline in March",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 02:03"
+}

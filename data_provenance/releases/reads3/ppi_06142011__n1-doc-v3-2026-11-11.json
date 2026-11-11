@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Finished energy goods",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Finished consumer foods",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Crude materials (energy, foods, core)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Intermediate core/energy",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Finished core (ex food/energy)",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": 0.3,
+ "implication_rates": -0.2,
+ "evidence": "The Producer Price Index for finished goods rose 0.2 percent in May, seasonally adjusted...This advance followed increases of 0.8 percent in April and 0.7 percent in March.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:55"
+}

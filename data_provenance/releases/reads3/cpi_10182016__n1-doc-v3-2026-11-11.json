@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Gasoline/Energy",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI (ex food/energy)",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Medical care/personal care",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0,
+ "implication_rates": 1,
+ "evidence": "The all items index rose 1.5 percent for the 12 months ending September, its largest 12-month increase since October 2014.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:35"
+}

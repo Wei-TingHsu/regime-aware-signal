@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Fuel imports",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Nonfuel imports (industrial supplies, consumer goods, capital goods)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Automotive vehicle imports",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Export prices (nonagricultural)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Tariff-sensitive import prices (China, Mexico, EU, Canada)",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": -0.2,
+ "implication_rates": 1,
+ "evidence": "U.S. import prices increased 0.4 percent in July... Higher prices for nonfuel imports and fuel imports drove the advance in July.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 02:04"
+}

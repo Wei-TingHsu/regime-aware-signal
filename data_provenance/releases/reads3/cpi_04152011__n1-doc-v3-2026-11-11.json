@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Gasoline/Energy",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food at home",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI (ex food/energy)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Apparel/household furnishings",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.55,
+ "implication_equities": -0.3,
+ "implication_rates": 0.4,
+ "evidence": "Gasoline and food prices continued to rise and together accounted for almost three quarters of the seasonally adjusted all items increase in March.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:31"
+}

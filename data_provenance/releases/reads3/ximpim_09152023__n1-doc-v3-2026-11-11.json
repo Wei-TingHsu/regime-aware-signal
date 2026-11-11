@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Fuel import prices",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Nonagricultural export industrial supplies/materials",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Nonfuel import prices",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Agricultural export prices",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Air fares/air freight (services)",
+   "contribution": "moderate",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.4,
+ "implication_equities": -1,
+ "implication_rates": 1,
+ "evidence": "import prices rose 0.5 percent in August...the largest monthly increase since May 2022, led by higher fuel prices",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 02:05"
+}

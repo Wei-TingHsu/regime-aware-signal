@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Final demand trade services margins",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Final demand energy goods",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Unprocessed goods for intermediate demand (energy, food)",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Processed goods for intermediate demand",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Core final demand less foods, energy, trade",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.4,
+ "implication_equities": 0.1,
+ "implication_rates": -0.2,
+ "evidence": "Final demand prices decreased 0.4 percent in October and 0.5 percent in September... the final demand index fell 1.1 percent for the 12 months ended in November, the tenth consecutive 12-month decline",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:59"
+}

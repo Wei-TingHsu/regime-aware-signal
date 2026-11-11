@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Agricultural export prices (corn, cotton, soybeans, wheat)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Fuel/petroleum import prices",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Nonfuel industrial supplies & materials (metals, chemicals)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Nonagricultural export industrial materials",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Finished goods (autos, consumer goods, capital goods)",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.75,
+ "implication_equities": -0.3,
+ "implication_rates": 1,
+ "evidence": "import prices increased 1.3 percent in November, the U.S. Bureau of Labor Statistics reported today, following a 1.0 percent advance the previous month",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 02:06"
+}

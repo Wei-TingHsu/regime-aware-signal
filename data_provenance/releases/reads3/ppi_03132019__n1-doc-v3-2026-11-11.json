@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "final demand energy",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "gasoline prices",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "final demand services",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "core (less food/energy/trade)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "unprocessed goods/energy materials",
+   "contribution": "large",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.4,
+ "implication_equities": 0,
+ "implication_rates": -1,
+ "evidence": "Final demand prices fell 0.1 percent in both January and December",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:53"
+}

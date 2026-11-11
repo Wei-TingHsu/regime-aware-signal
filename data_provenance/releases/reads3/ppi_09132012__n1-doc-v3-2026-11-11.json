@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Finished energy (gasoline)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Crude goods (energy, foods, core)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Intermediate energy",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Finished foods (dairy, eggs)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Finished core (ex food/energy)",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": -1,
+ "implication_rates": 1,
+ "evidence": "The Producer Price Index for finished goods rose 1.7 percent in August, seasonally adjusted... the largest monthly rise since a 1.9-percent increase in June 2009",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:57"
+}

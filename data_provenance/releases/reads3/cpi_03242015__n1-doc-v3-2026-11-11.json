@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Energy (gasoline turning up)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Food",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI (ex food/energy)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Medical care services (first decline since 1975)",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.7,
+ "implication_equities": 0,
+ "implication_rates": 1,
+ "evidence": "The seasonally adjusted increase in the all items index was broad-based, with increases in shelter, energy, and food indexes all contributing.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:30"
+}

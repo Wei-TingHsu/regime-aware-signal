@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Finished core (less food & energy)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Finished energy",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Finished foods",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Intermediate goods (energy-led)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Crude goods (energy & foods)",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0.2,
+ "implication_rates": -0.2,
+ "evidence": "the finished goods index advanced 4.1 percent for the 12 months ended January 2012, the smallest year-over-year rise since a 3.6-percent increase in January 2011",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:52"
+}

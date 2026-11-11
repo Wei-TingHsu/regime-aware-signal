@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Nonfarm payrolls +288k",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Unemployment rate fell to 6.3%",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Broad-based job gains (prof/biz, retail, construction, food services)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Labor force participation drop (-0.4pt) tempering unemployment rate decline",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Flat average hourly earnings growth (1.9% y/y)",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.75,
+ "implication_equities": 0.4,
+ "implication_rates": 0.5,
+ "evidence": "Total nonfarm payroll employment rose by 288,000, and the unemployment rate fell by 0.4 percentage point to 6.3 percent",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:39"
+}

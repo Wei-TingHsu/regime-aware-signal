@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Gasoline/Energy",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Food (meats)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI (ex food/energy)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Airline fares",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.7,
+ "implication_equities": -0.3,
+ "implication_rates": 1,
+ "evidence": "the all items index increased 2.0 percent over the last 12 months; this compares to a 1.5 percent increase for the 12 months ending March, and is the largest 12-month increase since July",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:31"
+}

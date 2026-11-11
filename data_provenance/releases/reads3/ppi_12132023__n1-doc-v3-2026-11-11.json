@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Final demand energy",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Core (ex food, energy, trade) services",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Final demand trade & transportation services",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Unprocessed goods intermediate demand",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Final demand foods",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.4,
+ "implication_equities": 0.3,
+ "implication_rates": -1,
+ "evidence": "The Producer Price Index for final demand was unchanged in November, seasonally adjusted",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:59"
+}

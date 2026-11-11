@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Shelter",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food (food at home)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Energy/gasoline",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "New vehicles & household furnishings",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Used cars/airline fares/apparel",
+   "contribution": "moderate",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.65,
+ "implication_equities": -1,
+ "implication_rates": 1,
+ "evidence": "The all items index rose 5.4 percent for the 12 months ending September, compared to a 5.3-percent rise for the period ending August.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:34"
+}

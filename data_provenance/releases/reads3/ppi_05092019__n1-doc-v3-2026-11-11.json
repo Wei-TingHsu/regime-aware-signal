@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Energy prices (gasoline, crude petroleum)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Core index (less foods, energy, trade)",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Trade services margins",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Portfolio management/services prices",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Food prices",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": -0.3,
+ "implication_rates": 0.4,
+ "evidence": "The index for final demand less foods, energy, and trade services moved up 0.4 percent in April, the largest increase since rising 0.5 percent in January 2018.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:54"
+}

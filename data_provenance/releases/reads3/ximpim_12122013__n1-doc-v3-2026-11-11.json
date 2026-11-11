@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": -1,
+ "drivers": [
+  {
+   "component": "Fuel imports",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Nonfuel import prices (12-month)",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Agricultural exports",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Nonagricultural exports (capital/consumer goods)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Import prices from China/Japan/Canada/Mexico",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0,
+ "implication_rates": -1,
+ "evidence": "U.S. import prices declined 0.6 percent for the second consecutive month in November",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 02:06"
+}

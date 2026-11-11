@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Gasoline/Energy",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Food",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Core CPI (ex food/energy)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Used cars and trucks",
+   "contribution": "small",
+   "direction": "-"
+  },
+  {
+   "component": "Shelter",
+   "contribution": "small",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.45,
+ "implication_equities": 0,
+ "implication_rates": 0,
+ "evidence": "the index for all items less food and energy increased 0.1 percent in December after rising 0.2 percent in the previous month",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 01:29"
+}

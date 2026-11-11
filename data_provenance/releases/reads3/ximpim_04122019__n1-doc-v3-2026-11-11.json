@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 1,
+ "drivers": [
+  {
+   "component": "Fuel import prices",
+   "contribution": "large",
+   "direction": "+"
+  },
+  {
+   "component": "Nonfuel import prices",
+   "contribution": "moderate",
+   "direction": "-"
+  },
+  {
+   "component": "Export prices (agri & nonagri)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Nonagricultural industrial supplies exports",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Air passenger fares",
+   "contribution": "small",
+   "direction": "-"
+  }
+ ],
+ "breadth": 0.5,
+ "implication_equities": 0,
+ "implication_rates": 0,
+ "evidence": "The import price index recorded no change over the past 12 months.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 02:02"
+}

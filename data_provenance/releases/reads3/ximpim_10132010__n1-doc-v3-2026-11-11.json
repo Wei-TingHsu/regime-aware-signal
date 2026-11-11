@@ -1,0 +1,37 @@
+{
+ "headline_surprise_sign": 0,
+ "drivers": [
+  {
+   "component": "Fuel imports",
+   "contribution": "large",
+   "direction": "-"
+  },
+  {
+   "component": "Nonfuel import prices",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Agricultural exports (corn, wheat)",
+   "contribution": "moderate",
+   "direction": "+"
+  },
+  {
+   "component": "Nonagricultural exports (industrial supplies)",
+   "contribution": "small",
+   "direction": "+"
+  },
+  {
+   "component": "Industrial supplies/metals import prices",
+   "contribution": "moderate",
+   "direction": "+"
+  }
+ ],
+ "breadth": 0.6,
+ "implication_equities": 0,
+ "implication_rates": 0,
+ "evidence": "Declining fuel prices more than offset an increase in nonfuel prices",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "n1-doc-v3-2026-11-11",
+ "_read_at": "2026-11-12 02:05"
+}
