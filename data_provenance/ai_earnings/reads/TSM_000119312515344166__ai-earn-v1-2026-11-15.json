@@ -1,0 +1,38 @@
+{
+ "own_stock": -0.2,
+ "market": 0,
+ "ai_demand": 0.2,
+ "results_vs_guidance": 1,
+ "guidance_change": -0.4,
+ "drivers": [
+  {
+   "item": "Revenue exceeded high end of guidance (FX-driven)",
+   "direction": "+",
+   "size": "small"
+  },
+  {
+   "item": "Net income and EPS declined YoY and QoQ",
+   "direction": "-",
+   "size": "moderate"
+  },
+  {
+   "item": "16nm ramp accelerating into Q4",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "Q4 revenue guidance implies sequential decline",
+   "direction": "-",
+   "size": "moderate"
+  },
+  {
+   "item": "TSMC Solar termination loss hurt margins",
+   "direction": "-",
+   "size": "small"
+  }
+ ],
+ "evidence": "third quarter revenue exceeded the high end of the guidance given in July",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v1-2026-11-15",
+ "_read_at": "2026-11-15 04:02"
+}

@@ -1,0 +1,38 @@
+{
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.5,
+ "results_vs_guidance": 0,
+ "guidance_change": 0,
+ "drivers": [
+  {
+   "item": "Revenue growth 32% YoY to $75B",
+   "direction": "+",
+   "size": "large"
+  },
+  {
+   "item": "Operating margin expansion to 29%",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "Google Cloud revenue growth to $5.5B though still loss-making",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "20-for-1 stock split announced",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "Google Cloud continued operating loss",
+   "direction": "-",
+   "size": "small"
+  }
+ ],
+ "evidence": "Our fourth quarter revenues of $75 billion, up 32% year over year, reflected broad-based strength in advertiser spend and strong consumer online activity, as well as substantial ongoing revenue growth from Google Cloud.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v1-2026-11-15",
+ "_read_at": "2026-11-15 04:01"
+}

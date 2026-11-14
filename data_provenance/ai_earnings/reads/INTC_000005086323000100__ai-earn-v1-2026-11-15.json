@@ -1,0 +1,38 @@
+{
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "results_vs_guidance": 1,
+ "guidance_change": 0.3,
+ "drivers": [
+  {
+   "item": "Revenue beat guidance, third straight beat",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "Q4 revenue guidance above Q3 actual",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "NEX segment down 32% YoY",
+   "direction": "-",
+   "size": "moderate"
+  },
+  {
+   "item": "AI PC and Xeon/Gaudi2 momentum, foundry customer wins",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "GAAP net income down 71% YoY",
+   "direction": "-",
+   "size": "small"
+  }
+ ],
+ "evidence": "Our results exceeded expectations for the third consecutive quarter, with revenue above the high end of our guidance and EPS benefiting from strong operating leverage and expense discipline",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v1-2026-11-15",
+ "_read_at": "2026-11-15 04:01"
+}

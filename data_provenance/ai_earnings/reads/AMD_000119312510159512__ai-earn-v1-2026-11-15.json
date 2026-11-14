@@ -1,0 +1,38 @@
+{
+ "own_stock": 0.3,
+ "market": 0,
+ "ai_demand": 0,
+ "results_vs_guidance": 1,
+ "guidance_change": 0.2,
+ "drivers": [
+  {
+   "item": "Record quarterly revenue, up 5% sequentially and 40% YoY",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "Non-GAAP profitability with $0.11 EPS",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "GAAP net loss of $43 million",
+   "direction": "-",
+   "size": "small"
+  },
+  {
+   "item": "Gross margin declined sequentially from 47% to 45%",
+   "direction": "-",
+   "size": "small"
+  },
+  {
+   "item": "Guidance for seasonal revenue increase in Q3",
+   "direction": "+",
+   "size": "small"
+  }
+ ],
+ "evidence": "AMD revenue $1.65 billion, 5 percent sequential increase and 40 percent increase year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v1-2026-11-15",
+ "_read_at": "2026-11-15 04:01"
+}

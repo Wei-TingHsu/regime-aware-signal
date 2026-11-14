@@ -1,0 +1,38 @@
+{
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "results_vs_guidance": 1,
+ "guidance_change": 0,
+ "drivers": [
+  {
+   "item": "Azure growth 43%",
+   "direction": "+",
+   "size": "large"
+  },
+  {
+   "item": "Microsoft Cloud revenue $59.3B, up 27%",
+   "direction": "+",
+   "size": "large"
+  },
+  {
+   "item": "Commercial RPO up 84% to $678B",
+   "direction": "+",
+   "size": "large"
+  },
+  {
+   "item": "Results exceeded guidance ex-discrete items",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "More Personal Computing revenue decline",
+   "direction": "-",
+   "size": "small"
+  }
+ ],
+ "evidence": "When adjusting for these items, we exceeded expectations across revenue, operating income, and diluted earnings per share.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v1-2026-11-15",
+ "_read_at": "2026-11-15 04:01"
+}

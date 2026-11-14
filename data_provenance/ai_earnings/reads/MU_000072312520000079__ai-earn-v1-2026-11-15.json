@@ -1,0 +1,38 @@
+{
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.1,
+ "results_vs_guidance": 1,
+ "guidance_change": -0.4,
+ "drivers": [
+  {
+   "item": "Q4 revenue and EPS beat sequential growth",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "Record QLC NAND shipments and DRAM strength in cloud/PC/gaming",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "FQ1 guidance below FQ4 actuals (revenue, margin, EPS all down sequentially)",
+   "direction": "-",
+   "size": "moderate"
+  },
+  {
+   "item": "Full-year revenue and margins down sharply YoY",
+   "direction": "-",
+   "size": "moderate"
+  },
+  {
+   "item": "CEO optimism on 2021 demand from 5G, cloud, automotive",
+   "direction": "+",
+   "size": "small"
+  }
+ ],
+ "evidence": "Micron delivered solid fiscal fourth quarter revenue and EPS resulting from strong DRAM sales in cloud, PC and gaming consoles and an extraordinary increase in QLC NAND shipments",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v1-2026-11-15",
+ "_read_at": "2026-11-15 04:01"
+}

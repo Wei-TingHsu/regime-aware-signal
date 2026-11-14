@@ -1,0 +1,38 @@
+{
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "results_vs_guidance": 1,
+ "guidance_change": 0.5,
+ "drivers": [
+  {
+   "item": "EPS growth (GAAP +16%, non-GAAP +19%)",
+   "direction": "+",
+   "size": "large"
+  },
+  {
+   "item": "Gen2 Cloud Infrastructure/Autonomous Database revenue up over 100%",
+   "direction": "+",
+   "size": "large"
+  },
+  {
+   "item": "Fusion/NetSuite Cloud ERP growth (33%/21%)",
+   "direction": "+",
+   "size": "moderate"
+  },
+  {
+   "item": "Total revenue growth only 2%, license revenue down",
+   "direction": "-",
+   "size": "small"
+  },
+  {
+   "item": "Expanded cloud region buildout to 38 by mid-2021",
+   "direction": "+",
+   "size": "moderate"
+  }
+ ],
+ "evidence": "Demand for our Gen2 Cloud Infrastructure is exceeding our plan and we are opening new datacenters as fast as we can.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v1-2026-11-15",
+ "_read_at": "2026-11-15 04:02"
+}
