@@ -1,0 +1,35 @@
+{
+  "direction": {
+    "equity": 0.0,
+    "duration": 0.0,
+    "gold": 0.0,
+    "dollar": 0.0,
+    "oil": 0.0
+  },
+  "magnitude": 0.05,
+  "horizon_days": 1,
+  "specificity": 0.9,
+  "novelty": 0.6,
+  "confidence": 0.95,
+  "evidence": [
+    "hereby proclaim the Oval Office as the Oval Office National Monument",
+    "The monument shall consist of the Oval Office itself (Room 110)",
+    "The Secretary is directed to take all necessary steps to implement this proclamation."
+  ],
+  "extra": {
+    "actor": "President (Antiquities Act, Dept. of Interior/NPS)",
+    "is_decided": true,
+    "sectors": [
+      "historic preservation",
+      "federal property management"
+    ]
+  },
+  "source": "political_other",
+  "date": "2026-11-12",
+  "doc_id": "proc202623113",
+  "prompt_version": "v1-2026-08-23",
+  "model": "claude-sonnet-5",
+  "truncated": false,
+  "orig_words": 823,
+  "max_words": 20000
+}

@@ -173,7 +173,7 @@ def cmd_patch(max_usd: float):
     print("done")
 
 
-AI_CHAIN = ["AMD", "NVDA", "MU", "INTC", "AVGO", "SNDK", "ORCL", "TSM", "CRWD", "GOOG", "META", "AMZN", "MSFT", "SOXX", "SMH", "QQQ"]     # founder's list (12 Nov) + the two semiconductor ETFs and QQQ; SK Hynix trades in Korea and is handled separately
+AI_CHAIN = ["AMD", "NVDA", "MU", "INTC", "AVGO", "SNDK", "SKHY", "ORCL", "TSM", "CRWD", "GOOG", "META", "AMZN", "MSFT", "SOXX", "SMH", "QQQ"]     # founder's list (12 Nov) + the two semiconductor ETFs and QQQ; SK Hynix trades in Korea and is handled separately
 
 
 def cmd_equities():
