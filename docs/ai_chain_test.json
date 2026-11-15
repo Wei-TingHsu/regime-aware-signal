@@ -1,0 +1,2883 @@
+{
+ "F1": {
+  "key": "F1",
+  "title": "Results releases stamped 16:00-16:40 (US filers) -> the Nasdaq-100 future. One observation per day: the average score of that afternoon's releases, entry counted from the last stamp. From June 2010.",
+  "n_obs": 506,
+  "cells": [
+   {
+    "signal": "own_stock",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 305,
+    "mean": 2.218960243230282,
+    "t": 2.0626571266618843,
+    "hit": 0.5180327868852459
+   },
+   {
+    "signal": "own_stock",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 378,
+    "mean": 2.8127794559808508,
+    "t": 2.1616571426079503,
+    "hit": 0.5608465608465608
+   },
+   {
+    "signal": "own_stock",
+    "cell": "1 min after the stamp, to 16:59",
+    "n": 409,
+    "mean": 2.3876262451645314,
+    "t": 1.7315723101514355,
+    "hit": 0.5403422982885085
+   },
+   {
+    "signal": "own_stock",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 409,
+    "mean": 10.371114949546927,
+    "t": 2.596860418196494,
+    "hit": 0.5721271393643031
+   },
+   {
+    "signal": "own_stock",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 409,
+    "mean": -3.6168387649635814,
+    "t": -0.5015213448595066,
+    "hit": 0.5134474327628362
+   },
+   {
+    "signal": "own_stock",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 288,
+    "mean": 2.2795350508432652,
+    "t": 2.606734397510518,
+    "hit": 0.5972222222222222
+   },
+   {
+    "signal": "own_stock",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 344,
+    "mean": 2.216029994803816,
+    "t": 1.8849329565857018,
+    "hit": 0.5232558139534884
+   },
+   {
+    "signal": "own_stock",
+    "cell": "5 min after the stamp, to 16:59",
+    "n": 404,
+    "mean": 1.9592894117908577,
+    "t": 1.6869528506910727,
+    "hit": 0.5420792079207921
+   },
+   {
+    "signal": "own_stock",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 404,
+    "mean": 10.715012711854483,
+    "t": 2.6770007429189393,
+    "hit": 0.5668316831683168
+   },
+   {
+    "signal": "own_stock",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 404,
+    "mean": -1.7419511140293558,
+    "t": -0.23698147439785003,
+    "hit": 0.5099009900990099
+   },
+   {
+    "signal": "own_stock",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 338,
+    "mean": 0.6795186239427117,
+    "t": 0.9137902437400355,
+    "hit": 0.5295857988165681
+   },
+   {
+    "signal": "own_stock",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 180,
+    "mean": -0.2620442866899039,
+    "t": -0.16816585513212368,
+    "hit": 0.49444444444444446
+   },
+   {
+    "signal": "own_stock",
+    "cell": "15 min after the stamp, to 16:59",
+    "n": 371,
+    "mean": 0.228976747343835,
+    "t": 0.25030277382304844,
+    "hit": 0.5525606469002695
+   },
+   {
+    "signal": "own_stock",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 385,
+    "mean": 6.25268971444104,
+    "t": 1.4687340812586018,
+    "hit": 0.5454545454545454
+   },
+   {
+    "signal": "own_stock",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 385,
+    "mean": -5.7460602624355746,
+    "t": -0.7421719768268626,
+    "hit": 0.4935064935064935
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 232,
+    "mean": 1.4520306641066754,
+    "t": 1.1186808661979342,
+    "hit": 0.5129310344827587
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 270,
+    "mean": 1.5352780708547755,
+    "t": 0.9806243633438525,
+    "hit": 0.5481481481481482
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "1 min after the stamp, to 16:59",
+    "n": 295,
+    "mean": 1.2441122064190366,
+    "t": 0.7549081319427516,
+    "hit": 0.5389830508474577
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 295,
+    "mean": 13.642526049587902,
+    "t": 2.8408431498495457,
+    "hit": 0.5830508474576271
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 295,
+    "mean": 2.06557935822668,
+    "t": 0.2304247495537505,
+    "hit": 0.5423728813559322
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 243,
+    "mean": 2.1849699269407092,
+    "t": 2.349897588522174,
+    "hit": 0.588477366255144
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 244,
+    "mean": 3.031688952933889,
+    "t": 2.2409865189808182,
+    "hit": 0.5573770491803278
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "5 min after the stamp, to 16:59",
+    "n": 294,
+    "mean": 2.167025647314603,
+    "t": 1.6387541896663353,
+    "hit": 0.564625850340136
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 294,
+    "mean": 16.713029048328046,
+    "t": 3.5404711545444445,
+    "hit": 0.6054421768707483
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 294,
+    "mean": 7.176114946096464,
+    "t": 0.79761145612388,
+    "hit": 0.5544217687074829
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 270,
+    "mean": 0.6237759029549794,
+    "t": 0.769447529280739,
+    "hit": 0.5296296296296297
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 120,
+    "mean": 0.94202841775644,
+    "t": 0.49138844154695965,
+    "hit": 0.5583333333333333
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "15 min after the stamp, to 16:59",
+    "n": 290,
+    "mean": 0.9454776525030887,
+    "t": 0.9403097336509864,
+    "hit": 0.5758620689655173
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 304,
+    "mean": 15.09731219736433,
+    "t": 3.089486786831328,
+    "hit": 0.5625
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 304,
+    "mean": 14.506064503634837,
+    "t": 1.5996213481232535,
+    "hit": 0.555921052631579
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 213,
+    "mean": 1.4973911648567264,
+    "t": 1.1220402253988688,
+    "hit": 0.4835680751173709
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 237,
+    "mean": 1.4618023952906956,
+    "t": 0.8578293821803045,
+    "hit": 0.5654008438818565
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "1 min after the stamp, to 16:59",
+    "n": 259,
+    "mean": 1.3915544967968658,
+    "t": 0.8087869438545748,
+    "hit": 0.5521235521235521
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 259,
+    "mean": 5.033734695022586,
+    "t": 1.0147324322624356,
+    "hit": 0.5366795366795367
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 259,
+    "mean": -5.652857196450806,
+    "t": -0.5977948776856106,
+    "hit": 0.528957528957529
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 220,
+    "mean": 0.6767636861017519,
+    "t": 0.7043751403365858,
+    "hit": 0.5681818181818182
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 213,
+    "mean": 1.4005492114186175,
+    "t": 0.983237341293744,
+    "hit": 0.5117370892018779
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "5 min after the stamp, to 16:59",
+    "n": 259,
+    "mean": 0.844913588582166,
+    "t": 0.6211400615196807,
+    "hit": 0.5521235521235521
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 259,
+    "mean": 4.3054441913006105,
+    "t": 0.8870585618992234,
+    "hit": 0.5366795366795367
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 259,
+    "mean": -5.089713236833759,
+    "t": -0.5337286045728165,
+    "hit": 0.5135135135135135
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 254,
+    "mean": 0.66230914985166,
+    "t": 0.782998846253417,
+    "hit": 0.5354330708661418
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 111,
+    "mean": 0.40179227313202853,
+    "t": 0.21473469654173544,
+    "hit": 0.5225225225225225
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "15 min after the stamp, to 16:59",
+    "n": 272,
+    "mean": 0.8765754165916846,
+    "t": 0.8723200371406871,
+    "hit": 0.5661764705882353
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 283,
+    "mean": 1.3788245476416694,
+    "t": 0.2828279158875345,
+    "hit": 0.519434628975265
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 283,
+    "mean": -7.479112134735812,
+    "t": -0.8021340911417241,
+    "hit": 0.49823321554770317
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 296,
+    "mean": 0.09834529508028356,
+    "t": 0.08904903697714896,
+    "hit": 0.4831081081081081
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 367,
+    "mean": 0.35176786147295963,
+    "t": 0.2702981018460711,
+    "hit": 0.5504087193460491
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "1 min after the stamp, to 16:59",
+    "n": 397,
+    "mean": 1.0137733373972333,
+    "t": 0.740446205266837,
+    "hit": 0.5390428211586902
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 397,
+    "mean": 6.400245025807771,
+    "t": 1.5515373339969298,
+    "hit": 0.5214105793450882
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 397,
+    "mean": -2.337472830366689,
+    "t": -0.3187749942690898,
+    "hit": 0.5138539042821159
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 281,
+    "mean": 0.7956790528688112,
+    "t": 0.8992621360372411,
+    "hit": 0.5444839857651246
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 334,
+    "mean": 0.4274865747931339,
+    "t": 0.3730192369877424,
+    "hit": 0.4880239520958084
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "5 min after the stamp, to 16:59",
+    "n": 394,
+    "mean": 1.388695829986115,
+    "t": 1.2420701644559513,
+    "hit": 0.5456852791878173
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 394,
+    "mean": 8.161443746101193,
+    "t": 1.987067016949638,
+    "hit": 0.5355329949238579
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 394,
+    "mean": 1.0148888036755919,
+    "t": 0.13671657186381594,
+    "hit": 0.5329949238578681
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 330,
+    "mean": 0.18857169957567477,
+    "t": 0.24787583685232953,
+    "hit": 0.5121212121212121
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 177,
+    "mean": -0.5044570263896485,
+    "t": -0.31911598637744293,
+    "hit": 0.4971751412429379
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "15 min after the stamp, to 16:59",
+    "n": 361,
+    "mean": 0.5577562357077467,
+    "t": 0.5964002698910174,
+    "hit": 0.5678670360110804
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 374,
+    "mean": 5.6905918865909,
+    "t": 1.412620680012607,
+    "hit": 0.5213903743315508
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 374,
+    "mean": 0.8281653172741699,
+    "t": 0.11141992936970326,
+    "hit": 0.516042780748663
+   },
+   {
+    "signal": "market",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 240,
+    "mean": 2.5435482391942563,
+    "t": 1.9405054864339126,
+    "hit": 0.525
+   },
+   {
+    "signal": "market",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 284,
+    "mean": 2.6344989783338555,
+    "t": 1.6398424530530937,
+    "hit": 0.5704225352112676
+   },
+   {
+    "signal": "market",
+    "cell": "1 min after the stamp, to 16:59",
+    "n": 306,
+    "mean": 2.59047093554099,
+    "t": 1.5280002724478414,
+    "hit": 0.5620915032679739
+   },
+   {
+    "signal": "market",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 306,
+    "mean": 12.845185950242533,
+    "t": 2.7674514238491863,
+    "hit": 0.6078431372549019
+   },
+   {
+    "signal": "market",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 306,
+    "mean": 2.8586479090497616,
+    "t": 0.34070326903938625,
+    "hit": 0.5359477124183006
+   },
+   {
+    "signal": "market",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 240,
+    "mean": 3.1000676506637594,
+    "t": 3.0564657233498305,
+    "hit": 0.5958333333333333
+   },
+   {
+    "signal": "market",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 256,
+    "mean": 2.4842926315982727,
+    "t": 1.7573678201284708,
+    "hit": 0.55078125
+   },
+   {
+    "signal": "market",
+    "cell": "5 min after the stamp, to 16:59",
+    "n": 298,
+    "mean": 2.7111692593186563,
+    "t": 1.9336696303864913,
+    "hit": 0.5805369127516778
+   },
+   {
+    "signal": "market",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 298,
+    "mean": 14.420635392142072,
+    "t": 3.068988971941175,
+    "hit": 0.5973154362416108
+   },
+   {
+    "signal": "market",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 298,
+    "mean": 5.037928911735873,
+    "t": 0.5849015936533579,
+    "hit": 0.5436241610738255
+   },
+   {
+    "signal": "market",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 266,
+    "mean": 0.488613976034533,
+    "t": 0.5675042106137433,
+    "hit": 0.5263157894736842
+   },
+   {
+    "signal": "market",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 129,
+    "mean": -0.8402799084513056,
+    "t": -0.4234823643104657,
+    "hit": 0.49612403100775193
+   },
+   {
+    "signal": "market",
+    "cell": "15 min after the stamp, to 16:59",
+    "n": 288,
+    "mean": 0.5667550772778815,
+    "t": 0.5355119949501708,
+    "hit": 0.5659722222222222
+   },
+   {
+    "signal": "market",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 297,
+    "mean": 11.442260128456159,
+    "t": 2.308210612923954,
+    "hit": 0.5791245791245792
+   },
+   {
+    "signal": "market",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 297,
+    "mean": 5.7284767770496074,
+    "t": 0.6302328517713484,
+    "hit": 0.5521885521885522
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 222,
+    "mean": 2.2549733559038994,
+    "t": 1.6232833451165607,
+    "hit": 0.527027027027027
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 244,
+    "mean": 3.7950476804133872,
+    "t": 2.2666500642906633,
+    "hit": 0.569672131147541
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "1 min after the stamp, to 16:59",
+    "n": 258,
+    "mean": 5.281341970286248,
+    "t": 2.912258892577381,
+    "hit": 0.5813953488372093
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 258,
+    "mean": 14.524537397752898,
+    "t": 2.6798721954339677,
+    "hit": 0.5775193798449613
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 258,
+    "mean": 9.993790043366378,
+    "t": 1.070504255362774,
+    "hit": 0.5387596899224806
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 224,
+    "mean": 2.4486770978989694,
+    "t": 2.277767143583856,
+    "hit": 0.5848214285714286
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 224,
+    "mean": 3.549603367237765,
+    "t": 2.508579277550534,
+    "hit": 0.5669642857142857
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "5 min after the stamp, to 16:59",
+    "n": 259,
+    "mean": 4.39106022761557,
+    "t": 3.0425930144211066,
+    "hit": 0.61003861003861
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 259,
+    "mean": 15.23137543248009,
+    "t": 2.8461268044740256,
+    "hit": 0.5714285714285714
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 259,
+    "mean": 12.49594564629563,
+    "t": 1.3372757840230618,
+    "hit": 0.5482625482625483
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 251,
+    "mean": 0.9760565632098925,
+    "t": 1.0782285829322997,
+    "hit": 0.5418326693227091
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 126,
+    "mean": 2.2175891516066977,
+    "t": 1.1051355985068014,
+    "hit": 0.5793650793650794
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "15 min after the stamp, to 16:59",
+    "n": 268,
+    "mean": 1.9384153216704876,
+    "t": 1.7516568124604657,
+    "hit": 0.5932835820895522
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 272,
+    "mean": 12.785925511382885,
+    "t": 2.608074390184585,
+    "hit": 0.5514705882352942
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 272,
+    "mean": 12.347465708516706,
+    "t": 1.4149945977088747,
+    "hit": 0.5441176470588235
+   }
+  ],
+  "p_family": 0.0925,
+  "best": {
+   "signal": "results_vs_prior_guidance",
+   "cell": "5 min after the stamp, to the next 09:35",
+   "n": 294,
+   "mean": 16.713029048328046,
+   "t": 3.5404711545444445,
+   "hit": 0.6054421768707483
+  },
+  "verdict": "does not pass",
+  "checks": {
+   "net of cost": 14.7,
+   "four periods (mean bp; n)": [
+    [
+     13.9,
+     74
+    ],
+    [
+     13.0,
+     74
+    ],
+    [
+     28.2,
+     73
+    ],
+    [
+     12.0,
+     73
+    ]
+   ],
+   "without the ten largest moves": 15.3,
+   "score size: |score| 0.5+ vs below (mean bp; n)": [
+    [
+     17.0,
+     198
+    ],
+    [
+     16.1,
+     96
+    ]
+   ],
+   "before the stamp (the 30 minutes ending 5 minutes before it; should be near 0)": {
+    "n": 334,
+    "mean": -1.7,
+    "t": -0.75
+   }
+  }
+ },
+ "F2": {
+  "key": "F2",
+  "title": "Results releases (US filers) -> the company's OWN stock, extended hours included. From May 2018.",
+  "n_obs": 384,
+  "cells": [
+   {
+    "signal": "own_stock",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 369,
+    "mean": 43.49890318905526,
+    "t": 3.011635803352199,
+    "hit": 0.5663956639566395
+   },
+   {
+    "signal": "own_stock",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 369,
+    "mean": 51.17880232839736,
+    "t": 3.2504293218615588,
+    "hit": 0.5799457994579946
+   },
+   {
+    "signal": "own_stock",
+    "cell": "1 min after the stamp, hold 60 min",
+    "n": 365,
+    "mean": 64.91915783480195,
+    "t": 3.526466948484969,
+    "hit": 0.5753424657534246
+   },
+   {
+    "signal": "own_stock",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 370,
+    "mean": 62.025809690793,
+    "t": 2.0891506628857606,
+    "hit": 0.5594594594594594
+   },
+   {
+    "signal": "own_stock",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 369,
+    "mean": 25.28033049438756,
+    "t": 0.740839728218738,
+    "hit": 0.5284552845528455
+   },
+   {
+    "signal": "own_stock",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 369,
+    "mean": 20.56434749195504,
+    "t": 2.32211135709149,
+    "hit": 0.5447154471544715
+   },
+   {
+    "signal": "own_stock",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 370,
+    "mean": 32.42653002406144,
+    "t": 3.143739478362831,
+    "hit": 0.572972972972973
+   },
+   {
+    "signal": "own_stock",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 366,
+    "mean": 40.76045844446782,
+    "t": 2.9601276473840166,
+    "hit": 0.5437158469945356
+   },
+   {
+    "signal": "own_stock",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 371,
+    "mean": 36.762763754698774,
+    "t": 1.4180307433072714,
+    "hit": 0.5363881401617251
+   },
+   {
+    "signal": "own_stock",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 372,
+    "mean": -0.11509559834384388,
+    "t": -0.003757481542258713,
+    "hit": 0.510752688172043
+   },
+   {
+    "signal": "own_stock",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 369,
+    "mean": 9.059028182132067,
+    "t": 1.3650625551267344,
+    "hit": 0.5013550135501355
+   },
+   {
+    "signal": "own_stock",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 368,
+    "mean": 15.078768028333993,
+    "t": 1.7318264662815461,
+    "hit": 0.5081521739130435
+   },
+   {
+    "signal": "own_stock",
+    "cell": "15 min after the stamp, hold 60 min",
+    "n": 365,
+    "mean": 24.9882016671532,
+    "t": 1.9569075971884746,
+    "hit": 0.5561643835616439
+   },
+   {
+    "signal": "own_stock",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 369,
+    "mean": 19.917151214806715,
+    "t": 0.8211711655464766,
+    "hit": 0.5392953929539296
+   },
+   {
+    "signal": "own_stock",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 370,
+    "mean": -16.531625374410165,
+    "t": -0.5637828769554468,
+    "hit": 0.4837837837837838
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 276,
+    "mean": 42.65339089295428,
+    "t": 2.4738417765654477,
+    "hit": 0.5760869565217391
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 277,
+    "mean": 57.845215846544704,
+    "t": 3.0168528301488866,
+    "hit": 0.5667870036101083
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "1 min after the stamp, hold 60 min",
+    "n": 273,
+    "mean": 56.08160472392789,
+    "t": 2.5339128875372423,
+    "hit": 0.5604395604395604
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 276,
+    "mean": 17.673056219487897,
+    "t": 0.47906272024537155,
+    "hit": 0.5144927536231884
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 275,
+    "mean": -4.34806276089905,
+    "t": -0.10264600325383204,
+    "hit": 0.49454545454545457
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 276,
+    "mean": 19.39049358808287,
+    "t": 1.7808897300658706,
+    "hit": 0.5507246376811594
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 277,
+    "mean": 31.311490523974545,
+    "t": 2.4130325088798563,
+    "hit": 0.5487364620938628
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 273,
+    "mean": 18.255658316702384,
+    "t": 1.0659364914714422,
+    "hit": 0.5128205128205128
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 277,
+    "mean": -12.167790932190247,
+    "t": -0.3737353296523984,
+    "hit": 0.516245487364621
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 278,
+    "mean": -35.85470069624706,
+    "t": -0.9375003814583085,
+    "hit": 0.5
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 276,
+    "mean": 14.851536365309318,
+    "t": 1.746540917834833,
+    "hit": 0.5217391304347826
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 275,
+    "mean": 19.051273722808276,
+    "t": 1.7430138792039094,
+    "hit": 0.5309090909090909
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "15 min after the stamp, hold 60 min",
+    "n": 273,
+    "mean": 0.5947287461279984,
+    "t": 0.03862313153505025,
+    "hit": 0.5238095238095238
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 275,
+    "mean": -20.343536799824356,
+    "t": -0.6689043045640488,
+    "hit": 0.4909090909090909
+   },
+   {
+    "signal": "results_vs_prior_guidance",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 276,
+    "mean": -46.5754184901733,
+    "t": -1.2674226373009236,
+    "hit": 0.44565217391304346
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 253,
+    "mean": 29.95574523547049,
+    "t": 1.5979390419187152,
+    "hit": 0.549407114624506
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 254,
+    "mean": 37.525083910590155,
+    "t": 1.8105153578615858,
+    "hit": 0.5669291338582677
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "1 min after the stamp, hold 60 min",
+    "n": 251,
+    "mean": 52.086677385243476,
+    "t": 2.174740772403094,
+    "hit": 0.5737051792828686
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 254,
+    "mean": 47.660496822241974,
+    "t": 1.2389320834875825,
+    "hit": 0.5354330708661418
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 253,
+    "mean": 14.416328872997683,
+    "t": 0.3273382155580003,
+    "hit": 0.5296442687747036
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 253,
+    "mean": 14.30280190403984,
+    "t": 1.2176423590535397,
+    "hit": 0.525691699604743
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 253,
+    "mean": 24.247841481922464,
+    "t": 1.735649708288087,
+    "hit": 0.5454545454545454
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 251,
+    "mean": 35.999993769836365,
+    "t": 1.9830143271674179,
+    "hit": 0.5258964143426295
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 254,
+    "mean": 27.72378592689092,
+    "t": 0.82471756387118,
+    "hit": 0.5236220472440944
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 255,
+    "mean": -4.500596685886125,
+    "t": -0.11430436697092426,
+    "hit": 0.5333333333333333
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 253,
+    "mean": 9.828177350840678,
+    "t": 1.083776138600871,
+    "hit": 0.4901185770750988
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 252,
+    "mean": 14.986890056680716,
+    "t": 1.3121327392592195,
+    "hit": 0.5119047619047619
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "15 min after the stamp, hold 60 min",
+    "n": 251,
+    "mean": 31.969718594477605,
+    "t": 2.0010299943879164,
+    "hit": 0.549800796812749
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 253,
+    "mean": 20.379352708035476,
+    "t": 0.6550664276805185,
+    "hit": 0.525691699604743
+   },
+   {
+    "signal": "guidance_change",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 254,
+    "mean": -15.799568535133249,
+    "t": -0.4204452185555194,
+    "hit": 0.49606299212598426
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 361,
+    "mean": 26.640075112894074,
+    "t": 1.8402296800972353,
+    "hit": 0.5041551246537396
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 362,
+    "mean": 25.171675006730972,
+    "t": 1.5905313342159795,
+    "hit": 0.5138121546961326
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "1 min after the stamp, hold 60 min",
+    "n": 357,
+    "mean": 27.274586670464913,
+    "t": 1.4565879702071136,
+    "hit": 0.5126050420168067
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 362,
+    "mean": 34.10412385743567,
+    "t": 1.1317465036401444,
+    "hit": 0.5497237569060773
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 361,
+    "mean": 1.9031848494860273,
+    "t": 0.05497572249426442,
+    "hit": 0.518005540166205
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 361,
+    "mean": 13.166354929354764,
+    "t": 1.4582963203323132,
+    "hit": 0.518005540166205
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 361,
+    "mean": 15.62643002458901,
+    "t": 1.4717259552733701,
+    "hit": 0.5290858725761773
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 358,
+    "mean": 9.01869865922384,
+    "t": 0.633934182167273,
+    "hit": 0.48044692737430167
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 362,
+    "mean": 22.798206971643033,
+    "t": 0.859769083601254,
+    "hit": 0.5524861878453039
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 363,
+    "mean": -9.91654441169146,
+    "t": -0.3179380211933137,
+    "hit": 0.509641873278237
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 361,
+    "mean": 4.719674591343358,
+    "t": 0.701077095116589,
+    "hit": 0.5013850415512465
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 360,
+    "mean": 15.889302546740636,
+    "t": 1.7957804916809526,
+    "hit": 0.5083333333333333
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "15 min after the stamp, hold 60 min",
+    "n": 356,
+    "mean": -1.251752030111185,
+    "t": -0.09550084904412266,
+    "hit": 0.5112359550561798
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 360,
+    "mean": 12.994418250352139,
+    "t": 0.5231214829572737,
+    "hit": 0.5333333333333333
+   },
+   {
+    "signal": "fcf_trend",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 361,
+    "mean": -20.097680332781344,
+    "t": -0.6719290131850442,
+    "hit": 0.5041551246537396
+   },
+   {
+    "signal": "market",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 329,
+    "mean": 55.012359905280455,
+    "t": 3.5924648485124338,
+    "hit": 0.5775075987841946
+   },
+   {
+    "signal": "market",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 329,
+    "mean": 62.13529947428732,
+    "t": 3.6634655948721067,
+    "hit": 0.5866261398176292
+   },
+   {
+    "signal": "market",
+    "cell": "1 min after the stamp, hold 60 min",
+    "n": 325,
+    "mean": 72.81842529190695,
+    "t": 3.708825737622,
+    "hit": 0.5784615384615385
+   },
+   {
+    "signal": "market",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 329,
+    "mean": 63.24558062977462,
+    "t": 1.9852552636771295,
+    "hit": 0.5592705167173252
+   },
+   {
+    "signal": "market",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 328,
+    "mean": 30.47341579512146,
+    "t": 0.837776481293122,
+    "hit": 0.5274390243902439
+   },
+   {
+    "signal": "market",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 329,
+    "mean": 27.00958449895044,
+    "t": 2.8336969748778467,
+    "hit": 0.5562310030395137
+   },
+   {
+    "signal": "market",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 330,
+    "mean": 41.393524964163205,
+    "t": 3.716552931311824,
+    "hit": 0.5787878787878787
+   },
+   {
+    "signal": "market",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 326,
+    "mean": 47.59457817856161,
+    "t": 3.238632260091314,
+    "hit": 0.558282208588957
+   },
+   {
+    "signal": "market",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 330,
+    "mean": 34.28235544729527,
+    "t": 1.2244433824483447,
+    "hit": 0.5606060606060606
+   },
+   {
+    "signal": "market",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 331,
+    "mean": 1.3292095734099165,
+    "t": 0.04063750231547211,
+    "hit": 0.5287009063444109
+   },
+   {
+    "signal": "market",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 329,
+    "mean": 8.532915965568607,
+    "t": 1.180969225630604,
+    "hit": 0.49544072948328266
+   },
+   {
+    "signal": "market",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 329,
+    "mean": 18.8377244659332,
+    "t": 2.018383330395571,
+    "hit": 0.5106382978723404
+   },
+   {
+    "signal": "market",
+    "cell": "15 min after the stamp, hold 60 min",
+    "n": 325,
+    "mean": 22.84278963679348,
+    "t": 1.66868921448261,
+    "hit": 0.56
+   },
+   {
+    "signal": "market",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 329,
+    "mean": 9.562115808150637,
+    "t": 0.3640664022011914,
+    "hit": 0.5562310030395137
+   },
+   {
+    "signal": "market",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 330,
+    "mean": -23.589669148837622,
+    "t": -0.7530113024965132,
+    "hit": 0.47878787878787876
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 306,
+    "mean": 28.52381352268357,
+    "t": 1.774507014473264,
+    "hit": 0.5294117647058824
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 307,
+    "mean": 34.06197211527738,
+    "t": 1.9006583135434514,
+    "hit": 0.5407166123778502
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "1 min after the stamp, hold 60 min",
+    "n": 303,
+    "mean": 34.01828055086863,
+    "t": 1.6236051609668234,
+    "hit": 0.5148514851485149
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 307,
+    "mean": -13.212281032448802,
+    "t": -0.38805347179123784,
+    "hit": 0.498371335504886
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 306,
+    "mean": -28.83582830743371,
+    "t": -0.7404734549829963,
+    "hit": 0.49673202614379086
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 306,
+    "mean": -1.6429433896232575,
+    "t": -0.1643538973465578,
+    "hit": 0.5
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 306,
+    "mean": 9.227596867173807,
+    "t": 0.7942199182484492,
+    "hit": 0.5163398692810458
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 304,
+    "mean": 2.9023705004611613,
+    "t": 0.1893762500665969,
+    "hit": 0.4901315789473684
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 307,
+    "mean": -40.98365890373592,
+    "t": -1.3804111985383478,
+    "hit": 0.48859934853420195
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 308,
+    "mean": -56.95970749354349,
+    "t": -1.6332371006990967,
+    "hit": 0.4837662337662338
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 306,
+    "mean": 2.669940288856278,
+    "t": 0.350937252897046,
+    "hit": 0.49673202614379086
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 307,
+    "mean": 9.620328926527828,
+    "t": 0.9784798682568444,
+    "hit": 0.5211726384364821
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "15 min after the stamp, hold 60 min",
+    "n": 303,
+    "mean": -2.527060889283533,
+    "t": -0.1792594387035201,
+    "hit": 0.5016501650165016
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 306,
+    "mean": -42.84278261817807,
+    "t": -1.5468735468681463,
+    "hit": 0.5098039215686274
+   },
+   {
+    "signal": "ai_demand",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 307,
+    "mean": -59.53474269038756,
+    "t": -1.7926508681462137,
+    "hit": 0.4527687296416938
+   }
+  ],
+  "p_family": 0.01,
+  "best": {
+   "signal": "market",
+   "cell": "5 min after the stamp, hold 30 min",
+   "n": 330,
+   "mean": 41.393524964163205,
+   "t": 3.716552931311824,
+   "hit": 0.5787878787878787
+  },
+  "verdict": "does not pass",
+  "checks": {
+   "net of cost": 31.4,
+   "four periods (mean bp; n)": [
+    [
+     48.5,
+     83
+    ],
+    [
+     33.0,
+     83
+    ],
+    [
+     61.1,
+     82
+    ],
+    [
+     23.1,
+     82
+    ]
+   ],
+   "without the ten largest moves": 24.0,
+   "score size: |score| 0.5+ vs below (mean bp; n)": [
+    [
+     60.2,
+     61
+    ],
+    [
+     37.1,
+     269
+    ]
+   ],
+   "before the stamp (the 30 minutes ending 5 minutes before it; should be near 0)": {
+    "n": 329,
+    "mean": 55.0,
+    "t": 2.89
+   },
+   "price-only rule at the same cell (follow the move so far)": {
+    "n": 379,
+    "mean": 2.4,
+    "t": 0.23
+   },
+   "score rule when the move so far AGREES with the score / DISAGREES": [
+    {
+     "n": 190,
+     "mean": 37.3
+    },
+    {
+     "n": 139,
+     "mean": 47.3
+    }
+   ]
+  }
+ },
+ "F3": {
+  "key": "F3",
+  "title": "Results releases -> the OTHER listed companies the reader named as affected. `direction` = the reader's sign for that company; `reporter_own` = simply copy the reporter's own sign (the 'everything moves together' rule).",
+  "n_obs": 1588,
+  "cells": [
+   {
+    "signal": "direction",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 358,
+    "mean": 1.5891124125518328,
+    "t": 0.7569712986807119,
+    "hit": 0.5083798882681564
+   },
+   {
+    "signal": "direction",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 358,
+    "mean": 2.4061315902734957,
+    "t": 0.9709359789731369,
+    "hit": 0.5111731843575419
+   },
+   {
+    "signal": "direction",
+    "cell": "1 min after the stamp, hold 60 min",
+    "n": 353,
+    "mean": 2.763888725031243,
+    "t": 0.8366888469224667,
+    "hit": 0.5354107648725213
+   },
+   {
+    "signal": "direction",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 360,
+    "mean": 1.5249366571840484,
+    "t": 0.23013034245075786,
+    "hit": 0.5222222222222223
+   },
+   {
+    "signal": "direction",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 360,
+    "mean": -9.903158565833838,
+    "t": -0.8813372778290303,
+    "hit": 0.49444444444444446
+   },
+   {
+    "signal": "direction",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 358,
+    "mean": 1.023788881789305,
+    "t": 0.658497964765313,
+    "hit": 0.4720670391061452
+   },
+   {
+    "signal": "direction",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 357,
+    "mean": 1.7717341730190108,
+    "t": 0.8638623121127194,
+    "hit": 0.4565826330532213
+   },
+   {
+    "signal": "direction",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 351,
+    "mean": 3.6790550814450165,
+    "t": 1.2471746602708071,
+    "hit": 0.5071225071225072
+   },
+   {
+    "signal": "direction",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 359,
+    "mean": -0.01787617043944408,
+    "t": -0.0028310873047901895,
+    "hit": 0.49303621169916434
+   },
+   {
+    "signal": "direction",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 359,
+    "mean": -11.25069239240828,
+    "t": -1.0224415944673286,
+    "hit": 0.4958217270194986
+   },
+   {
+    "signal": "direction",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 354,
+    "mean": 0.3958754949492109,
+    "t": 0.2618195194512762,
+    "hit": 0.4774011299435028
+   },
+   {
+    "signal": "direction",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 356,
+    "mean": 0.5634096311162289,
+    "t": 0.28471335044307294,
+    "hit": 0.4353932584269663
+   },
+   {
+    "signal": "direction",
+    "cell": "15 min after the stamp, hold 60 min",
+    "n": 350,
+    "mean": 3.493200626275802,
+    "t": 1.2094579681414763,
+    "hit": 0.5142857142857142
+   },
+   {
+    "signal": "direction",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 358,
+    "mean": 1.101573412842847,
+    "t": 0.1732192857872733,
+    "hit": 0.4972067039106145
+   },
+   {
+    "signal": "direction",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 358,
+    "mean": -9.354120685894973,
+    "t": -0.8599937454863744,
+    "hit": 0.5167597765363129
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "1 min after the stamp, hold 15 min",
+    "n": 353,
+    "mean": 6.03601146831227,
+    "t": 2.333605698764975,
+    "hit": 0.5580736543909348
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "1 min after the stamp, hold 30 min",
+    "n": 353,
+    "mean": 6.632705081009539,
+    "t": 2.1524424279293637,
+    "hit": 0.48158640226628896
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "1 min after the stamp, hold 60 min",
+    "n": 349,
+    "mean": 8.166943762034057,
+    "t": 2.055694294156514,
+    "hit": 0.5530085959885387
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "1 min after the stamp, to the next 09:35",
+    "n": 355,
+    "mean": -2.568124921806267,
+    "t": -0.3209333518627968,
+    "hit": 0.49859154929577465
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "1 min after the stamp, to the next 16:00",
+    "n": 355,
+    "mean": -20.956667507225383,
+    "t": -1.5135377359537117,
+    "hit": 0.49295774647887325
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "5 min after the stamp, hold 15 min",
+    "n": 353,
+    "mean": 2.062470576557875,
+    "t": 1.0573152378381263,
+    "hit": 0.49575070821529743
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 352,
+    "mean": 0.5959906670373659,
+    "t": 0.24989075545874195,
+    "hit": 0.45170454545454547
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 347,
+    "mean": 3.1727644705722287,
+    "t": 0.9341628671305028,
+    "hit": 0.515850144092219
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 354,
+    "mean": -8.734432970269314,
+    "t": -1.1253122154829784,
+    "hit": 0.4830508474576271
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "5 min after the stamp, to the next 16:00",
+    "n": 354,
+    "mean": -26.2997729304901,
+    "t": -1.920946418875267,
+    "hit": 0.4915254237288136
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "15 min after the stamp, hold 15 min",
+    "n": 349,
+    "mean": 1.0959207898984173,
+    "t": 0.6481130166969803,
+    "hit": 0.45558739255014324
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "15 min after the stamp, hold 30 min",
+    "n": 351,
+    "mean": -1.4786551125007024,
+    "t": -0.6699605637286927,
+    "hit": 0.4188034188034188
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "15 min after the stamp, hold 60 min",
+    "n": 346,
+    "mean": 1.841802011604434,
+    "t": 0.5492060618089164,
+    "hit": 0.5520231213872833
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "15 min after the stamp, to the next 09:35",
+    "n": 353,
+    "mean": -8.507649566345378,
+    "t": -1.1075802927103102,
+    "hit": 0.49575070821529743
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "15 min after the stamp, to the next 16:00",
+    "n": 353,
+    "mean": -27.412068872353064,
+    "t": -2.01189936483918,
+    "hit": 0.48441926345609065
+   }
+  ],
+  "p_family": 0.248,
+  "best": {
+   "signal": "reporter_own",
+   "cell": "1 min after the stamp, hold 15 min",
+   "n": 353,
+   "mean": 6.03601146831227,
+   "t": 2.333605698764975,
+   "hit": 0.5580736543909348
+  },
+  "verdict": "does not pass",
+  "checks": {
+   "net of cost": -2.6,
+   "four periods (mean bp; n)": [
+    [
+     2.4,
+     348
+    ],
+    [
+     11.4,
+     348
+    ],
+    [
+     15.4,
+     347
+    ],
+    [
+     0.6,
+     347
+    ]
+   ],
+   "without the ten largest moves": 6.8,
+   "score size: |score| 0.5+ vs below (mean bp; n)": [
+    [
+     9.1,
+     911
+    ],
+    [
+     4.3,
+     479
+    ]
+   ],
+   "before the stamp (the 30 minutes ending 5 minutes before it; should be near 0)": {
+    "n": 1451,
+    "mean": 21.1,
+    "t": 1.0
+   }
+  }
+ },
+ "F4": {
+  "key": "F4",
+  "title": "Other company events (US filers, material 0.2+ / 0.3+ / 0.5+) -> the company's OWN stock. `neg_uncertainty` = sell when the event raises uncertainty. From May 2018.",
+  "n_obs": 277,
+  "cells": [
+   {
+    "signal": "own_stock | material 0.2+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 184,
+    "mean": 5.209513502602293,
+    "t": 0.7727381901983569,
+    "hit": 0.5108695652173914
+   },
+   {
+    "signal": "own_stock | material 0.2+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 177,
+    "mean": 1.737951882959289,
+    "t": 0.1883745779404718,
+    "hit": 0.4971751412429379
+   },
+   {
+    "signal": "own_stock | material 0.2+",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 196,
+    "mean": 15.16225305342298,
+    "t": 0.9844019666497569,
+    "hit": 0.5051020408163265
+   },
+   {
+    "signal": "own_stock | material 0.2+",
+    "cell": "next regular session, hold 30 min",
+    "n": 244,
+    "mean": 12.235268966198209,
+    "t": 1.480835125439488,
+    "hit": 0.5532786885245902
+   },
+   {
+    "signal": "own_stock | material 0.2+",
+    "cell": "next regular session, hold 60 min",
+    "n": 245,
+    "mean": 12.086629358713557,
+    "t": 1.2619524579969952,
+    "hit": 0.5428571428571428
+   },
+   {
+    "signal": "own_stock | material 0.2+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 245,
+    "mean": 5.444843771701024,
+    "t": 0.37542268100846715,
+    "hit": 0.5061224489795918
+   },
+   {
+    "signal": "own_stock | material 0.2+",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 244,
+    "mean": 18.56832435148188,
+    "t": 0.8910870748898633,
+    "hit": 0.5286885245901639
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 147,
+    "mean": 4.431383805158407,
+    "t": 0.5461240018125866,
+    "hit": 0.5238095238095238
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 141,
+    "mean": 5.217651534912153,
+    "t": 0.4824040207947406,
+    "hit": 0.524822695035461
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 157,
+    "mean": 18.84802171530476,
+    "t": 1.04751375320331,
+    "hit": 0.4968152866242038
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "next regular session, hold 30 min",
+    "n": 186,
+    "mean": 17.390212328032415,
+    "t": 1.7748201960852303,
+    "hit": 0.5752688172043011
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "next regular session, hold 60 min",
+    "n": 186,
+    "mean": 19.660240758496133,
+    "t": 1.7516731558280771,
+    "hit": 0.5698924731182796
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 186,
+    "mean": 15.27713931108336,
+    "t": 0.9170373441079386,
+    "hit": 0.5161290322580645
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 186,
+    "mean": 17.870336852300596,
+    "t": 0.7465114770522772,
+    "hit": 0.5483870967741935
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 68,
+    "mean": 14.419503745049306,
+    "t": 0.9093641039387345,
+    "hit": 0.5147058823529411
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 67,
+    "mean": 20.22918614802269,
+    "t": 0.9936205250194478,
+    "hit": 0.5223880597014925
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 71,
+    "mean": 25.84094161997403,
+    "t": 1.096445930215536,
+    "hit": 0.5070422535211268
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "next regular session, hold 30 min",
+    "n": 81,
+    "mean": 22.129940168088584,
+    "t": 1.32098337038659,
+    "hit": 0.5679012345679012
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "next regular session, hold 60 min",
+    "n": 81,
+    "mean": 26.706158290267727,
+    "t": 1.4436946651515086,
+    "hit": 0.5802469135802469
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 81,
+    "mean": 13.67959019039741,
+    "t": 0.48098213829165565,
+    "hit": 0.5061728395061729
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 81,
+    "mean": 32.96148358755274,
+    "t": 0.7861173321540923,
+    "hit": 0.6049382716049383
+   },
+   {
+    "signal": "fcf_outlook | material 0.2+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 177,
+    "mean": 0.14273788474242843,
+    "t": 0.020569761668226504,
+    "hit": 0.4519774011299435
+   },
+   {
+    "signal": "fcf_outlook | material 0.2+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 169,
+    "mean": 7.663450818835968,
+    "t": 0.8124354363701081,
+    "hit": 0.5207100591715976
+   },
+   {
+    "signal": "fcf_outlook | material 0.2+",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 193,
+    "mean": 10.427383561053007,
+    "t": 0.6832343102813878,
+    "hit": 0.46632124352331605
+   },
+   {
+    "signal": "fcf_outlook | material 0.2+",
+    "cell": "next regular session, hold 30 min",
+    "n": 238,
+    "mean": 19.724041752746285,
+    "t": 2.410790036126535,
+    "hit": 0.5588235294117647
+   },
+   {
+    "signal": "fcf_outlook | material 0.2+",
+    "cell": "next regular session, hold 60 min",
+    "n": 238,
+    "mean": 22.60092710015357,
+    "t": 2.421055789335275,
+    "hit": 0.5756302521008403
+   },
+   {
+    "signal": "fcf_outlook | material 0.2+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 238,
+    "mean": 24.444958882287274,
+    "t": 1.6892381946158446,
+    "hit": 0.5252100840336135
+   },
+   {
+    "signal": "fcf_outlook | material 0.2+",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 238,
+    "mean": 29.558873820755487,
+    "t": 1.3624027984184774,
+    "hit": 0.5084033613445378
+   },
+   {
+    "signal": "fcf_outlook | material 0.3+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 140,
+    "mean": -1.129542260640603,
+    "t": -0.1331680416014518,
+    "hit": 0.45
+   },
+   {
+    "signal": "fcf_outlook | material 0.3+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 133,
+    "mean": 10.488773165329198,
+    "t": 0.9341319931874646,
+    "hit": 0.5112781954887218
+   },
+   {
+    "signal": "fcf_outlook | material 0.3+",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 151,
+    "mean": 12.760481747543373,
+    "t": 0.7015153446969589,
+    "hit": 0.46357615894039733
+   },
+   {
+    "signal": "fcf_outlook | material 0.3+",
+    "cell": "next regular session, hold 30 min",
+    "n": 179,
+    "mean": 21.09819791208371,
+    "t": 2.088983451885938,
+    "hit": 0.553072625698324
+   },
+   {
+    "signal": "fcf_outlook | material 0.3+",
+    "cell": "next regular session, hold 60 min",
+    "n": 179,
+    "mean": 21.695426216727682,
+    "t": 1.874879824198635,
+    "hit": 0.553072625698324
+   },
+   {
+    "signal": "fcf_outlook | material 0.3+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 179,
+    "mean": 17.59831441911549,
+    "t": 1.042879839540718,
+    "hit": 0.5083798882681564
+   },
+   {
+    "signal": "fcf_outlook | material 0.3+",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 179,
+    "mean": 12.622397379813336,
+    "t": 0.5082864550732932,
+    "hit": 0.4972067039106145
+   },
+   {
+    "signal": "fcf_outlook | material 0.5+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 66,
+    "mean": 11.70899438030934,
+    "t": 0.7152317491995246,
+    "hit": 0.4696969696969697
+   },
+   {
+    "signal": "fcf_outlook | material 0.5+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 65,
+    "mean": 21.495353458610776,
+    "t": 1.0309825930780059,
+    "hit": 0.49230769230769234
+   },
+   {
+    "signal": "fcf_outlook | material 0.5+",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 69,
+    "mean": 38.51007097501501,
+    "t": 1.6127919447987547,
+    "hit": 0.5362318840579711
+   },
+   {
+    "signal": "fcf_outlook | material 0.5+",
+    "cell": "next regular session, hold 30 min",
+    "n": 79,
+    "mean": 31.703552337139534,
+    "t": 1.8673129333703493,
+    "hit": 0.5569620253164557
+   },
+   {
+    "signal": "fcf_outlook | material 0.5+",
+    "cell": "next regular session, hold 60 min",
+    "n": 79,
+    "mean": 35.422530980587354,
+    "t": 1.899819764007994,
+    "hit": 0.569620253164557
+   },
+   {
+    "signal": "fcf_outlook | material 0.5+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 79,
+    "mean": 18.412927494914562,
+    "t": 0.6529338167337045,
+    "hit": 0.4810126582278481
+   },
+   {
+    "signal": "fcf_outlook | material 0.5+",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 79,
+    "mean": 24.402449177922836,
+    "t": 0.5671527586074873,
+    "hit": 0.569620253164557
+   },
+   {
+    "signal": "neg_uncertainty | material 0.2+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 207,
+    "mean": 5.858194099397491,
+    "t": 0.9754431640249961,
+    "hit": 0.463768115942029
+   },
+   {
+    "signal": "neg_uncertainty | material 0.2+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 197,
+    "mean": 1.98261995211489,
+    "t": 0.23892660308333347,
+    "hit": 0.49238578680203043
+   },
+   {
+    "signal": "neg_uncertainty | material 0.2+",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 220,
+    "mean": 4.844562825063248,
+    "t": 0.3456676548062348,
+    "hit": 0.4636363636363636
+   },
+   {
+    "signal": "neg_uncertainty | material 0.2+",
+    "cell": "next regular session, hold 30 min",
+    "n": 272,
+    "mean": 13.275601609293899,
+    "t": 1.7325370997622136,
+    "hit": 0.5257352941176471
+   },
+   {
+    "signal": "neg_uncertainty | material 0.2+",
+    "cell": "next regular session, hold 60 min",
+    "n": 273,
+    "mean": 8.30688886229121,
+    "t": 0.9286980338561314,
+    "hit": 0.5201465201465202
+   },
+   {
+    "signal": "neg_uncertainty | material 0.2+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 273,
+    "mean": 5.056990961055103,
+    "t": 0.37187158540575843,
+    "hit": 0.4908424908424908
+   },
+   {
+    "signal": "neg_uncertainty | material 0.2+",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 272,
+    "mean": 4.469932959567785,
+    "t": 0.2240946675359268,
+    "hit": 0.5
+   },
+   {
+    "signal": "neg_uncertainty | material 0.3+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 155,
+    "mean": 6.72520405914236,
+    "t": 0.8746125145499106,
+    "hit": 0.47096774193548385
+   },
+   {
+    "signal": "neg_uncertainty | material 0.3+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 148,
+    "mean": 4.316011152870115,
+    "t": 0.41842520256356097,
+    "hit": 0.49324324324324326
+   },
+   {
+    "signal": "neg_uncertainty | material 0.3+",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 166,
+    "mean": 12.220133207272776,
+    "t": 0.7095610287703957,
+    "hit": 0.4578313253012048
+   },
+   {
+    "signal": "neg_uncertainty | material 0.3+",
+    "cell": "next regular session, hold 30 min",
+    "n": 196,
+    "mean": 12.381112491879238,
+    "t": 1.2944812794698801,
+    "hit": 0.5255102040816326
+   },
+   {
+    "signal": "neg_uncertainty | material 0.3+",
+    "cell": "next regular session, hold 60 min",
+    "n": 196,
+    "mean": 5.9450240963724275,
+    "t": 0.5383666866907467,
+    "hit": 0.49489795918367346
+   },
+   {
+    "signal": "neg_uncertainty | material 0.3+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 196,
+    "mean": 0.8637386881438655,
+    "t": 0.05310611641381356,
+    "hit": 0.49489795918367346
+   },
+   {
+    "signal": "neg_uncertainty | material 0.3+",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 196,
+    "mean": -14.140700489988484,
+    "t": -0.6119998304921253,
+    "hit": 0.47959183673469385
+   },
+   {
+    "signal": "neg_uncertainty | material 0.5+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 68,
+    "mean": 15.732146542987046,
+    "t": 0.9933132826473904,
+    "hit": 0.4411764705882353
+   },
+   {
+    "signal": "neg_uncertainty | material 0.5+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 67,
+    "mean": 4.3600272227286965,
+    "t": 0.21264533311037837,
+    "hit": 0.47761194029850745
+   },
+   {
+    "signal": "neg_uncertainty | material 0.5+",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 71,
+    "mean": 10.521860350615446,
+    "t": 0.44328441643170297,
+    "hit": 0.4225352112676056
+   },
+   {
+    "signal": "neg_uncertainty | material 0.5+",
+    "cell": "next regular session, hold 30 min",
+    "n": 81,
+    "mean": 22.3197687084313,
+    "t": 1.3325650640141438,
+    "hit": 0.5555555555555556
+   },
+   {
+    "signal": "neg_uncertainty | material 0.5+",
+    "cell": "next regular session, hold 60 min",
+    "n": 81,
+    "mean": 12.844677092125076,
+    "t": 0.6875137917969272,
+    "hit": 0.49382716049382713
+   },
+   {
+    "signal": "neg_uncertainty | material 0.5+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 81,
+    "mean": 18.502482244225174,
+    "t": 0.6513393483357572,
+    "hit": 0.5185185185185185
+   },
+   {
+    "signal": "neg_uncertainty | material 0.5+",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 81,
+    "mean": -17.657713159301288,
+    "t": -0.41997393532985744,
+    "hit": 0.5185185185185185
+   }
+  ],
+  "p_family": 0.3605,
+  "best": {
+   "signal": "fcf_outlook | material 0.2+",
+   "cell": "next regular session, hold 60 min",
+   "n": 238,
+   "mean": 22.60092710015357,
+   "t": 2.421055789335275,
+   "hit": 0.5756302521008403
+  },
+  "verdict": "does not pass",
+  "checks": {
+   "net of cost": 12.6,
+   "four periods (mean bp; n)": [
+    [
+     18.4,
+     60
+    ],
+    [
+     9.1,
+     60
+    ],
+    [
+     21.5,
+     59
+    ],
+    [
+     41.7,
+     59
+    ]
+   ],
+   "without the ten largest moves": 16.3,
+   "score size: |score| 0.5+ vs below (mean bp; n)": [
+    [
+     -8.7,
+     18
+    ],
+    [
+     25.2,
+     220
+    ]
+   ],
+   "before the stamp (the 30 minutes ending 5 minutes before it; should be near 0)": {
+    "n": 188,
+    "mean": 9.6,
+    "t": 0.75
+   }
+  }
+ },
+ "F5": {
+  "key": "F5",
+  "title": "Other company events (material 0.3+) -> the OTHER listed companies named as affected.",
+  "n_obs": 493,
+  "cells": [
+   {
+    "signal": "direction",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 134,
+    "mean": 3.7160291845783306,
+    "t": 1.3384695453817181,
+    "hit": 0.48507462686567165
+   },
+   {
+    "signal": "direction",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 129,
+    "mean": 7.337775802059739,
+    "t": 1.661089262988996,
+    "hit": 0.5348837209302325
+   },
+   {
+    "signal": "direction",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 138,
+    "mean": 7.921087209832458,
+    "t": 0.49021969322208836,
+    "hit": 0.5144927536231884
+   },
+   {
+    "signal": "direction",
+    "cell": "next regular session, hold 30 min",
+    "n": 151,
+    "mean": -7.079164880437719,
+    "t": -1.2102516963256602,
+    "hit": 0.4503311258278146
+   },
+   {
+    "signal": "direction",
+    "cell": "next regular session, hold 60 min",
+    "n": 151,
+    "mean": -10.213752476001766,
+    "t": -1.2883916676757825,
+    "hit": 0.47019867549668876
+   },
+   {
+    "signal": "direction",
+    "cell": "next regular session, to the next 16:00",
+    "n": 151,
+    "mean": -5.909746261105096,
+    "t": -0.5063313330423868,
+    "hit": 0.5033112582781457
+   },
+   {
+    "signal": "direction",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 150,
+    "mean": 10.20341566857632,
+    "t": 0.5387051763812859,
+    "hit": 0.5333333333333333
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 133,
+    "mean": 0.3591230524017197,
+    "t": 0.10825299212118175,
+    "hit": 0.5338345864661654
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 128,
+    "mean": -4.623199075042924,
+    "t": -0.8787954296594465,
+    "hit": 0.421875
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "5 min after the stamp, to the next 09:35",
+    "n": 136,
+    "mean": 16.72134718455892,
+    "t": 0.9785448556700139,
+    "hit": 0.5294117647058824
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "next regular session, hold 30 min",
+    "n": 149,
+    "mean": 4.353815727247745,
+    "t": 0.6751101228997963,
+    "hit": 0.5503355704697986
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "next regular session, hold 60 min",
+    "n": 149,
+    "mean": 8.90890909261073,
+    "t": 1.0220514090558797,
+    "hit": 0.48322147651006714
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "next regular session, to the next 16:00",
+    "n": 149,
+    "mean": 22.28534654224724,
+    "t": 1.7248926669587732,
+    "hit": 0.5503355704697986
+   },
+   {
+    "signal": "reporter_own",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 148,
+    "mean": 19.292434939335003,
+    "t": 0.8699384049240164,
+    "hit": 0.5540540540540541
+   }
+  ],
+  "p_family": 0.628,
+  "best": {
+   "signal": "reporter_own",
+   "cell": "next regular session, to the next 16:00",
+   "n": 149,
+   "mean": 22.28534654224724,
+   "t": 1.7248926669587732,
+   "hit": 0.5503355704697986
+  },
+  "verdict": "does not pass",
+  "checks": {
+   "net of cost": 6.0,
+   "four periods (mean bp; n)": [
+    [
+     -9.7,
+     113
+    ],
+    [
+     24.1,
+     113
+    ],
+    [
+     17.3,
+     112
+    ],
+    [
+     32.4,
+     112
+    ]
+   ],
+   "without the ten largest moves": 19.2,
+   "score size: |score| 0.5+ vs below (mean bp; n)": [
+    [
+     5.5,
+     102
+    ],
+    [
+     19.0,
+     348
+    ]
+   ],
+   "before the stamp (the 30 minutes ending 5 minutes before it; should be near 0)": {
+    "n": 388,
+    "mean": -2.7,
+    "t": -0.83
+   }
+  }
+ },
+ "F6": {
+  "key": "F6",
+  "title": "Other company events (US filers, material 0.3+ / 0.5+) -> the Nasdaq-100 future. From June 2010.",
+  "n_obs": 360,
+  "cells": [
+   {
+    "signal": "market | material 0.3+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 70,
+    "mean": -3.7927125866887246,
+    "t": -1.0576473104110287,
+    "hit": 0.5428571428571428
+   },
+   {
+    "signal": "market | material 0.3+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 52,
+    "mean": -5.855966699348362,
+    "t": -0.8510677282457014,
+    "hit": 0.5384615384615384
+   },
+   {
+    "signal": "market | material 0.3+",
+    "cell": "next regular session, hold 30 min",
+    "n": 144,
+    "mean": 4.632953210839798,
+    "t": 1.1467027930342366,
+    "hit": 0.5347222222222222
+   },
+   {
+    "signal": "market | material 0.3+",
+    "cell": "next regular session, hold 60 min",
+    "n": 144,
+    "mean": 2.194829627800837,
+    "t": 0.4989449659400293,
+    "hit": 0.5138888888888888
+   },
+   {
+    "signal": "market | material 0.3+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 139,
+    "mean": 13.811000936355077,
+    "t": 1.410328296512447,
+    "hit": 0.6187050359712231
+   },
+   {
+    "signal": "market | material 0.5+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 45,
+    "mean": -6.552624437746695,
+    "t": -1.2303249858651404,
+    "hit": 0.5333333333333333
+   },
+   {
+    "signal": "market | material 0.5+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 36,
+    "mean": -6.270949285237774,
+    "t": -0.7584410696220457,
+    "hit": 0.5555555555555556
+   },
+   {
+    "signal": "market | material 0.5+",
+    "cell": "next regular session, hold 30 min",
+    "n": 89,
+    "mean": -0.7875832122534566,
+    "t": -0.17431720685767005,
+    "hit": 0.5168539325842697
+   },
+   {
+    "signal": "market | material 0.5+",
+    "cell": "next regular session, hold 60 min",
+    "n": 89,
+    "mean": -1.2803816535533974,
+    "t": -0.23179363722030275,
+    "hit": 0.5056179775280899
+   },
+   {
+    "signal": "market | material 0.5+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 86,
+    "mean": -3.2273733833780565,
+    "t": -0.29218522471742775,
+    "hit": 0.5930232558139535
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 159,
+    "mean": -1.328601345402028,
+    "t": -0.6413251002196769,
+    "hit": 0.5345911949685535
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 102,
+    "mean": -8.682430162284891,
+    "t": -1.9179681857644402,
+    "hit": 0.4803921568627451
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "next regular session, hold 30 min",
+    "n": 334,
+    "mean": 0.9265946375346191,
+    "t": 0.3828845266500151,
+    "hit": 0.5
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "next regular session, hold 60 min",
+    "n": 333,
+    "mean": 0.49866487858545744,
+    "t": 0.17285771112437862,
+    "hit": 0.4954954954954955
+   },
+   {
+    "signal": "own_stock | material 0.3+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 327,
+    "mean": 2.1826493505663973,
+    "t": 0.36198865026434934,
+    "hit": 0.5168195718654435
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "5 min after the stamp, hold 30 min",
+    "n": 66,
+    "mean": -2.965109340402533,
+    "t": -0.7211193789833756,
+    "hit": 0.5303030303030303
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "5 min after the stamp, hold 60 min",
+    "n": 52,
+    "mean": -8.16142512720581,
+    "t": -1.1496493976034825,
+    "hit": 0.5192307692307693
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "next regular session, hold 30 min",
+    "n": 130,
+    "mean": 3.6033451186989325,
+    "t": 0.9387679527979174,
+    "hit": 0.5461538461538461
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "next regular session, hold 60 min",
+    "n": 130,
+    "mean": 3.582781178875194,
+    "t": 0.6932858625948655,
+    "hit": 0.5307692307692308
+   },
+   {
+    "signal": "own_stock | material 0.5+",
+    "cell": "next regular session, to the next 16:00",
+    "n": 127,
+    "mean": 10.661561714019136,
+    "t": 1.2279083740717602,
+    "hit": 0.5826771653543307
+   }
+  ],
+  "p_family": 0.498,
+  "best": {
+   "signal": "own_stock | material 0.3+",
+   "cell": "5 min after the stamp, hold 60 min",
+   "n": 102,
+   "mean": -8.682430162284891,
+   "t": -1.9179681857644402,
+   "hit": 0.4803921568627451
+  },
+  "verdict": "does not pass",
+  "checks": {
+   "net of cost": -10.7,
+   "four periods (mean bp; n)": [
+    [
+     -14.0,
+     26
+    ],
+    [
+     1.2,
+     26
+    ],
+    [
+     -14.3,
+     25
+    ],
+    [
+     -7.8,
+     25
+    ]
+   ],
+   "without the ten largest moves": 0.4,
+   "score size: |score| 0.5+ vs below (mean bp; n)": [
+    [
+     0.1,
+     15
+    ],
+    [
+     -10.2,
+     87
+    ]
+   ],
+   "before the stamp (the 30 minutes ending 5 minutes before it; should be near 0)": {
+    "n": 203,
+    "mean": -2.3,
+    "t": -1.23
+   }
+  }
+ },
+ "F7": {
+  "key": "F7",
+  "title": "Foreign filers (TSMC; SK Hynix once its prices are on disk): results, monthly revenue and material events -> own stock, entered at the next regular session because the SEC stamp can be hours after the release in Asia. From May 2018.",
+  "n_obs": 99,
+  "cells": [
+   {
+    "signal": "own_stock",
+    "cell": "next regular session, hold 30 min",
+    "n": 83,
+    "mean": 6.12233842010505,
+    "t": 0.5168847505165203,
+    "hit": 0.5301204819277109
+   },
+   {
+    "signal": "own_stock",
+    "cell": "next regular session, hold 60 min",
+    "n": 83,
+    "mean": 6.833188602959758,
+    "t": 0.49350194476916015,
+    "hit": 0.4939759036144578
+   },
+   {
+    "signal": "own_stock",
+    "cell": "next regular session, to the next 16:00",
+    "n": 83,
+    "mean": -17.423402183731252,
+    "t": -1.0252579794627683,
+    "hit": 0.43373493975903615
+   },
+   {
+    "signal": "own_stock",
+    "cell": "next regular session, to the 16:00 after that",
+    "n": 82,
+    "mean": -21.67544489928905,
+    "t": -0.7408130550430541,
+    "hit": 0.4634146341463415
+   }
+  ],
+  "p_family": 0.565,
+  "best": {
+   "signal": "own_stock",
+   "cell": "next regular session, to the next 16:00",
+   "n": 83,
+   "mean": -17.423402183731252,
+   "t": -1.0252579794627683,
+   "hit": 0.43373493975903615
+  },
+  "verdict": "does not pass",
+  "checks": {
+   "net of cost": -27.4,
+   "four periods (mean bp; n)": [
+    [
+     -22.9,
+     21
+    ],
+    [
+     -9.1,
+     21
+    ],
+    [
+     -1.7,
+     21
+    ],
+    [
+     -37.0,
+     20
+    ]
+   ],
+   "without the ten largest moves": -18.0,
+   "score size: |score| 0.5+ vs below (mean bp; n)": [
+    [
+     -36.5,
+     28
+    ],
+    [
+     -7.7,
+     55
+    ]
+   ],
+   "before the stamp (the 30 minutes ending 5 minutes before it; should be near 0)": {
+    "n": 55,
+    "mean": 1.8,
+    "t": 0.32
+   }
+  }
+ }
+}
