@@ -962,3 +962,17 @@ Checks on the Fed-statement-score rule all pass (+30.0 bp over the hour after th
 **Collected (SEC filings only, exact acceptance times):** 756 results releases (662 US 8-K Item 2.02 + 94 TSMC quarterly 6-K) and 1,854 other events (1,698 event filings: officer / director changes 412, other events 392, disclosures 237, material agreements 165, new debt 80, and smaller groups; plus 156 TSMC monthly revenue reports).
 **Scored:** 754 results (reader `ai-earn-v3-2026-11-15`, each release sees the guidance of the one before; facts found: revenue 99%, free cash flow 78%, next guidance 67%) and 1,854 events (reader `ai-event-v2-2026-11-15`, each against the latest results). 469 events are material 0.3 or more. LLM spend: US$0.34 sample + US$0.54 trial (both superseded: the trial showed the cash-flow tables sat beyond the text sent, and one answer was cut short) + US$40.44 full run.
 **Registered before any price was joined:** seven families (results -> Nasdaq future, own stock, affected companies; events -> own stock, affected companies, Nasdaq future; foreign filers), 311 cells, family p by shuffled scores, bar 0.05 / 7 = 0.0071, costs 2 bp future / 10 bp stock (assumed). Priors #145–#152. No cost; the prices are on disk.
+
+### 3.62 AI-chain news test: result (15 Nov 19:20)
+`docs/ai_chain_test.md`, `docs/ai_chain_test.json`, `docs/prereg_ai_chain.md` §7. **None of the seven families passes** (bar: family p < 0.0071 = 0.05 / 7).
+| family | best cell | result | family p |
+|---|---|---|---|
+| F1 results -> Nasdaq future | results against prior guidance; enter 5 min after the stamp, hold to the next 09:35 | +16.7 bp, t +3.54, 61% of 294 days | 0.0925 |
+| F2 results -> own stock | market score; enter 5 min after, hold 30 min | +41.4 bp, t +3.72, 58% of 330; before the stamp +55.0 bp (t +2.89) | 0.0100 |
+| F3 results -> affected companies | copy the reporter; 1 min after, hold 15 min | +6.0 bp, t +2.33 | 0.2480 |
+| F4 events -> own stock | free-cash-flow outlook, material 0.2+; next regular session, hold 60 min | +22.6 bp, t +2.42, n 238 | 0.3605 |
+| F5 events -> affected companies | copy the reporter; next regular session to 16:00 | +22.3 bp, t +1.72 | 0.6280 |
+| F6 events -> Nasdaq future | own-stock score, material 0.3+; 5 min after, hold 60 min | -8.7 bp (against the score) | 0.4980 |
+| F7 foreign filers | own stock; next regular session to 16:00 | -17.4 bp (against the score) | 0.5650 |
+**Reading.** Other company events (type 2): no usable link, NEITHER. Results releases (type 1): two near misses. F1 — the Nasdaq future held overnight after results that beat the company's prior guidance: clean before the stamp, positive in all four periods, but family p 0.09. F2 — the company's own stock in the first hour after the stamp: family p 0.010 (bar 0.0071), the drift shrinks the later the entry (own-stock score, hold 60 min: +64.9 bp entering after 1 min, +40.8 after 5, +25.0 after 15), and the stock was ALREADY moving with the score before the SEC stamp, which means the stamp is late against the news wire; the 10 bp stock cost is an assumption for after-hours trading. The reader's spill-over directions (who gains, who loses) did not pay: F3 and F5 null.
+**Priors:** #145, #146, #148, #149, #150, #151 right; #147, #152 wrong. **Forward log (not signals):** FA-3 = F2's cell on each new results release; QC-3 = F1's cell. LLM spend for this test: US$41.39 (0.34 + 0.54 + 40.44 + 0.07). SK Hynix prices still to download.

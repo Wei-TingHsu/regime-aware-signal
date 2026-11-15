@@ -178,6 +178,20 @@ Registration and full tables: `docs/prereg_intraday_v3e.md`, `docs/intraday_v3e_
 
 **Lists after the intraday tests.** QUANT — confirmed: gold–equity correlation persistence (risk forecast); candidates: calm days rarer before regime changes, S&P the session after a ≥ 4% rise, the report's calls over 1–3 sessions, calm-state tilt. SUBJECTIVE — **grade A candidate: Fed statement score → Nasdaq / S&P futures for the next hour**; grade B: gold on Fed statement days by the rate surprise, Fed documents after ≥ 4% semiconductor falls. Where a rule is intraday it is filed under SUBJECTIVE by the founder's two-category rule even when, like E1(c), it is fully rule-based and could be automated.
 
+### B9. AI-chain company news (15 Nov 2026) — results releases and other events of fourteen companies, scored by Claude
+
+Registration and full tables: `docs/prereg_ai_chain.md`, `docs/ai_chain_test.md`; code `src/ai_earnings.py` (collection, two readers), `src/ai_chain_test.py` (TRACK §3.61–3.62).
+
+| id | claim tested | result | category |
+|---|---|---|---|
+| F1 | results release score → Nasdaq-100 future (from 2010) | best: results against prior guidance, 5 min after the stamp to the next 09:35: +16.7 bp, 61% of 294 days; family p 0.0925 — does not pass | NEITHER as registered; near miss, forward log QC-3 |
+| F2 | results release score → the company's own stock (from May 2018) | best: market score, 5 min after, hold 30 min: +41.4 bp, 58% of 330; family p 0.0100 — misses the 0.0071 bar; the stock was already moving with the score before the SEC stamp | NEITHER as registered; near miss, forward log FA-3 |
+| F3 | results → the other companies the reader named as affected | family p 0.2480 — does not pass | NEITHER |
+| F4 | other events (material) → own stock | family p 0.3605 — does not pass | NEITHER |
+| F5 | other events → affected companies | family p 0.6280 — does not pass | NEITHER |
+| F6 | other events → Nasdaq-100 future | best cell against the score; family p 0.4980 — does not pass | NEITHER |
+| F7 | foreign filers (TSMC) → own stock at the next regular session | against the score; family p 0.5650 — does not pass | NEITHER |
+
 ---
 
 ## Part C — rebuild cards
