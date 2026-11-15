@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2011 (quarter ended May 31, 2011)",
+  "revenue": "$10.775 billion GAAP (up 13% YoY)",
+  "operating_income": "$4.359 billion GAAP (40% margin); $5.2 billion non-GAAP (48% margin)",
+  "net_income": "$3.209 billion GAAP (up 36%)",
+  "eps": "$0.62 GAAP diluted (up 34%); $0.75 non-GAAP (up 25%)",
+  "operating_cash_flow": "$11.214 billion (trailing twelve months)",
+  "capex": "$450 million (TTM)",
+  "free_cash_flow": "$10.764 billion (TTM)",
+  "cash_and_investments": "$16.163 billion cash and equivalents + $12.685 billion marketable securities = $28.848 billion",
+  "total_debt": "$1.150 billion current notes payable + $14.772 billion non-current notes payable = $15.922 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0,
+ "fcf_trend": 0.7,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "IBM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle hardware/database gains vs enterprise IT rivals"
+  },
+  {
+   "company": "HPQ",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Exadata/Exalogic growth pressures competing hardware systems"
+  },
+  {
+   "company": "SAP",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong software license growth signals share gains in enterprise apps/database"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Database and cloud competition"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Hardware systems demand implies chip/component sourcing"
+  }
+ ],
+ "evidence": "Both GAAP and non-GAAP new software license revenues were up 19% to $3.7 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q4 and Full Year Fiscal 2026 (ended January 31, 2026)",
+  "revenue": "Q4: $1.31B (actual $1,305.4M); FY26: $4.81B (actual $4,812.0M)",
+  "operating_income": "Q4 non-GAAP: $325.8M; FY26 non-GAAP: ~$1.05B (GAAP Q4 loss $6.9M, FY26 GAAP loss $293.3M)",
+  "net_income": "Q4 non-GAAP: $289.1M; FY26 non-GAAP: $956.6M (GAAP Q4 net income $38.7M; FY26 GAAP net loss $162.5M)",
+  "eps": "Q4 non-GAAP diluted EPS $1.12 (GAAP $0.15); FY26 non-GAAP diluted EPS $3.73 (GAAP loss $0.65)",
+  "operating_cash_flow": "Q4: $497.9M; FY26: $1.61B",
+  "capex": "FY26: $302.1M (property & equipment) + $68.8M (capitalized software) \u2248 $370.9M",
+  "free_cash_flow": "Q4: $376.4M; FY26: $1.24B (as stated)",
+  "cash_and_investments": "$5.23B cash and cash equivalents as of Jan 31, 2026",
+  "total_debt": "$745.5M long-term debt",
+  "guidance_next": "Q1 FY27: revenue $1,360.0-$1,364.0M; ARR $5,501.8-$5,503.8M; non-GAAP operating income $308.0-$310.4M; non-GAAP net income $275.2-$277.1M; non-GAAP diluted EPS $1.06-$1.07. FY27: revenue $5,867.6-$5,927.6M; ARR $6,465.8-$6,516.4M; non-GAAP operating income $1,422.2-$1,462.2M; non-GAAP net income $1,241.0-$1,271.1M; non-GAAP diluted EPS $4.78-$4.90."
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.8,
+ "own_stock": 0.7,
+ "market": 0.1,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Expanded Azure Marketplace alliance lets customers buy Falcon via Azure commitments"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Cloud security partnerships (e.g., regional cloud expansion) imply broader cloud ecosystem demand"
+  }
+ ],
+ "evidence": "\"CrowdStrike delivered a record fourth quarter and fiscal year 2026, exceeding expectations across all guided metrics... we have strong conviction to once again raise our FY27 ARR outlook.\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}
