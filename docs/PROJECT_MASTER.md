@@ -6343,3 +6343,9 @@ selling point; claiming the routes fix gaps in published research.
 ### Standing rule — two ways to use a finding
 
 **Two-category rule (founder, 11 Nov 2026; standing).** A finding can be used in two ways and every test is labelled for both. **QUANT** = usable by a rule-based strategy that holds from one session to several weeks: the effect must still be there after the information is known at a daily close. **SUBJECTIVE (intraday)** = usable by the founder's own judgement inside the day: the effect is on the same day as the information and nothing is left afterwards. "Nothing is left after day 0" ends a finding as QUANT but not as SUBJECTIVE. Grade B = seen at daily closes only (a same-day association; capture after the release not yet tested); grade A = confirmed with intraday prices from the release time to the close. Findings that are neither a direction nor null are **CONTEXT** (how to size, hedge or explain); the rest are **NEITHER**. Every past test is re-labelled this way in `docs/TEST_BOOK.md` Part B, which also marks the tests where day 0 was never measured separately (the horizon audit list).
+
+### Customer-view rule (founder, 15 Nov 2026; standing)
+The product exists to solve one customer problem: not knowing where to see the news fast enough when it is released. Everything built is judged from
+the customer's side first. A live component must read from the FASTEST public source (news wires and company investor pages first; the SEC archive
+only as a backup), and a backtest that had to use a slower source must say so. Advantages the tests show are recorded in `docs/SELLING_POINTS.md`
+with their evidence and limits.
