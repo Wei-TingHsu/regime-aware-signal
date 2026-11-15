@@ -1,0 +1,235 @@
+"""news_listener.py -- the LIVE listener (step 2, founder 15 Nov): watch the fastest public sources that answer from this machine, and the moment one of
+the fourteen AI-chain companies publishes results (or files a material event, or the Fed issues a statement) fetch the text, have Claude score it with
+the SAME readers as the backtest, show the alert and write everything to the forward log with its times.
+
+Customer-view rule: the product must show the news as fast as it is public. So every item is logged with three clocks -- when the source says it was
+published, when this machine first saw it, when the score was ready -- and when two sources carry the same release the delay between them is logged
+(this measures how late the SEC route is against the wire, which the backtest could not).
+
+Sources (docs/wire_probe.md, 15 Nov): PR Newswire feeds; the NVIDIA, AMD, Meta and SK Hynix feeds; the Fed's press feed; and for every company the
+SEC's filing list (the backup that covers all fourteen, some minutes later). Business Wire and GlobeNewswire refuse scripts from this machine.
+
+    python -m src.news_listener once                 # one pass over every source: what answers, what is newest. Scores nothing.
+    python -m src.news_listener test --ticker AMD    # drill: score that company's most recent results release end to end (about 3 US cents)
+    python -m src.news_listener run                  # listen until stopped (Ctrl-C); --minutes 120 to stop by itself; --poll 30 seconds between passes
+"""
+from __future__ import annotations
+import argparse, json, os, re, time, urllib.request, xml.etree.ElementTree as ET
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+LIVE = Path("data_provenance/live"); TEXTS = LIVE / "docs"; LOG = LIVE / "events.jsonl"; SEEN = LIVE / "seen.json"; MD = Path("docs/live_news_log.md")
+NY, SG = ZoneInfo("America/New_York"), ZoneInfo("Asia/Singapore")
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+NAMES = {"NVDA": ["NVIDIA"], "AMD": ["AMD", "Advanced Micro Devices"], "MU": ["Micron"], "INTC": ["Intel"], "AVGO": ["Broadcom"], "SNDK": ["Sandisk", "SanDisk"], "SKHY": ["SK hynix", "SK Hynix"], "ORCL": ["Oracle"],
+         "TSM": ["TSMC", "Taiwan Semiconductor"], "CRWD": ["CrowdStrike"], "GOOG": ["Alphabet"], "META": ["Meta"], "AMZN": ["Amazon"], "MSFT": ["Microsoft"]}
+SEC_ALIAS = {"GOOG": ["GOOG", "GOOGL"], "META": ["META", "FB"]}
+FEEDS = [dict(name="PR Newswire: all releases", kind="wire", url="https://www.prnewswire.com/rss/news-releases-list.rss"),
+         dict(name="PR Newswire: earnings", kind="wire", url="https://www.prnewswire.com/rss/financial-services-latest-news/earnings-list.rss"),
+         dict(name="NVIDIA newsroom", kind="company", ticker="NVDA", url="https://nvidianews.nvidia.com/releases.xml"),
+         dict(name="AMD investor page", kind="company", ticker="AMD", url="https://ir.amd.com/rss/news-releases.xml"),
+         dict(name="Meta investor page", kind="company", ticker="META", url="https://investor.atmeta.com/rss/pressrelease.aspx"),
+         dict(name="SK Hynix newsroom", kind="company", ticker="SKHY", url="https://news.skhynix.com/feed/"),
+         dict(name="Federal Reserve: monetary policy press releases", kind="fed", url="https://www.federalreserve.gov/feeds/press_monetary.xml")]
+RX_RESULTS = r"\b(reports?|announces?|posts?|delivers?)\b.*\b(quarter(ly)?|results|earnings)\b"
+RX_NOT = r"\b(to (report|announce|host|release|webcast|present)|sets? (date|conference)|conference call|date for|schedules?|will (report|announce|host)|timing of|investor (day|conference))\b"
+EVENT_ITEMS = {"1.01", "1.02", "1.03", "1.05", "2.01", "2.03", "2.04", "2.05", "2.06", "3.01", "4.01", "4.02", "5.01", "5.02", "7.01", "8.01"}
+
+
+# ------------------------------------------------------------------------------------------------ fetching
+def fetch(url: str, timeout=20) -> bytes:
+    sec = "sec.gov" in url
+    if sec and not os.environ.get("SEC_CONTACT"): raise SystemExit("SEC_CONTACT is not set (the SEC asks every script to say who is calling)")
+    return urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": os.environ["SEC_CONTACT"] if sec else UA, "Accept": "*/*"}), timeout=timeout).read(4_000_000)
+
+
+def _when(raw: str):
+    try: t = parsedate_to_datetime(raw)
+    except Exception:
+        try: t = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except Exception: return None
+    return t if t.tzinfo else t.replace(tzinfo=timezone.utc)
+
+
+def feed_items(body: bytes) -> list:
+    root = ET.fromstring(body); strip = lambda tag: tag.split("}")[-1]; out = []
+    for it in (e for e in root.iter() if strip(e.tag) in ("item", "entry")):
+        d = {}
+        for c in it:
+            k = strip(c.tag); d[k] = (c.text or "").strip() or c.attrib.get("href", "") or d.get(k, "")
+        link = d.get("link") or d.get("guid") or d.get("id") or ""; raw = d.get("pubDate") or d.get("updated") or d.get("published") or d.get("date") or ""
+        out.append(dict(id=d.get("guid") or d.get("id") or link or d.get("title", ""), title=re.sub(r"\s+", " ", d.get("title", "")), link=link, published=_when(raw)))
+    return out
+
+
+def text_of(html: bytes) -> str:
+    t = html.decode("utf-8", "ignore"); t = re.sub(r"<script.*?</script>|<style.*?</style>|<!--.*?-->", " ", t, flags=re.S); t = re.sub(r"</(p|div|tr|li|h\d|br)[^>]*>|<br[^>]*>", "\n", t, flags=re.I); t = re.sub(r"<[^>]+>", " ", t)
+    t = re.sub(r"&nbsp;|&#160;", " ", t); t = re.sub(r"&amp;", "&", t); t = re.sub(r"[ \t]+", " ", t); return re.sub(r"\n\s*\n+", "\n", t).strip()
+
+
+def sec_ciks() -> dict:
+    cmap = json.loads(fetch("https://www.sec.gov/files/company_tickers.json")); look = {v["ticker"].upper(): str(v["cik_str"]).zfill(10) for v in cmap.values()}
+    return {t: next(look[a] for a in SEC_ALIAS.get(t, [t]) if a in look) for t in NAMES if any(a in look for a in SEC_ALIAS.get(t, [t]))}
+
+
+def sec_recent(cik: str, n=6) -> list:
+    r = json.loads(fetch(f"https://data.sec.gov/submissions/CIK{cik}.json"))["filings"]["recent"]; out = []
+    for i in range(min(n, len(r.get("form", [])))):
+        out.append(dict(id=r["accessionNumber"][i], form=r["form"][i], items=(r.get("items") or [""] * 99)[i] or "", accession=r["accessionNumber"][i], primary=(r.get("primaryDocument") or [""] * 99)[i], published=_when(str(r["acceptanceDateTime"][i])), title=f"{r['form'][i]} items {(r.get('items') or [''] * 99)[i] or 'n/a'}"))
+    return out
+
+
+def sec_text(cik: str, accession: str, primary: str) -> str:
+    acc = accession.replace("-", ""); base = f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{acc}/"; body = ""
+    try: body = text_of(fetch(base + primary)) if primary else ""
+    except Exception: pass
+    try:
+        names = [i.get("name", "") for i in json.loads(fetch(base + "index.json"))["directory"]["item"]]
+        for nme in [x for x in names if x != primary and x.lower().endswith((".htm", ".html", ".txt")) and re.search(r"ex-?_?99|press|release|exhibit99", x.lower())][:2]:
+            time.sleep(0.15); body += "\n\n[EXHIBIT]\n" + text_of(fetch(base + nme))
+    except Exception: pass
+    return body
+
+
+# ------------------------------------------------------------------------------------------------ what an item is
+def company_of(title: str):
+    for t, names in NAMES.items():
+        if any(re.match(rf"\s*{re.escape(n)}(\b|,|\.|\s)", title) for n in names): return t      # a company's own release starts with its name
+    return None
+
+
+def classify(src: dict, it: dict):
+    """-> (ticker or 'FED', kind) with kind in results | event | fed | other; or (None, None) when the item is not about the list"""
+    if src["kind"] == "sec":
+        items = {x.strip() for x in it["items"].split(",")}
+        if it["form"] == "8-K": return src["ticker"], ("results" if "2.02" in items else ("event" if items & EVENT_ITEMS else "other"))
+        return (src["ticker"], "event") if it["form"] == "6-K" else (None, None)
+    if src["kind"] == "fed": return ("FED", "fed") if re.search(r"FOMC statement", it["title"], re.I) else (None, None)
+    tk = src.get("ticker") or company_of(it["title"])
+    if tk is None: return None, None
+    return tk, ("results" if re.search(RX_RESULTS, it["title"], re.I) and not re.search(RX_NOT, it["title"], re.I) else "other")
+
+
+# ------------------------------------------------------------------------------------------------ scoring (the backtest's readers, unchanged)
+def score(tk: str, kind: str, text: str, stem: str, when: datetime) -> dict | None:
+    from src.news_events2 import _client
+    import src.ai_earnings as A
+    client = _client(); TEXTS.mkdir(parents=True, exist_ok=True); f = TEXTS / f"{stem}.txt"; f.write_text(f"[{tk} live {kind}]\n\n{text}")
+    if kind == "fed":
+        from src.news_events2 import _ask
+        from src.news_events3 import SYS_DOC, PV3, CHARS
+        m = re.search(r"(Recent indicators|Information received|Economic activity|Available indicators|The Committee|Although|Indicators)", text); body = text[m.start():] if m else text
+        d, _, _ = _ask(client, SYS_DOC, f"DOCUMENT (fomc, {when.astimezone(NY):%Y-%m-%d}):\n{body[:CHARS]}", stem, LIVE / "reads", PV3); return d
+    R = A._results(); naive = when.astimezone(NY).replace(tzinfo=None)
+    if kind == "results":
+        pg = None
+        for q in R[(R.ticker == tk) & (R.kind == "results") & (R.accepted_ny < naive)].iloc[::-1].itertuples():
+            d0 = A._read1(q.file)
+            if d0: pg = (d0.get("facts") or {}).get("guidance_next"); break
+        d, _, _ = A._ask2(client, A.SYS1, f"PRIOR GUIDANCE (from the company's previous release): {pg or 'none available'}\n\nRELEASE:\n{A._release_body(str(f), A.CHARS1, A.TABLES)}", "LIVE_" + stem, A.PV1); return d
+    d, _, _ = A._ask2(client, A.SYS2, f"BASELINE: {A._baseline(R, tk, naive)}\n\nEVENT ({tk}, live):\n{A._release_body(str(f), A.CHARS2)}", "LIVE_" + stem, A.PV2); return d
+
+
+def _line(d: dict, kind: str) -> str:
+    if not d: return "NOT SCORED (the read failed; the text is saved)"
+    if kind == "fed": return f"for stocks {d.get('implication_equities')!s}, for rates {d.get('implication_rates')!s} | {str(d.get('evidence'))[:140]}"
+    if kind == "results":
+        fx = d.get("facts") or {}; return (f"own stock {d.get('own_stock')!s}, market {d.get('market')!s}, AI demand {d.get('ai_demand')!s}, vs prior guidance {d.get('results_vs_prior_guidance')!s}, new guidance {d.get('guidance_change')!s}, free cash flow {d.get('fcf_trend')!s} | "
+            f"revenue {str(fx.get('revenue'))[:40]}; free cash flow {str(fx.get('free_cash_flow'))[:40]}; guidance {str(fx.get('guidance_next'))[:90]} | affects {[(x.get('company'), x.get('direction')) for x in (d.get('affected') or []) if isinstance(x, dict)][:5]}")
+    return f"[{d.get('event_type')}] material {d.get('material')!s}, own stock {d.get('own_stock')!s}, uncertainty {d.get('uncertainty')!s}, free-cash-flow outlook {d.get('fcf_outlook')!s} | {str(d.get('evidence'))[:120]}"
+
+
+# ------------------------------------------------------------------------------------------------ the loop
+def _log(row: dict):
+    LIVE.mkdir(parents=True, exist_ok=True)
+    with LOG.open("a") as fh: fh.write(json.dumps(row, default=str) + "\n")
+
+
+def _md(row: dict):
+    if not MD.exists(): MD.parent.mkdir(exist_ok=True); MD.write_text("# Live news log (forward record)\n\nEach row: a results release, a material company filing or a Fed statement seen live by `src/news_listener.py`, scored by the same readers as the backtest. Three clocks: published (as the source states), seen (this machine), scored. Prices are joined later.\n\n| seen (New York) | seen (Singapore) | who | kind | first source | published → seen | seen → scored | score | title |\n|---|---|---|---|---|---|---|---|---|\n")
+    with MD.open("a") as fh: fh.write(f"| {row['seen_ny']} | {row['seen_sg']} | {row['ticker']} | {row['kind']}{' (DRILL)' if row.get('drill') else ''} | {row['source']} | {row.get('lag_published_s', '')} s | {row.get('score_s', '')} s | {row.get('line', '')[:230].replace('|', '/')} | {row['title'][:90].replace('|', '/')} |\n")
+
+
+def handle(src: dict, it: dict, tk: str, kind: str, state: dict, drill=False, do_score=True):
+    now = datetime.now(timezone.utc); pub = it.get("published"); day = (pub or now).astimezone(NY).strftime("%Y%m%d"); key = f"{tk}|{kind}|{day}" if kind in ("results", "fed") else f"{tk}|{kind}|{it['id']}"
+    row = dict(ticker=tk, kind=kind, source=src["name"], title=it["title"], link=it.get("link", ""), id=it["id"], published=pub, seen=now, seen_ny=now.astimezone(NY).strftime("%Y-%m-%d %H:%M:%S"), seen_sg=now.astimezone(SG).strftime("%Y-%m-%d %H:%M:%S"),
+               lag_published_s=round((now - pub).total_seconds()) if pub else None, drill=drill)
+    first = state["first"].get(key)
+    if first and not drill:      # the same release from a second source: record how much later it came, do not score twice
+        row.update(kind=kind + " (again)", second_source_after_s=round((now - datetime.fromisoformat(first["seen"])).total_seconds()), first_source=first["source"]); _log(row)
+        print(f"   .. {tk} {kind}: also on {src['name']}, {row['second_source_after_s']} s after {first['source']}"); return
+    if kind == "other" or not do_score: _log(row); print(f"   .. {tk}: {it['title'][:100]}  [{src['name']}; not a results release, logged only]"); return
+    state["first"][key] = dict(seen=now.isoformat(), source=src["name"]); print("\a" + "=" * 110 + f"\n{'DRILL  ' if drill else ''}{tk}  {kind.upper()}  seen {row['seen_ny']} New York / {row['seen_sg']} Singapore  via {src['name']}" + (f"  ({row['lag_published_s']} s after the source's own time)" if pub else "") + f"\n{it['title'][:160]}")
+    try:
+        text = sec_text(src["cik"], it["accession"], it["primary"]) if src["kind"] == "sec" else text_of(fetch(it["link"]))
+        if len(text.split()) < 80: raise ValueError(f"only {len(text.split())} words fetched")
+        stem = f"{tk}_{day}_{re.sub(r'[^A-Za-z0-9]+', '', src['name'])[:14]}"; d = score(tk, kind, text, stem, pub or now); row.update(score_s=round((datetime.now(timezone.utc) - now).total_seconds()), words=len(text.split()), read=d, line=_line(d, kind))
+    except SystemExit: raise
+    except Exception as e: row.update(line=f"NOT SCORED: {type(e).__name__}: {str(e)[:120]}")
+    print(f"{row['line']}\n(scored {row.get('score_s', '?')} s after it was seen)\n" + "=" * 110); _log(row); _md(row)
+
+
+def sources() -> list:
+    S = [dict(f) for f in FEEDS]
+    try: S += [dict(name=f"SEC filings: {t}", kind="sec", ticker=t, cik=c) for t, c in sec_ciks().items()]
+    except SystemExit: raise
+    except Exception as e: print(f"  SEC company list not reachable ({type(e).__name__}); running without the SEC backup")
+    return S
+
+
+def poll(src: dict) -> list: return sec_recent(src["cik"]) if src["kind"] == "sec" else feed_items(fetch(src["url"]))
+
+
+def cmd_once():
+    print(f"one pass at {datetime.now(NY):%Y-%m-%d %H:%M:%S} New York / {datetime.now(SG):%H:%M:%S} Singapore"); ok = 0
+    for src in sources():
+        try: items = poll(src)
+        except SystemExit: raise
+        except Exception as e: print(f"  {src['name'][:48]:48} NO ANSWER: {type(e).__name__}: {str(e)[:70]}"); continue
+        ok += 1; hits = [(it, *classify(src, it)) for it in items]; mine = [h for h in hits if h[1]]; new = max((it for it in items if it["published"]), key=lambda x: x["published"], default=None)
+        print(f"  {src['name'][:48]:48} {len(items):3} items; newest {new['published'].astimezone(NY):%d %b %H:%M} NY" if new else f"  {src['name'][:48]:48} {len(items):3} items", end="")
+        print(f"; about the list: {len(mine)}" + (f" (e.g. {mine[0][1]} {mine[0][2]}: {mine[0][0]['title'][:60]})" if mine else "")); time.sleep(0.2)
+    print(f"{ok} sources answered. Nothing was scored.")
+
+
+def cmd_test(ticker: str):
+    S = [s for s in sources() if s.get("ticker") == ticker]; S.sort(key=lambda s: s["kind"] == "sec")      # the company's own feed first, the SEC as the fallback
+    for src in S:
+        try: items = poll(src)
+        except Exception as e: print(f"  {src['name']}: {type(e).__name__}"); continue
+        res = [it for it in items if classify(src, it) == (ticker, "results")]
+        if res: it = max(res, key=lambda x: x["published"] or datetime.min.replace(tzinfo=timezone.utc)); handle(src, it, ticker, "results", dict(first={}), drill=True); return
+        print(f"  {src['name']}: no results release among its {len(items)} newest items")
+    print("no results release found to drill on -- try another --ticker")
+
+
+def cmd_run(minutes: float | None, every: float, max_scores: int):
+    S = sources(); LIVE.mkdir(parents=True, exist_ok=True); state = json.loads(SEEN.read_text()) if SEEN.exists() else dict(ids=[], first={}); seen = set(state["ids"]); warm = not seen; t_end = time.time() + minutes * 60 if minutes else None; n = scored = 0
+    print(f"listening to {len(S)} sources every {every:.0f} s" + (f" for {minutes:.0f} minutes" if minutes else " until stopped with Ctrl-C") + ". The first pass only memorises what is already published.")
+    try:
+        while t_end is None or time.time() < t_end:
+            t0 = time.time(); bad = []
+            for src in S:
+                try: items = poll(src)
+                except SystemExit: raise
+                except Exception: bad.append(src["name"]); continue
+                for it in items:
+                    uid = f"{src['name']}|{it['id']}"
+                    if uid in seen: continue
+                    seen.add(uid)
+                    if warm: continue
+                    tk, kind = classify(src, it)
+                    if tk: handle(src, it, tk, kind, state, do_score=scored < max_scores); scored += kind in ("results", "event", "fed")
+                if src["kind"] == "sec": time.sleep(0.12)
+            warm = False; n += 1; state["ids"] = sorted(seen)[-20000:]; SEEN.write_text(json.dumps(state))
+            if n == 1 or n % 20 == 0: print(f"  {datetime.now(NY):%H:%M:%S} New York / {datetime.now(SG):%H:%M:%S} Singapore: pass {n}, {len(S) - len(bad)} of {len(S)} sources answered" + (f"; silent: {', '.join(bad)[:120]}" if bad else ""))
+            time.sleep(max(1.0, every - (time.time() - t0)))
+    except KeyboardInterrupt: print("\nstopped by you")
+    print(f"{n} passes. Log: {LOG} and {MD}")
+
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["once", "test", "run"]); ap.add_argument("--ticker", default="AMD"); ap.add_argument("--minutes", type=float); ap.add_argument("--poll", type=float, default=30.0); ap.add_argument("--max-scores", type=int, default=40, help="stop scoring after this many reads in one run (cost guard; about 3 US cents each)")
+    a = ap.parse_args(); {"once": cmd_once, "test": lambda: cmd_test(a.ticker), "run": lambda: cmd_run(a.minutes, a.poll, a.max_scores)}[a.cmd]()
