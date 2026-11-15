@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2016 (quarter ended Dec 31, 2016)",
+  "revenue": "NT$262.227 billion (US$8.25 billion)",
+  "operating_income": "NT$109.907 billion; operating margin 41.9%",
+  "net_income": "NT$100.200 billion; net margin 38.2%",
+  "eps": "NT$3.86 per share (US$0.61 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q1 2017 revenue NT$236-239 billion at FX 32.0 NT$/USD; gross margin 51.5%-53.5%; operating margin 40.5%-42.5%; 2017 capex ~US$10 billion"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.2,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "advanced 16nm node demand drove beat"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "foundry capacity/advanced process reliance"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's strong advanced-node share gains"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "uses TSMC advanced process for chips"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "sets tone for semiconductor capex/demand outlook"
+  }
+ ],
+ "evidence": "fourth quarter revenue surpassed the high-end of our guidance given three months ago",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

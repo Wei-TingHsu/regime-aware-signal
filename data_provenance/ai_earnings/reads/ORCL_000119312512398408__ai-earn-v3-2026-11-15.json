@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2013 (three months ended August 31, 2012)",
+  "revenue": "$8,181 million GAAP, down 2% YoY (up 3% constant currency)",
+  "operating_income": "$2,879 million GAAP (up 7%), $3.6 billion non-GAAP (up 1%)",
+  "net_income": "$2,034 million GAAP, up 11%",
+  "eps": "$0.41 GAAP diluted (up 15%); $0.53 non-GAAP (up 11%)",
+  "operating_cash_flow": "$5,671 million for the quarter; $13,993 million trailing twelve months (up 9%)",
+  "capex": "$139 million for the quarter; $627 million trailing twelve months",
+  "free_cash_flow": "$13,366 million trailing twelve months (up 8% YoY)",
+  "cash_and_investments": "$15,667 million cash and cash equivalents plus $15,940 million marketable securities = $31,607 million",
+  "total_debt": "$1,250 million current notes payable + $13,521 million non-current notes payable = $14,771 million",
+  "guidance_next": "No specific quantitative revenue/EPS guidance given; qualitative guidance: engineered systems sales expected to double for the full year to well over $1 billion, and cloud business approaching a $1 billion annual run rate"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.4,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "hardware systems revenue decline hurts related chip/server sales"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle expanding cloud infrastructure as a service competes with AWS"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle Cloud expansion competes with Microsoft enterprise/cloud offerings"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "overlapping cloud platform ambitions"
+  },
+  {
+   "company": "IBM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "engineered systems and enterprise software competition"
+  }
+ ],
+ "evidence": "Q1 operating cash flow increased to a record high of $5.7 billion. We\u2019re off to a good start in the new year.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

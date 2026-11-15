@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2025 (quarter ended June 30, 2025)",
+  "revenue": "$167.7 billion (up 13% YoY)",
+  "operating_income": "$19.2 billion (vs $14.7B in Q2 2024)",
+  "net_income": "$18.2 billion",
+  "eps": "$1.68 diluted",
+  "operating_cash_flow": "$121.1 billion TTM (up 12% YoY); $32.5B for the quarter",
+  "capex": "$32.2 billion for the quarter; $107.7 billion TTM",
+  "free_cash_flow": "$18.2 billion TTM (down from $53.0B TTM a year ago); quarterly FCF ~$0.3B (32,515-32,183)",
+  "cash_and_investments": "$57.7B cash and equivalents + $35.4B marketable securities = ~$93.2B",
+  "total_debt": "$50.7 billion long-term debt (down from $52.6B at Dec 31, 2024)",
+  "guidance_next": "Q3 2025 net sales of $174.0B-$179.5B (10%-13% YoY growth, ~130bps favorable FX impact); operating income of $15.5B-$20.5B vs $17.4B in Q3 2024"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.3,
+ "fcf_trend": -0.3,
+ "own_stock": 0.5,
+ "market": 0.4,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "AWS launched EC2 instances on NVIDIA Grace Blackwell Superchips"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AWS cloud growth signals strong overall cloud/AI capex demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud and AI infrastructure race intensifies alongside AWS growth"
+  },
+  {
+   "company": "ORCL",
+   "relation": "partner",
+   "direction": 0.4,
+   "reason": "General availability of Oracle Database@AWS integration"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Heavy data center capex implies continued memory/storage demand"
+  }
+ ],
+ "evidence": "Operating income increased to $19.2 billion in the second quarter, compared with $14.7 billion in second quarter 2024.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

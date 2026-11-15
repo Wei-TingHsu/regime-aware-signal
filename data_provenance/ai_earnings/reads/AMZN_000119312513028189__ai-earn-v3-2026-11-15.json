@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2012 (three months ended December 31, 2012); also full year 2012",
+  "revenue": "$21.27 billion (Q4), up 22% YoY; $61.09 billion full year, up 27%",
+  "operating_income": "$405 million (Q4), up 56% YoY; $676 million full year, down 22%",
+  "net_income": "$97 million (Q4), down 45% YoY; net loss of $39 million full year",
+  "eps": "$0.21 diluted (Q4); $(0.09) diluted full year",
+  "operating_cash_flow": "$4.18 billion trailing twelve months, up 7% YoY",
+  "capex": "$3.785 billion (purchases of property and equipment, TTM/full year 2012)",
+  "free_cash_flow": "$395 million trailing twelve months, down 81% YoY",
+  "cash_and_investments": "$8.084 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q1 2013 net sales expected between $15.0B and $16.6B (14%-26% growth); operating income (loss) expected between $(285)M and $65M vs $192M in Q1 2012, including ~$285M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.6,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud/digital media competition with AWS and Kindle ecosystem"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS cloud infrastructure competes with Azure"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS undercutting enterprise database/infrastructure with SAP HANA certification"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AWS data center buildout implies continued server/chip demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self-reference placeholder"
+  }
+ ],
+ "evidence": "Operating income increased 56% to $405 million in the fourth quarter...above high end of guidance",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

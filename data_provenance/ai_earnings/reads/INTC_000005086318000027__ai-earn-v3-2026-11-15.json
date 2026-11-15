@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2018 (quarter ended Sep 29, 2018)",
+  "revenue": "$19.2 billion (GAAP and non-GAAP), up 19% YoY",
+  "operating_income": "$7.349 billion GAAP; $7.6 billion non-GAAP",
+  "net_income": "$6.398 billion GAAP; $6.5 billion non-GAAP",
+  "eps": "$1.38 GAAP diluted; $1.40 non-GAAP",
+  "operating_cash_flow": "$8.835 billion (Q3); $22.5 billion YTD",
+  "capex": "$3.851 billion (Q3 additions to PP&E)",
+  "free_cash_flow": "~$4.98B (Q3, OCF minus capex); $11.2 billion YTD as stated",
+  "cash_and_investments": "$13.186 billion total cash and investments (Sep 29, 2018)",
+  "total_debt": "$27.874 billion ($3.051B short-term + $24.823B long-term debt)",
+  "guidance_next": "Q4 2018: revenue ~$19.0B, GAAP op margin ~33%/non-GAAP ~34.5%, GAAP EPS ~$1.16/non-GAAP EPS ~$1.22. FY2018 raised to revenue ~$71.2B, GAAP EPS ~$4.52/non-GAAP EPS ~$4.53, capex ~$15.5B, net capital deployed ~$14.0B, non-GAAP FCF ~$15.5B"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.5,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "Intel stresses customers continue to choose Intel despite competitive market"
+  },
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "DCG growth tied to AI and data-intensive workload demand signals healthy data-center capex"
+  },
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel's own memory NSG revenue up 21% suggests strong memory demand environment"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud service provider demand cited as driver of DCG record revenue"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud and communications providers investing heavily per DCG commentary"
+  }
+ ],
+ "evidence": "Raising full-year revenue outlook to $71.2 billion, GAAP EPS outlook to approximately $4.52 and non-GAAP EPS of $4.53; up $1.7 billion, $0.42 and $0.38 from July guidance, respectively.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,19 @@
+{
+ "event_type": "leadership change",
+ "material": 0.2,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel foundry push with board oversight signals stronger foundry ambitions"
+  }
+ ],
+ "evidence": "Mr. Tan's responsibilities include engaging with management to provide oversight and guidance with respect to: (i) strategy and key focus areas within the manufacturing group",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

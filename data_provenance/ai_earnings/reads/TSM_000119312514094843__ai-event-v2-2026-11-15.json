@@ -1,0 +1,37 @@
+{
+ "event_type": "guidance update",
+ "material": 0.5,
+ "fcf_outlook": 0.5,
+ "uncertainty": -0.3,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "strong 28nm demand implies healthy fabless customer demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "beneficiary of 28nm demand strength"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC foundry strength signals competitive pressure in process leadership"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "customer restocking implies strong order pipeline"
+  }
+ ],
+ "evidence": "first quarter revenue, gross profit margin and operating profit margin are all expected to exceed the high end of the guidance",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

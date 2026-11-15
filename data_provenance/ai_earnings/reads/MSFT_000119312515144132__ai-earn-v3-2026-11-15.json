@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY2015 (three months ended March 31, 2015)",
+  "revenue": "$21.7 billion, up 6% YoY (9% constant currency)",
+  "operating_income": "$6.6 billion, down 5% YoY (down 4% constant currency)",
+  "net_income": "$4,985 million",
+  "eps": "$0.61 diluted (GAAP), down 10% YoY; includes $0.01 negative impact from restructuring",
+  "operating_cash_flow": "$9,570 million (Q3); $22,264 million (nine months)",
+  "capex": "$1,391 million (Q3); $4,163 million (nine months)",
+  "free_cash_flow": "$8,179 million (Q3, OCF minus capex)",
+  "cash_and_investments": "$95,438 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$31,868 million (short-term debt $1,725M + current portion long-term debt $2,499M + long-term debt $27,644M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": -0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud competitor as Azure grows"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "competes in cloud, search, productivity"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise software and cloud competitor"
+  }
+ ],
+ "evidence": "operating income and EPS would have declined 4% and 7%, respectively, on a constant currency basis",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

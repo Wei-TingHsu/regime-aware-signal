@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.3,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "CA, Inc.",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "acquisition target, deal closing confirmed"
+  }
+ ],
+ "evidence": "Broadcom expects the acquisition of CA to be completed on November 5, 2018, the first day of its 2019 fiscal year.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

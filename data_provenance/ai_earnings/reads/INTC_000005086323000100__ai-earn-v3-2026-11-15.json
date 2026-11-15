@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2023 (quarter ended Sep 30, 2023)",
+  "revenue": "$14.2 billion, down 8% YoY",
+  "operating_income": "GAAP operating loss of $8 million; non-GAAP operating margin 13.6%",
+  "net_income": "$297 million attributable to Intel (GAAP); $1.7 billion non-GAAP",
+  "eps": "$0.07 GAAP diluted; $0.41 non-GAAP diluted",
+  "operating_cash_flow": "$5.8 billion in cash from operations (Q3); $6.847 billion for nine months ended Sep 30, 2023",
+  "capex": "$19,054 million (nine months ended Sep 30, 2023, additions to PP&E)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$7.621 billion cash and cash equivalents + $17.409 billion short-term investments = ~$25.03 billion",
+  "total_debt": "$2.288 billion short-term debt + $46.591 billion long-term debt = ~$48.88 billion",
+  "guidance_next": "Q4 2023 revenue $14.6-15.6 billion; GAAP EPS $0.23; non-GAAP EPS $0.44; GAAP gross margin 43.3%, non-GAAP 46.5%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.6,
+ "fcf_trend": -0.3,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel Gaudi2 and Xeon ramp compete directly with AMD's data-center and AI offerings"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel's AI accelerator push (Gaudi2) and AI PC strategy target overlapping AI compute demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "customer/partner",
+   "direction": 0.3,
+   "reason": "TSMC acquired a 10% stake in Intel's IMS Nanofabrication business, deepening ties"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader semiconductor capex and foundry expansion signals read-through to networking/infrastructure chipmakers"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier/peer",
+   "direction": 0.1,
+   "reason": "Data center AI buildout commentary supports memory demand outlook"
+  }
+ ],
+ "evidence": "Third-quarter revenue exceeded high end of guidance and EPS benefited from strong operating leverage and expense discipline... Guiding fourth-quarter revenue of $14.6 billion to $15.6 billion, EPS attributable to Intel of $0.23 and non-GAAP EPS attributable to Intel of $0.44.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

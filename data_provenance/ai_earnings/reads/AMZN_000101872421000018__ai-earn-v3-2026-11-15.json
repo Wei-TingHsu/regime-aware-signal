@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2021 (three months ended June 30, 2021)",
+  "revenue": "$113.1 billion (net sales), up 27% YoY",
+  "operating_income": "$7.7 billion, up from $5.8 billion YoY",
+  "net_income": "$7.8 billion, up from $5.2 billion YoY",
+  "eps": "$15.12 diluted, up from $10.30 YoY",
+  "operating_cash_flow": "$59.3 billion TTM, up 16% YoY; $12.7 billion for the quarter",
+  "capex": "$14.3 billion (purchases of property and equipment) for the quarter; $52.3 billion TTM",
+  "free_cash_flow": "$12.1 billion TTM, down from $31.9 billion TTM a year earlier",
+  "cash_and_investments": "$40.4 billion cash and equivalents plus $49.5 billion marketable securities (~$89.9 billion total) as of June 30, 2021",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.4,
+ "own_stock": 0.25,
+ "market": 0.2,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AWS reacceleration signals strong cloud demand across providers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "cloud growth trends benefit all major hyperscalers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "rising AWS capex implies more data-center compute hardware purchases"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "continued AWS infrastructure buildout supports chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "cloud capacity expansion could include AMD server chips"
+  }
+ ],
+ "evidence": "Operating income increased to $7.7 billion in the second quarter, compared with $5.8 billion in second quarter 2020.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

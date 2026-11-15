@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2020 (three months ended July 31, 2019)",
+  "revenue": "$108.1 million total revenue (94% YoY growth); subscription revenue $97.6 million",
+  "operating_income": "GAAP loss from operations $(50.6) million; Non-GAAP loss from operations $(20.6) million",
+  "net_income": "GAAP net loss $(51.9) million; Non-GAAP net loss $(23.1) million",
+  "eps": "GAAP net loss per share $(0.40); Non-GAAP net loss per share $(0.18)",
+  "operating_cash_flow": "Net cash used in operating activities $(6.2) million",
+  "capex": "Purchases of property and equipment $(21.6) million plus capitalized internal-use software $(1.3) million (quarter)",
+  "free_cash_flow": "$(29.2) million (stated)",
+  "cash_and_investments": "$826.8 million (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": "Q3 FY20: total revenue $117.1-$119.5 million; Non-GAAP loss from operations $(27.7)-$(26.1) million; Non-GAAP net loss $(24.8)-$(23.2) million; Non-GAAP net loss per share $(0.12)-$(0.11). Full Year FY20 (raised): total revenue $445.4-$451.8 million; Non-GAAP loss from operations $(97.9)-$(93.5) million; Non-GAAP net loss $(95.3)-$(90.8) million; Non-GAAP net loss per share $(0.65)-$(0.62)."
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.4,
+ "own_stock": 0.6,
+ "market": 0.1,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "CrowdStrike's platform growth and module adoption pressures Microsoft Defender endpoint share"
+  },
+  {
+   "company": "AMZN",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Cloud-native Falcon platform likely runs on/through hyperscale cloud infrastructure, supporting cloud demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Potential cloud infrastructure partner as CrowdStrike scales cloud-delivered security"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle's cloud security offerings compete indirectly with CrowdStrike's platform"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 1.0,
+   "reason": "Self-referential; strong post-IPO results highlight cybersecurity SaaS momentum"
+  }
+ ],
+ "evidence": "Total revenue was $108.1 million, a 94% increase... and the company raised its full-year revenue and loss guidance",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

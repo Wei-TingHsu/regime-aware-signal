@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2020 (ended Oct 27, 2019)",
+  "revenue": "$3.014 billion",
+  "operating_income": "$927 million GAAP / $1,156 million non-GAAP",
+  "net_income": "$899 million GAAP / $1,103 million non-GAAP",
+  "eps": "$1.45 GAAP diluted / $1.78 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$9.769 billion",
+  "total_debt": "$1.990 billion long-term debt",
+  "guidance_next": "Q4 FY20 revenue ~$2.95B +/-2%; GAAP/non-GAAP gross margin 64.1%/64.5% +/-50bps; GAAP/non-GAAP opex ~$1.02B/$805M; GAAP/non-GAAP other income ~$25M; GAAP/non-GAAP tax rate ~9% +/-1%, excluding Mellanox contribution"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.5,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Gaming GPU share pressure from NVIDIA strength"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Azure/EGX edge computing collaboration, hyperscale demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Networking/data center silicon demand tailwind"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Data center/edge AI competition"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Foundry beneficiary of stronger NVIDIA data center/gaming volumes"
+  }
+ ],
+ "evidence": "Revenue ... of $3.01 billion ... Up 17% sequentially, with GAAP gross margin up 380 bps and non-GAAP EPS up 44% Q/Q, while guiding Q4 revenue to ~$2.95B with higher gross margins",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

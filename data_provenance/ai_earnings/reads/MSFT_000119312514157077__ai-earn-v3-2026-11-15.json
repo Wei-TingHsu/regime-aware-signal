@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY2014 (three months ended March 31, 2014)",
+  "revenue": "$20.40 billion ($20,403 million)",
+  "operating_income": "$6.97 billion ($6,974 million GAAP)",
+  "net_income": "$5.66 billion ($5,660 million)",
+  "eps": "$0.68 diluted",
+  "operating_cash_flow": "$10,099 million (three months)",
+  "capex": "$1,192 million (additions to property and equipment)",
+  "free_cash_flow": "$8,907 million (10,099 - 1,192)",
+  "cash_and_investments": "$88,425 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$22,679 million (current portion $2,000M + long-term $20,679M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Bing search share and ad revenue growth pressures Google search"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Azure revenue growth over 150% signals cloud share gains vs AWS"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "SQL Server double-digit growth competes with Oracle database business"
+  }
+ ],
+ "evidence": "Revenue growth across segments and cost discipline drive earnings per share of $0.68",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

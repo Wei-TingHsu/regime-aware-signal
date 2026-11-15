@@ -1,0 +1,36 @@
+{
+ "facts": {
+  "period": "Q4 2010 (quarter ended Dec. 25, 2010)",
+  "revenue": "$1.65 billion (up 2% sequentially, flat YoY)",
+  "operating_income": "$413 million GAAP; $141 million non-GAAP",
+  "net_income": "$375 million GAAP; $106 million non-GAAP",
+  "eps": "$0.50 GAAP diluted; $0.14 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$1.79 billion",
+  "total_debt": null,
+  "guidance_next": "AMD expects first quarter of 2011 revenue to be flat to slightly down sequentially"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.1,
+ "own_stock": 0.1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "reason": "x86 microprocessor and APU competition"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "reason": "discrete graphics competition"
+  }
+ ],
+ "evidence": "AMD expects first quarter of 2011 revenue to be flat to slightly down sequentially.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

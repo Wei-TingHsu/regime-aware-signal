@@ -1,0 +1,49 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.25,
+ "fcf_outlook": 0.4,
+ "uncertainty": -0.2,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AI chip demand driving TSMC growth implies strong NVDA orders"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "shared foundry demand strength"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "advanced node demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC strength highlights Intel foundry lag"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broader semiconductor upcycle signal"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "memory demand tied to AI chip cycle"
+  }
+ ],
+ "evidence": "revenue for July 2024 was approximately NT$256.95 billion, an increase of 23.6 percent from June 2024 and an increase of 44.7 percent from July 2023",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

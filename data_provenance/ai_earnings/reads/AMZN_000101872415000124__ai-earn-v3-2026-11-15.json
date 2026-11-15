@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2015 (quarter ended September 30, 2015)",
+  "revenue": "$25.358 billion total net sales (up 23% YoY)",
+  "operating_income": "$406 million income from operations (vs $(544) million loss in Q3 2014)",
+  "net_income": "$79 million",
+  "eps": "$0.17 diluted",
+  "operating_cash_flow": "$9.823 billion (trailing twelve months)",
+  "capex": "$1.195 billion (quarterly) / $4.424 billion (trailing twelve months)",
+  "free_cash_flow": "$5.4 billion (trailing twelve months, as stated)",
+  "cash_and_investments": "$10.709 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.2,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AWS cloud growth highlights competitive cloud market"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AWS momentum pressures Google Cloud ambitions"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS database migration tools target Oracle customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "AWS data center expansion implies server chip demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Cloud infrastructure growth supports networking/chip suppliers"
+  }
+ ],
+ "evidence": "Operating income was $406 million in the third quarter, compared with operating loss of $544 million in third quarter 2014.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

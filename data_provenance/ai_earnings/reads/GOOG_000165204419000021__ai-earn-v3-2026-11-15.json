@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2019 (three months ended June 30, 2019)",
+  "revenue": "$38,944 million, up 19% YoY (22% constant currency)",
+  "operating_income": "$9,180 million GAAP (24% margin); Non-GAAP $9,180 million (prior year non-GAAP $8,116 million excluding EC fine)",
+  "net_income": "$9,947 million GAAP; Non-GAAP $9,947 million (prior year non-GAAP $8,266 million)",
+  "eps": "$14.21 diluted GAAP (Non-GAAP also $14.21; prior year non-GAAP $11.75)",
+  "operating_cash_flow": "$12,627 million",
+  "capex": "$6,126 million (purchases of property and equipment)",
+  "free_cash_flow": "$6,501 million (stated)",
+  "cash_and_investments": "$121,056 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$4,074 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud competitor, no direct comparison given"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/Azure competitor"
+  },
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "digital ad competitor"
+  }
+ ],
+ "evidence": "\"With revenues of $38.9 billion, up 19% versus the second quarter of 2018 and up 22% on a constant currency basis, we\u2019re delivering strong growth\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

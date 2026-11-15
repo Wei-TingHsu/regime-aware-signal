@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and Full Year Fiscal 2024 (quarter and year ended May 31, 2024)",
+  "revenue": "$14.3 billion, up 3% YoY (4% constant currency); FY2024 $53.0 billion, up 6%",
+  "operating_income": "GAAP $4.686 billion (33% margin); Non-GAAP $6.669 billion (47% margin) for Q4; FY2024 GAAP $15.4 billion, Non-GAAP $23.1 billion",
+  "net_income": "Q4 GAAP $3.143 billion; FY2024 GAAP $10.467 billion, Non-GAAP $15.7 billion",
+  "eps": "Q4 GAAP diluted $1.11, Non-GAAP $1.63; FY2024 GAAP $3.71, Non-GAAP $5.56",
+  "operating_cash_flow": "$18.673 billion (FY2024, trailing 4 quarters)",
+  "capex": "$6.866 billion (FY2024)",
+  "free_cash_flow": "$11.807 billion (FY2024, as stated)",
+  "cash_and_investments": "$10.454 billion cash + $207 million marketable securities = ~$10.66 billion",
+  "total_debt": "$10.605 billion current + $76.264 billion non-current notes payable = ~$86.87 billion",
+  "guidance_next": "Double-digit revenue growth expected for fiscal 2025, with each successive quarter growing faster than the previous as OCI capacity catches up with demand; RPO at $98 billion, up 44% YoY"
+ },
+ "results_vs_prior_guidance": -0.2,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.5,
+ "own_stock": -0.2,
+ "market": 0.3,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "Expanded multicloud deal, Azure/OCI interconnect for OpenAI/ChatGPT"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "New interconnect agreement, OCI datacenters inside Google Cloud"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "AI infrastructure buildout implies continued GPU demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle gaining large AI cloud contracts versus other hyperscalers"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AI datacenter capacity expansion benefits chip suppliers broadly"
+  }
+ ],
+ "evidence": "Q4 Total Revenue $14.3 billion, up 3% in USD, up 4% in constant currency",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

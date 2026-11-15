@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ1 2023 (ended December 1, 2022)",
+  "revenue": "$4.085 billion",
+  "operating_income": "GAAP $(209) million; Non-GAAP $(65) million",
+  "net_income": "GAAP $(195) million; Non-GAAP $(39) million",
+  "eps": "GAAP $(0.18); Non-GAAP $(0.04)",
+  "operating_cash_flow": "$943 million",
+  "capex": "$2.471 billion (net investments in capex)",
+  "free_cash_flow": "Adjusted FCF $(1.528) billion",
+  "cash_and_investments": "$12.08 billion cash, marketable investments and restricted cash; net cash position $1.81 billion",
+  "total_debt": "$10.265 billion current and long-term debt",
+  "guidance_next": "FQ2-23: Revenue $3.80B \u00b1 $200M; GAAP gross margin 7.5% \u00b1 2.5% (Non-GAAP 8.5% \u00b1 2.5%); GAAP opex $1.08B \u00b1 $15M (Non-GAAP $945M \u00b1 $15M); GAAP diluted EPS $(0.79) \u00b1 $0.10 (Non-GAAP $(0.62) \u00b1 $0.10)"
+ },
+ "results_vs_prior_guidance": -0.4,
+ "guidance_change": -0.8,
+ "fcf_trend": -0.8,
+ "own_stock": -0.7,
+ "market": -0.2,
+ "ai_demand": -0.1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "NAND oversupply and pricing pressure industry-wide"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "shared DRAM/NAND downturn dynamics"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "broader semiconductor demand weakness signal"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "read-through on chip/PC end-market softness"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "memory maker guidance signals weak near-term component demand, though AI/HBM exposure less affected"
+  }
+ ],
+ "evidence": "We expect improving customer inventories to enable higher revenue in the fiscal second half, and to deliver strong profitability once we get past this downturn.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

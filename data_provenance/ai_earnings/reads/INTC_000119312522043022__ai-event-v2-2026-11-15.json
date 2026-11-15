@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.3,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSEM",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Tower halts guidance/earnings call pending Intel acquisition"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel foundry expansion via Tower adds competitive capacity"
+  },
+  {
+   "company": "GLOBALFOUNDRIES",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "specialty foundry rival to enlarged Intel-Tower combo"
+  }
+ ],
+ "evidence": "In light of the announced transaction, Tower will not provide guidance for the first-quarter 2022 and will not host an earnings conference call.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

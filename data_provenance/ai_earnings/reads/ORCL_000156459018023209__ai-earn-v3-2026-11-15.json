@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2019 (three months ended August 31, 2018)",
+  "revenue": "$9.2 billion total revenues, up 1% YoY (up 2% constant currency)",
+  "operating_income": "GAAP $2.78 billion (up 1%), Non-GAAP $3.76 billion (up 1%)",
+  "net_income": "GAAP $2.265 billion, up 6% YoY",
+  "eps": "GAAP diluted $0.57 (up 13%); Non-GAAP diluted $0.71 (up 18%)",
+  "operating_cash_flow": "$15.5 billion trailing twelve months (up 5%); quarterly GAAP operating cash flow $6.722 billion",
+  "capex": "$383 million (quarterly); $1.646 billion trailing twelve months",
+  "free_cash_flow": "$13.896 billion trailing twelve months (up 10% YoY)",
+  "cash_and_investments": "$18.455 billion cash and cash equivalents plus $41.639 billion marketable securities (total ~$60.1 billion) as of Aug 31, 2018",
+  "total_debt": "Notes payable and other borrowings: $3.743 billion current + $54.386 billion non-current = ~$58.1 billion",
+  "guidance_next": "No specific numeric guidance given; CEO Safra Catz reiterated confidence in 'another fiscal year of double-digit non-GAAP earnings per share growth' for FY19"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.5,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Ellison claims Oracle database superior to Amazon's for cloud databases, says Amazon uses Oracle"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Implicit cloud infrastructure rivalry in ERP/cloud space"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "n/a"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Not addressed"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud infrastructure competitor not directly mentioned"
+  }
+ ],
+ "evidence": "That strong earnings per share growth rate increases my confidence that we will deliver on another fiscal year of double-digit non-GAAP earnings per share growth.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

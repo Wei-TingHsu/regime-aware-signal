@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.35,
+ "fcf_outlook": -0.1,
+ "uncertainty": -0.2,
+ "own_stock": 0.4,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "signals confidence in semiconductor capital returns"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "indirect, minimal impact"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "sector capital return sentiment"
+  }
+ ],
+ "evidence": "approved a $10 billion increase in the amount of the company\u2019s authorized share repurchase program",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

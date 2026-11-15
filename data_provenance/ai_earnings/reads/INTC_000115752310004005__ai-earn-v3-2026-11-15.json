@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2010 (quarter ended June 26, 2010)",
+  "revenue": "$10,765 million",
+  "operating_income": "$3,981 million",
+  "net_income": "$2,887 million",
+  "eps": "$0.51 diluted",
+  "operating_cash_flow": null,
+  "capex": "$1,048 million",
+  "free_cash_flow": null,
+  "cash_and_investments": "$17,772 million total cash investments (cash, short-term investments, trading assets)",
+  "total_debt": "$2,273 million (short-term $215M + long-term $2,058M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Intel's strong revenue/margin growth implies competitive pressure"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Flash memory investments referenced as risk factor, limited direct read-through"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Intel's own manufacturing ramp (32nm) reduces reliance on foundries"
+  }
+ ],
+ "evidence": "NET INCOME... $2,887 million vs a loss of $(398) million a year earlier, with operating income swinging from $(12) million to $3,981 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

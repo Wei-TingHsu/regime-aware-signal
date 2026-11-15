@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY2013 (ended May 30, 2013)",
+  "revenue": "$2,318 million",
+  "operating_income": "$149 million",
+  "net_income": "$43 million (attributable to Micron)",
+  "eps": "$0.04 diluted",
+  "operating_cash_flow": "Nine months: $1,094 million (quarterly OCF stated as $624 million)",
+  "capex": "$235 million (quarter); $964 million (nine months)",
+  "free_cash_flow": "$389 million (624 - 235, quarter, as stated/calculated)",
+  "cash_and_investments": "$2,899 million ($2,552M cash/short-term + $347M long-term marketable investments)",
+  "total_debt": "$3,624 million ($357M current + $3,267M long-term)",
+  "guidance_next": "Company is optimistic it will close the Elpida acquisition in fiscal Q4 ending August 29, 2013; no specific quantitative guidance given"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "NAND pricing improvement signals broader memory market recovery"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "DRAM/NAND supplier to PC/server makers benefiting from improved memory pricing"
+  }
+ ],
+ "evidence": "net income attributable to Micron shareholders of $43 million, or $0.04 per diluted share, on net sales of $2.3 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q4 2020 (quarter and full year ended December 31, 2020)",
+  "revenue": "$125.6 billion (Q4), $386.1 billion (FY2020)",
+  "operating_income": "$6.9 billion (Q4), $22.9 billion (FY2020)",
+  "net_income": "$7.2 billion (Q4), $21.3 billion (FY2020)",
+  "eps": "$14.09 diluted (Q4), $41.83 diluted (FY2020)",
+  "operating_cash_flow": "$66.1 billion (TTM)",
+  "capex": "$40.1 billion purchases of property and equipment (FY2020, from cash flow statement)",
+  "free_cash_flow": "$31.0 billion (TTM)",
+  "cash_and_investments": "$42.1 billion cash and equivalents + $42.3 billion marketable securities = $84.4 billion (Dec 31, 2020)",
+  "total_debt": "$31.8 billion long-term debt (Dec 31, 2020)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS cloud growth of 28% Q4 highlights competitive cloud landscape"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS growth implies continued cloud market competition"
+  }
+ ],
+ "evidence": "Operating income increased to $6.9 billion in the fourth quarter, compared with operating income of $3.9 billion in fourth quarter 2019",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

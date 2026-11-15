@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2026 (quarter ended June 30, 2026)",
+  "revenue": "$119.8 billion (+24% YoY, +23% constant currency)",
+  "operating_income": "$40.77 billion (+30% YoY), operating margin 34%",
+  "net_income": "$112.107 billion available to common stockholders (+298% YoY, largely due to $98.0B net unrealized gains on equity securities)",
+  "eps": "$9.11 diluted (+294% YoY)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$242.474 billion total cash, cash equivalents, and marketable securities (up from $126.843B at Dec 31, 2025)",
+  "total_debt": "$98.165 billion long-term debt (up from $46.547B at Dec 31, 2025), after $20.3B in new senior unsecured notes",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.5,
+ "own_stock": 0.8,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.7,
+   "reason": "Google Cloud AI infrastructure growth implies strong GPU/accelerator demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud AI acceleration signals strong competitive cloud/AI market growth"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Google Cloud's 82% growth highlights intensifying cloud/AI competition"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Rising AI infrastructure capex implies more chip fabrication demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Custom AI chip and networking demand tied to Google Cloud infrastructure buildout"
+  }
+ ],
+ "evidence": "Google Cloud revenues increased 82% to $24.8 billion, led by an increase in Google Cloud Platform (GCP) across enterprise AI Solutions and enterprise AI Infrastructure",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v2-2026-11-15"
+}

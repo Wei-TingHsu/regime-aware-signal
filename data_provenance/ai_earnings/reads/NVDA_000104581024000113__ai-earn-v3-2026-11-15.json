@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2025 (quarter ended April 28, 2024)",
+  "revenue": "$26,044 million (up 18% Q/Q, up 262% Y/Y)",
+  "operating_income": "$16,909 million GAAP; $18,059 million non-GAAP",
+  "net_income": "$14,881 million GAAP; $15,238 million non-GAAP",
+  "eps": "$5.98 diluted GAAP; $6.12 diluted non-GAAP",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$31,438 million (cash, cash equivalents and marketable securities)",
+  "total_debt": "$9,710 million (short-term $1,250M + long-term $8,460M)",
+  "guidance_next": "Q2 FY25 revenue expected to be $28.0 billion, plus or minus 2%; GAAP and non-GAAP gross margins expected to be 74.8% and 75.5% respectively, plus or minus 50bps (full-year gross margin in mid-70% range); GAAP and non-GAAP opex expected to be approximately $4.0B and $2.8B (full-year opex growth in low-40% range); other income/expense expected to be income of approximately $300 million; tax rates expected to be 17%, plus or minus 1%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.7,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "surging Blackwell/Hopper production implies higher foundry demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "AI accelerators drive HBM/memory demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVIDIA's dominant data-center growth pressures AMD's GPU market share"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "cloud providers buying more NVIDIA GPUs for AI workloads"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "networking (Spectrum-X) expansion signals broader AI infrastructure spend benefiting networking peers"
+  }
+ ],
+ "evidence": "Revenue is expected to be $28.0 billion, plus or minus 2%.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

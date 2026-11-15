@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2011 (quarter ended July 2, 2011)",
+  "revenue": "$13,032 million",
+  "operating_income": "$3,935 million",
+  "net_income": "$2,954 million",
+  "eps": "$0.54 diluted, $0.56 basic",
+  "operating_cash_flow": null,
+  "capex": "$2,484 million",
+  "free_cash_flow": null,
+  "cash_and_investments": "$11,537 million total cash investments (cash, short-term investments, trading assets)",
+  "total_debt": "$2,161 million (short-term $71M + long-term $2,090M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0,
+ "fcf_trend": -0.2,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel revenue growth implies share/strength vs AMD"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Intel's NAND/flash equity investment exposure tied to memory market health"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel manufacturing ramp and capex signal foundry competitive dynamics"
+  }
+ ],
+ "evidence": "NET REVENUE $13,032 ... GROSS MARGIN 7,902 ... NET INCOME $2,954",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

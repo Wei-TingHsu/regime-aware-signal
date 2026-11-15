@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2026 (three months ended September 30, 2026)",
+  "revenue": "$201.9 billion, +12% YoY",
+  "operating_income": "$28.1 billion, 13.9% margin",
+  "net_income": "$20.7 billion",
+  "eps": "$1.89 diluted",
+  "operating_cash_flow": "$168.3 billion TTM, +29% YoY",
+  "capex": "$77.3 billion in Q3 (purchases of property and equipment); $215.2 billion TTM",
+  "free_cash_flow": "TTM FCF outflow of $42.4 billion, vs inflow of $14.8 billion prior TTM",
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "AWS revenue growth projected to exceed 40% in both 2027 and 2028 (per CEO commentary); no formal quarterly guidance given"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 1,
+ "fcf_trend": -1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "AWS accelerating growth to 39% pressures Azure cloud narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Cloud competition intensifies as AWS reaccelerates"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "New AWS AI agreement signed, capex surge implies chip demand"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "New AWS agreement signed with Oracle"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "New AWS agreement signed with Meta"
+  }
+ ],
+ "evidence": "AWS net sales increased 39.3%\u2014its fastest growth in nearly five years\u2014to a $184 billion annualized revenue run rate",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

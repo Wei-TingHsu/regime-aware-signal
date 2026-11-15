@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2020 (three months ended September 30, 2020)",
+  "revenue": "$21,470 million (total revenue), $21,221 million advertising",
+  "operating_income": "$8,040 million (37% operating margin)",
+  "net_income": "$7,846 million",
+  "eps": "$2.71 diluted",
+  "operating_cash_flow": "$9,828 million",
+  "capex": "$3,689 million (purchases of property and equipment, net); $3.88 billion including finance lease principal payments",
+  "free_cash_flow": "$5,950 million (as stated, non-GAAP)",
+  "cash_and_investments": "$55.62 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": "Q4 2020: US&Canada DAUs/MAUs flat to slightly down vs Q3; Q4 ad revenue YoY growth rate expected higher than Q3's 22% reported rate; Oculus Quest 2 to help Other Revenue; FY2020 total expenses narrowed to $53-54B (from $52-55B); FY2020 capex ~$16B (unchanged); FY2020 tax rate mid-teens; FY2021 total expenses $68-73B (preliminary); FY2021 capex $21-23B; FY2021 tax rate high-teens"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.3,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "strong digital ad demand signals read across to Google ads"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "online commerce acceleration benefits e-commerce ad spend broadly"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "cloud/data center capex ramp signals broader tech infrastructure spend"
+  },
+  {
+   "company": "AAPL",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "iOS 14 targeting changes flagged as 2021 headwind to FB ad business"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "sharp FY2021 capex increase ($21-23B) implies more data center/server/network infrastructure spend"
+  }
+ ],
+ "evidence": "We expect our fourth quarter 2020 year-over-year ad revenue growth rate to be higher than our reported third quarter 2020 rate, driven by continued strong advertiser demand during the holiday season.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

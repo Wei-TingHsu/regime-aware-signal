@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ1 2024 (ended November 30, 2023)",
+  "revenue": "$4.726 billion (GAAP and Non-GAAP)",
+  "operating_income": "GAAP: $(1.128) billion; Non-GAAP: $(955) million",
+  "net_income": "GAAP: $(1.234) billion; Non-GAAP: $(1.048) billion",
+  "eps": "GAAP diluted: $(1.12); Non-GAAP diluted: $(0.95)",
+  "operating_cash_flow": "$1.401 billion",
+  "capex": "Investments in capital expenditures, net: $1.734 billion (gross PP&E expenditures $1.796 billion)",
+  "free_cash_flow": "Adjusted free cash flow: $(333) million",
+  "cash_and_investments": "$9.84 billion (cash, marketable investments, and restricted cash)",
+  "total_debt": "Current debt $908 million + Long-term debt $12.597 billion = ~$13.505 billion",
+  "guidance_next": "FQ2-24: Revenue $5.30B \u00b1 $200M (GAAP and Non-GAAP); GAAP gross margin 12.0% \u00b1 1.5% (Non-GAAP 13.0% \u00b1 1.5%); GAAP opex $1.07B \u00b1 $15M (Non-GAAP $950M \u00b1 $15M); GAAP diluted EPS $(0.45) \u00b1 $0.07 (Non-GAAP $(0.28) \u00b1 $0.07)"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.4,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "HBM demand tied to NVDA's AI GPU ramp"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Shared HBM/AI memory TAM growth benefits peer too"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AMD AI accelerators use HBM, benefits from memory supply commentary"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Broader AI server/compute demand read-through"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AI networking/ASIC demand tied to memory attach rates"
+  }
+ ],
+ "evidence": "\"Micron\u2019s strong execution and pricing drove better-than-anticipated first quarter financial results\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

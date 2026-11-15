@@ -1,0 +1,31 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": -0.1,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "foundry customer, unaffected by audited restatement"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "foundry customer, no new info"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "foundry competitor, no change"
+  }
+ ],
+ "evidence": "audited consolidated results for the fiscal year ended 2012",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

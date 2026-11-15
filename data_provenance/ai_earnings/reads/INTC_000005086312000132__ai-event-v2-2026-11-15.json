@@ -1,0 +1,31 @@
+{
+ "event_type": "leadership change",
+ "material": 0.6,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.6,
+ "own_stock": -0.3,
+ "market": -0.05,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel leadership transition creates uncertainty, slight competitive opening"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Intel strategic direction uncertainty could affect foundry/supply relationships"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "minimal direct effect"
+  }
+ ],
+ "evidence": "Paul Otellini...has decided to retire as an officer and director...starting an orderly leadership transition over the next six months",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

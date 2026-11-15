@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2023 (ended January 29, 2023)",
+  "revenue": "$8,915 million (+16% YoY)",
+  "operating_income": "$5,430 million (non-GAAP)",
+  "net_income": "$3,774 million (GAAP); $4,483 million (non-GAAP)",
+  "eps": "$8.80 GAAP diluted; $10.33 non-GAAP diluted",
+  "operating_cash_flow": "$4,036 million",
+  "capex": "$103 million",
+  "free_cash_flow": "$3,933 million (stated)",
+  "cash_and_investments": "$12,647 million cash and cash equivalents",
+  "total_debt": "$39,282 million (current $1,115M + long-term $38,167M)",
+  "guidance_next": "Q2 FY23 revenue guidance of approximately $8.7 billion (+8% YoY); Adjusted EBITDA guidance of approximately 64.5% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.5,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "overlapping data center/networking semiconductor markets"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "semiconductor solutions rivalry"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "broad semiconductor market overlap"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "enterprise/VMware software ecosystem ties"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "cloud/data center customer for networking chips"
+  }
+ ],
+ "evidence": "We generated $3.9 billion in free cash flow, representing a 16% increase year-over-year, and expect even stronger free cash flow in the second quarter.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

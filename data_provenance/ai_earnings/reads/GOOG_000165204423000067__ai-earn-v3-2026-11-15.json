@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2023 (quarter ended June 30, 2023)",
+  "revenue": "$74,604 million, +7% YoY (+9% constant currency)",
+  "operating_income": "$21,838 million, 29% operating margin",
+  "net_income": "$18,368 million",
+  "eps": "$1.44 diluted",
+  "operating_cash_flow": "$28,666 million (quarter); $52,175 million (YTD)",
+  "capex": "$6,888 million (quarter); $13,177 million (YTD)",
+  "free_cash_flow": "$21,778 million (quarter, OCF minus capex); $38,998 million (YTD)",
+  "cash_and_investments": "$118,332 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$13,705 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud competition; Google Cloud turned profitable, intensifying rivalry"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud competition from Google Cloud growth"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "AI investment and Cloud/DeepMind growth implies continued chip demand"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Peer large-cap tech advertising business, similar ad recovery read-through"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Increased AI/cloud infrastructure investment supports chip fabrication demand"
+  }
+ ],
+ "evidence": "Our financial results reflect continued resilience in Search, with an acceleration of revenue growth in both Search and YouTube, as well as momentum in Cloud.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

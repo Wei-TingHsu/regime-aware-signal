@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2017 (quarter ended June 30, 2017)",
+  "revenue": "$38.0 billion net sales, up 25% YoY",
+  "operating_income": "$628 million, down 51% YoY",
+  "net_income": "$197 million",
+  "eps": "$0.40 diluted ($0.41 basic)",
+  "operating_cash_flow": "$17.9 billion TTM (up 37% YoY)",
+  "capex": "$8.207 billion TTM (purchases of property and equipment, six months: $4,362M)",
+  "free_cash_flow": "$9.7 billion TTM (up from $7.7B)",
+  "cash_and_investments": "$13,203 million cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.3,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AWS G3 instances backed by NVIDIA Tesla M60 GPUs for graphics/AI workloads"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS cloud growth (34% YoY) pressures Azure competitive positioning"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS enterprise wins and ML/AI service expansion compete with Google Cloud"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Intel named as AWS Greengrass partner integrating into IoT platforms"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Potential beneficiary of AWS compute infrastructure expansion"
+  }
+ ],
+ "evidence": "Operating income decreased 51% to $628 million in the second quarter, compared with operating income of $1.3 billion in second quarter 2016",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

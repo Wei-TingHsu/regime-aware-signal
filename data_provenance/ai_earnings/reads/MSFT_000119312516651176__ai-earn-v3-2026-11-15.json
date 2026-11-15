@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2016 (quarter ended June 30, 2016); also full FY2016",
+  "revenue": "$20.6 billion GAAP; $22.6 billion non-GAAP (Q4); FY2016: $85.3 billion GAAP, $92.0 billion non-GAAP",
+  "operating_income": "$3.1 billion GAAP; $6.2 billion non-GAAP (Q4); FY2016: $20.2 billion GAAP, $27.9 billion non-GAAP",
+  "net_income": "$3.1 billion GAAP; $5.5 billion non-GAAP (Q4); FY2016: $16.8 billion GAAP, $22.3 billion non-GAAP",
+  "eps": "$0.39 GAAP; $0.69 non-GAAP (Q4); FY2016: $2.10 GAAP, $2.79 non-GAAP",
+  "operating_cash_flow": "$8,464 million (Q4); $33,325 million (FY2016)",
+  "capex": "$2,655 million (Q4, additions to property and equipment); $8,343 million (FY2016)",
+  "free_cash_flow": "$5,809 million (Q4, OCF minus capex); $24,982 million (FY2016, OCF minus capex)",
+  "cash_and_investments": "$113,240 million total cash, cash equivalents, and short-term investments (June 30, 2016)",
+  "total_debt": "Short-term debt $12,904 million + long-term debt $40,783 million = $53,687 million (June 30, 2016)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Azure growth of 102% signals share gains vs AWS in cloud"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Strong Azure and commercial cloud growth pressures Google Cloud competitive position"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Server and cloud growth highlights competitive threat to Oracle's enterprise database/cloud business"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Not directly addressed but part of broader enterprise software/cloud ecosystem"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Data center and Azure growth implies continued server/chip demand but not explicitly addressed"
+  }
+ ],
+ "evidence": "Commercial cloud annualized revenue run rate exceeds $12.1 billion, with Azure revenue grew 102% (up 108% in constant currency) with Azure compute usage more than doubling year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.1,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.0,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Vanguard International Semiconductor",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "continued sourcing/licensing relationship with TSMC maintained despite stake sale"
+  }
+ ],
+ "evidence": "This share sale will not affect the strategic relations between the two companies.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

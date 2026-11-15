@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2018 (quarter ended April 30, 2017)",
+  "revenue": "$1.937 billion GAAP, up 48% YoY, down 11% QoQ",
+  "operating_income": "GAAP $554 million; Non-GAAP $637 million",
+  "net_income": "GAAP $507 million; Non-GAAP $533 million",
+  "eps": "GAAP diluted $0.79; Non-GAAP diluted $0.85",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$6,206 million (cash, cash equivalents and marketable securities)",
+  "total_debt": "$215 million convertible short-term debt + $1,984 million long-term debt = $2,199 million",
+  "guidance_next": "Q2 FY18 revenue ~$1.95B \u00b12%; GAAP/non-GAAP gross margin 58.4%/58.6% \u00b150bps; GAAP opex ~$605M, non-GAAP opex ~$530M; GAAP/non-GAAP tax rate 17% \u00b11%; capex ~$55-65M"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.1,
+ "fcf_trend": -0.1,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA's GPU/datacenter dominance pressures AMD's competing accelerators"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Datacenter AI growth threatens Intel's CPU-centric server share"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Higher GPU shipments imply more foundry demand for NVDA chips"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure cloud adoption of Tesla P100/P40 GPUs signals cloud AI capex growth"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Google Cloud adding NVIDIA Tesla accelerators expands AI compute demand"
+  }
+ ],
+ "evidence": "Our Datacenter GPU computing business nearly tripled from last year, as more of the world's computer scientists engage deep learning.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

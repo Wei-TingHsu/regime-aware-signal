@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2024 (quarter ended September 30, 2024)",
+  "revenue": "$158.9 billion (up 11% YoY)",
+  "operating_income": "$17.4 billion",
+  "net_income": "$15.3 billion",
+  "eps": "$1.43 diluted",
+  "operating_cash_flow": "$112.7 billion (trailing twelve months)",
+  "capex": "$22.6 billion (quarterly purchases of property and equipment); $69.75 billion TTM",
+  "free_cash_flow": "$47.7 billion (trailing twelve months)",
+  "cash_and_investments": "$75.1 billion cash and equivalents + $13.0 billion marketable securities (Sept 30, 2024)",
+  "total_debt": "$54.9 billion long-term debt (Sept 30, 2024)",
+  "guidance_next": "Q4 2024: net sales $181.5B-$188.5B (7%-11% YoY growth, ~10bps FX headwind); operating income $16.0B-$20.0B vs $13.2B in Q4 2023"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AWS 19% growth signals strong cloud/AI demand broadly"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud AI capex race validated by AWS results"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Rising AWS capex implies continued GPU/chip demand"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "Oracle Database@AWS partnership highlighted"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AWS custom chip (Trainium) and cloud infra expansion implies broader semiconductor demand"
+  }
+ ],
+ "evidence": "Operating income increased to $17.4 billion in the third quarter, compared with $11.2 billion in third quarter 2023.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

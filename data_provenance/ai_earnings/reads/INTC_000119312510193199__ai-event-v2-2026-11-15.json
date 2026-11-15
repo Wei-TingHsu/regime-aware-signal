@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.6,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.5,
+ "own_stock": -0.3,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel capital diverted to security, not core CPU"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "software diversification precedent"
+  },
+  {
+   "company": "MSFT",
+   "relation": "partner",
+   "direction": -0.1,
+   "reason": "security software overlap/competition"
+  }
+ ],
+ "evidence": "Intel Corporation (\u201cIntel\u201d) announced that it had entered into a definitive agreement to acquire McAfee, Inc.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

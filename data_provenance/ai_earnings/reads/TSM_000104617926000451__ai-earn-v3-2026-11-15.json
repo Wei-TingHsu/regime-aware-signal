@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2026 (quarter ended June 30, 2026)",
+  "revenue": "NT$1,270.38 billion (US$40.20 billion), +36.0% YoY in NT$, +33.7% YoY in US$",
+  "operating_income": "NT$766.60 billion, operating margin 60.3%",
+  "net_income": "NT$706.56 billion, +77.4% YoY",
+  "eps": "NT$27.25 per share (US$4.31 per ADR)",
+  "operating_cash_flow": "NT$783.36 billion",
+  "capex": "NT$496.00 billion",
+  "free_cash_flow": "NT$287.36 billion (company-stated: operating cash flow minus capex)",
+  "cash_and_investments": "NT$3,518.01 billion cash & marketable securities",
+  "total_debt": "NT$864.27 billion long-term interest-bearing debt",
+  "guidance_next": "Q3 2026 revenue expected US$44.6-45.8 billion; gross margin 65%-67%; operating margin 56%-58% (at NT$32/US$1); full-year 2026 revenue expected to increase by slightly above 40% YoY in US dollar terms"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.3,
+ "own_stock": 0.8,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.7,
+   "reason": "leading-edge 2nm/3nm ramp implies continued AI chip supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "benefits from advanced node capacity expansion"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "custom silicon demand tied to TSMC advanced packaging/leading-edge nodes"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "TSMC's accelerating 2nm ramp widens foundry lead"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud/AI silicon customer benefiting from expanded capacity"
+  }
+ ],
+ "evidence": "Revenue is expected to be between US$44.6 billion and US$45.8 billion... 2026 revenue to increase by slightly above 40% in US dollar terms",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

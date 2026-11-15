@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.75,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.7,
+ "own_stock": -0.5,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "CA mainframe/enterprise software competitor being absorbed by larger rival"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Broadcom expands into enterprise software, diversifying away from chips"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": -0.5,
+   "reason": "large all-cash deal, non-core software diversification, integration/antitrust risk"
+  }
+ ],
+ "evidence": "will merge with and into CA... each issued and outstanding share of CA common stock... will be cancelled and automatically converted into the right to receive $44.50 in cash",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

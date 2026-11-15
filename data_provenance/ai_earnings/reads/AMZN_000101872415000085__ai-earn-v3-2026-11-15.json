@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2015 (quarter ended June 30, 2015)",
+  "revenue": "$23.18 billion",
+  "operating_income": "$464 million",
+  "net_income": "$92 million",
+  "eps": "$0.19 diluted ($0.20 basic)",
+  "operating_cash_flow": "$8.98 billion (trailing twelve months)",
+  "capex": "$4.607 billion (TTM); $1.213 billion (Q2 purchases of property and equipment)",
+  "free_cash_flow": "$4.37 billion (TTM)",
+  "cash_and_investments": "$10.269 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q3 2015: net sales expected $23.3B-$25.5B (13%-24% growth); operating income (loss) expected $(480) million to $70 million vs $(544) million in Q3 2014, including ~$580 million stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.3,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS cloud growth (77% YoY) pressures rival cloud platforms"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS strength vs Azure in cloud infrastructure race"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS cloud momentum challenges enterprise cloud rivals"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AWS data center expansion drives server chip demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Growing AWS compute capacity implies rising demand for data center silicon"
+  }
+ ],
+ "evidence": "Operating income was $464 million in the second quarter, compared with operating loss of $15 million in second quarter 2014",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

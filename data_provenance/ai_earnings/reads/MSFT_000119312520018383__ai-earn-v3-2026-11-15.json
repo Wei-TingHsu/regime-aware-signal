@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2020 (quarter ended Dec 31, 2019)",
+  "revenue": "$36.9 billion, +14% YoY",
+  "operating_income": "$13.9 billion, +35% YoY",
+  "net_income": "$11.6 billion, +38% GAAP YoY",
+  "eps": "$1.51 diluted, +40% GAAP YoY",
+  "operating_cash_flow": "$10,680 million (three months)",
+  "capex": "$3,545 million (additions to property and equipment)",
+  "free_cash_flow": "$7,135 million (10,680 - 3,545)",
+  "cash_and_investments": "$134,253 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$69,608 million (current portion $6,247M + long-term $63,361M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Azure growth of 62% pressures AWS cloud competitive position"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong Azure/commercial cloud growth intensifies cloud competition"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Server/cloud strength competes with Oracle enterprise offerings"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Rising datacenter/Azure capex implies continued server hardware demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Cloud infrastructure growth supports server chip demand"
+  }
+ ],
+ "evidence": "Revenue was $36.9 billion and increased 14%... Net income was $11.6 billion and increased 38% GAAP",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,25 @@
+{
+ "event_type": "restructuring",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.2,
+ "own_stock": -0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "IBM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Sun integration disruption could aid rivals in hardware/server space"
+  },
+  {
+   "company": "HPQ",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "server/hardware competitor benefiting from Oracle-Sun turmoil"
+  }
+ ],
+ "evidence": "Oracle estimates the additional costs related to this Amendment to the Sun Plan will be between $675 million and $825 million, the substantial majority of which will require the outlay of cash",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

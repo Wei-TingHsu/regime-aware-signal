@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.2,
+ "own_stock": -0.2,
+ "market": -0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "foundry demand slowdown signal"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "foundry demand slowdown signal"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "weaker TSMC demand could ease foundry competition"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "semiconductor cycle softness"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "broader chip demand weakness"
+  }
+ ],
+ "evidence": "a decrease of 13.5 percent from November 2022",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

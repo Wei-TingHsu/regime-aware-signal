@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2013 (quarter ended September 30, 2013)",
+  "revenue": "NT$162.58 billion",
+  "operating_income": "NT$59.618 billion (operating margin 36.7%)",
+  "net_income": "NT$51.952 billion",
+  "eps": "NT$2.00 diluted (US$0.34 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2013: revenue NT$144-147 billion; gross profit margin 44%-46%; operating profit margin 32%-34%, at exchange rate 1 USD = 29.5 NTD"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": -0.5,
+ "fcf_trend": 0,
+ "own_stock": -0.3,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "foundry customer facing softer sector demand signal"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "TSMC foundry customer, inventory correction risk"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "mobile chip customer affected by high-end mobile softness"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "foundry competitor; TSMC margin compression could ease competitive pressure"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "semiconductor peer exposed to similar mobile device demand cycle"
+  }
+ ],
+ "evidence": "we expect our fourth quarter to be impacted by softer demand for certain high-end mobile devices and the inventory correction resulting from such softer demand",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.4,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.5,
+ "own_stock": 0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Google Cloud security boost vs Azure"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS cloud competition intensifies"
+  },
+  {
+   "company": "CRWD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Wiz is a direct cloud security rival"
+  }
+ ],
+ "evidence": "Google will acquire Wiz, Inc. ... for $32 billion, subject to closing adjustments, in an all-cash transaction ... expected to close in 2026, subject to customary closing conditions, including the receipt of regulatory approvals.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

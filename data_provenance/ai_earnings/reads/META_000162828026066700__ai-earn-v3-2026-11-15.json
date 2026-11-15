@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2026 (quarter ended September 30, 2026)",
+  "revenue": "$64,601 million (+26% YoY)",
+  "operating_income": "$12,988 million GAAP (-37% YoY); $22,880 million excluding $9.89B legal charge",
+  "net_income": "$9,860 million (+264% YoY)",
+  "eps": "$3.83 diluted GAAP; $7.40 excluding legal charge",
+  "operating_cash_flow": "$32,786 million",
+  "capex": "$34.91 billion including finance lease principal payments",
+  "free_cash_flow": "-$2,120 million (stated)",
+  "cash_and_investments": "$82,449 million (cash $11,222M + marketable securities $71,227M)",
+  "total_debt": "$80,922 million long-term debt",
+  "guidance_next": "Q4 2026 revenue $73-76B (assumes ~1% FX headwind); FY2026 total expenses raised to $175-179B (incl. $9.9B legal charge); FY2026 capex incl. finance leases narrowed to $135-145B (from $130-145B); Q4 2026 tax rate 15-17%; Reality Labs 2026 losses now $18-19B, expected to narrow to ~$15B in 2027; continued strong revenue growth expected through 2027 though no full-year 2027 revenue guide given"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.2,
+ "fcf_trend": -0.5,
+ "own_stock": 0.2,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Higher capex guidance implies continued AI chip demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Custom silicon/networking spend tied to raised capex"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Shared AI infrastructure investment cycle narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Competing in AI ad and model race"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Comparable hyperscaler capex and cloud capacity dynamics"
+  }
+ ],
+ "evidence": "revenue was $64.60 billion, an increase of 26% year-over-year on both a reported and constant currency basis",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

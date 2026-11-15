@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2024 (quarter ended March 30, 2024)",
+  "revenue": "$5,473 million (GAAP and non-GAAP)",
+  "operating_income": "$36 million GAAP; $1,133 million non-GAAP",
+  "net_income": "$123 million GAAP; $1,013 million non-GAAP",
+  "eps": "$0.07 diluted GAAP; $0.62 diluted non-GAAP",
+  "operating_cash_flow": "$521 million",
+  "capex": "$142 million",
+  "free_cash_flow": "$379 million (521-142)",
+  "cash_and_investments": "$4,190M cash + $1,845M short-term investments = $6,035M",
+  "total_debt": "$750M current portion + $1,718M long-term = $2,468M",
+  "guidance_next": "Q2 2024 revenue approximately $5.7 billion, plus or minus $300 million (~6% YoY, ~4% QoQ growth at midpoint); non-GAAP gross margin approximately 53%"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.3,
+ "own_stock": 0.3,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "MI300 AI accelerator ramp competes directly with Nvidia GPUs"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "EPYC and Ryzen share gains vs Intel CPUs"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "HBM/memory demand rises with MI300 GPU ramp"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Foundry partner benefiting from Data Center GPU/CPU ramp"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Azure Stack HCI and cloud AI deployments using AMD EPYC/Instinct"
+  }
+ ],
+ "evidence": "AMD expects revenue to be approximately $5.7 billion, plus or minus $300 million... Non-GAAP gross margin is expected to be approximately 53%.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

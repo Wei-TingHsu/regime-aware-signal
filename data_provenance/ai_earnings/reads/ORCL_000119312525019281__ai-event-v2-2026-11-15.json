@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.35,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.1,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "cloud infrastructure peer, not directly affected"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "cloud infrastructure peer, not directly affected"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "cloud infrastructure peer, not directly affected"
+  }
+ ],
+ "evidence": "Oracle intends to use a portion of the net proceeds of the offering to repay all or a portion of its 2.95% Notes due May 2025, 3.125% Notes due July 2025... and to make scheduled payments of principal and interest on borrowings under its Term Loan Credit Agreement",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

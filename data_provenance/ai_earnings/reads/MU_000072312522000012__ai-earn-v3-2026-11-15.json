@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Fiscal Q2 2022 (ended March 3, 2022)",
+  "revenue": "$7.786 billion",
+  "operating_income": "$2.546 billion GAAP / $2.750 billion non-GAAP",
+  "net_income": "$2.263 billion GAAP / $2.444 billion non-GAAP",
+  "eps": "$2.00 GAAP diluted / $2.14 non-GAAP diluted",
+  "operating_cash_flow": "$3.628 billion",
+  "capex": "Investments in capital expenditures, net $2.600 billion",
+  "free_cash_flow": "$1.028 billion (adjusted free cash flow, as stated)",
+  "cash_and_investments": "$11.95 billion cash, marketable investments and restricted cash; net cash $4.871 billion",
+  "total_debt": "$7.076 billion (current + long-term debt)",
+  "guidance_next": "FQ3-22: Revenue $8.7B \u00b1 $200M; GAAP gross margin 47.0% \u00b1 1% (Non-GAAP 48.0% \u00b1 1%); GAAP opex $1.13B \u00b1 $25M (Non-GAAP $1.05B \u00b1 $25M); GAAP diluted EPS $2.33 \u00b1 $0.10 (Non-GAAP $2.46 \u00b1 $0.10)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.6,
+ "own_stock": 0.8,
+ "market": 0.4,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "Strong DRAM/NAND supply and pricing supports GPU memory ecosystem"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Memory demand strength aids AMD's compute/GPU memory supply chain"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "NAND pricing/demand strength benefits peer storage makers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Memory market strength indirectly signals healthy data-center capex cycle"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader semiconductor capex and demand strength read-through"
+  }
+ ],
+ "evidence": "Micron\u2019s excellent second quarter results exceeded the high end of our guidance for both revenue and margin, reflecting our strong execution",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

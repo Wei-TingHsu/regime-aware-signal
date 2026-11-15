@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2026 (fiscal quarter ended September 26, 2026)",
+  "revenue": "$13,377M GAAP (~$13.4B)",
+  "operating_income": "$2,832M GAAP; $3,923M non-GAAP",
+  "net_income": "$2,428M GAAP; $3,471M non-GAAP",
+  "eps": "$1.46 GAAP diluted; $2.09 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2026 revenue approximately $17 billion, plus or minus 3% (implying ~66% YoY growth, ~27% sequential growth); non-GAAP gross margin approximately 55%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.2,
+ "own_stock": 0.7,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AMD Instinct MI450/Helios gaining AI accelerator traction"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "EPYC CPU share gains versus Intel server chips"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Higher AMD GPU/CPU volumes drive foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Running Helios/Instinct workloads, adopting EPYC compute instances"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "OCI deploying Helios and EPYC-powered compute instances"
+  }
+ ],
+ "evidence": "revenue exceeding the high end of our guidance as Data Center segment sales nearly doubled year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v2-2026-11-15"
+}

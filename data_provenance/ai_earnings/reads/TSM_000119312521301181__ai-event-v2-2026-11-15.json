@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.25,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.2,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "TSMC Arizona fab expansion funding competes in US foundry capacity"
+  }
+ ],
+ "evidence": "TSMC Arizona Corporation ... proposes to offer U.S. dollar-denominated senior unsecured notes ... intend to use the net proceeds ... for general corporate purposes",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "1Q17 (quarter ended March 31, 2017)",
+  "revenue": "NT$233.91 billion",
+  "operating_income": "NT$95.47 billion (implied by 40.8% operating margin)",
+  "net_income": "NT$87.63 billion",
+  "eps": "NT$3.38",
+  "operating_cash_flow": "NT$161.01 billion",
+  "capex": "NT$102.51 billion",
+  "free_cash_flow": "NT$58.50 billion",
+  "cash_and_investments": "NT$659.32 billion (34.1% of total assets)",
+  "total_debt": "NT$134.22 billion long-term interest-bearing debt",
+  "guidance_next": "2Q17 revenue NT$213-216 billion; gross profit margin 50.5%-52.5%; operating profit margin 39%-41%, at FX 30.5 NT$/USD"
+ },
+ "results_vs_prior_guidance": -0.3,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.4,
+ "own_stock": -0.3,
+ "market": -0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "TSMC softer sequential guidance implies capacity/demand cooling for fabless customers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Shares TSMC's foundry capacity; weaker TSMC outlook may signal order softness"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Relies on TSMC fabs; guidance dip suggests order moderation"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSMC's margin compression could relatively favor Intel's foundry position"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Memory sector not directly addressed in this release"
+  }
+ ],
+ "evidence": "Revenue to be between NT$ 213 billion and NT$ 216 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

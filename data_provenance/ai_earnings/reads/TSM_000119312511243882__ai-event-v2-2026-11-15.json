@@ -1,0 +1,31 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.4,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "stronger near-term fab demand signal"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC strength highlights foundry competitiveness"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "rush orders suggest demand pull-in for chips"
+  }
+ ],
+ "evidence": "TSMC does not expect that these short-term rush orders will continue into the fourth quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

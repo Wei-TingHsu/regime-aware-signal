@@ -1,0 +1,57 @@
+{
+ "facts": {
+  "period": "Q2 FY21 (quarter ended July 26, 2020)",
+  "revenue": "$3.866B, up 50% YoY, up 26% QoQ",
+  "operating_income": "GAAP $651M; non-GAAP $1,516M",
+  "net_income": "GAAP $622M; non-GAAP $1,366M",
+  "eps": "GAAP diluted $0.99; non-GAAP diluted $2.18",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$10,981M",
+  "total_debt": "Long-term debt $6,960M",
+  "guidance_next": "Q3 FY21 revenue ~$4.40B +/-2%; GAAP/non-GAAP gross margin 62.5%/65.5% +/-50bps; GAAP/non-GAAP opex ~$1.54B/$1.09B; GAAP/non-GAAP other income/expense ~-$55M; tax rate 8% +/-1%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 0.6,
+ "own_stock": 0.8,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Data center GPU share pressure from A100"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Accelerated computing displacing CPU-centric workloads"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "A100 availability on Google Cloud signals strong cloud GPU demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Foundry demand tied to Ampere ramp"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Memory demand from data center GPU growth"
+  }
+ ],
+ "evidence": "Revenue is expected to be $4.40 billion, plus or minus 2 percent",
+ "ai_demand_quote": null,
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

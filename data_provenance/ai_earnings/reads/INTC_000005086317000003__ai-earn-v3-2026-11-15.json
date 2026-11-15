@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2016 / Full Year 2016",
+  "revenue": "$16.4 billion (Q4); $59.4 billion (FY16, GAAP); $59.5 billion non-GAAP FY",
+  "operating_income": "$4.5 billion (Q4 GAAP); $4.9 billion (Q4 non-GAAP); $12.9 billion (FY GAAP); $16.5 billion (FY non-GAAP)",
+  "net_income": "$3.6 billion (Q4 GAAP); $3.9 billion (Q4 non-GAAP); $10.3 billion (FY GAAP); $13.2 billion (FY non-GAAP)",
+  "eps": "$0.73 (Q4 GAAP diluted); $0.79 (Q4 non-GAAP); $2.12 (FY GAAP); $2.72 (FY non-GAAP)",
+  "operating_cash_flow": "$8.2 billion (Q4); $21.8 billion (FY)",
+  "capex": "$3.53 billion (Q4 additions to PP&E); implied ~$9.9-10.3 billion FY based on quarterly data",
+  "free_cash_flow": null,
+  "cash_and_investments": "$17.1 billion total cash investments (cash, short-term investments, trading assets) at Dec 31, 2016",
+  "total_debt": "$4.63 billion short-term debt + $20.65 billion long-term debt = ~$25.3 billion",
+  "guidance_next": "Full-year 2017: revenue flat vs 2016; GAAP gross margin ~62%, non-GAAP ~63%; GAAP operating income ~$15.7B, non-GAAP ~$17.1B; GAAP EPS $2.53, non-GAAP $2.80 +/-5%; full-year capex $12.0B +/- $500M. Q1 2017: revenue $14.8B +/- $500M; GAAP operating income ~$3.6B, non-GAAP ~$4.1B; GAAP EPS $0.56, non-GAAP $0.65 +/- 5 cents."
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "NVM/memory segment growth signals healthy memory demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Strong CCG/DCG results show Intel maintaining share and margins"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Rising capex ($12B guide) implies continued fab equipment and manufacturing investment"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Data Center Group growth shows robust cloud/data center capex environment benefiting broader chip demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "self-reference; company itself"
+  }
+ ],
+ "evidence": "Record annual cash flow from operations of $21.8 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.0,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "advanced node demand supports TSM growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "advanced node demand supports TSM growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSM foundry strength vs Intel foundry ambitions"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "chip demand correlated with TSM revenue"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "semiconductor sector sentiment"
+  }
+ ],
+ "evidence": "revenue for February 2024 was approximately NT$181.65 billion... an increase of 11.3 percent from February 2023",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

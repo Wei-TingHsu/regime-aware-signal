@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY25 (quarter ended July 28, 2024)",
+  "revenue": "$30.04 billion (up 15% QoQ, up 122% YoY)",
+  "operating_income": "$18,642 million GAAP; $19,937 million non-GAAP",
+  "net_income": "$16,599 million GAAP; $16,952 million non-GAAP",
+  "eps": "$0.67 diluted GAAP; $0.68 diluted non-GAAP",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$34,800 million cash, cash equivalents and marketable securities",
+  "total_debt": "$8,461 million long-term debt (no short-term debt outstanding)",
+  "guidance_next": "Q3 FY25 revenue expected to be $32.5 billion, plus or minus 2%; GAAP/non-GAAP gross margins expected to be 74.4%/75.0%, plus or minus 50bps (full-year gross margin in mid-70% range); GAAP/non-GAAP opex expected to be approximately $4.3B/$3.0B (full-year opex growth in mid- to upper-40% range); other income/expense expected to be income of approximately $350 million; tax rates expected to be 17%, plus or minus 1%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.7,
+ "own_stock": -0.2,
+ "market": 0.3,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.7,
+   "reason": "foundry capacity for Hopper/Blackwell ramp"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVDA data center dominance intensifies competitive pressure"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "HBM memory demand tied to GPU shipments"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "major cloud buyer of NVDA data center GPUs"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "custom AI silicon competes for data center spend"
+  }
+ ],
+ "evidence": "Record quarterly revenue of $30.0 billion, up 15% from Q1 and up 122% from a year ago",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

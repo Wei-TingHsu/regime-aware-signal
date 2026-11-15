@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and Full Year Fiscal 2021 (ended May 31, 2021)",
+  "revenue": "$11.2 billion (Q4), $40.5 billion (FY21)",
+  "operating_income": "GAAP $4,541 million Q4 (up 5%), $15.2 billion FY21 (up 9%); Non-GAAP $5.4 billion Q4, $19.0 billion FY21",
+  "net_income": "$4,033 million Q4 (up 29%), $13,746 million FY21 (up 36%)",
+  "eps": "GAAP diluted $1.37 Q4 (up 39%), $4.55 FY21 (up 48%); Non-GAAP $1.54 Q4 (up 29%), $4.67 FY21 (up 21%)",
+  "operating_cash_flow": "$15,887 million (trailing twelve months, record, up 21%)",
+  "capex": "$2,135 million (TTM)",
+  "free_cash_flow": "$13,752 million (TTM, per company table)",
+  "cash_and_investments": "$30,098 million cash and equivalents plus $16,456 million marketable securities = $46,554 million",
+  "total_debt": "Notes payable current $8,250 million + non-current $75,995 million = $84,245 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Oracle claims MySQL HeatWave outperforms Amazon Aurora, drawing customers away"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure rival though not directly named"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure rival though not directly named"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Gen2 Cloud Infrastructure growth over 100% implies more compute/chip demand"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "enterprise software peer, not directly addressed"
+  }
+ ],
+ "evidence": "Our Q4 performance was absolutely outstanding with total revenue beating guidance by nearly $200 million, and non-GAAP earnings per share beating guidance by $0.24",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

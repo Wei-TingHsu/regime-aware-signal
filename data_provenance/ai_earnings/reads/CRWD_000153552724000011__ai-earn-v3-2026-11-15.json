@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2025 (three months ended April 30, 2024)",
+  "revenue": "$921.0 million (up 33% YoY)",
+  "operating_income": "GAAP $6.9 million; Non-GAAP $198.7 million",
+  "net_income": "GAAP $42.8 million; Non-GAAP $231.7 million",
+  "eps": "GAAP diluted $0.17; Non-GAAP diluted $0.93",
+  "operating_cash_flow": "$383.2 million",
+  "capex": "~$60.2 million (property & equipment $49.7M + capitalized software $10.5M)",
+  "free_cash_flow": "$322.5 million (35% of revenue, record)",
+  "cash_and_investments": "$3.70 billion cash and cash equivalents (no short-term investments)",
+  "total_debt": "$742.9 million long-term debt",
+  "guidance_next": "Q2 FY25: revenue $958.3-$961.2M, Non-GAAP operating income $208.3-$210.5M, Non-GAAP net income $245.7-$247.8M, Non-GAAP diluted EPS $0.98-$0.99; FY25 (raised): revenue $3,976.3-$4,010.7M, Non-GAAP operating income $890.1-$916.5M, Non-GAAP net income $985.6-$1,012.0M, Non-GAAP diluted EPS $3.93-$4.03"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.8,
+ "own_stock": 0.7,
+ "market": 0.15,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "new partnership to deliver NVIDIA AI computing services on Falcon XDR"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Falcon for Defender positioned to augment/displace Microsoft Defender deployments"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "expanded AWS partnership for cybersecurity consolidation and cloud transformation"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "expanded Google Cloud partnership powering Mandiant IR/MDR with Falcon"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "no direct mention; sector read-through for enterprise software/cloud demand"
+  }
+ ],
+ "evidence": "record free cash flow of $322 million, 35% of revenue",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

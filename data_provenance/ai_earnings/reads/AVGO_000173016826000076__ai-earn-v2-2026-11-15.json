@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2026 (ended August 2, 2026)",
+  "revenue": "$29,591 million (+86% YoY)",
+  "operating_income": "GAAP $15,955 million; Non-GAAP $20,095 million",
+  "net_income": "GAAP $13,088 million; Non-GAAP $16,372 million",
+  "eps": "GAAP diluted $2.68; Non-GAAP diluted $3.32",
+  "operating_cash_flow": "$14,197 million",
+  "capex": "$0.5 billion (approx $532 million implied)",
+  "free_cash_flow": "$13,665 million (46% of revenue)",
+  "cash_and_investments": "$24.0 billion cash and cash equivalents",
+  "total_debt": null,
+  "guidance_next": "Q4 FY2026 revenue ~$34.8 billion (+93% YoY); Non-GAAP operating income ~66% of revenue; AI semiconductor revenue expected to accelerate to $21.7 billion, up 236% YoY"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.8,
+ "own_stock": 0.7,
+ "market": 0.4,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "custom AI accelerators compete with NVDA GPUs for AI workloads"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "foundry capacity demand rises with AI semiconductor growth"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "likely customer for custom AI ASICs (TPU-like programs)"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "potential custom silicon customer benefiting from AI networking demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "n/a"
+  }
+ ],
+ "evidence": "\"Q3 AI semiconductor revenue of $16.7 billion grew 221% year-over-year, and 54% quarter-over-quarter\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v2-2026-11-15"
+}

@@ -1,0 +1,49 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.85,
+ "fcf_outlook": 0.5,
+ "uncertainty": -0.3,
+ "own_stock": 0.8,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.6,
+   "reason": "x86/GPU competitor now faces combined Intel-NVIDIA CPU+GPU platform"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "potential shift of NVIDIA-related CPU manufacturing toward Intel foundry"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "hyperscaler beneficiary of new integrated CPU-GPU data center products"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "hyperscaler beneficiary of new integrated CPU-GPU data center products"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "hyperscaler beneficiary of new integrated CPU-GPU data center products"
+  },
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "equity stake and strategic alliance strengthens NVDA ecosystem reach into x86"
+  }
+ ],
+ "evidence": "NVIDIA will invest $5 billion in Intel\u2019s common stock at a purchase price of $23.28 per share",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

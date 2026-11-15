@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "strong fab demand signals healthy foundry utilization"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "robust TSMC volumes support chip supply"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC share gains vs Intel foundry"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "beneficiary of strong fab output"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "different memory segment, minor read-through"
+  }
+ ],
+ "evidence": "revenues for January 2022 were approximately NT$172.18 billion, an increase of 10.8 percent from December 2021 and an increase of 35.8 percent from January 2021",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

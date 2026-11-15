@@ -1,0 +1,37 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.85,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.7,
+ "own_stock": -0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "messaging/social competitive pressure"
+  },
+  {
+   "company": "AAPL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "iMessage competes with WhatsApp"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Skype messaging competition"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "not directly affected"
+  }
+ ],
+ "evidence": "$12 billion... and $4 billion in cash to existing WhatsApp securityholders",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

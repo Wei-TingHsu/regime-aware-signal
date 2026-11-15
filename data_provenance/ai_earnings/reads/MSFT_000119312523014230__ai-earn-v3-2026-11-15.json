@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2023 (quarter ended December 31, 2022)",
+  "revenue": "$52.7 billion, +2% YoY",
+  "operating_income": "$20.4 billion GAAP (-8% YoY); $21.6 billion non-GAAP (-3% YoY)",
+  "net_income": "$16.4 billion GAAP (-12% YoY); $17.4 billion non-GAAP (-7% YoY)",
+  "eps": "$2.20 GAAP diluted (-11% YoY); $2.32 non-GAAP diluted (-6% YoY)",
+  "operating_cash_flow": "$11,173 million (quarter); $34,371 million (six months)",
+  "capex": "$6,274 million (quarter, additions to property and equipment)",
+  "free_cash_flow": "$4,899 million (quarter: $11,173M operating cash flow minus $6,274M capex)",
+  "cash_and_investments": "$99,508 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$48,116 million (current portion $3,997M + long-term $44,119M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS competes directly with Azure cloud growth"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Google Cloud competes with Azure and AI platform push"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "AI model/platform buildout implies GPU demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Cloud/AI infrastructure growth supports silicon demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Windows OEM/PC weakness hurts Intel client demand"
+  }
+ ],
+ "evidence": "Microsoft Cloud revenue was $27.1 billion, up 22% (up 29% in constant currency) year-over-year as our commercial offerings continue to drive value for our customers",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2012 (ended March 31, 2012)",
+  "revenue": "$13.185 billion, up 34% YoY",
+  "operating_income": "$192 million (vs $322 million Q1 2011)",
+  "net_income": "$130 million (down 35% YoY)",
+  "eps": "$0.28 diluted (vs $0.44 Q1 2011)",
+  "operating_cash_flow": "$3.051 billion TTM (up 1% YoY); quarterly operating cash flow was $(2.438) billion",
+  "capex": "$386 million (quarterly); $1.899 billion TTM",
+  "free_cash_flow": "$1.15 billion TTM, down 39% YoY",
+  "cash_and_investments": "$2.288 billion cash and cash equivalents at quarter end (down from $5.269 billion at start of quarter)",
+  "total_debt": null,
+  "guidance_next": "Q2 2012 net sales expected $11.9B-$13.3B (20%-34% growth); operating income (loss) expected $(260)M to $40M, including ~$260M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.5,
+ "own_stock": -0.3,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/ecommerce competitor, AWS pricing/expansion noted"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure competitor via Azure"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise cloud/database competitor to AWS"
+  }
+ ],
+ "evidence": "Operating income (loss) is expected to be between $(260) million and $40 million, or between 229% decline and 80% decline compared with second quarter 2011.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

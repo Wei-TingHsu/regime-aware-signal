@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "1Q16 (quarter ended March 31, 2016)",
+  "revenue": "NT$203.495 billion (US$6.14 billion)",
+  "operating_income": "NT$70.467 billion (operating margin 34.6%)",
+  "net_income": "NT$64.782 billion",
+  "eps": "NT$2.50 (US$0.38 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "2Q16 revenue expected NT$215-218 billion; gross profit margin 49%-51%; operating profit margin 38.5%-40.5%, at exchange rate 32.3 NT$/US$1"
+ },
+ "results_vs_prior_guidance": 0.1,
+ "guidance_change": 0.6,
+ "fcf_trend": 0,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "foundry capacity recovery aids fabless customers"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC margin recovery strengthens foundry competitiveness"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from restocking and capacity recovery"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "advanced node capacity supports GPU production"
+  }
+ ],
+ "evidence": "management expects overall performance for second quarter 2016...Revenue is expected to be between NT$215 billion and NT$218 billion...Gross profit margin is expected to be between 49% and 51%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

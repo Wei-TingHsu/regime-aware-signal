@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.05,
+ "own_stock": 0.15,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "strong foundry demand signals ample capacity"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "benefits from TSMC capacity growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC strength highlights foundry lead"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.03,
+   "reason": "demand read-through for chip customers"
+  }
+ ],
+ "evidence": "revenue for June 2021 was approximately NT$148.47 billion, an increase of 32.1 percent from May 2021",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

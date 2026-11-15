@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.25,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.2,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "large-cap tech peer governance comparison"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "large-cap tech peer"
+  }
+ ],
+ "evidence": "Sundar Pichai, the CEO of Google, becomes the CEO of Google and Alphabet.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

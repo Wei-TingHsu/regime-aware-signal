@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ2-2020 (ended Feb 27, 2020)",
+  "revenue": "$4.797B GAAP/Non-GAAP",
+  "operating_income": "$440M GAAP / $542M Non-GAAP",
+  "net_income": "$405M GAAP / $517M Non-GAAP",
+  "eps": "$0.36 GAAP diluted / $0.45 Non-GAAP diluted",
+  "operating_cash_flow": "$2.00B",
+  "capex": "$1.94B net (per non-GAAP FCF reconciliation; GAAP PP&E expenditures net $2.013B)",
+  "free_cash_flow": "$63M adjusted (non-GAAP)",
+  "cash_and_investments": "$8.12B cash, marketable investments and restricted cash; net cash $2.70B",
+  "total_debt": "$5.425B (current $237M + long-term $5.188B)",
+  "guidance_next": "FQ3-20: Revenue $4.6B-$5.2B; GAAP gross margin 30% \u00b11.5% (Non-GAAP 31% \u00b11.5%); GAAP opex $891M \u00b1$25M (Non-GAAP $825M \u00b1$25M); GAAP diluted EPS $0.41 \u00b1$0.15 (Non-GAAP $0.55 \u00b1$0.15)"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.2,
+ "fcf_trend": -0.3,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "NAND pricing/supply dynamics shared"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Data center memory demand signals"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "GPU/AI systems rely on DRAM/HBM supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Compute demand tied to memory attach"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Semiconductor capex/supply chain read-through"
+  }
+ ],
+ "evidence": "Revenue at the high end of the guidance range, despite the unfolding COVID-19 pandemic",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

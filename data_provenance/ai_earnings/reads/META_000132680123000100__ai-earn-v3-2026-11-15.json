@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2023 (quarter ended September 30, 2023)",
+  "revenue": "$34.146 billion, +23% YoY",
+  "operating_income": "$13.748 billion, operating margin 40%",
+  "net_income": "$11.583 billion",
+  "eps": "$4.39 diluted",
+  "operating_cash_flow": "$20.402 billion (Q3); $51.709 billion (9mo)",
+  "capex": "$6.76 billion (including finance lease principal payments)",
+  "free_cash_flow": "$13.64 billion",
+  "cash_and_investments": "$61.12 billion (cash, cash equivalents, and marketable securities)",
+  "total_debt": "$18.38 billion long-term debt",
+  "guidance_next": "Q4 2023 revenue $36.5-40B; FY2023 total expenses $87-89B (lowered from $88-91B), includes ~$3.5B restructuring; FY2023 capex $27-29B (narrowed from $27-30B); FY2024 total expenses $94-99B; FY2024 capex $30-35B driven by AI and non-AI servers/data centers; Q4 2023 and FY2024 tax rate similar to Q3 2023"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.8,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Meta's 2024 capex surge ($30-35B) driven by AI hardware signals strong GPU demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "AI infrastructure buildout benefits chip suppliers broadly"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Similar AI infrastructure investment trend among large tech peers"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Comparable cloud/AI capex ramp expected across hyperscalers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Shared investor focus on AI capex efficiency across big tech"
+  }
+ ],
+ "evidence": "Income from operations $13,748 million, up 143% year-over-year, with operating margin of 40%, while lowering FY2023 expense and capex guidance despite signaling a large step-up in 2024 AI infrastructure spending",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

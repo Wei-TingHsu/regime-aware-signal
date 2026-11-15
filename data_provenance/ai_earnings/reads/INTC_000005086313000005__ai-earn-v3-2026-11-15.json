@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2012 and Full Year 2012",
+  "revenue": "FY2012: $53.3B (down 1% YoY); Q4'12: $13.5B (down 3% YoY)",
+  "operating_income": "FY2012: $14.6B (down 16% YoY); Q4'12: $3.2B (down 31% YoY)",
+  "net_income": "FY2012: $11.0B (down 15% YoY); Q4'12: $2.5B (down 27% YoY)",
+  "eps": "FY2012: $2.13 (down 11% YoY); Q4'12: $0.48 (down 25% YoY)",
+  "operating_cash_flow": "FY2012: ~$18.9B; Q4'12: ~$6.0B",
+  "capex": "FY2012: $11.0B; Q4'12: $2.5B",
+  "free_cash_flow": "FY2012: ~$7.9B (18.9B-11.0B); Q4'12: ~$3.5B (6.0B-2.5B)",
+  "cash_and_investments": "$18.2B total cash investments at year end, up $3.3B from 2011",
+  "total_debt": "Issued $6.2B in new debt during 2012 (total outstanding debt level not stated)",
+  "guidance_next": "Q1'13: revenue $12.7B +/- $500M (down ~6% sequentially, in line with seasonal pattern); gross margin 58% +/- a couple points (flat QoQ); R&D+MG&A ~$4.6B; tax rate 17%. FY2013: revenue to grow low single digits; gross margin 60% +/- a few points (down 2.1 points from 2012)."
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.3,
+ "fcf_trend": -0.1,
+ "own_stock": -0.4,
+ "market": -0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Weak PC Client revenue signals soft x86 demand industry-wide"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "PC market softness and inventory write-offs point to weak memory/PC component demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "PC Client Group revenue down 6% YoY reflects weak Windows PC ecosystem demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "Intel's margin pressure from own fabs has mixed read-through for foundry rivals"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "Data Center Group growth modest (+6%) but not AI-specific, limited direct bearing"
+  }
+ ],
+ "evidence": "Gross margin for the year is expected to be 60%, plus or minus a few points, down 2.1 points from 2012",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

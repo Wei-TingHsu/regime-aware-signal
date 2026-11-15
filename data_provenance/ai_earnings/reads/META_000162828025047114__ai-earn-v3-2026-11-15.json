@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2025 (quarter ended September 30, 2025)",
+  "revenue": "$51,242 million (+26% YoY)",
+  "operating_income": "$20,535 million (40% operating margin)",
+  "net_income": "$2,709 million (-83% YoY); excluding one-time $15.93B non-cash tax charge, $18.64 billion",
+  "eps": "$1.05 diluted reported; $7.25 diluted excluding one-time tax charge",
+  "operating_cash_flow": "$29,999 million (quarter); $79,586 million (nine months)",
+  "capex": "$19.37 billion (including principal payments on finance leases) for the quarter; $48,308 million property & equipment purchases for nine months",
+  "free_cash_flow": "$10.62 billion (quarter, as stated)",
+  "cash_and_investments": "$44.45 billion cash, cash equivalents and marketable securities",
+  "total_debt": "$28,834 million long-term debt",
+  "guidance_next": "Q4 2025 revenue $56-59B; FY2025 total expenses raised to $116-118B (from $114-118B); FY2025 capex raised to $70-72B (from $66-72B); 2026 capex dollar growth expected 'notably larger' than 2025, and total expense growth rate 'significantly faster' than 2025, driven by infrastructure (cloud, depreciation) and compensation costs"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.5,
+ "own_stock": -0.4,
+ "market": -0.2,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "accelerating AI infrastructure capex implies more GPU purchases"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "custom silicon/networking demand tied to Meta's infra buildout"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "memory demand from expanding data center capacity"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "shared investor concern over hyperscaler capex/margin trade-off"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "same AI capex-driven margin pressure narrative across hyperscalers"
+  }
+ ],
+ "evidence": "it has become clear that our compute needs have continued to expand meaningfully, including versus our expectations last quarter... we expect capital expenditures dollar growth will be notably larger in 2026 than 2025",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

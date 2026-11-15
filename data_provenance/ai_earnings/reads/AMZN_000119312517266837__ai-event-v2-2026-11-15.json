@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.5,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.2,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Kroger",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "grocery price competition from Amazon-owned Whole Foods"
+  },
+  {
+   "company": "Costco",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "grocery/retail price pressure"
+  },
+  {
+   "company": "Walmart",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "grocery price war and Prime integration threat"
+  }
+ ],
+ "evidence": "Whole Foods Market will offer lower prices starting Monday on a selection of best-selling grocery staples across its stores, with more to come.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

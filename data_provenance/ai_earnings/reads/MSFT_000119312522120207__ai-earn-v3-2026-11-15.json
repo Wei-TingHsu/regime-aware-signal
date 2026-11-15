@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2022 (quarter ended March 31, 2022)",
+  "revenue": "$49.4 billion, +18% YoY",
+  "operating_income": "$20.4 billion, +19% YoY",
+  "net_income": "$16.7 billion, +8% GAAP YoY (+13% non-GAAP)",
+  "eps": "$2.22 diluted, +9% GAAP YoY (+14% non-GAAP)",
+  "operating_cash_flow": "$25,386 million (quarter)",
+  "capex": "$5,340 million (additions to property and equipment, quarter)",
+  "free_cash_flow": "$20,046 million (25,386 - 5,340)",
+  "cash_and_investments": "$104,693 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$1,749 million current + $48,177 million long-term = $49,926 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure growth outpacing cloud peers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Cloud share-taking narrative"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Enterprise cloud competition"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Security/cloud demand read-through"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Server/PC hardware demand tied to Microsoft cloud buildout"
+  }
+ ],
+ "evidence": "better than expected commercial bookings growth of 28% and Microsoft Cloud revenue of $23.4 billion, up 32% year over year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

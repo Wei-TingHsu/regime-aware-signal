@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.2,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.2,
+ "market": 0.15,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "strong foundry demand signals ample capacity for fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "robust TSMC volumes support GPU supply"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC growth highlights foundry leadership vs Intel manufacturing"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "chip demand strength benefits fabless customer"
+  }
+ ],
+ "evidence": "revenues for September 2020 were approximately NT$127.59 billion, an increase of 3.8 percent from August 2020 and an increase of 24.9 percent from September 2019",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

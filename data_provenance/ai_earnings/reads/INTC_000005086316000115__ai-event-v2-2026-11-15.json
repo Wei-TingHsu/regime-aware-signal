@@ -1,0 +1,19 @@
+{
+ "event_type": "accounting",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.05,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "PSG/FPGA segment visibility (Altera) minor competitive signal"
+  }
+ ],
+ "evidence": "the company will revise the presentation of its financial results to reflect changes to certain operating segments",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

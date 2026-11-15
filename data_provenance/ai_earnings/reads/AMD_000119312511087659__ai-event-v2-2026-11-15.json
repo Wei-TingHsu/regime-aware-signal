@@ -1,0 +1,25 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.5,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.2,
+ "own_stock": -0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AMD cost pressure from foundry pricing"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "alternative foundry benefits if GF costs rise"
+  }
+ ],
+ "evidence": "we currently estimate that we will pay GF approximately $1.1 to $1.5 billion in 2011 and $1.5 to $1.9 billion in 2012 for wafer purchases under the Wafer Supply Agreement, as amended",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

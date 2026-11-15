@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.05,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "comparable capex funding needs"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "comparable debt market access"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "comparable debt market access"
+  }
+ ],
+ "evidence": "completed an offering of $1,500,000,000 aggregate principal amount of its 4.600% Senior Notes due 2028",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

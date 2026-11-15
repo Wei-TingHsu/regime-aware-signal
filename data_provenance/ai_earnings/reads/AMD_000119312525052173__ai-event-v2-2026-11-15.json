@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.25,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "AMD financing ZT Systems acquisition for AI server capacity"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "AMD bolstering AI server infrastructure capability"
+  }
+ ],
+ "evidence": "The Company intends to use the net proceeds from this offering to fund a portion of the acquisition of ZT Systems",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

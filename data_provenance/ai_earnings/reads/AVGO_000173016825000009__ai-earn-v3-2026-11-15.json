@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2025 (ended Feb 2, 2025)",
+  "revenue": "$14,916 million (+25% YoY)",
+  "operating_income": null,
+  "net_income": "GAAP $5,503 million; Non-GAAP $7,823 million",
+  "eps": "GAAP diluted $1.14; Non-GAAP diluted $1.60",
+  "operating_cash_flow": "$6,113 million",
+  "capex": "$100 million",
+  "free_cash_flow": "$6,013 million (40% of revenue)",
+  "cash_and_investments": "$9,307 million cash and cash equivalents",
+  "total_debt": "Short-term debt $5,653M + Long-term debt $60,926M = $66,579M",
+  "guidance_next": "Q2 FY2025 revenue guidance of approximately $14.9 billion (+19% YoY); Adjusted EBITDA guidance of approximately 66% of projected revenue; AI semiconductor revenue expected to be $4.4 billion in Q2"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.6,
+ "own_stock": 0.55,
+ "market": 0.35,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "custom AI XPU growth signals competitive AI silicon demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "fabs AVGO's AI chips, benefits from AI semiconductor growth"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "hyperscaler customer investing in AI XPUs/connectivity"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "hyperscaler customer driving AI semiconductor demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "hyperscaler customer for AI data center infrastructure"
+  }
+ ],
+ "evidence": "We expect continued strength in AI semiconductor revenue of $4.4 billion in Q2, as hyperscale partners continue to invest in AI XPUs and connectivity solutions for AI data centers.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

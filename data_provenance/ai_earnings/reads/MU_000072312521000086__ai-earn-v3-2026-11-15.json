@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Fiscal Q1 2022 (ended Dec. 2, 2021)",
+  "revenue": "$7.687 billion",
+  "operating_income": "$2.631 billion GAAP / $2.725 billion non-GAAP",
+  "net_income": "$2.306 billion GAAP / $2.471 billion non-GAAP",
+  "eps": "$2.04 GAAP diluted / $2.16 non-GAAP diluted",
+  "operating_cash_flow": "$3.938 billion",
+  "capex": "$3.265 billion (expenditures for PP&E); $3.267 billion net investments in capex",
+  "free_cash_flow": "$671 million (adjusted free cash flow, as stated)",
+  "cash_and_investments": "$11.48 billion (cash, marketable investments, and restricted cash); net cash position $4.458 billion",
+  "total_debt": "$7.022 billion (current and long-term debt)",
+  "guidance_next": "FQ2-22: Revenue $7.5B \u00b1 $200M; GAAP gross margin 45.0% \u00b1 1% (Non-GAAP 46.0% \u00b1 1%); GAAP opex $1,058M \u00b1 $25M (Non-GAAP $975M \u00b1 $25M); GAAP diluted EPS $1.83 \u00b1 $0.10 (Non-GAAP $1.95 \u00b1 $0.10)"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": -0.5,
+ "fcf_trend": -0.3,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "NAND pricing/margin pressure implied by guidance"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Micron capex and fab investment continuing"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "AI/data center demand cited as growth driver"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Memory demand tied to AI/5G compute growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Shared memory/semiconductor capex cycle exposure"
+  }
+ ],
+ "evidence": "Revenue $7.5 billion \u00b1 $200 million ... Diluted earnings per share $1.83 \u00b1 $0.10 (Non-GAAP $1.95 \u00b1 $0.10)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

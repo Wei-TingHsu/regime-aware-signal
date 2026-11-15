@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.2,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.05,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "comparable large-cap tech debt issuer, no direct effect"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "no direct effect"
+  }
+ ],
+ "evidence": "aggregate net proceeds from the offering were approximately $8.235 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

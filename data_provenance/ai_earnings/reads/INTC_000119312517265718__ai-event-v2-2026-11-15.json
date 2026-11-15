@@ -1,0 +1,19 @@
+{
+ "event_type": "leadership change",
+ "material": 0.25,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.3,
+ "own_stock": -0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel management transition creates minor opening"
+  }
+ ],
+ "evidence": "Stacy Smith, Group President of Manufacturing, Operations and Sales at Intel, has decided to retire from the company at the end of January 2018",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

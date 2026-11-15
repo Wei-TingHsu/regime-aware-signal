@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q2 2019 (three months ended June 30, 2019)",
+  "revenue": "$16,886 million, up 28% YoY",
+  "operating_income": "$4,626 million (27% operating margin)",
+  "net_income": "$2,616 million",
+  "eps": "$0.91 diluted",
+  "operating_cash_flow": "$8,615 million",
+  "capex": "$3,633 million (net purchases of property and equipment); $3.78 billion including finance lease principal payments",
+  "free_cash_flow": "$4,840 million (as stated)",
+  "cash_and_investments": "$48.60 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "shared digital ad market and regulatory scrutiny"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "faces similar antitrust/regulatory environment"
+  }
+ ],
+ "evidence": "Revenue grew 28% year-over-year while free cash flow rose to $4,840 million from $2,840 million, even as one-time FTC and tax charges depressed GAAP net income by 49%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

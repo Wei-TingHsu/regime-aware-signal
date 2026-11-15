@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.2,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.05,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "comparable large-cap tech debt issuance trend"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "comparable capex-funding debt issuance"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "similar capex-driven financing needs"
+  }
+ ],
+ "evidence": "closed its underwritten public offering of \u20ac6 billion aggregate principal amount of euro-denominated senior notes",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

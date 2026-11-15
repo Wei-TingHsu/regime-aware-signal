@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q4 and full year FY2011 (ended Sept 1, 2011)",
+  "revenue": "$2.140 billion (Q4); $8.788 billion (FY2011)",
+  "operating_income": "-$51 million (Q4); $755 million (FY2011)",
+  "net_income": "-$135 million attributable to Micron (Q4); $167 million (FY2011)",
+  "eps": "-$0.14 diluted (Q4); $0.17 diluted (FY2011)",
+  "operating_cash_flow": "$354 million (Q4); $2,484 million (FY2011)",
+  "capex": "$928 million (Q4); ~$2.9 billion (FY2011, includes equipment purchase contracts)",
+  "free_cash_flow": "-$574 million (Q4: 354-928); approx -$66 million to -$416 million (FY2011 depending on capex figure used: 2,484-2,550=-66)",
+  "cash_and_investments": "$2,160 million (Sept 1, 2011)",
+  "total_debt": "Long-term debt $1,861 million plus current portion $140 million = ~$2,001 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NAND pricing pressure industry-wide"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "DRAM ASP declines hitting memory sector broadly"
+  }
+ ],
+ "evidence": "net loss attributable to Micron shareholders of $135 million, or $0.14 per diluted share, on net sales of $2.1 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

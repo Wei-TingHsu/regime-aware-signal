@@ -1,0 +1,49 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "strong foundry demand signals capacity for fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from TSMC capacity/output strength"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC strength implies foundry share gains vs Intel"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "read-through to semiconductor demand cycle"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "relies on TSMC capacity for chip production"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "broader semiconductor demand signal"
+  }
+ ],
+ "evidence": "revenues for August 2016 were approximately NT$94.31 billion, an increase of 23.5 percent from July 2016 and an increase of 40.7 percent from August 2015",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

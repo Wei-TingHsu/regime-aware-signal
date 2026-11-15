@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ2 2024 (ended February 29, 2024)",
+  "revenue": null,
+  "operating_income": "$191 million (GAAP); $204 million (Non-GAAP)",
+  "net_income": "$793 million (GAAP); $476 million (Non-GAAP)",
+  "eps": "$0.71 GAAP diluted; $0.42 Non-GAAP diluted",
+  "operating_cash_flow": "$1,219 million",
+  "capex": "$1,384 million gross PP&E spend; $1,248 million net investments in capex",
+  "free_cash_flow": "Adjusted free cash flow $(29) million",
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "FQ3-24: Revenue $6.60B \u00b1 $200M; GAAP gross margin 25.5% \u00b1 1.5% (Non-GAAP 26.5% \u00b1 1.5%); GAAP opex $1.11B \u00b1 $15M (Non-GAAP $990M \u00b1 $15M); GAAP diluted EPS $0.17 \u00b1 $0.07 (Non-GAAP $0.45 \u00b1 $0.07)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "HBM/DRAM demand tied to AI accelerators"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "memory pricing recovery benefits NAND peers"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "shared AI-driven semiconductor demand cycle"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "overlapping memory/foundry exposure"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "advanced packaging/foundry capacity tied to memory and AI chip demand"
+  }
+ ],
+ "evidence": "GAAP diluted earnings (loss) per share $ 0.71 ... versus prior guidance of $(0.45) \u00b1 $0.07, swinging sharply positive",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

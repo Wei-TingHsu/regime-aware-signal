@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.35,
+ "fcf_outlook": 0.4,
+ "uncertainty": -0.2,
+ "own_stock": 0.3,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "SANM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "becomes preferred NPI manufacturing partner, gains ZT manufacturing business"
+  }
+ ],
+ "evidence": "paid, or will cause to be paid, to the Seller $2.4 billion in cash, subject to certain purchase price adjustments",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

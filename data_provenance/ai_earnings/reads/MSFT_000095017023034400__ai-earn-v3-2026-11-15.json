@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2023 (quarter ended June 30, 2023)",
+  "revenue": "$56.2 billion, +8% YoY",
+  "operating_income": "$24.3 billion, +18% YoY",
+  "net_income": "$20.1 billion, +20% YoY",
+  "eps": "$2.69 diluted, +21% YoY",
+  "operating_cash_flow": "$28,770 million (Q4)",
+  "capex": "$8,943 million (additions to property and equipment, Q4)",
+  "free_cash_flow": "$19,827 million (28,770-8,943)",
+  "cash_and_investments": "$111,262 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$47,237 million (current portion $5,247M + long-term $41,990M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Azure/AI cloud growth implies broad datacenter compute demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Azure AI capacity growth implies GPU demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud/AI competitive dynamics benchmarked against Azure growth"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AWS compared against strong Azure growth"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud infrastructure competitor amid rising cloud demand"
+  }
+ ],
+ "evidence": "Azure and other cloud services revenue growth of 26% (up 27% in constant currency)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

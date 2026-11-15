@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2020 (quarter ended June 30, 2020)",
+  "revenue": "$38,297 million",
+  "operating_income": "$6,383 million",
+  "net_income": "$6,959 million",
+  "eps": "$10.13 diluted",
+  "operating_cash_flow": "$13,993 million",
+  "capex": "$5,391 million",
+  "free_cash_flow": "$8,602 million (stated)",
+  "cash_and_investments": "$121,080 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$4,018 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.3,
+ "own_stock": 0.2,
+ "market": 0.2,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "cloud growth signals broader cloud demand recovery"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AWS cloud peer benefits from same demand trends"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "digital ad market gradual recovery read-through"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cloud infrastructure competitor benefits from sector growth"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "increased capex and cloud infra investment implies compute hardware demand"
+  }
+ ],
+ "evidence": "In the second quarter our total revenues were $38.3B, driven by gradual improvement in our ads business and strong growth in Google Cloud and Other Revenues",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

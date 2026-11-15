@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2015 (three months ended March 31, 2015)",
+  "revenue": "$3.543 billion",
+  "operating_income": "GAAP $933 million; Non-GAAP $1.840 billion",
+  "net_income": "GAAP $512 million; Non-GAAP $1.189 billion",
+  "eps": "GAAP diluted $0.18; Non-GAAP diluted $0.42",
+  "operating_cash_flow": "$1.700 billion",
+  "capex": "$502 million",
+  "free_cash_flow": "$1.20 billion (stated)",
+  "cash_and_investments": "$12.41 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "reason": "mobile advertising growth pressures ad market share",
+   "direction": -0.2
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "reason": "competition for digital ad spend",
+   "direction": -0.1
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "reason": "large-cap tech earnings sentiment",
+   "direction": 0.1
+  }
+ ],
+ "evidence": "Revenue from advertising was $3.32 billion , a 46% increase from the same quarter last year.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

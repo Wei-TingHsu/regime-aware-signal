@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q4 FY2010 (quarter and fiscal year ended May 31, 2010)",
+  "revenue": "$9.5 billion GAAP (up 39%); $9.6 billion non-GAAP (up 40%)",
+  "operating_income": "$3.3 billion GAAP (up 14%, 35% margin); $4.4 billion non-GAAP (up 26%, 46% margin)",
+  "net_income": "$2.364 billion GAAP (up 25%); $3.0 billion non-GAAP (up 31%)",
+  "eps": "$0.46 GAAP diluted (up 24%); $0.60 non-GAAP diluted (up 30%)",
+  "operating_cash_flow": "$8.681 billion (trailing twelve months, FY2010)",
+  "capex": "$230 million (Q4); $230 million trailing quarter per FCF table; FY2010 capex $230 (Q4) summed via table, FY total capex per cash flow statement $230 for year? (reported FY cash flow capex line: $230 million is Q4; FY total capex from statement of cash flows: $230)  -- as stated: $230 million (FY2010 capex per cash flow statement)",
+  "free_cash_flow": "$8.451 billion (trailing twelve months, Q4 FY2010)",
+  "cash_and_investments": "$9,914 million cash and cash equivalents + $8,555 million marketable securities = $18,469 million",
+  "total_debt": "$3,145 million current notes payable + $11,510 million non-current notes payable = $14,655 million",
+  "guidance_next": "Oracle has increased confidence that Sun will contribute $1.5 billion to non-GAAP operating income in FY2011, and $2.0 billion in FY2012; Exadata FY2011 sales pipeline approaching $1 billion"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "IBM",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Exadata outperforming IBM, customers switching from IBM servers"
+  },
+  {
+   "company": "SAP",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Oracle applications gaining share from SAP, SAP revenue declining"
+  }
+ ],
+ "evidence": "We executed better than expected on both the top and bottom line for the quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

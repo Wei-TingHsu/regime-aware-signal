@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and full fiscal year 2019 (ended January 27, 2019)",
+  "revenue": "$2.205 billion Q4 (down 24% YoY, down 31% QoQ); $11.716 billion FY19 (up 21% YoY)",
+  "operating_income": "$294 million GAAP Q4 (down 73% YoY); $479 million non-GAAP Q4; $3.804 billion GAAP FY19",
+  "net_income": "$567 million GAAP Q4 (down 49% YoY); $4.141 billion GAAP FY19",
+  "eps": "$0.92 GAAP diluted Q4 ($0.80 non-GAAP); $6.63 GAAP diluted FY19 ($6.64 non-GAAP)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$7.422 billion cash, cash equivalents and marketable securities (vs $7.108B a year earlier)",
+  "total_debt": null,
+  "guidance_next": "Q1 FY2020 revenue expected ~$2.20 billion +/-2%; GAAP/non-GAAP gross margin ~58.8%/59.0% +/-50bps; GAAP/non-GAAP opex ~$930M/$755M; for FY2020 overall, revenue expected to be flat to down slightly"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -0.3,
+ "fcf_trend": 0,
+ "own_stock": -0.2,
+ "market": -0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "NVIDIA GPU weakness from crypto/gaming inventory glut may ease competitive pressure or signal shared sector softness"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.3,
+   "reason": "Memory demand tied to GPU/datacenter buildouts weakens with inventory correction"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Foundry partner affected by lower NVIDIA chip volumes amid inventory digestion"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Datacenter/AI compute rivalry; NVIDIA's growth narrative in AI still a competitive threat long-term"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Google Cloud T4 GPU beta launch signals continued hyperscaler adoption of NVIDIA AI/datacenter products"
+  }
+ ],
+ "evidence": "The combination of post-crypto excess channel inventory and recent deteriorating end-market conditions drove a disappointing quarter.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

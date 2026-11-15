@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY18 (quarter ended January 28, 2018) and Fiscal Year 2018",
+  "revenue": "$2.911B Q4 (vs ~$2.65B guided); $9.714B FY18",
+  "operating_income": "$1,073M GAAP Q4; $3,210M GAAP FY18",
+  "net_income": "$1,118M GAAP Q4; $3,047M GAAP FY18",
+  "eps": "$1.78 GAAP diluted Q4 ($1.72 non-GAAP); $4.82 GAAP diluted FY18 ($4.92 non-GAAP)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$7,108M",
+  "total_debt": null,
+  "guidance_next": "Q1 FY19 revenue ~$2.90B \u00b12%; GAAP/non-GAAP gross margin 62.7%/63.0% \u00b150bps; GAAP/non-GAAP opex ~$770M/$645M; other income/expense nominal; tax rate 12% \u00b11%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVIDIA GPU share gains in gaming/datacenter"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "foundry demand rises with NVDA growth"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "cloud adoption of Volta GPUs"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "cloud GPU deployment"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "cloud GPU deployment"
+  }
+ ],
+ "evidence": "Record quarterly revenue of $2.91 billion, up 34 percent from a year ago... Record quarterly GAAP gross margin of 61.9 percent",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

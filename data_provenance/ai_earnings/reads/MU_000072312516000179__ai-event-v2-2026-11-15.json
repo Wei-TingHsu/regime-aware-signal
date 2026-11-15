@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.25,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.1,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Nanya Technology",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "counterparty financing Inotera acquisition via convertible notes and share purchase"
+  }
+ ],
+ "evidence": "Micron can require NTC to purchase from Micron 2.00% Convertible Senior Notes due 2021 ... in lieu of a corresponding amount of the shares issuable under the Share Purchase Agreement",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

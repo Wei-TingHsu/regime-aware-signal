@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "2Q16 (second quarter 2016), with 3Q16 guidance included",
+  "revenue": "NT$221.81 billion (vs. guidance of NT$215-218 billion)",
+  "operating_income": "Operating margin 41.2% (vs. guidance of 38.5%-40.5%)",
+  "net_income": "NT$72.51 billion (attributable to shareholders of parent)",
+  "eps": "NT$2.80 per share",
+  "operating_cash_flow": "NT$106.68 billion",
+  "capex": "NT$73.59 billion",
+  "free_cash_flow": "NT$33.09 billion (stated, = operating cash flow minus capex)",
+  "cash_and_investments": "NT$667.86 billion (37.0% of total assets)",
+  "total_debt": "Long-term interest-bearing debt NT$181.30 billion",
+  "guidance_next": "3Q16 revenue NT$254-257 billion (FX 32.30 NT$/US$1); gross margin 50%-52%; operating margin 39.5%-41.5%"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.6,
+ "fcf_trend": -0.3,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Fab capacity growth benefits fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Advanced node demand supports GPU production"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's margin strength highlights foundry competitiveness"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Communication segment strength tied to broad chip demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "Self-referential strong beat and raised guidance"
+  }
+ ],
+ "evidence": "Revenue to be between NT$254 billion and NT$257 billion, at a forecast exchange rate of 32.30 NT dollars to 1 US dollar",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

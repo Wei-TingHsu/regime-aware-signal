@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2020 (ended August 2, 2020)",
+  "revenue": "$5,821 million",
+  "operating_income": null,
+  "net_income": "$688 million GAAP; $2,435 million non-GAAP",
+  "eps": "$1.45 GAAP diluted; $5.40 non-GAAP diluted",
+  "operating_cash_flow": "$3,178 million",
+  "capex": "$105 million",
+  "free_cash_flow": "$3,073 million",
+  "cash_and_investments": "$8,857 million cash and cash equivalents",
+  "total_debt": "$44,023 million (current $822M + long-term $43,201M)",
+  "guidance_next": "Q4 FY2020 revenue guidance of $6.4 billion plus or minus $150 million; Adjusted EBITDA guidance of $3,744 million plus or minus $75 million, or 58.5% of revenue at midpoint"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.7,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "networking/cloud demand strength signals broad semis tailwind"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "cloud/datacenter demand strength supports memory demand read-through"
+  },
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "cloud/networking demand surge supports AI infrastructure capex thesis"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud customer demand cited as driver of networking strength"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud customer demand cited as driver of networking strength"
+  }
+ ],
+ "evidence": "Fourth quarter revenue guidance of $6.4 billion plus or minus $150 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

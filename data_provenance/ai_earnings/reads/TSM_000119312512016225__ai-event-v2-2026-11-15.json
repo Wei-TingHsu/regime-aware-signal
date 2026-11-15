@@ -1,0 +1,25 @@
+{
+ "event_type": "guidance update",
+ "material": 0.1,
+ "fcf_outlook": 0,
+ "uncertainty": 0,
+ "own_stock": 0,
+ "market": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "foundry customer, no change"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "foundry customer, no change"
+  }
+ ],
+ "evidence": "Net Sales 104.71 103 - 105 106.48 110.14 -1.7% -4.9%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

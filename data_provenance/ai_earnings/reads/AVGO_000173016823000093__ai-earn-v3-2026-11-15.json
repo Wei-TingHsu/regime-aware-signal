@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2023 (ended October 29, 2023) and full fiscal year 2023",
+  "revenue": "$9,295 million (Q4), $35,819 million (FY23)",
+  "operating_income": null,
+  "net_income": "$3,524 million GAAP / $4,810 million non-GAAP (Q4); $14,082 million GAAP / $18,378 million non-GAAP (FY23)",
+  "eps": "$8.25 GAAP / $11.06 non-GAAP diluted (Q4); $32.98 GAAP / $42.25 non-GAAP diluted (FY23)",
+  "operating_cash_flow": "$4,828 million (Q4); $18,085 million (FY23)",
+  "capex": "$105 million (Q4); $452 million (FY23)",
+  "free_cash_flow": "$4,723 million or 51% of revenue (Q4); $17,633 million or 49% of revenue (FY23)",
+  "cash_and_investments": "$14,189 million cash and cash equivalents at quarter end",
+  "total_debt": "$39,229 million (current $1,608M + long-term $37,621M)",
+  "guidance_next": "FY2024 revenue guidance of approximately $50.0 billion (including VMware contribution, +40% YoY); FY2024 Adjusted EBITDA guidance of approximately 60% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.5,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "AI accelerator demand from hyperscalers referenced"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "overlapping semiconductor/accelerator market"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "hyperscaler customer for AI networking/accelerators"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "hyperscaler customer for AI networking/accelerators"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "hyperscaler customer for AI networking/accelerators"
+  }
+ ],
+ "evidence": "Fiscal year 2024 annual revenue guidance of approximately $50.0 billion including contribution from VMware, an increase of 40 percent from the prior year period",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

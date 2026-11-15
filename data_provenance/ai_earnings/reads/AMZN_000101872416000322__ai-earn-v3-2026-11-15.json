@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2016 (three months ended September 30, 2016)",
+  "revenue": "$32.7 billion (net sales), up 29% YoY",
+  "operating_income": "$575 million, vs $406 million in Q3 2015",
+  "net_income": "$252 million, vs $79 million in Q3 2015",
+  "eps": "$0.52 diluted, vs $0.17 in Q3 2015",
+  "operating_cash_flow": "$14.6 billion (trailing twelve months), vs $9.8 billion prior TTM",
+  "capex": "$1,841 million (purchases of property and equipment, Q3 2016)",
+  "free_cash_flow": "$8.6 billion (trailing twelve months), vs $5.4 billion prior TTM",
+  "cash_and_investments": "$13,656 million cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q4 2016 net sales expected between $42.0B and $45.5B (17%-27% growth YoY, including ~60bps favorable FX impact); operating income expected between $0 and $1.25 billion, compared with $1.1 billion in Q4 2015"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.8,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS growth and new GPU/cloud features pressure Azure competitive position"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS cloud expansion and AI instance offerings compete with Google Cloud"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "AWS P2 instances use up to 16 NVIDIA Tesla K80 GPUs for AI/ML workloads"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader cloud security demand tied to AWS infrastructure growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "AWS infrastructure buildout implies continued server/chip demand"
+  }
+ ],
+ "evidence": "Net sales increased 29% to $32.7 billion in the third quarter...Operating income was $575 million in the third quarter, compared with $406 million in third quarter 2015",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

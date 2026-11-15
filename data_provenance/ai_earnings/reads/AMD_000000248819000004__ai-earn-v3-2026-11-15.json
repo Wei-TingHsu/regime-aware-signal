@@ -1,0 +1,50 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2018 (ended Dec 29, 2018)",
+  "revenue": "$1.42 billion (Q4); $6.48 billion (FY2018)",
+  "operating_income": "$28 million GAAP / $109 million non-GAAP (Q4); $451 million GAAP / $633 million non-GAAP (FY2018)",
+  "net_income": "$38 million GAAP / $87 million non-GAAP (Q4); $337 million GAAP / $514 million non-GAAP (FY2018)",
+  "eps": "$0.04 GAAP / $0.08 non-GAAP (Q4); $0.32 GAAP / $0.46 non-GAAP (FY2018)",
+  "operating_cash_flow": "$120 million (Q4); $34 million (FY2018)",
+  "capex": "$41 million (Q4); $163 million (FY2018)",
+  "free_cash_flow": "$79 million (Q4); -$129 million (FY2018)",
+  "cash_and_investments": "$1.156 billion",
+  "total_debt": "$1.25 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": -0.1,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.3,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD datacenter GPU (MI60/MI50) and EPYC gains compete directly"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "EPYC and Ryzen share gains pressure Intel's CPU dominance"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AMD's 7nm products shift more foundry business toward TSMC"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "AWS adoption of EPYC processors highlighted as datacenter win"
+  }
+ ],
+ "evidence": "Fourth quarter gross margin included a $45 million charge related to older technology licenses... despite near-term graphics headwinds",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

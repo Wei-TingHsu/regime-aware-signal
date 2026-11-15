@@ -1,0 +1,25 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.2,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.15,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "semiconductor peer, unaffected"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "foundry peer, unaffected"
+  }
+ ],
+ "evidence": "the Company filed a prospectus supplement ... to register the potential resale by the selling securityholder of ... 673,839,150 shares of common stock",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

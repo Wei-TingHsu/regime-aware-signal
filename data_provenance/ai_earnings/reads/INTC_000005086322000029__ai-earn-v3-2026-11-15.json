@@ -1,0 +1,57 @@
+{
+ "facts": {
+  "period": "Q2 2022",
+  "revenue": "$15.3 billion GAAP, down 22% YoY; $15.3 billion non-GAAP, down 17% YoY",
+  "operating_income": "$(700) million GAAP (loss); non-GAAP operating margin 9.2%",
+  "net_income": "$(454) million GAAP (loss); $1.2 billion non-GAAP",
+  "eps": "$(0.11) GAAP; $0.29 non-GAAP",
+  "operating_cash_flow": "$6.7 billion (six months); Q2 alone cited as $0.8 billion",
+  "capex": "$11.846 billion (six months, additions to PP&E)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$4.39 billion cash and cash equivalents plus $22.654 billion short-term investments",
+  "total_debt": "$2.882 billion short-term debt plus $32.548 billion long-term debt",
+  "guidance_next": "Q3 2022: revenue ~$15-16 billion GAAP/non-GAAP, gross margin ~43.2% GAAP/46.5% non-GAAP, EPS ~$0.12 GAAP/$0.35 non-GAAP; Full-year 2022 (revised): revenue $65-68 billion, gross margin 44.8% GAAP/49.0% non-GAAP, EPS $2.57 GAAP/$2.30 non-GAAP, capex ~$27B GAAP/$23B non-GAAP, adjusted FCF ($1-2 billion) negative (reiterated)"
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Sapphire Rapids paired with NVIDIA Hopper GPUs in DGX-H100"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel's CCG/DCAI weakness may reflect competitive share loss"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "expanded AWS partnership for custom Xeon solutions"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "expanded supply agreement for Meta's compute needs"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "IFS foundry ambitions compete with TSMC, though IFS revenue fell 54%"
+  }
+ ],
+ "evidence": "Revising full-year revenue guidance to $65 billion to $68 billion",
+ "note": "GAAP net loss and large cut to full-year revenue guidance (from ~$76B to $65-68B) versus prior guidance signal weak results and negative outlook",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

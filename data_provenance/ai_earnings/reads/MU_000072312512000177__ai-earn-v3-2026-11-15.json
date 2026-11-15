@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 FY2013 (ended November 29, 2012)",
+  "revenue": "$1,834 million",
+  "operating_income": "-$157 million (operating loss)",
+  "net_income": "-$275 million (net loss attributable to Micron)",
+  "eps": "-$0.27 diluted",
+  "operating_cash_flow": "$236 million",
+  "capex": "$538 million (invested in capital expenditures, per press release); $434 million (expenditures for PP&E per cash flow table)",
+  "free_cash_flow": "-$302 million (236 - 538)",
+  "cash_and_investments": "$2.8 billion (per release); $2,271 million cash and short-term investments + $527 million long-term marketable investments per balance sheet",
+  "total_debt": "$3,169 million long-term debt + $266 million current portion = ~$3,435 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "reason": "NAND pricing pressure industry-wide",
+   "direction": -1
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "reason": "memory supplier to PC/server makers amid weak DRAM pricing",
+   "direction": 0
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "reason": "semiconductor capex and margin pressure read-through",
+   "direction": 0
+  }
+ ],
+ "evidence": "net loss attributable to Micron shareholders of $275 million, or $0.27 per diluted share, on net sales of $1.8 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

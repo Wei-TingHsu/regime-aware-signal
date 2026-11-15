@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2013 (quarter and full year ended June 30, 2013)",
+  "revenue": "$19.90 billion (Q4); $77.85 billion (FY2013)",
+  "operating_income": "$6.07 billion (Q4 GAAP); $26.76 billion (FY2013 GAAP)",
+  "net_income": "$4.97 billion (Q4); $21.86 billion (FY2013)",
+  "eps": "$0.59 diluted (Q4); $2.58 diluted (FY2013)",
+  "operating_cash_flow": "$5.903 billion (Q4); $28.833 billion (FY2013)",
+  "capex": "$1.794 billion (Q4); $4.257 billion (FY2013)",
+  "free_cash_flow": "$4.109 billion (Q4); $24.576 billion (FY2013), calculated as operating cash flow minus capex",
+  "cash_and_investments": "$77.022 billion total cash, cash equivalents, and short-term investments (June 30, 2013)",
+  "total_debt": "$15.6 billion (current portion $2.999B + long-term $12.601B)",
+  "guidance_next": "Operating expense guidance revised to $31.3-$31.9 billion for FY2014 (down from prior preliminary $31.6-$32.2 billion)"
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "PC market decline hurts x86 ecosystem"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Online Services Division still losing money vs Google's search dominance"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Server and cloud competition in enterprise software"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud/Azure competes with AWS"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "Surface RT writedown signals hardware strategy struggles"
+  }
+ ],
+ "evidence": "Results reflect ongoing strength in enterprise offset by a challenging consumer PC market... include a $900 million charge, or a $0.07 per share impact, related to Surface RT inventory adjustments",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

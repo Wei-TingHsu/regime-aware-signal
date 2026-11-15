@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2025 (ended August 3, 2025)",
+  "revenue": "$15,952 million, +22% YoY",
+  "operating_income": null,
+  "net_income": "GAAP $4,140 million; Non-GAAP $8,404 million",
+  "eps": "GAAP diluted $0.85; Non-GAAP diluted $1.69",
+  "operating_cash_flow": "$7,166 million",
+  "capex": "$142 million",
+  "free_cash_flow": "$7,024 million (44% of revenue)",
+  "cash_and_investments": "$10,718 million cash and cash equivalents",
+  "total_debt": "Short-term debt $1,399 million; Long-term debt $62,830 million",
+  "guidance_next": "Q4 FY2025 revenue guidance of approximately $17.4 billion (+24% YoY); Adjusted EBITDA guidance of 67% of projected revenue; AI semiconductor revenue expected to accelerate to $6.2 billion in Q4"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.8,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "custom AI accelerators gaining share vs merchant GPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "foundry demand for custom AI silicon rising"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "likely custom accelerator customer driving AI revenue growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competes in AI/data center silicon"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "AI infrastructure buildout implies memory demand strength"
+  }
+ ],
+ "evidence": "Q3 AI revenue growth accelerated to 63% year-over-year to $5.2 billion... We expect growth in AI semiconductor revenue to accelerate to $6.2 billion in Q4",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

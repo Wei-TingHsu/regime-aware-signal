@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2018 (three months ended June 30, 2018)",
+  "revenue": "$13,231 million total revenue (+42% YoY)",
+  "operating_income": "$5,863 million (44% operating margin)",
+  "net_income": "$5,106 million",
+  "eps": "$1.74 diluted",
+  "operating_cash_flow": "$6,299 million",
+  "capex": "$3,459 million",
+  "free_cash_flow": "$2,840 million (as stated)",
+  "cash_and_investments": "$42.31 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "shared digital ad market, rising cost pressures across platforms"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "ad market overlap, minor relevance"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "mega-cap tech sentiment linked to margin/growth concerns"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "tangential, security/safety investment theme"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "data center capex supplier, muted signal"
+  }
+ ],
+ "evidence": "Free cash flow fell year-over-year to $2,840 million from $3,916 million even as total costs and expenses jumped 50% and operating margin compressed to 44% from 47%, signaling heavier spending is squeezing profitability just as the company flags continued investment in safety and security.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

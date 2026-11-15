@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.15,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.1,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "no direct effect"
+  }
+ ],
+ "evidence": "an up to $500 million secured revolving credit facility... As of June 7, 2019, there are no borrowings outstanding under the Credit Agreement",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

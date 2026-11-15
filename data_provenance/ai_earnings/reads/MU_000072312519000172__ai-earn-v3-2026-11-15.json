@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2020 (ended November 28, 2019)",
+  "revenue": "$5.144 billion",
+  "operating_income": "$518 million GAAP; $594 million non-GAAP",
+  "net_income": "$491 million GAAP; $548 million non-GAAP",
+  "eps": "$0.43 GAAP diluted; $0.48 non-GAAP diluted",
+  "operating_cash_flow": "$2.011 billion",
+  "capex": "$1.943 billion (net of partner funding)",
+  "free_cash_flow": "$79 million adjusted free cash flow",
+  "cash_and_investments": "$8.31 billion cash, marketable investments and restricted cash; net cash $2.66 billion",
+  "total_debt": "$5.65 billion current and long-term debt",
+  "guidance_next": "FQ2-20: Revenue $4.5B-$4.8B; GAAP gross margin 26% \u00b1 1.5% (Non-GAAP 27% \u00b1 1.5%); GAAP opex $878M \u00b1 $25M (Non-GAAP $825M \u00b1 $25M); GAAP diluted EPS $0.25 \u00b1 $0.06 (Non-GAAP $0.35 \u00b1 $0.06)"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.3,
+ "fcf_trend": -0.3,
+ "own_stock": -0.1,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "memory/NAND pricing weakness implied by soft Q2 guide"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Micron bought out Intel's IMFT stake, ending joint venture"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "memory supply conditions affect component costs"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "GPU makers depend on DRAM/NAND supply and pricing trends"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "broader semiconductor capex and cycle commentary"
+  }
+ ],
+ "evidence": "we are optimistic that Micron's fiscal second quarter will be the cyclical bottom for our financial performance",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

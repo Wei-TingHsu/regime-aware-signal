@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY2024 (ended December 31, 2024)",
+  "revenue": "$48.385B Q4 (up 21% YoY); $164.501B FY2024 (up 22% YoY)",
+  "operating_income": "$23.365B Q4 (48% margin); $69.380B FY2024 (42% margin)",
+  "net_income": "$20.838B Q4; $62.360B FY2024",
+  "eps": "$8.02 diluted Q4; $23.86 diluted FY2024",
+  "operating_cash_flow": "$27.988B Q4; $91.328B FY2024",
+  "capex": "$14.84B Q4 (incl. finance lease principal payments); $39.23B FY2024",
+  "free_cash_flow": "$13.15B Q4; $52.10B FY2024 (as stated)",
+  "cash_and_investments": "$77.81B (cash, cash equivalents, and marketable securities) as of Dec 31, 2024",
+  "total_debt": "$28.826B long-term debt as of Dec 31, 2024",
+  "guidance_next": "Q1 2025 revenue $39.5-41.8B (8-15% YoY growth); FY2025 total expenses $114-119B; FY2025 capex $60-65B; FY2025 tax rate 12-15%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": -1,
+ "fcf_trend": 0,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Massive capex increase to $60-65B signals continued AI chip buying"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Custom silicon/networking demand from higher infrastructure capex"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Memory demand tied to AI data center buildout"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "Signals broad hyperscaler capex acceleration for AI infrastructure"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Comparable AI infrastructure spending trend across hyperscalers"
+  }
+ ],
+ "evidence": "We anticipate our full year 2025 capital expenditures will be in the range of $60-65 billion... driven by increased investment to support both our generative AI efforts and core business.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

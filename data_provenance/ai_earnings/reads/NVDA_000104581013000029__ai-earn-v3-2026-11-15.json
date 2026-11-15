@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 FY2014 (ended April 28, 2013)",
+  "revenue": "$954.7 million",
+  "operating_income": "$82.8 million (GAAP)",
+  "net_income": "$77.9 million GAAP; $113.8 million non-GAAP",
+  "eps": "$0.13 GAAP diluted; $0.18 non-GAAP diluted",
+  "operating_cash_flow": "$175.65 million",
+  "capex": "$65.7 million (property, equipment and intangibles)",
+  "free_cash_flow": "$109.98 million",
+  "cash_and_investments": "$3,713.4 million",
+  "total_debt": null,
+  "guidance_next": "Q2 FY2014 revenue ~$975M +/-2%; GAAP/non-GAAP gross margin ~flat at 54.3%/54.6%; GAAP opex ~$448M, non-GAAP opex ~$408M; tax rate 16% +/-1pp; D&A ~$61-63M; capex $65-75M; diluted shares ~590M"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.2,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "notebook OEMs managing inventory ahead of Intel's Haswell launch"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "GPU market competitor"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "GRID software available from Microsoft; game console revenue"
+  }
+ ],
+ "evidence": "Revenue for the first quarter of fiscal 2014 was $954.7 million... Our outlook was $920 million to $960 million.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

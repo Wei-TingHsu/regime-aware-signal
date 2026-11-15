@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 FY2012 (quarter ended September 30, 2011)",
+  "revenue": "$17.37 billion, up 7% YoY",
+  "operating_income": "$7.20 billion, up 1% YoY",
+  "net_income": "$5.74 billion, up 6% YoY",
+  "eps": "$0.68 diluted, up 10% YoY",
+  "operating_cash_flow": "$8.49 billion (vs $8.19 billion prior year)",
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$57.4 billion total cash, cash equivalents and short-term investments (up from $52.8 billion at June 30, 2011)",
+  "total_debt": "$11.93 billion long-term debt",
+  "guidance_next": "Updated FY2012 operating expense guidance, including Skype and acquisition-related expenses, of $28.6 billion to $29.2 billion"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.4,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Bing share gains in search referenced"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise server/database overlap with Server & Tools growth"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud services growth (Azure) competes with AWS"
+  }
+ ],
+ "evidence": "Microsoft Corp. today announced record first-quarter revenue of $17.37 billion for the quarter ended Sept. 30, 2011, a 7% increase from the same period of the prior year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

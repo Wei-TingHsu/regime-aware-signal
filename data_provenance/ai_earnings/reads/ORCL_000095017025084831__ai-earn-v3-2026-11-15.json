@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and full year fiscal 2025 (ended May 31, 2025)",
+  "revenue": "$15.9 billion Q4 (up 11%); $57.4 billion FY25 (up 8%)",
+  "operating_income": "$5.1 billion GAAP Q4 (non-GAAP $7.0 billion); $17.7 billion GAAP FY25 (non-GAAP $25.0 billion)",
+  "net_income": "$3.4 billion GAAP Q4 (non-GAAP $4.9 billion); $12.4 billion GAAP FY25 (non-GAAP $17.3 billion)",
+  "eps": "$1.19 GAAP / $1.70 non-GAAP Q4; $4.34 GAAP / $6.03 non-GAAP FY25",
+  "operating_cash_flow": "$20.8 billion FY25, up 12%",
+  "capex": "$21.2 billion FY25 (vs $6.9 billion FY24)",
+  "free_cash_flow": "-$394 million trailing 4-quarters (vs $11.8 billion a year earlier)",
+  "cash_and_investments": "$10.8 billion cash and cash equivalents plus $417 million marketable securities",
+  "total_debt": "$7.3 billion current notes payable + $85.3 billion non-current notes payable = ~$92.6 billion total",
+  "guidance_next": "FY26: total cloud growth (apps+infra) expected to increase from 24% to over 40%; Cloud Infrastructure (OCI) growth expected to increase from 50% to over 70%; RPO likely to grow more than 100%; OCI consumption revenue growth expected to accelerate further; triple-digit MultiCloud revenue growth expected to continue"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.8,
+ "fcf_trend": -0.6,
+ "own_stock": 0.5,
+ "market": 0.3,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "massive capex buildout implies continued GPU purchases"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "OCI expansion could include AMD compute"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "OCI and MultiCloud growth competes with Azure cloud infrastructure"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "MultiCloud database growth from AWS highlights competitive cloud dynamics"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "MultiCloud database revenue growth from Google Cloud partnership"
+  }
+ ],
+ "evidence": "\"We expect our total cloud growth rate\u2014applications plus infrastructure\u2014will increase from 24% in FY25 to over 40% in FY26... RPO is likely to grow more than 100% in FY26\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

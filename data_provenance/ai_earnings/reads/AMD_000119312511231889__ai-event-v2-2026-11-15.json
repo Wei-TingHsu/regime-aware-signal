@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.5,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.3,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "new AMD CEO from Lenovo/IBM could sharpen competitive execution"
+  },
+  {
+   "company": "Lenovo",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "CEO's prior role as major customer executive, ties remain"
+  }
+ ],
+ "evidence": "Rory P. Read was named President and Chief Executive Officer of Advanced Micro Devices, Inc.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

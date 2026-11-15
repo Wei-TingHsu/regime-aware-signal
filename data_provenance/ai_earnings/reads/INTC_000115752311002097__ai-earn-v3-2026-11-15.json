@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2011 (fiscal quarter ended April 2, 2011)",
+  "revenue": "$12,847 million",
+  "operating_income": "$4,158 million",
+  "net_income": "$3,160 million",
+  "eps": "$0.56 diluted / $0.58 basic",
+  "operating_cash_flow": null,
+  "capex": "$2,723 million (capital spending)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$11,458 million total cash investments (cash, short-term investments and trading assets)",
+  "total_debt": "$2,137 million (short-term $54M + long-term $2,083M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0,
+ "fcf_trend": -0.2,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Intel revenue and margin strength implies competitive pressure on AMD"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Rising capex signals continued semiconductor capacity investment cycle"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel's heavy fab capex reinforces its in-house manufacturing lead over foundry rivals"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Strong PC/server chip demand benefits Intel's software/ecosystem partners"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Growth in enterprise/server segment supports software and services customers"
+  }
+ ],
+ "evidence": "GROSS MARGIN $7,885 (61.4% of $12,847 revenue), within Intel's prior guidance of ~61.0% +/- a couple points, while operating income rose to $4,158 million from $3,448 million a year earlier.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

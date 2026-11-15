@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2021 (quarter ended March 31, 2021)",
+  "revenue": "$55,314 million (up 34% YoY)",
+  "operating_income": "$16,437 million (30% margin)",
+  "net_income": "$17,930 million",
+  "eps": "$26.29 diluted",
+  "operating_cash_flow": "$19,289 million",
+  "capex": "$5,942 million (purchases of property and equipment)",
+  "free_cash_flow": "$13,347 million (stated)",
+  "cash_and_investments": "$135,104 million (cash, cash equivalents, and marketable securities)",
+  "total_debt": "$13,887 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.6,
+ "own_stock": 0.8,
+ "market": 0.3,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud segment growth signals competitive cloud market strength"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Google Cloud momentum vs AWS in cloud infrastructure"
+  },
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Broad-based ad revenue growth signals strong digital ad market"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Cloud/enterprise software competitive dynamics"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Data center capex growth implies hardware demand"
+  }
+ ],
+ "evidence": "Total revenues of $55.3 billion in the first quarter reflect elevated consumer activity online and broad based growth in advertiser revenue.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY2017 (ended June 1, 2017)",
+  "revenue": "$5.566 billion",
+  "operating_income": "$1.963 billion GAAP",
+  "net_income": "$1.647 billion GAAP ($1.896 billion non-GAAP)",
+  "eps": "$1.40 diluted GAAP; $1.62 diluted non-GAAP",
+  "operating_cash_flow": "$4.95 billion (nine months)",
+  "capex": "$1.27 billion net (quarter); $3.73 billion (nine months)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$4.90 billion cash, marketable investments, and restricted cash",
+  "total_debt": "$1.161 billion current debt + $10.485 billion long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "NAND pricing/supply dynamics favorable industry-wide"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "memory supplier to computing OEMs"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor capex cycle"
+  }
+ ],
+ "evidence": "Micron delivered strong operational performance in the third quarter with free cash flow nearly double last quarter, which enabled us to retire $1 billion in debt.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

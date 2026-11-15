@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2012 (quarter ended September 30, 2012)",
+  "revenue": "NT$141.38 billion",
+  "operating_income": "NT$52,653 million",
+  "net_income": "NT$49.30 billion (NT$49,303 million)",
+  "eps": "NT$1.90 diluted (US$0.32 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2012: revenue NT$129-131 billion; gross margin 45-47%; operating margin 33-35%; FX assumption 29.47 NT$/USD"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": -0.5,
+ "fcf_trend": 0,
+ "own_stock": 0.1,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "TSMC flags IC supply chain inventory correction hurting Q4 wafer demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSMC foundry slowdown could ease competitive pressure on Intel manufacturing"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Broadcom relies on TSMC advanced nodes; weaker Q4 demand outlook"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Nvidia uses TSMC 28nm; inventory correction signals near-term demand softness"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Record quarter driven by 28nm ramp, but cautious Q4 guide"
+  }
+ ],
+ "evidence": "we expect the IC supply chain to begin reducing inventories in the fourth quarter, which will affect the demand for our wafers",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

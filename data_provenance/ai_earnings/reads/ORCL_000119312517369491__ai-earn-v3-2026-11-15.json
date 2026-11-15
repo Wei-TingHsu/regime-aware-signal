@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2018 (three months ended November 30, 2017)",
+  "revenue": "$9.621 billion, up 6% YoY",
+  "operating_income": "GAAP $3.069 billion (32% margin); Non-GAAP $4.2 billion (44% margin)",
+  "net_income": "GAAP $2.233 billion, up 10%",
+  "eps": "GAAP diluted $0.52, up 8%; Non-GAAP diluted $0.70, up 14%",
+  "operating_cash_flow": "$7.416 billion (six months); trailing twelve months $14.581 billion",
+  "capex": "$1.072 billion (six months); trailing twelve months $2.037 billion",
+  "free_cash_flow": "Trailing twelve months $12.544 billion, down 1% YoY",
+  "cash_and_investments": "$21.310 billion cash and equivalents plus $50.270 billion marketable securities (~$71.6 billion total)",
+  "total_debt": "$2.499 billion current notes payable + $58.170 billion non-current notes payable (~$60.7 billion total)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.1,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Ellison claims Oracle Cloud DB cheaper than running on Amazon Cloud"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud platform/IaaS rivalry"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud platform rivalry"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "SaaS security peer, indirect"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "n/a"
+  }
+ ],
+ "evidence": "Cloud revenue growth of 44% drove our quarterly revenue and earnings higher... non-GAAP earnings per share growth of 14%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

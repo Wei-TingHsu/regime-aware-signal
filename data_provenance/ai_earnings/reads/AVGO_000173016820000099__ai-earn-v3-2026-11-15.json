@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2020 (ended May 3, 2020)",
+  "revenue": "$5,742 million",
+  "operating_income": null,
+  "net_income": "$563 million (GAAP)",
+  "eps": "$1.17 GAAP diluted; $5.14 non-GAAP diluted",
+  "operating_cash_flow": "$3,213 million",
+  "capex": "$148 million",
+  "free_cash_flow": "$3,065 million",
+  "cash_and_investments": "$9,207 million cash and cash equivalents",
+  "total_debt": "$45,863 million (current $819M + long-term $45,044M)",
+  "guidance_next": "Q3 FY2020 revenue guidance of $5.75 billion plus or minus $150 million; Adjusted EBITDA guidance of $3,220 million plus or minus $75 million, or 56% of revenue at midpoint"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.6,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud demand surge cited"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud demand surge cited"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "semiconductor peer in cloud/data center"
+  },
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "benefits from cloud/data center capex trend"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "foundry capacity tied to Broadcom's chip demand, supply constraints noted"
+  }
+ ],
+ "evidence": "We generated record quarterly free cash flow of over $3 billion and reinforced our balance sheet, ending the quarter with over $9 billion of cash",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

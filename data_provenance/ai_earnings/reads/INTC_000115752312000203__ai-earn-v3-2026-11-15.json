@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2011 (quarter ended Dec. 31, 2011); full-year 2011 also reported",
+  "revenue": "$13.887 billion GAAP Q4 2011 (up 21% YoY); $13.9 billion non-GAAP; FY2011 $54.0 billion GAAP / $54.2 billion non-GAAP (up 24%)",
+  "operating_income": "$4.599 billion GAAP Q4 2011 (up 14% YoY); $4.8 billion non-GAAP; FY2011 $17.477 billion GAAP / $18.4 billion non-GAAP",
+  "net_income": "$3.360 billion Q4 2011 GAAP (up 6% YoY); $3.5 billion non-GAAP; FY2011 $12.942 billion GAAP / $13.7 billion non-GAAP",
+  "eps": "$0.64 diluted GAAP Q4 2011 (up 14% YoY); $0.68 non-GAAP; FY2011 $2.39 GAAP / $2.53 non-GAAP",
+  "operating_cash_flow": null,
+  "capex": "$2.844 billion Q4 2011; FY2011 capital spending implied ~$10.9B (vs $10.5B +/- $300M guided)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$14.837 billion total cash investments (cash, short-term investments, trading assets) at Dec. 31, 2011",
+  "total_debt": "$247 million short-term debt + $7.084 billion long-term debt = ~$7.33 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0,
+ "fcf_trend": 0.2,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "reason": "Intel PC/data center share gains imply competitive pressure",
+   "direction": -0.2
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "reason": "NAND/memory market exposure via Intel's NVM Solutions Group",
+   "direction": 0.1
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "reason": "Intel 22nm transition signals foundry/process competition",
+   "direction": -0.1
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "reason": "Data center and networking silicon demand correlation",
+   "direction": 0.1
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "reason": "PC Client Group strength tied to Windows PC demand",
+   "direction": 0.1
+  }
+ ],
+ "evidence": "Revenue $13.9 billion non-GAAP, up 22% ... Earnings Per Share 68 cents, up 21%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

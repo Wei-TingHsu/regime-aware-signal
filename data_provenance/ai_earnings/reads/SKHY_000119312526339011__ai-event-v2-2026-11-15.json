@@ -1,0 +1,43 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.6,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.3,
+ "own_stock": 0.2,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "capacity expansion signals confidence in memory demand, competitive pressure"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "equipment/foundry ecosystem benefits from capex expansion"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "more HBM/memory capacity supports AI supply chain"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "memory supply security for AI chips"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.05,
+   "reason": "industry capacity increase could pressure pricing"
+  }
+ ],
+ "evidence": "Securing mid- to long-term production capacity in response to demand for memory semiconductors",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

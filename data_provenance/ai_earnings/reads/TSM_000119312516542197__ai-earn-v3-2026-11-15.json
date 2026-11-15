@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "1Q16 (Jan-Mar 2016)",
+  "revenue": "NT$203.50 billion",
+  "operating_income": "Operating margin 34.6% (~NT$70.4 billion implied)",
+  "net_income": "NT$64.78 billion",
+  "eps": "NT$2.50",
+  "operating_cash_flow": "NT$121.53 billion",
+  "capex": "NT$38.14 billion",
+  "free_cash_flow": "NT$83.39 billion (as stated)",
+  "cash_and_investments": "NT$648.39 billion",
+  "total_debt": "Long-term interest-bearing debt NT$181.15 billion",
+  "guidance_next": "2Q16 revenue NT$215-218 billion; gross margin 49%-51%; operating margin 38.5%-40.5%; at exchange rate 32.3 NT$/US$1"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.4,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Foundry customer benefiting from TSMC capacity/margin recovery"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Relies on TSMC leading-edge nodes for GPU production"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's strong 28nm/16nm ramp pressures Intel's foundry ambitions"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Broadcom sources communication chips from TSMC, benefits from capacity recovery"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "Self-reported results and raised margin guidance"
+  }
+ ],
+ "evidence": "Revenue to be between NT$ 215 billion and NT$ 218 billion... Gross profit margin to be between 49% and 51%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

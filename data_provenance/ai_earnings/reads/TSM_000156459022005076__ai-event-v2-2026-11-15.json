@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "continued advanced capacity expansion benefits foundry customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "capacity expansion supports supply for leading-edge chips"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC capex ramp pressures foundry competition"
+  }
+ ],
+ "evidence": "Approved capital appropriations of approximately US$20,944.17 million ... for installation and upgrade of advanced technology capacity",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2024 (fiscal quarter ended November 3, 2024) and full fiscal year 2024",
+  "revenue": "$14,054 million Q4 (+51% YoY); $51,574 million FY24 (+44% YoY)",
+  "operating_income": null,
+  "net_income": "GAAP $4,324 million Q4 / $5,895 million FY24; Non-GAAP $6,965 million Q4 / $23,733 million FY24",
+  "eps": "GAAP diluted $0.90 Q4 / $1.23 FY24; Non-GAAP diluted $1.42 Q4 / $4.87 FY24",
+  "operating_cash_flow": "$5,604 million Q4; $19,962 million FY24",
+  "capex": "$122 million Q4; $548 million FY24",
+  "free_cash_flow": "$5,482 million Q4 (39% of revenue); $19,414 million FY24",
+  "cash_and_investments": "$9,348 million cash and cash equivalents at quarter end (down from $9,952 million prior quarter and $14,189 million prior year)",
+  "total_debt": "Long-term debt $66,295 million plus current portion $1,271 million (total ~$67.6 billion), up sharply from $37,621 million long-term debt a year earlier",
+  "guidance_next": "Q1 FY2025 revenue guidance of approximately $14.6 billion (+22% YoY) and Adjusted EBITDA guidance of approximately 66% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.3,
+ "own_stock": 0.6,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Broadcom's AI XPU and networking growth signals intensifying custom-silicon competition in AI compute"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Broadcom's AI accelerator and networking strength competes for AI infrastructure spend"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Rising AI XPU volumes imply more advanced foundry demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Hyperscalers are key buyers of custom AI XPUs and Ethernet networking Broadcom supplies"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Large cloud/AI infrastructure customer likely driving AI revenue growth cited"
+  }
+ ],
+ "evidence": "AI revenue which grew 220 percent year-on-year was driven by our leading AI XPUs and Ethernet networking portfolio",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

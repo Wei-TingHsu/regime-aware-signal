@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2013 (quarter ended June 30, 2013)",
+  "revenue": "NT$155.89 billion",
+  "operating_income": "NT$57.629 billion (37.0% operating margin)",
+  "net_income": "NT$51.808 billion",
+  "eps": "NT$2.00 diluted (US$0.33 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q3 2013 revenue expected NT$161-164 billion; gross margin 47%-49%; operating margin 35%-37%; exchange rate assumption 1 USD = 29.83 NTD"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": -0.3,
+ "fcf_trend": 0,
+ "own_stock": -0.1,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "TSMC foundry customer; supply chain inventory moderation could hit AMD chip demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "major TSMC customer exposed to IC supply chain inventory correction"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel's in-house fabs less exposed to TSMC's foundry demand moderation"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "fabless chipmaker reliant on TSMC capacity, exposed to inventory slowdown"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "broader semiconductor supply chain reference, not directly addressed"
+  }
+ ],
+ "evidence": "we expect the IC supply chain to begin managing inventories in the second half of this year, which will moderate somewhat the overall demand for our wafers",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2017 (ended March 2, 2017)",
+  "revenue": "$4.648 billion",
+  "operating_income": "$1.044 billion (GAAP)",
+  "net_income": "$894 million (GAAP); $1.031 billion (non-GAAP)",
+  "eps": "$0.77 diluted (GAAP); $0.90 diluted (non-GAAP)",
+  "operating_cash_flow": "$2.543 billion (six months ended March 2, 2017)",
+  "capex": "$2.461 billion (six months ended March 2, 2017, net of partner funding)",
+  "free_cash_flow": "$82 million (six-month operating cash flow of $2.543B minus capex of $2.461B)",
+  "cash_and_investments": "$4.58 billion (cash, marketable investments, and restricted cash)",
+  "total_debt": "$12.425 billion (current debt $1.117B + long-term debt $11.308B)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.4,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "NAND pricing strength benefits peers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "tight DRAM supply raises memory costs for GPU makers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "higher DRAM prices affect component costs"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "memory supply tightness impacts server/PC platform costs"
+  },
+  {
+   "company": "SKHY",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "industry-wide DRAM/NAND pricing strength benefits all memory makers"
+  }
+ ],
+ "evidence": "Strong demand and limited industry supply for NAND and DRAM solutions, combined with significant progress on our cost reduction plan, produced excellent results for our second quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

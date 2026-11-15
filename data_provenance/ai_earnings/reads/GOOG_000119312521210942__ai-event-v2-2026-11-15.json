@@ -1,0 +1,31 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.4,
+ "own_stock": -0.2,
+ "market": -0.05,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "Big tech antitrust scrutiny shared concern"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "Big tech antitrust scrutiny shared concern"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Rival app store/OS player could gain relatively"
+  }
+ ],
+ "evidence": "a number of state Attorneys General filed an antitrust complaint against Alphabet Inc. ... alleging that Google\u2019s operation of Android and Google Play violated U.S. antitrust laws",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2014 (ended March 29, 2014)",
+  "revenue": "$12,764 million",
+  "operating_income": "$2,533 million",
+  "net_income": "$1,947 million",
+  "eps": "$0.38 diluted",
+  "operating_cash_flow": null,
+  "capex": "$2,689 million",
+  "free_cash_flow": null,
+  "cash_and_investments": "$19,046 million total cash investments (cash, short-term investments, trading assets)",
+  "total_debt": "$13,208 million (short-term $36M + long-term $13,172M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "memory/storage segment referenced (NVM Solutions Group) but no demand commentary"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "PC/data center competitor, no direct comparison given"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "foundry competitor context"
+  }
+ ],
+ "evidence": "Operating income fell to $2,533 million from $3,549 million in the prior quarter, while net income declined to $1,947 million from $2,625 million sequentially",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

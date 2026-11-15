@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2013 (quarter ended Dec 28, 2013) and FY2013",
+  "revenue": "$1.59 billion (Q4), $5.3 billion (FY)",
+  "operating_income": "$135 million GAAP (Q4); non-GAAP $91 million (Q4); FY $103 million",
+  "net_income": "$89 million (Q4); FY net loss $83 million",
+  "eps": "$0.12 GAAP (Q4), $0.06 non-GAAP (Q4); FY $(0.11)",
+  "operating_cash_flow": "$21 million (Q4); $(148) million (FY)",
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$1.2 billion (cash, cash equivalents and marketable securities, including long-term)",
+  "total_debt": "$1,998 million long-term debt plus $60 million short-term debt (Dec 28, 2013)",
+  "guidance_next": "For Q1 2014, AMD expects revenue to decrease 16 percent, plus or minus 3 percent, sequentially"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "PC market competition referenced as risk factor"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Xbox One semi-custom SoC driving graphics segment growth"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "no direct mention but cloud server reference"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "no direct mention"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "foundry relationships beyond GlobalFoundries not detailed"
+  }
+ ],
+ "evidence": "For the first quarter of 2014, AMD expects revenue to decrease 16 percent, plus or minus 3 percent, sequentially",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

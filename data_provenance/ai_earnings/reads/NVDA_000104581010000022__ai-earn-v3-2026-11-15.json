@@ -1,0 +1,50 @@
+{
+ "facts": {
+  "period": "Q2 FY2011 (quarter ended August 1, 2010)",
+  "revenue": "$811.2 million, down 19.0% sequentially, up 4.5% YoY",
+  "operating_income": "GAAP operating loss of $175.2 million",
+  "net_income": "GAAP net loss of $141.0 million; Non-GAAP net income of $20.1 million",
+  "eps": "GAAP ($0.25) diluted; Non-GAAP $0.03 diluted",
+  "operating_cash_flow": "$34.3 million",
+  "capex": "$37.6 million (purchase of property, equipment and intangible assets)",
+  "free_cash_flow": "-$3.3 million",
+  "cash_and_investments": "$1,772.5 million",
+  "total_debt": null,
+  "guidance_next": "Q3 FY2011 revenue up 3-5% sequentially; GAAP gross margin 46.5-47.5%; GAAP opex ~$300 million; GAAP tax rate 17-19%"
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 1,
+   "reason": "NVIDIA lost share in GPU market amid weak demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Integrated graphics gained share as consumers shifted to lower-cost PCs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -1,
+   "reason": "Weak GPU demand and inventory write-down suggest reduced foundry orders"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -1,
+   "reason": "Rising memory prices cited as pressuring GPU demand and margins"
+  }
+ ],
+ "evidence": "our GeForce consumer business fell significantly short of expectations amid weak PC demand in Europe and China",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

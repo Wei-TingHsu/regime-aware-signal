@@ -1,0 +1,37 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.4,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.5,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "NVDA loses Arm ecosystem control, slight relief for rivals"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "removes threat of NVDA-Arm combined IP leverage"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "no direct manufacturing impact"
+  },
+  {
+   "company": "QCOM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Arm remains independent, preserving neutral licensing"
+  }
+ ],
+ "evidence": "The parties agreed to terminate the Purchase Agreement because of significant regulatory challenges preventing the consummation of the transaction.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 FY2012 (ended March 1, 2012)",
+  "revenue": "$2,067 million",
+  "operating_income": "-$148 million",
+  "net_income": "-$224 million attributable to Micron",
+  "eps": "-$0.23 diluted",
+  "operating_cash_flow": "$978 million (six months); Q2 standalone not separately stated in text but implied ~$574 million per release text",
+  "capex": "$429 million (Q2); $1,089 million (six months expenditures for PP&E)",
+  "free_cash_flow": "~$145 million (Q2: $574M operating cash flow - $429M capex, as stated in release text)",
+  "cash_and_investments": "$2,094 million",
+  "total_debt": "$2,165 million long-term debt plus $150 million current portion = $2,315 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "reason": "NAND pricing pressure industry-wide",
+   "direction": -1
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "reason": "memory supplier to PC/server makers amid weak pricing",
+   "direction": 0
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "reason": "semiconductor capex cycle pressures",
+   "direction": 0
+  }
+ ],
+ "evidence": "net loss attributable to Micron shareholders of $224 million, or $0.23 per diluted share... gross margin declined to 13 percent in the second quarter of fiscal 2012 compared to 15 percent for the first quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

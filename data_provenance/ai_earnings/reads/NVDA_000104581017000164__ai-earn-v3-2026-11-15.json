@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2018 (quarter ended October 29, 2017)",
+  "revenue": "$2.636 billion, up 32% YoY, up 18% QoQ",
+  "operating_income": "GAAP $895M; non-GAAP $1,005M",
+  "net_income": "GAAP $838M; non-GAAP $833M",
+  "eps": "GAAP diluted $1.33; non-GAAP diluted $1.33",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$6,320 million (cash, cash equivalents and marketable securities)",
+  "total_debt": "~$2.008 billion (long-term debt $1,985M + short-term convertible debt $23M)",
+  "guidance_next": "Q4 FY18 revenue expected ~$2.65B \u00b12%; GAAP/non-GAAP gross margin 59.7%/60.0% \u00b150bps; GAAP opex ~$722M, non-GAAP opex ~$600M; GAAP and non-GAAP other income/expense nominal; tax rate guidance not fully captured in filing"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.5,
+ "own_stock": 0.8,
+ "market": 0.3,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA GPU/datacenter strength pressures AMD's GPU position"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Rising GPU/datacenter demand boosts memory demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Foundry partner benefits from higher GPU volumes"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud providers adopting Volta GPUs for AI workloads"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Major cloud/internet provider embracing Volta GPUs"
+  }
+ ],
+ "evidence": "Record revenue of $2.64 billion, up 32 percent from a year ago",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

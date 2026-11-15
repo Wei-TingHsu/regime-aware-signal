@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2011 (quarter ended July 2, 2011)",
+  "revenue": "$1.574 billion",
+  "operating_income": "$105 million (GAAP); $114 million (non-GAAP)",
+  "net_income": "$61 million",
+  "eps": "$0.08 (diluted GAAP); $0.09 (non-GAAP)",
+  "operating_cash_flow": "$174 million",
+  "capex": "$67 million",
+  "free_cash_flow": "$107 million (operating cash flow minus capex); company-reported Adjusted free cash flow $143 million",
+  "cash_and_investments": "$1.861 billion",
+  "total_debt": "$2.199 billion (long-term debt and capital lease obligations)",
+  "guidance_next": "AMD expects revenue to increase 10 percent, plus or minus 2 percent, sequentially for the third quarter of 2011."
+ },
+ "results_vs_prior_guidance": -0.2,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD APU/mobile share gains cited as competitive pressure"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Graphics segment weakness but competes directly in discrete GPUs"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Strong Q3 guidance of +10% sequential revenue growth"
+  }
+ ],
+ "evidence": "AMD expects revenue to increase 10 percent, plus or minus 2 percent, sequentially for the third quarter of 2011.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

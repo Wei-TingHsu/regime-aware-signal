@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "peer capital markets comparison"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "peer capital markets comparison"
+  }
+ ],
+ "evidence": "the Company issued $2.75 billion aggregate principal amount of its 3.500% senior unsecured notes due 2027...$10 billion total across four tranches, first-ever large debt raise signaling shift from debt-free balance sheet to funding capex/buybacks with new interest expense",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,49 @@
+{
+ "event_type": "guidance update",
+ "material": 0.3,
+ "fcf_outlook": 0.4,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "QCOM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "wireless demand weak, broader wireless market softness"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "datacenter strength implies more foundry demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "datacenter demand strength is industry-wide signal"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "enterprise storage strength signal"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "datacenter buildout driving demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "datacenter buildout driving demand"
+  }
+ ],
+ "evidence": "We remain focused on driving free cash flow growth per share and expect second quarter fiscal year 2018 free cash flow to exceed 40 percent of revenue",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

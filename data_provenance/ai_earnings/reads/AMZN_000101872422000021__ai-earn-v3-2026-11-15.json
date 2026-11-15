@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2022 (quarter ended September 30, 2022)",
+  "revenue": "$127.1 billion, up 15% YoY",
+  "operating_income": "$2.5 billion (vs $4.9 billion in Q3 2021)",
+  "net_income": "$2.9 billion",
+  "eps": "$0.28 diluted (vs $0.31 Q3 2021)",
+  "operating_cash_flow": "$39.7 billion TTM (down 27% YoY)",
+  "capex": "$16.4 billion in Q3 2022 (purchases of property and equipment); $66.0 billion TTM",
+  "free_cash_flow": "Outflow of $19.7 billion TTM (vs inflow of $2.6 billion TTM prior year)",
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -1,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS growth deceleration signals cloud spending pressure broadly"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Cloud segment comparison relevant amid slowing growth"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Named as AWS ecosystem partner award winner"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AWS continues ML infrastructure buildout (Trainium, EC2 training instances)"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "Macro ad/consumer spending weakness read-across to big tech"
+  }
+ ],
+ "evidence": "Operating income decreased to $2.5 billion in the third quarter, compared with $4.9 billion in third quarter 2021",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

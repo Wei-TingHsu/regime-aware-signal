@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2017 (quarter ended May 1, 2016)",
+  "revenue": "$1.305 billion",
+  "operating_income": "$245 million GAAP / $322 million non-GAAP",
+  "net_income": "$196 million GAAP / $263 million non-GAAP",
+  "eps": "$0.33 GAAP diluted / $0.46 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$4,754 million cash, cash equivalents and marketable securities",
+  "total_debt": "$1,421 million convertible short-term debt",
+  "guidance_next": "Q2 FY2017: revenue ~$1.35B \u00b12%; GAAP/non-GAAP gross margin 57.7%/58.0% \u00b150bps; GAAP opex ~$500M, non-GAAP opex ~$445M; GAAP/non-GAAP tax rate ~20% \u00b11%; capex ~$30-40M"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NVIDIA gaining share across gaming, datacenter with Pascal"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Pascal GPUs in full production, higher foundry demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "GPU/datacenter growth implies more memory demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Datacenter deep learning push competes with CPU-centric computing"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Cloud/datacenter deep learning adoption benefits GPU cloud instances"
+  }
+ ],
+ "evidence": "Revenue of $1.30 billion, up 13 percent from a year ago - growth across all platforms",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

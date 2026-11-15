@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2023 (ended April 30, 2023)",
+  "revenue": "$8,733 million (+8% YoY)",
+  "operating_income": null,
+  "net_income": "$3,481 million GAAP; $4,489 million non-GAAP",
+  "eps": "$8.15 GAAP diluted; $10.32 non-GAAP diluted",
+  "operating_cash_flow": "$4,502 million",
+  "capex": "$122 million",
+  "free_cash_flow": "$4,380 million",
+  "cash_and_investments": "$11,553 million cash and cash equivalents",
+  "total_debt": "$39,311 million (current $1,117M + long-term $38,194M)",
+  "guidance_next": "Q3 FY23 revenue guidance of approximately $8.85 billion (+5% YoY); Adjusted EBITDA guidance of approximately 65% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.1,
+ "fcf_trend": 0.4,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AI networking overlap"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "data center semis competition"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "semiconductor cycle read-through"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "hyperscale demand for networking"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "hyperscale AI network buildout"
+  }
+ ],
+ "evidence": "Our third quarter outlook projects year-over-year growth, reflecting continued leadership in networking as we support a measured ramp into large scale AI networks.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

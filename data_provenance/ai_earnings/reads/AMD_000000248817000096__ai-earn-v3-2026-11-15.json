@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2017 (quarter ended April 1, 2017)",
+  "revenue": "$984 million",
+  "operating_income": "GAAP operating loss $(29) million; non-GAAP operating loss $(6) million",
+  "net_income": "GAAP net loss $(73) million; non-GAAP net loss $(38) million",
+  "eps": "GAAP loss per share $(0.08); non-GAAP loss per share $(0.04)",
+  "operating_cash_flow": "$(299) million (net cash used in operating activities)",
+  "capex": "$23 million",
+  "free_cash_flow": "Non-GAAP free cash flow $(322) million",
+  "cash_and_investments": "$943 million (cash, cash equivalents and marketable securities)",
+  "total_debt": "$1,408 million",
+  "guidance_next": "For Q2 2017, AMD expects revenue to increase approximately 17 percent sequentially, plus or minus 3 percent, implying approximately 12 percent year-over-year growth at the midpoint"
+ },
+ "results_vs_prior_guidance": 0.0,
+ "guidance_change": 0.4,
+ "fcf_trend": -0.4,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Naples server CPU claims performance edge over 'today's top competitive offering'"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Vega GPU and Radeon RX 500 launches target high-end graphics market"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Collaboration on Project Olympus server platform and Project Scorpio console SoC"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "n/a"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Foundry partner for new Zen/Vega/Naples silicon ramp"
+  }
+ ],
+ "evidence": "Revenue was down 11 percent sequentially, due primarily to seasonality... For the second quarter of 2017, AMD expects revenue to increase approximately 17 percent sequentially",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and Fiscal Year 2015 (ended September 3, 2015)",
+  "revenue": "$3.60 billion (Q4); $16.19 billion (FY2015)",
+  "operating_income": "$427 million (Q4); $2,998 million (FY2015)",
+  "net_income": "$471 million (Q4 GAAP); $2,899 million (FY2015 GAAP)",
+  "eps": "$0.42 diluted GAAP (Q4); $2.47 diluted GAAP (FY2015); $0.37 non-GAAP (Q4); $2.72 non-GAAP (FY2015)",
+  "operating_cash_flow": "$1.03 billion (Q4); $5.21 billion (FY2015)",
+  "capex": "$1.85 billion (Q4); $4.12 billion (FY2015)",
+  "free_cash_flow": "-$0.82 billion (Q4, OCF minus capex); $1.09 billion (FY2015, OCF minus capex)",
+  "cash_and_investments": "$5.63 billion",
+  "total_debt": "$1,089 million current + $6,252 million long-term = $7,341 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NAND pricing pressure from weak PC demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": -1,
+   "reason": "PC sector weakness cited as drag on memory demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "foundry relationship unaffected by this release"
+  }
+ ],
+ "evidence": "fourth quarter results were impacted by continued weakness in the PC sector",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

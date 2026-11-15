@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2022",
+  "revenue": "$27,908 million (+7% YoY)",
+  "operating_income": "$8,524 million (operating margin 31%)",
+  "net_income": "$7,465 million",
+  "eps": "$2.72 diluted",
+  "operating_cash_flow": "$14,076 million",
+  "capex": "$5,441 million (property & equipment purchases); $5,550 million including finance lease principal payments",
+  "free_cash_flow": "$8,528 million",
+  "cash_and_investments": "$43.89 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": "Q2 2022 total revenue $28-30 billion; FY2022 total expenses $87-92 billion (lowered from $90-95 billion); FY2022 capex $29-34 billion (unchanged); FY2022 tax rate above Q1 rate, high teens"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.2,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "shared digital ad market softness from macro/FX"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "both investing heavily in infrastructure capex"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AI/ML infrastructure capex increase implies chip demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "cloud/AI infrastructure spending trend parallels Meta's"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "increased capex for AI/ML hardware build-out"
+  }
+ ],
+ "evidence": "We expect 2022 total expenses to be in the range of $87-92 billion, lowered from our prior outlook of $90-95 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

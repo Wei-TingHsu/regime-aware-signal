@@ -1,0 +1,31 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.4,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.4,
+ "own_stock": -0.3,
+ "market": -0.05,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "ad tech rival could gain if Google forced to divest/unbundle publisher tools"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "ad business rival benefits from Google ad-tech constraints"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "potential ad tech market share opportunity"
+  }
+ ],
+ "evidence": "Google\u2019s publisher tools violated antitrust laws by excluding rivals",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

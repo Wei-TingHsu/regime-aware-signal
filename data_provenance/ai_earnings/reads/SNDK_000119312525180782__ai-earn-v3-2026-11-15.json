@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2025 (fiscal quarter ended June 27, 2025)",
+  "revenue": "$1.901 billion GAAP/Non-GAAP, up 12% sequentially, up 8% YoY",
+  "operating_income": "$18 million GAAP; $100 million Non-GAAP",
+  "net_income": "$(23) million GAAP; $42 million Non-GAAP",
+  "eps": "$(0.16) GAAP diluted loss; $0.29 Non-GAAP diluted EPS",
+  "operating_cash_flow": "$94 million (quarter); $84 million (FY2025)",
+  "capex": "$45 million (quarter); $204 million (FY2025)",
+  "free_cash_flow": "$49 million (quarter, OCF minus capex); $(120) million (FY2025)",
+  "cash_and_investments": "$1,481 million cash and cash equivalents (up from $328M a year ago)",
+  "total_debt": "$1,849 million total debt ($20M current + $1,829M long-term; up from $0 a year ago)",
+  "guidance_next": "Q1 FY2026 revenue $2.10B-$2.20B; Non-GAAP gross margin 28.5%-29.5%; Non-GAAP opex $415M-$430M; Non-GAAP diluted EPS $0.70-$0.90"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.9,
+ "fcf_trend": 0.3,
+ "own_stock": 0.9,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "NAND/memory peer benefits from same demand/pricing upturn"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "NAND flash competitor facing similar improving industry fundamentals"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "HBF targets AI inference workloads tied to NVDA-class compute"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud/datacenter AI infrastructure demand overlap"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Broader memory/storage semiconductor industry dynamics"
+  }
+ ],
+ "evidence": "Fiscal first quarter 2026 Non-GAAP diluted earnings per share expected to be in the range of $0.70 to $0.90.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2018",
+  "revenue": "$17.0 billion, up 15% YoY",
+  "operating_income": "$5.3B GAAP / $5.6B non-GAAP",
+  "net_income": "$5.0B GAAP / $4.9B non-GAAP",
+  "eps": "$1.05 GAAP diluted / $1.04 non-GAAP",
+  "operating_cash_flow": "$7.413B in Q2; $13.7B YTD",
+  "capex": "$4.530B in Q2 (additions to PP&E)",
+  "free_cash_flow": "$2.883B in Q2 (7.413B-4.530B); $6.3B YTD as stated",
+  "cash_and_investments": "$12.225B total cash investments",
+  "total_debt": "$28.142B (short-term $3.510B + long-term $24.632B)",
+  "guidance_next": "Q3 2018 revenue $18.1B +/- $500M, GAAP op margin ~32.5%/non-GAAP ~34%, GAAP EPS $1.09/non-GAAP EPS $1.15 +/-5c; FY2018 revenue raised to ~$69.5B +/- $1.0B, GAAP EPS ~$4.10/non-GAAP EPS $4.15, capex $15B +/-$500M, net capital deployed $13B +/-$500M, non-GAAP FCF $15.0B +/-$500M"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "reason": "NSG memory growth highlights competitive memory/storage demand",
+   "direction": 0.2
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "reason": "Strong CCG/DCG results show Intel share strength in CPUs",
+   "direction": -0.2
+  },
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "reason": "Data center growth tied to AI workloads benefits broader AI compute demand",
+   "direction": 0.3
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "reason": "Rising capex and manufacturing ramp implies foundry/equipment demand",
+   "direction": 0.2
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "reason": "Cloud service providers cited as driving DCG demand",
+   "direction": 0.2
+  }
+ ],
+ "evidence": "Raising full-year revenue outlook to approximately $69.5 billion, GAAP EPS outlook to approximately $4.10 and non-GAAP EPS of $4.15; up $2.0 billion, $0.31 and $0.30 from April guidance, respectively.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

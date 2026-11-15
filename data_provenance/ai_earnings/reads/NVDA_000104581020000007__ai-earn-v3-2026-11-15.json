@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and Fiscal Year 2020 (quarter ended Jan 26, 2020)",
+  "revenue": "$3.105B Q4 (up 41% YoY, up 3% QoQ); FY20 $10.918B (down 7% YoY)",
+  "operating_income": "GAAP $990M Q4 / $2.846B FY20; non-GAAP $1.220B Q4 / $3.735B FY20",
+  "net_income": "GAAP $950M Q4 / $2.796B FY20; non-GAAP $1.172B Q4 / $3.580B FY20",
+  "eps": "GAAP $1.53 diluted Q4 / $4.52 FY20; non-GAAP $1.89 Q4 / $5.79 FY20",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$10.897B (cash, cash equivalents and marketable securities)",
+  "total_debt": "$1.991B long-term debt",
+  "guidance_next": "Q1 FY21 revenue ~$3.00B +/-2% (reduced $100M for coronavirus impact); GAAP/non-GAAP gross margin 65.0%/65.4% +/-50bps; GAAP/non-GAAP opex ~$1.05B/$835M; GAAP/non-GAAP other income ~$25M; GAAP/non-GAAP tax rate ~9% +/-1%, excluding Mellanox"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.4,
+ "own_stock": -0.2,
+ "market": 0.2,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVIDIA data center and gaming strength pressures AMD's competing GPU/CPU lines"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVIDIA's data center AI gains compete with Intel's Xeon/accelerator push"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Higher NVIDIA GPU demand supports TSMC foundry volumes"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure GPU supercomputer collaboration highlights cloud AI demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS Outposts using NVIDIA T4 GPUs shows cloud AI infrastructure growth"
+  }
+ ],
+ "evidence": "the company has reduced its revenue outlook for the first quarter of fiscal 2021 by $100 million to account for its potential impact",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

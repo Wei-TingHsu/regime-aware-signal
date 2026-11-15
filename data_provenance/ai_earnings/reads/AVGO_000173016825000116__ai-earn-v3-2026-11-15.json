@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY2025 (fiscal quarter and year ended November 2, 2025)",
+  "revenue": "$18,015 million Q4 (+28% YoY); $63,887 million FY25 (+24% YoY)",
+  "operating_income": null,
+  "net_income": "GAAP $8,518 million Q4 / $23,126 million FY25; Non-GAAP $9,714 million Q4 / $33,728 million FY25",
+  "eps": "GAAP diluted $1.74 Q4 / $4.77 FY25; Non-GAAP diluted $1.95 Q4 / $6.82 FY25",
+  "operating_cash_flow": "$7,703 million Q4; $27,537 million FY25",
+  "capex": "$237 million Q4; $623 million FY25",
+  "free_cash_flow": "$7,466 million Q4 (41% of revenue); $26,914 million FY25",
+  "cash_and_investments": "$16,178 million cash and cash equivalents at quarter end",
+  "total_debt": "$3,152 million short-term debt + $61,984 million long-term debt",
+  "guidance_next": "Q1 FY2026 revenue guidance of approximately $19.1 billion (+28% YoY); Adjusted EBITDA guidance of 67% of projected revenue; AI semiconductor revenue expected to double YoY to $8.2 billion"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.8,
+ "own_stock": 0.85,
+ "market": 0.6,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "custom AI accelerator growth signals continued strong AI silicon demand, validating category"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "foundry partner benefits from accelerating custom AI chip volumes"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "AI data center buildout implies higher memory content demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "custom AI accelerator (XPU) programs imply continued hyperscaler capex and co-design demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Broadcom's custom silicon and networking strength pressures merchant GPU alternatives"
+  }
+ ],
+ "evidence": "we expect AI semiconductor revenue to double year-over-year to $8.2 billion, driven by custom AI accelerators and Ethernet AI switches",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

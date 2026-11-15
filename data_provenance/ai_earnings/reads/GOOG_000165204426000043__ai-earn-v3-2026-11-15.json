@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2026 (quarter ended March 31, 2026)",
+  "revenue": "$109.896 billion, up 22% YoY",
+  "operating_income": "$39.696 billion, operating margin 36.1%",
+  "net_income": "$62.578 billion",
+  "eps": "$5.11 diluted",
+  "operating_cash_flow": "$45.790 billion",
+  "capex": "$35.674 billion",
+  "free_cash_flow": "$10.116 billion (quarter); $64.429 billion TTM",
+  "cash_and_investments": "$126.840 billion total cash, cash equivalents, and marketable securities",
+  "total_debt": "$77.501 billion long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0,
+ "fcf_trend": 0.1,
+ "own_stock": 0.7,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud AI growth signals strong enterprise AI demand across hyperscalers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Google Cloud 63% growth implies robust cloud/AI infrastructure spending trend"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Massive capex increase ($35.7B capex, backlog near $460B) implies continued AI chip demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Rising AI infrastructure investment supports semiconductor foundry demand"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Validates broader AI capex supercycle among large-cap tech peers"
+  }
+ ],
+ "evidence": "Google Cloud revenues grew 63% with backlog nearly doubling quarter on quarter to over $460 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

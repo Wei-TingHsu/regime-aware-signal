@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2011 (ended Dec 31, 2011)",
+  "revenue": "NT$104.71 billion",
+  "operating_income": "NT$32.93 billion (operating margin 31.4%)",
+  "net_income": "NT$31.58 billion",
+  "eps": "NT$1.22 diluted (US$0.20 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q1 2012 revenue NT$103-105 billion; gross profit margin 42.5-44.5%; operating profit margin 28.5-30.5%; based on FX 1 USD = 30.25 NT$; 2012 capex expected to be about US$6 billion; demand expected to be stronger than seasonal"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "foundry demand signals broader semiconductor cycle"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "TSMC advanced node capacity serves AMD's fabless production"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "relies on TSMC foundry for chip production"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "self"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "semiconductor cycle read-through"
+  }
+ ],
+ "evidence": "we expect the demand for our wafers to be stronger than seasonal for the first quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

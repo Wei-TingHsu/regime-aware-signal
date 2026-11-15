@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY17 (three months ended August 31, 2016)",
+  "revenue": "$8.6 billion total revenues, up 2% USD / 3% constant currency",
+  "operating_income": "$2.6 billion GAAP (31% margin); $3.4 billion non-GAAP (39% margin)",
+  "net_income": "$1.832 billion GAAP; $2.3 billion non-GAAP",
+  "eps": "$0.43 diluted GAAP (up 10%); $0.55 non-GAAP (up 4%)",
+  "operating_cash_flow": "$5,875 million for the quarter; $13.7 billion trailing twelve months",
+  "capex": "$299 million for the quarter (TTM $1,042 million)",
+  "free_cash_flow": "$12,637 million trailing twelve months (5% growth y/y)",
+  "cash_and_investments": "$28,614 million cash and equivalents plus $39,782 million marketable securities",
+  "total_debt": "$999 million current notes payable + $53,057 million non-current notes payable",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Oracle claims new IaaS beats AWS on price/performance"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Cloud security peer, not directly addressed"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Competing cloud/SaaS and IaaS provider"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Competing cloud infrastructure provider"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "Self-referential, not applicable"
+  }
+ ],
+ "evidence": "non-GAAP SaaS and PaaS revenue growing 82% in constant currency, substantially outperforming our guidance",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

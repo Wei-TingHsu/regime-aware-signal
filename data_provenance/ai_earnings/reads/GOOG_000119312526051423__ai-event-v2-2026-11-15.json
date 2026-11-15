@@ -1,0 +1,43 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.15,
+ "own_stock": -0.05,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "debt funds AI/data-center capex spend"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "beneficiary of continued chip capex"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "confirms sector-wide heavy AI capex financing trend"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "similar large capex/debt dynamics expected"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "comparable AI infrastructure financing pressure"
+  }
+ ],
+ "evidence": "closed its concurrent underwritten public offerings of $20 billion aggregate principal amount of U.S. dollar-denominated senior notes ... and \u00a35.5 billion aggregate principal amount of Sterling-denominated senior notes",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

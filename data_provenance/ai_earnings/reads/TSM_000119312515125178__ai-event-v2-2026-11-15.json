@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.25,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.2,
+ "own_stock": 0.35,
+ "market": 0.15,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "strong foundry demand signals healthy fabless chip orders"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "TSM capacity utilization reflects demand for GPU fabrication"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.15,
+   "reason": "broad chip demand read-through"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSM share gains in advanced process demand"
+  }
+ ],
+ "evidence": "Revenues for January through March 2015 totaled NT$222.03 billion, an increase of 49.8 percent compared to the same period in 2014.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and full-year fiscal 2015 (quarter ended Dec 26, 2015; year ended Dec 26, 2015)",
+  "revenue": "$14,914 million (Q4 2015) vs $14,721 million (Q4 2014); $55,355 million (FY2015) vs $55,870 million (FY2014)",
+  "operating_income": "$4,299 million (Q4 2015) vs $4,453 million (Q4 2014); $14,002 million (FY2015) vs $15,347 million (FY2014)",
+  "net_income": "$3,613 million (Q4 2015) vs $3,661 million (Q4 2014); $11,420 million (FY2015) vs $11,704 million (FY2014)",
+  "eps": "$0.74 diluted (Q4 2015, flat vs Q4 2014); $2.33 diluted (FY2015) vs $2.31 (FY2014)",
+  "operating_cash_flow": null,
+  "capex": "$2,328 million (Q4 2015) vs $2,143 million (Q4 2014); $1,206 million (Q3 2015)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$25,313 million total cash investments (Q4 2015) vs $14,054 million (Q4 2014) and $20,843 million (Q3 2015)",
+  "total_debt": "$22,670 million (short-term $2,634M + long-term $20,036M), vs $13,655M a year earlier",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.1,
+ "own_stock": -0.1,
+ "market": 0,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel's flat-to-down CCG/DCG results leave room for AMD share gains"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Data Center Group growth signals strong cloud/compute demand relevant to NVDA's data-center GPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel's foundry ambitions and manufacturing ramp commentary position it as a nascent TSMC rival"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Intel's NVM Solutions Group results and capex in memory-adjacent manufacturing affect memory market sentiment"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Intel's non-volatile memory business overlaps with SanDisk's NAND flash market"
+  }
+ ],
+ "evidence": "OPERATING INCOME 4,299 4,453 14,002 15,347 \u2014 a modest year-over-year decline in both quarterly and full-year profitability despite stable revenue",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

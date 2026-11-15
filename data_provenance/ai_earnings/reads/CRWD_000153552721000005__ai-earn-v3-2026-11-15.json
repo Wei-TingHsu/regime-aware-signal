@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and Full Year FY2021 (ended January 31, 2021)",
+  "revenue": "Q4: $264.9 million; FY: $874.4 million",
+  "operating_income": "Q4 GAAP loss $(15.8) million / Non-GAAP income $34.4 million; FY GAAP loss $(92.5) million / Non-GAAP income $62.4 million",
+  "net_income": "Q4 GAAP net loss $(19.0) million / Non-GAAP net income $31.6 million; FY GAAP net loss $(92.6) million / Non-GAAP net income $62.6 million",
+  "eps": "Q4 GAAP $(0.09); Non-GAAP diluted $0.13; FY GAAP $(0.43); Non-GAAP diluted $0.27",
+  "operating_cash_flow": "Q4: $114.5 million; FY: $356.6 million",
+  "capex": "FY: purchases of property/equipment $52.8 million + capitalized internal-use software $10.9 million (~$63.7 million)",
+  "free_cash_flow": "Q4: $97.4 million; FY: $292.9 million (as stated)",
+  "cash_and_investments": "$1.92 billion cash and cash equivalents as of Jan 31, 2021",
+  "total_debt": "$738.0 million long-term debt (net of issuance costs, from $750M senior notes)",
+  "guidance_next": "Q1 FY22: total revenue $287.8-$292.1 million, Non-GAAP income from operations $18.5-$21.7 million, Non-GAAP net income $10.8-$13.9 million, Non-GAAP diluted EPS $0.05-$0.06; Full Year FY22: total revenue $1,310.4-$1,320.7 million, Non-GAAP income from operations $94.8-$102.5 million, Non-GAAP net income $63.8-$71.4 million, Non-GAAP diluted EPS $0.27-$0.30"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.7,
+ "own_stock": 0.7,
+ "market": 0.15,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "CrowdStrike gaining share in endpoint/cloud security against Microsoft Defender"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Deepened AWS integration (threat intel feeds with AWS Network Firewall)"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader cloud security/software spending trend benefits enterprise cloud vendors"
+  }
+ ],
+ "evidence": "ARR surpasses $1 billion milestone driven by record net new ARR of $143 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "product or technology",
+ "material": 0.2,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.0,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel PC/Core M positioning vs competitors"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "performance claims vs Tegra K1"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Windows PC refresh cycle benefits ecosystem"
+  }
+ ],
+ "evidence": "Strategies and Innovation to Transform the PC are Paying Off",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2014 (three months ended June 30, 2014)",
+  "revenue": "$2.91 billion, up 61% YoY",
+  "operating_income": "GAAP $1.39 billion (48% margin); Non-GAAP $1.71 billion (59% margin)",
+  "net_income": "GAAP $791 million; Non-GAAP $1.09 billion",
+  "eps": "GAAP diluted $0.30; Non-GAAP diluted $0.42",
+  "operating_cash_flow": "$1.341 billion",
+  "capex": "$469 million",
+  "free_cash_flow": "$872 million (as stated)",
+  "cash_and_investments": "$13.96 billion",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "strong mobile ad growth validates digital ad market strength"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broader tech/internet sentiment lift from strong results"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "large-cap tech sentiment correlation"
+  }
+ ],
+ "evidence": "GAAP income from operations was $1.39 billion, up 147% compared to $562 million in the second quarter of 2013",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

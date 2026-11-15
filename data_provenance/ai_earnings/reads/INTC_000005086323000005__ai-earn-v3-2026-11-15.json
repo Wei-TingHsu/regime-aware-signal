@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2022 (and FY2022)",
+  "revenue": "$14.0B Q4 (down 32% YoY); $63.1B FY2022 (down 20% YoY)",
+  "operating_income": "Q4 operating loss $(1.1)B GAAP, 4.3% non-GAAP margin; FY2022 $2.3B GAAP, 12.6% non-GAAP margin",
+  "net_income": "Q4 net loss $(0.66)B GAAP, $0.4B non-GAAP; FY2022 net income $8.0B GAAP, $7.6B non-GAAP",
+  "eps": "Q4 $(0.16) GAAP / $0.10 non-GAAP; FY2022 $1.94 GAAP / $1.84 non-GAAP",
+  "operating_cash_flow": "$15.4B FY2022 (down from $29.5B FY2021)",
+  "capex": "$24.8B additions to PP&E FY2022 (up from $18.7B FY2021)",
+  "free_cash_flow": "approx -$9.4B FY2022 (OCF $15.4B minus capex $24.8B)",
+  "cash_and_investments": "$11.1B cash + $17.2B short-term investments = $28.3B",
+  "total_debt": "$4.4B short-term debt + $37.7B long-term debt = ~$42.1B",
+  "guidance_next": "Q1 2023 revenue $10.5-11.5B; GAAP EPS $(0.80), non-GAAP EPS $(0.15); GAAP gross margin 34.1%, non-GAAP 39.0%"
+ },
+ "results_vs_prior_guidance": -0.5,
+ "guidance_change": -0.8,
+ "fcf_trend": -0.8,
+ "own_stock": -0.6,
+ "market": -0.4,
+ "ai_demand": -0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Intel's CCG/DCAI weakness signals broader PC/server softness AMD also faces, but relative share shift possible"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel's AXG GPU launch (Ponte Vecchio) adds competition in AI/data center accelerators"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.4,
+   "reason": "Weak PC/data center demand signals broader semiconductor/memory downturn"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel Foundry Services ramp and 18A/20A progress position Intel as emerging foundry competitor"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Named as adopter of new Xeon Scalable processors, supporting data center demand"
+  }
+ ],
+ "evidence": "Forecasting first-quarter 2023 revenue of $10.5 billion to $11.5 billion; expecting first-quarter EPS of $(0.80) (non-GAAP EPS of $(0.15))",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

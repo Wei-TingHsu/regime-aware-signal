@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.0,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "former long-time Intel exec now independent director of Broadcom"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "former Google Cloud COO joins Broadcom board"
+  }
+ ],
+ "evidence": "Mr. Macleod\u2019s departure from the Board is not due to any disagreement between him and the Company.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

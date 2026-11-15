@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2017 (quarter ended September 30, 2017)",
+  "revenue": "NT$252.11 billion (US$8.32 billion)",
+  "operating_income": "NT$98.056 billion (operating margin 38.9%)",
+  "net_income": "NT$89.925 billion",
+  "eps": "NT$3.47 (US$0.57 per ADR)",
+  "operating_cash_flow": null,
+  "capex": "2017 capital budget ~US$10.8 billion (full-year)",
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2017 revenue expected US$9.10-9.20 billion; at NT$30.3/US$, gross margin 48%-50%, operating margin 37%-39%; full-year 2017 capex ~US$10.8 billion"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.2,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "foundry demand reflects AMD chip volumes"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "GPU/crypto-related demand uses TSMC capacity"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "fabless customer benefiting from TSMC capacity growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC advanced node strength pressures Intel foundry lead"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "semiconductor cycle read-through on memory/logic demand"
+  }
+ ],
+ "evidence": "third quarter revenue was $8.32 billion, which increased 17.9% from the previous quarter... Revenue is expected to be between US$9.10 billion and US$9.20 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

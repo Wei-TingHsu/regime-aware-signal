@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2026 (quarter ended June 27, 2026)",
+  "revenue": "$16.1 billion, up 25% YoY",
+  "operating_income": "$1,796 million GAAP (11.1% operating margin); non-GAAP operating margin 17.2%",
+  "net_income": "$(11.0) billion GAAP net loss attributable to Intel; $2.2 billion non-GAAP net income",
+  "eps": "$(2.16) GAAP diluted EPS; $0.42 non-GAAP diluted EPS",
+  "operating_cash_flow": "$7.0 billion in Q2 (per release); $8.102 billion for six months ended Jun 27, 2026",
+  "capex": "$6.192 billion additions to PP&E (investing activities) for six months, plus $1.423 billion PP&E financed via financing activities",
+  "free_cash_flow": "approximately $1.9 billion for six months (operating cash flow $8.102B minus investing capex $6.192B)",
+  "cash_and_investments": "$12.874B cash + $16.853B short-term investments = $29.727B (down from $37.416B at Dec 27, 2025)",
+  "total_debt": "$48.549B long-term debt + $1.988B short-term debt = $50.537B (up from $46.585B at Dec 27, 2025)",
+  "guidance_next": "Q3 2026 revenue $15.8-16.8 billion; GAAP EPS $0.31; non-GAAP EPS $0.38; GAAP gross margin 41.0%, non-GAAP 42.0%; GAAP tax rate 1%, non-GAAP 11%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.1,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Joint rack-scale AI infrastructure using NVIDIA Blackwell GPUs with Intel Xeon"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel's CPU/AI compute strength and DCAI growth challenges AMD's server/client share"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel Foundry 18A/18A-P ramp and High-NA EUV progress positions Intel as a foundry rival"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Expanded multi-year strategic collaboration with Google Cloud on AI capabilities"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Broader AI-driven compute demand commentary supports memory/AI infrastructure demand"
+  }
+ ],
+ "evidence": "We delivered a strong second quarter, exceeding our financial guidance on robust demand and improved execution, including volume upside driven by higher factory yields and improved cycle times",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

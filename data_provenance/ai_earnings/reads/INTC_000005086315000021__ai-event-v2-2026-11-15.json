@@ -1,0 +1,19 @@
+{
+ "event_type": "accounting",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.05,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "reporting change doesn't affect competitive position"
+  }
+ ],
+ "evidence": "the company will revise the presentation of its operating segments to reflect the combination of the PC Client Group and the Mobile and Communications Group to create the Client Computing Group",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

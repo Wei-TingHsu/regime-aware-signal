@@ -1,0 +1,49 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.25,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.2,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AI chip demand drives TSMC foundry volume"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "relies on TSMC advanced nodes"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "custom silicon fabbed at TSMC"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "foundry rival losing share to TSMC growth"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "AI/TPU chips made at TSMC"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "cloud AI silicon dependent on TSMC capacity"
+  }
+ ],
+ "evidence": "Revenue for January through June 2025 totaled NT$1,773.05 billion, an increase of 40.0 percent compared to the same period in 2024.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

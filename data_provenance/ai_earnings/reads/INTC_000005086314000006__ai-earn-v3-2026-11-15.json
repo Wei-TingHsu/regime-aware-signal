@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2013 (three months ended Dec 28, 2013); FY2013 (twelve months ended Dec 28, 2013)",
+  "revenue": "$13,834 million (Q4); $52,708 million (FY13)",
+  "operating_income": "$3,549 million (Q4); $12,291 million (FY13)",
+  "net_income": "$2,625 million (Q4); $9,620 million (FY13)",
+  "eps": "$0.51 diluted (Q4); $1.89 diluted (FY13)",
+  "operating_cash_flow": null,
+  "capex": "$2,948 million (Q4 capital spending)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$20,087 million total cash investments (Q4 2013) vs $19,146 million (Q3 2013)",
+  "total_debt": "$13,165 million long-term debt + $281 million short-term debt (Q4 2013)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0,
+ "fcf_trend": 0.3,
+ "own_stock": 0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel PC/data center share gains imply pressure on AMD"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "No specific memory commentary in release"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "Intel foundry/process remarks not detailed here"
+  },
+  {
+   "company": "INTC",
+   "relation": "self",
+   "direction": 0.2,
+   "reason": "Revenue and EPS modestly above prior guidance range"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "PC Client Group revenue flat YoY, steady platform demand"
+  }
+ ],
+ "evidence": "NET REVENUE $13,834 million... within the $13.7B +/- $500M prior guidance range, with gross margin of 61.96% slightly above the ~61% guided level",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

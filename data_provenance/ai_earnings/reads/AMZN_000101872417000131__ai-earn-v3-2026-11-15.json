@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2017 (three months ended September 30, 2017)",
+  "revenue": "$43.7 billion",
+  "operating_income": "$347 million",
+  "net_income": "$256 million",
+  "eps": "$0.52 diluted",
+  "operating_cash_flow": "$17.1 billion (trailing twelve months)",
+  "capex": "$9.027 billion (nine months); $2.659 billion (Q3)",
+  "free_cash_flow": "$8.1 billion (trailing twelve months)",
+  "cash_and_investments": "$12.767 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Alexa-Cortana integration announced, cloud/AI collaboration"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS/Alexa ecosystem expansion competes with Google Cloud and Assistant"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS wins (GE, Hulu, FICO) signal cloud share gains vs legacy providers"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "AWS infrastructure growth implies continued chip/server demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "GPU/EC2 instance expansion signals compute hardware demand"
+  }
+ ],
+ "evidence": "Operating income decreased 40% to $347 million in the third quarter, compared with operating income of $575 million in third quarter 2016",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

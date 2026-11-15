@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.2,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "NCR",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Oracle expands into hospitality/retail POS market"
+  },
+  {
+   "company": "SAP",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Enterprise software rival loses potential vertical expansion target"
+  },
+  {
+   "company": "MICROS",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Target shareholders receive $68/share cash premium"
+  }
+ ],
+ "evidence": "a purchase price of $68.00 per share, net to the holders thereof, in cash",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

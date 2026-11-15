@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.15,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "strong TSMC revenue signals healthy foundry demand for fabless customers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "TSMC capacity/demand strength benefits key foundry customer"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC's strong growth highlights competitive foundry momentum vs Intel"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.15,
+   "reason": "major TSMC customer benefiting from robust wafer demand"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "semiconductor sector demand read-through"
+  }
+ ],
+ "evidence": "revenues for September 2016 were approximately NT$89.70 billion ... an increase of 39.0 percent from September 2015",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

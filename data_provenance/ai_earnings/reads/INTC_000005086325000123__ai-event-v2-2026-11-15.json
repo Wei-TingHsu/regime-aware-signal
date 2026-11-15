@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.15,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.15,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "Altera divestiture delay creates competitive opening in FPGA/programmable logic"
+  }
+ ],
+ "evidence": "extends the initial date by which the Closing must occur from August 12, 2025, to September 13, 2025",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

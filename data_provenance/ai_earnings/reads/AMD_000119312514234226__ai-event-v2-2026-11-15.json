@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.25,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "AMD internal reorg, minimal competitive shift"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "no direct impact"
+  }
+ ],
+ "evidence": "Dr. Lisa Su... in her new role as AMD\u2019s Chief Operating Officer, reporting to AMD President and Chief Executive Officer Rory Read",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

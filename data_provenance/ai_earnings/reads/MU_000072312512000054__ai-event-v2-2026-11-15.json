@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.5,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.2,
+ "own_stock": 0.3,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "partner",
+   "direction": 0.1,
+   "reason": "restructured supply agreement, $300M deposit, continued NAND sourcing"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Micron gains full control of NAND capacity, more competitive supply"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "memory/foundry capacity shift"
+  }
+ ],
+ "evidence": "Micron and Micron Singapore paid an aggregate purchase price of approximately $600 million net of distributions received by Micron and Micron Singapore from IMFT and IMFS",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

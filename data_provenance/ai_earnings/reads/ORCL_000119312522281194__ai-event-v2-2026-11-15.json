@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.15,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "comparable cloud/enterprise peer, no direct impact"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "comparable cloud/enterprise peer, no direct impact"
+  }
+ ],
+ "evidence": "Oracle intends to use the net cash proceeds of the offering to prepay borrowings under its March 2022 delayed draw term loan credit agreement (the \u201cDDTL\u201d) on a dollar-for-dollar basis.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

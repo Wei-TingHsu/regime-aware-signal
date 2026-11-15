@@ -1,0 +1,37 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.35,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.05,
+ "own_stock": 0.25,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC capex expansion widens foundry lead"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "More advanced capacity benefits fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Advanced capacity expansion supports supply"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Capacity expansion aids chip supply"
+  }
+ ],
+ "evidence": "Approved capital appropriations of approximately US$15.1 billion ... for Installation and expansion of advanced technology capacity",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

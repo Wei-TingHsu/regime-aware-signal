@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2019 (quarter ended December 31, 2019)",
+  "revenue": "NT$317.24 billion (US$10.39 billion)",
+  "operating_income": "NT$124.24 billion; operating margin 39.2%",
+  "net_income": "NT$116.04 billion",
+  "eps": "NT$4.47 (US$0.73 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q1 2020 revenue US$10.2-10.3 billion; gross profit margin 48.5%-50.5%; operating profit margin 37.5%-39.5% (at NT$29.9/US$1); 2020 capex budget US$15-16 billion"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "7nm demand strength benefits key TSMC customer"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "advanced node demand supports HPC/networking customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "TSMC's 7nm leadership and EUV lead pressures Intel's process roadmap"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor cycle read-through, not directly addressed"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "HPC demand cited as growth driver, benefits GPU customer"
+  }
+ ],
+ "evidence": "revenue increased 10.6% year-over-year and increased 10.6% from the previous quarter... gross margin for the quarter was 50.2%, operating margin was 39.2%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

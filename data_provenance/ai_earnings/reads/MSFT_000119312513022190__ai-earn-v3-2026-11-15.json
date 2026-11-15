@@ -1,0 +1,39 @@
+{
+ "facts": {
+  "period": "Q2 FY2013 (quarter ended December 31, 2012)",
+  "revenue": "$21.456 billion (GAAP), record quarterly revenue",
+  "operating_income": "$7.771 billion GAAP (non-GAAP $8.317 billion)",
+  "net_income": "$6.377 billion",
+  "eps": "$0.76 diluted (GAAP); $0.81 non-GAAP",
+  "operating_cash_flow": "$4.780 billion (quarter); $13.264 billion (six months)",
+  "capex": "$930 million (quarter, additions to property and equipment)",
+  "free_cash_flow": "$3.850 billion (quarter, calculated: 4,780 - 930)",
+  "cash_and_investments": "$68.312 billion total cash, cash equivalents, and short-term investments",
+  "total_debt": "$14.188 billion (current portion $2.241B + long-term $11.947B)",
+  "guidance_next": "Microsoft reaffirms fiscal year 2013 operating expense guidance of $30.3 billion to $30.9 billion"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Online Services competes in search/advertising"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud/enterprise services overlap via Server & Tools"
+  }
+ ],
+ "evidence": "Operating income, net income, and diluted earnings per share for the quarter were $7.77 billion, $6.38 billion, and $0.76 per share",
+ "note": "GAAP operating income, net income and EPS all declined 3% year-over-year despite record revenue; operating cash flow fell from $5.862B to $4.780B YoY; capex rose; six-month operating cash flow declined from $14.355B to $13.264B; guidance merely reaffirmed, not raised.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

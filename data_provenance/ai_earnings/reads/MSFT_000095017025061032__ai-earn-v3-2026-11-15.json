@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2025 (three months ended March 31, 2025)",
+  "revenue": "$70.1 billion, +13% YoY (+15% constant currency)",
+  "operating_income": "$32.0 billion, +16% YoY (+19% constant currency)",
+  "net_income": "$25.8 billion, +18% YoY",
+  "eps": "$3.46 diluted, +18% YoY",
+  "operating_cash_flow": "$37,044 million (three months)",
+  "capex": "$16,745 million (additions to property and equipment, three months)",
+  "free_cash_flow": "$20,299 million (37,044 - 16,745)",
+  "cash_and_investments": "$79,618 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$42,881 million (short-term debt $0 + current portion LT debt $2,999 + long-term debt $39,882)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.6,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Azure capex surge implies continued GPU purchases"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Cloud AI infrastructure buildout benefits chip suppliers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Azure's 33% growth signals strong cloud competition/demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud AI demand strength benefits hyperscaler peer"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud infrastructure competition intensifies with Azure growth"
+  }
+ ],
+ "evidence": "Azure and other cloud services revenue growth of 33% (up 35% in constant currency)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

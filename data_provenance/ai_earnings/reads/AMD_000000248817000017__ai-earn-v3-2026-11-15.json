@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2016 / FY2016",
+  "revenue": "$1.11 billion (Q4); $4.27 billion (FY2016)",
+  "operating_income": "GAAP operating loss $(3)M (Q4); non-GAAP operating income $26M (Q4); FY GAAP operating loss $(372)M, non-GAAP operating income $44M",
+  "net_income": "GAAP net loss $(51)M (Q4); FY GAAP net loss $(497)M",
+  "eps": "$(0.06) GAAP (Q4); $(0.01) non-GAAP (Q4); $(0.60) GAAP FY2016",
+  "operating_cash_flow": "$188M (Q4); $90M (FY2016)",
+  "capex": "$21M (Q4); $77M (FY2016)",
+  "free_cash_flow": "$167M (Q4, 188-21); $13M (FY2016, 90-77)",
+  "cash_and_investments": "$1.264 billion cash and cash equivalents",
+  "total_debt": "Long-term debt net $1.435 billion; short-term debt $0",
+  "guidance_next": "For Q1 2017, AMD expects revenue to decrease 11 percent sequentially, plus or minus 3 percent, implying approximately 18 percent year-over-year growth at the midpoint"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.3,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "reason": "AMD GPU and Radeon Instinct push into deep learning/HPC directly competes",
+   "direction": -0.2
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "reason": "New collaboration bringing Radeon GPU tech to Google Cloud Platform",
+   "direction": 0.2
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "reason": "Ryzen/Zen CPU launch threatens Intel's CPU market share",
+   "direction": -0.3
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "reason": "Potential foundry diversification as AMD advances new architectures",
+   "direction": 0.1
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "reason": "Cloud/semi-custom demand relevant to AMD's Enterprise/Embedded/Semi-Custom segment",
+   "direction": 0.1
+  }
+ ],
+ "evidence": "Revenue of $1.11 billion was up 15 percent year-over-year... midpoint of guidance would result in Q1 2017 revenue increasing approximately 18 percent year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

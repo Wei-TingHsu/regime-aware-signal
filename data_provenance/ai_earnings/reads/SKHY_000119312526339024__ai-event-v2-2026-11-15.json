@@ -1,0 +1,43 @@
+{
+ "event_type": "other",
+ "material": 0.6,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.3,
+ "own_stock": 0.1,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Capacity expansion increases supply competition in memory"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Equipment/construction supply chain spending"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "More HBM/DRAM capacity supports AI memory supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Potential memory supply benefit"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Increased NAND/DRAM capacity pressures pricing"
+  }
+ ],
+ "evidence": "approved the investment for the construction of phases 1 to 6 of Fab 2 at the Yongin Semiconductor Cluster",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

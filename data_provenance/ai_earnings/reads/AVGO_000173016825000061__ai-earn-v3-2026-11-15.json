@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2025 (ended May 4, 2025)",
+  "revenue": "$15,004 million (+20% YoY)",
+  "operating_income": null,
+  "net_income": "GAAP $4,965 million; Non-GAAP $7,787 million",
+  "eps": "GAAP diluted $1.03; Non-GAAP diluted $1.58",
+  "operating_cash_flow": "$6,555 million",
+  "capex": "$144 million",
+  "free_cash_flow": "$6,411 million (43% of revenue)",
+  "cash_and_investments": "$9,472 million cash and cash equivalents",
+  "total_debt": "Short-term debt $5,531 million; Long-term debt $61,751 million",
+  "guidance_next": "Q3 FY2025 revenue guidance of approximately $15.8 billion (+21% YoY); Adjusted EBITDA guidance of at least 66% of projected revenue; AI semiconductor revenue expected to be $5.1 billion in Q3"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.7,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AI networking/accelerator demand validates broader AI capex trend"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Custom AI silicon volumes imply continued foundry demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Hyperscaler AI infrastructure investment driving custom chip orders"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Hyperscaler capex supports AI networking revenue growth"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud AI buildout underpins Broadcom's networking and custom silicon sales"
+  }
+ ],
+ "evidence": "Free cash flow was a record $6.4 billion, up 44% year-over-year.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

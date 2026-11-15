@@ -1,0 +1,54 @@
+{
+ "facts": {
+  "period": "Q1 2022 (three months ended March 31, 2022)",
+  "revenue": "$116.4 billion, +7% YoY (+9% ex-FX)",
+  "operating_income": "$3.7 billion, down from $8.9 billion in Q1 2021",
+  "net_income": "Net loss of $3.8 billion (includes $7.6B pre-tax valuation loss on Rivian stock)",
+  "eps": "-$7.56 diluted, vs $15.79 in Q1 2021",
+  "operating_cash_flow": "$39.3 billion TTM, down 41% YoY",
+  "capex": "$14.95 billion in Q1 2022 (purchases of property and equipment); $63.9 billion TTM",
+  "free_cash_flow": "-$18.6 billion TTM (outflow), vs +$26.4 billion TTM a year earlier",
+  "cash_and_investments": "$36.4 billion cash and equivalents + $30.0 billion marketable securities = ~$66.4 billion",
+  "total_debt": "$47.6 billion long-term debt (plus $65.7B long-term lease liabilities)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "reason": "Azure competes directly with AWS in cloud infrastructure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "reason": "Google Cloud competes with AWS"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AWS capex and cloud buildout implies chip demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Data center server chips for AWS infrastructure"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Memory demand tied to AWS/data center capex growth"
+  }
+ ],
+ "evidence": "Net loss was $3.8 billion in the first quarter, or $7.56 per diluted share, compared with net income of $8.1 billion, or $15.79 per diluted share, in first quarter 2021.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

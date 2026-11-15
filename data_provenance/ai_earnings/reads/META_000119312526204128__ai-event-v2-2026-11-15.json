@@ -1,0 +1,43 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.2,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "peer capex funding comparison"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "peer capex funding comparison"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "debt funds continued AI capex/compute spend"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "debt funds continued AI infrastructure spend"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "peer capex funding comparison"
+  }
+ ],
+ "evidence": "completed an offering of $3,000,000,000 aggregate principal amount of its 4.550% Senior Notes due 2031... $6,000,000,000... 6.450% Senior Notes due 2066",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

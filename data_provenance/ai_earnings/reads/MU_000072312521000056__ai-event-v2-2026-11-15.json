@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.05,
+ "uncertainty": -0.2,
+ "own_stock": 0.4,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "memory peer may face pressure to follow capital return"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "semiconductor peer, capital return signaling"
+  }
+ ],
+ "evidence": "Initiating a common stock dividend reflects our confidence in Micron\u2019s future and our commitment to creating compelling value for shareholders.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

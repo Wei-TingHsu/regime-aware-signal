@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2022 (ended May 1, 2022)",
+  "revenue": "$8,103 million, up 23% YoY",
+  "operating_income": null,
+  "net_income": "$2,590 million GAAP; $4,000 million non-GAAP",
+  "eps": "$5.93 GAAP diluted; $9.07 non-GAAP diluted",
+  "operating_cash_flow": "$4,243 million",
+  "capex": "$85 million",
+  "free_cash_flow": "$4,158 million (cash from operations $4,243M less capex $85M)",
+  "cash_and_investments": "$9,005 million cash and cash equivalents (down from $12,163M at prior fiscal year-end)",
+  "total_debt": "$39,466 million (current portion $302M + long-term $39,164M)",
+  "guidance_next": "Q3 FY2022 revenue guidance of approximately $8.4 billion (+24% YoY); Adjusted EBITDA guidance of approximately 63.5% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.6,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "strong networking/data-center semiconductor demand signals broader AI infrastructure strength"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "shared semiconductor end-markets, especially data center/networking"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "foundry partner benefiting from Broadcom's semiconductor revenue growth"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "storage/server strength implies healthy memory and storage component demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "cloud/data-center customers driving networking and server storage demand cited by Broadcom"
+  }
+ ],
+ "evidence": "Third quarter revenue guidance of approximately $8.4 billion, an expected increase of 24 percent from the prior year period",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

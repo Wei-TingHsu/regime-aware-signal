@@ -1,0 +1,49 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.05,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "SKHY",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "Sony Semiconductor co-investor benefits from capacity access"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC expands advanced foundry footprint, intensifying competitive pressure"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "more capacity supports long-term chip supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "benefits from expanded foundry capacity"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "not directly affected"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.03,
+   "reason": "additional capacity for advanced logic"
+  }
+ ],
+ "evidence": "the overall investment in JASM will exceed US$20 billion with strong support from the Japanese government",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 FY2011 (ended March 3, 2011)",
+  "revenue": "$2,257 million net sales",
+  "operating_income": "$179 million",
+  "net_income": "$72 million attributable to Micron",
+  "eps": "$0.07 diluted",
+  "operating_cash_flow": "$809 million (Q2); $1,541 million (six months)",
+  "capex": "$840 million (Q2)",
+  "free_cash_flow": "-$31 million (Q2 OCF $809M minus capex $840M)",
+  "cash_and_investments": "$2,184 million cash and short-term investments",
+  "total_debt": "$1,740 million (current portion $420M + long-term $1,320M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "NAND pricing pressure industry-wide"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "memory customer, no specific commentary"
+  },
+  {
+   "company": "MU",
+   "relation": "self",
+   "direction": -1,
+   "reason": "n/a"
+  }
+ ],
+ "evidence": "net income attributable to Micron shareholders of $72 million, or $0.07 per diluted share... compare to net income of $155 million, or $0.15 per diluted share, on net sales of $2.3 billion for the first quarter of fiscal 2011",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

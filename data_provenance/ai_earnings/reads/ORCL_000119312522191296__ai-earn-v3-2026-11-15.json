@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Fiscal Q4 2022 (quarter ended May 31, 2022) cloud metrics; promotional release ahead of Oracle CloudWorld",
+  "revenue": "Total cloud revenue (IaaS+SaaS) $2.9 billion, up 19% USD / 22% constant currency",
+  "operating_income": null,
+  "net_income": null,
+  "eps": null,
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cloud IaaS growth signals competitive cloud market strength"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "IaaS hyper-growth highlights rival cloud infrastructure demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Oracle's cloud infrastructure growth reflects broader cloud market expansion"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "enterprise software/cloud demand backdrop"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "infrastructure cloud growth implies underlying hardware/compute demand"
+  }
+ ],
+ "evidence": "Infrastructure cloud (IaaS) revenues were $792 million, up 36% in USD and up 39% in constant currency",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

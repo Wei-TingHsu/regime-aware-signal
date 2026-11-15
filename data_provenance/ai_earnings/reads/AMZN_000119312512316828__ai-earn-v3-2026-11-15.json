@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q2 2012 (three months ended June 30, 2012)",
+  "revenue": "$12.83 billion, up 29% YoY",
+  "operating_income": "$107 million (vs $201 million Q2 2011)",
+  "net_income": "$7 million (vs $191 million Q2 2011)",
+  "eps": "$0.01 diluted (vs $0.41 Q2 2011)",
+  "operating_cash_flow": "$3.22 billion trailing twelve months",
+  "capex": "$657 million in Q2 (purchases of fixed assets); $2.123 billion TTM",
+  "free_cash_flow": "$1.10 billion TTM, down 40% YoY",
+  "cash_and_investments": "$2.335 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q3 2012 net sales expected $12.9B-$14.3B (19%-31% growth); operating income (loss) expected $(350)M to $(50)M, down from $79M in Q3 2011, including ~$275M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.4,
+ "fcf_trend": -0.6,
+ "own_stock": -0.3,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/retail competitor, not directly addressed"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS vs Azure competitive dynamic implied"
+  }
+ ],
+ "evidence": "Operating income (loss) is expected to be between $(350) million and $(50) million, down from $79 million in the comparable prior year period.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

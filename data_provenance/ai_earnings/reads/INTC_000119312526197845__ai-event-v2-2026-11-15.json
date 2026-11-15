@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "semiconductor peer, no direct impact"
+  }
+ ],
+ "evidence": "The aggregate principal amount of the Notes is $6.5 billion, and the net proceeds from the offering are approximately $6.47 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

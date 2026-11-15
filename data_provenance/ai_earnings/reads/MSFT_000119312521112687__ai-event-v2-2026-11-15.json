@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.2,
+ "own_stock": 0.05,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "loses healthcare cloud AI opportunity"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS healthcare cloud competition"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle Cerner healthcare push rivalry"
+  }
+ ],
+ "evidence": "Microsoft will acquire Nuance for $56.00 per share... in an all-cash transaction valued at $19.7 billion, inclusive of Nuance\u2019s net debt.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and full fiscal year 2015 (ended January 25, 2015)",
+  "revenue": "$1.251B Q4 (up 9% YoY, up 2% QoQ); $4.682B FY15 (up 13% YoY)",
+  "operating_income": "$231.1M Q4; $758.99M FY15 (GAAP)",
+  "net_income": "$193.1M Q4; $630.6M FY15 (GAAP)",
+  "eps": "$0.35 GAAP / $0.43 non-GAAP diluted Q4; $1.12 GAAP / $1.42 non-GAAP diluted FY15",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": "not explicitly stated this release; referenced cumulative FCF FY13-FY15 as basis for $2.22B returned (111% of cumulative FCF)",
+  "cash_and_investments": "$4.623B (cash, cash equivalents and marketable securities)",
+  "total_debt": "$1.384B long-term debt",
+  "guidance_next": "Q1 FY16: revenue ~$1.16B +/-2%; GAAP gross margin ~56.2%, non-GAAP ~56.5% (+/-50bps); GAAP opex ~$478M, non-GAAP opex ~$425M; GAAP/non-GAAP tax rate ~20% +/-1%; capex ~$30-40M"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA GPU/gaming/compute momentum pressures AMD's graphics share"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVIDIA's Tesla/accelerated computing platform competes with Intel's data-center compute push"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Higher NVIDIA revenue and new GPU launches imply more foundry demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Growth in GPU/compute products implies more memory demand for NVIDIA products"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "GRID vGPU virtualization and Tesla compute platforms target enterprise/cloud customers like Google"
+  }
+ ],
+ "evidence": "Record revenue in Q4 of $1.25 billion, up 9 percent from $1.14 billion a year earlier... Non-GAAP diluted EPS in Q4 of $0.43, up 34 percent from $0.32 a year earlier.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

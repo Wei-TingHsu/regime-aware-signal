@@ -1,0 +1,31 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.2,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.1,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "foundry customer, no signal change"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "foundry customer, no signal change"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "foundry competitor"
+  }
+ ],
+ "evidence": "revenues for April 2018 were approximately NT$81.87 billion, a decrease of 21.0 percent from March 2018",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

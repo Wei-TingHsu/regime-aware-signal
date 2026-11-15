@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.2,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.1,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Microchip Technology",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "interim CEO Sanghi retains outside board role"
+  },
+  {
+   "company": "ASML",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "Meurice's prior ASML leadership referenced"
+  }
+ ],
+ "evidence": "the board of directors of Intel Corporation appointed Eric Meurice and Steve Sanghi to the Board, effective immediately",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

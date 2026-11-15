@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2017 (three months ended December 31, 2017); FY2017",
+  "revenue": "$60.5 billion (Q4), $177.9 billion (FY2017)",
+  "operating_income": "$2.1 billion (Q4), $4.1 billion (FY2017)",
+  "net_income": "$1.9 billion (Q4, includes ~$789 million provisional tax benefit), $3.0 billion (FY2017)",
+  "eps": "$3.75 diluted (Q4), $6.15 diluted (FY2017)",
+  "operating_cash_flow": "$18.4 billion (trailing twelve months)",
+  "capex": "$11,955 million (TTM purchases of property and equipment)",
+  "free_cash_flow": "$8.4 billion (TTM), down from $10.5 billion prior year",
+  "cash_and_investments": "$20,522 million cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "AWS cites major enterprise wins over rival cloud providers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "AWS customer wins in ML/AI and cloud infrastructure"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "AWS displacing legacy infrastructure providers like Oracle"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "AWS machine learning/AI workloads imply GPU demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Heavy AWS capex and data center buildout benefits chip suppliers"
+  }
+ ],
+ "evidence": "Operating income increased 69% to $2.1 billion in the fourth quarter, compared with operating income of $1.3 billion in fourth quarter 2016",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

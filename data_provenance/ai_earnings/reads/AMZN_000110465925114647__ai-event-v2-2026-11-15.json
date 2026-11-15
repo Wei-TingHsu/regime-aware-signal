@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "comparable hyperscaler capex financing trend"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "comparable hyperscaler capex financing trend"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "comparable hyperscaler capex financing trend"
+  }
+ ],
+ "evidence": "closed the sale of $2,500,000,000 ... notes due 2028 ... through $2,000,000,000 ... notes due 2065, with aggregate public offering price of the Notes of $14.961 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

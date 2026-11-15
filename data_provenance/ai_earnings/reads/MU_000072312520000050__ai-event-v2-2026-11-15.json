@@ -1,0 +1,25 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.05,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.0,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "memory/storage peer, no direct impact"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "no new info on supply chain"
+  }
+ ],
+ "evidence": "a webcast including the presentation titled, \u201cWinning in the 5G Era\u201d",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

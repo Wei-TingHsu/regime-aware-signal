@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2024 (quarter ended June 30, 2024)",
+  "revenue": "NT$673.51 billion / US$20.82 billion",
+  "operating_income": "NT$286.56 billion (operating margin 42.5%)",
+  "net_income": "NT$247.85 billion",
+  "eps": "NT$9.56 (US$1.48 per ADR unit)",
+  "operating_cash_flow": "NT$377.67 billion",
+  "capex": "NT$205.68 billion",
+  "free_cash_flow": "NT$171.99 billion",
+  "cash_and_investments": "NT$2,048.64 billion (cash & marketable securities)",
+  "total_debt": "NT$974.34 billion long-term interest-bearing debt",
+  "guidance_next": "Q3 2024 revenue expected US$22.4-23.2 billion; gross profit margin 53.5%-55.5%; operating profit margin 42.5%-44.5% (at NT$32.5/US$1)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "leading-edge demand tied to AI chip orders"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "relies on TSMC advanced nodes for AI/CPU chips"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "custom silicon/AI ASICs made at TSMC"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "TSMC strength in leading-edge foundry pressures Intel Foundry"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "AI-driven semiconductor demand broadly positive"
+  }
+ ],
+ "evidence": "Revenue is expected to be between US$22.4 billion and US$23.2 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

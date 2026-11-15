@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2016 (quarter ended December 31, 2015)",
+  "revenue": "$23.8 billion GAAP; $25.7 billion non-GAAP",
+  "operating_income": "$6.0 billion GAAP; $7.9 billion non-GAAP",
+  "net_income": "$5.0 billion GAAP; $6.3 billion non-GAAP",
+  "eps": "$0.62 GAAP; $0.78 non-GAAP",
+  "operating_cash_flow": "$5,598 million (three months ended Dec 31, 2015)",
+  "capex": "$2,024 million (additions to property and equipment)",
+  "free_cash_flow": "$3,574 million (5,598 - 2,024)",
+  "cash_and_investments": "$102,640 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$44,429 million (short-term debt $3,000M + current portion long-term debt $750M + long-term debt $40,679M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.5,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure growth of 140% signals cloud share gains vs AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud and productivity competition intensifying"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Server/cloud growth pressures enterprise software incumbents"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Surface and server growth supports component demand"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Enterprise cloud/security spending trend broadly positive"
+  }
+ ],
+ "evidence": "Commercial cloud annualized revenue run rate exceeds $9.4 billion; Azure revenue grew 140% in constant currency",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

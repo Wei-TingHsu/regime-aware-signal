@@ -1,0 +1,37 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.6,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Competes in FPGA/programmable logic market"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Rival in data center/semiconductor space"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Data center/IoT customer benefiting from combined tech"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Data center customer for FPGA-enhanced chips"
+  }
+ ],
+ "evidence": "Intel expects the acquisition to be accretive to non-GAAP EPS and free cash flow in the first full year after close, consistent with prior guidance.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

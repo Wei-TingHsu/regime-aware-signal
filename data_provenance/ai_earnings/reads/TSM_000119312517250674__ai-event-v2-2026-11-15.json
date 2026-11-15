@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.25,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.1,
+ "own_stock": -0.05,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "more advanced capacity could ease foundry allocation constraints"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "expanded advanced packaging capacity supports GPU demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC capacity expansion increases competitive pressure in foundry/process tech"
+  }
+ ],
+ "evidence": "capital appropriations of approximately US$3,153.6 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2024 (quarter ended September 30, 2024)",
+  "revenue": "NT$759.69 billion (US$23.50 billion)",
+  "operating_income": "NT$360.77 billion; operating margin 47.5%",
+  "net_income": "NT$325.26 billion",
+  "eps": "NT$12.54 (US$1.94 per ADR unit)",
+  "operating_cash_flow": "NT$391.99 billion",
+  "capex": "NT$207.08 billion",
+  "free_cash_flow": "NT$184.91 billion",
+  "cash_and_investments": "NT$2,167.60 billion (cash & marketable securities)",
+  "total_debt": "NT$936.16 billion long-term interest-bearing debt",
+  "guidance_next": "Q4 2024 revenue expected US$26.1-26.9 billion; gross profit margin 57%-59%; operating profit margin 46.5%-48.5% (at NT$32.0/US$1)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.5,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.8,
+   "reason": "AI-related demand drives TSMC's leading-edge nodes"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "Advanced node demand tied to AI chips"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "HPC/AI customer benefiting from capacity"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TSMC's strength highlights foundry competitive edge"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud/data-center AI demand supports HPC platform growth"
+  }
+ ],
+ "evidence": "revenue was $23.50 billion, which increased 36.0% year-over-year... Moving into fourth quarter 2024, we expect our business to continue to be supported by strong demand for our leading-edge process technologies",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

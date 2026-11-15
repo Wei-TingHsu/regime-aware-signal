@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.4,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "large tech issuer comparison, minimal impact"
+  }
+ ],
+ "evidence": "Oracle Corporation (\u201cOracle\u201d) consummated the issuance and sale of $2,500,000,000 aggregate principal amount of its 2.500% notes due 2022 ... and $1,250,000,000 aggregate principal amount of its 4.375% notes due 2055",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and full-year FY2015 (ended May 31, 2015)",
+  "revenue": "$10.7 billion Q4 (down 5% YoY, up 3% constant currency); $38.2 billion FY2015 (essentially flat, up 4% constant currency)",
+  "operating_income": "$3,982 million GAAP (37% margin) / $5.0 billion non-GAAP (46% margin) Q4; $13.9 billion GAAP / $17.4 billion non-GAAP FY2015",
+  "net_income": "$2,758 million Q4; $9,938 million FY2015",
+  "eps": "$0.62 diluted GAAP Q4 (down 23%), $0.78 non-GAAP; $2.21 GAAP FY2015, $2.77 non-GAAP",
+  "operating_cash_flow": "$14,336 million (FY2015, trailing twelve months $14.3B)",
+  "capex": "$1,391 million (FY2015)",
+  "free_cash_flow": "$12,945 million trailing four quarters (down 10% YoY)",
+  "cash_and_investments": "$21,716 million cash + $32,652 million marketable securities = $54,368 million",
+  "total_debt": "$1,999 million current notes payable + $39,959 million non-current notes payable = $41,958 million",
+  "guidance_next": "Oracle expects SaaS/PaaS revenue growth to jump to around 60% in constant currency in FY2016, and to book between $1.5 and $2.0 billion of new SaaS and PaaS business this fiscal year."
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.5,
+ "fcf_trend": -0.4,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle claims faster cloud growth, implying competitive share gains in SaaS/PaaS/IaaS"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle's IaaS growth (31% constant currency) positions it as rising competitor to AWS"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Self-referential cloud bookings beat strengthens long-term SaaS narrative"
+  }
+ ],
+ "evidence": "\u201cWe dramatically beat that forecast by selling a cloud industry all-time-record amount of $426 million of new SaaS and PaaS business.\u201d",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

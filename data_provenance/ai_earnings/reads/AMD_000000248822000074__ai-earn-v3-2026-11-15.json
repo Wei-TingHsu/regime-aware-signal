@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2022 (ended March 26, 2022)",
+  "revenue": "$5.887 billion (up 71% YoY)",
+  "operating_income": "$951 million GAAP; $1.837 billion non-GAAP",
+  "net_income": "$786 million GAAP; $1.589 billion non-GAAP",
+  "eps": "$0.56 diluted GAAP; $1.13 diluted non-GAAP",
+  "operating_cash_flow": "$995 million",
+  "capex": "$71 million",
+  "free_cash_flow": "$924 million (stated)",
+  "cash_and_investments": "$6.532 billion (cash, cash equivalents and short-term investments)",
+  "total_debt": "$1.787 billion",
+  "guidance_next": "Raised full-year 2022 guidance reflecting higher organic AMD growth plus Xilinx addition; specific Q2/FY22 numeric targets not included in this excerpt, but CEO cites 'increased full-year guidance'"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "AMD server/client share gains, EPYC doubling again"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "AMD GPU/data-center growth and Xilinx adaptive SoC expansion"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Azure adopting 3rd Gen EPYC with 3D V-Cache"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "New EC2 instances powered by AMD EPYC"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Google Cloud C2D VMs using AMD EPYC"
+  }
+ ],
+ "evidence": "Record quarterly revenue of $5.9 billion grew 71% year-over-year... with our increased full-year guidance reflecting higher AMD organic growth and the addition of the growing Xilinx business.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

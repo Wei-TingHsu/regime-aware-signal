@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2016 (quarter ended September 30, 2015)",
+  "revenue": "$20.4 billion GAAP; $21.7 billion non-GAAP",
+  "operating_income": "$5.8 billion GAAP; $7.1 billion non-GAAP",
+  "net_income": "$4.6 billion GAAP; $5.4 billion non-GAAP",
+  "eps": "$0.57 GAAP; $0.67 non-GAAP",
+  "operating_cash_flow": "$8,594 million",
+  "capex": "$1,356 million (additions to property and equipment)",
+  "free_cash_flow": "$7,238 million (8,594 - 1,356)",
+  "cash_and_investments": "$99,355 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$38,567 million (short-term debt $9,998M + current portion LT debt $750M + long-term debt $27,819M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud competition via Azure growth"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise cloud/database competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud and productivity competition"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "PC/server chip demand tied to Windows OEM trends"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "server/cloud infrastructure component supplier"
+  }
+ ],
+ "evidence": "Azure revenue and compute usage more than doubled year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

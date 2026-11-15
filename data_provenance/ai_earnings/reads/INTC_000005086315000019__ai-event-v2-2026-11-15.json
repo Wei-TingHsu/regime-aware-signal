@@ -1,0 +1,31 @@
+{
+ "event_type": "guidance update",
+ "material": 0.5,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.4,
+ "own_stock": -0.4,
+ "market": -0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "PC demand weakness could be relative share opportunity"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "weaker PC/chip demand environment"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "PC ecosystem demand softness"
+  }
+ ],
+ "evidence": "Demand for Intel's products is highly variable and could differ from expectations due to factors including changes in business and economic conditions",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

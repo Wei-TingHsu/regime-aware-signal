@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2023 (quarter ended October 31, 2022)",
+  "revenue": "$580.9 million total revenue (up 53% YoY); subscription revenue $547.4 million",
+  "operating_income": "GAAP loss from operations $(56.4) million; Non-GAAP income from operations $89.7 million",
+  "net_income": "GAAP net loss attributable to CrowdStrike $(55.0) million; Non-GAAP net income attributable to CrowdStrike $96.1 million",
+  "eps": "GAAP $(0.24) basic/diluted; Non-GAAP diluted $0.40",
+  "operating_cash_flow": "$242.9 million (record)",
+  "capex": "approx. $68.8 million (derived: OCF $242.9M minus stated FCF $174.1M)",
+  "free_cash_flow": "$174.1 million (record, as stated)",
+  "cash_and_investments": "$2.47 billion cash and cash equivalents as of Oct 31, 2022",
+  "total_debt": "$740.6 million long-term debt",
+  "guidance_next": "Q4 FY23: revenue $619.1-628.2M; Non-GAAP income from operations $87.2-93.7M; Non-GAAP net income $100.9-107.5M; Non-GAAP diluted EPS $0.42-0.45. Full Year FY23: revenue $2,223.0-2,232.0M; Non-GAAP income from operations $347.2-353.8M; Non-GAAP net income $357.6-364.4M; Non-GAAP diluted EPS $1.49-1.52"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.7,
+ "own_stock": -0.3,
+ "market": -0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "shared macro-driven enterprise sales cycle elongation"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "cloud/software peers face similar deal-timing headwinds"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "enterprise software spending caution noted broadly"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "cloud customer budget scrutiny implied"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cybersecurity platform consolidation narrative favors incumbents like CrowdStrike over fragmented vendors, slight read-through to enterprise software competitors"
+  }
+ ],
+ "evidence": "total net new ARR was below our expectations as increased macroeconomic headwinds elongated sales cycles with smaller customers and caused some larger customers to pursue multi-phase subscription start dates",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

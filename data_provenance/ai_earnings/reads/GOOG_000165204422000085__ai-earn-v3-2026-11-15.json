@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2022 (quarter ended September 30, 2022)",
+  "revenue": "$69,092 million, up 6% YoY (11% constant currency)",
+  "operating_income": "$17,135 million (25% margin), down from $21,031 million (32% margin)",
+  "net_income": "$13,910 million, down from $18,936 million",
+  "eps": "$1.06 diluted, down from $1.40",
+  "operating_cash_flow": "$23,353 million",
+  "capex": "$7,276 million",
+  "free_cash_flow": "$16,077 million (stated)",
+  "cash_and_investments": "$116,259 million total cash, cash equivalents and marketable securities, down from $139,649 million at Dec 31 2021",
+  "total_debt": "$14,653 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.2,
+ "own_stock": -0.5,
+ "market": -0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "shared digital-ad revenue slowdown signaled by Google Search/YouTube softness"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Google Cloud growth (38% YoY) but still losing money shows intensifying cloud competition and margin pressure sector-wide"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud segment comparison; AWS faces similar margin/growth scrutiny"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "continued capex ($7.3B) and AI-powered Search/Cloud investment implies ongoing chip/infrastructure demand"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud infrastructure competitor amid decelerating enterprise spend environment"
+  }
+ ],
+ "evidence": "Diluted EPS $ 1.40 $ 1.06",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

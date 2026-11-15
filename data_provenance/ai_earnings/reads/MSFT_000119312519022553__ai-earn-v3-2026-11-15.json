@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2019 (quarter ended December 31, 2018)",
+  "revenue": "$32.5 billion, up 12% YoY",
+  "operating_income": "$10.3 billion, up 18% YoY",
+  "net_income": "$8.4 billion GAAP; $8.6 billion non-GAAP",
+  "eps": "$1.08 GAAP diluted; $1.10 non-GAAP diluted",
+  "operating_cash_flow": "$8,900 million (three months)",
+  "capex": "$3,707 million (additions to property and equipment)",
+  "free_cash_flow": "$5,193 million (8,900 - 3,707)",
+  "cash_and_investments": "$127,662 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$73,169 million (current portion $3,516M + long-term $69,653M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.6,
+ "own_stock": 0.65,
+ "market": 0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure's 76% growth pressures AWS cloud share narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong Azure/Intelligent Cloud growth competes with Google Cloud"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Server/cloud growth strengthens MSFT's enterprise cloud position vs Oracle"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Rising datacenter/cloud capex implies more server CPU purchases"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.15,
+   "reason": "Cloud infrastructure buildout supports networking/semiconductor demand"
+  }
+ ],
+ "evidence": "commercial cloud revenue growing 48% year-over-year to $9.0 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

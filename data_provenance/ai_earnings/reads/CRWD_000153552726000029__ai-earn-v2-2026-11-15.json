@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2027 (ended July 31, 2026)",
+  "revenue": "$1.47 billion total revenue (26% YoY growth)",
+  "operating_income": "GAAP loss from operations $33.2M; Non-GAAP income from operations $371.6M",
+  "net_income": "GAAP net income $5.3M; Non-GAAP net income $322.9M",
+  "eps": "GAAP diluted EPS $0.01; Non-GAAP diluted EPS $0.31",
+  "operating_cash_flow": "$530.3 million",
+  "capex": "implied ~$152.9 million (OCF minus FCF)",
+  "free_cash_flow": "$377.4 million",
+  "cash_and_investments": "$5.01 billion cash and cash equivalents",
+  "total_debt": null,
+  "guidance_next": "Q3 FY27: ARR $6,184.4-$6,188.4M, Total revenue $1,523.2-$1,529.2M, Non-GAAP operating income $372.7-$375.9M, Non-GAAP net income $325.4-$327.9M, Non-GAAP diluted EPS $0.31; Full Year FY27 (raised): ARR $6,603.0-$6,611.9M, Total revenue $5,991.1-$6,011.1M, Non-GAAP operating income $1,497.2-$1,508.4M, Non-GAAP net income $1,302.7-$1,311.6M, Non-GAAP diluted EPS $1.25-$1.26; net new ARR growth guidance raised by 630bps to 34% at midpoint"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "AI gateway partner collaboration mentioned"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "AWS collaboration on AI/cloud security innovations"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Google Cloud included as AI gateway partner"
+  },
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "AI infrastructure demand tailwind referenced indirectly via Cerebras partnership"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Cloud/AI security ecosystem relevance"
+  }
+ ],
+ "evidence": "Delivers record net new ARR of $333 million, accelerates growth to 51% year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v2-2026-11-15"
+}

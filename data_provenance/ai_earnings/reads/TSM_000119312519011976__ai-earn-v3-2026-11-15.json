@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "4Q18 (also FY2018)",
+  "revenue": "US$9.40 billion / NT$289.77 billion",
+  "operating_income": "NT$107.2 billion (approx., 37.0% operating margin)",
+  "net_income": "NT$99.98 billion",
+  "eps": "NT$3.86 (diluted)",
+  "operating_cash_flow": "NT$189.37 billion",
+  "capex": "NT$114.10 billion",
+  "free_cash_flow": "NT$75.27 billion",
+  "cash_and_investments": "NT$695.18 billion",
+  "total_debt": "NT$56.90 billion long-term interest-bearing debt",
+  "guidance_next": "1Q19 revenue US$7.3-7.4 billion; gross margin 43-45%; operating margin 31-33% (at NT$30.6/US$)"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.6,
+ "fcf_trend": -0.1,
+ "own_stock": -0.4,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.3,
+   "reason": "foundry customer facing weaker TSMC demand outlook"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.3,
+   "reason": "major TSMC customer, soft 1Q19 guide signals demand pause"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "TSMC customer exposed to same cyclical slowdown"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "rival foundry capacity, TSMC weakness could ease competitive pressure"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "semiconductor cycle read-through, memory/logic demand softening together"
+  }
+ ],
+ "evidence": "Revenue to be between US$ 7.3 billion and US$ 7.4 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.4,
+ "own_stock": -0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "comparison shopping rival named by Google, may gain relative positioning"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "heightened EU antitrust scrutiny risk for large tech platforms"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "broader regulatory precedent for dominant tech platforms"
+  }
+ ],
+ "evidence": "The EC decision imposes a \u20ac2.42 billion fine and directs the termination of the conduct at issue.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

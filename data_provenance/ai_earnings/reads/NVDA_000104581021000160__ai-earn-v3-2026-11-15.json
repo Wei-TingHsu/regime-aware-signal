@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2022 (quarter ended October 31, 2021)",
+  "revenue": "$7.103 billion GAAP (up 9% Q/Q, up 50% Y/Y)",
+  "operating_income": "$2.671 billion GAAP; $3.386 billion non-GAAP",
+  "net_income": "$2.464 billion GAAP; $2.973 billion non-GAAP",
+  "eps": "$0.97 diluted GAAP; $1.17 diluted non-GAAP",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$19.298 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": "$10.944 billion long-term debt (no short-term debt, vs $999M short-term + $5.964B long-term a year earlier)",
+  "guidance_next": "Q4 FY22: revenue ~$7.40B +/-2%; GAAP/non-GAAP gross margin 65.3%/67.0% +/-50bps; GAAP/non-GAAP opex ~$2.02B/$1.43B; GAAP/non-GAAP other income/expense ~-$60M; tax rate 11% +/-1%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.3,
+ "own_stock": 0.7,
+ "market": 0.4,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA's data center/AI strength and beat implies relative share gains"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Rising NVDA revenue signals strong foundry demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Data center growth implies more memory demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Hyperscale/cloud scale-out demand cited as driver"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud scale-out demand for AI computing benefits AWS infrastructure spend"
+  }
+ ],
+ "evidence": "\"Demand for NVIDIA AI is surging, driven by hyperscale and cloud scale-out, and broadening adoption by more than 25,000 companies.\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

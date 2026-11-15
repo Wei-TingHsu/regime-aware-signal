@@ -1,0 +1,37 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.6,
+ "fcf_outlook": 0.5,
+ "uncertainty": -0.3,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "AAPL",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "secures long-term custom silicon supply through 2031"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "custom ASIC deal reduces reliance on merchant GPU/accelerator suppliers"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "manufacturing volume likely to increase with expanded ASIC program"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "memory content in custom silicon products"
+  }
+ ],
+ "evidence": "agreed to expand their long-standing technology collaboration through 2031 by entering into new multi-year long-term agreements for Broadcom to develop and supply a range of custom ASIC silicon products",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

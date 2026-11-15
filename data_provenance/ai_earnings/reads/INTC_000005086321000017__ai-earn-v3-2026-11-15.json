@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2021 (quarter ended March 27, 2021)",
+  "revenue": "$19.7B GAAP (down 1% YoY); $18.6B non-GAAP (flat YoY, ex-NAND)",
+  "operating_income": "$3.694B GAAP (18.8% margin); non-GAAP operating margin 32.8% (~$6.1B)",
+  "net_income": "$3.361B GAAP; $5.7B non-GAAP",
+  "eps": "$0.82 GAAP diluted; $1.39 non-GAAP",
+  "operating_cash_flow": "$5.548B",
+  "capex": "$3.972B (additions to PP&E; plus $416M NAND-related)",
+  "free_cash_flow": "~$1.576B (OCF $5.548B minus capex $3.972B, as derived; company gives no Q1 FCF figure)",
+  "cash_and_investments": "~$22.4B (cash $5.192B + short-term investments $2.417B + trading assets $14.788B)",
+  "total_debt": "~$35.88B (short-term debt $2.647B + long-term debt $33.237B)",
+  "guidance_next": "Q2 2021: revenue ~$18.9B GAAP / ~$17.8B non-GAAP, gross margin ~55%/57%, EPS ~$1.05 both; FY2021: revenue ~$77.0B GAAP / ~$72.5B non-GAAP, EPS ~$4.00 GAAP / ~$4.60 non-GAAP, capex $19.0-20.0B, non-GAAP FCF ~$10.5B"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.3,
+ "fcf_trend": -0.3,
+ "own_stock": -0.3,
+ "market": 0.1,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel CCG/DCG strength and roadmap momentum pressure AMD competitively"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel's Habana AI push is minor vs Nvidia's dominant AI accelerator position"
+  },
+  {
+   "company": "TSM",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "IDM 2.0/foundry strategy implies continued reliance on external foundries for leading-edge nodes"
+  },
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "NSG (NAND) revenue down 17% YoY amid pending divestiture, signaling soft memory pricing"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "AWS HPC competency and cloud collaboration highlight continued data-center customer relationship"
+  }
+ ],
+ "evidence": "First-quarter GAAP revenue of $19.7 billion... and non-GAAP revenue of $18.6 billion, flat YoY, which exceeded January guidance by $1.1 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

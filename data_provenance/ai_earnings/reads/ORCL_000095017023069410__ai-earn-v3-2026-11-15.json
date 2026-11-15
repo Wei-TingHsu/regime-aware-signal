@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2024 (three months ended November 30, 2023)",
+  "revenue": "$12.9 billion, up 5% YoY (4% constant currency)",
+  "operating_income": "GAAP $3.6 billion (28% margin); Non-GAAP $5.5 billion (43% margin)",
+  "net_income": "GAAP $2.503 billion; Non-GAAP $3.762 billion",
+  "eps": "GAAP diluted $0.89; Non-GAAP diluted $1.34",
+  "operating_cash_flow": "Trailing 4-quarter $17.039 billion (6-month $7.117 billion)",
+  "capex": "Trailing 4-quarter $6.935 billion (6-month $2.394 billion)",
+  "free_cash_flow": "Trailing 4-quarter $10.104 billion (stated); 6-month calculated ~$4.723 billion",
+  "cash_and_investments": "$8.244 billion cash + $0.446 billion marketable securities = ~$8.69 billion",
+  "total_debt": "$6.321 billion current + $82.468 billion non-current = ~$88.79 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.4,
+ "own_stock": 0.05,
+ "market": 0.3,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "20 new Oracle datacenters collocated with Azure signals deepening cloud partnership"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Explosive OCI/GenAI demand implies heavy GPU purchases"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "AI infrastructure buildout benefits chip suppliers broadly"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle's rapid cloud infra growth competes with Google Cloud"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "OCI growth (52%) takes share narrative from AWS-led cloud market"
+  }
+ ],
+ "evidence": "\"Demand for our Cloud Infrastructure and Generative AI services is increasing at an astronomical rate,\" said Oracle CEO, Safra Catz",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,43 @@
+{
+ "event_type": "product or technology",
+ "material": 0.35,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC extends leadership in 5nm/3nm process node"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "benefits from advanced node capacity expansion"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "future GPUs could use 5nm capacity"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "potential future foundry customer for advanced nodes"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "memory maker, limited direct impact"
+  }
+ ],
+ "evidence": "Our estimated investment in 5-nanometer technology is approximately NT$700 billion, and total investment in Fab 18 will exceed NT$500 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

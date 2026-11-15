@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY24 (ended July 31, 2023)",
+  "revenue": "$731.6 million (up 37% YoY)",
+  "operating_income": "GAAP loss $(15.4)M; Non-GAAP income $155.7M",
+  "net_income": "GAAP net income $8.5M; Non-GAAP net income $180.0M",
+  "eps": "GAAP diluted $0.03; Non-GAAP diluted $0.74",
+  "operating_cash_flow": "$244.8 million",
+  "capex": "$56.1 million (property & equipment + capitalized software, ~$128.7M six months; Q2 implied ~$56M)",
+  "free_cash_flow": "$188.7 million (record Q2 FCF)",
+  "cash_and_investments": "$3.17 billion cash and cash equivalents",
+  "total_debt": "$741.75 million long-term debt",
+  "guidance_next": "Q3 FY24: revenue $775.4-$778.0M, Non-GAAP operating income $154.4-$156.3M, Non-GAAP net income $179.8-$181.8M, Non-GAAP diluted EPS $0.74; FY24 (raised): revenue $3,030.7-$3,042.9M, Non-GAAP operating income $601.3-$610.5M, Non-GAAP net income $680.4-$689.7M, Non-GAAP diluted EPS $2.80-$2.84"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.8,
+ "fcf_trend": 1,
+ "own_stock": 0.9,
+ "market": 0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Falcon platform consolidation competes with Microsoft Defender/security suite"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS ISV Partner of the Year, cloud workload protection integration"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Cloud security leadership claim versus Google Cloud security offerings"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Enterprise software/cloud security spending trends broadly positive"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  }
+ ],
+ "evidence": "exceeding our guidance across both top and bottom line metrics in the second quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

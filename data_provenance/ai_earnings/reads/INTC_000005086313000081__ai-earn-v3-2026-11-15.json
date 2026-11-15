@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2013",
+  "revenue": "$12.8B (down 5% YoY, up 2% sequentially)",
+  "operating_income": "$2.7B (down 29% YoY)",
+  "net_income": "$2.0B (down 29% YoY)",
+  "eps": "$0.39 (down 28% YoY)",
+  "operating_cash_flow": "~$4.7B",
+  "capex": "$2.7B (quarter); FY guided $11.0B",
+  "free_cash_flow": "~$2.0B (4.7B - 2.7B)",
+  "cash_and_investments": "$17.4B total cash investments",
+  "total_debt": null,
+  "guidance_next": "Q3 2013 revenue ~$13.5B +/- $500M (up 5% seq); gross margin 61% +/- couple points; FY2013 revenue now expected approximately flat YoY (down from prior low-single-digit growth); FY gross margin 59% +/- couple points (down from prior 60%); FY R&D/MG&A spending $18.7B +/- $200M (down $200M from prior); FY capex $11.0B +/- $500M (down $1.0B from prior)"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -1,
+ "fcf_trend": -0.2,
+ "own_stock": -0.4,
+ "market": -0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel weakness in PC/data center could reflect share shift"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Soft PC demand signals broader semiconductor weakness"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel foundry struggles contrast with TSMC execution"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "PC platform demand softness affects Windows PC ecosystem"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Broader semiconductor capex cuts signal cautious industry spending"
+  }
+ ],
+ "evidence": "Revenue for the year is expected to be approximately flat from a year ago vs. prior expectations to grow in the low single digits.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

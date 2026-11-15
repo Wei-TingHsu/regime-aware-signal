@@ -1,0 +1,57 @@
+{
+ "facts": {
+  "period": "Q4 and Full Year Fiscal 2025 (ended January 31, 2025)",
+  "revenue": "Q4: $1,058.5M total revenue; FY25: $3,953.6M total revenue",
+  "operating_income": "Q4 Non-GAAP: $217.3M (GAAP loss $85.3M); FY25 Non-GAAP: $837.7M (GAAP loss $120.4M)",
+  "net_income": "Q4 Non-GAAP: $260.9M (GAAP net loss $92.3M); FY25 Non-GAAP: $987.6M (GAAP net loss $19.3M)",
+  "eps": "Q4 Non-GAAP diluted EPS $1.03 (GAAP diluted loss $0.37); FY25 Non-GAAP diluted EPS $3.93 (GAAP diluted loss $0.08)",
+  "operating_cash_flow": "Q4: $345.7M; FY25: $1,381.7M (record)",
+  "capex": "FY25: Purchases of property & equipment $254.9M + capitalized internal-use software $59.0M \u2248 $313.8M",
+  "free_cash_flow": "Q4: $239.8M; FY25: $1.07B (record, as stated)",
+  "cash_and_investments": "$4.32 billion cash and cash equivalents as of January 31, 2025",
+  "total_debt": "$743.98M long-term debt",
+  "guidance_next": "Q1 FY26: revenue $1,100.6-$1,106.4M, Non-GAAP operating income $173.1-$180.0M, Non-GAAP net income $162.1-$167.5M, Non-GAAP diluted EPS $0.64-$0.66; FY26: revenue $4,743.5-$4,805.5M, Non-GAAP operating income $944.2-$985.1M, Non-GAAP net income $851.2-$883.0M, Non-GAAP diluted EPS $3.33-$3.45 (guidance reflects new non-GAAP methodology that lowers EPS by ~$0.19 in Q1 and ~$0.98 for FY26 at midpoint due to inclusion of payroll taxes on SBC and a higher 22.5% assumed tax rate)"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.6,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competes in identity/cloud security"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "relation2": null,
+   "direction": 0.1,
+   "reason": "cloud partnership synergies"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "AWS Marketplace sales milestone and partnership"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "new partnership with Oracle Cloud Infrastructure"
+  },
+  {
+   "company": "CRWD_peer_cyber",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "AI-native SOC adoption signals broader cybersecurity demand"
+  }
+ ],
+ "evidence": "guidance for non-GAAP net income per share, diluted, of $3.33-$3.45 for full year FY26 reflects a methodology change that lowers EPS by about $0.98 at the midpoint, even as revenue growth decelerates to about 20-22%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

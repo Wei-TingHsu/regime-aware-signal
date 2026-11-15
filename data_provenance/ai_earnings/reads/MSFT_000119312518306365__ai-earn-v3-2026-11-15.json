@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2019 (quarter ended September 30, 2018)",
+  "revenue": "$29.1 billion, +19% YoY",
+  "operating_income": "$10.0 billion, +29% YoY",
+  "net_income": "$8.8 billion, +34% YoY",
+  "eps": "$1.14 diluted, +36% YoY",
+  "operating_cash_flow": "$13,657 million",
+  "capex": "$3,602 million (additions to property and equipment)",
+  "free_cash_flow": "$10,055 million (13,657 - 3,602)",
+  "cash_and_investments": "$135,880 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$76,230 million (current portion $6,497M + long-term $69,733M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Azure growth of 76% signals cloud share gains vs AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong commercial cloud growth pressures Google Cloud competitively"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Strength in enterprise cloud security spend broadly positive"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure and commercial cloud momentum challenges Oracle Cloud"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Data center buildout for Azure implies continued server/chip demand"
+  }
+ ],
+ "evidence": "Revenue was $29.1 billion and increased 19%\" with \"commercial cloud revenue of $8.5 billion, up 47% year over year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

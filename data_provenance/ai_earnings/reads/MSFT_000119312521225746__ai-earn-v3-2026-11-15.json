@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2021 (quarter ended June 30, 2021); also full FY2021",
+  "revenue": "$46.2 billion (Q4), $168.1 billion (FY)",
+  "operating_income": "$19.1 billion (Q4, +42% YoY), $69.9 billion (FY, +32% YoY)",
+  "net_income": "$16.5 billion (Q4, +47% YoY), $61.3 billion GAAP / $60.7 billion non-GAAP (FY)",
+  "eps": "$2.17 diluted (Q4, +49% YoY), $8.05 GAAP / $7.97 non-GAAP diluted (FY)",
+  "operating_cash_flow": "$22.71 billion (Q4), $76.74 billion (FY)",
+  "capex": "$6.45 billion (Q4 additions to PP&E), $20.62 billion (FY)",
+  "free_cash_flow": "$16.26 billion (Q4, OCF minus capex), $56.12 billion (FY, OCF minus capex)",
+  "cash_and_investments": "$130.3 billion total cash, cash equivalents, and short-term investments",
+  "total_debt": "$58.1 billion (current portion $8.07B + long-term $50.07B)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure growth of 51% outpaces AWS, cloud share pressure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong Azure and Search ad growth signals competitive cloud/ad strength"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Server/cloud growth highlights competitive cloud infrastructure momentum"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Broad digital ad and cloud demand strength signals healthy tech spending environment"
+  },
+  {
+   "company": "CRWD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Microsoft security growth implies competitive pressure in security software"
+  }
+ ],
+ "evidence": "Commercial cloud revenue grew 36% year over year to $19.5 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

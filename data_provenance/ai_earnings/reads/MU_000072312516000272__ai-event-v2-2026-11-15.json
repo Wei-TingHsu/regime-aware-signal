@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.5,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.2,
+ "own_stock": 0.3,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Nanya Technology",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "loses Inotera stake, dilution offset by Micron shares"
+  }
+ ],
+ "evidence": "Micron provided written notice to Nanya of its election to issue to Nanya 57,780,138 shares of Micron\u2019s common stock for an aggregate purchase price of NT$31,457,097,237 (approximately $1 billion)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

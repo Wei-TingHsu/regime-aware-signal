@@ -1,0 +1,43 @@
+{
+ "event_type": "guidance update",
+ "material": 0.6,
+ "fcf_outlook": -0.5,
+ "uncertainty": 0.6,
+ "own_stock": -0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Intel component shortages, foundry pivot create opening"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "IDM 2.0 foundry strategy competes with TSMC"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "supply chain shortage context"
+  },
+  {
+   "company": "SNDK",
+   "relation": "other",
+   "direction": 0.1,
+   "reason": "Intel divesting NAND business"
+  },
+  {
+   "company": "IBM",
+   "relation": "partner",
+   "direction": 0.1,
+   "reason": "research collaboration announced"
+  }
+ ],
+ "evidence": "Full-year capital spending $19.0-20.0 billion ... Free cash flow $10.0 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

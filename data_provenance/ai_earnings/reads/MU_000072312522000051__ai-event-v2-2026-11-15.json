@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.25,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.1,
+ "own_stock": -0.1,
+ "market": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "memory peer financing, little direct impact"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "memory peer, indicates sector needs capital amid downturn"
+  }
+ ],
+ "evidence": "Micron intends to use the net proceeds from the sale of the Notes for general corporate purposes, which may include capital expenditures.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

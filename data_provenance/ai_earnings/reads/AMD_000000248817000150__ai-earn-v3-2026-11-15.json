@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2017 (ended July 1, 2017)",
+  "revenue": "$1.22 billion (GAAP, +19% YoY, +24% sequentially)",
+  "operating_income": "$25 million GAAP; $49 million non-GAAP",
+  "net_income": "$(16) million GAAP net loss; $19 million non-GAAP",
+  "eps": "$(0.02) GAAP diluted; $0.02 non-GAAP diluted",
+  "operating_cash_flow": "$(82) million (net cash used in operating activities)",
+  "capex": "$12 million",
+  "free_cash_flow": "$(94) million (as stated)",
+  "cash_and_investments": "$844 million cash, cash equivalents and marketable securities",
+  "total_debt": "$1,375 million long-term debt, net plus $42 million short-term debt",
+  "guidance_next": "For Q3 2017, AMD expects revenue to increase approximately 23 percent sequentially, plus or minus 3 percent, implying approximately 15 percent YoY growth at the midpoint; full-year 2017 revenue now expected to grow mid to high-teens percentage, up from prior guidance of low double-digit percentage growth"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.7,
+ "fcf_trend": -0.3,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD GPU/datacenter momentum (Vega, Radeon Instinct, EPYC) signals competitive pressure"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "EPYC server launch and Ryzen desktop strength directly challenge Intel's CPU dominance"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Xbox One X uses AMD semi-custom chip, supporting Enterprise/Semi-Custom segment"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Higher AMD product volumes (Ryzen, Vega, EPYC) imply increased foundry demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Potential cloud/datacenter customer for new EPYC server processors"
+  }
+ ],
+ "evidence": "AMD now expects annual revenue to increase by a mid to high-teens percentage, compared to prior guidance of low double digit percentage revenue growth.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

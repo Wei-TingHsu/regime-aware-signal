@@ -1,0 +1,25 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.0,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "cloud competitor mentioned via AWS narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "cloud competitor"
+  }
+ ],
+ "evidence": "The Company\u2019s Letter to Shareholders, which accompanies its Annual Report for the Year Ended December 31, 2025, is attached as Exhibit 99.1",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

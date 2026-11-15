@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2021 (ended April 26, 2020)",
+  "revenue": "$3,080 million (up 39% YoY, down 1% QoQ)",
+  "operating_income": "$976 million GAAP; $1,205 million non-GAAP",
+  "net_income": "$917 million GAAP; $1,120 million non-GAAP",
+  "eps": "$1.47 GAAP diluted; $1.80 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$16,354 million (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": "Q2 FY21 revenue expected $3.65B +/-2% (incl. Mellanox, low-teens % of revenue); GAAP/non-GAAP gross margin 58.6%/66.0% +/-50bps; GAAP/non-GAAP opex ~$1.52B/$1.04B; GAAP/non-GAAP other income/expense ~-$50M/-$45M; GAAP/non-GAAP tax rate 9% +/-1%"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.3,
+ "own_stock": 0.5,
+ "market": 0.3,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA gaining data center/gaming momentum"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Data center GPU share gains vs CPU-centric offerings"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Higher memory demand from A100/DGX systems"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Foundry demand for Ampere A100 production ramp"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Mellanox networking overlap, data center interconnect demand"
+  }
+ ],
+ "evidence": "Our Data Center business achieved a record and its first $1 billion quarter.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

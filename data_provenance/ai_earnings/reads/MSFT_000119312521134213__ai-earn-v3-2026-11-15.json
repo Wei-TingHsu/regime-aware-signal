@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2021 (quarter ended March 31, 2021)",
+  "revenue": "$41.7 billion, +19% YoY",
+  "operating_income": "$17.0 billion, +31% YoY",
+  "net_income": "$15.5 billion GAAP (+44%); $14.8 billion non-GAAP (+38%)",
+  "eps": "$2.03 diluted GAAP; $1.95 non-GAAP",
+  "operating_cash_flow": "$22,179 million (quarter); $54,030 million (nine months)",
+  "capex": "$5,089 million (additions to property and equipment, quarter); $14,170 million (nine months)",
+  "free_cash_flow": "$17,090 million (quarter, OCF minus capex); $39,860 million (nine months)",
+  "cash_and_investments": "$125,407 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$58,058 million (current portion $8,051M + long-term $50,007M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.5,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Azure growth of 50% intensifies cloud competition with AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud competitor as Azure accelerates"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Server/cloud growth pressures enterprise software/database rivals"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Capex and datacenter buildout implies server hardware demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Cloud/datacenter expansion supports memory demand"
+  }
+ ],
+ "evidence": "\"Microsoft Cloud, with its end-to-end solutions, continues to provide compelling value to our customers generating $17.7 billion in commercial cloud revenue, up 33% year over year\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

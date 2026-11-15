@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY16 (ended July 26, 2015)",
+  "revenue": "$1.153 billion",
+  "operating_income": "$76 million (GAAP)",
+  "net_income": "$26 million (GAAP); $190 million (non-GAAP)",
+  "eps": "$0.05 GAAP diluted; $0.34 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$4,505 million",
+  "total_debt": "$1,399 million long-term debt",
+  "guidance_next": "Q3 FY16 revenue ~$1.18B +/-2%; GAAP gross margin ~56.2%, non-GAAP ~56.5% (+/-50bps); GAAP opex ~$484M, non-GAAP opex ~$435M; GAAP tax rate ~22%, non-GAAP ~20% (+/-1%); capex ~$25-35M; additional restructuring charges of $15-25M in H2 FY16"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.1,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "GPU/gaming competition"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "adjacent compute markets"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "memory demand for GPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "foundry demand for GPU chips"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "deep learning/cloud GPU use"
+  }
+ ],
+ "evidence": "Revenue rose 5 percent to $1.153 billion from $1.103 billion a year earlier",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

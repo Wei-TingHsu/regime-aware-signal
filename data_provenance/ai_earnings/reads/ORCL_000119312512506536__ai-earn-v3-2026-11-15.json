@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2013 (quarter ended November 30, 2012)",
+  "revenue": "$9.1 billion, up 3% YoY (up 5% constant currency)",
+  "operating_income": "GAAP $3.471 billion (up 12%), Non-GAAP $4.3 billion (up 9%)",
+  "net_income": "GAAP $2.581 billion (up 18%), Non-GAAP $3.1 billion (up 12%)",
+  "eps": "GAAP diluted $0.53 (up 24%), Non-GAAP $0.64 (up 18%)",
+  "operating_cash_flow": "$13.533 billion trailing twelve months",
+  "capex": "$710 million trailing twelve months",
+  "free_cash_flow": "$12.823 billion trailing twelve months (down from $13.366B prior quarter, 2% YoY growth)",
+  "cash_and_investments": "$15.912 billion cash and cash equivalents plus $17.783 billion marketable securities",
+  "total_debt": "$1.250 billion current notes payable + $18.507 billion non-current notes payable = $19.757 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.2,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle cloud apps (HCM, CRM, ERP) competing for enterprise software share"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle cloud business growth positions it against AWS-style cloud infrastructure"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "continued hardware systems revenue decline (SPARC-related) reflects weak hardware demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "general enterprise cloud competitive landscape"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "enterprise software/cloud sector peer"
+  }
+ ],
+ "evidence": "GAAP earnings per share were $0.53, up 24% compared to last year while non-GAAP earnings per share were up 18% to $0.64",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

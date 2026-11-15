@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2021 (quarter ended June 30, 2021)",
+  "revenue": "NT$372.15 billion (US$13.29 billion)",
+  "operating_income": "NT$145.67 billion (operating margin 39.1%)",
+  "net_income": "NT$134.36 billion",
+  "eps": "NT$5.18 (US$0.93 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q3 2021 revenue expected between US$14.6 billion and US$14.9 billion; gross profit margin 49.5%-51.5%; operating profit margin 38.5%-40.5% (at NT$27.9/US$1)"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.1,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "HPC demand strength implies leading-edge capacity for GPU customers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Benefits from strong 7nm/5nm advanced node demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's advanced node strength highlights foundry competitiveness gap"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "HPC/networking customer benefiting from advanced capacity"
+  },
+  {
+   "company": "SKHY",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader semiconductor demand read-through"
+  }
+ ],
+ "evidence": "revenue is expected to be between US$14.6 billion and US$14.9 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

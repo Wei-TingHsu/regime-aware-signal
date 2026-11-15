@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2027 (quarter ended September 30, 2026)",
+  "revenue": "$92.3 billion, +19% YoY",
+  "operating_income": "$45.9 billion, +21% YoY (22% constant currency)",
+  "net_income": "$36.6 billion GAAP (+32% YoY); $36.4 billion non-GAAP (+18% YoY)",
+  "eps": "$4.92 diluted GAAP (+32% YoY); $4.89 non-GAAP (+18% YoY)",
+  "operating_cash_flow": "$58.0 billion (vs $45.1 billion prior year)",
+  "capex": "$39.4 billion additions to property and equipment (vs $19.4 billion prior year)",
+  "free_cash_flow": "$18.6 billion (58,000 - 39,367, calculated)",
+  "cash_and_investments": "$64.5 billion total cash, cash equivalents and short-term investments (down from $76.8 billion at June 30, 2026)",
+  "total_debt": "$35.5 billion (current portion $4.4B + long-term $31.1B)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0,
+ "fcf_trend": -0.3,
+ "own_stock": 0.35,
+ "market": 0.4,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Azure capacity buildout implies continued GPU demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "AI accelerator demand benefits from cloud capex surge"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure's 48% growth pressures rival cloud infrastructure providers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure outgrowing AWS intensifies cloud competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Microsoft Cloud acceleration pressures Google Cloud market share"
+  }
+ ],
+ "evidence": "Results exceeded expectations across revenue, operating income, and earnings per share.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

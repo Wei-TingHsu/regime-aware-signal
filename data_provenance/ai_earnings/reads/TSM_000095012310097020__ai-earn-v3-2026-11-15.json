@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2010 (quarter ended September 30, 2010)",
+  "revenue": "NT$112.25 billion",
+  "operating_income": "NT$43,066 million (operating margin 38.4%)",
+  "net_income": "NT$46.94 billion",
+  "eps": "NT$1.81 (US$0.28 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2010 revenue expected between NT$107-109 billion; gross profit margin 48-50%; operating profit margin 35.5-37.5%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": -1,
+ "fcf_trend": 0,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "foundry/logic capacity competition"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "fabless customer relies on TSMC advanced nodes"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "communications chip demand drives TSMC revenue"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor cycle correlation"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor cycle correlation"
+  }
+ ],
+ "evidence": "Revenue is expected to be between NT$107 billion and NT$109 billion, below the prior guidance range of NT$109-111 billion, signaling a sequential slowdown despite beating Q3 guidance",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

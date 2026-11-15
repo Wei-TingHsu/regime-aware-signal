@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2017 (three months ended March 31, 2017)",
+  "revenue": "$8,032 million (total revenue), including $7,857 million advertising revenue",
+  "operating_income": "$3,327 million (operating margin 41%)",
+  "net_income": "$3,064 million",
+  "eps": "$1.04 diluted",
+  "operating_cash_flow": "$5,058 million",
+  "capex": "$1,271 million (reported as $1.27 billion in highlights)",
+  "free_cash_flow": "$3,787 million",
+  "cash_and_investments": "$32.31 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Competing digital ad platform"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Competes for ad dollars"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Large-cap tech peer with cloud/ad exposure"
+  }
+ ],
+ "evidence": "Revenue grew 49% year-over-year to $8,032 million with net income up 76% to $3,064 million and free cash flow of $3,787 million, reflecting strong, broad-based growth in advertising and user engagement.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

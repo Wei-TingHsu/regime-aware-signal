@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2018 (ended December 31, 2018)",
+  "revenue": "$72.4 billion (Q4), $232.9 billion (FY)",
+  "operating_income": "$3.8 billion (Q4), $12.4 billion (FY)",
+  "net_income": "$3.0 billion (Q4), $10.1 billion (FY)",
+  "eps": "$6.04 diluted (Q4), $20.14 diluted (FY)",
+  "operating_cash_flow": "$30.7 billion (TTM)",
+  "capex": "$13.4 billion purchases of property and equipment (FY)",
+  "free_cash_flow": "$19.4 billion (TTM)",
+  "cash_and_investments": "$32.2 billion cash, cash equivalents, and restricted cash (period end)",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "AWS growth of 45% intensifies cloud competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "AWS strength pressures Google Cloud positioning"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "AWS data center expansion implies continued compute infrastructure demand"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Cloud infrastructure share gains by AWS challenge legacy enterprise cloud players"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "AWS growth and ML/Alexa investments suggest ongoing GPU/accelerator demand"
+  }
+ ],
+ "evidence": "Operating cash flow increased 67% to $30.7 billion for the trailing twelve months ... Free cash flow increased to $19.4 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

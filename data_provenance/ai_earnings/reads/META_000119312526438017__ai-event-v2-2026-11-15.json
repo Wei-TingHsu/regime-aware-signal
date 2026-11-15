@@ -1,0 +1,43 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.55,
+ "fcf_outlook": -0.2,
+ "uncertainty": -0.1,
+ "own_stock": -0.35,
+ "market": -0.05,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "capital raise funds continued AI infrastructure/GPU capex"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "beneficiary of sustained capex spending"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "peer also funding heavy AI capex, same capital market dynamics"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "peer facing similar capex/funding pressures"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "peer facing similar capex/funding pressures"
+  }
+ ],
+ "evidence": "the Company agreed to issue and sell 250,000,000 Series A depositary shares...6.50% Series A Mandatory Convertible Preferred Stock",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

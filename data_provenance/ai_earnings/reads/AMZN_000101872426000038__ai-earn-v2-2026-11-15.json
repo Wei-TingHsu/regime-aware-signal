@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2026 (ended Sept 30, 2026)",
+  "revenue": "$201.9 billion, up 12% YoY",
+  "operating_income": "$28.1 billion (13.9% margin)",
+  "net_income": "$20.7 billion",
+  "eps": "$1.89 diluted",
+  "operating_cash_flow": "$168.3 billion TTM, up 29% YoY",
+  "capex": "not stated explicitly for Q3; implied ~$94.8B YoY increase in net PP&E purchases TTM",
+  "free_cash_flow": "-$42.4 billion TTM (outflow), vs +$14.8 billion TTM prior year",
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2026: net sales $240.0-$247.0B (12-16% growth); operating income $28.5-$33.5B vs $25.0B in Q4 2025; 2026 capex ~$220 billion"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0.5,
+ "fcf_trend": -0.4,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "AWS signed new agreement, capex supports GPU demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "memory chip supply volatility noted as risk, implies high demand"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "signed new AWS agreement"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AWS growth acceleration pressures cloud competitors"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AWS 39% growth intensifies cloud competition"
+  }
+ ],
+ "evidence": "operating income increased to $28.1 billion in the third quarter... Amazon's highest operating margin ever",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v2-2026-11-15"
+}

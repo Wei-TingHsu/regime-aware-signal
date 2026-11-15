@@ -1,0 +1,37 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.55,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.5,
+ "own_stock": -0.3,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Nokia",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "sold D&S business, becomes stronger standalone"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Microsoft deepens mobile hardware push vs Android ecosystem"
+  },
+  {
+   "company": "AAPL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Microsoft becomes more vertically integrated phone maker"
+  },
+  {
+   "company": "QCOM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "patent license agreement assigned to Microsoft"
+  }
+ ],
+ "evidence": "Microsoft will pay EUR 3.79 billion to purchase substantially all of Nokia\u2019s Devices & Services business, and EUR 1.65 billion to license Nokia\u2019s patents, for a total transaction price of EUR 5.44 billion in cash.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

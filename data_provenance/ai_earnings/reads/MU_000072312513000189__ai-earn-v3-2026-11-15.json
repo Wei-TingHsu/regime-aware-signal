@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and FY2013 (ended Aug 29, 2013)",
+  "revenue": "$2.843 billion (Q4); $9.073 billion (FY2013)",
+  "operating_income": "$207 million (Q4); $236 million (FY2013)",
+  "net_income": "$1.708 billion (Q4, includes $1,484M Elpida acquisition gain); $1.190 billion (FY2013)",
+  "eps": "$1.51 diluted (Q4); $1.13 diluted (FY2013)",
+  "operating_cash_flow": "$717 million (Q4); $1.811 billion (FY2013)",
+  "capex": "$332 million (Q4); $1.244 billion (FY2013, PP&E only)",
+  "free_cash_flow": "$385 million (Q4, 717-332); $567 million (FY2013, 1811-1244)",
+  "cash_and_investments": "$3.101 billion cash and short-term investments + $499 million long-term marketable investments = ~$3.6 billion, plus $556 million restricted cash (total $4.2B including restricted)",
+  "total_debt": "$1.585 billion current + $4.452 billion long-term = $6.037 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NAND pricing pressure as Micron NAND ASPs fell 11%"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Micron supplies memory for PC/server ecosystem"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self"
+  }
+ ],
+ "evidence": "net income attributable to Micron shareholders of $1.71 billion, or $1.51 per diluted share, on net sales of $2.8 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,49 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.05,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.0,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "AWS growth commentary implies cloud competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "cloud/AI competition"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "AI infra investment continuing"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "custom silicon/AI infra"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "datacenter memory demand"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "large tech AI capex peer"
+  }
+ ],
+ "evidence": "Free Cash Flow, adjusted for equipment finance leases improved from $35.5B in 2023 to $36.2B.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

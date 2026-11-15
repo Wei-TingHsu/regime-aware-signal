@@ -1,0 +1,31 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.45,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.6,
+ "own_stock": -0.3,
+ "market": -0.05,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "shares adtech antitrust exposure"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "potential adtech market share gain"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "rival ad platform could gain share"
+  }
+ ],
+ "evidence": "the U.S. Department of Justice, along with a number of state Attorneys General filed an antitrust complaint against Alphabet Inc. ... alleging that Google's digital advertising technology products violate U.S. antitrust laws",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

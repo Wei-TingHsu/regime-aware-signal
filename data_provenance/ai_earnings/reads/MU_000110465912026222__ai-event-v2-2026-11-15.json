@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.35,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.2,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "memory peer benefits from sector liquidity/capex signal"
+  }
+ ],
+ "evidence": "Micron estimates that the net proceeds from the offering, including the exercise of the Initial Purchasers\u2019 option to purchase the additional Notes, will be approximately $979 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

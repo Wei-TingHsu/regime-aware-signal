@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2017 (quarter ended March 31, 2017)",
+  "revenue": "NT$233.91 billion (US$7.51 billion)",
+  "operating_income": "NT$95.35 billion (operating margin 40.8%)",
+  "net_income": "NT$87.63 billion",
+  "eps": "NT$3.38 (US$0.54 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "2Q17: revenue NT$213-216 billion; gross profit margin 50.5%-52.5%; operating profit margin 39%-41%, at FX 30.5 NT$/USD"
+ },
+ "results_vs_prior_guidance": -0.2,
+ "guidance_change": -0.4,
+ "fcf_trend": 0,
+ "own_stock": -0.3,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "weaker TSMC demand outlook implies softer foundry orders"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "TSMC's demand softness signals cautious chip order trends"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "mobile/seasonal weakness affects broadcom's foundry volume"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSMC's margin compression may relatively favor Intel's integrated model"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "broader semiconductor demand softness signals read-through to memory sector"
+  }
+ ],
+ "evidence": "Moving into second quarter, we forecast the demand will be weaker than the prior quarter due to supply chain inventory management during the second quarter and mobile product seasonality.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

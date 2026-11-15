@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.35,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.2,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "no direct impact"
+  },
+  {
+   "company": "SAP",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "possible distraction opening at Oracle"
+  }
+ ],
+ "evidence": "Larry Ellison to the position of Executive Chairman of Oracle's Board ... Safra Catz and Mark Hurd Appointed CEO",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

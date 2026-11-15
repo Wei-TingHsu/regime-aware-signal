@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2011 (quarter ended Dec 31, 2010)",
+  "revenue": "$19.95 billion",
+  "operating_income": "$8.17 billion",
+  "net_income": "$6.63 billion",
+  "eps": "$0.77 diluted",
+  "operating_cash_flow": "$4.186 billion (quarter); $12.38 billion (six months)",
+  "capex": "$491 million (quarter); $1.055 billion (six months)",
+  "free_cash_flow": "$3.695 billion (quarter, OCF minus capex)",
+  "cash_and_investments": "$41.252 billion total cash, cash equivalents and short-term investments",
+  "total_debt": "$9.671 billion long-term debt; $0 short-term debt",
+  "guidance_next": "Reaffirms operating expense guidance of $26.9 billion to $27.3 billion for the full year ending June 30, 2011"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.4,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Bing/Yahoo search share gains pressure Google search"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Microsoft Business Division/SQL Server growth competes with Oracle enterprise software"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Windows Azure cloud momentum competes with AWS"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Strong PC-related Windows and server growth supports Intel chip demand"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Strong enterprise/consumer tech demand signals broader tech sector health"
+  }
+ ],
+ "evidence": "Microsoft Corp. today announced record second-quarter revenue of $19.95 billion for the quarter ended Dec. 31, 2010... Operating income, net income and diluted earnings per share for the quarter were $8.17 billion, $6.63 billion and $0.77 per share, respectively.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

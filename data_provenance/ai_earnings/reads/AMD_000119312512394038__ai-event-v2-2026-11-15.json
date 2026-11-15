@@ -1,0 +1,19 @@
+{
+ "event_type": "leadership change",
+ "material": 0.4,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.5,
+ "own_stock": -0.3,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AMD leadership instability could be relative opening for rival"
+  }
+ ],
+ "evidence": "Thomas Seifert has informed the company of his decision to resign as senior vice president and chief financial officer to pursue other opportunities",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

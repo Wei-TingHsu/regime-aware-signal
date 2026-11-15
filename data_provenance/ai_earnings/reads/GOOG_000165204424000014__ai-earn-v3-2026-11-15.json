@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2023 (quarter and year ended December 31, 2023)",
+  "revenue": "$86,310 million (Q4 2023), up 13% YoY; FY2023 $307,394 million, up 9% YoY",
+  "operating_income": "$23,697 million (Q4 2023), 27% margin; FY2023 $84,293 million, 27% margin",
+  "net_income": "$20,687 million (Q4 2023); FY2023 $73,795 million",
+  "eps": "$1.64 diluted (Q4 2023); $5.80 diluted (FY2023)",
+  "operating_cash_flow": "$18,915 million (Q4 2023); $101,746 million (FY2023)",
+  "capex": "$11,019 million (Q4 2023); $32,251 million (FY2023)",
+  "free_cash_flow": "$7,896 million (Q4 2023, as stated)",
+  "cash_and_investments": "$110,916 million total cash, cash equivalents, and marketable securities (as of Dec 31, 2023)",
+  "total_debt": "$13,253 million long-term debt (as of Dec 31, 2023)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.4,
+ "own_stock": 0.5,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud growth signals competitive cloud/AI race intensifying"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Google Cloud momentum pressures AWS competitive positioning"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Rising capex and AI investment implies continued chip demand"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Shared ad-market and AI-investment narrative benefits sentiment across large-cap tech ad/AI players"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AI infrastructure buildout supports demand for accelerators beyond Nvidia"
+  }
+ ],
+ "evidence": "We ended 2023 with very strong fourth quarter financial results, with Q4 consolidated revenues of $86 billion, up 13% year over year.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

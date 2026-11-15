@@ -1,0 +1,25 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.6,
+ "fcf_outlook": 0.6,
+ "uncertainty": -0.2,
+ "own_stock": 0.5,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "Nanya Technology",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "loses most Inotera supply access"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "DRAM supply shift, minor NAND relevance"
+  }
+ ],
+ "evidence": "Inotera will sell to Micron all of the DRAM products manufactured by Inotera other than DRAM products that are sold by Inotera to NTC",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

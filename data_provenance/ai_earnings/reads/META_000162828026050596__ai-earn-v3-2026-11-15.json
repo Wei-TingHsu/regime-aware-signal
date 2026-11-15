@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2026 (quarter ended June 30, 2026)",
+  "revenue": "$60.801 billion (+28% YoY)",
+  "operating_income": "$18.775 billion (-8% YoY), operating margin 31%",
+  "net_income": "$15.848 billion (-14% YoY)",
+  "eps": "$6.18 diluted (-13% YoY)",
+  "operating_cash_flow": "$31.862 billion",
+  "capex": "$30.116 billion (purchases of property and equipment) plus $0.962 billion finance lease principal payments; total capex incl. finance leases $31.08 billion",
+  "free_cash_flow": "$784 million (stated)",
+  "cash_and_investments": "$90.26 billion (cash, cash equivalents, and marketable securities)",
+  "total_debt": "$83.664 billion long-term debt",
+  "guidance_next": "Q3 2026 revenue $61-64B (assumes ~1% FX headwind); FY2026 total expenses raised to $165-169B (from $162-169B) to include $2.4B legal charges; FY2026 capex incl. finance leases narrowed to $130-145B (from $125-145B); operating income still expected above 2025 level; tax rate for remaining quarters raised to 15-17% (from 13-16%)"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.3,
+ "fcf_trend": -0.7,
+ "own_stock": -0.4,
+ "market": 0.1,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Capex floor raised to fund AI infrastructure buildout"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Networking/custom silicon demand tied to higher capex"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Memory demand from expanding data center buildout"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Chip fabrication demand from AI infrastructure spend"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Validates continued hyperscaler AI capex escalation trend"
+  }
+ ],
+ "evidence": "Costs and expenses were $42.03 billion, an increase of 55% year-over-year... income from operations $18,775 (8)% ... free cash flow was $784 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

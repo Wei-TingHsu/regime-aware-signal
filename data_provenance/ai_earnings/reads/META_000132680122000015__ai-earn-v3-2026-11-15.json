@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2021 (ended December 31, 2021)",
+  "revenue": "$33.671B Q4 (+20% YoY); $117.929B FY2021 (+37% YoY)",
+  "operating_income": "$12.585B Q4 (-1% YoY); $46.753B FY2021 (+43% YoY); operating margin 37% Q4 vs 46% prior year",
+  "net_income": "$10.285B Q4 (-8% YoY); $39.370B FY2021 (+35% YoY)",
+  "eps": "$3.67 diluted Q4 (-5% YoY); $13.77 diluted FY2021",
+  "operating_cash_flow": "$18.104B Q4; $57.683B FY2021",
+  "capex": "$5.37B Q4 (property/equipment) / $5.54B incl. finance leases; $18.567B FY2021 (property/equipment) / $19.24B incl. finance leases",
+  "free_cash_flow": "~$12.73B Q4 (18.104B OCF - 5.37B capex); ~$39.1B FY2021 (57.683B OCF - 18.567B capex)",
+  "cash_and_investments": "$48.0B cash, cash equivalents and marketable securities as of Dec 31, 2021",
+  "total_debt": null,
+  "guidance_next": "Q1 2022 total revenue $27-29B (3-11% YoY growth, citing impression/engagement shift to Reels, iOS/ad-targeting headwinds, macro cost pressures, FX headwind); FY2022 total expenses $90-95B (narrowed from prior $91-97B); FY2022 capex $29-34B (unchanged, reflecting 'significant increase' in AI/ML infrastructure investment); FY2022 tax rate similar to FY2021"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.8,
+ "fcf_trend": -0.3,
+ "own_stock": -0.9,
+ "market": -0.3,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "shared digital-ad growth deceleration/macro headwinds"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "ad market softness signals broader online-ad slowdown"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Meta flags 'significant increase' in AI/ML capex driving data-center infrastructure spend"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "rising capex for servers/data centers supports memory demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AI/ML infrastructure buildout implies higher chip demand upstream"
+  }
+ ],
+ "evidence": "We expect first quarter 2022 total revenue to be in the range of $27-29 billion, which represents 3-11% year-over-year growth",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

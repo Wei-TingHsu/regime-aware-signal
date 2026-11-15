@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 FY2015 (ended Dec 4, 2014)",
+  "revenue": "$4.573 billion",
+  "operating_income": "$1.085 billion",
+  "net_income": "$1.003 billion (GAAP); $1.138 billion (non-GAAP)",
+  "eps": "$0.84 diluted GAAP; $0.97 diluted non-GAAP",
+  "operating_cash_flow": "$1.592 billion",
+  "capex": "$669 million",
+  "free_cash_flow": "$923 million (1,592-669)",
+  "cash_and_investments": "$5.31 billion (cash and marketable investments)",
+  "total_debt": "$1.168 billion current debt + $4.608 billion long-term debt = $5.776 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "NAND flash memory competitor"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor manufacturing peer"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "memory customer relationship in computing"
+  }
+ ],
+ "evidence": "Micron's execution and continued favorable market conditions led to a strong first quarter with record revenues and operating cash flows",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

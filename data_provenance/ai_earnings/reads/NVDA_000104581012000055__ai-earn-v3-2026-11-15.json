@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q3 FY2013 (ended Oct 28, 2012)",
+  "revenue": "$1,204.1 million",
+  "operating_income": "$252.2 million GAAP",
+  "net_income": "$209.1 million GAAP; $245.5 million non-GAAP",
+  "eps": "$0.33 GAAP diluted; $0.39 non-GAAP diluted",
+  "operating_cash_flow": "$181.5 million",
+  "capex": "$44.7 million",
+  "free_cash_flow": "$136.8 million",
+  "cash_and_investments": "$3.43 billion",
+  "total_debt": null,
+  "guidance_next": "Q4 FY2013 revenue $1.025B-$1.175B; GAAP/non-GAAP gross margin ~52.9%/53.1%; GAAP opex ~$400M, non-GAAP opex ~$359M; tax rate ~20%/19% +/-1pp (or ~16% annual if R&D credit reinstated); D&A ~$58-60M; capex $60-70M; diluted shares ~629 million"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": -1,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "patent cross-license revenue included in GPU segment"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Kepler GPU share gains in gaming/pro markets"
+  }
+ ],
+ "evidence": "Revenue for the third quarter of fiscal 2013 was a record at $1.20 billion... Our outlook for revenue was $1.15 billion to $1.25 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2016 (quarter ended March 31, 2016)",
+  "revenue": "$20.5 billion GAAP; $22.1 billion non-GAAP",
+  "operating_income": "$5.3 billion GAAP; $6.8 billion non-GAAP",
+  "net_income": "$3.8 billion GAAP; $5.0 billion non-GAAP",
+  "eps": "$0.47 GAAP; $0.62 non-GAAP",
+  "operating_cash_flow": "$10,367 million (quarter)",
+  "capex": "$2,308 million (additions to property and equipment, quarter)",
+  "free_cash_flow": "$8,059 million (10,367 - 2,308)",
+  "cash_and_investments": "$105,552 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$46,394 million (short-term debt $5,498M + current LTD $0 + long-term debt $40,896M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.1,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0.15,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Azure growth of 120% pressures AWS cloud share"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud infrastructure competition intensifies"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Enterprise cloud/server share shift to Azure"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Datacenter buildout for Azure usage growth benefits chip demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "n/a"
+  }
+ ],
+ "evidence": "Azure revenue grew 120% in constant currency with usage of Azure compute and Azure SQL database more than doubling year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

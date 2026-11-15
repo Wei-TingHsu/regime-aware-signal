@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2014 (ended Jan 26, 2014)",
+  "revenue": "$1.144 billion",
+  "operating_income": "$166.9 million GAAP",
+  "net_income": "$146.9 million GAAP; $187.5 million non-GAAP",
+  "eps": "$0.25 GAAP diluted; $0.32 non-GAAP diluted",
+  "operating_cash_flow": "$400.7 million",
+  "capex": "$66.4 million",
+  "free_cash_flow": "$334.3 million",
+  "cash_and_investments": "$4.672 billion",
+  "total_debt": "$1.356 billion long-term debt",
+  "guidance_next": "Q1 FY2015 revenue ~$1.05B +/-2%; GAAP/non-GAAP gross margin ~54.2%/54.5%; GAAP opex ~$454M, non-GAAP opex ~$413M; tax rate 20% +/-1pp (16% if R&D credit renewed); capex ~$45M"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVDA GPU gains in gaming/HPC"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Tegra mobile/auto competition"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "foundry demand from GPU growth"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "memory demand tied to GPU/Tesla growth"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "GRID/cloud GPU adoption potential"
+  }
+ ],
+ "evidence": "Quarterly revenue came in well above our outlook, driven by PC gaming, capping an outstanding year for our GPU business",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

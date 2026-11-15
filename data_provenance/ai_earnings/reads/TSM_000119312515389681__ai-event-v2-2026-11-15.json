@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.05,
+ "fcf_outlook": 0.05,
+ "uncertainty": -0.05,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Xintec Inc",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "TSMC remains largest shareholder, continued collaboration"
+  }
+ ],
+ "evidence": "The share sales will not affect the business relations between the two companies.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

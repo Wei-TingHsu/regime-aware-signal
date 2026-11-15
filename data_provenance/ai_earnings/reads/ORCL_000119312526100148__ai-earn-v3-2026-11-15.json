@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2026 (three months ended February 28, 2026)",
+  "revenue": "$17.2 billion, up 22% YoY in USD (18% constant currency)",
+  "operating_income": "GAAP $5.464 billion (32% of revenue); Non-GAAP $7.4 billion, up 19% YoY in USD",
+  "net_income": "GAAP $3.721 billion (22% of revenue), up 27% YoY",
+  "eps": "GAAP diluted $1.27, up 24% YoY in USD; Non-GAAP $1.79, up 21% YoY in USD",
+  "operating_cash_flow": "$23.514 billion trailing four quarters, up 13% YoY",
+  "capex": "$48.250 billion trailing four quarters (vs $21.215B prior-year period)",
+  "free_cash_flow": "-$24.736 billion trailing four quarters (negative, worsening from -$13.181B prior quarter)",
+  "cash_and_investments": "$38.455 billion cash and cash equivalents plus $677 million marketable securities (up from $10.786B cash at May 31, 2025)",
+  "total_debt": "Notes payable and other borrowings: $9.887B current + $124.718B non-current = ~$134.6 billion",
+  "guidance_next": "Q4 FY26: total revenue growth 19-21% USD (18-20% cc); total Cloud revenue growth 46-50% USD (44-48% cc); Non-GAAP EPS $1.96-$2.00 USD (15-17% growth). FY26 unchanged: revenue $67B, capex $50B. FY27: total revenue guidance raised to $90 billion."
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.5,
+ "fcf_trend": -0.7,
+ "own_stock": 0.2,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.7,
+   "reason": "Oracle's AI contracts and capex surge imply continued massive GPU purchases"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Alternative GPU/compute supplier benefiting from AI infrastructure build-out"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle Cloud Infrastructure and multicloud database growth compete directly with Azure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "OCI and multicloud expansion compete with Google Cloud for AI workloads"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS faces competitive pressure from Oracle's rapid IaaS growth (+84% YoY)"
+  }
+ ],
+ "evidence": "Cloud revenue was at the high end of our guidance, total revenue was at the high end of constant currency guidance and above USD guidance, and non-GAAP earnings per share were above our guidance in both USD and constant currency.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2021 (fiscal quarter ended June 26, 2021)",
+  "revenue": "$3.85 billion (up 99% YoY, up 12% QoQ)",
+  "operating_income": "$831 million GAAP; $924 million non-GAAP",
+  "net_income": "$710 million GAAP; $778 million non-GAAP",
+  "eps": "$0.58 GAAP diluted; $0.63 non-GAAP diluted",
+  "operating_cash_flow": "$952 million",
+  "capex": "$64 million",
+  "free_cash_flow": "$888 million (record, as stated)",
+  "cash_and_investments": "$3.79 billion (cash, cash equivalents and short-term investments)",
+  "total_debt": "$313 million",
+  "guidance_next": "Q3 2021 revenue ~$4.1 billion +/- $100 million (up ~46% YoY, ~6% QoQ); non-GAAP gross margin ~48%; FY2021 revenue growth raised to ~60% YoY from prior ~50% guidance; FY2021 non-GAAP gross margin raised to ~48% from prior ~47%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "AMD share gains in CPU/server markets"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD data center GPU growth, competing GPU roadmap"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "AMD foundry demand rising with revenue growth"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Google Cloud adopting new EPYC-based T2D instances"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Strength in data center/server compute implies related memory demand"
+  }
+ ],
+ "evidence": "AMD now expects our 2021 annual revenue to grow by approximately 60 percent year-over-year... up from prior guidance of approximately 50 percent",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

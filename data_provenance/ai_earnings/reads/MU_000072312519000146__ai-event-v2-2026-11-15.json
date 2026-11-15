@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.35,
+ "fcf_outlook": 0.15,
+ "uncertainty": -0.1,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "exits 3D XPoint JV, loses supply rights, receives cash"
+  }
+ ],
+ "evidence": "Micron Technology, Inc. completed its previously announced acquisition of Intel Corporation's interest in the parties' joint venture, IM Flash Technologies, LLC, and paid Intel approximately $1.25 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

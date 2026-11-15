@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2016 (three months ended June 30, 2016)",
+  "revenue": "$6,436 million (up 59% YoY)",
+  "operating_income": "$2,746 million GAAP (43% margin); non-GAAP $3,764 million (58% margin)",
+  "net_income": "$2,055 million GAAP (up 186% YoY); non-GAAP $2,821 million",
+  "eps": "$0.71 GAAP diluted; $0.97 non-GAAP diluted",
+  "operating_cash_flow": "$3,198 million",
+  "capex": "$995 million",
+  "free_cash_flow": "$2,203 million (operating cash flow minus capex)",
+  "cash_and_investments": "$23.29 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Strong digital ad growth signals healthy online ad market broadly"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Validates strength in mobile/digital advertising spend"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Big tech earnings strength supports sector sentiment"
+  }
+ ],
+ "evidence": "Income from operations $2,746 million, up 116% year-over-year, with operating margin expanding to 43% from 31%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

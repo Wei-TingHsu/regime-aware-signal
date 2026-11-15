@@ -1,0 +1,37 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.6,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.2,
+ "own_stock": 0.2,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "unrelated storage peer, minimal impact"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "gaming/cloud content competition intensifies"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud gaming rival now faces stronger MSFT content portfolio"
+  },
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "metaverse/gaming content competition"
+  }
+ ],
+ "evidence": "completed its previously announced acquisition of Activision Blizzard, Inc.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

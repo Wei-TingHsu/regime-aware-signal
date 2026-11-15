@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and full-year 2014 (ended Dec 27, 2014)",
+  "revenue": "$14,721 million (Q4 2014) vs $13,834 million (Q4 2013); full year $55,870 million vs $52,708 million",
+  "operating_income": "$4,453 million (Q4 2014) vs $3,549 million (Q4 2013); full year $15,347 million vs $12,291 million",
+  "net_income": "$3,661 million (Q4 2014) vs $2,625 million (Q4 2013); full year $11,704 million vs $9,620 million",
+  "eps": "$0.74 diluted (Q4 2014) vs $0.51 (Q4 2013); full year $2.31 vs $1.89",
+  "operating_cash_flow": null,
+  "capex": "$2,143 million (Q4 2014) vs $2,948 million (Q4 2013)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$14,054 million total cash investments (Dec 27, 2014) vs $20,087 million (Dec 28, 2013)",
+  "total_debt": "$13,711 million ($1,604M short-term + $12,107M long-term, Dec 27, 2014)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.1,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel PC/Data Center strength implies competitive pressure"
+  },
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel's NVM Solutions Group competes in memory/storage"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel manufacturing ramp reduces reliance on external foundries"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Overlap in flash/storage solutions"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "Strong YoY revenue and profit growth across PC and Data Center segments"
+  }
+ ],
+ "evidence": "TOTAL OPERATING INCOME $4,453 million vs $3,549 million a year earlier",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

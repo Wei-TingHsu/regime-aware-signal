@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.35,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.1,
+ "own_stock": 0.4,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "signals capital return trend in memory sector"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "sector capital allocation signal"
+  }
+ ],
+ "evidence": "authorized the discretionary repurchase of up to $1 billion of its outstanding common stock",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

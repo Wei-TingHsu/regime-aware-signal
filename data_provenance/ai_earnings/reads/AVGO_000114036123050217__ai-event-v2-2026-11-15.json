@@ -1,0 +1,49 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.6,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.4,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "enterprise virtualization/cloud rivalry"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "infrastructure software competition"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud infrastructure overlap"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud infrastructure overlap"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "minimal effect"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "minimal effect"
+  }
+ ],
+ "evidence": "Broadcom Inc. and VMware, Inc. issued a joint press release... proposed business combination transaction between Broadcom and VMware",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

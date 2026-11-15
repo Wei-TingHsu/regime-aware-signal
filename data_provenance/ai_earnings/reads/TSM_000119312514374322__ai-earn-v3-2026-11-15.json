@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2014",
+  "revenue": "NT$209.05 billion",
+  "operating_income": null,
+  "net_income": "NT$76.34 billion",
+  "eps": "NT$2.94",
+  "operating_cash_flow": "NT$91.25 billion",
+  "capex": "NT$47.88 billion",
+  "free_cash_flow": "NT$43.37 billion",
+  "cash_and_investments": "NT$290.34 billion",
+  "total_debt": "NT$212.61 billion long-term interest-bearing debt",
+  "guidance_next": "4Q14 revenue NT$217-220 billion at NT$1=NT$30.31; gross profit margin 48%-50%; operating profit margin 38%-40%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.7,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "foundry customer benefiting from TSMC advanced node ramp"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "relies on TSMC for leading-edge wafers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's 20nm/FinFET progress pressures Intel's process lead"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "communication segment growth driven by TSMC foundry customers like Broadcom"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.7,
+   "reason": "company itself, strong beat and raised outlook"
+  }
+ ],
+ "evidence": "Net Revenue 209.05 ... 3Q14 Guidance 206-209; Gross Margin 50.5% vs 48.5%-50.5% guidance; Net Income ... 27.9% QoQ, 46.9% YoY",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

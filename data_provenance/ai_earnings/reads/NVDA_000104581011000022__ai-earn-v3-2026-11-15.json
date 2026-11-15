@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 FY2012 (ended May 1, 2011)",
+  "revenue": "$962.0 million, up 8.5% sequentially",
+  "operating_income": "$154.862 million (GAAP)",
+  "net_income": "$135.2 million GAAP; $165.7 million non-GAAP",
+  "eps": "$0.22 diluted GAAP; $0.27 diluted non-GAAP",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$2,726.541 million",
+  "total_debt": null,
+  "guidance_next": "Q2 FY2012 (excluding Icera): revenue up 4-6% sequentially; GAAP gross margin 50.5-51.5%; GAAP opex $332-$336 million; GAAP tax rate 14-16%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "legal settlement/licensing referenced from prior quarter"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NVIDIA GPU and Tegra momentum implies competitive pressure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Android tablets/superphones using Tegra 2 cited as growth driver"
+  }
+ ],
+ "evidence": "Revenue increased 8.5 percent to $962.0 million from the previous quarter... GAAP gross margin increased to 50.4 percent, a third consecutive quarterly record",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

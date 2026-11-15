@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2018 (quarter ended March 31, 2018)",
+  "revenue": "US$8.46 billion (NT$248.08 billion)",
+  "operating_income": "Operating margin 39.0% (NT$ revenue less NT$26.73bn opex implies ~NT$96.7bn operating income)",
+  "net_income": "NT$89.79 billion",
+  "eps": "NT$3.46",
+  "operating_cash_flow": "NT$160.73 billion",
+  "capex": "NT$71.85 billion",
+  "free_cash_flow": "NT$88.88 billion",
+  "cash_and_investments": "NT$684.38 billion (33.4% of assets)",
+  "total_debt": "Long-term interest-bearing debt NT$83.40 billion",
+  "guidance_next": "2Q18 revenue US$7.80-7.90 billion; at NT$29.20/US$, gross margin 47%-49%, operating margin 35%-37%"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.0,
+ "fcf_trend": -0.2,
+ "own_stock": 0.1,
+ "market": 0.2,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "TSMC foundry capacity underpins AMD chip supply"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "GPU demand tied to TSMC advanced nodes"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC node progress pressures Intel's foundry lead"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Broadcom relies on TSMC for chip fabrication"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "self-reference"
+  }
+ ],
+ "evidence": "Revenue (US$ billions) 8.46 8.40-8.50 ... Operating Margin 39.0% 38.0% - 40.0%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

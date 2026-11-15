@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "strong fab demand signals healthy chip supply chain"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "TSMC capacity growth supports AMD product ramp"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC strength highlights foundry share gains vs Intel"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from TSMC output growth"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "read-through of strong semiconductor demand"
+  }
+ ],
+ "evidence": "revenues for June 2020 were approximately NT$120.88 billion, an increase of 28.8 percent from May 2020 and an increase of 40.8 percent from June 2019",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

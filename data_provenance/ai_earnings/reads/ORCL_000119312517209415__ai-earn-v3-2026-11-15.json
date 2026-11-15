@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2017 (three months ended May 31, 2017)",
+  "revenue": "$10,892 million (GAAP), up 3% YoY (4% constant currency)",
+  "operating_income": "$4,073 million GAAP (37% margin); $5,016 million non-GAAP",
+  "net_income": "$3,231 million GAAP (full year $9,335 million)",
+  "eps": "$2.21 GAAP diluted (full year); $2.74 non-GAAP (full year); Q4 GAAP diluted EPS $0.76",
+  "operating_cash_flow": "$14,126 million (trailing 4 quarters, FY2017)",
+  "capex": "$2,021 million (FY2017)",
+  "free_cash_flow": "$12,105 million (trailing 4 quarters FY2017)",
+  "cash_and_investments": "$21,784 million cash and equivalents plus $44,294 million marketable securities",
+  "total_debt": "$9,797 million current notes payable + $48,112 million non-current notes payable = ~$57,909 million",
+  "guidance_next": "Expect to sell 'a lot more than $2 billion in new cloud ARR in fiscal year 2018' and expect EPS growth to accelerate in fiscal 2018"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Oracle cloud growth challenges Azure competitive positioning"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "IaaS growth signals competition with AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Cloud platform competition intensifies"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Not directly addressed"
+  },
+  {
+   "company": "AT&T",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Large-scale database migration to Oracle Cloud cited"
+  }
+ ],
+ "evidence": "revenue growth and earnings per share both substantially exceeded the high end of guidance",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

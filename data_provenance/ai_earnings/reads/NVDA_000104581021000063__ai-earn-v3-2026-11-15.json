@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY22 (quarter ended May 2, 2021)",
+  "revenue": "$5,661 million",
+  "operating_income": "$1,956 million GAAP / $2,557 million non-GAAP",
+  "net_income": "$1,912 million GAAP / $2,313 million non-GAAP",
+  "eps": "$3.03 GAAP diluted / $3.66 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$12,667 million",
+  "total_debt": null,
+  "guidance_next": "Q2 FY22: revenue ~$6.30B +/-2%; GAAP/non-GAAP gross margin 64.6%/66.5% +/-50bps; GAAP/non-GAAP opex ~$1.76B/$1.26B; GAAP/non-GAAP other income/expense ~-$50M; tax rate 10% +/-1%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.4,
+ "own_stock": 0.8,
+ "market": 0.5,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA gaming/data center strength implies competitive pressure"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Data center CPU/Grace ambitions challenge Intel"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Higher NVDA volumes drive foundry demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AWS collaboration on GPU inferencing cited"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Data center GPU growth implies more memory demand"
+  }
+ ],
+ "evidence": "Record revenue of $5.66 billion, up 84 percent from a year earlier",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

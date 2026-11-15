@@ -1,0 +1,25 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GLOBALFOUNDRIES",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "secured multi-year $2.1B wafer purchase commitment"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AMD locks in more capacity with GF, modest diversification away from TSMC reliance"
+  }
+ ],
+ "evidence": "GF agreed to increase the minimum annual capacity allocation to the Company for years 2022 through 2025",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

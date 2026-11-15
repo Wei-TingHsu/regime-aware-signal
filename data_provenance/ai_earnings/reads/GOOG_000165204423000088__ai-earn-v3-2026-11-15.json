@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2023 (quarter ended September 30, 2023)",
+  "revenue": "$76,693 million",
+  "operating_income": "$21,343 million",
+  "net_income": "$19,689 million",
+  "eps": "$1.55 diluted",
+  "operating_cash_flow": "$30,656 million",
+  "capex": "$8,055 million",
+  "free_cash_flow": "$22,601 million",
+  "cash_and_investments": "$119,935 million (cash, cash equivalents, and marketable securities)",
+  "total_debt": "$13,781 million (long-term debt)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud competitor; Google Cloud growth signals strong sector demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud competitor; AWS comparison relevant"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AI infrastructure capex and cloud growth imply chip demand"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Digital ad peer; ad revenue growth read-through"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud infrastructure competitor"
+  }
+ ],
+ "evidence": "\"The fundamental strength of our business was apparent again in Q3, with $77 billion in revenue, up 11% year over year, driven by meaningful growth in Search and YouTube, and momentum in Cloud.\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

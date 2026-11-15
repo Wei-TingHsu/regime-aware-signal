@@ -1,0 +1,25 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel funding ASML EUV/450mm accelerates process tech, pressuring foundry rivals"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel strengthens manufacturing lead via lithography investment"
+  }
+ ],
+ "evidence": "Intel is helping to fund ASML\u2019s research and development programs to accelerate deployment of new technologies for 450-millimeter (mm) wafers and extreme ultra-violet (EUV) lithography",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

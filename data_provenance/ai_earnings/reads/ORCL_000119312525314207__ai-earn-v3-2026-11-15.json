@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2026 (quarter ended November 30, 2025)",
+  "revenue": "$16.1 billion, up 14% YoY (13% constant currency)",
+  "operating_income": "GAAP $4.731 billion; Non-GAAP $6.7 billion",
+  "net_income": "GAAP $6.135 billion (up 95%)",
+  "eps": "GAAP diluted $2.10 (up 91%); Non-GAAP $2.26 (up 54%)",
+  "operating_cash_flow": "Trailing four quarters: $22.296 billion (up 10% YoY)",
+  "capex": "Trailing four quarters: $35.477 billion",
+  "free_cash_flow": "Trailing four quarters: -$13.181 billion (vs -$5.880B prior quarter, -$394M year ago)",
+  "cash_and_investments": "$19.241B cash + $0.525B marketable securities = ~$19.77B (up from $10.786B at May 31, 2025)",
+  "total_debt": "Notes payable and borrowings: $8.091B current + $99.984B non-current = ~$108.1B (up from ~$92.6B at May 31, 2025)",
+  "guidance_next": "No explicit new numerical guidance given in this release; reiterates RPO momentum ($523B, up 438% YoY, up $68B sequentially) and references prior FY26-FY30 OCI revenue targets and Multicloud growth trajectory, with detailed guidance deferred to prior Financial Analyst Meeting commentary"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.2,
+ "fcf_trend": -0.9,
+ "own_stock": 0.2,
+ "market": 0.3,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "new RPO commitments, continued GPU purchases, chip neutrality still includes Nvidia"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "new large RPO commitment cited by name"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Multicloud datacenters embedded in AWS, up 817% in Q2"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Multicloud datacenters embedded in Google Cloud"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Multicloud datacenters embedded in Azure"
+  }
+ ],
+ "evidence": "Remaining Performance Obligations (RPO) increased by $68 billion in Q2\u2014up 15% sequentially to $523 billion\u2014highlighted by new commitments from Meta, NVIDIA, and others",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

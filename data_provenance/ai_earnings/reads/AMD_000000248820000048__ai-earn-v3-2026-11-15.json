@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2020 (ended March 28, 2020)",
+  "revenue": "$1.79 billion",
+  "operating_income": "$177 million GAAP; $236 million non-GAAP",
+  "net_income": "$162 million GAAP; $222 million non-GAAP",
+  "eps": "$0.14 GAAP diluted; $0.18 non-GAAP diluted",
+  "operating_cash_flow": "-$65 million",
+  "capex": "$55 million",
+  "free_cash_flow": "-$120 million",
+  "cash_and_investments": "$1.385 billion (cash, equivalents and marketable securities)",
+  "total_debt": "$488 million",
+  "guidance_next": "Q2 2020 revenue approximately $1.85 billion, plus or minus $100 million, up ~21% YoY and ~4% sequentially; non-GAAP gross margin ~44%; full-year 2020 revenue growth ~25% (+/-5pp) YoY, non-GAAP gross margin ~45%"
+ },
+ "results_vs_prior_guidance": 0.1,
+ "guidance_change": 0.2,
+ "fcf_trend": -0.5,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AMD share gains in CPU/server via Ryzen and EPYC"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AMD GPU/Radeon Instinct competes in data center graphics"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Azure adopting EPYC-powered VMs"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Google Cloud deploying EPYC-based N2D VMs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Foundry partner benefiting from AMD's growth and ramp"
+  }
+ ],
+ "evidence": "AMD expects 2020 revenue to grow by approximately 25 percent, plus or minus 5 percentage points, compared to 2019 and non-GAAP gross margin to be approximately 45 percent",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

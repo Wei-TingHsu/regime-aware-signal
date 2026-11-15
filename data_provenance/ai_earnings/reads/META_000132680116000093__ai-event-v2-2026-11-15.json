@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": 0.0,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "capital return signals sector confidence"
+  }
+ ],
+ "evidence": "authorized the Company to repurchase up to $6.0 billion of its Class A common stock",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

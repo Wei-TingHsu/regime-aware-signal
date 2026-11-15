@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.15,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.05,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "comparable debt-funded capex peer"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "comparable debt-funded capex peer"
+  }
+ ],
+ "evidence": "closed the sale of C$1,250,000,000 aggregate principal amount of its 3.400% notes due 2029 ... together with the 2029 Notes, the 2031 Notes, the 2033 Notes, and the 2036 Notes, the \u201cNotes\u201d",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

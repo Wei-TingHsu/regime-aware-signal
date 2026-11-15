@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2020 (quarter ended June 27, 2020)",
+  "revenue": "$1.93 billion",
+  "operating_income": "$173 million GAAP / $233 million non-GAAP",
+  "net_income": "$157 million GAAP / $216 million non-GAAP",
+  "eps": "$0.13 GAAP / $0.18 non-GAAP diluted",
+  "operating_cash_flow": "$243 million",
+  "capex": "$91 million",
+  "free_cash_flow": "$152 million",
+  "cash_and_investments": "$1,775 million",
+  "total_debt": "$690 million",
+  "guidance_next": "Q3 2020 revenue ~$2.55 billion +/- $100 million (up ~42% YoY, ~32% QoQ), non-GAAP gross margin ~44%; FY2020 revenue growth raised to ~32% YoY, non-GAAP gross margin ~45%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.6,
+ "own_stock": 0.7,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "AMD share gains in client and server CPUs"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "DGX A100 AI system uses AMD EPYC CPUs"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS adds sixth EPYC-powered EC2 instance family"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Google Confidential VMs powered exclusively by EPYC"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Oracle Cloud Infrastructure E3 platform built on EPYC"
+  }
+ ],
+ "evidence": "AMD now expects 2020 revenue to grow by approximately 32 percent compared to 2019 driven by strength in PC, gaming and data center products.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

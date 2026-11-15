@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2018",
+  "revenue": "US$7.85 billion (NT$233.28 billion)",
+  "operating_income": "Operating margin 36.2% of revenue (~NT$84.4 billion implied)",
+  "net_income": "NT$72.29 billion",
+  "eps": "NT$2.79 per share",
+  "operating_cash_flow": "NT$129.77 billion",
+  "capex": "NT$59.68 billion",
+  "free_cash_flow": "NT$70.09 billion",
+  "cash_and_investments": "NT$748.92 billion (36.5% of assets)",
+  "total_debt": "NT$83.40 billion long-term interest-bearing debt",
+  "guidance_next": "3Q18: revenue US$8.45-8.55 billion; at NT$30.5/US$, gross margin 48-50%, operating margin 36.5-38.5%"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.1,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "fabless customer benefiting from TSMC capacity/margin outlook"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "relies on TSMC leading-edge nodes for GPUs"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "major fabless customer tied to TSMC output"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC margin/tech lead pressures Intel's foundry position"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "semiconductor capex/demand read-through for memory sector"
+  }
+ ],
+ "evidence": "Revenue to be between US$ 8.45 billion and US$ 8.55 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

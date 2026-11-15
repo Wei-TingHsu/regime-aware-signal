@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q1 2011 (ended March 31, 2011)",
+  "revenue": "NT$105.38 billion",
+  "operating_income": "NT$39,163 million (operating margin 37.2%)",
+  "net_income": "NT$36.28 billion",
+  "eps": "NT$1.40 per share (US$0.24 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q2 2011 revenue expected NT$109-111 billion; gross profit margin 45.5-47.5%; operating profit margin 33.5-35.5%; wafer sales expected to increase, with computer and consumer segments up and communications segment slightly down"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.3,
+ "fcf_trend": 0,
+ "own_stock": 0.1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "foundry customer, no specific mention"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "competing foundry/IDM, not addressed"
+  }
+ ],
+ "evidence": "Revenue is expected to be between NT$109 billion and NT$111 billion; Gross profit margin is expected to be between 45.5% and 47.5%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

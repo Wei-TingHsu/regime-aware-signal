@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2023 (three months ended February 28, 2023)",
+  "revenue": "$12.4 billion, up 18% YoY in USD",
+  "operating_income": "GAAP $3,260 million (26% margin); Non-GAAP $5,185 million (42% margin)",
+  "net_income": "GAAP $1,896 million; Non-GAAP $3,382 million",
+  "eps": "GAAP diluted $0.68; Non-GAAP diluted $1.22",
+  "operating_cash_flow": "$15,503 million trailing twelve months (GAAP)",
+  "capex": "$8,205 million trailing twelve months",
+  "free_cash_flow": "$7,298 million trailing twelve months (GAAP operating cash flow minus capex)",
+  "cash_and_investments": "$8,219 million cash and cash equivalents plus $550 million marketable securities (Feb 28, 2023)",
+  "total_debt": "$5,415 million current notes payable and other borrowings + $86,396 million non-current = $91,811 million total",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0,
+ "fcf_trend": 0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure rival as Oracle IaaS grows fast"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "competes in cloud apps and infrastructure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "competes in cloud infrastructure"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Oracle's Gen2 cloud infra buildout implies continued GPU demand"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "enterprise software/cloud peer, limited direct read-through"
+  }
+ ],
+ "evidence": "Oracle\u2019s non-GAAP earnings per share growth hit the high end of our guidance\u2014up 13% in constant currency to $1.22",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "leadership change",
+ "material": 0.3,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.3,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "rival foundry/chipmaker could benefit from TSMC leadership transition uncertainty"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "customer unaffected but watching management transition"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "major foundry customer, governance change noted"
+  }
+ ],
+ "evidence": "Approved the appointment of Drs. Mark Liu and C. C. Wei (in alphabetical order) as President and Co-Chief Executive Officer of TSMC.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

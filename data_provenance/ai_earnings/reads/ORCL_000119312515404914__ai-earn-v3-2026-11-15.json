@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2016 (three months ended November 30, 2015)",
+  "revenue": "$9.0 billion total revenues, down 6% in USD / flat in constant currency",
+  "operating_income": "$2,955 million GAAP (33% margin); $3.7 billion non-GAAP (41% margin)",
+  "net_income": "$2,197 million GAAP; $2.7 billion non-GAAP",
+  "eps": "$0.51 GAAP diluted; $0.63 non-GAAP diluted",
+  "operating_cash_flow": "$12,903 million trailing twelve months",
+  "capex": "$1,606 million trailing twelve months (per FCF table); $641 million for six months per cash flow statement",
+  "free_cash_flow": "$11,297 million trailing twelve months (down 22% YoY)",
+  "cash_and_investments": "$17,411 million cash and equivalents plus $34,924 million marketable securities",
+  "total_debt": "$2,000 million notes payable current + $39,940 million notes payable non-current = $41,940 million",
+  "guidance_next": "SaaS/PaaS revenue growth expected to accelerate to nearly 50% in Q3 and close to 60% in Q4 (constant currency); SaaS/PaaS cloud gross margins expected to rise from 43% in Q2 to approaching 60% in Q4; still on-target to book more than $1.5 billion of new SaaS/PaaS business this fiscal year"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.1,
+ "fcf_trend": -0.5,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "self-referential, not applicable"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud SaaS/PaaS growth competition"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "IaaS/cloud infrastructure rivalry"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud platform competition"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "SaaS sector read-through, limited relevance"
+  }
+ ],
+ "evidence": "beating the mid-point of guidance by 4 cents despite a stronger than expected currency headwind",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2011 (ended December 2, 2010)",
+  "revenue": "$2.252 billion net sales",
+  "operating_income": "$390 million",
+  "net_income": "$155 million attributable to Micron",
+  "eps": "$0.15 diluted ($0.16 basic)",
+  "operating_cash_flow": "$732 million",
+  "capex": "approximately $570 million (stated); $465 million PP&E expenditures per cash flow statement",
+  "free_cash_flow": "approximately $162 million ($732M operating cash flow minus $570M capex, as stated in text)",
+  "cash_and_investments": "$2.411 billion (down from $2.913 billion at prior quarter end)",
+  "total_debt": "$1.348 billion long-term debt plus $468 million current portion; company reduced debt by $544 million net in the quarter",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NAND ASP declines of 15% signal pricing pressure across NAND suppliers"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "DRAM/NAND used in PCs; weak pricing could reflect soft PC demand"
+  },
+  {
+   "company": "Samsung",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Cross-license agreement payments; memory peer pricing dynamics"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "Self-reference: sharp margin and EPS decline sequentially"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "DRAM oversupply/ASP decline affects all DRAM makers similarly"
+  }
+ ],
+ "evidence": "DRAM products was 19 percent lower in the first quarter of fiscal 2011 compared to the fourth quarter of fiscal 2010 due to a 23 percent decrease in average selling prices",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

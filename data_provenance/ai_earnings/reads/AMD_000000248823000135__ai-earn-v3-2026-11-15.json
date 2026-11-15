@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2023 (quarter ended July 1, 2023)",
+  "revenue": "$5,359 million",
+  "operating_income": "GAAP: $(20) million; Non-GAAP: $1,068 million",
+  "net_income": "GAAP: $27 million; Non-GAAP: $948 million",
+  "eps": "GAAP diluted: $0.02; Non-GAAP diluted: $0.58",
+  "operating_cash_flow": "$379 million",
+  "capex": "$125 million",
+  "free_cash_flow": "$254 million (OCF $379M - capex $125M)",
+  "cash_and_investments": "$3,841M cash & equivalents + $2,444M short-term investments = $6,285M",
+  "total_debt": "$753M current + $1,714M long-term = $2,467M",
+  "guidance_next": "For Q3 2023, AMD expects revenue of approximately $5.7 billion, plus or minus $300 million, and non-GAAP gross margin of approximately 51%"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": 0.6,
+ "fcf_trend": -0.1,
+ "own_stock": 0.5,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD MI300 ramp targets AI accelerator market NVDA leads"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "EPYC/Ryzen share gains pressure Intel CPU share"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure instances powered by new EPYC chips"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS launching EPYC-based instances"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Foundry partner for AMD's advanced chips including MI300"
+  }
+ ],
+ "evidence": "AMD expects revenue to be approximately $5.7 billion, plus or minus $300 million, and expects non-GAAP gross margin to be approximately 51%.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

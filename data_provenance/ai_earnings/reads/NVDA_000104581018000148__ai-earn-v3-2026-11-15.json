@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2019 (three months ended October 28, 2018)",
+  "revenue": "$3,181 million (GAAP and non-GAAP), up 21% YoY, up 2% QoQ",
+  "operating_income": "GAAP $1,058 million; non-GAAP $1,210 million",
+  "net_income": "GAAP $1,230 million; non-GAAP $1,151 million",
+  "eps": "GAAP diluted $1.97; non-GAAP diluted $1.84",
+  "operating_cash_flow": "$487 million",
+  "capex": "$150 million (purchase of property, equipment and intangible assets)",
+  "free_cash_flow": "$337 million (as stated)",
+  "cash_and_investments": "$7,591 million",
+  "total_debt": "$1,990 million (long-term debt $1,987M + current portion $3M)",
+  "guidance_next": "Q4 FY2019 outlook: GAAP gross margin 62.3% (non-GAAP 62.5%); GAAP operating expenses ~$915 million (non-GAAP ~$755 million); tax rate 8% +/-1%; outlook impacted by excess channel inventory of mid-range Pascal gaming products expected to persist for one to two quarters"
+ },
+ "results_vs_prior_guidance": -0.6,
+ "guidance_change": -0.6,
+ "fcf_trend": -0.5,
+ "own_stock": -0.8,
+ "market": -0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "NVDA gaming miss and inventory glut could relatively benefit AMD's GPU positioning"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.3,
+   "reason": "Weaker gaming GPU demand/inventory correction implies softer memory demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Foundry partner exposed to NVDA's reduced near-term chip demand from inventory glut"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "T4 GPU availability on Google Cloud Platform signals growing cloud AI inference adoption"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Datacenter GPU strength pressures Intel's CPU-centric datacenter franchise, but inventory issues give some relief"
+  }
+ ],
+ "evidence": "Gaming revenue was short of our expectations, and our fourth quarter outlook is impacted by excess channel inventory of mid-range Pascal products.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

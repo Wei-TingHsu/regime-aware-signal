@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2027 (quarter ended April 26, 2026)",
+  "revenue": "$81,615 million (up 85% YoY, up 20% QoQ)",
+  "operating_income": "$53,536 million GAAP; $53,783 million non-GAAP",
+  "net_income": "$58,321 million GAAP; $45,548 million non-GAAP",
+  "eps": "$2.39 diluted GAAP; $1.87 diluted non-GAAP",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$80,572 million (cash $13,237M + marketable debt securities $37,098M + marketable equity securities $30,237M)",
+  "total_debt": "$8,470 million (short-term $1,000M + long-term $7,470M)",
+  "guidance_next": "Q2 FY27 revenue expected ~$91.0B (\u00b12%), GAAP/non-GAAP gross margin 74.9%/75.0% (\u00b150bps), GAAP opex ~$8.5B, non-GAAP opex ~$8.3B, FY27 tax rate 16.0%-18.0%, no China Data Center compute revenue assumed"
+ },
+ "results_vs_prior_guidance": 0.85,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.6,
+ "own_stock": 0.8,
+ "market": 0.55,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA extends dominant Data Center share and accelerates roadmap (Vera Rubin)"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Surging NVDA compute/networking volumes imply higher foundry demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "AI factory buildout and inventory growth imply strong HBM/memory demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Expanded Google Cloud collaboration using NVIDIA Blackwell/Vera Rubin instances"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVDA pushing networking (NVLink Fusion, BlueField) and custom silicon partnerships that compete with Broadcom's networking/ASIC business"
+  }
+ ],
+ "evidence": "Revenue is expected to be $91.0 billion, plus or minus 2%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Fiscal Q3 2025 (three months ended March 28, 2025)",
+  "revenue": "$1.695 billion, down 10% sequentially, down 1% YoY",
+  "operating_income": "GAAP: $(1,881) million loss; Non-GAAP: $2 million",
+  "net_income": "GAAP: $(1,933) million loss; Non-GAAP: $(43) million loss",
+  "eps": "GAAP: $(13.33) per share; Non-GAAP: $(0.30) per share",
+  "operating_cash_flow": "$26 million",
+  "capex": "$44 million (purchases of property, plant and equipment)",
+  "free_cash_flow": "$(18) million (GAAP FCF); Adjusted FCF $220 million including Flash Ventures activity",
+  "cash_and_investments": "$1,507 million cash and cash equivalents",
+  "total_debt": null,
+  "guidance_next": "Q4 FY2025 revenue $1.75B-$1.85B; Non-GAAP gross margin 25.5%-27.0%; Non-GAAP opex $395M-$405M; Non-GAAP diluted EPS $(0.10) to $0.15"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": -1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 1,
+   "reason": "NAND pricing increases signal broader memory market firming"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Limited direct read-through from NAND-specific commentary"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Cloud segment revenue up 103% YoY signals strong data center/AI storage demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Cloud end-market growth reflects hyperscaler storage demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Cloud end-market growth reflects hyperscaler storage demand"
+  }
+ ],
+ "evidence": "Third quarter revenue was $1.70 billion, down 10% sequentially and above the guidance range.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

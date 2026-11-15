@@ -1,0 +1,19 @@
+{
+ "event_type": "leadership change",
+ "material": 0.1,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.05,
+ "own_stock": -0.05,
+ "market": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Departure tied to settled AMD-Intel antitrust litigation, no new impact"
+  }
+ ],
+ "evidence": "will resign his employment with the Company...effective December 31, 2010",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

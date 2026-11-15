@@ -1,0 +1,43 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.25,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.1,
+ "own_stock": 0.15,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "TSMC capacity expansion supports AI chip supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from added advanced node capacity"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "TSMC investing in OpenAI/Anthropic signals AI ecosystem funding"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "competing AI lab investment landscape"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "advanced packaging capacity boosts custom silicon supply"
+  }
+ ],
+ "evidence": "Approved capital appropriations of approximately US$40,926.70 million... investments in Anthropic, PBC... and OpenAI Group PBC",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

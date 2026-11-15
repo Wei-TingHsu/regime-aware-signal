@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2017",
+  "revenue": "$14.8 billion (GAAP, up 8% YoY)",
+  "operating_income": "$3.6 billion GAAP; $3.9 billion non-GAAP",
+  "net_income": "$3.0 billion GAAP; $3.2 billion non-GAAP",
+  "eps": "$0.61 GAAP diluted; $0.66 non-GAAP",
+  "operating_cash_flow": "~$3.9 billion",
+  "capex": "$1.952 billion (additions to property, plant and equipment)",
+  "free_cash_flow": "~$1.95 billion (3.9B operating cash flow - 1.952B capex)",
+  "cash_and_investments": "$17.295 billion total cash investments",
+  "total_debt": "$25.751 billion (short-term $5.073B + long-term $20.678B)",
+  "guidance_next": "Q2 2017 revenue $14.4B +/- $500M, GAAP op income ~$3.6B/non-GAAP ~$3.9B, GAAP EPS $0.53/non-GAAP $0.68 +/-5c; FY2017 revenue raised to ~$60B, GAAP EPS raised to $2.56, non-GAAP EPS raised to $2.85 +/-5%, capex unchanged at $12.0B +/- $500M"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel's NVM memory business had record quarterly revenue, signaling strong memory demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong Intel CPU ASPs and Data Center growth implies competitive pressure on AMD"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel highlights AI and data center growth, a market NVDA also competes in"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "not directly addressed"
+  }
+ ],
+ "evidence": "Full-year outlook for revenue was raised $500 million and EPS was raised by 5 cents to $2.85",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

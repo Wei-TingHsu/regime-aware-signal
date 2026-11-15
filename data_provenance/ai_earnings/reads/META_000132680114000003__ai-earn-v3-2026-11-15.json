@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and FY2013 (ended December 31, 2013)",
+  "revenue": "$2.585 billion (Q4), $7.872 billion (FY2013)",
+  "operating_income": "GAAP $1.133 billion (Q4), $2.804 billion (FY2013); Non-GAAP $1.459 billion (Q4), $3.803 billion (FY2013)",
+  "net_income": "GAAP $523 million (Q4), $1.500 billion (FY2013); Non-GAAP $780 million (Q4), $2.202 billion (FY2013)",
+  "eps": "GAAP diluted $0.20 (Q4), $0.60 (FY2013); Non-GAAP diluted $0.31 (Q4), $0.88 (FY2013)",
+  "operating_cash_flow": "$1.231 billion (Q4), $4.222 billion (FY2013)",
+  "capex": "$483 million (Q4), $1.362 billion (FY2013)",
+  "free_cash_flow": "$2.85 billion (FY2013, as stated)",
+  "cash_and_investments": "$11.45 billion (cash and marketable securities, end of 2013)",
+  "total_debt": "$0 long-term debt (repaid $1.5B during 2013); capital lease obligations $476 million total (current $239M + non-current $237M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Mobile ad share gains suggest competitive pressure in digital advertising"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Strong digital ad growth signals healthy online ad market broadly"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Validates strength of large-cap tech sector earnings momentum"
+  }
+ ],
+ "evidence": "Revenue from advertising was $2.34 billion, a 76% increase from the same quarter last year, with mobile advertising revenue representing approximately 53% of advertising revenue, up from approximately 23%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

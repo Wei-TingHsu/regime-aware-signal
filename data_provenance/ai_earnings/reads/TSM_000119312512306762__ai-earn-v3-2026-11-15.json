@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2012 (ended June 30, 2012)",
+  "revenue": "NT$128.06 billion",
+  "operating_income": "NT$46.712 billion",
+  "net_income": "NT$41.813 billion",
+  "eps": "NT$1.61 (US$0.27 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q3 2012 revenue NT$136-138 billion; gross profit margin 46-48%; operating profit margin 34-36%; FX assumption 1 USD = 29.76 NT$; 28nm shipments expected to double, accounting for >80% of Q3 revenue growth"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.5,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "strong 28nm demand benefits foundry customers using advanced nodes"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's advanced node ramp strengthens its competitive foundry position"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "self-referential strong results and guidance"
+  }
+ ],
+ "evidence": "Revenue is expected to be between NT$136 billion and NT$138 billion, above the prior quarter's actual beat, driven by doubling 28nm shipments",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

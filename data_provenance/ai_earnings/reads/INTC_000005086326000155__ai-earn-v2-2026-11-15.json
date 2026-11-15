@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2026 (quarter ended ~June 2026)",
+  "revenue": "$16.1 billion, up 25% YoY",
+  "operating_income": "GAAP operating margin 11.1% (vs -24.7% prior year); non-GAAP operating margin 17.2%",
+  "net_income": "GAAP net loss attributable to Intel $(11.0) billion; non-GAAP net income $2.2 billion",
+  "eps": "GAAP diluted EPS $(2.16); non-GAAP diluted EPS $0.42",
+  "operating_cash_flow": "$7.0 billion",
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q3 2026 revenue $15.8-16.8 billion; GAAP EPS $0.31; non-GAAP EPS $0.38; GAAP gross margin 41.0%, non-GAAP gross margin 42.0%; GAAP tax rate 1%, non-GAAP tax rate 11%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.2,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Intel/VC2 cloud combines Xeon with NVIDIA Blackwell GPUs, signaling continued AI GPU demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel Foundry 18A progress positions it as emerging foundry competitor to TSMC"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Strong Intel CPU/data-center growth and Xeon 6+ launch pressures AMD's server CPU share"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Expanded Intel-Google Cloud collaboration on AI workforce capabilities"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Release cites ongoing industry-wide substrate and memory shortages as a risk factor"
+  }
+ ],
+ "evidence": "\"We delivered a strong second quarter, exceeding our financial guidance on robust demand and improved execution\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v2-2026-11-15"
+}

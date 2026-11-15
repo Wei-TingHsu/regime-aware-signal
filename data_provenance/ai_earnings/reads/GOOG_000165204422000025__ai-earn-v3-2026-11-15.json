@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2022 (quarter ended March 31, 2022)",
+  "revenue": "$68,011 million, +23% YoY (26% constant currency)",
+  "operating_income": "$20,094 million, 30% operating margin",
+  "net_income": "$16,436 million, down from $17,930 million YoY",
+  "eps": "$24.62 diluted, down from $26.29 YoY",
+  "operating_cash_flow": "$25,106 million",
+  "capex": "$9,786 million (purchases of property and equipment)",
+  "free_cash_flow": "$15,320 million (stated)",
+  "cash_and_investments": "$133,970 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$14,791 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.2,
+ "own_stock": -0.3,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "shared digital ad market deceleration signal"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Google Cloud's 44% growth highlights strong cloud infrastructure demand trend"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "cloud segment growth underscores healthy enterprise cloud spending across hyperscalers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "rising capex ($9.8B) partly reflects continued data center/AI infrastructure buildout"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "cloud infrastructure growth across hyperscalers supports enterprise cloud demand narrative"
+  }
+ ],
+ "evidence": "Net income $16,436 million, down from $17,930 million, with diluted EPS falling from $26.29 to $24.62 as revenue growth decelerated to 23% from 34% a year earlier",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

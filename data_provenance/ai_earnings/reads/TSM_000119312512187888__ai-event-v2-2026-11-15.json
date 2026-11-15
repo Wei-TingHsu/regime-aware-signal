@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "more 28nm/20nm capacity benefits fabless customers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "expanded leading-edge capacity supports supply"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC capacity expansion pressures foundry competition"
+  }
+ ],
+ "evidence": "approved capital appropriations of 1.046 billion to expand 28 nanometer process capacity, as well as capital appropriations of US$768.2 million to pull in 20 nanometer engineering capacity",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

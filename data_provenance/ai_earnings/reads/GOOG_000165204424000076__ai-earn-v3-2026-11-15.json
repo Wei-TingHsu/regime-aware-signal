@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2024 (quarter ended June 30, 2024)",
+  "revenue": "$84,742 million, up 14% YoY",
+  "operating_income": "$27,425 million, 32% margin",
+  "net_income": "$23,619 million",
+  "eps": "$1.89 diluted",
+  "operating_cash_flow": "$26,640 million (quarter)",
+  "capex": "$13,186 million (quarter)",
+  "free_cash_flow": "$13,454 million (quarter, per reconciliation)",
+  "cash_and_investments": "$100,725 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$13,238 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud growth signals strong enterprise AI/cloud demand across hyperscalers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Google Cloud's growth and profitability highlight competitive cloud/AI infrastructure race"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Rising capex ($13.2B in quarter) implies continued heavy AI chip/infrastructure spending"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Increased capex for AI infrastructure implies demand for advanced chip manufacturing"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Shared AI infrastructure investment trend among large tech peers"
+  }
+ ],
+ "evidence": "We delivered revenues of $85 billion, up 14% year-on-year driven by Search as well as Cloud, which for the first time exceeded $10 billion in quarterly revenues and $1 billion in operating profit.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

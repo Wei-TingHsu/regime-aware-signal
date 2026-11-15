@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2016 (three months ended September 30, 2016)",
+  "revenue": "$7,011 million (up 56% YoY)",
+  "operating_income": "$3,122 million (45% operating margin)",
+  "net_income": "$2,379 million",
+  "eps": "$0.82 diluted GAAP; $1.09 non-GAAP",
+  "operating_cash_flow": "$3,577 million",
+  "capex": "$1,095 million (purchases of property and equipment)",
+  "free_cash_flow": "$2,482 million (operating cash flow minus capex)",
+  "cash_and_investments": "$26.14 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.7,
+ "own_stock": 0.8,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Facebook's ad revenue surge shows share gains in digital advertising"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Strong mega-cap tech earnings support sector sentiment"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Robust growth and margins reinforce confidence in large-cap tech spending/ad ecosystem"
+  }
+ ],
+ "evidence": "Income from operations $3,122 ... 114% YoY; Net income $2,379 ... 166% YoY",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

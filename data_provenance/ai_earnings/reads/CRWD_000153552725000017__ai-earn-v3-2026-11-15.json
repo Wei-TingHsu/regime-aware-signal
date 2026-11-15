@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 FY2026 (ended April 30, 2025)",
+  "revenue": "$1,103.4 million (GAAP total revenue), up 20% YoY",
+  "operating_income": "GAAP loss from operations $(124.7) million; Non-GAAP income from operations $201.1 million",
+  "net_income": "GAAP net loss attributable to CrowdStrike $(110.2) million; Non-GAAP net income $184.7 million",
+  "eps": "GAAP diluted EPS $(0.44); Non-GAAP diluted EPS $0.73",
+  "operating_cash_flow": "$384.1 million (record)",
+  "capex": "$85.75 million (PP&E) + $17.4 million (capitalized software) \u2248 $103.2 million",
+  "free_cash_flow": "$279.4 million (as stated)",
+  "cash_and_investments": "$4.61 billion cash and cash equivalents (record)",
+  "total_debt": "$744.4 million long-term debt",
+  "guidance_next": "Q2 FY26: revenue $1,144.7-$1,151.6M, Non-GAAP operating income $226.9-$233.1M, Non-GAAP net income $209.1-$213.8M, Non-GAAP diluted EPS $0.82-$0.84; FY26: revenue $4,743.5-$4,805.5M, Non-GAAP operating income $970.8-$1,010.8M, Non-GAAP net income $878.7-$909.7M, Non-GAAP diluted EPS $3.44-$3.56"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.15,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "partner",
+   "direction": 0.3,
+   "reason": "Agentic AI innovations built on NVIDIA AI software"
+  },
+  {
+   "company": "MSFT",
+   "relation": "partner",
+   "direction": 0.2,
+   "reason": "Collaboration on threat actor tracking/coordination"
+  },
+  {
+   "company": "GOOG",
+   "relation": "partner",
+   "direction": 0.2,
+   "reason": "Expanded Google Cloud partnership, Partner of the Year award"
+  }
+ ],
+ "evidence": "We achieved net new ARR and bottom-line results ahead of our expectations and generated record cash flow from operations.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,19 @@
+{
+ "event_type": "guidance update",
+ "material": 0.15,
+ "fcf_outlook": 0.05,
+ "uncertainty": -0.1,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "no direct impact"
+  }
+ ],
+ "evidence": "We expect McAfee\u2019s financial performance to be slightly dilutive to Intel\u2019s earnings in 2011 and accretive in 2012 and beyond.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

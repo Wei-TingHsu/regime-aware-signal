@@ -1,0 +1,31 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.2,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.0,
+ "own_stock": 0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "foundry demand signal for chip customers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "foundry demand signal"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "foundry demand signal"
+  }
+ ],
+ "evidence": "revenues for January 2016 were approximately NT$70.86 billion, an increase of 21.4 percent from December 2015",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2021 (quarter ended September 30, 2021)",
+  "revenue": "$65,118 million (up 41% YoY)",
+  "operating_income": "$21,031 million (32% margin)",
+  "net_income": "$18,936 million",
+  "eps": "$27.99 diluted",
+  "operating_cash_flow": "$25,539 million",
+  "capex": "$6,819 million",
+  "free_cash_flow": "$18,720 million",
+  "cash_and_investments": "$142,003 million (cash, cash equivalents, and marketable securities)",
+  "total_debt": "$14,288 million (long-term debt)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud growth signals competitive cloud/AI market strength"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Google Cloud growth underscores broader cloud demand vs AWS"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Strong digital ad results suggest healthy ad market read-through"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Rising capex and AI-driven infrastructure investment implies chip demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Capex growth in servers/network equipment benefits hardware suppliers"
+  }
+ ],
+ "evidence": "Our consistent investments to support long-term growth are reflected in strong financial performance, with revenues of $65.1 billion in the quarter.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

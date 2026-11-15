@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and Fiscal Year 2022 (quarter ended January 30, 2022)",
+  "revenue": "$7.643 billion (Q4), $26.914 billion (FY22)",
+  "operating_income": "$2.970 billion GAAP / $3.677 billion non-GAAP (Q4); $10.041B GAAP / $12.690B non-GAAP (FY22)",
+  "net_income": "$3.003 billion GAAP / $3.350 billion non-GAAP (Q4); $9.752B GAAP / $11.259B non-GAAP (FY22)",
+  "eps": "$1.18 GAAP / $1.32 non-GAAP diluted (Q4); $3.85 GAAP / $4.44 non-GAAP diluted (FY22)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$21.208 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": "$10.946 billion long-term debt (no short-term debt)",
+  "guidance_next": "Q1 FY23: revenue ~$8.10B +/-2%; GAAP/non-GAAP gross margin 65.2%/67.0% +/-50bps; GAAP opex ~$3.55B (incl. $1.36B Arm write-off), non-GAAP opex ~$1.60B; GAAP/non-GAAP other expense ~$55M; GAAP/non-GAAP tax rate 11%/13% +/-1%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.6,
+ "own_stock": 0.7,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA data center/gaming strength pressures AMD's GPU share narrative"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Data center GPU dominance challenges Intel's CPU-centric AI positioning"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Record NVDA volumes imply strong foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure partnership and AI infrastructure buildout cited"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Meta building AI Research SuperCluster on NVIDIA DGX A100 systems"
+  }
+ ],
+ "evidence": "\u201cWe are seeing exceptional demand for NVIDIA computing platforms,\u201d said Jensen Huang",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

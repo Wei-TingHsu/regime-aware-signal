@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2023 (three months ended March 31, 2023)",
+  "revenue": "$28,645 million (+3% YoY)",
+  "operating_income": "$7,227 million (operating margin 25%)",
+  "net_income": "$5,709 million",
+  "eps": "$2.20 diluted",
+  "operating_cash_flow": "$13,998 million",
+  "capex": "$6,823 million (purchases of property and equipment, net) / $7,086M including finance lease principal payments",
+  "free_cash_flow": "$6,911 million",
+  "cash_and_investments": "$37.44 billion (cash, cash equivalents, and marketable securities)",
+  "total_debt": "$9,925 million long-term debt",
+  "guidance_next": "Q2 2023 revenue $29.5-32B; FY2023 total expenses $86-90B (lowered from $89-95B, including $3-5B restructuring costs); FY2023 capex $30-33B (unchanged); FY2023 tax rate ~20%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.2,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Meta increasing capex for AI capacity build-out"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "digital ad market read-through, AI investment race"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "cloud/AI infrastructure spending peer"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "AI capex and generative AI competition"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "networking/data center hardware for AI capacity expansion"
+  }
+ ],
+ "evidence": "We expect second quarter 2023 total revenue to be in the range of $29.5-32 billion ... We anticipate our full-year 2023 total expenses will be in the range of $86-90 billion, updated from our prior outlook",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

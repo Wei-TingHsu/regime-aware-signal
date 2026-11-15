@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ4 and Fiscal Year 2021 (ended Sept 2, 2021)",
+  "revenue": "$8.274 billion (FQ4-21); $27.705 billion (FY21)",
+  "operating_income": "$2.955 billion GAAP / $3.073 billion non-GAAP (FQ4-21)",
+  "net_income": "$2.720 billion GAAP / $2.778 billion non-GAAP (FQ4-21)",
+  "eps": "$2.39 GAAP diluted / $2.42 non-GAAP diluted (FQ4-21)",
+  "operating_cash_flow": "$3.884 billion (FQ4-21); $12.468 billion (FY21)",
+  "capex": "$2.011 billion net (FQ4-21); $9.72 billion (FY21)",
+  "free_cash_flow": "$1.877 billion adjusted (FQ4-21); $2.753 billion adjusted (FY21)",
+  "cash_and_investments": "$10.46 billion cash, marketable investments, and restricted cash; net cash position $3.688 billion",
+  "total_debt": "$6.776 billion (current + long-term debt)",
+  "guidance_next": "FQ1-22: Revenue $7.65B \u00b1 $200M; GAAP gross margin 46.0% \u00b1 1% (Non-GAAP 47.0% \u00b1 1%); GAAP opex $986M \u00b1 $25M (Non-GAAP $915M \u00b1 $25M); GAAP diluted EPS $2.00 \u00b1 $0.10 (Non-GAAP $2.10 \u00b1 $0.10)"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.5,
+ "fcf_trend": 0.6,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "NAND pricing/demand trends shared across memory makers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "GPU/AI systems rely on DRAM/HBM supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "CPU/GPU makers depend on memory supply and pricing"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Data center and client platforms use DRAM/NAND"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Shared semiconductor capex and cyclical demand signals"
+  }
+ ],
+ "evidence": "The demand outlook for 2022 is strong, and Micron is delivering innovative solutions to our customers, fueling our long-term growth.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

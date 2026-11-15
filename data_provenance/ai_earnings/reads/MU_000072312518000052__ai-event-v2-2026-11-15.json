@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.6,
+ "fcf_outlook": 0.4,
+ "uncertainty": -0.2,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "memory pricing strength implied by guidance raise"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "capacity demand correlation"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "memory buyer benefits from supply confidence"
+  }
+ ],
+ "evidence": "announced an update to its guidance for the third quarter of fiscal 2018 and a $10 billion share repurchase authorization",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

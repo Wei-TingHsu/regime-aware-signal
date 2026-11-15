@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2015 (ended July 27, 2014)",
+  "revenue": "$1.103 billion",
+  "operating_income": "$163.2 million GAAP",
+  "net_income": "$128.0 million GAAP; $173.4 million non-GAAP",
+  "eps": "$0.22 GAAP diluted; $0.30 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$4.386 billion",
+  "total_debt": "$1.370 billion long-term debt",
+  "guidance_next": "Q3 FY2015 revenue ~$1.20 billion +/-2%; GAAP gross margin ~55.2%, non-GAAP ~55.5% (+/-50bps); GAAP opex ~$463 million, non-GAAP ~$416 million; tax rate ~19% +/-1%; capex ~$40-50 million"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVIDIA gaining share in gaming/datacenter GPUs"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Tegra K1 featured in Android L and Project Tango"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Foundry partner benefiting from higher GPU volumes"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Mobile/Tegra push competes with Intel mobile chips"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud service providers driving Tesla datacenter demand"
+  }
+ ],
+ "evidence": "Our Tesla datacenter business is in high gear, benefiting from strong demand from cloud service providers",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

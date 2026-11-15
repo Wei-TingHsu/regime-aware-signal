@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ3-21 (ended June 3, 2021)",
+  "revenue": "$7.422 billion",
+  "operating_income": "$1.799 billion GAAP; $2.364 billion Non-GAAP",
+  "net_income": "$1.735 billion GAAP; $2.173 billion Non-GAAP",
+  "eps": "$1.52 GAAP diluted; $1.88 Non-GAAP diluted",
+  "operating_cash_flow": "$3.560 billion",
+  "capex": "$2.04 billion (investments in capital expenditures, net)",
+  "free_cash_flow": "$1.518 billion (adjusted free cash flow, as stated)",
+  "cash_and_investments": "$9.82 billion cash, marketable investments, and restricted cash; net cash position $3.10 billion",
+  "total_debt": "$6.715 billion (current + long-term debt)",
+  "guidance_next": "FQ4-21: Revenue $8.2B \u00b1 $200M; GAAP gross margin 46.0% \u00b1 1% (Non-GAAP 47.0% \u00b1 1%); GAAP opex $955M \u00b1 $25M (Non-GAAP $900M \u00b1 $25M); GAAP diluted EPS $2.23 \u00b1 $0.10 (Non-GAAP $2.30 \u00b1 $0.10)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "NAND pricing/demand strength implies similar tailwinds"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Memory demand from data center/PC customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Data center memory demand tied to AI/accelerator growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Indirect exposure via data center memory demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Shared semiconductor capex/demand cycle commentary"
+  }
+ ],
+ "evidence": "Revenue of $7.42 billion versus $6.24 billion for the prior quarter...largest sequential earnings improvement in our history",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

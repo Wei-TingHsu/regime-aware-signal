@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2015 (quarter ended June 30, 2015)",
+  "revenue": "NT$205.44 billion",
+  "operating_income": "NT$77.069 billion (operating margin 37.5%)",
+  "net_income": "NT$79.417 billion",
+  "eps": "NT$3.06 (US$0.50 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q3 2015 revenue NT$207-210 billion; gross margin 47%-49%; operating margin 36.5%-38.5%, at an assumed exchange rate of 31 NT$/US$1"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.1,
+ "fcf_trend": 0,
+ "own_stock": -0.1,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cautious industry demand signals overall chip sector weakness"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "customer inventory caution implies soft orders"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "foundry demand softness affects fabless customers"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "broader semiconductor end-market softness noted"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "weak consumer electronics demand cited across chip supply chain"
+  }
+ ],
+ "evidence": "the end market recovery is not as strong as was expected earlier; customers continue to remain cautious in inventory management",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

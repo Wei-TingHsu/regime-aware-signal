@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2020 (three months ended November 30, 2019)",
+  "revenue": "$9.6 billion, up 1% YoY (USD and constant currency)",
+  "operating_income": "GAAP $3,183 million (up 3%); Non-GAAP $4,042 million",
+  "net_income": "GAAP $2,311 million; Non-GAAP $2,981 million",
+  "eps": "GAAP diluted $0.69 (up 14%); Non-GAAP diluted $0.90 (up 12%)",
+  "operating_cash_flow": "$13,796 million (trailing twelve months, GAAP)",
+  "capex": "$1,591 million (trailing twelve months)",
+  "free_cash_flow": "$12,205 million (trailing twelve months), down 11% YoY",
+  "cash_and_investments": "$24,540 million cash and cash equivalents + $2,904 million marketable securities (Nov 30, 2019)",
+  "total_debt": "$999 million notes payable current + $50,670 million notes payable and other borrowings non-current",
+  "guidance_next": "No specific numeric guidance for Q3 given in this release; CEO states general expectation of continued double-digit non-GAAP EPS growth ('I fully expect we will do that again this year')"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.2,
+ "fcf_trend": -0.3,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud applications/infrastructure competition"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure competition (OCI vs AWS)"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure competition"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "enterprise software/cloud peer"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "hardware/chip supplier for Oracle infrastructure"
+  }
+ ],
+ "evidence": "GAAP Earnings Per Share was up 14% to $0.69, while non-GAAP Earnings Per Share was up 12% to $0.90",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

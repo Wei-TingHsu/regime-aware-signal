@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2024 (ended February 4, 2024)",
+  "revenue": "$11,961 million (+34% YoY)",
+  "operating_income": null,
+  "net_income": "GAAP $1,325 million; Non-GAAP $5,254 million",
+  "eps": "GAAP diluted $2.84; Non-GAAP diluted $10.99",
+  "operating_cash_flow": "$4,815 million",
+  "capex": "$122 million",
+  "free_cash_flow": "$4,693 million (39% of revenue)",
+  "cash_and_investments": "$11,864 million cash and cash equivalents",
+  "total_debt": "Current portion $2,433 million + long-term $73,468 million = $75,901 million",
+  "guidance_next": "FY2024 revenue guidance reiterated at approximately $50.0 billion (incl. VMware, +40% YoY); FY2024 Adjusted EBITDA guidance reiterated at approximately 60% of projected revenue (~$30 billion)"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.6,
+ "own_stock": 0.5,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "custom AI accelerators compete with merchant GPUs"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "overlap in AI/networking silicon"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "hyperscaler custom AI accelerator demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "hyperscaler networking/AI silicon demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "foundry capacity for AI chip growth"
+  }
+ ],
+ "evidence": "strong demand for our networking products in AI data centers, as well as custom AI accelerators from hyperscalers, are driving growth in our semiconductor segment",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

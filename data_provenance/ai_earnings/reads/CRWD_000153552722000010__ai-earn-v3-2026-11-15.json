@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2023 (ended April 30, 2022)",
+  "revenue": "$487.8 million",
+  "operating_income": "Non-GAAP $83.0 million; GAAP loss from operations $(23.9) million",
+  "net_income": "Non-GAAP net income attributable to CrowdStrike $74.8 million; GAAP net loss $(31.5) million",
+  "eps": "Non-GAAP diluted EPS $0.31; GAAP diluted loss per share $(0.14)",
+  "operating_cash_flow": "$215.0 million",
+  "capex": "$57.4 million (purchases of property/equipment $52.2M + capitalized internal-use software $5.2M)",
+  "free_cash_flow": "$157.5 million (as stated)",
+  "cash_and_investments": "$2.15 billion cash and cash equivalents",
+  "total_debt": "$739.9 million long-term debt",
+  "guidance_next": "Q2 FY23: revenue $512.7-516.8M, Non-GAAP income from operations $70.4-73.3M, Non-GAAP net income $64.9-67.9M, Non-GAAP diluted EPS $0.27-0.28; Full Year FY23 (raised): revenue $2,190.5-2,205.8M, Non-GAAP income from operations $306.5-317.8M, Non-GAAP net income $283.3-294.6M, Non-GAAP diluted EPS $1.18-1.22"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud security/endpoint competitor via Defender"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud security competitor via Chronicle/Mandiant ties"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Public cloud workload protection deployments mentioned"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Cybersecurity platform consolidation theme"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Cloud infrastructure security overlap"
+  }
+ ],
+ "evidence": "Raises revenue and profit guidance for fiscal year 2023",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

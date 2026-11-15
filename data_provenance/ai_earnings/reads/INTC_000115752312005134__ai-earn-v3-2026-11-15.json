@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2012",
+  "revenue": "$13.5 billion",
+  "operating_income": "$3.8 billion GAAP / $4.1 billion non-GAAP",
+  "net_income": "$3.0 billion GAAP ($2,972 million) / $3.1 billion non-GAAP",
+  "eps": "$0.58 diluted GAAP / $0.60 non-GAAP",
+  "operating_cash_flow": null,
+  "capex": "$2,887 million",
+  "free_cash_flow": null,
+  "cash_and_investments": "$10,465 million total cash investments (cash, short-term investments, trading assets)",
+  "total_debt": "$7,156 million (short-term $56M + long-term $7,100M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel revenue miss/weak PC demand could reflect broader x86 softness"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Intel foundry/process issues indirectly relevant"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Weak PC/chip demand signals soft component cycle"
+  }
+ ],
+ "evidence": "Revenue $13.5 billion, Flat ... missed prior guidance midpoint of $14.3 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

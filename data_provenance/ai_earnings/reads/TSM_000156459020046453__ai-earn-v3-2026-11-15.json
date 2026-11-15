@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2020",
+  "revenue": "NT$356.43 billion (US$12.14 billion)",
+  "operating_income": "NT$150.048 billion (operating margin 42.1%)",
+  "net_income": "NT$137.31 billion",
+  "eps": "NT$5.30 (US$0.90 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2020 revenue expected US$12.4-12.7 billion; gross profit margin 51.5%-53.5%; operating profit margin 40.5%-42.5% (at NT$28.75/US$1 assumption)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.5,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "advanced node demand supports AMD products"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "HPC demand cited as growth driver, benefits GPU customer"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "foundry customer benefiting from advanced tech demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's advanced node lead pressures Intel's foundry competitiveness"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "broader semiconductor demand strength signals healthy chip cycle"
+  }
+ ],
+ "evidence": "revenue increased 21.6% while net income and diluted EPS both increased 35.9%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

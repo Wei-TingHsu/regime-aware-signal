@@ -1,0 +1,37 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.35,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.15,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "confirms capacity expansion for advanced nodes"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from continued leading-edge capacity growth"
+  },
+  {
+   "company": "ASML",
+   "relation": "supplier",
+   "direction": 0.15,
+   "reason": "large capex implies more equipment orders"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC capacity expansion increases competitive pressure"
+  }
+ ],
+ "evidence": "the Board approved capital appropriations of approximately US$20,657.50 million for purposes including: 1) Installation of advanced technology capacity",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

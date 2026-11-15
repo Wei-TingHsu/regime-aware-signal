@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2013 (1Q13)",
+  "revenue": "NT$132.76 billion",
+  "operating_income": "Operating margin 33.5% of NT$132.76B revenue (~NT$44.5 billion)",
+  "net_income": "NT$39.58 billion",
+  "eps": "NT$1.53 per share",
+  "operating_cash_flow": "NT$73.57 billion",
+  "capex": "NT$80.42 billion",
+  "free_cash_flow": "-NT$6.85 billion (stated)",
+  "cash_and_investments": "NT$189.26 billion",
+  "total_debt": "NT$127.09 billion long-term interest-bearing debt",
+  "guidance_next": "2Q13 revenue NT$154-156 billion at exchange rate 29.82 NTD/USD; gross margin 47.5%-49.5%; operating margin 35%-37%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.5,
+ "fcf_trend": -0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "28nm/advanced node demand from fabless customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC advanced node momentum (28nm/16nm FinFET) competes with Intel foundry"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "potential foundry customer benefiting from advanced process ramp"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor capex cycle read-through"
+  }
+ ],
+ "evidence": "Revenue to be between NT$154 billion and NT$156 billion ... Operating profit margin to be between 35% and 37%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

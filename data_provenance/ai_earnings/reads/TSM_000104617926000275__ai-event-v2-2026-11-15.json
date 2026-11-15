@@ -1,0 +1,37 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.1,
+ "own_stock": 0.05,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC deepens US fab investment, competitive pressure in advanced manufacturing"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "more US capacity supports leading-edge supply for customers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from expanded Arizona capacity"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "additional US foundry capacity"
+  }
+ ],
+ "evidence": "A capital increase of not more than US$20 billion from Taiwan Semiconductor Manufacturing Co., Ltd., subject to approval of the competent authorities.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

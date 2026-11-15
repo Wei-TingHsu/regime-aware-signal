@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY19 (quarter ended April 29, 2018)",
+  "revenue": "$3.207 billion",
+  "operating_income": "GAAP $1.295 billion; non-GAAP $1.428 billion",
+  "net_income": "GAAP $1.244 billion; non-GAAP $1.285 billion",
+  "eps": "GAAP diluted $1.98; non-GAAP diluted $2.05",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$7.300 billion",
+  "total_debt": "Long-term debt $1.986 billion; convertible short-term debt $14 million",
+  "guidance_next": "Q2 FY19 revenue ~$3.10B \u00b12%; GAAP/non-GAAP gross margin 63.3%/63.5% \u00b150bps; GAAP/non-GAAP opex ~$810M/$685M; other income/expense ~$15M income; tax rate 11.0% \u00b11%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVIDIA gaming/datacenter strength implies share pressure"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "foundry demand tied to NVIDIA GPU volume growth"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "memory demand from datacenter/gaming GPUs"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "datacenter compute share shift toward GPUs"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud/AI infrastructure buyer of NVIDIA datacenter products"
+  }
+ ],
+ "evidence": "Record revenue of $3.21 billion, up 66 percent from a year ago",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2025 (quarter ended June 30, 2025)",
+  "revenue": "$76.4 billion, up 18% YoY",
+  "operating_income": "$34.3 billion, up 23% YoY",
+  "net_income": "$27.2 billion, up 24% YoY",
+  "eps": "$3.65 diluted, up 24% YoY",
+  "operating_cash_flow": "$42,647 million (quarter)",
+  "capex": "$17,079 million (additions to property and equipment, quarter)",
+  "free_cash_flow": "$25,568 million (42,647 - 17,079)",
+  "cash_and_investments": "$94,565 million (cash, cash equivalents, and short-term investments)",
+  "total_debt": "$43,151 million (current portion of long-term debt $2,999M + long-term debt $40,152M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Azure growth of 39% intensifies cloud competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud/AI competition from Azure strength"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Massive capex ($64.5B FY) implies continued AI chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Rising cloud infrastructure spend supports AI compute suppliers"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud infrastructure competitor as Azure scales"
+  }
+ ],
+ "evidence": "Azure surpassed $75 billion in revenue, up 34 percent, driven by growth across all workloads",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

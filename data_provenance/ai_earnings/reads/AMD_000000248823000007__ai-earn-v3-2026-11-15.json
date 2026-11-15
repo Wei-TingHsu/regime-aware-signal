@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2022 and Full Year 2022 (ended Dec 31, 2022)",
+  "revenue": "$5.599 billion (Q4); $23.601 billion (FY2022)",
+  "operating_income": "GAAP: $(149) million (Q4); $1.264 billion (FY2022). Non-GAAP: $1.262 billion (Q4); $6.345 billion (FY2022)",
+  "net_income": "GAAP: $21 million (Q4); $1.320 billion (FY2022). Non-GAAP: $1.113 billion (Q4); $5.504 billion (FY2022)",
+  "eps": "GAAP diluted: $0.01 (Q4); $0.84 (FY2022). Non-GAAP diluted: $0.69 (Q4); $3.50 (FY2022)",
+  "operating_cash_flow": "$567 million (Q4); $3.565 billion (FY2022)",
+  "capex": "$124 million (Q4); $450 million (FY2022)",
+  "free_cash_flow": "$443 million (Q4); $3.115 billion (FY2022)",
+  "cash_and_investments": "$5.855 billion (cash, cash equivalents and short-term investments)",
+  "total_debt": "$2.467 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": 0,
+ "fcf_trend": -0.2,
+ "own_stock": -0.1,
+ "market": 0.1,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Weak PC market and inventory correction hit Client segment, implying similar pressure on Intel's PC business"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AMD previewed MI300 AI accelerator, directly competing in data-center AI compute"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Microsoft cited as adopting 4th Gen EPYC CPUs for cloud infrastructure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Google Cloud announced planned solutions using 4th Gen EPYC CPUs"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Oracle Cloud Infrastructure cited as deploying 4th Gen EPYC CPUs"
+  }
+ ],
+ "evidence": "Although the demand environment is mixed, we are confident in our ability to gain market share in 2023 and deliver long-term growth based on our differentiated product portfolio.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

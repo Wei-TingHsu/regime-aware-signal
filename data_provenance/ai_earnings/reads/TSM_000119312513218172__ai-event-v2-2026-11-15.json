@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.35,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "more foundry capacity for advanced nodes"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "benefits from expanded advanced process capacity"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC capacity expansion intensifies foundry competition"
+  }
+ ],
+ "evidence": "Approved capital appropriations totaling approximately US$4,901.9 million for the purpose of R&D and capacity expansion for advanced process technologies",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

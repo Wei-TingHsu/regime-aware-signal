@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2019 (quarter ended January 27, 2019) - preliminary guidance update",
+  "revenue": "$2.20 billion, plus or minus 2% (revised down from prior guidance of $2.70 billion)",
+  "operating_income": null,
+  "net_income": null,
+  "eps": null,
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Company states it will provide Q1 FY2020 guidance on Feb. 14 earnings call; no specific next-quarter guidance given in this release"
+ },
+ "results_vs_prior_guidance": -0.9,
+ "guidance_change": -0.9,
+ "fcf_trend": -0.3,
+ "own_stock": -0.9,
+ "market": -0.6,
+ "ai_demand": -0.5,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "NVIDIA gaming/GPU weakness could relatively benefit AMD positioning"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.4,
+   "reason": "$120M DRAM/component excess charge signals weaker memory demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.3,
+   "reason": "Lower NVIDIA GPU volumes reduce foundry demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Datacenter compute spending caution could shift some share dynamics"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "Signals broader semiconductor datacenter/channel inventory softness"
+  }
+ ],
+ "evidence": "Fourth quarter revenue expected to be $2.20 billion versus previous guidance of $2.70 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

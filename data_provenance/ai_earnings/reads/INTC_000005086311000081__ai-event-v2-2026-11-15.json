@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.25,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "Intel confidence signal lifts sector sentiment"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "minor relevance"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "semiconductor capital return trend"
+  }
+ ],
+ "evidence": "approved a 16 percent increase in the quarterly cash dividend to 21 cents per share",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2027 (three months ended August 31, 2026)",
+  "revenue": "$19.345 billion, up 30% USD and constant currency",
+  "operating_income": "GAAP $6.728 billion (up 57%); non-GAAP $8.2 billion (up 31%)",
+  "net_income": "GAAP net income available to common shareholders $4.679 billion, up 60%; non-GAAP $5.8 billion, up 34%",
+  "eps": "GAAP diluted $1.56, up 55%; non-GAAP $1.92, up 30%",
+  "operating_cash_flow": "$23.103 billion, up 184% YoY",
+  "capex": "$28.499 billion",
+  "free_cash_flow": "-$5.396 billion (operating cash flow minus capex, as stated)",
+  "cash_and_investments": "$36.369 billion cash and cash equivalents plus $708 million marketable securities",
+  "total_debt": "$7.625 billion current notes payable + $117.712 billion non-current notes payable = ~$125.3 billion",
+  "guidance_next": "Q2 FY27: total revenue growth 30-34% USD/cc; total cloud revenue growth 64-70% cc, 65-71% USD; non-GAAP EPS $1.83-$1.91 cc / $1.85-$1.93 USD (19-25% growth ex one-time Ampere gain, or decline 14-19% including it). FY27: revenue now expected at least $90 billion; non-GAAP EPS raised to $8.10."
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.6,
+ "fcf_trend": -0.3,
+ "own_stock": 0.8,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.8,
+   "reason": "GPU demand exceeding supply; 300,000 GPUs delivered"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "AI chip demand tailwind from Oracle's cloud infra buildout"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Memory demand tied to massive datacenter capacity expansion"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Chip manufacturing demand from AI infrastructure growth"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Validates strong hyperscale AI cloud demand across the sector"
+  }
+ ],
+ "evidence": "Customer demand for AI Cloud Training and Inferencing Services continues to grow faster than supply.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

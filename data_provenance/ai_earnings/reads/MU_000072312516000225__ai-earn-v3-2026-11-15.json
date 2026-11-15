@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and full fiscal year 2016 (ended September 1, 2016)",
+  "revenue": "$3.217 billion (Q4 FY16); $12.399 billion (FY16)",
+  "operating_income": "$(32) million (Q4 FY16); $168 million (FY16)",
+  "net_income": "$(170) million (Q4 FY16); $(276) million (FY16)",
+  "eps": "$(0.16) diluted GAAP (Q4 FY16); $(0.27) diluted GAAP (FY16); non-GAAP $(0.05) (Q4) and $0.06 (FY16)",
+  "operating_cash_flow": "$3.168 billion (FY16)",
+  "capex": "$5.863 billion gross (FY16); $5.40 billion net of partner funding (FY16); $1.69 billion net (Q4)",
+  "free_cash_flow": "approx $(2.695) billion (FY16, OCF $3.168B minus gross capex $5.863B)",
+  "cash_and_investments": "$4.81 billion (cash and marketable investments, Q4 end)",
+  "total_debt": "$9.910 billion (current $756M + long-term $9.154B)",
+  "guidance_next": "Restructuring charges of $80 million total, with $58 million incurred in Q4 FY16 and the remainder expected in early fiscal 2017; no explicit revenue/EPS guidance given for next quarter"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": 0,
+ "fcf_trend": -0.4,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "DRAM/NAND pricing and supply dynamics directly compete with Micron"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "NAND flash competitor; pricing trends in Micron's release affect NAND market broadly"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Joint 3D XPoint memory development partner; memory market trends affect both"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Buys DRAM for GPUs/CPUs; improving DRAM supply-demand balance could ease component costs"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "GPU maker relies on DRAM supply; improving memory market conditions signal healthier component availability"
+  }
+ ],
+ "evidence": "\"We are seeing improving market conditions in terms of both slowing supply growth and improving demand across a number of key segments\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

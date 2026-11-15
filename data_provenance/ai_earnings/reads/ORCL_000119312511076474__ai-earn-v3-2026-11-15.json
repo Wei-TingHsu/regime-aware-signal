@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2011 (three months ended February 28, 2011)",
+  "revenue": "$8.764 billion GAAP (up 37% YoY); $8.807 billion non-GAAP (up 36%)",
+  "operating_income": "$2.987 billion GAAP (up 62%, 34% margin); $3.9 billion non-GAAP (up 35%, 44% margin)",
+  "net_income": "$2.116 billion GAAP (up 78%)",
+  "eps": "$0.41 GAAP diluted (up 75%); $0.54 non-GAAP (up 40%)",
+  "operating_cash_flow": "$9.948 billion trailing twelve months GAAP",
+  "capex": "$441 million trailing twelve months (per TTM table); $372 million nine months ended Feb 28, 2011",
+  "free_cash_flow": "$9.507 billion trailing twelve months (19% growth YoY)",
+  "cash_and_investments": "$11.864 billion cash and cash equivalents plus $12.491 billion marketable securities = $24.355 billion",
+  "total_debt": "$14.752 billion non-current notes payable (no current notes payable outstanding)",
+  "guidance_next": "Expect an even higher sequential growth rate for Exadata and Exalogic in Q4; confident of exceeding the $1.5 billion profit goal for the overall Sun business for the fiscal year"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "not addressed"
+  },
+  {
+   "company": "Salesforce.com",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "signed new multi-year contract on Oracle database/middleware"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "no specific mention"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "general enterprise software competition, not specifically addressed"
+  },
+  {
+   "company": "SNDK",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "not addressed"
+  }
+ ],
+ "evidence": "GAAP earnings per share were $0.41, up 75% compared to last year while non-GAAP earnings per share were up 40% to $0.54",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

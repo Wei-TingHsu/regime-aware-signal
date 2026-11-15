@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2014 (three months ended February 28, 2014)",
+  "revenue": "$9.3 billion, up 4% YoY",
+  "operating_income": "GAAP $3.567 billion (up 7%); Non-GAAP $4.4 billion (up 5%)",
+  "net_income": "GAAP $2.565 billion (up 2%); Non-GAAP $3.1 billion (unchanged)",
+  "eps": "GAAP diluted $0.56 (up 8%); Non-GAAP diluted $0.68 (up 5%)",
+  "operating_cash_flow": "$15.029 billion trailing twelve months (down slightly from $15.196B prior quarter but up from $13.717B year-ago TTM)",
+  "capex": "$609 million (trailing quarter per TTM table); $426 million nine-months YTD per cash flow statement",
+  "free_cash_flow": "$14.420 billion trailing twelve months (up 11% YoY)",
+  "cash_and_investments": "$16.832 billion cash and cash equivalents plus $20.393 billion marketable securities = $37.225 billion",
+  "total_debt": "$1.516 billion current notes payable + $22.677 billion non-current notes payable = $24.193 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0,
+ "fcf_trend": 0.5,
+ "own_stock": 0.4,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "IBM",
+   "relation": "competitor",
+   "reason": "Engineered Systems growth contrasted with industry-wide decline in high-end servers",
+   "direction": -0.3
+  },
+  {
+   "company": "SAP",
+   "relation": "competitor",
+   "reason": "Cloud Applications bookings growth over 60% pressures enterprise software rivals",
+   "direction": -0.2
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "reason": "Competes in cloud applications and enterprise software",
+   "direction": -0.1
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "reason": "Cloud infrastructure competitive dynamics",
+   "direction": -0.1
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "reason": "Engineered Systems hardware growth implies component demand",
+   "direction": 0.2
+  }
+ ],
+ "evidence": "Hardware systems products revenues were up 8% to $725 million... throughout the industry traditional high-end server product lines are in steep decline",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

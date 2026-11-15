@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2025 (three months ended August 31, 2024)",
+  "revenue": "$13.3 billion, up 7% YoY (8% constant currency)",
+  "operating_income": "GAAP $4.0 billion (30% margin); Non-GAAP $5.7 billion (43% margin)",
+  "net_income": "GAAP $2.929 billion",
+  "eps": "GAAP diluted $1.03 (up 20%); Non-GAAP diluted $1.39 (up 17%)",
+  "operating_cash_flow": "$7.427 billion for the quarter; $19.126 billion trailing 4 quarters",
+  "capex": "$2.303 billion for the quarter; $7.855 billion trailing 4 quarters",
+  "free_cash_flow": "$11.271 billion trailing 4 quarters (stated)",
+  "cash_and_investments": "$10.616 billion cash and cash equivalents + $295 million marketable securities",
+  "total_debt": "$9.201 billion current notes payable + $75.314 billion non-current notes payable = ~$84.5 billion",
+  "guidance_next": "No explicit numeric guidance given for Q2 or FY25 in this release beyond CEO statement that strong RPO backlog 'will increase revenue growth throughout FY25'"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.2,
+ "own_stock": 0.5,
+ "market": 0.3,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.7,
+   "reason": "Datacenters filled with NVIDIA GPU clusters for AI training"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "MultiCloud regions live/building with Microsoft Azure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "MultiCloud regions live/building with Google Cloud"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "New MultiCloud agreement with AWS for Oracle database embedding"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Datacenter buildout implies networking/semiconductor demand"
+  }
+ ],
+ "evidence": "RPO was up 53% from last year to a record $99 billion... That strong contract backlog will increase revenue growth throughout FY25.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

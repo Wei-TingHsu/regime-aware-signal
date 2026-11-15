@@ -1,0 +1,37 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.4,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.2,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "more advanced capacity could ease foundry constraints"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "expanded advanced process capacity benefits fabless customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC capacity expansion increases competitive pressure in foundry/process leadership"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "beneficiary of added advanced capacity"
+  }
+ ],
+ "evidence": "Approved capital appropriations totaling approximately US$2.975 billion for the purpose of expanding advanced process capacity, construction of 12-inch GigaFabs, and installation of facilities systems.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

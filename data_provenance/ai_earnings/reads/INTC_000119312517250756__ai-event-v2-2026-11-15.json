@@ -1,0 +1,37 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.5,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.2,
+ "own_stock": 0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Intel strengthens autonomous driving/ADAS position vs Nvidia's Drive platform"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Waymo/autonomous driving competition intensifies"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "potential foundry demand for autonomous driving chips"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "minimal direct effect"
+  }
+ ],
+ "evidence": "Acquisition Expected to Accelerate the Future of Autonomous Driving",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

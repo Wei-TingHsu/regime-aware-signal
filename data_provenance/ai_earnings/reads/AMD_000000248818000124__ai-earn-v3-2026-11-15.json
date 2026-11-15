@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2018 (quarter ended June 30, 2018)",
+  "revenue": "$1.756 billion",
+  "operating_income": "$153 million GAAP; $186 million non-GAAP",
+  "net_income": "$116 million GAAP; $156 million non-GAAP",
+  "eps": "$0.11 diluted GAAP; $0.14 diluted non-GAAP",
+  "operating_cash_flow": "-$45 million",
+  "capex": "$43 million",
+  "free_cash_flow": "-$88 million (as stated)",
+  "cash_and_investments": "$983 million",
+  "total_debt": "$1,393 million",
+  "guidance_next": "Q3 2018 revenue approximately $1.7 billion, plus or minus $50 million, up ~7% YoY; non-GAAP gross margin approximately 38%"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.4,
+ "own_stock": -0.1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AMD CPU/server share gains via EPYC and Ryzen"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD GPU datacenter and gaming momentum"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AMD ramping 7nm products via foundry partner"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "server/datacenter growth benefits memory demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broader semiconductor datacenter cycle strength"
+  }
+ ],
+ "evidence": "Revenue was $1.76 billion, up 53 percent year-over-year and 7 percent quarter-over-quarter... gross margin grew to 37 percent",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

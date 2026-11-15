@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2018 (three months ended September 30, 2018)",
+  "revenue": "$13,727 million, +33% YoY",
+  "operating_income": "$5,781 million, operating margin 42%",
+  "net_income": "$5,137 million",
+  "eps": "$1.76 diluted",
+  "operating_cash_flow": "$7,496 million",
+  "capex": "$3,343 million (purchases of property and equipment)",
+  "free_cash_flow": "$4,153 million (as stated)",
+  "cash_and_investments": "$41.21 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "digital ad margin compression concerns spill over"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "big tech capex/margin scrutiny"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "general large-cap tech sentiment"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "datacenter infra buildout implied by capex rise"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "server/infra spend from rising capex"
+  }
+ ],
+ "evidence": "Operating margin 42% vs 50% a year earlier, with capex up from $1.76B to $3.34B and FCF down YoY to $4.15B from $4.37B, signaling decelerating profitability and rising cost pressure despite strong revenue growth.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2019 (fiscal quarter ended Sep 28, 2019)",
+  "revenue": "$19.2 billion",
+  "operating_income": "$6.4 billion GAAP / $6.9 billion non-GAAP",
+  "net_income": "$6.0 billion GAAP / $6.3 billion non-GAAP",
+  "eps": "$1.35 GAAP / $1.42 non-GAAP",
+  "operating_cash_flow": "$10.7 billion in Q3; $23.3 billion YTD (9 months: $23,257M)",
+  "capex": "$11.5 billion YTD (nine months); full-year guided ~$16.0 billion",
+  "free_cash_flow": "$11.7 billion YTD (stated); full-year guidance ~$16.0 billion non-GAAP",
+  "cash_and_investments": "$12,025 million total cash investments (cash, short-term investments, trading assets)",
+  "total_debt": "Short-term debt $5,200M + long-term debt $23,707M = ~$28.9 billion",
+  "guidance_next": "Q4 2019: revenue ~$19.2B, GAAP EPS ~$1.28/non-GAAP ~$1.24; FY2019 revenue raised to ~$71.0B, GAAP EPS ~$4.42, non-GAAP EPS raised to ~$4.60, capex ~$16.0B, non-GAAP FCF ~$16.0B"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.5,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel CCG/DCG strength and Xeon demand growth implies competitive pressure on AMD"
+  },
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel NSG memory revenue growth highlights competitive overlap, though NSG posted operating loss"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Rising capex and 10nm ramp implies continued foundry/equipment ecosystem spending"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Data-center and cloud segment strength signals broader semiconductor demand recovery"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Cloud segment growth within DCG implies healthy hyperscaler demand for Intel server chips"
+  }
+ ],
+ "evidence": "Third-quarter revenue of $19.2 billion set a new record and exceeded July guidance... Raising full-year revenue outlook to $71 billion, up $1.5 billion from July guidance.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY2014 (ended Oct 27, 2013)",
+  "revenue": "$1.054 billion",
+  "operating_income": "$140.988 million (GAAP)",
+  "net_income": "$118.734 million GAAP; $153.790 million non-GAAP",
+  "eps": "$0.20 GAAP diluted; $0.26 non-GAAP diluted",
+  "operating_cash_flow": "$162.315 million",
+  "capex": "$38.159 million (property, equipment and intangible assets)",
+  "free_cash_flow": "$124.156 million",
+  "cash_and_investments": "$3.033 billion (down from $3.728B at FY13 year-end)",
+  "total_debt": null,
+  "guidance_next": "Q4 FY2014 revenue ~$1.05B +/-2%; GAAP/non-GAAP gross margin ~54.2%/54.5%; GAAP opex ~$450M, non-GAAP opex ~$410M; tax rate 16% +/-1pp; diluted shares ~578.5M"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.4,
+ "own_stock": -0.1,
+ "market": 0,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "GPU market share commentary implies competitive pressure"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "PC market decline noted, competing in mobile/graphics"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Foundry partner benefits from NVIDIA GPU volume"
+  }
+ ],
+ "evidence": "GAAP and non-GAAP margins are expected to be approximately 54.2 percent and 54.5 percent, respectively",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

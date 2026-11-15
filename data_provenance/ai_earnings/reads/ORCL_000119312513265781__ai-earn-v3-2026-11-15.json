@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and full fiscal year 2013 (ended May 31, 2013)",
+  "revenue": "Q4 GAAP $10.947B (unchanged YoY); FY GAAP $37.180B (unchanged YoY)",
+  "operating_income": "Q4 GAAP $5.0B (+9%), non-GAAP $5.6B (+1%); FY GAAP $14.7B (+7%), non-GAAP $17.6B (+2%)",
+  "net_income": "Q4 GAAP $3.807B (+10%), non-GAAP $4.1B (-1%); FY GAAP $10.925B (+9%), non-GAAP $13.0B (+3%)",
+  "eps": "Q4 GAAP $0.80 (+17%), non-GAAP $0.87 (+5%); FY GAAP $2.26 (+15%), non-GAAP $2.68 (+9%)",
+  "operating_cash_flow": "TTM $14.224B (FY13)",
+  "capex": "FY13 $650M",
+  "free_cash_flow": "TTM $13.574B (per company's own FCF table)",
+  "cash_and_investments": "$14.613B cash + $17.603B marketable securities = ~$32.2B",
+  "total_debt": "$18.494B non-current notes payable (no current notes payable)",
+  "guidance_next": "Qualitative only: 'we believe hardware will be a growth story in Oracle\u2019s FY14'; no numeric guidance given"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.3,
+ "own_stock": 0.4,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "IBM",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Oracle says it took share from IBM P-Series, which declined 32%"
+  },
+  {
+   "company": "SAP",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle claims cloud apps business now larger than SAP and Workday combined"
+  },
+  {
+   "company": "Workday",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Oracle HCM Cloud said to have outgrown Workday's HCM+ERP additions combined"
+  }
+ ],
+ "evidence": "A record level non-GAAP operating margin of 47% in FY13 enabled us to generate over $14 billion in operating cash flow during the year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

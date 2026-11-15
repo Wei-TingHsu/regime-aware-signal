@@ -1,0 +1,49 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.2,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "foundry demand strength implies capacity for fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from TSMC capacity/demand recovery"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC share gains in foundry market"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "read-through for semiconductor demand recovery"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "memory/semiconductor cycle sentiment"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "uses TSMC foundry capacity"
+  }
+ ],
+ "evidence": "revenues for August 2019 were approximately NT$106.12 billion, an increase of 25.2 percent from July 2019 and an increase of 16.5 percent from August 2018",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

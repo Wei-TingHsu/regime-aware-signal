@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q2 2015 (quarter ended June 27, 2015)",
+  "revenue": "$13,195 million",
+  "operating_income": "$2,896 million",
+  "net_income": "$2,706 million",
+  "eps": "$0.55 diluted",
+  "operating_cash_flow": null,
+  "capex": "$1,767 million (additions to property, plant and equipment)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$13,870 million total cash investments",
+  "total_debt": "$1,118 million short-term + $12,116 million long-term = $13,234 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Intel CCG revenue decline could reflect PC market weakness affecting both"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Intel manufacturing/foundry mentioned as startup business"
+  }
+ ],
+ "evidence": "Revenue declined to $13,195 million from $13,831 million and operating income fell to $2,896 million from $3,844 million year-over-year, with Client Computing Group operating income dropping from $2,586 million to $1,602 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

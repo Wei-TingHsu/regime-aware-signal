@@ -1,0 +1,31 @@
+{
+ "event_type": "leadership change",
+ "material": 0.2,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.1,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Foundry rival unaffected by planned succession"
+  },
+  {
+   "company": "SNDK",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Minimal impact on supply relationship"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Leadership transition orderly, no supply disruption expected"
+  }
+ ],
+ "evidence": "Dr. C.C. Wei succeed as the company\u2019s next Chairman, subject to the election of the incoming board in June 2024",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v1-2026-11-15"
+}

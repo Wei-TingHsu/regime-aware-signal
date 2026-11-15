@@ -1,0 +1,19 @@
+{
+ "event_type": "leadership change",
+ "material": 0.15,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.2,
+ "own_stock": -0.1,
+ "market": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.05,
+   "reason": "memory industry cost pressure signal"
+  }
+ ],
+ "evidence": "To align with the Company's ongoing expense reduction initiatives, D. Mark Durcan, the Company's Chief Executive Officer...requested a voluntary and temporary base salary reduction",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

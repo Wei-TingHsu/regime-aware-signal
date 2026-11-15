@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.3,
+ "fcf_outlook": 0.0,
+ "uncertainty": -0.2,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "activist investor engagement in big tech governance"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "not directly affected"
+  }
+ ],
+ "evidence": "the Company has agreed, at the ValueAct Group\u2019s election, to appoint Mr. Morfit ... to the Company\u2019s Board of Directors",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

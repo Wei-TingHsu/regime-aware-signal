@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2013 (quarter ended Sept 28, 2013)",
+  "revenue": "$1.46 billion (up 26% sequentially, up 15% YoY)",
+  "operating_income": "$95 million GAAP; $78 million non-GAAP",
+  "net_income": "$48 million GAAP; $31 million non-GAAP",
+  "eps": "$0.06 GAAP; $0.04 non-GAAP",
+  "operating_cash_flow": "$21 million (quarter)",
+  "capex": "$15 million (purchases of property, plant and equipment)",
+  "free_cash_flow": "$6 million (operating cash flow $21M minus capex $15M)",
+  "cash_and_investments": "$1.2 billion (cash, equivalents and marketable securities incl. long-term)",
+  "total_debt": "$2,049 million (current + long-term debt and capital leases)",
+  "guidance_next": "For Q4 2013, AMD expects revenue to increase 5 percent, plus or minus 3 percent, sequentially"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.2,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cited as key competitive risk in CPU/chipset market"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "GPU/graphics market rivalry as AMD launches new Radeon line"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "semi-custom console chip demand (Xbox) driving AMD's GVS growth"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Oracle exec named as APU13 keynote speaker, minor relevance"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "self-reference, not applicable"
+  }
+ ],
+ "evidence": "AMD revenue $1.46 billion, increased 26 percent sequentially and 15 percent year-over-year... Company returns to profitability with product diversification strategy, but Q4 guidance of only 5% sequential growth signals a sharp deceleration from Q3's pace.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

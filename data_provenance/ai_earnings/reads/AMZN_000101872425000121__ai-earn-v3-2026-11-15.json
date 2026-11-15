@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2025 (quarter ended September 30, 2025)",
+  "revenue": "$180.2 billion (net sales), up 13% YoY",
+  "operating_income": "$17.4 billion GAAP ($21.7 billion excluding $2.5B FTC settlement and $1.8B severance charges)",
+  "net_income": "$21.2 billion, including $9.5B pre-tax Anthropic investment gain",
+  "eps": "$1.95 diluted",
+  "operating_cash_flow": "$130.7 billion (TTM), up 16% YoY",
+  "capex": "$35.1 billion in Q3; TTM purchases of property & equipment, net, up $50.9B YoY",
+  "free_cash_flow": "$14.8 billion TTM, down from $47.7 billion TTM a year earlier",
+  "cash_and_investments": "$66.9B cash + $27.3B marketable securities as of 9/30/25",
+  "total_debt": null,
+  "guidance_next": "Q4 2025 net sales of $206.0B-$213.0B, 10%-13% YoY growth"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.1,
+ "fcf_trend": -0.4,
+ "own_stock": 0.5,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "New EC2 UltraServers using Grace Blackwell Superchips show continued large NVIDIA deployment"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "New EPYC-based EC2 instances expand AMD's cloud footprint"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Custom Xeon 6 processors exclusive to AWS instances"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AWS reacceleration to 20% signals robust cloud/AI capex cycle benefiting all hyperscalers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Strong cloud AI demand trend positive read-through for Google Cloud"
+  }
+ ],
+ "evidence": "AWS is growing at a pace we haven\u2019t seen since 2022, re-accelerating to 20.2% YoY.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.65,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.65,
+ "own_stock": -0.35,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "CRWD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Broadcom entering enterprise security market via acquisition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "overlap in enterprise security/software"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "unrelated cloud/security peer"
+  }
+ ],
+ "evidence": "the additional significant indebtedness that Broadcom expects to incur in connection with the proposed transaction, and the need to generate sufficient cash flows to service and repay such debt",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

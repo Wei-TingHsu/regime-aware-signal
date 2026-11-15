@@ -1,0 +1,31 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.0,
+ "own_stock": 0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "foundry demand signal"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "foundry demand signal"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC strength implies foundry competitiveness"
+  }
+ ],
+ "evidence": "net sales for February 2013 were approximately NT$41.18 billion... an increase of 21.5 percent over February 2012",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

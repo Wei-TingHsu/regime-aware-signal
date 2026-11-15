@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2011 (quarter ended April 2, 2011)",
+  "revenue": "$1.61 billion (down 2% sequentially, up 2% year-over-year)",
+  "operating_income": "$54 million GAAP; $92 million non-GAAP",
+  "net_income": "$510 million GAAP ($0.68 EPS); $56 million non-GAAP ($0.08 EPS)",
+  "eps": "$0.68 GAAP diluted; $0.08 non-GAAP diluted",
+  "operating_cash_flow": "-$168 million (GAAP net cash used in operating activities)",
+  "capex": "$38 million (purchases of property, plant and equipment)",
+  "free_cash_flow": "-$206 million (GAAP OCF minus capex); company-reported non-GAAP adjusted free cash flow $154 million",
+  "cash_and_investments": "$1.745 billion",
+  "total_debt": "$2.196 billion (long-term debt and capital lease obligations, including current portion)",
+  "guidance_next": "AMD expects revenue to be flat to slightly down sequentially for the second quarter of 2011."
+ },
+ "results_vs_prior_guidance": 0.1,
+ "guidance_change": 0,
+ "fcf_trend": -0.5,
+ "own_stock": -0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AMD cites Intel pricing/bundling as competitive risk"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AMD highlights graphics leadership with new Radeon launch"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Software partner leveraging AMD APU/GPU performance"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Potential alternative foundry amid GlobalFoundries manufacturing risk commentary"
+  }
+ ],
+ "evidence": "AMD expects revenue to be flat to slightly down sequentially for the second quarter of 2011.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

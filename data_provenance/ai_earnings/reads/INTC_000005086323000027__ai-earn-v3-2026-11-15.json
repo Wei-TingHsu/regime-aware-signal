@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2023 (ended April 1, 2023)",
+  "revenue": "$11.7 billion, down 36% YoY",
+  "operating_income": "GAAP operating loss $(1.468) billion; non-GAAP operating margin (2.5)%",
+  "net_income": "GAAP net loss attributable to Intel $(2.758) billion; non-GAAP net loss $(0.2) billion",
+  "eps": "GAAP $(0.66); non-GAAP $(0.04)",
+  "operating_cash_flow": "$(1.785) billion (cash used in operations)",
+  "capex": "$7.413 billion (additions to PP&E)",
+  "free_cash_flow": "approximately $(9.2) billion (operating cash flow of $(1.785)B minus capex of $7.413B)",
+  "cash_and_investments": "$8.232B cash and cash equivalents + $19.302B short-term investments = $27.534B",
+  "total_debt": "$1.437B short-term debt + $48.836B long-term debt = $50.273B",
+  "guidance_next": "Q2 2023 revenue $11.5-12.5 billion; GAAP EPS $(0.62); non-GAAP EPS $(0.04); GAAP gross margin ~33.2%, non-GAAP ~37.5%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.3,
+ "fcf_trend": -0.6,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel CPU/data center recovery signals competitive pressure in x86 market"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel Foundry Services expansion and 18A progress position as foundry rival"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel highlights AI acceleration in Xeon but lags in AI compute leadership"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader semiconductor demand recovery signal from PC/data center commentary"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "self"
+  }
+ ],
+ "evidence": "We exceeded our first-quarter expectations on the top and bottom line",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

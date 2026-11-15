@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2014 (ended November 28, 2013)",
+  "revenue": "$4.04 billion",
+  "operating_income": "$551 million",
+  "net_income": "$358 million (GAAP, attributable to Micron); $881 million (non-GAAP)",
+  "eps": "$0.30 diluted (GAAP); $0.77 diluted (non-GAAP)",
+  "operating_cash_flow": "$1.507 billion (reported as $1.51 billion)",
+  "capex": "$669 million (per release text); $526 million (per cash flow statement PP&E expenditures)",
+  "free_cash_flow": "$838 million (1.507B - 0.669B per release narrative)",
+  "cash_and_investments": "$4.41 billion total cash and marketable investments ($3.87B cash and short-term investments + $538M long-term marketable investments)",
+  "total_debt": "$1.543 billion current portion long-term debt + $4.260 billion long-term debt = $5.803 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "NAND flash competitor; Micron NAND revenue grew modestly"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "Elpida acquisition boosts DRAM scale and margins"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Memory supplier relationship implied but not detailed"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Broader semiconductor sector context"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Foundry/manufacturing ecosystem peer, not directly addressed"
+  }
+ ],
+ "evidence": "Revenues in the first quarter of fiscal 2014 were $4.04 billion and were 42 percent higher compared to the fourth quarter of fiscal 2013 and 120 percent higher compared to the first quarter of fiscal 2013.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

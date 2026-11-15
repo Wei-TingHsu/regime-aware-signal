@@ -1,0 +1,49 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": 0.5,
+ "uncertainty": -0.2,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "strong TSMC demand signals AI chip volumes"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "foundry demand strength benefits fabless customers"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "advanced node demand strength"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC strength highlights foundry competitive gap"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broader semiconductor cycle strength"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "semiconductor demand upcycle read-through"
+  }
+ ],
+ "evidence": "revenue for January 2026 was approximately NT$401.26 billion, an increase of 19.8 percent from December 2025 and an increase of 36.8 percent from January 2025",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

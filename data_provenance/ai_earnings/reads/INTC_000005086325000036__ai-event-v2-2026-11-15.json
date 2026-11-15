@@ -1,0 +1,37 @@
+{
+ "event_type": "leadership change",
+ "material": 0.75,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.3,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "stronger Intel leadership raises competitive pressure"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "new CEO may expand foundry partnerships"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "revived Intel could compete more in AI chips"
+  },
+  {
+   "company": "CRDO",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Tan remains chairman, ties to Intel strategy"
+  }
+ ],
+ "evidence": "the Board of Directors of Intel Corporation appointed Lip-Bu Tan as Chief Executive Officer",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

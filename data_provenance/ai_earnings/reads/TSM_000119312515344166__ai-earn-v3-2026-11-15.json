@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2015 (ended September 30, 2015)",
+  "revenue": "NT$212.51 billion (US$6.67 billion)",
+  "operating_income": "NT$78.389 billion (operating margin 36.9%)",
+  "net_income": "NT$75.33 billion",
+  "eps": "NT$2.91 (US$0.46 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": "2015 capital budget about US$8 billion (full-year guidance, not Q3 actual)",
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2015: revenue NT$201-204 billion; gross margin 47.5%-49.5%; operating margin 36.5%-38.5%, at assumed exchange rate of 32.71 NT$/US$1"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.3,
+ "fcf_trend": 0,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "16nm ramp benefits fabless customers using TSMC's advanced nodes"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC's 16nm ramp intensifies foundry/process competition"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "self-referential, strong 16nm ramp signals near-term momentum"
+  }
+ ],
+ "evidence": "TSMC's third quarter revenue exceeded the high end of the guidance given in July",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

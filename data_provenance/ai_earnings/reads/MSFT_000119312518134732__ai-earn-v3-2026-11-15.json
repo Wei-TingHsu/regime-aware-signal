@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2018 (quarter ended March 31, 2018)",
+  "revenue": "$26.8 billion, +16% YoY",
+  "operating_income": "$8.3 billion, +23% YoY",
+  "net_income": "$7.424 billion, +35% YoY",
+  "eps": "$0.95 diluted, +36% YoY",
+  "operating_cash_flow": "$12,151 million (three months)",
+  "capex": "$2,934 million (additions to property and equipment)",
+  "free_cash_flow": "$9,217 million (12,151 - 2,934)",
+  "cash_and_investments": "$132,270 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$77,157 million (short-term debt $230M + current portion long-term debt $3,447M + long-term debt $73,480M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Azure growth of 93% signals share gains in cloud infrastructure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong commercial cloud growth pressures rival cloud/search ads"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Server/cloud product growth of 20% challenges enterprise database rival"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Rising datacenter/cloud infrastructure spend implies more hardware demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Azure and server growth implies higher server chip demand"
+  }
+ ],
+ "evidence": "We delivered double-digit revenue and operating income growth driven by 58% growth in our commercial cloud revenue.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

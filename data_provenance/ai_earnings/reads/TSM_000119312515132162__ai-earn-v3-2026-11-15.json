@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "1Q15 (quarter ended March 31, 2015)",
+  "revenue": "NT$222.034 billion",
+  "operating_income": "NT$86.626 billion (operating margin 39.0%)",
+  "net_income": "NT$78.990 billion",
+  "eps": "NT$3.05 (US$0.48 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "2Q15 revenue NT$204-207 billion (FX assumption 31.03 NTD/USD); gross margin 47.5%-49.5%; operating margin 36.5%-38.5%; full-year 2015 revenue expected double-digit growth over 2014 with 2H15 recovery; 2015 capex budget US$10.5-11.0 billion"
+ },
+ "results_vs_prior_guidance": 0.1,
+ "guidance_change": -0.4,
+ "fcf_trend": 0.0,
+ "own_stock": -0.3,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "customer business loss/inventory adjustment flagged for Q2"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "part of fabless customer base affected by Q2 softness"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "rival foundry/IDM may see relative advantage if TSMC customers cut orders"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "broadcom-type fabless customers tied to TSMC wafer demand softness"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "self-referential guidance cut signals near-term industry softness"
+  }
+ ],
+ "evidence": "a combination of customers\u2019 business loss, inventory adjustment, and a less favorable exchange rate will negatively impact our second quarter business",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

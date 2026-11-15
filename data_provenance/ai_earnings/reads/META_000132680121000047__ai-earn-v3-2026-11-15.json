@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q2 2021 (three months ended June 30, 2021)",
+  "revenue": "$29,077 million",
+  "operating_income": "$12,367 million",
+  "net_income": "$10,394 million",
+  "eps": "$3.61 diluted",
+  "operating_cash_flow": "$13,246 million",
+  "capex": "$4,612 million (purchases of property and equipment); $4.74 billion including finance lease principal payments",
+  "free_cash_flow": "$8,511 million (as stated)",
+  "cash_and_investments": "$64.08 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": "Q3/Q4 2021 YoY total revenue growth expected to decelerate significantly sequentially due to tougher comps; iOS ad-targeting headwinds expected greater impact in Q3 than Q2; FY2021 total expenses $70-73B (unchanged); FY2021 capex $19-21B (unchanged); FY2021 tax rate high-teens"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "shares digital ad market, similar ad-targeting dynamics"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "competes for digital ad spend"
+  }
+ ],
+ "evidence": "we expect year-over-year total revenue growth rates to decelerate significantly on a sequential basis as we lap periods of increasingly strong growth",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

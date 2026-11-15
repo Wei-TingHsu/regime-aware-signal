@@ -1,0 +1,25 @@
+{
+ "event_type": "restructuring",
+ "material": 0.35,
+ "fcf_outlook": 0.15,
+ "uncertainty": 0.25,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "AMD cost-cutting signals competitive pressure, slight relief for Intel"
+  },
+  {
+   "company": "GLOBALFOUNDRIES",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "workforce rebalancing may affect manufacturing demand/commitments"
+  }
+ ],
+ "evidence": "operational savings of approximately $10 million in the fourth quarter of fiscal 2011 and $118 million in fiscal 2012",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

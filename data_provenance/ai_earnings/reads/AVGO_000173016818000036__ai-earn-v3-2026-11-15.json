@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2018 (ended August 5, 2018)",
+  "revenue": "$5,063M GAAP net revenue; $5,066M non-GAAP net revenue",
+  "operating_income": "$1,339M GAAP (26.4% of revenue); $2,536M non-GAAP (50.1% of revenue)",
+  "net_income": "$1,196M GAAP; $2,257M non-GAAP",
+  "eps": "$2.71 GAAP diluted; $4.98 non-GAAP diluted",
+  "operating_cash_flow": "$2,247M",
+  "capex": "$120M",
+  "free_cash_flow": "$2,127M (stated, 42% of revenue)",
+  "cash_and_investments": "$4,136M cash and cash equivalents",
+  "total_debt": "$17,604M (long-term debt $17,487M + current portion $117M)",
+  "guidance_next": "Q4 FY18: GAAP net revenue $5,397M +/- $75M; non-GAAP net revenue $5,400M +/- $75M; GAAP gross margin 52.3% +/- 1%; non-GAAP gross margin 67.0% +/- 1%; capex ~$110M"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.4,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "enterprise storage/datacenter demand strength implies memory demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "overlap in enterprise storage, wired infrastructure"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "foundry capacity needed for AVGO's growing chip volumes"
+  },
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "shared datacenter/AI infrastructure demand tailwind"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competes in networking/enterprise silicon"
+  }
+ ],
+ "evidence": "Datacenter demand is driving strong growth in more than 50 percent of our consolidated revenue",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2025 (quarter ended Dec 27, 2025); also FY2025",
+  "revenue": "$13.7 billion (Q4), down 4% YoY; FY2025 $52.9 billion, flat YoY",
+  "operating_income": "GAAP $580 million (Q4); non-GAAP operating margin 8.8%; FY2025 GAAP operating loss $(2.2) billion",
+  "net_income": "GAAP net loss attributable to Intel $(0.6) billion (Q4); non-GAAP net income $0.8 billion (Q4); FY2025 GAAP net loss $(0.3) billion, non-GAAP net income $1.9 billion",
+  "eps": "GAAP $(0.12); non-GAAP $0.15 (Q4); FY2025 GAAP $(0.06), non-GAAP $0.42",
+  "operating_cash_flow": "$4.3 billion (Q4); $9.7 billion (FY2025)",
+  "capex": "FY2025 additions to PP&E $14.6 billion (investing) plus $3.0 billion (financing-lease related), per cash flow statement",
+  "free_cash_flow": "Not explicitly stated; FY2025 OCF $9.7B minus PP&E additions ~$14.6B implies roughly $(4.9) billion",
+  "cash_and_investments": "$14.265 billion cash and equivalents + $23.151 billion short-term investments (Dec 27, 2025), up from $8.249B/$13.813B a year earlier",
+  "total_debt": "$2.499 billion short-term debt + $44.086 billion long-term debt = ~$46.6 billion",
+  "guidance_next": "Q1 2026 revenue $11.7-12.7 billion; GAAP EPS $(0.21); non-GAAP EPS $0.00; GAAP gross margin 32.3%, non-GAAP 34.5%; GAAP tax rate (79)%, non-GAAP tax rate 11%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.5,
+ "fcf_trend": 0.1,
+ "own_stock": -0.3,
+ "market": 0.1,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Completed $5B equity purchase strengthening Intel balance sheet; strategic tie-up"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel touts x86 ecosystem strength and AI PC/CPU demand, implying competitive pressure on AMD"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel 18A ramp and foundry supply growth positions it as a rival advanced-node foundry"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "DCAI growth (+9% YoY) implies higher demand for memory used in AI servers"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel's DCAI/custom silicon push for AI edge/data center overlaps with Broadcom's custom ASIC business"
+  }
+ ],
+ "evidence": "We expect our available supply to be at its lowest level in Q1 before improving in Q2 and beyond.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2024 (quarter ended March 31, 2024)",
+  "revenue": "$80,539 million, up 15% YoY",
+  "operating_income": "$25,472 million, 32% operating margin",
+  "net_income": "$23,662 million",
+  "eps": "$1.89 diluted",
+  "operating_cash_flow": "$28,848 million",
+  "capex": "$12,012 million",
+  "free_cash_flow": "$16,836 million",
+  "cash_and_investments": "$108,090 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$13,228 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud and AI competition"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud competition"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Higher capex implies more AI chip demand"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "Shared AI infrastructure investment narrative"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud infrastructure competitor"
+  }
+ ],
+ "evidence": "Operating income $25,472 million, Operating margin 32%, up from 25% a year earlier, alongside 15% revenue growth and new dividend/buyback program",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

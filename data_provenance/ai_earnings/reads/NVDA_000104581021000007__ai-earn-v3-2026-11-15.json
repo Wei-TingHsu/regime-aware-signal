@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY21 (quarter ended January 31, 2021)",
+  "revenue": "$5.003 billion GAAP",
+  "operating_income": "$1.507 billion GAAP; $2.089 billion non-GAAP",
+  "net_income": "$1.457 billion GAAP; $1.957 billion non-GAAP",
+  "eps": "$2.31 GAAP diluted; $3.10 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$11.561 billion cash, cash equivalents and marketable securities",
+  "total_debt": null,
+  "guidance_next": "Q1 FY22 revenue ~$5.30B +/-2%; GAAP/non-GAAP gross margin 63.8%/66.0% +/-50bps; GAAP/non-GAAP opex ~$1.67B/$1.20B; GAAP/non-GAAP other income/expense ~-$50M expense; tax rate 10% +/-1%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Gaming/datacenter GPU competition intensifying as NVDA grows share"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Foundry demand rises with NVDA GPU/data center growth"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS adopting A100/NGC, cloud AI infrastructure deployment"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Google Cloud Anthos integration with DGX A100 systems"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Memory demand tied to data center GPU ramp"
+  }
+ ],
+ "evidence": "Revenue is expected to be $5.30 billion, plus or minus 2 percent -- above the $4.80B guided for the quarter just reported, implying accelerating growth",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2021 (three months ended March 31, 2021)",
+  "revenue": "$26,171 million",
+  "operating_income": "$11,378 million",
+  "net_income": "$9,497 million",
+  "eps": "$3.30 diluted",
+  "operating_cash_flow": "$12,242 million",
+  "capex": "$4,272 million (purchases of property and equipment); $4.42B including finance lease principal payments",
+  "free_cash_flow": "$7,819 million",
+  "cash_and_investments": "$64.22 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": "Q2 2021 YoY total revenue growth expected stable to modestly accelerating vs Q1; significant deceleration expected in Q3/Q4 2021 due to tougher comps; FY2021 total expenses raised to $70-73B (from $68-73B); FY2021 capex lowered to $19-21B (from $21-23B); FY2021 tax rate high-teens; iOS14.5 ad-targeting headwinds expected to begin impacting in Q2"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "shared digital ad market strength implies robust ad demand broadly"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "competing for digital ad dollars"
+  },
+  {
+   "company": "AAPL",
+   "relation": "supplier",
+   "direction": -0.3,
+   "reason": "iOS14.5 ad-tracking changes cited as revenue headwind"
+  }
+ ],
+ "evidence": "Income from operations $11,378 $5,893 93%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

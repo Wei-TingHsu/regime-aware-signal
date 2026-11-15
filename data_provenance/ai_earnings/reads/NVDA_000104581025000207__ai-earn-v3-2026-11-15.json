@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2026 (quarter ended July 27, 2025)",
+  "revenue": "$46,743 million, up 6% Q/Q and 56% Y/Y",
+  "operating_income": "$28,440 million GAAP (up from $21,638M Q1); $30,165 million non-GAAP",
+  "net_income": "$26,422 million GAAP; $25,783 million non-GAAP ($25,595M excluding H20 items)",
+  "eps": "$1.08 diluted GAAP; $1.05 non-GAAP ($1.04 excluding H20 items)",
+  "operating_cash_flow": "$15,365 million for the quarter; $42,779 million for six months",
+  "capex": "$1,894 million (purchases of property/equipment and intangibles) plus $21 million principal payments",
+  "free_cash_flow": "$13,450 million for the quarter (stated); $39,584 million six months",
+  "cash_and_investments": "$56,791 million cash, cash equivalents and marketable securities (vs $43,210M at FY25 year-end)",
+  "total_debt": "$8,466 million long-term debt",
+  "guidance_next": "Q3 FY26 revenue outlook ~$54.0 billion (\u00b12%); GAAP gross margin 73.3%, non-GAAP gross margin 73.5%; GAAP opex $5,900M, non-GAAP opex $4,200M; other income ~$500 million excluding equity security gains/losses; GAAP and non-GAAP tax rate 16.5% \u00b11%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Manufacturing partner for Blackwell ramp, named in RTX PRO server adoption"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NVIDIA Blackwell dominance in data center and MLPerf benchmarks"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Memory demand tied to data center GPU ramp and giga-scale AI infrastructure"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Hyperscaler buildout of Blackwell AI infrastructure implied in data center growth"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Networking (Spectrum-X) competes indirectly with Broadcom's switching silicon"
+  }
+ ],
+ "evidence": "Second-quarter revenue was $41.1 billion, up 5% from the previous quarter and up 56% from a year ago... Q3 FY2026 Outlook... revenue $54.0 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

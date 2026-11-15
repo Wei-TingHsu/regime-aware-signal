@@ -1,0 +1,49 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.5,
+ "fcf_outlook": 0.5,
+ "uncertainty": 0.2,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "cloud infra competitor losing share to OCI"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS competes for same cloud workloads"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Google Cloud competes for same deals"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "more datacenter buildout implies more GPU demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "networking/silicon supplier benefits from capacity expansion"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "chip fabrication demand tied to AI buildout"
+  }
+ ],
+ "evidence": "we signed multiple large cloud services agreements including one that is expected to contribute more than $30 billion in annual revenue starting in FY28",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

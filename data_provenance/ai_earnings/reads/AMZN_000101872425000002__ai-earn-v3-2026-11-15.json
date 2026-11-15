@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2024 (quarter and fiscal year ended December 31, 2024)",
+  "revenue": "$187.8 billion (Q4), $637.96 billion (FY2024)",
+  "operating_income": "$21.2 billion (Q4), $68.6 billion (FY2024)",
+  "net_income": "$20.0 billion (Q4), $59.2 billion (FY2024)",
+  "eps": "$1.86 diluted (Q4), $5.53 diluted (FY2024)",
+  "operating_cash_flow": "$45.6 billion (Q4), $115.9 billion (TTM)",
+  "capex": "$27.8 billion (Q4), $83.0 billion (TTM, purchases of property and equipment)",
+  "free_cash_flow": "$38.2 billion (TTM, as stated), up from $36.8 billion prior TTM",
+  "cash_and_investments": "$78.8 billion cash and equivalents + $22.4 billion marketable securities = ~$101.2 billion",
+  "total_debt": null,
+  "guidance_next": "Q1 2025 net sales of $151.0B-$155.5B (5%-9% YoY growth, ~$2.1B/150bps unfavorable FX impact); operating income of $14.0B-$18.0B vs $15.3B in Q1 2024"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.2,
+ "own_stock": -0.3,
+ "market": 0.2,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Trainium2 and Project Rainier position AWS silicon as GPU alternative"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "AWS 19% growth and AI buildout intensify cloud competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Competing cloud/AI infrastructure investment race"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS database/AI features (Aurora DSQL, Bedrock) compete with Oracle offerings"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Trainium2 UltraServers compete with AMD accelerators for AI training"
+  }
+ ],
+ "evidence": "Operating income is expected to be between $14.0 billion and $18.0 billion, compared with $15.3 billion in first quarter 2024.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

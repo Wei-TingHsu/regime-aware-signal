@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": 0.15,
+ "uncertainty": -0.1,
+ "own_stock": 0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "no direct effect"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "AMD liquidity supports component purchases"
+  }
+ ],
+ "evidence": "a senior secured asset based line of credit for a principal amount up to $500 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

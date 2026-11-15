@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2015 (quarter and full year ended December 31, 2015)",
+  "revenue": "$35.7 billion (Q4), $107.0 billion (FY2015)",
+  "operating_income": "$1.1 billion (Q4), $2.2 billion (FY2015)",
+  "net_income": "$482 million (Q4), $596 million (FY2015)",
+  "eps": "$1.00 diluted (Q4), $1.25 diluted (FY2015)",
+  "operating_cash_flow": "$11.9 billion (TTM)",
+  "capex": "$4.589 billion (FY2015 purchases of property and equipment)",
+  "free_cash_flow": "$7.3 billion (TTM)",
+  "cash_and_investments": "$15.890 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q1 2016 net sales expected between $26.5B and $29.0B (17%-28% growth); operating income expected between $100M and $700M, vs $255M in Q1 2015"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -0.2,
+ "fcf_trend": 1,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS cloud growth (81% YoY) pressures Azure competitive positioning"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS scale and new regions pressure Google Cloud"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AWS infrastructure expansion implies continued server/chip demand"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS enterprise cloud growth competes with Oracle cloud ambitions"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Data center buildout for AWS supports chip demand"
+  }
+ ],
+ "evidence": "Operating income increased 88% to $1.1 billion in the fourth quarter, compared with operating income of $591 million in fourth quarter 2014",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

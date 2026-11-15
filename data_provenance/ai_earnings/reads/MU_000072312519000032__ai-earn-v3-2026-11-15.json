@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2019 (ended May 30, 2019)",
+  "revenue": "$4.788 billion",
+  "operating_income": "GAAP $1.010 billion; Non-GAAP $1.110 billion",
+  "net_income": "GAAP $840 million; Non-GAAP $1.198 billion",
+  "eps": "GAAP diluted $0.74; Non-GAAP diluted $1.05",
+  "operating_cash_flow": "$2.71 billion",
+  "capex": "$2.21 billion (net of partner funding)",
+  "free_cash_flow": "$504 million (adjusted free cash flow)",
+  "cash_and_investments": "$7.93 billion (cash, marketable investments, restricted cash); net cash position $3.02 billion",
+  "total_debt": "$4.91 billion (current + long-term debt)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -0.3,
+ "fcf_trend": -0.4,
+ "own_stock": -0.2,
+ "market": 0.0,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NAND oversupply pressures pricing across industry"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "IMFT joint venture wind-down, Micron to pay ~$1.4B to acquire Intel's stake"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Broader semiconductor capex cycle context"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Memory demand tied to AI/GPU compute growth mentioned in company description"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Memory used in AI/compute platforms"
+  }
+ ],
+ "evidence": "revenue fell to $4.79 billion from $7.80 billion a year ago, gross margin nearly halved to 38.2%, and the CEO said capex would be cut in fiscal 2020 to improve industry supply-demand balance, signaling a weak near-term memory pricing environment",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

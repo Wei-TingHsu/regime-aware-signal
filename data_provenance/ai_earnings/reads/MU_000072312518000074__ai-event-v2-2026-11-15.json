@@ -1,0 +1,25 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.5,
+ "own_stock": -0.3,
+ "market": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "potential share gain if Micron DRAM/SSD sales blocked in China"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "unrelated foundry, minor relevance via UMC rivalry"
+  }
+ ],
+ "evidence": "The preliminary injunction enjoins Micron\u2019s Chinese subsidiaries from manufacturing, selling, or importing certain Crucial and Ballistix-branded DRAM modules and solid state drives in China.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

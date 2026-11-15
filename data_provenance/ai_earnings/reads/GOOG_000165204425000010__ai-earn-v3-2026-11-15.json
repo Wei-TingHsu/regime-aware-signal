@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2024 (ended December 31, 2024)",
+  "revenue": "$96.469 billion (Q4), up 12% YoY; FY2024 $350.018 billion, up 14%",
+  "operating_income": "$30.972 billion (Q4), 32% margin; FY2024 $112.390 billion, 32% margin",
+  "net_income": "$26.536 billion (Q4); FY2024 $100.118 billion",
+  "eps": "$2.15 diluted (Q4); FY2024 $8.04 diluted",
+  "operating_cash_flow": "$39.113 billion (Q4); FY2024 $125.299 billion",
+  "capex": "$14.276 billion (Q4); FY2024 $52.535 billion",
+  "free_cash_flow": "$24.837 billion (Q4, as stated)",
+  "cash_and_investments": "$95.657 billion total cash, cash equivalents, and marketable securities (as of Dec 31, 2024)",
+  "total_debt": "$10.883 billion long-term debt (as of Dec 31, 2024)",
+  "guidance_next": "Expect to invest approximately $75 billion in capital expenditures in 2025"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Higher capex implies continued GPU/accelerator purchases"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Potential beneficiary of AI infrastructure buildout"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud/AI competitive dynamics in Google Cloud growth"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud infrastructure competition intensifies"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Chip fabrication demand tied to AI infrastructure spend"
+  }
+ ],
+ "evidence": "Total operating income increased 31% and operating margin expanded by 5% percentage points to 32%.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

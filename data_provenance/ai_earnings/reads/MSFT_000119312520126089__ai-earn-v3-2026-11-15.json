@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2020 (quarter ended March 31, 2020)",
+  "revenue": "$35.0 billion, +15% YoY",
+  "operating_income": "$13.0 billion, +25% YoY",
+  "net_income": "$10.8 billion, +22% YoY",
+  "eps": "$1.40 diluted, +23% YoY",
+  "operating_cash_flow": "$17,504 million (quarter)",
+  "capex": "$3,767 million (additions to property and equipment, quarter)",
+  "free_cash_flow": "$13,737 million (17,504 - 3,767)",
+  "cash_and_investments": "$137,626 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$66,610 million (current portion $3,748M + long-term $62,862M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud competitor, Azure strength implies competitive cloud market"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/search competitor"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure's 59% growth pressures enterprise cloud rivals"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "datacenter buildout implies chip/server demand"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "security demand highlighted alongside Microsoft's own security growth"
+  }
+ ],
+ "evidence": "Commercial Cloud revenue generating $13.3 billion, up 39% year over year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

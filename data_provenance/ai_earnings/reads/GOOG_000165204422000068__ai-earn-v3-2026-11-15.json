@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2022 (quarter ended June 30, 2022)",
+  "revenue": "$69,685 million, up 13% YoY (16% constant currency)",
+  "operating_income": "$19,453 million, 28% margin",
+  "net_income": "$16,002 million",
+  "eps": "$1.21 diluted (post 20-for-1 split)",
+  "operating_cash_flow": "$19,422 million (quarter)",
+  "capex": "$6,828 million (quarter)",
+  "free_cash_flow": "$12,594 million (quarter, per company reconciliation)",
+  "cash_and_investments": "$124,997 million total cash, cash equivalents and marketable securities",
+  "total_debt": "$14,734 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.1,
+ "own_stock": -0.4,
+ "market": -0.2,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud and ad market slowdown signals sector-wide pressure"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS rival Google Cloud growth decelerating but still competing for enterprise spend"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "Shared digital ad slowdown evident in Search/YouTube deceleration"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Continued heavy capex/R&D on AI and computing infrastructure"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "Cloud infrastructure competition amid decelerating growth"
+  }
+ ],
+ "evidence": "revenues of $69.7 billion... up 13% versus last year... Operating margin 31% -> 28%... Net income $18,525 -> $16,002 million, Diluted EPS $1.36 -> $1.21",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

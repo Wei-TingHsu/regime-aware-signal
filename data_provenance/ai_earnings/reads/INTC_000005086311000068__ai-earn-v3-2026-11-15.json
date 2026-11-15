@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2011",
+  "revenue": "$12.8B GAAP (up 12% sequentially, 25% YoY)",
+  "operating_income": "$4.2B (up 3% sequentially, 21% YoY)",
+  "net_income": "$3.2B GAAP (up 29% YoY); $3.3B non-GAAP",
+  "eps": "$0.56 GAAP (up 30% YoY); $0.59 non-GAAP",
+  "operating_cash_flow": "over $4.0B",
+  "capex": "$2.7B",
+  "free_cash_flow": "approximately $1.3B (4.0B - 2.7B)",
+  "cash_and_investments": "$11.5B total cash investments (down $10.0B from Q4)",
+  "total_debt": null,
+  "guidance_next": "Q2'11 revenue $12.8B +/- $500M (flat sequentially); gross margin ~61% +/- a couple points; R&D and MG&A ~$3.9B; full-year 2011 gross margin still expected ~63% +/- a few points; full-year R&D/MG&A still ~$15.7B +/- $200M; depreciation ~$5.0B +/- $100M"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.0,
+ "fcf_trend": 0.1,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Intel PC/server share gains from Sandy Bridge ramp"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Strong semiconductor demand signals broader industry health"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Healthy data center and PC demand implies memory demand strength"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "PC client strength tied to Windows ecosystem demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "self"
+  }
+ ],
+ "evidence": "Revenue of $12.8B was up 12% sequentially versus an average historical decline of 8% and was above our expectations.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,19 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.8,
+ "fcf_outlook": 0.8,
+ "uncertainty": -0.8,
+ "own_stock": 0.8,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "pays $1.5B, loses chipset license leverage"
+  }
+ ],
+ "evidence": "Intel will pay NVIDIA licensing fees which in the aggregate will amount to $1.5 billion, payable in annual installments",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

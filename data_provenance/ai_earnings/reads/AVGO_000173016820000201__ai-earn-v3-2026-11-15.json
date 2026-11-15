@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2020 (fiscal quarter ended November 1, 2020) and full fiscal year 2020",
+  "revenue": "$6,467 million (Q4); $23,888 million (FY2020)",
+  "operating_income": null,
+  "net_income": "$1,324 million GAAP (Q4); $2,960 million GAAP (FY2020); $2,865 million non-GAAP (Q4); $9,993 million non-GAAP (FY2020)",
+  "eps": "$2.93 GAAP diluted (Q4); $6.35 non-GAAP diluted (Q4); $6.33 GAAP diluted (FY2020); $22.16 non-GAAP diluted (FY2020)",
+  "operating_cash_flow": "$3,348 million (Q4); $12,061 million (FY2020)",
+  "capex": "$102 million (Q4); $463 million (FY2020)",
+  "free_cash_flow": "$3,246 million (Q4); $11,598 million (FY2020)",
+  "cash_and_investments": "$7,618 million cash and cash equivalents at quarter end",
+  "total_debt": "$41,062 million (current portion $827M + long-term $40,235M)",
+  "guidance_next": "Q1 FY2021 revenue guidance of approximately $6.6 billion (expected +13% YoY, all organic); Adjusted EBITDA guidance of approximately $3.9 billion, or 59% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.6,
+ "own_stock": 0.5,
+ "market": 0.15,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "cloud networking demand cited as growth driver"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "cloud data center networking demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "cloud infrastructure demand for networking chips"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "foundry partner benefiting from Broadcom's semiconductor volume growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competes in networking/broadband/enterprise semiconductor markets where Broadcom reported enterprise softness but overall growth"
+  }
+ ],
+ "evidence": "Revenue of $6,467 million for the fourth quarter... Adjusted EBITDA of $3,827 million for the fourth quarter... Quarterly common stock dividend increased by 11 percent to $3.60 per share",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2013 (quarter ended March 30, 2013)",
+  "revenue": "$12.6 billion",
+  "operating_income": "$2.519 billion",
+  "net_income": "$2.045 billion",
+  "eps": "$0.40 diluted",
+  "operating_cash_flow": null,
+  "capex": "$2.174 billion",
+  "free_cash_flow": null,
+  "cash_and_investments": "$17.073 billion total cash investments",
+  "total_debt": "$13.231 billion (short-term $88M + long-term $13.143B)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": -0.3,
+ "guidance_change": 0,
+ "fcf_trend": -0.3,
+ "own_stock": -0.4,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "weak PC/chip demand environment shared across x86 makers"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel foundry/manufacturing struggles could benefit outsourced fabs"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "soft PC-driven semiconductor demand signals weaker component sales"
+  }
+ ],
+ "evidence": "NET INCOME $2,045 ... down 17%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,43 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.7,
+ "fcf_outlook": -0.4,
+ "uncertainty": 0.8,
+ "own_stock": -0.6,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "could gain China share if Micron banned"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Korean memory rival could gain China share"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "reduced Micron demand if sales impacted"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "potential supply chain disruption for memory-using customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "potential supply chain disruption"
+  }
+ ],
+ "evidence": "the CAC notified critical information infrastructure operators in China to stop using Micron products",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

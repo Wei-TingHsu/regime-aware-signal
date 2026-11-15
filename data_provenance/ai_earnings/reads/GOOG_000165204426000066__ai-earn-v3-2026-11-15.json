@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2026 (quarter ended June 30, 2026)",
+  "revenue": "$119.8 billion (+24% YoY, +23% constant currency)",
+  "operating_income": "$40.77 billion (+30% YoY, 34% margin)",
+  "net_income": "$112.1 billion available to common stockholders (+298% YoY, includes $98.0B net unrealized gain on equity securities)",
+  "eps": "$9.11 diluted (+294% YoY)",
+  "operating_cash_flow": "$39.07 billion (quarter); $84.86 billion (YTD)",
+  "capex": "$44.92 billion (quarter, purchases of property and equipment); $80.60 billion (YTD)",
+  "free_cash_flow": "-$5.86 billion (Q2 OCF $39.07B minus capex $44.92B)",
+  "cash_and_investments": "$242.47 billion total cash, cash equivalents, and marketable securities",
+  "total_debt": "$98.17 billion long-term debt (up from $46.55 billion at Dec 2025)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.3,
+ "own_stock": 0.6,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud acceleration signals broad enterprise AI/cloud demand also benefiting Azure"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Strong cloud growth implies healthy overall hyperscaler AI infrastructure demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Massive capex increase ($44.9B) for AI infrastructure implies continued GPU/accelerator demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Google Cloud TPU systems and custom silicon scaling benefits AVGO as design/supply partner"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Rising inventory and infrastructure capex suggest higher memory component demand"
+  }
+ ],
+ "evidence": "Google Cloud revenues accelerating to 82% growth, driven by demand for AI infrastructure and AI solutions",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

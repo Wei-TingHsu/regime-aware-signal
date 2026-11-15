@@ -1,0 +1,37 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.5,
+ "fcf_outlook": 0.5,
+ "uncertainty": -0.3,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AAPL",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "secures RF component supply for iPhone/iPad/Watch"
+  },
+  {
+   "company": "QCOM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Apple intent to source RF front-end mainly from Broadcom"
+  },
+  {
+   "company": "SWKS",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "loses exclusivity/share in Apple RF front-end supply"
+  },
+  {
+   "company": "QRVO",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "competes for same Apple RF business"
+  }
+ ],
+ "evidence": "Apple intends, but is not required, to source all of its requirements for such RF front end components and modules from the Company",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

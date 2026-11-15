@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2017 (ended December 1, 2016)",
+  "revenue": "$3.97 billion",
+  "operating_income": "$359 million",
+  "net_income": "$180 million (GAAP); $335 million (non-GAAP)",
+  "eps": "$0.16 diluted GAAP; $0.32 diluted non-GAAP",
+  "operating_cash_flow": "$1,138 million",
+  "capex": "$1,288 million (gross); $1.18 billion net of partner funding",
+  "free_cash_flow": "-$150 million (1,138 - 1,288)",
+  "cash_and_investments": "$4.32 billion ($4,169M cash/ST investments + $155M long-term marketable investments)",
+  "total_debt": "$1,155 million current + $8,490 million long-term = $9,645 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0,
+ "fcf_trend": 0.2,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "reason": "NAND pricing/supply dynamics benefit from tight industry supply",
+   "direction": 0.3
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "reason": "semiconductor capex and manufacturing cost trends",
+   "direction": 0.1
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "reason": "potential NAND/memory supplier relationship",
+   "direction": 0.1
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "reason": "memory pricing affects component costs for computing",
+   "direction": 0.1
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "reason": "self-reference, not applicable",
+   "direction": 0
+  }
+ ],
+ "evidence": "\"Positive market momentum, driven by favorable demand trends and limited industry supply, produced solid results for our first quarter\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

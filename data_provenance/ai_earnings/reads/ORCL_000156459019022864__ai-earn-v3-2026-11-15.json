@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and full year FY2019 (ended May 31, 2019)",
+  "revenue": "$11.1 billion Q4; $39.5 billion FY19",
+  "operating_income": "$4.257 billion GAAP Q4 (38% margin); $5.3 billion non-GAAP Q4; $13.5 billion GAAP FY19",
+  "net_income": "$3.740 billion GAAP Q4; $11.083 billion GAAP FY19; $13.1 billion non-GAAP FY19",
+  "eps": "$1.07 GAAP / $1.16 non-GAAP Q4; $2.97 GAAP / $3.52 non-GAAP FY19",
+  "operating_cash_flow": "$14.551 billion FY19 (trailing 4-quarter, GAAP)",
+  "capex": "$1.660 billion Q4; ~$6.4 billion FY19 (sum of quarterly capex)",
+  "free_cash_flow": "$12.891 billion trailing 4-quarter FY19 (down 6% YoY)",
+  "cash_and_investments": "$20.514 billion cash and equivalents plus $17.313 billion marketable securities as of May 31, 2019",
+  "total_debt": "$4.494 billion current notes payable plus $51.673 billion non-current notes payable",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0,
+ "fcf_trend": -0.3,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle cloud infrastructure and ERP gains imply competitive pressure in enterprise cloud"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle Gen2 Cloud Infrastructure positioned against AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "Competes in cloud infrastructure market Oracle targets"
+  }
+ ],
+ "evidence": "non-GAAP operating income grew 7% in constant currency\u2014which drove EPS well above the high end of my guidance",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

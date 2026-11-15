@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY25 (quarter ended Jan 26, 2025) and full fiscal year 2025",
+  "revenue": "$39,331 million (Q4), $130,497 million (FY25)",
+  "operating_income": "$24,034 million GAAP / $25,516 million non-GAAP (Q4)",
+  "net_income": "$22,091 million GAAP / $22,066 million non-GAAP (Q4)",
+  "eps": "$0.89 GAAP diluted / $0.89 non-GAAP diluted (Q4)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$43,210 million",
+  "total_debt": "$8,463 million long-term (no short-term debt)",
+  "guidance_next": "Q1 FY26 revenue expected $43.0B \u00b12%; GAAP/non-GAAP gross margin 70.6%/71.0% \u00b150bps; GAAP/non-GAAP opex ~$5.2B/$3.6B; other income/expense ~$400M income; tax rate 17.0% \u00b11%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Blackwell ramp requires more advanced foundry capacity"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "HBM memory demand tied to Blackwell systems"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVDA's dominant data-center growth pressures AMD's AI GPU share"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Named as cloud partner deploying GB200 systems"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "AWS bringing GB200 systems and DGX Cloud to market"
+  }
+ ],
+ "evidence": "Demand for Blackwell is amazing as reasoning AI adds another scaling law \u2014 increasing compute for training makes models smarter and increasing compute for long thinking makes the answer smarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

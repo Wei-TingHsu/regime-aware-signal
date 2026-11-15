@@ -1,0 +1,50 @@
+{
+ "facts": {
+  "period": "Q3 FY2021 (three months ended Feb 28, 2021)",
+  "revenue": "$10,085 million (+3% YoY)",
+  "operating_income": "GAAP $3,878 million (+10% YoY); Non-GAAP $4,800 million (+10% YoY)",
+  "net_income": "GAAP $5,000 million (+95% YoY); Non-GAAP $3,500 million (+10% YoY)",
+  "eps": "GAAP $1.68 (+113% YoY); Non-GAAP $1.16 (+20% YoY)",
+  "operating_cash_flow": "$14,659 million (trailing 4 quarters)",
+  "capex": "$1,851 million (trailing 4 quarters, Q3); $1,418 million (nine months ended Feb 28, 2021)",
+  "free_cash_flow": "$12,808 million (trailing 4 quarters)",
+  "cash_and_investments": "$22,321 million cash and cash equivalents + $13,543 million marketable securities = $35,864 million",
+  "total_debt": "Notes payable current $5,758 million + non-current $63,541 million = $69,299 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.3,
+ "own_stock": 0.4,
+ "market": 0.1,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle cloud ERP/infrastructure growth competes with Azure/Dynamics"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Gen2 Cloud Infrastructure growth competes with Google Cloud"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "OCI growth >100% competes with AWS"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  }
+ ],
+ "evidence": "GAAP earnings per share was up 113% to $1.68",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

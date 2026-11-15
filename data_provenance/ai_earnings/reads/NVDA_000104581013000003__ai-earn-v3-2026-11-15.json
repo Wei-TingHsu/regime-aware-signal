@@ -1,0 +1,57 @@
+{
+ "facts": {
+  "period": "Q4 and Full Year FY2013 (ended Jan 27, 2013)",
+  "revenue": "$1.1069B Q4 (down 8.1% QoQ, up 16.1% YoY); $4.2802B FY13 (up 7.1% YoY)",
+  "operating_income": "$183.6M Q4 GAAP; $648.2M FY13 GAAP",
+  "net_income": "$174.0M Q4 GAAP; $562.5M FY13 GAAP; Q4 non-GAAP $214.9M; FY13 non-GAAP $728.4M",
+  "eps": "$0.28 GAAP / $0.35 non-GAAP Q4; $0.90 GAAP / $1.17 non-GAAP FY13",
+  "operating_cash_flow": "$451.0M Q4; $824.2M FY13",
+  "capex": "$47.8M Q4; $183.3M FY13 (property, equipment and intangibles)",
+  "free_cash_flow": "$403.3M Q4; $640.9M FY13 (as stated)",
+  "cash_and_investments": "$3,727.9M",
+  "total_debt": null,
+  "guidance_next": "Q1 FY2014 revenue ~$940M +/-2%; GAAP/non-GAAP gross margin flat at 52.9%/53.2%; GAAP opex ~$430M, non-GAAP opex ~$395M; tax rate 16% +/-1pp; D&A ~$59-61M; capex $55-65M; diluted shares ~619M"
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": -1,
+ "fcf_trend": 0,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "GPU/CPU competitor, no direct mention"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "mobile SOC and chipset competitor"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -1,
+   "reason": "lower revenue outlook implies reduced foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Surface RT device uses NVIDIA Tegra"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Android ecosystem for Tegra/SHIELD"
+  }
+ ],
+ "evidence": "Revenue is expected to be $940 million, plus or minus two percent",
+ "period_note": null,
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

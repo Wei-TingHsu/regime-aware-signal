@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2015 (three months ended April 27, 2014)",
+  "revenue": "$1,102.8 million",
+  "operating_income": "$151.4 million (GAAP)",
+  "net_income": "$136.5 million (GAAP); $166.1 million (non-GAAP)",
+  "eps": "$0.24 GAAP diluted; $0.29 non-GAAP diluted",
+  "operating_cash_flow": "$151.0 million",
+  "capex": "$29.1 million (purchase of property, equipment and intangible assets)",
+  "free_cash_flow": "$121.95 million",
+  "cash_and_investments": "$4,347.8 million",
+  "total_debt": "$1,363.3 million long-term debt",
+  "guidance_next": "Q2 FY2015 revenue expected to be $1.1 billion, plus or minus 2%; GAAP gross margin ~53.7%, non-GAAP ~54.0%; GAAP opex ~$457 million, non-GAAP opex ~$414 million; tax rate ~20% +/-1%; capex ~$40 million"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NVIDIA GPU share gains in gaming and datacenter"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "patent license revenue of $66M from Intel agreement"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "GRID/VDI ecosystem via VMware, not directly Microsoft but cloud infra relevant"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "OpenPOWER Foundation collaboration with IBM/Google on server CPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "foundry partner benefiting from GPU volume growth"
+  }
+ ],
+ "evidence": "Revenue is expected to be $1.1 billion, plus or minus two percent.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

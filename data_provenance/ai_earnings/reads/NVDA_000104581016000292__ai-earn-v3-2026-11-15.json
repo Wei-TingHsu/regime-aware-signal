@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2017 (quarter ended July 31, 2016)",
+  "revenue": "$1.428 billion, up 24% YoY and 9% QoQ",
+  "operating_income": "GAAP $317M; non-GAAP $382M",
+  "net_income": "GAAP $253M; non-GAAP $313M",
+  "eps": "GAAP diluted $0.40; non-GAAP diluted $0.53",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$4,879 million (cash, cash equivalents and marketable securities)",
+  "total_debt": "Convertible short-term debt $1,428 million plus long-term capital lease obligations $8 million",
+  "guidance_next": "Q3 FY17: revenue ~$1.68B \u00b12%; GAAP/non-GAAP gross margin 57.8%/58.0% \u00b150bps; GAAP opex ~$530M, non-GAAP opex ~$465M; GAAP/non-GAAP tax rate ~21% \u00b11%; capex ~$35-45M"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.85,
+ "fcf_trend": 0.3,
+ "own_stock": 0.85,
+ "market": 0.3,
+ "ai_demand": 0.85,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "NVIDIA's Pascal launch and gaming/datacenter strength pressures AMD's GPU/CPU share"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVIDIA datacenter/deep-learning momentum (Tesla P100) challenges Intel's server compute dominance"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Foundry partner benefits from higher Pascal GPU volumes and strong revenue growth"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Rising GPU/datacenter demand implies more memory content purchased from suppliers like Micron"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Growing deep-learning/datacenter demand signals more GPU purchases by major cloud/AI customers"
+  }
+ ],
+ "evidence": "Record revenue of $1.43 billion, up 24 percent from a year ago - growth across all platforms",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

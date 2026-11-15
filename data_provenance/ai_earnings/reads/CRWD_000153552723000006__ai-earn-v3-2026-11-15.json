@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q4 and Full Year FY2023 (quarter and year ended January 31, 2023)",
+  "revenue": "Q4: $637.4 million (+48% YoY); FY: $2.24 billion (+54% YoY)",
+  "operating_income": "Q4: GAAP loss $(61.5)M, Non-GAAP income $95.6M; FY: GAAP loss $(190.1)M, Non-GAAP income $355.6M",
+  "net_income": "Q4: GAAP net loss $(47.5)M, Non-GAAP net income $111.6M; FY: GAAP net loss $(183.2)M, Non-GAAP net income $368.4M",
+  "eps": "Q4: GAAP $(0.20), Non-GAAP $0.47; FY: GAAP $(0.79), Non-GAAP $1.54",
+  "operating_cash_flow": "Q4: $273.3M; FY: $941.0M",
+  "capex": "FY: $235.0M property & equipment + $29.1M capitalized software \u2248 $264.1M",
+  "free_cash_flow": "Q4: $209.5M (record); FY: $676.8M",
+  "cash_and_investments": "$2.71 billion cash, equivalents and short-term investments (Jan 31, 2023)",
+  "total_debt": "$741.0 million long-term debt",
+  "guidance_next": "Q1 FY24 revenue $674.9-$678.2M, Non-GAAP operating income $107.1-$109.5M, Non-GAAP net income $121.1-$123.5M, Non-GAAP diluted EPS $0.50-$0.51; FY24 revenue $2,955.1-$3,014.8M, Non-GAAP operating income $474.0-$518.7M, Non-GAAP net income $535.9-$580.7M, Non-GAAP diluted EPS $2.21-$2.39"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.9,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "CrowdStrike claims AI-driven share gains vs. Microsoft Defender in endpoint security"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Cloud workload security overlap, no direct commentary"
+  }
+ ],
+ "evidence": "Revenue was $637.4 million, a 48% increase... record cash flow from operations of $273 million and record free cash flow of $209 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

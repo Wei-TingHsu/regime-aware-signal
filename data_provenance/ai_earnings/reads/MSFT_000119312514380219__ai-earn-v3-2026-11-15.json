@@ -1,0 +1,50 @@
+{
+ "facts": {
+  "period": "Q1 FY2015 (quarter ended September 30, 2014)",
+  "revenue": "$23.20 billion",
+  "operating_income": "$5.84 billion (GAAP, includes $1.14B restructuring/integration charges)",
+  "net_income": "$4.54 billion",
+  "eps": "$0.54 diluted (GAAP)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$89.19 billion total cash, cash equivalents, and short-term investments",
+  "total_debt": "$3.5B short-term debt + $1.748B current portion of long-term debt + long-term debt (amount cut off)",
+  "guidance_next": "No specific numeric guidance given in release; stated that forward-looking guidance would be provided on the earnings call"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": 0,
+ "fcf_trend": 0.1,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud/commercial momentum (Azure, O365) competes with Google Cloud"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Azure growth (128% commercial cloud) competes with AWS"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "SQL Server and enterprise software growth pressures Oracle"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Surface and device hardware growth implies component demand"
+  }
+ ],
+ "evidence": "Devices and Consumer revenue grew 47% to $10.96 billion... Commercial cloud revenue grew 128% driven by Office 365, Azure and Dynamics CRM.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

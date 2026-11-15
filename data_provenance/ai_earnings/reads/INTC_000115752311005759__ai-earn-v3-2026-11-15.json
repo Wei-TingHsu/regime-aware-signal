@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2011 (ended Oct 1, 2011)",
+  "revenue": "$14,233M (vs guided $14.0B +/-500M)",
+  "operating_income": "$4,785M",
+  "net_income": "$3,468M",
+  "eps": "$0.65 diluted",
+  "operating_cash_flow": null,
+  "capex": "$2,713M (quarter)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$15,192M total cash investments",
+  "total_debt": "$7,076M long-term debt + $66M short-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Intel revenue/margin beat implies competitive strength"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Intel 22nm ramp discussion touches foundry competition"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "mentions flash memory equity investments exposure"
+  }
+ ],
+ "evidence": "NET REVENUE $14,233 ... vs prior guidance of $14.0B +/- $500M, beating the high end",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.2,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.0,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "TSMC continued capex expansion in advanced capacity"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "capacity expansion supports future chip supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "capacity expansion supports future chip supply"
+  }
+ ],
+ "evidence": "Approved capital appropriations of approximately US$9,234.73 million for purposes including: 1) Installation and expansion of advanced technology capacity",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

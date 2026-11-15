@@ -1,0 +1,19 @@
+{
+ "event_type": "restructuring",
+ "material": 0.05,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.1,
+ "own_stock": 0.05,
+ "market": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "online retail shift marginal"
+  }
+ ],
+ "evidence": "The closing of Microsoft Store physical locations will result in a pre-tax charge of approximately $450M, or $0.05 per share",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

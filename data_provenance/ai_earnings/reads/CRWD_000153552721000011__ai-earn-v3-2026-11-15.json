@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2022 (ended April 30, 2021)",
+  "revenue": "$302.8 million (GAAP total revenue)",
+  "operating_income": "Non-GAAP income from operations $29.8 million; GAAP loss from operations $(31.3) million",
+  "net_income": "Non-GAAP net income attributable to CrowdStrike $23.3 million; GAAP net loss $(85.0) million (incl. $48.8M Humio-related tax costs)",
+  "eps": "Non-GAAP diluted EPS $0.10; GAAP diluted EPS $(0.38)",
+  "operating_cash_flow": "$147.5 million (record)",
+  "capex": "$25.8 million property & equipment + $4.4 million capitalized internal-use software = ~$30.2 million",
+  "free_cash_flow": "$117.3 million (record), as stated",
+  "cash_and_investments": "$1.68 billion cash and cash equivalents",
+  "total_debt": "$738.4 million long-term debt",
+  "guidance_next": "Q2 FY22 revenue $318.3-$324.4M, Non-GAAP income from operations $26.3-$30.7M, Non-GAAP net income $17.7-$22.1M, Non-GAAP diluted EPS $0.07-$0.09; Full Year FY22 revenue $1,347.0-$1,365.7M, Non-GAAP income from operations $115.7-$129.6M, Non-GAAP net income $83.1-$97.0M, Non-GAAP diluted EPS $0.35-$0.41"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "product integration with Google Cloud security"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "endpoint security market share competition"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "cloud workload protection overlap"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "no direct mention"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "no direct mention"
+  }
+ ],
+ "evidence": "Revenue was $302.8 million, a 70% increase... Delivers record operating and free cash flow for the second consecutive quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

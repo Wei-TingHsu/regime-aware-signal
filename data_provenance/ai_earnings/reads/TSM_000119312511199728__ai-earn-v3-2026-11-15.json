@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2011 (quarter ended June 30, 2011)",
+  "revenue": "NT$110.51 billion",
+  "operating_income": "NT$37.866 billion (income from operations)",
+  "net_income": "NT$35.95 billion",
+  "eps": "NT$1.39 (US$0.24 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q3 2011: revenue expected NT$102-104 billion; gross profit margin 40.5-42.5%; operating profit margin 28-30%; computer and consumer segments to decline more than communications segment, industrial/standard segment to increase"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.8,
+ "fcf_trend": 0,
+ "own_stock": -0.7,
+ "market": -0.5,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.3,
+   "reason": "foundry customer exposed to weaker wafer demand outlook"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.3,
+   "reason": "foundry customer exposed to weaker wafer demand outlook"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "industry-wide semiconductor demand signal weak"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.3,
+   "reason": "communications segment slowdown affects comms chip customers"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "broader chip inventory correction and weak end-demand signal"
+  }
+ ],
+ "evidence": "the outlook of the global economic condition has weakened in the last few months, which has added volatility to the supply chain inventory, and in turn, has significantly impacted the demand for our wafers in the third quarter of 2011",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

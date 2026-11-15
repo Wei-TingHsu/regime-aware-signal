@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 FY2015 (three months ended November 30, 2014)",
+  "revenue": "$9.6 billion total revenues, up 3% YoY (7% constant currency)",
+  "operating_income": "GAAP $3,542 million (37% margin, up 4%); Non-GAAP $4.4 billion (46% margin, up 3%)",
+  "net_income": "GAAP $2,502 million (down 2%); Non-GAAP $3.1 billion (down 1%)",
+  "eps": "GAAP diluted $0.56 (flat YoY); Non-GAAP diluted $0.69 (up 1%)",
+  "operating_cash_flow": "Trailing twelve months GAAP operating cash flow $15,273 million; six months ended Nov 30, 2014: $7,790 million",
+  "capex": "Six months ended Nov 30, 2014: $426 million; trailing 4-quarter Q2 capex $727 million",
+  "free_cash_flow": "$14,546 million trailing four quarters (0% growth YoY)",
+  "cash_and_investments": "$16,153 million cash and equivalents + $28,580 million marketable securities = $44,733 million",
+  "total_debt": "$32,456 million notes payable and other non-current borrowings (no current notes payable)",
+  "guidance_next": "Ellison: 'By Q4 of this year we expect our new cloud bookings to exceed $250 million. Next fiscal year our new cloud bookings will be well over the billion dollars mark.'"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0.4,
+ "fcf_trend": -0.2,
+ "own_stock": 0.1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/SaaS competitor, bookings growth comparison"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "IaaS/cloud infrastructure competitor"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud platform competitor"
+  }
+ ],
+ "evidence": "Total Q2 new cloud bookings grew at a rate of more than 140%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

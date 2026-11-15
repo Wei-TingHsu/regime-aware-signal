@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2020 (three months ended June 30, 2020)",
+  "revenue": "$18.687 billion total (10% ad growth, 11% total growth YoY)",
+  "operating_income": "$5.963 billion",
+  "net_income": "$5.178 billion",
+  "eps": "$1.80 diluted",
+  "operating_cash_flow": "$3.878 billion (quarter); $14.878 billion (six months)",
+  "capex": "$3.36 billion (including finance lease principal payments)",
+  "free_cash_flow": "$514 million (quarter, impacted by $5.0B FTC settlement paid in April 2020); $7.856 billion (six months)",
+  "cash_and_investments": "$58.24 billion (cash, equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": "Q3 2020 DAUs/MAUs expected flat or slightly down vs Q2 in most regions; Q3 ad revenue YoY growth rate expected roughly similar to July's ~10% run-rate; FY2020 total expenses narrowed to $52-55B (from $52-56B); FY2020 capex raised to ~$16B (high end of prior $14-16B range); FY2020 tax rate expected mid-teens (down from high-teens)"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.2,
+ "fcf_trend": -0.2,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "reason": "digital ad market read-through on recovery trends",
+   "direction": 0.2
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "reason": "shares digital ad market, macro ad demand signal",
+   "direction": 0.1
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "reason": "large tech peer, macro recovery signal",
+   "direction": 0.1
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "reason": "capex increase for data center buildout implies hardware/chip demand",
+   "direction": 0.1
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "reason": "raised capex guidance signals continued data center infrastructure spend",
+   "direction": 0.1
+  }
+ ],
+ "evidence": "In the first three weeks of July, our year-over-year ad revenue growth rate was approximately in\u2011line with our second quarter 2020 year-over-year ad revenue growth rate of 10%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,25 @@
+{
+ "event_type": "product or technology",
+ "material": 0.15,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.1,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel claims process leadership over foundry rivals"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel 14nm yield progress strengthens process lead vs AMD"
+  }
+ ],
+ "evidence": "Yield is now in healthy range with further improvements coming",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

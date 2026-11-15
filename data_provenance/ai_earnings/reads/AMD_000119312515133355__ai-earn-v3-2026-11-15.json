@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2015 (ended March 28, 2015)",
+  "revenue": "$1.03 billion, down 17% sequentially, down 26% YoY",
+  "operating_income": "GAAP operating loss $137M; Non-GAAP operating loss $30M",
+  "net_income": "GAAP net loss $180M; Non-GAAP net loss $73M",
+  "eps": "GAAP loss per share $(0.23); Non-GAAP loss per share $(0.09)",
+  "operating_cash_flow": "$(173) million (net cash used in operating activities)",
+  "capex": "$22 million",
+  "free_cash_flow": "Non-GAAP free cash flow $(195) million",
+  "cash_and_investments": "$906 million, down $134 million sequentially",
+  "total_debt": "$2.27 billion, up $56 million sequentially",
+  "guidance_next": "For Q2 2015, AMD expects revenue to decrease 3 percent, plus or minus 3 percent, sequentially"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.6,
+ "fcf_trend": -0.6,
+ "own_stock": 0.3,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AMD PC weakness implies relative stability for Intel in CPUs"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AMD GPU/channel weakness may cede share in graphics"
+  },
+  {
+   "company": "GLOBALFOUNDRIES",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Wafer purchase commitment of ~$1B maintained despite weak demand"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Semiconductor sector sentiment tied to PC demand trends"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Foundry demand read-through from AMD's wafer commitments"
+  }
+ ],
+ "evidence": "revenue to decrease 3 percent, plus or minus 3 percent, sequentially, a marked improvement from the prior quarter's 17 percent sequential decline",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

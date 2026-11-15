@@ -1,0 +1,25 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.15,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.2,
+ "own_stock": -0.1,
+ "market": 0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "not involved"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "not involved"
+  }
+ ],
+ "evidence": "Pillar Data is directly and indirectly majority-owned and controlled by Lawrence J. Ellison, Oracle Corporation\u2019s Chief Executive Officer, director and largest stockholder.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

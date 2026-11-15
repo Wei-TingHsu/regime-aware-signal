@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY2019 (fiscal year ended November 3, 2019)",
+  "revenue": "$5,776 million (Q4); $22,597 million (FY2019)",
+  "operating_income": "$1,054 million GAAP (Q4, 18.2% of revenue); $3,018 million non-GAAP (Q4, 52.3%); $3,444 million GAAP (FY19); $11,929 million non-GAAP (FY19)",
+  "net_income": "$847 million GAAP (Q4); $2,724 million GAAP (FY19); $2,391 million non-GAAP (Q4); $9,452 million non-GAAP (FY19)",
+  "eps": "$1.97 GAAP diluted (Q4); $6.43 GAAP diluted (FY19); $5.39 non-GAAP diluted (Q4); $21.29 non-GAAP diluted (FY19)",
+  "operating_cash_flow": "$2,479 million (Q4); $9,697 million (FY19)",
+  "capex": "$96 million (Q4, implied from FCF calc)",
+  "free_cash_flow": "$2,383 million (Q4 non-GAAP); $9,265 million (FY19 non-GAAP)",
+  "cash_and_investments": "$5,055 million cash and cash equivalents at quarter end",
+  "total_debt": null,
+  "guidance_next": "FY2020 revenue guidance of $25 billion plus or minus $500 million (up 11% at midpoint); FY2020 Adjusted EBITDA guidance of $13.75 billion plus or minus $250 million (55% of revenue at midpoint)"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.6,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "Semiconductor cyclicality commentary relevant to peer chipmakers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "Broad semiconductor cycle bottoming signal"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Semiconductor cycle bottoming suggests broader recovery"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Foundry partner benefits from semiconductor recovery outlook"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "Infrastructure software segment overlap via CA/Symantec integration"
+  }
+ ],
+ "evidence": "Fiscal year 2020 revenue guidance of $25 billion plus or minus $500 million, up 11 percent from fiscal year 2019 at the midpoint of guidance",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

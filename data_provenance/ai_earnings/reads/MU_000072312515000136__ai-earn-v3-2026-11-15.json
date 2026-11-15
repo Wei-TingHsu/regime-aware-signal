@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2016 (ended December 3, 2015)",
+  "revenue": "$3.35 billion",
+  "operating_income": "$232 million",
+  "net_income": "$206 million (GAAP); $249 million (non-GAAP)",
+  "eps": "$0.19 diluted (GAAP); $0.24 diluted (non-GAAP)",
+  "operating_cash_flow": "$1.12 billion ($1,120 million)",
+  "capex": "$990 million",
+  "free_cash_flow": "$130 million (1,120 - 990)",
+  "cash_and_investments": "$5.41 billion (cash & short-term investments $3,641M + long-term marketable investments $1,771M)",
+  "total_debt": "$7,377 million (current debt $1,051M + long-term debt $6,326M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.5,
+ "own_stock": -0.5,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "shared NAND pricing pressure"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "joint 3D NAND venture exposed to same pricing declines"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "DRAM ASP weakness affects all DRAM makers"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "weaker memory capex could soften foundry/equipment demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "lower memory pricing could reflect soft PC/server demand"
+  }
+ ],
+ "evidence": "Revenues for the first quarter of fiscal 2016 were $3.35 billion and were 7 percent lower compared to the fourth quarter of fiscal 2015 and 27 percent lower compared to the first quarter of fiscal 2015.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

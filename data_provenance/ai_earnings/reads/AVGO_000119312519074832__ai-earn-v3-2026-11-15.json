@@ -1,0 +1,57 @@
+{
+ "facts": {
+  "period": "Q1 FY2019 (ended Feb 3, 2019)",
+  "revenue": "$5,789 million",
+  "operating_income": "GAAP $555 million (9.6% of revenue); Non-GAAP $3,052 million (52.7% of revenue)",
+  "net_income": "GAAP $471 million; Non-GAAP $2,446 million",
+  "eps": "GAAP diluted $1.12; Non-GAAP diluted $5.55",
+  "operating_cash_flow": "$2,132 million",
+  "capex": "$99 million",
+  "free_cash_flow": "$2,033 million",
+  "cash_and_investments": "$5,093 million cash and cash equivalents",
+  "total_debt": null,
+  "guidance_next": "FY2019 net revenue ~$24,500 million (maintained); GAAP operating margin 17.6%, Non-GAAP operating margin 51.0%; capex ~$550 million; depreciation ~$600 million; intangible amortization ~$5,235 million; targeting ~$12 billion capital return in FY2019"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0,
+ "fcf_trend": 0.6,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Semiconductor demand softness noted in China"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Semiconductor peer exposed to similar China/wireless cycle"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "n/a"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "CA Technologies software integration competes in enterprise software"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Foundry partner exposed to semiconductor demand slowdown in China/wireless"
+  }
+ ],
+ "evidence": "Maintaining fiscal year 2019 revenue outlook of $24.5 billion",
+ "notes": null,
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

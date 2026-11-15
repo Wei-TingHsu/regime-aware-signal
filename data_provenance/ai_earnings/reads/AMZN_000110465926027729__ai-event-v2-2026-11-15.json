@@ -1,0 +1,26 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.1,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "peer hyperscaler capex financing comparison"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "peer hyperscaler capex financing comparison"
+  }
+ ],
+ "evidence": "the estimated net proceeds from the offering were approximately $36.813 billion",
+ "guidance_notes": "Large debt issuance (~$36.9B) to fund heavy 2026 capex (~$200B guided), first-time significant debt load (baseline had none), modestly increases leverage and interest costs but supports capex plan; routine shelf-registered offering, largely expected given capex scale.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

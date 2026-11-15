@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2017 (three months ended March 31, 2017)",
+  "revenue": "$35.7 billion (up 23% YoY)",
+  "operating_income": "$1.005 billion (down 6% YoY from $1.071B)",
+  "net_income": "$724 million",
+  "eps": "$1.48 diluted ($1.52 basic)",
+  "operating_cash_flow": "$17.6 billion TTM (up 53% YoY); quarterly figure not separately highlighted ($-1.59B GAAP operating cash flow for the quarter per cash flow statement)",
+  "capex": "$1.861 billion (purchases of property and equipment, three months); $7.417B TTM",
+  "free_cash_flow": "$10.2 billion TTM (up from $6.7B); free cash flow less lease principal repayments $6.2B; less finance lease and capital lease assets acquired $3.3B",
+  "cash_and_investments": "$15.44B cash and cash equivalents + $6.091B marketable securities = ~$21.5B at March 31, 2017",
+  "total_debt": "$7.691 billion long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AWS growth and enterprise wins (Snap $1B deal) underscore cloud competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS momentum pressures rival cloud providers"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS enterprise migrations (Dunkin', Liberty Mutual) highlight cloud share shift from legacy IT"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AWS capacity expansion implies continued infrastructure/chip demand"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Cloud security relevance as AWS scales enterprise adoption"
+  }
+ ],
+ "evidence": "Operating cash flow increased 53% to $17.6 billion for the trailing twelve months... Free cash flow increased to $10.2 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

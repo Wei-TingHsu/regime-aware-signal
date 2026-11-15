@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.2,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "strong foundry demand signals healthy chip cycle"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from TSMC capacity/demand strength"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC share gains vs Intel foundry"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "foundry customer benefits from strong TSMC output"
+  }
+ ],
+ "evidence": "revenues for September 2014 were approximately NT$74.85 billion, a increase of 8.0 percent from August 2014 and an increase of 35.1 percent over September 2013",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2017 (quarter ended September 30, 2017)",
+  "revenue": "$10,328 million (up 47% YoY)",
+  "operating_income": "$5,122 million (operating margin 50%)",
+  "net_income": "$4,707 million (up 79% YoY)",
+  "eps": "$1.59 diluted (up 77% YoY)",
+  "operating_cash_flow": "$6,128 million",
+  "capex": "$1,755 million (purchases of property and equipment)",
+  "free_cash_flow": "$4,373 million",
+  "cash_and_investments": "$38.29 billion (cash, cash equivalents, and marketable securities)",
+  "total_debt": null,
+  "guidance_next": "No specific numeric guidance given; qualitative statement that increased investment in security 'will impact our profitability'"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.8,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Strong digital ad growth signals healthy online ad market broadly"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Shared strength in tech/ad-adjacent digital spending environment"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broad tech sector momentum reflected in mega-cap results"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Rising capex ($1.76B) implies continued infrastructure/datacenter hardware spend"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Facebook's growing data center capex benefits server chip suppliers"
+  }
+ ],
+ "evidence": "Income from operations $5,122 million, up 64% year-over-year, with diluted EPS of $1.59, up 77% year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

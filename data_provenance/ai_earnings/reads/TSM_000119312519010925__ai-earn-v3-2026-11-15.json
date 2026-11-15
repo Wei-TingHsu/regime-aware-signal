@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2018 (quarter ended Dec 31, 2018)",
+  "revenue": "NT$289.77 billion (US$9.40 billion)",
+  "operating_income": "NT$107.124 billion (operating margin 37.0%)",
+  "net_income": "NT$99.984 billion",
+  "eps": "NT$3.86 (US$0.63 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "1Q19 revenue expected US$7.3-7.4 billion; gross margin 43-45%; operating margin 31-33% (at NT$30.8/US$); 2019 capex budget expected US$10-11 billion"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.75,
+ "fcf_trend": -0.2,
+ "own_stock": -0.6,
+ "market": -0.5,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.4,
+   "reason": "TSMC foundry customer; weak chip demand/inventory glut signals soft near-term orders"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.4,
+   "reason": "relies on TSMC advanced nodes; cites HPC demand but overall outlook weak"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "TSMC weakness in mobile/macro may relatively favor Intel's own fabs if foundry demand soft"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.3,
+   "reason": "major TSMC customer exposed to same inventory/mobile slowdown"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "semiconductor supply chain inventory correction implies broader memory/chip demand softness"
+  }
+ ],
+ "evidence": "we anticipate our business will be dampened by the overall weakening of the macroeconomic outlook, mobile product seasonality, and high levels of inventory in the semiconductor supply chain",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

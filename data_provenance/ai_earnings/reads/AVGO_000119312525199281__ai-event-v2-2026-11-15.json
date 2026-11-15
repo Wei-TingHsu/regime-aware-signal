@@ -1,0 +1,37 @@
+{
+ "event_type": "leadership change",
+ "material": 0.3,
+ "fcf_outlook": 0.0,
+ "uncertainty": -0.3,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Extended Tan tenure strengthens AVGO's custom AI silicon push against GPU incumbents"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Continued AI accelerator growth supports foundry demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "Key custom XPU customer benefits from stable leadership continuity"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "AI semiconductor cycle read-through"
+  }
+ ],
+ "evidence": "the independent members of the Board approved the Tan PSU Award ... to incentivize Mr. Tan to extend his leadership of the Company through fiscal 2030",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,25 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.6,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.3,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "DRAM consolidation reduces competitive supply overlap"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Micron gains full control of DRAM capacity, strengthening scale vs rivals"
+  }
+ ],
+ "evidence": "Micron estimates...that the aggregate consideration payable in the Share Swap for Inotera shares not already owned by Micron or its subsidiaries will be approximately US$4.0 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

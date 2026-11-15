@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2019 (three months ended July 29, 2018)",
+  "revenue": "$3,123 million (GAAP and non-GAAP)",
+  "operating_income": "$1,157 million GAAP; $1,290 million non-GAAP",
+  "net_income": "$1,101 million GAAP; $1,210 million non-GAAP",
+  "eps": "$1.76 diluted GAAP; $1.94 diluted non-GAAP",
+  "operating_cash_flow": "$913 million",
+  "capex": "$128 million (purchase of property, equipment and intangible assets)",
+  "free_cash_flow": "$785 million",
+  "cash_and_investments": "$7,943 million",
+  "total_debt": "$1,987 million long-term debt plus $14 million convertible short-term debt",
+  "guidance_next": "Q3 FY2019 outlook: GAAP gross margin 62.6% (non-GAAP 62.8%); GAAP operating expenses ~$870 million (non-GAAP ~$730 million)"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.1,
+ "own_stock": -0.1,
+ "market": 0.1,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVIDIA GPU dominance in datacenter/supercomputing pressures AMD's position"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Datacenter GPU growth challenges Intel's CPU-centric compute share"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Google Cloud integrating NVIDIA Tesla P4 GPUs for AI inference"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "AWS used for fastest AI training time with NVIDIA V100 GPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Manufacturing partner benefiting from strong GPU demand growth"
+  }
+ ],
+ "evidence": "Datacenter revenue was $760 million, up 83 percent from a year ago and up 8 percent sequentially, led by strong sales of our Volta architecture products",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "loses JV stake, ends joint 3D XPoint development, becomes wafer customer"
+  }
+ ],
+ "evidence": "Micron anticipates no meaningful impact to overall financial results or changes to its Fiscal 2019 capital expenditures and long-term capital expenditure target.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

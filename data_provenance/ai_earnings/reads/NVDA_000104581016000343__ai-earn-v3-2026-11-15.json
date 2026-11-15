@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2017 (three months ended October 30, 2016)",
+  "revenue": "$2.004 billion GAAP, up 54% YoY and 40% QoQ",
+  "operating_income": "$639 million GAAP; $708 million non-GAAP",
+  "net_income": "$542 million GAAP; $570 million non-GAAP",
+  "eps": "$0.83 GAAP diluted; $0.94 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$6,671 million (cash, equivalents and marketable securities)",
+  "total_debt": "$2,993 million (convertible short-term debt $1,011M + long-term debt $1,982M)",
+  "guidance_next": "Q4 FY17: revenue ~$2.10B \u00b12%; GAAP/non-GAAP gross margin 59.0%/59.2% \u00b150bps; GAAP opex ~$572M, non-GAAP opex ~$500M; GAAP/non-GAAP tax rate ~20% \u00b11%; capex ~$45-55M"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVIDIA's dominant GPU/AI growth pressures AMD's competitive position"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Datacenter AI momentum shifts compute spend toward GPUs over CPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Higher NVIDIA volumes imply increased foundry demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cited as cloud partner offering NVIDIA GPU deep learning platform"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cited as cloud partner deploying NVIDIA GPUs for AI workloads"
+  }
+ ],
+ "evidence": "We had a breakout quarter - record revenue, record margins and record earnings were driven by strength across all product lines",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

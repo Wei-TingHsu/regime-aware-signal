@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.2,
+ "own_stock": -0.3,
+ "market": -0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "weaker foundry demand signals broader chip slowdown"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "soft semiconductor demand environment"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "shared exposure to chip cycle downturn"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSMC weakness could relatively favor Intel's own fabs"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "memory/semiconductor cycle softness read-through"
+  }
+ ],
+ "evidence": "revenues for December 2018 were approximately NT$89.83 billion, a decrease of 8.7 percent from November 2018",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

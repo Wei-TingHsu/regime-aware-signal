@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2018 (quarter ended September 30, 2018)",
+  "revenue": "$56.6 billion (up 29% YoY)",
+  "operating_income": "$3.724 billion (vs $347 million in Q3 2017)",
+  "net_income": "$2.883 billion (vs $256 million in Q3 2017)",
+  "eps": "$5.75 diluted (vs $0.52 in Q3 2017)",
+  "operating_cash_flow": "$26.604 billion (trailing twelve months, up 57% YoY)",
+  "capex": "$13.312 billion (trailing twelve months, purchases of property and equipment)",
+  "free_cash_flow": "$15.4 billion (trailing twelve months, up from $8.0 billion)",
+  "cash_and_investments": "Cash, cash equivalents and restricted cash of $21.032 billion at period end",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.8,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS growth (43% YoY) and margin expansion pressures Azure competitive positioning"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS cloud dominance and profitability growth challenges Google Cloud"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS scale and enterprise cloud growth pressures Oracle cloud ambitions"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AWS capacity expansion and AI/ML investments imply continued chip demand"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader cloud infrastructure growth signals healthy enterprise IT/security spending environment"
+  }
+ ],
+ "evidence": "Operating income increased to $3.7 billion in the third quarter, compared with operating income of $347 million in third quarter 2017",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

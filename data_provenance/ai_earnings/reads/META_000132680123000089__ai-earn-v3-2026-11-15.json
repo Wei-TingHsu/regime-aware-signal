@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2023 (quarter ended June 30, 2023)",
+  "revenue": "$31,999 million, +11% YoY",
+  "operating_income": "$9,392 million, 29% operating margin",
+  "net_income": "$7,788 million",
+  "eps": "$2.98 diluted",
+  "operating_cash_flow": "$17,309 million (quarter); $31,307 million (six months)",
+  "capex": "$6,216 million (property & equipment purchases); $6.35B including finance lease principal payments",
+  "free_cash_flow": "$10.96 billion (as stated)",
+  "cash_and_investments": "$53.45 billion (cash, equivalents, and marketable securities)",
+  "total_debt": "$18.38 billion long-term debt",
+  "guidance_next": "Q3 2023 revenue $32-34.5B; FY2023 total expenses $88-91B (raised from $86-90B due to legal expenses, includes ~$4B restructuring); FY2023 capex lowered to $27-30B (from $30-33B); tax rate similar to Q2; 2024 capex and expenses expected to grow, driven by AI infrastructure investment"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.7,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Ad market share and engagement strength signal competitive pressure"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Overlapping digital ad spend competition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Competing AI investment narrative (Llama 2 vs Copilot)"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Meta signals 2024 capex growth driven by AI servers/data centers"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Networking/infrastructure supplier benefiting from data center buildout"
+  }
+ ],
+ "evidence": "We expect third quarter 2023 total revenue to be in the range of $32-34.5 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

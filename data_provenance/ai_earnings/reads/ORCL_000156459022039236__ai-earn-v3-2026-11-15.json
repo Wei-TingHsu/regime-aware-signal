@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2023 (quarter ended November 30, 2022)",
+  "revenue": "$12.3 billion, up 18% YoY in USD, up 25% constant currency",
+  "operating_income": "GAAP $3.071 billion (25% margin); Non-GAAP $5.086 billion (41% margin)",
+  "net_income": "GAAP $1.741 billion; Non-GAAP $3.312 billion",
+  "eps": "GAAP diluted $0.63; Non-GAAP diluted $1.21",
+  "operating_cash_flow": "$15.073 billion trailing twelve months",
+  "capex": "$6.678 billion trailing twelve months (quarterly capex $4.154 billion for six months ended Nov 30, 2022)",
+  "free_cash_flow": "$8.395 billion trailing twelve months (up 18% YoY)",
+  "cash_and_investments": "$6.813 billion cash and cash equivalents plus $537 million marketable securities as of Nov 30, 2022",
+  "total_debt": "$9.746 billion current notes payable + $81.173 billion non-current notes payable = ~$90.9 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Oracle cloud infrastructure growth competes directly with Azure"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "OCI growth of 59% constant currency competes with AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Cloud infrastructure growth competes with Google Cloud"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "OCI capacity expansion implies continued GPU/chip demand"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Enterprise software/cloud peer, limited direct read-through"
+  }
+ ],
+ "evidence": "total revenue grew 25% in constant currency\u2014exceeding the high end of our guidance by more than $200 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

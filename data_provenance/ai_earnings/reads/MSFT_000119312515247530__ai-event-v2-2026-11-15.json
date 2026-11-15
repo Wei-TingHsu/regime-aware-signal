@@ -1,0 +1,19 @@
+{
+ "event_type": "restructuring",
+ "material": 0.6,
+ "fcf_outlook": -0.1,
+ "uncertainty": -0.2,
+ "own_stock": 0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Android gains as Windows Phone shrinks"
+  }
+ ],
+ "evidence": "the company will record an impairment charge of approximately $7.6 billion related to assets associated with the acquisition of the Nokia Devices and Services (NDS) business",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

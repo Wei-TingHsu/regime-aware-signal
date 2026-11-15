@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2010 (quarter ended June 26, 2010)",
+  "revenue": "$10.8B",
+  "operating_income": "$4.0B",
+  "net_income": "$2.9B",
+  "eps": "$0.51",
+  "operating_cash_flow": "~$3.5B",
+  "capex": "$1.05B",
+  "free_cash_flow": "~$2.45B (cash flow from operations minus capex)",
+  "cash_and_investments": "$17.8B total cash investments",
+  "total_debt": null,
+  "guidance_next": "Q3 2010: revenue $11.6B +/- $400M (up ~8% sequentially); gross margin 67% +/- a couple points; R&D+MG&A spending ~$3.2B; depreciation ~$1.1B; gains/losses from equity investments and other income ~zero"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Intel's record PC/server share gains imply pressure on AMD"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Strong PC/server demand supports memory suppliers"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "Healthy semiconductor demand signals broad industry strength"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "PC client strength benefits Windows ecosystem demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "Self-referential record results"
+  }
+ ],
+ "evidence": "Revenue of $10.8B, gross margin of 67%, operating income of $4.0B and earnings per share of $0.51 were all records.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

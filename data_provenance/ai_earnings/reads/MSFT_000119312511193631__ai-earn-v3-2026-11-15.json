@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY2011 (ended June 30, 2011)",
+  "revenue": "$17.37 billion (Q4), $69.94 billion (FY)",
+  "operating_income": "$6.17 billion (Q4), $27.16 billion (FY)",
+  "net_income": "$5.87 billion (Q4), $23.15 billion (FY)",
+  "eps": "$0.69 diluted (Q4), $2.69 diluted (FY)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$52.77 billion total cash, cash equivalents, and short-term investments",
+  "total_debt": "$11.92 billion long-term debt, $0 short-term debt",
+  "guidance_next": "Reaffirms FY2012 operating expense guidance of 3% to 5% growth from FY2011, or $28.0 billion to $28.6 billion"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0,
+ "fcf_trend": 0.5,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Bing search share gains vs Google"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "SQL Server growth competes with Oracle database"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Windows Azure cloud growth competes with AWS"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Facebook social graph integration into Bing"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Windows PC ecosystem growth supports Intel demand"
+  }
+ ],
+ "evidence": "Microsoft Reports Record Fourth-Quarter and Full-Year Results",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

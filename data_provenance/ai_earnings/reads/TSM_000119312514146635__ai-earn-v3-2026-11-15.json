@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "1Q14 (quarter ended March 31, 2014)",
+  "revenue": "NT$148.22 billion (US$ down 0.7% QoQ, up 8.7% YoY)",
+  "operating_income": "NT$52,522 million (operating margin 35.4%)",
+  "net_income": "NT$47,871 million (net margin 32.3%)",
+  "eps": "NT$1.85 (US$0.31 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "2Q14 revenue NT$180-183 billion; gross margin 47.5%-49.5%; operating margin 36.5%-38.5% (at NT$30.10/US$1)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "foundry demand strength implies more capacity for fabless customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "TSMC's technology/yield lead pressures rival foundry economics"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "restocking and mobile demand benefits major TSMC customers"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self-referential strong results and guidance"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "memory demand not directly addressed"
+  }
+ ],
+ "evidence": "management expects overall performance for second quarter 2014 to be... Revenue is expected to be between NT$180 billion and NT$183 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2010 (quarter ended June 30, 2010)",
+  "revenue": "NT$104.96 billion",
+  "operating_income": "NT$40.468 billion (38.6% operating margin)",
+  "net_income": "NT$40.282 billion",
+  "eps": "NT$1.55 diluted (US$0.24 per ADS)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q3 2010 revenue NT$109-111 billion; gross margin 48-50%; operating margin 36-38%"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0.3,
+ "fcf_trend": 0,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "foundry demand growth implies capacity for fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "advanced process demand benefits GPU customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC advanced node growth pressures Intel's foundry lead"
+  }
+ ],
+ "evidence": "management expects overall performance for third quarter 2010 to be as follows: Revenue to be between NT$109 billion and NT$111 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

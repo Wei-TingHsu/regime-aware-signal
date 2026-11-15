@@ -1,0 +1,37 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.8,
+ "fcf_outlook": 0.4,
+ "uncertainty": -0.4,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "DRAM consolidation strengthens Micron's scale vs SK Hynix"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "memory industry consolidation supportive of pricing"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "expanded DRAM/mobile memory supply options"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "broader memory supply base"
+  }
+ ],
+ "evidence": "Micron paid 60 billion yen (or the equivalent of approximately $612 million...) in cash at the closing to acquire Elpida\u2019s equity",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2013 (three months ended June 30, 2013)",
+  "revenue": "$1.813 billion (up 53% YoY)",
+  "operating_income": "GAAP $562 million; Non-GAAP $794 million",
+  "net_income": "GAAP $333 million; Non-GAAP $488 million",
+  "eps": "GAAP diluted $0.13; Non-GAAP diluted $0.19",
+  "operating_cash_flow": "$1,322 million (three months ended June 30, 2013)",
+  "capex": "$268 million",
+  "free_cash_flow": "$1,054 million (operating cash flow $1,322M minus capex $268M)",
+  "cash_and_investments": "$10.3 billion (cash and marketable securities)",
+  "total_debt": "$1,500 million long-term debt plus $667 million total capital lease obligations",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Shows strong mobile ad monetization is achievable, validating mobile ad market growth"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broad online ad market strength signal"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Tech sector sentiment benefits from strong large-cap internet earnings"
+  }
+ ],
+ "evidence": "Mobile advertising revenue represented approximately 41% of advertising revenue for the second quarter of 2013, up from essentially nothing a year earlier, with revenue up 53% YoY and GAAP swinging from a $743 million operating loss to $562 million operating income",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

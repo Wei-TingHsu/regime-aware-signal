@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2021 (quarter ended June 26, 2021)",
+  "revenue": "$19.6B GAAP / $18.5B non-GAAP",
+  "operating_income": "$5,546M GAAP (28.3% operating margin); ~31.6% non-GAAP",
+  "net_income": "$5,061M GAAP / ~$5.2B non-GAAP",
+  "eps": "$1.24 GAAP diluted / $1.28 non-GAAP",
+  "operating_cash_flow": "$14,294M (six months); Q2 alone $8.7B",
+  "capex": "$7,574M (six months, PP&E additions)",
+  "free_cash_flow": "Not directly stated for Q2; FY guide implies ~$11.0B non-GAAP FCF",
+  "cash_and_investments": "$4,746M cash + $3,014M short-term investments + $17,097M trading assets",
+  "total_debt": "$3,695M short-term debt + $31,714M long-term debt = ~$35.4B",
+  "guidance_next": "Q3 2021: revenue ~$19.1B GAAP/$18.2B non-GAAP, gross margin ~53%/55%, EPS ~$1.08/$1.10; FY2021 raised to revenue $77.6B GAAP/$73.5B non-GAAP, EPS $4.09 GAAP/$4.80 non-GAAP, capex $19.0-20.0B, non-GAAP FCF ~$11.0B"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.4,
+ "fcf_trend": -0.2,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": -0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel DCG revenue down 9% YoY, signals competitive share pressure"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Data center weakness contrasts with GPU/AI demand strength elsewhere"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "NAND/memory segment revenue down 34% YoY, weak memory pricing read-through"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Cited as cloud customer using 3rd Gen Xeon and partnership on Bridge Technology"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel IDM 2.0 foundry ambitions and advanced packaging investment compete with TSMC foundry business"
+  }
+ ],
+ "evidence": "Exceeded Q2 guidance for revenue, EPS, and gross margin; record Q2 revenue in PC and Mobileye businesses. Raising full-year 2021 guidance.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2022 (quarter ended June 30, 2022)",
+  "revenue": "$28,822 million (-1% YoY)",
+  "operating_income": "$8,358 million (operating margin 29%)",
+  "net_income": "$6,687 million",
+  "eps": "$2.46 diluted",
+  "operating_cash_flow": "$12,197 million",
+  "capex": "$7,572 million (purchases of property and equipment); $7.75 billion including finance lease principal payments",
+  "free_cash_flow": "$4,450 million (as stated)",
+  "cash_and_investments": "$40.49 billion (cash, cash equivalents, and marketable securities)",
+  "total_debt": null,
+  "guidance_next": "Q3 2022 total revenue $26-28.5 billion; FY2022 total expenses $85-88 billion (lowered from $87-92 billion); FY2022 capex $30-34 billion (narrowed from $29-34 billion); FY2022 tax rate above Q2 rate, high teens"
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -0.3,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "shared weak digital ad demand environment"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "macro ad/consumer weakness read-through"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "cloud/ad spend macro headwinds signal"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "continued elevated capex for data center infrastructure"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "capex raised despite ad slowdown, supports AI infrastructure spend"
+  }
+ ],
+ "evidence": "revenue came in at $28,822 million, below the prior guided range of $28-30 billion, while expense and revenue guidance for the next quarter were both cut, reflecting 'a continuation of the weak advertising demand environment'",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

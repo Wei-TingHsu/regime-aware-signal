@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2022 (quarter ended June 30, 2022)",
+  "revenue": "$121.2 billion, up 7% YoY (up 10% ex-FX)",
+  "operating_income": "$3.3 billion (vs $7.7 billion Q2 2021)",
+  "net_income": "net loss of $2.0 billion",
+  "eps": "-$0.20 diluted",
+  "operating_cash_flow": "$35.6 billion TTM (down 40% YoY); $9.0 billion for the quarter",
+  "capex": "$15.7 billion for the quarter; $65.4 billion TTM",
+  "free_cash_flow": "-$23.5 billion TTM (outflow), vs +$12.1 billion TTM a year earlier",
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "No explicit next-quarter guidance figures included in this excerpt; release emphasizes improving fulfillment productivity and accelerating revenue growth into H2 2022 (Prime Day, NFL Thursday Night Football, Rings of Power launch)."
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 0.2,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud competitor to AWS"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Azure competes with AWS"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "ad market read-through"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AWS compute capacity growth implies chip demand"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "enterprise cloud security peer"
+  }
+ ],
+ "evidence": "\"We're also seeing revenue accelerate as we continue to make Prime even better for members\" alongside AWS operating income growing 33% to $5.7 billion despite overall net loss",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.25,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "strong fab demand signals healthy chip cycle"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from TSMC capacity/demand strength"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC share gains highlight foundry competitive pressure"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "relies on TSMC capacity for chip supply"
+  }
+ ],
+ "evidence": "Jan. ~ March. Net Revenue 491,075,873 vs 362,410,230, an increase of 35.5 percent",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

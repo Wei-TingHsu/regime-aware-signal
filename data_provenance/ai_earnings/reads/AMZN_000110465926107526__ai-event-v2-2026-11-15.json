@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.15,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.05,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "capex race funded by debt"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "capex race funded by debt"
+  }
+ ],
+ "evidence": "aggregate public offering price of the Notes was \u00a34.242 billion and the estimated net proceeds from the offering were approximately \u00a34.235 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

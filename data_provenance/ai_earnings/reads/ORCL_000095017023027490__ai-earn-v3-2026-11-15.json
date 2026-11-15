@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and Full Year Fiscal 2023 (ended May 31, 2023)",
+  "revenue": "$13.8 billion Q4 (up 17% USD); $50.0 billion FY23 (up 18% USD)",
+  "operating_income": "Q4 GAAP $4.1 billion (30% margin); Q4 Non-GAAP $6.2 billion (44% margin); FY23 GAAP $13.1 billion; FY23 Non-GAAP $20.9 billion",
+  "net_income": "Q4 GAAP $3.319 billion; FY23 GAAP $8.503 billion; FY23 Non-GAAP $14.2 billion",
+  "eps": "Q4 GAAP diluted $1.19, Non-GAAP $1.67; FY23 GAAP $3.07, Non-GAAP $5.12",
+  "operating_cash_flow": "$17.165 billion FY23 (up 80% YoY)",
+  "capex": "$8.695 billion FY23",
+  "free_cash_flow": "$8.470 billion (trailing 4Q, Q4 FY23); FY23 implied ~$8.47 billion (OCF $17.165B - capex $8.695B)",
+  "cash_and_investments": "$9.765 billion cash and cash equivalents + $422 million marketable securities as of May 31, 2023",
+  "total_debt": "$4.061 billion current notes payable + $86.420 billion non-current notes payable = ~$90.5 billion total",
+  "guidance_next": "No formal numeric guidance given; CEO stated this 'bodes well for another strong year in FY24' based on accelerating cloud infrastructure and applications growth"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "NVIDIA using Oracle's GPU clusters for its own AI infrastructure, validating demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud infrastructure competitor as Oracle OCI grows 76% YoY"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS competitor as Oracle gains share in cloud infrastructure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Google Cloud competitor amid Oracle's accelerating IaaS growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "Beneficiary of broader surge in GPU cluster demand for AI workloads mentioned alongside NVIDIA"
+  }
+ ],
+ "evidence": "cutting edge companies doing LLM development such as Mosaic ML, Adept AI, Cohere plus 30 other AI development companies have recently signed contracts to purchase more than $2 billion of capacity in Oracle\u2019s Gen2 Cloud",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

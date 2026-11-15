@@ -1,0 +1,25 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.1,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.1,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "AWS cloud competitor"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "cloud/retail ads competitor"
+  }
+ ],
+ "evidence": "Trailing Twelve Month FCF adjusted for equipment finance leases improved from -$12.8B in 2022 to $35.5B (up $48.3B).",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

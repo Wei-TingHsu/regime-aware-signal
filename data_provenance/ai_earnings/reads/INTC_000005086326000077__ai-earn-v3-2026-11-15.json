@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2026 (quarter ended March 28, 2026)",
+  "revenue": "$13.6 billion, up 7% YoY",
+  "operating_income": "GAAP operating loss $(3,136) million (operating margin -23.1%); non-GAAP operating margin 12.3%",
+  "net_income": "GAAP net loss attributable to Intel $(3,728) million; non-GAAP net income $1.5 billion",
+  "eps": "GAAP diluted EPS $(0.73); non-GAAP diluted EPS $0.29",
+  "operating_cash_flow": "$1,096 million",
+  "capex": "$3,636 million additions to PP&E (investing) plus $1,327 million financing-related PP&E additions",
+  "free_cash_flow": "-$2,540 million (operating cash flow $1,096M minus investing capex $3,636M)",
+  "cash_and_investments": "$17,247 million cash and cash equivalents plus $15,542 million short-term investments",
+  "total_debt": "$2,004 million short-term debt plus $43,027 million long-term debt",
+  "guidance_next": "Q2 2026 revenue $13.8-14.8 billion; GAAP EPS $0.08; non-GAAP EPS $0.20; GAAP gross margin 37.5%, non-GAAP 39.0%; GAAP tax rate 4%, non-GAAP 11%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": -0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Xeon 6 selected as host CPU for DGX Rubin NVL8 systems"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "multiyear Xeon deployment and custom ASIC IPU co-development"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel CPU share gains in DCAI and CCG amid AI demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel Foundry expanding advanced packaging and external customer wins"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broader AI infrastructure demand supports memory/chip ecosystem"
+  }
+ ],
+ "evidence": "revenue was $13.6 billion, up 7% year-over-year... sixth consecutive quarter of revenue above our expectations",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

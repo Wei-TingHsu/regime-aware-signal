@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2018 (fiscal quarter ended September 29, 2018)",
+  "revenue": "$1.653 billion GAAP and non-GAAP",
+  "operating_income": "GAAP $150 million; non-GAAP $186 million",
+  "net_income": "GAAP $102 million; non-GAAP $150 million",
+  "eps": "GAAP diluted $0.09; non-GAAP diluted $0.13",
+  "operating_cash_flow": "$95 million",
+  "capex": "$33 million",
+  "free_cash_flow": "$62 million (stated)",
+  "cash_and_investments": "$1.056 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": "$1.303 billion",
+  "guidance_next": "Q4 2018 revenue approximately $1.45 billion, plus or minus $50 million, up ~8% YoY; non-GAAP gross margin ~41%"
+ },
+ "results_vs_prior_guidance": -0.2,
+ "guidance_change": -0.4,
+ "fcf_trend": 0.3,
+ "own_stock": -0.4,
+ "market": -0.1,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AMD GPU channel inventory glut implies weaker near-term discrete GPU demand broadly"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AMD cites CPU share gains from Ryzen/EPYC against Intel"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "New Azure H-Series instance powered by EPYC shows cloud adoption"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Oracle Cloud launching EPYC-powered instances"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Foundry partner benefits from Ryzen/EPYC ramp volumes"
+  }
+ ],
+ "evidence": "The sequential decrease was driven by lower graphics revenue in the Computing and Graphics business segment...due to significantly lower graphics revenue driven by high channel inventory",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2026 (ended January 2, 2026)",
+  "revenue": "$3.025B (GAAP and Non-GAAP), up 31% QoQ, up 61% YoY",
+  "operating_income": "$1,065M GAAP; $1,133M Non-GAAP",
+  "net_income": "$803M GAAP; $967M Non-GAAP",
+  "eps": "$5.15 GAAP diluted; $6.20 Non-GAAP diluted",
+  "operating_cash_flow": "$1,019M",
+  "capex": "$39M",
+  "free_cash_flow": "$980M (reported); Adjusted FCF $843M",
+  "cash_and_investments": "$1,539M cash and cash equivalents",
+  "total_debt": "$603M total (current $20M + long-term $583M)",
+  "guidance_next": "Q3 FY2026 revenue $4.40B-$4.80B; Non-GAAP gross margin 65.0%-67.0%; Non-GAAP opex $450M-$470M; Non-GAAP diluted EPS $12.00-$14.00"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.7,
+   "reason": "NAND/memory pricing and AI-driven demand benefits peers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AI infrastructure buildout drives storage demand tied to GPU deployments"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "semi-custom AI deployments referenced as demand driver"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud/datacenter SSD demand from hyperscalers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "datacenter AI deployment driving enterprise SSD adoption"
+  }
+ ],
+ "evidence": "Second quarter revenue was $3.03 billion, up 31% sequentially and above the guidance range",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

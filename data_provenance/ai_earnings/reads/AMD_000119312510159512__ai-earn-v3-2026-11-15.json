@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2010 (quarter ended June 26, 2010)",
+  "revenue": "$1.65 billion",
+  "operating_income": "$125 million GAAP; $138 million non-GAAP",
+  "net_income": "$(43) million GAAP net loss; $83 million non-GAAP",
+  "eps": "$(0.06) GAAP diluted; $0.11 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$1.90 billion, approximately flat sequentially",
+  "total_debt": "Repurchased $206 million principal of 6.00% Convertible Senior Notes due 2015 using $200 million",
+  "guidance_next": "AMD expects revenue to be up seasonally for the third quarter of 2010."
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD gaining notebook/server design wins vs Intel"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "no direct mention"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "DirectX 11 GPU ecosystem shipments"
+  }
+ ],
+ "evidence": "\"Robust demand for our latest mobile platforms and solid execution drove record second quarter revenue and a healthy gross margin\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

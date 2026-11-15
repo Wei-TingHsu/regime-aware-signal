@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2025",
+  "revenue": "$13.7 billion, up 3% YoY",
+  "operating_income": "$0.683 billion GAAP (5.0% margin); non-GAAP operating margin 11.2%",
+  "net_income": "$4.1 billion GAAP attributable to Intel; $1.0 billion non-GAAP",
+  "eps": "$0.90 GAAP diluted; $0.23 non-GAAP diluted",
+  "operating_cash_flow": "$2.5 billion (quarter); $5.409 billion (nine months)",
+  "capex": "$11.158 billion (nine months, PP&E additions) plus $2.493B financing-related PP&E additions",
+  "free_cash_flow": "Not explicitly stated; nine-month OCF $5.409B less PP&E additions implies negative FCF",
+  "cash_and_investments": "$11.141B cash + $19.794B short-term investments = ~$30.9B",
+  "total_debt": "$2.496B short-term debt + $44.057B long-term debt = ~$46.6B",
+  "guidance_next": "Q4 2025 revenue $12.8-13.8 billion; GAAP EPS $(0.14); non-GAAP EPS $0.08; GAAP gross margin 34.5%, non-GAAP gross margin 36.5%; GAAP tax rate 476%, non-GAAP tax rate 12%; excludes Altera"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": -0.1,
+ "fcf_trend": 0.3,
+ "own_stock": 0.5,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "$5B equity investment and joint x86/NVLink product collaboration"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel regaining CPU/x86 momentum and foundry traction"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel 18A ramp and Fab 52 output signal more foundry competition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Windows ML/vPro-Intune collaboration deepens Intel-Microsoft ties"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel's new ASIC/accelerator push competes with Broadcom's custom silicon business"
+  }
+ ],
+ "evidence": "Current demand is outpacing supply, a trend we expect will persist into 2026.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2018 (quarter ended December 31, 2017)",
+  "revenue": "$28.9 billion, +12% YoY",
+  "operating_income": "$8.7 billion, +10% YoY",
+  "net_income": "GAAP net loss $(6.3) billion; non-GAAP net income $7.5 billion (+20% YoY)",
+  "eps": "GAAP diluted loss per share $(0.82); non-GAAP diluted EPS $0.96 (+20% YoY)",
+  "operating_cash_flow": "$7,875 million (Q2), up from $6,293 million YoY",
+  "capex": "$2,586 million (additions to property and equipment, Q2)",
+  "free_cash_flow": "$5,289 million (operating cash flow minus capex)",
+  "cash_and_investments": "$142,780 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$89,260 million (short-term debt $12,466M + current portion of long-term debt $3,446M + long-term debt $73,348M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure +98% growth pressures AWS cloud share narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong Intelligent Cloud growth challenges Google Cloud"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Server/cloud products growth competes with Oracle enterprise offerings"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Rising cloud/server demand implies more datacenter chip purchases"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AI/IoT and cloud growth signals increased compute/accelerator demand"
+  }
+ ],
+ "evidence": "\"commercial cloud revenue growing 56% year-over-year to $5.3 billion\" ... \"Azure revenue growth of 98%\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

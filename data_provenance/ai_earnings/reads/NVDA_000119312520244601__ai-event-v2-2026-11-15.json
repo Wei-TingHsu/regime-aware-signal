@@ -1,0 +1,49 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.9,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.7,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "QCOM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Arm licensee facing potential supplier conflict"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "rival CPU architecture benefits if Arm neutrality questioned"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "foundry partner largely unaffected"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "watches Arm ecosystem shift"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Arm licensee concerned about neutrality"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "uses Arm for custom chips, competitive concern"
+  }
+ ],
+ "evidence": "a transaction valued at $40 billion... subject to the conditions set forth in the Purchase Agreement, NVIDIA or its designee will acquire, from the Sellers, all of the allotted and issued ordinary shares of Arm",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

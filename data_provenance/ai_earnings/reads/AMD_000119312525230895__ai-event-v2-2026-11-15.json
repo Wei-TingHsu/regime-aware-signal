@@ -1,0 +1,49 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.9,
+ "fcf_outlook": 0.7,
+ "uncertainty": 0.3,
+ "own_stock": 0.8,
+ "market": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "AMD gains major AI GPU customer, eroding Nvidia's dominance in large-scale AI deployments"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Higher foundry demand from 6GW Instinct GPU rollout"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "More AI server memory content needed for large GPU deployments"
+  },
+  {
+   "company": "SNDK",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Increased storage demand from AI data center buildout"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Competing hyperscaler AI infrastructure dynamics shift with OpenAI diversifying compute suppliers"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Cloud/AI infrastructure partners benefit from expanded compute ecosystem"
+  }
+ ],
+ "evidence": "deployment of six gigawatts of AMD Instinct\u2122 GPUs... expected to deliver tens of billions of dollars in revenue for AMD... expected to be highly accretive to AMD\u2019s non-GAAP earnings-per-share",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

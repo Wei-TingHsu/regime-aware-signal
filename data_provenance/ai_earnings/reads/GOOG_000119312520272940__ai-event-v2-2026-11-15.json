@@ -1,0 +1,31 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.5,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.7,
+ "own_stock": -0.4,
+ "market": -0.15,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "shared antitrust scrutiny risk but relative advantage if GOOG constrained"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "big tech antitrust precedent concern"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "could gain search/ad share if Google constrained"
+  }
+ ],
+ "evidence": "the DOJ, joined by 11 state Attorneys General, filed an antitrust complaint against Google... alleging that Google violated U.S. antitrust laws relating to Search and Search advertising",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

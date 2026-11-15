@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q4 2010 (quarter ended December 31, 2010); also FY2010",
+  "revenue": "$12.95 billion (Q4), $34.20 billion (FY2010)",
+  "operating_income": "$474 million (Q4), $1.41 billion (FY2010)",
+  "net_income": "$416 million (Q4), $1.15 billion (FY2010)",
+  "eps": "$0.91 diluted (Q4), $2.53 diluted (FY2010)",
+  "operating_cash_flow": "$3.50 billion (TTM)",
+  "capex": "$979 million (FY2010, purchases of fixed assets)",
+  "free_cash_flow": "$2.52 billion (TTM), down 14% YoY",
+  "cash_and_investments": "$3.78 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q1 2011: net sales $9.1B-$9.9B (28%-39% growth); operating income $260M-$385M (34% decline to 2% decline YoY), including ~$140M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.1,
+ "guidance_change": -0.5,
+ "fcf_trend": -0.4,
+ "own_stock": -0.4,
+ "market": 0.0,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AWS cloud infrastructure competition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AWS cloud infrastructure competition"
+  }
+ ],
+ "evidence": "Operating income is expected to be between $260 million and $385 million, or between 34% decline and 2% decline compared with first quarter 2010.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

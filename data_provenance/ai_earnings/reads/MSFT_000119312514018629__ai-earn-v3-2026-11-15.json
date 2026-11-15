@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2014 (three months ended December 31, 2013)",
+  "revenue": "$24.52 billion (GAAP), up 14% Y/Y",
+  "operating_income": "$7.97 billion (GAAP)",
+  "net_income": "$6.56 billion",
+  "eps": "$0.78 diluted",
+  "operating_cash_flow": "$4,413 million (three months)",
+  "capex": "$1,732 million (additions to property and equipment, three months)",
+  "free_cash_flow": "$2,681 million (operating cash flow minus capex)",
+  "cash_and_investments": "$83,944 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$22,976 million (short-term debt $300M + current portion long-term debt $2,000M + long-term debt $20,676M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Bing share gains and search ad growth of 34% pressure Google search dominance"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "SQL Server and System Center taking enterprise database/management share"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure triple-digit customer growth competes with AWS in cloud"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Surface and PC-related hardware growth supports Intel chip demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "n/a"
+  }
+ ],
+ "evidence": "Microsoft Reports Record Revenue of $24.52 Billion in Second Quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

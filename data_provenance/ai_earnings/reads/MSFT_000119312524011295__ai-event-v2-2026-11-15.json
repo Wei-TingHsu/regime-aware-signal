@@ -1,0 +1,31 @@
+{
+ "event_type": "cyber incident",
+ "material": 0.15,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.3,
+ "own_stock": -0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "security concerns may favor rivals"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "cloud security scrutiny benefits AWS"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.03,
+   "reason": "enterprise cloud alternative"
+  }
+ ],
+ "evidence": "a nation-state associated threat actor had gained access to and exfiltrated information from a very small percentage of employee email accounts",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

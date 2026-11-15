@@ -1,0 +1,43 @@
+{
+ "event_type": "other",
+ "material": 0.3,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.35,
+ "own_stock": -0.2,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "fab capacity disruption risk"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "potential wafer/output delay"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "fab disruption risk"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "rival fab disruption could shift share"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "Taiwan semiconductor supply chain risk highlighted"
+  }
+ ],
+ "evidence": "A small number of tools were damaged at certain facilities, partially impacting their operations.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

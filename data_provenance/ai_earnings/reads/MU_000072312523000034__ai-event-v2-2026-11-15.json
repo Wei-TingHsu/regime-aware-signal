@@ -1,0 +1,43 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.6,
+ "fcf_outlook": -0.4,
+ "uncertainty": 0.7,
+ "own_stock": -0.5,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "could gain share in China memory market"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Korean rival may absorb displaced China demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broader China tech tension spillover"
+  },
+  {
+   "company": "AAPL",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "mobile OEMs pressured to avoid Micron parts"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "reduced Micron revenue could dent foundry demand"
+  }
+ ],
+ "evidence": "approximately half of that China HQ customer revenue, which equates to a low-double-digit percentage of Micron\u2019s worldwide revenue, is now at risk of being impacted",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

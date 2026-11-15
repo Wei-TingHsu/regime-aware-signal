@@ -1,0 +1,37 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.3,
+ "own_stock": -0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "peer capex funding comparison"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "peer capex funding comparison"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "funds likely support AI capex spend"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "funds likely support AI/data center capex"
+  }
+ ],
+ "evidence": "may offer and sell, from time to time in its sole discretion, up to $40 billion of shares of Class A Common Stock and Class C Capital Stock",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

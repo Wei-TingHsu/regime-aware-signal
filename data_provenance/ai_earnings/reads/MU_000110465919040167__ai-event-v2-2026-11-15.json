@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.35,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.25,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "partner",
+   "direction": 0.1,
+   "reason": "Intel sells NCI and JV debt stake to Micron for cash"
+  },
+  {
+   "company": "SKHY",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "memory peer unaffected directly"
+  }
+ ],
+ "evidence": "Micron intends to use a substantial portion of the net proceeds of the offering of the Notes to fund the purchase price for Intel Corporation\u2019s (\u201cIntel\u201d) noncontrolling interest in IM Flash Technologies, LLC (\u201cIM Flash\u201d) and IM Flash debt owed to Intel.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

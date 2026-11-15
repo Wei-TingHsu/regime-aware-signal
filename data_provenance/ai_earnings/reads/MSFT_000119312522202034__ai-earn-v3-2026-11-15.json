@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2022 (quarter ended June 30, 2022); also FY2022 full year",
+  "revenue": "$51.9 billion (Q4), up 12% YoY; $198.3 billion (FY22), up 18% YoY",
+  "operating_income": "$20.5 billion (Q4), up 8% YoY; $83.4 billion (FY22), up 19% YoY",
+  "net_income": "$16.7 billion (Q4), up 2% YoY; $72.7 billion GAAP (FY22), up 19% YoY",
+  "eps": "$2.23 diluted (Q4), up 3% YoY; $9.65 GAAP diluted (FY22), up 20% YoY",
+  "operating_cash_flow": "$24.629 billion (Q4); $89.035 billion (FY22)",
+  "capex": "$6.871 billion (Q4, additions to property and equipment); $23.886 billion (FY22)",
+  "free_cash_flow": "$17.758 billion (Q4, OCF minus capex); $65.149 billion (FY22, OCF minus capex)",
+  "cash_and_investments": "$104.757 billion total cash, cash equivalents, and short-term investments (June 30, 2022)",
+  "total_debt": "$49.781 billion (current portion $2.749B + long-term $47.032B)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": -0.3,
+ "guidance_change": 0,
+ "fcf_trend": 0.2,
+ "own_stock": -0.3,
+ "market": -0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": -1,
+   "reason": "Windows OEM revenue fell on weak PC market and China shutdowns"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "Ad spend cuts hurt Search/LinkedIn ads, signaling broader digital ad weakness"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "Reductions in advertising spend flagged as a macro headwind"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Azure growing 40-46% implies share gains versus AWS in cloud infrastructure"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Continued strong Azure/cloud growth implies sustained data center compute capex"
+  }
+ ],
+ "evidence": "evolving macroeconomic conditions and other unforeseen items had an impact on financial results beyond what was included in our forward-looking guidance provided on April 26, 2022",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

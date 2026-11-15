@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2026 (ended April 3, 2026)",
+  "revenue": "$5,950 million, up 97% sequentially, above guidance range",
+  "operating_income": "$4,111 million GAAP / $4,218 million non-GAAP",
+  "net_income": "$3,615 million GAAP / $3,675 million non-GAAP",
+  "eps": "$23.03 diluted GAAP / $23.41 diluted non-GAAP",
+  "operating_cash_flow": "$3,038 million",
+  "capex": "$45 million",
+  "free_cash_flow": "$2,993 million (stated); $2,955 million adjusted FCF",
+  "cash_and_investments": "$3,735 million cash and cash equivalents",
+  "total_debt": "Zero-debt balance sheet per CEO statement; debt repayments of $650M in quarter",
+  "guidance_next": "Q4 FY2026 revenue $7.75B-$8.25B; GAAP/non-GAAP gross margin 78.9%-80.9%/79.0%-81.0%; non-GAAP opex $480M-$500M; non-GAAP diluted EPS $30.00-$33.00"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.6,
+   "reason": "Shared NAND/memory pricing upcycle and datacenter demand surge"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AI datacenter buildout driving storage demand alongside compute"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Hyperscaler datacenter expansion lifts flash storage demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud/AI infrastructure growth driving enterprise SSD demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Datacenter capacity expansion supports high-value NAND sales"
+  }
+ ],
+ "evidence": "Third quarter revenue was $5.95 billion, up 97% sequentially and above the guidance range, with GAAP net income reported at $3,615 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

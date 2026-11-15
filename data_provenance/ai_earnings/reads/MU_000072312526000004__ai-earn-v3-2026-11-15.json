@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ2-26 (fiscal Q2 2026, ended Feb 26, 2026)",
+  "revenue": "$23.86B (GAAP and Non-GAAP)",
+  "operating_income": "$16.135B GAAP (67.6% margin); $16.455B Non-GAAP (69.0% margin)",
+  "net_income": "$13.785B GAAP; $14.021B Non-GAAP",
+  "eps": "$12.07 GAAP diluted; $12.20 Non-GAAP diluted",
+  "operating_cash_flow": "$11.903B",
+  "capex": "Investments in capital expenditures, net: $5.004B (gross PP&E expenditures $6.387B)",
+  "free_cash_flow": "$6.899B adjusted free cash flow (as stated)",
+  "cash_and_investments": "$16.7B cash, marketable investments, and restricted cash (per release); balance sheet shows $13.908B cash + $0.681B ST investments + $2.038B LT investments",
+  "total_debt": "$9.557B long-term debt + $0.585B current debt (down from $14.017B long-term debt at FY25 year-end)",
+  "guidance_next": "FQ3-26: Revenue $33.5B \u00b1 $750M; GAAP gross margin ~81% (Non-GAAP ~81%); GAAP opex ~$1.60B (Non-GAAP ~$1.40B); GAAP diluted EPS $18.90 \u00b1 $0.40 (Non-GAAP $19.15 \u00b1 $0.40)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.7,
+   "reason": "Tight NAND/memory supply and pricing strength benefits other memory makers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Memory tightness reflects surging AI compute/HBM demand tied to GPU buildouts"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AI accelerator demand driving memory content growth benefits AMD's AI platforms"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Rising DRAM/NAND prices raise data center hardware costs for hyperscalers"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Higher memory costs pressure cloud infrastructure capex economics"
+  }
+ ],
+ "evidence": "Micron set new records across revenue, gross margin, EPS, and free cash flow in fiscal Q2 ... and we expect significant records again in fiscal Q3",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

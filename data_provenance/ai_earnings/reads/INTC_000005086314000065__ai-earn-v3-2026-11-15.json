@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2014 (quarter ended September 27, 2014)",
+  "revenue": "$14,554 million (vs $13,483 million Q3 2013)",
+  "operating_income": "$4,540 million (vs $3,504 million Q3 2013)",
+  "net_income": "$3,317 million (vs $2,950 million Q3 2013)",
+  "eps": "$0.66 diluted (vs $0.58 Q3 2013)",
+  "operating_cash_flow": null,
+  "capex": "$2,445 million (Q3 2014) vs $2,828 million (Q2 2014) and $2,866 million (Q3 2013)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$15,594 million total cash investments (cash, short-term investments, trading assets) vs $17,311 million (Q2 2014) and $19,146 million (Q3 2013)",
+  "total_debt": "$13,267 million ($79M short-term + $13,188M long-term)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.2,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Intel PC/Data Center strength implies competitive pressure"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Data center and memory-adjacent demand growth signals broader chip demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel manufacturing ramp competes with foundry customers"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Overlapping data center and networking chip markets"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Growing Data Center Group revenue signals competitive data-center compute demand"
+  }
+ ],
+ "evidence": "DILUTED EARNINGS PER COMMON SHARE $0.66 ... $0.58 (Q3 2013)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

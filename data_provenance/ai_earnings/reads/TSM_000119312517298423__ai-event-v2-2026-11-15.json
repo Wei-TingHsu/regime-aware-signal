@@ -1,0 +1,43 @@
+{
+ "event_type": "product or technology",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.05,
+ "own_stock": 0.15,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC advances leading-edge process roadmap"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competing foundry loses edge in advanced nodes"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "future access to 3nm capacity"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "future access to 3nm capacity"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "future access to 3nm capacity"
+  }
+ ],
+ "evidence": "TSMC today announced that, following careful evaluation, the Company\u2019s planned advanced 3nm fab will be located in the Tainan Science Park",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

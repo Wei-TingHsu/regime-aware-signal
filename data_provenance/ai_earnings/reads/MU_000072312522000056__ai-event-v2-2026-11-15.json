@@ -1,0 +1,49 @@
+{
+ "event_type": "guidance update",
+ "material": 0.6,
+ "fcf_outlook": -0.4,
+ "uncertainty": 0.5,
+ "own_stock": -0.3,
+ "market": -0.2,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Industry-wide NAND oversupply implies pricing pressure for peers"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "DRAM/NAND peer facing same weak demand environment"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Memory/storage adjacent, weak semiconductor demand signal"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Capex cuts reduce equipment/fab utilization demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Memory supply tightening could affect component availability/pricing dynamics"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Memory industry weakness signals broader semiconductor demand softness"
+  }
+ ],
+ "evidence": "Micron is reducing DRAM and NAND wafer starts by approximately 20% versus fiscal fourth quarter 2022",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

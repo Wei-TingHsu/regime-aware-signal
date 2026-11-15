@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ4-24 (ended August 29, 2024) and FY2024",
+  "revenue": "$7.75 billion (GAAP and Non-GAAP)",
+  "operating_income": "$1,522 million GAAP; $1,745 million Non-GAAP",
+  "net_income": "$887 million GAAP; $1,342 million Non-GAAP",
+  "eps": "$0.79 GAAP diluted; $1.18 Non-GAAP diluted",
+  "operating_cash_flow": "$3,405 million",
+  "capex": "$3,082 million (net investments in capex, non-GAAP)",
+  "free_cash_flow": "$323 million (adjusted free cash flow, as stated)",
+  "cash_and_investments": "$9.16 billion (cash, marketable investments, and restricted cash)",
+  "total_debt": "$13,397 million (current $431M + long-term $12,966M)",
+  "guidance_next": "FQ1-25: Revenue $8.70B \u00b1 $200M; GAAP gross margin 38.5% \u00b1 1.0% (Non-GAAP 39.5% \u00b1 1.0%); GAAP opex $1.211B \u00b1 $15M (Non-GAAP $1.085B \u00b1 $15M); GAAP diluted EPS $1.54 \u00b1 $0.08 (Non-GAAP $1.74 \u00b1 $0.08)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "HBM demand tied to AI GPU ramp"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "NAND pricing/demand recovery benefits peers"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "advanced packaging/foundry ties to HBM growth"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "shared AI infrastructure demand tailwind"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "data center DRAM/SSD demand from hyperscalers"
+  }
+ ],
+ "evidence": "We forecast record revenue in fiscal Q1 and a substantial revenue record with significantly improved profitability in fiscal 2025.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

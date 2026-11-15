@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q3 FY2012 (quarter ended March 31, 2012)",
+  "revenue": "$17.41 billion, up 6% YoY",
+  "operating_income": "$6.37 billion, up 12% YoY",
+  "net_income": "$5.11 billion",
+  "eps": "$0.60 diluted (vs $0.61 prior year)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$59.53 billion total cash, cash equivalents, and short-term investments (up from $52.77 billion at June 30, 2011)",
+  "total_debt": "$11.94 billion long-term debt",
+  "guidance_next": "FY2012 operating expense guidance revised downward to $28.3B-$28.7B (from prior $28.5B-$28.9B); preliminary FY2013 operating expense guidance of $30.3B-$30.9B, representing 6%-8% growth from FY2012 guidance midpoint"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.4,
+ "own_stock": 0.4,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "MSFT SQL Server double-digit growth pressures Oracle database business"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Online Services Division narrowing losses signals stronger search/ads competition"
+  }
+ ],
+ "evidence": "Strong business demand drives double-digit operating income growth.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

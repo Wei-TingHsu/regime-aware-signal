@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.2,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.1,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "memory peer, no direct impact"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "NAND competitor, no direct impact"
+  }
+ ],
+ "evidence": "The proceeds of the Incremental Term Loan will be used for general corporate purposes.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

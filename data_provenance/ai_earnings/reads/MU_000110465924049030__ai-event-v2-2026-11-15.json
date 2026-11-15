@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.25,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.15,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Also pursuing CHIPS Act funding for US fabs"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "US subsidized capacity increases competitive supply"
+  }
+ ],
+ "evidence": "This application requests federal funding in the form of grants for modernization of production of long-lifecycle DRAM products",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

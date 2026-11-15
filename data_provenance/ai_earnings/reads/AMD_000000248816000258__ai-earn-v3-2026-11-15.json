@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2016 (fiscal quarter ended September 24, 2016)",
+  "revenue": "$1,307 million",
+  "operating_income": "GAAP operating loss $293 million; Non-GAAP operating income $70 million",
+  "net_income": "GAAP net loss $406 million; Non-GAAP net income $27 million",
+  "eps": "GAAP $(0.50); Non-GAAP $0.03",
+  "operating_cash_flow": "$29 million (three months)",
+  "capex": "$9 million (three months)",
+  "free_cash_flow": "$20 million (29-9)",
+  "cash_and_investments": "$1,258 million cash and cash equivalents",
+  "total_debt": "$1,632 million",
+  "guidance_next": "For Q4 2016, AMD expects revenue to decrease 18 percent sequentially, plus or minus 3 percent; midpoint implies Q4 2016 revenue up approximately 12 percent year-over-year and 2016 revenue up 6 percent from 2015"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.5,
+ "own_stock": 0.6,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "reason": "AMD Zen/Summit Ridge CPU previews signal competitive threat to Intel desktop/server CPUs",
+   "direction": -0.3
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "reason": "Polaris GPU family expansion and design wins compete directly with Nvidia GPUs",
+   "direction": -0.2
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "reason": "WSA amendment gives AMD flexibility to source foundry services outside GlobalFoundries, potentially benefiting TSMC",
+   "direction": 0.2
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "reason": "Not directly addressed but semiconductor sector sentiment linked",
+   "direction": 0
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "reason": "Participation with AMD in open interconnect/datacenter standards consortium",
+   "direction": 0.1
+  }
+ ],
+ "evidence": "Revenue of $1,307 million, up 27 percent sequentially and up 23 percent year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

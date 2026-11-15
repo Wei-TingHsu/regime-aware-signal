@@ -1,0 +1,37 @@
+{
+ "event_type": "product or technology",
+ "material": 0.3,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.0,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "3nm capacity enables advanced chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "3nm leadership benefits fabless customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC extends process-tech lead over Intel foundry"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "advanced node access for chip designs"
+  }
+ ],
+ "evidence": "3nm technology has successfully entered volume production with good yields",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

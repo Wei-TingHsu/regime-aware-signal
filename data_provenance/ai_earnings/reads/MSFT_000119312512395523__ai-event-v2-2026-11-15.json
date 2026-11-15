@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "AAPL",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "dividend increase signals tech sector cash return trend"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "comparable large-cap tech dividend payer"
+  }
+ ],
+ "evidence": "its board of directors declared a quarterly dividend of $0.23 per share, reflecting a 3 cent or 15 percent increase over the previous quarter's dividend",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

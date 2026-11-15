@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "1Q15 (quarter ended March 31, 2015)",
+  "revenue": "NT$222.03 billion",
+  "operating_income": "NT$86.6 billion (39.0% operating margin)",
+  "net_income": "NT$78.99 billion",
+  "eps": "NT$3.05 (diluted)",
+  "operating_cash_flow": "NT$156.00 billion",
+  "capex": "NT$48.88 billion",
+  "free_cash_flow": "NT$107.12 billion (stated)",
+  "cash_and_investments": "NT$518.98 billion",
+  "total_debt": "NT$214.05 billion long-term interest-bearing debt",
+  "guidance_next": "2Q15 revenue NT$204-207 billion (FX 31.03 NTD/USD); gross margin 47.5%-49.5%; operating margin 36.5%-38.5%; FY2015 capex reaffirmed at US$10.5-11.0 billion"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.6,
+ "own_stock": 0.2,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Foundry capacity and margin trends affect AMD's cost structure"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "TSMC's capex and margin health signal continued leading-edge capacity for GPU customers"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Broadcom relies on TSMC's advanced nodes"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC's strong margins and capex underscore foundry competitiveness vs Intel"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Limited direct bearing, tech sector sentiment only"
+  }
+ ],
+ "evidence": "Revenue to be between NT$ 204 billion and NT$ 207 billion, at a forecast exchange rate of 31.03 NT dollars to 1 US dollar",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

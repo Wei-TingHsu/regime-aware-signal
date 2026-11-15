@@ -1,0 +1,49 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.8,
+ "fcf_outlook": 0.4,
+ "uncertainty": 0.3,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AMD gains FPGA/adaptive compute scale to compete in data center"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "broader AMD portfolio competes in AI/data center"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "semis consolidation precedent"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "potential data center/FPGA customer synergies"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "potential cloud/FPGA customer synergies"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "combined entity increases foundry volume"
+  }
+ ],
+ "evidence": "AMD completed the previously announced acquisition of Xilinx, Inc.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

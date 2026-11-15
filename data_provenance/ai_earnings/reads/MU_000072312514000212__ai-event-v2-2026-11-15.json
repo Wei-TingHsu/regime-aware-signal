@@ -1,0 +1,31 @@
+{
+ "event_type": "product or technology",
+ "material": 0.35,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.2,
+ "own_stock": 0.15,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "faces increased 3D NAND capacity competition"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "signals broader capex upcycle in memory/semis"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "co-investor sentiment in NAND/storage class memory"
+  }
+ ],
+ "evidence": "the Company currently expects the total cost for this expansion to be approximately $4 billion incurred over a number of years starting in fiscal 2016",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.1,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Strong TSMC demand signals healthy foundry utilization, supportive of fabless customers' output"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Robust TSMC volumes indicate solid chip supply/demand backdrop"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Strong TSMC growth highlights competitive foundry momentum vs Intel"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Benefits from TSMC capacity strength"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Positive read-through for semiconductor demand cycle"
+  }
+ ],
+ "evidence": "revenues for April 2014 were approximately NT$61.89 billion, an increase of 23.9 percent from March 2014 and an increase of 23.6 percent over April 2013",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

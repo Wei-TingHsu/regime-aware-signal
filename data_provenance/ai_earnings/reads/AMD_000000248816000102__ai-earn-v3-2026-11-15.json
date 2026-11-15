@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2015 (ended Dec 26, 2015) and FY2015",
+  "revenue": "$958M (Q4), $3.99B (FY)",
+  "operating_income": "-$49M GAAP / -$39M non-GAAP (Q4); -$481M GAAP / -$253M non-GAAP (FY)",
+  "net_income": "-$102M GAAP / -$79M non-GAAP (Q4); -$660M GAAP / -$419M non-GAAP (FY)",
+  "eps": "-$0.13 GAAP / -$0.10 non-GAAP (Q4); -$0.84 GAAP / -$0.54 non-GAAP (FY)",
+  "operating_cash_flow": "$53M (Q4); -$237M (FY)",
+  "capex": "$32M (Q4); $96M (FY)",
+  "free_cash_flow": "$21M (Q4, 53-32); -$333M (FY, -237-96)",
+  "cash_and_investments": "$785M cash and cash equivalents",
+  "total_debt": "$2.26B",
+  "guidance_next": "For Q1 2016, based on a 13 week quarter, AMD expects revenue to decrease 14 percent, plus or minus 3 percent, sequentially"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.5,
+ "fcf_trend": 0.1,
+ "own_stock": -0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AMD continued weak client CPU revenue implies share still with Intel"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "GPU competition in gaming/VR market"
+  },
+  {
+   "company": "SNDK",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "no direct mention"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "console/semi-custom exposure via Xbox"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "no direct mention"
+  }
+ ],
+ "evidence": "For Q1 2016, based on a 13 week quarter, AMD expects revenue to decrease 14 percent, plus or minus 3 percent, sequentially",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

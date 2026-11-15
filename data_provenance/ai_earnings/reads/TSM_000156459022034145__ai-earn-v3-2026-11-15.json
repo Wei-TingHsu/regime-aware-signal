@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2022",
+  "revenue": "NT$613.14 billion (US$20.23 billion)",
+  "operating_income": "NT$310.32 billion (operating margin 50.6%)",
+  "net_income": "NT$280.87 billion",
+  "eps": "NT$10.83 (US$1.79 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2022 revenue expected US$19.9-20.7 billion; gross profit margin 59.5%-61.5%; operating profit margin 49%-51% (at NT$31.5/US$1)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": -1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -1,
+   "reason": "weakening end-market demand, inventory adjustment"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "foundry competitor amid demand softness"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -1,
+   "reason": "exposed to inventory correction in chip customers"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "broader semiconductor demand weakness signaled"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "5nm ramp continues supporting advanced node demand"
+  }
+ ],
+ "evidence": "we expect our business to be flattish, as the end market demand weakens, and customers\u2019 ongoing inventory adjustment is balanced by continued ramp-up for our industry-leading 5nm technologies",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

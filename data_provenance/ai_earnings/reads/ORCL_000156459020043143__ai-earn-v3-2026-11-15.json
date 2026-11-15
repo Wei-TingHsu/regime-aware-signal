@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2021 (quarter ended August 31, 2020)",
+  "revenue": "$9.367 billion, up 2% YoY",
+  "operating_income": "GAAP $3,211 million (34% margin); Non-GAAP $4,178 million (45% margin)",
+  "net_income": "GAAP $2,251 million; Non-GAAP $2,882 million",
+  "eps": "GAAP diluted $0.72; Non-GAAP diluted $0.93",
+  "operating_cash_flow": "$5,953 million for the quarter; $13,092 million trailing twelve months",
+  "capex": "$436 million for the quarter; $1,614 million trailing twelve months",
+  "free_cash_flow": "$11,478 million trailing twelve months (down 6% YoY)",
+  "cash_and_investments": "$27,276 million cash and cash equivalents plus $15,003 million marketable securities",
+  "total_debt": "$2,997 million notes payable current + $67,769 million notes payable non-current",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": -0.3,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle claims IaaS satisfaction score beats AWS"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle claims IaaS satisfaction score beats Azure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle claims IaaS satisfaction score beats Google Cloud"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Cloud security peer, not directly addressed"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "n/a"
+  }
+ ],
+ "evidence": "Q1 was fantastic with total revenue beating guidance by more than $150 million, and non-GAAP earnings per share beating guidance by $0.07",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

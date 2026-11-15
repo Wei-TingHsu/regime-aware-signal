@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.1,
+ "fcf_outlook": 0.05,
+ "uncertainty": -0.05,
+ "own_stock": 0.05,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "TSMC capacity trends signal healthy foundry demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "Strong TSMC revenue implies robust chip demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.03,
+   "reason": "TSMC growth highlights foundry competitiveness vs Intel"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.03,
+   "reason": "Foundry volume growth supports fabless customers"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.02,
+   "reason": "Semiconductor sector demand read-through"
+  }
+ ],
+ "evidence": "revenues for January 2020 were approximately NT$103.68 billion, an increase of 32.8 percent from January 2019",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2025 (ended October 31, 2024)",
+  "revenue": "$1,010.2 million GAAP total revenue (29% YoY growth)",
+  "operating_income": "GAAP loss from operations $(55.7) million; Non-GAAP income from operations $194.9 million",
+  "net_income": "GAAP net loss attributable to CrowdStrike $(16.8) million; Non-GAAP net income $234.3 million",
+  "eps": "GAAP diluted EPS $(0.07); Non-GAAP diluted EPS $0.93",
+  "operating_cash_flow": "$326.1 million",
+  "capex": "approximately $95.5 million (implied: OCF $326.1M minus stated FCF $230.6M)",
+  "free_cash_flow": "$230.6 million (as stated)",
+  "cash_and_investments": "$4.26 billion cash and cash equivalents",
+  "total_debt": "$743.6 million long-term debt",
+  "guidance_next": "Q4 FY25: revenue $1,028.7-$1,035.4M, Non-GAAP operating income $184.0-$189.0M, Non-GAAP net income $210.9-$215.8M, Non-GAAP diluted EPS $0.84-$0.86; FY25: revenue $3,923.8-$3,930.5M, Non-GAAP operating income $804.4-$809.4M, Non-GAAP net income $937.5-$942.6M, Non-GAAP diluted EPS $3.74-$3.76"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "endpoint security overlap"
+  },
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "joint AI cybersecurity startup accelerator"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "joint AWS cybersecurity accelerator"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud security competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud/security platform competition"
+  }
+ ],
+ "evidence": "Exceeds $1 billion quarterly total revenue milestone, grows 29% year-over-year to reach $1.01 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

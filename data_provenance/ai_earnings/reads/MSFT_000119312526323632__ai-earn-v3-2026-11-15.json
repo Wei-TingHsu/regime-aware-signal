@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2026 (quarter ended June 30, 2026); also FY2026 full year",
+  "revenue": "$90.0 billion, +18% YoY (17% constant currency)",
+  "operating_income": "$40.6 billion, +18% YoY",
+  "net_income": "$35.8 billion GAAP (+31% YoY); $35.3 billion non-GAAP (+22% YoY)",
+  "eps": "$4.81 diluted GAAP (+32% YoY); $4.74 non-GAAP (+23% YoY)",
+  "operating_cash_flow": "$55.4 billion (Q4); $182.9 billion (FY2026)",
+  "capex": "$35.8 billion (Q4 additions to property and equipment); $115.9 billion (FY2026)",
+  "free_cash_flow": "~$19.6 billion (Q4: 55,441-35,802); ~$67.0 billion (FY2026: 182,935-115,948)",
+  "cash_and_investments": "$76.8 billion total cash, cash equivalents and short-term investments (down from $94.6 billion a year earlier)",
+  "total_debt": "~$40.3 billion ($9,227M current portion + $31,067M long-term debt)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0,
+ "fcf_trend": -0.3,
+ "own_stock": 0.5,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "capex nearly doubled to $116B FY, implies massive GPU purchases"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "benefits from AI datacenter buildout spend"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "memory demand tied to AI server/datacenter capex surge"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Azure's 43% growth and $678B RPO signal strong overall cloud/AI demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "read-through of robust enterprise AI/cloud spending across hyperscalers"
+  }
+ ],
+ "evidence": "When adjusting for these items, we exceeded expectations across revenue, operating income, and diluted earnings per share.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

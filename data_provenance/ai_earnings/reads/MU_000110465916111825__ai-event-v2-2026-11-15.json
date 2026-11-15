@@ -1,0 +1,33 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.45,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.3,
+ "own_stock": -0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "MU raising costly debt signals memory downturn stress"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "peer in NAND/memory pricing weakness"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "minor, not directly tied"
+  }
+ ],
+ "evidence": "issue and sell $1.25 billion aggregate principal amount of 7.500% Senior Secured Notes due 2023",
+ "fcf_outlook_reason": "",
+ "uncertainty_reason": "",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

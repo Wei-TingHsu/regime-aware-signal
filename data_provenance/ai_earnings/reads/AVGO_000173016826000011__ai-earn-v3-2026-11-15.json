@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2026 (ended February 1, 2026)",
+  "revenue": "$19,311 million, +29% YoY",
+  "operating_income": null,
+  "net_income": "GAAP $7,349 million; Non-GAAP $10,185 million",
+  "eps": "GAAP diluted $1.50; Non-GAAP diluted $2.05",
+  "operating_cash_flow": "$8,260 million",
+  "capex": "$250 million",
+  "free_cash_flow": "$8,010 million (41% of revenue)",
+  "cash_and_investments": "$14,174 million cash and cash equivalents",
+  "total_debt": "Short-term debt $2,252 million; Long-term debt $63,805 million",
+  "guidance_next": "Q2 FY2026 revenue guidance of approximately $22.0 billion (+47% YoY); Adjusted EBITDA guidance of approximately 68% of projected revenue; AI semiconductor revenue expected to be $10.7 billion in Q2"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.5,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "custom AI accelerators gaining share validates AI silicon demand broadly"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "surging custom AI chip volumes benefit foundry capacity"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "likely custom AI accelerator customer driving demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AI infrastructure buildout implies memory demand strength"
+  }
+ ],
+ "evidence": "Q1 AI revenue of $8.4 billion grew 106% year-over-year, above our forecast... we expect AI semiconductor revenue to be $10.7 billion in Q2",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

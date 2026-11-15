@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2018 (quarter ended September 30, 2018)",
+  "revenue": "NT$260.35 billion / US$8.49 billion",
+  "operating_income": "Operating margin 36.6% (~NT$95.3 billion implied)",
+  "net_income": "NT$89.07 billion",
+  "eps": "NT$3.44 per share",
+  "operating_cash_flow": "NT$94.08 billion",
+  "capex": "NT$69.95 billion",
+  "free_cash_flow": "NT$24.13 billion",
+  "cash_and_investments": "NT$604.02 billion",
+  "total_debt": "NT$56.90 billion long-term interest-bearing debt",
+  "guidance_next": "4Q18 revenue expected US$9.35-9.45 billion; gross margin 47-49%; operating margin 36-38%, at NT$30.8/US$"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "fabless customer reliant on TSMC capacity"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "major foundry customer"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "competing in advanced process nodes"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "relies on TSMC for chip manufacturing"
+  },
+  {
+   "company": "SKHY",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor industry peer"
+  }
+ ],
+ "evidence": "Revenue (US$ billions) 8.49 vs guidance 8.28-8.38, beating prior guidance; operating margin 36.6% above guided 35.5-37.5%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

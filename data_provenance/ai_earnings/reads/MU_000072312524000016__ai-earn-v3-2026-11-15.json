@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2024 (ended May 30, 2024)",
+  "revenue": "$6.811 billion",
+  "operating_income": "$719 million GAAP (10.6% margin); $941 million non-GAAP (13.8% margin)",
+  "net_income": "$332 million GAAP; $702 million non-GAAP",
+  "eps": "$0.30 GAAP diluted; $0.62 non-GAAP diluted",
+  "operating_cash_flow": "$2.482 billion",
+  "capex": "$2.057 billion (net investments in capital expenditures)",
+  "free_cash_flow": "$425 million (adjusted free cash flow, as stated)",
+  "cash_and_investments": "$9.22 billion (cash, marketable investments, and restricted cash)",
+  "total_debt": "$13.258 billion ($398M current + $12.860B long-term)",
+  "guidance_next": "FQ4-24: Revenue $7.60B \u00b1 $200M; GAAP gross margin 33.5% \u00b1 1.0% (Non-GAAP 34.5% \u00b1 1.0%); GAAP opex $1.19B \u00b1 $15M (Non-GAAP $1.06B \u00b1 $15M); GAAP diluted EPS $0.61 \u00b1 $0.08 (Non-GAAP $1.08 \u00b1 $0.08)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "HBM demand tied to AI GPU buildout"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "NAND/data center SSD market strength"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "advanced packaging/foundry for memory tech"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "AI compute ecosystem benefits from memory demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "hyperscaler data center buildout drives DRAM/NAND demand"
+  }
+ ],
+ "evidence": "Robust AI demand and strong execution enabled Micron to drive 17% sequential revenue growth, exceeding our guidance range in fiscal Q3",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

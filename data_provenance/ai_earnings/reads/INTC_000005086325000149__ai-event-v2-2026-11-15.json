@@ -1,0 +1,31 @@
+{
+ "event_type": "leadership change",
+ "material": 0.35,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.4,
+ "own_stock": -0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel leadership instability benefits rival client/datacenter CPU share"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "foundry relationship largely unaffected"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "minor relevance as customer"
+  }
+ ],
+ "evidence": "Michelle Johnston Holthaus, Chief Executive Officer of Intel Products, notified Intel Corporation (\u201cIntel\u201d) of her decision to resign for Good Reason",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

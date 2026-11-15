@@ -1,0 +1,49 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.2,
+ "market": 0.15,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "leading foundry demand signals AI chip supply health"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from TSMC capacity/demand strength"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC strength implies competitive foundry pressure"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "relies on TSMC advanced nodes"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "memory peer, limited direct read-through"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "semiconductor cycle improvement signal"
+  }
+ ],
+ "evidence": "revenue for January 2024 was approximately NT$215.79 billion, an increase of 22.4 percent from December 2023 and an increase of 7.9 percent from January 2023",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

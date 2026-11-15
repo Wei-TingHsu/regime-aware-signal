@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.85,
+ "fcf_outlook": -0.35,
+ "uncertainty": 0.6,
+ "own_stock": -0.4,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "rival in healthcare cloud/EHR ambitions"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competing cloud healthcare push"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS healthcare data business faces stronger Oracle-Cerner combo"
+  }
+ ],
+ "evidence": "a purchase price of $95.00 per share, net to the holders thereof, in cash",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

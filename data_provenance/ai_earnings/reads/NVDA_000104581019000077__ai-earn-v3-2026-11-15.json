@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2020 (ended April 28, 2019)",
+  "revenue": "$2.22 billion (vs $2.20B guided)",
+  "operating_income": "$358M GAAP / $557M non-GAAP",
+  "net_income": "$394M GAAP / $543M non-GAAP",
+  "eps": "$0.64 GAAP / $0.88 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$7,802M",
+  "total_debt": null,
+  "guidance_next": "Q2 FY20 revenue ~$2.55B +/-2%; GAAP/non-GAAP gross margin 59.2%/59.5% +/-50bps; GAAP/non-GAAP opex ~$985M/$765M; GAAP/non-GAAP other income ~$27M; tax rate ~10% +/-1%"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.2,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": -0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "GPU market share dynamics as NVDA stabilizes"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "memory demand tied to NVDA GPU volumes"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "foundry demand recovery signal"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "AWS adoption of T4 GPUs and Jetson/RoboMaker"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Azure IoT collaboration with NVIDIA DeepStream"
+  }
+ ],
+ "evidence": "Revenue is expected to be $2.55 billion, plus or minus 2 percent, up from $2.22 billion, signaling sequential growth and a rebound narrative after Jensen Huang said 'NVIDIA is back on an upward trajectory.'",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

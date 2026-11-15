@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2019 (ended May 5, 2019)",
+  "revenue": "$5,517 million",
+  "operating_income": "$970 million GAAP (17.6% margin); $2,949 million non-GAAP (53.5% margin)",
+  "net_income": "$691 million GAAP",
+  "eps": "$1.64 GAAP diluted; $5.21 non-GAAP diluted",
+  "operating_cash_flow": "$2,667 million",
+  "capex": "$125 million",
+  "free_cash_flow": "$2,542 million",
+  "cash_and_investments": "$5,328 million cash and cash equivalents",
+  "total_debt": null,
+  "guidance_next": "FY2019 revenue outlook cut to $22,500 million ($17.5B semiconductor solutions, $5B infrastructure software); GAAP operating margin 14.75%, non-GAAP operating margin 52.50%; capex ~$500 million; depreciation ~$600 million; intangible amortization ~$5,235 million; still expects double-digit FCF growth and $8 billion in share repurchases/eliminations for FY2019"
+ },
+ "results_vs_prior_guidance": -0.2,
+ "guidance_change": -0.6,
+ "fcf_trend": 0.5,
+ "own_stock": -0.4,
+ "market": -0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "QCOM",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "wireless semiconductor peer facing same demand softness"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "broad semiconductor demand slowdown and inventory correction signal"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "networking/semiconductor cyclicality and export restriction impact"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "foundry customer cutting outlook implies softer wafer demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "general semiconductor industry demand read-through"
+  }
+ ],
+ "evidence": "We currently see a broad-based slowdown in the demand environment... our customers are actively reducing their inventory levels, and we are taking a conservative stance for the rest of the year.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

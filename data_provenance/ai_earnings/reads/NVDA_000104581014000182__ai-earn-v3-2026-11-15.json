@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2015 (three months ended October 26, 2014)",
+  "revenue": "$1.225 billion (up 16% YoY, up 11% QoQ)",
+  "operating_income": "$213.3 million GAAP",
+  "net_income": "$172.967 million GAAP; $220 million non-GAAP",
+  "eps": "$0.31 GAAP diluted; $0.39 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$4.241 billion (cash, equivalents and marketable securities)",
+  "total_debt": "$1.377 billion long-term debt",
+  "guidance_next": "Q4 FY2015: revenue ~$1.20B +/-2%; GAAP gross margin ~55.2%, non-GAAP ~55.5% (+/-50bps); GAAP opex ~$470M, non-GAAP opex ~$422M; GAAP/non-GAAP tax rate ~18% +/-1%; capex ~$40-50M"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.1,
+ "fcf_trend": -0.1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVIDIA GPU/datacenter share gains"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Tegra/GPU competes with Intel mobile/compute lines"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Foundry partner benefiting from Maxwell GPU demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Tegra K1 used in Nexus 9 tablet"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Memory supplier for GPU/datacenter growth"
+  }
+ ],
+ "evidence": "Revenue for the third quarter ended October 26, 2014, of $1.23 billion, up 16 percent from $1.05 billion a year earlier and up 11 percent from $1.10 billion the previous quarter.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

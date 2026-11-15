@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2019",
+  "revenue": "$16.5 billion, down 3% YoY",
+  "operating_income": "$4.617 billion GAAP; $5.1 billion non-GAAP",
+  "net_income": "$4.179 billion GAAP",
+  "eps": "$0.92 GAAP diluted; $1.06 non-GAAP",
+  "operating_cash_flow": "$7.587 billion",
+  "capex": "$3.554 billion",
+  "free_cash_flow": "$4.033 billion (OCF minus capex)",
+  "cash_and_investments": "$11.944 billion total cash and investments",
+  "total_debt": "$28.815 billion (short-term $3.726B + long-term $25.089B)",
+  "guidance_next": "Q3 2019 revenue ~$18.0B, GAAP EPS ~$1.16/non-GAAP ~$1.24; FY2019 revenue raised to ~$69.5B, GAAP EPS ~$4.10/non-GAAP EPS raised to $4.40, capex ~$15.5B, non-GAAP FCF ~$15.0B"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": -0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel PC/data center strength and raised guidance implies competitive pressure on AMD"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "Intel NSG memory revenue down 13% YoY signals weak NAND pricing environment"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "Weak memory pricing read-through from Intel's NSG decline"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Overall semiconductor demand steadier than feared, modest positive"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "DCG cloud segment revenue declined slightly YoY, soft cloud capex signal"
+  }
+ ],
+ "evidence": "Raising full-year revenue outlook to $69.5 billion, up $500 million from April guidance... raising full-year non-GAAP EPS outlook to $4.40",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

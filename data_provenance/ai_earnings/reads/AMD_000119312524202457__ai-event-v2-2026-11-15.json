@@ -1,0 +1,49 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.5,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.3,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "server infra consolidation trend"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD gains server/rack-scale manufacturing capability to compete in AI systems"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AMD strengthens data center hardware integration"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "potential hyperscaler customer for custom server solutions"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "potential hyperscaler customer for custom server solutions"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "more AMD server volume supports foundry demand"
+  }
+ ],
+ "evidence": "aggregate consideration ... based on an equity value for all outstanding equity interests of the Company of up to $4.9 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

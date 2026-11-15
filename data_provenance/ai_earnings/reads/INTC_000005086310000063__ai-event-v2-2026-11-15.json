@@ -1,0 +1,19 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.3,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.2,
+ "own_stock": 0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Potential FTC settlement could ease antitrust pressure on Intel, reducing AMD's regulatory leverage"
+  }
+ ],
+ "evidence": "requesting that the administrative trial proceedings between Intel and the FTC be suspended through July 22, 2010 while the parties review and discuss a proposed consent order",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

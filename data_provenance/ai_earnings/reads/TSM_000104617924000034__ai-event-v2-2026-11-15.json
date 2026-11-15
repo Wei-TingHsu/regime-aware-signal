@@ -1,0 +1,37 @@
+{
+ "event_type": "other",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.3,
+ "own_stock": -0.2,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "potential wafer supply delay"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "potential wafer supply delay"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "potential wafer supply delay"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "possible relative capacity advantage if TSMC delayed"
+  }
+ ],
+ "evidence": "A small number of tools were damaged at certain facilities, partially impacting their operations.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

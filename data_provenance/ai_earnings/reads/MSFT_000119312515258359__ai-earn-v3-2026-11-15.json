@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 FY2015 (quarter ended June 30, 2015)",
+  "revenue": "$22.2 billion",
+  "operating_income": "$(2.1) billion GAAP; $6.4 billion non-GAAP",
+  "net_income": "$(3,195) million",
+  "eps": "$(0.40) GAAP; $0.62 non-GAAP",
+  "operating_cash_flow": "$6,816 million (quarter); $29,080 million (FY)",
+  "capex": "$1,781 million (quarter, additions to property and equipment); $5,944 million (FY)",
+  "free_cash_flow": "$5,035 million (quarter, OCF minus capex)",
+  "cash_and_investments": "$96,526 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "short-term debt $4,985M + current portion long-term debt $2,499M + long-term debt $27,808M = $35,292 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Azure cloud growth signals competitive cloud market strength"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cloud and search competition referenced via Bing/Azure growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "PC market decline post-XP refresh impacts Windows OEM demand"
+  }
+ ],
+ "evidence": "Operating loss was $2.1 billion, compared to operating income of $6.5 billion in the prior year, including $8.4 billion of impairment, integration, and restructuring expenses",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

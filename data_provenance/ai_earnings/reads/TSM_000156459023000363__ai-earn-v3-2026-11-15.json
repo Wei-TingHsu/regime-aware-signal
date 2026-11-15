@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2022 (quarter ended Dec 31, 2022)",
+  "revenue": "NT$625.53 billion (US$19.93 billion)",
+  "operating_income": "NT$325.04 billion (operating margin 52.0%)",
+  "net_income": "NT$295.90 billion",
+  "eps": "NT$11.41 (US$1.82 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q1 2023 revenue expected US$16.7-17.5 billion; gross profit margin 53.5%-55.5%; operating profit margin 41.5%-43.5% (at NT$30.7/US$1); full-year 2023 capital budget US$32-36 billion"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.6,
+ "fcf_trend": 0.0,
+ "own_stock": -0.3,
+ "market": -0.4,
+ "ai_demand": -0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "weak foundry demand signals softer chip orders"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "shares TSMC's advanced-node capacity, hit by same demand softness"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "major TSMC customer exposed to inventory correction"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "rival foundry may gain relative share amid TSMC slowdown"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "broader semiconductor inventory correction read-through"
+  }
+ ],
+ "evidence": "we expect our business to be further impacted by continued end market demand softness, and customers\u2019 further inventory adjustment",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2014 (ended March 31, 2014)",
+  "revenue": "$19.74 billion, up 23% YoY",
+  "operating_income": "$146 million, down 19% YoY from $181 million",
+  "net_income": "$108 million",
+  "eps": "$0.23 diluted",
+  "operating_cash_flow": "$5.35 billion (trailing twelve months)",
+  "capex": "$3.854 billion (trailing twelve months); $1.08 billion in Q1 2014",
+  "free_cash_flow": "$1.49 billion (trailing twelve months)",
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q2 2014 net sales expected between $18.1B and $19.8B (15%-26% growth); operating income (loss) expected between $(455)M and $(55)M vs $79M in Q2 2013, including ~$455M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.2,
+ "own_stock": -0.3,
+ "market": 0,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS price cuts intensify cloud price competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS price cuts intensify cloud price competition"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "AWS infrastructure expansion implies compute demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "AWS infrastructure expansion implies compute demand"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud/database price cuts pressure competitors"
+  }
+ ],
+ "evidence": "Operating income (loss) is expected to be between $(455) million and $(55) million, compared to $79 million in second quarter 2013",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

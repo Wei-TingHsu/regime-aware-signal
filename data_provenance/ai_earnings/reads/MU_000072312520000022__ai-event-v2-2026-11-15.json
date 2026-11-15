@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.6,
+ "own_stock": -0.3,
+ "market": -0.3,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "sector-wide COVID demand uncertainty"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "supply chain uncertainty amid precautionary liquidity moves"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "shared semiconductor macro uncertainty from COVID-19"
+  }
+ ],
+ "evidence": "as a precautionary measure in order to increase its cash position and preserve financial flexibility in light of current uncertainty in the global markets resulting from the COVID-19 outbreak",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.15,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "debt issuance by peer, no direct impact"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "signals credit market conditions for mega-cap tech"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "comparable balance sheet financing activity"
+  }
+ ],
+ "evidence": "Meta intends to use the net proceeds from the offering for general corporate purposes, which may include, but are not limited to, capital expenditures, repurchases of outstanding shares of its common stock, acquisitions, or investments.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

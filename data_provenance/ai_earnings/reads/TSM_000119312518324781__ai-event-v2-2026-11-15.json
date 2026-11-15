@@ -1,0 +1,31 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.1,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.0,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "capacity expansion supports future foundry customer supply"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "capacity expansion supports future foundry customer supply"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "TSMC continued capex signals competitive capacity lead"
+  }
+ ],
+ "evidence": "Approved capital appropriations of approximately US$3,364.40 million for purposes including... construction of fab facilities",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

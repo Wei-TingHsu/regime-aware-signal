@@ -1,0 +1,37 @@
+{
+ "event_type": "guidance update",
+ "material": 0.35,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.5,
+ "own_stock": -0.3,
+ "market": -0.3,
+ "affected": [
+  {
+   "company": "AAPL",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "similar China supply chain exposure"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "PC chip demand tied to Windows OEM/Surface shortfall"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "PC component demand softness"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "supply chain disruption affects chip production for devices"
+  }
+ ],
+ "evidence": "we do not expect to meet our More Personal Computing segment guidance as Windows OEM and Surface are more negatively impacted than previously anticipated",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

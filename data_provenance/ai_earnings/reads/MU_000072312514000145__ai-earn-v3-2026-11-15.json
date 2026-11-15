@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and FY2014 (ended August 28, 2014)",
+  "revenue": "$4.23 billion (Q4); $16.36 billion (FY2014)",
+  "operating_income": "$828 million (Q4); $3,087 million (FY2014)",
+  "net_income": "$1.15 billion (Q4 GAAP); $3.05 billion (FY2014)",
+  "eps": "$0.96 diluted (Q4 GAAP); $2.54 diluted (FY2014); $0.82 non-GAAP (Q4)",
+  "operating_cash_flow": "$1.35 billion (Q4); $5.70 billion (FY2014)",
+  "capex": "$1.33 billion (Q4); $2.658 billion (FY2014, PP&E expenditures)",
+  "free_cash_flow": "$0.02 billion (Q4: 1.35B - 1.33B); $3.04 billion (FY2014: 5.70B - 2.658B)",
+  "cash_and_investments": "$5.35 billion (cash and marketable investments, end of Q4)",
+  "total_debt": "$6.593 billion (current debt $1,638M + long-term debt $4,955M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "NAND flash memory competitor"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "memory customer for computing products"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor manufacturing peer"
+  }
+ ],
+ "evidence": "Revenues for fiscal year 2014 were $16.36 billion and net income attributable to Micron shareholders was $3.05 billion, or $2.54 per diluted share",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

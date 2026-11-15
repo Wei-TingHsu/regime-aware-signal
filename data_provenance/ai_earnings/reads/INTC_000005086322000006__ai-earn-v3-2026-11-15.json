@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2021 / Full Year 2021 (ended Dec 25, 2021)",
+  "revenue": "Q4: $20.5B GAAP / $19.5B non-GAAP; FY2021: $79.0B GAAP / $74.7B non-GAAP",
+  "operating_income": "Q4: $4.989B GAAP (24.3% margin); FY2021: $19.456B GAAP (24.6% margin); non-GAAP margins 25.9% Q4 / 29.7% FY",
+  "net_income": "Q4: $4.623B GAAP / $4.5B non-GAAP; FY2021: $19.868B GAAP / $22.4B non-GAAP",
+  "eps": "Q4: $1.13 GAAP diluted / $1.09 non-GAAP; FY2021: $4.86 GAAP / $5.47 non-GAAP",
+  "operating_cash_flow": "FY2021: $29.991B (~$30.0B)",
+  "capex": "FY2021: $18.733B additions to PP&E (plus $1.596B NAND held-for-sale capex)",
+  "free_cash_flow": "FY2021: $11.3B (stated non-GAAP FCF)",
+  "cash_and_investments": "$4.827B cash + $2.103B short-term investments + $21.483B trading assets = ~$28.4B",
+  "total_debt": "$4.591B short-term + $33.510B long-term = ~$38.1B",
+  "guidance_next": "Q1 2022: revenue ~$18.3B (GAAP and non-GAAP); GAAP gross margin ~49%, non-GAAP ~52%; EPS $0.70 GAAP / $0.80 non-GAAP; tax rate 25% GAAP / 15% non-GAAP"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": -0.6,
+ "fcf_trend": -0.3,
+ "own_stock": -0.5,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel CCG/DCG share pressure persists despite Q4 beat"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Habana AI accelerators compete in AI inference market"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Habana Gaudi accelerators now power AWS EC2 DL1 instances"
+  },
+  {
+   "company": "SKHY",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Completed first closing of NAND business sale to SK hynix"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel's $20B Ohio fabs signal foundry ambitions competing with TSMC"
+  }
+ ],
+ "evidence": "Forecasting first-quarter 2022 revenue of approximately $18.3 billion; expecting first-quarter EPS of $0.70 (non-GAAP EPS of $0.80)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2018 (quarter ended June 30, 2018) and full fiscal year 2018",
+  "revenue": "$30.1 billion (Q4), $110.4 billion (FY18)",
+  "operating_income": "$10.4 billion (Q4), $35.1 billion (FY18)",
+  "net_income": "$8.9 billion GAAP / $8.8 billion non-GAAP (Q4); $16.6 billion GAAP / $30.3 billion non-GAAP (FY18)",
+  "eps": "$1.14 GAAP / $1.13 non-GAAP diluted (Q4); $2.13 GAAP / $3.88 non-GAAP diluted (FY18)",
+  "operating_cash_flow": "$11,418 million (Q4); $43,884 million (FY18)",
+  "capex": "$3,980 million (Q4); $11,632 million (FY18)",
+  "free_cash_flow": "$7,438 million (Q4, OCF-capex); $32,252 million (FY18, OCF-capex)",
+  "cash_and_investments": "$133,768 million total cash, cash equivalents and short-term investments",
+  "total_debt": "$76,240 million (short-term debt $0 + current portion LT debt $3,998M + long-term debt $72,242M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.3,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure's 89% growth signals share gains vs AWS in cloud infrastructure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong commercial cloud growth pressures Google Cloud competitive position"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Enterprise cloud/server growth competes with Oracle's cloud offerings"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Rising capex for cloud infrastructure implies continued server/chip purchases"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Data center buildout benefits chip suppliers as Azure scales"
+  }
+ ],
+ "evidence": "commercial cloud revenue growing 53% year-over-year to $6.9 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.15,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.05,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "ASML",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "continued large capex approvals for advanced tech capacity"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "capacity expansion supports advanced node supply"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "capacity expansion supports advanced node supply"
+  }
+ ],
+ "evidence": "Machinery equipment for advanced technology capacity: NT$228.0 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.35,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "commits to building advanced chips in US via TSMC Arizona"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "partnership continuity for AI chip manufacturing"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC gains US foundry foothold, competes with Intel Foundry"
+  }
+ ],
+ "evidence": "up to US$6.6 billion in direct funding, the PMT also proposes to provide TSMC with up to US$5 billion in loans",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

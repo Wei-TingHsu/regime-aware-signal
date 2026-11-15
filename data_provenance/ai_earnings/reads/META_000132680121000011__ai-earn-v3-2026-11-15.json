@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2020",
+  "revenue": "$28,072 million Q4 (33% YoY); $85,965 million FY (22% YoY)",
+  "operating_income": "$12,775 million Q4; $32,671 million FY",
+  "net_income": "$11,219 million Q4; $29,146 million FY",
+  "eps": "$3.88 diluted Q4; $10.09 diluted FY",
+  "operating_cash_flow": "$14,040 million Q4; $38,747 million FY",
+  "capex": "$4.82 billion Q4 (incl. finance lease principal payments); $15.72 billion FY",
+  "free_cash_flow": "$9,222 million Q4; $23,028 million FY",
+  "cash_and_investments": "$61.95 billion (cash, cash equivalents and marketable securities) as of Dec 31, 2020",
+  "total_debt": null,
+  "guidance_next": "FY2021 total expenses $68-73B (unchanged); FY2021 capex $21-23B (unchanged, includes delayed 2020 spend); FY2021 tax rate high-teens; Q1/Q2 2021 revenue YoY growth expected stable to modestly accelerating sequentially, pressured in H2 by tougher comps and iOS14/regulatory ad-targeting headwinds beginning late Q1"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.0,
+ "fcf_trend": 0.6,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "shared digital ad market strength"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "online commerce tailwind shared across ad/e-commerce"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broad tech capex/cloud infrastructure trend"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "beneficiary of continued high data center capex ($21-23B)"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "server/infrastructure capex spend supports chip suppliers"
+  }
+ ],
+ "evidence": "Income from operations $ 12,775 $ 8,858 44%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

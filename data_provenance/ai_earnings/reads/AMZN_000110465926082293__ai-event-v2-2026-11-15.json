@@ -1,0 +1,26 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "comparable hyperscaler capex financing needs"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "comparable hyperscaler capex financing needs"
+  }
+ ],
+ "evidence": "aggregate principal amount...$24.923 billion...net proceeds...approximately $24.867 billion",
+ "note": "Large $25B debt raise adds fixed interest burden and leverage (debt already up to $119.1B) amid negative TTM FCF, funding continued heavy capex; modestly negative for FCF/uncertainty but routine, well-telegraphed financing activity for a company of this scale.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

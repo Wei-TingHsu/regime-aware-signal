@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2017 (quarter ended March 31, 2017)",
+  "revenue": "$22.1 billion GAAP; $23.6 billion non-GAAP",
+  "operating_income": "$5.6 billion GAAP; $7.1 billion non-GAAP",
+  "net_income": "$4.8 billion GAAP; $5.7 billion non-GAAP",
+  "eps": "$0.61 diluted GAAP; $0.73 non-GAAP",
+  "operating_cash_flow": "$10,660 million (three months)",
+  "capex": "$1,695 million (additions to property and equipment)",
+  "free_cash_flow": "$8,965 million (10,660-1,695)",
+  "cash_and_investments": "$126,018 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$7,187M short-term debt + $599M current portion LT debt + $76,222M long-term debt \u2248 $84,008 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure growth of 93% signals cloud share gains vs AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud competition intensifying from Azure momentum"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Enterprise cloud/database competition from Azure/Dynamics 365"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader enterprise cloud security spending tailwind"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Datacenter buildout for Azure implies server/chip demand"
+  }
+ ],
+ "evidence": "commercial cloud annualized revenue run rate to more than $15.2 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

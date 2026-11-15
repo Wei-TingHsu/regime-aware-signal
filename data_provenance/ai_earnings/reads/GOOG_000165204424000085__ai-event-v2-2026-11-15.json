@@ -1,0 +1,31 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.7,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.7,
+ "own_stock": -0.5,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Bing/competing search could gain if remedies force changes"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Ad search competitor could benefit from distribution changes"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Ad tech antitrust precedent risk"
+  }
+ ],
+ "evidence": "Judge Amit P. Mehta of U.S. District Court for the District of Columbia ruled that Google LLC ... violated antitrust laws related to online search.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

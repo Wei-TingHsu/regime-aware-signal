@@ -1,0 +1,31 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.25,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "foundry demand strength favors TSMC over Intel manufacturing"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "strong TSMC volumes imply healthy chip demand for fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "robust foundry sales track GPU/chip demand"
+  }
+ ],
+ "evidence": "net sales were approximately NT$43.62 billion, an increase of 9 percent over April 2012 and an increase of 21.3 percent over May 2011",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2012 (quarter and full year ended June 30, 2012)",
+  "revenue": "$18.06B GAAP (non-GAAP adjusted $18.60B); FY2012 $73.72B GAAP ($74.26B non-GAAP)",
+  "operating_income": "$192M GAAP (non-GAAP $6.93B) for Q4; FY2012 $21.76B GAAP ($28.50B non-GAAP)",
+  "net_income": "-$492M GAAP for Q4; $16.98B GAAP for FY2012",
+  "eps": "-$0.06 GAAP (non-GAAP $0.73) Q4; $2.00 GAAP ($2.78 non-GAAP) FY2012",
+  "operating_cash_flow": "$7.68B Q4; $31.63B FY2012",
+  "capex": "$622M Q4; $2.31B FY2012",
+  "free_cash_flow": "$7.06B Q4 (7,677-622); $29.32B FY2012 (31,626-2,305)",
+  "cash_and_investments": "$63.04B total cash, cash equivalents, and short-term investments (June 30, 2012)",
+  "total_debt": "$11.94B (current portion $1.23B + long-term $10.71B)",
+  "guidance_next": "Microsoft reaffirms fiscal year 2013 operating expense guidance of $30.3 billion to $30.9 billion."
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": 0.0,
+ "fcf_trend": 0.3,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Server & Tools growth signals enterprise share gains"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Online Services (Bing) share gains vs Google search"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Microsoft cloud/server growth competes with AWS"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "PC/enterprise demand supports Windows ecosystem hardware"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "n/a"
+  }
+ ],
+ "evidence": "Microsoft reaffirms fiscal year 2013 operating expense guidance of $30.3 billion to $30.9 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

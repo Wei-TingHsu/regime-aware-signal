@@ -1,0 +1,25 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.3,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "wireless/baseband competition intensifies with Intel entry"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "potential foundry partner for acquired wireless chips"
+  }
+ ],
+ "evidence": "Intel has entered into a definitive agreement to purchase Infineon\u2019s Wireless Solutions business in a cash transaction valued at $1.4 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

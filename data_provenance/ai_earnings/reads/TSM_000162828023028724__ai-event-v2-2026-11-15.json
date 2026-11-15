@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.1,
+ "own_stock": 0.15,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "foundry demand recovery signal"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "foundry demand recovery signal"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "semis demand trend read-through"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC share strength vs Intel foundry"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "foundry demand recovery signal"
+  }
+ ],
+ "evidence": "revenue for July 2023 was approximately NT$177.62 billion, an increase of 13.6 percent from June 2023",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2025 (quarter ended Dec 31, 2025)",
+  "revenue": "NT$1,046.09 billion (US$33.73 billion)",
+  "operating_income": "NT$564.90 billion (operating margin 54.0%)",
+  "net_income": "NT$505.74 billion",
+  "eps": "NT$19.50 diluted (US$3.14 per ADR)",
+  "operating_cash_flow": "NT$725.51 billion (4Q25)",
+  "capex": "NT$356.91 billion (4Q25)",
+  "free_cash_flow": "NT$368.60 billion (4Q25, stated)",
+  "cash_and_investments": "NT$3,068.59 billion",
+  "total_debt": "NT$896.06 billion long-term interest-bearing debt",
+  "guidance_next": "Q1 2026 revenue US$34.6-35.8 billion; gross margin 63%-65%; operating margin 54%-56% (at NT$31.6/US$1); 2026 capex US$52-56 billion; 2026 revenue expected to grow close to 30% YoY in USD terms"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.7,
+ "own_stock": 0.8,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.7,
+   "reason": "leading-edge demand drives TSMC growth, implies strong NVDA chip volumes"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "benefits from strong advanced node capacity and demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "custom silicon/advanced packaging demand tied to TSMC capacity growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "TSMC's leadership and capex surge widen foundry gap"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "broader AI infrastructure capex signals strong memory/compute demand environment"
+  }
+ ],
+ "evidence": "Revenue is expected to be between US$34.6 billion and US$35.8 billion... 2026 revenue to increase by close to 30% in US dollar terms",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,37 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.35,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.2,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "capex arms race funding comparison"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "similar AI capex debt financing trend"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "peer large-cap AI capex financing"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "debt proceeds likely fund continued AI infrastructure/GPU spend"
+  }
+ ],
+ "evidence": "completed an offering of $3,250,000,000 ... 5.850% Senior Notes due 2031 ... $2,750,000,000 ... 7.500% Senior Notes due 2056",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

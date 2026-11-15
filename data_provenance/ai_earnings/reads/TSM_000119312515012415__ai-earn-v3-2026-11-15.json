@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "4Q14 (quarter ended Dec 31, 2014) and FY2014",
+  "revenue": "NT$222.52 billion (4Q14); NT$762.81 billion (FY14)",
+  "operating_income": "Operating margin 39.6% of revenue (4Q14); 38.8% (FY14)",
+  "net_income": "NT$79.99 billion (4Q14, net income to shareholders)",
+  "eps": "NT$3.08 (4Q14); NT$10.18 diluted (FY14)",
+  "operating_cash_flow": "NT$153.67 billion (4Q14); NT$421.53 billion (FY14)",
+  "capex": "NT$52.42 billion (4Q14); NT$288.54 billion (FY14)",
+  "free_cash_flow": "NT$101.25 billion (4Q14); NT$132.99 billion (FY14)",
+  "cash_and_investments": "NT$436.92 billion (end 4Q14)",
+  "total_debt": "Long-term interest-bearing debt NT$214.52 billion (end 4Q14)",
+  "guidance_next": "1Q15 revenue NT$221-224 billion (FX 31.80 NTD/USD); gross margin 48.5%-50.5%; operating margin 38.5%-40.5%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.0,
+ "fcf_trend": 0.8,
+ "own_stock": 0.6,
+ "market": 0.1,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "TSMC capacity/margin strength supports leading-edge customers like Nvidia"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Foundry capacity and margin health benefit fabless customer AMD"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's record margins and cash highlight foundry competitive strength vs Intel"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Communications-heavy revenue mix implies solid demand from customers like Broadcom"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader semiconductor capex/demand signal relevant to memory peers"
+  }
+ ],
+ "evidence": "Cash from operating activities 153.67 ... Free Cash Flow(1) 101.25 ... Cash & Marketable Securities 436.92 29.2%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

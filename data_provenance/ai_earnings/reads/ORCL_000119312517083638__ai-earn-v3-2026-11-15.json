@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY17 (three months ended Feb 28, 2017)",
+  "revenue": "$9.205 billion GAAP, up 2% YoY (non-GAAP $9.3B, up 3%)",
+  "operating_income": "$2,959 million GAAP (32% margin); non-GAAP $3.9 billion (43% margin)",
+  "net_income": "$2,239 million GAAP, up 5%",
+  "eps": "$0.53 GAAP diluted (up 6%); $0.69 non-GAAP diluted (up 7%)",
+  "operating_cash_flow": "$13,453 million trailing twelve months",
+  "capex": "$1,676 million trailing twelve months (approx, from TTM table); 9-month capex $1,496 million",
+  "free_cash_flow": "$11,777 million trailing twelve months (TTM operating cash flow minus TTM capex)",
+  "cash_and_investments": "$19,748 million cash and equivalents plus $39,604 million marketable securities = ~$59.35 billion",
+  "total_debt": "$3,498 million current notes payable + $50,469 million non-current notes payable = ~$53.97 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "CRM",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Oracle claims SaaS/PaaS growing 3x faster and selling more than Salesforce"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Ellison claims Gen2 IaaS faster/cheaper than AWS"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/IaaS competitor"
+  }
+ ],
+ "evidence": "Q3 was a very strong quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

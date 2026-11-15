@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2023 (quarter ended March 31, 2023)",
+  "revenue": "$69,787 million, up 3% YoY (6% constant currency)",
+  "operating_income": "$17,415 million, 25% margin",
+  "net_income": "$15,051 million",
+  "eps": "$1.17 diluted",
+  "operating_cash_flow": "$23,509 million",
+  "capex": "$6,289 million (purchases of property and equipment)",
+  "free_cash_flow": "$17,220 million (23,509 - 6,289)",
+  "cash_and_investments": "$115,102 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$13,697 million long-term debt",
+  "guidance_next": "No specific forward quantitative guidance given beyond confirming prior disclosed estimates (severance/office charges now mostly recognized at $2.6B of the $1.9-2.3B+0.5B range; depreciation reduction realized at $988M in Q1 vs ~$3.4B full-year estimate) and noting Google DeepMind segment change begins Q2 2023"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.5,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud momentum intensifies competition in cloud/AI"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Google Cloud growth competes with AWS"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AI investment and Cloud growth imply continued GPU/infra demand"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Shared ad-market and AI-cost-cutting narrative benefits sentiment"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Data center buildout supports memory demand"
+  }
+ ],
+ "evidence": "Resilience in Search and momentum in Cloud resulted in Q1 consolidated revenues of $69.8 billion, up 3% year over year, or up 6% in constant currency.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

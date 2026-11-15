@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2023 (quarter ended Dec 30, 2023); also FY2023",
+  "revenue": "$15.4 billion (Q4), up 10% YoY; FY2023 $54.2 billion, down 14% YoY",
+  "operating_income": "$2.585 billion GAAP (Q4); FY2023 $93 million GAAP",
+  "net_income": "$2.7 billion GAAP attributable to Intel (Q4); FY2023 $1.7 billion",
+  "eps": "$0.63 GAAP diluted / $0.54 non-GAAP diluted (Q4); FY2023 $0.40 GAAP / $1.05 non-GAAP",
+  "operating_cash_flow": "$4.6 billion (Q4); $11.471 billion (FY2023)",
+  "capex": "$25.750 billion (FY2023 additions to PP&E); Q4 not separately disclosed",
+  "free_cash_flow": "FY2023 operating cash flow minus capex = 11.471B - 25.750B = -$14.279 billion (negative)",
+  "cash_and_investments": "$7.079 billion cash + $17.955 billion short-term investments = $25.034 billion (Dec 30, 2023)",
+  "total_debt": "$2.288 billion short-term debt + $46.978 billion long-term debt = $49.266 billion",
+  "guidance_next": "Q1 2024 revenue $12.2-13.2 billion; GAAP EPS $(0.25); non-GAAP EPS $0.13; GAAP gross margin 40.7%, non-GAAP 44.5%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.6,
+ "fcf_trend": -0.6,
+ "own_stock": -0.5,
+ "market": -0.2,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel CCG resurgence and AI PC push pressures AMD client share"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel DCAI AI push modest vs Nvidia's dominant AI accelerator demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Weak DCAI/NEX revenue implies softer server memory demand from Intel platforms"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "IFS foundry ramp still loss-making, competes with TSMC for leading-edge nodes"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "5th Gen Xeon AI-optimized chips reaching cloud providers like Azure"
+  }
+ ],
+ "evidence": "Forecasting first-quarter 2024 revenue of $12.2 billion to $13.2 billion; expecting first-quarter EPS attributable to Intel of $(0.25) (non-GAAP EPS attributable to Intel of $0.13)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

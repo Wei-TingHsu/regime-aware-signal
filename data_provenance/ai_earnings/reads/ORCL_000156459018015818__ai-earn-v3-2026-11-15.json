@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 FY18 (quarter ended May 31, 2018) and full FY18",
+  "revenue": "$11.3 billion (Q4), $39.8 billion (FY18)",
+  "operating_income": "GAAP $4.38B (Q4), non-GAAP $5.3B (Q4); FY18 GAAP $13.7B, non-GAAP $17.6B",
+  "net_income": "$3.408B (Q4 GAAP), $4.087B (Q4 non-GAAP); FY18 GAAP $3.825B, non-GAAP $13.2B",
+  "eps": "$0.82 GAAP / $0.99 non-GAAP (Q4); $0.90 GAAP / $3.12 non-GAAP (FY18)",
+  "operating_cash_flow": "$15.386B (trailing twelve months, FY18)",
+  "capex": "$1.736B (FY18)",
+  "free_cash_flow": "$13.65B (trailing 4 quarters, FY18)",
+  "cash_and_investments": "$21.62B cash + $45.64B marketable securities",
+  "total_debt": "$4.491B current notes payable + $56.128B non-current notes payable = ~$60.6B",
+  "guidance_next": "CEO Safra Catz: 'Looking ahead to FY19, I expect revenue growth will enable us to deliver double-digit non-GAAP earnings per share growth once again.' Mark Hurd expects 'continued strong growth from our Fusion SaaS suites throughout FY19.'"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.4,
+ "own_stock": 0.3,
+ "market": 0.0,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud IaaS/PaaS rivalry as Oracle pushes database migrations to its cloud"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS competes directly with Oracle Cloud IaaS push"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Google Cloud competes for enterprise database migrations"
+  }
+ ],
+ "evidence": "\"We had a great fourth quarter with total revenues more than $200 million above our constant currency forecast\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2012 (ended September 30, 2012)",
+  "revenue": "$13.81 billion net sales, up 27% YoY",
+  "operating_income": "$(28) million operating loss (vs. $79 million income in Q3 2011)",
+  "net_income": "$(274) million net loss, including $169 million LivingSocial equity-method loss",
+  "eps": "$(0.60) per diluted share",
+  "operating_cash_flow": "$3.37 billion TTM, up 8% YoY",
+  "capex": "$716 million in Q3 (purchases of fixed assets); $2.31 billion TTM",
+  "free_cash_flow": "$1.06 billion TTM, down 31% YoY",
+  "cash_and_investments": "$2.98 billion cash and equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q4 2012: net sales $20.25B-$22.75B (16%-31% growth); operating income (loss) $(490)M to $310M, vs. $260M in Q4 2011, including ~$290M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.4,
+ "own_stock": -0.3,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS growth and new enterprise/government wins pressure Azure's early cloud ambitions"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS expansion into archiving, government and education use-cases competes with nascent Google Cloud"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS enterprise/government cloud wins (FinQloud, GovCloud) challenge Oracle's enterprise infrastructure business"
+  }
+ ],
+ "evidence": "Operating loss was $28 million in the third quarter, compared with operating income of $79 million in third quarter 2011",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

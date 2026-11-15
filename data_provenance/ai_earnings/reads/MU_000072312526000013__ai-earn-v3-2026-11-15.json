@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2026 (ended May 28, 2026)",
+  "revenue": "$41.456 billion",
+  "operating_income": "$33.318 billion GAAP / $33.681 billion Non-GAAP",
+  "net_income": "$28.243 billion GAAP / $28.857 billion Non-GAAP",
+  "eps": "$24.67 GAAP diluted / $25.11 Non-GAAP diluted",
+  "operating_cash_flow": "$25.388 billion",
+  "capex": "$7.826 billion gross; $7.084 billion net investments in capex",
+  "free_cash_flow": "$18.304 billion (adjusted FCF, as stated)",
+  "cash_and_investments": "$30.2 billion (cash, marketable investments, restricted cash)",
+  "total_debt": "Current debt $582M + Long-term debt $5,140M = $5.722 billion",
+  "guidance_next": "FQ4-26: Revenue $50.0B \u00b1 $1.0B; GAAP gross margin ~86% (Non-GAAP ~86%); GAAP opex ~$1.86B (Non-GAAP ~$1.65B); GAAP diluted EPS $30.73 \u00b1 $1.00 (Non-GAAP $31.00 \u00b1 $1.00)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.6,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "HBM4 in high-volume shipments for lead customer platform"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.7,
+   "reason": "benefits from HBM/DDR5 server memory demand growth"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.7,
+   "reason": "NAND pricing/demand strength read-through from QLC SSD ramp"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.5,
+   "reason": "industry-wide memory pricing and AI demand strength benefits peers"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "Strategic Customer Agreements imply long-term cloud/AI memory capacity commitments"
+  }
+ ],
+ "evidence": "Micron\u2019s record fiscal Q3 financial results and even stronger outlook for Q4 reflect the strategic value of memory in the AI era",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

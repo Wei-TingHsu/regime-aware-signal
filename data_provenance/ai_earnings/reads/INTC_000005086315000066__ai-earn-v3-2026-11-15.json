@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2015 (three months ended September 26, 2015)",
+  "revenue": "$14,465 million (vs $14,554 million prior year)",
+  "operating_income": "$4,192 million (vs $4,540 million prior year)",
+  "net_income": "$3,109 million (vs $3,317 million prior year)",
+  "eps": "$0.64 diluted (vs $0.66 prior year)",
+  "operating_cash_flow": null,
+  "capex": "$(1,206) million (additions to property, plant and equipment)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$20,843 million total cash investments (cash, short-term investments, trading assets)",
+  "total_debt": "$21,188 million (short-term debt $1,129M + long-term debt $20,059M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.2,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Client Computing revenue decline signals weak PC market shared with AMD"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Data Center Group growth (+12% YoY) signals strong data-center demand relevant to GPU/compute competitors"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Intel's NVM/storage group activity and data center growth imply memory demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "Intel's foundry start-up mentioned as nascent competitor to TSMC"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Overlap in NAND/storage business segment"
+  }
+ ],
+ "evidence": "DILUTED EARNINGS PER SHARE OF COMMON STOCK $0.64 ... $0.66 (prior year)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

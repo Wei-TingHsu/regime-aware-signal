@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2016 (three months ended April 2, 2016)",
+  "revenue": "$13,702 million",
+  "operating_income": "$2,568 million",
+  "net_income": "$2,046 million",
+  "eps": "$0.42 diluted",
+  "operating_cash_flow": null,
+  "capex": "$1,259 million (additions to property, plant and equipment)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$15,091 million total cash investments",
+  "total_debt": "$25,369 million (short-term $3,594M + long-term $21,775M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Intel CCG/DCG weakness could reflect competitive dynamics"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "NVM Solutions Group posted an operating loss, signaling weak NAND pricing"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NAND segment profitability pressure implies weak memory pricing environment"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "self-reference, included for completeness"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "foundry/manufacturing comparison context"
+  }
+ ],
+ "evidence": "OPERATING INCOME $2,568 million, down from $4,299 million prior quarter and roughly flat year-over-year despite revenue growth, with cash and short-term investments falling sharply to $5,988 million from $17,990 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.05,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "foundry demand indicator"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "fab customer demand signal"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "fab customer demand signal"
+  }
+ ],
+ "evidence": "net sales were approximately NT$35.72 billion, an decrease of 4.4 percent over October 2010",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

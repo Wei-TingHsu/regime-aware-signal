@@ -1,0 +1,49 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.2,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AMD strengthens data center/server systems integration capability via ZT acquisition"
+  },
+  {
+   "company": "SKHY",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "ODM/server integration space"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "AMD gains rack-scale systems capability competing for data center infrastructure"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "More AMD server volume could increase foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "Potential hyperscale customer benefits from AMD's expanded systems/manufacturing capability"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "Potential hyperscale customer benefits from AMD's expanded systems/manufacturing capability"
+  }
+ ],
+ "evidence": "completed the previously announced acquisition of ZT Group Int\u2019l, Inc... paid... $3.375 billion in cash",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

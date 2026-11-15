@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2024 (quarter ended July 30, 2023)",
+  "revenue": "$13.507 billion (up 88% Q/Q, up 101% Y/Y)",
+  "operating_income": "GAAP $6.800 billion; non-GAAP $7.776 billion",
+  "net_income": "GAAP $6.188 billion; non-GAAP $6.740 billion",
+  "eps": "GAAP diluted $2.48; non-GAAP diluted $2.70",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$16.023 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": "Short-term debt $1.249 billion + long-term debt $8.456 billion = $9.705 billion",
+  "guidance_next": "Q3 FY24 revenue expected to be $16.00 billion, plus or minus 2%; GAAP and non-GAAP gross margins expected to be 71.5% and 72.5% respectively, plus or minus 50bps; GAAP and non-GAAP operating expenses expected to be approximately $2.95 billion and $2.00 billion respectively; other income/expense expected to be income of approximately $100 million; GAAP and non-GAAP tax rates expected to be 14.5%, plus or minus 1%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA dominance in AI GPUs pressures AMD's competing accelerators"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.8,
+   "reason": "Surging NVDA demand drives more advanced chip foundry orders"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "HBM memory demand for AI GPUs benefits Micron"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Azure H100 cloud instances show strong AI infrastructure buildout"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "AWS H100 instances reflect continued cloud AI capex"
+  }
+ ],
+ "evidence": "Record revenue of $13.51 billion, up 88% from Q1, up 101% from year ago",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2023 (quarter ended September 30, 2023)",
+  "revenue": "$5.8 billion GAAP",
+  "operating_income": "$224 million GAAP; $1.276 billion non-GAAP",
+  "net_income": "$299 million GAAP; $1.135 billion non-GAAP",
+  "eps": "$0.18 diluted GAAP; $0.70 diluted non-GAAP",
+  "operating_cash_flow": "$421 million (Q3); $1.286 billion (nine months)",
+  "capex": "$124 million (Q3 purchases of property and equipment)",
+  "free_cash_flow": "$297 million (calculated: $421M operating cash flow - $124M capex)",
+  "cash_and_investments": "$3,561 million cash and equivalents + $2,224 million short-term investments = $5,785 million",
+  "total_debt": "$752 million current portion + $1,715 million long-term = $2,467 million",
+  "guidance_next": "Q4 2023 revenue approximately $6.1 billion, plus or minus $300 million (~9% YoY growth, ~5% sequential growth at midpoint); non-GAAP gross margin approximately 51.5%"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.5,
+ "fcf_trend": -0.4,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "MI300 ramp positions AMD as credible competitor in AI accelerators"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "EPYC server CPU share gains and 21% sequential Data Center growth"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure adding EPYC instances, cloud adoption growing"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "New AWS instances powered by 4th Gen EPYC CPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Foundry partner benefiting from MI300 volume production ramp"
+  }
+ ],
+ "evidence": "AMD Instinct\u2122 MI300A and MI300X GPUs are on track for volume production in the fourth quarter to support deployments with several leading HPC, cloud and AI customers",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

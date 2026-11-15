@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2018 (quarter ended September 30, 2018)",
+  "revenue": "$33,740 million, up 21% YoY",
+  "operating_income": "$8,310 million (25% operating margin)",
+  "net_income": "$9,192 million",
+  "eps": "$13.06 diluted",
+  "operating_cash_flow": "$13,210 million",
+  "capex": "$5,282 million",
+  "free_cash_flow": "$7,928 million",
+  "cash_and_investments": "$106,416 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$3,986 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "competitor",
+   "reason": "digital ad market comparison",
+   "direction": 0.1
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "reason": "cloud and ad competition",
+   "direction": 0.1
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "reason": "cloud and search competition",
+   "direction": 0.1
+  }
+ ],
+ "evidence": "Alphabet revenues were $33.7 billion, up 21% versus the third quarter of 2017, and we remain focused on delivering on the opportunities we see.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY18 (three months ended February 28, 2018)",
+  "revenue": "$9.8 billion, up 6% YoY",
+  "operating_income": "GAAP $3,410 million (up 15%); Non-GAAP $4.3 billion (up 9%)",
+  "net_income": "GAAP net loss $4,024 million; Non-GAAP net income $3.5 billion (up 21%)",
+  "eps": "GAAP ($0.98); Non-GAAP $0.83 (up 20%)",
+  "operating_cash_flow": "$10,726 million (nine months); TTM $15,192 million",
+  "capex": "$1,358 million (nine months); TTM $1,883 million",
+  "free_cash_flow": "TTM $13,309 million (up 13% YoY)",
+  "cash_and_investments": "$19,487 million cash + $50,968 million marketable securities = $70,455 million",
+  "total_debt": "$4,491 million current + $56,224 million non-current = $60,715 million",
+  "guidance_next": "CEO reaffirmed expectation of 'double-digit non-GAAP earnings per share growth for FY18'; no specific numeric guidance for Q4 given in this release"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.6,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud SaaS/PaaS competition intensifying"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "IaaS competition as Oracle grows cloud infra revenue"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broader enterprise cloud/security software demand signal"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competing cloud platform services"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Oracle's infrastructure/hardware buildout implies server component demand"
+  }
+ ],
+ "evidence": "With non-GAAP earnings per share up 20% in Q3, our year-to-date earnings per share growth is now up to 16%... I feel quite confident that we will comfortably deliver on my original forecast of double-digit non-GAAP earnings per share growth for FY18.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

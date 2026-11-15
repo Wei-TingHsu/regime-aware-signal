@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2012 (quarter ended June 2012)",
+  "revenue": "$13.5B (up 5% sequentially, up 4% YoY)",
+  "operating_income": "$3.8B (28% of revenue, up 1% sequentially, down 3% YoY)",
+  "net_income": "$2.8B (up 3% sequentially, down 4% YoY)",
+  "eps": "$0.54 (up 2% sequentially, flat YoY)",
+  "operating_cash_flow": "approximately $4.7B",
+  "capex": "$2.7B (purchased capital assets)",
+  "free_cash_flow": "approximately $2.0B (operating cash flow $4.7B minus capex $2.7B)",
+  "cash_and_investments": "$13.6B total cash investments (approximately flat to Q1)",
+  "total_debt": null,
+  "guidance_next": "Q3 2012 revenue expected $14.3B +/- $500M (midpoint up 6% sequentially); gross margin ~63% +/- couple points; R&D/MG&A ~$4.6B; full-year 2012 revenue growth now expected 3%-5% over 2011; full-year gross margin still ~64% +/- couple points; R&D/MG&A now $18.2B +/- $200M (down $100M from prior); capex still $12.5B +/- $400M; depreciation now ~$6.3B (down $100M from prior)."
+ },
+ "results_vs_prior_guidance": -0.1,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.2,
+ "own_stock": -0.1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "soft PC/consumer demand environment affects both x86 players"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "Intel cites NAND memory softness hurting revenue, signaling weak memory pricing/demand"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "NAND weakness noted by Intel implies broader memory market softness"
+  }
+ ],
+ "evidence": "Revenue of $13.5B ... was slightly lower than expectations due to softness in our NAND memory business",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

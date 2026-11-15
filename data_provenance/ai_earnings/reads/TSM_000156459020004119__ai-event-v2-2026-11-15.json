@@ -1,0 +1,31 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.15,
+ "fcf_outlook": 0.05,
+ "uncertainty": -0.05,
+ "own_stock": 0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "TSMC capacity expansion supports leading-edge foundry customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "Continued advanced node capacity benefits fabless customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.02,
+   "reason": "TSMC capex strengthens foundry lead vs Intel manufacturing"
+  }
+ ],
+ "evidence": "Approved capital appropriations of approximately US$6,742.1 million (approximately NT$200.9 billion) for purposes including: 1) Fab construction, and installation of fab facility systems",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

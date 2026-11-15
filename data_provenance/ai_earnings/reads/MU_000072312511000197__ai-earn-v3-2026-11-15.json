@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2012 (ended December 1, 2011)",
+  "revenue": "$2,090 million",
+  "operating_income": "$(82) million",
+  "net_income": "$(187) million attributable to Micron shareholders",
+  "eps": "$(0.19) diluted",
+  "operating_cash_flow": "$404 million",
+  "capex": "$697 million (expenditures for PP&E); $750 million total capital expenditures as stated in text",
+  "free_cash_flow": "approximately $(346) million (404 - 750)",
+  "cash_and_investments": "$1,915 million",
+  "total_debt": "$1,973 million long-term debt plus $146 million current portion = $2,119 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "reason": "NAND pricing pressure industry-wide",
+   "direction": -1
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "reason": "self",
+   "direction": -1
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "reason": "foundry/semiconductor capex linkage",
+   "direction": 0
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "reason": "memory buyer dynamics",
+   "direction": 0
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "reason": "semiconductor sector sentiment",
+   "direction": 0
+  }
+ ],
+ "evidence": "net loss attributable to Micron shareholders of $187 million, or $0.19 per diluted share, on net sales of $2.1 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

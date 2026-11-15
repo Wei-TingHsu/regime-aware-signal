@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2019 (quarter ended Dec 31, 2019); FY2019 also reported",
+  "revenue": "$87.4 billion (Q4), up 21% YoY; FY2019 $280.5 billion, up 20%",
+  "operating_income": "$3.9 billion (Q4); $14.5 billion (FY2019)",
+  "net_income": "$3.3 billion (Q4); $11.6 billion (FY2019)",
+  "eps": "$6.47 diluted (Q4); $23.01 diluted (FY2019)",
+  "operating_cash_flow": "$38.5 billion TTM, up 25% YoY",
+  "capex": "$16.861 billion (FY2019 purchases of property and equipment)",
+  "free_cash_flow": "$25.8 billion TTM, up from $19.4 billion",
+  "cash_and_investments": "$36.410 billion cash, cash equivalents, and restricted cash at period end",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "reason": "AWS growth highlights cloud competition with Azure",
+   "direction": 0.2
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "reason": "AWS cloud growth competes with Google Cloud",
+   "direction": 0.1
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "reason": "AWS infrastructure growth pressures Oracle cloud ambitions",
+   "direction": -0.1
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "reason": "Large tech peer benefiting from similar consumer/advertising/cloud trends",
+   "direction": 0.1
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "reason": "AWS infrastructure buildout implies continued data center hardware demand",
+   "direction": 0.2
+  }
+ ],
+ "evidence": "Operating cash flow increased 25% to $38.5 billion for the trailing twelve months... Free cash flow increased to $25.8 billion for the trailing twelve months, compared with $19.4 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

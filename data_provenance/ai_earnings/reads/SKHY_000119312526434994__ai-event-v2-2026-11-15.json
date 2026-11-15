@@ -1,0 +1,31 @@
+{
+ "event_type": "accounting",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.15,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "memory peer, no new info"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "memory peer, no new info"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "HBM customer, no new info"
+  }
+ ],
+ "evidence": "the audit by the Company's external auditor has not yet been completed, they may be subject to change.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

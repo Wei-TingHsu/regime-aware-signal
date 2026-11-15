@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.4,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.3,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Microsoft gains communications/VoIP platform strengthening competitive position"
+  },
+  {
+   "company": "AAPL",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "FaceTime faces stronger cross-platform rival"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "not directly relevant"
+  }
+ ],
+ "evidence": "Microsoft will acquire Skype, the leading Internet communications company, for $8.5 billion in cash",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

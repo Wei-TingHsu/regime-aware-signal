@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2022 (ended July 31, 2022)",
+  "revenue": "$8,464 million (+25% YoY)",
+  "operating_income": null,
+  "net_income": "$3,074 million GAAP; $4,241 million non-GAAP",
+  "eps": "$7.15 GAAP diluted; $9.73 non-GAAP diluted",
+  "operating_cash_flow": "$4,424 million",
+  "capex": "$116 million",
+  "free_cash_flow": "$4,308 million (51% of revenue)",
+  "cash_and_investments": "$9,977 million cash and cash equivalents",
+  "total_debt": "$39,191 million long-term debt plus $304 million current portion",
+  "guidance_next": "Q4 FY22 revenue guidance of approximately $8.9 billion (+20% YoY); Adjusted EBITDA guidance of approximately 63% of projected revenue"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.8,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "strong data center demand signals read-through for AI chip peers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "semiconductor demand strength broadly positive"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "data center/cloud infrastructure demand benefits memory suppliers"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "overlapping data center and networking semiconductor markets"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "cloud/data center customer demand for networking chips"
+  }
+ ],
+ "evidence": "Revenue of $8,464 million for the third quarter, up 25 percent from the prior year period, beating prior guidance of approximately $8.4 billion, with Q4 guidance raised to approximately $8.9 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

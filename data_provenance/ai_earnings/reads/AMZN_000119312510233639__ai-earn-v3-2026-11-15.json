@@ -1,0 +1,32 @@
+{
+ "facts": {
+  "period": "Q3 2010 (three months ended September 30, 2010)",
+  "revenue": "$7.56 billion (up 39% YoY)",
+  "operating_income": "$268 million (up 7% YoY)",
+  "net_income": "$231 million",
+  "eps": "$0.51 diluted",
+  "operating_cash_flow": "$2.62 billion (TTM), $855 million (quarter)",
+  "capex": "$315 million (quarter, purchases of fixed assets)",
+  "free_cash_flow": "$1.83 billion (TTM), down 5% YoY",
+  "cash_and_investments": "$1,539 million cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q4 2010: net sales expected between $12.0B and $13.3B (26%-40% YoY growth); operating income expected between $360M and $560M (-24% to +18% YoY), including ~$140M stock-based compensation and amortization"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.1,
+ "fcf_trend": -0.4,
+ "own_stock": -0.3,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Oracle software certified to run on AWS EC2, expanding cloud adoption"
+  }
+ ],
+ "evidence": "Free cash flow decreased 5% to $1.83 billion for the trailing twelve months, compared with $1.92 billion for the trailing twelve months ended September 30, 2009.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

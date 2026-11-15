@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2015 (ended March 5, 2015)",
+  "revenue": "$4.17 billion",
+  "operating_income": "$855 million",
+  "net_income": "$934 million (GAAP, attributable to Micron)",
+  "eps": "$0.78 diluted (GAAP); $0.81 non-GAAP",
+  "operating_cash_flow": "$1.25 billion (quarter); $2.843 billion (six months)",
+  "capex": "$853 million (quarter); $1.522 billion (six months)",
+  "free_cash_flow": "$397 million (quarter, OCF minus capex)",
+  "cash_and_investments": "$6.35 billion",
+  "total_debt": "$6.718 billion (current $1.199B + long-term $5.519B)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": -0.3,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NAND pricing pressure industry-wide"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "memory supply partner/competitor in NOR/NAND"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "self"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "foundry relationships in semis ecosystem"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor sector read-through"
+  }
+ ],
+ "evidence": "Revenues for the second quarter of fiscal 2015 ... were 9 percent lower compared to the first quarter of fiscal 2015 ... decreases in average selling prices for both NAND and DRAM",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

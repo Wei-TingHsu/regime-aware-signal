@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2012 (three months ended Feb 29, 2012)",
+  "revenue": "$9.0 billion GAAP (up 3%); $9.1 billion non-GAAP (up 3%)",
+  "operating_income": "$3,317 million GAAP (up 11%), margin 37%; $4.2 billion non-GAAP (up 8%), margin 46%",
+  "net_income": "$2,498 million GAAP (up 18%)",
+  "eps": "$0.49 GAAP diluted (up 20%); $0.62 non-GAAP (up 15%)",
+  "operating_cash_flow": "$13,463 million trailing twelve months (up 35% YoY); $9,686 million nine months ended Feb 29, 2012",
+  "capex": "$509 million trailing-twelve-month capex (per FCF table); $431 million nine months ended Feb 29, 2012",
+  "free_cash_flow": "$12,954 million trailing twelve months (36% growth YoY)",
+  "cash_and_investments": "$13,781 million cash and cash equivalents + $15,961 million marketable securities = $29,742 million total",
+  "total_debt": "$14,777 million non-current notes payable and other borrowings (no current notes payable)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SAP",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Ellison contrasts Exalytics favorably against SAP's Hana"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "self"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise software/cloud rival though not mentioned directly"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "hardware systems revenue decline may reduce chip demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud competition context"
+  }
+ ],
+ "evidence": "GAAP earnings per share were $0.49, up 20% compared to last year while non-GAAP earnings per share were up 15% to $0.62.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

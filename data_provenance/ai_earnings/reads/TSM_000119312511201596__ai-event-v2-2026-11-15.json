@@ -1,0 +1,31 @@
+{
+ "event_type": "guidance update",
+ "material": 0.15,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": -0.1,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "weaker TSMC outlook signals soft semi demand broadly"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "foundry demand softness could reflect customer order weakness"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "broader chip demand slowdown read-through"
+  }
+ ],
+ "evidence": "Revenue to be between NT$ 102 billion and NT$ 104 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

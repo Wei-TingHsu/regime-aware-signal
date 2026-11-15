@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.1,
+ "own_stock": 0.15,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Fab demand strength signals healthy foundry capacity for AMD"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Continued strong TSMC output supports NVDA chip supply"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC volume growth highlights foundry leadership vs Intel"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "Broadcom relies on TSMC capacity for chip production"
+  }
+ ],
+ "evidence": "revenue for September 2021 was approximately NT$152.69 billion, an increase of 11.1 percent from August 2021 and an increase of 19.7 percent from September 2020",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

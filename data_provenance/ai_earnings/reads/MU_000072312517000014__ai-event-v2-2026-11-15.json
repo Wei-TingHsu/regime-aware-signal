@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.4,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.4,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "memory peer, no direct impact"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "NAND competitor, minimal impact"
+  }
+ ],
+ "evidence": "The Board has not established a timeframe for this process and intends to conduct a deliberate review of candidates",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

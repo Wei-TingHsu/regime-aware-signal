@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2016 (ended March 31, 2016)",
+  "revenue": "$29.1 billion",
+  "operating_income": "$1.071 billion",
+  "net_income": "$513 million",
+  "eps": "$1.07 diluted",
+  "operating_cash_flow": "$11.258 billion (trailing twelve months)",
+  "capex": "$4.897 billion (trailing twelve months, purchases of property and equipment)",
+  "free_cash_flow": "$6.4 billion (trailing twelve months, as stated)",
+  "cash_and_investments": "$12.470 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q2 2016 net sales expected between $28.0B and $30.5B (21%-32% growth); operating income expected between $375M and $975M, vs $464M in Q2 2015"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.3,
+ "fcf_trend": 1,
+ "own_stock": 0.8,
+ "market": 0.3,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS growth of 64% pressures Azure competitive narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS cloud strength highlights competitive cloud race"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS database migration service targets Oracle workloads"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "cloud security demand tailwinds from AWS ecosystem growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AWS infrastructure expansion implies more server/chip demand"
+  }
+ ],
+ "evidence": "Net sales increased 28% to $29.1 billion in the first quarter... Operating income was $1.1 billion in the first quarter, compared with $255 million in first quarter 2015",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

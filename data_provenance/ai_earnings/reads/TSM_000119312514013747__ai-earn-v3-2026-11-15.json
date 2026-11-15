@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "4Q13 (also FY2013)",
+  "revenue": "NT$145.81 billion (4Q13); NT$597.02 billion (FY2013)",
+  "operating_income": "Operating margin 32.8% of revenue (4Q13); 35.1% (FY2013)",
+  "net_income": "NT$44.81 billion (4Q13); implied ~NT$180B+ for FY13 via EPS/income before tax NT$215.49B",
+  "eps": "NT$1.73 (4Q13); NT$7.26 diluted (FY2013)",
+  "operating_cash_flow": "NT$102.77 billion (4Q13); NT$347.38 billion (FY2013)",
+  "capex": "NT$73.96 billion (4Q13); NT$287.60 billion (FY2013)",
+  "free_cash_flow": "NT$28.81 billion (4Q13); NT$59.78 billion (FY2013)",
+  "cash_and_investments": "NT$245.34 billion",
+  "total_debt": "Long-term interest-bearing debt NT$211.58 billion",
+  "guidance_next": "1Q14 revenue NT$136-138 billion (at NT$30/US$1), gross margin 44.5%-46.5%, operating margin 32%-34%"
+ },
+ "results_vs_prior_guidance": -0.1,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.1,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC foundry strength implies competitive pressure on Intel's process lead"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Fabless customer benefits from TSMC capacity/yield trends"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Self-referential, included for completeness"
+  },
+  {
+   "company": "SNDK",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Memory/storage ecosystem tangential to logic foundry results"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Semiconductor capex and margin trends loosely correlated"
+  }
+ ],
+ "evidence": "Revenue to be between NT$136 billion and NT$138 billion... Operating profit margin to be between 32% and 34%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2025 (fiscal quarter ended March 29, 2025)",
+  "revenue": "$7,438 million",
+  "operating_income": "$806 million (GAAP); $1,779 million (non-GAAP)",
+  "net_income": "$709 million (GAAP); $1,566 million (non-GAAP)",
+  "eps": "$0.44 (GAAP diluted); $0.96 (non-GAAP diluted)",
+  "operating_cash_flow": "$939 million",
+  "capex": "$212 million",
+  "free_cash_flow": "$727 million (939-212)",
+  "cash_and_investments": "$6,049M cash + $1,261M short-term investments = $7,310 million",
+  "total_debt": "$947M short-term borrowings + $3,217M long-term debt = $4,164 million",
+  "guidance_next": "Q2 2025 revenue approximately $7.4 billion, plus or minus $300 million; non-GAAP gross margin ~43% including ~$800M export-control inventory charges, or ~54% excluding that charge"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": -1,
+ "fcf_trend": 1,
+ "own_stock": -1,
+ "market": -1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "shared export-control headwinds in AI GPU market"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "foundry demand tied to AMD's data center growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AMD CPU share gains in client/data center"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "memory demand from AMD AI accelerators"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud deployment of AMD EPYC and Instinct chips"
+  }
+ ],
+ "evidence": "Non-GAAP gross margin is estimated to be 43% inclusive of approximately $800 million in charges for inventory and related reserves due to the new export controls",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

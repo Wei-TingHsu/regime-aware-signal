@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.2,
+ "own_stock": -0.2,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "weak foundry demand signals softer chip cycle"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "softer demand environment for fabless customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSMC weakness could ease competitive pressure"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "exposure to semiconductor demand slowdown"
+  }
+ ],
+ "evidence": "revenues for February 2019 were approximately NT$60.89 billion, a decrease of 22.0 percent from January 2019 and a decrease of 5.8 percent from February 2018",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

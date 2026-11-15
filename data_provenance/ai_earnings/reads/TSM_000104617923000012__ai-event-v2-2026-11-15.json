@@ -1,0 +1,49 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.25,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.15,
+ "own_stock": -0.15,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "major TSMC customer, weaker TSMC revenue signals demand softness"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "fabless customer relying on TSMC capacity"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.05,
+   "reason": "uses TSMC foundry services"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "rival foundry could gain relative share if TSMC demand softens"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.05,
+   "reason": "memory sector tracks broader semiconductor cycle weakness"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.05,
+   "reason": "storage peer exposed to same cyclical downturn"
+  }
+ ],
+ "evidence": "revenue for September 2023 was approximately NT$180.43 billion, a decrease of 4.4 percent from August 2023 and a decrease of 13.4 percent from September 2022",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

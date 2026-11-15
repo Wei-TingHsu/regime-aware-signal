@@ -1,0 +1,37 @@
+{
+ "event_type": "guidance update",
+ "material": 0.55,
+ "fcf_outlook": 0.4,
+ "uncertainty": -0.3,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "PC demand strength benefits memory suppliers"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "stronger PC market lifts overall demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "PC ecosystem partner benefits from stronger PC demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "signals broader semiconductor demand recovery"
+  }
+ ],
+ "evidence": "Intel now expects some revenue growth for the year as compared to the previous outlook of approximately flat.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

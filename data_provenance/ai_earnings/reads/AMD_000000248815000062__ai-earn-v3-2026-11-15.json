@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2015",
+  "revenue": "$1.06 billion",
+  "operating_income": "$(158)M GAAP / $(97)M non-GAAP",
+  "net_income": "$(197)M GAAP / $(136)M non-GAAP",
+  "eps": "$(0.25) GAAP / $(0.17) non-GAAP",
+  "operating_cash_flow": "$(59)M (quarter)",
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$755M cash and cash equivalents",
+  "total_debt": "$2.26 billion",
+  "guidance_next": "For Q4 2015, AMD expects revenue to decrease 10 percent, plus or minus 3 percent, sequentially"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "GPU market share battle via Radeon Technologies Group"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "client/server processor competition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Windows 10 co-launch products"
+  }
+ ],
+ "evidence": "For Q4 2015, AMD expects revenue to decrease 10 percent, plus or minus 3 percent, sequentially.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

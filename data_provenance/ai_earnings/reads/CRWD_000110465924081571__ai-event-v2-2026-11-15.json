@@ -1,0 +1,31 @@
+{
+ "event_type": "cyber incident",
+ "material": 0.95,
+ "fcf_outlook": -0.5,
+ "uncertainty": 0.9,
+ "own_stock": -0.85,
+ "market": -0.15,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "Windows platform implicated in global outage, shared reputational fallout"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "enterprise customers relying on Falcon sensor faced outages, raising vendor-risk scrutiny"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": -0.05,
+   "reason": "cloud/security ecosystem reputational spillover"
+  }
+ ],
+ "evidence": "released a sensor configuration update for our Falcon sensor software that resulted in outages for a number of our customers utilizing certain Windows systems",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

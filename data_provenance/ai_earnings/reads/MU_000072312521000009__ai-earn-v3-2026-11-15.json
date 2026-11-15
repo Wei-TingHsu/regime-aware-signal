@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2021 (ended Dec 3, 2020)",
+  "revenue": "$5.773 billion",
+  "operating_income": "$866 million GAAP / $973 million Non-GAAP",
+  "net_income": "$803 million GAAP / $897 million Non-GAAP",
+  "eps": "$0.71 GAAP diluted / $0.78 Non-GAAP diluted",
+  "operating_cash_flow": "$1.967 billion",
+  "capex": "$2.738 billion (gross) / $2.726 billion (net)",
+  "free_cash_flow": "-$816 million (adjusted FCF, per reconciliation)",
+  "cash_and_investments": "$8.36 billion cash, marketable investments, and restricted cash; net cash $1.734 billion",
+  "total_debt": "$6.629 billion (current + long-term)",
+  "guidance_next": "FQ2-21: Revenue $5.8B \u00b1 $200M; GAAP gross margin 25% \u00b1 1% (Non-GAAP 31% \u00b1 1%); GAAP opex $882M \u00b1 $25M (Non-GAAP $825M \u00b1 $25M); GAAP diluted EPS $0.41 \u00b1 $0.07 (Non-GAAP $0.75 \u00b1 $0.07)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.3,
+ "fcf_trend": -0.5,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Micron's 176-layer NAND lead pressures NAND rivals"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Memory/storage overlap and data-center competition"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Strong DRAM demand tied to AI/GPU compute growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Benefits from improving memory supply for CPUs/GPUs"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Cloud and data-center memory demand cited as growth driver"
+  }
+ ],
+ "evidence": "Micron delivered outstanding fiscal first quarter results, driven by focused execution and strong end-market demand... we are in an excellent position to benefit from accelerating digital transformation... fueled by AI, 5G, cloud, and the intelligent edge.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

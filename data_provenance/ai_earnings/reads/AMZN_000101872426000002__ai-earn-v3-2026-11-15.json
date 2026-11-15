@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2025 (quarter ended Dec 31, 2025); FY2025 also reported",
+  "revenue": "$213.4 billion (Q4), up 14% YoY; FY2025 $716.9 billion, up 12%",
+  "operating_income": "$25.0 billion (Q4, includes $2.44B special charges); $27.4B excluding charges; FY2025 $80.0 billion",
+  "net_income": "$21.2 billion (Q4); FY2025 $77.7 billion",
+  "eps": "$1.95 diluted (Q4); FY2025 $7.17 diluted",
+  "operating_cash_flow": "$139.5 billion TTM, up 20% YoY",
+  "capex": "Purchases of property and equipment $131.8 billion TTM (vs $83.0B prior year)",
+  "free_cash_flow": "$11.2 billion TTM, down from $38.2 billion prior year",
+  "cash_and_investments": "$86.8B cash + $36.2B marketable securities = ~$123.0 billion",
+  "total_debt": null,
+  "guidance_next": "No explicit Q1 2026 revenue/income guidance given in this excerpt; company states it expects to invest about $200 billion in capital expenditures across Amazon in 2026."
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.3,
+ "fcf_trend": -0.4,
+ "own_stock": 0.4,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Bedrock offers Nvidia models; AWS still buys GPUs alongside Trainium"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Trainium custom silicon scaling reduces reliance on merchant GPUs"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Massive AI capex implies more memory/HBM demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AWS 24% growth signals robust cloud/AI capex cycle benefiting all hyperscalers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Shared AI infrastructure race; Bedrock includes Google models, implying cross-cloud demand"
+  }
+ ],
+ "evidence": "Net sales increased 14% to $213.4 billion in the fourth quarter... AWS segment sales increased 24% year-over-year to $35.6 billion (our fastest growth in 13 quarters)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

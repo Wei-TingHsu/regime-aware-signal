@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY2022 (ended December 31, 2022)",
+  "revenue": "$76,048 million Q4; $282,836 million FY (up 1% YoY Q4, up 10% YoY FY)",
+  "operating_income": "$18,160 million Q4; $74,842 million FY",
+  "net_income": "$13,624 million Q4; $59,972 million FY",
+  "eps": "$1.05 diluted Q4; $4.56 diluted FY",
+  "operating_cash_flow": "$23,614 million Q4; $91,495 million FY",
+  "capex": "$7,595 million Q4; $31,485 million FY",
+  "free_cash_flow": "$16,019 million Q4 (stated)",
+  "cash_and_investments": "$113,762 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$14,701 million long-term debt",
+  "guidance_next": "No formal quantitative guidance given; disclosed expected Q1 2023 charges of $1.9B-$2.3B severance, ~$0.5B office space exit costs, and ~$3.4B reduction in FY2023 depreciation from server/network useful life change"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.2,
+ "own_stock": -0.3,
+ "market": -0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud competition intensifying as Google Cloud grows but still posts operating losses"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud infrastructure rivalry with Google Cloud"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "Shared ad-revenue slowdown and cost-cutting dynamics in digital advertising"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AI inflection and cloud capex commentary signals continued chip/infrastructure demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Server equipment lifecycle changes tied to data center hardware spending"
+  }
+ ],
+ "evidence": "Operating income $18,160 million Q4 2022 versus $21,885 million Q4 2021, operating margin down from 29% to 24%, alongside $1.9-2.3B severance charges and workforce reduction of ~12,000 roles signal margin pressure despite AI optimism",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2019 (three months ended November 30, 2018)",
+  "revenue": "$9,562 million (flat YoY, +2% constant currency)",
+  "operating_income": "GAAP $3,101 million (+2%); Non-GAAP $4,087 million (-2%)",
+  "net_income": "$2,333 million GAAP (+5%); Non-GAAP $3,100 million (+3%)",
+  "eps": "GAAP diluted $0.61 (+18%); Non-GAAP diluted $0.80 (+16%)",
+  "operating_cash_flow": "$15,238 million trailing twelve months (+5% / -1% in rounded detail)",
+  "capex": "$1,468 million TTM; $804 million for six months ended Nov 30, 2018",
+  "free_cash_flow": "$13,770 million TTM (+10% YoY)",
+  "cash_and_investments": "$10,824 million cash and equivalents + $38,567 million marketable securities = ~$49.4 billion",
+  "total_debt": "$6,477 million current notes payable + $51,561 million non-current notes payable = ~$58.0 billion",
+  "guidance_next": "No specific numeric guidance for Q3 given; CEO stated confidence in continued 'strong EPS and free cash flow growth during the second half of this fiscal year'"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.5,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "reason": "cloud infrastructure competitor as Oracle grows platform/infrastructure cloud",
+   "direction": -0.1
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "reason": "competes in cloud ERP/SaaS and infrastructure",
+   "direction": -0.1
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "reason": "competes in cloud infrastructure and database services",
+   "direction": -0.1
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "reason": "enterprise software/cloud subscription peer sentiment",
+   "direction": 0.1
+  },
+  {
+   "company": "SNDK",
+   "relation": "supplier",
+   "reason": "hardware/storage component supplier to Oracle's hardware segment",
+   "direction": 0.0
+  }
+ ],
+ "evidence": "GAAP EPS UP 18% TO $0.61 and NON-GAAP EPS UP 16% TO $0.80",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

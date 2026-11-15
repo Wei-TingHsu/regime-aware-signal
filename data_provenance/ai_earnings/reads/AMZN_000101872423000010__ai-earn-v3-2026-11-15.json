@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2023 (quarter ended June 30, 2023)",
+  "revenue": "$134.4 billion, +11% YoY",
+  "operating_income": "$7.7 billion, up from $3.3 billion YoY",
+  "net_income": "$6.7 billion",
+  "eps": "$0.65 diluted",
+  "operating_cash_flow": "$61.8 billion TTM, +74% YoY",
+  "capex": "$11.455 billion in Q2; $58.632 billion TTM (property and equipment purchases)",
+  "free_cash_flow": "$7.9 billion inflow TTM, vs -$23.5 billion TTM prior year",
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AWS growth stabilization signals healthy cloud demand broadly"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud competitor benefiting from same gen-AI workload shift"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "AWS generative AI buildout implies continued GPU/accelerator demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AI infrastructure buildout benefits chip suppliers broadly"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Ad revenue recovery trend echoed across digital ad peers"
+  }
+ ],
+ "evidence": "Operating income increased to $7.7 billion in the second quarter, compared with $3.3 billion in second quarter 2022.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

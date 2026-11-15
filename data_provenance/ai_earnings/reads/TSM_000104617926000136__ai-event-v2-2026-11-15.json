@@ -1,0 +1,49 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.2,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "strong TSMC revenue implies robust AI chip demand pull-through"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "benefits from same advanced-node demand driving TSMC growth"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broader semiconductor cycle strength signal"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC leadership in advanced nodes widens competitive gap"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "custom silicon/AI demand supports TSMC's growth"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "hyperscaler AI buildout underpins TSMC revenue strength"
+  }
+ ],
+ "evidence": "Revenue for January through March 2026 totaled NT$1,134.10 billion, an increase of 35.1 percent compared to the same period in 2025.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

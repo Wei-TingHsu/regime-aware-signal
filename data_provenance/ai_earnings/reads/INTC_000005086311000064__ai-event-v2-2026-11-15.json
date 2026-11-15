@@ -1,0 +1,19 @@
+{
+ "event_type": "accounting",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.1,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "no direct impact"
+  }
+ ],
+ "evidence": "the company will revise the presentation of its financial results to reflect the recently closed acquisitions of Infineon Wireless Solutions and McAfee Inc.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

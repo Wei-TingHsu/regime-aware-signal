@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2022 (ended Oct 1, 2022)",
+  "revenue": "$15.3 billion GAAP (down 20% YoY); $15.3 billion non-GAAP (down 15% YoY)",
+  "operating_income": "GAAP operating loss $(175) million; non-GAAP operating margin 10.8%",
+  "net_income": "$1.0 billion GAAP; $2.4 billion non-GAAP",
+  "eps": "$0.25 GAAP; $0.59 non-GAAP",
+  "operating_cash_flow": "$7.73 billion (nine months ended Oct 1, 2022); Q3 alone $1.0 billion",
+  "capex": "$19.145 billion additions to PP&E (nine months, GAAP gross)",
+  "free_cash_flow": "Not explicitly stated for Q3; nine-month OCF $7.73B minus capex $19.145B implies negative ~$11.4B; full-year adjusted FCF guided at ($2-4) billion",
+  "cash_and_investments": "$4.529B cash and cash equivalents + $18.030B short-term investments = ~$22.6 billion",
+  "total_debt": "$2.283B short-term debt + $37.240B long-term debt = ~$39.5 billion",
+  "guidance_next": "Q4 2022: revenue ~$14-15 billion GAAP/non-GAAP, gross margin 41.4% GAAP/45.0% non-GAAP, EPS $(0.10) GAAP/$0.20 non-GAAP; Full-year 2022 revised: revenue $63-64 billion, gross margin 43.1% GAAP/47.5% non-GAAP, EPS $2.00 GAAP/$1.95 non-GAAP, capex ~$25B GAAP/$21B non-GAAP, adjusted FCF ($2-4) billion negative"
+ },
+ "results_vs_prior_guidance": -0.3,
+ "guidance_change": -0.6,
+ "fcf_trend": -0.6,
+ "own_stock": -0.4,
+ "market": -0.2,
+ "ai_demand": -0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "joining Intel Foundry's RAMP-C program"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Intel DCAI revenue down 27% signals share/demand weakness Intel faces"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel foundry ramp still behind, TSM remains leading-edge leader"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "broad semiconductor demand weakness implied by Intel's guidance cut"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Google Cloud using new 4th Gen Xeon-based C3 instances"
+  }
+ ],
+ "evidence": "Revising full-year revenue guidance to $63 billion to $64 billion, reflecting continued macroeconomic headwinds.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

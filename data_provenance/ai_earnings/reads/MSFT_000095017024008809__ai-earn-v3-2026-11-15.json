@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2024 (quarter ended December 31, 2023)",
+  "revenue": "$62.0 billion, +18% YoY",
+  "operating_income": "$27.0 billion, +33% YoY (GAAP); +25% non-GAAP",
+  "net_income": "$21.9 billion, +33% YoY",
+  "eps": "$2.93 diluted, +33% YoY",
+  "operating_cash_flow": "$18,853 million (quarter)",
+  "capex": "$9,735 million (additions to property and equipment, quarter)",
+  "free_cash_flow": "$9,118 million (18,853 - 9,735)",
+  "cash_and_investments": "$81,017 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "short-term debt $27,041M + current portion LT debt $2,250M + long-term debt $44,928M = $74,219M",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.6,
+ "market": 0.5,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Azure AI capacity growth implies continued GPU demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Azure cloud growth outpaces rivals, competitive pressure on AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud and AI competition intensifies"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Datacenter buildout benefits chip suppliers"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Cloud infrastructure competition"
+  }
+ ],
+ "evidence": "Azure and other cloud services revenue growth of 30% (up 28% in constant currency)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

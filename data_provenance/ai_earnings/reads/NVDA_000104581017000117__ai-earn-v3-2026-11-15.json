@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2018 (quarter ended July 30, 2017)",
+  "revenue": "$2.23 billion (up 56% YoY, up 15% QoQ)",
+  "operating_income": "$688 million GAAP; $773 million non-GAAP",
+  "net_income": "$583 million GAAP; $638 million non-GAAP",
+  "eps": "$0.92 GAAP diluted; $1.01 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$5,877 million (cash, cash equivalents and marketable securities)",
+  "total_debt": "$2,068 million (convertible short-term debt $84M + long-term debt $1,984M)",
+  "guidance_next": "Q3 FY18 revenue ~$2.35B \u00b12%; GAAP/non-GAAP gross margin 58.6%/58.8% \u00b150bps; GAAP opex ~$672M, non-GAAP opex ~$570M; GAAP/non-GAAP tax rate 17% \u00b11%; capex ~$65-75M"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.4,
+ "own_stock": 0.9,
+ "market": 0.4,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVIDIA's GPU/datacenter dominance pressures AMD's competing GPU roadmap"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Datacenter AI compute share shifting toward NVIDIA GPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Higher NVIDIA volumes (Volta, V100) imply more foundry demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Datacenter GPU growth drives high-bandwidth memory demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud providers adopting NVIDIA GPUs for AI workloads (GPU Cloud Platform)"
+  }
+ ],
+ "evidence": "Record revenue of $2.23 billion, up 56 percent from a year ago ... Datacenter revenue increased more than two and a half times.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

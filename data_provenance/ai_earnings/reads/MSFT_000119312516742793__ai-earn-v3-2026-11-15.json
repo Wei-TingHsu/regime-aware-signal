@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2017 (quarter ended September 30, 2016)",
+  "revenue": "$20.5 billion GAAP; $22.3 billion non-GAAP",
+  "operating_income": "$5.2 billion GAAP; $7.1 billion non-GAAP",
+  "net_income": "$4.7 billion GAAP; $6.0 billion non-GAAP",
+  "eps": "$0.60 GAAP diluted; $0.76 non-GAAP diluted",
+  "operating_cash_flow": "$11,549 million",
+  "capex": "$2,163 million (additions to property and equipment)",
+  "free_cash_flow": "$9,386 million (11,549 - 2,163)",
+  "cash_and_investments": "$136,932 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$74,690 million (short-term debt $14,536M + long-term debt $60,154M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Azure growing 116% pressures AWS cloud market share narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Strong Azure growth intensifies cloud competition"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Enterprise cloud/server momentum challenges Oracle's cloud transition"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Broader enterprise software demand signal, limited direct overlap"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Rising Azure compute usage implies higher server/datacenter hardware demand"
+  }
+ ],
+ "evidence": "Commercial cloud annualized revenue run rate exceeds $13.0 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

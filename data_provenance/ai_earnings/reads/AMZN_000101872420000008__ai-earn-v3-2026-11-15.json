@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2020 (quarter ended March 31, 2020)",
+  "revenue": "$75.5 billion (up 26% YoY)",
+  "operating_income": "$4.0 billion (down from $4.4 billion in Q1 2019)",
+  "net_income": "$2.5 billion (down from $3.6 billion in Q1 2019)",
+  "eps": "$5.01 diluted (down from $7.09 in Q1 2019)",
+  "operating_cash_flow": "$39.7 billion TTM (up 16% YoY); $3.06 billion for the quarter",
+  "capex": "$6.795 billion (purchases of property and equipment, Q1 2020)",
+  "free_cash_flow": "$24.3 billion TTM (up from $23.0 billion TTM)",
+  "cash_and_investments": "$27.2 billion cash + $22.1 billion marketable securities as of March 31, 2020",
+  "total_debt": "$23.4 billion long-term debt",
+  "guidance_next": "For Q2 2020, management said that under normal circumstances it would expect about $4 billion or more in operating profit, but instead expects to spend the entirety of that $4 billion, and perhaps more, on COVID-19-related costs (PPE, cleaning, distancing measures, higher wages, testing), implying Q2 operating income near breakeven or negative."
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -0.5,
+ "fcf_trend": 0.3,
+ "own_stock": -0.3,
+ "market": 0.2,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AWS growth of 33% signals continued cloud demand strength, a reference point for Azure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Cloud infrastructure demand backdrop relevant to Google Cloud"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "AWS capacity growth implies continued data-center hardware spend"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Rising AWS infrastructure spend supports server chip demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Data center expansion at AWS supports memory demand"
+  }
+ ],
+ "evidence": "we expect to spend the entirety of that $4 billion, and perhaps a bit more, on COVID-related expenses getting products to customers and keeping employees safe",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

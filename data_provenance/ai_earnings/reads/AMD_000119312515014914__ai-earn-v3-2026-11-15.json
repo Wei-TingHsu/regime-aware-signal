@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2014 and FY2014",
+  "revenue": "$1.24 billion (Q4), $5.51 billion (FY)",
+  "operating_income": "GAAP operating loss $330M (Q4); non-GAAP operating income $36M (Q4)",
+  "net_income": "GAAP net loss $364M (Q4); non-GAAP net income $2M (Q4)",
+  "eps": "GAAP $(0.47) (Q4); non-GAAP $0.00 (Q4)",
+  "operating_cash_flow": "$116M (Q4); $(98)M (FY)",
+  "capex": "$22M (Q4); $95M (FY)",
+  "free_cash_flow": "$94M (Q4, 116-22); $(193)M (FY, -98-95)",
+  "cash_and_investments": "$1.04 billion (cash, equivalents and marketable securities)",
+  "total_debt": "$2.21 billion",
+  "guidance_next": "For Q1 2015, AMD expects revenue to decrease 15 percent, plus or minus 3 percent, sequentially"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "GPU market share dynamics referenced via channel weakness"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "semi-custom SoC console sales mentioned"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "PC/desktop processor competition"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "foundry context for future ARM/APU production"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "self-referential, included per instructions pattern"
+  }
+ ],
+ "evidence": "Revenue of $1.24 billion, down 13 percent sequentially and 22 percent year-over-year... Operating loss of $330 million... Net loss of $364 million, loss per share of $0.47",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY21 (ended October 31, 2020)",
+  "revenue": "$232.5 million, +86% YoY",
+  "operating_income": "GAAP loss from operations $(24.2) million; Non-GAAP income from operations $18.9 million",
+  "net_income": "GAAP net loss $(24.5) million; Non-GAAP net income $18.6 million",
+  "eps": "GAAP $(0.11); Non-GAAP diluted $0.08",
+  "operating_cash_flow": "$88.5 million",
+  "capex": "$9.9 million (property/equipment) + $2.5 million (capitalized internal-use software) = ~$12.4 million",
+  "free_cash_flow": "$76.1 million (as stated)",
+  "cash_and_investments": "$1,059.9 million cash and cash equivalents",
+  "total_debt": null,
+  "guidance_next": "Q4 FY21: total revenue $245.5-$250.5 million, Non-GAAP income from operations $18.5-$22.1 million, Non-GAAP net income $17.7-$21.3 million, Non-GAAP diluted EPS $0.08-$0.09; Full Year FY21 (raised): total revenue $855.0-$860.0 million, Non-GAAP income from operations $46.4-$50.0 million, Non-GAAP net income $48.8-$52.4 million, Non-GAAP diluted EPS $0.21-$0.22"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Competes in endpoint/cloud security"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "AWS integration expansion for Falcon platform"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Enterprise cloud/security software peer"
+  }
+ ],
+ "evidence": "Total revenue was $232.5 million, an 86% increase...results exceeding our expectations across the board",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

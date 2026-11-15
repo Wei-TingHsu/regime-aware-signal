@@ -1,0 +1,19 @@
+{
+ "event_type": "restructuring",
+ "material": 0.15,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Microsoft retreat from phone hardware cedes mobile ground to Android ecosystem"
+  }
+ ],
+ "evidence": "Microsoft will record an impairment and restructuring charge of approximately $950 million, of which approximately $200 million will relate to severance payments",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

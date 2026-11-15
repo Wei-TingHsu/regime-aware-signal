@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2014",
+  "revenue": "$1.429 billion (flat sequentially, down 2% YoY)",
+  "operating_income": "$63 million GAAP; $66 million non-GAAP",
+  "net_income": "$17 million",
+  "eps": "$0.02 GAAP; $0.03 non-GAAP",
+  "operating_cash_flow": "$18 million",
+  "capex": "$29 million",
+  "free_cash_flow": "-$11 million (operating cash flow minus capex)",
+  "cash_and_investments": "$938 million (cash, cash equivalents and marketable securities)",
+  "total_debt": "$2.20 billion",
+  "guidance_next": "For Q4 2014, AMD expects revenue to decrease 13 percent, plus or minus 3 percent, sequentially"
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AMD weakness in Computing and Graphics (PC market) reflects broader PC softness"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "GPU ASP and discrete GPU sales pressure noted in AMD segment"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Not directly addressed"
+  }
+ ],
+ "evidence": "For Q4 2014, AMD expects revenue to decrease 13 percent, plus or minus 3 percent, sequentially.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

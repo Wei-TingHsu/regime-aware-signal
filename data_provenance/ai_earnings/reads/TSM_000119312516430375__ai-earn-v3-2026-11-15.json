@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "4Q15 (Taiwan Semiconductor Manufacturing Company, Q4 2015 results release)",
+  "revenue": null,
+  "operating_income": null,
+  "net_income": null,
+  "eps": null,
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "1Q16: revenue NT$198-201 billion; gross profit margin 47%-49%; operating profit margin 36.5%-38.5%, at a forecast exchange rate of 32.5 NT$/US$1"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "foundry customer, no specific demand commentary given"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "foundry customer, no specific demand commentary given"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "competing foundry/IDM, no comparative data given"
+  }
+ ],
+ "evidence": "Revenue to be between NT$ 198 billion and NT$ 201 billion, at a forecast exchange rate of 32.5 NT dollars to 1 US dollar",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2024 (ended August 4, 2024)",
+  "revenue": "$13,072 million (+47% YoY)",
+  "operating_income": null,
+  "net_income": "GAAP net loss $1,875 million; Non-GAAP net income $6,120 million",
+  "eps": "GAAP diluted loss per share $(0.40); Non-GAAP diluted EPS $1.24",
+  "operating_cash_flow": "$4,963 million",
+  "capex": "$172 million",
+  "free_cash_flow": "$4,791 million (37% of revenue)",
+  "cash_and_investments": "$9,952 million cash and cash equivalents",
+  "total_debt": "$69,959 million (current $3,161M + long-term $66,798M)",
+  "guidance_next": "Q4 FY2024 revenue guidance of approximately $14.0 billion (+51% YoY) and Adjusted EBITDA guidance of approximately 64% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.4,
+ "fcf_trend": -0.1,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Broadcom's custom AI accelerators compete with Nvidia GPUs"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Overlap in AI/data-center silicon and networking"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Likely customer for custom AI accelerators (TPU-like designs)"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Cloud/data-center demand drives Broadcom networking and VMware sales"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Foundry partner benefiting from rising AI chip demand"
+  }
+ ],
+ "evidence": "We expect revenue from AI to be $12 billion for fiscal year 2024 driven by Ethernet networking and custom accelerators for AI data centers",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

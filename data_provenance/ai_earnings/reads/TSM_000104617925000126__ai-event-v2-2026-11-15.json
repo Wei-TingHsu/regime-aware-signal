@@ -1,0 +1,31 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.15,
+ "fcf_outlook": -0.05,
+ "uncertainty": -0.05,
+ "own_stock": 0.05,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "continued advanced capacity expansion supports leading-edge supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "capacity investment benefits foundry customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC capex reinforces foundry lead"
+  }
+ ],
+ "evidence": "the Board approved capital appropriations of approximately US$14,981.60 million for purposes including fab construction and advanced technology capacity",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

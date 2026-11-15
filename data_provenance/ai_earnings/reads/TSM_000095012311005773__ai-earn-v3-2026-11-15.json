@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2010 (quarter ended December 31, 2010)",
+  "revenue": "NT$110.14 billion",
+  "operating_income": "NT$41.513 billion (operating margin 37.7%)",
+  "net_income": "NT$40.72 billion",
+  "eps": "NT$1.57 diluted (US$0.26 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q1 2011 revenue expected NT$105-107 billion; gross profit margin 47-49%; operating profit margin 35-37%; 2011 capex about US$7.8 billion"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": -0.2,
+ "fcf_trend": 0,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "TSMC foundry capacity/demand signals benefit fabless customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "advanced node share gains (40nm/65nm >50% revenue) show TSMC process leadership"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "strong communication segment demand implies healthy chip demand for fabless customers"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "self"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "beneficiary of TSMC capacity expansion and strong demand"
+  }
+ ],
+ "evidence": "revenue increased 19.6% while net income increased 24.7% and diluted EPS increased 24.6%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

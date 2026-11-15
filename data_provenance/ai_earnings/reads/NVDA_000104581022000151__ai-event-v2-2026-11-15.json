@@ -1,0 +1,43 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.35,
+ "fcf_outlook": 0.25,
+ "uncertainty": 0.1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.15,
+   "reason": "similar export licensing relief likely for AI chips"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "continued fabrication/export of H100/A100 chips"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.15,
+   "reason": "cloud customers can keep buying A100/H100"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "AI infrastructure customer benefits from continued supply"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "cloud AI chip customer"
+  }
+ ],
+ "evidence": "The U.S. government has authorized exports, reexports, and in-country transfers needed to continue NVIDIA Corporation\u2019s...development of H100 integrated circuits",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

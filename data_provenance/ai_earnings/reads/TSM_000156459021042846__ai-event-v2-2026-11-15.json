@@ -1,0 +1,31 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.05,
+ "own_stock": 0.05,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "TSMC capacity growth supports chip supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "Reliant on TSMC foundry output"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.03,
+   "reason": "TSMC strength highlights foundry lead"
+  }
+ ],
+ "evidence": "revenue for July 2021 was approximately NT$124.56 billion, ... an increase of 17.5 percent from July 2020",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

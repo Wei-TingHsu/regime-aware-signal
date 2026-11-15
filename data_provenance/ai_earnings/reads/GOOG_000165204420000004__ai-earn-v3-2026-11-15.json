@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2019 (quarter and year ended December 31, 2019)",
+  "revenue": "$46,075 million (Q4 2019); $161,857 million (FY2019)",
+  "operating_income": "$9,266 million (Q4 2019); $34,231 million (FY2019)",
+  "net_income": "$10,671 million (Q4 2019); $34,343 million (FY2019)",
+  "eps": "$15.35 diluted (Q4 2019); $49.16 diluted (FY2019)",
+  "operating_cash_flow": "$14,427 million (Q4 2019); $54,520 million (FY2019)",
+  "capex": "$6,052 million (Q4 2019); $23,548 million (FY2019)",
+  "free_cash_flow": "$8,375 million (Q4 2019, as stated)",
+  "cash_and_investments": "$119,675 million total cash, cash equivalents, and marketable securities (Dec 31, 2019)",
+  "total_debt": "$4,554 million long-term debt (Dec 31, 2019)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Google Cloud reaching $10B run rate intensifies cloud competition"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Cloud growth competes directly with AWS"
+  },
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Strong ad revenue growth (Search, YouTube) competes for digital ad spend"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Rising capex and AI/cloud computing investment implies continued chip/infrastructure demand"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Google Cloud's growth pressures enterprise cloud competitors"
+  }
+ ],
+ "evidence": "revenues of $162 billion, up 18% year over year and up 20% on a constant currency basis",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2013 (quarter ended March 31, 2013)",
+  "revenue": "$16.07 billion (up 22% YoY)",
+  "operating_income": "$181 million (down 6% YoY)",
+  "net_income": "$82 million",
+  "eps": "$0.18 diluted ($0.18 basic)",
+  "operating_cash_flow": "$4.245 billion (TTM), -$2.372 billion for the quarter",
+  "capex": "$670 million (quarter); $4.068 billion (TTM) for purchases of property and equipment",
+  "free_cash_flow": "$177 million (TTM), down 85% YoY from $1.15 billion",
+  "cash_and_investments": "$4.481 billion cash and equivalents at quarter end (down from $8.084 billion at period start)",
+  "total_debt": null,
+  "guidance_next": "Q2 2013: net sales expected between $14.5B and $16.2B (13%-26% growth); operating income (loss) expected between $(340)M and $10M vs $107M in Q2 2012, including ~$340M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.5,
+ "own_stock": -0.3,
+ "market": 0.0,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS cloud service launches (Redshift, OpsWorks) compete with Azure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS cloud expansion competes with Google Cloud"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Amazon Redshift data warehouse service competes with Oracle offerings"
+  }
+ ],
+ "evidence": "Operating income decreased 6% to $181 million in the first quarter... Free cash flow decreased 85% to $177 million for the trailing twelve months",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2011 and Full Year 2011 (fiscal year ended Dec 31, 2011)",
+  "revenue": "Q4: $13.9B (up 22% YoY); FY: $54.2B non-GAAP / $54.0B GAAP (up 24% YoY)",
+  "operating_income": "Q4: $4.8B non-GAAP (up 20% YoY); FY: $18.4B non-GAAP (up 18% YoY)",
+  "net_income": "Q4: $3.5B non-GAAP (up 11% YoY); FY: $13.7B non-GAAP (up 19% YoY)",
+  "eps": "Q4: $0.68 non-GAAP (up 21% YoY); FY: $2.53 non-GAAP (up 25% YoY)",
+  "operating_cash_flow": "FY 2011: approximately $21.0B; Q4 2011: approximately $6.6B",
+  "capex": "FY 2011: $10.8B; Q4 2011: $2.8B",
+  "free_cash_flow": "FY 2011: approximately $10.2B (21.0B - 10.8B); Q4 2011: approximately $3.8B (6.6B - 2.8B)",
+  "cash_and_investments": "$14.8B total cash investments at year-end, down $6.7B from 2010",
+  "total_debt": "Issued $5.0B in debt during 2011 (Q3 issuance); no total debt figure explicitly stated",
+  "guidance_next": "Q1 2012 revenue expected at $12.8B +/- $500M (down ~8% sequentially, more than typical seasonal decline due to continued HDD shortage impact); gross margin expected at 63% +/- a couple points (down 1.5 points sequentially); R&D and MG&A spending ~$4.4B; depreciation ~$1.5B; amortization ~$75M; other income ~$0"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -0.3,
+ "fcf_trend": -0.1,
+ "own_stock": -0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel's PC/server strength and margin discipline pressure AMD's competitive position"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Data Center Group growth implies continued component/memory demand from Intel's platform business"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "PC Client Group growth reflects healthy Windows PC ecosystem demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Data Center Group revenue growth signals steady cloud/server demand from hyperscale customers"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "HDD shortage cited as supply-chain constraint affecting storage-adjacent component demand"
+  }
+ ],
+ "evidence": "Revenue is expected to be $12.8B, plus or minus $500M in the first quarter... This decline is slightly more than the average seasonal decline as we expect the shortage of hard disk drives to continue to impact our business in the first quarter.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

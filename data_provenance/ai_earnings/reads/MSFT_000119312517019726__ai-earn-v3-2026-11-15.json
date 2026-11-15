@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2017 (quarter ended December 31, 2016)",
+  "revenue": "$24.1 billion GAAP; $26.1 billion non-GAAP",
+  "operating_income": "$6.2 billion GAAP; $8.2 billion non-GAAP",
+  "net_income": "$5.2 billion GAAP; $6.5 billion non-GAAP",
+  "eps": "$0.66 GAAP diluted; $0.83 non-GAAP diluted",
+  "operating_cash_flow": "$6,293 million (quarter)",
+  "capex": "$1,988 million (additions to property and equipment, quarter)",
+  "free_cash_flow": "$4,305 million (6,293 - 1,988)",
+  "cash_and_investments": "$122,781 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$84,970 million (25,065 short-term debt + 599 current portion LT debt + 59,306 long-term debt)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0,
+ "fcf_trend": 0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Azure growth of 93% pressures AWS cloud market share narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Cloud competition intensifying as Azure scales rapidly"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Enterprise cloud/server share shifting toward Azure"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Azure compute usage more than doubling implies server/datacenter demand"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Enterprise cloud security spend tailwind from broader cloud adoption"
+  }
+ ],
+ "evidence": "Azure revenue increased 93% (up 95% in constant currency) with Azure compute usage more than doubling year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

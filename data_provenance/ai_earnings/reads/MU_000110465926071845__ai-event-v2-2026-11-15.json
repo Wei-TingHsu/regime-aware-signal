@@ -1,0 +1,31 @@
+{
+ "event_type": "leadership change",
+ "material": 0.05,
+ "fcf_outlook": 0.0,
+ "uncertainty": -0.05,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "new director ex-NVIDIA DGX Cloud exec, possible closer ties"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "new director ex-Broadcom optical systems exec"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "new director ex-Meta infrastructure VP"
+  }
+ ],
+ "evidence": "Her experience leading large-scale technology platforms and advancing some of the industry\u2019s most important innovations will be a tremendous asset to Micron.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

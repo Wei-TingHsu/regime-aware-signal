@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2014 (three months ended September 30, 2014)",
+  "revenue": "$20.58 billion (up 20% YoY)",
+  "operating_income": "-$544 million (operating loss)",
+  "net_income": "-$437 million (net loss)",
+  "eps": "-$0.95 diluted",
+  "operating_cash_flow": "$1.766 billion (quarter); $5.705 billion (trailing twelve months)",
+  "capex": "$1.378 billion (purchases of property and equipment, quarter)",
+  "free_cash_flow": "$1.08 billion (trailing twelve months, per release)",
+  "cash_and_investments": "$5.258 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q4 2014: net sales expected between $27.3B and $30.3B (7%-18% growth); operating income (loss) expected between $(570) million and $430 million, vs $510 million in Q4 2013, including ~$470 million stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.1,
+ "guidance_change": -0.4,
+ "fcf_trend": 0.2,
+ "own_stock": -0.4,
+ "market": 0.0,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS growth ~90% YoY pressures rival cloud platforms"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS cloud share gains vs Google Cloud"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AWS capacity expansion implies server/chip demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Data center buildout implies memory demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Networking/infrastructure demand from AWS growth"
+  }
+ ],
+ "evidence": "Operating loss was $544 million in the third quarter, compared with operating loss of $25 million in third quarter 2013.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

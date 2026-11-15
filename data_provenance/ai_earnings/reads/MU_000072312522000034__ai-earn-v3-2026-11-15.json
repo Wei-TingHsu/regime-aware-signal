@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ3 2022 (ended June 2, 2022)",
+  "revenue": "$8.642 billion",
+  "operating_income": "$3.004 billion GAAP; $3.144 billion non-GAAP",
+  "net_income": "$2.626 billion GAAP; $2.939 billion non-GAAP",
+  "eps": "$2.34 GAAP diluted; $2.59 non-GAAP diluted",
+  "operating_cash_flow": "$3.838 billion",
+  "capex": "$2.528 billion (net investments in capital expenditures)",
+  "free_cash_flow": "$1.310 billion (adjusted free cash flow)",
+  "cash_and_investments": "$11.98 billion (cash, marketable investments, restricted cash); net cash position $5.014 billion",
+  "total_debt": "$6.963 billion (current + long-term debt)",
+  "guidance_next": "FQ4-22: Revenue $7.2B \u00b1 $400M; GAAP gross margin 41.5% \u00b1 1.5% (Non-GAAP 42.5% \u00b1 1.5%); GAAP opex $1.13B \u00b1 $25M (Non-GAAP $1.05B \u00b1 $25M); GAAP diluted EPS $1.52 \u00b1 $0.20 (Non-GAAP $1.63 \u00b1 $0.20)"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.8,
+ "fcf_trend": 0.1,
+ "own_stock": -0.6,
+ "market": -0.3,
+ "ai_demand": -0.1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "NAND/memory demand weakening industry-wide"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "DRAM/NAND peer facing same demand slowdown"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Shared PC/data-center memory demand softness"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Micron moderating supply growth could reduce foundry/equipment orders"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Weaker memory demand signals broader PC/server slowdown affecting AMD's end markets"
+  }
+ ],
+ "evidence": "Recently, the industry demand environment has weakened, and we are taking action to moderate our supply growth in fiscal 2023.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,43 @@
+{
+ "event_type": "guidance update",
+ "material": 0.6,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.3,
+ "own_stock": -0.1,
+ "market": 0.15,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "secures US advanced packaging/manufacturing capacity"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "benefits from expanded US fab access"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "named as key US customer benefiting"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "faces stronger US-based foundry rival"
+  },
+  {
+   "company": "AAPL",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "supply chain security in US"
+  }
+ ],
+ "evidence": "TSMC today announced its intention to expand its investment in advanced semiconductor manufacturing in the United States by an additional $100 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

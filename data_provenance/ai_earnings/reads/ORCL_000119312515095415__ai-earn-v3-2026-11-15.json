@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2015 (three months ended February 28, 2015)",
+  "revenue": "$9,327 million total revenue, unchanged YoY (up 6% constant currency)",
+  "operating_income": "GAAP $3,383 million (down 5%); Non-GAAP $4,2 billion (down 4%)",
+  "net_income": "$2,495 million GAAP (down 3%); Non-GAAP $3.1 billion (down 1%)",
+  "eps": "GAAP diluted $0.56 (down 1%); Non-GAAP diluted $0.68 (unchanged)",
+  "operating_cash_flow": "$14,509 million trailing twelve months",
+  "capex": "$948 million trailing twelve months (per TTM table); $794 million nine months per cash flow statement",
+  "free_cash_flow": "$13,561 million trailing twelve months (down 6% YoY)",
+  "cash_and_investments": "$13,701 million cash and cash equivalents + $30,076 million marketable securities",
+  "total_debt": "$1,999 million notes payable current + $30,258 million notes payable non-current = $32,257 million",
+  "guidance_next": "Hurd: 'In Q4, we expect to sell over $300 million of new SaaS and PaaS annual recurring revenue.' Ellison: 'We are well on our way to selling over $1 billion of new SaaS and PaaS business in calendar 2015.'"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.2,
+ "fcf_trend": -0.3,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "CRM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Ellison frames race vs Salesforce for cloud bookings"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "general cloud/SaaS competitor"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "IaaS competitor"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/IaaS competitor"
+  }
+ ],
+ "evidence": "We beat the midpoint of my constant currency guidance on every single financial metric this past quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

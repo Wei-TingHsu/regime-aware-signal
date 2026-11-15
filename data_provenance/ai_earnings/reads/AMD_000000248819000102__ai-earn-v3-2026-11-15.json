@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2019",
+  "revenue": "$1.53 billion",
+  "operating_income": "$59 million GAAP; $111 million non-GAAP",
+  "net_income": "$35 million GAAP; $92 million non-GAAP",
+  "eps": "$0.03 diluted GAAP; $0.08 non-GAAP",
+  "operating_cash_flow": "$30 million",
+  "capex": "$58 million",
+  "free_cash_flow": "-$28 million",
+  "cash_and_investments": "$1.128 billion",
+  "total_debt": "$1.031 billion",
+  "guidance_next": "Q3 2019 revenue approximately $1.8 billion, plus or minus $50 million (~18% sequential increase, ~9% YoY increase); non-GAAP gross margin approximately 43%; FY2019 revenue to increase mid-single digit percent YoY, non-GAAP gross margin approximately 42% for 2019"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.7,
+ "fcf_trend": -0.2,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AMD GPU/datacenter GPU gains and RDNA/EPYC momentum"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "Ryzen/EPYC 7nm share gains in CPU market"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Next-gen Xbox (Project Scarlett) custom SoC design win"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "7nm foundry capacity ramp for AMD products"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Potential cloud/datacenter GPU and EPYC adoption"
+  }
+ ],
+ "evidence": "revenue to be approximately $1.8 billion, plus or minus $50 million, an increase of approximately 18 percent sequentially and approximately 9 percent year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

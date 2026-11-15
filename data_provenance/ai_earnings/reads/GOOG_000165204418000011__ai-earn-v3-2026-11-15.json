@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2018 (three months ended March 31, 2018)",
+  "revenue": "$31,146 million, up 26% YoY (23% constant currency)",
+  "operating_income": "$7,001 million (22% margin)",
+  "net_income": "$9,401 million",
+  "eps": "$13.33 diluted (includes $3.40 benefit from equity securities gains)",
+  "operating_cash_flow": "$11,642 million",
+  "capex": "$7,299 million",
+  "free_cash_flow": "$4,343 million",
+  "cash_and_investments": "$102,885 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$1,329 million short-term + $3,973 million long-term = ~$5,302 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "digital ad market peer, implies strong ad spend environment"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud and ad competitor"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud competitor, large capex comparison"
+  }
+ ],
+ "evidence": "Our ongoing strong revenue growth reflects our momentum globally, up 26% versus the first quarter of 2017",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

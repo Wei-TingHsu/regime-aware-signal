@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.1,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel offloads fab capex burden, easing funding gap vs TSMC"
+  }
+ ],
+ "evidence": "Brookfield contributed to NewCo approximately $0.8 billion in cash and, when taken together with Brookfield\u2019s commitments for future contributions, will be $14.8 billion in the aggregate",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

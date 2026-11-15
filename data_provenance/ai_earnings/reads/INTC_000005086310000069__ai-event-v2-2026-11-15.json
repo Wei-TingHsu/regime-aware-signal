@@ -1,0 +1,19 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.15,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.15,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "FTC antitrust case against Intel could benefit AMD if settlement imposes restrictions"
+  }
+ ],
+ "evidence": "There can be no assurance that these discussions will result in a settlement of the administrative trial proceedings.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": 0.4,
+ "uncertainty": -0.2,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "strong foundry demand signals healthy chip cycle"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "benefits from TSMC capacity/demand strength"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC share gains in foundry market"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "TSMC foundry demand reflects broader chip demand"
+  }
+ ],
+ "evidence": "net sales were approximately NT$49.28 billion, an increase of 15.1 percent over September 2012 and an increase of 32.3 percent over October 2011",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

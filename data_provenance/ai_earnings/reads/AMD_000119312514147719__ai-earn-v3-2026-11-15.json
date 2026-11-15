@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2014 (quarter ended March 29, 2014)",
+  "revenue": "$1.40 billion (GAAP and non-GAAP)",
+  "operating_income": "$49 million GAAP; $66 million non-GAAP",
+  "net_income": "$(20) million GAAP net loss; $12 million non-GAAP net income",
+  "eps": "$(0.03) GAAP; $0.02 non-GAAP",
+  "operating_cash_flow": "$(204) million (net cash used in operating activities)",
+  "capex": "$21 million",
+  "free_cash_flow": "$(225) million (non-GAAP free cash flow, stated)",
+  "cash_and_investments": "$982 million (cash, cash equivalents and marketable securities, including long-term)",
+  "total_debt": "$2.138 billion",
+  "guidance_next": "For Q2 2014, AMD expects revenue to increase 3 percent, plus or minus 3 percent, sequentially"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.4,
+ "fcf_trend": -0.6,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD revenue growth and new x86/ARM server chips pressure Intel's share"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong GPU (Radeon R7/R9) demand competes directly with Nvidia"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Semi-custom SoC sales (console chips) tied to Xbox demand"
+  },
+  {
+   "company": "GLOBALFOUNDRIES",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "New fixed-pricing wafer supply agreement, ~$1.2B 2014 purchases"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Broader semiconductor sector sentiment, limited direct linkage"
+  }
+ ],
+ "evidence": "Revenue of $1.40 billion, decreased 12 percent sequentially and increased 28 percent year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

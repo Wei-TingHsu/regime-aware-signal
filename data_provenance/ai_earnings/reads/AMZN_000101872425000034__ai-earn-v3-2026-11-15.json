@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2025 (ended March 31, 2025)",
+  "revenue": "$155.7 billion",
+  "operating_income": "$18.4 billion",
+  "net_income": "$17.1 billion",
+  "eps": "$1.59 diluted",
+  "operating_cash_flow": "$113.9 billion (TTM)",
+  "capex": "$25.0 billion (quarter, purchases of property and equipment); $88.0 billion TTM",
+  "free_cash_flow": "$25.9 billion (TTM), down from $50.1 billion TTM a year ago",
+  "cash_and_investments": "$66.2B cash and equivalents + $28.4B marketable securities = ~$94.6 billion",
+  "total_debt": "$53.4 billion long-term debt",
+  "guidance_next": "Q2 2025 net sales of $159.0B-$164.0B (7%-11% YoY growth, ~10bps unfavorable FX impact); operating income of $13.0B-$17.5B vs $14.7B in Q2 2024"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS growth reaffirms cloud/AI capex race with Azure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS 17% growth signals continued cloud AI competition"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Heavy AWS capex and Trainium2 rollout imply continued chip/GPU demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "AWS infrastructure buildout could include AMD silicon demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Data center expansion implies memory demand, though not specifically mentioned"
+  }
+ ],
+ "evidence": "Operating income increased to $18.4 billion in the first quarter, compared with $15.3 billion in first quarter 2024.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

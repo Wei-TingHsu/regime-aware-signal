@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2011 (quarter ended Sept 30, 2011)",
+  "revenue": "NT$106.48 billion",
+  "operating_income": "NT$31.598 billion (operating margin 29.7%)",
+  "net_income": "NT$30.395 billion",
+  "eps": "NT$1.17 (US$0.20 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2011: revenue NT$103-105 billion; gross profit margin 43.5-45.5%; operating profit margin 30-32%; all major segments expected to decline except communications, based on FX assumption of 1 USD = 30.3 NT$"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.1,
+ "fcf_trend": 0,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "communications segment strength aids fabless customers in smartphone chips"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "foundry customer, computer segment weakness may affect orders"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "competing in advanced process technology"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "self-reference, margin outlook improvement"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "broader semiconductor demand softness noted in computer/consumer segments"
+  }
+ ],
+ "evidence": "management expects overall performance for fourth quarter 2011... Gross profit margin is expected to be between 43.5% and 45.5%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

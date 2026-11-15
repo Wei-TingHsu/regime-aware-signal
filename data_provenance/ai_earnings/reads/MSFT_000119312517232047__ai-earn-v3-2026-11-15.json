@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2017 (quarter ended June 30, 2017)",
+  "revenue": "$23.3 billion GAAP; $24.7 billion non-GAAP",
+  "operating_income": "$5.3 billion GAAP; $7.0 billion non-GAAP",
+  "net_income": "$6.5 billion GAAP; $7.7 billion non-GAAP",
+  "eps": "$0.83 GAAP diluted; $0.98 non-GAAP diluted",
+  "operating_cash_flow": "$11,005 million (three months ended June 30, 2017)",
+  "capex": "$2,283 million (additions to property and equipment, three months ended June 30, 2017)",
+  "free_cash_flow": "$8,722 million (11,005 - 2,283)",
+  "cash_and_investments": "$132,981 million total cash, cash equivalents, and short-term investments as of June 30, 2017",
+  "total_debt": "short-term debt $9,072 million + current portion of long-term debt $1,049 million + long-term debt $76,073 million = $86,194 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Azure revenue growth of 97% signals share gains in cloud infrastructure vs AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Strong Azure and commercial cloud growth pressures Google Cloud competitive position"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Server and cloud services growth driven by Azure challenges Oracle's cloud ambitions"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Not addressed in this release"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Rising cloud/datacenter infrastructure growth implies continued server hardware demand"
+  }
+ ],
+ "evidence": "Commercial cloud annualized revenue run rate exceeds $18.9 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

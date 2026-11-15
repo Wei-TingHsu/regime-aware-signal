@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY2012 (ended May 31, 2012)",
+  "revenue": "$2,172 million",
+  "operating_income": "-$191 million",
+  "net_income": "-$320 million attributable to Micron",
+  "eps": "-$0.32 diluted",
+  "operating_cash_flow": "$686 million (quarter); $1,664 million (nine months)",
+  "capex": "$325 million (quarter, approx.); $1,367 million (nine months)",
+  "free_cash_flow": "approx. $361 million (quarter: $686M OCF - $325M capex)",
+  "cash_and_investments": "$2,325 million ($2.7 billion including other investments per release text)",
+  "total_debt": "$2,936 million long-term debt plus $262 million current portion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": -0.3,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Intel $300M customer advance for IM Flash expansion"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "NAND Flash market peer"
+  },
+  {
+   "company": "Samsung",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "DRAM/NAND competitor, prior cross-license"
+  }
+ ],
+ "evidence": "net loss attributable to Micron shareholders of $320 million, or $0.32 per diluted share, on net sales of $2.2 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

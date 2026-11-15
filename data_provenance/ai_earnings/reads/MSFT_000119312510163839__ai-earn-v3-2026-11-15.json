@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 FY2010 (quarter ended June 30, 2010) and FY2010 full year",
+  "revenue": "$16.04 billion (quarter), $62.48 billion (full year)",
+  "operating_income": "$5.93 billion (quarter), $24.10 billion (full year)",
+  "net_income": "$4.52 billion (quarter), $18.76 billion (full year)",
+  "eps": "$0.51 diluted (quarter), $2.10 diluted (full year)",
+  "operating_cash_flow": "$5.604 billion (quarter), $24.073 billion (full year)",
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$36.788 billion total cash, cash equivalents and short-term investments",
+  "total_debt": "$1.000 billion short-term debt + $4.939 billion long-term debt = ~$5.939 billion",
+  "guidance_next": "Updated operating expense guidance of $26.9 billion to $27.3 billion for the full year ending June 30, 2011"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise software competitor"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Bing gaining share, search competition"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Windows Azure cloud competition"
+  }
+ ],
+ "evidence": "Record fourth-quarter revenue of $16.04 billion...a 22% increase from the same period of the prior year, with operating income, net income and diluted earnings per share increases of 49%, 48% and 50%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

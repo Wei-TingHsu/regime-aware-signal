@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2021 (ended Dec 25, 2021) and FY2021",
+  "revenue": "$4.826 billion Q4 (up 49% YoY, 12% QoQ); $16.434 billion FY2021 (up 68% YoY)",
+  "operating_income": "$1.207 billion GAAP Q4 ($1.328B non-GAAP); $3.648 billion GAAP FY ($4.069B non-GAAP)",
+  "net_income": "$974 million GAAP Q4 ($1.122B non-GAAP); $3.162 billion GAAP FY ($3.435B non-GAAP)",
+  "eps": "$0.80 GAAP diluted Q4 ($0.92 non-GAAP); $2.57 GAAP diluted FY ($2.79 non-GAAP)",
+  "operating_cash_flow": "$822 million Q4; $3.521 billion FY",
+  "capex": "$86 million Q4; $301 million FY",
+  "free_cash_flow": "$736 million Q4; $3.220 billion FY",
+  "cash_and_investments": "$3.608 billion (cash, equivalents and short-term investments)",
+  "total_debt": "$313 million",
+  "guidance_next": "No explicit forward quarterly or annual guidance numbers provided in this excerpt; CEO states expectation of 'another year of significant growth in 2022' driven by new product ramps and next-gen launches"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "AMD share gains in CPU/server markets"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD Instinct MI200 targets AI/HPC accelerator market"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "AWS expanding EPYC-powered EC2 instances"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Azure launching new AMD-powered VM instances"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Google Cloud launching new AMD-based instances"
+  }
+ ],
+ "evidence": "Revenue of $4.8 billion was up 49 percent year-over-year and 12 percent quarter-over-quarter... Gross margin was 50 percent, an increase of more than 5 percentage points year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

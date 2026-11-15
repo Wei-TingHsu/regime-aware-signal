@@ -1,0 +1,19 @@
+{
+ "event_type": "leadership change",
+ "material": 0.15,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.1,
+ "own_stock": -0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel leadership instability could be competitive opening"
+  }
+ ],
+ "evidence": "equity award to Robert (\"Bob\") H. Swan, Intel's interim Chief Executive Officer",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

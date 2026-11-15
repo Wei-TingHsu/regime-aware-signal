@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2019 (three months ended June 30, 2019)",
+  "revenue": "$63.4 billion (up 20% YoY)",
+  "operating_income": "$3.1 billion (vs $3.0 billion Q2 2018)",
+  "net_income": "$2.6 billion (vs $2.5 billion Q2 2018)",
+  "eps": "$5.22 diluted (vs $5.07 Q2 2018)",
+  "operating_cash_flow": "$36.0 billion TTM (up 65% YoY)",
+  "capex": "$13.9 billion TTM (purchases of property and equipment)",
+  "free_cash_flow": "$25.0 billion TTM (up from $10.4 billion)",
+  "cash_and_investments": "$22,965 million cash, cash equivalents and restricted cash at period end",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS cloud rival; Amazon's scale and AI push pressure Azure share"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Competes in cloud and AI voice/assistant space"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud infrastructure rival to AWS"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Chips for AWS data centers benefit from AWS growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Potential beneficiary of AWS server/chip demand"
+  }
+ ],
+ "evidence": "Operating income increased to $3.1 billion in the second quarter, compared with operating income of $3.0 billion in second quarter 2018",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

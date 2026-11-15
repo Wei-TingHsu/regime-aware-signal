@@ -1,0 +1,37 @@
+{
+ "event_type": "leadership change",
+ "material": 0.4,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.5,
+ "own_stock": -0.5,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.5,
+   "reason": "Intel process execution shakeup signals continued 7nm struggles, competitive opening"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Potential increased reliance on foundry if Intel process issues persist"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Not directly affected"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Benefits if Intel CPU/process leadership weakens"
+  }
+ ],
+ "evidence": "to accelerate product leadership and improve focus and accountability in process technology execution",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2020 (quarter ended December 31, 2020)",
+  "revenue": "NT$361.53 billion (US$12.68 billion)",
+  "operating_income": "NT$157.12 billion (operating margin 43.5%)",
+  "net_income": "NT$142.77 billion",
+  "eps": "NT$5.51 (US$0.97 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q1 2021 revenue expected US$12.7-13.0 billion; gross profit margin 50.5%-52.5%; operating profit margin 39.5%-41.5% (at NT$27.95/US$1); 2021 capex budget US$25-28 billion"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.5,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "advanced node demand from HPC/5G customers like AMD"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "HPC-related demand cited as growth driver"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "benefits from advanced foundry capacity expansion"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TSMC's 5nm leadership and margin strength pressures Intel's foundry competitiveness"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "broader semiconductor demand recovery signaled by TSMC's automotive and HPC commentary"
+  }
+ ],
+ "evidence": "Revenue is expected to be between US$12.7 billion and US$13.0 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

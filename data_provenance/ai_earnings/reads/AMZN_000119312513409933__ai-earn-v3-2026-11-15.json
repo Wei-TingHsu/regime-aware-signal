@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2013 (quarter ended September 30, 2013)",
+  "revenue": "$17.09 billion net sales (up 24% YoY)",
+  "operating_income": "Operating loss of $25 million (vs loss of $28 million in Q3 2012)",
+  "net_income": "Net loss of $41 million",
+  "eps": "-$0.09 diluted per share",
+  "operating_cash_flow": "$4.98 billion (trailing twelve months), up 48% YoY",
+  "capex": "$1.038 billion in Q3 2013 (purchases of property and equipment); $4.589 billion TTM",
+  "free_cash_flow": "$388 million (trailing twelve months), down 63% YoY",
+  "cash_and_investments": "$3.872 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q4 2013: net sales expected between $23.5B and $26.5B (10%-25% growth); operating income (loss) expected between $(500)M and $500M vs $405M in Q4 2012, including ~$350M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.5,
+ "own_stock": 0.6,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS cloud momentum and new enterprise features pressure Google Cloud competitiveness"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS enterprise/government wins and feature expansion compete with Azure"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "Self-referential: strong top-line growth and narrower-than-feared operating loss"
+  }
+ ],
+ "evidence": "Operating loss was $25 million in the third quarter, compared with an operating loss of $28 million in third quarter 2012.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

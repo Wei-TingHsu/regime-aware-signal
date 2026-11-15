@@ -1,0 +1,31 @@
+{
+ "event_type": "restructuring",
+ "material": 0.45,
+ "fcf_outlook": 0.35,
+ "uncertainty": 0.1,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "signals sector-wide cost discipline trend"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "parallel layoffs validate cost-cutting cycle"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.15,
+   "reason": "tech sector workforce reduction trend"
+  }
+ ],
+ "evidence": "we\u2019ve decided to reduce our workforce by approximately 12,000 roles ... to sharpen our focus, reengineer our cost base, and direct our talent and capital to our highest priorities",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

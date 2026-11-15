@@ -1,0 +1,19 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.15,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.2,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "CA Inc",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "pending acquisition target referenced"
+  }
+ ],
+ "evidence": "our proposed acquisition of CA, Inc., including (1) the acquisition may not be completed in a timely manner or at all",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and FY2017 (ended Aug 31, 2017)",
+  "revenue": "$6.14 billion (Q4), $20.32 billion (FY17)",
+  "operating_income": "$2.502 billion GAAP (Q4), $5.868 billion GAAP (FY17)",
+  "net_income": "$2.368 billion GAAP (Q4), $5.089 billion GAAP (FY17)",
+  "eps": "$1.99 diluted GAAP (Q4), $4.41 diluted GAAP (FY17); $2.02 non-GAAP (Q4), $4.96 non-GAAP (FY17)",
+  "operating_cash_flow": "$8.153 billion (FY17)",
+  "capex": "$5.253 billion investments in capital expenditures (FY17); $1.51 billion net of partner funding (Q4)",
+  "free_cash_flow": "$8.153B - $5.253B = $2.90 billion (FY17, calculated)",
+  "cash_and_investments": "$6.15 billion cash, marketable investments, and restricted cash (Q4 end); $5.428B cash and short-term investments + $617M long-term marketable investments",
+  "total_debt": "$1.262 billion current debt + $9.872 billion long-term debt = $11.134 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "NAND/storage peer benefiting from similar pricing dynamics"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor manufacturing peer in favorable industry cycle"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "memory customer benefiting from Micron's product roadmap"
+  }
+ ],
+ "evidence": "Micron delivered exceptional fourth quarter and fiscal year results, reflecting solid execution and robust demand for our memory and storage solutions",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

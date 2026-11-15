@@ -1,0 +1,37 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.25,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.05,
+ "own_stock": 0.15,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "continued capacity expansion supports advanced node supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "capex supports advanced packaging/CoWoS capacity"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC reinforcing capacity lead in foundry"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.15,
+   "reason": "benefits from expanded advanced packaging capacity"
+  }
+ ],
+ "evidence": "approved capital appropriations of approximately US$17,356.20 million for purposes including installation and upgrade of advanced technology capacity",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,43 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "capacity expansion supports AI chip supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "capacity expansion supports AI chip supply"
+  },
+  {
+   "company": "Sony",
+   "relation": "partner",
+   "direction": 0.3,
+   "reason": "new JV for image sensor manufacturing"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC capex strengthens foundry lead"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "self"
+  }
+ ],
+ "evidence": "the Board approved capital appropriations of approximately US$29,442.50 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

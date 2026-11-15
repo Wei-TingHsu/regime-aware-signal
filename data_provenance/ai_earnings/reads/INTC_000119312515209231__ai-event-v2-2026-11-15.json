@@ -1,0 +1,43 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.7,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.5,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel diversifies into FPGAs, less focus elsewhere"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Altera foundry relationship may shift"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Rival FPGA/programmable logic maker faces stronger competitor"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Potential datacenter FPGA customer unaffected directly"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Cloud customer of combined IP"
+  }
+ ],
+ "evidence": "Intel intends to fund the transaction with a combination of cash from the balance sheet and new debt.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

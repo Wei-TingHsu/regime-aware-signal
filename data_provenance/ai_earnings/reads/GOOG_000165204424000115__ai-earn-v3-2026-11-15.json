@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2024 (quarter ended September 30, 2024)",
+  "revenue": "$88.3 billion (up 15% YoY)",
+  "operating_income": "$28.521 billion (operating margin 32%)",
+  "net_income": "$26.301 billion",
+  "eps": "$2.12 diluted",
+  "operating_cash_flow": "$30.698 billion",
+  "capex": "$13.061 billion",
+  "free_cash_flow": "$17.637 billion",
+  "cash_and_investments": "$93.230 billion total cash, cash equivalents, and marketable securities",
+  "total_debt": "$12.297 billion long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0.5,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud growth signals strong enterprise AI/cloud demand across hyperscalers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Google Cloud's 35% growth implies competitive cloud/AI infrastructure market strength"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Capex surge to $13B driven by AI infrastructure buildout implies chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Rising AI infrastructure capex benefits AI chip suppliers broadly"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Shared narrative of AI-driven ad and cloud revenue acceleration across mega-cap tech"
+  }
+ ],
+ "evidence": "Total operating income increased 34% and operating margin percent expanded by 4.5 percentage points to 32%.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

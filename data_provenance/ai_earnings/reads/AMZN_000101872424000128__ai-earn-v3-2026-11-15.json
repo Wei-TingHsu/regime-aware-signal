@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2024 (quarter ended June 30, 2024)",
+  "revenue": "$148.0 billion (net sales), up 10% YoY",
+  "operating_income": "$14.7 billion",
+  "net_income": "$13.5 billion",
+  "eps": "$1.26 diluted",
+  "operating_cash_flow": "$108.0 billion (TTM)",
+  "capex": "$17.62 billion (Q2 2024 purchases of property and equipment)",
+  "free_cash_flow": "$53.0 billion (TTM, as stated)",
+  "cash_and_investments": "$71,178M cash + $17,914M marketable securities = ~$89.1 billion",
+  "total_debt": "$54,889 million long-term debt (plus lease liabilities not summed)",
+  "guidance_next": "Q3 2024: net sales $154.0B-$158.5B (8%-11% YoY growth, ~90bps FX headwind); operating income $11.5B-$15.0B vs $11.2B in Q3 2023"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.8,
+ "own_stock": 0.2,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AWS reacceleration signals strong cloud/AI demand market-wide"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud and GenAI competition intensifying"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Rising AWS capex implies continued GPU/chip purchases"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Trainium positioned as lower-cost alternative to AMD/Nvidia chips"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Data center buildout implies higher memory demand"
+  }
+ ],
+ "evidence": "\"AWS segment sales increased 19% year-over-year to $26.3 billion\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

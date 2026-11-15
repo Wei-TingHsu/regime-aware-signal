@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2021 (ended December 31, 2021)",
+  "revenue": "$75,325 million Q4; $257,637 million FY (up 32% and 41% YoY)",
+  "operating_income": "$21,885 million Q4 (29% margin); $78,714 million FY (31% margin)",
+  "net_income": "$20,642 million Q4; $76,033 million FY",
+  "eps": "$30.69 diluted Q4; $112.20 diluted FY",
+  "operating_cash_flow": "$24,934 million Q4; $91,652 million FY",
+  "capex": "$6,383 million Q4; $24,640 million FY",
+  "free_cash_flow": "$18,551 million Q4 (stated)",
+  "cash_and_investments": "$139,649 million total cash, cash equivalents and marketable securities",
+  "total_debt": "$14,817 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud growth strength signals competitive cloud/AI market"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Google Cloud growth implies cloud infrastructure demand broadly"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Strong ad market read-through for digital advertising peers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Heavy capex and AI investment implies continued chip/infrastructure demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Capex growth implies semiconductor manufacturing demand"
+  }
+ ],
+ "evidence": "Our fourth quarter revenues of $75 billion, up 32% year over year, reflected broad-based strength in advertiser spend and strong consumer online activity, as well as substantial ongoing revenue growth from Google Cloud.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.15,
+ "own_stock": -0.2,
+ "market": -0.05,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "TSM foundry demand signal for fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "TSM capacity/demand read-through"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "foundry rival may gain if TSM demand softens"
+  }
+ ],
+ "evidence": "revenues for April 2017 were approximately NT$56.87 billion, a decrease of 33.8 percent from March 2017 and a decrease of 14.9 percent from April 2016",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

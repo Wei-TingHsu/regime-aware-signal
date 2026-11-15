@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2023 (quarter ended September 30, 2023)",
+  "revenue": "$143.1 billion, up 13% YoY",
+  "operating_income": "$11.2 billion (vs $2.5 billion Q3 2022)",
+  "net_income": "$9.9 billion",
+  "eps": "$0.94 diluted (vs $0.28 Q3 2022)",
+  "operating_cash_flow": "$71.7 billion TTM (vs $39.7 billion TTM prior year); Q3 quarterly $21.2 billion",
+  "capex": "Q3 purchases of property and equipment $12.479 billion; TTM $54.733 billion",
+  "free_cash_flow": "$21.4 billion TTM inflow (vs $19.7 billion TTM outflow prior year)",
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS growth stabilization signals cloud/AI demand strength broadly"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud competitor benefiting from same AI demand trend"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "AWS AI infrastructure buildout implies continued chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Custom AI chip and Trainium/Inferentia buildout implies compute demand"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Enterprise cloud security demand tied to cloud growth narrative"
+  }
+ ],
+ "evidence": "operating income increased to $11.2 billion in the third quarter, compared with $2.5 billion in third quarter 2022",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.15,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "divests 10% of IMS Nanofabrication stake to TSMC"
+  },
+  {
+   "company": "ARM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "TSMC invests in Arm IPO"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "benefits from TSMC's investment in e-beam lithography ecosystem"
+  }
+ ],
+ "evidence": "Approved the purchase of 10% equity interest in IMS Nanofabrication Global, LLC from Intel Corporation for an amount not exceeding US$432.8 million.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

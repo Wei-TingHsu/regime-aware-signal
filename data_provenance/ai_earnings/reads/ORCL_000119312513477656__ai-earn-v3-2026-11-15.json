@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 FY2014 (three months ended November 30, 2013)",
+  "revenue": "$9.275 billion GAAP, up 2% YoY",
+  "operating_income": "$3.410 billion GAAP (37% margin); $4.2 billion non-GAAP (46% margin)",
+  "net_income": "$2.553 billion GAAP, down 1% YoY; $3.2 billion non-GAAP, up 1%",
+  "eps": "$0.56 GAAP diluted, up 5%; $0.69 non-GAAP, up 7%",
+  "operating_cash_flow": "$15.196 billion TTM (record)",
+  "capex": "$578 million TTM (per trailing 4-quarter table); $279 million for six months ended Nov 30, 2013",
+  "free_cash_flow": "$14.618 billion TTM, up 14% YoY",
+  "cash_and_investments": "$14.894 billion cash and cash equivalents plus $22.080 billion marketable securities (~$37.0 billion total) as of Nov 30, 2013",
+  "total_debt": "$1.525 billion current notes payable + $22.641 billion non-current notes payable = ~$24.2 billion",
+  "guidance_next": "Hardware President Mark Hurd stated: 'we expect hardware products will show growth next quarter' - no formal quantitative guidance given"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise software/cloud competitor"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure competitor"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/enterprise software competitor"
+  }
+ ],
+ "evidence": "TTM Operating Cash Flow Increases to Record $15.2 billion, TTM Free Cash Flow up 14%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

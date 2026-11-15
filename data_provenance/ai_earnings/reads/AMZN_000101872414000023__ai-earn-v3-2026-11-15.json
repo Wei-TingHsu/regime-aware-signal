@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2014 (three months ended June 30, 2014)",
+  "revenue": "$19.34 billion",
+  "operating_income": "Operating loss of $15 million",
+  "net_income": "Net loss of $126 million",
+  "eps": "-$0.27 diluted",
+  "operating_cash_flow": "$5.33 billion (trailing twelve months)",
+  "capex": "$1.29 billion (quarter); $4.288 billion (TTM)",
+  "free_cash_flow": "$1.04 billion (trailing twelve months)",
+  "cash_and_investments": "$5,057 million cash and equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q3 2014: net sales expected between $19.7B and $21.5B (15%-26% growth); operating loss expected between $810M and $410M vs $25M loss in Q3 2013, including ~$410M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.4,
+ "fcf_trend": 0.3,
+ "own_stock": -0.5,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud competitor to AWS"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Azure competes with AWS price cuts"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AWS infrastructure expansion implies server demand"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS price cuts pressure enterprise cloud rivals"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "large-cap tech spending read-through"
+  }
+ ],
+ "evidence": "Operating loss is expected to be between $810 million and $410 million, compared to $25 million in third quarter 2013",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4/FY 2010 (guidance for Q1 and FY2011)",
+  "revenue": null,
+  "operating_income": null,
+  "net_income": null,
+  "eps": null,
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q1 2011 GAAP gross margin ~61.0% +/- a couple points (62.0% ex-items); FY2011 GAAP gross margin ~63.0% +/- a few points (64.0% ex-items)"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": -0.1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel chipset issue could push customers to competitors"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Intel's flash memory investments concentrated, risk of impairment"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "no direct mention"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "wireless/mobile communications overlap via Infineon WLS deal"
+  }
+ ],
+ "evidence": "chipset degradation issue on Intel\u2019s future financial and operating results, including on revenue, gross margin, and inventory valuation",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

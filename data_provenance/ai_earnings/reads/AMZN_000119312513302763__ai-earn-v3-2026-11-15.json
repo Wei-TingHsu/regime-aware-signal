@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2013 (three months ended June 30, 2013)",
+  "revenue": "$15.70 billion, up 22% YoY",
+  "operating_income": "$79 million, down 26% YoY",
+  "net_income": "net loss of $7 million",
+  "eps": "-$0.02 diluted",
+  "operating_cash_flow": "$4.53 billion (trailing twelve months)",
+  "capex": "$855 million (purchases of property and equipment, Q2); $4.267 billion TTM",
+  "free_cash_flow": "$265 million (TTM), down 76% YoY",
+  "cash_and_investments": "$3.704 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q3 2013: net sales expected between $15.45B and $17.15B (12%-24% growth); operating loss expected between $(440)M and $65M vs $(28)M in Q3 2012, including ~$340M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.6,
+ "own_stock": 0.1,
+ "market": 0,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud and digital content competition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS pricing cuts pressure cloud competitors"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS expanding enterprise/government cloud share"
+  },
+  {
+   "company": "AAPL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Kindle/Appstore vs iOS ecosystem"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "digital content and ad ecosystem overlap"
+  }
+ ],
+ "evidence": "Operating loss is expected to be between $440 million and $65 million, compared to $28 million in third quarter 2012.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

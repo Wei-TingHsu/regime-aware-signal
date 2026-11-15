@@ -1,0 +1,31 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.3,
+ "fcf_outlook": 0,
+ "uncertainty": 0.5,
+ "own_stock": -0.3,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "shared antitrust scrutiny of online platforms"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "shared antitrust scrutiny of online platforms"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "regulatory spillover risk for big tech"
+  }
+ ],
+ "evidence": "Alphabet received a civil investigative demand from the DOJ requesting information and documents relating to our prior antitrust investigations",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

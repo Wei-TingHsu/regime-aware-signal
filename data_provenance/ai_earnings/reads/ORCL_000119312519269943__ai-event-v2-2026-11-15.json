@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.6,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.4,
+ "own_stock": -0.3,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "leadership uncertainty at cloud rival"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "not directly affected"
+  }
+ ],
+ "evidence": "Oracle Corporation deeply regrets to announce that Mark V. Hurd, Chief Executive Officer and Director, died on October 18, 2019.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

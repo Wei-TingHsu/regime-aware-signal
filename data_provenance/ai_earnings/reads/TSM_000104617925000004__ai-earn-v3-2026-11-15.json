@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2024 (quarter ended December 31, 2024)",
+  "revenue": "NT$868.46 billion; US$26.88 billion",
+  "operating_income": "NT$425.71 billion; operating margin 49.0%",
+  "net_income": "NT$374.68 billion",
+  "eps": "NT$14.45 diluted (US$2.24 per ADR unit)",
+  "operating_cash_flow": "NT$620.21 billion",
+  "capex": "NT$361.95 billion",
+  "free_cash_flow": "NT$258.26 billion",
+  "cash_and_investments": "NT$2,422.02 billion (36.2% of total assets)",
+  "total_debt": "Long-term interest-bearing debts NT$958.43 billion",
+  "guidance_next": "Q1 2025 revenue expected US$25.0-25.8 billion; gross profit margin 57%-59%; operating profit margin 46.5%-48.5% (at NT$32.8/US$1); 2025 capex budget US$38-42 billion"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "AI-related demand driving advanced node growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "relies on TSMC advanced nodes for AI/CPU products"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "custom silicon/AI ASICs manufactured at TSMC"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "TSMC's advanced node lead and strong margins highlight competitive pressure"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self-referential strong results"
+  }
+ ],
+ "evidence": "Moving into first quarter 2025, we expect our business to be impacted by smartphone seasonality, partially offset by continued growth in AI-related demand.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

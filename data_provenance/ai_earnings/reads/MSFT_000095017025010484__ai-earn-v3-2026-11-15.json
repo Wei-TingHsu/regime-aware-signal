@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2025 (quarter ended December 31, 2024)",
+  "revenue": "$69.6 billion, +12% YoY",
+  "operating_income": "$31.7 billion, +17% YoY (16% cc)",
+  "net_income": "$24.1 billion, +10% YoY",
+  "eps": "$3.23 diluted, +10% YoY",
+  "operating_cash_flow": "$22,291 million (3 months); $56,471 million (6 months)",
+  "capex": "$15,804 million (3 months, 'Additions to property and equipment'); $30,727 million (6 months)",
+  "free_cash_flow": "$6,487 million (3 months, OCF minus capex); $25,744 million (6 months)",
+  "cash_and_investments": "$71,555 million total cash, cash equivalents and short-term investments (down from $75,543 million at June 30, 2024)",
+  "total_debt": "$44,970 million total (current portion $5,248M + long-term $39,722M); no short-term debt vs $6,693M at June 30, 2024",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.3,
+ "own_stock": 0.15,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Azure +31%, capex surge for AI infrastructure implies continued GPU demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "cloud/AI infra buildout benefits silicon suppliers broadly"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "foundry demand tied to AI chip buildout for hyperscaler capex"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "cloud peer; strong Azure growth signals robust enterprise cloud/AI spending overall"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "cloud peer; AI revenue run-rate growth suggests broad AI monetization momentum"
+  }
+ ],
+ "evidence": "Already, our AI business has surpassed an annual revenue run rate of $13 billion, up 175% year-over-year.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

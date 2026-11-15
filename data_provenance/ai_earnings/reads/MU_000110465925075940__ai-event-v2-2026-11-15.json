@@ -1,0 +1,49 @@
+{
+ "event_type": "guidance update",
+ "material": 0.7,
+ "fcf_outlook": 0.7,
+ "uncertainty": -0.3,
+ "own_stock": 0.8,
+ "market": 0.3,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "memory pricing strength benefits NAND/DRAM peers"
+  },
+  {
+   "company": "SKHY",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "DRAM pricing tailwind for Hynix"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "higher memory costs but signals strong AI demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "memory demand tied to AI compute buildout"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "stronger memory demand signals broader semis strength"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "memory strength highlights relative weakness in Intel's segments"
+  }
+ ],
+ "evidence": "This revised guidance reflects improved pricing, particularly in DRAM, and strong execution.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

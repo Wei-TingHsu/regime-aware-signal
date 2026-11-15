@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2024 (quarter ended September 30, 2023)",
+  "revenue": "$56.5 billion, up 13% YoY",
+  "operating_income": "$26.9 billion, up 25% YoY",
+  "net_income": "$22.3 billion, up 27% YoY",
+  "eps": "$2.99 diluted, up 27% YoY",
+  "operating_cash_flow": "$30,583 million",
+  "capex": "$9,917 million (additions to property and equipment)",
+  "free_cash_flow": "$20,666 million (operating cash flow minus capex)",
+  "cash_and_investments": "$143,951 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$71,502 million (short-term debt $25,808M + current portion LT debt $3,748M + long-term debt $41,946M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Azure AI growth implies continued GPU demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Cloud capex growth benefits chip suppliers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Azure outgrowing cloud peers in AI-driven demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Azure's 29% growth highlights competitive cloud pressure on AWS"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Enterprise cloud competition remains relevant"
+  }
+ ],
+ "evidence": "Azure and other cloud services revenue growth of 29% (up 28% in constant currency)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

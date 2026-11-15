@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and Fiscal Year 2016 (ended January 31, 2016)",
+  "revenue": "$1.401 billion (Q4); $5.010 billion (FY16)",
+  "operating_income": "$252 million GAAP / $356 million non-GAAP (Q4); $747 million GAAP / $1.125 billion non-GAAP (FY16)",
+  "net_income": "$207 million GAAP / $297 million non-GAAP (Q4); $614 million GAAP / $929 million non-GAAP (FY16)",
+  "eps": "$0.35 GAAP / $0.52 non-GAAP diluted (Q4); $1.08 GAAP / $1.67 non-GAAP diluted (FY16)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$5.037 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": "$1.413 billion convertible short-term debt",
+  "guidance_next": "Q1 FY2017: revenue ~$1.26B \u00b12%; GAAP/non-GAAP gross margin 57.2%/57.5% \u00b150bps; GAAP opex ~$500M, non-GAAP opex ~$445M; GAAP/non-GAAP tax rate ~19% \u00b11%; capex ~$35-45M"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.5,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA record datacenter/deep-learning growth pressures AMD's GPU position"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVIDIA's accelerated computing platforms compete with Intel's CPU-centric datacenter push"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Google open-sourcing TensorFlow accelerated on NVIDIA GPUs"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Azure GPU Lab integration speeding neural net workloads via NVIDIA hardware"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Facebook's Big Sur machine-learning system built on NVIDIA Tesla platform"
+  }
+ ],
+ "evidence": "Record quarterly revenue of $1.40 billion, up 12 percent from a year earlier",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

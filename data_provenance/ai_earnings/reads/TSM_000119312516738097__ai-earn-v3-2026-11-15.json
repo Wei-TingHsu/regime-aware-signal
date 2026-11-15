@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "3Q16",
+  "revenue": "NT$260.41 billion",
+  "operating_income": "operating margin 40.8% (~NT$106.3 billion implied)",
+  "net_income": "NT$96.76 billion",
+  "eps": "NT$3.73",
+  "operating_cash_flow": "NT$126.41 billion",
+  "capex": "NT$103.78 billion",
+  "free_cash_flow": "NT$22.63 billion",
+  "cash_and_investments": "NT$516.95 billion",
+  "total_debt": "NT$152.16 billion long-term interest-bearing debt",
+  "guidance_next": "4Q16 revenue NT$255-258 billion at FX 31.50 NT$/USD; gross margin 50.5%-52.5%; operating margin 40%-42%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": -0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "TSMC advanced node demand benefits fabless customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC strong results highlight foundry competitive pressure"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "self"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "communication segment strength (60% of revenue) implies strong customer demand"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "not directly addressed"
+  }
+ ],
+ "evidence": "Net Revenue 260.41 [vs] 3Q16 Guidance 254-257 ... 17.4% ... Net Income to Shareholders of the Parent Company 96.76 ... 33.4%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

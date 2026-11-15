@@ -1,0 +1,43 @@
+{
+ "event_type": "guidance update",
+ "material": 0.5,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.3,
+ "own_stock": -0.4,
+ "market": -0.2,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "memory pricing weakness signal"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "lower memory demand could reduce capacity needs"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "weaker memory prices benefit data-center cost"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "lower memory costs for GPUs/CPUs"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "cheaper memory inputs"
+  }
+ ],
+ "evidence": "revenue will be near the low-end of its previously announced guidance range of $7.9 billion to $8.3 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

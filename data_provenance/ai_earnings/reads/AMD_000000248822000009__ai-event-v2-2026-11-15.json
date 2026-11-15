@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.5,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.5,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD gains FPGA/adaptive computing scale via Xilinx close"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "broader AMD portfolio competes in data center/AI"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "combined AMD-Xilinx volume supports foundry demand"
+  }
+ ],
+ "evidence": "received clearance from the National Anti-Monopoly Policy Bureau ... with respect to the merger",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

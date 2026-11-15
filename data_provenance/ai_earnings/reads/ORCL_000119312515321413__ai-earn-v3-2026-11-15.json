@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q1 FY2016 (three months ended August 31, 2015)",
+  "revenue": "$8.4 billion (down 2% USD, up 7% constant currency)",
+  "operating_income": "$2.7 billion GAAP (31% margin); $3.5 billion non-GAAP (41% margin)",
+  "net_income": "$1.747 billion GAAP; $2.3 billion non-GAAP",
+  "eps": "$0.40 GAAP diluted; $0.53 non-GAAP",
+  "operating_cash_flow": "$5,856 million (quarter); $13,464 million trailing twelve months",
+  "capex": "$446 million (quarter); $1,636 million TTM",
+  "free_cash_flow": "$11,828 million TTM (down 20% YoY)",
+  "cash_and_investments": "$16,739 million cash and equivalents plus $39,191 million marketable securities",
+  "total_debt": "$2,000 million current notes payable + $40,050 million non-current notes payable = ~$42,050 million",
+  "guidance_next": "Q4 FY2016 SaaS/PaaS revenue growth rate expected to be over 60% in constant currency; still on target to book $1.5-$2.0 billion of new SaaS/PaaS business this fiscal year; SaaS/PaaS cloud margins expected to reach ~60% in Q4 FY2016, up from 40% in Q1"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": 0.1,
+ "fcf_trend": -0.5,
+ "own_stock": 0.1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "CRM",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Oracle claims faster cloud bookings growth than Salesforce"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "referenced as primary cloud competitor with slowing growth"
+  }
+ ],
+ "evidence": "GAAP Operating Cash Flow trailing twelve months down to $13,464 million from $15,357 million a year prior, with Free Cash Flow down 20% year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

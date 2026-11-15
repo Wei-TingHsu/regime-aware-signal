@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2016 (ended June 2, 2016)",
+  "revenue": "$2.90 billion",
+  "operating_income": "-$27 million",
+  "net_income": "-$215 million (GAAP, attributable to Micron)",
+  "eps": "-$0.21 diluted (GAAP); -$0.08 non-GAAP",
+  "operating_cash_flow": "$389 million (quarterly, per release text)",
+  "capex": "$1.69 billion",
+  "free_cash_flow": "approximately -$1.30 billion (389M - 1,690M)",
+  "cash_and_investments": "$5.65 billion cash and marketable investments",
+  "total_debt": "$9.63 billion (current $712M + long-term $8,919M)",
+  "guidance_next": "Cost savings program expected to save ~$80 million per quarter in fiscal 2017 (over $300 million for the year); $70 million restructure charges expected, mostly in Q4 FY2016"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.6,
+ "own_stock": -0.4,
+ "market": -0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NAND pricing weakness implies industry-wide pressure"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Memory industry downcycle signals broader semiconductor demand softness"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Reduced capex and weaker memory demand may affect foundry/equipment spending"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "No direct read-through stated"
+  },
+  {
+   "company": "MU",
+   "relation": "self",
+   "direction": -0.4,
+   "reason": "Widening losses and restructuring signal ongoing weakness"
+  }
+ ],
+ "evidence": "net loss attributable to Micron shareholders for the third quarter of fiscal 2016 was $215 million, or ($0.21) per diluted share... we continue to face challenging market conditions",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

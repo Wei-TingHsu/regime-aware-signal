@@ -1,0 +1,37 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.2,
+ "own_stock": 0.15,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD-Xilinx combo strengthens FPGA/data center competitiveness"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "broader AMD portfolio competes in accelerated computing"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "combined company remains key foundry customer"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "overlap in networking/semi solutions"
+  }
+ ],
+ "evidence": "the Company's stockholders approved a proposal to approve the issuance of shares of the Company's common stock to the stockholders of Xilinx in connection with the merger",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

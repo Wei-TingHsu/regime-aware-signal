@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2024 (ended May 5, 2024)",
+  "revenue": "$12,487 million, up 43% YoY",
+  "operating_income": null,
+  "net_income": "GAAP $2,121 million; Non-GAAP $5,394 million",
+  "eps": "GAAP diluted $4.42; Non-GAAP diluted $10.96",
+  "operating_cash_flow": "$4,580 million",
+  "capex": "$132 million",
+  "free_cash_flow": "$4,448 million (36% of revenue)",
+  "cash_and_investments": "$9,809 million cash and cash equivalents",
+  "total_debt": "Current portion $2,426 million + long-term debt $71,590 million = ~$74,016 million",
+  "guidance_next": "FY2024 revenue guidance raised to approximately $51.0 billion (+42% YoY incl. VMware); FY2024 Adjusted EBITDA guidance raised to approximately 61% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.3,
+ "own_stock": 0.7,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AI chip demand strength benefits sector broadly"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "AI infrastructure buildout benefits memory suppliers"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Shared AI semiconductor demand tailwind"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Foundry partner benefiting from AI chip volume growth"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Hyperscaler AI infrastructure spend supports custom silicon demand"
+  }
+ ],
+ "evidence": "Revenue from our AI products was a record $3.1 billion during the quarter...We are raising our fiscal year 2024 guidance for consolidated revenue to $51 billion and adjusted EBITDA to 61% of revenue.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2011 (ended Jan 30, 2011)",
+  "revenue": "$886.4 million, up 5.0% sequentially",
+  "operating_income": "$179.8 million (GAAP)",
+  "net_income": "$171.7 million (GAAP)",
+  "eps": "$0.29 diluted (GAAP)",
+  "operating_cash_flow": "$434.7 million",
+  "capex": "$21.3 million (property, equipment and intangible assets)",
+  "free_cash_flow": "$413.3 million",
+  "cash_and_investments": "$2,490.6 million",
+  "total_debt": null,
+  "guidance_next": "Q1 FY2012: revenue up 6-8% sequentially; GAAP gross margin 48.5-49.5%; GAAP opex ~$327 million; GAAP tax rate 16-18%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.8,
+ "own_stock": 0.7,
+ "market": 0.1,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "new $1.5B six-year cross-licensing deal, settlement boosts NVDA"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA gaining GPU share in desktop/notebook discrete graphics"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Windows to natively support ARM SOCs like Tegra"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "foundry partner benefiting from higher NVDA GPU/Tegra volumes"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Tegra/ARM CPU (Project Denver) aimed at PC/server space historically Intel's"
+  }
+ ],
+ "evidence": "Revenue was at the very top end of our expectations.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

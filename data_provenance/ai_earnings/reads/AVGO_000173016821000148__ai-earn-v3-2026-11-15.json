@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2021 (ended October 31, 2021) and full fiscal year 2021",
+  "revenue": "$7,407 million (Q4), $27,450 million (FY21)",
+  "operating_income": null,
+  "net_income": "$1,989 million GAAP / $3,501 million non-GAAP (Q4); $6,736 million GAAP / $12,578 million non-GAAP (FY21)",
+  "eps": "$4.45 GAAP / $7.81 non-GAAP diluted (Q4); $15.00 GAAP / $28.01 non-GAAP diluted (FY21)",
+  "operating_cash_flow": "$3,541 million (Q4); $13,764 million (FY21)",
+  "capex": "$88 million (Q4); $443 million (FY21)",
+  "free_cash_flow": "$3,453 million (Q4); $13,321 million (FY21)",
+  "cash_and_investments": "$12,163 million cash and cash equivalents at quarter end",
+  "total_debt": "$39,730 million (current portion $290M + long-term $39,440M)",
+  "guidance_next": "Q1 FY2022 revenue guidance of approximately $7.6 billion (expected +14% YoY); Adjusted EBITDA guidance of approximately 61.5% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "shared semiconductor strength signals healthy industry demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cloud/data-center demand commentary supports peer chip demand"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "storage/semiconductor cycle strength implies memory demand tailwind"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud and service-provider demand cited as growth driver"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud/service-provider strength benefits hyperscaler infrastructure spend"
+  }
+ ],
+ "evidence": "Broadcom concluded the year with record fourth quarter results driven by a rebound in enterprise, and continued strength from cloud and service provider demand",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Fiscal 2024 Q3 (ended Feb 29, 2024)",
+  "revenue": "$13.3 billion, up 7% YoY",
+  "operating_income": "GAAP $3,750 million; Non-GAAP $5,792 million",
+  "net_income": "$2,401 million GAAP; $3,982 million non-GAAP",
+  "eps": "$0.85 GAAP diluted; $1.41 non-GAAP diluted",
+  "operating_cash_flow": "$18,239 million (trailing 4 quarters)",
+  "capex": "$5,981 million (trailing 4 quarters, Q3 only); $4,068 million (nine months)",
+  "free_cash_flow": "$12,258 million (trailing 4 quarters)",
+  "cash_and_investments": "$9,481 million cash and cash equivalents; $423 million marketable securities",
+  "total_debt": "$87,980 million (current $5,510M + non-current $82,470M notes payable and other borrowings)",
+  "guidance_next": "No explicit numeric guidance for Q4 revenue/EPS given; qualitative guidance: 'We expect that 43% of our current $80 billion of Remaining Performance Obligations will be recognized as revenue over the next four quarters, and that our Gen2 Cloud Infrastructure business will remain in a hypergrowth phase\u2014up 53% in Q3\u2014for the foreseeable future.'"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Oracle's Gen2 AI infrastructure buildout implies continued GPU demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud infrastructure competitor as Oracle gains share in cloud capacity"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Competing cloud infrastructure provider"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Competing cloud infrastructure provider"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Potential chip supplier for Oracle's expanding AI datacenters"
+  }
+ ],
+ "evidence": "demand for our Gen2 AI infrastructure substantially exceeds supply\u2014despite the fact we are opening new and expanding existing cloud datacenters very, very rapidly",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

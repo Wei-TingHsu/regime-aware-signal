@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2026 (quarter ended September 26, 2026)",
+  "revenue": "$16.5 billion, up 21% YoY",
+  "operating_income": "$2.522 billion GAAP (15.3% operating margin); non-GAAP operating margin 19.6%",
+  "net_income": "$3.3 billion GAAP attributable to Intel; $2.8 billion non-GAAP",
+  "eps": "$0.60 GAAP diluted; $0.52 non-GAAP diluted",
+  "operating_cash_flow": "$5.1 billion in Q3 (quarterly); $13.184 billion for nine months",
+  "capex": "~$10.216 billion additions to PP&E for nine months (plus $1.618B financing-related PP&E additions)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$21.846B cash + $32.159B short-term investments = ~$54.0B (up from $37.4B at Dec 27, 2025)",
+  "total_debt": "Short-term debt $3.817B + long-term debt $46.317B = ~$50.1B",
+  "guidance_next": "Q4 2026 revenue $15.0-16.0B; GAAP gross margin 37.1%, non-GAAP 38.0%; GAAP tax rate 31%, non-GAAP 11%; GAAP EPS $0.10, non-GAAP EPS $0.25"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": -0.6,
+ "fcf_trend": 0.3,
+ "own_stock": -0.1,
+ "market": 0.1,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "joint oneDNN/PyTorch x86 optimization collaboration"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "multiyear Xeon/OCI expansion including future Diamond Rapids"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "first Googlebook devices on Core Ultra Series 3"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "day-0 Muse Spark Open support on Intel GPU D-series/Xeon"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel Foundry ramp (14A PDK, RAMP-C) competes for external foundry customers"
+  }
+ ],
+ "evidence": "we see the PC slowdown continuing at least through the first half of next year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

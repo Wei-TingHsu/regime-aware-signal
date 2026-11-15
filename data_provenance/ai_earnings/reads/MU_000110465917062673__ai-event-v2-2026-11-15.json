@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.3,
+ "own_stock": 0.3,
+ "market": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "memory peer benefits from improved sector balance sheet sentiment"
+  }
+ ],
+ "evidence": "Micron will redeem ... 7.500% Senior Secured Notes due 2023 ... and 5.25% Senior Notes due 2023",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

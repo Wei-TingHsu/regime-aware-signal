@@ -1,0 +1,49 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.2,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "advanced node demand strength implied"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "foundry demand read-through"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC strength highlights competitive gap"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "foundry demand read-through"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "semiconductor cycle strength"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "semiconductor cycle strength"
+  }
+ ],
+ "evidence": "Revenue for January through December 2024 totaled NT$2,894.31 billion, an increase of 33.9 percent compared to the same period in 2023.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

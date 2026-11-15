@@ -1,0 +1,45 @@
+{
+ "facts": {
+  "period": "Q3 FY2010 (ended June 3, 2010)",
+  "revenue": "$2.288 billion",
+  "operating_income": "$540 million",
+  "net_income": "$939 million attributable to Micron (includes $437M non-operating Numonyx gain)",
+  "eps": "$0.92 diluted",
+  "operating_cash_flow": "$889 million (Q3); $2.019 billion nine months",
+  "capex": "$269 million (nine months, PP&E expenditures)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$2.313 billion",
+  "total_debt": "Long-term debt $1.717B + current portion $652M = ~$2.369B",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "NAND Flash peer pricing dynamics"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "relation2": "partner",
+   "direction": 0,
+   "reason": "IMFT joint venture partner"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor manufacturing peer"
+  }
+ ],
+ "evidence": "net income attributable to Micron shareholders of $939 million, or $0.92 per diluted share, on net sales of $2.29 billion, compared to net income of $365 million... for the second quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

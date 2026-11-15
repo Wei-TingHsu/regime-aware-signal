@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2026 (three months ended March 31, 2026)",
+  "revenue": "$56.311B, +33% YoY",
+  "operating_income": "$22.872B, operating margin 41%",
+  "net_income": "$26.773B, +61% YoY",
+  "eps": "$10.44 diluted (includes $8.03B one-time tax benefit; ex-benefit EPS ~$7.31)",
+  "operating_cash_flow": "$32.226B",
+  "capex": "$18.997B (purchases of property and equipment); $19.84B incl. finance lease principal payments",
+  "free_cash_flow": "$12.386B (as stated)",
+  "cash_and_investments": "$81.18B (cash+cash equivalents+marketable securities)",
+  "total_debt": "$58.748B long-term debt",
+  "guidance_next": "Q2 2026 revenue $58-61B (assumes ~2% FX tailwind); FY2026 total expenses $162-169B (unchanged); FY2026 capex incl. finance leases $125-145B (raised from $115-135B); operating income above 2025 level; tax rate 13-16% for remaining quarters"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.1,
+ "own_stock": -0.2,
+ "market": -0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "higher capex for AI compute/data centers"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "custom chips/networking for AI infra buildout"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "cited higher component (memory) pricing driving capex increase"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "shared AI infra spending race context"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "cloud/AI capacity competition"
+  }
+ ],
+ "evidence": "We anticipate 2026 capital expenditures... to be in the range of $125-145 billion, increased from our prior range of $115-135 billion. This reflects our expectations for higher component pricing this year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

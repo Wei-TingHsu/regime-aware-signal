@@ -1,0 +1,37 @@
+{
+ "event_type": "guidance update",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.15,
+ "own_stock": -0.1,
+ "market": -0.15,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Q4 demand softness signal"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Foundry demand slowdown implies weaker chip orders"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "TSMC softness could ease competitive pressure"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.05,
+   "reason": "Semiconductor cycle weakness read-through"
+  }
+ ],
+ "evidence": "the company further expects its fourth-quarter revenue will experience a sequential decline",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

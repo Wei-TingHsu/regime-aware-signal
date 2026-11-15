@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2023 (ended July 31, 2022)",
+  "revenue": "$535.2 million",
+  "operating_income": "GAAP loss from operations $(48.3) million; Non-GAAP income from operations $87.3 million",
+  "net_income": "GAAP net loss attributable to CrowdStrike $(49.3) million; Non-GAAP net income $85.9 million",
+  "eps": "GAAP $(0.21) diluted; Non-GAAP $0.36 diluted",
+  "operating_cash_flow": "$209.9 million",
+  "capex": "implied ~$74 million (property & equipment + capitalized software, Q2 only not separately stated; six months: $131.6 million)",
+  "free_cash_flow": "$135.8 million (stated)",
+  "cash_and_investments": "$2.32 billion cash and cash equivalents",
+  "total_debt": "$740.3 million long-term debt",
+  "guidance_next": "Q3 FY23 revenue $569.1-575.9M; Non-GAAP income from operations $72.7-77.7M; Non-GAAP net income $73.0-78.0M; Non-GAAP diluted EPS $0.30-0.32. Full Year FY23 (raised): revenue $2,223.0-2,232.0M; Non-GAAP income from operations $321.8-328.5M; Non-GAAP net income $313.7-320.5M; Non-GAAP diluted EPS $1.31-1.33"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/endpoint security rival via Defender"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "cloud infra customer for CrowdStrike workloads"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "AWS integration for Falcon CNAPP"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "cloud platform integration partner"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "enterprise IT spending read-through"
+  }
+ ],
+ "evidence": "Revenue was $535.2 million, a 58% increase... raising our guidance for fiscal year 2023",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

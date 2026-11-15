@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2012 (ended December 31, 2012)",
+  "revenue": "$1.585 billion Q4 (up 40% YoY); $5.089 billion FY (up 37% YoY)",
+  "operating_income": "GAAP $523M Q4 / $538M FY; Non-GAAP $736M Q4 / $2,261M FY",
+  "net_income": "GAAP $64M Q4 / $53M FY; Non-GAAP $426M Q4 / $1,317M FY",
+  "eps": "GAAP $0.03 Q4 / $0.01 FY; Non-GAAP $0.17 Q4 / $0.53 FY",
+  "operating_cash_flow": "$681M Q4; $1,612M FY",
+  "capex": "$198M Q4 (plus $89M capital-leased equipment); $1,235M FY",
+  "free_cash_flow": "$483M Q4 (681-198); $377M FY (1,612-1,235)",
+  "cash_and_investments": "$9.63 billion (cash and marketable securities) as of Dec 31, 2012",
+  "total_debt": "$1,500M long-term debt plus capital lease obligations ($365M current, $491M long-term)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competes for digital ad spend as mobile ad monetization accelerates"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "broad internet/tech sector sentiment read-through"
+  }
+ ],
+ "evidence": "Mobile revenue represented approximately 23% of advertising revenue for the fourth quarter of 2012, up from approximately 14% of advertising revenue in the third quarter of 2012",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2025 (quarter ended Dec 27, 2025) and FY2025",
+  "revenue": "$10.27B Q4 (record), $34.64B FY2025",
+  "operating_income": "$1.75B GAAP Q4 (17% margin); $2.85B non-GAAP Q4 (28% margin, record)",
+  "net_income": "$1.51B GAAP Q4; $2.52B non-GAAP Q4 (record)",
+  "eps": "$0.92 GAAP diluted Q4; $1.53 non-GAAP diluted Q4 (record)",
+  "operating_cash_flow": "$2.60B Q4; $7.71B FY2025",
+  "capex": "$222M Q4; $974M FY2025",
+  "free_cash_flow": "$2.38B Q4 (2,600-222); $6.74B FY2025 (7,709-974)",
+  "cash_and_investments": "$10.55B (cash $5.54B + short-term investments $5.01B) vs $5.13B prior year",
+  "total_debt": "$3.22B (current $874M + long-term $2.35B) vs $1.72B prior year",
+  "guidance_next": "Q1 2026 revenue ~$9.8B +/- $300M (incl. ~$100M MI308 China sales), ~32% YoY growth, ~5% sequential decline; non-GAAP gross margin ~55%"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.8,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD data-center GPU ramp (Instinct, Helios) gains AI-compute share"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "Ryzen/EPYC share gains in client and server CPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Higher wafer demand from record AMD volumes across segments"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS launched new instances on 5th Gen EPYC CPUs"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud/data-center AI buildout benefits from AMD Instinct adoption"
+  }
+ ],
+ "evidence": "Our record fourth quarter and full-year results demonstrate AMD's ability to deliver profitable growth at scale... We achieved record non-GAAP operating income and free cash flow",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

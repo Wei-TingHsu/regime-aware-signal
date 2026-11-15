@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2018 (quarter ended June 30, 2018)",
+  "revenue": "$52.9 billion (net sales), up 39% YoY",
+  "operating_income": "$3.0 billion (vs $628 million prior year)",
+  "net_income": "$2.5 billion (vs $197 million prior year)",
+  "eps": "$5.07 diluted (vs $0.40 prior year)",
+  "operating_cash_flow": "$21.8 billion trailing twelve months (up 22% YoY)",
+  "capex": "$3,243 million purchases of property and equipment in Q2; $6,341 million for six months",
+  "free_cash_flow": "$10.4 billion trailing twelve months (up from $9.6 billion); lease-adjusted FCF measures declined YoY",
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.3,
+ "own_stock": 0.7,
+ "market": 0.2,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS cloud growth and enterprise wins pressure Azure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS momentum vs Google Cloud"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS taking enterprise workloads (Fox, Verizon/Oath)"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "AWS machine learning/AI services expansion implies chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Cloud infrastructure growth benefits compute suppliers"
+  }
+ ],
+ "evidence": "Operating income increased to $3.0 billion in the second quarter, compared with operating income of $628 million in second quarter 2017",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

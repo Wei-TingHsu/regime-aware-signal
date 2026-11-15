@@ -1,0 +1,37 @@
+{
+ "event_type": "other",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.3,
+ "own_stock": -0.1,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "supply chain disruption could shift share"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "possible supply chain diversification"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "fab customer exposed to shipment uncertainty"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "potential chip supply disruption from Japan quake"
+  }
+ ],
+ "evidence": "we do not exclude the possibility that this earthquake and its follow-on effects may impact the global electronics supply chain",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

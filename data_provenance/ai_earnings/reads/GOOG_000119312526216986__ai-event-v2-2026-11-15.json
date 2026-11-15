@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.2,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.05,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "similar capex-funding debt issuance precedent"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "competing hyperscaler also raising debt for capex"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "financing supports continued AI capex/GPU purchases"
+  }
+ ],
+ "evidence": "closed its concurrent underwritten public offerings of \u20ac9 billion aggregate principal amount of euro-denominated senior notes ... and C$9.5 billion aggregate principal amount of Canadian dollar-denominated senior notes",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

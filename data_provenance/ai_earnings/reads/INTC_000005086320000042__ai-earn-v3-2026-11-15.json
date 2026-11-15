@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2020 (ended Sep 26, 2020)",
+  "revenue": "$18.3 billion, down 4% YoY",
+  "operating_income": "$5.1 billion GAAP / $5.4 billion non-GAAP, down 22% YoY",
+  "net_income": "$4.3 billion GAAP / $4.7 billion non-GAAP",
+  "eps": "$1.02 GAAP / $1.11 non-GAAP",
+  "operating_cash_flow": "$8.2 billion for Q3; $25.5 billion YTD (9 months)",
+  "capex": "$10.4 billion YTD (9 months, 'Additions to property, plant and equipment')",
+  "free_cash_flow": "$15.1 billion YTD (stated)",
+  "cash_and_investments": "$18.25 billion total cash investments (cash, short-term investments, trading assets) as of Sep 26, 2020",
+  "total_debt": "$36,059M long-term debt + $504M short-term debt \u2248 $36.6 billion",
+  "guidance_next": "Q4 2020: revenue ~$17.4B, GAAP EPS ~$1.02, non-GAAP EPS ~$1.10, operating margin ~24.5% GAAP/26.5% non-GAAP; Full-year 2020 raised to revenue ~$75.3B, GAAP EPS ~$4.55, non-GAAP EPS ~$4.90, cash from ops $32.2-33.0B, capex $14.2-14.5B, FCF $18.0-18.5B"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.1,
+ "own_stock": -0.4,
+ "market": -0.1,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel benchmarks new chips directly against Ryzen; competitive notebook/CCG pressure continues"
+  },
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel exiting NAND via sale to SK hynix reduces NAND competitive supply"
+  },
+  {
+   "company": "SKHY",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Agreed to acquire Intel's NAND memory and storage business for $9.0B"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Data Center enterprise weakness and AI/edge competition imply contested data-center compute market"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Intel's 10nm ramp and process struggles highlight relative foundry execution comparisons"
+  }
+ ],
+ "evidence": "a weaker economy due to COVID-19 impacted DCG's Enterprise & Government market segment, which was down 47 percent YoY following two quarters of more than 30 percent growth",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

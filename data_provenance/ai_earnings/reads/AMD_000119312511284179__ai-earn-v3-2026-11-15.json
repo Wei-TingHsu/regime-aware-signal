@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2011 (quarter ended Oct 1, 2011)",
+  "revenue": "$1.69 billion (7% sequential increase, 4% YoY increase)",
+  "operating_income": "$138 million GAAP; $146 million non-GAAP",
+  "net_income": "$97 million GAAP; $110 million non-GAAP",
+  "eps": "$0.13 GAAP; $0.15 non-GAAP",
+  "operating_cash_flow": "$189 million (quarter)",
+  "capex": "$58 million (purchases of property, plant and equipment)",
+  "free_cash_flow": "$131 million (189 - 58)",
+  "cash_and_investments": "$1.807 billion (cash, equivalents and marketable securities, incl. long-term)",
+  "total_debt": "$2.060 billion (current $489M + long-term $1,571M)",
+  "guidance_next": "AMD expects revenue to increase 3 percent, plus or minus 2 percent, sequentially for the fourth quarter of 2011."
+ },
+ "results_vs_prior_guidance": -0.4,
+ "guidance_change": -0.5,
+ "fcf_trend": 0.1,
+ "own_stock": -0.5,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AMD's deceleration implies relative weakness in x86 unit growth, modest positive for Intel comparatively"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AMD graphics segment grew sequentially, competitive pressure in discrete GPU market"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Slower PC/chip demand growth could soften memory demand from AMD platforms"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Weaker AMD revenue growth outlook signals softer foundry demand trajectory"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Limited direct read-through; general semiconductor demand signal only"
+  }
+ ],
+ "evidence": "AMD expects revenue to increase 3 percent, plus or minus 2 percent, sequentially for the fourth quarter of 2011.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

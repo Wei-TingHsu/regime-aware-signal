@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 FY2013 (quarter ended Sept 30, 2012)",
+  "revenue": "$16.01 billion (GAAP)",
+  "operating_income": "$5.31 billion (GAAP)",
+  "net_income": "$4.47 billion (GAAP)",
+  "eps": "$0.53 diluted (GAAP)",
+  "operating_cash_flow": "$8,484 million",
+  "capex": "$603 million (additions to property and equipment)",
+  "free_cash_flow": "$7,881 million (8,484 - 603)",
+  "cash_and_investments": "$66,644 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$11,950 million (current $2,236M + long-term $9,714M)",
+  "guidance_next": "Microsoft reaffirms fiscal year 2013 operating expense guidance of $30.3 billion to $30.9 billion."
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": -0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Online Services competes with Google search/ads"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud/server competition via Azure vs AWS"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "PC slowdown ahead of Windows 8 hurts Intel PC chip demand"
+  }
+ ],
+ "evidence": "the slowdown in PC demand ahead of the Windows 8 launch resulted in a decline in operating income",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

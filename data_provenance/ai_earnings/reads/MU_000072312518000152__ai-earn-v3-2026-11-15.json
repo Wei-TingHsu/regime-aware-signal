@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Fiscal Q1 2019 (ended November 29, 2018)",
+  "revenue": "$7.913 billion GAAP, up 16% YoY, down from $8.440 billion in FQ4-18",
+  "operating_income": "$3.759 billion GAAP (47.5% of revenue); $3.887 billion non-GAAP (49.1%)",
+  "net_income": "$3.293 billion GAAP attributable to Micron; $3.508 billion non-GAAP",
+  "eps": "$2.81 diluted GAAP; $2.97 diluted non-GAAP",
+  "operating_cash_flow": "$4.810 billion",
+  "capex": "$2.720 billion gross investments in capex (cash flow statement); $2.48 billion net of amounts funded by partners",
+  "free_cash_flow": "$2.33 billion adjusted free cash flow (operating cash flow less net capex)",
+  "cash_and_investments": "$5.563 billion cash and short-term investments; $7.21 billion total cash, marketable investments and restricted cash; net cash position of $3.07 billion",
+  "total_debt": "$4.132 billion ($398 million current debt plus $3.734 billion long-term debt)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.2,
+ "own_stock": -0.2,
+ "market": -0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Memory oversupply warning affects all DRAM/NAND producers"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Shared NAND pricing pressure from weak supply-demand dynamics"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Overlapping memory and 3D XPoint interests"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "GPU and data-center customers depend on DRAM/HBM supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Relies on memory supply for compute products"
+  }
+ ],
+ "evidence": "Despite weak near-term industry supply-demand dynamics entering calendar 2019, Micron is well-positioned to deliver healthy profitability throughout the year.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

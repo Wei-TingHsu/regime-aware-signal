@@ -1,0 +1,37 @@
+{
+ "event_type": "guidance update",
+ "material": 0.35,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.4,
+ "own_stock": -0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.4,
+   "reason": "PC CPU supply shortage opens market share opportunity"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Intel increasing foundry outsourcing to ease capacity constraints"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "PC OEM/partner facing CPU shipment delays"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "not directly affected"
+  }
+ ],
+ "evidence": "Supply remains extremely tight in our PC business where we are operating with limited inventory buffers.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.15,
+ "fcf_outlook": 0.05,
+ "uncertainty": -0.1,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "memory peer, unaffected by refinancing"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "not directly impacted"
+  }
+ ],
+ "evidence": "The Revolving Credit Facility replaced the Company\u2019s existing $2.5 billion revolving credit facility ... which was otherwise due to mature on July 3, 2023.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

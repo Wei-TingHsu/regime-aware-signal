@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q2 2014",
+  "revenue": "$1.44 billion (up 3% sequentially, up 24% YoY)",
+  "operating_income": "$63 million GAAP; $67 million non-GAAP",
+  "net_income": "-$36 million GAAP net loss; $17 million non-GAAP",
+  "eps": "-$0.05 GAAP; $0.02 non-GAAP",
+  "operating_cash_flow": "-$28 million (net cash used in operating activities)",
+  "capex": "$23 million (purchases of property, plant and equipment)",
+  "free_cash_flow": "-$51 million (operating cash flow of -$28M minus capex of $23M)",
+  "cash_and_investments": "$948 million (cash, cash equivalents and marketable securities)",
+  "total_debt": "$2.21 billion",
+  "guidance_next": "For the third quarter of 2014, AMD expects revenue to increase 2 percent, plus or minus 3 percent, sequentially"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.6,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD cites Intel pricing/bundling as competitive risk"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "GPU segment competition in AIB channel"
+  }
+ ],
+ "evidence": "Revenue of $1.44 billion, increased 3 percent sequentially and 24 percent year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

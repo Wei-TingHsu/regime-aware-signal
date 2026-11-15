@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2019 (quarter ended March 31, 2019)",
+  "revenue": "$30.6 billion, +14% YoY",
+  "operating_income": "$10.3 billion, +25% YoY",
+  "net_income": "$8.8 billion, +19% YoY",
+  "eps": "$1.14 diluted, +20% YoY",
+  "operating_cash_flow": "$13,520 million (three months)",
+  "capex": "$2,565 million (additions to property and equipment)",
+  "free_cash_flow": "$10,955 million (13,520 - 2,565)",
+  "cash_and_investments": "$131,618 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$73,100 million (current portion $6,515M + long-term $66,585M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Azure growth of 73% pressures AWS cloud share narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Strong Azure/cloud growth intensifies competition with Google Cloud"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Enterprise cloud/server growth competes with Oracle's cloud push"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Server/Azure growth implies continued datacenter compute demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Cloud infrastructure buildout benefits server chip suppliers"
+  }
+ ],
+ "evidence": "Demand for our cloud offerings drove commercial cloud revenue to $9.6 billion this quarter, up 41% year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

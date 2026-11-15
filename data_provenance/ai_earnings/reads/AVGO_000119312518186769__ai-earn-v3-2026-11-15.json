@@ -1,0 +1,43 @@
+{
+ "facts": {
+  "period": "Q2 FY2018 (ended May 6, 2018)",
+  "revenue": "$5,014 million GAAP ($5,017 million non-GAAP continuing ops)",
+  "operating_income": "$1,201 million GAAP (24.0% of revenue); $2,455 million non-GAAP (48.9% of revenue)",
+  "net_income": "$3,733 million GAAP; $2,243 million non-GAAP from continuing operations",
+  "eps": "$8.33 diluted GAAP; $4.88 diluted non-GAAP",
+  "operating_cash_flow": "$2,313 million",
+  "capex": "$189 million",
+  "free_cash_flow": "$2,124 million (42% of net revenue)",
+  "cash_and_investments": "$8,187 million cash and cash equivalents",
+  "total_debt": "$17,598 million (current $117M + long-term $17,481M)",
+  "guidance_next": "Q3 FY2018: GAAP net revenue $5,047M +/- $75M; non-GAAP net revenue $5,050M +/- $75M; GAAP gross margin 50.75% +/- 1%; non-GAAP gross margin 66.5% +/- 1%; capex ~$125 million"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "reason": "chip manufacturing partner for Broadcom's semiconductor products"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "overlapping networking/storage semiconductor markets"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor sector peer with storage exposure"
+  }
+ ],
+ "evidence": "Free cash flow of $2,124 million or 42 percent of net revenue",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

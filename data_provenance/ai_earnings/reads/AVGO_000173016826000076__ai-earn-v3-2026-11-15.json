@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2026 (ended August 2, 2026)",
+  "revenue": "$29.6 billion (+86% YoY)",
+  "operating_income": "GAAP $16.0 billion; Non-GAAP $20.1 billion",
+  "net_income": "GAAP $13.1 billion; Non-GAAP $16.4 billion",
+  "eps": "GAAP diluted $2.68; Non-GAAP diluted $3.32",
+  "operating_cash_flow": "$14.2 billion",
+  "capex": "$0.5 billion",
+  "free_cash_flow": "$13.7 billion (46% of revenue)",
+  "cash_and_investments": "$24.0 billion cash and cash equivalents (up from $19.6B prior quarter)",
+  "total_debt": "Short-term debt $2.25B + Long-term debt $57.2B = ~$59.4B (down from ~$65.1B at Nov 2, 2025)",
+  "guidance_next": "Q4 FY2026 revenue guidance of approximately $34.8 billion (+93% YoY); Non-GAAP operating income guidance of approximately 66% of projected revenue; AI semiconductor revenue expected to accelerate to $21.7 billion, up 236% YoY"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.8,
+ "own_stock": 0.7,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Custom AI accelerators gaining share vs merchant GPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Foundry capacity demand rises with AI semi growth"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Memory/HBM demand tied to AI accelerator ramp"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Competing custom silicon and accelerator market"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Hyperscaler customer driving custom AI chip demand"
+  }
+ ],
+ "evidence": "Q4 consolidated revenue growth is forecasted to increase 93% year-over-year to $34.8 billion, and we expect to maintain our non-GAAP operating margin at 66%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

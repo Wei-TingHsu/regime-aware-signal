@@ -1,0 +1,31 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.3,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "secures 3D NAND supply from JV partner"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "NAND rival as Micron locks in Intel demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "not directly affected"
+  }
+ ],
+ "evidence": "Micron will supply to Intel, and Intel will be required to purchase, a minimum quantity of certain 3D NAND flash memory products",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

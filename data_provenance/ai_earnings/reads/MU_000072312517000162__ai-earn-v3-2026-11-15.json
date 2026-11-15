@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2018 (ended November 30, 2017)",
+  "revenue": "$6.80 billion",
+  "operating_income": "$3.097 billion GAAP / $3.157 billion non-GAAP",
+  "net_income": "$2.678 billion GAAP / $2.994 billion non-GAAP",
+  "eps": "$2.19 diluted GAAP / $2.45 diluted non-GAAP",
+  "operating_cash_flow": "$3.636 billion",
+  "capex": "$2.089 billion (gross) / $1.92 billion net of partner funding",
+  "free_cash_flow": "~$1.55 billion (3.636B operating cash flow - 2.089B capex)",
+  "cash_and_investments": "$6.61 billion (cash, marketable investments, restricted cash)",
+  "total_debt": "$9.34 billion total face value debt after repurchases",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 1,
+   "reason": "NAND pricing strength benefits peers"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor capex cycle context"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "memory demand tied to AI/server GPU growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "server/SSD demand benefits chipset ecosystem"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "server growth tangential benefit"
+  }
+ ],
+ "evidence": "Revenues of $6.80 billion, 71 percent higher compared with the same period last year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

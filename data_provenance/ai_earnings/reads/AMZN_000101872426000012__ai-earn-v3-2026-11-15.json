@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2026 (three months ended March 31, 2026)",
+  "revenue": "$181.5 billion (+17% YoY)",
+  "operating_income": "$23.9 billion (vs $18.4 billion Q1 2025)",
+  "net_income": "$30.3 billion, includes $16.8 billion pre-tax Anthropic investment gain",
+  "eps": "$2.78 diluted (vs $1.59 Q1 2025)",
+  "operating_cash_flow": "$148.5 billion TTM (+30% YoY)",
+  "capex": "$151.0 billion TTM purchases of property and equipment (Q1 alone $44.2 billion)",
+  "free_cash_flow": "$1.2 billion TTM (down from $25.9 billion TTM a year ago)",
+  "cash_and_investments": "$101.8 billion cash and equivalents + $41.3 billion marketable securities = $143.1 billion",
+  "total_debt": "$119.1 billion long-term debt (up from $65.6 billion at Dec 31, 2025)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0,
+ "fcf_trend": -0.3,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "one million+ NVIDIA GPUs to be deployed starting 2026"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS growth re-accelerating to 28%, fastest in 15 quarters, pressures cloud peers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS momentum and AI infra wins vs rival cloud"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "signed agreement to deploy tens of millions of AWS Graviton cores for agentic AI"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Amazon custom silicon (Trainium/Graviton) scaling reduces reliance on merchant chip suppliers"
+  }
+ ],
+ "evidence": "Free cash flow decreased to $1.2 billion for the trailing twelve months, driven primarily by a year-over-year increase of $59.3 billion in purchases of property and equipment",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

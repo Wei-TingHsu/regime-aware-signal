@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2024 (fiscal quarter ended March 30, 2024)",
+  "revenue": "$12.7 billion, up 9% YoY",
+  "operating_income": "$(1,069) million GAAP; non-GAAP operating margin 5.7%",
+  "net_income": "$(381) million GAAP attributable to Intel; $0.8 billion non-GAAP",
+  "eps": "$(0.09) GAAP diluted; $0.18 non-GAAP diluted",
+  "operating_cash_flow": "$(1,223) million (cash used in operations)",
+  "capex": "$5,970 million (additions to PP&E)",
+  "free_cash_flow": "approximately $(7,193) million (operating cash flow minus capex)",
+  "cash_and_investments": "$6,923 million cash + $14,388 million short-term investments = $21,311 million",
+  "total_debt": "$4,581 million short-term + $47,869 million long-term = $52,450 million",
+  "guidance_next": "Q2 2024 revenue $12.5-13.5 billion; GAAP EPS $(0.05); non-GAAP EPS $0.10; GAAP gross margin 40.2%, non-GAAP gross margin 43.5%; tax rate 61% GAAP / 13% non-GAAP"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": -0.3,
+ "fcf_trend": -0.4,
+ "own_stock": -0.4,
+ "market": 0.0,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Gaudi 3 positioned as faster/more efficient than H100"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "CPU/AI accelerator competition in data center and client"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Announced plans to design a chip on Intel 18A"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel Foundry gaining external customer commitments on 18A"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Data center/AI infrastructure buildout benefits memory demand"
+  }
+ ],
+ "evidence": "Forecasting second-quarter 2024 revenue of $12.5 billion to $13.5 billion; expecting second-quarter EPS of $(0.05); non-GAAP EPS of $0.10, down from Q1's $0.18 non-GAAP EPS with gross margins guided lower sequentially",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

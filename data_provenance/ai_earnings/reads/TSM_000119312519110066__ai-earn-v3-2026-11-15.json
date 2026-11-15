@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "1Q19 (quarter ended March 31, 2019)",
+  "revenue": "NT$218.70 billion (US$7.10 billion)",
+  "operating_income": "NT$64.27 billion; operating margin 29.4%",
+  "net_income": "NT$61.39 billion",
+  "eps": "NT$2.37 (US$0.38 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "2Q19 revenue expected between US$7.55 billion and US$7.65 billion; gross profit margin 43%-45%; operating profit margin 31%-33% (at NT$30.85/US$1)"
+ },
+ "results_vs_prior_guidance": -0.6,
+ "guidance_change": 0.3,
+ "fcf_trend": 0,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Foundry recovery signals steadier advanced-node supply"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "7nm capacity commentary relevant to GPU supply"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC advanced node share gains pressure Intel foundry lead"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Demand stabilization supports Broadcom's chip orders"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Signals broader semiconductor cycle bottoming"
+  }
+ ],
+ "evidence": "we believe we may have passed the bottom of the cycle of our business as we are seeing demand stabilizing",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

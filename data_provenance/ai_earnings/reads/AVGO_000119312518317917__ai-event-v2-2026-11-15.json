@@ -1,0 +1,25 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.7,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.5,
+ "own_stock": -0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "CA enterprise software competes with Oracle in some segments"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "enterprise software overlap minimal"
+  }
+ ],
+ "evidence": "aggregate consideration for the acquisition was approximately $18.7 billion in cash... funded... with proceeds from unsecured debt",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2018 (ended March 1, 2018)",
+  "revenue": "$7.351 billion",
+  "operating_income": "$3.567 billion GAAP / $3.630 billion non-GAAP",
+  "net_income": "$3.309 billion GAAP / $3.495 billion non-GAAP",
+  "eps": "$2.67 GAAP diluted / $2.82 non-GAAP diluted",
+  "operating_cash_flow": "$4.35 billion (quarterly, per highlights); $7.984 billion for six months",
+  "capex": "$2.11 billion (net of partner funding) for the quarter",
+  "free_cash_flow": "$2.2 billion adjusted FCF for the quarter",
+  "cash_and_investments": "$8.68 billion cash, marketable investments and restricted cash",
+  "total_debt": "$1.514 billion current debt + $7.802 billion long-term debt = ~$9.316 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "Industry-wide memory demand strength benefits NAND/storage peers"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Intel provides financing to IMFT joint venture with Micron"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Broader semiconductor capex and demand cycle correlation"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Record graphics memory sales imply strong GPU/AI-related demand pull-through"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Growth in cloud/data center memory sales reflects hyperscaler demand"
+  }
+ ],
+ "evidence": "Record revenue and profitability supported by solid execution and broad demand for Micron\u2019s products",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

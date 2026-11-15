@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2026 (three months ended June 30, 2026)",
+  "revenue": "$200.6 billion, up 20% YoY",
+  "operating_income": "$27.5 billion, up 43% YoY",
+  "net_income": "$62.6 billion (includes $53.4B non-operating gain mostly from Anthropic investment)",
+  "eps": "$5.75 diluted",
+  "operating_cash_flow": "$161.4 billion TTM, up 33% YoY",
+  "capex": "Purchases of property and equipment: $54.2 billion in Q2; $173.0 billion TTM",
+  "free_cash_flow": "TTM FCF outflow of $7.6 billion, vs inflow of $18.2 billion TTM prior year",
+  "cash_and_investments": "Cash and cash equivalents $78.?B (cut off) as of June 30, 2026, vs $86.8B Dec 31, 2025",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AWS 37% growth signals strong cloud/AI demand across hyperscalers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud AI demand strength benefits sector peers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "AI infrastructure capex surge implies continued chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Rising AI compute spend supports chip suppliers broadly"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AI cloud capacity race intensifies across providers"
+  }
+ ],
+ "evidence": "AWS net sales increased 37%\u2014its fastest growth in 18 quarters\u2014to a $169 billion annualized revenue run rate",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

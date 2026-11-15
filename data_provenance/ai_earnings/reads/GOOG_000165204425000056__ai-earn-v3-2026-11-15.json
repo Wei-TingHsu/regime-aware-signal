@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2025 (quarter ended June 30, 2025)",
+  "revenue": "$96.428 billion, up 14% YoY",
+  "operating_income": "$31.271 billion, up 14% YoY, 32.4% margin",
+  "net_income": "$28.196 billion, up 19% YoY",
+  "eps": "$2.31 diluted, up 22% YoY",
+  "operating_cash_flow": "$27.747 billion (Q2); $63.897 billion YTD",
+  "capex": "$22.446 billion (Q2); $39.643 billion YTD",
+  "free_cash_flow": "$5.301 billion (Q2, GAAP-defined non-GAAP measure); $66.728 billion TTM",
+  "cash_and_investments": "$95.148 billion total cash, cash equivalents and marketable securities",
+  "total_debt": "Long-term debt $23.607 billion (up from $10.883B at YE2024, after $12.5B note issuance)",
+  "guidance_next": "Increasing 2025 capital expenditures to approximately $85 billion, up from prior plan, due to strong and growing demand for Cloud products and services"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.2,
+ "own_stock": 0.5,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud growth signals strong enterprise AI/cloud demand across hyperscalers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Google Cloud's 32% growth implies robust competitive cloud/AI market"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Higher capex guidance ($85B) implies more AI infrastructure/chip spending"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Increased capex for AI infrastructure supports semiconductor foundry demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Data center buildout implies continued memory demand"
+  }
+ ],
+ "evidence": "We are increasing our investment in capital expenditures in 2025 to approximately $85 billion and are excited by the opportunity ahead",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

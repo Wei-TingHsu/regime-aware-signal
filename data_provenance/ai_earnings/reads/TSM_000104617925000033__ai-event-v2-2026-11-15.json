@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.2,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "strong TSMC revenue signals robust AI chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "benefits from healthy foundry demand environment"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC strength highlights foundry competitive gap"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "strong wafer demand supports custom silicon supply"
+  }
+ ],
+ "evidence": "Revenue for January through March 2025 totaled NT$839.25 billion, an increase of 41.6 percent compared to the same period in 2024.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

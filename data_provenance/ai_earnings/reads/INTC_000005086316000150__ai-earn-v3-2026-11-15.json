@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2016",
+  "revenue": "$15.8 billion",
+  "operating_income": "$4.5 billion GAAP; $5.1 billion non-GAAP",
+  "net_income": "$3.4 billion GAAP; $3.9 billion non-GAAP",
+  "eps": "$0.69 GAAP diluted; $0.80 non-GAAP",
+  "operating_cash_flow": "approximately $5.8 billion",
+  "capex": "$2.463 billion",
+  "free_cash_flow": "approximately $3.3 billion (5.8B - 2.463B)",
+  "cash_and_investments": "$17.769 billion total cash investments",
+  "total_debt": "$27.616 billion (short-term $3.573B + long-term $24.043B)",
+  "guidance_next": "Q4 2016 revenue $15.7 billion +/- $500 million; GAAP gross margin ~61%, non-GAAP ~63%; full-year 2016 capex $9.5 billion +/- $500 million; restructuring charges now expected ~$2.3 billion total"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Intel CCG and DCG strength signals competitive pressure"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "NVM Solutions Group (NAND) results relevant to memory peers"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Intel manufacturing capex signals foundry competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Data Center Group growth tied to cloud demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Data Center Group growth tied to cloud/enterprise demand"
+  }
+ ],
+ "evidence": "Data Center Group revenue of $4.5 billion, up 13 percent sequentially and up 10 percent year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

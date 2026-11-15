@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and full year 2019 (ended December 31, 2019)",
+  "revenue": "$21,082 million (Q4); $70,697 million (FY2019)",
+  "operating_income": "$8,858 million (Q4); $23,986 million (FY2019)",
+  "net_income": "$7,349 million (Q4); $18,485 million (FY2019)",
+  "eps": "$2.56 diluted (Q4); $6.43 diluted (FY2019)",
+  "operating_cash_flow": "$9,083 million (Q4); $36,314 million (FY2019)",
+  "capex": "$4.24 billion (Q4, incl. finance lease principal payments); $15.65 billion (FY2019)",
+  "free_cash_flow": "$4,842 million (Q4); $20,660 million (FY2019)",
+  "cash_and_investments": "$54.86 billion as of Dec 31, 2019",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Shared digital ad market growth signals healthy ad demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Competing for digital ad dollars"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Large-cap tech peer benefiting from similar ad/cloud capex trends"
+  }
+ ],
+ "evidence": "Net income $7,349 million, up 7% year-over-year, with free cash flow of $4,842 million for the quarter, both showing continued profitable growth despite rising costs and declining operating margin.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

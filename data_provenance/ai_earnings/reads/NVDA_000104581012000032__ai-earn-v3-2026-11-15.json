@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2013 (ended July 29, 2012)",
+  "revenue": "$1,044.3 million",
+  "operating_income": "$139.6 million (GAAP)",
+  "net_income": "$119.0 million GAAP; $170.4 million non-GAAP",
+  "eps": "$0.19 GAAP diluted; $0.27 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$3,278.1 million",
+  "total_debt": null,
+  "guidance_next": "Q3 FY2013 revenue $1.15B-$1.25B; GAAP gross margin ~51.8%, non-GAAP ~52.0%; GAAP opex ~$390M, non-GAAP opex ~$350M; tax rate ~20% +/-1% (or ~16% if R&D credit reinstated); D&A ~$57-59M; capex $30-40M; diluted shares ~630 million"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "Patent cross-license revenue included in GPU segment"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NVDA GPU share gains 'in a weak market'"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Tegra 3 powers Nexus 7 tablet"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Tegra powers Surface RT"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Improved 28nm supply enabled higher Kepler shipments"
+  }
+ ],
+ "evidence": "Revenue for second quarter of fiscal 2013 was $1.04 billion, compared with our outlook of between $990 million to $1.05 billion... Our outlook for the third quarter of fiscal 2013... Revenue is expected to be between $1.15 billion and $1.25 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

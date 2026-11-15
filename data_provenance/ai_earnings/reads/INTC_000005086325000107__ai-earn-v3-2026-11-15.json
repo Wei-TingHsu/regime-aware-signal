@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2025 (fiscal quarter ended June 28, 2025)",
+  "revenue": "$12.9 billion (flat YoY)",
+  "operating_income": "GAAP operating loss $(3.176) billion; non-GAAP operating margin (3.9)%",
+  "net_income": "GAAP net loss attributable to Intel $(2.918) billion; non-GAAP net loss $(0.4) billion",
+  "eps": "GAAP diluted EPS $(0.67); non-GAAP diluted EPS $(0.10)",
+  "operating_cash_flow": "$2.1 billion in Q2; $2.863 billion for six months ended Jun 28, 2025",
+  "capex": "Additions to PP&E $8.733 billion (six months); full-year gross capex target ~$18 billion",
+  "free_cash_flow": "Not explicitly stated; six-month OCF $2.863B minus six-month capex $8.733B implies negative FCF of roughly $(5.87) billion",
+  "cash_and_investments": "$9.643B cash + $11.563B short-term investments = ~$21.2 billion",
+  "total_debt": "Short-term debt $6.731B + long-term debt $44.026B = ~$50.8 billion",
+  "guidance_next": "Q3 2025 revenue $12.6-13.6 billion; GAAP EPS $(0.24); non-GAAP EPS $0.00; GAAP gross margin 34.1%, non-GAAP gross margin 36.0%; GAAP tax rate (23)%, non-GAAP tax rate 12%; reaffirms 2025 non-GAAP opex target ~$17B, 2026 target $16B, 2025 gross capex $18B"
+ },
+ "results_vs_prior_guidance": -0.2,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.2,
+ "own_stock": -0.3,
+ "market": 0,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Intel Xeon 6776P is host CPU for NVIDIA DGX B300 AI systems"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel's weak CCG/DCAI margins and restructuring suggest competitive pressure persists"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel Foundry scaling back Germany/Poland/Ohio projects signals slower foundry capacity buildout, leaving more external foundry demand with TSMC"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Data center/cloud demand commentary implies continued hyperscaler purchasing of Intel Xeon parts"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Cloud/data-center AI infrastructure build-out referenced as driving CPU host demand"
+  }
+ ],
+ "evidence": "Earnings (loss) per share attributable to Intel\u2014diluted $(0.67)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

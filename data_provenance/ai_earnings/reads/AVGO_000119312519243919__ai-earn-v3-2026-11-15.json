@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2019 (ended August 4, 2019)",
+  "revenue": "$5,515 million",
+  "operating_income": "$865 million GAAP (15.7% margin); $2,910 million non-GAAP (52.8% margin)",
+  "net_income": "$715 million GAAP; $2,281 million non-GAAP",
+  "eps": "$1.71 GAAP diluted; $5.16 non-GAAP diluted",
+  "operating_cash_flow": "$2,419 million",
+  "capex": "$112 million",
+  "free_cash_flow": "$2,307 million",
+  "cash_and_investments": "$5,462 million cash and cash equivalents",
+  "total_debt": null,
+  "guidance_next": "Maintaining FY2019 guidance: revenue outlook of $22,500 million ($17.5B semiconductor solutions, $5B infrastructure software); GAAP operating margin 14.75%, non-GAAP operating margin 52.50%; capex ~$500 million; depreciation ~$600 million; intangible amortization ~$5,235 million"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0,
+ "fcf_trend": 0.4,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "broad semiconductor market commentary"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "semiconductor demand said to have bottomed but stay subdued"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "infrastructure software segment overlap via CA"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "foundry partner tied to semiconductor revenue trends"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  }
+ ],
+ "evidence": "Maintaining fiscal year 2019 guidance, including revenue outlook of $22.5 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

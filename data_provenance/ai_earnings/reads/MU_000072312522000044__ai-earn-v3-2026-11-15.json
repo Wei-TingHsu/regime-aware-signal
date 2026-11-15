@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ4-22 (ended September 1, 2022) and FY2022",
+  "revenue": "$6.643B (FQ4-22); $30.758B (FY22)",
+  "operating_income": "GAAP $1.521B / Non-GAAP $1.662B (FQ4-22)",
+  "net_income": "GAAP $1.492B / Non-GAAP $1.621B (FQ4-22)",
+  "eps": "GAAP diluted $1.35 / Non-GAAP diluted $1.45 (FQ4-22)",
+  "operating_cash_flow": "$3.777B (FQ4-22); $15.181B (FY22)",
+  "capex": "Net capex $3.581B (FQ4-22); $11.976B (FY22)",
+  "free_cash_flow": "Adjusted FCF $196M (FQ4-22); $3.205B (FY22)",
+  "cash_and_investments": "$11.06B cash, marketable investments, and restricted cash; net cash position $4.149B",
+  "total_debt": "$6.906B (current + long-term debt)",
+  "guidance_next": "FQ1-23: Revenue $4.25B \u00b1 $250M; GAAP gross margin 25.0% \u00b1 2.0% (Non-GAAP 26.0% \u00b1 2.0%); GAAP opex $1.09B \u00b1 $25M (Non-GAAP $1.00B \u00b1 $25M); GAAP diluted EPS ($0.09) \u00b1 $0.10 (Non-GAAP $0.04 \u00b1 $0.10)"
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": -0.6,
+ "market": -0.3,
+ "ai_demand": -0.4,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "NAND oversupply and pricing weakness signaled"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "Broader semiconductor demand slowdown implied"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Weak memory demand may reflect slower AI server buildouts near-term"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "Shared exposure to PC/datacenter chip demand slowdown"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.3,
+   "reason": "Capex cuts reduce foundry/equipment demand pass-through"
+  }
+ ],
+ "evidence": "navigate the weakened near-term supply-demand environment... nearly 50% wafer fab equipment capex cut versus last year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

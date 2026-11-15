@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.2,
+ "own_stock": 0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AMD/Xilinx combination strengthens AMD's FPGA/datacenter competitiveness"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "broader AMD portfolio competes more with Nvidia's data center push"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "combined larger customer volume for foundry"
+  }
+ ],
+ "evidence": "Effective as of 11:59 p.m. EST on January 11, 2021, the waiting period under the HSR Act expired with respect to the Merger.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

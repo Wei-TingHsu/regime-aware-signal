@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2021 (quarter ended March 31, 2021)",
+  "revenue": "NT$362.41 billion (US$12.92 billion)",
+  "operating_income": "NT$150.54 billion; operating margin 41.5%",
+  "net_income": "NT$139.69 billion; net margin 38.6%",
+  "eps": "NT$5.39 (US$0.96 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q2 2021 revenue US$12.9-13.2 billion; gross profit margin 49.5%-51.5%; operating profit margin 38.5%-40.5% (at NT$28.4/US$1); 2021 capex budget raised to around US$30 billion"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.2,
+ "own_stock": 0.5,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "HPC demand strength and advanced node capacity growth benefits leading-edge GPU customer"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Advanced node (5nm/7nm) capacity expansion supports AMD's product roadmap"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's leading-edge dominance and capex surge pressures Intel's foundry ambitions"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Advanced packaging and HPC wafer demand supports networking/ASIC customers like Broadcom"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "HPC/datacenter demand growth implies cloud providers' custom silicon and chip sourcing from TSMC strengthens"
+  }
+ ],
+ "evidence": "the management further expects the 2021 capital budget to be around US$30 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

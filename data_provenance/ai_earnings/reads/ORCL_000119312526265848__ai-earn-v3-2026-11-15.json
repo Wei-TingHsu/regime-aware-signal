@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and full fiscal year 2026 (ended May 31, 2026)",
+  "revenue": "Q4: $19.2B total revenue (+21% USD); FY26: $67.4B (+17% USD)",
+  "operating_income": "Q4: GAAP $6.1B (+20%), non-GAAP $8.6B (+22%); FY26: GAAP $20.6B (+17%), non-GAAP $28.9B (+16%)",
+  "net_income": "Q4: GAAP $4.2B (+23%), non-GAAP $6.2B (+26%); FY26: GAAP $17.0B (+36%), non-GAAP $22.2B (+29%)",
+  "eps": "Q4: GAAP $1.45 (+21%), non-GAAP $2.11 (+24%); FY26: GAAP $5.83 (+34%), non-GAAP $7.63 (+27%)",
+  "operating_cash_flow": "FY26: $31,977M (+54% YoY)",
+  "capex": "FY26: $55,663M",
+  "free_cash_flow": "FY26: -$23,686M (negative)",
+  "cash_and_investments": "Cash $31,289M + marketable securities $605M = ~$31.9B",
+  "total_debt": "Notes payable current $7,199M + non-current $122,342M = ~$129.5B",
+  "guidance_next": "Q1 FY27: total revenue growth 27-29% USD/cc; total cloud revenue growth 57-63% cc / 58-64% USD; non-GAAP EPS $1.72-$1.76 USD (17-20% growth). FY27: revenue confirmed at $90B; non-GAAP EPS raised to $8.05 (18% growth ex one-time items)."
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.8,
+ "fcf_trend": -0.6,
+ "own_stock": 0.6,
+ "market": 0.4,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.7,
+   "reason": "RPO surge driven by large GPU-backed AI contracts"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "AI datacenter buildout broadens accelerator demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "massive capex implies memory/storage demand growth"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle's 92% IaaS growth signals share gains vs hyperscalers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle Cloud Infrastructure growth pressures AWS competitively"
+  }
+ ],
+ "evidence": "Record Remaining Performance Obligations grew $85 billion in Q4 from $553 billion to $638 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

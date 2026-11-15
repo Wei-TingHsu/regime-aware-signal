@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q1 2011 (ended March 31, 2011)",
+  "revenue": "$9.857 billion, up 38% YoY",
+  "operating_income": "$322 million, down from $394 million YoY",
+  "net_income": "$201 million, down 33% YoY",
+  "eps": "$0.44 diluted (vs $0.66 prior year)",
+  "operating_cash_flow": "$3.033 billion TTM, up 9% YoY",
+  "capex": "$1.138 billion TTM (purchases of fixed assets)",
+  "free_cash_flow": "$1.90 billion TTM, down 18% YoY",
+  "cash_and_investments": "$2.641B cash + $4.240B marketable securities = $6.881B (down from $8.762B at Dec 31, 2010)",
+  "total_debt": null,
+  "guidance_next": "Q2 2011 net sales expected $8.85B-$9.65B (35%-47% growth); operating income expected $95M-$245M (65% decline to 9% decline YoY), including ~$180M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.5,
+ "fcf_trend": -0.5,
+ "own_stock": -0.5,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/retail competition context"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS vs Azure early cloud competition"
+  }
+ ],
+ "evidence": "Operating income is expected to be between $95 million and $245 million, or between 65% decline and 9% decline compared with second quarter 2010.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

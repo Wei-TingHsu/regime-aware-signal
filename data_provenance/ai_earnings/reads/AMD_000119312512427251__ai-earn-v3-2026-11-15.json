@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2012",
+  "revenue": "$1.27 billion",
+  "operating_income": "$(131) million GAAP; $(124) million non-GAAP",
+  "net_income": "$(157) million GAAP; $(150) million non-GAAP",
+  "eps": "$(0.21) GAAP; $(0.20) non-GAAP",
+  "operating_cash_flow": "$(240) million",
+  "capex": "$32 million",
+  "free_cash_flow": "$(272) million (operating cash flow minus capex)",
+  "cash_and_investments": "$1.48 billion (cash, cash equivalents and marketable securities, including long-term)",
+  "total_debt": "$2.04 billion long-term debt plus $5 million current portion",
+  "guidance_next": "For the fourth quarter of 2012, AMD expects revenue to decrease 9 percent, plus or minus 4 percent, sequentially."
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AMD weakness implies relative PC CPU share pressure favors Intel"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "no direct mention"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AMD graphics segment also weak, GPU competition referenced"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "weaker PC demand reduces memory attach"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "lower AMD volumes reduce foundry demand (though GF is primary fab)"
+  }
+ ],
+ "evidence": "a net loss of $157 million, or $0.21 per share, and an operating loss of $131 million... AMD expects revenue to decrease 9 percent, plus or minus 4 percent, sequentially",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

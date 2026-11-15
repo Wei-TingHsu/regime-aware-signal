@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2012 (ended July 31, 2011)",
+  "revenue": "$1.02 billion (up 5.7% sequentially, up 25.3% YoY)",
+  "operating_income": "$174.0 million GAAP",
+  "net_income": "$151.6 million GAAP; $193.5 million non-GAAP",
+  "eps": "$0.25 GAAP diluted; $0.32 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$2.47 billion",
+  "total_debt": null,
+  "guidance_next": "Q3 FY2012: revenue up 4-6% sequentially; GAAP and non-GAAP gross margins flat; GAAP opex $361-366 million; non-GAAP opex $319-321 million; GAAP and non-GAAP tax rate 15-17%; capex $25-35 million; diluted shares ~615 million"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.5,
+ "own_stock": 0.4,
+ "market": 0.1,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "patent cross-license revenue recognized, Sandy Bridge notebook share gains"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVIDIA gaining notebook GPU market share"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "manufactures NVIDIA's GPUs amid record shipments"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "memory tied to GPU/MCP product volumes"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Icera baseband entry into mobile RF/baseband space"
+  }
+ ],
+ "evidence": "GAAP gross margin increased to 51.7 percent, a record for the fourth consecutive quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2025",
+  "revenue": "$12.7 billion, flat YoY",
+  "operating_income": "GAAP operating loss $(0.301) billion; non-GAAP operating margin 5.4%",
+  "net_income": "$(0.821) billion attributable to Intel (GAAP); $0.6 billion non-GAAP",
+  "eps": "$(0.19) GAAP diluted; $0.13 non-GAAP diluted",
+  "operating_cash_flow": "$0.813 billion",
+  "capex": "$5.183 billion (additions to PP&E, gross); net capex target $8-11B for 2025",
+  "free_cash_flow": "-$4.37 billion (operating cash flow $0.813B minus capex $5.183B)",
+  "cash_and_investments": "$8.947B cash and cash equivalents + $12.101B short-term investments = $21.048B",
+  "total_debt": "$5.240B short-term debt + $44.911B long-term debt = $50.151B",
+  "guidance_next": "Q2 2025 revenue $11.2-12.4 billion; GAAP EPS $(0.32); non-GAAP EPS $0.00; GAAP gross margin 34.3%, non-GAAP gross margin 36.5%; GAAP tax rate (51)%, non-GAAP tax rate 12%; 2025 opex target reduced to ~$17B (from $17.5B), 2026 target $16B; 2025 gross capex reduced to $18B (from $20B), net capex ~$8-11B"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.3,
+ "own_stock": -0.2,
+ "market": -0.1,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel CCG/DCAI share loss continues (CCG down 8%), AMD relative beneficiary"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel Foundry still loss-making, external foundry customers likely stay with TSMC"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "NAND JV sale to SK hynix finalized, no longer consolidated"
+  },
+  {
+   "company": "SKHY",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Completed second/final close of NAND business sale to SK hynix"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel's weak DCAI/AI positioning contrasts with NVDA's AI compute dominance"
+  }
+ ],
+ "evidence": "Forecasting second-quarter 2025 revenue of $11.2 billion to $12.4 billion; expecting second-quarter EPS attributable to Intel of $(0.32)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2018 (ended December 31, 2018)",
+  "revenue": "$39,276 million Q4 (up 22% YoY); $136,819 million FY (up 23% YoY)",
+  "operating_income": "$8,203 million Q4; $26,321 million FY",
+  "net_income": "$8,948 million Q4; $30,736 million FY",
+  "eps": "$12.77 diluted Q4; $43.70 diluted FY",
+  "operating_cash_flow": "$12,987 million Q4; $47,971 million FY",
+  "capex": "$7,081 million Q4; $25,139 million FY",
+  "free_cash_flow": "$5,906 million Q4 (per company reconciliation)",
+  "cash_and_investments": "$109,140 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$4,012 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "digital ad market strength signal"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cloud and ad competition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cloud competition"
+  }
+ ],
+ "evidence": "revenue growth, up 23% year over year to $136.8 billion, and up 22% for the fourth quarter to $39.3 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

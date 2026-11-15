@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 FY2022 (three months ended November 30, 2021)",
+  "revenue": "$10.36 billion, up 6% YoY",
+  "operating_income": "GAAP operating loss of $824 million; Non-GAAP operating income $4.9 billion, up 6%",
+  "net_income": "GAAP net loss of $1,247 million; Non-GAAP net income $3,380 million",
+  "eps": "GAAP diluted loss per share $(0.46); Non-GAAP diluted EPS $1.21, up 14%",
+  "operating_cash_flow": "$10,255 million trailing four quarters (six months ended Nov 30, 2021: $1,709 million)",
+  "capex": "$3,118 million trailing four quarters (six months: $1,987 million)",
+  "free_cash_flow": "$7,137 million trailing four quarters, down 41% YoY",
+  "cash_and_investments": "$22,838 million (cash $17,938M + marketable securities $4,900M)",
+  "total_debt": "$78,431 million (notes payable current $4,998M + non-current $73,433M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "MySQL HeatWave claimed to outperform Amazon Aurora"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure rivalry"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure rivalry"
+  }
+ ],
+ "evidence": "Oracle\u2019s Q2 Non-GAAP earnings per share was up 14% to $1.21\u2014beating guidance by $0.10",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

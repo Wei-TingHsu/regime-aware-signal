@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2023 (ended July 30, 2023)",
+  "revenue": "$8,876 million (+5% YoY)",
+  "operating_income": null,
+  "net_income": "$3,303 million GAAP; $4,596 million non-GAAP",
+  "eps": "$7.74 GAAP diluted; $10.54 non-GAAP diluted",
+  "operating_cash_flow": "$4,719 million",
+  "capex": "$122 million",
+  "free_cash_flow": "$4,597 million",
+  "cash_and_investments": "$12,055 million cash and cash equivalents",
+  "total_debt": "$39,341 million (current portion $1,119M + long-term $38,222M)",
+  "guidance_next": "Q4 FY23 revenue guidance of approximately $9.27 billion (+4% YoY); Adjusted EBITDA guidance of approximately 65% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.5,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "shared AI networking/data center demand tailwind"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "hyperscaler scaling AI clusters drives networking demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "hyperscale customer building AI data center networks"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "hyperscale customer building AI data center networks"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "foundry partner benefiting from Broadcom semiconductor demand"
+  }
+ ],
+ "evidence": "Broadcom\u2019s third quarter results were driven by demand for next generation networking technologies as hyperscale customers scale out and network their AI clusters within data centers",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

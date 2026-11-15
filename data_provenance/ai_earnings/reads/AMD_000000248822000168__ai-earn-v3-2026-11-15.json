@@ -1,0 +1,57 @@
+{
+ "facts": {
+  "period": "Q3 2022 (ended September 24, 2022)",
+  "revenue": "$5,565 million",
+  "operating_income": "GAAP operating loss $(64) million; Non-GAAP operating income $1,264 million",
+  "net_income": "$66 million GAAP; $1,095 million non-GAAP",
+  "eps": "$0.04 GAAP diluted; $0.67 non-GAAP diluted",
+  "operating_cash_flow": "$965 million",
+  "capex": "$123 million",
+  "free_cash_flow": "$842 million",
+  "cash_and_investments": "$5,591 million (cash, cash equivalents and short-term investments)",
+  "total_debt": "$2,466 million",
+  "guidance_next": "Q4 2022 revenue ~$5.5 billion \u00b1$300 million (up ~14% YoY, flat sequentially); non-GAAP gross margin ~51%; FY2022 revenue ~$23.5 billion \u00b1$300 million (up ~43% YoY); FY2022 non-GAAP gross margin ~52%"
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": -1,
+ "fcf_trend": 0,
+ "own_stock": -1,
+ "market": -1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "shared PC market weakness implied"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "overlapping data center/gaming GPU market"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Azure using AMD EPYC confidential computing VMs"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "AWS new memory-optimized EPYC instances"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "foundry partner for 5nm Ryzen/EPYC products"
+  }
+ ],
+ "evidence": "Third quarter results came in below our expectations due to the softening PC market and substantial inventory reduction actions across the PC supply chain",
+ "note": "No prior guidance text was provided, but CEO explicitly states results missed internal expectations; Q4/FY guidance ($5.5B Q4, $23.5B FY) implies a slowdown and sequential flatness versus prior growth trajectory, with Client segment weakness overshadowing Data Center/Embedded strength.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": 0.15,
+ "uncertainty": -0.3,
+ "own_stock": 0.2,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AMD-Xilinx deal progresses, strengthening combined competitor"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "broader AMD portfolio post-merger competes in data center/FPGA"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "combined AMD-Xilinx volume supports foundry demand"
+  }
+ ],
+ "evidence": "the United Kingdom\u2019s Competition and Markets Authority, and effective as of June 30, 2021, the European Commission issued approvals of the Merger",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

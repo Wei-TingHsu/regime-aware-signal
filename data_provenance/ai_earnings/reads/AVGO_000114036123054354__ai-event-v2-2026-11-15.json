@@ -1,0 +1,37 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.85,
+ "fcf_outlook": 0.3,
+ "uncertainty": 0.6,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "VMware adds enterprise virtualization/cloud scale rivaling Azure stack"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Broadcom-VMware bundling competes with GCP enterprise offerings"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Enterprise infrastructure software rivalry intensifies"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Security/software peer, indirect exposure to VMware integration"
+  }
+ ],
+ "evidence": "Broadcom funded the Cash Consideration through a combination of cash on hand and borrowings under the Credit Agreement",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ3 2020 (ended May 28, 2020)",
+  "revenue": "$5.438 billion",
+  "operating_income": "GAAP $888 million; Non-GAAP $981 million",
+  "net_income": "GAAP $803 million; Non-GAAP $941 million",
+  "eps": "GAAP diluted $0.71; Non-GAAP diluted $0.82",
+  "operating_cash_flow": "$2.023 billion",
+  "capex": "$1.937 billion (net PP&E expenditures), net capex (adjusted) $1.922 billion",
+  "free_cash_flow": "$101 million (adjusted free cash flow, as stated)",
+  "cash_and_investments": "$9.29 billion (cash, marketable investments, restricted cash); net cash position $2.60 billion",
+  "total_debt": "$6.686 billion (current + long-term debt)",
+  "guidance_next": "FQ4-20: Revenue $5.75B-$6.25B; GAAP gross margin 34.5% \u00b11.5% (Non-GAAP 35.5% \u00b11.5%); GAAP opex $900M \u00b1$25M (Non-GAAP $850M \u00b1$25M); GAAP diluted EPS $0.88 \u00b1$0.10 (Non-GAAP $1.05 \u00b1$0.10)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "NAND/SSD market peer, implied by Micron's SSD strength"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "major DRAM/NAND customer for data center"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "foundry relationships in memory ecosystem"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "uses memory in compute products"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "GPU/AI systems rely on memory supply"
+  }
+ ],
+ "evidence": "Revenue of $5.44 billion versus $4.80 billion for the prior quarter and $4.79 billion for the same period last year, and GAAP diluted EPS of $0.71 versus prior guidance midpoint of $0.41 \u00b1$0.15",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

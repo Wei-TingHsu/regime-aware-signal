@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.6,
+ "fcf_outlook": 0.3,
+ "uncertainty": 0.2,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "capacity dynamics shift with Elpida combo"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Micron scale increases vs NAND peers"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "prior IMFlash seller, memory market context"
+  }
+ ],
+ "evidence": "Pro Forma Combined Net Sales $1,834 $794 ($9) $2,619 ... Operating Income (loss) (157) (140) 197 (100)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2026 (ended June 30, 2026)",
+  "revenue": "$200.6 billion (+20% YoY)",
+  "operating_income": "$27.5 billion (+43% YoY)",
+  "net_income": "$62.6 billion, including $53.4 billion non-operating pre-tax other income primarily from Anthropic investment",
+  "eps": "$5.75 diluted",
+  "operating_cash_flow": "$161.4 billion trailing twelve months (+33% YoY)",
+  "capex": "Increased $66.1 billion YoY net of proceeds and incentives, primarily AI-related",
+  "free_cash_flow": "Outflow of $7.6 billion TTM, vs inflow of $18.2 billion TTM a year earlier",
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.3,
+ "own_stock": 0.6,
+ "market": 0.4,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AWS 37% growth signals strong cloud/AI capex cycle for all hyperscalers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud AI demand strength benefits Google Cloud narrative"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "AI/chips run-rate growth implies continued GPU and accelerator demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Rising AI infrastructure spend supports AMD accelerator sales"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Memory chip supply volatility noted as risk factor tied to AI buildout"
+  }
+ ],
+ "evidence": "AWS net sales increased 37%\u2014its fastest growth in 18 quarters\u2014to a $169 billion annualized revenue run rate",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v2-2026-11-15"
+}

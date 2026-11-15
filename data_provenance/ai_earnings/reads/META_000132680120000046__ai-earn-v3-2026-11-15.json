@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2020 (three months ended March 31, 2020)",
+  "revenue": "$17,737 million (+18% YoY)",
+  "operating_income": "$5,893 million (33% margin)",
+  "net_income": "$4,902 million",
+  "eps": "$1.71 diluted",
+  "operating_cash_flow": "$11,001 million",
+  "capex": "$3,558 million (purchases of property and equipment, net); $3.66 billion including finance lease principal payments",
+  "free_cash_flow": "$7,343 million",
+  "cash_and_investments": "$60.29 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": "No specific revenue guidance given; April advertising revenue trending ~flat YoY vs 17% growth in Q1; FY2020 total expenses narrowed to $52-56B (from $54-59B); FY2020 capex narrowed to $14-16B (from $17-19B); FY2020 tax rate expected high-teens"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.3,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "shared digital ad demand weakness from COVID-19"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "beneficiary of increased online engagement/usage"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "broader tech capex trends relevant to cloud infra"
+  }
+ ],
+ "evidence": "After the initial steep decrease in advertising revenue in March, we have seen signs of stability reflected in the first three weeks of April, where advertising revenue has been approximately flat compared to the same period a year ago",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

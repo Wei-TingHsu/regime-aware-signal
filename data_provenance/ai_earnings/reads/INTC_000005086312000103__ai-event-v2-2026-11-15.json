@@ -1,0 +1,37 @@
+{
+ "event_type": "guidance update",
+ "material": 0.65,
+ "fcf_outlook": -0.4,
+ "uncertainty": 0.5,
+ "own_stock": -0.6,
+ "market": -0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Signals PC market weakness affecting whole x86 ecosystem"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.3,
+   "reason": "Weaker PC demand hurts memory suppliers"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Weak PC demand ahead of Windows 8 launch hurts OEM/Windows sales"
+  },
+  {
+   "company": "SNDK",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "PC component demand softness"
+  }
+ ],
+ "evidence": "an update to forward looking statements relating to 2012 and the third quarter of 2012",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

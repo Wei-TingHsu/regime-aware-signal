@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2025 (ended November 28, 2024)",
+  "revenue": "$8.709 billion",
+  "operating_income": "$2.174 billion GAAP; $2.394 billion non-GAAP",
+  "net_income": "$1.870 billion GAAP; $2.037 billion non-GAAP",
+  "eps": "$1.67 diluted GAAP; $1.79 diluted non-GAAP",
+  "operating_cash_flow": "$3.244 billion",
+  "capex": "$3.206 billion (gross); $3.132 billion net investments in capex",
+  "free_cash_flow": "$112 million adjusted free cash flow",
+  "cash_and_investments": "$8.75 billion (cash, marketable investments, restricted cash)",
+  "total_debt": "Current debt $533M + Long-term debt $13.252B = ~$13.785 billion",
+  "guidance_next": "FQ2-25: Revenue $7.90B \u00b1 $200M; GAAP gross margin 37.5% \u00b1 1.0% (Non-GAAP 38.5% \u00b1 1.0%); GAAP opex $1.24B \u00b1 $15M (Non-GAAP $1.10B \u00b1 $15M); GAAP diluted EPS $1.26 \u00b1 $0.10 (Non-GAAP $1.43 \u00b1 $0.10)"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": -0.5,
+ "fcf_trend": -0.3,
+ "own_stock": -0.4,
+ "market": 0.1,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "HBM/DRAM demand tied to AI accelerators"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NAND pricing pressure from consumer weakness"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Shared AI data-center tailwind narrative"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Memory/storage overlap, weak PC demand read-through"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Foundry partner benefiting from AI-driven memory/logic capex"
+  }
+ ],
+ "evidence": "we anticipate a return to growth in the second half of our fiscal year... consumer-oriented markets are weaker in the near term",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

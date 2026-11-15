@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2011 (three months ended September 30, 2011)",
+  "revenue": "$10.876 billion (net sales), up 44% YoY",
+  "operating_income": "$79 million, down from $268 million in Q3 2010",
+  "net_income": "$63 million, down 73% YoY",
+  "eps": "$0.14 diluted (vs $0.51 prior year)",
+  "operating_cash_flow": "$3.114 billion trailing twelve months (up 19% YoY); quarterly OCF $797 million",
+  "capex": "$529 million (purchases of fixed assets) in Q3; $1.589 billion TTM",
+  "free_cash_flow": "$1.53 billion TTM, down 17% YoY",
+  "cash_and_investments": "$2.823 billion cash and equivalents at quarter end",
+  "total_debt": null,
+  "guidance_next": "Q4 2011 net sales expected $16.45B-$18.65B (27%-44% growth); operating income (loss) expected $(200)M to $250M (142% decline to 47% decline YoY), including ~$200M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.4,
+ "fcf_trend": -0.3,
+ "own_stock": -0.4,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS enterprise/cloud expansion competes with Google Cloud ambitions"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS GovCloud and enterprise features compete with Azure"
+  },
+  {
+   "company": "SNDK",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Kindle Fire ramp implies higher component/flash storage demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "Increased data center capacity build-out for AWS implies server chip demand"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "AWS enterprise cloud push competes with Oracle's enterprise infrastructure business"
+  }
+ ],
+ "evidence": "Operating income (loss) is expected to be between $(200) million and $250 million, or between 142% decline and 47% decline compared with fourth quarter 2010.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

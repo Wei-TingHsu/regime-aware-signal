@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2024 (ended Jan 31, 2024) and full fiscal year 2024",
+  "revenue": "Q4: $845.3 million (up 33% YoY); FY24: $3.06 billion (up 36% YoY)",
+  "operating_income": "Q4 GAAP $29.7M, Non-GAAP $213.1M; FY24 GAAP loss $2.0M, Non-GAAP $660.3M",
+  "net_income": "Q4 GAAP $53.7M, Non-GAAP $236.2M; FY24 GAAP $89.3M, Non-GAAP $751.8M",
+  "eps": "Q4 GAAP diluted $0.22, Non-GAAP $0.95; FY24 GAAP diluted $0.37, Non-GAAP $3.09",
+  "operating_cash_flow": "Q4: $347.0M; FY24: $1,166.2M",
+  "capex": "FY24: Purchases of property and equipment $176.5M + capitalized internal-use software $49.5M (~$226M total); Q4 capex implied via FCF calc",
+  "free_cash_flow": "Q4: $283.0M; FY24: $938.2M",
+  "cash_and_investments": "$3.47 billion (cash, cash equivalents and short-term investments) as of Jan 31, 2024",
+  "total_debt": "Long-term debt $742.5 million as of Jan 31, 2024",
+  "guidance_next": "Q1 FY25: revenue $902.2-$905.8M; Non-GAAP operating income $188.1-$190.8M; Non-GAAP net income $220.4-$223.1M; Non-GAAP diluted EPS $0.89-$0.90. FY25: revenue $3,924.9-$3,989.0M; Non-GAAP operating income $863.6-$913.0M; Non-GAAP net income $940.3-$989.7M; Non-GAAP diluted EPS $3.77-$3.97"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "competes in cloud-native endpoint/security with Defender"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "enterprise security/cloud infrastructure peer"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "cloud workload security customer base overlap"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "cloud security customer base via AWS workloads"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "data center compute underpinning cloud security infrastructure"
+  }
+ ],
+ "evidence": "Delivers record operating and free cash flow... net new ARR growth accelerates to 27% year-over-year and reaches a record $282 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

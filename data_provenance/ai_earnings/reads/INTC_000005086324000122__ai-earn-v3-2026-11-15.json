@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2024 (quarter ended June 29, 2024)",
+  "revenue": "$12.8 billion, down 1% YoY",
+  "operating_income": "GAAP operating loss $(1,964) million; non-GAAP operating margin 0.2%",
+  "net_income": "GAAP net loss attributable to Intel $(1.6) billion; non-GAAP net income $0.1 billion",
+  "eps": "GAAP $(0.38); non-GAAP $0.02",
+  "operating_cash_flow": "$2.3 billion generated in cash from operations in Q2 (six-month figure $1.069 billion)",
+  "capex": "$11.652 billion (six-month additions to PP&E)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$29.273 billion ($11.287B cash + $17.986B short-term investments)",
+  "total_debt": "$53.029 billion ($4.695B short-term + $48.334B long-term)",
+  "guidance_next": "Q3 2024 revenue of $12.5-13.5 billion; GAAP EPS $(0.24); non-GAAP EPS $(0.03)"
+ },
+ "results_vs_prior_guidance": -0.8,
+ "guidance_change": -0.6,
+ "fcf_trend": -0.7,
+ "own_stock": -0.9,
+ "market": -0.1,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Intel's margin/DCAI weakness implies relative share opportunity for AMD in CPUs/servers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel's Gaudi 3 launch is a minor competitive challenge in AI accelerators"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Intel foundry capex cuts and internal push to 18A could reduce reliance on TSMC long-term"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "No direct memory commentary"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.9,
+   "reason": "Self-referential, dividend suspension and margin miss"
+  }
+ ],
+ "evidence": "Suspending dividend starting in the fourth quarter of 2024.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

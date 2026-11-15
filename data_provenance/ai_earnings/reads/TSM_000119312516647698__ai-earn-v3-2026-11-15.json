@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2016 (quarter ended June 30, 2016)",
+  "revenue": "NT$221.81 billion (US$6.84 billion)",
+  "operating_income": "NT$91,321 million (operating margin 41.2%)",
+  "net_income": "NT$72,506 million (net profit margin 32.7%)",
+  "eps": "NT$2.80 (US$0.43 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "3Q16 revenue NT$254-257 billion; gross margin 50%-52%; operating margin 39.5%-41.5%; at exchange rate 32.30 NT$/US$1; 2016 capex budget US$9.5-10.5 billion"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "foundry demand strength signals healthy semi cycle"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC advanced node gains highlight competitive foundry edge"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "benefits from TSMC capacity/node ramp as fabless customer"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broader semiconductor demand recovery signal"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self"
+  }
+ ],
+ "evidence": "Second quarter results exceeded the high end of our guidance given three months earlier",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

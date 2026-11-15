@@ -1,0 +1,19 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": -0.6,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "receives $1.5B settlement payments and license to Intel patents"
+  }
+ ],
+ "evidence": "Intel will make payments totaling $1.5 billion... settlement of the existing litigation between the companies as well as broad mutual general releases",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

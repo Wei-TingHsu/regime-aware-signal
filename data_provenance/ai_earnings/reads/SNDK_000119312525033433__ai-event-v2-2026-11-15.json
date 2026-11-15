@@ -1,0 +1,37 @@
+{
+ "event_type": "restructuring",
+ "material": 0.75,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.55,
+ "own_stock": -0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Western Digital (WDC)",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Spin-off counterparty, retains HDD business"
+  },
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "NAND flash competitor gains if SNDK faces transition friction"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "NAND flash competitor"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "foundry/manufacturing exposure unclear post-spin"
+  }
+ ],
+ "evidence": "the Company is restricted in its ability (among other things) to freely issue stock, to merge or agree to merge with a third party, to be acquired or agree to be acquired by certain parties and to raise additional equity capital",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

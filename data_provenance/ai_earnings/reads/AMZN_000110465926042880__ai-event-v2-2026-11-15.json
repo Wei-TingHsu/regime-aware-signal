@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.35,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.3,
+ "own_stock": 0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AAPL",
+   "relation": "partner",
+   "direction": 0.3,
+   "reason": "Apple Leo D2D satellite services agreement for iPhone/Watch"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "Amazon expands satellite connectivity ambitions vs Google ecosystem"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "Cloud/infra rival expanding into satellite connectivity"
+  }
+ ],
+ "evidence": "Amazon will acquire Globalstar\u2019s existing satellite operations, infrastructure, and assets, including MSS spectrum licenses with global authorizations",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q1 2015 (three months ended March 28, 2015)",
+  "revenue": "$12,781 million",
+  "operating_income": "$2,615 million",
+  "net_income": "$1,992 million",
+  "eps": "$0.41 diluted",
+  "operating_cash_flow": null,
+  "capex": "$2,025 million (additions to property, plant and equipment)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$14,118 million total cash investments (cash, short-term investments, and trading assets)",
+  "total_debt": "$13,233 million (short-term debt $1,121M + long-term debt $12,112M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "memory/storage segment referenced but no AI-specific commentary"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Client Computing and Data Center competitor"
+  }
+ ],
+ "evidence": "NET REVENUE $12,781 ... OPERATING INCOME 2,615 ... Dec 27, 2014 4,453 ... Mar 29, 2014 2,510 (sequential decline in operating income and net income despite flat YoY revenue)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

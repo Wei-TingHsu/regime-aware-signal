@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY23 (quarter ended May 1, 2022)",
+  "revenue": "$8.29 billion, up 46% YoY, up 8% QoQ",
+  "operating_income": "GAAP $1.868B; Non-GAAP $3.955B",
+  "net_income": "GAAP $1.618B; Non-GAAP $3.443B",
+  "eps": "GAAP diluted $0.64; Non-GAAP diluted $1.36",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$20.338 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": "Q2 FY23 revenue ~$8.10B +/-2% (includes ~$500M reduction for Russia/China COVID lockdowns); GAAP/non-GAAP gross margin 65.1%/67.1% +/-50bps; GAAP opex ~$2.46B, non-GAAP opex ~$1.75B; GAAP/non-GAAP other expense ~$40M; GAAP/non-GAAP tax rate 12.5% +/-1%"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": -0.4,
+ "fcf_trend": 0.1,
+ "own_stock": -0.4,
+ "market": -0.2,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Data center/GPU competition amid macro headwinds"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Grace CPU and data center push challenges Intel"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Hopper/Grace ramp drives foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure vGPU cloud collaboration expands AI infrastructure use"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Record data center demand implies higher memory content needs"
+  }
+ ],
+ "evidence": "Revenue is expected to be $8.10 billion, plus or minus 2%. This includes an estimated reduction of approximately $500 million relating to Russia and the COVID lockdowns in China.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

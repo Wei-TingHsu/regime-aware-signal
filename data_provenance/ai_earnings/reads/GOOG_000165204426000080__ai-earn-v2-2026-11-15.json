@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2026 (quarter ended September 30, 2026)",
+  "revenue": "$127,577 million, up 25% YoY",
+  "operating_income": "$40,576 million, up 30% YoY; operating margin 31.8%",
+  "net_income": "$26,170 million available to common stockholders (total net income $26,468 million)",
+  "eps": "$2.12 diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$265,098 million total cash, cash equivalents and marketable securities (up from $126,843 million at 12/31/2025)",
+  "total_debt": "Long-term debt $125,102 million (up from $46,547 million at 12/31/2025), including $28.7 billion of new senior unsecured notes issued in Q3 2026",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.3,
+ "own_stock": 0.6,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "TPU systems sales surge implies more foundry demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Rising TPU demand signals some AI-accelerator share shift"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud AI infrastructure race intensifies"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud AI infrastructure race intensifies"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Memory demand tied to AI infrastructure buildout"
+  }
+ ],
+ "evidence": "Google Cloud delivered record growth as revenues increased 103% to $30.7 billion, led by strong growth in Google Cloud Platform (GCP) across enterprise AI infrastructure and enterprise AI solutions",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v2-2026-11-15"
+}

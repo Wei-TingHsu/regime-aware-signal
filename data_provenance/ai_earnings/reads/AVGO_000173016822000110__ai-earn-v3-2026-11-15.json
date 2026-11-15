@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2022 (ended October 30, 2022) and full fiscal year 2022",
+  "revenue": "$8,930 million (Q4), $33,203 million (FY22)",
+  "operating_income": null,
+  "net_income": "$3,359 million GAAP (Q4); $4,544 million non-GAAP (Q4); $11,495 million GAAP (FY22)",
+  "eps": "$7.83 GAAP diluted (Q4); $10.45 non-GAAP diluted (Q4); $26.53 GAAP diluted (FY22)",
+  "operating_cash_flow": "$4,583 million (Q4); $16,736 million (FY22)",
+  "capex": "$122 million (Q4); $424 million (FY22)",
+  "free_cash_flow": "$4,461 million (Q4), 50% of revenue; $16,312 million (FY22)",
+  "cash_and_investments": "$12,416 million cash and cash equivalents",
+  "total_debt": "$39,075 million long-term debt plus $440 million current portion = ~$39,515 million",
+  "guidance_next": "Q1 FY23 revenue guidance of approximately $8.9 billion (+16% YoY); Adjusted EBITDA guidance of approximately 63% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.5,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "semiconductor demand signals from hyperscale/enterprise"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "overlapping data center and networking chip markets"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Broadcom's foundry partner benefits from continued semiconductor demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "hyperscale customer driving infrastructure software and chip demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "hyperscale/cloud customer referenced as demand driver"
+  }
+ ],
+ "evidence": "Revenue of $8,930 million for the fourth quarter, up 21 percent from the prior year period, matching guidance, with free cash flow of $4,461 million or 50 percent of revenue and a 12 percent dividend increase",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

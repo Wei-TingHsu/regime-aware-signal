@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.4,
+ "fcf_outlook": 0.4,
+ "uncertainty": 0.1,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel gains capital to fund leading-edge fab buildout, easing foundry capacity constraints"
+  }
+ ],
+ "evidence": "Co-Investor acquired from Intel Ireland a 49% ownership interest in Grange Newco LLC ... for approximately $11 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

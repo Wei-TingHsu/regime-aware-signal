@@ -1,0 +1,37 @@
+{
+ "event_type": "guidance update",
+ "material": 0.4,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.4,
+ "own_stock": -0.3,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "wafer delivery delays"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "wafer delivery delays"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "wafer delivery delays"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "rival foundry disruption"
+  }
+ ],
+ "evidence": "the Company now expects first quarter gross profit margin to be between 44% and 46%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

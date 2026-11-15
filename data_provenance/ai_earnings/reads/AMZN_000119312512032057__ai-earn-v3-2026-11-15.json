@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 2011 (and FY2011)",
+  "revenue": "$17.43B (Q4), $48.08B (FY)",
+  "operating_income": "$260M (Q4), $862M (FY)",
+  "net_income": "$177M (Q4), $631M (FY)",
+  "eps": "$0.38 diluted (Q4), $1.37 diluted (FY)",
+  "operating_cash_flow": "$3.90B TTM (up 12%)",
+  "capex": "$1.81B FY (purchases of fixed assets)",
+  "free_cash_flow": "$2.09B TTM (down 17%)",
+  "cash_and_investments": "$5.27B cash and equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q1 2012 net sales $12.0B-$13.4B (22%-36% growth); operating income (loss) $(200)M to $100M, including ~$200M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.3,
+ "fcf_trend": -0.4,
+ "own_stock": -0.3,
+ "market": 0,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/media competition, not directly addressed"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AWS growth highlights cloud market expansion"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "database/cloud competitor via DynamoDB launch"
+  }
+ ],
+ "evidence": "Operating income was $260 million in the fourth quarter, compared with $474 million in fourth quarter 2010",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

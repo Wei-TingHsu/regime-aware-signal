@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2020 / FY2020",
+  "revenue": "$3.244 billion (Q4), $9.763 billion (FY2020)",
+  "operating_income": "$570 million GAAP (Q4), $663 million non-GAAP (Q4); $1.369 billion GAAP (FY), $1.657 billion non-GAAP (FY)",
+  "net_income": "$1.781 billion GAAP (Q4, incl. $1.30B tax benefit), $636 million non-GAAP (Q4); $2.490 billion GAAP (FY), $1.575 billion non-GAAP (FY)",
+  "eps": "$1.45 GAAP diluted (Q4), $0.52 non-GAAP diluted (Q4); $2.06 GAAP diluted (FY), $1.29 non-GAAP diluted (FY)",
+  "operating_cash_flow": "$554 million (Q4), $1.071 billion (FY)",
+  "capex": "$74 million (Q4), $294 million (FY)",
+  "free_cash_flow": "$480 million (Q4), $777 million (FY)",
+  "cash_and_investments": "$2.290 billion (cash, cash equivalents and short-term investments)",
+  "total_debt": "$330 million",
+  "guidance_next": "Q1 2021 revenue ~$3.2 billion +/- $100 million (up ~79% YoY, down ~1% QoQ); non-GAAP gross margin ~46%; FY2021 revenue growth ~37% YoY; non-GAAP gross margin ~47%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.8,
+ "own_stock": 0.7,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "AMD share gains in CPU/server markets"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD GPU and Instinct accelerator momentum"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure using EPYC CPUs for HPC workloads"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS expanding EPYC-powered EC2 instances"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Foundry partner benefiting from AMD's revenue growth"
+  }
+ ],
+ "evidence": "Revenue of $3.24 billion was up 53 percent year-over-year and 16 percent quarter-over-quarter... AMD expects revenue growth of approximately 37 percent over 2020",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

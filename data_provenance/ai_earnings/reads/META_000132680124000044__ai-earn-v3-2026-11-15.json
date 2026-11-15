@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2024 (quarter ended March 31, 2024)",
+  "revenue": "$36.455 billion, up 27% YoY",
+  "operating_income": "$13.818 billion, 38% operating margin",
+  "net_income": "$12.369 billion",
+  "eps": "$4.71 diluted",
+  "operating_cash_flow": "$19.246 billion",
+  "capex": "$6.4 billion (property & equipment, net); $6.72 billion including finance lease principal payments",
+  "free_cash_flow": "$12.531 billion (stated)",
+  "cash_and_investments": "$58.12 billion (cash, equivalents and marketable securities)",
+  "total_debt": "$18.387 billion long-term debt",
+  "guidance_next": "Q2 2024 revenue $36.5-39B; FY2024 total expenses raised to $96-99B (from $94-99B); FY2024 capex raised to $35-40B (from $30-37B) to accelerate AI infrastructure investment, with further increases expected in 2025; FY2024 tax rate mid-teens"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.3,
+ "own_stock": -0.4,
+ "market": -0.2,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.7,
+   "reason": "Meta raising AI capex implies more GPU purchases"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "potential alternative AI chip supplier benefiting from capex increase"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "higher server/data-center buildout boosts memory demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "signals industry-wide AI capex escalation pressuring margins across big tech"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "same AI infrastructure spending race could compress peer margins"
+  }
+ ],
+ "evidence": "We anticipate our full-year 2024 capital expenditures will be in the range of $35-40 billion, increased from our prior range of $30-37 billion as we continue to accelerate our infrastructure investments to support our artificial intelligence (AI) roadmap.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,37 @@
+{
+ "event_type": "capital expenditure",
+ "material": 0.35,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "more advanced capacity could ease foundry supply constraints"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "expanded advanced node/CoWoS-related capacity benefits fabless customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC capacity expansion increases competitive foundry pressure"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "more wafer-level packaging capacity supports supply"
+  }
+ ],
+ "evidence": "Approved capital appropriations of US$1,880.9 million to set up mini-lines for the wafer fab in Taichung, and to expand advanced technology capacity",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,49 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.5,
+ "fcf_outlook": 0.3,
+ "uncertainty": 0.1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Mellanox strengthens NVDA networking/datacenter portfolio vs Broadcom"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVDA gains interconnect tech competing with Intel datacenter/networking"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Stronger NVDA datacenter platform intensifies competition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Cloud customers benefit from integrated GPU-networking stack"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Datacenter customer gains faster interconnect options"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Cloud customer benefits from combined compute/networking offering"
+  }
+ ],
+ "evidence": "completed its previously announced acquisition of Mellanox Technologies, Ltd... for approximately $7.0 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

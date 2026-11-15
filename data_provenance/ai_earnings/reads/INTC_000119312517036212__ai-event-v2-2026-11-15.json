@@ -1,0 +1,31 @@
+{
+ "event_type": "guidance update",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.0,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel data center/AI growth push"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel reaffirms CPU/data center dominance"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "manufacturing ecosystem overlap"
+  }
+ ],
+ "evidence": "Top Priorities for 2017: Growth in Data Center & Adjacencies, flawlessly execute in Client business, strong & healthy growth in IoT & devices, Memory & FPGAS",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2023 (quarter ended July 31, 2022)",
+  "revenue": "$6.704 billion, up 3% YoY, down 19% QoQ",
+  "operating_income": "GAAP $499 million (down 80% YoY); Non-GAAP $1.325 billion (down 57% YoY)",
+  "net_income": "$656 million GAAP (down 72% YoY); Non-GAAP $1.292 billion (down 51% YoY)",
+  "eps": "GAAP diluted $0.26; Non-GAAP diluted $0.51",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$17.037 billion (down from $21.208 billion at FY22 year-end)",
+  "total_debt": null,
+  "guidance_next": "Q3 FY23 revenue expected to be $5.90 billion \u00b12%; GAAP/non-GAAP gross margin 62.4%/65.0% \u00b150bps; GAAP/non-GAAP opex ~$2.59B/$1.82B; tax rate ~9.5% \u00b11%"
+ },
+ "results_vs_prior_guidance": -0.4,
+ "guidance_change": -0.6,
+ "fcf_trend": -0.3,
+ "own_stock": -0.6,
+ "market": -0.2,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Shared gaming/GPU channel inventory glut signals sector-wide weakness"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Broad PC/gaming demand softness implies similar headwinds"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Weak GPU/gaming demand reduces memory content demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Lower NVDA chip volumes reduce foundry utilization near-term"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Strong Data Center/AI demand trend supports networking/AI silicon peers"
+  }
+ ],
+ "evidence": "Revenue is expected to be $5.90 billion, plus or minus 2%... Gaming and Professional Visualization revenue are expected to decline sequentially, as OEMs and channel partners reduce inventory levels",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

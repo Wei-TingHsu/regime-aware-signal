@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2027 (ended April 30, 2026)",
+  "revenue": "$1.39 billion, up 26% YoY",
+  "operating_income": "GAAP loss from operations $30.6 million; Non-GAAP income from operations $325.7 million",
+  "net_income": "GAAP net income attributable to CrowdStrike $27.8 million; Non-GAAP net income $283.4 million",
+  "eps": "GAAP diluted EPS $0.11; Non-GAAP diluted EPS $1.10",
+  "operating_cash_flow": "$590.9 million (record)",
+  "capex": null,
+  "free_cash_flow": "$468.5 million (record)",
+  "cash_and_investments": "$4.55 billion cash and cash equivalents",
+  "total_debt": null,
+  "guidance_next": "Q2 FY27: ARR $5,792.6-$5,794.6M, Total revenue $1,436.0-$1,442.0M, Non-GAAP operating income $345.6-$349.1M, Non-GAAP net income $300.7-$303.4M, Non-GAAP diluted EPS $1.16-$1.17; Full Year FY27 (raised): ARR $6,531.7-$6,555.5M, Total revenue $5,914.7-$5,958.7M, Non-GAAP operating income $1,452.3-$1,480.3M, Non-GAAP net income $1,263.1-$1,285.2M, Non-GAAP diluted EPS $4.88-$4.96; net new ARR growth guidance raised to 27.7% at midpoint, a 520bps increase"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Falcon integration with Microsoft Defender environments expands interoperability"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "Named Google Cloud Security Partner of Year, CDR expansion to Google Cloud"
+  },
+  {
+   "company": "AMZN",
+   "relation": "partner",
+   "direction": 0.3,
+   "reason": "Charlotte AI AgentWorks built with AWS"
+  },
+  {
+   "company": "NVDA",
+   "relation": "partner",
+   "direction": 0.3,
+   "reason": "Co-development of no-code agent platform with NVIDIA"
+  },
+  {
+   "company": "INTC",
+   "relation": "partner",
+   "direction": 0.2,
+   "reason": "Expanded collaboration to optimize Falcon for AI PCs"
+  }
+ ],
+ "evidence": "exceeding expectations across all guided metrics while accelerating growth and expanding profitability and cash flow",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v2-2026-11-15"
+}

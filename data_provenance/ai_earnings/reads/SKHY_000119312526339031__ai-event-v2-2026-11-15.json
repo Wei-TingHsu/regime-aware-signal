@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.15,
+ "fcf_outlook": 0.05,
+ "uncertainty": -0.05,
+ "own_stock": 0.15,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "memory sector capital return signals healthy pricing"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "memory sector peer benefit"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.03,
+   "reason": "HBM supplier stability positive for AI supply chain"
+  }
+ ],
+ "evidence": "The Company is actively reviewing additional shareholder return measures to enhance shareholder value and expects to finalize and announce further details within the third quarter of 2026.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

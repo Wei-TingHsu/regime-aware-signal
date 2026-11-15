@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 FY2014 (quarter ended June 30, 2014); also FY2014 full year",
+  "revenue": "$23.38 billion (quarter); $86.83 billion (FY2014)",
+  "operating_income": "$6.48 billion (quarter, GAAP); $27.76 billion (FY2014)",
+  "net_income": "$4.612 billion (quarter); $22.074 billion (FY2014)",
+  "eps": "$0.55 diluted GAAP (quarter, down 7% YoY); non-GAAP EPS grew 6%; $2.63 diluted (FY2014)",
+  "operating_cash_flow": "$9.514 billion (quarter); $32.231 billion (FY2014)",
+  "capex": "$1.330 billion (quarter, additions to property and equipment); $5.485 billion (FY2014)",
+  "free_cash_flow": "~$8.184 billion (quarter, OCF minus capex); ~$26.746 billion (FY2014)",
+  "cash_and_investments": "$85.709 billion total cash, cash equivalents, and short-term investments",
+  "total_debt": "$22.645 billion (short-term debt $2.0B + long-term debt $20.645B)",
+  "guidance_next": "No explicit quantitative guidance in release; company states forward-looking guidance will be given on the earnings call. Notes pre-tax restructuring costs of $1.1-$1.6 billion expected in FY2015, mostly in first half."
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.5,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Microsoft commercial cloud and server/SQL growth competes with Oracle enterprise offerings"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Azure and commercial cloud run-rate growth (147%) signals competitive pressure on AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud and productivity suite growth competes with Google's enterprise cloud ambitions"
+  }
+ ],
+ "evidence": "Commercial cloud revenue grew 147% with an annualized run rate that exceeds $4.4 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2011 (quarter ended ~Oct 1, 2011)",
+  "revenue": "$14.2B GAAP (non-GAAP $14.3B), up 9% sequentially and 28% YoY",
+  "operating_income": "$4.8B GAAP, up 22% sequentially and 16% YoY (34% of revenue)",
+  "net_income": "$3.5B GAAP (non-GAAP $3.7B), up 17% YoY GAAP / 24% non-GAAP",
+  "eps": "$0.65 GAAP (non-GAAP $0.69), up 25% YoY GAAP / 33% non-GAAP",
+  "operating_cash_flow": "~$6.3B",
+  "capex": "$2.7B purchased in capital assets",
+  "free_cash_flow": "~$3.6B (6.3B - 2.7B)",
+  "cash_and_investments": "$15.2B total cash investments, up $3.7B sequentially",
+  "total_debt": "Took on $5.0B new long-term debt during the quarter (no total debt figure given)",
+  "guidance_next": "Q4 2011: revenue $14.7B +/- $500M (up 28% YoY, up 3% sequentially, below normal seasonality); gross margin 65% +/- a couple points (66% non-GAAP); R&D and MG&A ~$4.3B; depreciation ~$1.4B; amortization of acquisition intangibles ~$75M; tax rate 28%; full-year 2011 capex unchanged at $10.5B +/- $300M"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.6,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel PC/data center share gains, strong pricing"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel's 22nm transition reduces reliance on external foundries"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Healthy supply chain inventory signals stable component demand"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Data Center Group growth reflects server/enterprise demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Atom/chipset weakness contrasts with Intel's core PC/server strength"
+  }
+ ],
+ "evidence": "Revenue of $14.2B was slightly better than expected, up 9% sequentially and 28% from a year ago.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

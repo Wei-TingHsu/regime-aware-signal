@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2013 (3Q13), with guidance for Q4 2013",
+  "revenue": "NT$162.58 billion (3Q13 actual); prior guidance was NT$161-164 billion",
+  "operating_income": "Operating margin 36.7% on NT$162.58B revenue (~NT$59.7B)",
+  "net_income": "NT$51.95 billion",
+  "eps": "NT$2.00 per share (diluted)",
+  "operating_cash_flow": "NT$95.80 billion",
+  "capex": "NT$54.82 billion",
+  "free_cash_flow": "NT$40.98 billion (stated: operating cash flow minus capex)",
+  "cash_and_investments": "NT$218.16 billion (cash & marketable securities)",
+  "total_debt": "Long-term interest-bearing debt NT$211.22 billion",
+  "guidance_next": "4Q13 revenue NT$144-147 billion at NTD/USD 29.5; gross margin 44%-46%; operating margin 32%-34%"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.4,
+ "fcf_trend": 0.5,
+ "own_stock": 0.1,
+ "market": -0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Q4 revenue/margin guidance implies seasonal order slowdown"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSMC margin compression could ease competitive cost pressure"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self-reference, not applicable"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Communication segment flat QoQ suggests modest customer demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Not addressed directly by release"
+  }
+ ],
+ "evidence": "Revenue to be between NT$144 billion and NT$147 billion ... Operating profit margin to be between 32% and 34%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

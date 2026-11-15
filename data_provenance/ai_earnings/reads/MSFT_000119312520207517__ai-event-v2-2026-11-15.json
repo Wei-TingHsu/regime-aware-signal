@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.6,
+ "own_stock": 0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "social/ad competitor to combined MSFT-TikTok"
+  },
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TikTok under MSFT could strengthen ad/social rival"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "indirect cloud/ads competitor"
+  }
+ ],
+ "evidence": "These discussions are preliminary and there can be no assurance that a transaction which involves Microsoft will proceed.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

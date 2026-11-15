@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.25,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.2,
+ "own_stock": 0.3,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Twitch/gaming content competition intensifies"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Stadia cloud gaming rivalry"
+  },
+  {
+   "company": "Sony (not in list)",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "PlayStation loses access to Bethesda franchises"
+  }
+ ],
+ "evidence": "Microsoft will acquire ZeniMax Media for $7.5 billion in cash.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

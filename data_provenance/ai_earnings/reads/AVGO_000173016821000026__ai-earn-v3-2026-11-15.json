@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2021 (ended January 31, 2021)",
+  "revenue": "$6,655 million, +14% YoY",
+  "operating_income": null,
+  "net_income": "GAAP $1,378 million; Non-GAAP $2,973 million",
+  "eps": "GAAP diluted $3.05; Non-GAAP diluted $6.61",
+  "operating_cash_flow": "$3,113 million",
+  "capex": "$114 million",
+  "free_cash_flow": "$2,999 million",
+  "cash_and_investments": "$9,552 million cash and cash equivalents",
+  "total_debt": "Current portion $864 million + Long-term $41,068 million = $41,932 million",
+  "guidance_next": "Q2 FY2021 revenue guidance of approximately $6.5 billion (expected +13% YoY); Adjusted EBITDA guidance of approximately 59% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.1,
+ "fcf_trend": 0.5,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "reason": "key semiconductor foundry partner for Broadcom's chip production",
+   "direction": 0.2
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "reason": "competes in semiconductor/networking chip markets",
+   "direction": 0
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "reason": "overlapping enterprise/networking semiconductor markets",
+   "direction": 0
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "reason": "semiconductor industry peer, cyclicality read-through",
+   "direction": 0.1
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "reason": "hyperscale customer for networking/infrastructure chips",
+   "direction": 0.1
+  }
+ ],
+ "evidence": "Revenue of $6,655 million for the first quarter, up 14 percent from the prior year period, slightly exceeding the prior guidance of approximately $6.6 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2014 (ended July 28, 2013)",
+  "revenue": "$977.2 million",
+  "operating_income": "$105.5 million GAAP",
+  "net_income": "$96.4 million GAAP; $133.3 million non-GAAP",
+  "eps": "$0.16 GAAP diluted; $0.23 non-GAAP diluted",
+  "operating_cash_flow": "$99.2 million",
+  "capex": "$87.7 million (purchase of property, equipment and intangibles)",
+  "free_cash_flow": "$11.5 million",
+  "cash_and_investments": "$2.94 billion",
+  "total_debt": null,
+  "guidance_next": "Q3 FY2014 revenue ~$1.050 billion +/-2%; GAAP/non-GAAP gross margin ~flat at 56.0%/56.3%; GAAP opex ~$460M, non-GAAP opex ~$418M; tax rate 16% +/-1pp; D&A ~$62-64M; capex $60-70M; diluted shares ~589M"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.4,
+ "fcf_trend": -0.5,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVDA GPU margin/share gains imply competitive pressure"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Tegra mobile push competes in mobile/CPU-adjacent markets"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Higher revenue and new GPU/Tegra launches imply more foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "GRID virtualization and datacenter GPU ties to cloud/enterprise partners"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Semiconductor sector sentiment read-through, limited direct linkage"
+  }
+ ],
+ "evidence": "Revenue is expected to be $1.050 billion, plus or minus two percent.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

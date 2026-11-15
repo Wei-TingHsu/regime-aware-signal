@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2022 (quarter ended August 1, 2021)",
+  "revenue": "$6,507 million (record, up 68% YoY, up 15% QoQ)",
+  "operating_income": "GAAP $2,444 million; Non-GAAP $3,071 million",
+  "net_income": "GAAP $2,374 million; Non-GAAP $2,623 million",
+  "eps": "GAAP diluted $0.94; Non-GAAP diluted $1.04",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$19,654 million (vs $11,561 million at FY21 year-end)",
+  "total_debt": "Short-term $1,000M + Long-term $10,943M = $11,943 million (vs $6,963M at FY21 year-end)",
+  "guidance_next": "Q3 FY22: revenue ~$6.80B +/-2%; GAAP/non-GAAP gross margin 65.2%/67.0% +/-50bps; GAAP/non-GAAP opex ~$1.96B/$1.37B; GAAP/non-GAAP other income/expense ~-$60M; tax rate 11% +/-1%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.3,
+ "own_stock": 0.8,
+ "market": 0.5,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA record Gaming/Data Center growth pressures AMD's GPU/CPU share"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Data Center strength highlights NVDA's AI/accelerated computing lead over Intel"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Higher NVDA revenue implies more foundry demand for advanced chips"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Data center and gaming GPU growth supports memory/HBM demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Partnership with Plus for 1,000+ NVIDIA DRIVE-powered autonomous trucks for Amazon"
+  }
+ ],
+ "evidence": "Revenue is expected to be $6.80 billion, plus or minus 2 percent.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

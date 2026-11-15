@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2022 (quarter and full year ended December 31, 2022)",
+  "revenue": "$149.2 billion, up 9% YoY (Q4); $514.0 billion full year, up 9%",
+  "operating_income": "$2.7 billion (Q4), down from $3.5 billion; $12.2 billion full year, down from $24.9 billion",
+  "net_income": "$0.3 billion (Q4); full year net loss of $2.7 billion",
+  "eps": "$0.03 diluted (Q4); $(0.27) diluted full year",
+  "operating_cash_flow": "$46.8 billion TTM, up 1% YoY",
+  "capex": "$63.6 billion full year (purchases of property and equipment)",
+  "free_cash_flow": "Outflow of $11.6 billion TTM, worse than outflow of $9.1 billion prior year",
+  "cash_and_investments": "$53,888 million cash and equivalents plus $16,138 million marketable securities as of Dec 31, 2022",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AWS growth deceleration implies cloud competition intensifying"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Cloud market share battle with AWS slowdown"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AWS AI/ML infrastructure investment (Stability AI, ML workloads) signals chip demand"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Both facing macro ad/consumer headwinds"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Continued capex in data center infrastructure supports memory demand"
+  }
+ ],
+ "evidence": "Operating income decreased to $2.7 billion in the fourth quarter, compared with $3.5 billion in fourth quarter 2021... includes approximately $2.7 billion of charges",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

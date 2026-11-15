@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": 0.3,
+ "uncertainty": 0.1,
+ "own_stock": 0.3,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Sanmina",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "acquires ZT Systems manufacturing business for $3B, adds scale and AMD partnership"
+  }
+ ],
+ "evidence": "The aggregate consideration (including contingent consideration) payable by Buyer to the Seller in connection with the Equity Sale is $3.0 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

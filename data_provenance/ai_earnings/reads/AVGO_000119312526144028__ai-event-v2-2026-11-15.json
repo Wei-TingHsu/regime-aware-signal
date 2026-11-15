@@ -1,0 +1,43 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.75,
+ "fcf_outlook": 0.6,
+ "uncertainty": -0.2,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Long-term TPU and networking supply deal through 2031"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "Custom TPU scale-up reduces reliance on Nvidia GPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Likely foundry partner for increased TPU volumes"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Custom silicon expansion pressures merchant AI chip vendors"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Memory demand rises with expanded AI rack buildout"
+  }
+ ],
+ "evidence": "Long Term Agreement for Broadcom to develop and supply custom Tensor Processing Units (\u201cTPUs\u201d) for Google\u2019s future generations of TPUs ... through up to 2031",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

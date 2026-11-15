@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ4 and FY2023 (ended August 31, 2023)",
+  "revenue": "$4.01B (Q4); $15.54B (FY23)",
+  "operating_income": "GAAP $(1.472)B; Non-GAAP $(1.208)B (Q4)",
+  "net_income": "GAAP $(1.43)B; Non-GAAP $(1.177)B (Q4)",
+  "eps": "GAAP $(1.31); Non-GAAP $(1.07) diluted (Q4)",
+  "operating_cash_flow": "$249M (Q4); $1.559B (FY23)",
+  "capex": "Net capex $1.007B (Q4); $7.012B (FY23)",
+  "free_cash_flow": "Adjusted FCF $(758)M (Q4); $(5.453)B (FY23)",
+  "cash_and_investments": "$10.52B (cash, marketable investments, restricted cash)",
+  "total_debt": "Current debt $278M + Long-term debt $13.052B = ~$13.33B",
+  "guidance_next": "FQ1-24: Revenue $4.40B \u00b1 $200M; GAAP gross margin (6.0%) \u00b1 2.0% (Non-GAAP (4.0%) \u00b1 2.0%); GAAP opex $1.01B \u00b1 $15M (Non-GAAP $900M \u00b1 $15M); GAAP diluted EPS $(1.24) \u00b1 $0.07 (Non-GAAP $(1.07) \u00b1 $0.07)"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.2,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "DRAM market recovery benefits all memory makers"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "NAND market tightening aids pricing for peers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "AI demand driving HBM/DRAM content growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader semiconductor cycle recovery signal"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Semiconductor capex/demand recovery read-through"
+  }
+ ],
+ "evidence": "Revenue of $4.01 billion versus $3.75 billion for the prior quarter and $6.64 billion for the same period last year... We look forward to record industry TAM revenue in 2025 as AI proliferates from the data center to the edge.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2024 (quarter ended April 30, 2023)",
+  "revenue": "$7.19 billion, up 19% Q/Q, down 13% Y/Y",
+  "operating_income": "$2,140 million GAAP; $3,052 million non-GAAP",
+  "net_income": "$2,043 million GAAP; $2,713 million non-GAAP",
+  "eps": "$0.82 GAAP diluted; $1.09 non-GAAP diluted",
+  "operating_cash_flow": "$2,911 million",
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$15,320 million (cash, cash equivalents and marketable securities)",
+  "total_debt": "$10,954 million (short-term $1,250M + long-term $9,704M)",
+  "guidance_next": "Q2 FY24 revenue expected to be $11.00 billion, plus or minus 2%; GAAP and non-GAAP gross margins expected to be 68.6% and 70.0% respectively, plus or minus 50bps; GAAP and non-GAAP operating expenses expected to be approximately $2.71 billion and $1.90 billion respectively; other income/expense expected to be income of approximately $90 million; GAAP and non-GAAP tax rates expected to be 14.0% plus or minus 1%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA's dominant data center/AI position pressures AMD's GPU roadmap"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Surging AI/data center GPU demand lifts memory content and HBM demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "NVIDIA ramping supply of H100/Hopper chips increases foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Azure integration and H100 deployment signal strong cloud AI capex"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AWS offering H100-based products shows continued cloud AI infrastructure buildout"
+  }
+ ],
+ "evidence": "Second quarter fiscal 2024 revenue outlook of $11.00 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

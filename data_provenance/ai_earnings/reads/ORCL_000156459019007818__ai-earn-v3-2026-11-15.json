@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY19 (three months ended February 28, 2019)",
+  "revenue": "$9.6 billion total revenue (down 1% USD, up 3% constant currency)",
+  "operating_income": "GAAP $3,399 million (+3%); Non-GAAP $4.3 billion (+2%)",
+  "net_income": "GAAP $2,745 million; Non-GAAP $3.2 billion (-8%)",
+  "eps": "GAAP diluted $0.76; Non-GAAP diluted $0.87 (+8%)",
+  "operating_cash_flow": "$10,129 million for nine months; $14,789 million trailing twelve months",
+  "capex": "$1,247 million nine months; $1,625 million trailing twelve months (Q3)",
+  "free_cash_flow": "$13,164 million trailing twelve months (down 1% YoY)",
+  "cash_and_investments": "$14,720 million cash + $25,310 million marketable securities = $40,030 million",
+  "total_debt": "$4,487 million current + $51,672 million non-current notes payable = $56,159 million",
+  "guidance_next": "No specific numeric guidance; CEO stated 'With year-to-date non-GAAP EPS growth rate now at 16% in constant currency, we will comfortably deliver another year of double-digit EPS growth.'"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.1,
+ "fcf_trend": -0.3,
+ "own_stock": 0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "CRM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle claims #1 enterprise apps share, surpassing Salesforce"
+  },
+  {
+   "company": "SAP",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle claims #1 enterprise apps share, surpassing SAP"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud infrastructure and database competition (Gen2 Cloud, Autonomous DB)"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Competes with AWS in cloud infrastructure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Competes with Google Cloud in infrastructure and database services"
+  }
+ ],
+ "evidence": "we will comfortably deliver another year of double-digit EPS growth",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

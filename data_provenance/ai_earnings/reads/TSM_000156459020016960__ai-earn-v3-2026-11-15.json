@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2020 (quarter ended March 31, 2020)",
+  "revenue": "NT$310.60 billion (US$10.31 billion)",
+  "operating_income": "NT$128,522 million (operating margin 41.4%)",
+  "net_income": "NT$116.99 billion",
+  "eps": "NT$4.51 (US$0.75 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q2 2020 revenue expected US$10.1-10.4 billion; gross profit margin 50%-52%; operating profit margin 39%-41% (at NT$30.0/US$1 assumption)"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.2,
+ "fcf_trend": 0,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "HPC demand cited as offsetting weakness, implies strong advanced-node orders"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "benefits from TSMC advanced process capacity and HPC/5G ramp"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "major foundry customer tied to TSMC's advanced node demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's resilience and advanced-node leadership pressures Intel's foundry competitiveness"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "semiconductor sector read-through on demand resilience during pandemic"
+  }
+ ],
+ "evidence": "Our first quarter business declined less than seasonality, due to the increase in HPC-related demand and the continued ramp of 5G smartphones",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

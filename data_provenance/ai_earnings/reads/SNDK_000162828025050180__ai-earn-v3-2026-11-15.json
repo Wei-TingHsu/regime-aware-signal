@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2026 (ended October 3, 2025)",
+  "revenue": "$2,308 million, up 21% sequentially",
+  "operating_income": "GAAP $176 million; Non-GAAP $245 million",
+  "net_income": "GAAP $112 million; Non-GAAP $181 million",
+  "eps": "GAAP diluted $0.75; Non-GAAP diluted $1.22",
+  "operating_cash_flow": "$488 million",
+  "capex": "$50 million (purchases of property, plant and equipment)",
+  "free_cash_flow": "$438 million (Adjusted free cash flow $448 million)",
+  "cash_and_investments": "$1,442 million cash and cash equivalents",
+  "total_debt": null,
+  "guidance_next": "Q2 FY2026 revenue $2.55B-$2.65B; Non-GAAP gross margin 41.0%-43.0%; Non-GAAP opex $450M-$475M; Non-GAAP diluted EPS $3.00-$3.40"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.5,
+   "reason": "NAND/memory pricing and demand strength implies similar tailwinds"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.4,
+   "reason": "Flash/NAND industry-wide demand and pricing improvement"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Hyperscaler datacenter qualification and demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Hyperscaler engagement for datacenter SSDs"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Hyperscale customer engagement driving datacenter revenue"
+  }
+ ],
+ "evidence": "Expect second quarter revenue to be in the range of $2.55 billion to $2.65 billion, with expected Non-GAAP diluted net income per share to be in the range of $3.00 to $3.40",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

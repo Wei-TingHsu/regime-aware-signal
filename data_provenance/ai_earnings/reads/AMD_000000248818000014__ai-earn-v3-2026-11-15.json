@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2017 (quarter ended Dec 30, 2017) and full-year 2017",
+  "revenue": "$1.48B Q4 (up 34% YoY, down 10% sequentially); $5.33B full-year (up 25% YoY)",
+  "operating_income": "$82M GAAP Q4 ($103M non-GAAP); $204M GAAP FY ($301M non-GAAP)",
+  "net_income": "$61M GAAP Q4 ($88M non-GAAP); $43M GAAP FY ($179M non-GAAP)",
+  "eps": "$0.06 GAAP diluted Q4 ($0.08 non-GAAP); $0.04 GAAP diluted FY ($0.17 non-GAAP)",
+  "operating_cash_flow": "$383M Q4; $68M full-year",
+  "capex": "$44M Q4; $113M full-year",
+  "free_cash_flow": "$339M Q4 (383-44); -$45M full-year (68-113)",
+  "cash_and_investments": "$1.185B cash and cash equivalents at quarter end, up $306M sequentially, down from $1.264B a year earlier",
+  "total_debt": "$1.395B ($70M short-term + $1.325B long-term net)",
+  "guidance_next": "Q1 2018 revenue expected ~$1.55B, plus or minus $50M, up 32% YoY, driven by Ryzen, GPU and EPYC ramp"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.3,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "EPYC and Ryzen gains, server share pressure"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Radeon Vega GPU momentum in gaming/pro graphics"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure deployed EPYC processors, cloud validation"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Memory demand tied to higher AMD system volumes"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "7nm product ramp signals increased foundry demand"
+  }
+ ],
+ "evidence": "Revenue of $1.48 billion was up 34 percent year-over-year... Revenue was down 10 percent sequentially... better than the roughly 15% sequential decline previously guided, with Q1 2018 guided up 32% year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

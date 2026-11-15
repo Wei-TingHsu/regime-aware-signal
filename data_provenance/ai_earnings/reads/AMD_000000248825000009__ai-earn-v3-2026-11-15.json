@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2024 (quarter ended Dec 28, 2024) and FY2024",
+  "revenue": "$7,658 million (record, up 24% YoY, up 12% QoQ)",
+  "operating_income": "GAAP $871 million; non-GAAP $2,026 million (record)",
+  "net_income": "GAAP $482 million; non-GAAP $1,777 million (record)",
+  "eps": "GAAP diluted $0.29; non-GAAP diluted $1.09",
+  "operating_cash_flow": "$1,299 million (Q4); $3,041 million (FY2024)",
+  "capex": "$208 million (Q4); $636 million (FY2024)",
+  "free_cash_flow": "$1,091 million (Q4, OCF-capex); $2,405 million (FY2024, OCF-capex)",
+  "cash_and_investments": "$3,787M cash + $1,345M short-term investments = $5,132M",
+  "total_debt": "$1,721 million long-term debt (no current portion), down from $2,468M a year ago",
+  "guidance_next": "Q1 2025 revenue approximately $7.1 billion, plus or minus $300 million (~30% YoY growth, ~7% sequential decline at midpoint); non-GAAP gross margin approximately 54%"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.4,
+ "own_stock": 0.2,
+ "market": 0.2,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD Instinct GPU ramp and Data Center growth of 69% YoY signals share gains in AI accelerators"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Ryzen/EPYC share gains in client and server CPUs continue to pressure Intel"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Record Data Center and Client volumes imply higher foundry demand for AMD's advanced-node chips"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Cloud/hyperscaler adoption of Instinct and EPYC supports AI infrastructure build-out"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader AI/data-center capex strength benefits custom silicon and networking peers"
+  }
+ ],
+ "evidence": "Fourth quarter revenue was a record $7.7 billion... Data Center segment revenue in the quarter was a record $3.9 billion, up 69% year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

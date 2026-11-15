@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 and FY2010 (ended Sept 2, 2010)",
+  "revenue": "$2.493 billion (Q4); $8.482 billion (FY)",
+  "operating_income": "$433 million (Q4); $1.589 billion (FY)",
+  "net_income": "$342 million (Q4); $1.850 billion (FY)",
+  "eps": "$0.32 diluted (Q4); $1.85 diluted (FY)",
+  "operating_cash_flow": "$1.1 billion (Q4, record); $3.096 billion (FY)",
+  "capex": "$616 million (FY, PP&E) plus $330 million equipment purchase contracts; ~$950 million total FY per release",
+  "free_cash_flow": "~$2.146 billion (FY op cash flow $3.096B minus PP&E capex $0.616B minus $0.330B equipment contracts, roughly $2.15B)",
+  "cash_and_investments": "$2.913 billion",
+  "total_debt": "$712 million current portion + $1.648 billion long-term = ~$2.36 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "IM Flash JV partner, NAND supply relationship"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "NAND Flash market competitor amid pricing declines"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor manufacturing peer, no direct mention"
+  }
+ ],
+ "evidence": "Company Achieves Historical Highs for Revenue, Income and Cash Flows in 2010 Fiscal Year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

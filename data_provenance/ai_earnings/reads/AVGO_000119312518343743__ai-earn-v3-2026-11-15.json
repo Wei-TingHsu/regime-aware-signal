@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and full fiscal year 2018 (quarter ended November 4, 2018)",
+  "revenue": "$5,444M GAAP Q4 (+12% YoY); $5,448M non-GAAP Q4; FY18 $20,848M GAAP (+18% YoY)",
+  "operating_income": "GAAP $1,652M (30.3% of revenue) Q4; non-GAAP $2,862M (52.5% of revenue) Q4",
+  "net_income": "GAAP $1,115M Q4; non-GAAP $2,546M Q4",
+  "eps": "GAAP diluted $2.64 Q4; non-GAAP diluted $5.85 Q4; FY18 GAAP $28.44, non-GAAP $20.82",
+  "operating_cash_flow": "$2,635M Q4",
+  "capex": "$106M Q4",
+  "free_cash_flow": "$2,529M Q4 (stated, up 47% YoY); FY18 $8,245M (stated)",
+  "cash_and_investments": "$4,292M cash and cash equivalents at quarter end",
+  "total_debt": null,
+  "guidance_next": "Qualitative only in text provided: CEO expects 'another year of double digit revenue growth' for FY2019 and 'operating margin to hit another record,' driven by sustained semiconductor demand plus newly acquired CA Technologies software business; specific FY19 numeric targets were cut off in the excerpt."
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.8,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "strong Broadcom semiconductor demand implies continued foundry utilization"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Broadcom enterprise storage/networking strength highlights competitive pressure"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "overlap in wired infrastructure/networking silicon markets"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "CA Technologies acquisition expands Broadcom into enterprise/mainframe software, challenging incumbents"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "broad semiconductor cycle strength signaled by Broadcom's double-digit growth outlook"
+  }
+ ],
+ "evidence": "Free cash flow for the fourth quarter of $2,529 million, up 47 percent from the prior year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

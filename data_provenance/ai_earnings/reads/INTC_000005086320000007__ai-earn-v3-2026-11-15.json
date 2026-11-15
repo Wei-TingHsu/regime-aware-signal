@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2019 / FY2019",
+  "revenue": "Q4: $20.2B; FY2019: $72.0B",
+  "operating_income": "Q4: $6.8B GAAP / $7.2B non-GAAP; FY2019: $22.0B GAAP / $23.8B non-GAAP",
+  "net_income": "Q4: $6.9B GAAP / $6.7B non-GAAP; FY2019: $21.0B GAAP / $21.8B non-GAAP",
+  "eps": "Q4: $1.58 GAAP / $1.52 non-GAAP; FY2019: $4.71 GAAP / $4.87 non-GAAP",
+  "operating_cash_flow": "FY2019: $33.1B (record)",
+  "capex": "FY2019: $16.2B (additions to PP&E)",
+  "free_cash_flow": "FY2019: $16.9B",
+  "cash_and_investments": "$13.1B total cash investments as of Dec 28, 2019",
+  "total_debt": "$3.7B short-term + $25.3B long-term = ~$29.0B",
+  "guidance_next": "Q1 2020 revenue ~$19.0B, GAAP EPS ~$1.23/non-GAAP ~$1.30; FY2020 revenue ~$73.5B, GAAP EPS ~$4.71/non-GAAP ~$5.00, capex ~$17.0B, non-GAAP FCF ~$16.5B"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "memory/NAND market read-through from NSG growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel CCG/DCG share and revenue beat signals competitive strength"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Intel foundry/process ramp commentary"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Habana Labs AI acquisition signals rising AI data-center investment"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud service provider demand driving DCG growth"
+  }
+ ],
+ "evidence": "Fourth-quarter revenue set an all-time quarterly record of $20.2 billion, which was $1 billion higher than October guidance",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

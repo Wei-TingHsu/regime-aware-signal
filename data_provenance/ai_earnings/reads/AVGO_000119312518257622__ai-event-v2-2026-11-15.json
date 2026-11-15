@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.2,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "CA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "target company closer to acquisition completion"
+  }
+ ],
+ "evidence": "Expiration of the waiting period under the HSR Act satisfies one of the conditions to the closing of the pending transaction",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

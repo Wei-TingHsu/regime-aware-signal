@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.2,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel raising debt to fund capex/foundry buildout while TSM self-funds more easily"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "Intel's rising leverage signals funding strain for manufacturing ambitions"
+  }
+ ],
+ "evidence": "the net proceeds from the offering are approximately $2.53 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

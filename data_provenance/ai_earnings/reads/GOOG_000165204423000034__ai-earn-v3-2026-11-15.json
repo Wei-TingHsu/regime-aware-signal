@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2023 (preliminary disclosure ahead of April 25 release)",
+  "revenue": null,
+  "operating_income": null,
+  "net_income": null,
+  "eps": null,
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "No new quantitative guidance; reiterates prior disclosed estimates of $1.9B-$2.3B severance/related charges and ~$0.5B office space exit costs mostly in Q1 2023, and ~$3.4B reduction in FY2023 depreciation from useful life change; notes Google DeepMind segment reporting change begins Q2 2023"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AI/cloud rivalry context via DeepMind consolidation"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud segment comparison relevant"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Self-referential accounting/segment restatement"
+  }
+ ],
+ "evidence": "this blog post may contain forward-looking statements...actual results may differ materially from the results predicted",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

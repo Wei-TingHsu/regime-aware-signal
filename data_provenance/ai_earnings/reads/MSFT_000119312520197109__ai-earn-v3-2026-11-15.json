@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2020 (quarter ended June 30, 2020)",
+  "revenue": "$38.0 billion, +13% YoY",
+  "operating_income": "$13.4 billion, +8% YoY",
+  "net_income": "$11.2 billion GAAP, -15% YoY (+5% non-GAAP)",
+  "eps": "$1.46 diluted GAAP, -15% YoY (+7% non-GAAP)",
+  "operating_cash_flow": "$18,673 million (quarter)",
+  "capex": "$4,744 million (additions to property and equipment, quarter)",
+  "free_cash_flow": "$13,929 million (18,673 - 4,744)",
+  "cash_and_investments": "$136,527 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$63,327 million (current portion $3,749M + long-term $59,578M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Azure growth of 47% signals cloud share gains vs AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Strong Azure/commercial cloud growth pressures Google Cloud competitive position"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Server/cloud services growth highlights competitive cloud infrastructure pressure"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Security/cloud ecosystem peer, limited direct read-through"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Datacenter/cloud capacity growth implies continued infrastructure/chip demand"
+  }
+ ],
+ "evidence": "\"Our commercial cloud surpassed $50 billion in annual revenue for the first time this year... Commercial bookings were better than expected, growing 12% year-over-year\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

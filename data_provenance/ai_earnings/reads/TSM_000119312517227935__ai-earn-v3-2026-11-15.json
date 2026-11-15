@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2017 (quarter ended June 30, 2017)",
+  "revenue": "NT$213.86 billion (vs. guidance of NT$213-216B)",
+  "operating_income": "implied NT$83.22 billion (38.9% operating margin)",
+  "net_income": "NT$66.27 billion",
+  "eps": "NT$2.56 per share",
+  "operating_cash_flow": "NT$103.40 billion",
+  "capex": "NT$105.19 billion",
+  "free_cash_flow": "-NT$1.79 billion",
+  "cash_and_investments": "NT$658.95 billion (33.2% of total assets)",
+  "total_debt": "NT$99.32 billion long-term interest-bearing debt",
+  "guidance_next": "3Q17 revenue expected US$8.12-8.22 billion; at FX 30.3 NT$/USD, gross margin 48.5%-50.5%, operating margin 37%-39%"
+ },
+ "results_vs_prior_guidance": -0.1,
+ "guidance_change": 0.3,
+ "fcf_trend": -0.3,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "benefits from TSMC capacity expansion"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "relies on TSMC advanced nodes"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "depends on TSMC leading-edge output"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's rising revenue guidance implies foundry share gains"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "self"
+  }
+ ],
+ "evidence": "Revenue to be between US$ 8.12 billion and US$ 8.22 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

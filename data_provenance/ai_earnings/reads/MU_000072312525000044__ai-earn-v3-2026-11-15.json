@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2026 (ended November 27, 2025)",
+  "revenue": "$13.643 billion",
+  "operating_income": "$6.136 billion GAAP / $6.419 billion non-GAAP",
+  "net_income": "$5.240 billion GAAP / $5.482 billion non-GAAP",
+  "eps": "$4.60 GAAP diluted / $4.78 non-GAAP diluted",
+  "operating_cash_flow": "$8.411 billion",
+  "capex": "$5.389 billion (gross); $4.505 billion net of government incentives/proceeds",
+  "free_cash_flow": "$3.906 billion (adjusted FCF, as stated)",
+  "cash_and_investments": "$12.0 billion (cash, marketable investments, restricted cash)",
+  "total_debt": "$11.756 billion ($569M current + $11.187B long-term)",
+  "guidance_next": "FQ2-26: Revenue $18.70B \u00b1 $400M; GAAP gross margin 67.0% \u00b1 1.0% (Non-GAAP 68.0% \u00b1 1.0%); GAAP opex $1.56B \u00b1 $20M (Non-GAAP $1.38B \u00b1 $20M); GAAP diluted EPS $8.19 \u00b1 $0.20 (Non-GAAP $8.42 \u00b1 $0.20)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 0.9,
+ "market": 0.6,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.5,
+   "reason": "Memory pricing/demand tailwind lifts all DRAM/NAND makers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "HBM/AI memory demand surge supports GPU ecosystem buildout"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AI accelerator demand drives memory attach and vice versa"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Broader AI infrastructure semiconductor demand confirmed"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Capacity/capex strength signals robust AI chip volume outlook"
+  }
+ ],
+ "evidence": "Our Q2 outlook reflects substantial records across revenue, gross margin, EPS and free cash flow, and we anticipate our business performance to continue strengthening through fiscal 2026.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

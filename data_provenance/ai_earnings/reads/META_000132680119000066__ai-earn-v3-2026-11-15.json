@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q3 2019 (quarter ended September 30, 2019)",
+  "revenue": "$17,652 million (+29% YoY)",
+  "operating_income": "$7,185 million (41% margin, down from 42%)",
+  "net_income": "$6,091 million (+19% YoY)",
+  "eps": "$2.12 diluted (+20% YoY)",
+  "operating_cash_flow": "$9,307 million",
+  "capex": "$3,532 million (property & equipment, net); $3.68 billion including finance lease principal payments",
+  "free_cash_flow": "$5,631 million (as stated)",
+  "cash_and_investments": "$52.27 billion (cash & cash equivalents + marketable securities)",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "strong digital ad growth signals healthy ad market broadly"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "ad revenue strength implies competitive digital ad spend environment"
+  }
+ ],
+ "evidence": "Total revenue $17,652 ... 29% [YoY growth], with free cash flow rising to $5,631 million from $4,153 million a year earlier",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

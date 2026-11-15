@@ -1,0 +1,48 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.7,
+ "fcf_outlook": -0.4,
+ "uncertainty": 0.8,
+ "own_stock": -0.7,
+ "market": -0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "reason": "similar China data center GPU exposure, may face same restrictions"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "lower foundry demand if NVDA China sales curtailed"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "could gain relative share if NVDA constrained in China"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "cloud customers may face supply constraints for AI chips"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "AI infrastructure buyers affected by export curbs"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "data center GPU procurement from China-bound units affected"
+  }
+ ],
+ "evidence": "The Company\u2019s outlook for its third fiscal quarter provided on August 24, 2022 included approximately $400 million in potential sales to China which may be subject to the new license requirement",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

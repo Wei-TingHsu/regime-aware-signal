@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2027 (ended April 30, 2026)",
+  "revenue": "$1.39 billion total revenue (GAAP), up 26% YoY; subscription revenue $1.32 billion",
+  "operating_income": "GAAP loss from operations $(30.6) million; Non-GAAP income from operations $325.7 million",
+  "net_income": "GAAP net income attributable to CrowdStrike $27.8 million; Non-GAAP net income attributable to CrowdStrike $283.4 million",
+  "eps": "GAAP diluted EPS $0.11; Non-GAAP diluted EPS $1.10",
+  "operating_cash_flow": "$590.9 million (record)",
+  "capex": "$120.2 million (property & equipment $97.6M + capitalized internal-use software $22.6M)",
+  "free_cash_flow": "$468.5 million (record, as stated)",
+  "cash_and_investments": "$4.55 billion cash and cash equivalents as of April 30, 2026",
+  "total_debt": "$745.8 million long-term debt",
+  "guidance_next": "Q2 FY27: ARR $5,792.6-$5,794.6M; revenue $1,436.0-$1,442.0M; Non-GAAP operating income $345.6-$349.1M; Non-GAAP net income $300.7-$303.4M; Non-GAAP diluted EPS $1.16-$1.17. FY27 (raised): ARR $6,531.7-$6,555.5M; revenue $5,914.7-$5,958.7M; Non-GAAP operating income $1,452.3-$1,480.3M; Non-GAAP net income $1,263.1-$1,285.2M; Non-GAAP diluted EPS $4.88-$4.96; net new ARR growth guidance raised ~520bps to 27.7% at midpoint"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.8,
+ "own_stock": 0.8,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "Charlotte AI AgentWorks Ecosystem co-built with NVIDIA; AI PC telemetry collaboration"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Falcon OverWatch for Defender integration signals coexistence/competition in endpoint security"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Named Google Cloud Security Partner of the Year; CDR expansion to Google Cloud and Agent Cloud Ecosystem"
+  },
+  {
+   "company": "AMZN",
+   "relation": "partner",
+   "direction": 0.3,
+   "reason": "AWS co-developed Charlotte AI AgentWorks Ecosystem"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Expanded collaboration to optimize Falcon platform for AI PCs via silicon-level telemetry"
+  }
+ ],
+ "evidence": "CrowdStrike delivered strong Q1 results, exceeding expectations across all guided metrics while accelerating growth and expanding profitability and cash flow.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

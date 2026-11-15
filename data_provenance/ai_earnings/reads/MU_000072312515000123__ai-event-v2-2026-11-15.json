@@ -1,0 +1,19 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.2,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Nanya Technology",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "gains option to license advanced Micron DRAM process technology"
+  }
+ ],
+ "evidence": "Micron will receive an equity stake in Nanya and also royalties based on revenues from products implementing the technology",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2022 (preliminary)",
+  "revenue": "~$5.6 billion",
+  "operating_income": null,
+  "net_income": null,
+  "eps": null,
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AMD PC weakness implies broader x86 client market softness, possibly shared"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Data center GPU demand reportedly strong, in-line, suggesting healthy AI/data center segment"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.3,
+   "reason": "PC inventory correction signals weaker memory demand from PC supply chain"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Lower AMD unit shipments reduce foundry demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Broader semiconductor demand softness signal from PC inventory correction"
+  }
+ ],
+ "evidence": "Preliminary third quarter revenue of approximately $5.6 billion, lower than prior outlook of $6.7 billion plus or minus $200 million, primarily due to weaker Client segment revenue",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

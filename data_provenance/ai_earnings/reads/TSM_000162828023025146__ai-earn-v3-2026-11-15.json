@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2023 (quarter ended June 30, 2023)",
+  "revenue": "NT$480.84 billion / US$15.68 billion",
+  "operating_income": "NT$201.96 billion (operating margin 42.0%)",
+  "net_income": "NT$181.80 billion",
+  "eps": "NT$7.01 (US$1.14 per ADR unit)",
+  "operating_cash_flow": "NT$167.25 billion",
+  "capex": "NT$250.53 billion",
+  "free_cash_flow": "-NT$83.28 billion",
+  "cash_and_investments": "NT$1,489.96 billion (cash & marketable securities)",
+  "total_debt": "NT$907.32 billion long-term interest-bearing debt",
+  "guidance_next": "Q3 2023 revenue expected US$16.7-17.5 billion; gross profit margin 51.5%-53.5%; operating profit margin 38%-40% (at NT$30.8/US$1)"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.5,
+ "fcf_trend": -0.4,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "HPC platform strength tied to AI chip demand on advanced nodes"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "benefits from 3nm/5nm ramp capacity"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "advanced packaging and HPC demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's leading-edge ramp pressures foundry competition"
+  },
+  {
+   "company": "AAPL",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "smartphone platform remains largest revenue share, 3nm ramp benefits iPhone chips"
+  }
+ ],
+ "evidence": "revenue is expected to be between US$16.7 billion and US$17.5 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

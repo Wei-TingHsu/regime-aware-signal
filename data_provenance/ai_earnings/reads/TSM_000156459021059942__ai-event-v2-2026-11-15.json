@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "strong foundry demand signals healthy chip supply for NVDA orders"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "TSMC capacity growth supports AMD's leading-edge node access"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "continued TSMC revenue growth implies stable fab capacity for AVGO"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC's accelerating revenue underscores its foundry lead over Intel"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "broad semiconductor demand strength reflected in TSMC's growth"
+  }
+ ],
+ "evidence": "revenue for November 2021 was approximately NT$148.27 billion, an increase of 10.2 percent from October 2021 and an increase of 18.7 percent from November 2020",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

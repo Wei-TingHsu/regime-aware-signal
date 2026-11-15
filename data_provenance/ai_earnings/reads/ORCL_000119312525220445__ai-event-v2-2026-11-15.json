@@ -1,0 +1,37 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.5,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.3,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "cloud infra rival unaffected directly"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "cloud infra rival unaffected directly"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "cloud infra rival unaffected directly"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "debt funds capex incl. GPU purchases"
+  }
+ ],
+ "evidence": "net proceeds of the offering will be used for general corporate purposes, which may include capital expenditures, repayment of indebtedness, future investments or acquisitions and payment of cash dividends on or repurchases",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

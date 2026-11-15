@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.05,
+ "uncertainty": -0.05,
+ "own_stock": 0.05,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "foundry demand trend indicator"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "TSMC capacity/demand signal for fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "TSMC foundry demand trend"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "TSMC foundry demand trend"
+  }
+ ],
+ "evidence": "Full-year sales for 2010 totaled NT$406.96 billion, an increase of 42.4 percent compared to 2009.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

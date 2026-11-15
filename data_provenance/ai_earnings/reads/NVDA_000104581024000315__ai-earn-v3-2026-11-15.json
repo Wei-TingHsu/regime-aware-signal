@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY25 (quarter ended October 27, 2024)",
+  "revenue": "$35,082 million (up 17% Q/Q, up 94% Y/Y)",
+  "operating_income": "$21,869 million GAAP; $23,276 million non-GAAP",
+  "net_income": "$19,309 million GAAP; $20,010 million non-GAAP",
+  "eps": "$0.78 diluted GAAP; $0.81 non-GAAP",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$38,487 million",
+  "total_debt": "$8,462 million long-term debt (no short-term debt)",
+  "guidance_next": "Q4 FY25 revenue expected to be $37.5 billion, plus or minus 2%; GAAP/non-GAAP gross margins expected to be 73.0%/73.5%, plus or minus 50bps; GAAP/non-GAAP opex expected to be approximately $4.8B/$3.4B; other income/expense expected to be income of approximately $400 million; tax rates expected to be 16.5%, plus or minus 1%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Blackwell in full production, manufacturing scale-up"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NVDA data center dominance widening"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Azure deploying H200 instances"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "AWS deploying H200 instances"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "memory demand tied to AI server buildout"
+  }
+ ],
+ "evidence": "Record quarterly revenue of $35.1 billion, up 17% from Q2 and up 94% from a year ago",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

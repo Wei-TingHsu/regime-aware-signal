@@ -1,0 +1,31 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.2,
+ "own_stock": 0.05,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "NXPI",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "secures capacity and equity stake in European fab"
+  },
+  {
+   "company": "IFX",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "co-investor, strengthens Dresden ecosystem"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC expands European foundry footprint against Intel's own EU fab plans"
+  }
+ ],
+ "evidence": "Total investments are expected to exceed 10 billion euros consisting of equity injection, debt borrowing, and strong support from the European Union and German government.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

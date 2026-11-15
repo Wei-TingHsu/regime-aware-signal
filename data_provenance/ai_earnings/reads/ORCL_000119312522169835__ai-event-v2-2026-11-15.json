@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.65,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.45,
+ "own_stock": -0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "Oracle expands healthcare cloud footprint, competing for enterprise cloud workloads"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "Oracle gains healthcare data/cloud scale via Cerner"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "AWS faces stronger Oracle healthcare cloud competitor"
+  }
+ ],
+ "evidence": "completed its acquisition of Cerner Corporation ... at a price of $95.00 per Share",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

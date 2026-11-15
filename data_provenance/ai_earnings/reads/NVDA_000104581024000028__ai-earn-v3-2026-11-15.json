@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY24 (quarter ended January 28, 2024) and full fiscal year 2024",
+  "revenue": "$22.103 billion (Q4), $60.922 billion (FY24)",
+  "operating_income": "$13.615 billion GAAP / $14.749 billion non-GAAP (Q4); $32.972 billion GAAP / $37.134 billion non-GAAP (FY24)",
+  "net_income": "$12.285 billion GAAP / $12.839 billion non-GAAP (Q4); $29.760 billion GAAP / $32.312 billion non-GAAP (FY24)",
+  "eps": "$4.93 GAAP / $5.16 non-GAAP diluted (Q4); $11.93 GAAP / $12.96 non-GAAP diluted (FY24)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$25.984 billion",
+  "total_debt": null,
+  "guidance_next": "Q1 FY25 revenue expected to be $24.0 billion, plus or minus 2%; GAAP and non-GAAP gross margins expected to be 76.3% and 77.0% respectively, plus or minus 50bps; GAAP and non-GAAP operating expenses expected to be approximately $3.5 billion and $2.5 billion; other income/expense expected to be income of approximately $250 million; GAAP and non-GAAP tax rates expected to be 17.0%, plus or minus 1%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "validates AI accelerator market size, intensifies competitive pressure"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.8,
+   "reason": "surging GPU demand drives foundry/CoWoS capacity needs"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.7,
+   "reason": "HBM memory demand tied directly to data center GPU growth"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "cloud/AI infrastructure buildout implies continued large GPU purchases"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Gemma collaboration and DGX Cloud expansion signal deepening AI infrastructure spend"
+  }
+ ],
+ "evidence": "Revenue is expected to be $24.0 billion, plus or minus 2%.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

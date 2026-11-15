@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2019 (three months ended September 30, 2019)",
+  "revenue": "$40,499 million",
+  "operating_income": "$9,177 million",
+  "net_income": "$7,068 million",
+  "eps": "$10.12 diluted",
+  "operating_cash_flow": "$15,466 million",
+  "capex": "$6,732 million",
+  "free_cash_flow": "$8,734 million",
+  "cash_and_investments": "$121,177 million (cash, cash equivalents, and marketable securities)",
+  "total_debt": "$4,082 million (long-term debt)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud growth highlighted as competitive area"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud and ad competition"
+  },
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Digital ad market overlap"
+  }
+ ],
+ "evidence": "revenues of $40.5 billion, up 20% versus the third quarter of 2018",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

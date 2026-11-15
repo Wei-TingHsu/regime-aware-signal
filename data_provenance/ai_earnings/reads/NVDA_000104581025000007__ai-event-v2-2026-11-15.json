@@ -1,0 +1,49 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.6,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.6,
+ "own_stock": -0.4,
+ "market": -0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Similarly subject to worldwide AI chip export licensing regime"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Foundry diligence requirements and export restriction could affect chip volumes"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Hyperscaler customer facing new licensing requirements for GPU deployment abroad"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Cloud customer affected by worldwide licensing on AI systems"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Cloud customer affected by worldwide licensing on AI systems"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Also subject to similar ECCN export controls on AI chips"
+  }
+ ],
+ "evidence": "the IFR will, unless modified, impose a worldwide licensing requirement on all products classified under Export Control Classification Numbers...including but not limited to: A100, A800, H100, H200, H800, B100, B200, GB200, L4, L40S, and RTX 6000 Ada",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

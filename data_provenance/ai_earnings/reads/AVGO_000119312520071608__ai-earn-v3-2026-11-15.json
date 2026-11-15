@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2020 (ended February 2, 2020)",
+  "revenue": "$5,858 million",
+  "operating_income": null,
+  "net_income": "$385 million GAAP; $2,370 million non-GAAP",
+  "eps": "$0.74 GAAP diluted; $5.25 non-GAAP diluted",
+  "operating_cash_flow": "$2,322 million",
+  "capex": "$108 million",
+  "free_cash_flow": "$2,214 million",
+  "cash_and_investments": "$6,444 million cash and cash equivalents",
+  "total_debt": "$44,718 million (current portion $2,311M + long-term $42,407M)",
+  "guidance_next": "Second quarter FY2020 revenue guidance of $5.7 billion plus or minus $150 million; Adjusted EBITDA guidance of $3,135 million plus or minus $75 million (~55% of revenue); prior FY2020 annual guidance withdrawn"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.6,
+ "fcf_trend": 0.3,
+ "own_stock": -0.3,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Broadcom cites improving semiconductor backdrop but COVID uncertainty clouds sector demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Semiconductor supply chain uncertainty from COVID-19 could affect foundry demand"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Broader semiconductor demand visibility concerns"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "Company withdrew annual guidance citing demand uncertainty"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Infrastructure software segment growth tied to enterprise IT spending trends"
+  }
+ ],
+ "evidence": "visibility in our global markets is lacking and demand uncertainty is intensifying. As a result, we believe it prudent to withdraw our annual guidance until visibility returns to pre COVID-19 levels.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

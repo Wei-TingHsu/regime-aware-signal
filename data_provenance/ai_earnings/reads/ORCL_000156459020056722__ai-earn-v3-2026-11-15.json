@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 FY2021 (three months ended November 30, 2020)",
+  "revenue": "$9.8 billion, up 2% YoY",
+  "operating_income": "GAAP $3,583 million (37% margin), up 13%; Non-GAAP $4.6 billion, up 14%",
+  "net_income": "GAAP $2,442 million, up 6%",
+  "eps": "GAAP diluted $0.80, up 16%; Non-GAAP $1.06, up 19%",
+  "operating_cash_flow": "$7,341 million for six months ended Nov 30, 2020 (trailing 4-quarter GAAP operating cash flow $13,967 million)",
+  "capex": "$1,004 million for six months (trailing 4-quarter $1,833 million)",
+  "free_cash_flow": "Trailing 4-quarter free cash flow $12,134 million (up 1% YoY)",
+  "cash_and_investments": "$28,001 million cash and cash equivalents plus $10,592 million marketable securities as of Nov 30, 2020",
+  "total_debt": "Notes payable current $7,251 million plus non-current $63,531 million = approximately $70.8 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Ellison claims more datacenters than AWS"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "SaaS ERP satisfaction ranked above Microsoft per IDC survey"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  }
+ ],
+ "evidence": "GAAP EPS up 16% to $0.80, Non-GAAP EPS up 19% to $1.06, with Gen2 Cloud Infrastructure revenue up over 100%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2019 (three months ended March 31, 2019)",
+  "revenue": "$15,077 million, up 26% YoY",
+  "operating_income": "$3,317 million (includes $3.0B FTC legal accrual); ex-accrual operating margin would be 20pp higher",
+  "net_income": "$2,429 million, down 51% YoY",
+  "eps": "$0.85 diluted (would have been $1.89 ex-FTC accrual, i.e., $1.04 higher)",
+  "operating_cash_flow": "$9,308 million",
+  "capex": "$3,837 million (purchases of property and equipment, net); $3.96 billion including finance lease principal payments",
+  "free_cash_flow": "$5,346 million (as stated)",
+  "cash_and_investments": "$45.24 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "digital ad market peer"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "competes for digital ad spend"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "large-cap tech peer sentiment"
+  }
+ ],
+ "evidence": "Total revenue $15,077 ... 26% increase YoY, with free cash flow of $5,346 million, up from $5,048 million a year earlier, despite absorbing a $3.0 billion one-time legal accrual",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

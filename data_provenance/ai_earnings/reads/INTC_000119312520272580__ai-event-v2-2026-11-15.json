@@ -1,0 +1,37 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.45,
+ "fcf_outlook": 0.3,
+ "uncertainty": 0.25,
+ "own_stock": 0.3,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "SKHY",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "acquires NAND assets for $9B, boosts scale"
+  },
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "SK hynix becomes stronger NAND/SSD competitor"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "SK hynix NAND scale increases competitive pressure"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  }
+ ],
+ "evidence": "this transaction will allow us to further prioritize our investments in differentiated technology where we can play a bigger role in the success of our customers and deliver attractive returns to our stockholders",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

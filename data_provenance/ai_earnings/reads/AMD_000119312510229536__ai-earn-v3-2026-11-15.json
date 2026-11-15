@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2010 (quarter ended Sept 25, 2010)",
+  "revenue": "$1.62 billion (down 2% sequentially, up 16% YoY)",
+  "operating_income": "$128M GAAP; $144M non-GAAP",
+  "net_income": "net loss of $118M attributable to common stockholders (GAAP); non-GAAP net income $108M",
+  "eps": "$(0.17) GAAP diluted; $0.15 non-GAAP",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$1.73 billion cash, cash equivalents and marketable securities",
+  "total_debt": "~$780M of 6.00% Convertible Senior Notes outstanding; $500M of new 7.75% Senior Notes due 2020 issued",
+  "guidance_next": "AMD expects revenue to be approximately flat sequentially for the fourth quarter of 2010."
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": -1,
+ "fcf_trend": -0.3,
+ "own_stock": -0.5,
+ "market": -0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AMD cites Intel competitive pressure and weaker PC demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "not addressed"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "not addressed"
+  }
+ ],
+ "evidence": "weaker than expected consumer demand",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

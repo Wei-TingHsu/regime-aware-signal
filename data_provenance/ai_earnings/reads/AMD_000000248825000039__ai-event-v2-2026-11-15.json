@@ -1,0 +1,49 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.6,
+ "fcf_outlook": -0.35,
+ "uncertainty": 0.7,
+ "own_stock": -0.6,
+ "market": -0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "Same export control regime likely hits NVDA's China AI chip sales"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.15,
+   "reason": "Reduced MI308 volumes could lower foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Hyperscaler AI chip customers may face supply/roadmap uncertainty"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Potential buyer of MI308 for AI infrastructure affected"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "AI chip customer exposure to China restrictions"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Broader chip sector exposed to China export curbs"
+  }
+ ],
+ "evidence": "The Company expects that the Export Control may result in charges of up to approximately $800 million in inventory, purchase commitments and related reserves.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

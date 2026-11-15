@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2026 (quarter ended September 30, 2026)",
+  "revenue": "$127,577 million (up 25% YoY)",
+  "operating_income": "$40,576 million (operating margin 31.8%)",
+  "net_income": "$26,170 million available to common stockholders (GAAP net income $26,468 million)",
+  "eps": "$2.12 diluted (vs $2.87 prior-year quarter)",
+  "operating_cash_flow": "$42,290 million for the quarter",
+  "capex": "$51,355 million (purchases of property and equipment)",
+  "free_cash_flow": "-$9,065 million for the quarter; TTM free cash flow $19,747 million",
+  "cash_and_investments": "$265,098 million total cash, cash equivalents, and marketable securities (vs $126,843 million at Dec 31, 2025)",
+  "total_debt": "$125,102 million long-term debt (vs $46,547 million at Dec 31, 2025)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.4,
+ "own_stock": 0.6,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TPU systems sales cited as meaningful contributor, signaling in-house AI chip substitution"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Google Cloud's 103% growth intensifies cloud/AI infrastructure competition"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "GCP's record growth pressures AWS competitive positioning in AI cloud"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Rising TPU systems sales imply higher foundry orders for custom AI silicon"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Massive capex ramp ($51B/qtr) for AI data centers boosts memory demand"
+  }
+ ],
+ "evidence": "Google Cloud delivered record growth as revenues increased 103% to $30.7 billion, led by strong growth in Google Cloud Platform (GCP) across enterprise AI infrastructure and enterprise AI solutions",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,49 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.7,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.4,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "Kroger",
+   "relation": "competitor",
+   "direction": -0.6,
+   "reason": "grocery competition intensifies"
+  },
+  {
+   "company": "Costco",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "grocery competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "ecommerce/retail scale race"
+  },
+  {
+   "company": "Walmart",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "grocery and ecommerce competition"
+  },
+  {
+   "company": "Target",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "grocery/retail competition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "not directly affected"
+  }
+ ],
+ "evidence": "will be converted into the right to receive $42.00 per Whole Foods Market Share in cash, without interest",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

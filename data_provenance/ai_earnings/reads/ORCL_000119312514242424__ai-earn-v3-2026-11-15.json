@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2014 (quarter ended May 31, 2014)",
+  "revenue": "$11.3 billion, up 3% YoY",
+  "operating_income": "GAAP $4,909 million (down 2%); non-GAAP $5,800 million (up 3%)",
+  "net_income": "GAAP $3,646 million, down 4%",
+  "eps": "GAAP diluted $0.80 (flat); non-GAAP diluted $0.92 (up 6%)",
+  "operating_cash_flow": "$14,921 million (trailing twelve months, GAAP)",
+  "capex": "$580 million (quarter); $580 million TTM component shown",
+  "free_cash_flow": "$14,341 million (trailing twelve months)",
+  "cash_and_investments": "$17,769 million cash and equivalents plus $21,050 million marketable securities = $38,819 million",
+  "total_debt": "$1,508 million current notes payable + $22,667 million non-current notes payable = $24,175 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "CRM",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Oracle claims #2 SaaS position behind salesforce.com"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud/enterprise software competitor"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "IaaS competitor mentioned indirectly via cloud infrastructure growth"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud platform competitor"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  }
+ ],
+ "evidence": "GAAP operating income was down 2% to $4.9 billion... GAAP net income was down 4% to $3.6 billion, while GAAP earnings per share were unchanged at $0.80",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

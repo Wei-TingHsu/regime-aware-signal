@@ -1,0 +1,25 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.2,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.1,
+ "own_stock": 0.05,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "Sony",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "JV controlling shareholder, leads image sensor tech"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "not directly involved"
+  }
+ ],
+ "evidence": "TSMC plans to make cash contributions of approximately 282 billion yen",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

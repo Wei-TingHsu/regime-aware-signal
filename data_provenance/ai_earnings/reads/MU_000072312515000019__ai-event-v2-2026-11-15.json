@@ -1,0 +1,19 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.4,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "secures Micron DRAM supply pipeline, strengthening competitive position"
+  }
+ ],
+ "evidence": "Inotera will sell to Micron all of the DRAM products manufactured by Inotera",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

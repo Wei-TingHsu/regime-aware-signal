@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2012",
+  "revenue": "$12.9B, flat YoY, down 7% sequentially",
+  "operating_income": "$3.8B, down 8% YoY, down 17% sequentially",
+  "net_income": "$2.7B, down 13% YoY, down 19% sequentially",
+  "eps": "$0.53 GAAP (down 5% YoY); $0.56 non-GAAP",
+  "operating_cash_flow": "approximately $3.0B",
+  "capex": "$3.0B",
+  "free_cash_flow": "approximately $0B (OCF $3.0B - capex $3.0B)",
+  "cash_and_investments": "$13.8B total cash investments, down $1.1B sequentially",
+  "total_debt": null,
+  "guidance_next": "Q2 2012 revenue expected $13.6B +/- $500M (up 5% sequentially); gross margin ~62% +/- a couple points; full year 2012 revenue still expected to grow high single digits; full year gross margin still ~64% +/- a few points; R&D/MG&A spending ~$18.3B +/- $200M; capex still ~$12.5B +/- $400M; tax rate 28% for remaining quarters"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.1,
+ "fcf_trend": -0.3,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel PC/server margins stable, implies competitive pressure persists"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Memory demand tied to PC supply chain recovery as HDD shortages ease"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Foundry dynamics as Intel ramps 22nm internally"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "PC client recovery tied to Windows ecosystem demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Data center group flat YoY, modest cloud infrastructure signal"
+  }
+ ],
+ "evidence": "Revenue is expected to be $13.6B, plus or minus $500M in the second quarter... This increase is better than the average seasonal decline of down 1%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q3 FY2016 (quarter ended Feb 29, 2016)",
+  "revenue": "$9.0 billion total revenue, down 3% in USD, up 1% constant currency",
+  "operating_income": "$3.0 billion GAAP (34% margin); $3.8 billion non-GAAP (42% margin)",
+  "net_income": "$2.1 billion GAAP; $2.7 billion non-GAAP",
+  "eps": "$0.50 GAAP diluted; $0.64 non-GAAP diluted",
+  "operating_cash_flow": "$14.1 billion trailing twelve months",
+  "capex": "$1,606 million trailing twelve months (implied); 9-month capex $1,009 million",
+  "free_cash_flow": "$12,508 million trailing twelve months",
+  "cash_and_investments": "$15,583 million cash and equivalents + $35,184 million marketable securities = ~$50.8 billion",
+  "total_debt": "$40,106 million notes payable non-current (no current notes payable)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "CRWD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Oracle claims SaaS deferred revenue growth outpacing Salesforce.com"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self-reference, not applicable"
+  }
+ ],
+ "evidence": "Cloud SaaS and PaaS revenue growth rate accelerated to 61% in constant currency in Q3, exceeding the prior guidance of nearly 50%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

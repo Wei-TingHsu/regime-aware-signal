@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2024 (quarter ended March 31, 2024)",
+  "revenue": "$143.3 billion, up 13% YoY",
+  "operating_income": "$15.3 billion (vs $4.8 billion Q1 2023)",
+  "net_income": "$10.4 billion",
+  "eps": "$0.98 diluted",
+  "operating_cash_flow": "$99.1 billion trailing twelve months",
+  "capex": "$14.925 billion in the quarter (purchases of property and equipment); $53.447 billion TTM",
+  "free_cash_flow": "$50.1 billion TTM (vs -$3.3 billion TTM prior year)",
+  "cash_and_investments": "$72.852 billion cash and equivalents + $12.222 billion marketable securities = ~$85.1 billion",
+  "total_debt": "$57.634 billion long-term debt (plus short-term debt not separately itemized here)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS reacceleration vs Azure cloud competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Cloud and ad competition with Google Cloud/Ads"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "AWS AI capacity growth implies more chip demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Data center buildout implies memory demand"
+  },
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Advertising growth competition"
+  }
+ ],
+ "evidence": "the appeal of AWS\u2019s AI capabilities is reaccelerating AWS\u2019s growth rate (now at a $100 billion annual revenue run rate)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,37 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.2,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "rival foundry/IDM also investing in EUV via ASML, intensifies race"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from advanced node roadmap progress"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "future advanced chips depend on EUV availability"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "relies on TSMC leading-edge process roadmap"
+  }
+ ],
+ "evidence": "an investment amount of \u20ac838 million in ASML to acquire a 5% of its equity; and to commit \u20ac276 million, spread over 5 years",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

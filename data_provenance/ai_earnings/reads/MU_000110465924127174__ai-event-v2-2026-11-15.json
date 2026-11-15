@@ -1,0 +1,43 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.35,
+ "fcf_outlook": 0.4,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "US fab subsidy precedent benefits domestic manufacturing push"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "similar CHIPS Act grant recipient, validates program"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "memory supply security from subsidized US capacity"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "benefits from stable domestic memory supply"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "MU gains cost advantage via grants for US fabs"
+  }
+ ],
+ "evidence": "the Department has awarded Micron Idaho a grant in a maximum funding amount of $1.5 billion ... grants in a maximum funding amount of $4.6 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2018 (quarter ended Sept 30, 2018)",
+  "revenue": "NT$260.35 billion (US$8.49 billion)",
+  "operating_income": "NT$95.245 billion (operating margin 36.6%)",
+  "net_income": "NT$89.072 billion",
+  "eps": "NT$3.44 (US$0.56 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2018 revenue expected US$9.35-9.45 billion; gross margin 47-49%; operating margin 36-38%, at NT$30.8/US$"
+ },
+ "results_vs_prior_guidance": -0.2,
+ "guidance_change": 0.6,
+ "fcf_trend": 0,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "benefits from TSMC 7nm capacity ramp"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC 7nm lead widens process gap"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "relies on TSMC advanced nodes"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "strong Q4 guidance signals robust foundry demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "uses TSMC advanced process for GPUs"
+  }
+ ],
+ "evidence": "Based on our current business outlook, management expects... Revenue is expected to be between US$9.35 billion and US$9.45 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,25 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.3,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.2,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GLOBALFOUNDRIES",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "locks in $1.2B 2014 wafer purchase commitment"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "no direct impact"
+  }
+ ],
+ "evidence": "The 2014 amendment does not impact AMD\u2019s 2014 financial goals including gross margin.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

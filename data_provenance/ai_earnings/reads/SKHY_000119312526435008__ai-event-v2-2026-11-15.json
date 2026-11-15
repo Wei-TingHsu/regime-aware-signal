@@ -1,0 +1,43 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.7,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.2,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "memory peer benefits from sector capital return signaling strong cash generation"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "NAND peer, read-through on memory pricing/cycle strength"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "foundry supplier benefits from strong memory capex/cash flow"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "HBM customer, signals memory supply strength supporting AI chips"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "HBM customer benefiting from stable memory supply"
+  }
+ ],
+ "evidence": "Expected Size of Shareholder Returns for Fiscal Year 2026: Approximately Won 100 trillion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

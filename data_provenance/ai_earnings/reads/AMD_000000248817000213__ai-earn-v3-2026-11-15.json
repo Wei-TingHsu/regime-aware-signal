@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2017 (quarter ended September 30, 2017)",
+  "revenue": "$1.64 billion GAAP, up 26% YoY and 34% sequentially",
+  "operating_income": "$126 million GAAP; $155 million non-GAAP",
+  "net_income": "$71 million GAAP; $110 million non-GAAP",
+  "eps": "$0.07 GAAP diluted; $0.10 non-GAAP diluted",
+  "operating_cash_flow": "$66 million (three months ended Sept 30, 2017)",
+  "capex": "$34 million (purchases of property, plant and equipment, three months)",
+  "free_cash_flow": "$32 million (operating cash flow $66M minus capex $34M)",
+  "cash_and_investments": "$879 million cash and cash equivalents (vs $844M prior quarter including marketable securities)",
+  "total_debt": "Short-term debt $70M; Long-term debt, net $1,356M (total ~$1,426M)",
+  "guidance_next": "Q4 2017 revenue expected to decrease approximately 15% sequentially, plus or minus 3%, implying approximately 26% YoY growth at midpoint; full-year 2017 revenue now expected to grow greater than 20%, up from prior guidance of mid-to-high teens percentage"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "AMD GPU/Radeon and EPYC datacenter wins pressure Nvidia's graphics/datacenter share"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Ryzen and EPYC share gains in desktop and server CPU markets at Intel's expense"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "AWS adopted AMD Radeon Pro MxGPU for cloud graphics instances"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Microsoft Azure collaboration on AMD EPYC processors"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "AMD sourcing additional foundry wafers outside GlobalFoundries as volumes rise"
+  }
+ ],
+ "evidence": "Revenue was $1.64 billion, up 26 percent year-over-year... AMD now expects annual 2017 revenue to increase by greater than 20 percent, compared to prior guidance of mid-to-high teens percentage.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

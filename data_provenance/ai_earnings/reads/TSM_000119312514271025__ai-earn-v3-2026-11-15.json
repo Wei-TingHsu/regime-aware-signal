@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2014 (quarter ended June 30, 2014)",
+  "revenue": "NT$183.02 billion",
+  "operating_income": "38.6% operating margin (~NT$70.6 billion implied)",
+  "net_income": "NT$59.70 billion",
+  "eps": "NT$2.30",
+  "operating_cash_flow": "NT$81.75 billion",
+  "capex": "NT$73.33 billion",
+  "free_cash_flow": "NT$8.42 billion (as stated: operating cash flow minus capex)",
+  "cash_and_investments": "NT$314.59 billion (23.4% of total assets)",
+  "total_debt": "NT$211.65 billion long-term interest-bearing debt",
+  "guidance_next": "Q3 2014: revenue NT$206-209 billion (at NT$1=NT$29.81 assumption); gross profit margin 48.5%-50.5%; operating profit margin 38.5%-40.5%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.6,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "fabless customer benefits from TSMC capacity/node ramp"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "relies on TSMC leading-edge process for GPUs"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "uses TSMC foundry for communications chips"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TSMC's strong margins and 28nm/20nm ramp pressure Intel's foundry competitiveness"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.7,
+   "reason": "self-referential strength signals broader foundry demand"
+  }
+ ],
+ "evidence": "Revenue to be between NT$ 206 billion and NT$ 209 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

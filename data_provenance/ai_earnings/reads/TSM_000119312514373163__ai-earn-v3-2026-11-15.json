@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2014 (quarter ended Sept 30, 2014)",
+  "revenue": "NT$209.05 billion",
+  "operating_income": "NT$84.432 billion (operating margin 40.4%)",
+  "net_income": "NT$76.335 billion",
+  "eps": "NT$2.94 diluted (US$0.49 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2014: revenue NT$217-220 billion (at NT$1=NT$30.31); gross profit margin 48%-50%; operating profit margin 38%-40%; 20nm expected to exceed 20% of Q4 wafer revenue"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.3,
+ "own_stock": 0.7,
+ "market": 0.4,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "TSMC advanced node capacity supports fabless customers like AMD"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TSMC's 20nm ramp strengthens foundry lead over Intel's process competitiveness"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Fabless customer benefiting from TSMC advanced process ramp"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader semiconductor demand read-through"
+  }
+ ],
+ "evidence": "TSMC broke new record in revenue thanks to strong demand for TSMC\u2019s advanced technologies",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

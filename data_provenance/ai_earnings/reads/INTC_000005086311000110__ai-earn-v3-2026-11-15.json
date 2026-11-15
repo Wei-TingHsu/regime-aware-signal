@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2011",
+  "revenue": "$13.0B GAAP (record, up 1% seq, up 21% YoY)",
+  "operating_income": "$3.9B (down 5% sequentially, down 1% YoY)",
+  "net_income": "$3.0B GAAP (up 2% YoY); $3.2B non-GAAP (up 10% YoY)",
+  "eps": "$0.54 GAAP (up 6% YoY); $0.59 non-GAAP (up 16% YoY)",
+  "operating_cash_flow": "~$4.0B",
+  "capex": "$2.5B",
+  "free_cash_flow": "~$1.5B (4.0B - 2.5B)",
+  "cash_and_investments": "$11.5B total cash investments, flat sequentially",
+  "total_debt": null,
+  "guidance_next": "Q3 2011 revenue $14.0B +/- $500M (up ~7% seq); gross margin 64% +/- a couple points; R&D/MG&A ~$4.3B; full-year 2011 gross margin 63% +/- couple points (unchanged); full-year R&D/MG&A raised to $16.2B +/- $200M (up $500M from prior); capex raised to $10.5B +/- $400M (up $300M from prior)"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.2,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel PC/data center share gains, Sandy Bridge ramp"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Memory/semiconductor capex cycle signals"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel reinvesting in 14nm fabs, competitive foundry dynamics"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "PC ecosystem health via Ultrabooks, tablets, phones push"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Data Center Group growth signals cloud demand"
+  }
+ ],
+ "evidence": "Revenue of $13.0B was better than expected, up 1% sequentially and 21% from a year ago",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.2,
+ "own_stock": -0.2,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "weaker foundry demand signals softer chip demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "lower TSMC utilization implies softer order trends"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSMC demand weakness could relatively favor Intel foundry"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "weaker TSMC sales points to softer chip demand"
+  }
+ ],
+ "evidence": "net sales were approximately NT$30.57 billion, a decrease of 13.2 percent over November 2011 and a decrease of 9.4 percent over December 2010",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2026 (ended March 28, 2026)",
+  "revenue": "$10,253M GAAP (up 38% YoY, flat QoQ)",
+  "operating_income": "$1,476M GAAP; $2,540M non-GAAP",
+  "net_income": "$1,383M GAAP; $2,265M non-GAAP",
+  "eps": "$0.84 diluted GAAP; $1.37 diluted non-GAAP",
+  "operating_cash_flow": "$2,955M",
+  "capex": "$389M",
+  "free_cash_flow": "$2,566M (calculated: $2,955M - $389M); described as 'record quarterly free cash flow'",
+  "cash_and_investments": "$5,585M cash + $6,762M short-term investments = $12,347M",
+  "total_debt": "$874M current portion + $2,350M long-term = $3,224M",
+  "guidance_next": "Q2 2026 revenue ~$11.2B +/- $300M (~46% YoY growth, ~9% sequential increase); non-GAAP gross margin ~56%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.8,
+ "own_stock": 0.8,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AMD Instinct/MI450 gaining large customer commitments (Meta 6GW deal)"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "HBM4 memory demand rising with MI455X ramp and Samsung collaboration"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "Announced up to 6GW AMD Instinct GPU deployment, lead customer for next-gen EPYC"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "New Google Cloud H4D VMs powered by 5th Gen EPYC"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Expanded Azure instances on 5th Gen EPYC"
+  }
+ ],
+ "evidence": "revenue to be approximately $11.2 billion, plus or minus $300 million... year-over-year growth of approximately 46%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

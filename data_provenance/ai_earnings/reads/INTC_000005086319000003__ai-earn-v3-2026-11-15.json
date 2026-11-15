@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY2018 (ended Dec 29, 2018)",
+  "revenue": "Q4: $18.7B (up 9% YoY); FY2018: $70.8B (up 13% YoY, record)",
+  "operating_income": "Q4: $6.224B GAAP / $6.6B non-GAAP; FY2018: $23.316B GAAP / $24.5B non-GAAP",
+  "net_income": "Q4: $5.195B GAAP / $5.9B non-GAAP; FY2018: $21.053B GAAP / $21.5B non-GAAP",
+  "eps": "Q4: $1.12 GAAP / $1.28 non-GAAP; FY2018: $4.48 GAAP / $4.58 non-GAAP",
+  "operating_cash_flow": "Q4: $6.9B; FY2018: $29.4B (record)",
+  "capex": "Q4: $3.89B; FY2018 implied ~$15.1B (from $29.4B OCF minus $14.3B FCF)",
+  "free_cash_flow": "FY2018: $14.3B (stated)",
+  "cash_and_investments": "$11.65B total cash investments (Dec 29, 2018) vs $14.0B prior year",
+  "total_debt": "$26.359B total (short-term $1.261B + long-term $25.098B)",
+  "guidance_next": "Q1 2019: revenue ~$16.0B, GAAP op margin ~27%/non-GAAP ~29%, GAAP EPS ~$0.81/non-GAAP ~$0.87; FY2019: revenue ~$71.5B, GAAP op margin ~32%/non-GAAP ~34%, GAAP EPS ~$4.35/non-GAAP ~$4.60, capex ~$15.5B, non-GAAP FCF ~$16.0B"
+ },
+ "results_vs_prior_guidance": -0.2,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.3,
+ "own_stock": -0.3,
+ "market": -0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel still growing CCG/DCG share despite 10nm delay narrative"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Data center AI/cloud growth cited (Cascade Lake AI features) signals strong overall data-center demand"
+  },
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "NSG (NAND/Optane) revenue up 25% YoY, record quarter, supports memory demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Continued capex and product ramp (10nm Ice Lake) implies ongoing foundry/equipment ecosystem activity"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broad data-center/cloud segment growth (24% cloud) signals healthy semiconductor demand backdrop"
+  }
+ ],
+ "evidence": "Expecting record 2019 revenue of approximately $71.5 billion and first-quarter revenue of approximately $16 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

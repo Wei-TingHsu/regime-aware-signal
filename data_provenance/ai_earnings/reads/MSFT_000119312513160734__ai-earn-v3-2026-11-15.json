@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q3 FY2013 (quarter ended March 31, 2013)",
+  "revenue": "$20.49 billion",
+  "operating_income": "$7.61 billion",
+  "net_income": "$6.06 billion ($6,055 million)",
+  "eps": "$0.72 diluted (GAAP); $0.65 non-GAAP adjusted",
+  "operating_cash_flow": "$9.666 billion (three months)",
+  "capex": "$930 million (additions to property and equipment)",
+  "free_cash_flow": "$8.736 billion (operating cash flow minus capex)",
+  "cash_and_investments": "$74.483 billion total cash, cash equivalents, and short-term investments",
+  "total_debt": "$14.195 billion ($2,246M current + $11,949M long-term)",
+  "guidance_next": "FY2013 operating expense guidance revised down to $30.2-$30.5 billion (ex EC fine); preliminary FY2014 operating expense guidance of $31.6-$32.2 billion, representing 4-6% growth from FY2013 adjusted midpoint"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.4,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Online Services/search competition mentioned"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "SQL Server/System Center share gains cited vs database competitors"
+  }
+ ],
+ "evidence": "Microsoft delivers record third-quarter revenue and earnings per share",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

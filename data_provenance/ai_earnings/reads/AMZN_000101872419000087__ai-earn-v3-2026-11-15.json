@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2019 (three months ended September 30, 2019)",
+  "revenue": "$70.0 billion (net sales), up 24% YoY",
+  "operating_income": "$3.157 billion, down from $3.724 billion in Q3 2018",
+  "net_income": "$2.134 billion, down from $2.883 billion in Q3 2018",
+  "eps": "$4.23 diluted, down from $5.75 in Q3 2018",
+  "operating_cash_flow": "$35.332 billion trailing twelve months (up 33% YoY); $7.892 billion for the quarter",
+  "capex": "$4.697 billion for the quarter (purchases of property and equipment); $15.282 billion TTM",
+  "free_cash_flow": "$23.5 billion TTM, up from $15.4 billion TTM prior year",
+  "cash_and_investments": "$23.554 billion cash, cash equivalents, and restricted cash at period end",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "smart speaker/voice assistant competition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud and voice assistant rivalry"
+  },
+  {
+   "company": "AAPL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "device ecosystem rivalry"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "smart home device integration partner"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "voice interoperability initiative partner"
+  }
+ ],
+ "evidence": "Operating income decreased to $3.2 billion in the third quarter, compared with operating income of $3.7 billion in third quarter 2018",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

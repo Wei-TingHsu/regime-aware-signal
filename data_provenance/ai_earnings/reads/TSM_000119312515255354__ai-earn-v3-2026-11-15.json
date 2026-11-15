@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2015 (quarter ended June 30, 2015)",
+  "revenue": "NT$205.44 billion",
+  "operating_income": null,
+  "net_income": "NT$79.42 billion",
+  "eps": "NT$3.06",
+  "operating_cash_flow": "NT$111.07 billion",
+  "capex": "NT$(53.81) billion",
+  "free_cash_flow": "NT$57.26 billion (stated)",
+  "cash_and_investments": "NT$550.35 billion",
+  "total_debt": "NT$202.66 billion (long-term interest-bearing debt)",
+  "guidance_next": "Q3 2015 revenue NT$207-210 billion; gross margin 47%-49%; operating margin 36.5%-38.5%, at an assumed exchange rate of 31 NT$/US$1"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.0,
+ "fcf_trend": 0.2,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "communications segment demand supports foundry volume"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "advanced node capacity relevant to GPU production"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "foundry customer benefiting from TSMC node progress"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC's steady margins highlight foundry competitiveness"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "semiconductor capex and demand trends correlate across industry"
+  }
+ ],
+ "evidence": "Revenue to be between NT$207 billion and NT$210 billion, at a forecast exchange rate of 31.00 NT dollars to 1 US dollar",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

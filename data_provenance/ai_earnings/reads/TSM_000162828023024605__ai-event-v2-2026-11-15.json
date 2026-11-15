@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.2,
+ "own_stock": -0.3,
+ "market": -0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "weaker TSMC demand signals softer chip cycle"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "foundry demand tied to TSMC output"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSMC weakness could relatively favor Intel foundry push"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "depends on TSMC capacity for chip production"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "semiconductor cycle downturn signal"
+  }
+ ],
+ "evidence": "revenue for June 2023 was approximately NT$156.40 billion, a decrease of 11.4 percent from May 2023 and a decrease of 11.1 percent from June 2022",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

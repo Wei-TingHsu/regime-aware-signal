@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2023 (ended April 1, 2023)",
+  "revenue": "$5,353 million (down 9% YoY)",
+  "operating_income": "GAAP: $(145) million loss; Non-GAAP: $1,098 million",
+  "net_income": "GAAP: $(139) million loss; Non-GAAP: $970 million",
+  "eps": "GAAP diluted: $(0.09); Non-GAAP diluted: $0.60",
+  "operating_cash_flow": "$486 million",
+  "capex": "$158 million",
+  "free_cash_flow": "$328 million (stated)",
+  "cash_and_investments": "$5,939 million (cash, cash equivalents and short-term investments)",
+  "total_debt": "$2,467 million",
+  "guidance_next": "Q2 2023 revenue approximately $5.3 billion, plus or minus $300 million; non-GAAP gross margin approximately 50%; sequential growth expected in Data Center and Client segments, offset by modest declines in Gaming and Embedded"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.1,
+ "fcf_trend": -0.3,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AI/data center GPU competition intensifying as AMD accelerates AI roadmap"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD Data Center and Embedded gains pressure Intel's core markets"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Azure using AMD EPYC confidential computing capabilities"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Google Cloud adopting AMD EPYC-based confidential computing"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "AMD relies on TSMC as third-party manufacturer for its chips"
+  }
+ ],
+ "evidence": "delivered better than expected revenue and earnings in a mixed demand environment",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

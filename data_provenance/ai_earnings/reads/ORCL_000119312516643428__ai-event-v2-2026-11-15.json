@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.4,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "comparable large tech debt issuer, minimal spillover"
+  }
+ ],
+ "evidence": "consummated the issuance and sale of $4,250,000,000 aggregate principal amount of its 1.900% notes due 2021... and $3,000,000,000 aggregate principal amount of its 4.000% notes due 2046",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

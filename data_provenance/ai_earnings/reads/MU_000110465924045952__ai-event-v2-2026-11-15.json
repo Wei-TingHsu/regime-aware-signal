@@ -1,0 +1,43 @@
+{
+ "event_type": "other",
+ "material": 0.3,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.25,
+ "own_stock": -0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "tighter DRAM/NAND supply could lift memory pricing"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.15,
+   "reason": "competitor could gain share amid Micron supply disruption"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.05,
+   "reason": "potential DRAM supply tightness for GPU memory"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.05,
+   "reason": "possible memory supply constraints"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "also Taiwan-based, earthquake exposure context"
+  }
+ ],
+ "evidence": "Micron currently estimates that the earthquake will result in an impact of up to a mid-single digit percentage of a calendar quarter\u2019s Company-level DRAM supply.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

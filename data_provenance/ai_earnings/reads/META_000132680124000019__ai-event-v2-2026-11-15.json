@@ -1,0 +1,19 @@
+{
+ "event_type": "leadership change",
+ "material": 0.15,
+ "fcf_outlook": 0.05,
+ "uncertainty": -0.05,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "CEO Hock Tan joining Meta board strengthens ties; Meta pays Broadcom ~$500M for components/design services"
+  }
+ ],
+ "evidence": "Mr. Tan is the president and chief executive officer of Broadcom Inc. ... the total amount paid to Broadcom under these arrangements was approximately $500.4 million.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

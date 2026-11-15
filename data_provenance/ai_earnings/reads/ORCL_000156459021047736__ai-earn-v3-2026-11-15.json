@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Fiscal 2022 Q1 (three months ended August 31, 2021)",
+  "revenue": "$9.728 billion, up 4% YoY",
+  "operating_income": "GAAP $3.427 billion (35% margin); Non-GAAP $4.334 billion (45% margin)",
+  "net_income": "$2.457 billion GAAP (up 9%); $2.944 billion Non-GAAP",
+  "eps": "GAAP diluted $0.86 (up 19%); Non-GAAP diluted $1.03 (up 11%)",
+  "operating_cash_flow": "$15.325 billion (trailing twelve months, up 17%)",
+  "capex": "$2.761 billion (trailing twelve months); $1.062 billion for the quarter",
+  "free_cash_flow": "$12.564 billion (trailing twelve months, up 9%)",
+  "cash_and_investments": "$23.059 billion cash and equivalents plus $16.251 billion marketable securities (total ~$39.3 billion)",
+  "total_debt": "$6.748 billion notes payable current plus $75.970 billion notes payable non-current (~$82.7 billion total)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure rivalry referenced via Gartner ranking"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "CEO claims Oracle 'leapfrogs Google' in cloud ranking"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/database competitor"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "enterprise software/cloud peer"
+  },
+  {
+   "company": "SNDK",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "storage/infrastructure supplier for data centers"
+  }
+ ],
+ "evidence": "constant currency revenue beat guidance by $100 million with all revenue segments exceeding forecast, and Non-GAAP earnings per share beating guidance by $0.08",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

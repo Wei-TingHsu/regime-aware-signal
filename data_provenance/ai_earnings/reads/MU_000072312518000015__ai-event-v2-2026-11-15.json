@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.3,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.35,
+ "own_stock": -0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "memory peer, limited direct impact"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "3D XPoint partner, unaffected"
+  }
+ ],
+ "evidence": "Micron today announced a chief financial officer transition",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

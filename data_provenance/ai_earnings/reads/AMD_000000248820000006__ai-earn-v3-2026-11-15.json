@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2019",
+  "revenue": "$2.13 billion (Q4); $6.73 billion (FY)",
+  "operating_income": "$348 million GAAP / $405 million non-GAAP (Q4)",
+  "net_income": "$170 million GAAP / $383 million non-GAAP (Q4)",
+  "eps": "$0.15 GAAP / $0.32 non-GAAP diluted (Q4)",
+  "operating_cash_flow": "$442 million (Q4); $493 million (FY)",
+  "capex": "$42 million (Q4); $217 million (FY)",
+  "free_cash_flow": "$400 million (Q4); $276 million (FY)",
+  "cash_and_investments": "$1.50 billion",
+  "total_debt": "$486 million",
+  "guidance_next": "Q1 2020 revenue approximately $1.8 billion, plus or minus $50 million, up ~42% YoY, down ~15% sequentially"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.9,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "AMD share gains in CPUs via Ryzen/EPYC"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Radeon GPU momentum and gaming share gains"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure adopting EPYC instances"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS new EPYC-based cloud instances"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "7nm process ramp driving AMD margin gains"
+  }
+ ],
+ "evidence": "Revenue of $2.13 billion was up 50 percent year-over-year... Gross margin expanded to 45 percent in Q4 2019",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

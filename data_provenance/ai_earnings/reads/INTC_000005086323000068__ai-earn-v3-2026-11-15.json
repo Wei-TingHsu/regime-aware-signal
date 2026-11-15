@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2023 (fiscal quarter ended July 1, 2023)",
+  "revenue": "$12.9 billion (down 15% YoY)",
+  "operating_income": "$(1.016) billion GAAP; non-GAAP operating margin 3.5%",
+  "net_income": "$1.481 billion GAAP attributable to Intel; $0.5 billion non-GAAP",
+  "eps": "$0.35 GAAP diluted; $0.13 non-GAAP diluted",
+  "operating_cash_flow": "$2.8 billion for the quarter (per news summary); $1.023 billion for six months ended Jul 1, 2023",
+  "capex": "$13.301 billion (six months ended Jul 1, 2023, additions to PP&E); quarterly figure not separately disclosed",
+  "free_cash_flow": null,
+  "cash_and_investments": "$8.349 billion cash + $15.908 billion short-term investments = $24.257 billion",
+  "total_debt": "$2.711 billion short-term + $46.335 billion long-term = $49.046 billion",
+  "guidance_next": "Q3 2023 revenue approximately $12.9-13.9 billion; GAAP EPS approximately $0.04; non-GAAP EPS approximately $0.20; GAAP gross margin ~39.1%, non-GAAP ~43.0%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.4,
+ "fcf_trend": -0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel CPU/GPU share gains and improved execution pressure AMD's client/server positioning"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel touts Gaudi2/Xeon as 'open alternatives' to Nvidia in AI training benchmarks"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "IFS foundry momentum (Boeing, Northrop, Ericsson 18A deal) signals Intel foundry competing for TSMC's customers"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Collaboration on AI PC development and Meteor Lake previewed at Microsoft Build"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Google Cloud general availability of 4th Gen Xeon instances"
+  }
+ ],
+ "evidence": "Second-quarter results on the top and bottom line exceeded the high end of guidance; company continues to execute strategy with momentum across process and product technology and foundry.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

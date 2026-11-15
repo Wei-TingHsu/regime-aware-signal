@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2013 (quarter ended March 2013)",
+  "revenue": "$12.6B (down 3% YoY, down 7% sequentially)",
+  "operating_income": "$2.5B (down 34% YoY)",
+  "net_income": "$2.0B (down 25% YoY)",
+  "eps": "$0.40 (down 25% YoY)",
+  "operating_cash_flow": "~$4.3B",
+  "capex": "$2.2B (purchased in Q1)",
+  "free_cash_flow": "~$2.1B (OCF $4.3B - capex $2.2B)",
+  "cash_and_investments": "$17.1B total cash investments, down $1.1B sequentially",
+  "total_debt": null,
+  "guidance_next": "Q2 2013 revenue $12.9B +/- $500M (up ~3% sequentially); Q2 gross margin ~58% +/- a couple points; full-year revenue still expected low single-digit growth; full-year gross margin still ~60% +/- a few points; R&D+MG&A ~$18.9B +/- $200M; capex now $12.0B +/- $500M, down $1.0B from prior expectations"
+ },
+ "results_vs_prior_guidance": -0.4,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.1,
+ "own_stock": -0.3,
+ "market": -0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "PC weakness/Intel margin pressure signals soft x86 demand industry-wide"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel's manufacturing start-up cost woes highlight foundry execution advantage"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Weak PC platform volumes point to soft component demand across semiconductor supply chain"
+  }
+ ],
+ "evidence": "Operating income of $2.5B was down 34% from $3.8B",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

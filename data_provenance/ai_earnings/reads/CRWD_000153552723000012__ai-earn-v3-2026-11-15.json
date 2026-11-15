@@ -1,0 +1,57 @@
+{
+ "facts": {
+  "period": "Q1 FY2024 (ended April 30, 2023)",
+  "revenue": "$692.6 million (+42% YoY)",
+  "operating_income": "GAAP loss from operations $(19.5) million; Non-GAAP income from operations $115.9 million",
+  "net_income": "GAAP net income attributable to CrowdStrike $0.5 million; Non-GAAP net income $136.4 million",
+  "eps": "GAAP diluted $0.00; Non-GAAP diluted $0.57",
+  "operating_cash_flow": "$300.9 million",
+  "capex": "$73.2 million (purchases of property/equipment $62.3M + capitalized internal-use software $10.9M)",
+  "free_cash_flow": "$227.4 million",
+  "cash_and_investments": "$2.93 billion (cash, equivalents and short-term investments)",
+  "total_debt": "$741.4 million long-term debt",
+  "guidance_next": "Q2 FY24 revenue $717.2-$727.4M, Non-GAAP operating income $116.4-$123.8M, Non-GAAP net income $129.5-$137.0M, Non-GAAP diluted EPS $0.54-$0.57; FY24 revenue raised to $3,000.5-$3,036.7M, Non-GAAP operating income $498.9-$526.2M, Non-GAAP net income $562.8-$590.1M, Non-GAAP diluted EPS $2.32-$2.43"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.8,
+ "own_stock": 0.7,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Security/endpoint protection rival via Defender"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "relation2": null,
+   "direction": 0.2,
+   "reason": "Expanded partnership integrating Falcon with ChromeOS"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Collaboration with AWS on generative AI security apps"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Broader cloud security market competitor"
+  }
+ ],
+ "evidence": "Highlights of the quarter included a rule of 75 on a free cash flow basis and records across revenue, gross margin, GAAP and non-GAAP earnings, and cash flow.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

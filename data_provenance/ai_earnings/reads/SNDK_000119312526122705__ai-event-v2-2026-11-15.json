@@ -1,0 +1,31 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.4,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.3,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "SNDK diversifies DRAM sourcing away from Micron"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "New DRAM supply deal bypasses SK Hynix"
+  },
+  {
+   "company": "Nanya Technology",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Gets $1B equity investment and long-term supply contract"
+  }
+ ],
+ "evidence": "the Company agreed to purchase approximately 139 million shares of Nanya common stock for an aggregate purchase price of approximately $1.0 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

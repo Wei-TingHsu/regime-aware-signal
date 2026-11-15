@@ -1,0 +1,57 @@
+{
+ "facts": {
+  "period": "4Q17 / FY2017",
+  "revenue": "NT$277.57 billion (US$9.21 billion)",
+  "operating_income": "Operating margin 39.2%, operating expenses NT$28.84 billion",
+  "net_income": "NT$99.29 billion",
+  "eps": "NT$3.83 (diluted)",
+  "operating_cash_flow": "NT$204.13 billion (4Q17)",
+  "capex": "NT$61.18 billion (4Q17)",
+  "free_cash_flow": "NT$142.95 billion (4Q17)",
+  "cash_and_investments": "NT$649.36 billion",
+  "total_debt": "NT$91.80 billion (long-term interest-bearing debt)",
+  "guidance_next": "1Q18 revenue US$8.40-8.50 billion; at NT$29.6/US$, gross margin 49.5%-51.5%, operating margin 38%-40%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.5,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "comms segment 62% of revenue, largest driver"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "advanced node customer, 16/20nm and below growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "foundry leadership vs IDM competition"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "semiconductor capex cycle indicator"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "advanced node demand for computer/communication chips"
+  }
+ ],
+ "evidence": "Revenue to be between US$ 8.40 billion and US$ 8.50 billion",
+ "note": "1Q18 revenue guidance midpoint (~US$8.45B) represents a sequential decline from 4Q17's US$9.21 billion, consistent with seasonal patterns but below the strong 4Q beat; FY2017 FCF grew 20.3% YoY showing balance sheet strength despite guidance softening for next quarter.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

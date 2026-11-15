@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2017 (quarter ended September 30, 2017)",
+  "revenue": "NT$252.11 billion (+17.9% YoY, +3.2% QoQ)",
+  "operating_income": "Operating margin 38.9% (within guided 37%-39% range)",
+  "net_income": "NT$89.93 billion (+35.7% QoQ, -7.1% YoY)",
+  "eps": "NT$3.47 per share",
+  "operating_cash_flow": "NT$116.78 billion",
+  "capex": "NT$61.71 billion",
+  "free_cash_flow": "NT$55.07 billion (OCF minus capex)",
+  "cash_and_investments": "NT$501.78 billion (27.3% of total assets)",
+  "total_debt": "NT$91.81 billion long-term interest-bearing debt",
+  "guidance_next": "Q4 2017 revenue US$9.10-9.20 billion; at NT$30.3/US$, gross margin 48%-50%, operating margin 37%-39%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.0,
+ "fcf_trend": 0.5,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "foundry customer benefits from TSMC capacity/margin strength"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "major foundry customer, implied healthy demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC margin strength signals competitive foundry edge"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "foundry customer tied to TSMC output growth"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "semiconductor sector sentiment read-through"
+  }
+ ],
+ "evidence": "Net Income to Shareholders of the Parent Company 89.93 ... +35.7% QoQ",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

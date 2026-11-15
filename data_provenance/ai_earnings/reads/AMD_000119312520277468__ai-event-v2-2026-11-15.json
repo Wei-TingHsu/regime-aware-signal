@@ -1,0 +1,49 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.9,
+ "fcf_outlook": 0.4,
+ "uncertainty": 0.5,
+ "own_stock": 0.2,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD gains FPGA/adaptive compute scale to compete in data center"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Stronger combined AMD-Xilinx competes harder vs Intel in data center/embedded"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Combined volume likely increases foundry demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Broader AMD portfolio competes in networking/embedded chips"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Potential expanded silicon options for cloud/data center customers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Potential expanded silicon options for cloud/data center customers"
+  }
+ ],
+ "evidence": "Merger Sub will merge with and into Xilinx (the \"Merger\"), with Xilinx surviving such Merger as a wholly owned subsidiary of the Company",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

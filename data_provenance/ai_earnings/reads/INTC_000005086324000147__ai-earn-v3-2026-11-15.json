@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2024 (quarter ended Sep 28, 2024)",
+  "revenue": "$13.3 billion (down 6% YoY)",
+  "operating_income": "$(9,057) million GAAP; non-GAAP operating margin (17.8)%",
+  "net_income": "$(16.6) billion GAAP attributable to Intel; $(2.0) billion non-GAAP",
+  "eps": "$(3.88) GAAP; $(0.46) non-GAAP",
+  "operating_cash_flow": "$4.1 billion in Q3; $5,123 million for nine months (vs $6,847M prior year)",
+  "capex": "$18,110 million (nine months, additions to PP&E) vs $19,054M prior year",
+  "free_cash_flow": "Not explicitly stated for Q3; nine-month OCF minus capex = $5,123M - $18,110M = $(12,987)M",
+  "cash_and_investments": "$8,785M cash + $15,301M short-term investments = $24,086M (vs $25,034M at Dec 30, 2023)",
+  "total_debt": "$3,765M short-term debt + $46,471M long-term debt = $50,236M (vs $49,266M at Dec 30, 2023)",
+  "guidance_next": "Q4 2024 revenue of $13.3-14.3 billion; GAAP EPS $(0.24); non-GAAP EPS $0.12; GAAP gross margin 36.5%, non-GAAP gross margin 39.5%, tax rate (50)% GAAP / 13% non-GAAP"
+ },
+ "results_vs_prior_guidance": 0.1,
+ "guidance_change": 0.3,
+ "fcf_trend": -0.4,
+ "own_stock": 0.05,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "joint x86 Ecosystem Advisory Group formed with Intel"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS finalizing multi-billion-dollar custom chip deal with Intel Foundry"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel 18A targeting foundry leadership, competing for external customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Gaudi 3 AI accelerators positioned against Nvidia GPUs"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "listed as founding member of x86 Ecosystem Advisory Group, potential foundry/PC customer"
+  }
+ ],
+ "evidence": "We delivered revenue above the midpoint of our guidance, and are acting with urgency to position the business for sustainable value creation moving forward",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

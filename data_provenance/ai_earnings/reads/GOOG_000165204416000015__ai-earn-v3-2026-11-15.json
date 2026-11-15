@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2016 (three months ended March 31, 2016)",
+  "revenue": "$20,257 million (up 17% YoY, 23% constant currency)",
+  "operating_income": "GAAP $5,342 million; Non-GAAP $6,836 million",
+  "net_income": "GAAP $4,207 million; Non-GAAP $5,248 million",
+  "eps": "GAAP diluted $6.02; Non-GAAP diluted $7.50",
+  "operating_cash_flow": "$7,658 million",
+  "capex": "$2,428 million",
+  "free_cash_flow": "$5,230 million (as stated)",
+  "cash_and_investments": "$75,264 million",
+  "total_debt": "Short-term $3,221 million + Long-term $1,987 million = $5,208 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong ad revenue growth shows Google capturing digital ad spend"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Competes for online ad and cloud dollars"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Competes in cloud and search/advertising"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud infrastructure competitor as Other Bets/data center capex grows"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Rising capex signals continued data center hardware spend"
+  }
+ ],
+ "evidence": "17% revenue growth year on year and 23% growth on a constant currency basis",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

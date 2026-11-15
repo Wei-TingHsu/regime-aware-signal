@@ -1,0 +1,37 @@
+{
+ "event_type": "product or technology",
+ "material": 0.3,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.0,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC expands leading-edge capacity ahead of foundry peers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "more advanced 20nm capacity available"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "future leading-edge capacity for GPU fabrication"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "potential future custom chip capacity"
+  }
+ ],
+ "evidence": "TSMC also expects to launch its 20nm technology ahead of foundry peers",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

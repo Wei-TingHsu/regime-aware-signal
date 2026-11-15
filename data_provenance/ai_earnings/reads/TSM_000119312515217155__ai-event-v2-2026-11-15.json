@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.1,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.0,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "VIS",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "continued close collaboration and wafer sourcing"
+  }
+ ],
+ "evidence": "TSMC will remain the largest shareholder of VIS, and TSMC announces that it has no plan to sell more VIS shares in the foreseeable future.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

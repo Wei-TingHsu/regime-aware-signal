@@ -1,0 +1,25 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.1,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.0,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.03,
+   "reason": "slight demand read-through"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.03,
+   "reason": "slight demand read-through"
+  }
+ ],
+ "evidence": "Net sales 79,740,672 76,616,258",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

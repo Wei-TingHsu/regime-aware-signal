@@ -1,0 +1,43 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.2,
+ "own_stock": -0.3,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "weaker foundry demand signal"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "weaker foundry demand signal"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "weaker foundry demand signal"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSMC demand softness could benefit rival foundry"
+  },
+  {
+   "company": "AAPL",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "seasonal demand drop tied to customer order patterns"
+  }
+ ],
+ "evidence": "revenues for July 2017 were approximately NT$71.61 billion, a decrease of 14.9 percent from June 2017",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

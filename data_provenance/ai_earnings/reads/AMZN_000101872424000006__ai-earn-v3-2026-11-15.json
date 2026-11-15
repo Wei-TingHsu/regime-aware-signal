@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2023 (quarter ended Dec 31, 2023); also full-year 2023 reported",
+  "revenue": "$170.0 billion (Q4 2023), up 14% YoY; FY2023 $574.8 billion, up 12% YoY",
+  "operating_income": "$13.2 billion (Q4 2023) vs $2.7 billion (Q4 2022); FY2023 $36.9 billion vs $12.2 billion (2022)",
+  "net_income": "$10.6 billion (Q4 2023) vs $0.3 billion (Q4 2022); FY2023 $30.4 billion vs net loss $2.7 billion (2022)",
+  "eps": "$1.00 diluted (Q4 2023) vs $0.03 (Q4 2022); FY2023 $2.90 vs $(0.27)",
+  "operating_cash_flow": "$84.9 billion TTM (trailing twelve months ended Dec 31 2023), up 82% YoY",
+  "capex": "Purchases of property and equipment: $14,588 million (Q4 2023); $52,729 million (FY2023)",
+  "free_cash_flow": "$36.8 billion TTM inflow (vs $11.6 billion outflow prior TTM)",
+  "cash_and_investments": "$73.4 billion cash and equivalents plus $13.4 billion marketable securities (~$86.8 billion total) as of Dec 31, 2023",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.9,
+ "own_stock": 0.8,
+ "market": 0.4,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AWS reacceleration signals robust cloud/AI demand across providers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud and ad growth read-through from Amazon's advertising and AWS gains"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "AWS AI infrastructure investment and genAI offerings (Bedrock, Trainium) imply continued GPU/accelerator demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AWS's custom Trainium chips compete with AMD's AI accelerators while also showing overall AI compute demand strength"
+  },
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Strong ad growth at Amazon signals healthy digital ad market, relevant to Meta's ad business"
+  }
+ ],
+ "evidence": "Operating income increased to $13.2 billion in the fourth quarter, compared with $2.7 billion in fourth quarter 2022.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

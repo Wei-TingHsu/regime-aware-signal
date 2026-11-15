@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2020 (quarter ended September 30, 2020)",
+  "revenue": "$96.1 billion (net sales), up 37% YoY",
+  "operating_income": "$6.2 billion (vs $3.2 billion prior year)",
+  "net_income": "$6.3 billion (vs $2.1 billion prior year)",
+  "eps": "$12.37 diluted (vs $4.23 prior year)",
+  "operating_cash_flow": "$11.964 billion quarterly; $55.3 billion trailing twelve months (up 56% YoY)",
+  "capex": "$11.063 billion quarterly (purchases of property and equipment); $30.629 billion TTM",
+  "free_cash_flow": "$29.5 billion TTM (vs $23.5 billion prior year)",
+  "cash_and_investments": "$29.93 billion cash and equivalents + $38.47 billion marketable securities (~$68.4 billion total) as of Sept 30, 2020",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.7,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS growth (29% YoY) pressures Azure's cloud market share narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong AWS results highlight competitive cloud dominance over Google Cloud"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AWS capex surge ($30.6B TTM) implies continued server/chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Rising AWS infrastructure spend supports demand for data-center processors"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Data center buildout implies memory/storage component demand"
+  }
+ ],
+ "evidence": "Operating income increased to $6.2 billion in the third quarter, compared with operating income of $3.2 billion in third quarter 2019.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

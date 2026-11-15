@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2021 (quarter ended September 30, 2020)",
+  "revenue": "$37.2 billion, +12% YoY",
+  "operating_income": "$15.9 billion, +25% YoY",
+  "net_income": "$13.9 billion, +30% YoY",
+  "eps": "$1.82 diluted, +32% YoY",
+  "operating_cash_flow": "$19,335 million",
+  "capex": "$4,907 million (additions to property and equipment)",
+  "free_cash_flow": "$14,428 million (19,335 - 4,907)",
+  "cash_and_investments": "$137,977 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$63,552 million (current portion $6,497M + long-term $57,055M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.5,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Azure growth of 47% outpaces cloud rivals, competitive pressure on AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong Azure growth implies competitive cloud share gains vs Google Cloud"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Server/cloud growth highlights competitive enterprise cloud landscape"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Rising datacenter/cloud infrastructure spend (Azure, Surface) supports chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Cloud infrastructure growth implies higher demand for compute silicon"
+  }
+ ],
+ "evidence": "Demand for our cloud offerings drove a strong start to the fiscal year with our commercial cloud revenue generating $15.2 billion, up 31% year over year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

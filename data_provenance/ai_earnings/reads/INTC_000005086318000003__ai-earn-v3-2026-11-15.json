@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2017 (quarter ended Dec 30, 2017)",
+  "revenue": "Q4 2017: $17.1B GAAP/non-GAAP; FY2017: $62.8B GAAP/non-GAAP",
+  "operating_income": "Q4 2017: $5.4B GAAP / $5.9B non-GAAP; FY2017: $17.9B GAAP / $19.6B non-GAAP",
+  "net_income": "Q4 2017: $(0.7)B GAAP / $5.2B non-GAAP; FY2017: $9.6B GAAP / $16.8B non-GAAP",
+  "eps": "Q4 2017: $(0.15) GAAP / $1.08 non-GAAP; FY2017: $1.99 GAAP / $3.46 non-GAAP",
+  "operating_cash_flow": "Q4 2017 ~$7.2B; FY2017 record $22.1B",
+  "capex": "Q4 2017 additions to PP&E $4.069B (FY2018 guide capex $14.0B +/- $500M)",
+  "free_cash_flow": "Not stated for FY2017 in GAAP terms; FY2018 non-GAAP guidance $13.0B +/- $500M",
+  "cash_and_investments": "$14.002B total cash investments (Dec 30, 2017) vs $17.099B prior year",
+  "total_debt": "Short-term debt $1.776B + Long-term debt $25.037B = $26.813B (Dec 30, 2017) vs $25.283B prior year",
+  "guidance_next": "Q1 2018: revenue $15.0B +/- $500M; GAAP op margin ~25%/non-GAAP ~27%; GAAP EPS $0.65/non-GAAP EPS $0.70 +/-5c. FY2018: revenue $65.0B +/- $1.0B; GAAP op margin ~28%/non-GAAP ~30%; GAAP EPS $3.30/non-GAAP EPS $3.55 +/-5%; capex $14.0B +/- $500M; net capital deployed $12.0B +/- $500M; non-GAAP FCF $13.0B +/- $500M; tax rate ~14%"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.4,
+ "own_stock": 0.6,
+ "market": 0.1,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong Intel CCG/DCG results and record data-centric growth pressure AMD's share-gain narrative"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Intel's AI chip push (Nervana, Movidius) signals growing competitive AI compute market, implying strong overall AI demand"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "NSG memory revenue up 37% YoY shows strong NAND/memory demand benefiting memory peers"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel's continued in-house manufacturing investment (Arizona fab) competes with foundry alternatives"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "DCG growth driven by cloud/data-center demand implies strong purchasing from hyperscale customers like AWS"
+  }
+ ],
+ "evidence": "\"Compared to the expectations we set, our revenue was stronger, our operating margins were higher, and our spending was lower\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

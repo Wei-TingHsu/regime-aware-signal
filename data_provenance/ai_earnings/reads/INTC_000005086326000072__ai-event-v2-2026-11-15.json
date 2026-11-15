@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.4,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.3,
+ "own_stock": -0.3,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel spending cash/debt on internal fab consolidation rather than external foundry capacity"
+  }
+ ],
+ "evidence": "The $14.2 billion repurchase price was financed by Intel with cash on hand and a bridge loan of $6.5 billion, which Intel intends to refinance, subject to market conditions.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

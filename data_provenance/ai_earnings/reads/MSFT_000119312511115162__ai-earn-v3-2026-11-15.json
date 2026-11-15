@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2011 (quarter ended March 31, 2011)",
+  "revenue": "$16.43 billion",
+  "operating_income": "$5.71 billion",
+  "net_income": "$5.23 billion",
+  "eps": "$0.61 diluted (includes $0.05 one-time tax benefit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$50.15 billion total cash, cash equivalents and short-term investments",
+  "total_debt": "$11.92 billion long-term debt, $0 short-term debt",
+  "guidance_next": "FY2011 operating expenses reaffirmed at $26.9-$27.3 billion; preliminary FY2012 operating expense guidance of 3%-5% growth from FY2011 guidance midpoint, or $28.0-$28.6 billion"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.1,
+ "fcf_trend": 0.4,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "reason": "SQL Server, SharePoint gains vs enterprise database/software rivals",
+   "direction": -0.2
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "reason": "Bing search share gain to 13.9%",
+   "direction": -0.2
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "reason": "cloud services growth (Office 365, Azure) competes with AWS",
+   "direction": -0.1
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "reason": "PC-linked Windows revenue softness reflects weak PC demand",
+   "direction": -0.2
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "reason": "large-cap tech comparator on enterprise/consumer software spend",
+   "direction": 0.1
+  }
+ ],
+ "evidence": "Microsoft Reports Record Third-Quarter Results ... revenue growth of 13% and earnings per share of $0.61",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

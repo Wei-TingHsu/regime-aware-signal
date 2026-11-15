@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY2022 (ended Dec 31, 2022)",
+  "revenue": "$32.165B Q4 (-4% YoY); $116.609B FY (-1% YoY)",
+  "operating_income": "$6.399B Q4 (-49% YoY); $28.944B FY (-38% YoY)",
+  "net_income": "$4.652B Q4 (-55% YoY); $23.200B FY (-41% YoY)",
+  "eps": "$1.76 diluted Q4; $8.59 diluted FY",
+  "operating_cash_flow": "$14.511B Q4; $50.475B FY",
+  "capex": "$9.22B Q4 (incl. finance lease principal payments); $32.04B FY",
+  "free_cash_flow": "$5.468B Q4 (OCF 14.511B - capex 9.043B); approx $19.044B FY (50.475B - 31.431B, per statement of cash flows purchases of property and equipment)",
+  "cash_and_investments": "$40.74B (cash, cash equivalents and marketable securities) as of Dec 31, 2022",
+  "total_debt": "$9.923B long-term debt",
+  "guidance_next": "Q1 2023 revenue $26-28.5B; FY2023 total expenses $89-95B (lowered from $94-100B); FY2023 capex $30-33B (lowered from $34-37B); FY2023 restructuring charges ~$1B (down from $2B prior estimate); FY2023 tax rate low twenties"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.4,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "lower Meta capex guidance signals reduced near-term GPU/data center spend"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "digital ad market read-through; both face similar macro ad pressures"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "cloud/data center capex trends watched together"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "AI infrastructure spending comparisons"
+  },
+  {
+   "company": "SNDK",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "lower data center buildout reduces storage component demand"
+  }
+ ],
+ "evidence": "We anticipate our full-year 2023 total expenses will be in the range of $89-95 billion, lowered from our prior outlook of $94-100 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

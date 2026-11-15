@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2024 (fiscal quarter ended September 28, 2024)",
+  "revenue": "$6.819 billion (GAAP, up 18% YoY, 17% QoQ)",
+  "operating_income": "$724 million GAAP; $1.715 billion non-GAAP",
+  "net_income": "$771 million GAAP; $1.504 billion non-GAAP",
+  "eps": "$0.47 diluted GAAP; $0.92 diluted non-GAAP",
+  "operating_cash_flow": "$628 million (quarter); $1.742 billion (nine months)",
+  "capex": "$132 million (quarter); $428 million (nine months)",
+  "free_cash_flow": "$496 million (quarter, OCF minus capex)",
+  "cash_and_investments": "$3.897B cash + $0.647B short-term investments = $4.544B",
+  "total_debt": "$1.720 billion long-term debt (no current portion; $750M repaid during the period)",
+  "guidance_next": "Q4 2024 revenue approximately $7.5 billion, plus or minus $300 million (~22% YoY, ~10% QoQ growth at midpoint); non-GAAP gross margin approximately 54%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.2,
+ "own_stock": 0.6,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AI GPU demand surge benefits both; MI325X directly competes with H100/H200"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Strong Ryzen/EPYC growth pressures Intel's CPU share"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Foundry partner benefiting from AMD's Data Center/Instinct volume ramp"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Oracle Cloud Infrastructure selected AMD Instinct MI300X for new compute supercluster"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Memory demand from MI325X/MI300X high-bandwidth memory requirements"
+  }
+ ],
+ "evidence": "AMD expects revenue to be approximately $7.5 billion, plus or minus $300 million... representing year-over-year growth of approximately 22% and sequential growth of approximately 10%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

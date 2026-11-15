@@ -1,0 +1,43 @@
+{
+ "event_type": "guidance update",
+ "material": 0.55,
+ "fcf_outlook": 0.4,
+ "uncertainty": 0.2,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "stronger PC/enterprise demand signal benefits chip peers"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "improved component demand outlook"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.15,
+   "reason": "read-through to semiconductor demand strength"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "PC ecosystem demand signal"
+  },
+  {
+   "company": "SNDK",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "storage supply chain tied to PC build demand"
+  }
+ ],
+ "evidence": "announcing updated Business Outlook relating to the fourth quarter of 2011",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

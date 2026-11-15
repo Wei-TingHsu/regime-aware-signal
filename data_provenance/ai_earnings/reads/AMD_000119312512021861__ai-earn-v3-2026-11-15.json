@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2011 (quarter ended Dec 31, 2011) and full-year 2011",
+  "revenue": "$1.69 billion Q4 (flat sequentially, +2% YoY); $6.57 billion FY2011 (flat YoY)",
+  "operating_income": "GAAP $71 million Q4; Non-GAAP $172 million Q4; GAAP $368 million FY; Non-GAAP $524 million FY",
+  "net_income": "GAAP net loss $177 million Q4; Non-GAAP net income $138 million Q4; GAAP net income $491 million FY",
+  "eps": "GAAP $(0.24) Q4; Non-GAAP $0.19 Q4; GAAP $0.66 FY",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$1.91 billion (cash, cash equivalents and marketable securities including long-term marketable securities)",
+  "total_debt": "$2.016 billion (current portion $489M + long-term $1,527M)",
+  "guidance_next": "AMD expects revenue to decrease eight percent, plus or minus three percent, sequentially for the first quarter of 2012."
+ },
+ "results_vs_prior_guidance": -0.4,
+ "guidance_change": -0.6,
+ "fcf_trend": -0.3,
+ "own_stock": -0.6,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Weak PC demand implied by sharp Q1 revenue guidance cut hurts both x86 players"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Graphics segment revenue fell; broader GPU/PC market softness"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.3,
+   "reason": "Weaker PC/chip demand outlook reduces component volume needs"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "General semiconductor demand softness signaled by guidance cut"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Lower AMD volumes could reduce foundry utilization"
+  }
+ ],
+ "evidence": "AMD expects revenue to decrease eight percent, plus or minus three percent, sequentially for the first quarter of 2012.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

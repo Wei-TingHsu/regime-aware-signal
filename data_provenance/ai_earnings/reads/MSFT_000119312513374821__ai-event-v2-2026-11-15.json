@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.15,
+ "fcf_outlook": 0,
+ "uncertainty": 0.2,
+ "own_stock": -0.05,
+ "market": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "CEO transition uncertainty at MSFT"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "cloud/enterprise competitor amid MSFT leadership gap"
+  }
+ ],
+ "evidence": "Ensuring continuity of key leaders during the transition to a new chief executive officer",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

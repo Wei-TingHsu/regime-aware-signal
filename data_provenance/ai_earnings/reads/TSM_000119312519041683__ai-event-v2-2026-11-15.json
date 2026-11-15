@@ -1,0 +1,28 @@
+{
+ "event_type": "accounting",
+ "material": 0.35,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.3,
+ "own_stock": -0.3,
+ "market": -0.05,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "reason": "foundry customer affected by scrapped wafers/delivery delay"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "reason": "potential delivery schedule impact from wafer scrap"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "reason": "TSMC yield issue could ease competitive pressure"
+  }
+ ],
+ "evidence": "This incident is expected to reduce Q1 revenue by about US$550 million, gross margin by 2.6 percentage points, operating margin by 3.2 percentage points, and EPS by NT$0.42.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

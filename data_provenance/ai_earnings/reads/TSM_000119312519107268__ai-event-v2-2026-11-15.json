@@ -1,0 +1,37 @@
+{
+ "event_type": "product or technology",
+ "material": 0.2,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC extends process leadership, pressuring Intel foundry competitiveness"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "benefits from cheaper, easy-migration 7nm-derived node"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "GPU/HPC customers gain cost-performance options"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "networking chip customer benefits from N6 node"
+  }
+ ],
+ "evidence": "TSMC N6 technology will further extend our leadership in delivering product benefits with higher performance and cost advantage beyond the current N7",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

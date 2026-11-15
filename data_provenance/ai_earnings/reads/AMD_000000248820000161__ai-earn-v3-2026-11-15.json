@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2020 (ended September 26, 2020)",
+  "revenue": "$2,801 million (GAAP and non-GAAP), up 56% YoY, up 45% QoQ",
+  "operating_income": "$449 million GAAP; $525 million non-GAAP",
+  "net_income": "$390 million GAAP; $501 million non-GAAP",
+  "eps": "$0.32 diluted GAAP; $0.41 diluted non-GAAP",
+  "operating_cash_flow": "$339 million",
+  "capex": "$74 million",
+  "free_cash_flow": "$265 million (stated)",
+  "cash_and_investments": "$1,771 million (cash, cash equivalents and short-term investments)",
+  "total_debt": "$373 million",
+  "guidance_next": "Q4 2020 revenue ~$3.0 billion +/- $100 million (up ~41% YoY, ~7% QoQ); non-GAAP gross margin ~45%; FY2020 revenue growth raised to ~41% YoY (from prior 32%), non-GAAP gross margin ~45% (consistent with prior guidance)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "AMD EPYC/Ryzen share gains in server and client"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD GPU competition, though AMD GPU revenue weaker this quarter"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure using AMD EPYC for cloud and Office 365"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS instances based on AMD EPYC processors"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Google Cloud Confidential VMs using AMD EPYC"
+  }
+ ],
+ "evidence": "AMD now expects 2020 revenue to grow by approximately 41 percent compared to 2019, up from prior guidance of 32 percent.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

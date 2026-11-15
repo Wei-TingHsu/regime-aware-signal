@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2018 (quarter ended September 30, 2017)",
+  "revenue": "$24.5 billion, up 12% YoY",
+  "operating_income": "$7.7 billion, up 15% YoY",
+  "net_income": "$6.6 billion, up 16% YoY",
+  "eps": "$0.84 diluted, up 17% YoY",
+  "operating_cash_flow": "$12,440 million",
+  "capex": "$2,132 million (additions to property and equipment)",
+  "free_cash_flow": "$10,308 million (12,440 - 2,132)",
+  "cash_and_investments": "$138,471 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$85,475 million (short-term debt $8,170M + current portion long-term debt $1,050M + long-term debt $76,255M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure growing 90% YoY, gaining cloud share vs AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure's rapid growth pressures Google Cloud competitive position"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Server/cloud growth and Dynamics 365 strength compete with Oracle enterprise offerings"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader cloud security spending tailwind implied by enterprise cloud growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Azure's 90% growth implies rising datacenter compute/chip demand"
+  }
+ ],
+ "evidence": "\"Commercial cloud annualized revenue run rate reaches $20.4 billion\" with Azure revenue growth of 90%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

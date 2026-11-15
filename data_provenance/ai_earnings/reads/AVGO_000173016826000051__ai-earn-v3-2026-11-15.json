@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2026 (ended May 3, 2026)",
+  "revenue": "$22,187 million (+48% YoY)",
+  "operating_income": null,
+  "net_income": "GAAP $9,310 million; Non-GAAP $12,074 million",
+  "eps": "GAAP diluted $1.91; Non-GAAP diluted $2.44",
+  "operating_cash_flow": "$10,493 million",
+  "capex": "$231 million",
+  "free_cash_flow": "$10,262 million (46% of revenue)",
+  "cash_and_investments": "$19,628 million cash and cash equivalents",
+  "total_debt": "Short-term debt $2,252 million; Long-term debt $62,655 million",
+  "guidance_next": "Q3 FY2026 revenue guidance of approximately $29.4 billion (+84% YoY); Non-GAAP operating income guidance of approximately 67% of projected revenue; Adjusted EBITDA guidance of approximately 68% of projected revenue; AI semiconductor revenue expected to grow over 200% YoY to $16.0 billion"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.6,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "custom AI accelerators gaining share vs merchant GPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "foundry capacity demand rises with AI semi growth"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "likely custom ASIC customer driving AI semi revenue"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "likely custom accelerator customer benefiting from AI buildout"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "memory demand tied to AI data center buildout"
+  }
+ ],
+ "evidence": "In Q3 we expect semiconductor revenue from AI to grow over 200 percent year-over-year to $16.0 billion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2012",
+  "revenue": "NT$128.06 billion",
+  "operating_income": "Operating margin 36.5% (~NT$46.74 billion implied)",
+  "net_income": "NT$41.81 billion",
+  "eps": "NT$1.61",
+  "operating_cash_flow": "NT$69.97 billion",
+  "capex": "NT$59.47 billion",
+  "free_cash_flow": "NT$10.50 billion",
+  "cash_and_investments": "NT$188.37 billion",
+  "total_debt": "Long-term interest-bearing debt NT$37.28 billion",
+  "guidance_next": "Q3 2012 revenue NT$136-138 billion; gross margin 46-48%; operating margin 34-36%; FX assumption 29.76 NT$/USD"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "TSMC advanced node capacity growth benefits fabless customers like AMD"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "self"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC strong 28nm ramp pressures Intel foundry competitiveness"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "NVDA relies on TSMC leading-edge nodes for GPU production"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Broadcom uses TSMC foundry capacity for communication chips"
+  }
+ ],
+ "evidence": "Net Sales 128.06 126 - 128 ... +21.4% ... 28nm shipments expected to double, accounting for >80% of Q3 revenue growth",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

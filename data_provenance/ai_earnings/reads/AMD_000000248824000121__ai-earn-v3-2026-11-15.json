@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2024 (quarter ended June 29, 2024)",
+  "revenue": "$5,835 million (GAAP, up 9% YoY, up 7% QoQ)",
+  "operating_income": "$269 million GAAP; $1,264 million non-GAAP",
+  "net_income": "$265 million GAAP; $1,126 million non-GAAP",
+  "eps": "$0.16 GAAP diluted; $0.69 non-GAAP diluted",
+  "operating_cash_flow": "$593 million (Q2); $1,114 million (six months)",
+  "capex": "$154 million (Q2); $296 million (six months)",
+  "free_cash_flow": "$439 million (593-154, Q2 calculated)",
+  "cash_and_investments": "$4,113M cash + $1,227M short-term investments = $5,340 million",
+  "total_debt": "$1,719 million long-term debt (current portion $0, after $750M repayment)",
+  "guidance_next": "Q3 2024 revenue approximately $6.7 billion, plus or minus $300 million (~16% YoY, ~15% QoQ growth at midpoint); non-GAAP gross margin approximately 53.5%"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.3,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AMD's Instinct GPU ramp signals robust overall AI accelerator demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Rising Instinct/EPYC volumes imply higher advanced-node foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure ND MI300X V5 GA shows cloud adoption of AMD AI chips"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Continued Client/Data Center CPU share gains pressure Intel"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Higher-memory Instinct MI325X roadmap implies increased HBM demand"
+  }
+ ],
+ "evidence": "revenue above the midpoint of our guidance driven by strong growth in the Data Center and Client segments",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.05,
+ "own_stock": 0.15,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "foundry demand signal supports capacity for fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "strong TSMC volume implies healthy chip demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "TSMC share gains vs Intel foundry"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.03,
+   "reason": "read-through for semiconductor demand cycle"
+  }
+ ],
+ "evidence": "revenues for February 2014 were approximately NT$46.83 billion... an increase of 13.7 percent over February 2013",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

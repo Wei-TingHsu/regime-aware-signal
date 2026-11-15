@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.4,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.3,
+ "own_stock": -0.4,
+ "market": -0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "weak foundry demand signals broader semiconductor slowdown"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSMC weakness could relatively favor IDM competitor"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "reliance on TSMC capacity, demand slowdown risk"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "broader semiconductor demand softness"
+  }
+ ],
+ "evidence": "net sales were approximately NT$32.86 billion, a decrease of 11.3 percent over August 2011 and a decrease of 10.3 percent over September 2010",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

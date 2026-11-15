@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2022 (quarter ended June 30, 2022)",
+  "revenue": "NT$534.14 billion (US$18.16 billion)",
+  "operating_income": "NT$262.12 billion, operating margin 49.1%",
+  "net_income": "NT$237.03 billion",
+  "eps": "NT$9.14 (US$1.55 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q3 2022 revenue expected US$19.8-20.6 billion; gross profit margin 57.5%-59.5%; operating profit margin 47%-49% (at NT$29.7/US$1)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "advanced node demand supports GPU supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "relies on TSMC leading-edge capacity"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "uses TSMC advanced/specialty nodes"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC margin strength highlights foundry leadership"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broader semiconductor demand read-through"
+  }
+ ],
+ "evidence": "revenue is expected to be between US$19.8 billion and US$20.6 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

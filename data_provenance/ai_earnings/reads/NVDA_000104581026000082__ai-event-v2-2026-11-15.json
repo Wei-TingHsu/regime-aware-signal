@@ -1,0 +1,49 @@
+{
+ "event_type": "leadership change",
+ "material": 0.85,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.85,
+ "own_stock": -0.65,
+ "market": -0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "NVDA leadership vacuum could aid rival GPU sales"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "potential share gain amid NVDA uncertainty"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "key foundry partner exposed to NVDA execution risk"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.15,
+   "reason": "major GPU buyer faces supply/strategy uncertainty"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "cloud AI buyer exposed to NVDA governance risk"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "large AI chip customer faces uncertainty"
+  }
+ ],
+ "evidence": "the Board of Directors... accepted the resignation of Jen-Hsun Huang, as NVIDIA's President, Chief Executive Officer and member of the Board, effective immediately.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

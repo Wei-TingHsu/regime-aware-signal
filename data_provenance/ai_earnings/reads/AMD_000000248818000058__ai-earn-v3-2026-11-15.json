@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2018",
+  "revenue": "$1.65 billion, up 40% YoY",
+  "operating_income": "$120 million GAAP; $152 million non-GAAP",
+  "net_income": "$81 million GAAP; $121 million non-GAAP",
+  "eps": "$0.08 GAAP diluted; $0.11 non-GAAP diluted",
+  "operating_cash_flow": "-$86 million",
+  "capex": "$46 million",
+  "free_cash_flow": "-$132 million",
+  "cash_and_investments": "$1.045 billion cash and cash equivalents",
+  "total_debt": "$1.388 billion",
+  "guidance_next": "Q2 2018 revenue approximately $1.725 billion, plus or minus $50 million, up 50% YoY; non-GAAP gross margin approximately 37%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.7,
+ "fcf_trend": -0.3,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "Ryzen/EPYC share gains in client and server"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Radeon GPU strength in gaming/datacenter"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Xbox FreeSync partnership, cloud/server adoption"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "foundry demand for AMD's growing chip volumes"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "strong growth across own segments"
+  }
+ ],
+ "evidence": "AMD expects revenue to be approximately $1.725 billion, plus or minus $50 million, an increase of 50 percent year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2021 (three months ended September 25, 2021)",
+  "revenue": "$4,313 million (up 54% YoY, up 12% QoQ)",
+  "operating_income": "$948 million GAAP; $1,055 million non-GAAP",
+  "net_income": "$923 million GAAP; $893 million non-GAAP",
+  "eps": "$0.75 diluted GAAP; $0.73 non-GAAP",
+  "operating_cash_flow": "$849 million",
+  "capex": "$85 million",
+  "free_cash_flow": "$764 million (as stated)",
+  "cash_and_investments": "$3,608 million (cash, cash equivalents and short-term investments)",
+  "total_debt": "$313 million",
+  "guidance_next": "Q4 2021 revenue ~$4.5 billion +/- $100 million (up ~39% YoY, ~4% QoQ); non-GAAP gross margin ~49.5% for Q4; FY2021 revenue growth raised to ~65% YoY from prior ~60% guidance; FY2021 non-GAAP gross margin ~48%"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.4,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "reason": "AMD data center/GPU growth signals competitive AI/server GPU momentum",
+   "direction": 0.2
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "reason": "EPYC server share gains and data center doubling pressure Intel's server CPU business",
+   "direction": -0.5
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "reason": "Partnership on Windows 11 and cloud compute involving AMD chips",
+   "direction": 0.2
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "reason": "AMD EPYC and Radeon powering new AWS EC2 instances",
+   "direction": 0.2
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "reason": "Google Cloud N2D VMs powered by AMD EPYC processors",
+   "direction": 0.2
+  }
+ ],
+ "evidence": "AMD now expects revenue to grow approximately 65 percent driven by growth across all businesses, up from prior guidance of 60 percent growth.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

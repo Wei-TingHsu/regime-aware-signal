@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 FY21 (ended July 31, 2020)",
+  "revenue": "$199.0 million total revenue (84% YoY growth); subscription revenue $184.3 million",
+  "operating_income": "GAAP loss from operations $(30.0) million; Non-GAAP income from operations $7.8 million",
+  "net_income": "GAAP net loss $(29.9) million; Non-GAAP net income $7.9 million",
+  "eps": "GAAP $(0.14); Non-GAAP diluted $0.03",
+  "operating_cash_flow": "$55.0 million (net cash from operations)",
+  "capex": "$20.6 million property & equipment + $2.0 million capitalized internal-use software = ~$22.6 million",
+  "free_cash_flow": "$32.4 million (as stated)",
+  "cash_and_investments": "$1,064.7 million cash and cash equivalents (no marketable securities remaining)",
+  "total_debt": null,
+  "guidance_next": "Q3 FY21: total revenue $210.6-$215.0 million, Non-GAAP income (loss) from operations $(1.4)-$1.6 million, Non-GAAP net income (loss) $(2.2)-$0.9 million, Non-GAAP diluted EPS $(0.01)-$0.00; Full Year FY21 (raised): total revenue $809.1-$826.7 million, Non-GAAP income from operations $3.6-$16.4 million, Non-GAAP net income $5.6-$18.4 million, Non-GAAP diluted EPS $0.02-$0.08"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "CrowdStrike's cloud-native platform likely runs on hyperscale cloud infrastructure"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Microsoft Defender competes in endpoint security market CrowdStrike is winning share in"
+  },
+  {
+   "company": "GOOG",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Potential cloud infrastructure customer relationship for Falcon platform delivery"
+  }
+ ],
+ "evidence": "we are raising our guidance for fiscal year 2021 and now expect to deliver non-GAAP operating income for the fiscal year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

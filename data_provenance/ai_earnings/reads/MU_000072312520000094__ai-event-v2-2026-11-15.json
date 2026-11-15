@@ -1,0 +1,37 @@
+{
+ "event_type": "guidance update",
+ "material": 0.7,
+ "fcf_outlook": 0.6,
+ "uncertainty": -0.3,
+ "own_stock": 0.8,
+ "market": 0.3,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.4,
+   "reason": "NAND/DRAM pricing strength implies sector-wide memory demand improvement"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "higher memory costs for PC/server OEM supply chain"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "memory demand tied to AI/data center buildouts benefits suppliers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "server/PC demand correlated with memory upcycle"
+  }
+ ],
+ "evidence": "Revenue $5.70 bn - $5.75 bn ... Gross margin 28.5% - 29.5% ... Diluted earnings per share $0.61 - $0.65",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

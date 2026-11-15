@@ -1,0 +1,19 @@
+{
+ "event_type": "guidance update",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.0,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "one-billionth GPU shipped milestone"
+  }
+ ],
+ "evidence": "Revenue to be between NT$105 billion and NT$107 billion, at a forecast exchange rate of 29.26 NT dollars to 1 US dollar",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

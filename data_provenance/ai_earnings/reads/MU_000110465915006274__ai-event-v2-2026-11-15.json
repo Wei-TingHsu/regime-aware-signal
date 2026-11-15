@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.25,
+ "fcf_outlook": 0.05,
+ "uncertainty": -0.1,
+ "own_stock": 0.1,
+ "market": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "memory peer financing, little direct effect"
+  }
+ ],
+ "evidence": "The Company intends to use the net proceeds from this offering for the retirement or repurchase of convertible notes and debt and general corporate purposes.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2026 (quarter ended March 31, 2026)",
+  "revenue": "$82.9 billion, +18% YoY (+15% CC)",
+  "operating_income": "$38.4 billion, +20% YoY (+16% CC)",
+  "net_income": "$31.78 billion GAAP, +23% YoY; non-GAAP $31.79 billion, +20%",
+  "eps": "$4.27 diluted GAAP, +23% YoY; non-GAAP $4.27, +21%",
+  "operating_cash_flow": "$46.679 billion (quarter); $127.494 billion (nine months)",
+  "capex": "$30.876 billion (additions to PP&E, quarter)",
+  "free_cash_flow": "$15.803 billion (46,679 - 30,876)",
+  "cash_and_investments": "$78.272 billion total cash, cash equivalents and short-term investments",
+  "total_debt": "$40.262 billion (current portion $8,839M + long-term $31,423M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Azure AI capacity growth implies continued GPU demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Cloud AI infrastructure buildout benefits chip suppliers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud competitor in AI infrastructure race"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS competes directly with Azure for cloud/AI share"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Cloud infrastructure competitor"
+  }
+ ],
+ "evidence": "We delivered results that exceeded expectations across revenue, operating income, and earnings per share, reflecting strong execution and growing demand for the Microsoft Cloud",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

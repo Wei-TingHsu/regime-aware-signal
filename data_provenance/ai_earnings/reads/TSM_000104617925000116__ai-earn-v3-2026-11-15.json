@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2025 (quarter ended September 30, 2025)",
+  "revenue": "NT$989.92 billion / US$33.10 billion",
+  "operating_income": "NT$500.685 billion (operating margin 50.6%)",
+  "net_income": "NT$452.302 billion",
+  "eps": "NT$17.44 (US$2.92 per ADR)",
+  "operating_cash_flow": "NT$426.83 billion",
+  "capex": "NT$287.45 billion",
+  "free_cash_flow": "NT$139.38 billion",
+  "cash_and_investments": "NT$2,751.06 billion",
+  "total_debt": "Long-term interest-bearing debt NT$918.23 billion",
+  "guidance_next": "Q4 2025 revenue expected US$32.2-33.4 billion; gross margin 59%-61%; operating margin 49%-51% (at NT$30.6/US$1)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "leading-edge demand tied to AI GPU production"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "advanced node demand for AI/CPU chips"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "custom AI silicon reliant on TSMC capacity"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "TSMC's leading-edge strength highlights competitive gap"
+  }
+ ],
+ "evidence": "revenue increased 40.8% year-over-year and increased 10.1% from the previous quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

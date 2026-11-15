@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2019 (quarter ended June 30, 2019)",
+  "revenue": "$33.7 billion, +12% YoY",
+  "operating_income": "$12.4 billion, +20% YoY",
+  "net_income": "$13.2 billion GAAP (+49%); $10.6 billion non-GAAP (+21%)",
+  "eps": "$1.71 diluted GAAP (+50%); $1.37 non-GAAP (+21%)",
+  "operating_cash_flow": "$16,108 million (quarter)",
+  "capex": "$4,051 million (additions to property and equipment, quarter)",
+  "free_cash_flow": "$12,057 million (calculated: operating cash flow minus capex)",
+  "cash_and_investments": "$133,819 million total cash, cash equivalents and short-term investments",
+  "total_debt": "$72,178 million (current portion $5,516M + long-term $66,662M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.6,
+ "own_stock": 0.7,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Azure growth of 64% pressures AWS market share narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Cloud competitor as Azure accelerates"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Enterprise software/cloud competitor as Dynamics 365 and Azure grow strongly"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Data center capex growth implied by Azure/cloud expansion"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Cloud infrastructure buildout benefits server chip suppliers"
+  }
+ ],
+ "evidence": "Q4 commercial cloud revenue increased 39% year-over-year to $11.0 billion, driving our strongest commercial quarter ever",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

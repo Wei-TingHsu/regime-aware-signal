@@ -1,0 +1,19 @@
+{
+ "event_type": "accounting",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.05,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "no direct impact, accounting-only item"
+  }
+ ],
+ "evidence": "Under International Financial Reporting Standards as adopted in Korea, the embedded derivatives in the exchangeable bonds have been measured at fair value and reflected in the Company's financial statements. Accordingly, there is no actual cash outflow.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

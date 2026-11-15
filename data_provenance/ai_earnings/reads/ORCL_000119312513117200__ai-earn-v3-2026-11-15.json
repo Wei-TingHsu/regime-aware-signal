@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2013 (three months ended February 28, 2013)",
+  "revenue": "$8,958 million, down 1% YoY",
+  "operating_income": "GAAP $3,334 million (37% margin); Non-GAAP $4.2 billion (47% margin)",
+  "net_income": "GAAP $2,504 million; Non-GAAP $3.1 billion",
+  "eps": "GAAP diluted $0.52 (up 6%); Non-GAAP diluted $0.65 (up 5%)",
+  "operating_cash_flow": "$13,717 million trailing twelve months",
+  "capex": "$684 million (TTM); $467 million (nine months)",
+  "free_cash_flow": "$13,033 million (trailing twelve months)",
+  "cash_and_investments": "$16,101 million cash + $17,306 million marketable securities = $33,407 million",
+  "total_debt": "$1,250 million current notes payable + $18,502 million non-current notes payable = $19,752 million",
+  "guidance_next": "Non-GAAP operating margin expected to reach an all-time high for the fiscal year (no specific numeric guidance given)"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise software/cloud competitor"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud IaaS competitor"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "hardware systems decline reduces chip demand context"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "SPARC chip manufacturing relevance"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/enterprise software competitor"
+  }
+ ],
+ "evidence": "Both operating cash flow and free cash flow were at record levels for a Q3, with operating cash flow of $13.7 billion over the last twelve months.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

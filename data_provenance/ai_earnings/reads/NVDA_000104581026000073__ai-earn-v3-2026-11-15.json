@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2027 (quarter ended July 26, 2026)",
+  "revenue": "$96,221M (up 18% Q/Q, up 106% Y/Y)",
+  "operating_income": "$63,734M GAAP; $63,956M non-GAAP",
+  "net_income": "$59,688M GAAP; $53,954M non-GAAP",
+  "eps": "$2.46 GAAP diluted; $2.22 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$99,369M (cash $22,443M + marketable debt securities $34,143M + marketable equity securities $42,783M)",
+  "total_debt": "$33,366M (short-term $1,000M + long-term $32,366M)",
+  "guidance_next": "Q3 FY27 revenue expected ~$108.0B (plus or minus 2%), no China Data Center compute revenue assumed; GAAP/non-GAAP gross margin 74.0% (plus or minus 50bps); GAAP opex ~$9.2B, non-GAAP opex ~$9.0B; FY27 tax rate 16.0%-18.0%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA extends dominant AI accelerator lead and demand commentary"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "memory partnership with SK hynix for AI buildout"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "foundry capacity needed for Blackwell/Rubin ramp"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Azure deploying Vera Rubin racks, large AI capex partner"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Google Cloud deploying Vera Rubin racks"
+  }
+ ],
+ "evidence": "Revenue is expected to be $108.0 billion, plus or minus 2%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

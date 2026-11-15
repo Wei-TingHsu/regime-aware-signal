@@ -1,0 +1,31 @@
+{
+ "event_type": "guidance update",
+ "material": 0.2,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "benefits from TSMC capacity/tech roadmap"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "beneficiary of advanced node capacity expansion"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC foundry strength pressures Intel foundry ambitions"
+  }
+ ],
+ "evidence": "2012 capex raised to US$8-8.5 billion due to stronger 28nm demand and 20nm R&D pull-in",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

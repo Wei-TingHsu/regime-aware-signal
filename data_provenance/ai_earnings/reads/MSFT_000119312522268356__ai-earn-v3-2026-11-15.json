@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2023 (quarter ended September 30, 2022)",
+  "revenue": "$50.1 billion, +11% YoY (+16% constant currency)",
+  "operating_income": "$21.5 billion, +6% YoY (+15% constant currency)",
+  "net_income": "$17.6 billion, -14% YoY (-8% constant currency)",
+  "eps": "$2.35 diluted, -13% YoY (-7% constant currency)",
+  "operating_cash_flow": "$23,198 million",
+  "capex": "$6,283 million (additions to property and equipment)",
+  "free_cash_flow": "$16,915 million (23,198 - 6,283)",
+  "cash_and_investments": "$107,262 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$48,622 million (current portion $3,248M + long-term $45,374M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.2,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Azure growth of 35% outpaces cloud rivals"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Azure cloud share gains pressure GCP"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Server/cloud growth competes with Oracle Cloud"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Data center infrastructure buildout benefits chip suppliers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Azure cloud capacity growth implies continued AI/datacenter hardware demand"
+  }
+ ],
+ "evidence": "Azure and other cloud services revenue growth of 35% (up 42% in constant currency)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

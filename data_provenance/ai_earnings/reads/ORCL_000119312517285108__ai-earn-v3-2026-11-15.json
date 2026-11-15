@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2018 (three months ended August 31, 2017)",
+  "revenue": "$9.2 billion, up 7% YoY",
+  "operating_income": "GAAP $2.8 billion (up 7%); Non-GAAP $3.8 billion (up 11%)",
+  "net_income": "$2.2 billion GAAP (up 21%); $2.7 billion non-GAAP (up 14%)",
+  "eps": "$0.52 GAAP (up 19%); $0.62 non-GAAP (up 12%)",
+  "operating_cash_flow": "$6,566 million (quarter); $14,817 million trailing twelve months",
+  "capex": "$473 million (quarter); $2,195 million trailing twelve months",
+  "free_cash_flow": "$12,622 million trailing twelve months (per release table)",
+  "cash_and_investments": "$21,321 million cash and equivalents plus $45,576 million marketable securities",
+  "total_debt": "$4,998 million current notes payable + $48,293 million non-current notes payable",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0,
+ "fcf_trend": 0.2,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "not addressed"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Ellison contrasts autonomous DB pricing/reliability vs AWS"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud rival, not directly addressed"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "self"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure rival, not addressed"
+  }
+ ],
+ "evidence": "GAAP Earnings Per Share was up 19% to $0.52, while non-GAAP Earnings Per Share was up 12% to $0.62.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

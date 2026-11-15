@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2012 (ended Jan 29, 2012) and full FY2012",
+  "revenue": "$953.2 million (Q4); $3,997.9 million (FY12)",
+  "operating_income": "$122.3 million (Q4 GAAP); $648.3 million (FY12 GAAP)",
+  "net_income": "$116.0 million GAAP / $158.1 million non-GAAP (Q4); $581.1 million GAAP / $734.4 million non-GAAP (FY12)",
+  "eps": "$0.19 GAAP / $0.26 non-GAAP (Q4 diluted); $0.94 GAAP / $1.19 non-GAAP (FY12 diluted)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$3,129.6 million (vs $2,490.6 million prior year)",
+  "total_debt": null,
+  "guidance_next": "Q1 FY2013: revenue $900-930 million; GAAP gross margin ~49.2% +/-1pp, non-GAAP ~49.5% +/-1pp; GAAP opex ~$383 million, non-GAAP ~$340 million; tax rate ~20% (or ~16% if R&D credit reinstated); capex $35-45 million; diluted shares ~622.5 million"
+ },
+ "results_vs_prior_guidance": -0.6,
+ "guidance_change": -0.4,
+ "fcf_trend": 0.2,
+ "own_stock": -0.5,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Rambus settlement follows pattern of cross-licensing seen with Intel; competitive chipset/CPU overlap"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "NVIDIA GPU revenue softness could reflect broader discrete GPU market weakness benefiting or hurting AMD similarly"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "Lower NVIDIA revenue and flat capex guidance implies softer foundry demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Tegra 3 powering Android 4.0 'Ice Cream Sandwich' devices ties NVIDIA fortunes to Android ecosystem growth"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "No explicit memory commentary, but GPU volume decline could soften memory component demand"
+  }
+ ],
+ "evidence": "Revenue for the fourth quarter of fiscal 2012 was $953.2 million, down 10.6 percent from the prior quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

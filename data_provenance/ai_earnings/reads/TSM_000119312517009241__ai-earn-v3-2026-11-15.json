@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "4Q16 (and FY2016)",
+  "revenue": "NT$262.23 billion (4Q16); NT$947.94 billion (FY2016)",
+  "operating_income": "Operating margin 41.9% of NT$262.23B revenue (~NT$109.9B) 4Q16; FY2016 operating margin 39.9%",
+  "net_income": "NT$100.20 billion (4Q16); implied FY2016 net income consistent with EPS NT$12.89 diluted",
+  "eps": "NT$3.86 (4Q16, diluted); NT$12.89 (FY2016, diluted)",
+  "operating_cash_flow": "NT$185.22 billion (4Q16); NT$539.84 billion (FY2016)",
+  "capex": "NT$112.54 billion (4Q16); NT$328.05 billion (FY2016)",
+  "free_cash_flow": "NT$72.68 billion (4Q16); NT$211.79 billion (FY2016)",
+  "cash_and_investments": "NT$632.11 billion (33.5% of total assets)",
+  "total_debt": "Long-term interest-bearing debt NT$153.12 billion",
+  "guidance_next": "1Q17 revenue NT$236-239 billion at FX 32.0 NT$/USD; gross margin 51.5%-53.5%; operating margin 40.5%-42.5%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.0,
+ "fcf_trend": 0.1,
+ "own_stock": 0.4,
+ "market": 0.2,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Fabless customer benefiting from TSMC advanced-node capacity and margin strength"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Relies on TSMC leading-edge nodes; strong TSMC results signal healthy supply"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Major TSMC customer for communication/networking chips"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC's margin and node leadership pressures Intel's foundry ambitions"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Different segment (memory) but part of broader semiconductor capex cycle"
+  }
+ ],
+ "evidence": "Net Revenue 262.23 255-258 ... Gross Margin 52.3% 50.5%\u201452.5% ... Operating Margin 41.9% 40%\u201442%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

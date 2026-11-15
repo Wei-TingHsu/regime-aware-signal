@@ -1,0 +1,49 @@
+{
+ "event_type": "guidance update",
+ "material": 0.6,
+ "fcf_outlook": 0.3,
+ "uncertainty": -0.2,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud infra growth target implies share gains vs hyperscalers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud infra competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "cloud infra competition"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "capex guidance implies continued GPU spend"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "capex/infra buildout beneficiary"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "chip demand from datacenter buildout"
+  }
+ ],
+ "evidence": "Defined timeline to positive free cash flow during the second half of FY28 and set free cash flow target of $30 billion+ for FY29.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

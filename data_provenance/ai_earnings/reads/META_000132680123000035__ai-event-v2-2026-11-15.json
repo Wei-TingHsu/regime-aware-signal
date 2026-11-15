@@ -1,0 +1,31 @@
+{
+ "event_type": "restructuring",
+ "material": 0.5,
+ "fcf_outlook": 0.4,
+ "uncertainty": 0.1,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "signals industry-wide cost discipline trend"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "peer tech layoffs validate cost-cutting push"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "reinforces sector-wide efficiency narrative"
+  }
+ ],
+ "evidence": "we expect our full-year 2023 total expenses to be in the range of $86-92 billion, lowered from $89-95 billion previously",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

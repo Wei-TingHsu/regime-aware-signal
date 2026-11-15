@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2021 (ended Dec 31, 2021), full year 2021",
+  "revenue": "$137.4 billion (Q4), $469.8 billion (FY)",
+  "operating_income": "$3.5 billion (Q4), $24.9 billion (FY)",
+  "net_income": "$14.3 billion (Q4, includes $11.8B pre-tax Rivian valuation gain), $33.4 billion (FY)",
+  "eps": "$27.75 diluted (Q4), $64.81 diluted (FY)",
+  "operating_cash_flow": "$46.3 billion TTM (down 30% YoY)",
+  "capex": "$61.1 billion purchases of property and equipment (FY)",
+  "free_cash_flow": "-$9.1 billion TTM (outflow), vs +$31.0 billion prior year",
+  "cash_and_investments": "$36.2 billion cash and equivalents + $59.8 billion marketable securities",
+  "total_debt": "$48.7 billion long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0,
+ "fcf_trend": -0.8,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AWS 40% growth signals strong cloud demand sector-wide"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "cloud infrastructure growth benefits all hyperscalers"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "AWS compute expansion implies server/chip demand"
+  },
+  {
+   "company": "SNDK",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "data center buildout implies storage demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "networking/semiconductor demand from AWS capex growth"
+  }
+ ],
+ "evidence": "Net income increased to $14.3 billion in the fourth quarter...includes a pre-tax valuation gain of $11.8 billion...from our common stock investment in Rivian Automotive",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

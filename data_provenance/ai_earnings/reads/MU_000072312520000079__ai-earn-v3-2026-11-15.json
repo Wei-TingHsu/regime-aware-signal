@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Fiscal Q4 2020 (ended Sept. 3, 2020)",
+  "revenue": "$6.056 billion",
+  "operating_income": "$1.157 billion GAAP ($1.302 billion non-GAAP)",
+  "net_income": "$988 million GAAP ($1.229 billion non-GAAP)",
+  "eps": "$0.87 diluted GAAP ($1.08 non-GAAP)",
+  "operating_cash_flow": "$2.271 billion",
+  "capex": "$2.16 billion (net investments in capex)",
+  "free_cash_flow": "$111 million (adjusted free cash flow, as stated)",
+  "cash_and_investments": "$9.26 billion (cash, marketable investments, and restricted cash)",
+  "total_debt": "$6.643 billion (current $270M + long-term $6.373B)",
+  "guidance_next": "FQ1-21: Revenue $5.2B \u00b1 $200M; GAAP gross margin 26.5% \u00b11% (Non-GAAP 27.5% \u00b11%); GAAP opex $873M \u00b1$25M (Non-GAAP $825M \u00b1$25M); GAAP diluted EPS $0.39 \u00b1$0.07 (Non-GAAP $0.47 \u00b1$0.07)"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.6,
+ "fcf_trend": -0.4,
+ "own_stock": -0.4,
+ "market": 0,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "Shared NAND pricing pressure implied by weak FQ1 margin guidance"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Lower memory ASPs could ease input costs but signals soft PC/cloud demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Weaker memory pricing environment may reflect broader component demand softness"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "PC/data-center memory demand trends tied to Intel's platform shipments"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Industry-wide DRAM/NAND pricing weakness implied by guided margin drop"
+  }
+ ],
+ "evidence": "Revenue $5.2 billion \u00b1 $200 million ... Diluted earnings per share $0.39 \u00b1 $0.07 (Non-GAAP $0.47 \u00b1 $0.07)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

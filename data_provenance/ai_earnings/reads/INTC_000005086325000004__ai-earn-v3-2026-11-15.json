@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2024 (fiscal year ended Dec 28, 2024)",
+  "revenue": "$14.3 billion, down 7% YoY",
+  "operating_income": "$412 million GAAP (2.9% margin); non-GAAP operating margin 9.6%",
+  "net_income": "$(0.1) billion GAAP attributable to Intel; $0.6 billion non-GAAP",
+  "eps": "$(0.03) GAAP diluted; $0.13 non-GAAP diluted",
+  "operating_cash_flow": "$3.2 billion (Q4); $8.288 billion (full year)",
+  "capex": "$23.944 billion (full year additions to PP&E)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$8.249 billion cash and cash equivalents + $13.813 billion short-term investments = ~$22.1 billion",
+  "total_debt": "$3.729 billion short-term debt + $46.282 billion long-term debt = ~$50.0 billion",
+  "guidance_next": "Q1 2025 revenue of $11.7-12.7 billion; GAAP EPS $(0.27); non-GAAP EPS $0.00; GAAP gross margin 33.8%, non-GAAP gross margin 36.0%; GAAP tax rate (32)%, non-GAAP tax rate 12%"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": -0.7,
+ "fcf_trend": -0.3,
+ "own_stock": -0.4,
+ "market": 0.0,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "x86 ecosystem collaboration but also competitive pressure noted"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel Foundry still struggling, losses widening, less competitive threat near-term"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "MRDIMM memory technology highlighted for AI servers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "DCAI weak, Gaudi AI accelerators mentioned but modest scale"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.4,
+   "reason": "self-referential, weak Q1 guidance"
+  }
+ ],
+ "evidence": "Our Q1 outlook reflects seasonal weakness magnified by macro uncertainties, further inventory digestion and competitive dynamics.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

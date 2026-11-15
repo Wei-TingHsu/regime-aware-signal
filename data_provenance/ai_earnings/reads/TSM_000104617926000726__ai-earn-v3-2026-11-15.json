@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2026 (quarter ended September 30, 2026)",
+  "revenue": "NT$1,494.24 billion (US$46.72 billion)",
+  "operating_income": "NT$876.45 billion; operating margin 58.7%",
+  "net_income": "NT$763.06 billion",
+  "eps": "NT$29.43 (US$4.60 per ADR unit)",
+  "operating_cash_flow": "NT$919.77 billion",
+  "capex": "NT$443.21 billion",
+  "free_cash_flow": "NT$476.56 billion (as stated)",
+  "cash_and_investments": "NT$4,016.98 billion (39.9% of total assets)",
+  "total_debt": "Long-term interest-bearing debt NT$818.38 billion; total liabilities NT$3,009.66 billion",
+  "guidance_next": "4Q26 revenue expected US$52.3-54.3 billion; gross margin 65%-67%; operating margin 56.5%-58.5% (at NT$31.8/US$1); full-year 2026 revenue expected to increase by around 44% YoY in US dollar terms"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.8,
+ "own_stock": 0.7,
+ "market": 0.5,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.7,
+   "reason": "leading-edge 2nm/3nm capacity ramp supports AI GPU supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "benefits from TSMC advanced node availability for AI/CPU chips"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "custom silicon/AI ASIC demand tied to TSMC capacity"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TSMC's accelerating lead widens foundry gap"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "cloud/AI infrastructure buildout depends on leading-edge chip supply"
+  }
+ ],
+ "evidence": "third quarter revenue was $46.72 billion, which increased 41.2% year-over-year... supported by strong demand for our leading-edge process technologies, including the steep ramp-up of our 2-nanometer technology",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

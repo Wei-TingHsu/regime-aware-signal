@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2017 (three months ended March 31, 2017)",
+  "revenue": "$24,750 million",
+  "operating_income": "$6,568 million",
+  "net_income": "$5,426 million",
+  "eps": "$7.73 diluted",
+  "operating_cash_flow": "$9,548 million",
+  "capex": "$2,508 million",
+  "free_cash_flow": "$7,040 million",
+  "cash_and_investments": "$92,439 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$3,937 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "ad market peer, no direct comparison made"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/ads peer, not addressed"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud peer, not addressed"
+  }
+ ],
+ "evidence": "revenues up 22% versus the first quarter of 2016 and 24% on a constant currency basis",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

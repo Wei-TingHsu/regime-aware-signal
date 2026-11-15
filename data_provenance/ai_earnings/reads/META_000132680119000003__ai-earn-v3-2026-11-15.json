@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and Full Year 2018",
+  "revenue": "$16,914 million (Q4); $55,838 million (FY)",
+  "operating_income": "$7,820 million (Q4); $24,913 million (FY)",
+  "net_income": "$6,882 million (Q4); $22,112 million (FY)",
+  "eps": "$2.38 diluted (Q4); $7.57 diluted (FY)",
+  "operating_cash_flow": "$7,684 million (Q4); $29,274 million (FY)",
+  "capex": "$4,366 million (Q4); $13,915 million (FY)",
+  "free_cash_flow": "$3,318 million (Q4); $15,359 million (FY)",
+  "cash_and_investments": "$41.11 billion",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Comparable digital ad platform facing cost pressure"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Large tech capex trend comparison"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Mega-cap tech capex and margin comparison"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Datacenter infrastructure spend relevant to chip suppliers"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Server/datacenter buildout implies chip demand"
+  }
+ ],
+ "evidence": "Operating margin fell to 46% from 57% and free cash flow declined to $3,318 million from $5,408 million year-over-year, reflecting sharply rising costs and capex outpacing revenue growth",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

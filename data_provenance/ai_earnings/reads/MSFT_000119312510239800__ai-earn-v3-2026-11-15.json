@@ -1,0 +1,50 @@
+{
+ "facts": {
+  "period": "Q1 FY2011 (quarter ended September 30, 2010)",
+  "revenue": "$16.20 billion, up 25% YoY",
+  "operating_income": "$7.12 billion, up 59% YoY",
+  "net_income": "$5.41 billion, up 51% YoY",
+  "eps": "$0.62 diluted, up 55% YoY",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$44.17 billion total cash, cash equivalents, and short-term investments",
+  "total_debt": "$10.665 billion (short-term debt $1.0B + long-term debt $9.665B)",
+  "guidance_next": "Reaffirms operating expense guidance of $26.9 billion to $27.3 billion for the full year ending June 30, 2011"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0,
+ "fcf_trend": 0.7,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "enterprise server/database growth competes with Oracle"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Bing share gains pressure Google search"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure/Office 365 growth competes with AWS cloud push"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "sustained PC refresh cycle driven by Windows 7 boosts Intel demand"
+  }
+ ],
+ "evidence": "Microsoft Corp. today announced record first-quarter revenue of $16.20 billion... increases of 59%, 51% and 55%, respectively",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

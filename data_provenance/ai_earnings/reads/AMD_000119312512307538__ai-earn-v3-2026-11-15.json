@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2012",
+  "revenue": "$1.41 billion",
+  "operating_income": "$77 million GAAP; $86 million non-GAAP",
+  "net_income": "$37 million GAAP; $46 million non-GAAP",
+  "eps": "$0.05 GAAP; $0.06 non-GAAP",
+  "operating_cash_flow": "$81 million",
+  "capex": "$39 million",
+  "free_cash_flow": "$42 million (non-GAAP adjusted)",
+  "cash_and_investments": "$1.76 billion (cash, cash equivalents and marketable securities, including long-term)",
+  "total_debt": null,
+  "guidance_next": "AMD expects revenue to decrease 1 percent, plus or minus 3 percent, sequentially for the third quarter of 2012."
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AMD weakness implies relative share stability for Intel"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AMD graphics/GPU softness vs Nvidia positioning"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Windows 8 launch tied to AMD OEM notebook designs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Weaker AMD demand could reduce foundry orders indirectly"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "General semiconductor demand read-through"
+  }
+ ],
+ "evidence": "AMD revenue $1.41 billion, 11 percent sequential decrease and a 10 percent decrease year-over-year, guided against prior expectation of +3% sequential growth, with Q3 outlook now calling for a further 1% sequential decline",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,57 @@
+{
+ "facts": {
+  "period": "Q3 2012 (quarter ended Sept 30, 2012)",
+  "revenue": "NT$141.38 billion",
+  "operating_income": "NT$52.58 billion implied (37.2% operating margin x revenue, not separately stated)",
+  "net_income": "NT$49.30 billion",
+  "eps": "NT$1.90 (diluted)",
+  "operating_cash_flow": "NT$76.63 billion",
+  "capex": "NT$78.33 billion",
+  "free_cash_flow": "-NT$1.70 billion (as stated)",
+  "cash_and_investments": "NT$147.75 billion",
+  "total_debt": "Long-term interest-bearing debt NT$77.73 billion",
+  "guidance_next": "4Q12 revenue NT$129-131 billion; gross margin 45-47%; operating margin 33-35%; FX assumption 29.47 NT$/USD"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Foundry customer benefits from TSMC capacity/tech"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Competes in advanced process leadership"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Self-referential strong quarter"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Foundry customer tied to TSMC output"
+  },
+  {
+   "company": "SNDK",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "Minor overlap in semiconductor supply chain"
+  }
+ ],
+ "evidence": "Revenue +10.4% QoQ and +32.8% YoY, beating prior guidance range of NT$136-138 billion with NT$141.38 billion actual, while operating margin of 37.2% topped the 34-36% guided range",
+ "note": "4Q12 guidance of NT$129-131 billion implies a sequential revenue decline (~-7% QoQ at midpoint) and flat-to-lower margins versus 3Q12 actuals, despite 3Q12 beating its own prior guidance.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

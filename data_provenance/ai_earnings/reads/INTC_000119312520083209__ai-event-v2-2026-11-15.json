@@ -1,0 +1,31 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.5,
+ "own_stock": -0.2,
+ "market": -0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "shared COVID demand/supply uncertainty"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "potential supply chain disruption"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "enterprise demand uncertainty from pandemic"
+  }
+ ],
+ "evidence": "The recent novel coronavirus (COVID-19) outbreak could materially adversely affect our financial condition and results of operations",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

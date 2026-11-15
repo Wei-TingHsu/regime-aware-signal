@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 2020 (preliminary, pre-announcement)",
+  "revenue": "expected to exceed prior guidance of ~$17.4B (exact figure not given)",
+  "operating_income": null,
+  "net_income": null,
+  "eps": "expected to exceed prior guidance of ~$1.02 GAAP / ~$1.10 non-GAAP",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Leadership change could sharpen Intel's competitive response"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "New engineer-CEO may deepen foundry/outsourcing ties"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Limited direct read-through"
+  }
+ ],
+ "evidence": "Intel announced ... that it expects its fourth-quarter 2020 revenue and earnings per share to exceed its prior guidance provided in its October 22, 2020 earnings release.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

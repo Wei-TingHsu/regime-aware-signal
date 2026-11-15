@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2012 (and FY2012)",
+  "revenue": "NT$131.31 billion (4Q12); NT$506.25 billion (FY2012)",
+  "operating_income": "Operating margin 35.2% (4Q12); 35.8% (FY2012) \u2014 NT$ amount not separately stated",
+  "net_income": "NT$41.57 billion (4Q12); implied ~NT$181.6 billion FY2012 from 35.8% margin context not directly given",
+  "eps": "NT$1.61 (4Q12); NT$6.41 (FY2012)",
+  "operating_cash_flow": "NT$85.41 billion (4Q12)",
+  "capex": "NT$59.77 billion / US$2,053 million (4Q12); US$8,322 million (FY2012)",
+  "free_cash_flow": "NT$25.64 billion (4Q12); NT$42.93 billion (FY2012)",
+  "cash_and_investments": "NT$150.92 billion",
+  "total_debt": "Long-term interest-bearing debt NT$82.11 billion",
+  "guidance_next": "1Q13 revenue NT$127-129 billion at NT$28.90/US$; gross margin 43.5-45.5%; operating margin 31.5-33.5%"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.4,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "foundry demand implied by advanced node ramp"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC advanced-node leadership (28nm ramp) pressures rival foundry/IDM economics"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "self"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "capex guidance (~US$9B 2013) signals continued equipment/materials spend benefiting supply chain"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "foundry capacity expansion (20nm/16FinFET roadmap) supports future chip customers"
+  }
+ ],
+ "evidence": "Revenue 131.31 ... vs Guidance 129-131, Gross Margin 47.2% vs Guidance 45%-47%, Operating Margin 35.2% vs Guidance 33%-35%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

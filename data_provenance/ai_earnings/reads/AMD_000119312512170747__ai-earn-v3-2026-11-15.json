@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2012 (quarter ended March 31, 2012)",
+  "revenue": "$1.59 billion (GAAP), down 6% sequentially, down 2% y/y",
+  "operating_income": "GAAP operating loss $(580) million; non-GAAP operating income $138 million",
+  "net_income": "GAAP net loss $(590) million; non-GAAP net income $92 million",
+  "eps": "GAAP $(0.80); non-GAAP $0.12",
+  "operating_cash_flow": "$107 million",
+  "capex": "$40 million (capital additions)",
+  "free_cash_flow": "$67 million (stated as 'Adjusted free cash flow')",
+  "cash_and_investments": "$1.713 billion (cash, cash equivalents and marketable securities incl. long-term)",
+  "total_debt": "$2.019 billion (long-term debt and capital lease obligations, including current portion)",
+  "guidance_next": "AMD expects revenue to increase 3 percent, plus or minus 3 percent, sequentially for the second quarter of 2012."
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.5,
+ "fcf_trend": -0.4,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AMD's CPU/APU sequential revenue decline less steep than guided, signaling stabilizing PC demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "AMD Graphics segment flat sequentially, GPU ASPs up, implying stable discrete GPU pricing environment"
+  },
+  {
+   "company": "GLOBALFOUNDRIES",
+   "relation": "supplier",
+   "direction": -0.3,
+   "reason": "Amended Wafer Supply Agreement and $703M waiver charge highlight ongoing foundry cost/capacity tension"
+  }
+ ],
+ "evidence": "AMD expects revenue to increase 3 percent, plus or minus 3 percent, sequentially for the second quarter of 2012.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

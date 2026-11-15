@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2015 (quarter ended Sept 30, 2015)",
+  "revenue": "NT$212.51 billion",
+  "operating_income": "~NT$78.4 billion (36.9% operating margin on NT$212.51B revenue, not separately stated)",
+  "net_income": "NT$75.33 billion",
+  "eps": "NT$2.91",
+  "operating_cash_flow": "NT$118.14 billion",
+  "capex": "NT$70.30 billion",
+  "free_cash_flow": "NT$47.84 billion (as stated)",
+  "cash_and_investments": "NT$524.88 billion",
+  "total_debt": "NT$192.01 billion long-term interest-bearing debt (current debt not separately disclosed)",
+  "guidance_next": "Q4 2015: revenue NT$201-204 billion; gross margin 47.5%-49.5%; operating margin 36.5%-38.5%, at assumed exchange rate of 32.71 NT$/US$1"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0,
+ "fcf_trend": -0.2,
+ "own_stock": -0.3,
+ "market": -0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "foundry customer; TSMC sequential revenue guide implies soft chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "major foundry customer affected by TSMC's weaker Q4 outlook"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "rival chipmaker may gain relative ground if TSMC foundry demand softens"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "self-referential guidance implies cyclical slowdown"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "fabless customer exposed to TSMC's weaker near-term outlook"
+  }
+ ],
+ "evidence": "Revenue to be between NT$ 201 billion and NT$ 204 billion, at a forecast exchange rate of 32.71 NT dollars to 1 US dollar",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

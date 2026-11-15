@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2015 (quarter ended Dec 31, 2015)",
+  "revenue": "NT$203.52 billion (US$6.24 billion)",
+  "operating_income": "NT$77.964 billion (operating margin 38.3%)",
+  "net_income": "NT$72.837 billion (net margin 35.8%)",
+  "eps": "NT$2.81 per share (US$0.43 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q1 2016: revenue NT$198-201 billion; gross margin 47%-49%; operating margin 36.5%-38.5%, at assumed exchange rate of 32.5 NT$/US$1; 2016 capex budget US$9-10 billion"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.3,
+ "fcf_trend": 0,
+ "own_stock": -0.1,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "TSMC foundry capacity/pricing affects AMD's chip costs"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Depends on TSMC's advanced node capacity and yields"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Rival in advanced process technology race"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Relies on TSMC foundry for chip production"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Broader semiconductor cycle read-through"
+  }
+ ],
+ "evidence": "customers remain cautious in general... management expects overall performance for first quarter 2016... Revenue is expected to be between NT$198 billion and NT$201 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

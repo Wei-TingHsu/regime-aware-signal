@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2025 (three months ended November 30, 2024)",
+  "revenue": "$14.1 billion, up 9% YoY (USD and constant currency)",
+  "operating_income": "GAAP $4.22 billion (30% margin); Non-GAAP $6.1 billion (43% margin)",
+  "net_income": "GAAP $3.151 billion; Non-GAAP $4.207 billion",
+  "eps": "GAAP diluted $1.10 (up 24%); Non-GAAP diluted $1.47 (up 10%)",
+  "operating_cash_flow": "Trailing 4-quarter: $20.287 billion",
+  "capex": "Trailing 4-quarter: $10.745 billion; Q2 six-month capex $6.273 billion",
+  "free_cash_flow": "Trailing 4-quarter: $9.542 billion (down 6% YoY)",
+  "cash_and_investments": "$10.941 billion cash and equivalents + $370 million marketable securities",
+  "total_debt": "$8.162 billion current notes payable + $80.462 billion non-current notes payable = ~$88.6 billion",
+  "guidance_next": "CEO states 'This fiscal year, total Oracle Cloud revenue should top $25 billion' (FY25); no formal quarterly EPS/revenue guidance given"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": -1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "65,000 H200 GPU supercomputer, GPU consumption up 336%"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "new agreement to use OCI and collaborate on Llama-based AI agents"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "OCI growth cited as faster than hyperscale cloud competitors"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "OCI growth cited as faster than hyperscale cloud competitors"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "OCI growth cited as faster than hyperscale cloud competitors"
+  }
+ ],
+ "evidence": "With our remaining performance obligation (RPO) up 50% to $97 billion, we believe our already impressive growth rates will continue to climb even higher.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

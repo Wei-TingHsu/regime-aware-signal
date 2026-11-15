@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2026 (ended October 31, 2025)",
+  "revenue": "$1,234.2 million, +22% YoY",
+  "operating_income": "GAAP loss from operations $69.4 million; Non-GAAP income from operations $264.6 million (record)",
+  "net_income": "GAAP net loss attributable to CrowdStrike $34.0 million; Non-GAAP net income attributable to CrowdStrike $245.4 million (record)",
+  "eps": "GAAP diluted loss per share $0.14; Non-GAAP diluted EPS $0.96 (record)",
+  "operating_cash_flow": "$397.5 million (record)",
+  "capex": "~$83.7 million (property & equipment + capitalized software, 9-month figures imply ~$27.8M/quarter avg; quarterly not separately stated)",
+  "free_cash_flow": "$295.9 million (record)",
+  "cash_and_investments": "$4.80 billion cash and cash equivalents",
+  "total_debt": "$745.1 million long-term debt",
+  "guidance_next": "Q4 FY26: revenue $1,290.0-$1,300.0M; Non-GAAP operating income $315.4-$319.4M; Non-GAAP net income $282.1-$286.6M; Non-GAAP diluted EPS $1.09-$1.11. Raised FY26: revenue $4,796.6-$4,806.6M; Non-GAAP operating income $1,036.1-$1,040.1M; Non-GAAP net income $949.6-$954.0M; Non-GAAP diluted EPS $3.70-$3.72"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.7,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "Joint AI security integrations cited as demand driver"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AWS partnership and marketplace SIEM integration expands exposure"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Falcon platform consolidation gains share in endpoint/security market"
+  },
+  {
+   "company": "META",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Named in AI security innovation partnerships"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Collaboration announced on enterprise AI security"
+  }
+ ],
+ "evidence": "Q3 was one of our best quarters in company history: we achieved record Q3 net new ARR of $265 million, accelerating to 73% year-over-year growth",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

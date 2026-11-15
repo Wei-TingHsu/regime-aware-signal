@@ -1,0 +1,19 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.15,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.05,
+ "own_stock": -0.05,
+ "market": 0,
+ "affected": [
+  {
+   "company": "Rambus",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "receives royalty payments from NVIDIA under licensing agreement"
+  }
+ ],
+ "evidence": "NVIDIA\u2019s financial outlook and gross margin for the third quarter of 2011 ... contemplated the impact of the payment of the these royalties to Rambus",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

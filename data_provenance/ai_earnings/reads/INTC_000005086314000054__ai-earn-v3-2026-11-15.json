@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2014 (quarter ended Jun 28, 2014)",
+  "revenue": "$13,831 million",
+  "operating_income": "$3,844 million",
+  "net_income": "$2,796 million",
+  "eps": "$0.55 diluted",
+  "operating_cash_flow": null,
+  "capex": "$2,828 million",
+  "free_cash_flow": null,
+  "cash_and_investments": "$17,311 million total cash investments",
+  "total_debt": "$13,194 million (short-term $14M + long-term $13,180M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel PC and DCG strength implies competitive pressure"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Data Center Group growth signals server/memory demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel manufacturing ramp commentary relevant to foundry landscape"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Data center platform demand tied to cloud providers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Data Center Group growth linked to cloud infrastructure buildout"
+  }
+ ],
+ "evidence": "NET INCOME $2,796 ... DILUTED EARNINGS PER COMMON SHARE $0.55 vs $0.39 prior year, with Data Center Group revenue up 19% YoY",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

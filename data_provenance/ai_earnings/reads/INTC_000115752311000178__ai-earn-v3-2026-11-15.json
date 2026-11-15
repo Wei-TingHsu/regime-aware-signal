@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2010 (and full-year 2010)",
+  "revenue": "$11.5 billion Q4 (full-year $43.6 billion)",
+  "operating_income": "$4.3 billion Q4 (full-year $15.9 billion)",
+  "net_income": "$3.4 billion Q4 (full-year $11.7 billion)",
+  "eps": "$0.59 Q4 diluted (full-year $2.05)",
+  "operating_cash_flow": "~$16.7 billion (full-year)",
+  "capex": "$1.869 billion Q4 (full-year $5.2 billion)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$21.497 billion total cash investments (Dec 25, 2010)",
+  "total_debt": "$2.115 billion (short-term $38M + long-term $2,077M)",
+  "guidance_next": "Q1 2011 revenue $11.5B +/- $400M; gross margin 64% +/- a couple points; R&D+MG&A ~$3.4B; equity/interest gain ~$200M; depreciation ~$1.2B. Full-year 2011: gross margin 65% +/- a few points; R&D+MG&A $13.9B +/- $200M; R&D ~$7.3B; tax rate ~29%; depreciation ~$5B +/- $100M; capex $9.0B +/- $300M"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.6,
+ "own_stock": 0.5,
+ "market": 0.3,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel PC/server share gains, strong margins imply competitive pressure"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel's record capex signals broader semiconductor capacity investment cycle"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Memory market commentary tied to Intel's equity investments in flash segment"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "PC Client Group strength (up 21%) implies healthy Windows PC ecosystem demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Data Center Group revenue up 35% signals strong data-center compute demand broadly"
+  }
+ ],
+ "evidence": "Intel posted revenue of $11.5 billion... all records... We believe that 2011 will be even better",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

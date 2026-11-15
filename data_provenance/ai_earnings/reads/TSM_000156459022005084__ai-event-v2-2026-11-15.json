@@ -1,0 +1,25 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.2,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.1,
+ "own_stock": 0.15,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "Sony Semiconductor (SSS)",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "co-investor in JASM, shared capacity benefit"
+  },
+  {
+   "company": "DENSO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "secures long-term specialty wafer supply"
+  }
+ ],
+ "evidence": "DENSO will take a minority stake in Japan Advanced Semiconductor Manufacturing, Inc. (\"JASM\")... with a US$0.35 billion investment",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

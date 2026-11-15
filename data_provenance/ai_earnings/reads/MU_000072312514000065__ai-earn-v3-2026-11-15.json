@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 FY2014 (ended Feb 27, 2014)",
+  "revenue": "$4.107 billion",
+  "operating_income": "$869 million",
+  "net_income": "$731 million (GAAP); $989 million (non-GAAP)",
+  "eps": "$0.61 diluted (GAAP); $0.85 diluted (non-GAAP)",
+  "operating_cash_flow": "$1.39 billion (quarter); $2.897 billion (six months)",
+  "capex": "$565 million (quarter); $1.031 billion (six months)",
+  "free_cash_flow": "$825 million (quarter: 1.39B - 0.565B)",
+  "cash_and_investments": "$5.06 billion (cash and marketable investments)",
+  "total_debt": "$2.230 billion current debt + $4.317 billion long-term debt = $6.547 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "NAND flash market peer"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "DRAM/NAND supplier to PC/server makers"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self-reference, strong memory pricing cycle"
+  }
+ ],
+ "evidence": "net income attributable to Micron shareholders in the second quarter of fiscal 2014 was $731 million, or $0.61 per diluted share, compared to net income of $358 million, or $0.30 per diluted share, in the first quarter of fiscal 2014 and a net loss of ($286) million... in the second quarter of fiscal 2013",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

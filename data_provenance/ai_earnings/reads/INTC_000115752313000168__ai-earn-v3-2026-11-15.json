@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2012 / FY2012",
+  "revenue": "$13.5 billion (Q4), $53.3 billion (FY2012)",
+  "operating_income": "$3.2 billion (Q4), $14.6 billion (FY2012)",
+  "net_income": "$2.5 billion (Q4), $11.0 billion (FY2012)",
+  "eps": "$0.48 diluted (Q4), $2.13 diluted (FY2012)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$8,478M cash and equivalents + $3,999M short-term investments + $5,685M trading assets (Dec 29, 2012)",
+  "total_debt": "$312M short-term debt + $13,136M long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": -1,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel weakness may reflect PC market softness affecting both"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel margin pressure highlights foundry competitiveness"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "Shared exposure to weak PC/semiconductor demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Weak PC-driven Intel revenue signals soft Windows PC demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Limited direct read-through to cloud/search business"
+  }
+ ],
+ "evidence": "Revenue $13.5 billion ... down 3%; Operating Income $3.2 billion ... down 31%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

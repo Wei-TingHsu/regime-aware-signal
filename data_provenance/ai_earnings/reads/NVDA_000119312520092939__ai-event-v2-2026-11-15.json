@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.25,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.1,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "minor relative effect, extra NVDA cash cushion during COVID downturn"
+  }
+ ],
+ "evidence": "The net proceeds from the offering of the Notes were approximately $4.97 billion... for general corporate purposes, which may include, among other things, repayment of indebtedness.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

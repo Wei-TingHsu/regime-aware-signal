@@ -1,0 +1,19 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Whole Foods Market",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "acquisition financing confirms deal proceeding"
+  }
+ ],
+ "evidence": "The Company expects to use the net proceeds from the offering to fund all or a portion of the consideration for its acquisition of Whole Foods Market, Inc. and for general corporate purposes.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2023 (quarter ended December 31, 2023)",
+  "revenue": "NT$625.53 billion (US$19.62 billion)",
+  "operating_income": "NT$260.21 billion (operating margin 41.6%)",
+  "net_income": "NT$238.71 billion",
+  "eps": "NT$9.21 (US$1.44 per ADR unit)",
+  "operating_cash_flow": "NT$394.83 billion (Q4); NT$1,241.97 billion (FY2023)",
+  "capex": "NT$170.16 billion (Q4); NT$949.82 billion (FY2023)",
+  "free_cash_flow": "NT$224.67 billion (Q4); NT$292.15 billion (FY2023)",
+  "cash_and_investments": "NT$1,687.65 billion",
+  "total_debt": "NT$918.28 billion long-term interest-bearing debt",
+  "guidance_next": "Q1 2024 revenue expected US$18.0-18.8 billion; gross profit margin 52%-54%; operating profit margin 40%-42% (at NT$31.1/US$1); 2024 capex budget US$28-32 billion"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.3,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "HPC demand offsetting smartphone seasonality points to AI chip strength"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Benefits from TSMC's advanced node HPC demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "HPC/networking chips reliant on TSMC advanced nodes"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's strong 3nm ramp pressures Intel foundry ambitions"
+  },
+  {
+   "company": "AAPL",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Smartphone seasonality cited as a headwind for Q1 guidance"
+  }
+ ],
+ "evidence": "revenue was essentially flat ... increased 13.6% from the previous quarter, supported by the continued strong ramp of our industry-leading 3-nanometer technology",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

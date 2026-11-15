@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 FY2012 (quarter ended Dec 31, 2011)",
+  "revenue": "$20.89 billion",
+  "operating_income": "$7.99 billion",
+  "net_income": "$6.62 billion",
+  "eps": "$0.78 diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$51.736 billion total cash, cash equivalents, and short-term investments",
+  "total_debt": "$11.932 billion long-term debt",
+  "guidance_next": "Operating expense guidance for FY2012 revised downward to $28.5 billion to $28.9 billion"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Bing/Yahoo search share gains cited"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "SQL Server/System Center growth vs Oracle"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Server & Tools cloud growth implies competitive cloud market"
+  }
+ ],
+ "evidence": "Microsoft is revising operating expense guidance downward to $28.5 billion to $28.9 billion for the full year ending June 30, 2012.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

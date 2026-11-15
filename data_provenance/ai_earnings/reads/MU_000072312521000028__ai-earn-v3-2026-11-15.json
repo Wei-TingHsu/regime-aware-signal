@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ2-2021 (ended March 4, 2021)",
+  "revenue": "$6.236 billion (GAAP and Non-GAAP)",
+  "operating_income": "GAAP $663 million; Non-GAAP $1.257 billion",
+  "net_income": "GAAP $603 million; Non-GAAP $1.128 billion",
+  "eps": "GAAP diluted $0.53; Non-GAAP diluted $0.98",
+  "operating_cash_flow": "$3.057 billion",
+  "capex": "Net capex $2.88 billion (expenditures for PP&E net $3.0B less partner funding/proceeds)",
+  "free_cash_flow": "$174 million (adjusted free cash flow)",
+  "cash_and_investments": "$8.57 billion cash, marketable investments, and restricted cash; net cash position $1.946 billion",
+  "total_debt": "$6.621 billion (current + long-term debt)",
+  "guidance_next": "FQ3-21: Revenue $7.1B \u00b1 $200M; GAAP gross margin 40.5% \u00b1 1% (Non-GAAP 41.5% \u00b1 1%); GAAP opex $930M \u00b1 $25M (Non-GAAP $875M \u00b1 $25M); GAAP diluted EPS $1.52 \u00b1 $0.07 (Non-GAAP $1.62 \u00b1 $0.07)"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.5,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "NAND market strength implies similar tailwinds"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Memory demand tied to AI/GPU compute growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "CPU/GPU makers rely on DRAM supply and pricing trends"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Data center CPU demand correlates with memory attach rates"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud/data center buildout drives memory and storage demand"
+  }
+ ],
+ "evidence": "Revenue of $6.24 billion versus $5.77 billion for the prior quarter... guidance for the third quarter... Revenue $7.1 billion \u00b1 $200 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

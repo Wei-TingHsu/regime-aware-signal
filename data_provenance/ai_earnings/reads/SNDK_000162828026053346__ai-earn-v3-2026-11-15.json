@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Fiscal Q4 2026 (quarter ended July 3, 2026) and FY2026",
+  "revenue": "$8,965 million (Q4); $20,248 million (FY2026)",
+  "operating_income": "$7,037 million GAAP / $7,104 million non-GAAP (Q4); $12,389 million GAAP / $12,700 million non-GAAP (FY)",
+  "net_income": "$6,903 million GAAP / $6,162 million non-GAAP (Q4); $11,433 million GAAP / $10,987 million non-GAAP (FY)",
+  "eps": "$43.97 GAAP diluted / $39.25 non-GAAP diluted (Q4); $73.76 GAAP / $70.88 non-GAAP (FY)",
+  "operating_cash_flow": "$7,126 million (Q4); $11,671 million (FY)",
+  "capex": "$43 million (Q4); $177 million (FY)",
+  "free_cash_flow": "$7,083 million (Q4, OCF minus capex); $11,494 million (FY, OCF minus capex)",
+  "cash_and_investments": "$4,762 million cash and cash equivalents plus $1,777 million marketable equity securities",
+  "total_debt": "$0 long-term debt (down from $1,829 million a year earlier)",
+  "guidance_next": "Q1 FY2027 revenue $10.30B-$10.80B; GAAP gross margin 83.0%-84.9%/non-GAAP 83.0%-85.0%; non-GAAP opex $520M-$540M; non-GAAP diluted EPS $44.00-$46.00"
+ },
+ "results_vs_prior_guidance": 0.95,
+ "guidance_change": 0.85,
+ "fcf_trend": 0.95,
+ "own_stock": 0.9,
+ "market": 0.25,
+ "ai_demand": 0.85,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.5,
+   "reason": "NAND/memory pricing and datacenter demand surge benefits peers"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.4,
+   "reason": "Shared NAND pricing upcycle and datacenter demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Datacenter revenue up 437% YoY implies hyperscaler storage buildout"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Growing datacenter/cloud storage demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AI infrastructure storage demand from cloud providers"
+  }
+ ],
+ "evidence": "Expect first quarter 2027 revenue to be in the range of $10.30 billion to $10.80 billion, with expected Non-GAAP diluted net income per share to be in the range of $44.00 to $46.00.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

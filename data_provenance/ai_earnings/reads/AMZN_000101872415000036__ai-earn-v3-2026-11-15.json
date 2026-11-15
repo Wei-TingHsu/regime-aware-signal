@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2015 (three months ended March 31, 2015)",
+  "revenue": "$22.72 billion, up 15% YoY",
+  "operating_income": "$255 million, up 74% YoY from $146 million",
+  "net_income": "net loss of $57 million",
+  "eps": "-$0.12 diluted",
+  "operating_cash_flow": "trailing twelve months $7.84 billion (up 47% YoY); quarterly operating cash flow was -$1,499 million",
+  "capex": "$871 million in quarter; $4,684 million trailing twelve months",
+  "free_cash_flow": "trailing twelve months $3.16 billion, up from $1.49 billion",
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q2 2015 net sales expected $20.6B-$22.8B (7%-18% growth); operating income (loss) expected $(500) million to $50 million vs $(15) million in Q2 2014, including ~$600 million stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS growth highlights cloud competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS growth highlights cloud competition"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "AWS cloud infrastructure competition"
+  }
+ ],
+ "evidence": "Operating income increased 74% to $255 million in the first quarter, compared with operating income of $146 million in first quarter 2014",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

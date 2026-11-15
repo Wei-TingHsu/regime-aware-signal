@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q4 FY2012 (ended Aug 30, 2012) and full FY2012",
+  "revenue": "$1.963 billion (Q4); $8.234 billion (FY2012)",
+  "operating_income": "-$140 million (Q4); -$618 million (FY2012)",
+  "net_income": "-$243 million (Q4); -$1.032 billion (FY2012)",
+  "eps": "-$0.24 diluted (Q4); -$1.04 diluted (FY2012)",
+  "operating_cash_flow": "$450 million (Q4); $2.114 billion (FY2012)",
+  "capex": "$372 million (Q4); ~$1.9 billion (FY2012, per press release text) / $1.699 billion (per cash flow statement)",
+  "free_cash_flow": "$78 million (Q4: 450-372); ~$415 million (FY2012: 2114-1699)",
+  "cash_and_investments": "$2.9 billion (incl. long-term investments); $2.559 billion cash and short-term investments",
+  "total_debt": "$3.038 billion long-term debt plus $224 million current portion = ~$3.262 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": -0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "IM Flash joint venture partner, restructuring referenced"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "NAND pricing pressure industry-wide"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Samsung cross-license mentioned, not directly relevant"
+  }
+ ],
+ "evidence": "net loss attributable to Micron shareholders of $243 million, or $0.24 per diluted share, on net sales of $2.0 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

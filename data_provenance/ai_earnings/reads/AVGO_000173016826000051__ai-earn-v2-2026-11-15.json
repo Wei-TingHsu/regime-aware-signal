@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2026 (ended May 3, 2026)",
+  "revenue": "$22,187 million, up 48% YoY",
+  "operating_income": null,
+  "net_income": "GAAP $9,310 million; Non-GAAP $12,074 million",
+  "eps": "GAAP diluted $1.91; Non-GAAP diluted $2.44",
+  "operating_cash_flow": "$10,493 million",
+  "capex": "$231 million",
+  "free_cash_flow": "$10,262 million (46% of revenue)",
+  "cash_and_investments": "$19,628 million cash and cash equivalents",
+  "total_debt": null,
+  "guidance_next": "Q3 FY2026 revenue ~$29.4 billion (+84% YoY); non-GAAP operating income ~67% of revenue; Adjusted EBITDA ~68% of revenue; AI semiconductor revenue expected to grow over 200% YoY to $16.0 billion"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.5,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "custom AI accelerators compete with merchant GPUs but validate overall AI capex growth"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "foundry for Broadcom's custom AI silicon, benefits from surging demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "likely hyperscaler customer for custom AI accelerators (TPU-like programs)"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "AI infrastructure buildout implies strong memory/HBM demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AI silicon market growth benefits broader accelerator ecosystem"
+  }
+ ],
+ "evidence": "\u201cQ2 semiconductor revenue from AI of $10.8 billion grew 143% year-over-year, above our forecast... in Q3 we expect semiconductor revenue from AI to grow over 200 percent year-over-year to $16.0 billion.\u201d",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v2-2026-11-15"
+}

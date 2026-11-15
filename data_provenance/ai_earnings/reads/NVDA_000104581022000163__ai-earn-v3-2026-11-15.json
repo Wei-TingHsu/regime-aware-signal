@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY23 (quarter ended October 30, 2022)",
+  "revenue": "$5.931 billion, down 17% YoY and down 12% QoQ",
+  "operating_income": "$601 million GAAP (down 77% YoY); $1.536 billion non-GAAP (down 55% YoY)",
+  "net_income": "$680 million GAAP; $1.456 billion non-GAAP",
+  "eps": "$0.27 GAAP diluted; $0.58 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 FY23 revenue expected to be $6.00 billion plus or minus 2%; GAAP and non-GAAP gross margins expected to be 63.2% and 66.0% respectively plus or minus 50bps; GAAP and non-GAAP operating expenses expected to be approximately $2.56 billion and $1.78 billion respectively; other income/expense expected to be approximately $40 million; GAAP and non-GAAP tax rates expected to be 9.0% plus or minus 1%"
+ },
+ "results_vs_prior_guidance": -0.6,
+ "guidance_change": 0.3,
+ "fcf_trend": 0,
+ "own_stock": -0.3,
+ "market": -0.2,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Gaming/datacenter GPU rival amid soft discrete GPU demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Competes in datacenter and AI compute"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "Azure deploying tens of thousands of A100/H100 GPUs"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "OCI deploying tens of thousands more NVIDIA GPUs"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Foundry partner for Hopper/Ada chips ramping"
+  }
+ ],
+ "evidence": "Revenue for the third quarter ended October 30, 2022, of $5.93 billion, down 17% from a year ago and down 12% from the previous quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

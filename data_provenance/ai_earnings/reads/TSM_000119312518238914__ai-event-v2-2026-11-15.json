@@ -1,0 +1,37 @@
+{
+ "event_type": "cyber incident",
+ "material": 0.45,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.35,
+ "own_stock": -0.35,
+ "market": -0.05,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "wafer shipment delays"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "wafer shipment delays"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.15,
+   "reason": "potential supply delay"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "foundry rival outage could aid Intel's own fabs"
+  }
+ ],
+ "evidence": "We estimate the impact to third quarter revenue to be about three percent, and impact to gross margin to be about one percentage point.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

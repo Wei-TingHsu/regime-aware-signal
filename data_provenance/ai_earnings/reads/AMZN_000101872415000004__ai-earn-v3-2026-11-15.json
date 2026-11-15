@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2014 (quarter ended Dec 31, 2014) and FY2014",
+  "revenue": "$29.33 billion (Q4), $88.99 billion (FY)",
+  "operating_income": "$591 million (Q4), $178 million (FY)",
+  "net_income": "$214 million (Q4), net loss of $241 million (FY)",
+  "eps": "$0.45 diluted (Q4), $(0.52) diluted (FY)",
+  "operating_cash_flow": "$6.84 billion (TTM)",
+  "capex": "$4.893 billion (FY, purchases of property and equipment)",
+  "free_cash_flow": "$1.95 billion (TTM), down from $2.03 billion prior TTM",
+  "cash_and_investments": "$14.557 billion cash and equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q1 2015 net sales expected between $20.9B and $22.9B (6%-16% growth); operating income (loss) expected between $(450) million and $50 million, vs $146 million in Q1 2014, including ~$450 million stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": -0.3,
+ "fcf_trend": -0.2,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS usage growth ~90% YoY shows Amazon extending cloud lead"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS strength pressures rival cloud platforms"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS database services like Aurora compete with Oracle"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "AWS data center buildout implies continued server/chip demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "AWS infrastructure growth supports server CPU demand"
+  }
+ ],
+ "evidence": "Operating income was $591 million in the fourth quarter, compared with operating income of $510 million in fourth quarter 2013",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

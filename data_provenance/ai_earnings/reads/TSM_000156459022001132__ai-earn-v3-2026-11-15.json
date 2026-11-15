@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2021 (quarter ended Dec 31, 2021)",
+  "revenue": "NT$438.19 billion (US$15.74 billion)",
+  "operating_income": "NT$182,772 million (operating margin 41.7%)",
+  "net_income": "NT$166,232 million",
+  "eps": "NT$6.41 (US$1.15 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q1 2022 revenue expected US$16.6-17.2 billion; gross profit margin 53%-55%; operating profit margin 42%-44% (at NT$27.6/US$1); 2022 capex budget US$40-44 billion"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 0.3,
+ "own_stock": 0.6,
+ "market": 0.4,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "advanced node demand strength (5nm/7nm)"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "HPC demand cited as key driver"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC advanced node leadership widens gap"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "HPC/networking chip demand via TSMC capacity"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "self"
+  }
+ ],
+ "evidence": "Revenue is expected to be between US$16.6 billion and US$17.2 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

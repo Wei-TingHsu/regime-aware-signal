@@ -1,0 +1,25 @@
+{
+ "event_type": "product or technology",
+ "material": 0.2,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.2,
+ "own_stock": -0.15,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "12/16nm customer potentially affected by yield issue"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "uses TSMC 12/16nm nodes"
+  }
+ ],
+ "evidence": "TSMC reiterates that this event is not expected to affect our guidance given on January 17, 2019.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

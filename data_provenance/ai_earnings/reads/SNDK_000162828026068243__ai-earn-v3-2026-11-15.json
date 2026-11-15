@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Fiscal Q1 2027 (quarter ended October 2, 2026)",
+  "revenue": "$11,031 million (GAAP and Non-GAAP), up 23% sequentially",
+  "operating_income": "$8,780 million GAAP; $8,871 million Non-GAAP",
+  "net_income": "$8,101 million GAAP; $7,624 million Non-GAAP",
+  "eps": "$52.60 diluted GAAP; $49.51 diluted Non-GAAP",
+  "operating_cash_flow": "$6,363 million",
+  "capex": "$54 million (purchases of property, plant and equipment)",
+  "free_cash_flow": "$6,309 million (stated); Adjusted free cash flow $5,696 million",
+  "cash_and_investments": "$5,136 million cash and cash equivalents; $2,289 million marketable equity securities",
+  "total_debt": null,
+  "guidance_next": "Q2 FY2027 revenue $12.2B-$12.6B; GAAP gross margin 84.4%-85.4%/non-GAAP 84.5%-85.5%; non-GAAP opex $540M-$560M; non-GAAP diluted EPS $55.00-$57.00 (pre-split basis)"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.9,
+ "fcf_trend": 0.6,
+ "own_stock": 0.8,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.5,
+   "reason": "Flash/NAND memory peer benefiting from same AI data center demand surge"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AI servers using Sandisk enterprise SSDs for AI infrastructure"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Hyperscaler datacenter buildout driving Sandisk's datacenter revenue up 61% QoQ"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Cloud/data center demand for storage underpinning growth"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AI infrastructure investment driving enterprise storage demand"
+  }
+ ],
+ "evidence": "Expect second quarter 2027 revenue to be in the range of $12.2 billion to $12.6 billion, with expected Non-GAAP diluted net income per share ... in the range of $55.00 to $57.00",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,43 @@
+{
+ "event_type": "product or technology",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.2,
+ "own_stock": 0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC expanding China capacity intensifies foundry competition"
+  },
+  {
+   "company": "SMIC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Direct new competitor presence in China market"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "More advanced capacity potentially available for fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Expanded TSMC capacity benefits major fabless customers"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "Potential future capacity access in China"
+  }
+ ],
+ "evidence": "TSMC today submitted an application ... to build a wholly-owned 12-inch wafer manufacturing facility and a design service center in Nanjing, China",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

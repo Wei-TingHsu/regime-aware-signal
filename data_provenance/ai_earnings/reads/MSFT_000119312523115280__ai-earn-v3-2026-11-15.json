@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2023 (quarter ended March 31, 2023)",
+  "revenue": "$52.9 billion, up 7% YoY (10% constant currency)",
+  "operating_income": "$22.4 billion, up 10% YoY (15% constant currency)",
+  "net_income": "$18.3 billion, up 9% YoY (14% constant currency)",
+  "eps": "$2.45 diluted, up 10% YoY (14% constant currency)",
+  "operating_cash_flow": "$24,441 million (three months ended March 31, 2023)",
+  "capex": "$6,607 million (additions to property and equipment, three months)",
+  "free_cash_flow": "$17,834 million (operating cash flow minus capex)",
+  "cash_and_investments": "$104,427 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$48,210 million (current portion $6,245M + long-term $41,965M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Azure growth of 27% outpaces cloud rivals, competitive pressure on AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong Azure and AI positioning pressures Google Cloud and Search ad share"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "AI infrastructure buildout implies strong demand for AI chips/GPUs"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud and enterprise software competition from Microsoft 365/Dynamics growth"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Networking/semiconductor demand tied to hyperscale cloud and AI infrastructure growth"
+  }
+ ],
+ "evidence": "Microsoft Cloud revenue of $28.5 billion, up 22% (up 25% in constant currency) year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

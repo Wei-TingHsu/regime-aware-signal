@@ -1,0 +1,49 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.85,
+ "fcf_outlook": 0.6,
+ "uncertainty": 0.2,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "Meta diversifies AI GPU supply away from Nvidia"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "secures large-scale GPU capacity, dilution cost via warrant"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "more AMD GPU volume to fabricate"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "validates multi-vendor AI chip strategy"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "competitive pressure to diversify AI compute suppliers"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "custom silicon competition for hyperscaler AI spend"
+  }
+ ],
+ "evidence": "definitive multi-year, multi-generation partnership to deploy up to 6 gigawatts of AMD Instinct\u2122 GPUs",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

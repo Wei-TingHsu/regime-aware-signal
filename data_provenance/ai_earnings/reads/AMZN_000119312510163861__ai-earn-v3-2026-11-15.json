@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q2 2010 (ended June 30, 2010)",
+  "revenue": "$6.57 billion, up 41% YoY",
+  "operating_income": "$270 million, up 71% YoY",
+  "net_income": "$207 million, up 45% YoY",
+  "eps": "$0.45 diluted",
+  "operating_cash_flow": "$2.561 billion (trailing twelve months)",
+  "capex": "$575 million (trailing twelve months, purchases of fixed assets)",
+  "free_cash_flow": "$1.99 billion (trailing twelve months), up 29% YoY",
+  "cash_and_investments": "$1.629 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q3 2010: net sales expected between $6.900B and $7.625B (27%-40% growth YoY); operating income expected between $210M and $310M (-16% to +24% YoY), including ~$130M stock-based compensation and amortization"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/AWS competitive landscape"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/AWS competitive landscape"
+  }
+ ],
+ "evidence": "Operating income increased 71% to $270 million in the second quarter... Net income increased 45% to $207 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

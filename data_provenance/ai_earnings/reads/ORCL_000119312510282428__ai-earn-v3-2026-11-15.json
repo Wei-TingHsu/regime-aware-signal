@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2011 (three months ended November 30, 2010)",
+  "revenue": "$8.582 billion GAAP/non-GAAP, up 47%",
+  "operating_income": "$2.770 billion GAAP (up 27%); $3.8 billion non-GAAP (up 33%)",
+  "net_income": "$1.870 billion GAAP (up 28%); ~$2.6 billion non-GAAP (up 34%)",
+  "eps": "$0.37 GAAP diluted (up 27%); $0.51 non-GAAP (up 33%)",
+  "operating_cash_flow": "$9.053 billion trailing twelve months (GAAP)",
+  "capex": "$369 million trailing twelve months",
+  "free_cash_flow": "$8.684 billion trailing twelve months",
+  "cash_and_investments": "$10.420 billion cash and cash equivalents plus $14.425 billion marketable securities as of Nov 30, 2010",
+  "total_debt": "$2.255 billion current notes payable/borrowings plus $14.780 billion non-current notes payable/borrowings",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Oracle touts SPARC Supercluster beating IBM/HP performance, implying competitive hardware pressure"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise software competitor, not directly addressed"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/database competitor, not addressed"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise/cloud competitor, not addressed"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "hardware component supply chain, not addressed"
+  }
+ ],
+ "evidence": "Strong revenue performance plus disciplined business management enabled a 33% increase in non-GAAP earnings per share to $0.51",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

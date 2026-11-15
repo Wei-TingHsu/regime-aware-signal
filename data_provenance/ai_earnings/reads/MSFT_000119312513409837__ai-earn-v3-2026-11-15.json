@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2014 (quarter ended September 30, 2013)",
+  "revenue": "$18.53 billion",
+  "operating_income": "$6.33 billion (GAAP)",
+  "net_income": "$5.24 billion",
+  "eps": "$0.62 diluted",
+  "operating_cash_flow": "$8.205 billion",
+  "capex": "$1.231 billion (additions to property and equipment)",
+  "free_cash_flow": "$6.974 billion (operating cash flow minus capex)",
+  "cash_and_investments": "$80.672 billion total cash, cash equivalents, and short-term investments",
+  "total_debt": "$15.932 billion (short-term debt $1.3B + current portion long-term debt $2.0B + long-term debt $12.632B)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "SQL Server and database growth signals share gains"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Azure cloud growth competes with AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Commercial cloud growth competes with Google enterprise offerings"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Surface and device hardware growth supports PC/chip demand"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "No direct bearing stated"
+  }
+ ],
+ "evidence": "Commercial cloud revenue grew 103%.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

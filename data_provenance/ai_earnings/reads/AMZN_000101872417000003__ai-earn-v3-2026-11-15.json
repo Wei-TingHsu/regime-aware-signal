@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2016 (quarter ended December 31, 2016)",
+  "revenue": "$43.7 billion (up 22% YoY)",
+  "operating_income": "$1.255 billion (up 13% YoY)",
+  "net_income": "$749 million",
+  "eps": "$1.54 diluted",
+  "operating_cash_flow": "$16.443 billion (trailing twelve months)",
+  "capex": "$6.737 billion (purchases of property and equipment, TTM)",
+  "free_cash_flow": "$9.7 billion (trailing twelve months, as stated)",
+  "cash_and_investments": "$19.334 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "No explicit Q1 2017 guidance figures included in provided excerpt"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0,
+ "fcf_trend": 0.8,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS cloud growth and enterprise wins (Capital One, Workday) pressure Azure competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AWS enterprise migrations and AI services compete with Google Cloud"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "AWS infrastructure expansion and AI services (Lex, Polly, Rekognition) imply continued GPU/compute demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AWS datacenter and Availability Zone expansion drives server chip demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Cloud and device growth (Echo, Fire) supports memory demand"
+  }
+ ],
+ "evidence": "Net sales increased 22% to $43.7 billion in the fourth quarter ... Operating income increased 13% to $1.3 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

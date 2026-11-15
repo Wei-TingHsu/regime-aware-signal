@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.15,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.0,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "VIS",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "reduced TSMC ownership/overhang from share sale"
+  }
+ ],
+ "evidence": "TSMC plans to execute the sale of up to 152.0 million common shares of Vanguard International Semiconductor Corporation... approximately 8.1% of VIS' fully-diluted paid-in-capital",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2021 (quarter ended Sep 25, 2021)",
+  "revenue": "$19.2B GAAP, up 5% YoY; $18.1B non-GAAP, up 5% YoY",
+  "operating_income": "$5.227B GAAP; GAAP operating margin 27.2%, non-GAAP operating margin 28.8%",
+  "net_income": "$6.823B GAAP; $7.0B non-GAAP",
+  "eps": "$1.67 GAAP diluted; $1.71 non-GAAP (exceeded July guidance by $0.61)",
+  "operating_cash_flow": "$9.9B in Q3; $24.194B nine months YTD",
+  "capex": "Additions to PP&E $11.579B YTD (plus $1.118B NAND held-for-sale capex)",
+  "free_cash_flow": "Not explicitly stated for Q3; FY2021 non-GAAP FCF now guided ~$12.5B, up from prior ~$11.0B",
+  "cash_and_investments": "$7.870B cash + $4.004B short-term investments + $22.761B trading assets as of Sep 25, 2021",
+  "total_debt": "$4.694B short-term debt + $35.610B long-term debt = ~$40.3B",
+  "guidance_next": "Q4 2021: revenue ~$19.2B GAAP / $18.3B non-GAAP; gross margin ~51.4% GAAP / 53.5% non-GAAP; EPS ~$0.78 GAAP / $0.90 non-GAAP. FY2021 raised to revenue $77.7B GAAP/$73.5B non-GAAP, EPS $4.50 GAAP/$5.28 non-GAAP, gross margin 55%/57%, capex $18.0-19.0B, non-GAAP FCF ~$12.5B"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": -0.2,
+ "fcf_trend": 0.3,
+ "own_stock": -0.4,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "CCG/DCG product ramp and roadmap claims pressure AMD share narrative"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Ponte Vecchio GPU targets AI/HPC acceleration, new competitive entrant"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel Foundry Services wins (RAMP-C, Qualcomm 20A) position as alternative foundry"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "First IFS packaging customer; new Xeon-based EC2 instances"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "NSG/NAND business being divested, limited read-through"
+  }
+ ],
+ "evidence": "Third-quarter GAAP earnings-per-share (EPS) was $1.67; non-GAAP EPS was $1.71, which exceeded July guidance by $0.61 ... Q4 2021 ... Earnings per share $0.78 [GAAP] approximately, down sharply from Q3's $1.67",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,19 @@
+{
+ "event_type": "accounting",
+ "material": 0.15,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.1,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "DRAM consolidation already known"
+  }
+ ],
+ "evidence": "These provisional amounts could change as additional information becomes available. These changes could result in material variances between the combined entity's future financial results",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

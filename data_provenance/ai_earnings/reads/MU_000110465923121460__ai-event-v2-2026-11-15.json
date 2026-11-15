@@ -1,0 +1,49 @@
+{
+ "event_type": "guidance update",
+ "material": 0.5,
+ "fcf_outlook": 0.5,
+ "uncertainty": -0.4,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.5,
+   "reason": "memory pricing recovery lifts peers"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.5,
+   "reason": "memory pricing recovery lifts peers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "improved memory supply/pricing for AI/server demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "memory cost/supply dynamics affect server/GPU customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "memory pricing environment affects PC/server ecosystem"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "semiconductor cycle recovery signal"
+  }
+ ],
+ "evidence": "it expects revenue will approach $4.7 billion and non-GAAP gross margins will approach breakeven for the first quarter of fiscal 2024",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.55,
+ "fcf_outlook": 0.35,
+ "uncertainty": -0.25,
+ "own_stock": 0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "AMD gains capital to fund competitive R&D/manufacturing"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "stronger balance sheet aids AMD GPU competitiveness"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.05,
+   "reason": "more funding supports foundry orders"
+  }
+ ],
+ "evidence": "The resulting aggregate net proceeds to the Company from the Common Stock Offering were approximately $580.5 million... from the Notes Offering were approximately $680.0 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

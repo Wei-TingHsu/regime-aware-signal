@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 2013 (quarter ended September 2013)",
+  "revenue": "$13.5B (flat YoY, +5% QoQ)",
+  "operating_income": "$3.5B (down 9% YoY)",
+  "net_income": "$3.0B (down 1% YoY)",
+  "eps": "$0.58 (flat YoY)",
+  "operating_cash_flow": "$5.7B",
+  "capex": "$2.9B",
+  "free_cash_flow": "$2.8B (OCF minus capex)",
+  "cash_and_investments": "$19.1B total cash investments, up $1.8B QoQ",
+  "total_debt": null,
+  "guidance_next": "Q4 2013 revenue expected to be $13.7B +/- $500M (midpoint up 2% QoQ); gross margin expected ~61% +/- a couple points, down 1.4 points QoQ due to higher 14nm factory spending; R&D and MG&A ~$4.7B; tax rate 25%; full-year 2013 capex now forecast at $10.8B +/- $300M"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": -0.4,
+ "fcf_trend": 0.3,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel notes cautious PC order patterns, signaling broader PC/chip demand softness"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Shared exposure to semiconductor capex cycle and inventory caution"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "Intel's own 14nm fab investment signals continued in-house manufacturing focus, limited direct read-through"
+  }
+ ],
+ "evidence": "The fourth quarter forecast reflects the caution we are seeing in the order patterns of our customers and their desire to keep inventory levels lean.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

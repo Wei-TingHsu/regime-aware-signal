@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY2015 (ended June 4, 2015)",
+  "revenue": "$3.85 billion",
+  "operating_income": "$631 million",
+  "net_income": "$491 million (GAAP, attributable to Micron)",
+  "eps": "$0.42 diluted GAAP; $0.54 diluted non-GAAP",
+  "operating_cash_flow": "$1.34 billion (quarter); $4.178 billion (nine months)",
+  "capex": "$734 million (quarter); $2.256 billion (nine months)",
+  "free_cash_flow": "$606 million (1,340 - 734, quarter, approx.)",
+  "cash_and_investments": "$7.33 billion (cash and marketable investments)",
+  "total_debt": "$7.551 billion (current $1,148M + long-term $6,403M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NAND/DRAM pricing weakness industry-wide"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": -1,
+   "reason": "PC sector weakness cited as root cause"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor capex cycle context"
+  }
+ ],
+ "evidence": "Revenues for the third quarter of fiscal 2015 were $3.85 billion and were 8 percent lower compared to the second quarter of fiscal 2015",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,49 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.15,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.2,
+ "market": 0.15,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "strong TSMC volume signals robust AI chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.15,
+   "reason": "benefits from healthy foundry demand trend"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "custom silicon demand reflected in TSMC growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC share gains highlight competitive gap"
+  },
+  {
+   "company": "SKHY",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "read-through for semiconductor supply chain strength"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "broader semiconductor demand tailwind"
+  }
+ ],
+ "evidence": "Revenue for January through May 2026 totaled NT$1,961.80 billion, an increase of 30.0 percent compared to the same period in 2025.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

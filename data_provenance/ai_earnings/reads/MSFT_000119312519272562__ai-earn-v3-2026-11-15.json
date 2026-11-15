@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2020 (quarter ended September 30, 2019)",
+  "revenue": "$33.1 billion, +14% YoY",
+  "operating_income": "$12.7 billion, +27% YoY",
+  "net_income": "$10.7 billion, +21% YoY",
+  "eps": "$1.38 diluted, +21% YoY",
+  "operating_cash_flow": "$13,818 million",
+  "capex": "$3,385 million (additions to property and equipment)",
+  "free_cash_flow": "$10,433 million (13,818 - 3,385)",
+  "cash_and_investments": "$136,636 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$69,495 million (current portion $3,017M + long-term $66,478M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Azure growth of 59% outpaces AWS cloud growth"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Azure and commercial cloud strength pressures Google Cloud"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Server/cloud and enterprise growth competes with Oracle offerings"
+  },
+  {
+   "company": "CRWD",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Security/cloud ecosystem overlap, minor relevance"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Rising Azure/datacenter capex implies more server hardware purchases"
+  }
+ ],
+ "evidence": "Revenue was $33.1 billion and increased 14%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

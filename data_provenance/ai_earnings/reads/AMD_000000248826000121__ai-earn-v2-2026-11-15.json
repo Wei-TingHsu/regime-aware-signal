@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2026 (fiscal quarter ended June 27, 2026)",
+  "revenue": "$11.536 billion (up 50% YoY, up 13% QoQ)",
+  "operating_income": "$1.990 billion GAAP (17% margin); $3.094 billion non-GAAP (27% margin)",
+  "net_income": "$2.297 billion GAAP; $2.760 billion non-GAAP",
+  "eps": "$1.38 diluted GAAP; $1.66 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q3 2026 revenue approximately $13 billion, plus or minus $300 million (implying ~41% YoY growth, ~13% sequential growth); non-GAAP gross margin approximately 56%"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0.6,
+ "fcf_trend": 0,
+ "own_stock": 0.8,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "AMD Instinct/Helios ramp signals intensifying AI accelerator competition and validates market size"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Expanded Azure deployment of Helios racks and EPYC VMs"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "EPYC and Ryzen share gains in CPU/server and client markets"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Foundry demand rises with Instinct MI400/Helios and EPYC ramp"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Memory capacity needs grow with MI400 series and AI rack-scale systems"
+  }
+ ],
+ "evidence": "We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v2-2026-11-15"
+}

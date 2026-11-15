@@ -1,0 +1,31 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.05,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "no new competitive disclosure"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "XPU strategy reiterated, not new"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "no change to foundry plans disclosed"
+  }
+ ],
+ "evidence": "We exceeded Q1 expectations\u2026 but lowered out",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

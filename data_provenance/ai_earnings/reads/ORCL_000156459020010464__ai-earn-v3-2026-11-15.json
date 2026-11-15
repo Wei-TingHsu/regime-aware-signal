@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY2020 (three months ended Feb 29, 2020)",
+  "revenue": "$9.8 billion, up 2% YoY (3% constant currency)",
+  "operating_income": "GAAP $3,528 million (36% margin); Non-GAAP $4,357 million (44% margin)",
+  "net_income": "GAAP $2,571 million; Non-GAAP $3,160 million",
+  "eps": "GAAP diluted $0.79 (up 4%); Non-GAAP diluted $0.97 (up 11%)",
+  "operating_cash_flow": "$13,947 million trailing twelve months (GAAP); $9,525 million for nine months ended Feb 29, 2020",
+  "capex": "$1,544 million trailing twelve months; $1,131 million nine months ended Feb 29, 2020",
+  "free_cash_flow": "$12,403 million trailing twelve months (down 6% YoY)",
+  "cash_and_investments": "$25,858 million ($23,829M cash + $2,029M marketable securities) as of Feb 29, 2020",
+  "total_debt": "Notes payable current $2,355 million + non-current $49,320 million = $51,675 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0,
+ "fcf_trend": -0.3,
+ "own_stock": 0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Competing cloud infrastructure and SaaS offerings"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS competes with Oracle Cloud Infrastructure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Google Cloud competes in enterprise/database cloud market"
+  }
+ ],
+ "evidence": "non-GAAP Earnings Per Share up 11% to $0.97, consistent with CEO's prior expectation of continued double-digit non-GAAP EPS growth",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

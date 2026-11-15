@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.7,
+ "fcf_outlook": 0.4,
+ "uncertainty": 0.3,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Micron gains full DRAM supply control, strengthening scale vs peers"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Taiwan semiconductor ecosystem consolidation"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "memory supply chain stability"
+  }
+ ],
+ "evidence": "Inotera is a Taiwan-based company that presently manufactures DRAM products and sells such products exclusively to Micron... Micron will acquire 100% of the issued and outstanding shares of Inotera",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,19 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.35,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.25,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Co-party ending joint NAND development, continues own roadmap"
+  }
+ ],
+ "evidence": "both companies will develop 3D NAND independently in order to better optimize the technology and products for their individual business needs",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,25 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.4,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.2,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "messaging/social competition intensifies"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "competes in messaging/communication platforms"
+  }
+ ],
+ "evidence": "an aggregate of 177,760,669 shares of the Company's Class A common stock and approximately $4.59 billion in cash to existing WhatsApp securityholders",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

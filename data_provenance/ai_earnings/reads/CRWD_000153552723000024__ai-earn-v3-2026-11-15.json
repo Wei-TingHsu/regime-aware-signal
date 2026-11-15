@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2024 (ended October 31, 2023)",
+  "revenue": "$786.0 million",
+  "operating_income": "GAAP $3.2 million; Non-GAAP $175.7 million",
+  "net_income": "GAAP $26.7 million; Non-GAAP $199.2 million",
+  "eps": "GAAP diluted $0.11; Non-GAAP diluted $0.82",
+  "operating_cash_flow": "$273.5 million",
+  "capex": null,
+  "free_cash_flow": "$239.0 million (stated)",
+  "cash_and_investments": "$3.17 billion (cash, cash equivalents and short-term investments)",
+  "total_debt": "$742.1 million long-term debt",
+  "guidance_next": "Q4 FY24: revenue $836.6-$840.0M; Non-GAAP operating income $186.5-$189.0M; Non-GAAP net income $199.6-$202.1M; Non-GAAP diluted EPS $0.81-$0.82. FY24 (raised): revenue $3,046.8-$3,050.2M; Non-GAAP operating income $633.6-$636.2M; Non-GAAP net income $715.2-$717.7M; Non-GAAP diluted EPS $2.95-$2.96."
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.9,
+ "own_stock": 0.9,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "CrowdStrike gains share in endpoint security vs Microsoft Defender"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Competes in cloud security/CNAPP space"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "CrowdStrike exceeded $1B in AWS Marketplace sales, boosting AWS ecosystem revenue"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Cloud/security software peer benefiting from similar enterprise IT consolidation trend"
+  },
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "AI-native platform messaging reflects broader enterprise AI adoption supporting AI infrastructure demand"
+  }
+ ],
+ "evidence": "Record net new ARR of $223 million driven by accelerating year-over-year growth... Delivers record profitability... Achieves record Q3 cash flow from operations and record free cash flow",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

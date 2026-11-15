@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and Full Year Fiscal 2022 (ended January 31, 2022)",
+  "revenue": "Q4: $431.0M total revenue (GAAP); FY22: $1,451.6M total revenue (GAAP)",
+  "operating_income": "Q4: GAAP loss $(23.5)M / Non-GAAP income $80.4M; FY22: GAAP loss $(142.5)M / Non-GAAP income $196.2M",
+  "net_income": "Q4: GAAP net loss $(42.0)M / Non-GAAP net income $70.4M; FY22: GAAP net loss $(234.8)M / Non-GAAP net income $160.7M",
+  "eps": "Q4: GAAP $(0.18) / Non-GAAP diluted $0.30; FY22: GAAP $(1.03) / Non-GAAP diluted $0.67",
+  "operating_cash_flow": "Q4: $159.7M; FY22: $574.8M",
+  "capex": "FY22: $112.1M (purchases of PP&E) + $20.9M (capitalized internal-use software) = approximately $133.0M",
+  "free_cash_flow": "Q4: $127.3M; FY22: $441.8M (as stated)",
+  "cash_and_investments": "$2.00B cash and cash equivalents as of January 31, 2022",
+  "total_debt": "$739.5M long-term debt (Senior Notes)",
+  "guidance_next": "Q1 FY23: revenue $458.9-465.4M, Non-GAAP income from operations $61.7-66.4M, Non-GAAP net income $52.0-56.7M, Non-GAAP diluted EPS $0.22-0.24; Full Year FY23: revenue $2,133.1-2,163.2M, Non-GAAP income from operations $289.2-311.8M, Non-GAAP net income $251.1-273.6M, Non-GAAP diluted EPS $1.03-1.13"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.8,
+ "own_stock": 0.75,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "CrowdStrike cloud/endpoint share gains pressure Microsoft security offerings"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Strong cloud security SaaS growth signals healthy enterprise cloud spending"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Cybersecurity cloud demand supports broader cloud infrastructure spend"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Strong SaaS growth supports AWS-hosted security workloads"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Direct rival in endpoint/XDR security market share"
+  }
+ ],
+ "evidence": "Delivers record operating and free cash flow for the second consecutive quarter, bringing operating and free cash flow for the fiscal year to a record $575 million and $442 million, respectively",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

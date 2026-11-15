@@ -1,0 +1,31 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.2,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.1,
+ "own_stock": -0.2,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "weaker foundry demand signals softer chip demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "foundry revenue decline suggests slower demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSM weakness could ease competitive pressure"
+  }
+ ],
+ "evidence": "net sales were approximately NT$34.92 billion, a decrease of 2.1 percent over June 2011 and a decrease of 3.4 percent over July 2010",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

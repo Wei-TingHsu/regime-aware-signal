@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2019 (quarter ended June 30, 2019)",
+  "revenue": "NT$241.00 billion / US$7.75 billion",
+  "operating_income": "Operating margin 31.7% of net revenue (~NT$76.4B implied)",
+  "net_income": "NT$66.77 billion",
+  "eps": "NT$2.57",
+  "operating_cash_flow": "NT$117.76 billion",
+  "capex": "NT$116.35 billion",
+  "free_cash_flow": "NT$1.41 billion",
+  "cash_and_investments": "NT$764.62 billion",
+  "total_debt": "Long-term interest-bearing debt NT$35.30 billion",
+  "guidance_next": "Q3 2019 revenue US$9.1-9.2 billion; gross profit margin 46%-48%; operating profit margin 35%-37% (at NT$31.0/US$1)"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.8,
+ "fcf_trend": -0.3,
+ "own_stock": 0.6,
+ "market": 0.4,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AAPL",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "7nm ramp likely tied to flagship smartphone chips"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "benefits from TSMC 7nm capacity expansion"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "HPC platform growth (+23% QoQ) suggests strong GPU/compute demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TSMC's strong guidance and 7nm ramp intensify competitive pressure"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "networking/communications chip demand tied to TSMC capacity"
+  }
+ ],
+ "evidence": "Revenue to be between US$ 9.1 billion and US$ 9.2 billion ... Operating profit margin to be between 35% and 37%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2012 (quarter ended Dec. 29, 2012) and full year 2012",
+  "revenue": "$1.16 billion Q4 2012; $5.42 billion FY2012",
+  "operating_income": "$(422) million GAAP Q4; non-GAAP $(55) million Q4; FY $(1.06) billion GAAP, $45 million non-GAAP",
+  "net_income": "$(473) million GAAP Q4 ($(102)M non-GAAP); FY $(1.18) billion GAAP ($(114)M non-GAAP)",
+  "eps": "$(0.63) GAAP Q4 ($(0.14) non-GAAP); FY $(1.60) GAAP ($(0.16) non-GAAP)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$1.0 billion cash/equivalents/marketable securities (plus $181M long-term marketable securities) at quarter end; $1.2 billion total cited in release",
+  "total_debt": "$2.037 billion long-term debt plus $5 million current portion",
+  "guidance_next": "AMD expects revenue to decrease 9 percent, plus or minus three percent, sequentially for the first quarter of 2013"
+ },
+ "results_vs_prior_guidance": -0.3,
+ "guidance_change": -0.4,
+ "fcf_trend": -0.6,
+ "own_stock": -0.5,
+ "market": -0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AMD weakness in PC/CPU market could cede share or reflect broader PC demand softness"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AMD graphics/GPU segment also soft, Nvidia comparison cited on compute performance"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "AMD wafer agreement issues; reduced foundry demand implied by GF charge"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "No direct memory commentary"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "Data center ARM collaboration aimed at cloud customers, limited direct impact"
+  }
+ ],
+ "evidence": "Operating loss was $422 million... primarily due to the impact of a Lower of Cost or Market (LCM) charge related to the GLOBALFOUNDRIES Inc. (GF) take-or-pay obligation of $273 million, previously expected to be $165 million",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

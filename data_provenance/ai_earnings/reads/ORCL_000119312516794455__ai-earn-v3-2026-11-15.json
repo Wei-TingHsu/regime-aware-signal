@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2017 (three months ended November 30, 2016)",
+  "revenue": "$9.0 billion total revenues, flat YoY in USD, +1% constant currency; non-GAAP $9.1 billion",
+  "operating_income": "$3.037 billion GAAP (34% margin); non-GAAP $3.8 billion (42% margin)",
+  "net_income": "$2.032 billion GAAP; non-GAAP $2.6 billion",
+  "eps": "$0.48 diluted GAAP; $0.61 non-GAAP",
+  "operating_cash_flow": "$14.249 billion trailing twelve months",
+  "capex": "$1.604 billion trailing twelve months (approx; six-month capex $1.056 billion)",
+  "free_cash_flow": "$12.645 billion trailing twelve months (10% growth YoY)",
+  "cash_and_investments": "$18.592 billion cash and cash equivalents + $39.614 billion marketable securities",
+  "total_debt": "$3.838 billion current notes payable + $50.489 billion non-current notes payable",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "not addressed"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/SaaS competitor implied by growth claims"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "IaaS competition referenced via cloud infrastructure growth claims"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud competitor context"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self; strong cloud growth and cash generation"
+  }
+ ],
+ "evidence": "Total Quarterly Cloud Revenue $1.1 Billion \u2014 First Quarter Over One Billion Dollar Mark",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

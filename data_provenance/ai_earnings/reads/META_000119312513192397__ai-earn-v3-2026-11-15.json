@@ -1,0 +1,41 @@
+{
+ "facts": {
+  "period": "Q1 2013 (ended March 31, 2013)",
+  "revenue": "$1.458 billion",
+  "operating_income": "GAAP $373 million; Non-GAAP $563 million",
+  "net_income": "GAAP $219 million; Non-GAAP $312 million",
+  "eps": "GAAP diluted $0.09; Non-GAAP diluted $0.12",
+  "operating_cash_flow": "$719 million",
+  "capex": "$327 million",
+  "free_cash_flow": "$392 million (719-327)",
+  "cash_and_investments": "$9.5 billion cash and marketable securities",
+  "total_debt": "$1.5 billion long-term debt plus $758 million capital lease obligations",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "reason": "competing for mobile ad dollars"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "reason": "competing for digital ad and platform share"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "reason": "large internet platform comparable for ad/mobile growth trends"
+  }
+ ],
+ "evidence": "Revenue for the first quarter totaled $1.46 billion, an increase of 38%, compared with $1.06 billion in the first quarter of 2012",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

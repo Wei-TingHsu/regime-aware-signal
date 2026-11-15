@@ -1,0 +1,49 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.75,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.6,
+ "own_stock": -0.4,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "more capital to fund GPU/datacenter buildout"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "chip supply for AI infrastructure expansion"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "memory demand tied to datacenter capex"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cloud rival may gain relative balance-sheet comfort"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cloud rival benefits if Oracle's leverage raises investor caution"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cloud rival less levered by comparison"
+  }
+ ],
+ "evidence": "aggregate sales proceeds of up to $20.0 billion... through an \"at-the-market\" offering program",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

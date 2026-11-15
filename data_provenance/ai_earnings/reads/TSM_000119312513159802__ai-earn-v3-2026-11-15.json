@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2013 (quarter ended March 31, 2013)",
+  "revenue": "NT$132.76 billion",
+  "operating_income": "NT$44.428 billion (operating margin 33.5%)",
+  "net_income": "NT$39.577 billion",
+  "eps": "NT$1.53 (US$0.26 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": "2013 capex estimate raised to US$9.5-10 billion (full year)",
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q2 2013 revenue NT$154-156 billion; gross margin 47.5-49.5%; operating margin 35-37%, at exchange rate 1 USD = NT$29.82"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "foundry customer, indirect read-through on advanced node demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "TSMC advanced node ramp pressures Intel foundry competitiveness"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor capex cycle read-through"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "mobile chip customer benefiting from strong mobile demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "indirect mobile ecosystem demand signal"
+  }
+ ],
+ "evidence": "our first quarter revenue exceeded the guidance given three months ago",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

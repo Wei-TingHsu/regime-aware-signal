@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2012 (quarter ended Dec 31, 2012)",
+  "revenue": "NT$131.31 billion (131,305 million)",
+  "operating_income": "NT$46,254 million (operating margin 35.2%)",
+  "net_income": "NT$41,569 million (net margin 31.7%)",
+  "eps": "NT$1.61 diluted (US$0.28 per ADR)",
+  "operating_cash_flow": null,
+  "capex": "2013 capex guided at about US$9 billion (full-year, not quarterly)",
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q1 2013: revenue NT$127-129 billion; gross margin 43.5-45.5%; operating margin 31.5-33.5%; FX assumption 28.90 NT$/USD; 2013 capex ~US$9 billion"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": -0.2,
+ "fcf_trend": 0,
+ "own_stock": 0.3,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "advanced node (28nm) foundry demand benefits GPU customers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "relies on TSMC advanced process capacity"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC's strong margins and node ramp pressure Intel's foundry competitiveness"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "fabless chipmaker dependent on TSMC capacity"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "broader semiconductor demand read-through"
+  }
+ ],
+ "evidence": "demand for our products was higher than we expected three months ago, resulting in above-guidance revenue and profit margins",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

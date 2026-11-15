@@ -1,0 +1,25 @@
+{
+ "event_type": "other",
+ "material": 0.15,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.2,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "memory peer, no direct impact"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "packaging/foundry peer, minor relevance"
+  }
+ ],
+ "evidence": "no matters have been determined as of the date hereof",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

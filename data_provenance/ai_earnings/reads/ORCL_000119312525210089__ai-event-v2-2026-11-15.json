@@ -1,0 +1,31 @@
+{
+ "event_type": "leadership change",
+ "material": 0.55,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.45,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "Oracle leadership transition could slow cloud momentum, slight relative benefit to rivals"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "AWS competes with OCI; leadership change adds uncertainty to Oracle's cloud execution"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "Google Cloud competitor benefits from any Oracle execution risk"
+  }
+ ],
+ "evidence": "Safra Catz will no longer serve as Chief Executive Officer and Principal Financial Officer of Oracle as of the Effective Date",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

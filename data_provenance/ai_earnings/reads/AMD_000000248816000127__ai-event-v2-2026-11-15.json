@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.4,
+ "fcf_outlook": 0.4,
+ "uncertainty": -0.3,
+ "own_stock": 0.4,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "AMD accelerates fabless transition, aligning with foundry model"
+  }
+ ],
+ "evidence": "AMD received from NFME approximately $371 million... with net cash proceeds of approximately $320 million after payment of taxes and other customary expenses",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

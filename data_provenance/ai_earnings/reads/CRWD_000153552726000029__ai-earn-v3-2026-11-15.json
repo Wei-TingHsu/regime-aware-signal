@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2027 (quarter ended July 31, 2026)",
+  "revenue": "$1.47 billion total revenue (GAAP), up 26% YoY; subscription revenue $1.40 billion",
+  "operating_income": "GAAP loss from operations $33.2 million; Non-GAAP income from operations $371.6 million",
+  "net_income": "GAAP net income $5.3 million; Non-GAAP net income $322.9 million",
+  "eps": "GAAP diluted EPS $0.01; Non-GAAP diluted EPS $0.31",
+  "operating_cash_flow": "$530.3 million (Q2, record)",
+  "capex": "approx. $152.9 million (derived: operating cash flow $530.3M minus stated FCF $377.4M)",
+  "free_cash_flow": "$377.4 million (Q2, record, stated)",
+  "cash_and_investments": "$5.01 billion cash and cash equivalents as of July 31, 2026",
+  "total_debt": "$746.2 million long-term debt",
+  "guidance_next": "Q3 FY27: ARR $6,184.4-$6,188.4M; revenue $1,523.2-$1,529.2M; Non-GAAP operating income $372.7-$375.9M; Non-GAAP net income $325.4-$327.9M; Non-GAAP diluted EPS $0.31. FY27 (raised): ARR $6,603.0-$6,611.9M; revenue $5,991.1-$6,011.1M; Non-GAAP operating income $1,497.2-$1,508.4M; Non-GAAP net income $1,302.7-$1,311.6M; Non-GAAP diluted EPS $1.25-$1.26; net new ARR growth guidance raised 630bps to 34% at midpoint"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.7,
+ "own_stock": 0.8,
+ "market": 0.2,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "AI/cloud security collaboration cited"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "AWS collaboration on AI/cloud security"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Google Cloud AI gateway partnership"
+  },
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "AI infrastructure demand tailwind via Cerebras partnership"
+  },
+  {
+   "company": "PANW",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Accelerating growth and market share gains in cybersecurity"
+  }
+ ],
+ "evidence": "Delivers record net new ARR of $333 million, accelerates growth to 51% year-over-year ... Increases FY27 net new ARR growth guidance by 630 basis points to 34% year-over-year growth at the midpoint",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

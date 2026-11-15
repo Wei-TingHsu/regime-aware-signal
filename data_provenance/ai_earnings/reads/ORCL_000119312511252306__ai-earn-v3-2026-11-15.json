@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2012 (three months ended August 31, 2011)",
+  "revenue": "$8.374 billion GAAP (up 12%)",
+  "operating_income": "$2.683 billion GAAP (up 40%); $3.6 billion non-GAAP (up 21%)",
+  "net_income": "$1.840 billion GAAP (up 36%)",
+  "eps": "$0.36 GAAP diluted (up 34%); $0.48 non-GAAP (up 14%)",
+  "operating_cash_flow": "$5.421 billion for the quarter; $12.818 billion trailing twelve months (up 46%)",
+  "capex": "$160 million for the quarter; $492 million trailing twelve months",
+  "free_cash_flow": "$12.326 billion trailing twelve months (operating cash flow minus capex)",
+  "cash_and_investments": "$13.162 billion cash and equivalents plus $18.498 billion marketable securities",
+  "total_debt": "$14.789 billion non-current notes payable (no current notes payable)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0,
+ "fcf_trend": 0.7,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "IBM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle high-end server growth vs low-end commodity hardware decline"
+  },
+  {
+   "company": "HPQ",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle shifting away from low-margin commodity hardware, pressuring rivals"
+  },
+  {
+   "company": "SAP",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Strong software license growth signals competitive pressure"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Enterprise software and cloud competition"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Oracle pushing proprietary SPARC chips over x86 alternatives"
+  }
+ ],
+ "evidence": "GAAP operating income was up 40% to $2.7 billion, and GAAP operating margin was 32%.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

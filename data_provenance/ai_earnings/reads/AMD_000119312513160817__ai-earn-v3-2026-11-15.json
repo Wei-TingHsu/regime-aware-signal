@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2013 (quarter ended March 30, 2013)",
+  "revenue": "$1.09 billion, down 6% sequentially and 31% year-over-year",
+  "operating_income": "GAAP operating loss $98 million; non-GAAP operating loss $46 million",
+  "net_income": "GAAP net loss $146 million; non-GAAP net loss $94 million",
+  "eps": "GAAP loss per share $0.19; non-GAAP loss per share $0.13",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$1.2 billion (cash, cash equivalents and marketable securities, including long-term securities)",
+  "total_debt": "$2.039 billion long-term debt and capital lease obligations (plus $5 million current portion)",
+  "guidance_next": "For Q2 2013, AMD expects revenue to increase 2 percent, plus or minus 3 percent, sequentially"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.0,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AMD cites Intel pricing/marketing as competitive risk in PC/server CPUs"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "AMD graphics segment results imply competitive GPU market dynamics"
+  },
+  {
+   "company": "Sony",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Sony PS4 semi-custom APU design win signals new revenue stream"
+  },
+  {
+   "company": "GLOBALFOUNDRIES",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Continued take-or-pay obligations and prior LCM charges tied to wafer supply"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Broader semiconductor demand environment referenced as 'difficult market environment'"
+  }
+ ],
+ "evidence": "AMD revenue $1.09 billion, decreased 6 percent sequentially... For the second quarter of 2013, AMD expects revenue to increase 2 percent, plus or minus 3 percent, sequentially.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

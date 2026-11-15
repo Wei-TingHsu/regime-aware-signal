@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q1 2014 (three months ended March 31, 2014)",
+  "revenue": "$2.50 billion, up 72% YoY",
+  "operating_income": "GAAP $1.075 billion (43% margin); Non-GAAP $1.374 billion (55% margin)",
+  "net_income": "GAAP $642 million; Non-GAAP $885 million",
+  "eps": "GAAP diluted $0.25; Non-GAAP diluted $0.34",
+  "operating_cash_flow": "$1,285 million",
+  "capex": "$363 million",
+  "free_cash_flow": "$922 million (as stated)",
+  "cash_and_investments": "$12.63 billion (cash + marketable securities)",
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Strong mobile ad growth signals share gains in digital advertising"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Broader ad market competition, limited direct overlap"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "Tech peer benchmark for cloud/ad business health"
+  }
+ ],
+ "evidence": "Revenue for the first quarter of 2014 totaled $2.50 billion, an increase of 72%, ... GAAP income from operations was $1.08 billion, up 188%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

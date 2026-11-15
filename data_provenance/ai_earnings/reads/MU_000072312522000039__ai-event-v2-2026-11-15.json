@@ -1,0 +1,43 @@
+{
+ "event_type": "guidance update",
+ "material": 0.85,
+ "fcf_outlook": -0.85,
+ "uncertainty": 0.8,
+ "own_stock": -0.8,
+ "market": -0.4,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -0.6,
+   "reason": "Shared NAND/memory downturn"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Weaker PC/server demand signal"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Memory demand reflects weak PC/server end markets"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "Broader semiconductor demand slowdown signal"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "Shared inventory/demand weakness in tech supply chain"
+  }
+ ],
+ "evidence": "we expect significant sequential declines in revenue and margins. We expect free cash flow to be negative in FQ1.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,19 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.15,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.2,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Zynga",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "gains independence from Facebook platform, reduced payment/ad revenue share to Facebook"
+  }
+ ],
+ "evidence": "Zynga may elect (i) not to use Facebook Payments as a means of payment and/or (ii) not to display ads served by Facebook",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

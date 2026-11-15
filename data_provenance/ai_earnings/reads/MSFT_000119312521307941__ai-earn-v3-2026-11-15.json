@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2022 (quarter ended September 30, 2021)",
+  "revenue": "$45.3 billion, +22% YoY",
+  "operating_income": "$20.2 billion, +27% YoY",
+  "net_income": "$20.5 billion GAAP (+48%), $17.2 billion non-GAAP (+24%)",
+  "eps": "$2.71 GAAP diluted (+49%), $2.27 non-GAAP diluted (+25%)",
+  "operating_cash_flow": "$24,540 million",
+  "capex": "$5,810 million (additions to property and equipment)",
+  "free_cash_flow": "$18,730 million (24,540 - 5,810)",
+  "cash_and_investments": "$130,615 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$53,288 million (current portion $3,249M + long-term $50,039M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Azure growth of 50% intensifies cloud competition"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure/cloud share gains pressure Google Cloud"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Strong Intelligent Cloud/Azure growth implies continued datacenter compute buildout"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Enterprise cloud/database competition from Azure growth"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Cloud security spend tailwind as commercial cloud expands"
+  }
+ ],
+ "evidence": "Revenue was $45.3 billion and increased 22%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

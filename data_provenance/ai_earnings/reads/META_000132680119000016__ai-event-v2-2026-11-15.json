@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.3,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.3,
+ "own_stock": -0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "talent/product leadership opening for rivals"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "potential ad market share shift"
+  }
+ ],
+ "evidence": "Christopher K. Cox informed Facebook, Inc. (the \"Company\") of his intention to resign from his position as Chief Product Officer",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

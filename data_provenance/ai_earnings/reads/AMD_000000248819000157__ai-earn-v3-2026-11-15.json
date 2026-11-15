@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2019",
+  "revenue": "$1.80 billion",
+  "operating_income": "$186 million GAAP / $240 million non-GAAP",
+  "net_income": "$120 million GAAP / $219 million non-GAAP",
+  "eps": "$0.11 GAAP / $0.18 non-GAAP diluted",
+  "operating_cash_flow": "$234 million",
+  "capex": "$55 million",
+  "free_cash_flow": "$179 million",
+  "cash_and_investments": "$1.209 billion",
+  "total_debt": "$872 million",
+  "guidance_next": "Q4 2019 revenue approximately $2.1 billion, plus or minus $50 million (~48% YoY, ~17% QoQ increase); non-GAAP gross margin approximately 44%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Ryzen/EPYC share gains pressuring Intel CPU share"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "Radeon RDNA GPU launches compete with Nvidia"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Google deploying 2nd Gen EPYC in data centers/cloud"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "Surface Laptop 3 using AMD Ryzen; Azure-related cloud use"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "7nm foundry capacity demand from AMD's Ryzen/EPYC ramp"
+  }
+ ],
+ "evidence": "Revenue grew 9 percent year-over-year and 18 percent quarter-over-quarter; Gross margin expanded to 43 percent, up 3 percentage points year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

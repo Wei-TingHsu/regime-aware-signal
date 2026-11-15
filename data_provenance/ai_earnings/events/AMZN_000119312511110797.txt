@@ -1,0 +1,364 @@
+[AMZN 8-K items: 7.01,9.01]
+
+8-K
+ 1
+ d8k.htm
+ FORM 8-K
+
+ SECURITIES AND EXCHANGE
+COMMISSION 
+ WASHINGTON, D.C. 20549 
+
+ FORM 8-K 
+
+ CURRENT REPORT
+
+ PURSUANT TO SECTION 13 OR 15(d) OF THE 
+ SECURITIES EXCHANGE ACT OF 1934 
+ APRIL 27, 2011 
+
+ DATE OF REPORT 
+
+ (DATE OF EARLIEST EVENT REPORTED) 
+
+ AMAZON.COM,
+INC. 
+ (EXACT NAME OF REGISTRANT AS SPECIFIED IN CHARTER) 
+
+ DELAWARE 
+
+ 000-22513 
+
+ 91-1646860 
+
+ (STATE OR OTHER JURISDICTION
+OF INCORPORATION) 
+
+ (COMMISSION FILE NO.) 
+
+ (IRS EMPLOYER 
+ IDENTIFICATION NO.) 
+
+ 410 TERRY AVENUE NORTH, SEATTLE,
+WASHINGTON 98109-5210 
+ (ADDRESS OF PRINCIPAL EXECUTIVE OFFICES, INCLUDING ZIP CODE) 
+
+ (206) 266-1000 
+ (REGISTRANT’S TELEPHONE NUMBER, INCLUDING AREA CODE) 
+
+ Check the appropriate box below
+if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: 
+
+ ¨ 
+ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) 
+
+ ¨ 
+ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) 
+
+ ¨ 
+ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) 
+
+ ¨ 
+ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) 
+
+ ITEM 7.01. REGULATION FD DISCLOSURE 
+
+ 3 
+
+ ITEM 9.01. FINANCIAL STATEMENTS AND EXHIBITS 
+
+ 3 
+
+ SIGNATURES 
+
+ 4 
+
+ EXHIBIT INDEX 
+
+ 5 
+
+ EXHIBIT 99.1 
+
+ 2 
+
+ ITEM 7.01. 
+ REGULATION FD DISCLOSURE 
+ The Company’s Letter to Shareholders, which accompanies its Annual Report for the Year Ended December 31, 2010, is attached as Exhibit 99.1. 
+
+ ITEM 9.01. 
+ FINANCIAL STATEMENTS AND EXHIBITS 
+ (d) Exhibits 
+
+ Exhibit
+Number 
+
+ Description 
+
+ 99.1 
+
+ 2010 Letter to Shareholders 
+
+ 3 
+
+ SIGNATURES 
+
+ Pursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf
+by the undersigned hereunto duly authorized. 
+
+ AMAZON.COM, INC. (REGISTRANT) 
+
+ By: 
+
+ / S / L. M ICHELLE 
+W ILSON 
+
+ L. Michelle Wilson 
+
+ Senior Vice President 
+
+ Dated:
+April 27, 2011 
+
+ 4 
+
+ EXHIBIT INDEX 
+
+ Exhibit
+Number 
+
+ Description 
+
+ 99.1 
+
+ 2010 Letter to Shareholders 
+
+ 5
+
+[EXHIBIT]
+EX-99.1
+ 2
+ dex991.htm
+ 2010 LETTER TO SHAREHOLDERS
+
+ Exhibit 99.1 
+
+ To our shareowners: 
+ Random forests, naïve Bayesian estimators, RESTful services, gossip protocols, eventual consistency, data sharding, anti-entropy, Byzantine quorum, erasure coding, vector clocks … walk into
+certain Amazon meetings, and you may momentarily think you’ve stumbled into a computer science lecture. 
+ Look inside a
+current textbook on software architecture, and you’ll find few patterns that we don’t apply at Amazon. We use high-performance transactions systems, complex rendering and object caching, workflow and queuing systems, business intelligence
+and data analytics, machine learning and pattern recognition, neural networks and probabilistic decision making, and a wide variety of other techniques. And while many of our systems are based on the latest in computer science research, this often
+hasn’t been sufficient: our architects and engineers have had to advance research in directions that no academic had yet taken. Many of the problems we face have no textbook solutions, and so we -- happily -- invent new approaches. 
+
+ Our technologies are almost exclusively implemented as services : bits of logic that encapsulate the data they operate on and
+provide hardened interfaces as the only way to access their functionality. This approach reduces side effects and allows services to evolve at their own pace without impacting the other components of the overall system. Service-oriented architecture
+-- or SOA -- is the fundamental building abstraction for Amazon technologies. Thanks to a thoughtful and far-sighted team of engineers and architects, this approach was applied at Amazon long before SOA became a buzzword in the industry. Our
+e-commerce platform is composed of a federation of hundreds of software services that work in concert to deliver functionality ranging from recommendations to order fulfillment to inventory tracking. For example, to construct a product detail page
+for a customer visiting Amazon.com, our software calls on between 200 and 300 services to present a highly personalized experience for that customer. 
+ State management is the heart of any system that needs to grow to very large size. Many years ago, Amazon’s requirements reached a point where many of our systems could no longer be served by any
+commercial solution: our key data services store many petabytes of data and handle millions of requests per second. To meet these demanding and unusual requirements, we’ve developed several alternative, purpose-built persistence solutions,
+including our own key-value store and single table store. To do so, we’ve leaned heavily on the core principles from the distributed systems and database research communities and invented from there. The storage systems we’ve pioneered
+demonstrate extreme scalability while maintaining tight control over performance, availability, and cost. To achieve their ultra-scale properties these systems take a novel approach to data update management: by relaxing the synchronization
+requirements of updates that need to be disseminated to large numbers of replicas, these systems are able to survive under the harshest performance and availability conditions. These implementations are based on the concept of eventual consistency.
+The advances in data management developed by Amazon engineers have been the starting point for the architectures underneath the cloud storage and data management services offered by Amazon Web Services (AWS). For example, our Simple Storage Service,
+Elastic Block Store, and SimpleDB all derive their basic architecture from unique Amazon technologies. 
+
+ Other areas of Amazon’s business face similarly complex data processing and decision
+problems, such as product data ingestion and categorization, demand forecasting, inventory allocation, and fraud detection. Rule-based systems can be used successfully, but they can be hard to maintain and can become brittle over time. In many
+cases, advanced machine learning techniques provide more accurate classification and can self-heal to adapt to changing conditions. For example, our search engine employs data mining and machine learning algorithms that run in the background to
+build topic models, and we apply information extraction algorithms to identify attributes and extract entities from unstructured descriptions, allowing customers to narrow their searches and quickly find the desired product. We consider a large
+number of factors in search relevance to predict the probability of a customer’s interest and optimize the ranking of results. The diversity of products demands that we employ modern regression techniques like trained random forests of decision
+trees to flexibly incorporate thousands of product attributes at rank time. The end result of all this behind-the-scenes software? Fast, accurate search results that help you find what you want. 
+
+ All the effort we put into technology might not matter that much if we kept technology off to the side in some sort of R&D
+department, but we don’t take that approach. Technology infuses all of our teams, all of our processes, our decision-making, and our approach to innovation in each of our businesses. It is deeply integrated into everything we do. 
+
+ One example is Whispersync, our Kindle service designed to ensure that everywhere you go, no matter what devices you have with you, you
+can access your reading library and all of your highlights, notes, and bookmarks, all in sync across your Kindle devices and mobile apps. The technical challenge is making this a reality for millions of Kindle owners, with hundreds of millions of
+books, and hundreds of device types, living in over 100 countries around the world—at 24x7 reliability. At the heart of Whispersync is an eventually consistent replicated data store, with application defined conflict resolution that must and
+can deal with device isolation lasting weeks or longer. As a Kindle customer, of course, we hide all this technology from you. So when you open your Kindle, it’s in sync and on the right page. To paraphrase Arthur C. Clarke, like any
+sufficiently advanced technology, it’s indistinguishable from magic. 
+ Now, if the eyes of some shareowners dutifully
+reading this letter are by this point glazing over, I will awaken you by pointing out that, in my opinion, these techniques are not idly pursued – they lead directly to free cash flow. 
+
+ We live in an era of extraordinary increases in available bandwidth, disk space, and processing power, all of which continue to get cheap
+fast. We have on our team some of the most sophisticated technologists in the world – helping to solve challenges that are right on the edge of what’s possible today. As I’ve discussed many times before, we have unshakeable conviction
+that the long-term interests of shareowners are perfectly aligned with the interests of customers. 
+ And we like it that way.
+Invention is in our DNA and technology is the fundamental tool we wield to evolve and improve every aspect of the experience we provide our customers. We still have a lot to learn, and I expect and hope we’ll continue to have so much fun
+learning it. I take great pride in being part of this team. 
+ As always, I attach a copy of our original 1997 letter. Our
+approach remains the same, and it’s still Day 1. 
+
+ Jeffrey P. Bezos 
+
+ Founder and Chief Executive Officer 
+
+ Amazon.com, Inc. 
+
+ 1997 LETTER TO SHAREHOLDERS
+
+ (Reprinted from the 1997 Annual Report) 
+
+ To our shareholders: 
+
+ Amazon.com passed many milestones in 1997: by year-end, we had served more than 1.5 million customers, yielding
+838% revenue growth to $147.8 million, and extended our market leadership despite aggressive competitive entry. 
+
+ But this is Day 1 for the Internet and, if we execute well, for Amazon.com. Today, online commerce saves customers money and precious
+time. Tomorrow, through personalization, online commerce will accelerate the very process of discovery. Amazon.com uses the Internet to create real value for its customers and, by doing so, hopes to create an enduring franchise, even in established
+and large markets. 
+
+ We have a window of
+opportunity as larger players marshal the resources to pursue the online opportunity and as customers, new to purchasing online, are receptive to forming new relationships. The competitive landscape has continued to evolve at a fast pace. Many large
+players have moved online with credible offerings and have devoted substantial energy and resources to building awareness, traffic, and sales. Our goal is to move quickly to solidify and extend our current position while we begin to pursue the
+online commerce opportunities in other areas. We see substantial opportunity in the large markets we are targeting. This strategy is not without risk: it requires serious investment and crisp execution against established franchise leaders.
+
+ It’s All About the Long Term
+
+ We believe that a fundamental measure of our
+success will be the shareholder value we create over the long term . This value will be a direct result of our ability to extend and solidify our current market leadership position. The stronger our market leadership, the more powerful our
+economic model. Market leadership can translate directly to higher revenue, higher profitability, greater capital velocity, and correspondingly stronger returns on invested capital. 
+
+ Our decisions have consistently reflected this focus. We first measure ourselves in terms of the metrics most
+indicative of our market leadership: customer and revenue growth, the degree to which our customers continue to purchase from us on a repeat basis, and the strength of our brand. We have invested and will continue to invest aggressively to expand
+and leverage our customer base, brand, and infrastructure as we move to establish an enduring franchise. 
+
+ Because of our emphasis on the long term, we may make decisions and weigh tradeoffs differently than some companies. Accordingly, we want
+to share with you our fundamental management and decision-making approach so that you, our shareholders, may confirm that it is consistent with your investment philosophy: 
+
+ • 
+
+ We will continue to focus relentlessly on our customers. 
+
+ • 
+
+ We will continue to make investment decisions in light of long-term market leadership considerations rather than short-term profitability
+considerations or short-term Wall Street reactions. 
+
+ • 
+
+ We will continue to measure our programs and the effectiveness of our investments analytically, to jettison those that do not provide acceptable
+returns, and to step up our investment in those that work best. We will continue to learn from both our successes and our failures. 
+
+ • 
+
+ We will make bold rather than timid investment decisions where we see a sufficient probability of gaining market leadership advantages. Some of these
+investments will pay off, others will not, and we will have learned another valuable lesson in either case. 
+
+ • 
+
+ When forced to choose between optimizing the appearance of our GAAP accounting and maximizing the present value of future cash flows, we’ll take
+the cash flows. 
+
+ • 
+
+ We will share our strategic thought processes with you when we make bold choices (to the extent competitive pressures allow), so that you may evaluate
+for yourselves whether we are making rational long-term leadership investments. 
+
+ • 
+
+ We will work hard to spend wisely and maintain our lean culture. We understand the importance of continually reinforcing a cost-conscious culture,
+particularly in a business incurring net losses. 
+
+ • 
+
+ We will balance our focus on growth with emphasis on long-term profitability and capital management. At this stage, we choose to prioritize growth
+because we believe that scale is central to achieving the potential of our business model. 
+
+ • 
+
+ We will continue to focus on hiring and retaining versatile and talented employees, and continue to weight their compensation to stock options rather
+than cash. We know our success will be largely affected by our ability to attract and retain a motivated employee base, each of whom must think like, and therefore must actually be, an owner. 
+
+ We aren’t so bold as to claim that the above is the
+“right” investment philosophy, but it’s ours, and we would be remiss if we weren’t clear in the approach we have taken and will continue to take. 
+
+ With this foundation, we would like to turn to a review of
+our business focus, our progress in 1997, and our outlook for the future. 
+
+ Obsess Over Customers 
+
+ From the beginning, our focus has been on offering our customers compelling value. We realized that the Web was, and still is, the World Wide Wait. Therefore, we set out to offer customers something they
+simply could not get any other way, and began serving them with books. We brought them much more selection than was possible in a physical store (our store would now occupy 6 football fields), and presented it in a useful, easy-to-search, and
+easy-to-browse format in a store open 365 days a year, 24 hours a day. We maintained a dogged focus on improving the shopping experience, and in 1997 substantially enhanced our store. We now offer customers gift certificates, 1-Click SM shopping, and vastly more reviews, content, browsing options, and
+recommendation features. We dramatically lowered prices, further increasing customer value. Word of mouth remains the most powerful customer acquisition tool we have, and we are grateful for the trust our customers have placed in us. Repeat
+purchases and word of mouth have combined to make Amazon.com the market leader in online bookselling. 
+
+ By many measures, Amazon.com came a long way in 1997: 
+
+ • 
+
+ Sales grew from $15.7 million in 1996 to $147.8 million – an 838% increase. 
+
+ • 
+
+ Cumulative customer accounts grew from 180,000 to 1,510,000 – a 738% increase. 
+
+ • 
+
+ The percentage of orders from repeat customers grew from over 46% in the fourth quarter of 1996 to over 58% in the same period in 1997.
+
+ • 
+
+ In terms of audience reach, per Media Metrix, our Web site went from a rank of 90th to within the top 20. 
+
+ • 
+
+ We established long-term relationships with many important strategic partners, including America Online, Yahoo!, Excite, Netscape, GeoCities,
+AltaVista, @Home, and Prodigy. 
+
+ Infrastructure 
+
+ During 1997, we worked hard to expand our business
+infrastructure to support these greatly increased traffic, sales, and service levels: 
+
+ • 
+
+ Amazon.com’s employee base grew from 158 to 614, and we significantly strengthened our management team. 
+
+ • 
+
+ Distribution center capacity grew from 50,000 to 285,000 square feet, including a 70% expansion of our Seattle facilities and the launch of our second
+distribution center in Delaware in November. 
+
+ • 
+
+ Inventories rose to over 200,000 titles at year-end, enabling us to improve availability for our customers. 
+
+ • 
+
+ Our cash and investment balances at year-end were $125 million, thanks to our initial public offering in May 1997 and our $75 million loan, affording
+us substantial strategic flexibility. 
+
+ Our Employees 
+
+ The past year’s success is the product of a talented, smart, hard-working group, and I take great pride in being a part of this team. Setting the bar high in our approach to hiring has been, and will
+continue to be, the single most important element of Amazon.com’s success. 
+
+ It’s not easy to work here (when I interview people I tell them, “You can work long, hard, or smart, but at Amazon.com you can’t choose two out of three”), but we are working to build
+something important, something that matters to our customers, something that we can all tell our grandchildren about. Such things aren’t meant to be easy. We are incredibly fortunate to have this group of dedicated employees whose sacrifices
+and passion build Amazon.com. 
+
+ Goals for 1998
+
+ We are still in the early stages of learning
+how to bring new value to our customers through Internet commerce and merchandising. Our goal remains to continue to solidify and extend our brand and customer base. This requires sustained investment in systems and infrastructure to support
+outstanding customer convenience, selection, and service while we grow. We are planning to add music to our product offering, and over time we believe that other products may be prudent investments. We also believe there are significant
+opportunities to better serve our customers overseas, such as reducing delivery times and better tailoring the customer experience. To be certain, a big part of the challenge for us will lie not in finding new ways to expand our business, but in
+prioritizing our investments. 
+
+ We now know vastly
+more about online commerce than when Amazon.com was founded, but we still have so much to learn. Though we are optimistic, we must remain vigilant and maintain a sense of urgency. The challenges and hurdles we will face to make our long-term vision
+for Amazon.com a reality are several: aggressive, capable, well-funded competition; considerable growth challenges and execution risk; the risks of product and geographic expansion; and the need for large continuing investments to meet an expanding
+market opportunity. However, as we’ve long said, online bookselling, and online commerce in general, should prove to be a very large market, and it’s likely that a number of companies will see significant benefit. We feel good about what
+we’ve done, and even more excited about what we want to do. 
+
+ 1997 was indeed an incredible year. We at Amazon.com are grateful to our customers for their business and trust, to each other for our hard work, and to our shareholders for their support and
+encouragement. 
+
+ Jeffrey P.
+Bezos 
+ Founder and Chief Executive Officer 
+
+ Amazon.com, Inc.

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "4Q13 (quarter ended Dec 31, 2013)",
+  "revenue": "NT$145.81 billion",
+  "operating_income": "NT$47.754 billion (operating margin 32.8%)",
+  "net_income": "NT$44.81 billion",
+  "eps": "NT$1.73 (US$0.29 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "1Q14 revenue NT$136-138 billion; gross margin 44.5%-46.5%; operating margin 32%-34%; 2014 capex US$9.5-10 billion; assumes NT$30/US$1"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.3,
+ "fcf_trend": 0,
+ "own_stock": -0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "fabless inventory reduction weighing on near-term foundry demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "foundry competitive dynamics unaffected directly"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "weak seasonal IC demand and inventory cuts by fabless customers"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "self-referential guidance cut for Q1"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "memory demand not directly addressed"
+  }
+ ],
+ "evidence": "we expect our first quarter revenue will decline sequentially by about 6%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

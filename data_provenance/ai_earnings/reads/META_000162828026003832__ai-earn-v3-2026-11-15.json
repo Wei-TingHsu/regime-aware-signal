@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2025 (ended December 31, 2025)",
+  "revenue": "$59,893M (Q4); $200,966M (FY)",
+  "operating_income": "$24,745M (Q4); $83,276M (FY)",
+  "net_income": "$22,768M (Q4); $60,458M (FY)",
+  "eps": "$8.88 diluted (Q4); $23.49 diluted (FY)",
+  "operating_cash_flow": "$36,214M (Q4); $115,800M (FY)",
+  "capex": "$22,137M incl. finance lease principal payments (Q4); $72,215M (FY)",
+  "free_cash_flow": "$14,077M (Q4); $43,585M (FY)",
+  "cash_and_investments": "$81,592M cash, cash equivalents and marketable securities",
+  "total_debt": "$58,744M long-term debt",
+  "guidance_next": "Q1 2026 revenue $53.5-56.5B (assumes ~4% FX tailwind); FY2026 total expenses $162-169B; FY2026 capex incl. finance leases $115-135B; 2026 operating income expected above 2025 level; FY2026 tax rate 13-16%"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.5,
+ "own_stock": -0.4,
+ "market": 0.1,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.7,
+   "reason": "massive 2026 capex guide ($115-135B) implies more GPU purchases"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "AI infrastructure spend benefits compute suppliers"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "custom silicon/networking demand from hyperscaler capex surge"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "memory demand tied to AI data center buildout"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "foundry capacity needed for AI chip ramp"
+  }
+ ],
+ "evidence": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $115-135 billion, with year-over-year growth driven by increased investment to support our Meta Superintelligence Labs efforts and core business.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

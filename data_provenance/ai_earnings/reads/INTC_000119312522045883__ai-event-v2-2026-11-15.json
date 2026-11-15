@@ -1,0 +1,49 @@
+{
+ "event_type": "product or technology",
+ "material": 0.3,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.2,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel foundry ambitions threaten TSMC's foundry dominance"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Xeon/process roadmap claims competitive gains"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AI/HPC compute density claims target Nvidia's market"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Shared semiconductor capacity/supply chain narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Potential foundry customer for IP/chiplets"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Potential foundry/cloud compute customer"
+  }
+ ],
+ "evidence": "We remain confident we will [achieve] Intel 7 Manufacturing Ready... in 2H'22",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

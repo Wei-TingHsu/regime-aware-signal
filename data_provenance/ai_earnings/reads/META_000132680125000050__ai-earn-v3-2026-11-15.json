@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2025 (three months ended March 31, 2025)",
+  "revenue": "$42,314 million (+16% YoY)",
+  "operating_income": "$17,555 million (41% operating margin)",
+  "net_income": "$16,644 million (+35% YoY)",
+  "eps": "$6.43 diluted",
+  "operating_cash_flow": "$24,026 million",
+  "capex": "$12,941 million (purchases of property and equipment); $13.69 billion including principal payments on finance leases",
+  "free_cash_flow": "$10,334 million",
+  "cash_and_investments": "$70,230 million (cash, cash equivalents, and marketable securities)",
+  "total_debt": "$28,829 million long-term debt",
+  "guidance_next": "Q2 2025 revenue $42.5-45.5B; FY2025 total expenses $113-118B (lowered from $114-119B); FY2025 capex $64-72B (raised from $60-65B) including finance lease principal payments, due to additional data center investment and higher infrastructure hardware costs; FY2025 tax rate 12-15% (unchanged)"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.3,
+ "fcf_trend": -0.3,
+ "own_stock": 0.3,
+ "market": 0.3,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.7,
+   "reason": "raised capex for AI data center hardware implies more GPU purchases"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "custom silicon/networking for AI infrastructure buildout"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "memory demand tied to AI data center expansion"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "foundry capacity needed for AI chip demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "signals sector-wide elevated AI capex trend among hyperscalers"
+  }
+ ],
+ "evidence": "Revenue was $42.31 billion, an increase of 16% year-over-year... We anticipate our full year 2025 capital expenditures... will be in the range of $64-72 billion, increased from our prior outlook of $60-65 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

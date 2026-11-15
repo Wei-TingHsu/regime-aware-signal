@@ -1,0 +1,25 @@
+{
+ "event_type": "other",
+ "material": 0.6,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.3,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "NAND peer, independent SNDK may compete more sharply"
+  },
+  {
+   "company": "WDC",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "spin-off counterparty, separates flash from HDD"
+  }
+ ],
+ "evidence": "Upon consummation of the Spin-Off, the Company will be an independent, publicly traded company.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

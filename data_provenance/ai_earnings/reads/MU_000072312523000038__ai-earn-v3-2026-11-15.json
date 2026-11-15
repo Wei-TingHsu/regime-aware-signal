@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ3 2023 (ended June 1, 2023)",
+  "revenue": "$3.752 billion GAAP and Non-GAAP",
+  "operating_income": "GAAP $(1.761) billion; Non-GAAP $(1.469) billion",
+  "net_income": "GAAP $(1.896) billion; Non-GAAP $(1.565) billion",
+  "eps": "GAAP $(1.73) diluted; Non-GAAP $(1.43) diluted",
+  "operating_cash_flow": "$24 million",
+  "capex": "Investments in capital expenditures, net $1.379 billion (gross PP&E capex $1.561 billion)",
+  "free_cash_flow": "Adjusted free cash flow $(1.355) billion (as stated)",
+  "cash_and_investments": "$11.40 billion (cash, marketable investments, and restricted cash)",
+  "total_debt": "$13.245 billion (current debt $259M + long-term debt $12.986B)",
+  "guidance_next": "FQ4-23: Revenue $3.90B \u00b1 $200M; GAAP gross margin (12.5%) \u00b1 2.5% (Non-GAAP (10.5%) \u00b1 2.5%); GAAP opex $946M \u00b1 $15M (Non-GAAP $845M \u00b1 $15M); GAAP diluted EPS $(1.34) \u00b1 $0.07 (Non-GAAP $(1.19) \u00b1 $0.07)"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.2,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Micron margin recovery outpaces peer DRAM/NAND pricing trends"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AI/memory-centric computing demand cited as growth driver"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Data center and AI compute demand supports memory attach"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Broader semiconductor cycle recovery signal"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Cloud/data center memory demand tied to AI buildout"
+  }
+ ],
+ "evidence": "Micron delivered fiscal third quarter revenue, gross margin, and EPS all above the midpoint of the guidance range",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

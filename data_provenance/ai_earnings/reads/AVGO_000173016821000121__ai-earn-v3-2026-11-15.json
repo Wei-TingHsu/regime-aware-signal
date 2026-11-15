@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2021 (ended August 1, 2021)",
+  "revenue": "$6,778 million, +16% YoY",
+  "operating_income": null,
+  "net_income": "$1,876 million GAAP; $3,124 million non-GAAP",
+  "eps": "$4.20 GAAP diluted; $6.96 non-GAAP diluted",
+  "operating_cash_flow": "$3,541 million",
+  "capex": "$115 million",
+  "free_cash_flow": "$3,426 million (cash from operations $3,541M less capex $115M)",
+  "cash_and_investments": "$11,105 million cash and cash equivalents",
+  "total_debt": "$40,457 million (current $279M + long-term $40,178M)",
+  "guidance_next": "Q4 FY2021 revenue guidance of approximately $7.35 billion (+14% YoY); Adjusted EBITDA guidance of approximately 61% of projected revenue"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "itself - strong results"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "overlapping networking/data center silicon demand signals"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "foundry demand tied to Broadcom's semiconductor growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "shared data center/5G infrastructure markets"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "cloud infrastructure demand supports Broadcom networking chips"
+  }
+ ],
+ "evidence": "Fourth quarter revenue guidance of approximately $7.35 billion, an expected increase of 14 percent from the prior year period",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

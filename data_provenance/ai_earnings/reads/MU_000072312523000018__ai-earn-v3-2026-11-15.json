@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ2-23 (ended March 2, 2023)",
+  "revenue": "$3.693 billion",
+  "operating_income": "GAAP $(2.303) billion; Non-GAAP $(2.077) billion",
+  "net_income": "GAAP $(2.312) billion; Non-GAAP $(2.081) billion",
+  "eps": "GAAP diluted $(2.12); Non-GAAP diluted $(1.91)",
+  "operating_cash_flow": "$343 million",
+  "capex": "Investments in capital expenditures, net $2.155 billion",
+  "free_cash_flow": "Adjusted free cash flow $(1.812) billion",
+  "cash_and_investments": "$12.12 billion (cash, marketable investments, and restricted cash)",
+  "total_debt": "Current debt $237 million; Long-term debt $12.037 billion",
+  "guidance_next": "FQ3-23: Revenue $3.70B \u00b1 $200M; GAAP gross margin (23.0%) \u00b1 2.5% (Non-GAAP (21.0%) \u00b1 2.5%); GAAP opex $1.07B \u00b1 $15M (Non-GAAP $900M \u00b1 $15M); GAAP diluted EPS $(1.79) \u00b1 $0.07 (Non-GAAP $(1.58) \u00b1 $0.07), assuming ~$500M inventory write-down impacting EPS by ~$0.45"
+ },
+ "results_vs_prior_guidance": 0.1,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.5,
+ "own_stock": -0.1,
+ "market": 0.1,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "Shared NAND oversupply and pricing pressure"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Broader semiconductor demand weakness signaled"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "AI/data center demand cited as bright spot for memory"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.1,
+   "reason": "Reduced capex/wafer starts signal softer foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Cloud/data center AI demand supports memory content growth"
+  }
+ ],
+ "evidence": "Micron delivered fiscal second quarter revenue within our guidance range in a challenging market environment... We remain confident in long-term demand and are investing prudently to preserve our technology and product portfolio competitiveness.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

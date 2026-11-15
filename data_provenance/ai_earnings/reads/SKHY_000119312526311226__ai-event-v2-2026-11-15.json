@@ -1,0 +1,31 @@
+{
+ "event_type": "other",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.1,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Ohio fab rumor denied, no deal confirmed"
+  },
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "memory peer, no capacity change confirmed"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "foundry peer, speculative report denied"
+  }
+ ],
+ "evidence": "it has not pursued, or made any determination regarding, an acquisition of Intel Corporation\u2019s land and fabrication facility located in Ohio as reported in the above-mentioned news article",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2024 (three months ended August 31, 2023)",
+  "revenue": "$12.5 billion, up 9% in USD (8% constant currency)",
+  "operating_income": "GAAP $3.3 billion (26% margin); Non-GAAP $5.1 billion (41% margin)",
+  "net_income": "$2.4 billion GAAP; $3.4 billion non-GAAP",
+  "eps": "$0.86 GAAP diluted; $1.19 non-GAAP diluted",
+  "operating_cash_flow": "$7.0 billion (quarterly, up 9%)",
+  "capex": "$1,314 million (quarterly)",
+  "free_cash_flow": "$5.7 billion (trailing 4-quarter, up 21%)",
+  "cash_and_investments": "$11,613 million cash and cash equivalents plus $470 million marketable securities",
+  "total_debt": "$4,499 million current notes payable + $84,442 million non-current notes payable = ~$88.9 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Oracle cites NVIDIA Superclusters powering AI training demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "OCI growth outpacing hyperscale competitors per CEO"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Oracle claims faster/cheaper AI cloud than rivals"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Comparison to hyperscale cloud infrastructure competitors"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Potential alternative AI chip supplier amid rising GPU demand"
+  }
+ ],
+ "evidence": "AI development companies have signed contracts to purchase more than $4 billion of capacity in Oracle's Gen2 Cloud... twice as much as we had booked at the end of Q4",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

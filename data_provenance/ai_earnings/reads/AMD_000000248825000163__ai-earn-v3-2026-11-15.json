@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2025 (fiscal quarter ended September 27, 2025)",
+  "revenue": "$9.246 billion GAAP, up 36% YoY, up 20% QoQ",
+  "operating_income": "$1.27 billion GAAP (14% margin); $2.238 billion non-GAAP (24% margin)",
+  "net_income": "$1.243 billion GAAP; $1.965 billion non-GAAP",
+  "eps": "$0.75 diluted GAAP; $1.20 diluted non-GAAP",
+  "operating_cash_flow": "$2.159 billion (incl. discontinued ops); $1.788 billion from continuing operations",
+  "capex": "$258 million (purchases of property and equipment)",
+  "free_cash_flow": "approximately $1.901 billion (operating cash flow $2.159B minus capex $258M); described as 'record free cash flow'",
+  "cash_and_investments": "$4.808 billion cash and equivalents + $2.435 billion short-term investments = ~$7.243 billion",
+  "total_debt": "$873 million current portion of long-term debt + $2.347 billion long-term debt = ~$3.22 billion",
+  "guidance_next": "Q4 2025 revenue expected ~$9.6 billion, plus or minus $300 million (~25% YoY growth, ~4% sequential growth); non-GAAP gross margin expected ~54.5%; outlook excludes any MI308 shipments to China"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.7,
+ "own_stock": 0.7,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Validates massive AI accelerator demand industry-wide despite AMD gains"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "OCI deploying 50,000 MI450 GPUs in new AI supercluster"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Foundry partner benefiting from scaling Instinct GPU production"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Rising AI data center build-outs boost memory demand alongside AMD GPUs"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AMD's record Client/EPYC growth continues to pressure Intel's CPU share"
+  }
+ ],
+ "evidence": "Third quarter revenue was a record $9.2 billion... Our record third quarter performance and strong fourth quarter guidance marks a clear step up in our growth trajectory",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

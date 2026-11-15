@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2012 (quarter ended June 30, 2012)",
+  "revenue": "$13.5 billion",
+  "operating_income": "$3.8 billion (GAAP); $4.1 billion (non-GAAP)",
+  "net_income": "$2.8 billion (GAAP); $3.0 billion (non-GAAP)",
+  "eps": "$0.54 diluted GAAP; $0.57 non-GAAP",
+  "operating_cash_flow": null,
+  "capex": "$2,662 million",
+  "free_cash_flow": null,
+  "cash_and_investments": "$13,648 million total cash investments",
+  "total_debt": "$7,093 million long-term debt + $92 million short-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": 0,
+ "fcf_trend": 0.1,
+ "own_stock": 0.1,
+ "market": 0,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel PC/DC share stable, pressure on AMD"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Memory demand tied to Intel platform volumes"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel manufacturing capex signals continued in-house fab investment"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Data Center Group growth reflects cloud customer demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Data Center Group growth reflects cloud customer demand"
+  }
+ ],
+ "evidence": "Data Center Group revenue of $2.8 billion, up 14 percent sequentially.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2026 (quarter ended December 31, 2025)",
+  "revenue": "$81.3 billion, +17% YoY (+15% constant currency)",
+  "operating_income": "$38.3 billion, +21% YoY (+19% constant currency)",
+  "net_income": "GAAP $38.5 billion (+60%); non-GAAP $30.9 billion (+23%)",
+  "eps": "GAAP diluted $5.16 (+60%); non-GAAP diluted $4.14 (+24%)",
+  "operating_cash_flow": "$35,758 million (quarter); $80,815 million (six months)",
+  "capex": "$29,876 million (quarter, additions to property and equipment)",
+  "free_cash_flow": "$5,882 million (quarter: 35,758 - 29,876)",
+  "cash_and_investments": "$89,462 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$40,262 million (current portion $4,837M + long-term $35,425M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Azure AI capacity growth implies continued GPU demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Cloud AI infrastructure buildout benefits chip suppliers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Strong cloud/AI results validate sector-wide cloud AI demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Azure's 39% growth signals robust cloud AI demand across hyperscalers"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud infrastructure spending trends benefit all major cloud providers"
+  }
+ ],
+ "evidence": "We exceeded expectations across revenue, operating income, and earnings per share",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2012 (ended March 31, 2012)",
+  "revenue": "NT$105.51 billion",
+  "operating_income": "NT$35.438 billion (operating margin 33.6%)",
+  "net_income": "NT$33.47 billion",
+  "eps": "NT$1.29 (US$0.22 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q2 2012 revenue NT$126-128 billion; gross profit margin 47-49%; operating profit margin 34.5-36.5%; FX assumption 1 USD = 29.58 NT$; 2012 capex raised to US$8-8.5 billion due to stronger 28nm demand and 20nm R&D pull-in"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.9,
+ "fcf_trend": 0.3,
+ "own_stock": 0.8,
+ "market": 0.4,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "foundry demand strength implies capacity for fabless customers"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "benefits from advanced node capacity ramp"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TSMC capex surge signals competitive lead in advanced nodes"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "read-through for semiconductor capex/demand cycle"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "mobile computing demand growth benefits chip customers"
+  }
+ ],
+ "evidence": "we have experienced strong orders in the last few months... our estimate for 2012 capital expenditure is raised and is in the US$8-8.5 billion range",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY26 (quarter ended Jan 25, 2026) and FY26",
+  "revenue": "$68.127 billion (Q4), $215.938 billion (FY26)",
+  "operating_income": "GAAP $44.299 billion (Q4); non-GAAP $46.107 billion (Q4)",
+  "net_income": "GAAP $42.960 billion (Q4); non-GAAP $39.552 billion (Q4)",
+  "eps": "GAAP $1.76 diluted (Q4); non-GAAP $1.62 diluted (Q4)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$62.556 billion cash, cash equivalents and marketable securities",
+  "total_debt": null,
+  "guidance_next": "Q1 FY27 revenue expected ~$78.0 billion (\u00b12%); GAAP/non-GAAP gross margin 74.9%/75.0% (\u00b150bps, incl. 0.1% SBC impact); GAAP opex ~$7.7B, non-GAAP opex ~$7.5B (incl. $1.9B SBC, as non-GAAP now includes SBC); FY27 tax rate 17.0%-19.0%; no China Data Center compute revenue assumed"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVIDIA cements AI compute leadership with Rubin/Blackwell"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "surging Data Center demand implies more memory purchases"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "higher GPU volumes require more foundry capacity"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "multiyear GPU deployment partnership announced"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Azure to deploy Vera Rubin instances, Anthropic scaling on Azure/NVIDIA"
+  }
+ ],
+ "evidence": "Revenue is expected to be $78.0 billion, plus or minus 2%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2026 (quarter ended June 27, 2026)",
+  "revenue": "$11,536M, up 50% YoY, up 13% QoQ",
+  "operating_income": "GAAP $1,990M; non-GAAP $3,094M",
+  "net_income": "GAAP $2,297M; non-GAAP $2,760M",
+  "eps": "GAAP diluted $1.38; non-GAAP diluted $1.66",
+  "operating_cash_flow": "$2,366M (Q2); $5,321M (6 mo)",
+  "capex": "$808M (Q2); $1,197M (6 mo)",
+  "free_cash_flow": "~$1,558M (Q2, OCF-capex); ~$4,124M (6 mo)",
+  "cash_and_investments": "$5,086M cash + $8,025M short-term investments = $13,111M (plus additional long-term investments in other non-current assets)",
+  "total_debt": "$875M current + $2,351M long-term = $3,226M",
+  "guidance_next": "Q3 2026 revenue ~$13.0B +/- $300M (~41% YoY growth, ~13% sequential increase); non-GAAP gross margin ~56%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.6,
+ "own_stock": 0.7,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AMD Instinct/Helios ramp directly competes for AI accelerator share"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Azure deploying Helios racks and EPYC VMs at scale"
+  },
+  {
+   "company": "META",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Named deployer of AMD Helios AI racks"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Named deployer of Helios/Instinct infrastructure"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Foundry partner benefiting from AMD's accelerating Data Center GPU/CPU volumes"
+  }
+ ],
+ "evidence": "We expect Data Center sales to accelerate in the second half of 2026, driving stronger overall revenue growth and continued earnings expansion.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

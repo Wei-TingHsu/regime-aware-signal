@@ -1,0 +1,50 @@
+{
+ "facts": {
+  "period": "Q1 2020 (quarter ended March 31, 2020)",
+  "revenue": "$41,159 million (up 13% YoY, 15% constant currency)",
+  "operating_income": "$7,977 million (19% margin); Non-GAAP $7,977 million (19% margin, vs $8,305M/23% in Q1'19 ex-EC fine)",
+  "net_income": "$6,836 million",
+  "eps": "$9.87 diluted (GAAP); Non-GAAP comparison basis $9.87 vs $11.90 in Q1'19 ex-EC fine",
+  "operating_cash_flow": "$11,451 million",
+  "capex": "$6,005 million (purchases of property and equipment)",
+  "free_cash_flow": "$5,446 million (explicitly stated)",
+  "cash_and_investments": "$117,229 million (total cash, cash equivalents, and marketable securities)",
+  "total_debt": "$5,016 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.1,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "shared exposure to March digital-ad slowdown"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Cloud growth (+52%) signals healthy enterprise cloud demand broadly"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cloud segment strength read-across to AWS demand"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.05,
+   "reason": "cloud infrastructure competitor benefiting from same enterprise digitization trend"
+  }
+ ],
+ "evidence": "Performance was strong during the first two months of the quarter, but then in March we experienced a significant slowdown in ad revenues.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,31 @@
+{
+ "event_type": "routine or administrative",
+ "material": 0.1,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.0,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "fabless customer demand detail, no new info"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "fabless customer demand detail"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "foundry competitor, no new info"
+  }
+ ],
+ "evidence": "Third quarter revenue was NT$112.25 billion, representing a 6.9% increase from the prior quarter.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

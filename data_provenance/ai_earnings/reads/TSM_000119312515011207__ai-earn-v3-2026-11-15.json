@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "4Q14 (quarter ended Dec 31, 2014)",
+  "revenue": "NT$222.52 billion",
+  "operating_income": "NT$88.222 billion (operating margin 39.6%)",
+  "net_income": "NT$79.991 billion",
+  "eps": "NT$3.08 per share (US$0.50 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "1Q15 revenue expected NT$221-224 billion; gross margin 48.5%-50.5%; operating margin 38.5%-40.5%; FX assumption 1 USD = 31.80 NT dollars; 2015 full-year capex expected US$11.5-12 billion"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Advanced node capacity ramp benefits fabless customers using TSMC leading-edge process"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC's strong 20nm ramp and margins highlight foundry leadership versus Intel's process execution"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "Direct reporting entity, strong beat and robust next-quarter guidance"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Fabless chipmakers benefit from TSMC's advanced node capacity expansion"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Future GPU production relies on TSMC's leading-edge nodes being ramped"
+  }
+ ],
+ "evidence": "fourth quarter revenue increased 52.6% while net income and diluted EPS both increased 78.5%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

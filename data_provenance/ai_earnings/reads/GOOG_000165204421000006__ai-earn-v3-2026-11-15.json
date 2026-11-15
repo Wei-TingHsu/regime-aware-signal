@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2020 (quarter and year ended December 31, 2020)",
+  "revenue": "$56,898 million (Q4 2020); $182,527 million (FY2020)",
+  "operating_income": "$15,651 million (Q4 2020); $41,224 million (FY2020)",
+  "net_income": "$15,227 million (Q4 2020); $40,269 million (FY2020)",
+  "eps": "$22.30 diluted (Q4 2020); $58.61 diluted (FY2020)",
+  "operating_cash_flow": "$22,677 million (Q4 2020); $65,124 million (FY2020)",
+  "capex": "$5,479 million (Q4 2020); $22,281 million (FY2020)",
+  "free_cash_flow": "$17,198 million (Q4 2020, as stated)",
+  "cash_and_investments": "$136,694 million total cash, cash equivalents, and marketable securities (as of Dec 31, 2020)",
+  "total_debt": "$13,932 million long-term debt (as of Dec 31, 2020)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.4,
+   "reason": "Cloud growth momentum signals strong overall enterprise cloud demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Google Cloud's growth highlights competitive cloud market strength"
+  },
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Strong digital ad recovery benefits peer ad-driven platforms"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud infrastructure competition intensifying as Google Cloud scales"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Rising capex and server investment implies continued chip/infrastructure demand"
+  }
+ ],
+ "evidence": "Our strong fourth quarter performance, with revenues of $56.9 billion, was driven by Search and YouTube, as consumer and business activity recovered from earlier in the year.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

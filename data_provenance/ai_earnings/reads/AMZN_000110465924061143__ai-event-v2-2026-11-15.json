@@ -1,0 +1,25 @@
+{
+ "event_type": "leadership change",
+ "material": 0.3,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.3,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AWS leadership change opens cloud competitive opportunity"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "cloud competitor could gain share amid AWS transition"
+  }
+ ],
+ "evidence": "Adam N. Selipsky, CEO Amazon Web Services, is resigning from the Company, effective as of June 3, 2024.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

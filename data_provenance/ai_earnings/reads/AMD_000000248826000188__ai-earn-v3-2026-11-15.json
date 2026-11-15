@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2026 (fiscal quarter ended September 26, 2026)",
+  "revenue": "$13,377M GAAP/non-GAAP (up 45% YoY, up 16% QoQ)",
+  "operating_income": "$2,832M GAAP; $3,923M non-GAAP",
+  "net_income": "$2,428M GAAP; $3,471M non-GAAP",
+  "eps": "$1.46 diluted GAAP; $2.09 diluted non-GAAP",
+  "operating_cash_flow": "$1,202M (three months ended Sept 26, 2026, continuing operations)",
+  "capex": "$648M (purchases of property and equipment, three months)",
+  "free_cash_flow": "$554M (1,202 - 648, as derived)",
+  "cash_and_investments": "$15,776M (cash and equivalents $7,404M + short-term investments $8,372M)",
+  "total_debt": "$7,079M long-term debt; $0 current portion",
+  "guidance_next": "Q4 2026 revenue ~$17B +/- 3% (midpoint implies ~66% YoY growth, ~27% sequential increase); non-GAAP gross margin ~55%"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.8,
+ "fcf_trend": -0.3,
+ "own_stock": 0.7,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AMD Instinct MI450/Helios ramp and hyperscaler adoption pressures Nvidia's data-center GPU share"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Scaling Helios/Venice production implies higher advanced-node foundry orders"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Data center GPU ramp drives HBM/memory demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Running workloads on first AMD Helios systems, EPYC cloud instances"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "OCI deploying Helios and new EPYC-powered compute instances"
+  }
+ ],
+ "evidence": "We delivered a record quarter with revenue exceeding the high end of our guidance as Data Center segment sales nearly doubled year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

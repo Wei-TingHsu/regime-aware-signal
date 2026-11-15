@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2017 (quarter ended June 30, 2017)",
+  "revenue": "$26,010 million, up 21% YoY (23% constant currency)",
+  "operating_income": "$4,132 million GAAP (16% margin); $6,868 million excluding EC fine",
+  "net_income": "$3,524 million GAAP; $6,260 million excluding EC fine",
+  "eps": "$5.01 diluted GAAP; $8.90 excluding EC fine",
+  "operating_cash_flow": "$7,403 million",
+  "capex": "$2,831 million (purchases of property and equipment)",
+  "free_cash_flow": "$4,572 million",
+  "cash_and_investments": "$94,713 million total cash, cash equivalents, and marketable securities",
+  "total_debt": "$3,955 million long-term debt",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0,
+ "own_stock": -0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "META",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "ad market peer, growth comparison"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud and ad competitor"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud competitor"
+  }
+ ],
+ "evidence": "Operating margin 16% ... Operating income $4,132 (GAAP) vs $6,868 excluding the $2.7 billion EC fine, reflecting a large one-time regulatory hit to reported profitability",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

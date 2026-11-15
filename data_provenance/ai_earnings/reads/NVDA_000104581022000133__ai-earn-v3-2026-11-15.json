@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY23 (quarter ended July 31, 2022) - preliminary results",
+  "revenue": "$6.70 billion (vs. guided $8.10B \u00b12%)",
+  "operating_income": null,
+  "net_income": null,
+  "eps": null,
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "No quantitative Q3 FY23 guidance given; qualitatively, 'challenging market conditions' in Gaming channel are expected to persist into the third quarter, and macroeconomic conditions affecting sell-through are expected to continue."
+ },
+ "results_vs_prior_guidance": -0.9,
+ "guidance_change": -0.5,
+ "fcf_trend": -0.4,
+ "own_stock": -0.85,
+ "market": -0.3,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "Shared gaming/channel inventory glut and macro weakness likely to hit AMD GPU sell-through too"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Broader PC/gaming demand weakness implied by NVIDIA's channel price cuts"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": -0.4,
+   "reason": "Inventory write-downs and demand cuts signal weaker memory/component pull-through"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": -0.3,
+   "reason": "Long-term purchase commitments now being written down imply reduced near-term wafer demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Data Center revenue still grew 61% YoY to a record, implying continued cloud/AI infrastructure demand"
+  }
+ ],
+ "evidence": "Second quarter results are expected to include approximately $1.32 billion of charges, primarily for inventory and related reserves, based on revised expectations of future demand.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

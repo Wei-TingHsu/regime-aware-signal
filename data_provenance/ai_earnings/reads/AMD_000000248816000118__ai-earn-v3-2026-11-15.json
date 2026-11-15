@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2016 (13-week quarter ended March 26, 2016)",
+  "revenue": "$832 million, down 13% sequentially and down 19% year-over-year",
+  "operating_income": "GAAP operating loss $68 million; non-GAAP operating loss $55 million",
+  "net_income": "GAAP net loss $109 million; non-GAAP net loss $96 million",
+  "eps": "GAAP $(0.14); non-GAAP $(0.12)",
+  "operating_cash_flow": "Net cash used in operating activities $(42) million",
+  "capex": "$26 million (purchases of property, plant and equipment)",
+  "free_cash_flow": "Non-GAAP free cash flow $(68) million",
+  "cash_and_investments": "$716 million cash and cash equivalents",
+  "total_debt": "$2.236 billion",
+  "guidance_next": "For Q2 2016, AMD expects revenue to increase 15 percent, plus or minus 3 percent, sequentially"
+ },
+ "results_vs_prior_guidance": 0.1,
+ "guidance_change": 0.6,
+ "fcf_trend": -0.6,
+ "own_stock": 0.3,
+ "market": 0.0,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AMD client/notebook losses show weak CPU demand overall"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "AMD GPU ASP declines and new Polaris/Vega roadmap signal competitive GPU push"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "Foundry relationship implied via future Polaris/Vega production shift"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Vega GPU to use High Bandwidth Memory 2, a memory demand driver"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "n/a"
+  }
+ ],
+ "evidence": "For Q2 2016, AMD expects revenue to increase 15 percent, plus or minus 3 percent, sequentially",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

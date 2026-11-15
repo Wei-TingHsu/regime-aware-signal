@@ -1,0 +1,31 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.4,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.3,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "CRM",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Oracle expands SaaS/cloud ERP via NetSuite, intensifying competition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competes in cloud ERP/SaaS space"
+  },
+  {
+   "company": "SAP",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competes in ERP/cloud applications"
+  }
+ ],
+ "evidence": "Merger Subsidiary has agreed to commence a cash tender offer to acquire all of the shares of the Company\u2019s common stock ... for a purchase price of $109.00 per share, net to the holders thereof, in cash",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

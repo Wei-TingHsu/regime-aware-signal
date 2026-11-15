@@ -1,0 +1,19 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.5,
+ "fcf_outlook": 0.4,
+ "uncertainty": -0.1,
+ "own_stock": 0.3,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Competes in FPGA/programmable logic via Xilinx; Altera spin-off refocuses Intel"
+  }
+ ],
+ "evidence": "purchase price that implies an enterprise value for the Company of $8.75 billion, and which is expected to result in net cash proceeds to the Sellers of approximately $4.40 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

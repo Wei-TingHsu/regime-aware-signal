@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2023 (quarter ended September 30, 2023)",
+  "revenue": "NT$546.73 billion / US$17.28 billion",
+  "operating_income": "NT$228.07 billion (operating margin 41.7%)",
+  "net_income": "NT$211.00 billion",
+  "eps": "NT$8.14 (US$1.29 per ADR unit)",
+  "operating_cash_flow": "NT$294.65 billion",
+  "capex": "NT$226.62 billion",
+  "free_cash_flow": "NT$68.03 billion",
+  "cash_and_investments": "NT$1,551.32 billion",
+  "total_debt": "NT$937.49 billion long-term interest-bearing debt",
+  "guidance_next": "Q4 2023 revenue expected US$18.8-19.6 billion; gross profit margin 51.5%-53.5%; operating profit margin 39.5%-41.5% (at NT$32/US$1)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.5,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "advanced node/HPC demand supports AI chip supply"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "relies on TSMC advanced nodes for AI/GPU products"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TSMC strength highlights foundry competitive gap"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "custom silicon/networking chips built on TSMC nodes"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "broader semiconductor cycle recovery signal"
+  }
+ ],
+ "evidence": "revenue increased 10.2% from the previous quarter... fourth quarter revenue expected between US$18.8 billion and US$19.6 billion, above prior guidance's beat",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

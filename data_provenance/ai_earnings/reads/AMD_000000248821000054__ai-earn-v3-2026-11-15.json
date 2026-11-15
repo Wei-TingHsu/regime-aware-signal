@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2021 (ended March 27, 2021)",
+  "revenue": "$3.445 billion",
+  "operating_income": "$662 million GAAP; $762 million non-GAAP",
+  "net_income": "$555 million GAAP; $642 million non-GAAP",
+  "eps": "$0.45 GAAP diluted; $0.52 non-GAAP diluted",
+  "operating_cash_flow": "$898 million",
+  "capex": "$66 million",
+  "free_cash_flow": "$832 million (stated)",
+  "cash_and_investments": "$3.116 billion (cash, cash equivalents and short-term investments)",
+  "total_debt": "$313 million",
+  "guidance_next": "Q2 2021 revenue ~$3.6 billion +/- $100 million (up ~86% YoY, ~4% QoQ); non-GAAP gross margin ~47%; FY2021 revenue growth raised to ~50% YoY from prior ~37% guidance"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.8,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Strong GPU/data center demand signals broad semis strength"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.5,
+   "reason": "AMD server/client share gains via EPYC and Ryzen"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure instances powered by EPYC 7003 highlight cloud demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS adopting EPYC processors"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Google Cloud instances using EPYC processors"
+  }
+ ],
+ "evidence": "AMD now expects revenue growth of approximately 50 percent over 2020...up from prior guidance of approximately 37 percent annual growth",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

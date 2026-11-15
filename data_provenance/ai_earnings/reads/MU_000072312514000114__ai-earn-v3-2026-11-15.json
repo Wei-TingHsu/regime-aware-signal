@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY2014 (ended May 29, 2014)",
+  "revenue": "$3.98 billion (down 3% QoQ, up 72% YoY)",
+  "operating_income": "$839 million",
+  "net_income": "$806 million (GAAP, attributable to Micron)",
+  "eps": "$0.68 diluted GAAP; $0.79 diluted non-GAAP",
+  "operating_cash_flow": "$1.46 billion (quarter); $4.35 billion (nine months)",
+  "capex": "$576 million (quarter); $1.518 billion (nine months)",
+  "free_cash_flow": "$884 million (quarter, calculated: $1.46B - $576M)",
+  "cash_and_investments": "$4.81 billion (cash and marketable investments)",
+  "total_debt": "$5.645 billion (current debt $1.508B + long-term debt $4.137B)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "NAND flash competitor, no direct commentary"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "semiconductor manufacturing peer"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "large semiconductor peer, no direct linkage"
+  }
+ ],
+ "evidence": "Cash flows from operations for the third quarter of fiscal 2014 were $1.46 billion, while investments in capital expenditures were $576 million.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

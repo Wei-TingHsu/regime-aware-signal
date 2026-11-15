@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 FY2020 (quarter ended July 28, 2019)",
+  "revenue": "$2.579 billion",
+  "operating_income": "$571 million (GAAP); $802 million (non-GAAP)",
+  "net_income": "$552 million (GAAP); $762 million (non-GAAP)",
+  "eps": "$0.90 diluted GAAP; $1.24 diluted non-GAAP",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$8.475 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": "$1.989 billion long-term debt",
+  "guidance_next": "Q3 FY20 revenue ~$2.90B +/-2%; GAAP/non-GAAP gross margin 62.0%/62.5% +/-50bps; GAAP/non-GAAP opex ~$980M/$765M; GAAP/non-GAAP other income ~$25M; GAAP/non-GAAP tax rate ~10% +/-1%"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVIDIA GPU/gaming and data-center strength pressures AMD's competing lines"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Higher NVIDIA revenue and margin outlook implies more foundry orders"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Rising GPU/data-center shipments support memory demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "NVIDIA's Arm CPU support for AI supercomputers challenges x86 dominance"
+  },
+  {
+   "company": "AVGO",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Pending Mellanox deal highlights networking/AI infrastructure consolidation trend"
+  }
+ ],
+ "evidence": "Revenue is expected to be $2.90 billion, plus or minus 2 percent... GAAP and non-GAAP gross margins are expected to be 62.0 percent and 62.5 percent, respectively",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

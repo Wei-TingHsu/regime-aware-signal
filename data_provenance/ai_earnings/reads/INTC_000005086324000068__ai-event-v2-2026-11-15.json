@@ -1,0 +1,25 @@
+{
+ "event_type": "accounting",
+ "material": 0.25,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.3,
+ "own_stock": -0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel foundry transparency may reveal cost disadvantage vs TSMC"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "benefits if Intel foundry segment shows weak economics"
+  }
+ ],
+ "evidence": "creates a foundry relationship between our Intel Products business ... and our Intel Foundry business",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

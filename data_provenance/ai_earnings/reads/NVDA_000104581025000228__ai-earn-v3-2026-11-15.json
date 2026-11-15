@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2026 (quarter ended October 26, 2025)",
+  "revenue": "$57.006 billion, up 22% QoQ, up 62% YoY",
+  "operating_income": "GAAP $36.010 billion; non-GAAP $37.752 billion",
+  "net_income": "GAAP $31.910 billion; non-GAAP $31.767 billion",
+  "eps": "GAAP $1.30 diluted; non-GAAP $1.30 diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$60.608 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": "Short-term debt $999M + Long-term debt $7,468M = ~$8.467 billion",
+  "guidance_next": "Q4 FY26 revenue expected ~$65.0 billion (\u00b12%); GAAP/non-GAAP gross margin 74.8%/75.0% (\u00b150bps); GAAP opex ~$6.7B, non-GAAP opex ~$5.0B; other income ~$500M excluding equity gains/losses; tax rate 17.0% \u00b11%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Blackwell wafer production ramp at TSMC Arizona"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "surging data center/memory demand tied to AI buildout"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NVDA reinforces dominant AI compute share with sold-out GPUs"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "partnership for AI infrastructure buildout with NVIDIA GPUs"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "collaboration on gigawatt-scale AI supercomputers using NVIDIA systems"
+  }
+ ],
+ "evidence": "Revenue is expected to be $65.0 billion, plus or minus 2%... Blackwell sales are off the charts, and cloud GPUs are sold out",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

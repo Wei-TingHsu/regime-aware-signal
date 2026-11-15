@@ -1,0 +1,19 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.2,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.3,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "Samsung",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "also named respondent in same ITC investigation"
+  }
+ ],
+ "evidence": "TSMC and Samsung have been named as respondents in the investigation.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

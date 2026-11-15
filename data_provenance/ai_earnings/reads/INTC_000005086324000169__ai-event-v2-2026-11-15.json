@@ -1,0 +1,31 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.5,
+ "fcf_outlook": 0.3,
+ "uncertainty": 0.2,
+ "own_stock": 0.2,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "US subsidy strengthens Intel Foundry as domestic alternative"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Signals continued US CHIPS Act support for domestic semiconductor manufacturing"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "Intel foundry subsidies could lower its manufacturing costs"
+  }
+ ],
+ "evidence": "the DOC has agreed to award Intel up to $7.8 billion in direct funding and $65 million in workforce development funding",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2019 (three months ended March 30, 2019)",
+  "revenue": "$1.27 billion",
+  "operating_income": "$38 million GAAP; $84 million non-GAAP",
+  "net_income": "$16 million GAAP; $62 million non-GAAP",
+  "eps": "$0.01 diluted GAAP; $0.06 non-GAAP",
+  "operating_cash_flow": "-$213 million",
+  "capex": "$62 million",
+  "free_cash_flow": "-$275 million",
+  "cash_and_investments": "$1.194 billion (cash, equivalents and marketable securities)",
+  "total_debt": "$1.094 billion",
+  "guidance_next": "Q2 2019 revenue approximately $1.52 billion, plus or minus $50 million (~19% sequential increase, ~13% YoY decrease); non-GAAP gross margin approximately 41%"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0.3,
+ "fcf_trend": -0.6,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD datacenter GPU revenue more than doubled YoY"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Ryzen/EPYC share gains in client and server"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "AWS expanded EPYC-powered EC2 instances"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Selected AMD GPUs for Stadia game streaming"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "7nm product ramp drives foundry demand"
+  }
+ ],
+ "evidence": "AMD expects revenue to be approximately $1.52 billion, plus or minus $50 million, an increase of approximately 19 percent sequentially",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

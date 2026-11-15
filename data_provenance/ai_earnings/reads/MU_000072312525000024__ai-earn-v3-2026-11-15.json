@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2025 (ended August 28, 2025) and full year FY2025",
+  "revenue": "$11.32 billion (Q4); $37.38 billion (FY)",
+  "operating_income": "$3.654 billion GAAP / $3.955 billion non-GAAP (Q4); $9.77B GAAP / $10.846B non-GAAP (FY)",
+  "net_income": "$3.201 billion GAAP / $3.469 billion non-GAAP (Q4); $8.539B GAAP / $9.47B non-GAAP (FY)",
+  "eps": "$2.83 GAAP diluted / $3.03 non-GAAP diluted (Q4); $7.59 GAAP / $8.29 non-GAAP (FY)",
+  "operating_cash_flow": "$5.73 billion (Q4); $17.53 billion (FY)",
+  "capex": "net capex $4.93 billion (Q4); $13.80 billion (FY)",
+  "free_cash_flow": "Adjusted free cash flow $803 million (Q4); $3.72 billion (FY)",
+  "cash_and_investments": "$11.94 billion cash, marketable investments, and restricted cash at year end",
+  "total_debt": "Current debt $560M + Long-term debt $14.017B = ~$14.58 billion",
+  "guidance_next": "FQ1-26: Revenue $12.50B \u00b1 $300M; GAAP gross margin 50.5% \u00b1 1.0% (Non-GAAP 51.5% \u00b1 1.0%); GAAP opex $1.49B \u00b1 $20M (Non-GAAP $1.34B \u00b1 $20M); GAAP diluted EPS $3.56 \u00b1 $0.15 (Non-GAAP $3.75 \u00b1 $0.15)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.5,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "AI data center demand drives HBM/DRAM pull from Micron"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "NAND pricing tailwinds benefit storage peers too"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "broader semis benefit from AI capex cycle strength"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AI accelerator systems require high-bandwidth memory"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "networking/AI infrastructure demand ties to memory content growth"
+  }
+ ],
+ "evidence": "Forecasting $1.2 billion in sequential revenue growth with gross margins exceeding 50%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

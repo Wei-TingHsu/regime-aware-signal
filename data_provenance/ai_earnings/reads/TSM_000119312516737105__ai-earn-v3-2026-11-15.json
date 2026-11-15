@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "3Q16 (quarter ended September 30, 2016)",
+  "revenue": "NT$260.41 billion (US$8.20 billion)",
+  "operating_income": "NT$106,263 million (operating margin 40.8%)",
+  "net_income": "NT$96,759 million (net margin 37.2%)",
+  "eps": "NT$3.73 (US$0.59 per ADR unit)",
+  "operating_cash_flow": null,
+  "capex": "2016 capital budget expected to be slightly above US$9.5 billion",
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "4Q16 revenue NT$255-258 billion; gross margin 50.5%-52.5%; operating margin 40%-42%; FX assumption 1 USD = 31.50 NT$; 2016 capex slightly above US$9.5 billion"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.4,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "TSMC advanced node capacity supports fabless customers"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "beneficiary of leading-edge foundry capacity"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "TSMC advanced process strength pressures Intel foundry position"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "relies on TSMC for advanced wafers"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "self"
+  }
+ ],
+ "evidence": "third quarter revenue surpassed the high-end of our guidance given three months ago, mainly due to strong demand in overall smartphone market",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

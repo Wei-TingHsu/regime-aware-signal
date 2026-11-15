@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2019",
+  "revenue": "$16.1 billion (flat YoY)",
+  "operating_income": "$4.2 billion GAAP / $4.5 billion non-GAAP",
+  "net_income": "$4.0 billion GAAP",
+  "eps": "$0.87 GAAP / $0.89 non-GAAP",
+  "operating_cash_flow": "$4.959 billion",
+  "capex": "$3.321 billion",
+  "free_cash_flow": "$1.638 billion (4,959-3,321)",
+  "cash_and_investments": "$12.033 billion total cash investments",
+  "total_debt": "$28.487 billion (2,750 short-term + 25,737 long-term)",
+  "guidance_next": "Q2 2019: revenue ~$15.6B, GAAP EPS $0.83/non-GAAP $0.89; FY2019: revenue ~$69.0B (down from January), GAAP EPS $4.14/non-GAAP $4.35, capex ~$15.5B, non-GAAP FCF ~$15.0B"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.7,
+ "fcf_trend": -0.4,
+ "own_stock": -0.4,
+ "market": -0.1,
+ "ai_demand": -0.3,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.4,
+   "reason": "NSG memory revenue down 12% on weak NAND pricing"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Intel DCG weakness in enterprise/server segment"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "data center softness signals cautious enterprise IT spend"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "10nm ramp and Xeon/FPGA launches point to foundry demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "cloud segment grew only 5% vs faster prior growth, signaling moderating cloud capex"
+  }
+ ],
+ "evidence": "Expecting full-year revenue of $69.0 billion, full-year GAAP EPS of $4.14 and non-GAAP EPS of $4.35; down from January guidance.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

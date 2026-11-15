@@ -1,0 +1,38 @@
+{
+ "facts": {
+  "period": "Q2 2015 (preliminary, unaudited)",
+  "revenue": null,
+  "operating_income": null,
+  "net_income": null,
+  "eps": null,
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "approximately $830 million at quarter end, 'in line with expectations'",
+  "total_debt": null,
+  "guidance_next": "No specific Q3 2015 figures given; AMD states it will 'provide information regarding expected third quarter results' on the earnings call"
+ },
+ "results_vs_prior_guidance": 0.1,
+ "guidance_change": 0,
+ "fcf_trend": -0.1,
+ "own_stock": -0.1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "text cites Intel's dominance as an ongoing competitive risk"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0,
+   "reason": "reliance on Microsoft software support for product ecosystem"
+  }
+ ],
+ "evidence": "Cash and cash equivalents at the end of the second quarter are expected to be approximately $830 million, in line with expectations.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

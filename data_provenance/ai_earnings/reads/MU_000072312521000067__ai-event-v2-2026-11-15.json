@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "memory sector financing norms"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "debt-funded capex race in semis"
+  }
+ ],
+ "evidence": "Micron of $1,000,000,000 aggregate principal amount of 2.703% senior notes due 2032, $500,000,000 aggregate principal amount of 3.366% senior notes due 2041, and $500,000,000 aggregate principal amount of 3.477% senior notes due 2051",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

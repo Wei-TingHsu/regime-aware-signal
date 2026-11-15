@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2021 (quarter ended October 25, 2020)",
+  "revenue": "$4.726 billion (GAAP and non-GAAP, same figure)",
+  "operating_income": "$1.398 billion GAAP; $1.993 billion non-GAAP",
+  "net_income": "$1.336 billion GAAP; $1.834 billion non-GAAP",
+  "eps": "$2.12 diluted GAAP; $2.91 diluted non-GAAP",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$10.139 billion (cash, cash equivalents and marketable securities) at Oct 25, 2020, down from $10.897 billion at Jan 26, 2020",
+  "total_debt": null,
+  "guidance_next": "Q4 FY21 revenue ~$4.80B +/-2%; GAAP/non-GAAP gross margin 62.8%/65.5% +/-50bps; GAAP/non-GAAP opex ~$1.64B/$1.18B; GAAP/non-GAAP other income/expense ~-$55M expense; tax rate 8% +/-1%"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": -0.1,
+ "fcf_trend": 0.2,
+ "own_stock": 0.6,
+ "market": 0.4,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVDA's record Gaming/Data Center growth and AI leadership pressures AMD's GPU/CPU positioning"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Data Center GPU/DPU momentum and A100 ramp challenge Intel's data-center CPU dominance"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AWS announced general availability of A100-based cloud instances"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Azure cited among cloud providers deploying NVIDIA A100 GPUs"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Oracle Cloud Infrastructure launched A100-based instances"
+  }
+ ],
+ "evidence": "Record revenue of $4.73 billion, up 57 percent from a year earlier",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

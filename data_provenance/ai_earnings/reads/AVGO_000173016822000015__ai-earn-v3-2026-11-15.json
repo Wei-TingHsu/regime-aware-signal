@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2022 (ended January 30, 2022)",
+  "revenue": "$7,706 million, up 16% YoY",
+  "operating_income": null,
+  "net_income": "$2,472 million GAAP; $3,741 million non-GAAP",
+  "eps": "$5.59 GAAP diluted; $8.39 non-GAAP diluted",
+  "operating_cash_flow": "$3,486 million",
+  "capex": "$101 million",
+  "free_cash_flow": "$3,385 million",
+  "cash_and_investments": "$10,219 million cash and cash equivalents",
+  "total_debt": "$39,505 million (current $300M + long-term $39,205M)",
+  "guidance_next": "Q2 FY2022 revenue guidance of approximately $7.9 billion (expected +20% YoY); Adjusted EBITDA guidance of approximately 62.5% of projected revenue"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Strong semiconductor demand signals benefit memory/storage peers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Enterprise/data center semiconductor strength is industry-wide positive"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Hyperscale and enterprise demand trends benefit chip competitors"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Broadcom's semiconductor growth implies continued foundry demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Hyperscale/service provider investment cited as demand driver"
+  }
+ ],
+ "evidence": "Second quarter revenue guidance of approximately $7.9 billion, an expected increase of 20 percent from the prior year period",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

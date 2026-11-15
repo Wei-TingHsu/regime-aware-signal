@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2020 (quarter ended June 30, 2020)",
+  "revenue": "NT$310.70 billion (US$10.38 billion)",
+  "operating_income": "NT$131.09 billion (operating margin 42.2%)",
+  "net_income": "NT$120.82 billion (net margin 38.9%)",
+  "eps": "NT$4.66 per share (US$0.78 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q3 2020 revenue expected US$11.2-11.5 billion; gross profit margin 50%-52%; operating profit margin 39%-41% (at NT$29.5/US$1 assumption); 2020 capex budget US$16-17 billion"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.2,
+ "own_stock": 0.7,
+ "market": 0.4,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "HPC demand cited as growth driver, 7nm/5nm strength"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Advanced node demand (7nm) supports AMD's roadmap"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Broad advanced-node customer base benefits from capacity/tech leadership"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TSMC's advanced node leadership (7nm/5nm) pressures Intel's process lead"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Strong semiconductor demand signals (5G, HPC) support broader chip sector sentiment"
+  }
+ ],
+ "evidence": "Revenue is expected to be between US$11.2 billion and US$11.5 billion... driven by 5G smartphones, HPC and IoT-related applications",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

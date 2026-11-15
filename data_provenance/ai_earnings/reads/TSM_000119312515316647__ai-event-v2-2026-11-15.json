@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.25,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.2,
+ "own_stock": -0.25,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "weaker TSMC output could signal softer chip demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "relies on TSMC capacity, demand read-through"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSMC softness could relatively favor Intel's foundry position"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": -0.05,
+   "reason": "TSMC fab customer exposed to same demand trend"
+  }
+ ],
+ "evidence": "revenues for August 2015 were approximately NT$67.04 billion, a decrease of 17.2 percent from July 2015 and a decline of 3.2 percent versus August 2014",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2025 (quarter ended September 30, 2025)",
+  "revenue": "$102.3 billion (up 16% YoY, 15% constant currency)",
+  "operating_income": "$31.228 billion GAAP (up 9%); $34.685 billion excluding $3.5B EC fine (up 22%)",
+  "net_income": "$34.979 billion (up 33%)",
+  "eps": "$2.87 diluted (up 35%)",
+  "operating_cash_flow": "$48.414 billion for the quarter",
+  "capex": "$23.953 billion (purchases of property and equipment, quarter)",
+  "free_cash_flow": "$24.461 billion (operating cash flow $48.414B minus capex $23.953B)",
+  "cash_and_investments": "$98.496 billion cash, cash equivalents and marketable securities; plus $63.8 billion non-marketable securities",
+  "total_debt": null,
+  "guidance_next": "Now expects 2025 capital expenditures to be in a range of $91 billion to $93 billion, up from prior guidance of approximately $85 billion, due to growth across the business and demand from Cloud customers"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.5,
+ "own_stock": 0.8,
+ "market": 0.6,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.7,
+   "reason": "Higher capex implies more AI chip purchases"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Potential beneficiary of expanded AI infrastructure spend"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud rival validated by strong Cloud growth/backlog"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Cloud rival; signals robust enterprise cloud demand sector-wide"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Competing cloud/AI infrastructure provider amid rising capex race"
+  }
+ ],
+ "evidence": "we now expect 2025 capital expenditures to be in a range of $91 billion to $93 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

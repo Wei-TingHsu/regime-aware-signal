@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2022 (three months ended February 28, 2022)",
+  "revenue": "$10.513 billion, up 4% YoY (up 7% constant currency)",
+  "operating_income": "GAAP $3.822 billion (36% margin); Non-GAAP $4.8 billion (46% margin)",
+  "net_income": "$2.319 billion GAAP; $3.1 billion non-GAAP",
+  "eps": "$0.84 diluted GAAP; $1.13 non-GAAP diluted",
+  "operating_cash_flow": "$10.396 billion (trailing twelve months)",
+  "capex": "$3.805 billion (trailing twelve months, per FCF table); $3.088 billion for nine months per cash flow statement",
+  "free_cash_flow": "$6.591 billion (trailing twelve months), down 49% YoY",
+  "cash_and_investments": "$22.682 billion cash and cash equivalents plus $707 million marketable securities (down from $30.1B/$16.5B at May 31, 2021)",
+  "total_debt": "Notes payable current $6.248B + non-current $72.165B = $78.413 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -0.6,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "MySQL HeatWave positioned to beat AWS Aurora/Redshift"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "HeatWave launching on Azure, cloud infra growth parallels Azure demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud database/infra competition implied"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Ampere ARM server chip investment implies competitive pressure on x86"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "Ampere ARM chips compete in server CPU space, indirect read-through"
+  }
+ ],
+ "evidence": "our highest quarterly organic revenue growth rate since we began our transition to the cloud",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

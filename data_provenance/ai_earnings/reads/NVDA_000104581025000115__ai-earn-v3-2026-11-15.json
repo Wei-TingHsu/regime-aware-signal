@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2026 (quarter ended April 27, 2025)",
+  "revenue": "$44,062 million (GAAP), up 69% YoY, up 12% QoQ",
+  "operating_income": "$21,638 million GAAP; $23,275 million non-GAAP",
+  "net_income": "$18,775 million GAAP; $19,894 million non-GAAP",
+  "eps": "$0.76 GAAP diluted; $0.81 non-GAAP diluted; $0.96 non-GAAP ex H20 charge",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$53,691 million cash, cash equivalents and marketable securities (up from $43,210M at Q4 FY25 end)",
+  "total_debt": "$8,464 million long-term debt",
+  "guidance_next": "Q2 FY26 revenue expected ~$45.0B \u00b12% (reflecting ~$8.0B H20 revenue loss from export controls); GAAP/non-GAAP gross margin ~71.8%/72.0% \u00b150bps, targeting mid-70s by late FY26; GAAP/non-GAAP opex ~$5.7B/$4.0B; other income ~$450M; tax rate 16.5% \u00b11%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.5,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Blackwell ramp implies higher foundry demand"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "HBM/memory demand tied to AI server buildout"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVDA reaffirms dominant AI compute position"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Blackwell instances on Azure show continued hyperscaler capex"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Networking/switch competition highlighted via Spectrum-X"
+  }
+ ],
+ "evidence": "Excluding the $4.5 billion charge, first quarter non-GAAP gross margin would have been 71.3%... Global demand for NVIDIA\u2019s AI infrastructure is incredibly strong.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

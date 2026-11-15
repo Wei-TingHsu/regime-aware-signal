@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2022 (quarter ended March 31, 2022)",
+  "revenue": "NT$491.08 billion (US$17.57 billion)",
+  "operating_income": "NT$223.79 billion (operating margin 45.6%)",
+  "net_income": "NT$202.73 billion (net margin 41.3%)",
+  "eps": "NT$7.82 per share (US$1.40 per ADR)",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q2 2022 revenue expected US$17.6-18.2 billion; gross profit margin 56%-58%; operating profit margin 45%-47% (at NT$28.8/US$1)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 0,
+ "own_stock": 1,
+ "market": 0.4,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "HPC demand strength signals robust advanced-node orders"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "benefits from strong HPC/advanced-node demand at TSMC"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TSMC's margin and demand strength highlights competitive foundry lead"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "advanced packaging and HPC demand supports Broadcom's chip sourcing"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self"
+  }
+ ],
+ "evidence": "revenue is expected to be between US$17.6 billion and US$18.2 billion... gross profit margin to be between 56% and 58%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

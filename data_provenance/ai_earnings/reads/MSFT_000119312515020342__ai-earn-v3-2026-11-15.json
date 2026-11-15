@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 FY2015 (quarter ended December 31, 2014)",
+  "revenue": "$26.5 billion",
+  "operating_income": "$7.8 billion",
+  "net_income": "$5,863 million",
+  "eps": "$0.71 diluted (GAAP)",
+  "operating_cash_flow": "$4,340 million (quarter); $12,694 million (six months)",
+  "capex": "$1,490 million (quarter, additions to property and equipment)",
+  "free_cash_flow": "$2,850 million (quarter: 4,340 - 1,490)",
+  "cash_and_investments": "$90,249 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$8,299 million short-term debt + $1,749 million current portion of long-term debt + $18,260 million long-term debt = $28,308 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/Azure competitive dynamics mentioned but no direct comparison"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "search advertising competition referenced via Bing share gains"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise software/database competitor to SQL Server, Commercial Licensing"
+  }
+ ],
+ "evidence": "Net income $5,863 million and diluted EPS $0.71, down from $6,558 million and $0.78 a year earlier, with operating income down 2% year-over-year and a $0.02 per-share restructuring hit plus a $0.04 per-share tax charge from an IRS audit adjustment.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

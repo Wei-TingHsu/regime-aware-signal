@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and Full-Year 2020 (ended Dec 26, 2020)",
+  "revenue": "$20.0 billion Q4 (GAAP, down 1% YoY); $77.9 billion full-year (up 8% YoY, record)",
+  "operating_income": "$5.884 billion Q4 GAAP; $23.678 billion full-year GAAP",
+  "net_income": "$5.9 billion Q4 GAAP ($6.2B non-GAAP); $20.9 billion full-year GAAP ($22.4B non-GAAP)",
+  "eps": "$1.42 Q4 GAAP ($1.52 non-GAAP); $4.94 full-year GAAP ($5.30 non-GAAP)",
+  "operating_cash_flow": "$9.9 billion Q4; $35.4 billion full-year (record)",
+  "capex": "$14.259 billion full-year (additions to PP&E)",
+  "free_cash_flow": "$21.1 billion full-year non-GAAP (up 25% YoY)",
+  "cash_and_investments": "$5.865B cash + $2.292B short-term investments + $15.738B trading assets = ~$23.9 billion",
+  "total_debt": "$2.504B short-term + $33.897B long-term = ~$36.4 billion",
+  "guidance_next": "Q1 2021 revenue ~$18.6 billion GAAP (~$17.5B non-GAAP); operating margin ~27% GAAP (~30% non-GAAP); EPS ~$1.03 GAAP (~$1.10 non-GAAP)"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": -0.3,
+ "fcf_trend": 0.6,
+ "own_stock": -0.2,
+ "market": -0.1,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Intel DCG/CCG share pressure implied by weak data-center results"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel entering discrete GPU and AI accelerator market (Habana Gaudi)"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "NSG memory segment record revenue, NAND business pending sale"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "AWS selected Intel Habana Gaudi AI processors for EC2 training"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel's 10nm/7nm process delays increase reliance on external foundries, benefiting TSMC's foundry position"
+  }
+ ],
+ "evidence": "Fourth-quarter revenue was $20.0 billion, exceeding October guidance by $2.6 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

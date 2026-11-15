@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2025 (fiscal quarter ended June 28, 2025)",
+  "revenue": "$7,685 million (record, up 32% YoY, up 3% QoQ)",
+  "operating_income": "GAAP: $(134) million loss; Non-GAAP: $897 million",
+  "net_income": "GAAP: $872 million; Non-GAAP: $781 million",
+  "eps": "GAAP diluted: $0.54; Non-GAAP diluted: $0.48",
+  "operating_cash_flow": "$2,011 million total ($1,462M continuing + $549M discontinued)",
+  "capex": "$282 million (purchases of property and equipment, continuing ops)",
+  "free_cash_flow": "~$1,729 million (operating cash flow of $2,011M minus capex of $282M)",
+  "cash_and_investments": "$5,867 million ($4,442M cash and equivalents + $1,425M short-term investments)",
+  "total_debt": "$3,218 million long-term debt",
+  "guidance_next": "Q3 2025 revenue expected ~$8.7 billion, plus or minus $300 million (~28% YoY growth, ~13% sequential growth); non-GAAP gross margin expected ~54%; outlook excludes any MI308 shipments to China pending government license review"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD Instinct MI350/MI400 ramp and Helios platform directly target NVDA's AI accelerator dominance"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Record EPYC/Ryzen share gains in server and client CPUs continue to pressure Intel"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Higher AMD revenue and AI GPU ramp implies increased advanced-node foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Named partner in Advancing AI 2025 ecosystem and Instinct GPU adoption"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Cited as strategic partner deploying AMD Instinct-powered AI infrastructure"
+  }
+ ],
+ "evidence": "We delivered strong revenue growth in the second quarter led by record server and PC processor sales... we are seeing robust demand across our computing and AI product portfolio and are well positioned to deliver significant growth in the second half of the year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

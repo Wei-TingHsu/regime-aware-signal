@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2016 (quarter ended October 25, 2015)",
+  "revenue": "$1.305 billion (up 13% QoQ, up 7% YoY)",
+  "operating_income": "GAAP $245 million; Non-GAAP $308 million",
+  "net_income": "GAAP $246 million; Non-GAAP $255 million",
+  "eps": "GAAP diluted $0.44; Non-GAAP diluted $0.46",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$4,728 million (vs $4,623 million at FY2015 year-end)",
+  "total_debt": "Long-term debt $1,406 million (vs $1,384 million at FY2015 year-end)",
+  "guidance_next": "Q4 FY16: revenue ~$1.30B \u00b12%; GAAP/non-GAAP gross margin ~56.7%/57.0% \u00b150bps; GAAP opex ~$503M, non-GAAP opex ~$445M; GAAP/non-GAAP tax rate ~20% \u00b11%; restructuring charges $25-35M; capex ~$20-30M"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.2,
+ "fcf_trend": 0.4,
+ "own_stock": 0.7,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "NVIDIA GPU revenue strength and margin gains imply competitive pressure"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Datacenter/GRID growth encroaches on Intel's server compute space"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Higher NVIDIA revenue implies increased foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Azure adopting GRID 2.0 cloud GPU capabilities"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Cloud computing and deep learning trends benefit major cloud providers broadly"
+  }
+ ],
+ "evidence": "Record revenue of $1.305 billion, up 7 percent from a year ago, up 13 percent sequentially",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,19 @@
+{
+ "event_type": "accounting",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.2,
+ "own_stock": -0.2,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "validates weak online ad/search bet by MSFT, rival benefits"
+  }
+ ],
+ "evidence": "the company\u2019s expectations for future growth and profitability are lower than previous estimates",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

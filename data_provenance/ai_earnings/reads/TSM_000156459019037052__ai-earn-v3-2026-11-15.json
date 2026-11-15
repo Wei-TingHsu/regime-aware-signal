@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2019 (quarter ended September 30, 2019)",
+  "revenue": "NT$293.05 billion (US$9.40 billion)",
+  "operating_income": "NT$107.89 billion; operating margin 36.8%",
+  "net_income": "NT$101.07 billion; net margin 34.5%",
+  "eps": "NT$3.90 (US$0.62 per ADR)",
+  "operating_cash_flow": null,
+  "capex": "2019 capital budget expected US$14-15 billion",
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 2019 revenue expected US$10.2-10.3 billion; gross profit margin 48%-50%; operating profit margin 37%-39% (at NT$30.6/US$1)"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.8,
+ "fcf_trend": 0.3,
+ "own_stock": 0.7,
+ "market": 0.3,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "relies on TSMC 7nm for HPC/CPU products"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "uses TSMC advanced nodes for GPUs"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "TSMC 7nm lead pressures Intel's process roadmap"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Broadcom sources advanced chips from TSMC"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "strong semiconductor demand signals broader chip cycle strength"
+  }
+ ],
+ "evidence": "Revenue is expected to be between US$10.2 billion and US$10.3 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

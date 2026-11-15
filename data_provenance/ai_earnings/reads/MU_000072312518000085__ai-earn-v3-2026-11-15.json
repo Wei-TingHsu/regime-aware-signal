@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and full fiscal year 2018 (ended August 30, 2018)",
+  "revenue": "$8.44 billion (Q4), $30.39 billion (FY18)",
+  "operating_income": "$4.377 billion (Q4 GAAP), $14.994 billion (FY18 GAAP)",
+  "net_income": "$4.325 billion (Q4 GAAP), $14.135 billion (FY18 GAAP)",
+  "eps": "$3.56 diluted (Q4 GAAP), $11.51 diluted (FY18 GAAP)",
+  "operating_cash_flow": "$5.16 billion (Q4), $17.40 billion (FY18)",
+  "capex": "$2.06 billion (Q4, net of partner funding), $8.20 billion (FY18, net of partner funding)",
+  "free_cash_flow": "$3.09 billion (Q4 adjusted FCF), $9.20 billion (FY18 adjusted FCF)",
+  "cash_and_investments": "$7.36 billion cash, marketable investments, and restricted cash; net cash position of $2.72 billion",
+  "total_debt": "$4.64 billion total carrying value of debt at year end",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0,
+ "fcf_trend": 0.9,
+ "own_stock": 0.5,
+ "market": 0.3,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "IMFT joint venture partner, financed NAND JV debt"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "NAND flash competitor benefiting from same demand trends"
+  },
+  {
+   "company": "AMD",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Semiconductor peer benefiting from cloud/datacenter capex growth"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "GPU maker relies on memory for AI/datacenter products, strong memory demand signals healthy AI buildout"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Foundry capacity trends linked to broader semiconductor demand strength"
+  }
+ ],
+ "evidence": "Micron delivered an exceptional fourth quarter and capped record fiscal year results by becoming the second largest semiconductor company in the U.S.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

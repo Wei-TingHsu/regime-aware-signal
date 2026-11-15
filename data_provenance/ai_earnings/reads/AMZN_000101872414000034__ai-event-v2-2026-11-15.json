@@ -1,0 +1,25 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.2,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "YouTube loses bid for Twitch, live-streaming gaming content"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "Xbox/gaming ecosystem faces stronger Amazon-backed rival"
+  }
+ ],
+ "evidence": "Amazon will acquire all of the outstanding shares of Twitch for approximately $970 million in cash",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

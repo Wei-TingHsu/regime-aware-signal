@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2026 (quarter ended March 31, 2026)",
+  "revenue": "NT$1,134.10 billion / US$35.90 billion",
+  "operating_income": "NT$658.97 billion; operating margin 58.1%",
+  "net_income": "NT$572.48 billion",
+  "eps": "NT$22.08 (US$3.49 per ADR unit)",
+  "operating_cash_flow": "NT$698.97 billion",
+  "capex": "NT$350.76 billion",
+  "free_cash_flow": "NT$348.21 billion",
+  "cash_and_investments": "NT$3,383.60 billion (39.0% of total assets)",
+  "total_debt": "Long-term interest-bearing debt NT$901.02 billion",
+  "guidance_next": "Q2 2026 revenue US$39.0-40.2 billion; gross margin 65.5%-67.5%; operating margin 56.5%-58.5% (at NT$31.7/US$1); 2026 revenue expected to increase by above 30% YoY in USD terms"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 1,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "leading-edge demand (HPC 61% of revenue) implies strong AI chip orders"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "benefits from strong advanced node capacity/demand"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "custom silicon/HPC demand tied to TSMC leading-edge strength"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "TSMC's accelerating advanced-node dominance pressures Intel foundry ambitions"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "broad AI infrastructure buildout implies strong memory demand too"
+  }
+ ],
+ "evidence": "Revenue is expected to be between US$39.0 billion and US$40.2 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,25 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.2,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.5,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "foundry industry stability, minor relevance"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "customer of both GF and TSMC, benefits from resolved litigation and continued access"
+  }
+ ],
+ "evidence": "TSMC and GLOBALFOUNDRIES (GF) today announced they are dismissing all litigation between them as well as those that involve any of their customers.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

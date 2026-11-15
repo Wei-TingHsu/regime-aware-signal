@@ -1,0 +1,49 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "unrelated specialty node investment"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC expands specialty foundry capacity, pressuring rival foundry ambitions"
+  },
+  {
+   "company": "SKHY",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Sony Semiconductor secures stable logic wafer supply as minority investor"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "broader foundry capacity benefits specialty-chip customers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "additional specialty fab capacity supports supply reliability"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "more foundry capacity eases chip shortage concerns"
+  }
+ ],
+ "evidence": "The initial capital expenditure is estimated to be approximately US$7 billion with strong support from the Japanese government.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

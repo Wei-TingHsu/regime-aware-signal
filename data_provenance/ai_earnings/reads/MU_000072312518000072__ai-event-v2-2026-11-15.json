@@ -1,0 +1,25 @@
+{
+ "event_type": "financing or capital return",
+ "material": 0.1,
+ "fcf_outlook": 0.05,
+ "uncertainty": -0.05,
+ "own_stock": 0.05,
+ "market": 0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "not directly affected"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "not directly affected"
+  }
+ ],
+ "evidence": "The Credit Agreement provides Micron with a committed $2.0 billion revolving credit facility... that matures 5 years after the effective date... As of the date of the filing of this Current Report there are no borrowings outstanding under the Credit Agreement.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

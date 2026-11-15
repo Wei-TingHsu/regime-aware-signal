@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2026 (three months ended August 31, 2025)",
+  "revenue": "$14.926 billion, up 12% YoY (11% constant currency)",
+  "operating_income": "GAAP $4.277 billion (29% margin); Non-GAAP $6.236 billion (42% margin)",
+  "net_income": "$2.927 billion GAAP (20% margin); Non-GAAP $4.3 billion",
+  "eps": "GAAP diluted $1.01 (down 2%); Non-GAAP diluted $1.47 (up 6%)",
+  "operating_cash_flow": "$8.14 billion for the quarter; $21.534 billion trailing 4 quarters",
+  "capex": "$8.502 billion for the quarter; $27.414 billion trailing 4 quarters",
+  "free_cash_flow": "Trailing 4-quarter FCF of -$5.880 billion (operating cash flow minus capex)",
+  "cash_and_investments": "$10.445 billion cash and equivalents + $560 million marketable securities = ~$11.0 billion",
+  "total_debt": "Notes payable and borrowings: $9.079B current + $82.236B non-current = ~$91.3 billion",
+  "guidance_next": "RPO likely to exceed $500 billion within months; OCI revenue expected to grow 77% to $18 billion in FY26, then $32B, $73B, $114B, and $144B over the following four years; MultiCloud revenue expected to grow substantially every quarter for several years; detailed FY26 guidance to be updated at October Financial Analyst Meeting"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 1,
+ "fcf_trend": -0.6,
+ "own_stock": 0.85,
+ "market": 0.5,
+ "ai_demand": 0.95,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "MultiCloud partner, 1,529% database revenue growth from hyperscalers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "MultiCloud partner and Gemini integration into Oracle AI Database"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "MultiCloud partner receiving additional datacenters"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "Massive capex surge implies continued GPU/datacenter buildout demand"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "Beneficiary of expanding AI infrastructure capex and compute demand"
+  }
+ ],
+ "evidence": "\"we expect Oracle Cloud Infrastructure revenue to grow 77% to $18 billion this fiscal year\u2014and then increase to $32 billion, $73 billion, $114 billion, and $144 billion over the subsequent four years\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

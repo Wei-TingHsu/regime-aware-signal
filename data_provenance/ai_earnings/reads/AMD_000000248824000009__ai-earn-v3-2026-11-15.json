@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2023 (quarter ended Dec 30, 2023); also FY2023",
+  "revenue": "$6.168 billion GAAP/non-GAAP (Q4 2023); FY2023 $22.680 billion",
+  "operating_income": "GAAP $342 million; Non-GAAP $1.412 billion (Q4 2023)",
+  "net_income": "GAAP $667 million; Non-GAAP $1.249 billion (Q4 2023)",
+  "eps": "GAAP $0.41; Non-GAAP $0.77 (diluted, Q4 2023)",
+  "operating_cash_flow": "$381 million (Q4 2023); $1.667 billion (FY2023)",
+  "capex": "$139 million (Q4 2023); $546 million (FY2023)",
+  "free_cash_flow": "$242 million (Q4 2023, OCF minus capex); $1.121 billion (FY2023)",
+  "cash_and_investments": "$5.773 billion ($3.933B cash + $1.840B short-term investments)",
+  "total_debt": "$2.468 billion ($751M current + $1.717B long-term)",
+  "guidance_next": "Q1 2024 revenue approximately $5.4 billion, plus or minus $300 million; non-GAAP gross margin approximately 52%; Data Center segment revenue expected flat sequentially with strong Data Center GPU ramp offsetting seasonal server decline; Client, Embedded and Gaming expected to decline sequentially, with semi-custom revenue down by a significant double-digit percentage"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.2,
+ "fcf_trend": -0.4,
+ "own_stock": -0.1,
+ "market": 0.2,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "AMD MI300X ramp challenges Nvidia's data-center GPU dominance"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "AMD EPYC and Ryzen gains pressure Intel's CPU share"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Higher AMD GPU/CPU volumes support foundry demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Microsoft cited as deploying AMD Instinct MI300X for cloud AI infrastructure"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "MI300X's high memory bandwidth design implies strong HBM demand"
+  }
+ ],
+ "evidence": "AMD expects Data Center segment revenue to be flat, with a seasonal decline in server sales offset by a strong Data Center GPU ramp",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

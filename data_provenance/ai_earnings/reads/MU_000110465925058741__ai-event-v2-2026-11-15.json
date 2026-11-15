@@ -1,0 +1,43 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.8,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.1,
+ "own_stock": 0.4,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": -0.4,
+   "reason": "Micron's expanded HBM/DRAM capacity intensifies competition"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "More US HBM supply secures AI memory needs"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Greater domestic HBM availability for AI accelerators"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Expanded fab build-out may increase equipment/foundry linkage"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "Competes for CHIPS Act funding and US manufacturing prominence"
+  }
+ ],
+ "evidence": "Micron plans to invest an additional $30 billion beyond prior plans which includes building a second leading-edge memory fab in Boise, Idaho",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

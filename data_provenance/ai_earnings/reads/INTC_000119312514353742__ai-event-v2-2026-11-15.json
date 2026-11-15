@@ -1,0 +1,31 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.3,
+ "own_stock": 0.2,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "QCOM",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Intel/Spreadtrum push into mobile SoCs threatens Qualcomm's China mobile chip share"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "potential foundry/manufacturing ties for new SoCs"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "indirect, limited overlap"
+  }
+ ],
+ "evidence": "Intel also has agreed to invest up to RMB 9 billion (about US$1.5 billion) for a minority stake of approximately 20 percent of the holding company under Tsinghua Unigroup",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,37 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.8,
+ "fcf_outlook": 0.3,
+ "uncertainty": 0.6,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "DRAM capacity consolidation shifts competitive balance"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": 0.0,
+   "reason": "Memory market consolidation indirectly affects pricing"
+  },
+  {
+   "company": "INTC",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Potential DRAM supply stability benefits major customer"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "Memory supply chain stabilization"
+  }
+ ],
+ "evidence": "Micron commits to support plans of reorganization for the Elpida Companies that would provide for payments to the secured and unsecured creditors... in exchange for 100% ownership of Elpida",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

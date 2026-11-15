@@ -1,0 +1,37 @@
+{
+ "event_type": "restructuring",
+ "material": 0.35,
+ "fcf_outlook": 0.15,
+ "uncertainty": 0.15,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "similar tech layoff wave signal"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "macro cost discipline trend across big tech"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "enterprise software competitor could benefit from MSFT focus shift"
+  },
+  {
+   "company": "CRWD",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "tech sector macro signal"
+  }
+ ],
+ "evidence": "workforce reductions of approximately 10,000 employees by the end of the third fiscal quarter of 2023",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

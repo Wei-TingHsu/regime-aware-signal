@@ -1,0 +1,19 @@
+{
+ "event_type": "leadership change",
+ "material": 0.15,
+ "fcf_outlook": -0.05,
+ "uncertainty": 0.2,
+ "own_stock": -0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.05,
+   "reason": "AMD sales leadership gap could aid competitor positioning"
+  }
+ ],
+ "evidence": "Mr. Emilio Ghilardi, Senior Vice President and Chief Sales Officer, will be leaving the Company",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

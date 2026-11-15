@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 FY2016 (ended April 26, 2015)",
+  "revenue": "$1.151 billion, up 4% YoY, down 8% QoQ",
+  "operating_income": "$176 million GAAP",
+  "net_income": "$134 million GAAP; $187 million non-GAAP",
+  "eps": "$0.24 GAAP diluted; $0.33 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$4.792 billion",
+  "total_debt": "$1.391 billion long-term debt",
+  "guidance_next": "Q2 FY16 revenue ~$1.01B +/-2%; GAAP gross margin ~55.7%, non-GAAP ~56.0% (+/-50bps); GAAP opex ~$474M, non-GAAP opex ~$425M; GAAP tax rate ~23%, non-GAAP ~21% (+/-1%); capex ~$35-45M; restructuring charges $100-125M for Icera wind-down"
+ },
+ "results_vs_prior_guidance": 0.4,
+ "guidance_change": -0.5,
+ "fcf_trend": 0.2,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "NVIDIA gaining gross margin share in GPUs"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "deep learning/self-driving push competes with Intel data-center ambitions"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "foundry for GPU production as NVIDIA invests in new architectures"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "major consumer web/cloud companies cited as deep learning customers"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "memory supplier benefiting from GPU/compute growth"
+  }
+ ],
+ "evidence": "Revenue is expected to be $1.01 billion, plus or minus two percent.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

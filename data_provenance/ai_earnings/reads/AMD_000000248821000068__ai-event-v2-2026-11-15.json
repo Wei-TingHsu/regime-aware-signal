@@ -1,0 +1,25 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.1,
+ "own_stock": 0.1,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AMD gains flexibility to diversify foundry sourcing"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "secures capacity amid supply shortage, minor read-across"
+  }
+ ],
+ "evidence": "removes all prior exclusivity commitments and provides the Company with full flexibility to contract with any wafer foundry",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

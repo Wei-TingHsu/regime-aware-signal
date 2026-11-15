@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2020",
+  "revenue": "$19.8 billion (up 23% YoY)",
+  "operating_income": "$7.0 billion GAAP; $7.5 billion non-GAAP",
+  "net_income": "$5.7 billion GAAP; $6.2 billion non-GAAP",
+  "eps": "$1.31 GAAP diluted; $1.45 non-GAAP",
+  "operating_cash_flow": "$6.2 billion",
+  "capex": "$3.3 billion (additions to PP&E)",
+  "free_cash_flow": "$2.9 billion (stated)",
+  "cash_and_investments": "$20.8 billion total cash investments (Mar 28, 2020)",
+  "total_debt": "$39.9 billion (short-term $3.46B + long-term $36.46B)",
+  "guidance_next": "Q2 2020 revenue ~$18.5 billion; GAAP EPS ~$1.04, non-GAAP EPS ~$1.10; operating margin ~28% GAAP/30% non-GAAP; full-year guidance withdrawn due to COVID-19 uncertainty"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": -1,
+ "fcf_trend": -0.3,
+ "own_stock": 0.1,
+ "market": 0.1,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel CCG/DCG strength suggests resilient share vs AMD"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "NSG memory revenue record signals strong memory demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel foundry/process comments relevant to foundry competition"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Cloud service provider revenue up 53% YoY implies strong hyperscaler capex"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Data center cloud demand growth benefits major cloud customers' infrastructure spend narrative"
+  }
+ ],
+ "evidence": "Expecting second-quarter revenue of $18.5 billion ; GAAP EPS of $1.04 and non-GAAP EPS of $1.10 ; not providing full-year guidance given significant economic uncertainty.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

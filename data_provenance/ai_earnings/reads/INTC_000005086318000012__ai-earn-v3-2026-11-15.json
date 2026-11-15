@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2018",
+  "revenue": "$16.1 billion (GAAP and non-GAAP), up 9% YoY",
+  "operating_income": "$4.47 billion GAAP; $4.8 billion non-GAAP",
+  "net_income": "$4.454 billion GAAP; $4.2 billion non-GAAP",
+  "eps": "$0.93 diluted GAAP; $0.87 non-GAAP",
+  "operating_cash_flow": "$6.284 billion",
+  "capex": "$2.910 billion (additions to PP&E)",
+  "free_cash_flow": "$3.374 billion (OCF minus capex, as stated figures)",
+  "cash_and_investments": "$16.197 billion total cash investments (cash, short-term investments, trading assets)",
+  "total_debt": "$28.612 billion (short-term $3.842B + long-term $24.770B)",
+  "guidance_next": "Q2 2018: revenue $16.3B +/- $500M; GAAP op margin ~28%/non-GAAP ~30%; GAAP EPS $0.85/non-GAAP EPS $0.85 +/-5c. FY2018 raised: revenue $67.5B +/- $1.0B (up $2.5B from prior guidance); GAAP op margin ~29%/non-GAAP ~31%; GAAP EPS $3.79/non-GAAP EPS $3.85 +/-5%; capex $14.5B +/- $500M; net capital deployed $12.5B +/- $500M; non-GAAP FCF $14.5B +/- $500M; tax rate ~13%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "NSG memory/storage demand strength signals broader memory market strength"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Xeon Scalable adoption for AI workloads shows data-center AI compute demand growth"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Strong CCG/DCG share gains and pricing could pressure AMD's competitive position"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "10nm delay implies continued reliance on external/alternative foundry capacity discussions"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "PSG FPGA wins in data center show healthy demand for programmable/accelerator silicon"
+  }
+ ],
+ "evidence": "Intel is raising its full-year revenue and earnings outlook based on this strong start; expecting 2018 revenue of $67.5 billion, up $2.5 billion from prior guidance.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

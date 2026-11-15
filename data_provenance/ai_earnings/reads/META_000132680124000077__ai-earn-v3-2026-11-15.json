@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2024 (three months ended September 30, 2024)",
+  "revenue": "$40,589 million, up 19% YoY",
+  "operating_income": "$17,350 million, 43% operating margin",
+  "net_income": "$15,688 million",
+  "eps": "$6.03 diluted",
+  "operating_cash_flow": "$24,724 million",
+  "capex": "$9,202 million (including finance lease principal payments)",
+  "free_cash_flow": "$15,522 million",
+  "cash_and_investments": "$70,900 million (cash, cash equivalents, marketable securities)",
+  "total_debt": "$28,823 million long-term debt",
+  "guidance_next": "Q4 2024 revenue $45-48B; FY2024 total expenses $96-98B (narrowed from $96-99B); FY2024 capex $38-40B (raised from $37-40B); Q4 tax rate low-teens; continued significant capex growth expected in 2025"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.4,
+ "fcf_trend": 0.6,
+ "own_stock": 0.4,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "rising capex signals continued GPU/accelerator demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "chip fabrication demand tied to Meta's AI infrastructure buildout"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "shared AI capex escalation narrative among hyperscalers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "competes in AI/cloud infra spending trend"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "potential beneficiary of expanded AI compute capex"
+  }
+ ],
+ "evidence": "We anticipate our full-year 2024 capital expenditures will be in the range of $38-40 billion, updated from our prior range of $37-40 billion ... we continue to expect significant capital expenditures growth in 2025",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

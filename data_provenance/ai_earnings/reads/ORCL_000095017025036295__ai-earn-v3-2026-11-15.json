@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2025 (quarter ended Feb 28, 2025)",
+  "revenue": "$14.13 billion, up 6% YoY (8% constant currency)",
+  "operating_income": "GAAP $4.358 billion (31% margin); Non-GAAP $6.195 billion (44% margin)",
+  "net_income": "$2.936 billion GAAP, up 22% YoY",
+  "eps": "GAAP diluted $1.02 (+20%); Non-GAAP diluted $1.47 (+4%)",
+  "operating_cash_flow": "$20.745 billion trailing 4 quarters (9-month figure $14.664 billion)",
+  "capex": "$14.933 billion trailing 4 quarters (9-month figure $12.135 billion)",
+  "free_cash_flow": "$5.812 billion trailing 4 quarters (down from $11.271B a year earlier)",
+  "cash_and_investments": "$17.406B cash + $0.417B marketable securities = ~$17.82 billion",
+  "total_debt": "$8.167B current + $88.109B non-current = ~$96.28 billion",
+  "guidance_next": "CEO: 'We expect that our huge $130 billion sales backlog will help drive a 15% increase in Oracle's overall revenue in our next fiscal year beginning this June,' with RPO expected to 'continue to grow rapidly' and a first Stargate contract anticipated."
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.7,
+ "fcf_trend": -0.4,
+ "own_stock": 0.3,
+ "market": 0.3,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "Oracle signed cloud/GPU agreement with NVIDIA; GPU consumption up 244%"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.5,
+   "reason": "Named as a signed cloud agreement partner for AI compute"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "Database MultiCloud revenue from Microsoft up 92% in 3 months"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": 0.4,
+   "reason": "Part of MultiCloud database growth and hyperscaler comparison"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "Also part of MultiCloud database growth citation"
+  }
+ ],
+ "evidence": "We expect that our huge $130 billion sales backlog will help drive a 15% increase in Oracle\u2019s overall revenue in our next fiscal year beginning this June.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

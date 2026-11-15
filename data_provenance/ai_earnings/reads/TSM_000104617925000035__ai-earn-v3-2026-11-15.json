@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2025 (ended March 31, 2025)",
+  "revenue": "NT$839.25 billion / US$25.53 billion",
+  "operating_income": "NT$407.08 billion (operating margin 48.5%)",
+  "net_income": "NT$361.56 billion",
+  "eps": "NT$13.94 (US$2.12 per ADR unit)",
+  "operating_cash_flow": "NT$625.57 billion",
+  "capex": "NT$330.83 billion",
+  "free_cash_flow": "NT$294.74 billion",
+  "cash_and_investments": "NT$2,703.09 billion (cash & marketable securities)",
+  "total_debt": "NT$986.98 billion long-term interest-bearing debt",
+  "guidance_next": "Q2 2025 revenue US$28.4-29.2 billion; gross profit margin 57%-59%; operating profit margin 47%-49% (at NT$32.5/US$1)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "AI-related demand growth supports advanced node capacity"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "benefits from TSMC advanced process availability"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "HPC platform growth reflects custom silicon demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "TSMC's advanced node strength and margins widen competitive gap"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self"
+  }
+ ],
+ "evidence": "revenue increased 41.6% year-over-year... continued growth in AI-related demand",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

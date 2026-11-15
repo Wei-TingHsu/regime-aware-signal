@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY2012 (ended October 30, 2011)",
+  "revenue": "$1,066.2 million (up 4.9% QoQ, up 26.3% YoY)",
+  "operating_income": "$197.1 million GAAP",
+  "net_income": "$178.3 million GAAP; $217.0 million non-GAAP",
+  "eps": "$0.29 GAAP diluted; $0.35 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": "$2,748.4 million",
+  "total_debt": null,
+  "guidance_next": "Q4 FY2012: revenue flat +/-2% QoQ; GAAP/non-GAAP gross margin flat to up 0.5pp from Q3; GAAP opex ~$372 million; non-GAAP opex ~$330 million; GAAP/non-GAAP tax rate 14-16%; capex $30-40 million; diluted shares ~618 million"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.5,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "ai_demand": 0.2,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "notebook GPU share loss attributed partly to Intel losing share to AMD CPUs"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "cross-license revenue tied to Intel; Intel notebook share softness cited"
+  },
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "record margins, revenue growth, Tegra 3 momentum"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "foundry partner benefiting from GPU/Tegra volume growth"
+  },
+  {
+   "company": "AMZN",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Tesla GPUs chosen for supercomputing deployment (Oak Ridge)"
+  }
+ ],
+ "evidence": "Our GAAP and non-GAAP earnings both exceeded expectations for the quarter.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 2010 (quarter ended December 25, 2010) and full-year 2010",
+  "revenue": "$11.5B for Q4 2010 (record); $43.6B for full-year 2010, up 24% YoY",
+  "operating_income": "$4.3B for Q4 2010 (record); $15.9B for full-year 2010 (36.5% of revenue)",
+  "net_income": "$3.4B for Q4 2010; $11.7B for full-year 2010",
+  "eps": "$0.59 for Q4 2010; $2.05 for full-year 2010",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0,
+ "fcf_trend": 0.4,
+ "own_stock": 0.6,
+ "market": 0.3,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel strength in enterprise/server share; prior AMD settlement noted"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Nvidia settlement increased Intel spending, legal friction between firms"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.2,
+   "reason": "Strong server/data center demand signals broader semiconductor cycle strength"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Robust PC/server demand supports foundry and chip ecosystem demand"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Strength in enterprise/server segment reflects healthy PC and data center demand from OEM customers"
+  }
+ ],
+ "evidence": "Record quarterly revenue of $11.5B... record operating income of $4.3B... Net income of $3.4B and earnings per share of $0.59 were up 10% and 7% respectively",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

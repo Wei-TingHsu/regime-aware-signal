@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2012",
+  "revenue": "$13.5B",
+  "operating_income": "$3.8B GAAP (29% of revenue); $4.1B non-GAAP",
+  "net_income": "$3.0B GAAP; $3.1B non-GAAP",
+  "eps": "$0.58 GAAP; $0.60 non-GAAP",
+  "operating_cash_flow": "~$5.1B",
+  "capex": "$2.9B in Q3; FY2012 now expected $11.3B \u00b1 $300M",
+  "free_cash_flow": "~$2.2B (5.1B - 2.9B)",
+  "cash_and_investments": "$10.5B total cash investments, down $3.2B from Q2",
+  "total_debt": null,
+  "guidance_next": "Q4'12 revenue $13.6B \u00b1 $500M (midpoint +1% QoQ); gross margin 57% \u00b1 couple points (58% non-GAAP); R&D+MG&A ~$4.5B; depreciation ~$1.6B; FY2012 capex now $11.3B \u00b1 $300M, down from $12.5B \u00b1 $400M prior forecast"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.6,
+ "fcf_trend": -0.3,
+ "own_stock": -0.4,
+ "market": -0.2,
+ "ai_demand": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Intel PC/enterprise softness could ease competitive pricing pressure or signal weak PC market overall"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "PC supply chain inventory reduction signals broader semiconductor demand softness"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel cutting capex and factory loadings reflects weak foundry demand environment"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": -0.2,
+   "reason": "Windows 8 launch timing cited as factor in customer order caution"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -0.4,
+   "reason": "self"
+  }
+ ],
+ "evidence": "Gross margin in the fourth quarter is expected to be 57%, plus or minus a couple points, down 6.3 points from the third quarter",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

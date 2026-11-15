@@ -1,0 +1,31 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.2,
+ "fcf_outlook": 0.2,
+ "uncertainty": -0.1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "UMC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "stronger TSMC foundry demand implies share loss for peers"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "foundry demand growth signals healthy chip cycle"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "beneficiary of strong foundry utilization"
+  }
+ ],
+ "evidence": "Revenues for January through March 2013 totaled NT$132.76 billion, an increase of 25.7 percent compared to the same period in 2012.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

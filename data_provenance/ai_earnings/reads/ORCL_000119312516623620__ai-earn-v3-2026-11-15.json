@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY16 (quarter and fiscal year ended May 31, 2016)",
+  "revenue": "$10.6 billion total Q4 revenue, down 1% in US$, flat in constant currency; FY16 total revenue $37.0 billion, down 3% in US$",
+  "operating_income": "$4.0 billion GAAP (37% margin); $4.8 billion non-GAAP (45% margin) for Q4; FY16 GAAP $12.6B, non-GAAP $15.8B",
+  "net_income": "$2.8 billion GAAP Q4; non-GAAP $3.4 billion; FY16 GAAP $8.9 billion, non-GAAP $11.2 billion",
+  "eps": "$0.66 GAAP diluted Q4, $0.81 non-GAAP; FY16 $2.07 GAAP, $2.61 non-GAAP",
+  "operating_cash_flow": "$13.6 billion trailing twelve months (FY16)",
+  "capex": "$1,189 million (Q4/FY16 annual capex per cash flow statement)",
+  "free_cash_flow": "$12,372 million trailing four quarters (per supplemental table)",
+  "cash_and_investments": "$20.15 billion cash and equivalents plus $35.97 billion marketable securities (total ~$56.1 billion) as of May 31, 2016",
+  "total_debt": "Notes payable: $3,750 million current + $40,105 million non-current = ~$43.9 billion",
+  "guidance_next": "Q1 FY17 SaaS and PaaS revenues expected to be up 75% to 80%"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": -1,
+ "own_stock": 1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 1,
+   "reason": "self-referential strong cloud growth"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/SaaS competitor, not explicitly mentioned"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "IaaS competitor via AWS, not explicitly mentioned"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud/IaaS competitor, not explicitly mentioned"
+  },
+  {
+   "company": "Workday",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "explicitly compared unfavorably: 'ten-times more cloud ERP customers than Workday'"
+  }
+ ],
+ "evidence": "SaaS and PaaS revenue growth accelerated to 68% in constant currency, significantly higher than my guidance... enabling us to raise our guidance for Q1 SaaS and PaaS revenue growth, which we now expect to be between 75% and 80%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

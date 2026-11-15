@@ -1,0 +1,43 @@
+{
+ "event_type": "contract or partnership",
+ "material": 0.65,
+ "fcf_outlook": 0.15,
+ "uncertainty": 0.55,
+ "own_stock": 0.1,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "OpenAI backer, demand read-through"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competing AI infra buildout"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competing cloud/AI capacity"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "more chip demand from DSX deployment"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "custom silicon rival for AI infra"
+  }
+ ],
+ "evidence": "NVIDIA\u2019s aggregate payment obligation is cumulatively capped at $105 billion for its initial commitment under the Agreements.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

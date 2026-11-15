@@ -1,0 +1,25 @@
+{
+ "event_type": "product or technology",
+ "material": 0.15,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.1,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "process density comparison claims Intel 14nm advantage"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "no direct impact"
+  }
+ ],
+ "evidence": "Intel 14nm provides significant density advantage",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

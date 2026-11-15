@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2017 (quarter ended Sept 30, 2017)",
+  "revenue": "$16.1 billion (GAAP and non-GAAP), up 2% YoY",
+  "operating_income": "GAAP $5.1 billion (up 15%); Non-GAAP $5.6 billion (up 8%)",
+  "net_income": "$4.5 billion GAAP (up 34%); $4.8 billion non-GAAP (up 25%)",
+  "eps": "$0.94 GAAP diluted (up 36%); $1.01 non-GAAP (up 26%)",
+  "operating_cash_flow": "approximately $6.3 billion",
+  "capex": "$2.979 billion (additions to property, plant and equipment)",
+  "free_cash_flow": "approximately $3.3 billion (6.3B OCF - 2.979B capex)",
+  "cash_and_investments": "$17.504 billion total cash investments (cash, short-term investments, trading assets)",
+  "total_debt": "$31.64 billion (short-term $4.142B + long-term $27.498B)",
+  "guidance_next": "Q4 2017: revenue $16.3B +/- $500M; GAAP op income ~$4.8B/non-GAAP ~$5.2B; GAAP EPS $0.80/non-GAAP $0.86 +/-5c. FY2017 revenue raised to $62.0B +/- $500M; GAAP EPS raised to $2.93, non-GAAP EPS raised to $3.25 +/-5%; capex lowered to $11.5B +/- $500M"
+ },
+ "results_vs_prior_guidance": 0.8,
+ "guidance_change": 0.7,
+ "fcf_trend": 0.6,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "NVM Solutions Group memory revenue up 37% signals strong memory market demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Data center and FPGA growth signals broader semiconductor demand strength"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel CCG flat but DCG up 7%, maintaining competitive data center position"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "PSG FPGA wins in AI and autonomous driving show growing AI compute competition/demand"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Cloud service provider design wins for FPGAs tied to AI workloads"
+  }
+ ],
+ "evidence": "Raised full-year business outlook for the third consecutive quarter. Full-year revenue outlook raised by $700 million to $62 billion; full-year GAAP EPS outlook raised by $0.27 to $2.93 and non-GAAP EPS by $0.25 to $3.25.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

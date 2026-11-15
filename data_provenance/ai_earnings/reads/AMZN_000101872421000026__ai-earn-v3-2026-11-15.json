@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2021 (quarter ended September 30, 2021)",
+  "revenue": "$110.8 billion, up 15% YoY",
+  "operating_income": "$4.9 billion (vs $6.2 billion Q3 2020)",
+  "net_income": "$3.2 billion",
+  "eps": "$6.12 diluted",
+  "operating_cash_flow": "$54.7 billion TTM (down 1% YoY); $7.3 billion for the quarter",
+  "capex": "$15.7 billion in Q3 (purchases of property and equipment)",
+  "free_cash_flow": "$2.6 billion TTM (down from $29.5 billion TTM a year ago)",
+  "cash_and_investments": "$29.9 billion cash and equivalents + $49.0 billion marketable securities (Sept 30, 2021)",
+  "total_debt": null,
+  "guidance_next": "Net sales expected between $130.0 billion and $140.0 billion, or growth of 4% to 12%; operating income expected to be between a loss of $1.0 billion and income of $3.0 billion, compared with $6.9 billion in Q4 2020; guidance includes 'several billion dollars of additional costs' in Consumer business from labor, wage, supply chain, and freight pressures"
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": -1,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": -0.3,
+ "ai_demand": 0.4,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "AWS margin pressure may relatively favor Azure cloud economics narrative"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Cloud competitor benefits if AWS cost pressures persist"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Cloud infrastructure competitor"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AWS capex and server buildout implies chip demand"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "AWS infrastructure growth supports server chip demand"
+  }
+ ],
+ "evidence": "operating income expected to be between a loss of $1.0 billion and income of $3.0 billion, compared with $6.9 billion in Q4 2020",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

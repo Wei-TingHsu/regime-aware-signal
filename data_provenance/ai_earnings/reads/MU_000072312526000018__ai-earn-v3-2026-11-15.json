@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "FQ4-26 (quarter ended September 3, 2026) and FY2026",
+  "revenue": "$54.229 billion (Q4); $133.188 billion (FY26)",
+  "operating_income": "$43.751 billion GAAP / $44.636 billion non-GAAP (Q4); $99.340 billion GAAP (FY26)",
+  "net_income": "$37.701 billion GAAP / $38.398 billion non-GAAP (Q4); $84.969 billion GAAP (FY26)",
+  "eps": "$32.87 GAAP / $33.42 non-GAAP diluted (Q4); $74.33 GAAP / $75.52 non-GAAP (FY26)",
+  "operating_cash_flow": "$43.973 billion (Q4); $89.675 billion (FY26)",
+  "capex": "Investments in capex, net: $10.774 billion (Q4); $27.367 billion (FY26)",
+  "free_cash_flow": "Adjusted FCF $33.199 billion (Q4); $62.308 billion (FY26)",
+  "cash_and_investments": "$73.48 billion cash, marketable investments, and restricted cash at year end",
+  "total_debt": "Current debt $491M + long-term debt $4.688 billion \u2248 $5.18 billion",
+  "guidance_next": "FQ1-27: Revenue $61.5B \u00b1 $1.5B; GAAP gross margin ~85.95% (Non-GAAP ~86.25%); GAAP opex ~$2.31B (Non-GAAP ~$2.06B); GAAP diluted EPS $37.84 \u00b1 $1.00 (Non-GAAP $38.15 \u00b1 $1.00)"
+ },
+ "results_vs_prior_guidance": 1,
+ "guidance_change": 1,
+ "fcf_trend": 1,
+ "own_stock": 1,
+ "market": 0.6,
+ "ai_demand": 1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 1,
+   "reason": "AI compute demand drives memory consumption via Strategic Customer Agreements"
+  },
+  {
+   "company": "SKHY",
+   "relation": "competitor",
+   "direction": 0.5,
+   "reason": "Industry-wide DRAM/HBM pricing and demand tailwinds benefit all memory makers"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": 0.5,
+   "reason": "NAND/SSD demand strength (ION SSD, PCIe Gen6) implies broad storage upcycle"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "AI accelerator ecosystem benefits from richer memory content per system"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.4,
+   "reason": "Networking/AI silicon demand correlates with data-center memory buildout"
+  }
+ ],
+ "evidence": "Revenue of $54.23 billion versus $41.46 billion for the prior quarter and guidance to $61.5 billion \u00b1 $1.5 billion for the next quarter, with record fiscal 2026 results and an 'even stronger fiscal 2027' expected",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

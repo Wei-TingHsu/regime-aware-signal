@@ -1,0 +1,25 @@
+{
+ "event_type": "acquisition or disposal",
+ "material": 0.5,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.4,
+ "own_stock": -0.3,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "CRWD",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "security market consolidation could benefit pure-play rivals"
+  },
+  {
+   "company": "ORCL",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "tech acquisition comparables"
+  }
+ ],
+ "evidence": "will be converted into the right to receive $48.00 in cash, without interest",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

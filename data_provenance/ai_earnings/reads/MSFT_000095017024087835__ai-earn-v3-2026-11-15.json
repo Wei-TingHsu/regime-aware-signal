@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 FY2024 (quarter ended June 30, 2024); also full FY2024",
+  "revenue": "$64.7 billion (Q4), $245.1 billion (FY)",
+  "operating_income": "$27.9 billion (Q4), $109.4 billion (FY)",
+  "net_income": "$22.0 billion (Q4), $88.1 billion (FY)",
+  "eps": "$2.95 diluted (Q4), $11.80 diluted (FY)",
+  "operating_cash_flow": "$37,195 million (Q4), $118,548 million (FY)",
+  "capex": "$13,873 million (Q4 additions to PP&E), $44,477 million (FY)",
+  "free_cash_flow": "$23,322 million (Q4: 37,195-13,873), $74,071 million (FY: 118,548-44,477)",
+  "cash_and_investments": "$75,543 million total cash, cash equivalents, and short-term investments",
+  "total_debt": "$51,630 million (short-term debt $6,693M + current portion long-term debt $2,249M + long-term debt $42,688M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 0.4,
+ "own_stock": 0.2,
+ "market": 0.3,
+ "ai_demand": 0.6,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Azure AI capex buildout implies continued GPU demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure growth of 29-30% outpaces AWS, competitive cloud pressure"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Azure cloud share gains pressure Google Cloud"
+  },
+  {
+   "company": "ORCL",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud/database competition from Azure growth"
+  },
+  {
+   "company": "AVGO",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Networking/custom silicon demand tied to datacenter capex surge"
+  }
+ ],
+ "evidence": "Microsoft Cloud quarterly revenue of $36.8 billion, up 21% (up 22% in constant currency) year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

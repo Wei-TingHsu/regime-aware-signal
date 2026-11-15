@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q2 2016 (quarter ended July 2, 2016)",
+  "revenue": "$13,533 million (vs $13,195 million prior year)",
+  "operating_income": "$1,318 million (vs $2,896 million prior year)",
+  "net_income": "$1,330 million (vs $2,706 million prior year)",
+  "eps": "$0.27 diluted (vs $0.55 prior year)",
+  "operating_cash_flow": null,
+  "capex": "$(2,286) million (additions to property, plant and equipment)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$17,689 million total cash investments (cash, short-term investments, trading assets)",
+  "total_debt": "$4,560 million short-term debt + $24,053 million long-term debt = $28,613 million",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "Data Center/Client Computing results show margin pressure amid competitive market"
+  },
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NVM Solutions Group posted an operating loss, signaling weak memory/NAND pricing environment"
+  },
+  {
+   "company": "SNDK",
+   "relation": "competitor",
+   "direction": -1,
+   "reason": "NAND flash segment losses reflect tough pricing for storage competitors"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "Intel's manufacturing ramp costs and restructuring could affect foundry relationships"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "Large restructuring charges and falling operating income signal self-inflicted margin pressure"
+  }
+ ],
+ "evidence": "OPERATING INCOME $1,318 (vs $2,896 prior year) driven by $1,414 million of restructuring and other charges, more than halving profitability year-over-year",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

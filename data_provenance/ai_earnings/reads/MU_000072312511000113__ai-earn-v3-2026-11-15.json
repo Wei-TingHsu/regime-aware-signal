@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q3 FY2011 (ended June 2, 2011)",
+  "revenue": "$2,139 million",
+  "operating_income": "$237 million",
+  "net_income": "$75 million (attributable to Micron)",
+  "eps": "$0.07 diluted",
+  "operating_cash_flow": "$589 million (quarter); $2,130 million (nine months)",
+  "capex": "$534 million (quarter); $1,682 million (nine months, PP&E expenditures)",
+  "free_cash_flow": "$55 million (quarter: 589-534)",
+  "cash_and_investments": "$2,395 million",
+  "total_debt": "$1,572 million (current $184M + long-term $1,388M)",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": -1,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "direction": -1,
+   "reason": "NAND pricing pressure industry-wide"
+  },
+  {
+   "company": "INTC",
+   "relation": "peer",
+   "direction": 0,
+   "reason": "memory market softness context"
+  },
+  {
+   "company": "MU",
+   "relation": "self",
+   "direction": -1,
+   "reason": "declining revenue and margins"
+  }
+ ],
+ "evidence": "Revenue from sales of DRAM products was 7 percent lower in the third quarter of fiscal 2011 compared to the second quarter of fiscal 2011 due to a decrease in sales volume.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

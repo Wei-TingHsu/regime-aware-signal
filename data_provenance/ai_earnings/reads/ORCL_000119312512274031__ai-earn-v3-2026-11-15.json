@@ -1,0 +1,50 @@
+{
+ "facts": {
+  "period": "Q4 and Fiscal Year 2012 (ended May 31, 2012)",
+  "revenue": "$10.9 billion GAAP (up 1%); FY2012 $37.1 billion GAAP (up 4%)",
+  "operating_income": "$4.6 billion GAAP (up 5%), 42% margin; FY2012 $13.7 billion GAAP (up 14%), 37% margin",
+  "net_income": "$3.451 billion GAAP (up 8%); FY2012 $9.981 billion (up 17%)",
+  "eps": "$0.69 GAAP diluted (up 11%), $0.82 non-GAAP (up 10%); FY2012 $1.96 GAAP, $2.46 non-GAAP",
+  "operating_cash_flow": "FY2012 $13.743 billion (up 23%)",
+  "capex": "FY2012 $648 million",
+  "free_cash_flow": "FY2012 $13.095 billion (trailing 4-quarter, up 22%)",
+  "cash_and_investments": "$14.955 billion cash and equivalents plus $15.721 billion marketable securities = ~$30.7 billion",
+  "total_debt": "$2.950 billion current notes payable + $13.524 billion non-current notes payable = ~$16.5 billion",
+  "guidance_next": null
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": 1,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "enterprise software/cloud competitor"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud competitor"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "cloud infrastructure competitor"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0,
+   "reason": "hardware systems component supplier"
+  }
+ ],
+ "evidence": "Fiscal Year 2012 Operating Cash Flow Up 23% to $13.7 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

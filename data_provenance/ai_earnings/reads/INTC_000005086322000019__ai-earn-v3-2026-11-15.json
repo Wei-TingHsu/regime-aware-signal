@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q1 2022 (ended April 2, 2022)",
+  "revenue": "$18.4 billion GAAP (down 7% YoY), $18.4 billion non-GAAP (down 1% YoY)",
+  "operating_income": "$4.341 billion GAAP; 23.1% non-GAAP operating margin",
+  "net_income": "$8.113 billion GAAP; $3.6 billion non-GAAP",
+  "eps": "$1.98 GAAP diluted; $0.87 non-GAAP",
+  "operating_cash_flow": "$5.891 billion",
+  "capex": "$4.604 billion (additions to PP&E) + $193 million held-for-sale NAND PP&E",
+  "free_cash_flow": "~$1.287 billion ($5.891B OCF - $4.604B capex)",
+  "cash_and_investments": "$6.215 billion cash and cash equivalents + $32.481 billion short-term investments",
+  "total_debt": "$4.459 billion short-term + $32.788 billion long-term = ~$37.247 billion",
+  "guidance_next": "Q2 2022: revenue ~$18.0B GAAP/non-GAAP, gross margin ~48% GAAP/51% non-GAAP, EPS ~$0.50 GAAP/$0.70 non-GAAP; Full-year 2022: revenue ~$76.0B, gross margin ~49% GAAP/52% non-GAAP, EPS ~$4.19 GAAP/$3.60 non-GAAP, capex ~$27B, adjusted FCF ($1-2 billion) negative"
+ },
+ "results_vs_prior_guidance": 0.5,
+ "guidance_change": 0.1,
+ "fcf_trend": -0.3,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Intel CCG revenue declined 13% YoY, showing competitive pressure"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel AXG GPU launch (Arc) signals competitive entry but DCAI/AI growth also validates AI compute demand"
+  },
+  {
+   "company": "TSM",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Intel IFS foundry ambitions and Tower Semiconductor acquisition intent compete for foundry customers"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "DCAI segment includes memory and grew 22%, reflecting datacenter demand strength"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "DCAI growth and Sapphire Rapids shipments to cloud customers signal healthy datacenter/cloud capex"
+  }
+ ],
+ "evidence": "First-quarter GAAP revenue of $18.4 billion... exceeded January guidance... Reaffirming full-year 2022 revenue guidance.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,44 @@
+{
+ "facts": {
+  "period": "Q2 2011 (ended June 30, 2011)",
+  "revenue": "$9.91 billion (up 51% YoY)",
+  "operating_income": "$201 million (down from $270 million YoY)",
+  "net_income": "$191 million (down 8% YoY)",
+  "eps": "$0.41 diluted",
+  "operating_cash_flow": "$3.21 billion (trailing twelve months)",
+  "capex": "$1.374 billion (trailing twelve months, purchases of fixed assets)",
+  "free_cash_flow": "$1.83 billion (trailing twelve months, down 8% YoY)",
+  "cash_and_investments": "$2.047 billion cash and cash equivalents at period end",
+  "total_debt": null,
+  "guidance_next": "Q3 2011 net sales expected $10.3B-$11.1B (36%-47% growth); operating income expected $20M-$170M (93% decline to 37% decline YoY), including ~$180M stock-based comp and amortization"
+ },
+ "results_vs_prior_guidance": 0.3,
+ "guidance_change": -0.6,
+ "fcf_trend": -0.3,
+ "own_stock": -0.2,
+ "market": 0,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "competes in cloud/advertising-adjacent commerce"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "AWS competes with Azure"
+  },
+  {
+   "company": "ORCL",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "AWS RDS for Oracle databases expands Oracle's cloud reach"
+  }
+ ],
+ "evidence": "Operating income was $201 million in the second quarter, compared with $270 million in second quarter 2010",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

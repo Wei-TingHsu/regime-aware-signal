@@ -1,0 +1,31 @@
+{
+ "event_type": "leadership change",
+ "material": 0.4,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.2,
+ "own_stock": 0.0,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.0,
+   "reason": "foundry relationship unaffected"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel leadership transition creates brief uncertainty"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "no direct impact"
+  }
+ ],
+ "evidence": "Paul S. Otellini retired from the board and as president and CEO of Intel",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,43 @@
+{
+ "event_type": "leadership change",
+ "material": 0.7,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.7,
+ "own_stock": -0.3,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "Intel leadership vacuum opens competitive opportunity"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "foundry strategy uncertainty may increase outsourcing"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "Intel distraction benefits rivals in AI/data center"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "limited direct impact"
+  },
+  {
+   "company": "QCOM",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "potential market share gain"
+  }
+ ],
+ "evidence": "Patrick Gelsinger...resigned from the Company and the Board of Directors, effective immediately",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

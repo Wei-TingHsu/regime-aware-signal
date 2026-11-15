@@ -1,0 +1,51 @@
+{
+ "facts": {
+  "period": "Q2 2017 (quarter ended July 1, 2017)",
+  "revenue": "$14,763 million GAAP net revenue (vs. prior guidance of $14.4B +/- $500M)",
+  "operating_income": "$3,827 million GAAP (vs. guidance ~$3.6B)",
+  "net_income": "$2,808 million GAAP (up from $1,330 million a year ago)",
+  "eps": "$0.58 diluted GAAP (vs. guidance $0.53); $0.60 basic",
+  "operating_cash_flow": null,
+  "capex": "$2,778 million (additions to property, plant and equipment, Q2 2017)",
+  "free_cash_flow": null,
+  "cash_and_investments": "$25,929 million total cash investments (cash, short-term investments and trading assets)",
+  "total_debt": "$4,130 million short-term debt + $27,855 million long-term debt = ~$31,985 million",
+  "guidance_next": "Q3 2017: revenue $15.7B +/- $500M, GAAP op income ~$4.3B/non-GAAP ~$4.8B, GAAP EPS $0.72/non-GAAP $0.80 +/-5c; FY2017 raised to revenue $61.3B +/- $500M, GAAP EPS $2.66, non-GAAP EPS $3.00 +/-5%, capex unchanged $12.0B +/- $500M"
+ },
+ "results_vs_prior_guidance": 0.7,
+ "guidance_change": 0.6,
+ "fcf_trend": 0.5,
+ "own_stock": 0.6,
+ "market": 0.2,
+ "ai_demand": 0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "reason": "CPU/data-center rivalry as Intel's CCG and DCG show strong growth"
+  },
+  {
+   "company": "MU",
+   "relation": "peer",
+   "reason": "NVM Solutions Group (NAND/Optane) revenue nearly doubled YoY, signaling firmer memory pricing"
+  },
+  {
+   "company": "SNDK",
+   "relation": "peer",
+   "reason": "NAND flash demand/pricing trends in Intel's memory segment mirror SanDisk's market"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "reason": "Data Center Group growth signals continued server/compute demand that NVDA also serves"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "reason": "Foundry start-up business mentioned; capex guidance reflects broader semiconductor capital spending trends"
+  }
+ ],
+ "evidence": "Full-Year 2017 Revenue $61.3 billion ... Earnings per share $3.00 +/- 5% (raised from prior guidance of ~$60B revenue and $2.85 non-GAAP EPS)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

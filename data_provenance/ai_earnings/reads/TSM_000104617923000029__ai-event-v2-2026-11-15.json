@@ -1,0 +1,37 @@
+{
+ "event_type": "monthly revenue",
+ "material": 0.25,
+ "fcf_outlook": -0.15,
+ "uncertainty": 0.2,
+ "own_stock": -0.15,
+ "market": -0.05,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "demand pull-in/out signal for leading-edge nodes"
+  },
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "foundry demand indicator"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "TSM weakness could be relative positive for Intel Foundry"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "foundry demand indicator"
+  }
+ ],
+ "evidence": "revenue for November 2023 was approximately NT$206.03 billion, a decrease of 15.3 percent from October 2023 and a decrease of 7.5 percent from November 2022",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and FY 2025 (quarter and year ended December 31, 2025)",
+  "revenue": "$113.828 billion (Q4), $402.836 billion (FY)",
+  "operating_income": "$35.934 billion (Q4), $129.039 billion (FY)",
+  "net_income": "$34.455 billion (Q4), $132.170 billion (FY)",
+  "eps": "$2.82 diluted (Q4), $10.81 diluted (FY)",
+  "operating_cash_flow": "$52.402 billion (Q4), $164.713 billion (FY)",
+  "capex": "$27.851 billion (Q4), $91.447 billion (FY)",
+  "free_cash_flow": "$24.551 billion (Q4), $73.266 billion (TTM)",
+  "cash_and_investments": "$126.843 billion (cash, cash equivalents and marketable securities)",
+  "total_debt": "$46.547 billion long-term debt (up from $10.883 billion a year earlier)",
+  "guidance_next": "2026 CapEx investments anticipated to be in the range of $175 billion to $185 billion"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.3,
+ "fcf_trend": -0.2,
+ "own_stock": 0.5,
+ "market": 0.4,
+ "ai_demand": 0.8,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "massive AI infrastructure capex implies more chip purchases"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "AI data center buildout drives memory demand"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud growth acceleration intensifies cloud competition"
+  },
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Cloud/AI infrastructure race continues"
+  },
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "custom silicon/TPU manufacturing demand rises with capex"
+  }
+ ],
+ "evidence": "our 2026 CapEx investments are anticipated to be in the range of $175 to $185 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

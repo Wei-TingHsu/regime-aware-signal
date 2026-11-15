@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "1Q14 (quarter ended March 31, 2014)",
+  "revenue": "NT$148.22 billion",
+  "operating_income": "NT$52.46 billion (implied from 35.4% operating margin)",
+  "net_income": "NT$47.87 billion (to shareholders of parent)",
+  "eps": "NT$1.85 (diluted)",
+  "operating_cash_flow": "NT$94.86 billion",
+  "capex": "NT$114.91 billion",
+  "free_cash_flow": "NT$-20.05 billion (stated: Cash from operating activities - Capital expenditures)",
+  "cash_and_investments": "NT$234.95 billion (cash & marketable securities)",
+  "total_debt": "NT$212.62 billion long-term interest-bearing debt",
+  "guidance_next": "2Q14 revenue NT$180-183 billion at NT$30.10/US$1; gross profit margin 47.5%-49.5%; operating profit margin 36.5%-38.5%"
+ },
+ "results_vs_prior_guidance": 0.6,
+ "guidance_change": 0.0,
+ "fcf_trend": -0.3,
+ "own_stock": 0.5,
+ "market": 0.2,
+ "ai_demand": 0.0,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "TSMC advanced node demand benefits fabless customers"
+  },
+  {
+   "company": "INTC",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "TSMC's strong margins highlight foundry competitiveness"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.6,
+   "reason": "Self-referential strong quarter and guidance"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "Reliant on TSMC advanced process capacity"
+  },
+  {
+   "company": "AVGO",
+   "relation": "customer",
+   "direction": 0.1,
+   "reason": "Uses TSMC for leading-edge chip production"
+  }
+ ],
+ "evidence": "Revenue to be between NT$180 billion and NT$183 billion ... Gross profit margin to be between 47.5% and 49.5% ... Operating profit margin to be between 36.5% and 38.5%",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

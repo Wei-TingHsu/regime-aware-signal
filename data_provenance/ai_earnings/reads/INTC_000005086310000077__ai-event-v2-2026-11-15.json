@@ -1,0 +1,23 @@
+{
+ "event_type": "legal or regulatory",
+ "material": 0.35,
+ "fcf_outlook": 0.1,
+ "uncertainty": -0.5,
+ "own_stock": 0.3,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "reason": "IP agreement extension and relief from alleged anticompetitive practices benefits AMD"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "reason": "IP cross-license terms with Intel addressed in settlement"
+  }
+ ],
+ "evidence": "we do not believe that any changes in our business practices to comply with the agreement will be material to our financial position, results, or cash flows",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2021 (three months ended September 30, 2021)",
+  "revenue": "$29.010 billion (up 35% YoY)",
+  "operating_income": "$10.423 billion (36% margin)",
+  "net_income": "$9.194 billion",
+  "eps": "$3.22 diluted",
+  "operating_cash_flow": "$14.091 billion (Q3)",
+  "capex": "$4.54 billion (including finance lease principal payments)",
+  "free_cash_flow": "$9.547 billion (as stated, non-GAAP)",
+  "cash_and_investments": "$58.08 billion cash, cash equivalents and marketable securities",
+  "total_debt": null,
+  "guidance_next": "Q4 2021 total revenue of $31.5B-$34B (reflecting 'significant uncertainty' from iOS 14 and macro/COVID factors, non-ads revenue down YoY on Quest 2 lap); FY2021 total expenses narrowed to $70-71B (from $70-73B); FY2021 capex narrowed to ~$19B (from $19-21B); FY2022 total expenses $91-97B (preliminary); FY2022 capex $29-34B (preliminary); Q4 tax rate high-teens; FY2022 tax rate expected similar to FY2021"
+ },
+ "results_vs_prior_guidance": 0.2,
+ "guidance_change": -0.4,
+ "fcf_trend": 0.5,
+ "own_stock": -0.4,
+ "market": -0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "2022 capex guidance of $29-34B signals rising data center/server/GPU spend"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "higher infrastructure capex implies more compute hardware purchases"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "server/network infrastructure buildout benefits chip suppliers"
+  },
+  {
+   "company": "GOOG",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "shares same iOS 14 ad-targeting headwinds affecting digital ad peers"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "rising industry data-center capex supports cloud infrastructure demand"
+  }
+ ],
+ "evidence": "Our outlook reflects the significant uncertainty we face in the fourth quarter in light of continued headwinds from Apple's iOS 14 changes, and macroeconomic and COVID-related factors.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q4 and full fiscal year 2022 (ended May 31, 2022)",
+  "revenue": "$11.8 billion (Q4), up 5% USD / 10% constant currency; FY22 $42.4 billion, up 5% USD / 7% constant currency",
+  "operating_income": "Q4 GAAP $4,503 million (38% margin); Non-GAAP $5.6 billion (47% margin); FY22 GAAP $10.9 billion (26% margin), Non-GAAP $19.6 billion (46% margin)",
+  "net_income": "Q4 GAAP $3,189 million; FY22 GAAP $6,717 million, Non-GAAP $13.7 billion",
+  "eps": "Q4 GAAP diluted $1.16, Non-GAAP $1.54; FY22 GAAP diluted $2.41, Non-GAAP $4.90",
+  "operating_cash_flow": "$9,539 million (trailing twelve months, FY22)",
+  "capex": "$4,511 million (FY22)",
+  "free_cash_flow": "$5,028 million (trailing 4-quarter, FY22), down from $13,752 million a year earlier",
+  "cash_and_investments": "$21,383 million cash and equivalents plus $519 million marketable securities (May 31, 2022), down from $30,098M + $16,456M a year earlier",
+  "total_debt": "Notes payable current $3,749 million + non-current $72,110 million = approximately $75.9 billion",
+  "guidance_next": "No specific numeric guidance given; qualitative statement from CEO: Oracle finds itself in position to deliver stellar revenue growth over the next several quarters, citing infrastructure cloud entering a hyper-growth phase and the Cerner acquisition."
+ },
+ "results_vs_prior_guidance": 0,
+ "guidance_change": 0,
+ "fcf_trend": -1,
+ "own_stock": 0.3,
+ "market": 0.1,
+ "ai_demand": 0.3,
+ "affected": [
+  {
+   "company": "MSFT",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle IaaS growth signals competitive cloud infrastructure market"
+  },
+  {
+   "company": "AMZN",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Oracle claims hyper-growth in infrastructure cloud, implying share gains vs AWS"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Cloud infrastructure competition highlighted by Oracle's growth"
+  },
+  {
+   "company": "INTC",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "Rising capex and data center buildout implies hardware/chip demand"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Infrastructure cloud hyper-growth implies increased demand for AI/data center compute hardware"
+  }
+ ],
+ "evidence": "We believe that this revenue growth spike indicates that our infrastructure business has now entered a hyper-growth phase.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

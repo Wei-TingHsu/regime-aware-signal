@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 2022 (three months ended September 30, 2022)",
+  "revenue": "$27,714 million, down 4% YoY (up 2% constant currency)",
+  "operating_income": "$5,664 million, down 46% YoY; operating margin 20% vs 36% prior year",
+  "net_income": "$4,395 million, down 52% YoY",
+  "eps": "$1.64 diluted, down 49% YoY",
+  "operating_cash_flow": "$9,691 million (Q3); $35,964 million (nine months)",
+  "capex": "$9,520 million including finance lease principal payments (text states $9.52B); cash flow statement shows $9,375M property/equipment purchases",
+  "free_cash_flow": "approx. $171 million (operating cash flow $9,691M minus capex $9,520M)",
+  "cash_and_investments": "$41,776 million (cash & equivalents $14,308M + marketable securities $27,468M)",
+  "total_debt": "$9,922 million long-term debt (newly issued in Q3 2022)",
+  "guidance_next": "Q4 2022 revenue $30-32.5B (assumes ~7% FX headwind); FY2022 total expenses $85-87B (narrowed from $85-88B); FY2022 capex $32-33B (narrowed from $30-34B); FY2023 total expenses $96-101B; FY2023 capex $34-39B driven by AI capacity; FY2023 headcount roughly flat with Q3 2022 levels; Reality Labs losses to grow significantly in 2023"
+ },
+ "results_vs_prior_guidance": 0.1,
+ "guidance_change": -0.5,
+ "fcf_trend": -0.5,
+ "own_stock": -0.6,
+ "market": -0.2,
+ "ai_demand": 0.5,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.5,
+   "reason": "Meta's 2023 capex surge explicitly tied to AI capacity buildout"
+  },
+  {
+   "company": "AMD",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "beneficiary of data center/AI infrastructure spending increase"
+  },
+  {
+   "company": "GOOG",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "shared digital ad market headwinds and macro pressure"
+  },
+  {
+   "company": "AMZN",
+   "relation": "peer",
+   "direction": -0.2,
+   "reason": "similar cloud/AI capex ramp facing investor scrutiny on margins"
+  },
+  {
+   "company": "MSFT",
+   "relation": "peer",
+   "direction": -0.1,
+   "reason": "comparable large-cap tech facing margin compression amid AI capex increases"
+  }
+ ],
+ "evidence": "We anticipate our full-year 2023 total expenses will be in the range of $96-101 billion... capital expenditures to be in the range of $34-39 billion, driven by our investments in data centers, servers, and network infrastructure",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}
