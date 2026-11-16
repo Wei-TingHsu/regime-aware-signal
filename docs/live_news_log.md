@@ -5,3 +5,4 @@ Each row: a results release, a material company filing or a Fed statement seen l
 | seen (New York) | seen (Singapore) | who | kind | first source | published → seen | seen → scored | score | title |
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-15 08:16:04 | 2026-11-15 21:16:04 | AMD | results (DRILL) | AMD investor page | 1008065 s | 18 s | own stock 0.8, market 0.6, AI demand 0.9, vs prior guidance 0.6, new guidance 0.8, free cash flow 0.3 / revenue $13,377M (GAAP, up 45% YoY, up 16% QoQ); free cash flow None; guidance Q4 2026 revenue ~$17B +/-3% (~66% YoY growth, ~ | AMD Reports Third Quarter 2026 Financial Results |
+| 2026-11-16 06:28:00 | 2026-11-16 19:28:00 | SKHY | event | SEC filings: SKHY | 55 s | 6 s | [routine or administrative] material 0.05, own stock 0.05, uncertainty 0.0, free-cash-flow outlook 0.0 / Subsequent to the end of the reporting period, the Company cancelled 23,693,272 treasury shares on November 5, 2026. | 6-K items n/a |

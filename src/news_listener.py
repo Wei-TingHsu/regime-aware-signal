@@ -35,6 +35,7 @@ FEEDS = [dict(name="PR Newswire: all releases", kind="wire", url="https://www.pr
          dict(name="Federal Reserve: monetary policy press releases", kind="fed", url="https://www.federalreserve.gov/feeds/press_monetary.xml")]
 RX_RESULTS = r"\b(reports?|announces?|posts?|delivers?)\b.*\b(quarter(ly)?|results|earnings)\b"
 RX_NOT = r"\b(to (report|announce|host|release|webcast|present)|sets? (date|conference)|conference call|date for|schedules?|will (report|announce|host)|timing of|investor (day|conference))\b"
+RX_EVENT = r"\$\s?\d[\d.,]*\s?(billion|million)|\b(acquir\w*|acquisition|merger|merge[sd]?|divest\w*|to sell|completes?|definitive agreement|strategic (partnership|collaboration|investment)|multi-?year|invest(s|ment)? (of )?\$|\$\s?\d[\d.,]*\s?(billion|million)|chief executive|\bCEO\b|\bCFO\b|chief financial|appoints?|names? new|resign\w*|retire\w*|steps? down|succession|guidance|outlook|preliminary|offering|notes due|buyback|repurchase|dividend|stock split|restructur\w*|layoffs?|workforce reduction|investigation|settle\w*|lawsuit|export (control|licen[cs]e)|breach|outage|recall)\b"      # a company-feed title that looks like a material event (17 Nov: the acquisition AMD announced on its own page was only logged)
 EVENT_ITEMS = {"1.01", "1.02", "1.03", "1.05", "2.01", "2.03", "2.04", "2.05", "2.06", "3.01", "4.01", "4.02", "5.01", "5.02", "7.01", "8.01"}
 
 
@@ -109,7 +110,8 @@ def classify(src: dict, it: dict):
     if src["kind"] == "fed": return ("FED", "fed") if re.search(r"FOMC statement", it["title"], re.I) else (None, None)
     tk = src.get("ticker") or company_of(it["title"])
     if tk is None: return None, None
-    return tk, ("results" if re.search(RX_RESULTS, it["title"], re.I) and not re.search(RX_NOT, it["title"], re.I) else "other")
+    if re.search(RX_RESULTS, it["title"], re.I) and not re.search(RX_NOT, it["title"], re.I): return tk, "results"
+    return tk, ("event" if re.search(RX_EVENT, it["title"], re.I) and not re.search(RX_NOT, it["title"], re.I) else "other")
 
 
 # ------------------------------------------------------------------------------------------------ scoring (the backtest's readers, unchanged)
@@ -161,11 +163,12 @@ def handle(src: dict, it: dict, tk: str, kind: str, state: dict, drill=False, do
         row.update(kind=kind + " (again)", second_source_after_s=round((now - datetime.fromisoformat(first["seen"])).total_seconds()), first_source=first["source"]); _log(row)
         print(f"   .. {tk} {kind}: also on {src['name']}, {row['second_source_after_s']} s after {first['source']}"); return
     if kind == "other" or not do_score: _log(row); print(f"   .. {tk}: {it['title'][:100]}  [{src['name']}; not a results release, logged only]"); return
-    state["first"][key] = dict(seen=now.isoformat(), source=src["name"]); print("\a" + "=" * 110 + f"\n{'DRILL  ' if drill else ''}{tk}  {kind.upper()}  seen {row['seen_ny']} New York / {row['seen_sg']} Singapore  via {src['name']}" + (f"  ({row['lag_published_s']} s after the source's own time)" if pub else "") + f"\n{it['title'][:160]}")
+    print("\a" + "=" * 110 + f"\n{'DRILL  ' if drill else ''}{tk}  {kind.upper()}  seen {row['seen_ny']} New York / {row['seen_sg']} Singapore  via {src['name']}" + (f"  ({row['lag_published_s']} s after the source's own time)" if pub else "") + f"\n{it['title'][:160]}")
     try:
         text = sec_text(src["cik"], it["accession"], it["primary"]) if src["kind"] == "sec" else text_of(fetch(it["link"]))
         if len(text.split()) < 80: raise ValueError(f"only {len(text.split())} words fetched")
         stem = f"{tk}_{day}_{re.sub(r'[^A-Za-z0-9]+', '', src['name'])[:14]}"; d = score(tk, kind, text, stem, pub or now); row.update(score_s=round((datetime.now(timezone.utc) - now).total_seconds()), words=len(text.split()), read=d, line=_line(d, kind))
+        if d: state["first"][key] = dict(seen=now.isoformat(), source=src["name"])
     except SystemExit: raise
     except Exception as e: row.update(line=f"NOT SCORED: {type(e).__name__}: {str(e)[:120]}")
     print(f"{row['line']}\n(scored {row.get('score_s', '?')} s after it was seen)\n" + "=" * 110); _log(row); _md(row)
