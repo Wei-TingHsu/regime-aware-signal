@@ -1,0 +1,11 @@
+"""register_17nov_live_outcomes.py -- TRACK 3.64: the forward record's rules and cells fixed BEFORE any live outcome exists. Idempotent."""
+from pathlib import Path
+TRACK = """
+### 3.64 Forward record: rules and cells fixed before any live outcome (17 Nov 02:10)
+`src/live_outcomes.py` -> `docs/live_outcomes.md`. First live run of the listener (15-16 Nov, 1,175 passes): stable, recovered by itself after the machine was offline; one SK Hynix 6-K seen 55 s after its stamp and scored 6 s later (routine); an acquisition AMD announced on its own page was only logged -> the listener now also scores material announcements from a company's own feed, and a failed fetch on one source no longer blocks the next source. AMD drill: score ready 18 s after the release was seen; free cash flow missing in the feed page's text (open).
+**The cells, fixed here (no search later).** FA-1: Fed statement, Nasdaq future in the direction of the score, 1 min after the release, hold 60 min (v3e E1c; backtest +30.0 bp, 74% of 101). FA-2: Fed day, gold's own move from the release to 15:15 held to the next 09:30 (v3e-3 d; +40.3 bp, 67% of 132). FA-3: results, own stock in the direction of the market score, 5 min after, hold 30 min (ai-chain F2 best cell; +41.4 bp, 58% of 330). QC-3: results stamped 16:00-16:40, Nasdaq future in the direction of 'results against prior guidance', 5 min after, to the next 09:35 (F1 best cell; +16.7 bp, 61% of 294). CV-1 (customer view, a record and not a registered rule): own stock in the direction of the own-stock score, entered 1 min after the score was ready on this machine, hold 60 min.
+**Clock.** The release = the time the first source states, or our own first sight when it states none or states a later time. The backtests used the SEC stamp for results, so live entries can be EARLIER than the backtest's; the difference is logged per event. **Verdict:** none before 30 trades per rule. Prices: Databento minute bars for the event day and the next, a few cents per event. Next events: NVIDIA results 17 Nov about 16:20 New York; Fed statement 9 Dec 2026.
+"""
+t = Path("docs/TRACK.md"); s = t.read_text()
+if "### 3.64 Forward record: rules and cells fixed" in s: print("  TRACK: 3.64 already present -- skipped")
+else: t.write_text(s.rstrip("\n") + "\n" + TRACK); print("  TRACK: 3.64 appended (forward record registered)")
