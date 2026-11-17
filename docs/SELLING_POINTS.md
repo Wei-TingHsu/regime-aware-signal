@@ -21,6 +21,17 @@ the new guidance, and gives one scored view in seconds: good or bad for the stoc
 > The test was even unfair to us: it used the regulator's time stamp, which is usually a few minutes later than the news wire. So the test entered
 > late and still showed the gain. A user who gets the score at wire time is earlier than our test, and should see at least that much of the move."
 
+
+**Update 17 Nov 2026 — measured from the true release time (W1).** On 217 past results releases of ten companies where the news wire's own time could
+be found, the same trade was entered from both clocks:
+> "Entering 1 minute after the news wire earned +0.86% on average in the next hour. Entering 1 minute after the regulator's stamp earned +0.36% on the
+> same releases. The regulator's stamp came a median 4 minutes after the wire. Fifteen minutes after the release the advantage is gone. The first
+> minutes are where the money is, and the first minutes are what the product gives the user."
+
+Evidence: `docs/wire_rerun.md`, `docs/wire_lag.md` (TRACK 3.66). Limits: about two thirds of the 2018+ releases of ten companies (no wire time for
+NVIDIA or Alphabet); right on 55% of trades either way, so the gain comes from the size of the moves caught, not from being right more often; before
+cost; a description, not a new pass.
+
 **Why that matters to the customer.** The customer does not need to know where the release appears or how to read it. The engine removes the three
 slow steps (find, read, judge) and leaves only the decision.
 
