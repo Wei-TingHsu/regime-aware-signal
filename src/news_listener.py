@@ -87,9 +87,13 @@ def sec_text(cik: str, accession: str, primary: str) -> str:
     try: body = text_of(fetch(base + primary)) if primary else ""
     except Exception: pass
     try:
-        names = [i.get("name", "") for i in json.loads(fetch(base + "index.json"))["directory"]["item"]]
-        for nme in [x for x in names if x != primary and x.lower().endswith((".htm", ".html", ".txt")) and re.search(r"ex-?_?99|press|release|exhibit99", x.lower())][:2]:
-            time.sleep(0.15); body += "\n\n[EXHIBIT]\n" + text_of(fetch(base + nme))
+        items = json.loads(fetch(base + "index.json"))["directory"]["item"]      # 18 Nov: NVIDIA's exhibit files are not named 'ex99' or 'press', so the reader was given the cover page only
+        def size(i):
+            try: return int(i.get("size") or 0)
+            except Exception: return 0
+        docs = [i for i in items if i.get("name", "") != primary and i.get("name", "").lower().endswith((".htm", ".html")) and not re.match(r"(r\d+|.*-index.*|filingsummary)\.html?$", i.get("name", "").lower())]
+        for i in sorted(docs, key=size, reverse=True)[:3]:      # the three largest: the press release and, where filed, the CFO commentary
+            time.sleep(0.15); body += "\n\n[EXHIBIT]\n" + text_of(fetch(base + i["name"]))
     except Exception: pass
     return body
 
@@ -134,8 +138,17 @@ def score(tk: str, kind: str, text: str, stem: str, when: datetime) -> dict | No
     d, _, _ = A._ask2(client, A.SYS2, f"BASELINE: {A._baseline(R, tk, naive)}\n\nEVENT ({tk}, live):\n{A._release_body(str(f), A.CHARS2)}", "LIVE_" + stem, A.PV2); return d
 
 
+def empty_read(d, kind: str) -> bool:
+    """a results read that found no revenue and scored everything 0: the text given to the reader did not contain the release"""
+    if not d: return True
+    if kind != "results": return False
+    nums = [d.get(k) for k in ("own_stock", "market", "ai_demand", "results_vs_prior_guidance", "guidance_change", "fcf_trend")]
+    return (d.get("facts") or {}).get("revenue") in (None, "", "null") and all((x in (None, 0, 0.0, "0")) for x in nums)
+
+
 def _line(d: dict, kind: str) -> str:
     if not d: return "NOT SCORED (the read failed; the text is saved)"
+    if empty_read(d, kind): return "NOT SCORED: the text fetched did not contain the results (no revenue found, every score 0); the next source will be tried"
     if kind == "fed": return f"for stocks {d.get('implication_equities')!s}, for rates {d.get('implication_rates')!s} | {str(d.get('evidence'))[:140]}"
     if kind == "results":
         fx = d.get("facts") or {}; return (f"own stock {d.get('own_stock')!s}, market {d.get('market')!s}, AI demand {d.get('ai_demand')!s}, vs prior guidance {d.get('results_vs_prior_guidance')!s}, new guidance {d.get('guidance_change')!s}, free cash flow {d.get('fcf_trend')!s} | "
@@ -168,7 +181,8 @@ def handle(src: dict, it: dict, tk: str, kind: str, state: dict, drill=False, do
         text = sec_text(src["cik"], it["accession"], it["primary"]) if src["kind"] == "sec" else text_of(fetch(it["link"]))
         if len(text.split()) < 80: raise ValueError(f"only {len(text.split())} words fetched")
         stem = f"{tk}_{day}_{re.sub(r'[^A-Za-z0-9]+', '', src['name'])[:14]}"; d = score(tk, kind, text, stem, pub or now); row.update(score_s=round((datetime.now(timezone.utc) - now).total_seconds()), words=len(text.split()), read=d, line=_line(d, kind))
-        if d: state["first"][key] = dict(seen=now.isoformat(), source=src["name"])
+        if d and not empty_read(d, kind): state["first"][key] = dict(seen=now.isoformat(), source=src["name"])
+        else: row["empty"] = True
     except SystemExit: raise
     except Exception as e: row.update(line=f"NOT SCORED: {type(e).__name__}: {str(e)[:120]}")
     print(f"{row['line']}\n(scored {row.get('score_s', '?')} s after it was seen)\n" + "=" * 110); _log(row); _md(row)
@@ -208,6 +222,27 @@ def cmd_test(ticker: str):
     print("no results release found to drill on -- try another --ticker")
 
 
+def cmd_rescore(ticker: str):
+    """Redo the latest results release of one company from its SEC filing (corrected text fetch). The score is made from the text alone, so the rules
+    that depend only on the release time (FA-3, QC-3) can use it; it is flagged 'rescored' and is NOT a customer-view observation (CV-1)."""
+    src = next((s for s in sources() if s["kind"] == "sec" and s.get("ticker") == ticker), None)
+    if src is None: print(f"{ticker}: not found at the SEC"); return
+    res = [it for it in sec_recent(src["cik"], n=12) if classify(src, it) == (ticker, "results")]
+    if not res: print(f"{ticker}: no results filing among its 12 newest filings"); return
+    it = max(res, key=lambda x: x["published"]); pub = it["published"]; day = pub.astimezone(NY).strftime("%Y%m%d"); text = sec_text(src["cik"], it["accession"], it["primary"]); print(f"{ticker}: filing {it['accession']} stamped {pub.astimezone(NY):%Y-%m-%d %H:%M:%S} New York; {len(text.split())} words fetched")
+    d = score(ticker, "results", text, f"{ticker}_{day}_rescore", pub); first = None
+    if LOG.exists():
+        for x in LOG.read_text().splitlines():
+            try: r = json.loads(x)
+            except Exception: continue
+            if r.get("ticker") == ticker and str(r.get("kind", "")).startswith("results") and not r.get("drill") and str(r.get("seen_ny", ""))[:10].replace("-", "") == day: first = first or r
+    now = datetime.now(timezone.utc); row = dict(ticker=ticker, kind="results", source=src["name"] + " (rescored)", title=it["title"], id=it["id"], published=pub, seen=(first or {}).get("seen", now), seen_ny=(first or {}).get("seen_ny", now.astimezone(NY).strftime("%Y-%m-%d %H:%M:%S")), seen_sg=(first or {}).get("seen_sg", now.astimezone(SG).strftime("%Y-%m-%d %H:%M:%S")),
+               lag_published_s=(first or {}).get("lag_published_s"), drill=False, rescored=True, rescored_at=now, words=len(text.split()), read=d, line=_line(d, "results"))
+    print("=" * 110 + f"\n{ticker}  RESULTS (rescored after the fact)\n{row['line']}\n" + "=" * 110)
+    if d and not empty_read(d, "results"): _log(row); _md(row); print("logged")
+    else: print("still empty -- paste this output to Claude")
+
+
 def cmd_run(minutes: float | None, every: float, max_scores: int):
     S = sources(); LIVE.mkdir(parents=True, exist_ok=True); state = json.loads(SEEN.read_text()) if SEEN.exists() else dict(ids=[], first={}); seen = set(state["ids"]); warm = not seen; t_end = time.time() + minutes * 60 if minutes else None; n = scored = 0
     print(f"listening to {len(S)} sources every {every:.0f} s" + (f" for {minutes:.0f} minutes" if minutes else " until stopped with Ctrl-C") + ". The first pass only memorises what is already published.")
@@ -234,5 +269,5 @@ def cmd_run(minutes: float | None, every: float, max_scores: int):
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["once", "test", "run"]); ap.add_argument("--ticker", default="AMD"); ap.add_argument("--minutes", type=float); ap.add_argument("--poll", type=float, default=30.0); ap.add_argument("--max-scores", type=int, default=40, help="stop scoring after this many reads in one run (cost guard; about 3 US cents each)")
-    a = ap.parse_args(); {"once": cmd_once, "test": lambda: cmd_test(a.ticker), "run": lambda: cmd_run(a.minutes, a.poll, a.max_scores)}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["once", "test", "run", "rescore"]); ap.add_argument("--ticker", default="AMD"); ap.add_argument("--minutes", type=float); ap.add_argument("--poll", type=float, default=30.0); ap.add_argument("--max-scores", type=int, default=40, help="stop scoring after this many reads in one run (cost guard; about 3 US cents each)")
+    a = ap.parse_args(); {"once": cmd_once, "test": lambda: cmd_test(a.ticker), "rescore": lambda: cmd_rescore(a.ticker), "run": lambda: cmd_run(a.minutes, a.poll, a.max_scores)}[a.cmd]()

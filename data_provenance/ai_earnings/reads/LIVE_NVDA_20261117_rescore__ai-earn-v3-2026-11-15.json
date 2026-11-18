@@ -1,0 +1,56 @@
+{
+ "facts": {
+  "period": "Q3 FY27 (quarter ended October 25, 2026)",
+  "revenue": "$115.8 billion (up 103% YoY, up 20% QoQ)",
+  "operating_income": "$77.5 billion GAAP; $77.9 billion non-GAAP",
+  "net_income": "$65.3 billion GAAP; $64.9 billion non-GAAP",
+  "eps": "$2.70 GAAP diluted; $2.68 non-GAAP diluted",
+  "operating_cash_flow": null,
+  "capex": null,
+  "free_cash_flow": null,
+  "cash_and_investments": null,
+  "total_debt": null,
+  "guidance_next": "Q4 FY27 (14-week quarter) revenue expected $130.0 billion, plus or minus 3%, with no China Data Center compute revenue assumed; GAAP and non-GAAP gross margins expected 71.0%-72.0%; GAAP opex ~$11.0 billion, non-GAAP opex ~$10.7 billion; FY27 GAAP/non-GAAP tax rate 16.0%-18.0%"
+ },
+ "results_vs_prior_guidance": 0.9,
+ "guidance_change": 0.3,
+ "fcf_trend": 0.4,
+ "own_stock": 0.7,
+ "market": 0.5,
+ "ai_demand": 0.9,
+ "affected": [
+  {
+   "company": "TSM",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "foundry capacity for Vera Rubin ramp"
+  },
+  {
+   "company": "MU",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "memory demand tied to Rubin/Blackwell systems"
+  },
+  {
+   "company": "AVGO",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "custom XPU/networking competition amid NVIDIA's rack-scale push"
+  },
+  {
+   "company": "MSFT",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "Azure deploying Vera Rubin NVL72 and Vera CPUs"
+  },
+  {
+   "company": "GOOG",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "Google Cloud offering Vera Rubin-powered A5X instances"
+  }
+ ],
+ "evidence": "Revenue is expected to be $130.0 billion, plus or minus 3%.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-earn-v3-2026-11-15"
+}

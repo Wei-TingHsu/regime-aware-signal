@@ -33,11 +33,15 @@ RULES = {"FA-1": "Fed statement score -> Nasdaq future, 1 min after the release,
 
 def events() -> pd.DataFrame:
     if not LOG.exists(): raise SystemExit(f"{LOG} does not exist yet -- the listener has logged nothing")
-    rows = [json.loads(x) for x in LOG.read_text().splitlines() if x.strip()]; E = pd.DataFrame([r for r in rows if r.get("kind") in ("results", "fed") and not r.get("drill") and isinstance(r.get("read"), dict)])
+    rows = [json.loads(x) for x in LOG.read_text().splitlines() if x.strip()]; rows = [r for r in rows if r.get("kind") in ("results", "fed") and not r.get("drill") and isinstance(r.get("read"), dict) and not r.get("empty")]
+    rows = [r for r in rows if not (r["kind"] == "results" and (r["read"].get("facts") or {}).get("revenue") in (None, "", "null") and not any(r["read"].get(k) for k in ("own_stock", "market", "results_vs_prior_guidance")))]      # an empty read is not a score
+    keep = {}
+    for r in rows: keep[(r["ticker"], r["kind"], str(r.get("seen_ny", ""))[:10])] = r      # one row per release: the last valid read (a later 'rescored' row replaces a live one)
+    E = pd.DataFrame(list(keep.values()))
     if E.empty: return E
     for c in ("published", "seen"): E[c] = pd.to_datetime(E[c], utc=True, errors="coerce", format="ISO8601").dt.tz_convert("America/New_York").dt.tz_localize(None)
     E["release"] = E["published"].fillna(E["seen"]); E["release"] = E[["release", "seen"]].min(axis=1)      # a source that states a time later than we saw it is not believed over our own clock
-    E["scored"] = E["seen"] + pd.to_timedelta(pd.to_numeric(E.get("score_s"), errors="coerce").fillna(0), unit="s"); E["date"] = E["release"].dt.normalize()
+    E["scored"] = E["seen"] + pd.to_timedelta(pd.to_numeric(E["score_s"], errors="coerce").fillna(0) if "score_s" in E.columns else 0, unit="s"); E["date"] = E["release"].dt.normalize()
     return E.sort_values("seen").reset_index(drop=True)
 
 
@@ -111,6 +115,7 @@ def cmd_ledger():
         else:
             add(r, "FA-3", r.ticker, d.get("market"), rel + 5, 30, 1199)
             if 960 <= rel <= 1000: add(r, "QC-3", "NQ", d.get("results_vs_prior_guidance"), rel + 5, "open", 1019)
+            if getattr(r, "rescored", False) is True: rows.append(dict(date=str(r.date.date()), who=r.ticker, rule="CV-1", direction="not counted", entry="", gross_bp=np.nan, note="the live read failed; the score was made after the fact, so no user could have acted on it")); continue
             add(r, "CV-1", r.ticker, d.get("own_stock"), sc + 1, 60, 1199, note=f"seen {max(0, round((r.seen - r.release).total_seconds()))} s after the source's time; score ready {round((r.scored - r.seen).total_seconds())} s later")
     T = pd.DataFrame(rows); L = ["# Live outcomes: the forward record of the candidate rules", "", "Each row is one live event seen and scored by `src/news_listener.py`, priced afterwards. The rules and their cells were fixed before any row existed (TRACK 3.64). Returns in bp (1 bp = 0.01%) in the direction of the trade, before cost. None of these is yet a confirmed signal.", ""]
     if T.empty: L.append("No scored results release or Fed statement has been logged yet."); print("no live events to score yet")
