@@ -90,15 +90,22 @@ def cmd_fetch(max_usd: float):
     E = events()
     if E.empty: print("nothing to price yet"); return
     todo = [n for n in needs(E) if not (PX / f"{n[0]}.parquet").exists()]; c = _client(); PX.mkdir(parents=True, exist_ok=True); spent = 0.0; todo = _ready(c, todo)
+    import re, time
     for key, ds, sym, stype, a, b in todo:
-        try:
-            usd = float(c.metadata.get_cost(dataset=ds, symbols=[sym], stype_in=stype, schema="ohlcv-1m", start=a, end=b))
-            if spent + usd > max_usd: print(f"  cap US${max_usd:.2f} reached before {key}; rerun with a higher --max-usd"); break
-            with warnings.catch_warnings():
-                warnings.simplefilter("ignore"); df = c.timeseries.get_range(dataset=ds, symbols=[sym], stype_in=stype, schema="ohlcv-1m", start=a, end=b).to_df()
-            if len(df): df.to_parquet(PX / f"{key}.parquet"); spent += usd; print(f"  {key}: {len(df):,} bars (US${usd:.4f})")
-            else: print(f"  {key}: no bars returned (the vendor publishes a day's data some hours later -- try again tomorrow)")
-        except Exception as e: print(f"  {key}: {type(e).__name__}: {str(e)[:110]}")
+        for attempt in range(4):      # the vendor's server sometimes times out (504), and sometimes holds less than was asked: try again, or ask only up to what it holds
+            try:
+                usd = float(c.metadata.get_cost(dataset=ds, symbols=[sym], stype_in=stype, schema="ohlcv-1m", start=a, end=b))
+                if spent + usd > max_usd: print(f"  cap US${max_usd:.2f} reached before {key}; rerun with a higher --max-usd"); break
+                with warnings.catch_warnings():
+                    warnings.simplefilter("ignore"); df = c.timeseries.get_range(dataset=ds, symbols=[sym], stype_in=stype, schema="ohlcv-1m", start=a, end=b).to_df()
+                if len(df): df.to_parquet(PX / f"{key}.parquet"); spent += usd; print(f"  {key}: {len(df):,} bars (US${usd:.4f})")
+                else: print(f"  {key}: no bars returned (the vendor publishes a day's data some hours later -- try again tomorrow)")
+                break
+            except Exception as e:
+                m = re.search(r"available up to '([^']+)'", str(e))
+                if m: b = pd.Timestamp(m.group(1)).tz_convert("UTC").strftime("%Y-%m-%dT%H:%M:%S"); continue
+                if attempt < 3 and ("504" in str(e) or "timed out" in str(e).lower()): time.sleep(5); continue
+                print(f"  {key}: {type(e).__name__}: {str(e)[:110]}"); break
     print(f"done; about US${spent:.2f} -> {PX} (ignored folder; not uploaded)")
 
 
