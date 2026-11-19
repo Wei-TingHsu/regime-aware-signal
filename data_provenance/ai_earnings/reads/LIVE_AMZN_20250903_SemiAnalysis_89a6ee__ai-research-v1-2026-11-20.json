@@ -1,0 +1,56 @@
+{
+ "report_type": "industry research",
+ "stance": 0.5,
+ "new_information": 0.6,
+ "material": 0.6,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.3,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "Microsoft",
+   "relation": "competitor",
+   "direction": 0.4,
+   "reason": "Azure leads cloud growth via OpenAI anchor deal"
+  },
+  {
+   "company": "Google",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "TPU advantage narrowing gap with AWS, serves Anthropic inference"
+  },
+  {
+   "company": "Anthropic",
+   "relation": "customer",
+   "direction": 0.8,
+   "reason": "AWS anchor customer driving multi-gigawatt Trainium buildout"
+  },
+  {
+   "company": "Nvidia",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Trainium2 displacing GPUs for Anthropic training workloads"
+  },
+  {
+   "company": "OpenAI",
+   "relation": "customer",
+   "direction": 0.0,
+   "reason": "Cited as Azure's anchor customer for comparison"
+  },
+  {
+   "company": "CoreWeave",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Rated higher than AWS in ClusterMAX for GPU cloud quality"
+  }
+ ],
+ "main_claims": [
+  "AWS is building over a gigawatt of datacenter capacity primarily for anchor customer Anthropic, with nearly a million Trainium2 chips in its largest campus.",
+  "SemiAnalysis forecasts AWS revenue growth accelerating above 20% YoY by end of 2025, reversing recent 'cloud crisis' underperformance.",
+  "AWS's custom EFA networking still lags Nvidia InfiniBand and RoCEv2 alternatives, explaining its past weakness versus Azure and Google Cloud in GPU/XPU cloud market share."
+ ],
+ "evidence": "forecasting an upcoming acceleration beyond 20% year-over-year growth by the end of 2025",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

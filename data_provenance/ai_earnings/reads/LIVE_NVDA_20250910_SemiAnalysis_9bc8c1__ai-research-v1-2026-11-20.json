@@ -1,0 +1,56 @@
+{
+ "report_type": "industry research",
+ "stance": 0.8,
+ "new_information": 0.6,
+ "material": 0.4,
+ "fcf_outlook": 0.5,
+ "uncertainty": 0.1,
+ "own_stock": 0.5,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": -0.6,
+   "reason": "must redesign roadmap to match prefill-specialized chip"
+  },
+  {
+   "company": "Broadcom",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "custom ASIC providers fall further behind"
+  },
+  {
+   "company": "SK Hynix",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "less HBM needed per prefill GPU"
+  },
+  {
+   "company": "Samsung Electronics",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "reduced HBM demand for prefill chips"
+  },
+  {
+   "company": "Micron",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "GDDR7 demand rises as HBM substitute"
+  },
+  {
+   "company": "TSMC",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "continued advanced packaging/foundry demand for new SoC"
+  }
+ ],
+ "main_claims": [
+  "Nvidia's new Rubin CPX chip is optimized for compute-heavy prefill inference phase using cheaper GDDR7 memory instead of HBM.",
+  "This widens Nvidia's rack-scale architecture lead over AMD and custom silicon competitors, forcing them to redesign roadmaps.",
+  "Lower memory and packaging costs make Rubin CPX cheaper to produce while improving performance-per-TCO for inference workloads."
+ ],
+ "evidence": "the rack system design gap between Nvidia and its competitors has become canyon-sized",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

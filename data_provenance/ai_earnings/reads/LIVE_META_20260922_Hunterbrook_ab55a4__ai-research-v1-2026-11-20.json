@@ -1,0 +1,38 @@
+{
+ "report_type": "industry research",
+ "stance": 0.2,
+ "new_information": 0.6,
+ "material": 0.1,
+ "fcf_outlook": 0.1,
+ "uncertainty": 0.1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "INOD",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "alleged key data supplier for Meta's Muse"
+  },
+  {
+   "company": "SCALE AI",
+   "relation": "competitor",
+   "direction": -0.1,
+   "reason": "Meta-backed rival training-data supplier"
+  },
+  {
+   "company": "MCOR (Mercor)",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "AI training data unicorn, rising valuation"
+  }
+ ],
+ "main_claims": [
+  "Meta's Muse app success is linked to undisclosed work by data-training supplier Innodata.",
+  "Innodata remains Meta's largest customer despite fears Scale AI investment would displace it.",
+  "Muse reached No.1 on Apple's app store and drove over $100B single-day Meta market cap gain."
+ ],
+ "evidence": "Yesterday alone, Meta stock gained more than $100 billion (with a b!) of market cap.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

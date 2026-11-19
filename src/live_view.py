@@ -35,19 +35,39 @@ def load(now=None) -> dict:
         if seen is None: continue
         rel = min(pub, seen) if pub is not None else seen; kind = str(r.get("kind", "")); d = r.get("read") if isinstance(r.get("read"), dict) else None
         base = dict(ticker=r.get("ticker"), kind=kind, title=str(r.get("title", ""))[:140], source=str(r.get("source", "")), release=rel, seen=seen, lag_s=r.get("lag_published_s"), score_s=r.get("score_s"), drill=bool(r.get("drill")), rescored=bool(r.get("rescored")), read=d, link=r.get("link", ""))
+        base["stale"] = (seen - rel).total_seconds() > 86400      # already more than a day old when first seen: read when a source was first connected, not live news
         if d is None or r.get("empty") or "(again)" in kind or kind == "other": other.append(base); continue
         if kind == "results" and (d.get("facts") or {}).get("revenue") in (None, "", "null") and not any(d.get(k) for k in ("own_stock", "market", "results_vs_prior_guidance")): other.append(base); continue
         scored[(base["ticker"], kind, rel.astimezone(NY).strftime("%Y-%m-%d"), r.get("id") if kind in ("event", "research") else "")] = base      # a rescored row replaces the live one
-    S = sorted(scored.values(), key=lambda b: b["seen"], reverse=True)
+    S = sorted(scored.values(), key=lambda b: b["release"], reverse=True); n_old = sum(b["stale"] for b in S); S = [b for b in S if not b["stale"]]      # newest release first
     for b in S: b["action"] = action(b, now)
     beat = (now - datetime.fromtimestamp(SEEN.stat().st_mtime, timezone.utc)).total_seconds() if SEEN.exists() else None
-    return dict(now=now, scored=S, other=sorted(other, key=lambda b: b["seen"], reverse=True), heartbeat_s=beat, record=record())
+    dup = sum("(again)" in b["kind"] for b in other); alerts = [b for b in S if b["action"]["state"] == "none" and not b["drill"] and (now - b["release"]).total_seconds() < 86400 and (abs(_num((b["read"] or {}).get("own_stock"))) >= 0.3 or _num((b["read"] or {}).get("material")) >= 0.5)]
+    return dict(now=now, scored=S, alerts=alerts, duplicates=dup, old_hidden=n_old, heartbeat_s=beat, record=record())
+
+
+def _num(x) -> float:
+    try: return float(x or 0)
+    except Exception: return 0.0
+
+
+def kind_label(b: dict) -> str:
+    """the plain name of what an item is"""
+    k = b["kind"]
+    if k == "results": return "Financial results"
+    if k == "fed": return "Fed statement"
+    if k == "research": return "Third-party report (unverified)"
+    return "Regulatory filing" if b["source"].startswith("SEC filings") else "Company announcement"
+
+
+def direction(b: dict) -> str:
+    s = _num((b["read"] or {}).get("implication_equities" if b["kind"] == "fed" else "own_stock")); return "positive" if s >= 0.3 else ("negative" if s <= -0.3 else ("slightly positive" if s > 0 else ("slightly negative" if s < 0 else "neutral")))
 
 
 def action(b: dict, now) -> dict:
     """what the rule in force says about one scored item, and whether its window is still open"""
     rule = next((r for r in RULES if r["kind"] == b["kind"]), None)
-    if rule is None or b["drill"]: return dict(rule=None, text=("alert only: a third party's report, claims unverified; no tested rule" if b["kind"] == "research" else "logged only (no rule for this kind of news)") if rule is None else "drill, not a live item", state="none")
+    if rule is None or b["drill"]: return dict(rule=None, text=("alert only: a third party's report, claims unverified; no tested rule" if b["kind"] == "research" else "information only: no tested rule for this kind of news") if rule is None else "test run, not live news", state="none")
     try: s = float((b["read"] or {}).get(rule["score"]) or 0)
     except Exception: s = 0.0
     if abs(s) < rule["threshold"] or s == 0: return dict(rule=rule["id"], text=f"no trade: score {s:+.2f} is under {rule['threshold']}" if rule["threshold"] else "no trade: score is 0", state="none", score=s)
@@ -67,8 +87,8 @@ def table(items: list, tz: str) -> pd.DataFrame:
     Z = ZoneInfo(tz); rows = []
     for b in items:
         d = b["read"] or {}; fx = d.get("facts") or {}
-        rows.append({"Released (New York)": b["release"].astimezone(NY).strftime("%d %b %H:%M:%S"), "Local time": b["release"].astimezone(Z).strftime("%d %b %H:%M"), "Company": b["ticker"], "Type": ("third-party report" if b["kind"] == "research" else b["kind"]) + (" (drill)" if b["drill"] else "") + (" (rescored)" if b["rescored"] else ""),
+        rows.append({"Released (New York)": b["release"].astimezone(NY).strftime("%Y-%m-%d %H:%M:%S"), "Local time": b["release"].astimezone(Z).strftime("%Y-%m-%d %H:%M"), "Company": b["ticker"], "What it is": kind_label(b) + (" — test run" if b["drill"] else "") + (" — scored late" if b["rescored"] else ""), "Reads as": direction(b),
                      "Own stock": d.get("own_stock"), "Market": d.get("market") if b["kind"] != "fed" else d.get("implication_equities"), "AI demand": d.get("ai_demand"), "Vs prior guidance": d.get("results_vs_prior_guidance"), "New guidance": d.get("guidance_change"), "Material": d.get("material"), "Uncertainty": d.get("uncertainty"),
-                     "Rule says": b.get("action", {}).get("text", ""), "Window": b.get("action", {}).get("state", ""), "Revenue": str(fx.get("revenue") or "")[:48], "Guidance": str(fx.get("guidance_next") or "")[:90],
+                     "Suggestion": b.get("action", {}).get("text", ""), "Revenue": str(fx.get("revenue") or "")[:48], "Guidance": str(fx.get("guidance_next") or "")[:90],
                      "Other companies named": ", ".join(f"{x.get('company')} {float(x.get('direction') or 0):+.1f}" for x in (d.get("affected") or []) if isinstance(x, dict))[:80], "Headline": b["title"], "Source": b["source"], "Seen after release (s)": b["lag_s"], "Scored after seen (s)": b["score_s"]})
     return pd.DataFrame(rows)

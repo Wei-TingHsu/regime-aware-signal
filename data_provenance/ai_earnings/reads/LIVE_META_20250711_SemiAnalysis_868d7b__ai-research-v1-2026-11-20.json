@@ -1,0 +1,56 @@
+{
+ "report_type": "industry research",
+ "stance": 0.4,
+ "new_information": 0.7,
+ "material": 0.5,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.5,
+ "own_stock": 0.3,
+ "market": 0.2,
+ "affected": [
+  {
+   "company": "OpenAI",
+   "relation": "competitor",
+   "direction": -0.3,
+   "reason": "Meta closing compute/talent gap"
+  },
+  {
+   "company": "DeepSeek",
+   "relation": "competitor",
+   "direction": 0.2,
+   "reason": "Meta lost open-weight lead to DeepSeek"
+  },
+  {
+   "company": "xAI",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "Meta copying tent/datacenter speed strategy"
+  },
+  {
+   "company": "Arista Networks",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "Networking switches used in Meta's Prometheus cluster"
+  },
+  {
+   "company": "Broadcom",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "ASICs used in Meta's backend network"
+  },
+  {
+   "company": "Siemens Energy",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "Turbines for Meta's on-site gas plants"
+  }
+ ],
+ "main_claims": [
+  "Meta is aggressively increasing capex and building massive AI datacenter clusters (Prometheus, Hyperion) to compete with OpenAI and xAI.",
+  "Meta is offering unprecedented compensation packages (up to $200M+) to poach top AI talent for a new Superintelligence team led personally by Zuckerberg.",
+  "Meta's Llama 4 'Behemoth' model underperformed due to technical issues, causing it to fall behind DeepSeek in open-weight model leadership."
+ ],
+ "evidence": "we forecast a meaningful step up in GenAI investment from Meta in the coming years",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

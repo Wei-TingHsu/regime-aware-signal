@@ -1,0 +1,50 @@
+{
+ "report_type": "industry research",
+ "stance": -0.3,
+ "new_information": 0.8,
+ "material": 0.3,
+ "fcf_outlook": -0.1,
+ "uncertainty": 0.4,
+ "own_stock": -0.2,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "SMIC",
+   "relation": "competitor",
+   "direction": 0.6,
+   "reason": "ramping 7nm capacity to replace TSMC-made Ascend die"
+  },
+  {
+   "company": "Huawei",
+   "relation": "customer",
+   "direction": -0.3,
+   "reason": "received illegally fabricated TSMC die, now shifting to SMIC"
+  },
+  {
+   "company": "Cambricon",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "freed SMIC capacity benefits Cambricon chip production"
+  },
+  {
+   "company": "NVDA",
+   "relation": "competitor",
+   "direction": -0.2,
+   "reason": "Huawei Ascend ramp threatens Nvidia's China AI chip share"
+  },
+  {
+   "company": "ByteDance",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "major buyer of Cambricon chips freed by SMIC capacity shift"
+  }
+ ],
+ "main_claims": [
+  "TSMC previously fabricated over 2.9 million Ascend die for Huawei in violation of U.S. export controls, forming a 'die bank' sustaining 2024-2025 production.",
+  "SMIC's advanced-node capacity is ramping fast enough to replace TSMC as Huawei's primary foundry, with HBM supply becoming the next bottleneck.",
+  "Huawei's true Ascend chip output is far higher than publicly reported figures, potentially reaching millions of units annually."
+ ],
+ "evidence": "This was a violation of export controls and Huawei ended up receiving more than 2.9M Ascend die, which can be used for both 910B and 910C.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

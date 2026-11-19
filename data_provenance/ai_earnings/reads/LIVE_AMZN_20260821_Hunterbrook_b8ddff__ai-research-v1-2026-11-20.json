@@ -1,0 +1,33 @@
+{
+ "report_type": "supply-chain analysis",
+ "stance": 1,
+ "new_information": 0.85,
+ "material": 0.15,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.15,
+ "market": 0.05,
+ "affected": [
+  {
+   "company": "MOD",
+   "relation": "supplier",
+   "direction": 1,
+   "reason": "Alleged leaked data shows large Google/AWS cooling order backlog"
+  },
+  {
+   "company": "GOOGL",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "Named as major chiller buyer for data centers via gCUB program"
+  }
+ ],
+ "main_claims": [
+  "Leaked internal Modine data allegedly shows ~$8.16B gross demand from Google for chillers tied to gCUB data center cooling architecture",
+  "Separate leaked data shows ~$12.38B estimated demand from Amazon/AWS mostly for air handlers through 2033",
+  "Probability-weighted estimates suggest ~$6B (Google) and ~$5.6B (Amazon) in likely converting demand, implying heavy hyperscaler capex on data center cooling"
+ ],
+ "fcf_outlook_reasoning": "",
+ "evidence": "the databases uploaded to GitHub estimate potential demand from Amazon Web Services for Modine\u2019s cooling products stretching out to 2033... Roughly $12.38 billion",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

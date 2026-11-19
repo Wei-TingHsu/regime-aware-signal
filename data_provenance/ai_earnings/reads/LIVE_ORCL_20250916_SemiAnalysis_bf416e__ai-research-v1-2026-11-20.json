@@ -1,0 +1,56 @@
+{
+ "report_type": "industry research",
+ "stance": 0.3,
+ "new_information": 0.8,
+ "material": 0.15,
+ "fcf_outlook": 0,
+ "uncertainty": 0.2,
+ "own_stock": 0.1,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "xAI",
+   "relation": "customer",
+   "direction": 0.6,
+   "reason": "building gigawatt Colossus 2 cluster, potential Oracle customer/competitor for compute"
+  },
+  {
+   "company": "Solaris Energy Infrastructure (SEI)",
+   "relation": "supplier",
+   "direction": 0.6,
+   "reason": "supplies gas turbines to xAI, large backlog exposure"
+  },
+  {
+   "company": "NVDA",
+   "relation": "supplier",
+   "direction": 0.3,
+   "reason": "GPU allocations driving xAI buildout"
+  },
+  {
+   "company": "OpenAI",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "competing gigawatt-scale cluster buildout"
+  },
+  {
+   "company": "Meta",
+   "relation": "competitor",
+   "direction": 0,
+   "reason": "competing gigawatt-scale cluster buildout"
+  },
+  {
+   "company": "Tesla",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "supplies Megapacks, Musk-affiliated capital/infra links"
+  }
+ ],
+ "main_claims": [
+  "xAI's Colossus 2 is scaling from 200MW to over 1GW using on-site gas turbines in Mississippi via a JV with Solaris Energy.",
+  "xAI's compute buildout pace could soon exceed Meta Superintelligence and Anthropic, rivaling Oracle-linked GPU deployments.",
+  "xAI's funding needs for Colossus 2 are large relative to its minimal external revenue, raising capital-raising dependence including possible Middle East investment."
+ ],
+ "evidence": "xAI is positioned to leapfrog most rivals again on compute... total datacenter capacity for a single training cluster will surpass Meta Superintelligence and Anthropic by Q3 2025",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

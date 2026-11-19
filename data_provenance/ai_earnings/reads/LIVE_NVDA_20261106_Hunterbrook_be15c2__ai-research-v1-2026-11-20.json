@@ -1,0 +1,26 @@
+{
+ "report_type": "industry research",
+ "stance": -0.3,
+ "new_information": 0.2,
+ "material": 0.5,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.6,
+ "own_stock": -0.3,
+ "market": -0.4,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "peer",
+   "direction": 0.3,
+   "reason": "grouped with Nvidia as driver of S&P earnings growth"
+  }
+ ],
+ "main_claims": [
+  "Nvidia and Micron account for 34% of expected S&P 500 earnings growth, concentrating market risk",
+  "Nvidia's $235B buyback authorization is a key support for its stock price",
+  "Whether AI boom continues or falters is the central uncertainty for markets"
+ ],
+ "evidence": "if Nvidia were to falter, the market would likely crash",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

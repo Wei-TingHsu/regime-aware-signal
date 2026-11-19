@@ -1,0 +1,56 @@
+{
+ "report_type": "industry research",
+ "stance": 0.05,
+ "new_information": 0.5,
+ "material": 0.15,
+ "fcf_outlook": 0.0,
+ "uncertainty": 0.1,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "TSMC",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "eDRAM/BEOL innovation highlighted favorably"
+  },
+  {
+   "company": "SK Hynix",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "DRAM scaling roadmap discussed"
+  },
+  {
+   "company": "Micron",
+   "relation": "peer",
+   "direction": 0.1,
+   "reason": "DRAM density comparison reference"
+  },
+  {
+   "company": "Synopsys",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "digital twin/EDA tools highlighted"
+  },
+  {
+   "company": "Lam Research",
+   "relation": "supplier",
+   "direction": 0.2,
+   "reason": "digital twin fab tools highlighted"
+  },
+  {
+   "company": "GlobalFoundries",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "eDRAM historical reference"
+  }
+ ],
+ "main_claims": [
+  "VLSI conference roundup covers advanced logic, DRAM scaling, and digital twin technologies across the industry.",
+  "Intel's 18A process is discussed and compared to TSMC's process technology and backside power adoption.",
+  "TSMC demonstrated early-stage BEOL-embedded DRAM technology with potential future cache density benefits."
+ ],
+ "evidence": "We'll discuss Intel's 18A process and compare with TSMC, where backside power will be adopted (and where it won't)",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

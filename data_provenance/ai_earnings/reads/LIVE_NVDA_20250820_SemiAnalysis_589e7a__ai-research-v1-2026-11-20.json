@@ -1,0 +1,38 @@
+{
+ "report_type": "product or supply-chain analysis",
+ "stance": -0.2,
+ "new_information": 0.7,
+ "material": 0.4,
+ "fcf_outlook": -0.2,
+ "uncertainty": 0.4,
+ "own_stock": -0.2,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "GOOGL",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "TPUs cited as currently viable for frontier training"
+  },
+  {
+   "company": "AMD",
+   "relation": "competitor",
+   "direction": 0.1,
+   "reason": "implied alternative GPU vendor in benchmarking scope"
+  },
+  {
+   "company": "Hyperscalers/Neoclouds",
+   "relation": "customer",
+   "direction": -0.1,
+   "reason": "face higher TCO and reliability issues deploying GB200"
+  }
+ ],
+ "main_claims": [
+  "No large-scale frontier training runs have yet been completed on GB200 NVL72 due to reliability and software immaturity.",
+  "GB200 NVL72 total cost of ownership is about 1.6x that of H100, requiring proportional performance gains to break even.",
+  "Software and reliability are expected to improve significantly by year-end, closing the performance-per-TCO gap."
+ ],
+ "evidence": "Currently there are no large-scale training runs done yet on GB200 NVL72 as software continues to mature and reliability challenges are worked through.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

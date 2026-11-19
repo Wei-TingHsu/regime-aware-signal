@@ -1,0 +1,56 @@
+{
+ "report_type": "industry research",
+ "stance": 0.3,
+ "new_information": 0.5,
+ "material": 0.2,
+ "fcf_outlook": 0.2,
+ "uncertainty": 0.1,
+ "own_stock": 0.2,
+ "market": 0.1,
+ "affected": [
+  {
+   "company": "SK Hynix",
+   "relation": "supplier",
+   "direction": 0.4,
+   "reason": "leading HBM supplier via MR-MUF process"
+  },
+  {
+   "company": "Samsung",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "questioned future viability as HBM supplier"
+  },
+  {
+   "company": "Micron",
+   "relation": "supplier",
+   "direction": 0.1,
+   "reason": "uses NCF underfill, lower thermal performance"
+  },
+  {
+   "company": "Broadcom",
+   "relation": "competitor",
+   "direction": 0.3,
+   "reason": "TPU/MTIA volumes increase HBM demand share"
+  },
+  {
+   "company": "Amazon",
+   "relation": "customer",
+   "direction": 0.3,
+   "reason": "emerging top HBM customer via direct procurement"
+  },
+  {
+   "company": "OpenAI",
+   "relation": "customer",
+   "direction": 0.2,
+   "reason": "custom accelerator HBM demand growth"
+  }
+ ],
+ "main_claims": [
+  "Nvidia will retain the largest share of HBM bit demand through 2027, led by its Rubin Ultra roadmap pushing per-GPU capacity to 1TB.",
+  "Custom ASIC players like Broadcom, Amazon, and OpenAI are increasing HBM demand but remain smaller than Nvidia's share.",
+  "HBM manufacturing faces front-end TSV yield and packaging challenges, with SK Hynix's MR-MUF process offering advantages over Samsung and Micron's NCF approach."
+ ],
+ "evidence": "Nvidia will still command the lion\u2019s share of HBM demand in 2027, driven by its aggressive roadmap, where Rubin Ultra alone pushes per GPU capacity to 1 TB.",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

@@ -136,7 +136,7 @@ def classify(src: dict, it: dict):
     """-> (ticker or 'FED', kind) with kind in results | event | fed | other; or (None, None) when the item is not about the list"""
     if src["kind"] == "sec":
         items = {x.strip() for x in it["items"].split(",")}
-        if it["form"] == "8-K": return src["ticker"], ("results" if "2.02" in items else ("event" if items & EVENT_ITEMS else "other"))
+        if it["form"] == "8-K": return src["ticker"], ("results" if "2.02" in items else "event")
         return (src["ticker"], "event") if it["form"] == "6-K" else (None, None)
     if src["kind"] == "research":
         tk = companies_in(it["title"]) or companies_in(it.get("summary", "")[:1500]); it["companies"] = tk; return (tk[0], "research") if tk else (None, None)
@@ -144,7 +144,7 @@ def classify(src: dict, it: dict):
     tk = src.get("ticker") or company_of(it["title"])
     if tk is None: return None, None
     if re.search(RX_RESULTS, it["title"], re.I) and not re.search(RX_NOT, it["title"], re.I): return tk, "results"
-    return tk, ("event" if re.search(RX_EVENT, it["title"], re.I) and not re.search(RX_NOT, it["title"], re.I) else "other")
+    return tk, "event"      # 20 Nov, founder: every item about a listed company is scored; routine ones come back with 'material' near 0
 
 
 # ------------------------------------------------------------------------------------------------ scoring (the backtest's readers, unchanged)
@@ -207,7 +207,7 @@ def handle(src: dict, it: dict, tk: str, kind: str, state: dict, drill=False, do
     if first and not drill:      # the same release from a second source: record how much later it came, do not score twice
         row.update(kind=kind + " (again)", second_source_after_s=round((now - datetime.fromisoformat(first["seen"])).total_seconds()), first_source=first["source"]); _log(row)
         print(f"   .. {tk} {kind}: also on {src['name']}, {row['second_source_after_s']} s after {first['source']}"); return
-    if kind == "other" or not do_score: _log(row); print(f"   .. {tk}: {it['title'][:100]}  [{src['name']}; not a results release, logged only]"); return
+    if not do_score: row["not_scored"] = "today's scoring budget is used up"; _log(row); print(f"   .. {tk}: {it['title'][:100]}  [{src['name']}; NOT scored: today's budget of scores is used up -- raise --max-scores]"); return
     print("\a" + "=" * 110 + f"\n{'DRILL  ' if drill else ''}{tk}  {kind.upper()}  seen {row['seen_ny']} New York / {row['seen_sg']} Singapore  via {src['name']}" + (f"  ({row['lag_published_s']} s after the source's own time)" if pub else "") + f"\n{it['title'][:160]}")
     try:
         if src["kind"] == "research":
@@ -299,30 +299,36 @@ def cmd_rescore(ticker: str):
 
 
 def cmd_run(minutes: float | None, every: float, max_scores: int):
-    S = sources(); LIVE.mkdir(parents=True, exist_ok=True); state = json.loads(SEEN.read_text()) if SEEN.exists() else dict(ids=[], first={}); seen = set(state["ids"]); warm = not seen; t_end = time.time() + minutes * 60 if minutes else None; n = scored = 0
-    print(f"listening to {len(S)} sources every {every:.0f} s" + (f" for {minutes:.0f} minutes" if minutes else " until stopped with Ctrl-C") + ". The first pass only memorises what is already published.")
+    S = sources(); LIVE.mkdir(parents=True, exist_ok=True); state = json.loads(SEEN.read_text()) if SEEN.exists() else dict(ids=[], first={}); seen = set(state["ids"]); t_end = time.time() + minutes * 60 if minutes else None; n = 0
+    known = set(state.get("warmed") or ({x.split("|")[0] for x in seen})); budget = state.get("budget") or {}      # sources already memorised once; scores used per New York day
+    print(f"listening to {len(S)} sources every {every:.0f} s" + (f" for {minutes:.0f} minutes" if minutes else " until stopped with Ctrl-C") + f". A source connected for the first time is only memorised; items older than a day are never scored. Budget: {max_scores} scores a day.")
     try:
         while t_end is None or time.time() < t_end:
-            t0 = time.time(); bad = []
+            t0 = time.time(); bad = []; now = datetime.now(timezone.utc); day = now.astimezone(NY).strftime("%Y-%m-%d")
             for src in S:
                 try: items = poll(src)
                 except SystemExit: raise
                 except Exception: bad.append(src["name"]); continue
+                first_time = src["name"] not in known; old = 0
                 for it in items:
                     uid = f"{src['name']}|{it['id']}"
                     if uid in seen: continue
                     seen.add(uid)
-                    if warm: continue
+                    if first_time: continue
+                    if it.get("published") and (now - it["published"]).total_seconds() > 86400: old += 1; continue      # already old when first seen: not news
                     tk, kind = classify(src, it)
-                    if tk: handle(src, it, tk, kind, state, do_score=scored < max_scores); scored += kind in ("results", "event", "fed", "research")
+                    if tk:
+                        used = int(budget.get(day, 0)); handle(src, it, tk, kind, state, do_score=used < max_scores); budget = {day: used + 1}
+                if first_time: known.add(src["name"]); print(f"   .. {src['name']}: connected for the first time; {len(items)} existing items memorised, none scored")
+                elif old: print(f"   .. {src['name']}: {old} item(s) older than a day skipped")
                 if src["kind"] == "sec": time.sleep(0.12)
-            warm = False; n += 1; state["ids"] = sorted(seen)[-20000:]; SEEN.write_text(json.dumps(state))
-            if n == 1 or n % 20 == 0: print(f"  {datetime.now(NY):%H:%M:%S} New York / {datetime.now(SG):%H:%M:%S} Singapore: pass {n}, {len(S) - len(bad)} of {len(S)} sources answered" + (f"; silent: {', '.join(bad)[:120]}" if bad else ""))
+            n += 1; state["ids"] = sorted(seen)[-20000:]; state["warmed"] = sorted(known); state["budget"] = budget; SEEN.write_text(json.dumps(state))
+            if n == 1 or n % 20 == 0: print(f"  {datetime.now(NY):%H:%M:%S} New York / {datetime.now(SG):%H:%M:%S} Singapore: pass {n}, {len(S) - len(bad)} of {len(S)} sources answered" + (f"; silent: {', '.join(bad)[:120]}" if bad else "") + f"; scores used today: {int(budget.get(day, 0))} of {max_scores}")
             time.sleep(max(1.0, every - (time.time() - t0)))
     except KeyboardInterrupt: print("\nstopped by you")
     print(f"{n} passes. Log: {LOG} and {MD}")
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["once", "test", "run", "rescore", "research"]); ap.add_argument("--ticker", default="AMD"); ap.add_argument("--minutes", type=float); ap.add_argument("--poll", type=float, default=30.0); ap.add_argument("--max-scores", type=int, default=40, help="stop scoring after this many reads in one run (cost guard; about 3 US cents each)")
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["once", "test", "run", "rescore", "research"]); ap.add_argument("--ticker", default="AMD"); ap.add_argument("--minutes", type=float); ap.add_argument("--poll", type=float, default=30.0); ap.add_argument("--max-scores", type=int, default=150, help="scores allowed per New York day (cost guard; about 1 to 3 US cents each)")
     a = ap.parse_args(); {"once": cmd_once, "test": lambda: cmd_test(a.ticker), "rescore": lambda: cmd_rescore(a.ticker), "research": lambda: cmd_research(a.ticker), "run": lambda: cmd_run(a.minutes, a.poll, a.max_scores)}[a.cmd]()
