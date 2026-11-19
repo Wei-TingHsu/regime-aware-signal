@@ -13,6 +13,8 @@ from src import live_view as V
 REFRESH_S = 30
 st.set_page_config(page_title="Event signals", page_icon="◐", layout="wide", initial_sidebar_state="collapsed")
 st.markdown("<style>.sig{padding:14px 18px;border-radius:12px;border:1px solid rgba(20,23,31,.12);margin:6px 0 10px 0}.open{background:#EAF6EF;border-color:#178A4C}.wait{background:#FFF7E6;border-color:#B7791F}.shut{background:#F4F5F7}.big{font-size:1.25rem;font-weight:700}.mut{color:#5F6672;font-size:.86rem}</style>", unsafe_allow_html=True)
+try: st.page_link("app.py", label="← Main page")
+except Exception: pass
 st.title("Event signals"); tz = st.selectbox("Local time zone", ["Asia/Singapore", "Asia/Taipei", "America/New_York", "Europe/London"], index=0, key="tz")
 
 

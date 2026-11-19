@@ -16,8 +16,8 @@ live outcome exists (TRACK 3.64); nothing is searched.
 Clocks. Backtests used the release time (Fed) or the SEC stamp (results). Live, "the release" = the time the first source states, or, when it states
 none, the time this machine first saw the item. CV-1 always uses the time the score was ready.
 
-    python -m src.live_outcomes plan                 # which days and symbols are needed, and Databento's quoted price. Downloads nothing.
-    python -m src.live_outcomes fetch --max-usd 2    # downloads those minute bars (ignored folder; not uploaded)
+    python -m src.live_outcomes plan                 # which days and symbols are needed. Downloads nothing.
+    python -m src.live_outcomes fetch                # free 1-minute bars from Yahoo (no paid data since 20 Nov 2026; run within a few days of the event)
     python -m src.live_outcomes ledger               # -> docs/live_outcomes.md, data_provenance/live/outcomes.csv
 """
 from __future__ import annotations
@@ -72,41 +72,32 @@ def _ready(c, todo):
     return out
 
 
+YAHOO = {"NQ": "NQ=F", "ES": "ES=F", "GC": "GC=F"}      # founder, 20 Nov: no more Databento spending. Prices for the forward record now come from Yahoo's free 1-minute bars.
+
+
 def cmd_plan():
-    from src.intraday_fetch import _client
     E = events()
     if E.empty: print("no scored results release or Fed statement in the live log yet -- nothing to price"); return
-    N = needs(E); todo = [n for n in N if not (PX / f"{n[0]}.parquet").exists()]; c = _client(); total = 0.0; todo = _ready(c, todo)
-    for key, ds, sym, stype, a, b in todo:
-        try: usd = float(c.metadata.get_cost(dataset=ds, symbols=[sym], stype_in=stype, schema="ohlcv-1m", start=a, end=b))
-        except Exception as e: print(f"  {key}: quote failed: {type(e).__name__}: {str(e)[:90]}"); continue
-        total += usd; print(f"  {key}: {ds} {sym} {a} -> {b}: US${usd:.4f}")
-    print(f"{len(E)} live events; {len(N)} price files needed, {len(todo)} ready to download; quoted US${total:.2f}. Nothing was downloaded.")
+    N = needs(E); todo = [n for n in N if not (PX / f"{n[0]}.parquet").exists()]
+    for key, *_ in todo: print(f"  {key}: to download from Yahoo (free)")
+    print(f"{len(E)} live events; {len(N)} price files needed, {len(todo)} to download. Cost: none. Yahoo keeps 1-minute bars for about a week, so price each event within a few days.")
 
 
-def cmd_fetch(max_usd: float):
-    from src.intraday_fetch import _client
-    import warnings
+def cmd_fetch(max_usd: float = 0.0):
+    """free 1-minute bars from Yahoo, regular and extended hours; saved in the same shape as before. No paid data is requested."""
+    import yfinance as yf
     E = events()
     if E.empty: print("nothing to price yet"); return
-    todo = [n for n in needs(E) if not (PX / f"{n[0]}.parquet").exists()]; c = _client(); PX.mkdir(parents=True, exist_ok=True); spent = 0.0; todo = _ready(c, todo)
-    import re, time
-    for key, ds, sym, stype, a, b in todo:
-        for attempt in range(4):      # the vendor's server sometimes times out (504), and sometimes holds less than was asked: try again, or ask only up to what it holds
-            try:
-                usd = float(c.metadata.get_cost(dataset=ds, symbols=[sym], stype_in=stype, schema="ohlcv-1m", start=a, end=b))
-                if spent + usd > max_usd: print(f"  cap US${max_usd:.2f} reached before {key}; rerun with a higher --max-usd"); break
-                with warnings.catch_warnings():
-                    warnings.simplefilter("ignore"); df = c.timeseries.get_range(dataset=ds, symbols=[sym], stype_in=stype, schema="ohlcv-1m", start=a, end=b).to_df()
-                if len(df): df.to_parquet(PX / f"{key}.parquet"); spent += usd; print(f"  {key}: {len(df):,} bars (US${usd:.4f})")
-                else: print(f"  {key}: no bars returned (the vendor publishes a day's data some hours later -- try again tomorrow)")
-                break
-            except Exception as e:
-                m = re.search(r"available up to '([^']+)'", str(e))
-                if m: b = pd.Timestamp(m.group(1)).tz_convert("UTC").strftime("%Y-%m-%dT%H:%M:%S"); continue
-                if attempt < 3 and ("504" in str(e) or "timed out" in str(e).lower()): time.sleep(5); continue
-                print(f"  {key}: {type(e).__name__}: {str(e)[:110]}"); break
-    print(f"done; about US${spent:.2f} -> {PX} (ignored folder; not uploaded)")
+    todo = [n for n in needs(E) if not (PX / f"{n[0]}.parquet").exists()]; PX.mkdir(parents=True, exist_ok=True)
+    for key, _ds, _sym, _stype, a, _b in todo:
+        short = key.split("_")[0]; ysym = YAHOO.get(short, short); end = min(pd.Timestamp(a) + pd.Timedelta(days=4), pd.Timestamp.now().normalize() + pd.Timedelta(days=1))
+        try:
+            df = yf.download(ysym, start=a, end=end.strftime("%Y-%m-%d"), interval="1m", prepost=True, progress=False, auto_adjust=False)
+            if df is None or not len(df): print(f"  {key}: Yahoo returned no 1-minute bars (it keeps them about a week; this event may be too old)"); continue
+            c = df["Close"]; c = c.iloc[:, 0] if isinstance(c, pd.DataFrame) else c; ix = pd.DatetimeIndex(c.index); ix = ix.tz_localize("America/New_York") if ix.tz is None else ix
+            out = pd.DataFrame(dict(close=c.to_numpy(float)), index=pd.DatetimeIndex(ix.tz_convert("UTC"), name="ts_event")).dropna(); out.to_parquet(PX / f"{key}.parquet"); print(f"  {key}: {len(out):,} one-minute bars from Yahoo ({ysym}), {out.index.min():%Y-%m-%d %H:%M} -> {out.index.max():%Y-%m-%d %H:%M} UTC")
+        except Exception as e: print(f"  {key}: {type(e).__name__}: {str(e)[:110]}")
+    print(f"done; no cost -> {PX}")
 
 
 def book() -> Book:

@@ -561,6 +561,8 @@ def documents_view(R: dict, day: str):
 # ==========================================================================
 st.markdown('<div class="rs-wordmark">◐ Regime-Aware Signal <span>a daily read on five core markets — '
             'and, more often than not, an explicit refusal to call it</span></div>', unsafe_allow_html=True)
+try: st.page_link("pages/Event_signals.py", label="Event signals: live company news, scores and rule windows →")      # 20 Nov: the header (and its page menu) is hidden by the style sheet
+except Exception: pass
 tabs = st.tabs(["Today", "Look up an asset", "The record", "How this works", "Reading this page"])
 try:
     focus_param = st.query_params.get("focus")

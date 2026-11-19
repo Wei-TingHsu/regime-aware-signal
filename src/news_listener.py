@@ -33,6 +33,27 @@ FEEDS = [dict(name="PR Newswire: all releases", kind="wire", url="https://www.pr
          dict(name="Meta investor page", kind="company", ticker="META", url="https://investor.atmeta.com/rss/pressrelease.aspx"),
          dict(name="SK Hynix newsroom", kind="company", ticker="SKHY", url="https://news.skhynix.com/feed/"),
          dict(name="Federal Reserve: monetary policy press releases", kind="fed", url="https://www.federalreserve.gov/feeds/press_monetary.xml")]
+RESEARCH = [      # founder, 20 Nov: research publishers and funds that publish their reports. THIRD PARTIES: their claims are theirs, they may hold a position.
+    dict(name="Hunterbrook", kind="research", position="publishes investigations and may trade on them (long or short)", urls=["https://newsletter.hntrbrk.com/feed", "https://hntrbrk.com/feed/", "https://hntrbrk.com/rss.xml"]),
+    dict(name="SemiAnalysis", kind="research", position="independent semiconductor and AI research; sells research", urls=["https://semianalysis.com/feed/", "https://newsletter.semianalysis.com/feed", "https://www.semianalysis.com/feed"]),
+]      # the addresses are candidates; the first that answers is used (see `once`)
+PV_R = "ai-research-v1-2026-11-20"
+SYS_R = """You are given (1) a BASELINE: a listed company's most recent reported financials and guidance, and (2) a REPORT about that company published by
+a THIRD PARTY: a research firm, or an investor that may hold a position in the stock (for example a short seller). The claims are the publisher's own
+and are NOT verified. Do not judge whether they are true. Score what the report means for the share price IF investors take it seriously, relative to
+the baseline, and how specific and checkable it is. Judge from the two texts only; do not use anything you know about how markets reacted.
+Return STRICT JSON, no preamble:
+{"report_type": one of "short report", "long thesis", "industry research", "product or supply-chain analysis", "other",
+ "stance": -1..+1 (the publisher's stance on the company: -1 = strongly negative),
+ "new_information": 0..1 (how much is specific, checkable new information -- figures, documents, named sources -- rather than opinion),
+ "material": 0..1 (how much this would matter against the size of the baseline if true),
+ "fcf_outlook": -1..+1 (change in expected future free cash flow if the claims hold),
+ "uncertainty": -1..+1 (+1 = makes future cash flows, guidance or governance clearly less predictable),
+ "own_stock": -1..+1 (what the report means for the company's share price over the next few sessions if taken seriously),
+ "market": -1..+1 (for large US technology shares as a group; 0 if it concerns only this company),
+ "affected": [up to six OTHER companies named or implicated; each {"company": ticker or name, "relation": "competitor" | "supplier" | "customer" | "peer", "direction": -1..+1, "reason": a few words}],
+ "main_claims": [up to three short sentences stating the report's main claims in neutral words],
+ "evidence": one quoted clause that best supports own_stock}"""
 RX_RESULTS = r"\b(reports?|announces?|posts?|delivers?)\b.*\b(quarter(ly)?|results|earnings)\b"
 RX_NOT = r"\b(to (report|announce|host|release|webcast|present)|sets? (date|conference)|conference call|date for|schedules?|will (report|announce|host)|timing of|investor (day|conference))\b"
 RX_EVENT = r"\$\s?\d[\d.,]*\s?(billion|million)|\b(acquir\w*|acquisition|merger|merge[sd]?|divest\w*|to sell|completes?|definitive agreement|strategic (partnership|collaboration|investment)|multi-?year|invest(s|ment)? (of )?\$|\$\s?\d[\d.,]*\s?(billion|million)|chief executive|\bCEO\b|\bCFO\b|chief financial|appoints?|names? new|resign\w*|retire\w*|steps? down|succession|guidance|outlook|preliminary|offering|notes due|buyback|repurchase|dividend|stock split|restructur\w*|layoffs?|workforce reduction|investigation|settle\w*|lawsuit|export (control|licen[cs]e)|breach|outage|recall)\b"      # a company-feed title that looks like a material event (17 Nov: the acquisition AMD announced on its own page was only logged)
@@ -61,7 +82,8 @@ def feed_items(body: bytes) -> list:
         for c in it:
             k = strip(c.tag); d[k] = (c.text or "").strip() or c.attrib.get("href", "") or d.get(k, "")
         link = d.get("link") or d.get("guid") or d.get("id") or ""; raw = d.get("pubDate") or d.get("updated") or d.get("published") or d.get("date") or ""
-        out.append(dict(id=d.get("guid") or d.get("id") or link or d.get("title", ""), title=re.sub(r"\s+", " ", d.get("title", "")), link=link, published=_when(raw)))
+        summary = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", d.get("encoded") or d.get("description") or d.get("summary") or d.get("content") or ""))
+        out.append(dict(id=d.get("guid") or d.get("id") or link or d.get("title", ""), title=re.sub(r"\s+", " ", d.get("title", "")), link=link, published=_when(raw), summary=summary))
     return out
 
 
@@ -105,12 +127,19 @@ def company_of(title: str):
     return None
 
 
+def companies_in(text: str) -> list:
+    """every listed company whose name appears anywhere in the text (a third party writes ABOUT a company; the name need not come first)"""
+    return [t for t, names in NAMES.items() if any(re.search(rf"(?<![A-Za-z0-9]){re.escape(n)}(?![A-Za-z0-9])", text, re.I if len(n) >= 6 else 0) for n in names)]      # long names in any letter case; short ones (AMD, Meta, Intel) exactly as written
+
+
 def classify(src: dict, it: dict):
     """-> (ticker or 'FED', kind) with kind in results | event | fed | other; or (None, None) when the item is not about the list"""
     if src["kind"] == "sec":
         items = {x.strip() for x in it["items"].split(",")}
         if it["form"] == "8-K": return src["ticker"], ("results" if "2.02" in items else ("event" if items & EVENT_ITEMS else "other"))
         return (src["ticker"], "event") if it["form"] == "6-K" else (None, None)
+    if src["kind"] == "research":
+        tk = companies_in(it["title"]) or companies_in(it.get("summary", "")[:1500]); it["companies"] = tk; return (tk[0], "research") if tk else (None, None)
     if src["kind"] == "fed": return ("FED", "fed") if re.search(r"FOMC statement", it["title"], re.I) else (None, None)
     tk = src.get("ticker") or company_of(it["title"])
     if tk is None: return None, None
@@ -135,6 +164,8 @@ def score(tk: str, kind: str, text: str, stem: str, when: datetime) -> dict | No
             d0 = A._read1(q.file)
             if d0: pg = (d0.get("facts") or {}).get("guidance_next"); break
         d, _, _ = A._ask2(client, A.SYS1, f"PRIOR GUIDANCE (from the company's previous release): {pg or 'none available'}\n\nRELEASE:\n{A._release_body(str(f), A.CHARS1, A.TABLES)}", "LIVE_" + stem, A.PV1); return d
+    if kind.startswith("research"):
+        pub, pos = kind.split("|")[1:3] if kind.count("|") >= 2 else ("a third party", "unknown"); d, _, _ = A._ask2(client, SYS_R, f"BASELINE: {A._baseline(R, tk, naive)}\n\nREPORT about {tk}, published by {pub} ({pos}); claims unverified:\n{A._release_body(str(f), 9000)}", "LIVE_" + stem, PV_R); return d
     d, _, _ = A._ask2(client, A.SYS2, f"BASELINE: {A._baseline(R, tk, naive)}\n\nEVENT ({tk}, live):\n{A._release_body(str(f), A.CHARS2)}", "LIVE_" + stem, A.PV2); return d
 
 
@@ -148,6 +179,7 @@ def empty_read(d, kind: str) -> bool:
 
 def _line(d: dict, kind: str) -> str:
     if not d: return "NOT SCORED (the read failed; the text is saved)"
+    if kind == "research": return f"THIRD-PARTY REPORT, claims unverified [{d.get('report_type')}] stance {d.get('stance')!s}, own stock {d.get('own_stock')!s}, material {d.get('material')!s}, new information {d.get('new_information')!s}, uncertainty {d.get('uncertainty')!s} | " + " ".join(str(x) for x in (d.get("main_claims") or []))[:260] + f" | affects {[(x.get('company'), x.get('direction')) for x in (d.get('affected') or []) if isinstance(x, dict)][:5]}"
     if empty_read(d, kind): return "NOT SCORED: the text fetched did not contain the results (no revenue found, every score 0); the next source will be tried"
     if kind == "fed": return f"for stocks {d.get('implication_equities')!s}, for rates {d.get('implication_rates')!s} | {str(d.get('evidence'))[:140]}"
     if kind == "results":
@@ -178,9 +210,15 @@ def handle(src: dict, it: dict, tk: str, kind: str, state: dict, drill=False, do
     if kind == "other" or not do_score: _log(row); print(f"   .. {tk}: {it['title'][:100]}  [{src['name']}; not a results release, logged only]"); return
     print("\a" + "=" * 110 + f"\n{'DRILL  ' if drill else ''}{tk}  {kind.upper()}  seen {row['seen_ny']} New York / {row['seen_sg']} Singapore  via {src['name']}" + (f"  ({row['lag_published_s']} s after the source's own time)" if pub else "") + f"\n{it['title'][:160]}")
     try:
-        text = sec_text(src["cik"], it["accession"], it["primary"]) if src["kind"] == "sec" else text_of(fetch(it["link"]))
-        if len(text.split()) < 80: raise ValueError(f"only {len(text.split())} words fetched")
-        stem = f"{tk}_{day}_{re.sub(r'[^A-Za-z0-9]+', '', src['name'])[:14]}"; d = score(tk, kind, text, stem, pub or now); row.update(score_s=round((datetime.now(timezone.utc) - now).total_seconds()), words=len(text.split()), read=d, line=_line(d, kind))
+        if src["kind"] == "research":
+            try: text = text_of(fetch(it["link"]))
+            except Exception: text = ""
+            if len(text.split()) < 150 or len(it.get("summary", "").split()) > len(text.split()): text = it["title"] + "\n\n" + it.get("summary", "")      # paywalled page: use what the feed itself carries
+            row.update(publisher=src["name"], companies=it.get("companies"))
+        else: text = sec_text(src["cik"], it["accession"], it["primary"]) if src["kind"] == "sec" else text_of(fetch(it["link"]))
+        if len(text.split()) < (25 if src["kind"] == "research" else 80): raise ValueError(f"only {len(text.split())} words fetched")
+        import hashlib
+        stem = f"{tk}_{day}_{re.sub(r'[^A-Za-z0-9]+', '', src['name'])[:14]}" + ("" if kind in ("results", "fed") else "_" + hashlib.md5(str(it["id"]).encode()).hexdigest()[:6]); d = score(tk, f"research|{src['name']}|{src.get('position', '')}" if kind == "research" else kind, text, stem, pub or now); row.update(score_s=round((datetime.now(timezone.utc) - now).total_seconds()), words=len(text.split()), read=d, line=_line(d, kind))
         if d and not empty_read(d, kind): state["first"][key] = dict(seen=now.isoformat(), source=src["name"])
         else: row["empty"] = True
     except SystemExit: raise
@@ -189,14 +227,21 @@ def handle(src: dict, it: dict, tk: str, kind: str, state: dict, drill=False, do
 
 
 def sources() -> list:
-    S = [dict(f) for f in FEEDS]
+    S = [dict(f) for f in FEEDS] + [dict(f) for f in RESEARCH]
     try: S += [dict(name=f"SEC filings: {t}", kind="sec", ticker=t, cik=c) for t, c in sec_ciks().items()]
     except SystemExit: raise
     except Exception as e: print(f"  SEC company list not reachable ({type(e).__name__}); running without the SEC backup")
     return S
 
 
-def poll(src: dict) -> list: return sec_recent(src["cik"]) if src["kind"] == "sec" else feed_items(fetch(src["url"]))
+def poll(src: dict) -> list:
+    if src["kind"] == "sec": return sec_recent(src["cik"])
+    if "url" in src: return feed_items(fetch(src["url"]))
+    err = None
+    for u in src["urls"]:      # candidate addresses: keep the first that answers with a feed
+        try: items = feed_items(fetch(u)); src["url"] = u; return items
+        except Exception as e: err = e
+    raise err
 
 
 def cmd_once():
@@ -207,7 +252,7 @@ def cmd_once():
         except Exception as e: print(f"  {src['name'][:48]:48} NO ANSWER: {type(e).__name__}: {str(e)[:70]}"); continue
         ok += 1; hits = [(it, *classify(src, it)) for it in items]; mine = [h for h in hits if h[1]]; new = max((it for it in items if it["published"]), key=lambda x: x["published"], default=None)
         print(f"  {src['name'][:48]:48} {len(items):3} items; newest {new['published'].astimezone(NY):%d %b %H:%M} NY" if new else f"  {src['name'][:48]:48} {len(items):3} items", end="")
-        print(f"; about the list: {len(mine)}" + (f" (e.g. {mine[0][1]} {mine[0][2]}: {mine[0][0]['title'][:60]})" if mine else "")); time.sleep(0.2)
+        print(f"; about the list: {len(mine)}" + (f" (e.g. {mine[0][1]} {mine[0][2]}: {mine[0][0]['title'][:60]})" if mine else "") + (f"  [{src['url']}]" if src["kind"] == "research" and "url" in src else "")); time.sleep(0.2)
     print(f"{ok} sources answered. Nothing was scored.")
 
 
@@ -220,6 +265,16 @@ def cmd_test(ticker: str):
         if res: it = max(res, key=lambda x: x["published"] or datetime.min.replace(tzinfo=timezone.utc)); handle(src, it, ticker, "results", dict(first={}), drill=True); return
         print(f"  {src['name']}: no results release among its {len(items)} newest items")
     print("no results release found to drill on -- try another --ticker")
+
+
+def cmd_research(ticker: str):
+    """drill: score the newest third-party report that names one company, end to end. Flagged as a drill; shows that the route works."""
+    for src in [x for x in sources() if x["kind"] == "research"]:
+        try: items = poll(src)
+        except Exception as e: print(f"  {src['name']}: NO ANSWER from any of its candidate addresses ({type(e).__name__})"); continue
+        hits = [it for it in items if classify(src, it) == (ticker, "research")]; print(f"  {src['name']}: {len(items)} items at {src.get('url')}; naming {ticker}: {len(hits)}")
+        if hits: handle(src, max(hits, key=lambda x: x["published"] or datetime.min.replace(tzinfo=timezone.utc)), ticker, "research", dict(first={}), drill=True); return
+    print(f"no third-party report naming {ticker} among the newest items")
 
 
 def cmd_rescore(ticker: str):
@@ -259,7 +314,7 @@ def cmd_run(minutes: float | None, every: float, max_scores: int):
                     seen.add(uid)
                     if warm: continue
                     tk, kind = classify(src, it)
-                    if tk: handle(src, it, tk, kind, state, do_score=scored < max_scores); scored += kind in ("results", "event", "fed")
+                    if tk: handle(src, it, tk, kind, state, do_score=scored < max_scores); scored += kind in ("results", "event", "fed", "research")
                 if src["kind"] == "sec": time.sleep(0.12)
             warm = False; n += 1; state["ids"] = sorted(seen)[-20000:]; SEEN.write_text(json.dumps(state))
             if n == 1 or n % 20 == 0: print(f"  {datetime.now(NY):%H:%M:%S} New York / {datetime.now(SG):%H:%M:%S} Singapore: pass {n}, {len(S) - len(bad)} of {len(S)} sources answered" + (f"; silent: {', '.join(bad)[:120]}" if bad else ""))
@@ -269,5 +324,5 @@ def cmd_run(minutes: float | None, every: float, max_scores: int):
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["once", "test", "run", "rescore"]); ap.add_argument("--ticker", default="AMD"); ap.add_argument("--minutes", type=float); ap.add_argument("--poll", type=float, default=30.0); ap.add_argument("--max-scores", type=int, default=40, help="stop scoring after this many reads in one run (cost guard; about 3 US cents each)")
-    a = ap.parse_args(); {"once": cmd_once, "test": lambda: cmd_test(a.ticker), "rescore": lambda: cmd_rescore(a.ticker), "run": lambda: cmd_run(a.minutes, a.poll, a.max_scores)}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["once", "test", "run", "rescore", "research"]); ap.add_argument("--ticker", default="AMD"); ap.add_argument("--minutes", type=float); ap.add_argument("--poll", type=float, default=30.0); ap.add_argument("--max-scores", type=int, default=40, help="stop scoring after this many reads in one run (cost guard; about 3 US cents each)")
+    a = ap.parse_args(); {"once": cmd_once, "test": lambda: cmd_test(a.ticker), "rescore": lambda: cmd_rescore(a.ticker), "research": lambda: cmd_research(a.ticker), "run": lambda: cmd_run(a.minutes, a.poll, a.max_scores)}[a.cmd]()

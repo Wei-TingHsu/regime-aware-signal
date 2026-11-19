@@ -1,0 +1,56 @@
+{
+ "report_type": "short report",
+ "stance": -1,
+ "new_information": 0.7,
+ "material": 0.5,
+ "fcf_outlook": -0.3,
+ "uncertainty": 0.6,
+ "own_stock": -0.4,
+ "market": -0.1,
+ "affected": [
+  {
+   "company": "NVDA",
+   "relation": "peer",
+   "direction": -0.3,
+   "reason": "shares similar China export-control exposure narrative"
+  },
+  {
+   "company": "IEIT Systems (Inspur)",
+   "relation": "customer",
+   "direction": -0.5,
+   "reason": "blacklisted entity allegedly still using AMD firmware"
+  },
+  {
+   "company": "Aivres",
+   "relation": "customer",
+   "direction": -0.4,
+   "reason": "alleged IEIT-linked reseller of AMD Instinct servers"
+  },
+  {
+   "company": "Kaytus",
+   "relation": "customer",
+   "direction": -0.4,
+   "reason": "alleged IEIT subsidiary selling AMD-based servers"
+  },
+  {
+   "company": "Tongfu Microelectronics",
+   "relation": "supplier",
+   "direction": -0.2,
+   "reason": "majority owner of AMD's chip packaging JV, China exposure"
+  },
+  {
+   "company": "Suma/Cancon",
+   "relation": "customer",
+   "direction": -0.4,
+   "reason": "alleged blacklisted entity alias appearing in AMD catalog"
+  }
+ ],
+ "main_claims": [
+  "AMD's firmware continues appearing in blacklisted IEIT Systems' server updates after its 2025 Entity List designation.",
+  "Three companies (Maginfra, Kaytus, Aivres) closely tied to IEIT sell AMD-based servers using nearly identical firmware, suggesting continued indirect dealings with a blacklisted entity.",
+  "AMD has broader China exposure than acknowledged (22.4% of FY2025 revenue, Tongfu packaging dependency, Singapore export rule impact) comparable to or greater than Nvidia's recently troubled China exposure."
+ ],
+ "evidence": "\"AMD\u2019s exposure to this possible policy shift may be larger than Nvidia\u2019s... AMD billed $7.75 billion, or 22.4% of revenue, to China (and Hong Kong) in fiscal 2025, compared to Nvidia\u2019s 9.1% revenue share.\"",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-research-v1-2026-11-20"
+}

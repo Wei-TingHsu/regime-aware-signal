@@ -6349,3 +6349,7 @@ The product exists to solve one customer problem: not knowing where to see the n
 the customer's side first. A live component must read from the FASTEST public source (news wires and company investor pages first; the SEC archive
 only as a backup), and a backtest that had to use a slower source must say so. Advantages the tests show are recorded in `docs/SELLING_POINTS.md`
 with their evidence and limits.
+
+### Standing rules added 20 Nov 2026
+- **No Databento spending** (founder, 20 Nov): the app no longer shows 1-minute prices, and no paid market data is requested. The forward record prices events with Yahoo's free 1-minute bars.
+- **Source register**: every source the founder names is written into `docs/SOURCES.md` the day it is named.
