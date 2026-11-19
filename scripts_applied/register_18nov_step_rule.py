@@ -1,0 +1,12 @@
+"""register_18nov_step_rule.py -- TRACK 3.70: the step rule registered as forward rule FA-4; netting set aside. Idempotent."""
+from pathlib import Path
+T = """
+### 3.70 Step rule registered as forward rule FA-4; netting set aside (18 Nov 23:55)
+**Founder's conclusion (18 Nov):** drop netting as a rule -- opposite signals are rare (54 of 1,464 stock-afternoons) and earn nothing either way; keep the step rule as the candidate because its threshold was stable. Agreed. A real account would still never hold a long and a short in the same stock at once; that is housekeeping, not a rule to test.
+**FA-4, fixed here.** On a results release of a listed AI-chain company: if the reader's own-stock score is 0.7 or more in size, trade the company's own stock in the direction of the score, enter 1 minute after the release, hold 60 minutes; otherwise no trade. Backtest behind it (TRACK 3.68): +141.5 bp per trade on 140 trades in 2020-2026 with each year's threshold fitted on earlier years (0.7 in six of seven years); before cost. **Category by the founder's rule:** the hold is 60 minutes, so it is an intraday rule -- SUBJECTIVE list, grade A candidate -- although it is fully rule-based and needs no judgement.
+**What turns the candidate into a signal.** (1) Costs measured (C; download quoted at about US$0.01) and the rule still positive after them. (2) The forward record: 30 FA-4 trades. About 45% of past releases cleared 0.7 (163 of 365), and the list publishes about 56 results a year, so roughly 25 trades a year: about 14 months to 30. An interim look after each earnings season, labelled as interim.
+**First live case.** NVIDIA, 17 Nov 2026 16:20:51 New York: rescored own-stock score +0.7 (revenue US$115.8 billion, up 103% on the year; results against prior guidance +0.9; new guidance +0.3; other companies named: TSM +0.6, MU +0.6, MSFT +0.6, GOOG +0.6, AVGO +0.1). It clears the threshold. FA-4 was registered AFTER this release but BEFORE its prices were available from the vendor (the price request of 18 Nov was refused as 'data_end_after_available_end'), and the score was made after the fact because the live read failed (3.69); the row is kept with both facts stated.
+"""
+t = Path("docs/TRACK.md"); s = t.read_text()
+if "### 3.70 Step rule registered as forward rule FA-4" in s: print("  TRACK: 3.70 already present -- skipped")
+else: t.write_text(s.rstrip("\n") + "\n" + T); print("  TRACK: 3.70 appended (FA-4 registered; netting set aside)")
