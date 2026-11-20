@@ -79,21 +79,32 @@ def cmd_cost():
     print(f"{heads} headlines pass the word filter, in {len(B)} batches of up to {BATCH}; {len(todo)} batches still to read: about US${usd:.2f}. By investor: " + ", ".join(f"{INVESTORS[k][1]} {v}" for k, v in per.items()) + ". Nothing was read.")
 
 
+def _read_batch(client, model, parse, slug, heads, tok):
+    """one batch -> list of calls (numbered within this batch). If the answer is not valid JSON the batch is read again in two halves (down to 10 headlines)."""
+    body = f"Investor: {INVESTORS[slug][1]}\n\n" + "\n".join(f"{i}. [{str(h['published'])[:10]}; {h['source']}] {h['title']}" for i, h in enumerate(heads))
+    r = client.messages.create(model=model, max_tokens=8000, system=SYS, messages=[{"role": "user", "content": body}]); t = "".join(x.text for x in r.content if x.type == "text"); tok[0] += r.usage.input_tokens; tok[1] += r.usage.output_tokens
+    try:
+        d = parse(t); return [c for c in (d.get("calls") or []) if isinstance(c, dict) and str(c.get("i", "")).lstrip("-").isdigit() and 0 <= int(c["i"]) < len(heads)]
+    except Exception:
+        if len(heads) <= 10: raise RuntimeError(f"answer not readable (stop: {r.stop_reason}); it began: {t[:70]!r}")
+        h = len(heads) // 2; left = _read_batch(client, model, parse, slug, heads[:h], tok); right = _read_batch(client, model, parse, slug, heads[h:], tok)
+        return left + [dict(c, i=int(c["i"]) + h) for c in right]
+
+
 def cmd_extract(max_usd: float):
     from src.news_events2 import _client, _parse, MODEL
-    client = _client(); READS.mkdir(parents=True, exist_ok=True); tin = tout = 0; n = 0; cost = lambda: tin / 1e6 * IN_RATE + tout / 1e6 * OUT_RATE
+    client = _client(); READS.mkdir(parents=True, exist_ok=True); tok = [0, 0]; n = 0; bad = 0; cost = lambda: tok[0] / 1e6 * IN_RATE + tok[1] / 1e6 * OUT_RATE
     for slug, m, k, heads in _batches():
         out = READS / f"{slug}_{m}_{k}__{PV}.json"
         if out.exists(): continue
-        body = f"Investor: {INVESTORS[slug][1]}\n\n" + "\n".join(f"{i}. [{str(h['published'])[:10]}; {h['source']}] {h['title']}" for i, h in enumerate(heads))
         try:
-            r = client.messages.create(model=MODEL, max_tokens=3000, system=SYS, messages=[{"role": "user", "content": body}]); t = "".join(b.text for b in r.content if b.type == "text"); tin += r.usage.input_tokens; tout += r.usage.output_tokens
-            d = _parse(t); calls = [dict(c, **{"published": heads[int(c["i"])]["published"], "title": heads[int(c["i"])]["title"], "source": heads[int(c["i"])]["source"], "link": heads[int(c["i"])]["link"]}) for c in (d.get("calls") or []) if isinstance(c, dict) and str(c.get("i", "")).lstrip("-").isdigit() and 0 <= int(c["i"]) < len(heads)]
+            calls = [dict(c, **{"published": heads[int(c["i"])]["published"], "title": heads[int(c["i"])]["title"], "source": heads[int(c["i"])]["source"], "link": heads[int(c["i"])]["link"]}) for c in _read_batch(client, MODEL, _parse, slug, heads, tok)]
             out.write_text(json.dumps(dict(slug=slug, month=m, model=MODEL, prompt_version=PV, n_headlines=len(heads), calls=calls), indent=1)); n += 1
-        except Exception as e: print(f"  {slug} {m} batch {k}: {type(e).__name__}: {str(e)[:90]}")
+        except Exception as e: bad += 1; print(f"  {slug} {m} batch {k}: {type(e).__name__}: {str(e)[:160]}")
         if n and n % 50 == 0: print(f"  {n} batches, about US${cost():.2f}")
         if cost() >= max_usd: print(f"  cap US${max_usd:.2f} reached after {n} batches; run again to continue"); break
-    print(f"done: {n} batches read now, about US${cost():.2f} -> {READS}")
+    left = sum(1 for b in _batches() if not (READS / f"{b[0]}_{b[1]}_{b[2]}__{PV}.json").exists())
+    print(f"done: {n} batches read now, {bad} failed now, {left} still unread in total, about US${cost():.2f} -> {READS}")
 
 
 def cmd_calls():
@@ -199,6 +210,92 @@ def cmd_test():
     Path("docs").mkdir(exist_ok=True); Path("docs/public_calls_test.md").write_text("\n".join(L) + "\n"); Path("docs/public_calls_test.json").write_text(json.dumps(out, indent=1)); T.drop(columns=["i0"]).to_csv(ROOT / "calls_priced.csv", index=False); print("-> docs/public_calls_test.md")
 
 
+# ------------------------------------------------------------------------------------------------ SR-2b: the parts a user could have traded (registered in TRACK 3.78 before running)
+N_F, SEED_F, COST_BP = 2000, 20261121, 30.0; LEGS = ["gone before the open", "open to close, day 0", "close day 0 to close +1", "open day 0 to close +1"]; JUDGED = LEGS[1:]
+
+
+def _prices_oc(tickers):
+    import yfinance as yf
+    PX = ROOT / "prices_oc"; PX.mkdir(parents=True, exist_ok=True); out = {}; bad = []
+    for t in tickers:
+        f = PX / f"{t}.parquet"
+        if f.exists(): out[t] = pd.read_parquet(f); continue
+        try:
+            d = yf.download(t, start="2017-06-01", interval="1d", progress=False, auto_adjust=True)
+            if isinstance(d.columns, pd.MultiIndex): d.columns = d.columns.get_level_values(0)
+            d = d[["Open", "Close"]].dropna(); d.columns = ["open", "close"]
+            if len(d) < 60: bad.append(t); continue
+            d.index = pd.DatetimeIndex(d.index).tz_localize(None); d.to_parquet(f); out[t] = d
+        except Exception: bad.append(t)
+    return out, bad
+
+
+def _legs(px):
+    """per security, per session i, in bp and minus the S&P 500's same piece (an index itself: raw):
+    co = previous close -> open; oc = open -> close; cc = previous close -> close"""
+    spy = px["SPY"]; out = {}
+    for t, d in px.items():
+        s = spy.reindex(d.index); raw = t in INDEX_ETF
+        f = lambda a, b, sa, sb: ((a / b - 1) - (0 if raw else (sa / sb - 1))).to_numpy(float) * 1e4
+        out[t] = dict(co=f(d.open, d.close.shift(1), s.open, s.close.shift(1)), oc=f(d.close, d.open, s.close, s.open), cc=f(d.close, d.close.shift(1), s.close, s.close.shift(1)))
+    return out
+
+
+def _four(L, j):
+    """the four pieces for a call whose day 0 is session j (arrays allowed)"""
+    import numpy as np
+    return np.stack([L["co"][j], L["oc"][j], L["cc"][j + 1], L["oc"][j] + L["cc"][j + 1]], axis=-1)
+
+
+def cmd_follow():
+    import numpy as np
+    C = pd.read_csv(ROOT / "calls.csv", parse_dates=["first_seen"]); px, bad = _prices_oc(sorted(set(C.ticker) | {"SPY"})); G = _legs(px); rng = np.random.default_rng(SEED_F); rows = []
+    ny = C.first_seen.dt.tz_convert("America/New_York"); C["day"] = (ny.dt.normalize() + pd.to_timedelta((ny.dt.hour >= 16).astype(int), unit="D")).dt.tz_localize(None); C["ny"] = ny.dt.tz_localize(None)
+    for r in C.itertuples():
+        if r.ticker not in px: continue
+        idx = px[r.ticker].index; i0 = int(idx.searchsorted(r.day))
+        if i0 < 2 or i0 + 2 >= len(idx) or (idx[i0] - r.day).days > 5: continue
+        v = _four(G[r.ticker], i0)
+        if not np.isfinite(v).all(): continue
+        pre = r.ny < idx[i0] + pd.Timedelta(hours=9, minutes=30)      # the first headline was out before that session opened
+        rows.append(dict(investor=r.investor, ticker=r.ticker, direction=r.direction, day0=idx[i0], i0=i0, before_open=bool(pre), kind=str(r.kind), new=bool(r.reported_as_new), **{k: r.direction * float(x) for k, x in zip(LEGS, v)}))
+    T = pd.DataFrame(rows).sort_values("day0").reset_index(drop=True)
+    if T.empty: print("no call could be priced"); return
+    busy = {}
+    for t, g in T.groupby("ticker"):
+        b = np.zeros(len(px[t]), bool)
+        for i0 in g.i0: b[max(0, i0 - 20):i0 + 21] = True
+        busy[t] = b
+    P = np.full((len(T), N_F, 4), np.nan)      # for every call: the same security and direction on 2,000 other dates
+    for r in T.itertuples():
+        L = G[r.ticker]; n = len(px[r.ticker]); j = rng.integers(2, n - 2, size=6 * N_F); v = _four(L, j); ok = ~busy[r.ticker][j] & np.isfinite(v).all(axis=1); v = v[ok][:N_F]; P[r.Index, :len(v)] = r.direction * v
+    def stat(mask, leg):
+        k = LEGS.index(leg); m = mask & (T.before_open.to_numpy() if k in (0, 1, 3) else True); x = T.loc[m, leg].to_numpy()
+        if len(x) < 30: return dict(n=int(len(x)))
+        lo, hi = np.quantile(x, [0.05, 0.95]); null = np.nanmean(P[m][:, :, k], axis=0); mean = float(x.mean())
+        return dict(n=int(len(x)), mean=mean, median=float(np.median(x)), trimmed=float(x[(x >= lo) & (x <= hi)].mean()), hit=float((x > 0).mean()), after_cost=mean - COST_BP, p=float((null >= mean).mean()))
+    yr = T.day0.dt.year.to_numpy(); pos = (T.direction > 0).to_numpy(); one = np.ones(len(T), bool)
+    main = [("ALL INVESTORS", one), ("positive calls", pos), ("negative calls", ~pos)] + [(k, (T.investor == k).to_numpy()) for k in sorted(T.investor.unique())]
+    extra = [("positive calls, 2018 to 2021", pos & (yr <= 2021)), ("positive calls, 2022 to 2026", pos & (yr >= 2022)), ("positive, said in a statement", pos & (T.kind == "statement").to_numpy()), ("positive, position disclosed in a filing", pos & (T.kind == "position disclosed in a filing").to_numpy()), ("positive, position reported by the media", pos & (T.kind == "position reported by the media").to_numpy()),
+             ("positive, reported as that day's news", pos & T.new.to_numpy()), ("positive, without the 5 most-called securities", pos & ~T.ticker.isin(list(T.ticker.value_counts().head(5).index)).to_numpy())] + [(f"{k}, positive calls", pos & (T.investor == k).to_numpy()) for k in sorted(T.investor.unique())]
+    bar = 0.05 / (len(main) * len(JUDGED)); out = dict(bar=bar, calls=int(len(T)), before_open=int(T.before_open.sum()), main={}, extra={})
+    fmt = lambda s: f"under 30 ({s['n']})" if "mean" not in s else f"{'**' if s['p'] < bar else ''}{s['mean']:+.0f} bp{'**' if s['p'] < bar else ''} (n {s['n']}; middle call {s['median']:+.0f}; without the 5% largest and smallest {s['trimmed']:+.0f}; right {s['hit']:.0%}; after {COST_BP:.0f} bp cost {s['after_cost']:+.0f}; p {s['p']:.4f})"
+    M = ["# SR-2b: public calls by well-known investors -- the parts a user could have traded", "",
+         f"{len(T)} calls priced; for {int(T.before_open.sum())} the first headline was out before the session opened (the others appeared during the session). Returns in bp, minus the S&P 500's same piece, in the direction of the call. "
+         f"'gone before the open' = previous close to the open of day 0: already in the price when a user could first trade (description, not judged). 'open to close, day 0' = buy at that open, sell at that close (only calls out before the open). "
+         f"'close day 0 to close +1' = buy at the close of day 0, sell at the next close (all calls). 'open day 0 to close +1' = both. p = how often the same securities on {N_F} sets of other dates did as well. "
+         f"A main cell counts at p < {bar:.4f} (0.05 / {len(main)} groups / {len(JUDGED)} pieces). Cost: {COST_BP:.0f} bp a round trip (the average measured on IBKR for the AI-chain list, docs/ai_chain_costs.md; an assumption for these securities).", ""]
+    for title, groups, key in (("Main groups (judged)", main, "main"), ("Splits (description; the bar does not apply)", extra, "extra")):
+        M += [f"## {title}", "", "| group | " + " | ".join(LEGS) + " |", "|---|" + "---|" * len(LEGS)]
+        for name, mask in groups:
+            S = {leg: stat(mask, leg) for leg in LEGS}; out[key][name] = S; M.append(f"| {name} | " + " | ".join(fmt(S[leg]) if (key == "main" and leg in JUDGED) else fmt(S[leg]).replace("**", "") for leg in LEGS) + " |")
+            short = lambda s: f"n {s['n']} under 30" if "mean" not in s else f"{s['mean']:+.0f} bp, middle {s['median']:+.0f}, trimmed {s['trimmed']:+.0f}, right {s['hit']:.0%}, p {s['p']:.4f}{' PASS' if key == 'main' and s['p'] < bar else ''}"
+            print(f"  {name}: open->close day 0 [{short(S[LEGS[1]])}] | close day 0->close +1 [{short(S[LEGS[2]])}] | gone before the open {S[LEGS[0]].get('mean', float('nan')):+.0f} bp")
+        M.append("")
+    Path("docs").mkdir(exist_ok=True); Path("docs/public_calls_follow.md").write_text("\n".join(M) + "\n"); Path("docs/public_calls_follow.json").write_text(json.dumps(out, indent=1)); T.drop(columns=["i0"]).to_csv(ROOT / "calls_legs.csv", index=False)
+    print(f"bar for the main groups: p < {bar:.4f}. -> docs/public_calls_follow.md")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["collect", "cost", "extract", "calls", "test"]); ap.add_argument("--start", default="2018-01"); ap.add_argument("--max-usd", type=float, default=15.0); a = ap.parse_args()
-    {"collect": lambda: cmd_collect(a.start), "cost": cmd_cost, "extract": lambda: cmd_extract(a.max_usd), "calls": cmd_calls, "test": cmd_test}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["collect", "cost", "extract", "calls", "test", "follow"]); ap.add_argument("--start", default="2018-01"); ap.add_argument("--max-usd", type=float, default=15.0); a = ap.parse_args()
+    {"collect": lambda: cmd_collect(a.start), "cost": cmd_cost, "extract": lambda: cmd_extract(a.max_usd), "calls": cmd_calls, "test": cmd_test, "follow": cmd_follow}[a.cmd]()

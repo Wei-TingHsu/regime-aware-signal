@@ -311,10 +311,10 @@ def cmd_run(minutes: float | None, every: float, max_scores: int):
                 except Exception: bad.append(src["name"]); continue
                 first_time = src["name"] not in known; old = 0
                 for it in items:
-                    uid = f"{src['name']}|{it['id']}"; tid = f"{src['name']}|title|{re.sub(r'[^a-z0-9]+', ' ', it['title'].lower()).strip()}"
+                    uid = f"{src['name']}|{it['id']}"; tid = f"{src['name']}|title|{re.sub(r'[^a-z0-9]+', ' ', it['title'].lower()).strip()}"; lid = f"{src['name']}|link|{str(it.get('link') or it['id']).split('#')[0].split('?')[0].rstrip('/')}"
                     if uid in seen: continue
-                    seen.add(uid)
-                    if src["kind"] != "sec" and tid in seen: continue      # 20 Nov: one SK Hynix article arrived as twelve feed entries with the same headline and was scored twelve times
+                    seen.add(uid); nt = tid.split("|title|")[1]; pre = src["name"] + "|title|"; again = src["kind"] != "sec" and (tid in seen or lid in seen or (len(nt) >= 25 and any(x.startswith(pre) and len(x) - len(pre) >= 25 and (nt in x or x[len(pre):] in nt) for x in seen))); seen.add(lid)      # 20 Nov (second fix): the same SK Hynix article arrived ten times under pieces of its headline -- the same address is the same article
+                    if again: seen.add(tid); continue      # 20 Nov: one SK Hynix article arrived as twelve feed entries with the same headline and was scored twelve times
                     seen.add(tid)
                     if first_time: continue
                     if it.get("published") and (now - it["published"]).total_seconds() > 86400: old += 1; continue      # already old when first seen: not news
