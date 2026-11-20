@@ -296,6 +296,65 @@ def cmd_follow():
     print(f"bar for the main groups: p < {bar:.4f}. -> docs/public_calls_follow.md")
 
 
+# ------------------------------------------------------------------------------------------------ SR-2c: only what comes after the headline for certain (registered in TRACK 3.80 before running)
+SAFE = ["overnight into +1", "open to close, +1", "open +1 to close +2"]; SEED_S = 20261122
+
+
+def _three(L, j):
+    import numpy as np
+    return np.stack([L["co"][j + 1], L["oc"][j + 1], L["oc"][j + 1] + L["cc"][j + 2]], axis=-1)
+
+
+def cmd_safe():
+    """93% of the headlines carry a date but no real time of day (the feed stamps them midnight Pacific). So the only pieces that are after the headline for
+    certain start at the OPEN of the session after the headline's date. Day 0 here = the first session on or after the headline's Pacific date."""
+    import numpy as np
+    C = pd.read_csv(ROOT / "calls.csv", parse_dates=["first_seen"]); px, bad = _prices_oc(sorted(set(C.ticker) | {"SPY"})); G = _legs(px); rng = np.random.default_rng(SEED_S); rows = []
+    t = C.first_seen; C["date_only"] = (t.dt.minute == 0) & (t.dt.second == 0) & t.dt.hour.isin([7, 8]); C["day"] = t.dt.tz_convert("America/Los_Angeles").dt.normalize().dt.tz_localize(None)
+    for r in C.itertuples():
+        if r.ticker not in px: continue
+        idx = px[r.ticker].index; i0 = int(idx.searchsorted(r.day))
+        if i0 < 2 or i0 + 3 >= len(idx) or (idx[i0] - r.day).days > 5: continue
+        v = _three(G[r.ticker], i0)
+        if not np.isfinite(v).all(): continue
+        k = str(r.kind).replace("reported by media", "reported by the media")
+        rows.append(dict(investor=r.investor, ticker=r.ticker, direction=r.direction, day0=idx[i0], i0=i0, kind=k, date_only=bool(r.date_only), **{n: r.direction * float(x) for n, x in zip(SAFE, v)}))
+    T = pd.DataFrame(rows).sort_values("day0").reset_index(drop=True)
+    if T.empty: print("no call could be priced"); return
+    busy = {}
+    for tk, g in T.groupby("ticker"):
+        b = np.zeros(len(px[tk]), bool)
+        for i0 in g.i0: b[max(0, i0 - 20):i0 + 21] = True
+        busy[tk] = b
+    P = np.full((len(T), N_F, 3), np.nan)
+    for r in T.itertuples():
+        n = len(px[r.ticker]); j = rng.integers(2, n - 3, size=6 * N_F); v = _three(G[r.ticker], j); ok = ~busy[r.ticker][j] & np.isfinite(v).all(axis=1); v = v[ok][:N_F]; P[r.Index, :len(v)] = r.direction * v
+    def stat(mask, leg):
+        k = SAFE.index(leg); x = T.loc[mask, leg].to_numpy()
+        if len(x) < 30: return dict(n=int(len(x)))
+        lo, hi = np.quantile(x, [0.05, 0.95]); null = np.nanmean(P[mask][:, :, k], axis=0); mean = float(x.mean())
+        return dict(n=int(len(x)), mean=mean, median=float(np.median(x)), trimmed=float(x[(x >= lo) & (x <= hi)].mean()), hit=float((x > 0).mean()), after_cost=mean - COST_BP, p=float((null >= mean).mean()))
+    yr = T.day0.dt.year.to_numpy(); pos = (T.direction > 0).to_numpy(); one = np.ones(len(T), bool); inv = sorted(T.investor.unique())
+    main = [("ALL INVESTORS", one), ("positive calls", pos), ("negative calls", ~pos)] + [(k, (T.investor == k).to_numpy()) for k in inv]
+    extra = [("positive calls, 2018 to 2021", pos & (yr <= 2021)), ("positive calls, 2022 to 2026", pos & (yr >= 2022))] + [(f"positive, {k}", pos & (T.kind == k).to_numpy()) for k in ("statement", "position disclosed in a filing", "position reported by the media")] + [(f"negative, {k}", ~pos & (T.kind == k).to_numpy()) for k in ("statement", "position disclosed in a filing", "position reported by the media")] \
+            + [(f"{k}, positive calls", pos & (T.investor == k).to_numpy()) for k in inv] + [(f"{k}, 2018 to 2021", (T.investor == k).to_numpy() & (yr <= 2021)) for k in inv] + [(f"{k}, 2022 to 2026", (T.investor == k).to_numpy() & (yr >= 2022)) for k in inv]
+    judged = SAFE[1:]; bar = 0.05 / (len(main) * len(judged)); out = dict(bar=bar, calls=int(len(T)), date_only=int(T.date_only.sum()), main={}, extra={})
+    fmt = lambda s, b: f"under 30 ({s['n']})" if "mean" not in s else f"{'**' if b and s['p'] < bar else ''}{s['mean']:+.0f} bp{'**' if b and s['p'] < bar else ''} (n {s['n']}; middle call {s['median']:+.0f}; without the 5% largest and smallest {s['trimmed']:+.0f}; right {s['hit']:.0%}; after {COST_BP:.0f} bp cost {s['after_cost']:+.0f}; p {s['p']:.4f})"
+    M = ["# SR-2c: public calls by well-known investors -- only what comes after the headline for certain", "",
+         f"{len(T)} calls priced; {int(T.date_only.sum())} of them ({T.date_only.mean():.0%}) carry a date but no real time of day. Day 0 = the first session on or after the headline's date. Returns in bp, minus the S&P 500's same piece, in the direction of the call. "
+         f"'overnight into +1' = close of day 0 to the open of +1 (description: a headline that came out after the close shows up here, before a user can trade). 'open to close, +1' = buy at the open of the next session, sell at its close. 'open +1 to close +2' = hold one session longer. "
+         f"p = how often the same securities on {N_F} sets of other dates did as well. A main cell counts at p < {bar:.4f} (0.05 / {len(main)} groups / {len(judged)} pieces). Cost {COST_BP:.0f} bp a round trip (assumption).", ""]
+    for title, groups, key in (("Main groups (judged)", main, "main"), ("Splits (description; the bar does not apply)", extra, "extra")):
+        M += [f"## {title}", "", "| group | " + " | ".join(SAFE) + " |", "|---|" + "---|" * len(SAFE)]
+        for name, mask in groups:
+            S = {leg: stat(mask, leg) for leg in SAFE}; out[key][name] = S; M.append(f"| {name} | " + " | ".join(fmt(S[leg], key == "main" and leg in judged) for leg in SAFE) + " |")
+            short = lambda s: f"n {s['n']} under 30" if "mean" not in s else f"{s['mean']:+.0f} bp, middle {s['median']:+.0f}, trimmed {s['trimmed']:+.0f}, right {s['hit']:.0%}, after cost {s['after_cost']:+.0f}, p {s['p']:.4f}{' PASS' if key == 'main' and s['p'] < bar else ''}"
+            print(f"  {name}: overnight into +1 {S[SAFE[0]].get('mean', float('nan')):+.0f} bp | open->close +1 [{short(S[SAFE[1]])}] | open +1->close +2 [{short(S[SAFE[2]])}]")
+        M.append("")
+    Path("docs").mkdir(exist_ok=True); Path("docs/public_calls_safe.md").write_text("\n".join(M) + "\n"); Path("docs/public_calls_safe.json").write_text(json.dumps(out, indent=1)); T.drop(columns=["i0"]).to_csv(ROOT / "calls_safe.csv", index=False)
+    print(f"{int(T.date_only.sum())} of {len(T)} calls have a date but no time of day. Bar for the main groups: p < {bar:.4f}. -> docs/public_calls_safe.md")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["collect", "cost", "extract", "calls", "test", "follow"]); ap.add_argument("--start", default="2018-01"); ap.add_argument("--max-usd", type=float, default=15.0); a = ap.parse_args()
-    {"collect": lambda: cmd_collect(a.start), "cost": cmd_cost, "extract": lambda: cmd_extract(a.max_usd), "calls": cmd_calls, "test": cmd_test, "follow": cmd_follow}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["collect", "cost", "extract", "calls", "test", "follow", "safe"]); ap.add_argument("--start", default="2018-01"); ap.add_argument("--max-usd", type=float, default=15.0); a = ap.parse_args()
+    {"collect": lambda: cmd_collect(a.start), "cost": cmd_cost, "extract": lambda: cmd_extract(a.max_usd), "calls": cmd_calls, "test": cmd_test, "follow": cmd_follow, "safe": cmd_safe}[a.cmd]()
