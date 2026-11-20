@@ -1,0 +1,31 @@
+{
+ "event_type": "product or technology",
+ "material": 0.1,
+ "fcf_outlook": 0.05,
+ "uncertainty": 0.0,
+ "own_stock": 0.05,
+ "market": 0.0,
+ "affected": [
+  {
+   "company": "MU",
+   "relation": "competitor",
+   "direction": -0.05,
+   "reason": "HBM tech leadership positioning"
+  },
+  {
+   "company": "NVDA",
+   "relation": "customer",
+   "direction": 0.05,
+   "reason": "memory ecosystem supports AI GPU roadmap"
+  },
+  {
+   "company": "TSM",
+   "relation": "peer",
+   "direction": 0.0,
+   "reason": "AI infrastructure supply chain"
+  }
+ ],
+ "evidence": "\u201cBuilding the Future AI Ecosystem Around Memory\u201d: SK hynix Presents Its Technology Vision at Super Computing 2026",
+ "_model": "claude-sonnet-5",
+ "_prompt_version": "ai-event-v2-2026-11-15"
+}

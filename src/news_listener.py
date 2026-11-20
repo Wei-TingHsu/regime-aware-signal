@@ -311,9 +311,11 @@ def cmd_run(minutes: float | None, every: float, max_scores: int):
                 except Exception: bad.append(src["name"]); continue
                 first_time = src["name"] not in known; old = 0
                 for it in items:
-                    uid = f"{src['name']}|{it['id']}"
+                    uid = f"{src['name']}|{it['id']}"; tid = f"{src['name']}|title|{re.sub(r'[^a-z0-9]+', ' ', it['title'].lower()).strip()}"
                     if uid in seen: continue
                     seen.add(uid)
+                    if src["kind"] != "sec" and tid in seen: continue      # 20 Nov: one SK Hynix article arrived as twelve feed entries with the same headline and was scored twelve times
+                    seen.add(tid)
                     if first_time: continue
                     if it.get("published") and (now - it["published"]).total_seconds() > 86400: old += 1; continue      # already old when first seen: not news
                     tk, kind = classify(src, it)

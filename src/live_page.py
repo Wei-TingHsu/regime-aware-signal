@@ -37,7 +37,7 @@ def _body(tz: str):
     if len(T): _df(T, rows=15)
     else: st.info("Nothing scored yet.")
     st.caption("Source = where the item came from. What it is — Financial results: a company's quarterly report. Company announcement: any other item on the company's own news page or the news wire. Regulatory filing: a filing with the US regulator (SEC). Third-party report: research or an investigation by someone else, who may hold a position; its claims are not verified. Fed statement: the central bank's policy statement. "
-               "Scores run from -1 (bad for the stock) to +1 (good). The two delay columns show our speed: how many seconds after the source published the item our listener saw it, and how many seconds later Claude's score was ready."
+               "Scores run from -1 (bad for the stock) to +1 (good). The two Time Lag columns show our speed: 'publish -> listener' is how many seconds after the source published the item our listener saw it; 'listener -> Claude responsiveness' is how many seconds Claude then took to return the score."
                + (f" {D['old_hidden']} older items, read when a source was first connected, are not shown." if D["old_hidden"] else "") + (f" {D['duplicates']} second copies of a release already scored were not scored again." if D["duplicates"] else ""))
 
     st.subheader("Forward record")
