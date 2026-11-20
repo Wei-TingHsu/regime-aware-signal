@@ -9,13 +9,14 @@ import pandas as pd
 
 LIVE = Path("data_provenance/live"); LOG = LIVE / "events.jsonl"; SEEN = LIVE / "seen.json"; OUT = LIVE / "outcomes.csv"; NY = ZoneInfo("America/New_York")
 RULES = [      # the rule line shown on the page. To change the rule in force, change this list (and register the change in TRACK first).
-    dict(id="FA-4", kind="results", score="own_stock", threshold=0.7, enter_min=1, hold_min=60, instrument="the company's own stock",
+    dict(id="FA-4", name="Strong-results rule", kind="results", score="own_stock", threshold=0.7, enter_min=1, hold_min=60, instrument="the company's own stock",
          text="Results release: when the own-stock score is 0.7 or more in size, trade the company's own stock in the direction of the score. Enter 1 minute after the release, hold 60 minutes.",
          evidence="Past releases 2020-2026, thresholds fitted on earlier years only: +1.42% per trade on 140 trades, before cost. Measured cost on Interactive Brokers for a US$10,000 trade: 0.21% median, 0.29% average per round trip. Scores of 0.8 or more after cost: +1.04% on 132 trades, right on 60%."),
-    dict(id="FA-1", kind="fed", score="implication_equities", threshold=0.0, enter_min=1, hold_min=60, instrument="the Nasdaq-100 future",
+    dict(id="FA-1", name="Fed-statement rule", kind="fed", score="implication_equities", threshold=0.0, enter_min=1, hold_min=60, instrument="the Nasdaq-100 future",
          text="Fed statement: trade the Nasdaq-100 future in the direction of the statement's score. Enter 1 minute after the release, hold 60 minutes.",
          evidence="Statement days 2010-2026: +0.30% on average, right on 74% of 101 days, before a cost of about 0.02%."),
 ]
+RULE_NAMES = {"FA-1": "Fed-statement rule", "FA-2": "Fed-day gold rule", "FA-3": "Sector-reading rule", "FA-4": "Strong-results rule", "QC-3": "Overnight Nasdaq rule", "CV-1": "What a user could have done (record only)"}
 STATUS = "Candidate rules under forward test. Not confirmed signals, not investment advice."
 
 
@@ -43,7 +44,7 @@ def load(now=None) -> dict:
     for b in S: b["action"] = action(b, now)
     beat = (now - datetime.fromtimestamp(SEEN.stat().st_mtime, timezone.utc)).total_seconds() if SEEN.exists() else None
     dup = sum("(again)" in b["kind"] for b in other); alerts = [b for b in S if b["action"]["state"] == "none" and not b["drill"] and (now - b["release"]).total_seconds() < 86400 and (abs(_num((b["read"] or {}).get("own_stock"))) >= 0.3 or _num((b["read"] or {}).get("material")) >= 0.5)]
-    return dict(now=now, scored=S, alerts=alerts, duplicates=dup, old_hidden=n_old, heartbeat_s=beat, record=record())
+    return dict(now=now, scored=S, alerts=alerts, duplicates=dup, old_hidden=n_old, heartbeat_s=beat, record=record(), untested=untested(S))
 
 
 def _num(x) -> float:
@@ -80,15 +81,25 @@ def action(b: dict, now) -> dict:
 def record() -> pd.DataFrame:
     if not OUT.exists(): return pd.DataFrame()
     T = pd.read_csv(OUT); T["gross_bp"] = pd.to_numeric(T.get("gross_bp"), errors="coerce"); g = T.dropna(subset=["gross_bp"]).groupby("rule")["gross_bp"]
-    return pd.DataFrame(dict(trades=g.size(), average_pct=(g.mean() / 100).round(2), right_on=(g.apply(lambda x: (x > 0).mean()) * 100).round(0))).reset_index() if len(T.dropna(subset=["gross_bp"])) else pd.DataFrame()
+    if not len(T.dropna(subset=["gross_bp"])): return pd.DataFrame()
+    R = pd.DataFrame(dict(trades=g.size(), average_pct=(g.mean() / 100).round(2), right_on=(g.apply(lambda x: (x > 0).mean()) * 100).round(0))).reset_index(); R.insert(0, "name", R["rule"].map(RULE_NAMES).fillna(R["rule"])); return R
+
+
+def untested(scored: list) -> pd.DataFrame:
+    """kinds of news that read strongly but have no tested rule yet, counted by source: the list of things still to be tested"""
+    rows = {}
+    for b in scored:
+        if b["drill"] or b["action"].get("rule") or not (abs(_num((b["read"] or {}).get("own_stock"))) >= 0.3 or _num((b["read"] or {}).get("material")) >= 0.5): continue
+        k = (b["source"], kind_label(b)); rows.setdefault(k, dict(n=0, last=b["release"])); rows[k]["n"] += 1; rows[k]["last"] = max(rows[k]["last"], b["release"])
+    return pd.DataFrame([{"Source": k[0], "What it is": k[1], "Strong items seen": v["n"], "Latest": v["last"].astimezone(NY).strftime("%Y-%m-%d %H:%M"), "Status": "no tested rule yet"} for k, v in rows.items()])
 
 
 def table(items: list, tz: str) -> pd.DataFrame:
     Z = ZoneInfo(tz); rows = []
     for b in items:
         d = b["read"] or {}; fx = d.get("facts") or {}
-        rows.append({"Released (New York)": b["release"].astimezone(NY).strftime("%Y-%m-%d %H:%M:%S"), "Local time": b["release"].astimezone(Z).strftime("%Y-%m-%d %H:%M"), "Company": b["ticker"], "What it is": kind_label(b) + (" — test run" if b["drill"] else "") + (" — scored late" if b["rescored"] else ""), "Reads as": direction(b),
+        rows.append({"Released (New York)": b["release"].astimezone(NY).strftime("%Y-%m-%d %H:%M:%S"), "Local time": b["release"].astimezone(Z).strftime("%Y-%m-%d %H:%M"), "Company": b["ticker"], "Source": b["source"], "Reads as": direction(b),
                      "Own stock": d.get("own_stock"), "Market": d.get("market") if b["kind"] != "fed" else d.get("implication_equities"), "AI demand": d.get("ai_demand"), "Vs prior guidance": d.get("results_vs_prior_guidance"), "New guidance": d.get("guidance_change"), "Material": d.get("material"), "Uncertainty": d.get("uncertainty"),
                      "Suggestion": b.get("action", {}).get("text", ""), "Revenue": str(fx.get("revenue") or "")[:48], "Guidance": str(fx.get("guidance_next") or "")[:90],
-                     "Other companies named": ", ".join(f"{x.get('company')} {float(x.get('direction') or 0):+.1f}" for x in (d.get("affected") or []) if isinstance(x, dict))[:80], "Headline": b["title"], "Source": b["source"], "Seen after release (s)": b["lag_s"], "Scored after seen (s)": b["score_s"]})
+                     "Other companies named": ", ".join(f"{x.get('company')} {float(x.get('direction') or 0):+.1f}" for x in (d.get("affected") or []) if isinstance(x, dict))[:80], "Headline": b["title"], "What it is": kind_label(b) + (" — test run" if b["drill"] else "") + (" — scored late" if b["rescored"] else ""), "Delay: published → our listener saw it (seconds)": b["lag_s"], "Delay: seen → score ready (seconds)": b["score_s"]})
     return pd.DataFrame(rows)

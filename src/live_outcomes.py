@@ -28,6 +28,7 @@ from src.ai_chain_test import Book, _ny, ret, COST
 
 LIVE = Path("data_provenance/live"); LOG = LIVE / "events.jsonl"; PX = Path("data_provenance/intraday/live"); DOCS = Path("docs")
 FUT = {"NQ": "NQ.c.0", "ES": "ES.c.0", "GC": "GC.v.0"}      # the same contracts as the backtest's final data (gold by volume)
+NAMES = {"FA-1": "Fed-statement rule", "FA-2": "Fed-day gold rule", "FA-3": "Sector-reading rule", "FA-4": "Strong-results rule", "QC-3": "Overnight Nasdaq rule", "CV-1": "What a user could have done"}      # plain names (founder, 20 Nov); the codes stay as record keys
 RULES = {"FA-1": "Fed statement score -> Nasdaq future, 1 min after the release, hold 60 min", "FA-2": "Fed day: gold's move from the release to 15:15 -> held to the next 09:30",
          "FA-3": "results: market score -> own stock, 5 min after, hold 30 min", "FA-4": "results, step rule: own-stock score of 0.7 or more in size -> own stock, 1 min after, hold 60 min", "QC-3": "results after the close: results against prior guidance -> Nasdaq future, 5 min after, to the next 09:35",
          "CV-1": "customer view: own-stock score -> own stock, 1 min after the score was ready, hold 60 min"}
@@ -138,7 +139,7 @@ def cmd_ledger():
         back = {"FA-1": "+30.0 bp, 74% of 101", "FA-2": "+40.3 bp, 67% of 132", "FA-3": "+41.4 bp, 58% of 330", "FA-4": "+141.5 bp per trade on 140 trades, 2020-2026, thresholds fitted on earlier years", "QC-3": "+16.7 bp, 61% of 294", "CV-1": "no backtest at this clock (own-stock score from the SEC stamp + 1 min: +64.9 bp, 58% of 365)"}
         for k, what in RULES.items():
             v = T[(T.rule == k)]["gross_bp"].dropna(); c = COST["future"] if k in ("FA-1", "FA-2", "QC-3") else COST["stock"]
-            L.append(f"| {k} | {what} | {len(v)} | {v.mean():+.1f} bp | {c:.0f} bp | {(v > 0).mean():.0%} | {back[k]} |" if len(v) else f"| {k} | {what} | 0 | | {c:.0f} bp | | {back[k]} |"); print(f"  {k}: {len(v)} trades" + (f", average {v.mean():+.1f} bp, right on {(v > 0).mean():.0%}" if len(v) else ""))
+            L.append(f"| {NAMES.get(k, k)} ({k}) | {what} | {len(v)} | {v.mean():+.1f} bp | {c:.0f} bp | {(v > 0).mean():.0%} | {back[k]} |" if len(v) else f"| {k} | {what} | 0 | | {c:.0f} bp | | {back[k]} |"); print(f"  {NAMES.get(k, k)} ({k}): {len(v)} trades" + (f", average {v.mean():+.1f} bp, right on {(v > 0).mean():.0%}" if len(v) else ""))
         L += ["", "A verdict needs at least 30 trades per rule; before that the totals are only a record.", "", "## Every event", "", "| date (New York) | who | rule | direction | entry | result, before cost | note |", "|---|---|---|---|---|---|---|"]
         L += [f"| {r.date} | {r.who} | {r.rule} | {r.direction} | {r.entry} | {'' if pd.isna(r.gross_bp) else f'{r.gross_bp:+.1f} bp'} | {r.note} |" for r in T.itertuples()]
     DOCS.mkdir(exist_ok=True); (DOCS / "live_outcomes.md").write_text("\n".join(L) + "\n"); print("-> docs/live_outcomes.md")

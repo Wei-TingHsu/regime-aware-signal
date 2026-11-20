@@ -83,7 +83,7 @@ a.rs-link {{ text-decoration:none !important; color:inherit !important; display:
 .rs-hover {{ transition:transform .18s ease, box-shadow .18s ease; cursor:pointer; }}
 .rs-hover:hover {{ transform:translateY(-2px) scale(1.015); box-shadow:0 2px 4px rgba(16,24,40,.05), 0 16px 36px rgba(10,37,64,.14); }}
 
-.rs-wordmark {{ font-weight:700; font-size:1.15rem; letter-spacing:-.01em; }}
+.rs-wordmark {{ font-weight:800; font-size:2.3rem; line-height:1.15; letter-spacing:-.01em; }}
 .rs-wordmark span {{ color:{INK3}; font-weight:500; margin-left:.5rem; font-size:.92rem; }}
 .rs-banner {{ padding:18px 22px; margin:6px 0 14px; }}
 .rs-banner h2 {{ margin:0 0 4px; font-size:1.35rem; }}
@@ -561,9 +561,7 @@ def documents_view(R: dict, day: str):
 # ==========================================================================
 st.markdown('<div class="rs-wordmark">◐ Regime-Aware Signal <span>a daily read on five core markets — '
             'and, more often than not, an explicit refusal to call it</span></div>', unsafe_allow_html=True)
-try: st.page_link("pages/Event_signals.py", label="Event signals: live company news, scores and rule windows →")      # 20 Nov: the header (and its page menu) is hidden by the style sheet
-except Exception: pass
-tabs = st.tabs(["Today", "Look up an asset", "The record", "How this works", "Reading this page"])
+tabs = st.tabs(["Today", "Look up an asset", "Event-driven company signals", "The record", "How this works", "Reading this page"])
 try:
     focus_param = st.query_params.get("focus")
 except Exception:
@@ -760,7 +758,7 @@ with tabs[1]:
 # ==========================================================================
 # THE RECORD
 # ==========================================================================
-with tabs[2]:
+with tabs[3]:
     st.markdown('<div class="g rs-banner"><h2>The record</h2><p>What runs, what has been tested, and what the referee says. '
                 'No performance figure appears here until the forward record can report an interval rather than a point.</p></div>',
                 unsafe_allow_html=True)
@@ -838,7 +836,7 @@ registered first, and changing it afterwards to the better-scoring one is the ki
 # ==========================================================================
 # HOW THIS WORKS
 # ==========================================================================
-with tabs[3]:
+with tabs[4]:
     st.markdown("""
 Every trading day we read the policy and company documents published that day — Federal Reserve statements and minutes,
 company earnings releases, executive orders and proclamations. A language model classifies each one: what it says, how
@@ -884,7 +882,7 @@ failed, the failure is recorded rather than the test rerun. No live performance 
 # ==========================================================================
 # READING THIS PAGE — the manual, for a reader who is not a quant
 # ==========================================================================
-with tabs[4]:
+with tabs[5]:
     st.markdown('<div class="g rs-banner"><h2>Reading this page</h2><p>What each thing on the Today tab means, what it is not, '
                 'and how a trader would use — or not use — a number like it. Everything here is also in the repository record.</p></div>',
                 unsafe_allow_html=True)
@@ -961,3 +959,10 @@ was looking at the right document.
 Nothing on this page is a recommendation to buy or sell. Every number carries its date, its source file in the
 repository, and its status — measured, tested, or registered and not yet run.
 """)
+
+# ==========================================================================
+# EVENT-DRIVEN COMPANY SIGNALS  (tab 3; added 20 Nov 2026 -- src/live_page.py draws it and redraws it every 30 seconds)
+# ==========================================================================
+with tabs[2]:
+    from src import live_page as _live_page
+    _live_page.render()
