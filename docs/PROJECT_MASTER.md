@@ -6353,3 +6353,5 @@ with their evidence and limits.
 ### Standing rules added 20 Nov 2026
 - **No Databento spending** (founder, 20 Nov): the app no longer shows 1-minute prices, and no paid market data is requested. The forward record prices events with Yahoo's free 1-minute bars.
 - **Source register**: every source the founder names is written into `docs/SOURCES.md` the day it is named.
+
+- **Command blocks** (founder, 20 Nov): before every block of commands, say whether it stops by itself and whether the listener must be stopped or restarted. Working arrangement: Window 1 = the listener only; Window 2 = the app only; Window 3 = every other command.
