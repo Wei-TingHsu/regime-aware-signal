@@ -1,0 +1,93 @@
+{
+ "slug": "buffett",
+ "month": "2018-11",
+ "model": "claude-sonnet-5",
+ "prompt_version": "calls-v1-2026-11-20",
+ "n_headlines": 11,
+ "calls": [
+  {
+   "i": 0,
+   "ticker": "BRK.B",
+   "company": "Berkshire Hathaway",
+   "direction": 1,
+   "kind": "statement",
+   "new": true,
+   "published": "2018-11-03 18:19:08+00:00",
+   "title": "Warren Buffett\u2019s latest investment idea: his own company\u2019s stock",
+   "source": "qz.com",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNX1FKZTdTckIyMkJhRFJHYTREb2dLRGVHSW02bnVBT0RtYlhMUXVVWVlTX0hEbW8wajFPNk1kSXJkX0xyUnBLOHd1ejUxSzc1U09HUmJndTNwRmJqdUFpck1keDNvTDcyRFVJcEJabWlyRzhURlRaTnhzNTJLTGhIb3dLYWRRV2c?oc=5"
+  },
+  {
+   "i": 3,
+   "ticker": "JPM",
+   "company": "JPMorgan Chase",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2018-11-14 08:00:00+00:00",
+   "title": "Berkshire Hathaway reveals stake in JP Morgan as Warren Buffett raises bet on the US banking system",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNeDdwRnJrdHBxaW5oZ05SYUFvX3Fad09yTjVKUjRiNVptZXBwS0tuNXc5endJYUhOSVV0VXdOd2N1ZFZ0OTJLanVtQ0RPbEs5bmoxaWtZV3p2cG9iUnBGQ3dnVDN4RXRqUTQ1WVhoUU5jZkN1OEp2UVNiLUo2TDNpMUN6T0ZLZ3B6c3NBR21XN0t5OGtraWV5anR4Zm9JNFNrS3BpalZuYjhiTXhPMl9QNW9lbjdnNWROSDN5cFE4M3VJY05LOE5kVE1SZ9IB0AFBVV95cUxNLTRVYTVreWg4aElaQUNldTNXX1ZZM0JmWHlneTk5ZUZRVUhBRU9zR2UzNHhWMVZ2UDFDZzVYMEhSd2RZcHZaakI4cXN2a1JySTU4dXc1TjF1bWdTWjhHWkgyTDMzRXRJa3I1a2MtTEVUZHNUYmJUX2Q5SWRKMzB5UENHT25XMEZkQVBEcDdpQnQxQ3luZ21BM2doSk43ZlNCUXRETHhqQS1jZlFwNGdjTWZtR09YVVBpUGZwVnZoekFpTmZZNHlwekQtSEZuZ1lq?oc=5"
+  },
+  {
+   "i": 5,
+   "ticker": "JPM",
+   "company": "JPMorgan Chase",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2018-11-14 08:00:00+00:00",
+   "title": "Warren Buffett takes $4 billion stake in JPMorgan Chase | CNN Business",
+   "source": "CNN",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5QYjd1clcwbFFCZF9fZlNFWDVhNGYySkN3TW1CWnRESFljTjNESnVfLXNsUFVNOFRWUTlId2wtalJtMlBDSnpGdWdOYTJDUXMtbHpwWlRaZnNZbURHQUdZLTJBdWNaUlQyY3RuOFZuWXh4UQ?oc=5"
+  },
+  {
+   "i": 6,
+   "ticker": "WMT",
+   "company": "Walmart",
+   "direction": -1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2018-11-14 08:00:00+00:00",
+   "title": "After More Than Two Decades, Warren Buffett Sells His Last Walmart Shares",
+   "source": "Bloomberg.com",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOS2VmVGJ5R3piY3RIYVVyYVI1QUJaQkZqdGRNUzhtWkROblRvZFF6M1hhaTRLQlNfVXFEeVdXMmR3OFJQTEpXNHMxSkhXQWJBRHA4T25YNEtDYk9XTmxBT3dHdFcyYVh2cDRWd0VlZEFHNVJwZWQzZXlxUEZPMWtCQ3JWcFVMUTd1R25lNVBHalVTVG9xLW81QlljSjJsWmV0YWtpWVBzWElCQ1RiU1FnbDNlcXdzQQ?oc=5"
+  },
+  {
+   "i": 7,
+   "ticker": "ORCL",
+   "company": "Oracle",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2018-11-14 08:00:00+00:00",
+   "title": "Buffett's Berkshire reveals stake in Oracle, boosting the shares",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRlJIRGNneTFDTXVnVmRPMUZyV1lObDQ1R3FEVXp6cGt6QUlmRGlCbkdfRWszQlRnX0NrVXE4cHBZaU5ZWk83UUk1UXpTaHRvSTRXc1N2RWprS0RWQlhZT1pxM2tnMnhycUkwbWdYUzAzQzR1dkpKVW0xUkRMVGItRnZnWU9RWmZ1RUNfdlcwcTZHd2pPeElYYTlZQXd1VUx60gGmAUFVX3lxTFA2OFowMXBHZXdtUl9hNjZRZHBrV0JFRmwxSWllb0ItTzFaWFJkc2taRG8yNHgyZFpVcWpqbUxoRTNDelh3c3Y3RUY3NFZEbVh0NWpCWmctM3Q3TVNtQXBGQkxoeXFLUHpCbVpha2VDMTJuc0JJb1R2bUk3WXh3aUZhR09DNTI5ZnVEWjA3bDVVeWh3Z2txaHNxV2o4S3I5Z2xzc2hiUFE?oc=5"
+  },
+  {
+   "i": 8,
+   "ticker": "JPM",
+   "company": "JPMorgan Chase",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": false,
+   "published": "2018-11-15 08:00:00+00:00",
+   "title": "Warren Buffett takes $4B stake in JPMorgan Chase",
+   "source": "Fox Business",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNNWFMMHlsUzBlZ2YteG40a1FDeHMteG5FYVp4aVBraDZzQV9XNmduZ1VCOVNkaVFTWHFUU0lwSlJTWnBwV2RLT21mWHlMcks0aHVGN0tVZnZiOXVWdG5iS3RNTmd3YmdlbFdpSU9mUTBsazFyVGFzWUFGTjdBcTJqdHpMWnZ6a1pkUUNGWlJKN1htdWxsYXJR0gGcAUFVX3lxTE5yLTFDZkxxRm5zZmhUZkpDR1NEZ3o4MUVZd21hTHJkU1AzWkhQcTBfOEdiWktiWGR5elJzTnNuVWJxSW5KUVRDamctaEFzX3VsaWRuODA2TFFJaDluMDZ5THVHampkbVY1YjhwYnAzbklnMURjRmF5QWozT3F5YVpFcDl2YWx6VXdlS3RSS3ZBc0p3ZGx0QlFZeklRWQ?oc=5"
+  },
+  {
+   "i": 9,
+   "ticker": "JPM",
+   "company": "JPMorgan Chase",
+   "direction": 1,
+   "kind": "statement",
+   "new": false,
+   "published": "2018-11-15 08:00:00+00:00",
+   "title": "Buffett's big bank bet explained using a simple measure of stock market value",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxONE1hSEdmNUp0YVd3SDlHZjhmQ183R3VVLUpKOEpReFI0bUNqbmpnQmoyYlJYNmx2MDRrVjZoYmFBZXc2YzFnMVZCRjVhR0EtTVN5MG5RNHlQcWZpd3JNUEpnY1lMTkFVYi1qMHNlZnRVMFhDYzZ2VmZ2SmxBNUp1NUVGZ0x2T0RBd2ZGbW5JOFhmWU5WV1NPT0FWZElZSHc4WmxPNzVaVkpVUdIBrwFBVV95cUxQd1ZIM3AxdnpndTNBaFNubjlUZXpucDJSVlZtMEFuRG5nZkdHZFVZZTQ5cDJ0S0VnV3hDY01Bdi0zTl9LbVNkbTI4RVo4Mm9qdmowdGpWaVlzbjFaZTQxaEZVX3liVTNvVVFabi1YWjBtcFp6TEE1RFNWallnMk5yaEJrdFAwcjRpWUY4dFFya3ZqLVN4UHpDRnYya2hxaFZ5bjh1cnlETllKQ21MNXhJ?oc=5"
+  }
+ ]
+}

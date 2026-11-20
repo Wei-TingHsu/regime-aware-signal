@@ -1,0 +1,93 @@
+{
+ "slug": "buffett",
+ "month": "2018-08",
+ "model": "claude-sonnet-5",
+ "prompt_version": "calls-v1-2026-11-20",
+ "n_headlines": 14,
+ "calls": [
+  {
+   "i": 2,
+   "ticker": "WMT",
+   "company": "Walmart",
+   "direction": -1,
+   "kind": "statement",
+   "new": true,
+   "published": "2018-08-16 07:00:00+00:00",
+   "title": "Warren Buffett\u2019s warning on Walmart: There are better stocks than retailers",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNSFNRczA5WEJmSHVwTkN6aTZ1TGJyazJaTzM3cV9YVnRGdzBnTF9rZ3pLc2RCNDBTWU5pYkVOeHhfZ1o0VF8wa19JVFUzRFJMbmk1YlhNOXN3b2stZjl1NE5BWkQ4b015M0FzWXZXSW9TTUN4TU5XNDljc28zLVpPcW9HNDh5YjVCUGEzV3hrTXBfSEJzWlIyR1MtVTZEVHBhbVHSAacBQVVfeXFMUGstQktJd2trTmlmdXk2N2FkN3BSVW5zTGtaWTg4c1JKdURYdmlWRE9RQ1gxcDVmSUpmRWJqbld1aUpMUHhXYk1PS09ySmZTcVFHVGgzV1ZkOXN5ZEhKYjZmUzE2bHFqN1l3UVV6ZmNJOHRMQTFOOVc1c1ZFM2FRVHdsTHo1emFJTmtZZkVmS09ENlRkblB3cHpVNXNNaWtmVUdiNnhaNU0?oc=5"
+  },
+  {
+   "i": 3,
+   "ticker": null,
+   "company": "Paytm (One97 Communications)",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2018-08-27 07:00:00+00:00",
+   "title": "Berkshire Hathaway Takes Stake In India's Paytm",
+   "source": "Forbes",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOd3psSDNYdjFZUF9nNnZPYnB4c2N2aldiUS12cUpmY3FjMUQzOTZsRWN4a2tUbWVRbWIycjB2cEpURVZsWXRwQU93bmcyVnpZTFNOVWtTZU1NUWJoRmt1amJJZll5SWJrWHA3dTNSMGxvV04wd3FqZE1MczB0blZYeGo4VmVTMkdZY3BhdFNkNktWMHNZZENnU0xRcUxTQQ?oc=5"
+  },
+  {
+   "i": 5,
+   "ticker": null,
+   "company": "Paytm (One97 Communications)",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2018-08-27 07:00:00+00:00",
+   "title": "Warren Buffett is investing in Paytm, his first Indian company",
+   "source": "WOWT",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcXc5bjg3all0WWV6aDd4a1pLWGE0dzllTFJGRkFsOXU2MnlBX2VsRFQ0WllnTzJySDJfdkFfR1JKRHJPTDRFZ19IWUJ3VDNkSW50dHY0WV96QXg3VGpGTUdhUmVGYlJIZDBrRFdqdnI3QzNCLXFxVFh4aWFDdDloY2xWWjNIUDZUVm5ZNXhtZGdZelEtMnhHTTVrbGxDWFVPRHBzTFN3Wm1vSFF4WC0w?oc=5"
+  },
+  {
+   "i": 6,
+   "ticker": null,
+   "company": "Paytm (One97 Communications)",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2018-08-28 07:00:00+00:00",
+   "title": "Berkshire Hathaway Confirms Investment in India's Paytm",
+   "source": "Investopedia",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE50RGFkN012MjJYUk02SUV0S0RyODhrYzJyczhLdXU4dFpPeHNuUlpic2pFTVY5cXk1eTdXdjY5MFc3b20xbnNqazUzUE1ZN3RZbGtGZkZiM2YybjdwLWpBZzhOQ2VUTWpXcTktVFdFTG92dXI1c1IyYQ?oc=5"
+  },
+  {
+   "i": 7,
+   "ticker": "BRK.B",
+   "company": "Berkshire Hathaway",
+   "direction": 1,
+   "kind": "statement",
+   "new": true,
+   "published": "2018-08-30 07:00:00+00:00",
+   "title": "Berkshire\u2019s Already Snapping Up Stock Under Eased Buyback Guidelines, Warren Buffett Says",
+   "source": "Barron's",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPNnlraVdzd1NVSUtkb0luS1BoRXlxUW9CNzlJRXA4VjFyWUcyQzVYckJtNWhHWHJVOXBONjE2QXoxUzR4QnNyZnhkYkNoMEQtTk4xRXdkeEFnTkxPOXZLQ0l6d3ZyS2h6X3NEd3gtODVyZ3AxaXNjZVVua05JMVFSX0w0QlEwcVdSUDVCOTk0R0I2eGo3VjQ0TkxoN1dqVEk1bkNjdVh2ZHJMVHNoQkN2Z2dTR3c2eDZ3LUR4bzVlUWRrakF6dGF5RWh3NA?oc=5"
+  },
+  {
+   "i": 11,
+   "ticker": "BRK.B",
+   "company": "Berkshire Hathaway",
+   "direction": 1,
+   "kind": "statement",
+   "new": true,
+   "published": "2018-08-30 07:00:00+00:00",
+   "title": "Buffett says Berkshire Hathaway has bought back 'a little' of its stock since changing policy",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNHEyYXA0WGJOVVdCRTJ0b3NRMUFMTkxLQmhKd2VkQ253MzVRYVBvRVdVMjRLeDRHeFRtQ0RnZlM4VWlmVG5HZFcyVzBqMHJja0JnYUpUNURqZVFGaGxQNmxRaDdQTUUtcDY4QnNFWWR1aUE4TUd0Z1cwWjZwMXpPcnFPSWpPUlRXdWt2UUF4Mkpsc0k1TU9IdHVTVlJqcjRIVk81YTJCZnhZODVZQXFJU2hqN0FfbHVzd2ZDcDdmemt4ZndQVDBv0gHMAUFVX3lxTE02SlE2SF9qYklzRkZtR0g1dnZSVmxCSGRxU193QjZNdGtzZ3RXNU0zSjlyMndSN3NYTGt5V09xTlBhQXF0ZUpqQXhOUmc1NDY3aW5HajZDN1MtS2Jna2hrMUJpYlVXZ1dHd0plWTg1SzF6MWFnZ2ZOTm5ZZkYzczBUaVJWekxvcFdFSGJzc0NQTnhYc2tYaExOSG1aRGRERDhmdUd0RmdYQVZyVW5lU191NmFDX25qUU5xRmtMZmRSRWljYXdrUFMyeVB0Uw?oc=5"
+  },
+  {
+   "i": 12,
+   "ticker": "TSLA",
+   "company": "Tesla",
+   "direction": -1,
+   "kind": "statement",
+   "new": true,
+   "published": "2018-08-31 07:00:00+00:00",
+   "title": "Warren Buffett to Apple: Don\u2019t Invest in Tesla",
+   "source": "Barron's",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBQbW5pYUxjYzRiRTczNlRHRlZ4WGtxRG1DTHBZTVJhOW92bDZKR2ZqQWEtNEN2T3NJS29ySmJSclhIekR3TzdsZ3V0VXNuemZfaTA4OWlfNm5wSXdmOU42THMwWHBCb0JuTm5haTljaWRZNWppZ2xIalhR?oc=5"
+  }
+ ]
+}

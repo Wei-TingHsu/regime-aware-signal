@@ -1,0 +1,69 @@
+{
+ "slug": "ackman",
+ "month": "2018-04",
+ "model": "claude-sonnet-5",
+ "prompt_version": "calls-v1-2026-11-20",
+ "n_headlines": 5,
+ "calls": [
+  {
+   "i": 0,
+   "ticker": "HLF",
+   "company": "Herbalife",
+   "direction": -1,
+   "kind": "position reported by media",
+   "new": false,
+   "published": "2018-04-05 07:00:00+00:00",
+   "title": "Bill Ackman's hedge fund empire crumbles in less than 3 years from public wrong-way bets on Herbalife, Chipotle",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVGZ1RHhweDZCSGdYNXowdzREakxKaFctR25heVd2clhJSGJyRzZWRjRYUkN4ZFE1WVB1amJZVGYwWFNMclZCSFlxdnBmZHE5MVNpUUlEVnFWcmliaUJ6WWN3cUE4Zm9udkRKaTltS1JSVDBkY1JOWU5ZSnJTNkstaHVfRnhUekhlLW44aVFQdlVEZDE3cDRLLVFLNUs1czNFU2ZMYmc5NWzSAa4BQVVfeXFMTmFkNElLNlduNXlzTXowVnFFaGdQeV80anJNUDJZZllXS21mcGFZd1NxS0pYUXJ5NklJYng3TW95cExhVkJPdlNNNUxWendGd1d3ZnNoWE1CNld3cW9GeG9XZzlKeE4yLWxKWlBlWWp0eDg2U0VHaW5tTnZ2QVVld2lHcUdhMG1SQ1lIdmlVZ0FSd1ROcE9lLXI4TnVJaDdibl9PamxPM2Z1a3paZXZR?oc=5"
+  },
+  {
+   "i": 0,
+   "ticker": "CMG",
+   "company": "Chipotle",
+   "direction": 1,
+   "kind": "position reported by media",
+   "new": false,
+   "published": "2018-04-05 07:00:00+00:00",
+   "title": "Bill Ackman's hedge fund empire crumbles in less than 3 years from public wrong-way bets on Herbalife, Chipotle",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVGZ1RHhweDZCSGdYNXowdzREakxKaFctR25heVd2clhJSGJyRzZWRjRYUkN4ZFE1WVB1amJZVGYwWFNMclZCSFlxdnBmZHE5MVNpUUlEVnFWcmliaUJ6WWN3cUE4Zm9udkRKaTltS1JSVDBkY1JOWU5ZSnJTNkstaHVfRnhUekhlLW44aVFQdlVEZDE3cDRLLVFLNUs1czNFU2ZMYmc5NWzSAa4BQVVfeXFMTmFkNElLNlduNXlzTXowVnFFaGdQeV80anJNUDJZZllXS21mcGFZd1NxS0pYUXJ5NklJYng3TW95cExhVkJPdlNNNUxWendGd1d3ZnNoWE1CNld3cW9GeG9XZzlKeE4yLWxKWlBlWWp0eDg2U0VHaW5tTnZ2QVVld2lHcUdhMG1SQ1lIdmlVZ0FSd1ROcE9lLXI4TnVJaDdibl9PamxPM2Z1a3paZXZR?oc=5"
+  },
+  {
+   "i": 2,
+   "ticker": "CMG",
+   "company": "Chipotle",
+   "direction": 1,
+   "kind": "statement",
+   "new": true,
+   "published": "2018-04-18 07:00:00+00:00",
+   "title": "Chipotle is banking on breakfast and drive-thrus to turn around the chain, according to billionaire investor Bill Ackman",
+   "source": "Business Insider",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQ28zeWJkelgzME84Y193Z1Jqd1hBTDhiMW5WcUwza3FvRUFmckxMSW5zcXVSbzlqMV9GY3NNbU5ldTJGVWloQ09JYm9YMkVnYkdua2VSQnRKRzEtRGpfclI1NmZEaENySlJwMTlIOU0tdUV6aUZxX1hjTmNFUE9QTFM4SWtXSnlhWDBPRmx3?oc=5"
+  },
+  {
+   "i": 3,
+   "ticker": "HLF",
+   "company": "Herbalife",
+   "direction": -1,
+   "kind": "position reported by media",
+   "new": false,
+   "published": "2018-04-23 07:00:00+00:00",
+   "title": "'The United States would be better off when Bill Ackman is gone' \u2014 Behind the investor's epic battle with Herbalife, Icahn",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaVdoenZadnNZZUZ4X1p5UzhBVGtXZTRnSVBldjR5SHJ6RnJQMDRqZWxHZHZ6ajU3cnp2dDctaWxDZ0YwaUsydmhiR04xQi0tR3FuaF8wT2p5UzFhOGswc0VBeFE5RFFpZWtRbUhYa1dNbnV6WWxpQ3RYTlJ3MTQ5NThjNHJHR3JJOGlkLUY5SnBmM244N1djSFFiTWt6Ym9WemR1cEdaZlpaZGdWd3VjWNIBtgFBVV95cUxNa0Zhb2Zqb2cyV0JpT2hnWU1NVzZvcjlJNVFYaEFqSDR4dmxiUHY5WWZHaEJDODVvVlFYcVBZUzMwZG1IcGQ0NXVnYi1KajZjY1BDc1labWRVS3R2eVp2TlcxS1czZHZZQ3EtSDJmb3ZjeEIxVnBzNEpXMmUySUlLbm1SRlpoWGJkM2IxNlFlamRLRHJRdEItM2VMYkZfeG5pb3BpU2NtQUZHM1F1QVFzczM2TU1vUQ?oc=5"
+  },
+  {
+   "i": 4,
+   "ticker": "HLF",
+   "company": "Herbalife",
+   "direction": -1,
+   "kind": "position reported by media",
+   "new": false,
+   "published": "2018-04-25 07:00:00+00:00",
+   "title": "Bill Ackman's bet against Herbalife was 'dangerous,' CNBC's Scott Wapner says",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOYm5xeXZSNWN4c0liRjBvU2hMZnFlTTJTQmlmenZzNUduOW5hMFZpVWxRVjBid0pEdTdXWlktTDhMTVc2c2dPNFotd01meXpreVlYeGtqc2ZPeVJOanhydk1oaUVQOVdEdXZnd3l0TDlhNTZvd2ZVS1oyXzloNnJtaThramxYbnI0dUp6YVI4TUNjVk9UdWhQSmxDZVZRMEFt0gGmAUFVX3lxTE1JTXd4d0FucXcwRDhPTVNqekhHMmdRTTR3a1FHTGd5c01fejFSOU5maERYN2xBVC1SdDF5NlI3SE1tLW53bGFQZjFIZ1kzSm91VDJJUkpKenUtM3NZcEZtLS1jMWZxOTFwWFVIa2NDeF9tcXpiRjlFOTk4d1ZrX3NqRnRtdmJibFIxTlNUYlU2Z1ZRaTFnZmU2VWxDWVdGWU1FRVJ1SEE?oc=5"
+  }
+ ]
+}

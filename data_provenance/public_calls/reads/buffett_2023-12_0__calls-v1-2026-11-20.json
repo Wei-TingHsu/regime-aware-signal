@@ -1,0 +1,69 @@
+{
+ "slug": "buffett",
+ "month": "2023-12",
+ "model": "claude-sonnet-5",
+ "prompt_version": "calls-v1-2026-11-20",
+ "n_headlines": 38,
+ "calls": [
+  {
+   "i": 20,
+   "ticker": "HPQ",
+   "company": "HP Inc.",
+   "direction": -1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2023-12-11 08:00:00+00:00",
+   "title": "Warren Buffett's Berkshire Hathaway continues to sell HP shares, reducing stake to 5.2%",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPejJkOC15UFdqeHY2WEk5Zk16bjVBbGo5QzZDZzV5bzVKclNOSVFCejg0c0lfRkxXenZ0NmRkTVJwNzZ5SVFhNEM1OW9OX2lWdThHYUxSeEVWYWJvRWh4ODN4aFcyWFRTTEVuSlA1N1Z2MV9YUlFGMVlKNzhyMnpCaXVjUzNZZDFHX3RZS01ZRkYxMTBqMjlxaUk3WnkyRTNyZFAyRkludmM3SzBEN2tZdl9mYm0zNVBzNVprRzZneW55V1BaTmJkMtIBzgFBVV95cUxQS2U3djY2T0lmbzlCell3QlQ3c2kyNkY1emVDVmlDbkxzQVBSckd6TFpGQlV0S3BzcThIWlZnSWIwWmZZTFFHcjI3b3d6NWNYNTNUM0QyeEg3WVBBWTNoSVJFNU5NUGVrU1ppUFVnRDVDSDRGWTFydlRRWFBka3d5LV90anc1UEhPZW51dXUybVNyN3RvTURYcFdNM2Rnb2F1Nm5MV3o2TGY2aGFNM3ZlOFpnVkQtSjZFZXJWdC1yQWwtc015cExnR1cxdnlodw?oc=5"
+  },
+  {
+   "i": 23,
+   "ticker": "OXY",
+   "company": "Occidental Petroleum",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2023-12-13 08:00:00+00:00",
+   "title": "Berkshire Hathaway buys Occidental Petroleum shares worth about $588.7 mln",
+   "source": "Reuters",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUWN1MUhRQkM0Vm1BbWZMdkpreTJzNTJXTmVKY0lNdl9IUmwzdjJqMV9aRndld0RPeUZsaTdEOF9ZeVVyeTFlVzNKUU9kcWpSOS0wdktKdFdjTWFoNGJuMVBJMkFMSlUxNFBaR01RRDNNaWhiNTA4ZmxwUG4wcm5URkhNQjdOdlViWndhNktwX05IT2pJdkdsblc3T25UUFRhX3RQSFNiU3JDRWRoYXNFQlRZRlBSSkk?oc=5"
+  },
+  {
+   "i": 25,
+   "ticker": "HPQ",
+   "company": "HP Inc.",
+   "direction": -1,
+   "kind": "position disclosed in a filing",
+   "new": false,
+   "published": "2023-12-14 08:00:00+00:00",
+   "title": "Warren Buffett's Berkshire Trims Stake in HP Inc",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWEJCb3RoMGw5anhNYS1BNTFFR2FOMHB4UjhncENtelRPdHdBdHF4ZGJyY3lMUDMwOC1KTXFXVUIzd1poVUZGa2VlR29aRDgxZ2VVZ29ENFQ3VkRjWlNVQWw2endqRVNfT3NrLTIxRlp0M1VsTXMtcm1UalRSckVURzNaXzBQYkVVazlN?oc=5"
+  },
+  {
+   "i": 26,
+   "ticker": "OXY",
+   "company": "Occidental Petroleum",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2023-12-14 08:00:00+00:00",
+   "title": "Buffett\u2019s Berkshire buys more Occidental in endorsement of Permian Basin-related purchase",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNaC1vWExHT2pwVG9YRllHbEkxYTFpNmh2aXQzVWdjRHpzS3JJNU5VZGZBOHNreFRYY2tVeEZocDRyRko2SWRIZ09oQUtjNzdXTWFFeVkwYzNYMkdUMFJFVV9OZF9fQWF4ckZIUFZyWW5vdzRUZTlEaHFRb1lFWml2dktVMnc0MGxTNUJyZEo3NHgxdHhCc1ctTkZkLU9hS25hbjFXUmFJd25qemowTjh6VXRfdVl6TTZXckJzdFYtcU5WSUXSAcgBQVVfeXFMT01QdVN1ZmJoZGcyZElxZldMdG5heWd0QWxYUWFldUs5c0x1VzhQTG5ZblcxeF9CTFlUWlZlcWI0enU2ajl6alR2QXNaanNaSnhSUU9fcXg4NWxUR1l1MkxLV3A1M09QRzhKVFdYR2pTRGk4bmlOR3hpSU5oeUhtYXJsSTJldlZ4ak9CWEhKelduRF9wQ0VobUVVdjVPWkJjVlhHTGlicktMRnRYTmxxRkVQekRiRGF5SzdYZFAyWnIxQ05jZWNoNFY?oc=5"
+  },
+  {
+   "i": 29,
+   "ticker": "FNMA",
+   "company": "Fannie Mae",
+   "direction": -1,
+   "kind": "statement",
+   "new": false,
+   "published": "2023-12-19 08:00:00+00:00",
+   "title": "Warren Buffett: Fannie Mae Fumble: A $1.4 Billion Mistake Learned the Hard Way",
+   "source": "The Acquirer's Multiple",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMVEtX3o2c29rMmUxODhBeGVZN2hJbmNjQkdmM0MyaGFYbXZDSGM4d3lTd0h6NTJ2N3RNa28wUTB0VzIzSHk0R2dndTVHakdMSUk4N2VMYWlPUmVoXzBEMUY4SGsyaXFDUnQycEczazIyellJM2w3Ul9rakx4MndDeHhvelFNZFBsM2R6dFdPb1pqT3U5NXd3T201bmJrd2Y0VTdTN0E5NHJ5T3I4SFNFY0o0U2g?oc=5"
+  }
+ ]
+}

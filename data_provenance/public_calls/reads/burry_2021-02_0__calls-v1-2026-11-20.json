@@ -1,0 +1,69 @@
+{
+ "slug": "burry",
+ "month": "2021-02",
+ "model": "claude-sonnet-5",
+ "prompt_version": "calls-v1-2026-11-20",
+ "n_headlines": 10,
+ "calls": [
+  {
+   "i": 1,
+   "ticker": "GME",
+   "company": "GameStop",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": false,
+   "published": "2021-02-06 10:11:51+00:00",
+   "title": "'Big Short' Investor Michael Burry Sparked GameStop Stock Price Frenzy",
+   "source": "markets.businessinsider.com",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPX2E0WkxwTUlaYXphbmdXSVRDLVdwVzdBSkdIck5mb2NkR1JtQmpjcU53RzBEYVp6dG51MkI1ZWlQZnNXeVNMcDJCWk02M1BRZlFucDVZQ0RISDFsRUxlcUNZUFFDNVIwZFNaNmI4Tm9RMHN1MXZ6OHFibExTSzFBS3BwTGFQWHEyTk1VNHRBT0liQUFfN0FqZzY4bWxoRWNWTmtfSENGM3BsRWZHbVpVci0zLW13blNOVGNySGkwTHdrUW8wRk1yTWFoVHA?oc=5"
+  },
+  {
+   "i": 2,
+   "ticker": "TSLA",
+   "company": "Tesla",
+   "direction": -1,
+   "kind": "statement",
+   "new": true,
+   "published": "2021-02-09 08:00:00+00:00",
+   "title": "'Big Short' Michael Burry Questions Tesla Bitcoin Bet, Dogecoin Bubble",
+   "source": "markets.businessinsider.com",
+   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPazdPSktYbkZUbHllSzRybGd1bmtzYzZCaTRxUkxLSEtkSGZac2gxcklwMnh2OHhLNFVKbkpLMkhPU2V3dDlnbHZTb3JnR1pub3R5ZllsSGpiRTRpcVl3TEt1V1NzNUJuTUZZV0pyaTdYRDVuNzJhM2t5aFZBenkwT2RHNVp4SUtGRHNOYklMelRXZFZhVm9iN1Z0Rzg1MWtlMTZWLVNBUGVCblJvS2R2ZFhmeGlwNkNUekFnX215NHRjOW5KYnJBSmNCamYyaDl6a0RvQVZQdzVRUQ?oc=5"
+  },
+  {
+   "i": 4,
+   "ticker": "GME",
+   "company": "GameStop",
+   "direction": -1,
+   "kind": "position reported by the media",
+   "new": false,
+   "published": "2021-02-16 08:00:00+00:00",
+   "title": "Michael Burry, The Hedge Fund Genius Who Started GameStop\u2019s 4,000% Rise, Sold Before Its Reddit Surge",
+   "source": "Forbes",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNOE5jcWprOW54RWEyYVU5TW5zcDRWZm5SbWlsSFl6bDhrREhJb3c0dF9HSTd2MERKaXVYQ3I5RTZWRjQ0RklzaDhjQ0tUWW1xS2hEMW1IMnFQWm9XbU9JQ0VicllwUGt6cG5Ua1JhemRIdnIwekw1MTJQTU9qY0RuN0dOdFd0YjlCMkVvWjlCelByWEtMRG5TWUVvY2JzYzNHQ2hlNVAzdnZCR0dYUnpNOTkxeFRfaVhfQnllNkl5VUxUbXNLVXR6Z1BFWHNpT0Q2NWVtaW1YNXd3ekZUV2hoZlREbw?oc=5"
+  },
+  {
+   "i": 5,
+   "ticker": "GME",
+   "company": "GameStop",
+   "direction": -1,
+   "kind": "position reported by the media",
+   "new": false,
+   "published": "2021-02-18 08:00:00+00:00",
+   "title": "Michael Burry, 'Big Short' Investor, Sold GameStop Shares Before Surge",
+   "source": "Newsweek",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOc0RKX3hiLVB1amZtWTB2VVNVV1JucUlSWGpSNkxsWHJQUUJqMGhXaXVpR0JOMURjMVpDV2c1N085RVpGS1ZwNjRLOUgzZzZ5dkhtMzlWUHhsOVdNb2xhaFJNVTZ3RTlkbTMzcDRWUU9iTUxicXU4ZWd4eTFya0hIN1hJTkFlTmFxWWpsZ3VSZHQ4UnQ2SGEyb1dGSnlxOXRMZ0NQQ3V1VjAtUVBCSjlN?oc=5"
+  },
+  {
+   "i": 6,
+   "ticker": "SPY",
+   "company": "S&P 500",
+   "direction": -1,
+   "kind": "statement",
+   "new": true,
+   "published": "2021-02-22 08:00:00+00:00",
+   "title": "'Big Short' Michael Burry Says Stock Market at Huge Risk of Crashing",
+   "source": "markets.businessinsider.com",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNZGtGbEVodlctUmRJVGhJWFRla1NNNFpDelFPczJwVmlvaXotOUI1MVp4aVo1NVhuRXNvTzk3U0FqdWlHUGZvYTh6RG5LOHVIdkJ3UGRtZ2ZBRGMzQnVSeEYzMGFTY1VjYjhOY1ZhQklIYXcxWTRHMFVBdy1LX2ZNRTZ1RE1jRm94YUdET21qdFJNWTFFeUIyOG1tUXl6b0tSa0d5Sml2dVJ2SS1PX2tTdDJqa0ZTbk5Obk9odGNqN3IxMS16TUE?oc=5"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "slug": "buffett",
+ "month": "2024-07",
+ "model": "claude-sonnet-5",
+ "prompt_version": "calls-v1-2026-11-20",
+ "n_headlines": 10,
+ "calls": [
+  {
+   "i": 1,
+   "ticker": "AAPL",
+   "company": "Apple Inc.",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": false,
+   "published": "2024-07-06 07:00:00+00:00",
+   "title": "Billionaire Warren Buffett Has 99% of His Money Invested in 1 Brilliant Stock",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcmtXU19CYktNeFhrd0ZLZlJidlZpY3ZhdUtaM19DN3YwNURXOTNrdHR0ZllKR1lOT3hTOWk1andsTmY2Wm54cUk0TGtPakl4bzNERXpKSGx0TXZlaUxkamt1cnUwUWhKLWZzWUVtZzUyZzFMMkFiMmFUNTY5YVFtaE16X09ZMjE0?oc=5"
+  },
+  {
+   "i": 4,
+   "ticker": "BAC",
+   "company": "Bank of America",
+   "direction": -1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2024-07-20 07:00:00+00:00",
+   "title": "Warren Buffett\u2019s Berkshire Hathaway sells 34 million Bank of America shares",
+   "source": "Fortune",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQcjE1ZDQxOU9fUXJDX3RTUGozMllzTDNlRVVNQ2lyZGMxdTBibjlNTVQyN2o2T1dTZjFMOXBxQ0ZyRU85aWJJWmlHNmxMX2NBTjh2Ukl6TVdkNUpPeUY2aXlOMEhYbjZQcVphUm1ISk8tNzdhZHIxUnlqWmo5TmZyd0Z1VXc2azVjQVpTdUJmT1NXdkJ6MTkxY2VIbWVaMENydkRsSFUyVUo0NkhpeWRTVw?oc=5"
+  },
+  {
+   "i": 5,
+   "ticker": "BAC",
+   "company": "Bank of America",
+   "direction": -1,
+   "kind": "position disclosed in a filing",
+   "new": false,
+   "published": "2024-07-22 07:00:00+00:00",
+   "title": "Warren Buffett's Berkshire Hathaway Cuts Stake in Bank of America",
+   "source": "Investopedia",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUGQ3b0l0VDNjQkxvNG1TVjV2VlZDWXRINDV2cTl3Y1AwYm9oZERielQ4d2ZLWmVPOVhxbkxWRldnRUFIcVhZV3pjc3dlWEV1eGNzQ203UlVfMmZTVHh1Qmo0NlgzSk1vVnlkQk5yMXhWMTNOdXViQ2NHbTJpcExTaDNTcVhVQllndzVkUUx2djFuajNMUnRYbTJMQ2R6Y1JJX1E?oc=5"
+  },
+  {
+   "i": 6,
+   "ticker": "BAC",
+   "company": "Bank of America",
+   "direction": -1,
+   "kind": "position disclosed in a filing",
+   "new": false,
+   "published": "2024-07-22 07:00:00+00:00",
+   "title": "Warren Buffett's Berkshire trims Bank of America stake for the first time since 2019 after strong rally",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNTXlZNmZESnR6Mm1wRHFraXNCLVpqR0hIYTJpd3gtMERQeWNCN3NNVURqckpuT194V0hMT0QwNlhsMnlUem01bkNYQWtGOEp1REZ2ZkNwbVp5eG15ZXBVSDFOdnVXZXlTR2NFR0FmQ1RTZk9LdHYwbkRidDdqeEthMEt4OVQtYldfQTlXdXh1X1Rrc3J3dEE4T2RrYmxTNlpXY1p0MDl4YTd0eVlWdXB0SFRkVWJpM08zZm8teVU5Rk0xamlaa2pkWmhfWmJzZE5RaGpBNDd30gHbAUFVX3lxTE01dzZUcHRfdmtrMUp4RGhrc0V2WnNDYy1KeWlkcVpTUHplRTlhUTF2SnpaSlNKNm9scU1UMFNXRVBsUFRKUkV6bmk0eGJjblg5RWdxMjUydlFtWUxaRVlGc0NFZzRUUV81amNHeXlBZXJpZlRULThDWGJ5ZU5YU25HRExEUllXYTRPaUlwOTRwcFU0UmpEcERUWDBtLTA3MTBuTGxvenA4WFVyLUJtalUxY3R6Q180SHFaa3VlQ1puZV9vVmltYllBR09sLUh2d040MGZBU2xTSnZjVQ?oc=5"
+  },
+  {
+   "i": 7,
+   "ticker": "BYDDY",
+   "company": "BYD Company",
+   "direction": -1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2024-07-23 07:00:00+00:00",
+   "title": "Buffett\u2019s Berkshire Hathaway Trims BYD Stake",
+   "source": "WSJ",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZFpvS2NxaUR4cTA3WEkzTTh0eER6OHN2ektzUlpzUWZnckttRjZmQjFOTVpJOUlBYi1YQlh5Z2pSdHNnS2FHblpmSWdaRTJmMGVHSXlzYmFvOHc4UDN6T1U4Y3JIN01kenhwc1U4RTZDMTFUdjViS1ZaSE5YVzhTejRkS3lIc2Q2c1ZtOWVxMEl6NS1zemRIRWVUR3hQQ00?oc=5"
+  },
+  {
+   "i": 9,
+   "ticker": "BAC",
+   "company": "Bank of America",
+   "direction": -1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2024-07-30 07:00:00+00:00",
+   "title": "Warren Buffett's Berkshire Hathaway sells Bank of America for a ninth straight day",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZGRhNUtXeWVtbFZhYXlmaElCQXlZSWI4Mm1pLWJfc0tfMEVZbzdDTkpOUWxWaEJkSHEzVmhONzVGUUgzWVRHWWFlTDRvS2FaWGNxeGY3SGt6Nmx4aGY0U2hhVHpGek5vY09mYXZmSkhKMXU0ci1JM25FWkVkT0lnNWFCbEMxQnpjTjJqdWVSZG94Ul9QbFIzUzhVZjN1WjkybWcwQlZmSjdCOVZZdV9heXVoNXNUY1VMTEHSAb8BQVVfeXFMT2gxZ2lIQWw0dDlVMnhkUjY4WUpvQ09PN1ByOHpoTjM5b1JybTBfOXFKRWxlcndmYXAteFFmLWpyMkU1TlB3UUZEV3ktUm1senpieGwtTHczMWtScjIteEZ5TXI3bUFmS0RlRnB5OHQ4SV9IU29rcjV4QlpCU3pyWEY0NWpRNWVRcWZQczdJaDQwbS04YU1zMG9QZ1FPOUFIX3UyQUYzcXI0ZkRfeG1HM1pESmZTVkx5MUZIWjdPaXM?oc=5"
+  }
+ ]
+}

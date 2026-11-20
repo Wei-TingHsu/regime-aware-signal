@@ -1,0 +1,69 @@
+{
+ "slug": "buffett",
+ "month": "2019-02",
+ "model": "claude-sonnet-5",
+ "prompt_version": "calls-v1-2026-11-20",
+ "n_headlines": 18,
+ "calls": [
+  {
+   "i": 5,
+   "ticker": "KHC",
+   "company": "Kraft Heinz",
+   "direction": -1,
+   "kind": "position reported by the media",
+   "new": false,
+   "published": "2019-02-22 08:00:00+00:00",
+   "title": "Warren Buffett\u2019s Berkshire Hathaway Lost $4.3 Billion in a Day Thanks to a Big Bet on One Company",
+   "source": "MONEY",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBVdVpSR1RXR0NNazlLOGx6aHVVWDhNcE82N3hPLWdXUkJyRmV6UkVlaWdsN1RWU242QUxhODU0dDhDNldsVk1EcnhuOTU4VmM3T1A5TnZCRUNuVTdD?oc=5"
+  },
+  {
+   "i": 6,
+   "ticker": "KHC",
+   "company": "Kraft Heinz",
+   "direction": -1,
+   "kind": "position reported by the media",
+   "new": false,
+   "published": "2019-02-23 08:00:00+00:00",
+   "title": "Warren Buffett\u2019s Berkshire Hathaway stock falls as big bet on Kraft Heinz sours",
+   "source": "MarketWatch",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVnJsb0VoX1duY3JWUGJ4RDlrZ2VYc1ZDNlg0OWZmZFhJcWFZanJJeEE2QWlwS0lMUjhobG5hY3BKU1BWampvYVktYXpCNGpOeEN2TElyaTdwWVVnUEtpdnJFUjZIdkpVVlQ3SnpKQjhZN0ZxUDg5MEZUcW5MbDZlY3c2Qml3NkRYbUdnamZ2S29nZFBWT1gySHljMVJzQ1RNd2FvQVdfd3BlRmlEakd4dnExMGJIbFVjY0h6aV9CcXI?oc=5"
+  },
+  {
+   "i": 12,
+   "ticker": "KHC",
+   "company": "Kraft Heinz",
+   "direction": -1,
+   "kind": "statement",
+   "new": true,
+   "published": "2019-02-25 08:00:00+00:00",
+   "title": "Buffett, after last week's stock plunge, says Berkshire Hathaway 'overpaid' for Kraft",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQNjNFaEQ4YmwxS0lPS0FvWGhwbWItTGZoQ2x0b3pUQXJ5WlJxOTVMbU8yVE52MU1zVkdTVlcxOGtvV040NnQ5NG5VMnR2WHdDdTVFMEU2T2d4V1FIZzV0dS1EX2k2ZHkzelNTRUFBeWQ4WUJXYmdrNVRzSzY2ZFlmUW4wLUlqTTlzWThUQ2dfVTc1MERLejhSRmY4Zk1wS3dwR0VjU29sWWJhdG5INXp6WnpqNVpydzNvRjZMcGVn0gHDAUFVX3lxTFAxRmlDOXZka3N2Tjh6XzR4U3RhalAwZThmYmdBY25DLUJUVWdleUhySHB1TUZVdnh2QUptWGRjUnl3OW4zclFmM3l6SE8yRUt6YnUwc3RPdHJ2c0FFS2NtUThMaEJPSU9OVThuVnZ3aGQ0VWNyb3J5RGc3Rm52b2YtOTJiMTBwcDBRZVp3VllsXzR2T29oWU1Wa3JuaGVUc1pSRUQ1UG82VlRpTDU1RHRGVHFvVXJvTmVTS0IyUU9HMnJSMA?oc=5"
+  },
+  {
+   "i": 15,
+   "ticker": "ORCL",
+   "company": "Oracle",
+   "direction": -1,
+   "kind": "position reported by the media",
+   "new": true,
+   "published": "2019-02-26 08:00:00+00:00",
+   "title": "Warren Buffett has sold his Oracle shares but retained his $44 billion investment in Apple",
+   "source": "ZDNET",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPck9TbXhLSlZ3akdxUERRSHZuQVdNaEJLNi1IQ2NDWHdPVFcwY1dCM2tDMk5KSFUta0ZuUnRoZWRRR3piQzhFeXNMX0lwbmRlbkZZVWUzRFlwUUZMaXhPVWZLbGxYWmd4TVJ5b0hjTzZTcEUtWVVQSWhFUmZyWEdaRUM4c0JCS2xpSklxajFtVGEwWXFGSG9NMGZneEE3WlQ4YXduZjNkX0RYMGE4YjBjOEZjOV9UaEdzRHF1Qg?oc=5"
+  },
+  {
+   "i": 15,
+   "ticker": "AAPL",
+   "company": "Apple",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": false,
+   "published": "2019-02-26 08:00:00+00:00",
+   "title": "Warren Buffett has sold his Oracle shares but retained his $44 billion investment in Apple",
+   "source": "ZDNET",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPck9TbXhLSlZ3akdxUERRSHZuQVdNaEJLNi1IQ2NDWHdPVFcwY1dCM2tDMk5KSFUta0ZuUnRoZWRRR3piQzhFeXNMX0lwbmRlbkZZVWUzRFlwUUZMaXhPVWZLbGxYWmd4TVJ5b0hjTzZTcEUtWVVQSWhFUmZyWEdaRUM4c0JCS2xpSklxajFtVGEwWXFGSG9NMGZneEE3WlQ4YXduZjNkX0RYMGE4YjBjOEZjOV9UaEdzRHF1Qg?oc=5"
+  }
+ ]
+}

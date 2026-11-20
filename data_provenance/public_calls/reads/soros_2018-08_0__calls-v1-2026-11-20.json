@@ -1,0 +1,117 @@
+{
+ "slug": "soros",
+ "month": "2018-08",
+ "model": "claude-sonnet-5",
+ "prompt_version": "calls-v1-2026-11-20",
+ "n_headlines": 6,
+ "calls": [
+  {
+   "i": 0,
+   "ticker": "BLK",
+   "company": "BlackRock",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2018-08-14 07:00:00+00:00",
+   "title": "Soros Fund Management adds popular tech names, BlackRock in second quarter",
+   "source": "Reuters",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQbkljd2paM1Y3eHZfbm1tcWlGRGlPcE1MMkNKV0p0ZHZqdWxKRTVyeVBxLXhxQVdNQXRVUmU0enZrdHltNXhWTlVydmZPQ2ZHejVIUUJVN2ZaZDMtTld5LUxkYVZHZmxlcDh4bGdhcXh5MTJSRDFqcEFwM00taExwdERGLWp3WkY0dXBGOXVKak5pTzc2XzBzMTVGSGkyOW1IdmpkNzZDLW5KRmhiMnVkcW9oLXZNeFpjVVFsYXFja21XMnBLQlVzS0QzOA?oc=5"
+  },
+  {
+   "i": 1,
+   "ticker": "SPOT",
+   "company": "Spotify",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": true,
+   "published": "2018-08-14 07:00:00+00:00",
+   "title": "Billionaire investor George Soros made a big bet on music streaming services, and it looks like it's paying off",
+   "source": "Business Insider",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOFlZYmhtUjVEMXpxajdrdERtLWQ1TWM1S3R5RURKN0xvOE5WVVJMOVFJWjNZZkVoa1JydUhXZklHcDN0YWhmUUhjakZGMmREWUliU1hGX2ZXQlQ4ZE1LaFB2dDROcl9uQzZzMzRXNzRhdXN5Z0xVbVE2TXRqSm44VUJqNDVSRDBVeDk3MURtLUFMZk00MG9PMXRuUGhpMWtxLVByR1ZtMA?oc=5"
+  },
+  {
+   "i": 2,
+   "ticker": "BLK",
+   "company": "BlackRock",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": false,
+   "published": "2018-08-15 07:00:00+00:00",
+   "title": "George Soros' fund adds popular tech names and BlackRock in the second quarter",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWXZiUTZjbnRuZW51V1NSQ2VEX1B2cy1qWHlmQ3Y1T2RwVW5tMEwwQmxXaWw3ajIzbkNsMGdnd1BQdzdDSWQzcFNuV0FsR25nWDNIMmVpLTZITDktQXB4dks3Wk44X01yTHh3Vk1OcktqN0JqY092enlFTEx2MG9JNy1IMi1GYWprZnFRMTI0SFo3TGdPZ1VjMnllcF90Qi1PeUJMX050VFVTZ9IBrwFBVV95cUxPOFUySDA5S1JfeG5oRFgyRmpKVGVrdU1BWVlmWTIwamJrd1ZJcDBqcGZDbzVfWlJWNF9HeGVCTVlDMC1yX0ZFSTlWY3hCX0IzTzJHbTltclBUQmZDQXJuZFp4TFpDQV9lNjdjMXBwck5UekktZWNPR0dlSkhjLVVCN1pDeDhaY0hBbzhCcUQ5TG16eVFQdVU1dU9KY3NsUEdkZXFDQWl4QTNYS0RqWkJV?oc=5"
+  },
+  {
+   "i": 3,
+   "ticker": "SPOT",
+   "company": "Spotify",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": true,
+   "published": "2018-08-15 07:00:00+00:00",
+   "title": "Billionaire investor George Soros made a big bet on music streaming services, and it looks like it's paying off (SPOT, P)",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdzZSX21XcTBGZ3gxZzc3UE5kcW5oZHdWc241d3dXSjVUVy1OOERGQlJldGdydFRIRVFJMDgwdnpFc295RmFYVFdJNDBHdmZuaVlpeGVvZTdiSVZaWjZrVTJNTHNfRXVmQmQ5LWRrUWQwM0wtWWh4Q2FfQkkzOGhITXU2T0dxWnlPVG5Fcg?oc=5"
+  },
+  {
+   "i": 3,
+   "ticker": "P",
+   "company": "Pandora Media",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": true,
+   "published": "2018-08-15 07:00:00+00:00",
+   "title": "Billionaire investor George Soros made a big bet on music streaming services, and it looks like it's paying off (SPOT, P)",
+   "source": "Yahoo Finance",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdzZSX21XcTBGZ3gxZzc3UE5kcW5oZHdWc241d3dXSjVUVy1OOERGQlJldGdydFRIRVFJMDgwdnpFc295RmFYVFdJNDBHdmZuaVlpeGVvZTdiSVZaWjZrVTJNTHNfRXVmQmQ5LWRrUWQwM0wtWWh4Q2FfQkkzOGhITXU2T0dxWnlPVG5Fcg?oc=5"
+  },
+  {
+   "i": 4,
+   "ticker": "FB",
+   "company": "Facebook",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2018-08-15 17:14:20+00:00",
+   "title": "George Soros Adds Facebook, Apple, Twitter: 13F",
+   "source": "Investopedia",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMkZoa0RSYm5HclBDLXJlb3RFZUt5RTl6Q1pZaFVmS25DZXRsUjRmOTluTTJBWXR1NjNWcEZHeGlNbFd1c2pobnpmdlMwaHFnazdKX0Zqa0pUVml6RU9CcWdvaS1VZi1pNTFIOWJER3pab0RSRi1oTm81cjRaWXEySU4zX204UQ?oc=5"
+  },
+  {
+   "i": 4,
+   "ticker": "AAPL",
+   "company": "Apple",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2018-08-15 17:14:20+00:00",
+   "title": "George Soros Adds Facebook, Apple, Twitter: 13F",
+   "source": "Investopedia",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMkZoa0RSYm5HclBDLXJlb3RFZUt5RTl6Q1pZaFVmS25DZXRsUjRmOTluTTJBWXR1NjNWcEZHeGlNbFd1c2pobnpmdlMwaHFnazdKX0Zqa0pUVml6RU9CcWdvaS1VZi1pNTFIOWJER3pab0RSRi1oTm81cjRaWXEySU4zX204UQ?oc=5"
+  },
+  {
+   "i": 4,
+   "ticker": "TWTR",
+   "company": "Twitter",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2018-08-15 17:14:20+00:00",
+   "title": "George Soros Adds Facebook, Apple, Twitter: 13F",
+   "source": "Investopedia",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMkZoa0RSYm5HclBDLXJlb3RFZUt5RTl6Q1pZaFVmS25DZXRsUjRmOTluTTJBWXR1NjNWcEZHeGlNbFd1c2pobnpmdlMwaHFnazdKX0Zqa0pUVml6RU9CcWdvaS1VZi1pNTFIOWJER3pab0RSRi1oTm81cjRaWXEySU4zX204UQ?oc=5"
+  },
+  {
+   "i": 5,
+   "ticker": "SPOT",
+   "company": "Spotify",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": false,
+   "published": "2018-08-16 07:00:00+00:00",
+   "title": "George Soros\u2019s bet on music streaming services pays off",
+   "source": "The Economic Times",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNV3NsQWg2R3Jya0pSd3pqc3VvNTh3ZXFndE1MX09hU0owSjZGVC00N196c0FOSU96dmdBZ0hYbENmMTFKZzFHZXRTOHdzcTkzWHNKa001M0F5VDR6NHhzTnBKUEpyaUhzQmVra1JiZmx4ZXRpZjltZG9vNXh2U2V6MGxUaDVJcGNOamxzTmVEemxnX25FRFVUMFA5XzJqU3hmQWxpNDBSWHpkY0FUUkhLYlJNcUt4QnVZT3FkTkc0RkUzaUpHR3fSAcsBQVVfeXFMTkxfUFltSFpndVptaFJFcHhWNVF5ZkxFWVphMjJlRnpOdnNNLUx5LU90NERmX2NmTVJ2RFpWalIyNno5TllITXR5N2NEWnZKdlAxdklkNmtCaEhqQnpNTzdCWjFUZWtXc1VLa2JVSDJuYjFiTDFmSmhMU0I5SGZzWFBEcmoxcVNnTE1KV3lxcGNYX25udUYyNFZtOWVRM2xoWDkzb2VHUHdmVEJGNS03MDVfTjdlMEt4TDM5cjRDa3ZwUjIwMDFjdkViUTg?oc=5"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "slug": "buffett",
+ "month": "2024-05",
+ "model": "claude-sonnet-5",
+ "prompt_version": "calls-v1-2026-11-20",
+ "n_headlines": 18,
+ "calls": [
+  {
+   "i": 1,
+   "ticker": "KO",
+   "company": "Coca-Cola",
+   "direction": 1,
+   "kind": "statement",
+   "new": false,
+   "published": "2024-05-03 07:00:00+00:00",
+   "title": "Why Berkshire Hathaway\u2019s Huge Coca-Cola Stake Is Unlikely to Get Bigger",
+   "source": "Barron's",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUF9CYllRc1Q5WVpuS3hDS29PUVhlTzE0VUtPd3dyYnVXRGU5RnAzQm9Uay0tMF9UNXN3VTRNbkFhVWRGNjhNbkhGX0ZuM1ZuOE85ZGxaTk5mS2dyZGQ5ckhQRUY4ODRvSFpfVVNkQXl4eDlJZEhySm9Ld0VkLTdZYlptNmdieXFKNDNLandn?oc=5"
+  },
+  {
+   "i": 10,
+   "ticker": "AAPL",
+   "company": "Apple",
+   "direction": -1,
+   "kind": "position disclosed in a filing",
+   "new": false,
+   "published": "2024-05-06 07:00:00+00:00",
+   "title": "Warren Buffett Praises Apple After Berkshire Hathaway Cuts Stake",
+   "source": "WSJ",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTWtVTlBtbzVTX05teHRzX20yMUx1VnlRbkgwVnNaOVRnYmYwb3M3ZURrNjVpRHFnNnFuLXZ2bHJSa1paaEJRMXFnb05NbnVoanNhMVBaTDA2ZVZMTVdtNmJVNFIwbDFhbm8wX1FpaElSQ0FkenlZcDMxeU9Ualh0NURMaTY5MnRadXFyMm9UekNLREU?oc=5"
+  },
+  {
+   "i": 11,
+   "ticker": "PARA",
+   "company": "Paramount Global",
+   "direction": -1,
+   "kind": "statement",
+   "new": false,
+   "published": "2024-05-06 07:00:00+00:00",
+   "title": "Warren Buffett says he was \u2018100% responsible\u2019 for Berkshire Hathaway\u2019s bad bet on Paramount: \u2018We lost quite a bit of money\u2019",
+   "source": "Fortune",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTGxxbWRqT24xODhmZGlETDBvNF9lMjg2dVVkaEdpRHBtSlJKMnJBSU1kY1pwbHpQMWtIajI2Q0w0em5KSVlRc2NsMUc2aXl6Uzl2UG9JZnNoZGFNWUNHcGpHVnVUTVlRa0VxRW1YYk9ERm1vOG9hUlZ1OEthbEJla3llV3ZEaDA4TEY0YkRMZWlqOHMzWE5BajI3TWU3bDFFck50TUluNHE0bVZ6Nmlr?oc=5"
+  },
+  {
+   "i": 14,
+   "ticker": "AAPL",
+   "company": "Apple",
+   "direction": 1,
+   "kind": "statement",
+   "new": false,
+   "published": "2024-05-10 07:00:00+00:00",
+   "title": "Warren Buffett Had to Work From His iPhone After Telephone Lines Went Down at Berkshire Hathaway: 'I'm Glad We Didn't Sell All of Our Apple'",
+   "source": "Entrepreneur",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUVFKaEpMVU8wa1kwa05xZ3RuSzh6TlRKMjktZFBwYXpxa1g0LS1CNENVQTgyRGtiQjNoT3otakpxTXBwTFFUQ185dno2MXlxQk9xMEJyRUQzTHJndnVGQTlDelIxYURHQXY0ZWhSUWt0SWdWbG9FblJKTHcySFQ2dGt0Z0Z2a3h2TkVsQ3BsbTNnZ196aHo4dXNqYXV6X2xrbEpLc0pTLXg?oc=5"
+  },
+  {
+   "i": 15,
+   "ticker": "CB",
+   "company": "Chubb Limited",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2024-05-15 07:00:00+00:00",
+   "title": "Warren Buffett\u2019s Berkshire Hathaway reveals insurer Chubb as confidential stock it\u2019s been buying",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQODRjWVhZd0lPSG5JZDIzMXlTTDR4a1pNLVpQRGwxRzhuajFoRUdiNGo2Wlk4bTlGcjFxaVAyV29GVmpOOTBxWDNuckZhUWE0UHZMdC0yN01zbXc4d3JwTEFBVHlPYmwzR2lWZUlaLXRyQW9ZV3UtLVN3cksxMVVQTnYydXR1Ym1mMnBuU3hIMFlJS1RSdVFaWjFUMFFNUktBMFNwNWVxVHhpVTNRQTViUy1zX2lNSFZJbV91V3MxZF9DMHpZMmRYY0J3NNIB0AFBVV95cUxPaGtnN2x0X3VKNE5SVlBnSE94QlBzclpsUmE4NXUzd0xWVzBTcWpXYUZ3UWpVRDE1c3REclB2YzFLVzFuUWxxd0liYVZSZzFQVDdieDBKUUltTWk1T0hQUGY1ZmJxVUxRTlNhUEZQdmtiVXV2T0tqMV9pYlVnZGxjb01mZUpuem13WlE5bGFFY21yZ1FnOW0yQWNXejFRMUR2aS1weFBxVWl4MVpQei1jclZEZ1JFMjY3bzR3QXlONjNkWXg2cEhhbXVkbmpseFF0?oc=5"
+  },
+  {
+   "i": 17,
+   "ticker": "CB",
+   "company": "Chubb Limited",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2024-05-16 07:00:00+00:00",
+   "title": "Warren Buffett Just Revealed a Secret $6.7 Billion Investment, and the Reason Why Is Eye-Opening",
+   "source": "Inc.com",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOOHlZaG03TFdKbHN4SnRLR1ZKbmhReTlBc28yY2FqNGRLOF9LelBkWDE4dFNodko5UE5pNUxtdmpndFczWlFjNGhxaGF2cjhYN182cWdEUlFCVXBtWm1nNUwybzNLcDY1NWN1VnNxaTVCZHZ3VWM4dVBMV2xORnM2Zms4b0ZjY0pITXloeW50bXAtNC1JRGhTVzdLd001QnpWWGd3V1JvTURVSFdGUENud0xRR01wNUIzYVRkSXdRMVVNd1E?oc=5"
+  }
+ ]
+}

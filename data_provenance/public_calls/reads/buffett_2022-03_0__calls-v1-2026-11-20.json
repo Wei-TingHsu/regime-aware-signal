@@ -1,0 +1,117 @@
+{
+ "slug": "buffett",
+ "month": "2022-03",
+ "model": "claude-sonnet-5",
+ "prompt_version": "calls-v1-2026-11-20",
+ "n_headlines": 27,
+ "calls": [
+  {
+   "i": 2,
+   "ticker": "OXY",
+   "company": "Occidental Petroleum",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": false,
+   "published": "2022-03-07 08:00:00+00:00",
+   "title": "Warren Buffett Was Buying Occidental, Carl Icahn Was Selling. Who Will Be Right?",
+   "source": "Barron's",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQclg4cFJIejhPeE5Xei1yQVpDRTVvT2dnZ2s1VlpuSkd6aVUtRkxIXzdTSEt1eHNhS0g5LUtTeThvdWg5dXZwdElDdkxQSlZuZmhNd3Nhd1I5VF9xRmVzakJRTURRRlppWUthZzNnSWNMWmJjRnU5Q093Q0MwdTNXOXBRdXFaMl9EWVE3bjVmZmF0aktzdVZCeElLSF95dDZGbE1hT004TjdjRl9YWGxIN1dBZ3ZZeTRuUFpWRjhMMA?oc=5"
+  },
+  {
+   "i": 7,
+   "ticker": "OXY",
+   "company": "Occidental Petroleum",
+   "direction": 1,
+   "kind": "position disclosed in a filing",
+   "new": true,
+   "published": "2022-03-12 08:00:00+00:00",
+   "title": "Warren Buffett is still buying Occidental Petroleum, adding shares worth $1.5 billion",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOelRZR3lvOVVKNExHMXlhUWFfXzRaSGZjTW96Mjg4SVZRYkdOd1Q1dFFray1OWldmLXdLT3U2OE45VGVmNS01NHU3TVI5eFY0NjNHelZHei1zQk5JSVNuSDYwSkNmbWpsMGtXcWZXcUN5d0NwUkFQZ2hDUFNBZkc2ZWZ0eDUyNnh1WklLZXRWbXdjeWJMX25WaEFFbm40cGh1WUNzQ3J3V0VPcl9zcE1oY2ZsRHdmQTlhVG1HblBxbVgtd9IBxwFBVV95cUxOaGV2OXN2WkZTRHhsUjhJX1hkZDdNWTF6U0ViQlNwdWhzdEt2eFJLcU9XOW1IekFDaHhQUVRmYVF5STRvUTJhQjlaY1NxTmVCcTlXaWFiamRzRHZPX2wtX2hCTVV0VjlBSHJ5SWd4dFdmMWJtVG0yZmg4b3E1dlg5VGpqWU50R0lKYzh2YU5sZGQ1UFp6d3RMWHRaLVdNTDVXU2RtU21aaXhDd0RHcTNoSVM5a2txTXgxZ016UlJKazY4eFBnZGFz?oc=5"
+  },
+  {
+   "i": 14,
+   "ticker": "Y",
+   "company": "Alleghany Corporation",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": true,
+   "published": "2022-03-21 07:00:00+00:00",
+   "title": "Warren Buffett Puts Some of His $144 Billion to Work With Alleghany Deal",
+   "source": "Barron's",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9NN1pGMHB1SE5lU1ozcUkyaGlpX0lCNHBMZjA0QkxGd2psZFZNN2NIeE5wUGhYY0M2aXlyQ3l6cklhcEVnSG0tQzM1TTN4WHh5UkRYTWZaeGJvS1gzbGRiUU4zVTdkb1RhcV9PbmtXcWZtNkk?oc=5"
+  },
+  {
+   "i": 15,
+   "ticker": "Y",
+   "company": "Alleghany Corporation",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": true,
+   "published": "2022-03-21 07:00:00+00:00",
+   "title": "Berkshire to buy insurer Alleghany for $11.6 billion in Warren Buffett's biggest deal in years",
+   "source": "CNBC",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOdXpYZlNrMlQxZFNrRFBoM1NJbERoNWlmVm04ajFqTmZfNU14WEZsbGMtd0ZpbE1LMjQwbndhbDgyNmVseVdUcEYzWGFVcXJ3QUhjSzF6eVJRYXF5TkJ5YS0zS3RiTFAzeVlGMlRuYXV5TFNNc2tjU0hMMWIwMG16emdBQjNwTWcwYmxFOGJwckxWOWQ5SUN4bEE5R25RSXRKckNydVJNcEZ6bjY3Ry11VnZnUjl1YTFPMXc0MjZXVzJ4OHlVWE5NOE1DM3BoNHPSAdQBQVVfeXFMUEQ2OUoxNU1VaW5OUGlYVnR3SUtoVmEwVW5HMDMwd3BNM3U2YW41cXZpTlp5c1g0dXJTSlVZUlJZUWc3RUlfMHFwLURCOG1meFpucGhJdUdnbWU4QzJXOUhDUVpYblV3dXUybHhMMXg1MENTbkNUV2dLSXFac2lGR2tTTHpMMkFITEhyVGJvTkRXLVdGZWJ0V3RGa053U3NtcmVxNk5fbDJZOGNDZGVla3JJR3FrTzBrVERmUjcyQ3BsMkFpc3ZOdkxkYlZXOWprdGtZVmg?oc=5"
+  },
+  {
+   "i": 16,
+   "ticker": "Y",
+   "company": "Alleghany Corporation",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": true,
+   "published": "2022-03-21 07:00:00+00:00",
+   "title": "Warren Buffett puts cash to work with $11.6 billion deal for Alleghany",
+   "source": "MarketWatch",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRlJQeUtqdmFaQWNmU3Z2MjJDU2o0V2pvNXp4WmM5WVVnUTh5TEFvZTJuY3BVVE41Q0ducmlKWWlKX2hJYWw2Y0J2RkxkRGIzVFFoeDN5S04tdGFHdnVNdWVZLU9idk16WmsxM194MU9hT0dzamdMeE5fRG9YTDYwSnhMalVqNmRCeERBeDlpUXM3REY1QkRYeVNzYXdMQjdRVml6dnlKOFZXTDFTLUJranZuZlltT3BzczBqTDJGWVNGNEtsb0pXUnc3LW1ScDNl?oc=5"
+  },
+  {
+   "i": 17,
+   "ticker": "Y",
+   "company": "Alleghany Corporation",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": true,
+   "published": "2022-03-21 07:00:00+00:00",
+   "title": "Warren Buffett's Berkshire Hathaway agrees to buy insurer Alleghany for nearly $12 billion",
+   "source": "markets.businessinsider.com",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQRGRHMmk3S1VLSU9lb2J4UjJFVmhTdXN4UmcxUFE3TVM0eTBIeVhIMS1Kd2VTMlhCN1ZzRV9ISXY3b0h5SEdWbGdlVTZadVY2UmlEVUZZeTRYWDQzWktXRkxUR0c2VjZUNUFISjhGLUU0cllyT0JETUdJM0xtbC1DNzlHQzNVWDdnR0tUQ0RBSWo1a3Vxd0hkQnJrSGpUZUVUUEN5alJ1SFpEbXNaN25La0tKSUVuTU9pbUN1OG1qSTA0WDdBUG1LSkNuTTNtdXVGYVJr?oc=5"
+  },
+  {
+   "i": 18,
+   "ticker": "Y",
+   "company": "Alleghany Corporation",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": true,
+   "published": "2022-03-21 07:00:00+00:00",
+   "title": "Berkshire Hathaway (BRK.A) Buys Insurer Alleghany Corporation (Y)",
+   "source": "Investopedia",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNd3RmN18xRU1EUXRjLUQ5d0w2a3VQNDAtMlZCSjBvb0xhZEd5OFcxWE10OHRhaU1wdmthYUVwdjQtazBJeFc0NXNUdm5Ua3RTZWJoWm50ZEtCU1Z2UDNMdlB0dzA2SmdLNnNxcElma3l1RHpQYlB6b0ZWak5Mcy1pckRvMlFub2k5LXR4MWd4WjZZQ3hF?oc=5"
+  },
+  {
+   "i": 19,
+   "ticker": "Y",
+   "company": "Alleghany Corporation",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": true,
+   "published": "2022-03-21 07:00:00+00:00",
+   "title": "Buffett\u2019s Berkshire Hathaway is buying insurer Alleghany for $11.6 billion | CNN Business",
+   "source": "CNN",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVWxPNGU2WGk0eUZjMGl5alU1Skc2X09UV0Y1cjFrNVhiV2JzZkRUMWNLMXFUUG1ibE1fcXFNRWdOM0hfejhRM3FSR3g2UWk1dFJ2R3gzY244QU9jbTY2OFREcm5VX1lTMkZGSUg3Z1JrUmFTUUtEd3NEdTJoLUc3ZTBtc3M0ak02R19nZQ?oc=5"
+  },
+  {
+   "i": 21,
+   "ticker": "Y",
+   "company": "Alleghany Corporation",
+   "direction": 1,
+   "kind": "position reported by the media",
+   "new": false,
+   "published": "2022-03-22 07:00:00+00:00",
+   "title": "Cut in Alleghany Deal Price Shows How Warren Buffett Dislikes Investment Bankers",
+   "source": "Barron's",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWkRhWHlpOUNmNzdiMmNWQUIwcm5OVnpEWmtmQkVjanctU1dlcFFHcXRWTmwwT3JnakVrdGF6WHpNRUhnRm54T01YcGtkalZrbDZqYzFrdFdaMWZNZk0yXzA1X1JPTUdpX1UtZXZnZV9JRVZQOUVNZUdSOS1ZZVRKWDhwTERhUTZhUzJQajRnS0FtZw?oc=5"
+  }
+ ]
+}
