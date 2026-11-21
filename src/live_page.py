@@ -30,6 +30,17 @@ div[data-testid="stPlotlyChart"], div[data-testid="stVegaLiteChart"], div[data-t
 div[data-testid="stAlert"], div[data-testid="stAlertContainer"], div[data-testid="stNotification"], div[role="alert"]{border-radius:16px !important}
 div[data-testid="stExpander"], div[data-testid="stExpander"] details{border-radius:16px !important}
 div[role="radiogroup"]{border-radius:14px}
+/* 21 Nov (third pass): the TAB BUTTONS themselves are rounded and lift under the cursor, like the five market cards */
+[role="tablist"], .stTabs [data-baseweb="tab-list"]{gap:10px !important; background:transparent !important; border-bottom:none !important; box-shadow:none !important; padding:6px 2px 10px 2px !important; overflow:visible !important}
+.stTabs [data-baseweb="tab-highlight"], .stTabs [data-baseweb="tab-border"]{display:none !important}
+[role="tablist"]::after, [role="tablist"]::before{display:none !important}
+button[role="tab"], [data-testid="stTab"], .stTabs [data-baseweb="tab"]{border-radius:14px !important; padding:8px 18px !important; height:auto !important; border:1px solid rgba(255,255,255,.8) !important; border-bottom:1px solid rgba(255,255,255,.8) !important;
+     outline:1px solid rgba(20,23,31,.07); background:linear-gradient(135deg,rgba(255,255,255,.7),rgba(236,238,243,.5)) !important; -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+     box-shadow:0 1px 2px rgba(16,24,40,.04), 0 4px 12px rgba(16,24,40,.05) !important; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; cursor:pointer}
+button[role="tab"]:hover, [data-testid="stTab"]:hover, .stTabs [data-baseweb="tab"]:hover{transform:translateY(-2px) scale(1.04); box-shadow:0 2px 4px rgba(16,24,40,.05), 0 14px 30px rgba(10,37,64,.14) !important}
+button[role="tab"][aria-selected="true"], [data-testid="stTab"][aria-selected="true"], .stTabs [aria-selected="true"]{background:rgba(255,255,255,.96) !important; outline:1px solid rgba(10,37,64,.25); box-shadow:0 2px 4px rgba(16,24,40,.06), 0 8px 20px rgba(10,37,64,.10) !important; font-weight:600}
+[role="tab"]::after, [role="tab"]::before, [role="tab"] .react-aria-SelectionIndicator{display:none !important}
+div[data-testid="stTabPanel"][data-st-inactive]{display:none !important}
 </style>"""      # injected once by app.py for the whole app (apply_21nov_panels.py)
 
 
