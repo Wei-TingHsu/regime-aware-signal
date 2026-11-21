@@ -96,5 +96,50 @@ def cmd_run():
     E[["unit", "definition", "ticker", "day", "cls"]].to_csv(ROOT / "outcomes.csv", index=False); print(f"{n_tests} tests; bar p < {bar:.4f}. -> docs/selloff_model.md")
 
 
+# ------------------------------------------------------------------------------------------------ stage C2 (TRACK 3.95): is the PRICE higher after h sessions?
+def _walk(g, X, w, epi, yr, y):
+    """out-of-sample probabilities of y=1, year by year from earlier years only; and the frequency in those earlier years"""
+    pr = np.full(len(g), np.nan); bs = np.full(len(g), np.nan); b = None; ok = np.isfinite(y)
+    for Y in sorted(set(yr)):
+        tr = (g.day < pd.Timestamp(f"{Y}-01-01") - pd.Timedelta(days=20)).to_numpy() & ok; te = (yr == Y) & ok
+        if tr.sum() < MIN_TRAIN or len(set(epi[tr])) < MIN_EPI or not te.any(): continue
+        lo, hi = np.quantile(X[tr], 0.01, axis=0), np.quantile(X[tr], 0.99, axis=0); Xc = np.clip(X, lo, hi); mu, sd = Xc[tr].mean(0), Xc[tr].std(0); sd[sd == 0] = 1; Z = (Xc - mu) / sd
+        b = _fit(Z[tr], y[tr], w[tr]); pr[te] = 1 / (1 + np.exp(-np.clip(np.column_stack([np.ones(te.sum()), Z[te]]) @ b, -30, 30))); bs[te] = np.average(y[tr], weights=w[tr])
+    return pr, bs, b
+
+
+def cmd_run2():
+    E = pd.read_csv(ROOT / "events.csv", parse_dates=["day"]); P = _px(); spy = P["SPY"].close; rng = np.random.default_rng(SEED + 1); n = len(E); MV = np.full((n, len(HORIZONS)), np.nan); MX = np.full((n, len(HORIZONS)), np.nan)
+    for r in E.itertuples():
+        c = P[r.ticker].close; i = int(r.i); js = spy.index.get_loc(r.day)
+        for a, h in enumerate(HORIZONS):
+            if i + h < len(c): MV[r.Index, a] = (c.iloc[i + h] / c.iloc[i] - 1) * 1e4
+            if i + h < len(c) and js + h < len(spy): MX[r.Index, a] = MV[r.Index, a] - (spy.iloc[js + h] / spy.iloc[js] - 1) * 1e4
+    fam = [(u, dfn, g) for (u, dfn), g in E.groupby(["unit", "definition"], sort=False)]; tests = [(u, dfn, g, kind, a) for u, dfn, g in fam for kind in (["price", "against the S&P 500"] if u == "stocks" else ["price"]) for a in range(len(HORIZONS))]; bar = 0.05 / len(tests); out = {}
+    L = ["# Sell-off study, stage C2: is the price HIGHER a few sessions after the sell-off?", "",
+         f"Registered in TRACK 3.95 before running. Outcome: the close of session +h is above the sell-off day's close ('price'), or -- stocks only -- the stock did better than the S&P 500 over those sessions. h = {', '.join(map(str, HORIZONS))}, each on its own. "
+         f"Same conditions, same year-by-year training on earlier years only, same check as stage C. Skill = how much smaller the model's error is than that of always quoting the historical frequency; range and p from resampling whole calendar months {N_BOOT} times. "
+         f"{len(tests)} tests, so skill counts at p < {bar:.5f}. **Usable only if** skill passes AND where the model said at least {LIFT:.0%} points above (or below) history the outcome was at least 5 points more (or less) frequent than history, in 20 or more separate months.", "",
+         "| sell-off | outcome | after | predicted sell-offs (months) | happened | skill (range) | p | said 10+ points ABOVE history: said / history / happened (months); price after | said 10+ points BELOW history: said / history / happened (months); price after | verdict |", "|---|---|---|---|---|---|---|---|---|---|"]
+    for u, dfn, g, kind, a in tests:
+        feats = FEATS + (CAUSE if u == "stocks" else []); g = g[g[feats].notna().all(axis=1)].sort_values("day"); X = g[feats].to_numpy(float); w = (1.0 / g.groupby("day").day.transform("size")).to_numpy(); epi = _episodes(g.day); yr = g.day.dt.year.to_numpy(); h = HORIZONS[a]
+        mv = (MV if kind == "price" else MX)[g.index, a]; y = np.where(np.isfinite(mv), (mv > 0).astype(float), np.nan); pr, bs, b = _walk(g, X, w, epi, yr, y); oos = np.isfinite(pr); key = f"{u}; {dfn}; {kind}; +{h}"
+        if oos.sum() < 200 or len(set(epi[oos])) < MIN_EPI: out[key] = dict(not_tested=True); L.append(f"| {u}; {dfn} | {kind} | +{h} | too few | | | | | | not tested |"); continue
+        yy, p_, b0, ww, ee, m_ = y[oos], pr[oos], bs[oos], w[oos], epi[oos], mv[oos]; em = pd.DataFrame(dict(e=ee, m=ww * (p_ - yy) ** 2, b=ww * (b0 - yy) ** 2)).groupby("e").sum(); M, B = em.m.to_numpy(), em.b.to_numpy()
+        skill = 1 - M.sum() / B.sum(); pick = rng.integers(0, len(M), size=(N_BOOT, len(M))); sk = 1 - M[pick].sum(1) / B[pick].sum(1); pv = float((sk <= 0).mean()); R = dict(n=int(oos.sum()), months=int(len(set(ee))), happened=float(np.average(yy, weights=ww)), skill=float(skill), low=float(np.quantile(sk, .05)), high=float(np.quantile(sk, .95)), p=pv)
+        txt = {}
+        for lab, sel, sign in (("above", p_ >= b0 + LIFT, 1), ("below", p_ <= b0 - LIFT, -1)):
+            if sel.any(): T = dict(events=int(sel.sum()), months=int(len(set(ee[sel]))), said=float(np.average(p_[sel], weights=ww[sel])), history=float(np.average(b0[sel], weights=ww[sel])), happened=float(np.average(yy[sel], weights=ww[sel])), move=float(np.average(m_[sel], weights=ww[sel]))); T["ok"] = bool(T["months"] >= 20 and sign * (T["happened"] - T["history"]) >= 0.05); txt[lab] = f"{T['said']:.0%} / {T['history']:.0%} / {T['happened']:.0%} ({T['months']}); {T['move']:+.0f} bp"
+            else: T = dict(events=0, ok=False); txt[lab] = "never"
+            R[lab] = T
+        R["usable"] = bool(pv < bar and skill > 0 and (R["above"]["ok"] or R["below"]["ok"])); verdict = "USABLE" if R["usable"] else ("better than history, not by enough" if (pv < bar and skill > 0) else "no better than history")
+        if b is not None: cz = b[1:]; R["drivers"] = "; ".join(f"{'more' if cz[q] > 0 else 'less'} likely higher with high {feats[q]}" for q in np.argsort(-np.abs(cz))[:3])
+        out[key] = R; L.append(f"| {u}; {dfn} | {kind} | +{h} | {R['n']} ({R['months']}) | {R['happened']:.0%} | {skill:+.1%} ({R['low']:+.1%} to {R['high']:+.1%}) | {pv:.4f} | {txt['above']} | {txt['below']} | {verdict} |")
+        if pv < 0.05 or R["usable"]: print(f"  {key}: higher {R['happened']:.0%} of the time; skill {skill:+.1%} ({R['low']:+.1%} to {R['high']:+.1%}), p {pv:.4f} -> {verdict}; said above: {txt['above']}; said below: {txt['below']} | {R.get('drivers', '')}")
+    done = [v for v in out.values() if "skill" in v]; pos = sum(1 for v in done if v["skill"] > 0); us = [k for k, v in out.items() if v.get("usable")]
+    print(f"{len(done)} tests run ({len(tests) - len(done)} not tested); skill above zero in {pos}; p under 0.05 in {sum(1 for v in done if v['p'] < 0.05)} (about {0.05 * len(done):.0f} expected by luck alone); passing the bar p < {bar:.5f}: {sum(1 for v in done if v['p'] < bar and v['skill'] > 0)}; USABLE: {us or 'none'}. Lines above show only tests with p under 0.05. -> docs/selloff_model2.md")
+    DOCS.mkdir(exist_ok=True); (DOCS / "selloff_model2.md").write_text("\n".join(L) + "\n"); (DOCS / "selloff_model2.json").write_text(json.dumps(dict(bar=bar, results=out), indent=1, default=lambda z: None if isinstance(z, float) and z != z else (float(z) if isinstance(z, (np.floating, np.integer)) else str(z))))
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["run"]); ap.parse_args(); cmd_run()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["run", "run2"]); a = ap.parse_args(); {"run": cmd_run, "run2": cmd_run2}[a.cmd]()
