@@ -1,0 +1,2267 @@
+{
+ "bar": 0.000641025641025641,
+ "results": {
+  "stocks; 1 session, -5% or worse; price; +1": {
+   "n": 5312,
+   "months": 214,
+   "happened": 0.5084371199159758,
+   "skill": 0.0016068505836330793,
+   "low": -0.00968110356556381,
+   "high": 0.012893153807292085,
+   "p": 0.396,
+   "above": {
+    "events": 569,
+    "months": 87,
+    "said": 0.6245385977692565,
+    "history": 0.4910037405559111,
+    "happened": 0.5885288928831227,
+    "move": 69.90754806453823,
+    "ok": true
+   },
+   "below": {
+    "events": 379,
+    "months": 153,
+    "said": 0.3480274609738315,
+    "history": 0.4916205681480309,
+    "happened": 0.43084151254076564,
+    "move": -28.29552581544327,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "less likely higher with high share of large stocks down 3%+ that day; less likely higher with high the S&P 500 over the same sessions %; more likely higher with high size in units of its own usual move"
+  },
+  "stocks; 1 session, -5% or worse; price; +2": {
+   "n": 5309,
+   "months": 214,
+   "happened": 0.5016508408671646,
+   "skill": -0.004927832886126637,
+   "low": -0.016465990098471762,
+   "high": 0.00602570716882807,
+   "p": 0.755,
+   "above": {
+    "events": 481,
+    "months": 59,
+    "said": 0.6250452335363768,
+    "history": 0.4961647988453263,
+    "happened": 0.5742675627907782,
+    "move": 175.80440799008383,
+    "ok": true
+   },
+   "below": {
+    "events": 413,
+    "months": 140,
+    "said": 0.3503055308682382,
+    "history": 0.49726607198666933,
+    "happened": 0.4306426935136436,
+    "move": -74.19478469214069,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high distance below the one-year high %; more likely higher with high size in units of its own usual move; more likely higher with high gap at the open %"
+  },
+  "stocks; 1 session, -5% or worse; price; +3": {
+   "n": 5307,
+   "months": 214,
+   "happened": 0.4948275619872202,
+   "skill": -0.008592879937933118,
+   "low": -0.019260696217724492,
+   "high": 0.0015229784791647531,
+   "p": 0.9165,
+   "above": {
+    "events": 686,
+    "months": 66,
+    "said": 0.6393288303994503,
+    "history": 0.4976440056949534,
+    "happened": 0.5849413012753568,
+    "move": 176.26087615365958,
+    "ok": true
+   },
+   "below": {
+    "events": 416,
+    "months": 83,
+    "said": 0.32614500963998094,
+    "history": 0.4957114506743928,
+    "happened": 0.4601249610545975,
+    "move": 24.24468336313294,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX change over the same sessions %; more likely higher with high distance below the one-year high %; less likely higher with high last day's move %"
+  },
+  "stocks; 1 session, -5% or worse; price; +5": {
+   "n": 5297,
+   "months": 214,
+   "happened": 0.5035242086232655,
+   "skill": -0.0063030457657968775,
+   "low": -0.01761253242351467,
+   "high": 0.0045379361525504916,
+   "p": 0.837,
+   "above": {
+    "events": 832,
+    "months": 71,
+    "said": 0.646686135825781,
+    "history": 0.5000060457402125,
+    "happened": 0.6301771333953735,
+    "move": 200.11773742873277,
+    "ok": true
+   },
+   "below": {
+    "events": 473,
+    "months": 127,
+    "said": 0.3488104977411064,
+    "history": 0.4980535321618208,
+    "happened": 0.46604636638927466,
+    "move": -6.9343237240343285,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX change over the same sessions %; less likely higher with high S&P 500 against its 200-day average %; more likely higher with high distance below the one-year high %"
+  },
+  "stocks; 1 session, -5% or worse; price; +7": {
+   "n": 5294,
+   "months": 214,
+   "happened": 0.5187943442052094,
+   "skill": -0.00974053133942454,
+   "low": -0.022437061075304333,
+   "high": 0.0019200947686912832,
+   "p": 0.911,
+   "above": {
+    "events": 481,
+    "months": 39,
+    "said": 0.6552280043351999,
+    "history": 0.5047070193559572,
+    "happened": 0.5289867947177185,
+    "move": 160.16710231754772,
+    "ok": false
+   },
+   "below": {
+    "events": 352,
+    "months": 123,
+    "said": 0.36549460628751307,
+    "history": 0.5061680803315853,
+    "happened": 0.5172525586014585,
+    "move": 21.22496943708584,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high size in units of its own usual move; more likely higher with high VIX change over the same sessions %; more likely higher with high VIX level"
+  },
+  "stocks; 1 session, -5% or worse; price; +10": {
+   "n": 5293,
+   "months": 214,
+   "happened": 0.5375210281106364,
+   "skill": -0.017823945609741765,
+   "low": -0.033187298527005485,
+   "high": -0.004537697284272169,
+   "p": 0.986,
+   "above": {
+    "events": 238,
+    "months": 16,
+    "said": 0.6271982104522518,
+    "history": 0.47657254652552367,
+    "happened": 0.5157073217633122,
+    "move": 528.8446191394676,
+    "ok": false
+   },
+   "below": {
+    "events": 293,
+    "months": 68,
+    "said": 0.320123409014024,
+    "history": 0.48656187524191014,
+    "happened": 0.5167949636640692,
+    "move": 67.17277322768045,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high last day's move %; more likely higher with high distance below the one-year high %; more likely higher with high the S&P 500 over the same sessions %"
+  },
+  "stocks; 1 session, -5% or worse; against the S&P 500; +1": {
+   "n": 5312,
+   "months": 214,
+   "happened": 0.5033016492300219,
+   "skill": 0.007479220819925136,
+   "low": -0.004372736390935328,
+   "high": 0.019702265586376146,
+   "p": 0.16,
+   "above": {
+    "events": 548,
+    "months": 84,
+    "said": 0.6361939002892435,
+    "history": 0.4935248903584964,
+    "happened": 0.5348096349566585,
+    "move": 20.881383911767482,
+    "ok": false
+   },
+   "below": {
+    "events": 604,
+    "months": 163,
+    "said": 0.3496062244837178,
+    "history": 0.5003145983429811,
+    "happened": 0.39689083227579913,
+    "move": -43.012154942360134,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high size in units of its own usual move; less likely higher with high share of large stocks down 3%+ that day; less likely higher with high last day's move %"
+  },
+  "stocks; 1 session, -5% or worse; against the S&P 500; +2": {
+   "n": 5309,
+   "months": 214,
+   "happened": 0.48761171002820597,
+   "skill": 0.005588275455810976,
+   "low": -0.007289905236909877,
+   "high": 0.018293747746372744,
+   "p": 0.249,
+   "above": {
+    "events": 713,
+    "months": 102,
+    "said": 0.6125422890523317,
+    "history": 0.48211163214459324,
+    "happened": 0.5475383408116704,
+    "move": 111.61472542017187,
+    "ok": true
+   },
+   "below": {
+    "events": 550,
+    "months": 173,
+    "said": 0.3253378418028676,
+    "history": 0.4823608446782641,
+    "happened": 0.37664781905639855,
+    "move": -57.52567686472148,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high size in units of its own usual move; more likely higher with high distance below the one-year high %; more likely higher with high gap at the open %"
+  },
+  "stocks; 1 session, -5% or worse; against the S&P 500; +3": {
+   "n": 5307,
+   "months": 214,
+   "happened": 0.47457043825375295,
+   "skill": -0.0003677957982857194,
+   "low": -0.014469745993073923,
+   "high": 0.012268941312002218,
+   "p": 0.5035,
+   "above": {
+    "events": 675,
+    "months": 85,
+    "said": 0.6355205388129245,
+    "history": 0.48966460153994146,
+    "happened": 0.571336614280446,
+    "move": 196.10194535273817,
+    "ok": true
+   },
+   "below": {
+    "events": 697,
+    "months": 159,
+    "said": 0.33688292174080803,
+    "history": 0.4880401797239149,
+    "happened": 0.4159748635468986,
+    "move": -32.97717510016333,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX change over the same sessions %; more likely higher with high the S&P 500 over the same sessions %; more likely higher with high distance below the one-year high %"
+  },
+  "stocks; 1 session, -5% or worse; against the S&P 500; +5": {
+   "n": 5297,
+   "months": 214,
+   "happened": 0.4728243549122938,
+   "skill": 0.0013445213595054684,
+   "low": -0.010543369226922238,
+   "high": 0.013069468902888508,
+   "p": 0.412,
+   "above": {
+    "events": 834,
+    "months": 66,
+    "said": 0.6217105019059697,
+    "history": 0.47998817399109617,
+    "happened": 0.5984042521391171,
+    "move": 195.14111106612694,
+    "ok": true
+   },
+   "below": {
+    "events": 527,
+    "months": 150,
+    "said": 0.32854650395895524,
+    "history": 0.47790092721376426,
+    "happened": 0.4326314591825443,
+    "move": -26.686567573310228,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high the S&P 500 over the same sessions %; less likely higher with high S&P 500 against its 200-day average %; more likely higher with high VIX change over the same sessions %"
+  },
+  "stocks; 1 session, -5% or worse; against the S&P 500; +7": {
+   "n": 5294,
+   "months": 214,
+   "happened": 0.4804502988701714,
+   "skill": 0.0023003125110436784,
+   "low": -0.0076527155986135685,
+   "high": 0.011750956700607789,
+   "p": 0.349,
+   "above": {
+    "events": 919,
+    "months": 66,
+    "said": 0.6349534987338592,
+    "history": 0.49252031495289705,
+    "happened": 0.5742648751252004,
+    "move": 237.72458405678583,
+    "ok": true
+   },
+   "below": {
+    "events": 288,
+    "months": 141,
+    "said": 0.3534261473433844,
+    "history": 0.48896416226918804,
+    "happened": 0.4672511165717371,
+    "move": -2.1209593634759494,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high share of large stocks down 3%+ that day; more likely higher with high size in units of its own usual move; more likely higher with high the S&P 500 over the same sessions %"
+  },
+  "stocks; 1 session, -5% or worse; against the S&P 500; +10": {
+   "n": 5293,
+   "months": 214,
+   "happened": 0.5026548497524788,
+   "skill": -0.0016726402964408749,
+   "low": -0.010891248753786798,
+   "high": 0.007602386674884725,
+   "p": 0.621,
+   "above": {
+    "events": 519,
+    "months": 30,
+    "said": 0.6394575463729821,
+    "history": 0.5063659213500539,
+    "happened": 0.5166666785643457,
+    "move": 365.3553659355251,
+    "ok": false
+   },
+   "below": {
+    "events": 433,
+    "months": 77,
+    "said": 0.36437996571599957,
+    "history": 0.5049882687645554,
+    "happened": 0.4514627356893312,
+    "move": 22.845854506348534,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high the S&P 500 over the same sessions %; less likely higher with high VIX level; more likely higher with high share of large stocks down 3%+ that day"
+  },
+  "stocks; 1 session, -7% or worse; price; +1": {
+   "n": 2026,
+   "months": 203,
+   "happened": 0.4899542859333082,
+   "skill": 1.863664013845856e-05,
+   "low": -0.018677527965447582,
+   "high": 0.018858791596959825,
+   "p": 0.476,
+   "above": {
+    "events": 472,
+    "months": 59,
+    "said": 0.6208674480832715,
+    "history": 0.46729074735134907,
+    "happened": 0.5916323204180433,
+    "move": 49.319115582829845,
+    "ok": true
+   },
+   "below": {
+    "events": 175,
+    "months": 107,
+    "said": 0.324452212743504,
+    "history": 0.4724492377000157,
+    "happened": 0.4379351200823324,
+    "move": -16.33636191038089,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high size in units of its own usual move; less likely higher with high the S&P 500 over the same sessions %; more likely higher with high VIX level"
+  },
+  "stocks; 1 session, -7% or worse; price; +2": {
+   "n": 2025,
+   "months": 203,
+   "happened": 0.49380299148359535,
+   "skill": -0.00562848563136753,
+   "low": -0.02341627188320221,
+   "high": 0.01376628986259831,
+   "p": 0.687,
+   "above": {
+    "events": 555,
+    "months": 60,
+    "said": 0.6132864165498665,
+    "history": 0.47760467277384283,
+    "happened": 0.6160622049515586,
+    "move": 194.36868874629673,
+    "ok": true
+   },
+   "below": {
+    "events": 137,
+    "months": 83,
+    "said": 0.3376711828954957,
+    "history": 0.4831593534457265,
+    "happened": 0.42469692259869446,
+    "move": -46.664593401491814,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high size in units of its own usual move; more likely higher with high S&P 500 against its 200-day average %"
+  },
+  "stocks; 1 session, -7% or worse; price; +3": {
+   "n": 2024,
+   "months": 203,
+   "happened": 0.49692153749603896,
+   "skill": -0.018310135690897678,
+   "low": -0.03316145068164057,
+   "high": -0.0032397901939599633,
+   "p": 0.975,
+   "above": {
+    "events": 410,
+    "months": 37,
+    "said": 0.6398883947000954,
+    "history": 0.4978222548240925,
+    "happened": 0.5249518749700957,
+    "move": 101.83925139851124,
+    "ok": false
+   },
+   "below": {
+    "events": 125,
+    "months": 65,
+    "said": 0.3581839361743853,
+    "history": 0.4986992258240031,
+    "happened": 0.5969793378822524,
+    "move": 97.81868330791977,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high distance below the one-year high %; more likely higher with high VIX level; less likely higher with high the S&P 500 over the same sessions %"
+  },
+  "stocks; 1 session, -7% or worse; price; +5": {
+   "n": 2019,
+   "months": 203,
+   "happened": 0.5231793284873053,
+   "skill": -0.01651419156471645,
+   "low": -0.03429900446339766,
+   "high": 0.001562016472043012,
+   "p": 0.9365,
+   "above": {
+    "events": 460,
+    "months": 31,
+    "said": 0.6693630113034311,
+    "history": 0.5042690161881358,
+    "happened": 0.5928327870706676,
+    "move": 326.6837843755842,
+    "ok": true
+   },
+   "below": {
+    "events": 146,
+    "months": 92,
+    "said": 0.3695078906062403,
+    "history": 0.5122316891246526,
+    "happened": 0.5441109782743127,
+    "move": -26.512396774305497,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; less likely higher with high share of large stocks down 3%+ that day; less likely higher with high the S&P 500 over the same sessions %"
+  },
+  "stocks; 1 session, -7% or worse; price; +7": {
+   "n": 2018,
+   "months": 203,
+   "happened": 0.5093652749288833,
+   "skill": -0.012226097312974415,
+   "low": -0.03495533917889201,
+   "high": 0.006083214158862415,
+   "p": 0.8545,
+   "above": {
+    "events": 373,
+    "months": 14,
+    "said": 0.6782524759523593,
+    "history": 0.4972022221634949,
+    "happened": 0.5271933658859266,
+    "move": 438.53009264921064,
+    "ok": false
+   },
+   "below": {
+    "events": 107,
+    "months": 63,
+    "said": 0.3822191490105571,
+    "history": 0.5116874494485847,
+    "happened": 0.5326206695983998,
+    "move": 77.04080562004903,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; less likely higher with high share of large stocks down 3%+ that day; less likely higher with high the S&P 500 over the same sessions %"
+  },
+  "stocks; 1 session, -7% or worse; price; +10": {
+   "n": 2018,
+   "months": 203,
+   "happened": 0.5252152038700617,
+   "skill": -0.018747599379739244,
+   "low": -0.036594045419504576,
+   "high": -0.0025118576472325867,
+   "p": 0.973,
+   "above": {
+    "events": 148,
+    "months": 5,
+    "said": 0.6466413011075819,
+    "history": 0.48313194832500395,
+    "happened": 0.549004044167752,
+    "move": 930.2545597518761,
+    "ok": false
+   },
+   "below": {
+    "events": 155,
+    "months": 52,
+    "said": 0.3437419355283883,
+    "history": 0.5030414530214925,
+    "happened": 0.5608825577347105,
+    "move": 46.11753608410844,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; less likely higher with high share of large stocks down 3%+ that day; less likely higher with high the S&P 500 over the same sessions %"
+  },
+  "stocks; 1 session, -7% or worse; against the S&P 500; +1": {
+   "n": 2026,
+   "months": 203,
+   "happened": 0.48481699471759004,
+   "skill": 0.003690331907933997,
+   "low": -0.01856198527638465,
+   "high": 0.025878265284851733,
+   "p": 0.379,
+   "above": {
+    "events": 330,
+    "months": 62,
+    "said": 0.6367413468186416,
+    "history": 0.47333849064019573,
+    "happened": 0.5325287588272614,
+    "move": -2.92019621254218,
+    "ok": true
+   },
+   "below": {
+    "events": 263,
+    "months": 125,
+    "said": 0.3199422326706064,
+    "history": 0.48333530811433395,
+    "happened": 0.3980822687930434,
+    "move": -53.147182284318966,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high size in units of its own usual move; more likely higher with high volume against normal; less likely higher with high last day's move %"
+  },
+  "stocks; 1 session, -7% or worse; against the S&P 500; +2": {
+   "n": 2025,
+   "months": 203,
+   "happened": 0.46969514656842265,
+   "skill": -0.00360831532214978,
+   "low": -0.02676260828677791,
+   "high": 0.018642801422420537,
+   "p": 0.6005,
+   "above": {
+    "events": 532,
+    "months": 74,
+    "said": 0.5888760240522792,
+    "history": 0.44224869125779076,
+    "happened": 0.534542074102335,
+    "move": 118.18123417079083,
+    "ok": true
+   },
+   "below": {
+    "events": 263,
+    "months": 131,
+    "said": 0.2887568895186779,
+    "history": 0.4477120280426682,
+    "happened": 0.3803994573219089,
+    "move": -75.30446219224818,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high size in units of its own usual move; more likely higher with high distance below the one-year high %; more likely higher with high VIX level"
+  },
+  "stocks; 1 session, -7% or worse; against the S&P 500; +3": {
+   "n": 2024,
+   "months": 203,
+   "happened": 0.4704713347173513,
+   "skill": -0.02124032501118056,
+   "low": -0.04390199081727212,
+   "high": 0.002858144172532267,
+   "p": 0.9295,
+   "above": {
+    "events": 305,
+    "months": 57,
+    "said": 0.6316223918396968,
+    "history": 0.4777275468143307,
+    "happened": 0.5345576261486403,
+    "move": 79.57900703831771,
+    "ok": true
+   },
+   "below": {
+    "events": 272,
+    "months": 136,
+    "said": 0.329807424797929,
+    "history": 0.48031865947800495,
+    "happened": 0.4465891880534343,
+    "move": -47.77827917903889,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high distance below the one-year high %; less likely higher with high share of large stocks down 3%+ that day; more likely higher with high size in units of its own usual move"
+  },
+  "stocks; 1 session, -7% or worse; against the S&P 500; +5": {
+   "n": 2019,
+   "months": 203,
+   "happened": 0.4746348442233755,
+   "skill": -0.013251083236692773,
+   "low": -0.03533753301778649,
+   "high": 0.007956385974589225,
+   "p": 0.86,
+   "above": {
+    "events": 523,
+    "months": 38,
+    "said": 0.66694280972857,
+    "history": 0.4846405859486627,
+    "happened": 0.5628679470329506,
+    "move": 212.106818081457,
+    "ok": true
+   },
+   "below": {
+    "events": 242,
+    "months": 132,
+    "said": 0.33137968135932566,
+    "history": 0.4912500601940481,
+    "happened": 0.43518723687126093,
+    "move": -58.1555736050777,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX change over the same sessions %; less likely higher with high S&P 500 against its 200-day average %; less likely higher with high share of large stocks down 3%+ that day"
+  },
+  "stocks; 1 session, -7% or worse; against the S&P 500; +7": {
+   "n": 2018,
+   "months": 203,
+   "happened": 0.45766030777891353,
+   "skill": -0.009554867203612316,
+   "low": -0.029844505949755473,
+   "high": 0.011207863696940296,
+   "p": 0.767,
+   "above": {
+    "events": 283,
+    "months": 27,
+    "said": 0.6749199858669195,
+    "history": 0.49476703043218384,
+    "happened": 0.5487927211621643,
+    "move": 273.3975818234626,
+    "ok": true
+   },
+   "below": {
+    "events": 188,
+    "months": 114,
+    "said": 0.34649859808165456,
+    "history": 0.48484365920457373,
+    "happened": 0.4286700282936817,
+    "move": -33.778633781543135,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high size in units of its own usual move; less likely higher with high S&P 500 against its 200-day average %; less likely higher with high last day's move %"
+  },
+  "stocks; 1 session, -7% or worse; against the S&P 500; +10": {
+   "n": 2018,
+   "months": 203,
+   "happened": 0.4896237051532887,
+   "skill": -0.0064717207272397825,
+   "low": -0.022317404137558526,
+   "high": 0.009329758892648263,
+   "p": 0.759,
+   "above": {
+    "events": 116,
+    "months": 18,
+    "said": 0.6743869277963186,
+    "history": 0.513172590944588,
+    "happened": 0.5246014852594073,
+    "move": 544.1538782841192,
+    "ok": false
+   },
+   "below": {
+    "events": 287,
+    "months": 89,
+    "said": 0.3759245231810705,
+    "history": 0.513551212076445,
+    "happened": 0.49108598076717436,
+    "move": -3.4945005829252547,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high size in units of its own usual move; less likely higher with high S&P 500 against its 200-day average %; less likely higher with high VIX level"
+  },
+  "stocks; 1 session, -10% or worse; price; +1": {
+   "n": 515,
+   "months": 131,
+   "happened": 0.47321527390537105,
+   "skill": -0.005175927175954165,
+   "low": -0.046885543883694966,
+   "high": 0.03852090191540613,
+   "p": 0.5645,
+   "above": {
+    "events": 165,
+    "months": 31,
+    "said": 0.6380855954090794,
+    "history": 0.4874771696299286,
+    "happened": 0.5598891772772704,
+    "move": 17.224794407817818,
+    "ok": true
+   },
+   "below": {
+    "events": 76,
+    "months": 60,
+    "said": 0.3321429646122647,
+    "history": 0.48937169907579403,
+    "happened": 0.398092967818832,
+    "move": -80.57372339971073,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "less likely higher with high the S&P 500 over the same sessions %; more likely higher with high size in units of its own usual move; more likely higher with high volume against normal"
+  },
+  "stocks; 1 session, -10% or worse; price; +2": {
+   "n": 515,
+   "months": 131,
+   "happened": 0.4462625981374541,
+   "skill": -0.020206065043515853,
+   "low": -0.0726994376648426,
+   "high": 0.030766227336471115,
+   "p": 0.736,
+   "above": {
+    "events": 206,
+    "months": 29,
+    "said": 0.6024852161892961,
+    "history": 0.4410595571419052,
+    "happened": 0.5069267194708754,
+    "move": 39.976436854426424,
+    "ok": true
+   },
+   "below": {
+    "events": 74,
+    "months": 57,
+    "said": 0.30218803393849153,
+    "history": 0.4471035994374857,
+    "happened": 0.41414141414141414,
+    "move": -79.28692739088564,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high size in units of its own usual move; less likely higher with high the S&P 500 over the same sessions %; more likely higher with high S&P 500 against its 200-day average %"
+  },
+  "stocks; 1 session, -10% or worse; price; +3": {
+   "n": 514,
+   "months": 131,
+   "happened": 0.5124543513968814,
+   "skill": -0.01565621445720433,
+   "low": -0.04912374749555785,
+   "high": 0.015774608954120705,
+   "p": 0.7675,
+   "above": {
+    "events": 82,
+    "months": 23,
+    "said": 0.6274339661384739,
+    "history": 0.4990375072078894,
+    "happened": 0.4366700517836416,
+    "move": -67.34392366661233,
+    "ok": false
+   },
+   "below": {
+    "events": 35,
+    "months": 28,
+    "said": 0.3628462673382346,
+    "history": 0.4984220911257927,
+    "happened": 0.43053817271589484,
+    "move": -79.12219670795675,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "less likely higher with high the S&P 500 over the same sessions %; more likely higher with high size in units of its own usual move; more likely higher with high gap at the open %"
+  },
+  "stocks; 1 session, -10% or worse; price; +5": {
+   "n": 514,
+   "months": 131,
+   "happened": 0.5172545062091778,
+   "skill": -0.02044860170433327,
+   "low": -0.055595842649942315,
+   "high": 0.015492376148420342,
+   "p": 0.8255,
+   "above": {
+    "events": 206,
+    "months": 25,
+    "said": 0.6510995466155194,
+    "history": 0.511385398160323,
+    "happened": 0.5796083212011717,
+    "move": 107.55198831141973,
+    "ok": true
+   },
+   "below": {
+    "events": 45,
+    "months": 36,
+    "said": 0.36654658638145277,
+    "history": 0.5114453603312985,
+    "happened": 0.5301204819277109,
+    "move": 19.80887721287909,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high the S&P 500 over the same sessions %; more likely higher with high distance below the one-year high %; more likely higher with high size in units of its own usual move"
+  },
+  "stocks; 1 session, -10% or worse; price; +7": {
+   "n": 514,
+   "months": 131,
+   "happened": 0.5147468552813719,
+   "skill": -0.022657245888665134,
+   "low": -0.056889152062804704,
+   "high": 0.00759184170561539,
+   "p": 0.8885,
+   "above": {
+    "events": 51,
+    "months": 11,
+    "said": 0.6454620280673529,
+    "history": 0.520856965223399,
+    "happened": 0.474020828846693,
+    "move": 411.90009926775474,
+    "ok": false
+   },
+   "below": {
+    "events": 54,
+    "months": 41,
+    "said": 0.3679078045835555,
+    "history": 0.5216195546627853,
+    "happened": 0.5185953588443215,
+    "move": 27.84178282585296,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high the S&P 500 over the same sessions %; less likely higher with high share of large stocks down 3%+ that day; more likely higher with high size in units of its own usual move"
+  },
+  "stocks; 1 session, -10% or worse; price; +10": {
+   "n": 514,
+   "months": 131,
+   "happened": 0.5401573448072639,
+   "skill": -0.02982303794600205,
+   "low": -0.06449760691239262,
+   "high": 0.0037610358606016,
+   "p": 0.9265,
+   "above": {
+    "events": 118,
+    "months": 16,
+    "said": 0.6543104987381075,
+    "history": 0.5285403680163561,
+    "happened": 0.6820126826442608,
+    "move": 498.21883980470295,
+    "ok": false
+   },
+   "below": {
+    "events": 39,
+    "months": 33,
+    "said": 0.38673717076377023,
+    "history": 0.5317921461445233,
+    "happened": 0.5753532182103611,
+    "move": 114.5804237951056,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high the S&P 500 over the same sessions %; less likely higher with high share of large stocks down 3%+ that day; less likely higher with high VIX change over the same sessions %"
+  },
+  "stocks; 1 session, -10% or worse; against the S&P 500; +1": {
+   "n": 515,
+   "months": 131,
+   "happened": 0.4582484989470933,
+   "skill": -0.0030213215581609276,
+   "low": -0.053481188041506214,
+   "high": 0.047580551838820775,
+   "p": 0.5305,
+   "above": {
+    "events": 85,
+    "months": 30,
+    "said": 0.6582501525908303,
+    "history": 0.4871061666996984,
+    "happened": 0.543334915195378,
+    "move": -8.72883685952496,
+    "ok": true
+   },
+   "below": {
+    "events": 108,
+    "months": 73,
+    "said": 0.3235774233397534,
+    "history": 0.490616393956681,
+    "happened": 0.38741999193456667,
+    "move": -57.92092077974482,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high gap at the open %; more likely higher with high size in units of its own usual move; more likely higher with high volume against normal"
+  },
+  "stocks; 1 session, -10% or worse; against the S&P 500; +2": {
+   "n": 515,
+   "months": 131,
+   "happened": 0.45064613481993854,
+   "skill": -0.01195494433611044,
+   "low": -0.07390809845574019,
+   "high": 0.048666489869140434,
+   "p": 0.5895,
+   "above": {
+    "events": 234,
+    "months": 30,
+    "said": 0.5973941897721278,
+    "history": 0.42581139561507336,
+    "happened": 0.5199508104532412,
+    "move": 2.5417847275467387,
+    "ok": true
+   },
+   "below": {
+    "events": 116,
+    "months": 81,
+    "said": 0.2642633484840501,
+    "history": 0.4253135453259732,
+    "happened": 0.4063492063492064,
+    "move": -81.30463222035421,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high size in units of its own usual move; more likely higher with high volume against normal"
+  },
+  "stocks; 1 session, -10% or worse; against the S&P 500; +3": {
+   "n": 514,
+   "months": 131,
+   "happened": 0.49285997675813237,
+   "skill": -0.0044756618134416115,
+   "low": -0.04445288409490798,
+   "high": 0.03700048343207092,
+   "p": 0.571,
+   "above": {
+    "events": 164,
+    "months": 16,
+    "said": 0.638420456394324,
+    "history": 0.4849019950389034,
+    "happened": 0.4542249664264428,
+    "move": -181.8350485722551,
+    "ok": false
+   },
+   "below": {
+    "events": 67,
+    "months": 45,
+    "said": 0.3519369907076855,
+    "history": 0.4907930562426291,
+    "happened": 0.45127282077654923,
+    "move": -64.36471706132174,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high size in units of its own usual move; more likely higher with high gap at the open %"
+  },
+  "stocks; 1 session, -10% or worse; against the S&P 500; +5": {
+   "n": 514,
+   "months": 131,
+   "happened": 0.46876904639262984,
+   "skill": -0.013244407785036438,
+   "low": -0.049614485199192385,
+   "high": 0.02065876000909222,
+   "p": 0.749,
+   "above": {
+    "events": 193,
+    "months": 15,
+    "said": 0.6228325263591833,
+    "history": 0.47663432209130946,
+    "happened": 0.6047558229032451,
+    "move": 152.60473287868217,
+    "ok": false
+   },
+   "below": {
+    "events": 63,
+    "months": 48,
+    "said": 0.32129244873619395,
+    "history": 0.4807956494879399,
+    "happened": 0.4948453608247423,
+    "move": 38.200777443699984,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high the S&P 500 over the same sessions %; more likely higher with high gap at the open %; less likely higher with high results filing in the window"
+  },
+  "stocks; 1 session, -10% or worse; against the S&P 500; +7": {
+   "n": 514,
+   "months": 131,
+   "happened": 0.47730614673896354,
+   "skill": -0.007045109545063211,
+   "low": -0.056496074318541034,
+   "high": 0.044958469165066836,
+   "p": 0.5885,
+   "above": {
+    "events": 87,
+    "months": 31,
+    "said": 0.6406926137424462,
+    "history": 0.5047100679774112,
+    "happened": 0.6629226873083109,
+    "move": 162.46729036600402,
+    "ok": true
+   },
+   "below": {
+    "events": 77,
+    "months": 59,
+    "said": 0.31410492257151473,
+    "history": 0.5055361737196047,
+    "happened": 0.47831460674157306,
+    "move": 38.03660323693648,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high size in units of its own usual move; more likely higher with high distance below the one-year high %; less likely higher with high VIX change over the same sessions %"
+  },
+  "stocks; 1 session, -10% or worse; against the S&P 500; +10": {
+   "n": 514,
+   "months": 131,
+   "happened": 0.5065078733098796,
+   "skill": -0.012638015348763965,
+   "low": -0.054776481862620095,
+   "high": 0.029709549363416347,
+   "p": 0.6845,
+   "above": {
+    "events": 70,
+    "months": 24,
+    "said": 0.6592107564107293,
+    "history": 0.505920922928668,
+    "happened": 0.62572255376634,
+    "move": 228.80440783614884,
+    "ok": true
+   },
+   "below": {
+    "events": 52,
+    "months": 37,
+    "said": 0.34910070748270555,
+    "history": 0.506773970202996,
+    "happened": 0.5000878477306002,
+    "move": -89.49083895715896,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high the S&P 500 over the same sessions %; less likely higher with high VIX change over the same sessions %; more likely higher with high distance below the one-year high %"
+  },
+  "stocks; 5 sessions, -10% or worse; price; +1": {
+   "n": 2704,
+   "months": 207,
+   "happened": 0.5066693901954228,
+   "skill": -0.014461279528326099,
+   "low": -0.028532382236758767,
+   "high": -0.0010136973235088888,
+   "p": 0.959,
+   "above": {
+    "events": 318,
+    "months": 37,
+    "said": 0.6770752782956477,
+    "history": 0.5369598323037039,
+    "happened": 0.50305016362801,
+    "move": 7.00506442314605,
+    "ok": false
+   },
+   "below": {
+    "events": 164,
+    "months": 53,
+    "said": 0.39675945042932903,
+    "history": 0.5393460402424924,
+    "happened": 0.5145700029701573,
+    "move": 47.701099428437345,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high share of large stocks down 3%+ that day; more likely higher with high VIX change over the same sessions %; more likely higher with high the S&P 500 over the same sessions %"
+  },
+  "stocks; 5 sessions, -10% or worse; price; +2": {
+   "n": 2700,
+   "months": 207,
+   "happened": 0.5304590751909889,
+   "skill": -0.004819320962306861,
+   "low": -0.02024394242017009,
+   "high": 0.009772122258581694,
+   "p": 0.691,
+   "above": {
+    "events": 483,
+    "months": 61,
+    "said": 0.6867997321782474,
+    "history": 0.5282365216573501,
+    "happened": 0.6255694338142792,
+    "move": 93.07808228763713,
+    "ok": true
+   },
+   "below": {
+    "events": 232,
+    "months": 83,
+    "said": 0.3686886172264903,
+    "history": 0.5206010636014005,
+    "happened": 0.4810592498997496,
+    "move": 7.592746166026148,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX change over the same sessions %; more likely higher with high the S&P 500 over the same sessions %; more likely higher with high VIX level"
+  },
+  "stocks; 5 sessions, -10% or worse; price; +3": {
+   "n": 2691,
+   "months": 207,
+   "happened": 0.5387460331466573,
+   "skill": -0.0036204904559926643,
+   "low": -0.015865266443909076,
+   "high": 0.008250150469611193,
+   "p": 0.6905,
+   "above": {
+    "events": 521,
+    "months": 44,
+    "said": 0.6868178793338737,
+    "history": 0.5339259878063677,
+    "happened": 0.5947355076208978,
+    "move": 121.82221664846804,
+    "ok": true
+   },
+   "below": {
+    "events": 76,
+    "months": 47,
+    "said": 0.4069840663535633,
+    "history": 0.5345189652800582,
+    "happened": 0.5019948717948718,
+    "move": 41.398752346500785,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX change over the same sessions %; more likely higher with high VIX level; more likely higher with high the S&P 500 over the same sessions %"
+  },
+  "stocks; 5 sessions, -10% or worse; price; +5": {
+   "n": 2691,
+   "months": 207,
+   "happened": 0.5423879458299286,
+   "skill": -0.009311261303295293,
+   "low": -0.020694481167936086,
+   "high": 0.002147068373696467,
+   "p": 0.911,
+   "above": {
+    "events": 336,
+    "months": 25,
+    "said": 0.6773068296388856,
+    "history": 0.5337111560654517,
+    "happened": 0.6915042335631009,
+    "move": 171.6438584936155,
+    "ok": true
+   },
+   "below": {
+    "events": 108,
+    "months": 49,
+    "said": 0.3970484172765728,
+    "history": 0.5307903474133967,
+    "happened": 0.5484720515474809,
+    "move": 102.93171995335439,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high the S&P 500 over the same sessions %; less likely higher with high share of large stocks down 3%+ that day"
+  },
+  "stocks; 5 sessions, -10% or worse; price; +7": {
+   "n": 2690,
+   "months": 207,
+   "happened": 0.5449489420107191,
+   "skill": -0.010676760953102438,
+   "low": -0.022462350588804924,
+   "high": 0.0009417992587403917,
+   "p": 0.9395,
+   "above": {
+    "events": 283,
+    "months": 28,
+    "said": 0.673285635992541,
+    "history": 0.5298917436254715,
+    "happened": 0.5733724943190672,
+    "move": -110.27049275988014,
+    "ok": false
+   },
+   "below": {
+    "events": 73,
+    "months": 40,
+    "said": 0.3805385850445036,
+    "history": 0.526936781370184,
+    "happened": 0.5572282463543613,
+    "move": 205.3978335393073,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high the S&P 500 over the same sessions %; more likely higher with high VIX change over the same sessions %"
+  },
+  "stocks; 5 sessions, -10% or worse; price; +10": {
+   "n": 2689,
+   "months": 207,
+   "happened": 0.5526833793573568,
+   "skill": -0.024127062168102453,
+   "low": -0.04043111661318338,
+   "high": -0.00979766818367654,
+   "p": 0.997,
+   "above": {
+    "events": 83,
+    "months": 9,
+    "said": 0.650830978675115,
+    "history": 0.5057709754405243,
+    "happened": 0.45524298198994756,
+    "move": -132.49810327556068,
+    "ok": false
+   },
+   "below": {
+    "events": 254,
+    "months": 43,
+    "said": 0.3536263502748904,
+    "history": 0.511502666953964,
+    "happened": 0.6065315145630316,
+    "move": 397.39549900629424,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high the S&P 500 over the same sessions %; more likely higher with high distance below the one-year high %"
+  },
+  "stocks; 5 sessions, -10% or worse; against the S&P 500; +1": {
+   "n": 2704,
+   "months": 207,
+   "happened": 0.5018326682246637,
+   "skill": -0.015769013799641574,
+   "low": -0.02672198600822213,
+   "high": -0.005546506294089994,
+   "p": 0.996,
+   "above": {
+    "events": 120,
+    "months": 28,
+    "said": 0.6576074617018681,
+    "history": 0.5302416347178658,
+    "happened": 0.39705221754234366,
+    "move": -64.20319359481954,
+    "ok": false
+   },
+   "below": {
+    "events": 149,
+    "months": 42,
+    "said": 0.37939872848248546,
+    "history": 0.5262733880150343,
+    "happened": 0.48283957083060747,
+    "move": -43.2945628340894,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX change over the same sessions %; more likely higher with high gap at the open %; more likely higher with high size in units of its own usual move"
+  },
+  "stocks; 5 sessions, -10% or worse; against the S&P 500; +2": {
+   "n": 2700,
+   "months": 207,
+   "happened": 0.5096470979180758,
+   "skill": -0.007153644790313107,
+   "low": -0.027746165326088767,
+   "high": 0.0134334023025491,
+   "p": 0.7115,
+   "above": {
+    "events": 550,
+    "months": 107,
+    "said": 0.6556906809157859,
+    "history": 0.5153742347360389,
+    "happened": 0.5680075363972089,
+    "move": 63.24171855134689,
+    "ok": true
+   },
+   "below": {
+    "events": 340,
+    "months": 121,
+    "said": 0.3390667258287428,
+    "history": 0.5137934883887417,
+    "happened": 0.4185474241744171,
+    "move": -47.30577819808459,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX change over the same sessions %; more likely higher with high the S&P 500 over the same sessions %; more likely higher with high gap at the open %"
+  },
+  "stocks; 5 sessions, -10% or worse; against the S&P 500; +3": {
+   "n": 2691,
+   "months": 207,
+   "happened": 0.49641069642488045,
+   "skill": -0.005918175704593631,
+   "low": -0.01999057018247976,
+   "high": 0.00861021298395254,
+   "p": 0.7405,
+   "above": {
+    "events": 261,
+    "months": 82,
+    "said": 0.6670599129247582,
+    "history": 0.5194479930192639,
+    "happened": 0.5561150229545574,
+    "move": 113.9576741395623,
+    "ok": false
+   },
+   "below": {
+    "events": 254,
+    "months": 86,
+    "said": 0.3787054815243897,
+    "history": 0.5164573545905852,
+    "happened": 0.4121037386241415,
+    "move": -39.941703124550976,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high the S&P 500 over the same sessions %; more likely higher with high VIX level; more likely higher with high gap at the open %"
+  },
+  "stocks; 5 sessions, -10% or worse; against the S&P 500; +5": {
+   "n": 2691,
+   "months": 207,
+   "happened": 0.5067080961118429,
+   "skill": -0.004089572826777577,
+   "low": -0.016346931812306408,
+   "high": 0.00794946320914624,
+   "p": 0.693,
+   "above": {
+    "events": 126,
+    "months": 34,
+    "said": 0.6539121810225088,
+    "history": 0.5144503347105823,
+    "happened": 0.540327371564618,
+    "move": 33.139034160736635,
+    "ok": false
+   },
+   "below": {
+    "events": 166,
+    "months": 85,
+    "said": 0.3708507046914048,
+    "history": 0.5142681332822441,
+    "happened": 0.42976847135385243,
+    "move": 31.7892473423424,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high the S&P 500 over the same sessions %; less likely higher with high volume against normal"
+  },
+  "stocks; 5 sessions, -10% or worse; against the S&P 500; +7": {
+   "n": 2690,
+   "months": 207,
+   "happened": 0.5051949531001886,
+   "skill": -0.012757992664890416,
+   "low": -0.02420369302055696,
+   "high": -0.002107438275976725,
+   "p": 0.9735,
+   "above": {
+    "events": 58,
+    "months": 23,
+    "said": 0.6579838935903952,
+    "history": 0.5124263605000713,
+    "happened": 0.5422336997654722,
+    "move": 32.689630609900824,
+    "ok": false
+   },
+   "below": {
+    "events": 163,
+    "months": 70,
+    "said": 0.370183520735397,
+    "history": 0.5081071547853013,
+    "happened": 0.5019598310578982,
+    "move": 130.34890020724978,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; less likely higher with high last day's move %; more likely higher with high the S&P 500 over the same sessions %"
+  },
+  "stocks; 5 sessions, -10% or worse; against the S&P 500; +10": {
+   "n": 2689,
+   "months": 207,
+   "happened": 0.5248078154714424,
+   "skill": -0.016283278156693726,
+   "low": -0.031230713231860996,
+   "high": -0.0015744065218321174,
+   "p": 0.9655,
+   "above": {
+    "events": 51,
+    "months": 13,
+    "said": 0.6550435396869453,
+    "history": 0.5214467951603969,
+    "happened": 0.43237179487179483,
+    "move": -197.02013466712347,
+    "ok": false
+   },
+   "below": {
+    "events": 457,
+    "months": 72,
+    "said": 0.36251743295702504,
+    "history": 0.5232869264996549,
+    "happened": 0.5104859752678723,
+    "move": 174.69366485123473,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high volume against normal; more likely higher with high the S&P 500 over the same sessions %; less likely higher with high last day's move %"
+  },
+  "stocks; 10 sessions, -15% or worse; price; +1": {
+   "n": 994,
+   "months": 152,
+   "happened": 0.5228632581778702,
+   "skill": -0.010525203616643442,
+   "low": -0.02998418444832247,
+   "high": 0.007187049246951554,
+   "p": 0.828,
+   "above": {
+    "events": 98,
+    "months": 25,
+    "said": 0.6334488141565529,
+    "history": 0.5041754296503738,
+    "happened": 0.42858647482268475,
+    "move": -69.15855568839187,
+    "ok": false
+   },
+   "below": {
+    "events": 62,
+    "months": 36,
+    "said": 0.3732943692142029,
+    "history": 0.5066626472000982,
+    "happened": 0.4601435195111491,
+    "move": 1.5611957007555008,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high last day's move %; more likely higher with high gap at the open %; more likely higher with high VIX change over the same sessions %"
+  },
+  "stocks; 10 sessions, -15% or worse; price; +2": {
+   "n": 992,
+   "months": 152,
+   "happened": 0.518128729414775,
+   "skill": -0.021452254419267902,
+   "low": -0.04078583009333586,
+   "high": -0.0031709002127572584,
+   "p": 0.972,
+   "above": {
+    "events": 202,
+    "months": 27,
+    "said": 0.6474536674689658,
+    "history": 0.5007108434457832,
+    "happened": 0.49662946988224127,
+    "move": -116.26754757944227,
+    "ok": false
+   },
+   "below": {
+    "events": 45,
+    "months": 31,
+    "said": 0.3793128861282826,
+    "history": 0.5045274831648635,
+    "happened": 0.46490354134589257,
+    "move": 7.734981479539003,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high the S&P 500 over the same sessions %; more likely higher with high VIX change over the same sessions %; more likely higher with high VIX level"
+  },
+  "stocks; 10 sessions, -15% or worse; price; +3": {
+   "n": 990,
+   "months": 152,
+   "happened": 0.5524184275062207,
+   "skill": -0.023002061514364236,
+   "low": -0.04744480333304625,
+   "high": -0.0010706218856293421,
+   "p": 0.958,
+   "above": {
+    "events": 152,
+    "months": 25,
+    "said": 0.6866770550714845,
+    "history": 0.5357041835201967,
+    "happened": 0.5291334035752209,
+    "move": -95.11448457952262,
+    "ok": false
+   },
+   "below": {
+    "events": 32,
+    "months": 24,
+    "said": 0.41174297803095283,
+    "history": 0.5307070016783535,
+    "happened": 0.5337468077344035,
+    "move": 76.61577434983828,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX change over the same sessions %; more likely higher with high distance below the one-year high %; less likely higher with high volume against normal"
+  },
+  "stocks; 10 sessions, -15% or worse; price; +5": {
+   "n": 989,
+   "months": 152,
+   "happened": 0.5101090930533929,
+   "skill": -0.026981153649515033,
+   "low": -0.049967108783986046,
+   "high": -0.005936624667483738,
+   "p": 0.984,
+   "above": {
+    "events": 148,
+    "months": 20,
+    "said": 0.6477261352522313,
+    "history": 0.5118726187736315,
+    "happened": 0.4205355657560317,
+    "move": -147.5709970969336,
+    "ok": false
+   },
+   "below": {
+    "events": 50,
+    "months": 38,
+    "said": 0.388712779385249,
+    "history": 0.5072854975844274,
+    "happened": 0.5219421101774042,
+    "move": 102.38375260160039,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high distance below the one-year high %; less likely higher with high last day's move %; less likely higher with high S&P 500 against its 200-day average %"
+  },
+  "stocks; 10 sessions, -15% or worse; price; +7": {
+   "n": 989,
+   "months": 152,
+   "happened": 0.538300651024732,
+   "skill": -0.014065504673332674,
+   "low": -0.032515478400973,
+   "high": 0.0035155970214877674,
+   "p": 0.9005,
+   "above": {
+    "events": 122,
+    "months": 22,
+    "said": 0.6665029201269569,
+    "history": 0.5431301216901823,
+    "happened": 0.5814177255235322,
+    "move": -96.19801510645557,
+    "ok": false
+   },
+   "below": {
+    "events": 63,
+    "months": 43,
+    "said": 0.4062598696682553,
+    "history": 0.541254458140447,
+    "happened": 0.5577618217287882,
+    "move": 248.13066748319383,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high distance below the one-year high %; less likely higher with high S&P 500 against its 200-day average %; less likely higher with high last day's move %"
+  },
+  "stocks; 10 sessions, -15% or worse; price; +10": {
+   "n": 988,
+   "months": 152,
+   "happened": 0.5847490662931839,
+   "skill": -0.02254209762041537,
+   "low": -0.049018194400573034,
+   "high": 0.003895337413292747,
+   "p": 0.9265,
+   "above": {
+    "events": 31,
+    "months": 21,
+    "said": 0.6601674891439187,
+    "history": 0.528995062296274,
+    "happened": 0.6098052384150435,
+    "move": 167.05679662870477,
+    "ok": true
+   },
+   "below": {
+    "events": 199,
+    "months": 57,
+    "said": 0.3739966663377221,
+    "history": 0.5237530522079525,
+    "happened": 0.5677979471516424,
+    "move": 41.53654211197945,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high VIX change over the same sessions %; more likely higher with high distance below the one-year high %; less likely higher with high volume against normal"
+  },
+  "stocks; 10 sessions, -15% or worse; against the S&P 500; +1": {
+   "n": 994,
+   "months": 152,
+   "happened": 0.5027984536109841,
+   "skill": -0.015805121323241078,
+   "low": -0.03971658766584084,
+   "high": 0.005903317252026541,
+   "p": 0.881,
+   "above": {
+    "events": 56,
+    "months": 39,
+    "said": 0.6213959240659133,
+    "history": 0.4975733728239313,
+    "happened": 0.445207114718873,
+    "move": 50.42892972707874,
+    "ok": false
+   },
+   "below": {
+    "events": 165,
+    "months": 55,
+    "said": 0.34354419013822873,
+    "history": 0.49647359539777486,
+    "happened": 0.4331106325098186,
+    "move": 10.773463704618232,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high gap at the open %; less likely higher with high last day's move %; less likely higher with high other company filing in the window"
+  },
+  "stocks; 10 sessions, -15% or worse; against the S&P 500; +2": {
+   "n": 992,
+   "months": 152,
+   "happened": 0.5226016405970184,
+   "skill": -0.009051531951537184,
+   "low": -0.029738244018744177,
+   "high": 0.010520681789981763,
+   "p": 0.7655,
+   "above": {
+    "events": 80,
+    "months": 24,
+    "said": 0.6411967606945951,
+    "history": 0.5121801439914003,
+    "happened": 0.550107971284145,
+    "move": 74.72342351685207,
+    "ok": false
+   },
+   "below": {
+    "events": 156,
+    "months": 48,
+    "said": 0.36142339699225784,
+    "history": 0.5081726003698187,
+    "happened": 0.4292430269136585,
+    "move": 1.5442991622333238,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high the S&P 500 over the same sessions %; more likely higher with high gap at the open %; less likely higher with high S&P 500 against its 200-day average %"
+  },
+  "stocks; 10 sessions, -15% or worse; against the S&P 500; +3": {
+   "n": 990,
+   "months": 152,
+   "happened": 0.5121381799659398,
+   "skill": -0.01915249690127996,
+   "low": -0.035919892049054394,
+   "high": -0.002932171580340051,
+   "p": 0.972,
+   "above": {
+    "events": 53,
+    "months": 20,
+    "said": 0.6338055478602341,
+    "history": 0.509894510968821,
+    "happened": 0.4600000376213523,
+    "move": -17.73825031948446,
+    "ok": false
+   },
+   "below": {
+    "events": 67,
+    "months": 40,
+    "said": 0.37665410757872775,
+    "history": 0.5087606494903182,
+    "happened": 0.4310524379969121,
+    "move": -54.97333023967069,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high the S&P 500 over the same sessions %; more likely higher with high gap at the open %; less likely higher with high last day's move %"
+  },
+  "stocks; 10 sessions, -15% or worse; against the S&P 500; +5": {
+   "n": 989,
+   "months": 152,
+   "happened": 0.5054183144773905,
+   "skill": -0.010166778404772314,
+   "low": -0.0341109919278003,
+   "high": 0.01488592426653097,
+   "p": 0.7645,
+   "above": {
+    "events": 173,
+    "months": 48,
+    "said": 0.6308246124399182,
+    "history": 0.49906583271746136,
+    "happened": 0.5556011065064564,
+    "move": 106.83609545602951,
+    "ok": true
+   },
+   "below": {
+    "events": 113,
+    "months": 71,
+    "said": 0.3394633133784909,
+    "history": 0.4983999473264654,
+    "happened": 0.43690214029444524,
+    "move": 57.61426423246954,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high the S&P 500 over the same sessions %; less likely higher with high last day's move %; less likely higher with high S&P 500 against its 200-day average %"
+  },
+  "stocks; 10 sessions, -15% or worse; against the S&P 500; +7": {
+   "n": 989,
+   "months": 152,
+   "happened": 0.507627462453921,
+   "skill": 3.949243470369179e-05,
+   "low": -0.0242605683689043,
+   "high": 0.02406228142892277,
+   "p": 0.498,
+   "above": {
+    "events": 75,
+    "months": 37,
+    "said": 0.633301139593454,
+    "history": 0.5090907100834123,
+    "happened": 0.5504090676666099,
+    "move": 227.97288825237985,
+    "ok": false
+   },
+   "below": {
+    "events": 147,
+    "months": 79,
+    "said": 0.35345724478786555,
+    "history": 0.5090283109910227,
+    "happened": 0.4405669322440504,
+    "move": -132.95453464442704,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high the S&P 500 over the same sessions %; less likely higher with high last day's move %; less likely higher with high S&P 500 against its 200-day average %"
+  },
+  "stocks; 10 sessions, -15% or worse; against the S&P 500; +10": {
+   "n": 988,
+   "months": 152,
+   "happened": 0.5313784876065223,
+   "skill": -0.01743872904003707,
+   "low": -0.043301618441690747,
+   "high": 0.007631412779055871,
+   "p": 0.8685,
+   "above": {
+    "events": 54,
+    "months": 30,
+    "said": 0.6490478076795168,
+    "history": 0.5237107852322319,
+    "happened": 0.5554145180483935,
+    "move": -45.68117518991568,
+    "ok": false
+   },
+   "below": {
+    "events": 205,
+    "months": 75,
+    "said": 0.3725089781604767,
+    "history": 0.5253848964870055,
+    "happened": 0.45781609480533064,
+    "move": -55.22236784588051,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "less likely higher with high S&P 500 against its 200-day average %; more likely higher with high the S&P 500 over the same sessions %; more likely higher with high distance below the one-year high %"
+  },
+  "indices and sectors; 1 session, -3% or worse; price; +1": {
+   "n": 2059,
+   "months": 193,
+   "happened": 0.5459259979546863,
+   "skill": -0.006002509509348775,
+   "low": -0.022808390800206402,
+   "high": 0.011841675518144456,
+   "p": 0.7025,
+   "above": {
+    "events": 430,
+    "months": 47,
+    "said": 0.6532611847585779,
+    "history": 0.5142034316912031,
+    "happened": 0.585329138069821,
+    "move": 19.588389421454256,
+    "ok": true
+   },
+   "below": {
+    "events": 37,
+    "months": 18,
+    "said": 0.40250587601847426,
+    "history": 0.5188324765529406,
+    "happened": 0.6926400869887467,
+    "move": 86.57040403544211,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; less likely higher with high the S&P 500 over the same sessions %; less likely higher with high share of large stocks down 3%+ that day"
+  },
+  "indices and sectors; 1 session, -3% or worse; price; +2": {
+   "n": 2059,
+   "months": 193,
+   "happened": 0.5257786089138548,
+   "skill": -0.015175590200103617,
+   "low": -0.03615919212414043,
+   "high": 0.0058888722344153524,
+   "p": 0.898,
+   "above": {
+    "events": 538,
+    "months": 45,
+    "said": 0.6509465139291866,
+    "history": 0.49628063787800425,
+    "happened": 0.5715210472364689,
+    "move": 71.4368782498352,
+    "ok": true
+   },
+   "below": {
+    "events": 60,
+    "months": 36,
+    "said": 0.36149447222826925,
+    "history": 0.489564548808594,
+    "happened": 0.43722084367245656,
+    "move": -8.316023933270722,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high volume against normal; less likely higher with high VIX change over the same sessions %"
+  },
+  "indices and sectors; 1 session, -3% or worse; price; +3": {
+   "n": 2058,
+   "months": 193,
+   "happened": 0.5360564403667851,
+   "skill": -0.023411414629832317,
+   "low": -0.0454275798944771,
+   "high": -0.0019761641461313543,
+   "p": 0.9665,
+   "above": {
+    "events": 563,
+    "months": 43,
+    "said": 0.6833722134450211,
+    "history": 0.5135523185250057,
+    "happened": 0.5281696260681801,
+    "move": -31.88870108719487,
+    "ok": false
+   },
+   "below": {
+    "events": 46,
+    "months": 28,
+    "said": 0.38936819687433627,
+    "history": 0.5174932234852735,
+    "happened": 0.6267942583732057,
+    "move": 135.8036916510595,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; less likely higher with high share of large stocks down 3%+ that day; more likely higher with high S&P 500 against its 200-day average %"
+  },
+  "indices and sectors; 1 session, -3% or worse; price; +5": {
+   "n": 2055,
+   "months": 193,
+   "happened": 0.5729466964869926,
+   "skill": -0.020727398207413428,
+   "low": -0.04119778761206202,
+   "high": -0.0011484198116725693,
+   "p": 0.958,
+   "above": {
+    "events": 516,
+    "months": 50,
+    "said": 0.6954059500809702,
+    "history": 0.5458608393703022,
+    "happened": 0.5039810178727502,
+    "move": -75.51297994532462,
+    "ok": false
+   },
+   "below": {
+    "events": 55,
+    "months": 26,
+    "said": 0.40758587420653497,
+    "history": 0.5306430476294524,
+    "happened": 0.5874855156431054,
+    "move": 192.32577687602634,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high the S&P 500 over the same sessions %; more likely higher with high VIX change over the same sessions %"
+  },
+  "indices and sectors; 1 session, -3% or worse; price; +7": {
+   "n": 2054,
+   "months": 193,
+   "happened": 0.5763546973802328,
+   "skill": -0.025345595307411983,
+   "low": -0.04817519589802234,
+   "high": -0.003064243688218341,
+   "p": 0.9705,
+   "above": {
+    "events": 534,
+    "months": 64,
+    "said": 0.7020411014584412,
+    "history": 0.5475024317507973,
+    "happened": 0.5742301291445552,
+    "move": 35.810318165441934,
+    "ok": false
+   },
+   "below": {
+    "events": 34,
+    "months": 16,
+    "said": 0.4190655945625936,
+    "history": 0.5392921772627621,
+    "happened": 0.7257330458919841,
+    "move": 323.88688387964953,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high S&P 500 against its 200-day average %; more likely higher with high the S&P 500 over the same sessions %"
+  },
+  "indices and sectors; 1 session, -3% or worse; price; +10": {
+   "n": 2054,
+   "months": 193,
+   "happened": 0.5720227626117247,
+   "skill": -0.028853426705028218,
+   "low": -0.04976430870172151,
+   "high": -0.0069154223831882754,
+   "p": 0.99,
+   "above": {
+    "events": 369,
+    "months": 32,
+    "said": 0.6690332408912821,
+    "history": 0.5129664684853994,
+    "happened": 0.48211841526395266,
+    "move": -20.632408366431775,
+    "ok": false
+   },
+   "below": {
+    "events": 37,
+    "months": 20,
+    "said": 0.38256433151326336,
+    "history": 0.5090657054869085,
+    "happened": 0.5437597099948213,
+    "move": -40.81537637738515,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; less likely higher with high share of large stocks down 3%+ that day; more likely higher with high VIX change over the same sessions %"
+  },
+  "indices and sectors; 1 session, -4% or worse; price; +1": {
+   "n": 955,
+   "months": 119,
+   "happened": 0.5580382142224248,
+   "skill": -0.02735702227176051,
+   "low": -0.07069227071088019,
+   "high": 0.015439011509941024,
+   "p": 0.849,
+   "above": {
+    "events": 311,
+    "months": 50,
+    "said": 0.690643015582669,
+    "history": 0.5170516375772904,
+    "happened": 0.5766567717460802,
+    "move": 85.05007585634996,
+    "ok": true
+   },
+   "below": {
+    "events": 57,
+    "months": 15,
+    "said": 0.35748855796148693,
+    "history": 0.518584137678775,
+    "happened": 0.43083987429866977,
+    "move": 14.724686085748628,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high the S&P 500 over the same sessions %; more likely higher with high S&P 500 against its 200-day average %; less likely higher with high share of large stocks down 3%+ that day"
+  },
+  "indices and sectors; 1 session, -4% or worse; price; +2": {
+   "n": 955,
+   "months": 119,
+   "happened": 0.5440941173835911,
+   "skill": -0.04129550047836639,
+   "low": -0.09057196992046179,
+   "high": 0.008384999948766531,
+   "p": 0.9205,
+   "above": {
+    "events": 440,
+    "months": 32,
+    "said": 0.7086892757175786,
+    "history": 0.4989173143088866,
+    "happened": 0.5330217584761939,
+    "move": 76.22664850899375,
+    "ok": false
+   },
+   "below": {
+    "events": 47,
+    "months": 31,
+    "said": 0.3664833353163522,
+    "history": 0.5066700674755461,
+    "happened": 0.5144124168514411,
+    "move": -11.64613028430428,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high the S&P 500 over the same sessions %; more likely higher with high volume against normal; more likely higher with high S&P 500 against its 200-day average %"
+  },
+  "indices and sectors; 1 session, -4% or worse; price; +3": {
+   "n": 955,
+   "months": 119,
+   "happened": 0.5456114402167034,
+   "skill": -0.04123988335083939,
+   "low": -0.08277422519831627,
+   "high": -0.002146880473925062,
+   "p": 0.9595,
+   "above": {
+    "events": 390,
+    "months": 34,
+    "said": 0.7376682554910612,
+    "history": 0.5488626227703846,
+    "happened": 0.5355054856349335,
+    "move": 43.28653191631868,
+    "ok": false
+   },
+   "below": {
+    "events": 19,
+    "months": 13,
+    "said": 0.4168307379323654,
+    "history": 0.5505252783004121,
+    "happened": 0.6333333333333333,
+    "move": 112.79645847290348,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high the S&P 500 over the same sessions %; more likely higher with high volume against normal; less likely higher with high distance below the one-year high %"
+  },
+  "indices and sectors; 1 session, -4% or worse; price; +5": {
+   "n": 953,
+   "months": 119,
+   "happened": 0.5970286560075293,
+   "skill": -0.050251414879803225,
+   "low": -0.100422682608447,
+   "high": -0.00012587494613035103,
+   "p": 0.95,
+   "above": {
+    "events": 428,
+    "months": 42,
+    "said": 0.7377653553259832,
+    "history": 0.5392034949851165,
+    "happened": 0.5959723911457436,
+    "move": 54.5597230218082,
+    "ok": true
+   },
+   "below": {
+    "events": 61,
+    "months": 31,
+    "said": 0.4097541224852895,
+    "history": 0.5495436400623414,
+    "happened": 0.5568652253909845,
+    "move": 94.30197077161533,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX change over the same sessions %; more likely higher with high VIX level; more likely higher with high the S&P 500 over the same sessions %"
+  },
+  "indices and sectors; 1 session, -4% or worse; price; +7": {
+   "n": 953,
+   "months": 119,
+   "happened": 0.5920097508125677,
+   "skill": -0.0187187878634818,
+   "low": -0.052787775295387564,
+   "high": 0.01682126800530561,
+   "p": 0.8175,
+   "above": {
+    "events": 272,
+    "months": 34,
+    "said": 0.6983246497627427,
+    "history": 0.5363743717058252,
+    "happened": 0.5234740243776169,
+    "move": -88.70243408534635,
+    "ok": false
+   },
+   "below": {
+    "events": 34,
+    "months": 14,
+    "said": 0.4277197989087438,
+    "history": 0.5465458278845008,
+    "happened": 0.40587219343696024,
+    "move": -162.30436244940884,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high S&P 500 against its 200-day average %; less likely higher with high run-up over the 60 sessions before %"
+  },
+  "indices and sectors; 1 session, -4% or worse; price; +10": {
+   "n": 953,
+   "months": 119,
+   "happened": 0.5963231750643723,
+   "skill": -0.025723978849683915,
+   "low": -0.0512547063252675,
+   "high": -0.0012747036367979597,
+   "p": 0.957,
+   "above": {
+    "events": 210,
+    "months": 11,
+    "said": 0.7188030255946487,
+    "history": 0.5551144082520537,
+    "happened": 0.512043370841684,
+    "move": -0.7646717565895639,
+    "ok": false
+   },
+   "below": {
+    "events": 9,
+    "months": 6,
+    "said": 0.4600542776013204,
+    "history": 0.5682935275961736,
+    "happened": 0.5486486486486487,
+    "move": -81.37055460763169,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; less likely higher with high share of large stocks down 3%+ that day; more likely higher with high size in units of its own usual move"
+  },
+  "indices and sectors; 5 sessions, -7% or worse; price; +1": {
+   "n": 504,
+   "months": 89,
+   "happened": 0.5610828857356636,
+   "skill": 0.01715955035288852,
+   "low": -0.03669108956403301,
+   "high": 0.07171893009072422,
+   "p": 0.3035,
+   "above": {
+    "events": 196,
+    "months": 46,
+    "said": 0.6856966713003467,
+    "history": 0.5347779568968234,
+    "happened": 0.6268011527377522,
+    "move": 83.50322156745452,
+    "ok": true
+   },
+   "below": {
+    "events": 64,
+    "months": 27,
+    "said": 0.3515990469809897,
+    "history": 0.5322166432610019,
+    "happened": 0.4355765139696497,
+    "move": -116.57104827733295,
+    "ok": true
+   },
+   "usable": false,
+   "drivers": "more likely higher with high size in units of its own usual move; less likely higher with high where it closed in the day's range; less likely higher with high last day's move %"
+  },
+  "indices and sectors; 5 sessions, -7% or worse; price; +2": {
+   "n": 503,
+   "months": 89,
+   "happened": 0.5687667371388302,
+   "skill": -0.016228936121757354,
+   "low": -0.057607257487691035,
+   "high": 0.023592715472635552,
+   "p": 0.732,
+   "above": {
+    "events": 146,
+    "months": 25,
+    "said": 0.7345620514674421,
+    "history": 0.5767428727124813,
+    "happened": 0.5780654908667415,
+    "move": 32.21448193011749,
+    "ok": false
+   },
+   "below": {
+    "events": 58,
+    "months": 21,
+    "said": 0.4293279698883178,
+    "history": 0.5804145007440021,
+    "happened": 0.5518801941907348,
+    "move": 79.19405800027353,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high distance below the one-year high %; less likely higher with high run-up over the 60 sessions before %; more likely higher with high gap at the open %"
+  },
+  "indices and sectors; 5 sessions, -7% or worse; price; +3": {
+   "n": 501,
+   "months": 89,
+   "happened": 0.5850949414033526,
+   "skill": 0.006052668390587712,
+   "low": -0.042953832803260907,
+   "high": 0.057066104392325824,
+   "p": 0.4075,
+   "above": {
+    "events": 198,
+    "months": 49,
+    "said": 0.7301740910536535,
+    "history": 0.5676129485699714,
+    "happened": 0.6654726368159204,
+    "move": 107.06599237647377,
+    "ok": true
+   },
+   "below": {
+    "events": 42,
+    "months": 15,
+    "said": 0.4130450909498782,
+    "history": 0.5648491341622689,
+    "happened": 0.41086867023466445,
+    "move": -142.1155076903527,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "less likely higher with high last day's move %; more likely higher with high distance below the one-year high %; more likely higher with high VIX level"
+  },
+  "indices and sectors; 5 sessions, -7% or worse; price; +5": {
+   "n": 501,
+   "months": 89,
+   "happened": 0.6376864438780326,
+   "skill": -0.0022808664872135953,
+   "low": -0.062458274058161733,
+   "high": 0.055139615802373386,
+   "p": 0.4925,
+   "above": {
+    "events": 185,
+    "months": 34,
+    "said": 0.7425412615622283,
+    "history": 0.5803493073863364,
+    "happened": 0.6861089092936958,
+    "move": 199.42955802624624,
+    "ok": true
+   },
+   "below": {
+    "events": 33,
+    "months": 12,
+    "said": 0.415903597131381,
+    "history": 0.5722314307689492,
+    "happened": 0.5345474062423127,
+    "move": 55.37295350617792,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high VIX change over the same sessions %; more likely higher with high size in units of its own usual move"
+  },
+  "indices and sectors; 5 sessions, -7% or worse; price; +7": {
+   "n": 501,
+   "months": 89,
+   "happened": 0.6253924424485173,
+   "skill": 0.00784765259556719,
+   "low": -0.03988101114613892,
+   "high": 0.05718595763335853,
+   "p": 0.391,
+   "above": {
+    "events": 166,
+    "months": 33,
+    "said": 0.710478781823183,
+    "history": 0.5552315217352287,
+    "happened": 0.6700259989053091,
+    "move": 130.3294215173883,
+    "ok": true
+   },
+   "below": {
+    "events": 33,
+    "months": 10,
+    "said": 0.39931293368235493,
+    "history": 0.538565769927784,
+    "happened": 0.5894743987148449,
+    "move": 70.8804410712744,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high S&P 500 against its 200-day average %; more likely higher with high distance below the one-year high %"
+  },
+  "indices and sectors; 5 sessions, -7% or worse; price; +10": {
+   "n": 501,
+   "months": 89,
+   "happened": 0.5874254898787609,
+   "skill": -0.018249716851752362,
+   "low": -0.04995151534170036,
+   "high": 0.013005051686045651,
+   "p": 0.8345,
+   "above": {
+    "events": 18,
+    "months": 13,
+    "said": 0.6473081782703006,
+    "history": 0.5141492026013046,
+    "happened": 0.5985130111524163,
+    "move": 245.8878678366306,
+    "ok": false
+   },
+   "below": {
+    "events": 33,
+    "months": 13,
+    "said": 0.37273135281024905,
+    "history": 0.500459956054997,
+    "happened": 0.6154514544767662,
+    "move": 163.75553164858687,
+    "ok": false
+   },
+   "usable": false,
+   "drivers": "more likely higher with high VIX level; more likely higher with high the S&P 500 over the same sessions %; more likely higher with high distance below the one-year high %"
+  }
+ }
+}
