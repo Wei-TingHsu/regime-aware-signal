@@ -22,6 +22,14 @@ PANEL_CSS = """<style>
 div[data-baseweb="tab-panel"], div[data-testid="stTabPanel"], div[role="tabpanel"]{border-radius:26px;padding:22px 26px 26px 26px;margin-top:14px;border:1px solid rgba(255,255,255,.8);outline:1px solid rgba(20,23,31,.06);
      background:linear-gradient(160deg,rgba(255,255,255,.72) 0%,rgba(243,244,248,.5) 60%,rgba(230,233,240,.45) 100%);-webkit-backdrop-filter:blur(22px) saturate(1.1);backdrop-filter:blur(22px) saturate(1.1);
      box-shadow:0 12px 40px rgba(20,23,31,.06), inset 0 1px 0 rgba(255,255,255,.9)}
+/* 21 Nov (second pass): nothing on any tab keeps square corners -- input boxes, pickers, buttons, charts, tables, message boxes */
+div[data-baseweb="input"], div[data-baseweb="base-input"], div[data-baseweb="select"] > div, .stTextInput > div > div, .stTextInput input, .stNumberInput > div > div, .stDateInput > div > div, div[data-baseweb="textarea"]{border-radius:14px !important}
+.stButton > button, .stDownloadButton > button, button[kind]{border-radius:14px !important}
+div[data-testid="stPlotlyChart"], div[data-testid="stVegaLiteChart"], div[data-testid="stArrowVegaLiteChart"], div[data-testid="stDataFrame"], div[data-testid="stTable"], div[data-testid="stImage"], div[data-testid="stMetric"], .stPlotlyChart, iframe{border-radius:18px !important; overflow:hidden}
+div[data-testid="stPlotlyChart"], div[data-testid="stVegaLiteChart"], div[data-testid="stArrowVegaLiteChart"], .stPlotlyChart{background:rgba(255,255,255,.6); border:1px solid rgba(255,255,255,.75); outline:1px solid rgba(20,23,31,.06); padding:8px 8px 2px 8px}
+div[data-testid="stAlert"], div[data-testid="stAlertContainer"], div[data-testid="stNotification"], div[role="alert"]{border-radius:16px !important}
+div[data-testid="stExpander"], div[data-testid="stExpander"] details{border-radius:16px !important}
+div[role="radiogroup"]{border-radius:14px}
 </style>"""      # injected once by app.py for the whole app (apply_21nov_panels.py)
 
 
