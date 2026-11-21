@@ -34,9 +34,13 @@ FEEDS = [dict(name="PR Newswire: all releases", kind="wire", url="https://www.pr
          dict(name="SK Hynix newsroom", kind="company", ticker="SKHY", url="https://news.skhynix.com/feed/"),
          dict(name="Federal Reserve: monetary policy press releases", kind="fed", url="https://www.federalreserve.gov/feeds/press_monetary.xml")]
 RESEARCH = [      # founder, 20 Nov: research publishers and funds that publish their reports. THIRD PARTIES: their claims are theirs, they may hold a position.
-    dict(name="Hunterbrook", kind="research", position="publishes investigations and may trade on them (long or short)", urls=["https://newsletter.hntrbrk.com/feed", "https://hntrbrk.com/feed/", "https://hntrbrk.com/rss.xml"]),
+    dict(name="Hunterbrook", kind="research", short=True, position="publishes investigations and may trade on them (long or short)", urls=["https://newsletter.hntrbrk.com/feed", "https://hntrbrk.com/feed/", "https://hntrbrk.com/rss.xml"]),
     dict(name="SemiAnalysis", kind="research", position="independent semiconductor and AI research; sells research", urls=["https://semianalysis.com/feed/", "https://newsletter.semianalysis.com/feed", "https://www.semianalysis.com/feed"]),
 ]      # the addresses are candidates; the first that answers is used (see `once`)
+SHORT = [      # founder, 21 Nov: publishers of short reports, admitted as live ALERTS after SR-1 showed their reports move the price on the day (TRACK 3.85). THIRD PARTIES, claims unverified, no trading rule.
+    dict(name="Grizzly Research", kind="short", position="publishes short reports and may hold a short position", url="https://grizzlyreports.com/feed/"),
+    dict(name="Blue Orca", kind="short", position="publishes short (and some long) reports and may hold a position", url="https://www.blueorcacapital.com/feed/"),
+    dict(name="Fuzzy Panda", kind="short", position="publishes short reports and may hold a short position", url="https://fuzzypandaresearch.com/feed/")]
 PV_R = "ai-research-v1-2026-11-20"
 SYS_R = """You are given (1) a BASELINE: a listed company's most recent reported financials and guidance, and (2) a REPORT about that company published by
 a THIRD PARTY: a research firm, or an investor that may hold a position in the stock (for example a short seller). The claims are the publisher's own
@@ -139,7 +143,8 @@ def classify(src: dict, it: dict):
         if it["form"] == "8-K": return src["ticker"], ("results" if "2.02" in items else "event")
         return (src["ticker"], "event") if it["form"] == "6-K" else (None, None)
     if src["kind"] == "research":
-        tk = companies_in(it["title"]) or companies_in(it.get("summary", "")[:1500]); it["companies"] = tk; return (tk[0], "research") if tk else (None, None)
+        tk = companies_in(it["title"]) or companies_in(it.get("summary", "")[:1500]); it["companies"] = tk; return (tk[0], "research") if tk else (("?", "short report") if src.get("short") else (None, None))      # a short-report publisher writing about a company outside the list: an alert all the same
+    if src["kind"] == "short": return "?", "short report"
     if src["kind"] == "fed": return ("FED", "fed") if re.search(r"FOMC statement", it["title"], re.I) else (None, None)
     tk = src.get("ticker") or company_of(it["title"])
     if tk is None: return None, None
@@ -199,7 +204,37 @@ def _md(row: dict):
     with MD.open("a") as fh: fh.write(f"| {row['seen_ny']} | {row['seen_sg']} | {row['ticker']} | {row['kind']}{' (DRILL)' if row.get('drill') else ''} | {row['source']} | {row.get('lag_published_s', '')} s | {row.get('score_s', '')} s | {row.get('line', '')[:230].replace('|', '/')} | {row['title'][:90].replace('|', '/')} |\n")
 
 
+def handle_short(src: dict, it: dict, state: dict, drill=False, do_score=True):
+    """a short-report publisher's item (any company, on the list or not): read with SR-1's reader (title and the feed's own text), logged as an ALERT. No rule."""
+    import hashlib
+    from src.short_reports import SYS, PV, _body
+    now = datetime.now(timezone.utc); pub = it.get("published"); row = dict(ticker="?", kind="short report", source=src["name"], title=it["title"], link=it.get("link", ""), id=it["id"], published=pub, seen=now, seen_ny=now.astimezone(NY).strftime("%Y-%m-%d %H:%M:%S"), seen_sg=now.astimezone(SG).strftime("%Y-%m-%d %H:%M:%S"),
+                                                                              lag_published_s=round((now - pub).total_seconds()) if pub else None, drill=drill, publisher=src["name"])
+    if not do_score: row.update(kind="other", not_scored="today's scoring budget is used up"); _log(row); print(f"   .. {src['name']}: {it['title'][:100]}  [NOT read: today's budget of scores is used up]"); return
+    try:
+        from src.news_events2 import _client, _parse, MODEL
+        f = LIVE / "reads" / f"SHORT_{re.sub(r'[^A-Za-z0-9]+', '', src['name'])[:14]}_{hashlib.sha1(str(it['id']).encode()).hexdigest()[:12]}__{PV}.json"; f.parent.mkdir(parents=True, exist_ok=True)
+        if f.exists(): d = json.loads(f.read_text())
+        else:
+            a = _client().messages.create(model=MODEL, max_tokens=1500, system=SYS, messages=[{"role": "user", "content": _body(src["name"], dict(published=(pub or now).isoformat(), title=it["title"], summary=it.get("summary", "")))}]); d = _parse("".join(b.text for b in a.content if b.type == "text")); f.write_text(json.dumps(d, indent=1))
+        tg = [x for x in (d.get("targets") or []) if isinstance(x, dict) and str(x.get("direction")).lstrip("-") == "1"] if d.get("is_report") else []
+        if not tg: row.update(kind="other", line="not a report on a listed company (note, media coverage, reply or follow-up without a target)", score_s=round((datetime.now(timezone.utc) - now).total_seconds())); _log(row); print(f"   .. {src['name']}: {it['title'][:90]}  [read: not a report on a listed company]"); return
+        x = tg[0]; dr = int(x["direction"]); tk = str(x.get("yahoo_symbol") or x.get("ticker") or x.get("company") or "?").upper()
+        try: sev = float(d.get("severity") or 0)
+        except Exception: sev = 0.0
+        t = (pub or now).astimezone(NY); hm = t.hour * 60 + t.minute; when = "at a weekend" if t.weekday() >= 5 else ("before the open" if hm < 570 else ("during the session" if hm < 960 else "after the close"))
+        read = dict(report_type="short report" if dr < 0 else "long thesis", own_stock=round(dr * sev, 2), material=sev, severity=sev, direction=dr, claim=d.get("claim"), first=bool(x.get("first")), targets=tg, main_claims=[d.get("summary")], published_when=when)
+        line = f"SHORT-SELLER REPORT, claims unverified: {'NEGATIVE' if dr < 0 else 'POSITIVE'} on {x.get('company')} ({tk}); severity as stated {sev}; claim: {d.get('claim')}; {'first report' if x.get('first') else 'follow-up'}; published {when} | {d.get('summary')}" + (f" | also names {[y.get('yahoo_symbol') or y.get('company') for y in tg[1:4]]}" if len(tg) > 1 else "")
+        row.update(ticker=tk, read=read, line=line, score_s=round((datetime.now(timezone.utc) - now).total_seconds()), companies=[y.get("yahoo_symbol") or y.get("company") for y in tg])
+        print("\a" + "=" * 110 + f"\n{'DRILL  ' if drill else ''}{tk}  SHORT REPORT  seen {row['seen_ny']} New York / {row['seen_sg']} Singapore  via {src['name']}" + (f"  ({row['lag_published_s']} s after the source's own time)" if pub else "") + f"\n{it['title'][:160]}\n{line}\n(read {row['score_s']} s after it was seen)\n" + "=" * 110)
+    except SystemExit: raise
+    except Exception as e: row.update(kind="other", line=f"NOT READ: {type(e).__name__}: {str(e)[:120]}"); print(f"   .. {src['name']}: {it['title'][:90]}  [{row['line']}]")
+    _log(row)
+    if row["kind"] == "short report": _md(row)
+
+
 def handle(src: dict, it: dict, tk: str, kind: str, state: dict, drill=False, do_score=True):
+    if kind == "short report": return handle_short(src, it, state, drill=drill, do_score=do_score)
     now = datetime.now(timezone.utc); pub = it.get("published"); day = (pub or now).astimezone(NY).strftime("%Y%m%d"); key = f"{tk}|{kind}|{day}" if kind in ("results", "fed") else f"{tk}|{kind}|{it['id']}"
     row = dict(ticker=tk, kind=kind, source=src["name"], title=it["title"], link=it.get("link", ""), id=it["id"], published=pub, seen=now, seen_ny=now.astimezone(NY).strftime("%Y-%m-%d %H:%M:%S"), seen_sg=now.astimezone(SG).strftime("%Y-%m-%d %H:%M:%S"),
                lag_published_s=round((now - pub).total_seconds()) if pub else None, drill=drill)
@@ -227,7 +262,7 @@ def handle(src: dict, it: dict, tk: str, kind: str, state: dict, drill=False, do
 
 
 def sources() -> list:
-    S = [dict(f) for f in FEEDS] + [dict(f) for f in RESEARCH]
+    S = [dict(f) for f in FEEDS] + [dict(f) for f in RESEARCH] + [dict(f) for f in SHORT]
     try: S += [dict(name=f"SEC filings: {t}", kind="sec", ticker=t, cik=c) for t, c in sec_ciks().items()]
     except SystemExit: raise
     except Exception as e: print(f"  SEC company list not reachable ({type(e).__name__}); running without the SEC backup")

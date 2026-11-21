@@ -39,7 +39,7 @@ def load(now=None) -> dict:
         base["stale"] = (seen - rel).total_seconds() > 86400      # already more than a day old when first seen: read when a source was first connected, not live news
         if d is None or r.get("empty") or "(again)" in kind or kind == "other": other.append(base); continue
         if kind == "results" and (d.get("facts") or {}).get("revenue") in (None, "", "null") and not any(d.get(k) for k in ("own_stock", "market", "results_vs_prior_guidance")): other.append(base); continue
-        scored[(base["ticker"], kind, rel.astimezone(NY).strftime("%Y-%m-%d"), r.get("id") if kind in ("event", "research") else "")] = base      # a rescored row replaces the live one
+        scored[(base["ticker"], kind, rel.astimezone(NY).strftime("%Y-%m-%d"), r.get("id") if kind in ("event", "research", "short report") else "")] = base      # a rescored row replaces the live one
     S = sorted(scored.values(), key=lambda b: b["release"], reverse=True); n_old = sum(b["stale"] for b in S); S = [b for b in S if not b["stale"]]      # newest release first
     for b in S: b["action"] = action(b, now)
     beat = (now - datetime.fromtimestamp(SEEN.stat().st_mtime, timezone.utc)).total_seconds() if SEEN.exists() else None
@@ -58,6 +58,7 @@ def kind_label(b: dict) -> str:
     if k == "results": return "Financial results"
     if k == "fed": return "Fed statement"
     if k == "research": return "Third-party report (unverified)"
+    if k == "short report": return "Short-seller report (unverified)"
     return "Regulatory filing" if b["source"].startswith("SEC filings") else "Company announcement"
 
 
@@ -71,7 +72,7 @@ LATE_S = 300      # more than 5 minutes after the tested entry: shown as missed,
 def action(b: dict, now) -> dict:
     """what the rule in force says about one scored item, and whether its window is still open"""
     rule = next((r for r in RULES if r["kind"] == b["kind"]), None)
-    if rule is None or b["drill"]: return dict(rule=None, text=("alert only: a third party's report, claims unverified; no tested rule" if b["kind"] == "research" else "information only: no tested rule for this kind of news") if rule is None else "test run, not live news", state="none")
+    if rule is None or b["drill"]: return dict(rule=None, text=("alert only: a short seller's report, claims unverified; no tested rule (tested 21 Nov 2026: such reports came with a fall of about 4% on the day, mostly before a user could trade)" if b["kind"] == "short report" else "alert only: a third party's report, claims unverified; no tested rule" if b["kind"] == "research" else "information only: no tested rule for this kind of news") if rule is None else "test run, not live news", state="none")
     try: s = float((b["read"] or {}).get(rule["score"]) or 0)
     except Exception: s = 0.0
     if abs(s) < rule["threshold"] or s == 0: return dict(rule=rule["id"], text=f"no trade: score {s:+.2f} is under {rule['threshold']}" if rule["threshold"] else "no trade: score is 0", state="none", score=s)

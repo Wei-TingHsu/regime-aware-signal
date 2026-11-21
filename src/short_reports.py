@@ -6,6 +6,8 @@ public calls, then short reports, then the sell-off study)
     python -m src.short_reports cost         # what the reading step would cost. Nothing is read.
     python -m src.short_reports extract --max-usd 5     # Claude reads each item: is it a report, on which company, long or short, how serious
     python -m src.short_reports reports      # one row per report and target -> data_provenance/short_reports/reports.csv
+    python -m src.short_reports test         # the registered price test (TRACK 3.84)
+    python -m src.short_reports forward      # forward record of the one lead (TRACK 3.86): run collect, extract, reports first
 
 Publishers whose own list answers a script (docs/source_probe.md, 20 Nov): Hindenburg Research (archive, to 2017), Grizzly Research (to 2020),
 Blue Orca (to 2011), Fuzzy Panda (10 newest), Hunterbrook (20 newest). The others refuse scripts and are not worked around.
@@ -212,6 +214,47 @@ def cmd_test():
     print(f"{len(T)} rows priced; {n_foreign} foreign-listed rows left out; {len(bad)} symbols without prices: {', '.join(bad[:40])}. Judged groups {len(judged_groups)}; bar p < {bar:.5f}. Numbers are in the direction of the report: for a negative report, + means the share fell. -> docs/short_reports_test.md")
 
 
+# ------------------------------------------------------------------------------------------------ forward record of the one lead of SR-1 (registered in TRACK 3.86)
+REGISTERED = "2026-11-21T05:00:00+00:00"      # only reports published after this moment count
+
+
+def cmd_forward():
+    """Lead (found after the fact in SR-1, so a hypothesis): a negative report published DURING the session is followed by a further fall in the next
+    session. Counted here on reports published after the registration, from the publishers' own lists (so it does not depend on the listener being on).
+    Run after: collect, extract, reports."""
+    import numpy as np, yfinance as yf
+    from src.public_calls import _legs
+    R = pd.read_csv(ROOT / "reports.csv"); R["t"] = pd.to_datetime(R.published, utc=True); R = R[(R.t > pd.Timestamp(REGISTERED)) & (R.direction < 0) & R.us_listed].sort_values("t")
+    L = ["# SR-1 forward record: negative short reports published after 21 Nov 2026", "", "Registered lead: a negative report published DURING the New York session -- sell at that session's close, buy back at the next close. "
+         "Numbers in bp, minus the S&P 500, + = the share fell. The lead is judged at 30 such reports (TRACK 3.86); until then every look is interim. Reports published before the open are listed too, as the comparison.", ""]
+    if R.empty: L.append("No negative report on a US-listed company has been published since the registration."); Path("docs/short_reports_forward.md").write_text("\n".join(L) + "\n"); print("no new negative report on a US-listed company since 21 Nov 2026 -> docs/short_reports_forward.md"); return
+    px = {}
+    for tk in sorted(set(R.symbol) | {"SPY"}):
+        try:
+            d = yf.download(tk, start="2026-06-01", interval="1d", progress=False, auto_adjust=True)
+            if isinstance(d.columns, pd.MultiIndex): d.columns = d.columns.get_level_values(0)
+            d = d[["Open", "Close"]].dropna(); d.columns = ["open", "close"]; d.index = pd.DatetimeIndex(d.index).tz_localize(None)
+            if len(d) >= 5: px[tk] = d
+        except Exception: pass
+    if "SPY" not in px: print("prices not reachable now; run again later"); return
+    G = _legs(px); rows = []
+    for r in R.itertuples():
+        ny = r.t.tz_convert("America/New_York").tz_localize(None); d = ny.normalize(); hm = ny.hour * 60 + ny.minute; row = dict(publisher=r.publisher, symbol=r.symbol, published_ny=f"{ny:%Y-%m-%d %H:%M}", severity=r.severity, first=bool(r.first), when="", day0=np.nan, next_session=np.nan, status="no prices")
+        if r.symbol in px:
+            idx = px[r.symbol].index; i0 = int(idx.searchsorted(d + pd.Timedelta(days=1) if hm >= 960 else d)); row["status"] = "waiting for the session"
+            if i0 < len(idx):
+                row["when"] = "during the session" if (idx[i0] == d and 570 <= hm < 960) else "before the open"; g = G[r.symbol]; row["status"] = "waiting for the next close"
+                if np.isfinite(g["cc"][i0]): row["day0"] = -float(g["cc"][i0])
+                if i0 + 1 < len(idx) and np.isfinite(g["cc"][i0 + 1]): row["next_session"] = -float(g["cc"][i0 + 1]); row["status"] = "complete"
+        rows.append(row)
+    T = pd.DataFrame(rows); T.to_csv(ROOT / "forward.csv", index=False); D = T[(T.when == "during the session") & (T.status == "complete")]; B = T[(T.when == "before the open") & (T.status == "complete")]
+    f = lambda x: "" if pd.isna(x) else f"{x:+.0f}"
+    L += [f"**Lead so far (interim): {len(D)} of 30 reports published during the session are complete" + (f"; next session: average {D.next_session.mean():+.0f} bp, middle {D.next_session.median():+.0f} bp, the share fell on {(D.next_session > 0).mean():.0%}." if len(D) else ".") + "**",
+          f"Comparison, reports published before the open: {len(B)} complete" + (f"; next session average {B.next_session.mean():+.0f} bp." if len(B) else "."), "", "| publisher | company | published (New York) | when | severity | first report | day 0 | next session | status |", "|---|---|---|---|---|---|---|---|---|"]
+    L += [f"| {r.publisher} | {r.symbol} | {r.published_ny} | {r.when} | {r.severity} | {'yes' if r.first else 'no'} | {f(r.day0)} | {f(r.next_session)} | {r.status} |" for r in T.itertuples()]
+    Path("docs").mkdir(exist_ok=True); Path("docs/short_reports_forward.md").write_text("\n".join(L) + "\n"); print("\n".join(L[4:6])); print(f"{len(T)} negative reports on US-listed companies since 21 Nov 2026 -> docs/short_reports_forward.md")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["collect", "times", "cost", "extract", "reports", "test"]); ap.add_argument("--max-usd", type=float, default=5.0); a = ap.parse_args()
-    {"collect": cmd_collect, "times": cmd_times, "cost": cmd_cost, "extract": lambda: cmd_extract(a.max_usd), "reports": cmd_reports, "test": cmd_test}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["collect", "times", "cost", "extract", "reports", "test", "forward"]); ap.add_argument("--max-usd", type=float, default=5.0); a = ap.parse_args()
+    {"collect": cmd_collect, "times": cmd_times, "cost": cmd_cost, "extract": lambda: cmd_extract(a.max_usd), "reports": cmd_reports, "test": cmd_test, "forward": cmd_forward}[a.cmd]()

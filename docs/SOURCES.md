@@ -23,6 +23,9 @@ company news, and has no trading rule until one is tested. (3) Anonymous posts a
 | central bank | Federal Reserve monetary-policy press releases | Fed feed | 15 Nov 2026 | live |
 | third party | **Hunterbrook** (publishes investigations and may trade on them) | publisher feed (candidate addresses; `once` shows which answers) | **20 Nov 2026** | added; first item to be seen live |
 | third party | **SemiAnalysis** (semiconductor and AI research) | publisher feed (candidates) | **20 Nov 2026** | added; paid articles are scored from the public part only |
+| third party | **Grizzly Research** (publishes short reports; may hold a short position) | publisher feed | **21 Nov 2026** | live as ALERTS (no rule); admitted after SR-1 (TRACK 3.85) |
+| third party | **Blue Orca** (short and some long reports; may hold a position) | publisher feed | **21 Nov 2026** | live as ALERTS (no rule) |
+| third party | **Fuzzy Panda** (publishes short reports; may hold a short position) | publisher feed | **21 Nov 2026** | live as ALERTS (no rule) |
 | wire | Business Wire (Intel, Amazon, CrowdStrike, SanDisk) | refuses scripts | — | not reachable live; SEC route used |
 | wire | GlobeNewswire (NVIDIA, AMD, Micron) | refuses scripts | — | not reachable live; company feeds / SEC route used |
 
