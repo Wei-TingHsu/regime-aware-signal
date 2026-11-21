@@ -11,3 +11,5 @@ to know how strong these sources can influence the market; if it doesn't, there 
 | Research publishers | SemiAnalysis | read live since 20 Nov as information only; reaction test with SR-1's method once enough items exist | live, no rule |
 
 New source addresses found later by the discovery search are added to this table automatically, with the date found.
+
+| WAITING LIST (founder, 21 Nov 2026) | Reading the event filings of the S&P 100 companies (ET-2): 6,590 texts on disk, counted cost US$35-53 (press releases only) or US$84-127 (all). Not read. | TRACK 3.91-3.93 |
