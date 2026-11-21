@@ -1,0 +1,1797 @@
+{
+ "stocks, one day -5% or worse": {
+  "sell_offs_find": 3733,
+  "sell_offs_confirm": 3279,
+  "families_searched": 36,
+  "families_total": 36,
+  "tried": 2118940,
+  "found": 624,
+  "found_scrambled_median": 692.0,
+  "confirmed": 115,
+  "confirmed_scrambled_median": 12.0,
+  "confirmed_scrambled_95": 123.15000000000003,
+  "confirmed_scrambled_max": 417.0,
+  "p": 0.0664451827242525,
+  "passes": false,
+  "families": [
+   {
+    "family": "T1",
+    "items": 41,
+    "tried": 32980,
+    "found": 28,
+    "found_scrambled": 4.0,
+    "confirmed": 16,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 7.050000000000011,
+    "p": 0.029900332225913623
+   },
+   {
+    "family": "T2",
+    "items": 52,
+    "tried": 53760,
+    "found": 1,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T3",
+    "items": 31,
+    "tried": 6020,
+    "found": 0,
+    "found_scrambled": 1.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 1.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4",
+    "items": 62,
+    "tried": 91720,
+    "found": 5,
+    "found_scrambled": 40.5,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 6.050000000000011,
+    "p": 1.0
+   },
+   {
+    "family": "T5",
+    "items": 39,
+    "tried": 5740,
+    "found": 0,
+    "found_scrambled": 1.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T6",
+    "items": 8,
+    "tried": 20,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T7",
+    "items": 14,
+    "tried": 620,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T8",
+    "items": 15,
+    "tried": 1560,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T2",
+    "items": 93,
+    "tried": 252940,
+    "found": 405,
+    "found_scrambled": 25.0,
+    "confirmed": 67,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 45.40000000000009,
+    "p": 0.04318936877076412
+   },
+   {
+    "family": "T1 + T3",
+    "items": 72,
+    "tried": 78920,
+    "found": 26,
+    "found_scrambled": 29.5,
+    "confirmed": 1,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 7.100000000000023,
+    "p": 0.2757475083056478
+   },
+   {
+    "family": "T1 + T4",
+    "items": 103,
+    "tried": 318120,
+    "found": 79,
+    "found_scrambled": 130.0,
+    "confirmed": 18,
+    "confirmed_scrambled_median": 2.0,
+    "confirmed_scrambled_95": 29.100000000000023,
+    "p": 0.08637873754152824
+   },
+   {
+    "family": "T1 + T5",
+    "items": 80,
+    "tried": 72280,
+    "found": 8,
+    "found_scrambled": 17.0,
+    "confirmed": 1,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 5.0,
+    "p": 0.292358803986711
+   },
+   {
+    "family": "T1 + T6",
+    "items": 49,
+    "tried": 260,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T7",
+    "items": 55,
+    "tried": 13020,
+    "found": 0,
+    "found_scrambled": 2.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T8",
+    "items": 56,
+    "tried": 52020,
+    "found": 1,
+    "found_scrambled": 5.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 13.0,
+    "p": 1.0
+   },
+   {
+    "family": "T2 + T3",
+    "items": 83,
+    "tried": 124300,
+    "found": 14,
+    "found_scrambled": 21.5,
+    "confirmed": 9,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 6.0,
+    "p": 0.046511627906976744
+   },
+   {
+    "family": "T2 + T4",
+    "items": 114,
+    "tried": 419720,
+    "found": 36,
+    "found_scrambled": 129.5,
+    "confirmed": 1,
+    "confirmed_scrambled_median": 1.0,
+    "confirmed_scrambled_95": 18.0,
+    "p": 0.5448504983388704
+   },
+   {
+    "family": "T2 + T5",
+    "items": 91,
+    "tried": 117800,
+    "found": 1,
+    "found_scrambled": 14.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 5.0,
+    "p": 1.0
+   },
+   {
+    "family": "T2 + T6",
+    "items": 60,
+    "tried": 1320,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T2 + T7",
+    "items": 66,
+    "tried": 29860,
+    "found": 0,
+    "found_scrambled": 3.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T2 + T8",
+    "items": 67,
+    "tried": 66380,
+    "found": 2,
+    "found_scrambled": 0.0,
+    "confirmed": 2,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 0.016611295681063124
+   },
+   {
+    "family": "T3 + T4",
+    "items": 93,
+    "tried": 109140,
+    "found": 4,
+    "found_scrambled": 39.5,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 7.0,
+    "p": 1.0
+   },
+   {
+    "family": "T3 + T5",
+    "items": 70,
+    "tried": 14680,
+    "found": 0,
+    "found_scrambled": 2.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 1.0,
+    "p": 1.0
+   },
+   {
+    "family": "T3 + T6",
+    "items": 39,
+    "tried": 20,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T3 + T7",
+    "items": 45,
+    "tried": 1320,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T3 + T8",
+    "items": 46,
+    "tried": 21340,
+    "found": 0,
+    "found_scrambled": 3.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 3.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4 + T5",
+    "items": 101,
+    "tried": 102280,
+    "found": 7,
+    "found_scrambled": 26.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 4.050000000000011,
+    "p": 1.0
+   },
+   {
+    "family": "T4 + T6",
+    "items": 70,
+    "tried": 40,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4 + T7",
+    "items": 76,
+    "tried": 8900,
+    "found": 0,
+    "found_scrambled": 4.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 1.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4 + T8",
+    "items": 77,
+    "tried": 98920,
+    "found": 7,
+    "found_scrambled": 27.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 5.0,
+    "p": 1.0
+   },
+   {
+    "family": "T5 + T6",
+    "items": 47,
+    "tried": 20,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T5 + T7",
+    "items": 53,
+    "tried": 1060,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T5 + T8",
+    "items": 54,
+    "tried": 17640,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T6 + T7",
+    "items": 22,
+    "tried": 0,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T6 + T8",
+    "items": 23,
+    "tried": 60,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T7 + T8",
+    "items": 29,
+    "tried": 4160,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   }
+  ],
+  "patterns": [
+   {
+    "when": [
+     "own results filing: yes",
+     "size rank in the list: high (over 0.728)"
+    ],
+    "tables": [
+     "T2",
+     "T3"
+    ],
+    "outcome": "it beats the S&P 500 over 3 sessions",
+    "found_rate": 0.3014950156211853,
+    "found_all": 0.48770150542259216,
+    "found_days": 103.75816345214844,
+    "found_months": 88,
+    "confirm_rate": 0.31080862879753113,
+    "confirm_all": 0.47111645340919495,
+    "confirm_days": 119.30244445800781,
+    "confirm_months": 80,
+    "events_found": 166,
+    "events_confirm": 214,
+    "move_confirm": {
+     "1": -66.62012711184065,
+     "2": -103.63882089475382,
+     "3": -118.40192058053829,
+     "5": -79.5639313750604,
+     "7": -25.826141219256908,
+     "10": 5.834176289321552
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "own results filing: yes",
+     "move against sector fund pct: low (under -4.82)",
+     "insider purchase filings in 90 days: at or under 0"
+    ],
+    "tables": [
+     "T2",
+     "T8"
+    ],
+    "outcome": "it beats the S&P 500 over 3 sessions",
+    "found_rate": 0.3525160253047943,
+    "found_all": 0.48770150542259216,
+    "found_days": 169.5002899169922,
+    "found_months": 107,
+    "confirm_rate": 0.3655526638031006,
+    "confirm_all": 0.47111645340919495,
+    "confirm_days": 233.48687744140625,
+    "confirm_months": 92,
+    "events_found": 253,
+    "events_confirm": 390,
+    "move_confirm": {
+     "1": -33.192859089531105,
+     "2": -43.01639848268675,
+     "3": -63.00776322273594,
+     "5": -17.768187517035965,
+     "7": 14.924234546260594,
+     "10": 26.872490851237494
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "own results filing: yes",
+     "own filings in the last 30 days: middle (1 to 2)",
+     "size rank in the list: high (over 0.728)"
+    ],
+    "tables": [
+     "T2",
+     "T3"
+    ],
+    "outcome": "it beats its sector fund over 2 sessions",
+    "found_rate": 0.30138683319091797,
+    "found_all": 0.493827223777771,
+    "found_days": 84.74823760986328,
+    "found_months": 75,
+    "confirm_rate": 0.3305646777153015,
+    "confirm_all": 0.48275700211524963,
+    "confirm_days": 100.83409118652344,
+    "confirm_months": 76,
+    "events_found": 128,
+    "events_confirm": 184,
+    "move_confirm": {
+     "1": -68.39579199352372,
+     "2": -96.29004784457335,
+     "3": -114.27226153920523,
+     "5": -58.886893434598754,
+     "7": -0.03788884367912076,
+     "10": 28.587625073718286
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "the S&P 500 over the same sessions %: high (over -1.25)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "investment-grade bond fund, move over 5 sessions %: middle (-0.187 to 0.632)"
+    ],
+    "tables": [
+     "T1",
+     "T4"
+    ],
+    "outcome": "the price is higher after 2 sessions",
+    "found_rate": 0.3602275550365448,
+    "found_all": 0.5101866126060486,
+    "found_days": 136.2333221435547,
+    "found_months": 95,
+    "confirm_rate": 0.3610672652721405,
+    "confirm_all": 0.48938968777656555,
+    "confirm_days": 99.44285583496094,
+    "confirm_months": 65,
+    "events_found": 180,
+    "events_confirm": 146,
+    "move_confirm": {
+     "1": -48.295600716607446,
+     "2": -45.405118084006915,
+     "3": -39.83048072333157,
+     "5": -47.11184262175942,
+     "7": -5.231025278709809,
+     "10": -0.6139341929515805
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "distance below the one-year high %: high (over -24.6)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "move against sector fund pct: low (under -4.82)"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "the price is higher after 1 session",
+    "found_rate": 0.35976916551589966,
+    "found_all": 0.4934650659561157,
+    "found_days": 174.33135986328125,
+    "found_months": 111,
+    "confirm_rate": 0.4184671938419342,
+    "confirm_all": 0.5121630430221558,
+    "confirm_days": 168.42478942871094,
+    "confirm_months": 89,
+    "events_found": 231,
+    "events_confirm": 247,
+    "move_confirm": {
+     "1": -38.72376930055829,
+     "2": -32.34866635493377,
+     "3": -44.257815022831196,
+     "5": -45.05097886501407,
+     "7": -32.26148167759577,
+     "10": -39.67930720677012
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "size in units of its own usual move: low (under -2.72)",
+     "run-up over the 60 sessions before %: high (over 1.77)",
+     "the average share against the S&P 500, 5 sessions %: middle (-0.614 to 0.00347)"
+    ],
+    "tables": [
+     "T1",
+     "T4"
+    ],
+    "outcome": "it beats the S&P 500 over 5 sessions",
+    "found_rate": 0.3018331825733185,
+    "found_all": 0.4743642210960388,
+    "found_days": 117.97663879394531,
+    "found_months": 90,
+    "confirm_rate": 0.3480505347251892,
+    "confirm_all": 0.47807735204696655,
+    "confirm_days": 86.8963623046875,
+    "confirm_months": 67,
+    "events_found": 227,
+    "events_confirm": 145,
+    "move_confirm": {
+     "1": -22.012508254852207,
+     "2": -39.87785525405869,
+     "3": -45.82188218126394,
+     "5": -19.616120202696628,
+     "7": 10.346898112130724,
+     "10": 51.154730171975444
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "gap at the open %: low (under -2.94)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "size rank in the list: high (over 0.728)"
+    ],
+    "tables": [
+     "T1",
+     "T3"
+    ],
+    "outcome": "it beats the S&P 500 over 2 sessions",
+    "found_rate": 0.308287650346756,
+    "found_all": 0.4928067922592163,
+    "found_days": 96.79051971435547,
+    "found_months": 84,
+    "confirm_rate": 0.35540202260017395,
+    "confirm_all": 0.47713735699653625,
+    "confirm_days": 96.03924560546875,
+    "confirm_months": 78,
+    "events_found": 141,
+    "events_confirm": 162,
+    "move_confirm": {
+     "1": -81.30844032514932,
+     "2": -111.44473907774332,
+     "3": -96.31922797724509,
+     "5": -65.98278596468188,
+     "7": -31.008267652299228,
+     "10": 4.259272908486439
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "run-up over the 60 sessions before %: high (over 1.77)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)"
+    ],
+    "tables": [
+     "T1"
+    ],
+    "outcome": "it beats the S&P 500 over 2 sessions",
+    "found_rate": 0.3534945845603943,
+    "found_all": 0.4928067922592163,
+    "found_days": 160.779052734375,
+    "found_months": 103,
+    "confirm_rate": 0.3778374195098877,
+    "confirm_all": 0.47713735699653625,
+    "confirm_days": 143.66452026367188,
+    "confirm_months": 90,
+    "events_found": 212,
+    "events_confirm": 220,
+    "move_confirm": {
+     "1": -61.76609451253464,
+     "2": -66.1124615094618,
+     "3": -82.1782669750375,
+     "5": -53.164898917660636,
+     "7": -73.01620768231503,
+     "10": -64.18502463232926
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "run-up over the 60 sessions before %: high (over 1.77)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "worst peer had any filing: no"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "the price is higher after 2 sessions",
+    "found_rate": 0.35590916872024536,
+    "found_all": 0.5101866126060486,
+    "found_days": 133.60287475585938,
+    "found_months": 99,
+    "confirm_rate": 0.3857630491256714,
+    "confirm_all": 0.48938968777656555,
+    "confirm_days": 125.46174621582031,
+    "confirm_months": 89,
+    "events_found": 175,
+    "events_confirm": 186,
+    "move_confirm": {
+     "1": -54.698502995918695,
+     "2": -54.29699976930394,
+     "3": -65.13089252093067,
+     "5": -43.87627234104381,
+     "7": -57.11162904760797,
+     "10": -49.632291703895106
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "distance below the one-year high %: high (over -24.6)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "fell more than every peer: yes"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "the price is higher after 2 sessions",
+    "found_rate": 0.3746104836463928,
+    "found_all": 0.5101866126060486,
+    "found_days": 187.1735076904297,
+    "found_months": 114,
+    "confirm_rate": 0.4039248526096344,
+    "confirm_all": 0.48938968777656555,
+    "confirm_days": 172.57081604003906,
+    "confirm_months": 92,
+    "events_found": 246,
+    "events_confirm": 250,
+    "move_confirm": {
+     "1": -45.40144902703574,
+     "2": -43.978768019975796,
+     "3": -54.75113036272735,
+     "5": -59.71635511977149,
+     "7": -50.31646280552445,
+     "10": -50.42385655838729
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "S&P 500 against its 200-day average %: high (over -3.11)",
+     "own results filing: yes",
+     "move against sector fund pct: low (under -4.82)"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "it beats the S&P 500 over 2 sessions",
+    "found_rate": 0.3643653392791748,
+    "found_all": 0.4928067922592163,
+    "found_days": 190.6118927001953,
+    "found_months": 103,
+    "confirm_rate": 0.4076363444328308,
+    "confirm_all": 0.47713735699653625,
+    "confirm_days": 246.7431640625,
+    "confirm_months": 89,
+    "events_found": 249,
+    "events_confirm": 405,
+    "move_confirm": {
+     "1": -28.44458084896511,
+     "2": -35.503536588750535,
+     "3": -52.50149852281867,
+     "5": -15.781873982232437,
+     "7": 16.66306716273357,
+     "10": 18.921677832962327
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "move against sector fund pct: low (under -4.82)"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "the price is higher after 2 sessions",
+    "found_rate": 0.39939025044441223,
+    "found_all": 0.5101866126060486,
+    "found_days": 251.11782836914062,
+    "found_months": 127,
+    "confirm_rate": 0.4223299026489258,
+    "confirm_all": 0.48938968777656555,
+    "confirm_days": 255.22471618652344,
+    "confirm_months": 102,
+    "events_found": 357,
+    "events_confirm": 408,
+    "move_confirm": {
+     "1": -33.94278552079473,
+     "2": -33.566203661560486,
+     "3": -51.129233996594024,
+     "5": -26.817836895399683,
+     "7": -14.740421346052036,
+     "10": -8.158198632082817
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "run-up over the 60 sessions before %: high (over 1.77)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "dollar index, move over 5 sessions %: middle (-0.278 to 1.18)"
+    ],
+    "tables": [
+     "T1",
+     "T4"
+    ],
+    "outcome": "it beats the S&P 500 over 1 session",
+    "found_rate": 0.3113095462322235,
+    "found_all": 0.5060250759124756,
+    "found_days": 82.12619018554688,
+    "found_months": 70,
+    "confirm_rate": 0.3755975067615509,
+    "confirm_all": 0.49188467860221863,
+    "confirm_days": 80.03544616699219,
+    "confirm_months": 64,
+    "events_found": 104,
+    "events_confirm": 117,
+    "move_confirm": {
+     "1": -63.840937078388,
+     "2": -55.056071544759725,
+     "3": -79.52558552463995,
+     "5": -49.32022471573676,
+     "7": -72.59823603909105,
+     "10": -89.15039420426271
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "own results filing: yes",
+     "VIX against the three-month VIX: low (under 0.986)",
+     "investment-grade bond fund, move over 5 sessions %: middle (-0.187 to 0.632)"
+    ],
+    "tables": [
+     "T2",
+     "T4"
+    ],
+    "outcome": "it beats the S&P 500 over 3 sessions",
+    "found_rate": 0.30079323053359985,
+    "found_all": 0.48770150542259216,
+    "found_days": 97.85238647460938,
+    "found_months": 70,
+    "confirm_rate": 0.3703249990940094,
+    "confirm_all": 0.47111645340919495,
+    "confirm_days": 104.82856750488281,
+    "confirm_months": 71,
+    "events_found": 141,
+    "events_confirm": 169,
+    "move_confirm": {
+     "1": -27.091001842250275,
+     "2": -49.26868160404032,
+     "3": -65.9209367720656,
+     "5": -64.24429223579651,
+     "7": -31.5441321813661,
+     "10": -30.796535624750856
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "last day's move %: low (under -7.56)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "own filings in the last 30 days: middle (1 to 2)"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "it beats its sector fund over 2 sessions",
+    "found_rate": 0.32101941108703613,
+    "found_all": 0.493827223777771,
+    "found_days": 136.3291015625,
+    "found_months": 99,
+    "confirm_rate": 0.390537828207016,
+    "confirm_all": 0.48275700211524963,
+    "confirm_days": 121.45777893066406,
+    "confirm_months": 84,
+    "events_found": 191,
+    "events_confirm": 221,
+    "move_confirm": {
+     "1": -46.25114190435639,
+     "2": -59.81821356395955,
+     "3": -88.79506965733994,
+     "5": -57.87478878046243,
+     "7": -76.64128101877321,
+     "10": -75.84449286724076
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "run-up over the 60 sessions before %: high (over 1.77)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "copper, move over 5 sessions %: middle (-4.95 to 0.689)"
+    ],
+    "tables": [
+     "T1",
+     "T4"
+    ],
+    "outcome": "the price is higher after 2 sessions",
+    "found_rate": 0.3197921812534332,
+    "found_all": 0.5101866126060486,
+    "found_days": 88.88739013671875,
+    "found_months": 71,
+    "confirm_rate": 0.37408509850502014,
+    "confirm_all": 0.48938968777656555,
+    "confirm_days": 74.75617980957031,
+    "confirm_months": 69,
+    "events_found": 111,
+    "events_confirm": 119,
+    "move_confirm": {
+     "1": -62.21156273112602,
+     "2": -78.71065434954124,
+     "3": -98.65697690967393,
+     "5": -94.7757412917103,
+     "7": -120.74283084760782,
+     "10": -129.62040004285225
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "run-up over the 60 sessions before %: high (over 1.77)",
+     "the S&P 500 over the same sessions %: high (over -1.25)",
+     "small against large companies, 5 sessions %: middle (-1.25 to 0.139)"
+    ],
+    "tables": [
+     "T1",
+     "T4"
+    ],
+    "outcome": "the price is higher after 10 sessions",
+    "found_rate": 0.3703593313694,
+    "found_all": 0.5134069919586182,
+    "found_days": 169.50669860839844,
+    "found_months": 102,
+    "confirm_rate": 0.46403300762176514,
+    "confirm_all": 0.544198751449585,
+    "confirm_days": 147.93690490722656,
+    "confirm_months": 77,
+    "events_found": 234,
+    "events_confirm": 279,
+    "move_confirm": {
+     "1": -22.702121623724643,
+     "2": -21.876776570623946,
+     "3": -73.55612851367957,
+     "5": -1.863023479952726,
+     "7": -23.748392796036118,
+     "10": -21.539581737434123
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "run-up over the 60 sessions before %: high (over 1.77)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "small against large companies, 5 sessions %: middle (-1.25 to 0.139)"
+    ],
+    "tables": [
+     "T1",
+     "T4"
+    ],
+    "outcome": "it beats its sector fund over 3 sessions",
+    "found_rate": 0.2885381281375885,
+    "found_all": 0.49490055441856384,
+    "found_days": 73.18501281738281,
+    "found_months": 65,
+    "confirm_rate": 0.3390752375125885,
+    "confirm_all": 0.4827064573764801,
+    "confirm_days": 45.95833206176758,
+    "confirm_months": 46,
+    "events_found": 93,
+    "events_confirm": 74,
+    "move_confirm": {
+     "1": -53.823340276334214,
+     "2": -90.97275144438292,
+     "3": -118.5831736353337,
+     "5": -92.8227477155434,
+     "7": -150.13090466659457,
+     "10": -171.2535080500306
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "oil, move over 5 sessions %: middle (-6.86 to -0.432)"
+    ],
+    "tables": [
+     "T1",
+     "T4"
+    ],
+    "outcome": "it beats the S&P 500 over 2 sessions",
+    "found_rate": 0.33215853571891785,
+    "found_all": 0.4928067922592163,
+    "found_days": 119.03549194335938,
+    "found_months": 88,
+    "confirm_rate": 0.38207343220710754,
+    "confirm_all": 0.47713735699653625,
+    "confirm_days": 99.77953338623047,
+    "confirm_months": 71,
+    "events_found": 173,
+    "events_confirm": 168,
+    "move_confirm": {
+     "1": -49.470050645840985,
+     "2": -64.3106592192834,
+     "3": -66.30918107057875,
+     "5": -24.451240407064333,
+     "7": 0.8719124818297055,
+     "10": 59.1787647537057
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "distance below the one-year high %: high (over -24.6)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "sessions to quarter end: middle (27 to 45)"
+    ],
+    "tables": [
+     "T1",
+     "T5"
+    ],
+    "outcome": "it beats its sector fund over 1 session",
+    "found_rate": 0.29790326952934265,
+    "found_all": 0.49082034826278687,
+    "found_days": 90.35371398925781,
+    "found_months": 68,
+    "confirm_rate": 0.38918477296829224,
+    "confirm_all": 0.49508416652679443,
+    "confirm_days": 78.16526794433594,
+    "confirm_months": 58,
+    "events_found": 119,
+    "events_confirm": 131,
+    "move_confirm": {
+     "1": -31.133596400789862,
+     "2": -11.082661944722938,
+     "3": -20.586893631818914,
+     "5": -23.203818405455806,
+     "7": -32.15597637782797,
+     "10": -46.64366889739242
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "gap at the open %: low (under -2.94)",
+     "in ai chain: yes",
+     "machine group 3 of 5 in 'who fell and who set it off' (marked by low share of peers down 3pct and high peers average move pct)"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "it beats the S&P 500 over 2 sessions",
+    "found_rate": 0.2670883238315582,
+    "found_all": 0.4928067922592163,
+    "found_days": 64.26422119140625,
+    "found_months": 66,
+    "confirm_rate": 0.35828453302383423,
+    "confirm_all": 0.47713735699653625,
+    "confirm_days": 61.21764373779297,
+    "confirm_months": 62,
+    "events_found": 91,
+    "events_confirm": 94,
+    "move_confirm": {
+     "1": -94.70078438520483,
+     "2": -167.74978150711678,
+     "3": -189.09040638391187,
+     "5": -77.33716445976734,
+     "7": -26.627677370907463,
+     "10": 29.306757444680102
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "gap at the open %: low (under -2.94)",
+     "regional banks, move over 5 sessions %: middle (-5.82 to -0.707)",
+     "small against large companies, 5 sessions %: middle (-1.25 to 0.139)"
+    ],
+    "tables": [
+     "T1",
+     "T4"
+    ],
+    "outcome": "it beats its sector fund over 3 sessions",
+    "found_rate": 0.28273463249206543,
+    "found_all": 0.49490055441856384,
+    "found_days": 68.02810668945312,
+    "found_months": 66,
+    "confirm_rate": 0.3572310507297516,
+    "confirm_all": 0.4827064573764801,
+    "confirm_days": 54.83917999267578,
+    "confirm_months": 51,
+    "events_found": 187,
+    "events_confirm": 134,
+    "move_confirm": {
+     "1": -6.168587806111029,
+     "2": -31.397998054474233,
+     "3": -50.1344128338018,
+     "5": 52.51146264279013,
+     "7": 27.797867317920247,
+     "10": 37.018207356545524
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "gap at the open %: low (under -2.94)",
+     "small against large companies, 5 sessions %: middle (-1.25 to 0.139)",
+     "value against growth shares, 5 sessions %: middle (-0.993 to 0.327)"
+    ],
+    "tables": [
+     "T1",
+     "T4"
+    ],
+    "outcome": "it beats its sector fund over 3 sessions",
+    "found_rate": 0.3138771951198578,
+    "found_all": 0.49490055441856384,
+    "found_days": 100.76153564453125,
+    "found_months": 88,
+    "confirm_rate": 0.3530605435371399,
+    "confirm_all": 0.4827064573764801,
+    "confirm_days": 49.28333282470703,
+    "confirm_months": 40,
+    "events_found": 190,
+    "events_confirm": 88,
+    "move_confirm": {
+     "1": -65.20121805858201,
+     "2": -95.46510833346588,
+     "3": -93.98342752593975,
+     "5": -42.166440902069695,
+     "7": -6.788155844381961,
+     "10": 39.02074506690446
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)"
+    ],
+    "tables": [
+     "T1"
+    ],
+    "outcome": "it beats the S&P 500 over 2 sessions",
+    "found_rate": 0.3906145989894867,
+    "found_all": 0.4928067922592163,
+    "found_days": 294.6568908691406,
+    "found_months": 134,
+    "confirm_rate": 0.42282283306121826,
+    "confirm_all": 0.47713735699653625,
+    "confirm_days": 273.01611328125,
+    "confirm_months": 103,
+    "events_found": 421,
+    "events_confirm": 442,
+    "move_confirm": {
+     "1": -33.82252281031084,
+     "2": -32.89623547601127,
+     "3": -52.38235666474194,
+     "5": -31.7766960972498,
+     "7": -19.25930274585619,
+     "10": -7.947532806672966
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "size in units of its own usual move: low (under -2.72)",
+     "value against growth shares, 5 sessions %: middle (-0.993 to 0.327)",
+     "the average share against the S&P 500, 5 sessions %: middle (-0.614 to 0.00347)"
+    ],
+    "tables": [
+     "T1",
+     "T4"
+    ],
+    "outcome": "it beats the S&P 500 over 5 sessions",
+    "found_rate": 0.32277947664260864,
+    "found_all": 0.4743642210960388,
+    "found_days": 135.30453491210938,
+    "found_months": 88,
+    "confirm_rate": 0.3791426718235016,
+    "confirm_all": 0.47807735204696655,
+    "confirm_days": 74.2611083984375,
+    "confirm_months": 62,
+    "events_found": 234,
+    "events_confirm": 124,
+    "move_confirm": {
+     "1": -17.75442145489653,
+     "2": -15.858511270116493,
+     "3": -34.361570431494314,
+     "5": -13.991415318699868,
+     "7": 45.91827456902898,
+     "10": 64.45816749642185
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "last day's move %: low (under -7.56)",
+     "volume against normal: high (over 1.98)",
+     "gold, move over 5 sessions %: low (under -1.53)"
+    ],
+    "tables": [
+     "T1",
+     "T4"
+    ],
+    "outcome": "it beats the S&P 500 over 2 sessions",
+    "found_rate": 0.2590891718864441,
+    "found_all": 0.4928067922592163,
+    "found_days": 61.62043762207031,
+    "found_months": 56,
+    "confirm_rate": 0.3531177043914795,
+    "confirm_all": 0.47713735699653625,
+    "confirm_days": 43.66459274291992,
+    "confirm_months": 46,
+    "events_found": 152,
+    "events_confirm": 244,
+    "move_confirm": {
+     "1": -17.826210919792775,
+     "2": -34.44258743232588,
+     "3": -136.41743511704354,
+     "5": -57.581092081204076,
+     "7": -65.78415675765703,
+     "10": -47.70417741204569
+    },
+    "candidate": false
+   }
+  ]
+ },
+ "stocks, 5 sessions -10% or worse": {
+  "sell_offs_find": 1795,
+  "sell_offs_confirm": 1719,
+  "families_searched": 36,
+  "families_total": 36,
+  "tried": 1040040,
+  "found": 161,
+  "found_scrambled_median": 141.0,
+  "confirmed": 0,
+  "confirmed_scrambled_median": 2.0,
+  "confirmed_scrambled_95": 21.05000000000001,
+  "confirmed_scrambled_max": 208.0,
+  "p": 1.0,
+  "passes": false,
+  "families": [
+   {
+    "family": "T1",
+    "items": 41,
+    "tried": 20360,
+    "found": 0,
+    "found_scrambled": 1.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T2",
+    "items": 52,
+    "tried": 42960,
+    "found": 53,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T3",
+    "items": 31,
+    "tried": 1580,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4",
+    "items": 57,
+    "tried": 39680,
+    "found": 0,
+    "found_scrambled": 10.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 3.0,
+    "p": 1.0
+   },
+   {
+    "family": "T5",
+    "items": 39,
+    "tried": 1800,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T6",
+    "items": 8,
+    "tried": 0,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T7",
+    "items": 14,
+    "tried": 220,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T8",
+    "items": 15,
+    "tried": 1340,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T2",
+    "items": 93,
+    "tried": 171420,
+    "found": 60,
+    "found_scrambled": 4.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 1.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T3",
+    "items": 72,
+    "tried": 21440,
+    "found": 0,
+    "found_scrambled": 3.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 1.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T4",
+    "items": 98,
+    "tried": 139700,
+    "found": 3,
+    "found_scrambled": 32.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 6.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T5",
+    "items": 80,
+    "tried": 23380,
+    "found": 0,
+    "found_scrambled": 2.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T6",
+    "items": 49,
+    "tried": 0,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T7",
+    "items": 55,
+    "tried": 920,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T8",
+    "items": 56,
+    "tried": 33280,
+    "found": 12,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T2 + T3",
+    "items": 83,
+    "tried": 51900,
+    "found": 1,
+    "found_scrambled": 2.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T2 + T4",
+    "items": 109,
+    "tried": 253620,
+    "found": 14,
+    "found_scrambled": 32.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 6.050000000000011,
+    "p": 1.0
+   },
+   {
+    "family": "T2 + T5",
+    "items": 91,
+    "tried": 51700,
+    "found": 10,
+    "found_scrambled": 1.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T2 + T6",
+    "items": 60,
+    "tried": 0,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T2 + T7",
+    "items": 66,
+    "tried": 4320,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T2 + T8",
+    "items": 67,
+    "tried": 47920,
+    "found": 8,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T3 + T4",
+    "items": 88,
+    "tried": 23920,
+    "found": 0,
+    "found_scrambled": 6.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 1.0,
+    "p": 1.0
+   },
+   {
+    "family": "T3 + T5",
+    "items": 70,
+    "tried": 3820,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T3 + T6",
+    "items": 39,
+    "tried": 0,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T3 + T7",
+    "items": 45,
+    "tried": 0,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T3 + T8",
+    "items": 46,
+    "tried": 7840,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4 + T5",
+    "items": 96,
+    "tried": 32400,
+    "found": 0,
+    "found_scrambled": 5.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 1.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4 + T6",
+    "items": 65,
+    "tried": 0,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4 + T7",
+    "items": 71,
+    "tried": 300,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4 + T8",
+    "items": 72,
+    "tried": 54900,
+    "found": 0,
+    "found_scrambled": 6.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 3.0,
+    "p": 1.0
+   },
+   {
+    "family": "T5 + T6",
+    "items": 47,
+    "tried": 0,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T5 + T7",
+    "items": 53,
+    "tried": 200,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T5 + T8",
+    "items": 54,
+    "tried": 8520,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T6 + T7",
+    "items": 22,
+    "tried": 0,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T6 + T8",
+    "items": 23,
+    "tried": 0,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T7 + T8",
+    "items": 29,
+    "tried": 600,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   }
+  ],
+  "patterns": []
+ },
+ "funds, one day -3% or worse": {
+  "sell_offs_find": 1723,
+  "sell_offs_confirm": 980,
+  "families_searched": 6,
+  "families_total": 6,
+  "tried": 29256,
+  "found": 1,
+  "found_scrambled_median": 9.0,
+  "confirmed": 0,
+  "confirmed_scrambled_median": 0.0,
+  "confirmed_scrambled_95": 3.0,
+  "confirmed_scrambled_max": 19.0,
+  "p": 1.0,
+  "passes": false,
+  "families": [
+   {
+    "family": "T1",
+    "items": 41,
+    "tried": 6144,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 1.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4",
+    "items": 57,
+    "tried": 2104,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T5",
+    "items": 34,
+    "tried": 504,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T4",
+    "items": 98,
+    "tried": 9672,
+    "found": 0,
+    "found_scrambled": 3.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 2.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T5",
+    "items": 75,
+    "tried": 7376,
+    "found": 1,
+    "found_scrambled": 1.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 1.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4 + T5",
+    "items": 91,
+    "tried": 3456,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   }
+  ],
+  "patterns": []
+ },
+ "funds, 5 sessions -7% or worse": {
+  "sell_offs_find": 580,
+  "sell_offs_confirm": 324,
+  "families_searched": 6,
+  "families_total": 6,
+  "tried": 2336,
+  "found": 1,
+  "found_scrambled_median": 0.0,
+  "confirmed": 0,
+  "confirmed_scrambled_median": 0.0,
+  "confirmed_scrambled_95": 0.0,
+  "confirmed_scrambled_max": 1.0,
+  "p": 1.0,
+  "passes": false,
+  "families": [
+   {
+    "family": "T1",
+    "items": 41,
+    "tried": 600,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4",
+    "items": 57,
+    "tried": 296,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T5",
+    "items": 34,
+    "tried": 224,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T4",
+    "items": 98,
+    "tried": 64,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T5",
+    "items": 75,
+    "tried": 760,
+    "found": 1,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T4 + T5",
+    "items": 91,
+    "tried": 392,
+    "found": 0,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   }
+  ],
+  "patterns": []
+ }
+}

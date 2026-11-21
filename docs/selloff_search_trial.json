@@ -1,0 +1,327 @@
+{
+ "stocks, one day -5% or worse": {
+  "sell_offs_find": 3733,
+  "sell_offs_confirm": 3279,
+  "families_searched": 3,
+  "families_total": 3,
+  "tried": 339680,
+  "found": 434,
+  "found_scrambled_median": 18.0,
+  "confirmed": 83,
+  "confirmed_scrambled_median": 0.0,
+  "confirmed_scrambled_95": 0.0,
+  "confirmed_scrambled_max": 0.0,
+  "p": 0.25,
+  "passes": false,
+  "families": [
+   {
+    "family": "T1",
+    "items": 41,
+    "tried": 32980,
+    "found": 28,
+    "found_scrambled": 4.0,
+    "confirmed": 16,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 0.25
+   },
+   {
+    "family": "T2",
+    "items": 52,
+    "tried": 53760,
+    "found": 1,
+    "found_scrambled": 0.0,
+    "confirmed": 0,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 1.0
+   },
+   {
+    "family": "T1 + T2",
+    "items": 93,
+    "tried": 252940,
+    "found": 405,
+    "found_scrambled": 13.0,
+    "confirmed": 67,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 0.25
+   }
+  ],
+  "patterns": [
+   {
+    "when": [
+     "distance below the one-year high %: high (over -24.6)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "move against sector fund pct: low (under -4.82)"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "the price is higher after 1 session",
+    "found_rate": 0.35976916551589966,
+    "found_all": 0.4934650659561157,
+    "found_days": 174.33135986328125,
+    "found_months": 111,
+    "confirm_rate": 0.4184671938419342,
+    "confirm_all": 0.5121630430221558,
+    "confirm_days": 168.42478942871094,
+    "confirm_months": 89,
+    "events_found": 231,
+    "events_confirm": 247,
+    "move_confirm": {
+     "1": -38.72376930055829,
+     "2": -32.34866635493377,
+     "3": -44.257815022831196,
+     "5": -45.05097886501407,
+     "7": -32.26148167759577,
+     "10": -39.67930720677012
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "run-up over the 60 sessions before %: high (over 1.77)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)"
+    ],
+    "tables": [
+     "T1"
+    ],
+    "outcome": "it beats the S&P 500 over 2 sessions",
+    "found_rate": 0.3534945845603943,
+    "found_all": 0.4928067922592163,
+    "found_days": 160.779052734375,
+    "found_months": 103,
+    "confirm_rate": 0.3778374195098877,
+    "confirm_all": 0.47713735699653625,
+    "confirm_days": 143.66452026367188,
+    "confirm_months": 90,
+    "events_found": 212,
+    "events_confirm": 220,
+    "move_confirm": {
+     "1": -61.76609451253464,
+     "2": -66.1124615094618,
+     "3": -82.1782669750375,
+     "5": -53.164898917660636,
+     "7": -73.01620768231503,
+     "10": -64.18502463232926
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "run-up over the 60 sessions before %: high (over 1.77)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "worst peer had any filing: no"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "the price is higher after 2 sessions",
+    "found_rate": 0.35590916872024536,
+    "found_all": 0.5101866126060486,
+    "found_days": 133.60287475585938,
+    "found_months": 99,
+    "confirm_rate": 0.3857630491256714,
+    "confirm_all": 0.48938968777656555,
+    "confirm_days": 125.46174621582031,
+    "confirm_months": 89,
+    "events_found": 175,
+    "events_confirm": 186,
+    "move_confirm": {
+     "1": -54.698502995918695,
+     "2": -54.29699976930394,
+     "3": -65.13089252093067,
+     "5": -43.87627234104381,
+     "7": -57.11162904760797,
+     "10": -49.632291703895106
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "distance below the one-year high %: high (over -24.6)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "fell more than every peer: yes"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "the price is higher after 2 sessions",
+    "found_rate": 0.3746104836463928,
+    "found_all": 0.5101866126060486,
+    "found_days": 187.1735076904297,
+    "found_months": 114,
+    "confirm_rate": 0.4039248526096344,
+    "confirm_all": 0.48938968777656555,
+    "confirm_days": 172.57081604003906,
+    "confirm_months": 92,
+    "events_found": 246,
+    "events_confirm": 250,
+    "move_confirm": {
+     "1": -45.40144902703574,
+     "2": -43.978768019975796,
+     "3": -54.75113036272735,
+     "5": -59.71635511977149,
+     "7": -50.31646280552445,
+     "10": -50.42385655838729
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "S&P 500 against its 200-day average %: high (over -3.11)",
+     "own results filing: yes",
+     "move against sector fund pct: low (under -4.82)"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "it beats the S&P 500 over 2 sessions",
+    "found_rate": 0.3643653392791748,
+    "found_all": 0.4928067922592163,
+    "found_days": 190.6118927001953,
+    "found_months": 103,
+    "confirm_rate": 0.4076363444328308,
+    "confirm_all": 0.47713735699653625,
+    "confirm_days": 246.7431640625,
+    "confirm_months": 89,
+    "events_found": 249,
+    "events_confirm": 405,
+    "move_confirm": {
+     "1": -28.44458084896511,
+     "2": -35.503536588750535,
+     "3": -52.50149852281867,
+     "5": -15.781873982232437,
+     "7": 16.66306716273357,
+     "10": 18.921677832962327
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "move against sector fund pct: low (under -4.82)"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "the price is higher after 2 sessions",
+    "found_rate": 0.39939025044441223,
+    "found_all": 0.5101866126060486,
+    "found_days": 251.11782836914062,
+    "found_months": 127,
+    "confirm_rate": 0.4223299026489258,
+    "confirm_all": 0.48938968777656555,
+    "confirm_days": 255.22471618652344,
+    "confirm_months": 102,
+    "events_found": 357,
+    "events_confirm": 408,
+    "move_confirm": {
+     "1": -33.94278552079473,
+     "2": -33.566203661560486,
+     "3": -51.129233996594024,
+     "5": -26.817836895399683,
+     "7": -14.740421346052036,
+     "10": -8.158198632082817
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "last day's move %: low (under -7.56)",
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+     "own filings in the last 30 days: middle (1 to 2)"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "it beats its sector fund over 2 sessions",
+    "found_rate": 0.32101941108703613,
+    "found_all": 0.493827223777771,
+    "found_days": 136.3291015625,
+    "found_months": 99,
+    "confirm_rate": 0.390537828207016,
+    "confirm_all": 0.48275700211524963,
+    "confirm_days": 121.45777893066406,
+    "confirm_months": 84,
+    "events_found": 191,
+    "events_confirm": 221,
+    "move_confirm": {
+     "1": -46.25114190435639,
+     "2": -59.81821356395955,
+     "3": -88.79506965733994,
+     "5": -57.87478878046243,
+     "7": -76.64128101877321,
+     "10": -75.84449286724076
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "gap at the open %: low (under -2.94)",
+     "in ai chain: yes",
+     "machine group 3 of 5 in 'who fell and who set it off' (marked by low share of peers down 3pct and high peers average move pct)"
+    ],
+    "tables": [
+     "T1",
+     "T2"
+    ],
+    "outcome": "it beats the S&P 500 over 2 sessions",
+    "found_rate": 0.2670883238315582,
+    "found_all": 0.4928067922592163,
+    "found_days": 64.26422119140625,
+    "found_months": 66,
+    "confirm_rate": 0.35828453302383423,
+    "confirm_all": 0.47713735699653625,
+    "confirm_days": 61.21764373779297,
+    "confirm_months": 62,
+    "events_found": 91,
+    "events_confirm": 94,
+    "move_confirm": {
+     "1": -94.70078438520483,
+     "2": -167.74978150711678,
+     "3": -189.09040638391187,
+     "5": -77.33716445976734,
+     "7": -26.627677370907463,
+     "10": 29.306757444680102
+    },
+    "candidate": false
+   },
+   {
+    "when": [
+     "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)"
+    ],
+    "tables": [
+     "T1"
+    ],
+    "outcome": "it beats the S&P 500 over 2 sessions",
+    "found_rate": 0.3906145989894867,
+    "found_all": 0.4928067922592163,
+    "found_days": 294.6568908691406,
+    "found_months": 134,
+    "confirm_rate": 0.42282283306121826,
+    "confirm_all": 0.47713735699653625,
+    "confirm_days": 273.01611328125,
+    "confirm_months": 103,
+    "events_found": 421,
+    "events_confirm": 442,
+    "move_confirm": {
+     "1": -33.82252281031084,
+     "2": -32.89623547601127,
+     "3": -52.38235666474194,
+     "5": -31.7766960972498,
+     "7": -19.25930274585619,
+     "10": -7.947532806672966
+    },
+    "candidate": false
+   }
+  ]
+ }
+}
