@@ -94,11 +94,17 @@ def untested(scored: list) -> pd.DataFrame:
     return pd.DataFrame([{"Source": k[0], "What it is": k[1], "Strong items seen": v["n"], "Latest": v["last"].astimezone(NY).strftime("%Y-%m-%d %H:%M"), "Status": "no tested rule yet"} for k, v in rows.items()])
 
 
-def table(items: list, tz: str) -> pd.DataFrame:
+def shown_minutes(b: dict, now) -> float:
+    """minutes since the item could first appear on the page: the moment the listener saw it plus the seconds Claude took to score it"""
+    try: return (now - b["seen"]).total_seconds() / 60 - float(b.get("score_s") or 0) / 60
+    except Exception: return 1e9
+
+
+def table(items: list, tz: str, now=None) -> pd.DataFrame:
     Z = ZoneInfo(tz); rows = []
     for b in items:
-        d = b["read"] or {}; fx = d.get("facts") or {}
-        rows.append({"Released (New York)": b["release"].astimezone(NY).strftime("%Y-%m-%d %H:%M:%S"), "Local time": b["release"].astimezone(Z).strftime("%Y-%m-%d %H:%M"), "Company": b["ticker"], "Source": b["source"], "Reads as": direction(b),
+        d = b["read"] or {}; fx = d.get("facts") or {}; m = shown_minutes(b, now) if now is not None else 1e9
+        rows.append({"On the page for": (f"{max(m, 0):.0f} min" if m < 15 else ""), "Released (New York)": b["release"].astimezone(NY).strftime("%Y-%m-%d %H:%M:%S"), "Local time": b["release"].astimezone(Z).strftime("%Y-%m-%d %H:%M"), "Company": b["ticker"], "Source": b["source"], "Reads as": direction(b),
                      "Own stock": d.get("own_stock"), "Market": d.get("market") if b["kind"] != "fed" else d.get("implication_equities"), "AI demand": d.get("ai_demand"), "Vs prior guidance": d.get("results_vs_prior_guidance"), "New guidance": d.get("guidance_change"), "Material": d.get("material"), "Uncertainty": d.get("uncertainty"),
                      "Suggestion": b.get("action", {}).get("text", ""), "Revenue": str(fx.get("revenue") or "")[:48], "Guidance": str(fx.get("guidance_next") or "")[:90],
                      "Other companies named": ", ".join(f"{x.get('company')} {float(x.get('direction') or 0):+.1f}" for x in (d.get("affected") or []) if isinstance(x, dict))[:80], "Headline": b["title"], "What it is": kind_label(b) + (" — test run" if b["drill"] else "") + (" — scored late" if b["rescored"] else ""), "Time Lag: publish -> listener (seconds)": b["lag_s"], "Time Lag: listener -> Claude responsiveness (seconds)": b["score_s"]})

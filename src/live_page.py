@@ -16,6 +16,22 @@ def _df(x, rows=None):
     except Exception: st.dataframe(x, use_container_width=True, **kw)
 
 
+def _colour(minutes: float) -> str:
+    """founder, 21 Nov 2026: red for the first 5 minutes on the page, yellow from 5 to 10, green from 10 to 15, then the usual background"""
+    if minutes < 5: return "background-color: #FF8A8A; color: #14171F"
+    if minutes < 10: return "background-color: #FFE680; color: #14171F"
+    if minutes < 15: return "background-color: #A8E6B4; color: #14171F"
+    return ""
+
+
+def _coloured(T, minutes: list):
+    if not any(m < 15 for m in minutes): return T      # nothing recent: the plain table
+    try:
+        css = [_colour(m) for m in minutes]; num = [c for c in T.columns if str(T[c].dtype).startswith(("float", "int"))]
+        return T.style.apply(lambda r: [css[r.name]] * len(r), axis=1).format(precision=2, na_rep="", subset=num)
+    except Exception: return T
+
+
 def _body(tz: str):
     D = V.load(); now = D["now"]; hb = D["heartbeat_s"]; Z = V.ZoneInfo(tz); live = hb is not None and hb < 180
     st.caption(f"Updated {now.astimezone(Z):%Y-%m-%d %H:%M:%S} local time · redraws every {REFRESH_S} seconds · " + (f"news listener running (last check {hb:.0f} seconds ago)" if live else "NEWS LISTENER NOT RUNNING" + (f" (last check {hb / 60:.0f} minutes ago)" if hb is not None else "")))
@@ -33,8 +49,10 @@ def _body(tz: str):
         a = b["action"]; st.markdown(f"<div class='sig sshut'><b>Ended:</b> {a['text']} · {V.RULE_NAMES.get(a['rule'], a['rule'])} · score {a['score']:+.2f} · released {b['release'].astimezone(V.NY):%Y-%m-%d %H:%M} New York<br><span class='smut'>{b['source']}: {b['title']}</span></div>", unsafe_allow_html=True)
 
     st.subheader("Scored news, newest first")
-    T = V.table(D["scored"][:200], tz)
-    if len(T): _df(T, rows=15)
+    items = D["scored"][:200]; T = V.table(items, tz, now)
+    if len(T):
+        st.markdown("<span class='smut'>Row colour = how long the item has been on this page: <span style='background:#FF8A8A;padding:1px 8px;border-radius:4px;color:#14171F'>under 5 minutes</span> <span style='background:#FFE680;padding:1px 8px;border-radius:4px;color:#14171F'>5 to 10 minutes</span> <span style='background:#A8E6B4;padding:1px 8px;border-radius:4px;color:#14171F'>10 to 15 minutes</span> no colour = longer than 15 minutes</span>", unsafe_allow_html=True)
+        _df(_coloured(T, [V.shown_minutes(b, now) for b in items]), rows=15)
     else: st.info("Nothing scored yet.")
     st.caption("Source = where the item came from. What it is — Financial results: a company's quarterly report. Company announcement: any other item on the company's own news page or the news wire. Regulatory filing: a filing with the US regulator (SEC). Third-party report: research or an investigation by someone else, who may hold a position; its claims are not verified. Fed statement: the central bank's policy statement. "
                "Scores run from -1 (bad for the stock) to +1 (good). The two Time Lag columns show our speed: 'publish -> listener' is how many seconds after the source published the item our listener saw it; 'listener -> Claude responsiveness' is how many seconds Claude then took to return the score."
