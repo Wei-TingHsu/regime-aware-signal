@@ -17,7 +17,7 @@ def _df(x, rows=None):
 
 
 def _colour(minutes: float) -> str:
-    """founder, 21 Nov 2026: red for the first 5 minutes on the page, yellow from 5 to 10, green from 10 to 15, then the usual background"""
+    """founder, 21 Nov 2026: counted from the RELEASE of the news -- red for the first 5 minutes, yellow from 5 to 10, green from 10 to 15, then the usual background"""
     if minutes < 5: return "background-color: #FF8A8A; color: #14171F"
     if minutes < 10: return "background-color: #FFE680; color: #14171F"
     if minutes < 15: return "background-color: #A8E6B4; color: #14171F"
@@ -45,14 +45,14 @@ def _body(tz: str):
         st.markdown(f"<div class='sig {cls}'><span class='sbig'>{a['text']}</span><br>{V.RULE_NAMES.get(a['rule'], a['rule'])} · score {a['score']:+.2f} · {'open now' if a['state'] == 'OPEN' else 'not yet open'} · {a['minutes_left']} minutes left · exit at {a['exit'].astimezone(Z):%Y-%m-%d %H:%M} local time<br><span class='smut'>{b['source']}: {b['title']} — {V.kind_label(b)}</span></div>", unsafe_allow_html=True)
     for b in D["alerts"][:6]:
         d = b["read"] or {}; st.markdown(f"<div class='sig swait'><b>{b['ticker']}: reads as {V.direction(b)}</b> (own-stock score {V._num(d.get('own_stock')):+.2f}) · released {b['release'].astimezone(Z):%Y-%m-%d %H:%M} local time<br>{b['source']}: {b['title']} — {V.kind_label(b)}<br><span class='smut'>Information only: no tested trading rule exists yet for this kind of news.</span></div>", unsafe_allow_html=True)
-    for b in [x for x in D["scored"] if x["action"].get("state") == "closed"][:3]:
-        a = b["action"]; st.markdown(f"<div class='sig sshut'><b>Ended:</b> {a['text']} · {V.RULE_NAMES.get(a['rule'], a['rule'])} · score {a['score']:+.2f} · released {b['release'].astimezone(V.NY):%Y-%m-%d %H:%M} New York<br><span class='smut'>{b['source']}: {b['title']}</span></div>", unsafe_allow_html=True)
+    for b in [x for x in D["scored"] if x["action"].get("state") in ("closed", "missed")][:3]:
+        a = b["action"]; st.markdown(f"<div class='sig sshut'><b>{'Ended:' if a['state'] == 'closed' else 'Arrived too late:'}</b> {a['text']} · {V.RULE_NAMES.get(a['rule'], a['rule'])} · score {a['score']:+.2f} · released {b['release'].astimezone(V.NY):%Y-%m-%d %H:%M} New York<br><span class='smut'>{b['source']}: {b['title']}</span></div>", unsafe_allow_html=True)
 
     st.subheader("Scored news, newest first")
     items = D["scored"][:200]; T = V.table(items, tz, now)
     if len(T):
-        st.markdown("<span class='smut'>Row colour = how long the item has been on this page: <span style='background:#FF8A8A;padding:1px 8px;border-radius:4px;color:#14171F'>under 5 minutes</span> <span style='background:#FFE680;padding:1px 8px;border-radius:4px;color:#14171F'>5 to 10 minutes</span> <span style='background:#A8E6B4;padding:1px 8px;border-radius:4px;color:#14171F'>10 to 15 minutes</span> no colour = longer than 15 minutes</span>", unsafe_allow_html=True)
-        _df(_coloured(T, [V.shown_minutes(b, now) for b in items]), rows=15)
+        st.markdown("<span class='smut'>Row colour = time since the source released the item: <span style='background:#FF8A8A;padding:1px 8px;border-radius:4px;color:#14171F'>under 5 minutes</span> <span style='background:#FFE680;padding:1px 8px;border-radius:4px;color:#14171F'>5 to 10 minutes</span> <span style='background:#A8E6B4;padding:1px 8px;border-radius:4px;color:#14171F'>10 to 15 minutes</span> no colour = released more than 15 minutes ago. An item that reaches us late never turns red: see the two Time Lag columns.</span>", unsafe_allow_html=True)
+        _df(_coloured(T, [V.since_release(b, now) for b in items]), rows=15)
     else: st.info("Nothing scored yet.")
     st.caption("Source = where the item came from. What it is — Financial results: a company's quarterly report. Company announcement: any other item on the company's own news page or the news wire. Regulatory filing: a filing with the US regulator (SEC). Third-party report: research or an investigation by someone else, who may hold a position; its claims are not verified. Fed statement: the central bank's policy statement. "
                "Scores run from -1 (bad for the stock) to +1 (good). The two Time Lag columns show our speed: 'publish -> listener' is how many seconds after the source published the item our listener saw it; 'listener -> Claude responsiveness' is how many seconds Claude then took to return the score."

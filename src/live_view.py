@@ -65,6 +65,9 @@ def direction(b: dict) -> str:
     s = _num((b["read"] or {}).get("implication_equities" if b["kind"] == "fed" else "own_stock")); return "positive" if s >= 0.3 else ("negative" if s <= -0.3 else ("slightly positive" if s > 0 else ("slightly negative" if s < 0 else "neutral")))
 
 
+LATE_S = 300      # more than 5 minutes after the tested entry: shown as missed, not as a suggestion (a chosen limit, not a tested one)
+
+
 def action(b: dict, now) -> dict:
     """what the rule in force says about one scored item, and whether its window is still open"""
     rule = next((r for r in RULES if r["kind"] == b["kind"]), None)
@@ -75,6 +78,11 @@ def action(b: dict, now) -> dict:
     rel = b["release"]; t_in = (rel.floor("min") + pd.Timedelta(minutes=(1 if (rel.second or rel.microsecond) else 0) + rule["enter_min"])); t_out = t_in + pd.Timedelta(minutes=rule["hold_min"]); side = "BUY" if s > 0 else "SELL"
     state = "before entry" if now < t_in else ("OPEN" if now < t_out else "closed"); left = max(0, round((t_out - now).total_seconds() / 60)) if state != "closed" else 0
     note = " (scored after the fact: no live trade was possible)" if b["rescored"] else ""
+    try: late = (b["seen"] + pd.Timedelta(seconds=float(b.get("score_s") or 0)) - t_in).total_seconds()      # how long after the tested entry time the score was on the page
+    except Exception: late = 0.0
+    if late > LATE_S and not b["rescored"]:      # 21 Nov: the rule was tested entering 1 minute after the release; an item that reaches us much later is not a suggestion
+        return dict(rule=rule["id"], side=side, score=s, enter=t_in, exit=t_out, state="missed", minutes_left=0, late_s=late, text=f"MISSED ({side} {rule['instrument'] if b['kind'] == 'fed' else b['ticker']}): the item reached us {late / 60:.0f} minutes after the tested entry time ({t_in.astimezone(NY):%H:%M} New York)")
+    if late > 0 and not b["rescored"]: note = f" (score ready {late:.0f} seconds after the tested entry time)"
     return dict(rule=rule["id"], side=side, score=s, enter=t_in, exit=t_out, state=state, minutes_left=left, text=f"{side} {rule['instrument'] if b['kind'] == 'fed' else b['ticker']}: enter {t_in.astimezone(NY):%H:%M}, exit {t_out.astimezone(NY):%H:%M} New York{note}")
 
 
@@ -94,17 +102,23 @@ def untested(scored: list) -> pd.DataFrame:
     return pd.DataFrame([{"Source": k[0], "What it is": k[1], "Strong items seen": v["n"], "Latest": v["last"].astimezone(NY).strftime("%Y-%m-%d %H:%M"), "Status": "no tested rule yet"} for k, v in rows.items()])
 
 
-def shown_minutes(b: dict, now) -> float:
-    """minutes since the item could first appear on the page: the moment the listener saw it plus the seconds Claude took to score it"""
-    try: return (now - b["seen"]).total_seconds() / 60 - float(b.get("score_s") or 0) / 60
+def since_release(b: dict, now) -> float:
+    """minutes since the source published the item (founder, 21 Nov 2026: the colours count from the release, not from the page)"""
+    try: return (now - b["release"]).total_seconds() / 60
     except Exception: return 1e9
+
+
+def _age(m: float) -> str:
+    if m >= 1440: return ""
+    if m < 1: return "under 1 min"
+    return f"{m:.0f} min" if m < 60 else f"{int(m // 60)} h {int(m % 60)} min"
 
 
 def table(items: list, tz: str, now=None) -> pd.DataFrame:
     Z = ZoneInfo(tz); rows = []
     for b in items:
-        d = b["read"] or {}; fx = d.get("facts") or {}; m = shown_minutes(b, now) if now is not None else 1e9
-        rows.append({"On the page for": (f"{max(m, 0):.0f} min" if m < 15 else ""), "Released (New York)": b["release"].astimezone(NY).strftime("%Y-%m-%d %H:%M:%S"), "Local time": b["release"].astimezone(Z).strftime("%Y-%m-%d %H:%M"), "Company": b["ticker"], "Source": b["source"], "Reads as": direction(b),
+        d = b["read"] or {}; fx = d.get("facts") or {}; m = since_release(b, now) if now is not None else 1e9
+        rows.append({"Since release": _age(m), "Released (New York)": b["release"].astimezone(NY).strftime("%Y-%m-%d %H:%M:%S"), "Local time": b["release"].astimezone(Z).strftime("%Y-%m-%d %H:%M"), "Company": b["ticker"], "Source": b["source"], "Reads as": direction(b),
                      "Own stock": d.get("own_stock"), "Market": d.get("market") if b["kind"] != "fed" else d.get("implication_equities"), "AI demand": d.get("ai_demand"), "Vs prior guidance": d.get("results_vs_prior_guidance"), "New guidance": d.get("guidance_change"), "Material": d.get("material"), "Uncertainty": d.get("uncertainty"),
                      "Suggestion": b.get("action", {}).get("text", ""), "Revenue": str(fx.get("revenue") or "")[:48], "Guidance": str(fx.get("guidance_next") or "")[:90],
                      "Other companies named": ", ".join(f"{x.get('company')} {float(x.get('direction') or 0):+.1f}" for x in (d.get("affected") or []) if isinstance(x, dict))[:80], "Headline": b["title"], "What it is": kind_label(b) + (" — test run" if b["drill"] else "") + (" — scored late" if b["rescored"] else ""), "Time Lag: publish -> listener (seconds)": b["lag_s"], "Time Lag: listener -> Claude responsiveness (seconds)": b["score_s"]})
