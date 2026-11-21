@@ -1,0 +1,1242 @@
+{
+ "bar": 0.003125,
+ "results": {
+  "stocks; 1 session, -5% or worse": {
+   "events": 7028,
+   "episodes": 262,
+   "first_year_predicted": 2009,
+   "predicted_events": 5309,
+   "predicted_days": 1663,
+   "predicted_episodes": 214,
+   "what_happened": {
+    "REBOUND": 0.2299365379151978,
+    "SLIDE": 0.2604984588901255,
+    "MIXED": 0.5095650031946767
+   },
+   "move_by_outcome": {
+    "REBOUND": {
+     "1": 329.50492244845475,
+     "2": 519.841558379753,
+     "3": 564.7287036603076,
+     "5": 533.8272285036452,
+     "7": 510.29482813420117,
+     "10": 676.3213704138348
+    },
+    "SLIDE": {
+     "1": -228.5103562825519,
+     "2": -468.5389966770798,
+     "3": -443.87164557283097,
+     "5": -363.96349672867916,
+     "7": -258.5485442676985,
+     "10": -227.36446786237684
+    },
+    "MIXED": {
+     "1": 64.79606801054315,
+     "2": 32.71999415026296,
+     "3": 68.47134685815084,
+     "5": 118.47305864014672,
+     "7": 149.1041265596562,
+     "10": 182.80233205953084
+    }
+   },
+   "REBOUND": {
+    "skill": -0.009333056327392564,
+    "low": -0.016501229203097777,
+    "high": -0.002377574650571701,
+    "p": 0.9825,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 551,
+      "episodes": 125,
+      "said": 0.10868492677621384,
+      "happened": 0.19342025828356646
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 2851,
+      "episodes": 211,
+      "said": 0.2062677031237927,
+      "happened": 0.23827155778654135
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 1813,
+      "episodes": 134,
+      "said": 0.27372857600328115,
+      "happened": 0.22396659836547111
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 94,
+      "episodes": 8,
+      "said": 0.37279288828440554,
+      "happened": 0.09967209807750133
+     }
+    ],
+    "top": {
+     "events": 293,
+     "episodes": 25,
+     "said": 0.34130452546557316,
+     "happened": 0.17645523723494336,
+     "history": 0.21390007016368884,
+     "move": {
+      "1": 149.68447030143668,
+      "2": 51.01231687013545,
+      "3": 262.15406623934757,
+      "5": 462.539749969906,
+      "7": 555.813224541933,
+      "10": 484.7368979920078
+     }
+    },
+    "usable": false,
+    "drivers": "less likely with high share of large stocks down 3%+ that day; less likely with high S&P 500 against its 200-day average %; less likely with high other company filing in the window; less likely with high the S&P 500 over the same sessions %"
+   },
+   "SLIDE": {
+    "skill": -0.0015854971468567403,
+    "low": -0.01085807180144487,
+    "high": 0.007368805194399091,
+    "p": 0.619,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 220,
+      "episodes": 34,
+      "said": 0.13745889422694424,
+      "happened": 0.08864272526572095
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 3648,
+      "episodes": 205,
+      "said": 0.21478201608929212,
+      "happened": 0.24696550710700463
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 1288,
+      "episodes": 206,
+      "said": 0.2939786129240033,
+      "happened": 0.27246131693212755
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 152,
+      "episodes": 92,
+      "said": 0.37445641386083994,
+      "happened": 0.3082519527715239
+     },
+     {
+      "bin": "45% to 100%",
+      "events": 1,
+      "episodes": 1,
+      "said": 0.4535760407999146,
+      "happened": 1.0
+     }
+    ],
+    "top": {
+     "events": 106,
+     "episodes": 70,
+     "said": 0.38420408414757706,
+     "happened": 0.33383600377002826,
+     "history": 0.2578345105684571,
+     "move": {
+      "1": -87.37503864764236,
+      "2": -78.27308739069534,
+      "3": -83.99095417219219,
+      "5": -140.6085839594556,
+      "7": -164.5281360922126,
+      "10": -79.44162733217054
+     }
+    },
+    "usable": false,
+    "drivers": "less likely with high gap at the open %; more likely with high last day's move %; less likely with high distance below the one-year high %; less likely with high VIX change over the same sessions %"
+   }
+  },
+  "stocks; 1 session, -7% or worse": {
+   "events": 2786,
+   "episodes": 247,
+   "first_year_predicted": 2009,
+   "predicted_events": 2025,
+   "predicted_days": 851,
+   "predicted_episodes": 203,
+   "what_happened": {
+    "REBOUND": 0.23410380659351326,
+    "SLIDE": 0.27183610449756956,
+    "MIXED": 0.49406008890891717
+   },
+   "move_by_outcome": {
+    "REBOUND": {
+     "1": 464.9021475619886,
+     "2": 587.4381694558102,
+     "3": 657.610390589622,
+     "5": 561.2741758387223,
+     "7": 531.1339399438406,
+     "10": 807.8217443226285
+    },
+    "SLIDE": {
+     "1": -242.9236869794989,
+     "2": -570.957113095833,
+     "3": -559.7567924511769,
+     "5": -471.08960135735913,
+     "7": -336.2803209597382,
+     "10": -217.6040188768632
+    },
+    "MIXED": {
+     "1": 123.51404557751232,
+     "2": 39.481481310114056,
+     "3": 96.38171743915224,
+     "5": 149.4345861616152,
+     "7": 182.76897175855746,
+     "10": 244.2550390738803
+    }
+   },
+   "REBOUND": {
+    "skill": -0.01583325629227006,
+    "low": -0.029858117440450492,
+    "high": -0.0018445530919527307,
+    "p": 0.9695,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 259,
+      "episodes": 98,
+      "said": 0.1157294005663518,
+      "happened": 0.20336492995819966
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 1006,
+      "episodes": 187,
+      "said": 0.20342035333701297,
+      "happened": 0.23189721572282418
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 682,
+      "episodes": 105,
+      "said": 0.27779818351695806,
+      "happened": 0.2866066312885155
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 76,
+      "episodes": 13,
+      "said": 0.3770155544737627,
+      "happened": 0.017956558705526312
+     },
+     {
+      "bin": "45% to 100%",
+      "events": 2,
+      "episodes": 2,
+      "said": 0.5111140482144052,
+      "happened": 0.0
+     }
+    ],
+    "top": {
+     "events": 171,
+     "episodes": 27,
+     "said": 0.34564089969257117,
+     "happened": 0.18554595721501208,
+     "history": 0.21029121781525303,
+     "move": {
+      "1": 377.49033002656904,
+      "2": 24.692783822422903,
+      "3": 311.9502430795749,
+      "5": 388.3313120296037,
+      "7": 518.9481727994342,
+      "10": 665.1042885321637
+     }
+    },
+    "usable": false,
+    "drivers": "less likely with high share of large stocks down 3%+ that day; less likely with high S&P 500 against its 200-day average %; less likely with high the S&P 500 over the same sessions %; less likely with high where it closed in the day's range"
+   },
+   "SLIDE": {
+    "skill": -0.011230101715346219,
+    "low": -0.030099526326045335,
+    "high": 0.008139304176877022,
+    "p": 0.845,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 167,
+      "episodes": 32,
+      "said": 0.12272476454130307,
+      "happened": 0.1851048096984887
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 1176,
+      "episodes": 155,
+      "said": 0.20793859452675065,
+      "happened": 0.2774406572978241
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 571,
+      "episodes": 171,
+      "said": 0.2969323439111014,
+      "happened": 0.26582265222861995
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 108,
+      "episodes": 70,
+      "said": 0.38523017048001884,
+      "happened": 0.32838734869191727
+     },
+     {
+      "bin": "45% to 100%",
+      "events": 3,
+      "episodes": 3,
+      "said": 0.4692729209432125,
+      "happened": 0.0
+     }
+    ],
+    "top": {
+     "events": 72,
+     "episodes": 50,
+     "said": 0.40313808390550665,
+     "happened": 0.25570228091236497,
+     "history": 0.27017488560751246,
+     "move": {
+      "1": -14.726253897538596,
+      "2": 38.63359672987437,
+      "3": 66.34001977339466,
+      "5": 35.13798476733413,
+      "7": 2.659211775114121,
+      "10": 2.089846594003512
+     }
+    },
+    "usable": false,
+    "drivers": "more likely with high the S&P 500 over the same sessions %; less likely with high size in units of its own usual move; less likely with high gap at the open %; more likely with high last day's move %"
+   }
+  },
+  "stocks; 1 session, -10% or worse": {
+   "events": 955,
+   "episodes": 179,
+   "first_year_predicted": 2011,
+   "predicted_events": 515,
+   "predicted_days": 277,
+   "predicted_episodes": 131,
+   "what_happened": {
+    "REBOUND": 0.21289863503690412,
+    "SLIDE": 0.29822368360893786,
+    "MIXED": 0.4888776813541581
+   },
+   "move_by_outcome": {
+    "REBOUND": {
+     "1": 615.6030218358032,
+     "2": 536.8279044041849,
+     "3": 619.7029711503005,
+     "5": 421.69079120821755,
+     "7": 493.9695690677398,
+     "10": 1018.0109838513819
+    },
+    "SLIDE": {
+     "1": -212.10993634460658,
+     "2": -587.0842895803771,
+     "3": -592.2160537297398,
+     "5": -554.7050022092234,
+     "7": -435.4105237140836,
+     "10": -324.6937406196484
+    },
+    "MIXED": {
+     "1": 228.09601983190382,
+     "2": -46.360862053243466,
+     "3": 13.868658161020603,
+     "5": 114.8620187979552,
+     "7": 165.56995150793614,
+     "10": 293.69728140248554
+    }
+   },
+   "REBOUND": {
+    "skill": -0.02627246735988975,
+    "low": -0.05214815006440694,
+    "high": 0.0015464471752282374,
+    "p": 0.9425,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 110,
+      "episodes": 70,
+      "said": 0.12541695914017847,
+      "happened": 0.21735613673408521
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 339,
+      "episodes": 98,
+      "said": 0.18585494507787736,
+      "happened": 0.225042505986109
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 50,
+      "episodes": 18,
+      "said": 0.28464695572383697,
+      "happened": 0.14487788202167254
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 16,
+      "episodes": 5,
+      "said": 0.36788206335948676,
+      "happened": 0.0286637409723902
+     }
+    ],
+    "top": {
+     "events": 37,
+     "episodes": 12,
+     "said": 0.3281320963581978,
+     "happened": 0.21517377186149264,
+     "history": 0.19043878648928939,
+     "move": {
+      "1": 532.329797815459,
+      "2": -22.852584037189935,
+      "3": 84.567315700244,
+      "5": 83.3188883634679,
+      "7": 339.8457124035589,
+      "10": 600.1207454799013
+     }
+    },
+    "usable": false,
+    "drivers": "less likely with high the S&P 500 over the same sessions %; more likely with high volume against normal; more likely with high run-up over the 60 sessions before %; less likely with high S&P 500 against its 200-day average %"
+   },
+   "SLIDE": {
+    "skill": -0.056810145780197496,
+    "low": -0.09796156397285914,
+    "high": -0.016256807215961032,
+    "p": 0.9905,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 13,
+      "episodes": 9,
+      "said": 0.13939056042839623,
+      "happened": 0.7239390296540186
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 295,
+      "episodes": 70,
+      "said": 0.20507737362892517,
+      "happened": 0.2726825919817551
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 160,
+      "episodes": 84,
+      "said": 0.30506464991404714,
+      "happened": 0.32613599410222294
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 42,
+      "episodes": 37,
+      "said": 0.3822607438893851,
+      "happened": 0.19823788546255505
+     },
+     {
+      "bin": "45% to 100%",
+      "events": 5,
+      "episodes": 5,
+      "said": 0.47936428703053535,
+      "happened": 0.2
+     }
+    ],
+    "top": {
+     "events": 21,
+     "episodes": 18,
+     "said": 0.42380148775996257,
+     "happened": 0.19047619047619047,
+     "history": 0.28301484014921713,
+     "move": {
+      "1": -49.431470141003466,
+      "2": -41.77705970278508,
+      "3": -12.12579114943561,
+      "5": 243.83561882905954,
+      "7": 152.91997575470532,
+      "10": 79.57583944101096
+     }
+    },
+    "usable": false,
+    "drivers": "more likely with high the S&P 500 over the same sessions %; less likely with high volume against normal; less likely with high size in units of its own usual move; less likely with high run-up over the 60 sessions before %"
+   }
+  },
+  "stocks; 5 sessions, -10% or worse": {
+   "events": 3525,
+   "episodes": 250,
+   "first_year_predicted": 2009,
+   "predicted_events": 2700,
+   "predicted_days": 1032,
+   "predicted_episodes": 207,
+   "what_happened": {
+    "REBOUND": 0.2179494957791514,
+    "SLIDE": 0.25232733779316074,
+    "MIXED": 0.5297231664276878
+   },
+   "move_by_outcome": {
+    "REBOUND": {
+     "1": 289.5201641824239,
+     "2": 515.2403130193641,
+     "3": 514.3663193727887,
+     "5": 494.3958790904244,
+     "7": 476.79165417448854,
+     "10": 591.7641182488024
+    },
+    "SLIDE": {
+     "1": -201.2659881851159,
+     "2": -422.08437201340405,
+     "3": -399.31542825085364,
+     "5": -348.5355054039651,
+     "7": -252.13125027182113,
+     "10": -229.48600925991752
+    },
+    "MIXED": {
+     "1": 78.85020784074865,
+     "2": 82.11501360809241,
+     "3": 104.44582488418675,
+     "5": 165.84927211258892,
+     "7": 186.32128569145976,
+     "10": 177.27966127054054
+    }
+   },
+   "REBOUND": {
+    "skill": -0.016978032095864126,
+    "low": -0.026928294201013624,
+    "high": -0.007279998773663289,
+    "p": 0.997,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 207,
+      "episodes": 71,
+      "said": 0.12271768132122439,
+      "happened": 0.16812618796766418
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 1797,
+      "episodes": 193,
+      "said": 0.2001974163817715,
+      "happened": 0.22260952126347125
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 550,
+      "episodes": 101,
+      "said": 0.28146039435671927,
+      "happened": 0.23080192124097093
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 112,
+      "episodes": 20,
+      "said": 0.3948083979896865,
+      "happened": 0.20226592222784712
+     },
+     {
+      "bin": "45% to 100%",
+      "events": 34,
+      "episodes": 6,
+      "said": 0.46657480961172526,
+      "happened": 0.1175584024114544
+     }
+    ],
+    "top": {
+     "events": 289,
+     "episodes": 32,
+     "said": 0.36740503015825476,
+     "happened": 0.19352081474775215,
+     "history": 0.2155656411114252,
+     "move": {
+      "1": 37.894314070839414,
+      "2": 120.01099948480507,
+      "3": 153.9714604174497,
+      "5": 196.479376191888,
+      "7": 17.02126740926775,
+      "10": -105.77868329978993
+     }
+    },
+    "usable": false,
+    "drivers": "more likely with high the S&P 500 over the same sessions %; more likely with high share of large stocks down 3%+ that day; more likely with high gap at the open %; less likely with high other company filing in the window"
+   },
+   "SLIDE": {
+    "skill": -0.016436908159389585,
+    "low": -0.027665306980267635,
+    "high": -0.00551160816328762,
+    "p": 0.9935,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 249,
+      "episodes": 59,
+      "said": 0.1289946706906989,
+      "happened": 0.19383168436237302
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 1684,
+      "episodes": 187,
+      "said": 0.20428184977775965,
+      "happened": 0.2623203175364287
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 716,
+      "episodes": 153,
+      "said": 0.28851729485910943,
+      "happened": 0.2453275721609201
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 50,
+      "episodes": 24,
+      "said": 0.3757496822792843,
+      "happened": 0.252004021418091
+     },
+     {
+      "bin": "45% to 100%",
+      "events": 1,
+      "episodes": 1,
+      "said": 0.4542373819351511,
+      "happened": 0.0
+     }
+    ],
+    "top": {
+     "events": 75,
+     "episodes": 33,
+     "said": 0.3623060871146466,
+     "happened": 0.2614006078159408,
+     "history": 0.2341848016577618,
+     "move": {
+      "1": 135.59413491410567,
+      "2": 55.42662242173888,
+      "3": 141.3465849009224,
+      "5": 427.44616713056683,
+      "7": 582.4630822065194,
+      "10": 611.5405592573869
+     }
+    },
+    "usable": false,
+    "drivers": "less likely with high VIX change over the same sessions %; less likely with high the S&P 500 over the same sessions %; less likely with high VIX level; more likely with high other company filing in the window"
+   }
+  },
+  "stocks; 10 sessions, -15% or worse": {
+   "events": 1528,
+   "episodes": 199,
+   "first_year_predicted": 2010,
+   "predicted_events": 992,
+   "predicted_days": 513,
+   "predicted_episodes": 152,
+   "what_happened": {
+    "REBOUND": 0.2566877308769509,
+    "SLIDE": 0.26968197347154804,
+    "MIXED": 0.4736302956515011
+   },
+   "move_by_outcome": {
+    "REBOUND": {
+     "1": 326.0332301049404,
+     "2": 509.3726975143272,
+     "3": 501.02629394638905,
+     "5": 506.6126211689632,
+     "7": 402.6609533635505,
+     "10": 562.7415407295084
+    },
+    "SLIDE": {
+     "1": -152.05089122841747,
+     "2": -427.5590579477871,
+     "3": -375.2433102051016,
+     "5": -333.38345283191677,
+     "7": -308.2717807464809,
+     "10": -265.580394543259
+    },
+    "MIXED": {
+     "1": 116.60859953148537,
+     "2": 65.48515668328383,
+     "3": 205.54779179584173,
+     "5": 182.8339679772338,
+     "7": 154.9748399361751,
+     "10": 172.58816963107614
+    }
+   },
+   "REBOUND": {
+    "skill": -0.018086674838710737,
+    "low": -0.03272927275049703,
+    "high": -0.003491880113188097,
+    "p": 0.983,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 139,
+      "episodes": 37,
+      "said": 0.1272220492462018,
+      "happened": 0.12445778173829602
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 643,
+      "episodes": 129,
+      "said": 0.20233579530619789,
+      "happened": 0.28646703088745507
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 208,
+      "episodes": 79,
+      "said": 0.280151276727156,
+      "happened": 0.23443565552594675
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 2,
+      "episodes": 2,
+      "said": 0.3710184612074686,
+      "happened": 0.0
+     }
+    ],
+    "top": {
+     "events": 12,
+     "episodes": 10,
+     "said": 0.3337969575934593,
+     "happened": 0.10791366906474821,
+     "history": 0.21437671967285044,
+     "move": {
+      "1": -9.44014367622102,
+      "2": -115.05143150427841,
+      "3": -145.5829475426539,
+      "5": 81.39138651246527,
+      "7": -10.465736976131467,
+      "10": 92.1089692162394
+     }
+    },
+    "usable": false,
+    "drivers": "more likely with high distance below the one-year high %; less likely with high VIX change over the same sessions %; more likely with high gap at the open %; less likely with high last day's move %"
+   },
+   "SLIDE": {
+    "skill": -0.02572941653060057,
+    "low": -0.0435138154286296,
+    "high": -0.007858475460375425,
+    "p": 0.991,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 11,
+      "episodes": 9,
+      "said": 0.1257247834853273,
+      "happened": 0.4554455445544555
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 359,
+      "episodes": 95,
+      "said": 0.218152286083994,
+      "happened": 0.3023582678940994
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 582,
+      "episodes": 132,
+      "said": 0.2900380877087213,
+      "happened": 0.25045781672574374
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 39,
+      "episodes": 24,
+      "said": 0.37670367755235146,
+      "happened": 0.22530629472739583
+     },
+     {
+      "bin": "45% to 100%",
+      "events": 1,
+      "episodes": 1,
+      "said": 0.4755333672341935,
+      "happened": 0.0
+     }
+    ],
+    "top": {
+     "events": 19,
+     "episodes": 9,
+     "said": 0.4069687977748029,
+     "happened": 0.17379063219861787,
+     "history": 0.27564617727656554,
+     "move": {
+      "1": 148.80955393168847,
+      "2": 206.80948304603405,
+      "3": 319.39338074446766,
+      "5": 560.5540441790827,
+      "7": 479.7240423514433,
+      "10": 262.7744973104125
+     }
+    },
+    "usable": false,
+    "drivers": "more likely with high last day's move %; less likely with high S&P 500 against its 200-day average %; less likely with high gap at the open %; less likely with high distance below the one-year high %"
+   }
+  },
+  "indices and sectors; 1 session, -3% or worse": {
+   "events": 2708,
+   "episodes": 240,
+   "first_year_predicted": 2004,
+   "predicted_events": 2059,
+   "predicted_days": 610,
+   "predicted_episodes": 193,
+   "what_happened": {
+    "REBOUND": 0.24367508857262954,
+    "SLIDE": 0.22643524280819363,
+    "MIXED": 0.5298896686191769
+   },
+   "move_by_outcome": {
+    "REBOUND": {
+     "1": 208.45145062186478,
+     "2": 356.0033646042992,
+     "3": 377.9360065395463,
+     "5": 342.0761798894312,
+     "7": 286.7755867366769,
+     "10": 364.9011281322559
+    },
+    "SLIDE": {
+     "1": -139.6994879504432,
+     "2": -302.3868893313224,
+     "3": -302.9695597415378,
+     "5": -259.6889161497715,
+     "7": -179.65713373371088,
+     "10": -273.72562911246195
+    },
+    "MIXED": {
+     "1": 35.12354247786969,
+     "2": 18.97764550248118,
+     "3": 11.150619924025818,
+     "5": 71.20139974421848,
+     "7": 54.30775744974622,
+     "10": 66.65912826167963
+    }
+   },
+   "REBOUND": {
+    "skill": -0.023253160722431998,
+    "low": -0.03759359864542241,
+    "high": -0.008296346728620091,
+    "p": 0.994,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 41,
+      "episodes": 27,
+      "said": 0.13687724901634074,
+      "happened": 0.24596709790768248
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 938,
+      "episodes": 167,
+      "said": 0.20656938786871692,
+      "happened": 0.2526668206203378
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 711,
+      "episodes": 103,
+      "said": 0.284819283377627,
+      "happened": 0.23268883816940622
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 293,
+      "episodes": 24,
+      "said": 0.38521695398980565,
+      "happened": 0.18472647445171683
+     },
+     {
+      "bin": "45% to 100%",
+      "events": 76,
+      "episodes": 7,
+      "said": 0.4910079300884823,
+      "happened": 0.36982450253491567
+     }
+    ],
+    "top": {
+     "events": 453,
+     "episodes": 36,
+     "said": 0.3825430717909825,
+     "happened": 0.2688651017909016,
+     "history": 0.2266842401405642,
+     "move": {
+      "1": 147.69379605475717,
+      "2": 57.36993618966441,
+      "3": 14.604605802163109,
+      "5": -8.03386869166924,
+      "7": -69.06246663832822,
+      "10": -113.2190108841624
+     }
+    },
+    "usable": false,
+    "drivers": "less likely with high the S&P 500 over the same sessions %; less likely with high share of large stocks down 3%+ that day; more likely with high run-up over the 60 sessions before %; more likely with high volume against normal"
+   },
+   "SLIDE": {
+    "skill": -0.006644950516846659,
+    "low": -0.02005347056376544,
+    "high": 0.007433359444581138,
+    "p": 0.7795,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 525,
+      "episodes": 41,
+      "said": 0.1251248785894428,
+      "happened": 0.16887934662524895
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 1323,
+      "episodes": 161,
+      "said": 0.2020590793353027,
+      "happened": 0.2376557968821798
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 203,
+      "episodes": 84,
+      "said": 0.27830517963976154,
+      "happened": 0.23139435414884513
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 8,
+      "episodes": 8,
+      "said": 0.3667358233703567,
+      "happened": 0.10714285714285715
+     }
+    ],
+    "top": {
+     "events": 26,
+     "episodes": 19,
+     "said": 0.3414681385770555,
+     "happened": 0.3781512605042017,
+     "history": 0.21585601648627423,
+     "move": {
+      "1": 8.246053229418818,
+      "2": 46.80610429801899,
+      "3": 92.58733467601373,
+      "5": 207.03980935251806,
+      "7": 143.9774089911361,
+      "10": 199.76040299297347
+     }
+    },
+    "usable": false,
+    "drivers": "less likely with high VIX level; less likely with high gap at the open %; less likely with high last day's move %; less likely with high VIX change over the same sessions %"
+   }
+  },
+  "indices and sectors; 1 session, -4% or worse": {
+   "events": 1258,
+   "episodes": 164,
+   "first_year_predicted": 2005,
+   "predicted_events": 955,
+   "predicted_days": 285,
+   "predicted_episodes": 119,
+   "what_happened": {
+    "REBOUND": 0.24150026386868492,
+    "SLIDE": 0.22692530666214877,
+    "MIXED": 0.5315744294691663
+   },
+   "move_by_outcome": {
+    "REBOUND": {
+     "1": 297.76314313007504,
+     "2": 447.5693964225555,
+     "3": 466.6611878820251,
+     "5": 451.9568184952347,
+     "7": 373.96008972273813,
+     "10": 461.65200995298164
+    },
+    "SLIDE": {
+     "1": -145.31327206343732,
+     "2": -352.60497342047876,
+     "3": -384.59469471265135,
+     "5": -350.1283346171086,
+     "7": -227.05220606238697,
+     "10": -379.0064682923141
+    },
+    "MIXED": {
+     "1": 47.47768177815366,
+     "2": 21.3464703580848,
+     "3": 22.398715499781638,
+     "5": 84.80995029198372,
+     "7": 67.77277002043289,
+     "10": 78.82045259623946
+    }
+   },
+   "REBOUND": {
+    "skill": -0.041587820452399615,
+    "low": -0.07582867788617352,
+    "high": -0.006143491864943919,
+    "p": 0.973,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 13,
+      "episodes": 9,
+      "said": 0.13486470575979767,
+      "happened": 0.0
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 206,
+      "episodes": 80,
+      "said": 0.21339734449865622,
+      "happened": 0.28323964937475354
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 428,
+      "episodes": 79,
+      "said": 0.2896696088987717,
+      "happened": 0.22924708980238026
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 147,
+      "episodes": 26,
+      "said": 0.38886077611735165,
+      "happened": 0.2021965749087578
+     },
+     {
+      "bin": "45% to 100%",
+      "events": 161,
+      "episodes": 10,
+      "said": 0.5206986507306068,
+      "happened": 0.25914090575974164
+     }
+    ],
+    "top": {
+     "events": 304,
+     "episodes": 28,
+     "said": 0.442657542358961,
+     "happened": 0.22915335114419338,
+     "history": 0.2525409797659993,
+     "move": {
+      "1": 142.26314514221076,
+      "2": 24.088404184291193,
+      "3": -18.637804622105108,
+      "5": -24.752543735221263,
+      "7": -68.6085462906921,
+      "10": -146.64203318444757
+     }
+    },
+    "usable": false,
+    "drivers": "less likely with high the S&P 500 over the same sessions %; less likely with high share of large stocks down 3%+ that day; more likely with high volume against normal; less likely with high where it closed in the day's range"
+   },
+   "SLIDE": {
+    "skill": -0.008172398023389427,
+    "low": -0.04331111033505849,
+    "high": 0.024992627528396646,
+    "p": 0.6535,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 292,
+      "episodes": 49,
+      "said": 0.10680289462528968,
+      "happened": 0.19845678612852088
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 433,
+      "episodes": 85,
+      "said": 0.19720601587369968,
+      "happened": 0.2132198992660493
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 194,
+      "episodes": 47,
+      "said": 0.28814028342885384,
+      "happened": 0.2670679198157923
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 27,
+      "episodes": 9,
+      "said": 0.38596920676065943,
+      "happened": 0.3045248609279119
+     },
+     {
+      "bin": "45% to 100%",
+      "events": 9,
+      "episodes": 1,
+      "said": 0.5305559133950276,
+      "happened": 0.14285714285714288
+     }
+    ],
+    "top": {
+     "events": 73,
+     "episodes": 18,
+     "said": 0.3610843270539096,
+     "happened": 0.2952364560764729,
+     "history": 0.21895875931993491,
+     "move": {
+      "1": 120.731320890077,
+      "2": 257.5398162162401,
+      "3": 185.3650722868105,
+      "5": 285.759124591409,
+      "7": 316.84463319748005,
+      "10": 359.7582001694879
+     }
+    },
+    "usable": false,
+    "drivers": "less likely with high S&P 500 against its 200-day average %; less likely with high gap at the open %; less likely with high VIX level; more likely with high the S&P 500 over the same sessions %"
+   }
+  },
+  "indices and sectors; 5 sessions, -7% or worse": {
+   "events": 906,
+   "episodes": 159,
+   "first_year_predicted": 2009,
+   "predicted_events": 503,
+   "predicted_days": 215,
+   "predicted_episodes": 89,
+   "what_happened": {
+    "REBOUND": 0.26697674418604656,
+    "SLIDE": 0.23016829423806165,
+    "MIXED": 0.5028549615758918
+   },
+   "move_by_outcome": {
+    "REBOUND": {
+     "1": 226.47459511005832,
+     "2": 394.10521434096523,
+     "3": 389.54164113546176,
+     "5": 352.9054017812453,
+     "7": 385.72056572336993,
+     "10": 503.1536562807579
+    },
+    "SLIDE": {
+     "1": -122.89880192023715,
+     "2": -314.34711994499384,
+     "3": -267.8871777281339,
+     "5": -167.67889118787,
+     "7": -169.06626678045083,
+     "10": -320.67345238371297
+    },
+    "MIXED": {
+     "1": 40.042885529376015,
+     "2": 65.20889794599671,
+     "3": 46.98812993914732,
+     "5": 119.59045218549899,
+     "7": 171.36242273780542,
+     "10": 125.48616379245567
+    }
+   },
+   "REBOUND": {
+    "skill": -0.03719217020539234,
+    "low": -0.08213738823127967,
+    "high": 0.0028951638454110667,
+    "p": 0.9355,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 26,
+      "episodes": 14,
+      "said": 0.12475424478780892,
+      "happened": 0.20111731843575417
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 122,
+      "episodes": 44,
+      "said": 0.21057469825829506,
+      "happened": 0.3020682387037281
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 239,
+      "episodes": 66,
+      "said": 0.2969736939646224,
+      "happened": 0.26879917014004606
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 93,
+      "episodes": 31,
+      "said": 0.38567596394816,
+      "happened": 0.24696750285996355
+     },
+     {
+      "bin": "45% to 100%",
+      "events": 23,
+      "episodes": 9,
+      "said": 0.47477132829673546,
+      "happened": 0.18935339215969912
+     }
+    ],
+    "top": {
+     "events": 83,
+     "episodes": 28,
+     "said": 0.4221556108391763,
+     "happened": 0.2217358968002257,
+     "history": 0.2693188325507997,
+     "move": {
+      "1": 57.3468709288489,
+      "2": -62.538036528402664,
+      "3": -44.420257655007404,
+      "5": 2.290936908438721,
+      "7": 20.18886618378552,
+      "10": -184.4641708690067
+     }
+    },
+    "usable": false,
+    "drivers": "less likely with high last day's move %; less likely with high VIX level; more likely with high gap at the open %; more likely with high distance below the one-year high %"
+   },
+   "SLIDE": {
+    "skill": 0.0001616311865381137,
+    "low": -0.037800546384759104,
+    "high": 0.03966440217448268,
+    "p": 0.5005,
+    "calibration": [
+     {
+      "bin": "0% to 15%",
+      "events": 244,
+      "episodes": 60,
+      "said": 0.11452884602628226,
+      "happened": 0.18731438555657304
+     },
+     {
+      "bin": "15% to 25%",
+      "events": 216,
+      "episodes": 55,
+      "said": 0.19213425889113947,
+      "happened": 0.2451928716007907
+     },
+     {
+      "bin": "25% to 35%",
+      "events": 38,
+      "episodes": 16,
+      "said": 0.28694923638350683,
+      "happened": 0.32635054363294813
+     },
+     {
+      "bin": "35% to 45%",
+      "events": 5,
+      "episodes": 3,
+      "said": 0.37327063936756755,
+      "happened": 0.36363636363636365
+     }
+    ],
+    "top": {
+     "events": 13,
+     "episodes": 7,
+     "said": 0.33325005422882786,
+     "happened": 0.4597701149425288,
+     "history": 0.19094631361398476,
+     "move": {
+      "1": -291.4044053088765,
+      "2": 200.07327862996604,
+      "3": 25.51294770117302,
+      "5": 299.10520297553654,
+      "7": 361.0871758326723,
+      "10": 301.7950416238334
+     }
+    },
+    "usable": false,
+    "drivers": "more likely with high last day's move %; less likely with high S&P 500 against its 200-day average %; less likely with high size in units of its own usual move; less likely with high VIX change over the same sessions %"
+   }
+  }
+ }
+}
