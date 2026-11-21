@@ -37,15 +37,23 @@ def _body(tz: str):
     st.caption(f"Updated {now.astimezone(Z):%Y-%m-%d %H:%M:%S} local time · redraws every {REFRESH_S} seconds · " + (f"news listener running (last check {hb:.0f} seconds ago)" if live else "NEWS LISTENER NOT RUNNING" + (f" (last check {hb / 60:.0f} minutes ago)" if hb is not None else "")))
     if not live: st.warning("The news listener is not running, so nothing new can appear here.")
 
-    st.subheader("Suggestions")
+    st.subheader("Current High-Confidence Suggestions")
+    st.caption("From a tested rule, while its hour is open. The strongest evidence on this page -- still a candidate: each rule gets its verdict after 30 live trades (see Forward record).")
     act = [b for b in D["scored"] if b["action"].get("state") in ("before entry", "OPEN")]
     if not act: st.markdown("<div class='sig sshut'><span class='sbig'>No suggestion right now.</span><br><span class='smut'>A suggestion appears when a company's financial results score 0.7 or more in size, or when the Fed issues a statement. It stays for the hour the rule covers.</span></div>", unsafe_allow_html=True)
     for b in act:
         a = b["action"]; cls = "sopen" if a["state"] == "OPEN" else "swait"
         st.markdown(f"<div class='sig {cls}'><span class='sbig'>{a['text']}</span><br>{V.RULE_NAMES.get(a['rule'], a['rule'])} · score {a['score']:+.2f} · {'open now' if a['state'] == 'OPEN' else 'not yet open'} · {a['minutes_left']} minutes left · exit at {a['exit'].astimezone(Z):%Y-%m-%d %H:%M} local time<br><span class='smut'>{b['source']}: {b['title']} — {V.kind_label(b)}</span></div>", unsafe_allow_html=True)
+    st.subheader("Current Low-Confidence Alerts (no tested rule)")
+    st.caption("News from the last 24 hours that reads strongly but has no tested trading rule. Information, not a trade suggestion: the kinds tested so far (short-seller reports, well-known investors' calls) moved the price before a user could act.")
+    if not D["alerts"]: st.markdown("<div class='sig sshut'><span class='smut'>No alert in the last 24 hours.</span></div>", unsafe_allow_html=True)
     for b in D["alerts"][:6]:
         d = b["read"] or {}; st.markdown(f"<div class='sig swait'><b>{b['ticker']}: reads as {V.direction(b)}</b> (own-stock score {V._num(d.get('own_stock')):+.2f}) · released {b['release'].astimezone(Z):%Y-%m-%d %H:%M} local time<br>{b['source']}: {b['title']} — {V.kind_label(b)}<br><span class='smut'>Information only: no tested trading rule exists yet for this kind of news.</span></div>", unsafe_allow_html=True)
-    for b in [x for x in D["scored"] if x["action"].get("state") in ("closed", "missed")][:3]:
+    st.subheader("Past Suggestions (Reference)")
+    st.caption("The three most recent suggestions whose hour is over, or that reached us too late to act on. For reference only.")
+    past = [x for x in D["scored"] if x["action"].get("state") in ("closed", "missed")][:3]
+    if not past: st.markdown("<div class='sig sshut'><span class='smut'>None yet.</span></div>", unsafe_allow_html=True)
+    for b in past:
         a = b["action"]; st.markdown(f"<div class='sig sshut'><b>{'Ended:' if a['state'] == 'closed' else 'Arrived too late:'}</b> {a['text']} · {V.RULE_NAMES.get(a['rule'], a['rule'])} · score {a['score']:+.2f} · released {b['release'].astimezone(V.NY):%Y-%m-%d %H:%M} New York<br><span class='smut'>{b['source']}: {b['title']}</span></div>", unsafe_allow_html=True)
 
     st.subheader("Scored news, newest first")
