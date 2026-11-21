@@ -130,6 +130,9 @@ a.rs-link {{ text-decoration:none !important; color:inherit !important; display:
 </style>
 """
 st.markdown(CSS, unsafe_allow_html=True)
+try:
+    from src import live_page as _lp_css; st.markdown(_lp_css.PANEL_CSS, unsafe_allow_html=True)      # 21 Nov 2026: each tab's content in a rounded frosted panel
+except Exception: pass
 
 # ==========================================================================
 # WHAT IS SHOWN vs WHAT IS MODELLED
