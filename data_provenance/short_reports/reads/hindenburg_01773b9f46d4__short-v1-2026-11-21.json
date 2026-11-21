@@ -1,0 +1,26 @@
+{
+ "slug": "hindenburg",
+ "publisher": "Hindenburg Research",
+ "id": "https://hindenburgresearch.com/?p=1396",
+ "title": "Kandi: How This China-Based NASDAQ-Listed Company Used Fake Sales, EV Hype to Nab $160 Million From U.S. Investors",
+ "link": "https://hindenburgresearch.com/kandi/",
+ "published": "2020-11-30T15:23:47+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Kandi Technologies Group",
+    "ticker": "KNDI",
+    "exchange": "NASDAQ",
+    "yahoo_symbol": "KNDI",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.9,
+  "summary": "Hindenburg alleges Kandi fabricated sales to undisclosed related parties to inflate revenue and deceive U.S. investors."
+ }
+}

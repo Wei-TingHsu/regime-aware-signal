@@ -1,0 +1,26 @@
+{
+ "slug": "hindenburg",
+ "publisher": "Hindenburg Research",
+ "id": "https://hindenburgresearch.com/?p=1330",
+ "title": "We View Nikola\u2019s Response As a Tacit Admission of Securities Fraud",
+ "link": "https://hindenburgresearch.com/nikola-response/",
+ "published": "2020-09-15T11:59:10+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Nikola Corporation",
+    "ticker": "NKLA",
+    "exchange": "NASDAQ",
+    "yahoo_symbol": "NKLA",
+    "direction": -1,
+    "first": false
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 1.0,
+  "summary": "Hindenburg says Nikola's rebuttal confirms deceptive claims, calling it a tacit admission of securities fraud."
+ }
+}

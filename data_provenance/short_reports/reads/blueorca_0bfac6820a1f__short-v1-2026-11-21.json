@@ -1,0 +1,26 @@
+{
+ "slug": "blueorca",
+ "publisher": "Blue Orca",
+ "id": "https://www.blueorcacapital.com/?p=2528",
+ "title": "Blue Orca is Short Enviva Inc.",
+ "link": "https://www.blueorcacapital.com/blue-orca-is-short-enviva-inc/",
+ "published": "2022-10-12T15:19:00+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Enviva Inc.",
+    "ticker": "EVA",
+    "exchange": "NYSE",
+    "yahoo_symbol": "EVA",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.8,
+  "summary": "Blue Orca announces short position in Enviva, alleging undisclosed issues undermining the company's business model or financials."
+ }
+}

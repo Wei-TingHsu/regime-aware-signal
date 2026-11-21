@@ -1,0 +1,26 @@
+{
+ "slug": "blueorca",
+ "publisher": "Blue Orca",
+ "id": "https://www.blueorcacapital.com/?p=2621",
+ "title": "Blue Orca is Short GDS Holdings",
+ "link": "https://www.blueorcacapital.com/blue-orca-is-short-gds-holdings/",
+ "published": "2018-08-01T04:27:00+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "GDS Holdings",
+    "ticker": "GDS",
+    "exchange": "NASDAQ",
+    "yahoo_symbol": "GDS",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.8,
+  "summary": "Blue Orca announces short position in GDS Holdings, implying accounting or fraud concerns."
+ }
+}

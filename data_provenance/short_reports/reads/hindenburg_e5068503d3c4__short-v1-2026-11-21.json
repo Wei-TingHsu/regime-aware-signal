@@ -1,0 +1,26 @@
+{
+ "slug": "hindenburg",
+ "publisher": "Hindenburg Research",
+ "id": "https://hindenburgresearch.com/?p=405",
+ "title": "Eros International: On-The-Ground Research, Employee Interviews, and Private Company Documents Expose Egregious Accounting Irregularities",
+ "link": "https://hindenburgresearch.com/eros-international-on-the-ground-research-employee-interviews-and-private-company-documents-expose-egregious-accounting-irregularities/",
+ "published": "2019-06-07T14:31:24+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Eros International",
+    "ticker": "EROS",
+    "exchange": "NYSE",
+    "yahoo_symbol": "EROS",
+    "direction": -1,
+    "first": false
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.95,
+  "summary": "Hindenburg alleges Eros's receivables largely fictitious via undisclosed related-party transactions, expects equity worthless."
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "slug": "hindenburg",
+ "publisher": "Hindenburg Research",
+ "id": "https://hindenburgresearch.com/?p=2328",
+ "title": "Welltower: Exposing The Shell Game",
+ "link": "https://hindenburgresearch.com/welltower/",
+ "published": "2022-12-07T12:47:46+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Welltower Inc.",
+    "ticker": "WELL",
+    "exchange": "NYSE",
+    "yahoo_symbol": "WELL",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.8,
+  "summary": "Welltower allegedly shifts distressed senior housing assets to inexperienced, conflicted operators to mask financial troubles."
+ }
+}

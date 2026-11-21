@@ -1,0 +1,26 @@
+{
+ "slug": "hindenburg",
+ "publisher": "Hindenburg Research",
+ "id": "https://hindenburgresearch.com/?p=1940",
+ "title": "Natera: Pioneers In Deceptive Medical Billing",
+ "link": "https://hindenburgresearch.com/natera/",
+ "published": "2022-03-09T13:06:25+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Natera Inc.",
+    "ticker": "NTRA",
+    "exchange": "NASDAQ",
+    "yahoo_symbol": "NTRA",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.8,
+  "summary": "Hindenburg alleges Natera fueled revenue growth via deceptive billing, sales practices, and a sham nonprofit to bypass prior authorization."
+ }
+}

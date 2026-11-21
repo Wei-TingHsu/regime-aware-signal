@@ -1,0 +1,26 @@
+{
+ "slug": "blueorca",
+ "publisher": "Blue Orca",
+ "id": "https://www.blueorcacapital.com/?p=2566",
+ "title": "Blue Orca is Short So-Young International Inc.",
+ "link": "https://www.blueorcacapital.com/blue-orca-is-short-so-young-international-inc/",
+ "published": "2021-05-06T15:45:00+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "So-Young International Inc.",
+    "ticker": "SY",
+    "exchange": "NASDAQ",
+    "yahoo_symbol": "SY",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.8,
+  "summary": "Blue Orca announces short position in So-Young International, implying undisclosed fraud or accounting concerns."
+ }
+}

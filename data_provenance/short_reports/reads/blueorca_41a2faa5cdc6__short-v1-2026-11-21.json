@@ -1,0 +1,26 @@
+{
+ "slug": "blueorca",
+ "publisher": "Blue Orca",
+ "id": "https://www.blueorcacapital.com/?p=2605",
+ "title": "Blue Orca is Short Ausnutria Dairy Corp Ltd",
+ "link": "https://www.blueorcacapital.com/blue-orca-is-short-ausnutria-dairy-corp-ltd-2/",
+ "published": "2019-08-15T16:16:00+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Ausnutria Dairy Corp Ltd",
+    "ticker": "1717",
+    "exchange": "HKEX",
+    "yahoo_symbol": "1717.HK",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.8,
+  "summary": "Blue Orca announces short position in Ausnutria Dairy, implying accounting or fraud concerns."
+ }
+}

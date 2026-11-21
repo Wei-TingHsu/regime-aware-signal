@@ -1,0 +1,26 @@
+{
+ "slug": "hindenburg",
+ "publisher": "Hindenburg Research",
+ "id": "https://hindenburgresearch.com/?p=2954",
+ "title": "Temenos: Major Accounting Irregularities, Failed Products And An Illusive Turnaround",
+ "link": "https://hindenburgresearch.com/temenos/",
+ "published": "2024-02-15T11:17:59+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Temenos",
+    "ticker": "TEMN",
+    "exchange": "SWX",
+    "yahoo_symbol": "TEMN.SW",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.9,
+  "summary": "Alleges manipulated earnings, roundtripped revenue, sham partnerships, backdated contracts, and failed products at Temenos."
+ }
+}

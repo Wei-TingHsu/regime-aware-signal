@@ -1,0 +1,26 @@
+{
+ "slug": "hindenburg",
+ "publisher": "Hindenburg Research",
+ "id": "https://hindenburgresearch.com/?p=1584",
+ "title": "The Lordstown Motors Mirage: Fake Orders, Undisclosed Production Hurdles, And A Prototype Inferno",
+ "link": "https://hindenburgresearch.com/lordstown/",
+ "published": "2021-03-12T13:19:42+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Lordstown Motors",
+    "ticker": "RIDE",
+    "exchange": "NASDAQ",
+    "yahoo_symbol": "RIDE",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.9,
+  "summary": "Hindenburg alleges Lordstown's pre-orders are largely fictitious, non-binding, used to mislead investors and raise capital."
+ }
+}

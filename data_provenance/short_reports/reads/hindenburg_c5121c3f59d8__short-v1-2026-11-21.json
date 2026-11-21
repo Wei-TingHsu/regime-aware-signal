@@ -1,0 +1,26 @@
+{
+ "slug": "hindenburg",
+ "publisher": "Hindenburg Research",
+ "id": "https://hindenburgresearch.com/?p=499",
+ "title": "Update: After 96 Hours, Predictive\u2019s \u2018Response\u2019 Fails to Address a Single Point from Our Detailed Report",
+ "link": "https://hindenburgresearch.com/predictive-response/",
+ "published": "2019-07-15T16:57:17+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Predictive Technology Group",
+    "ticker": "PRED",
+    "exchange": "NASDAQ",
+    "yahoo_symbol": "PRED",
+    "direction": -1,
+    "first": false
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.9,
+  "summary": "Follow-up noting Predictive's response ignored all fraud, insider dealing, and tissue sourcing allegations from original report."
+ }
+}

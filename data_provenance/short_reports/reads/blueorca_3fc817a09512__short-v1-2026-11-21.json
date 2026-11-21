@@ -1,0 +1,26 @@
+{
+ "slug": "blueorca",
+ "publisher": "Blue Orca",
+ "id": "https://www.blueorcacapital.com/?p=2670",
+ "title": "Glaucus Research is Short AAMC",
+ "link": "https://www.blueorcacapital.com/glaucus-research-is-short-aamc/",
+ "published": "2014-03-19T20:25:00+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Altisource Asset Management Corporation",
+    "ticker": "AAMC",
+    "exchange": "NYSE MKT",
+    "yahoo_symbol": "AAMC",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "valuation",
+  "severity": 0.6,
+  "summary": "Report argues AAMC is overvalued and raises concerns about its business model and conflicts of interest."
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "slug": "blueorca",
+ "publisher": "Blue Orca",
+ "id": "https://www.blueorcacapital.com/?p=2581",
+ "title": "Blue Orca is Short China Feihe Ltd",
+ "link": "https://www.blueorcacapital.com/blue-orca-is-short-china-feihe-ltd/",
+ "published": "2020-07-08T17:56:00+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "China Feihe Ltd",
+    "ticker": "6186",
+    "exchange": "HKEX",
+    "yahoo_symbol": "6186.HK",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.8,
+  "summary": "Blue Orca alleges China Feihe is a fraudulent company, likely overstating financial results."
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "slug": "blueorca",
+ "publisher": "Blue Orca",
+ "id": "https://www.blueorcacapital.com/?p=2551",
+ "title": "Blue Orca is Short Li-Cycle Holdings Corp.",
+ "link": "https://www.blueorcacapital.com/blue-orca-is-short-li-cycle-holdings-corp/",
+ "published": "2022-03-24T14:35:00+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Li-Cycle Holdings Corp.",
+    "ticker": "LICY",
+    "exchange": "NYSE",
+    "yahoo_symbol": "LICY",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.8,
+  "summary": "Blue Orca announces short position in Li-Cycle Holdings, alleging exaggerated claims about its battery recycling business."
+ }
+}

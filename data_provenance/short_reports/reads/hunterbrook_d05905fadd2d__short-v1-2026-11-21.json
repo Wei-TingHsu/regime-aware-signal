@@ -1,0 +1,34 @@
+{
+ "slug": "hunterbrook",
+ "publisher": "Hunterbrook",
+ "id": "https://newsletter.hntrbrk.com/p/exclusive-lennars-big-new-customer",
+ "title": "EXCLUSIVE: Lennar\u2019s Big New Customer Is Its Own Spinoff, Millrose",
+ "link": "https://newsletter.hntrbrk.com/p/exclusive-lennars-big-new-customer",
+ "published": "2026-10-02T15:01:07+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Lennar Corporation",
+    "ticker": "LEN",
+    "exchange": "NYSE",
+    "yahoo_symbol": "LEN",
+    "direction": -1,
+    "first": false
+   },
+   {
+    "company": "Millrose Properties",
+    "ticker": "MRP",
+    "exchange": "NYSE",
+    "yahoo_symbol": "MRP",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.7,
+  "summary": "Lennar allegedly inflates sales by having spinoff Millrose buy its unsold homes and rent them at a loss."
+ }
+}

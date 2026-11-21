@@ -1,0 +1,42 @@
+{
+ "slug": "blueorca",
+ "publisher": "Blue Orca",
+ "id": "https://www.blueorcacapital.com/?p=3028",
+ "title": "Blue Orca is Long Rohm (6963 JP), Chubu Electric (9502 JP) and TRE (9247 JP)",
+ "link": "https://www.blueorcacapital.com/blue-orca-is-long-rohm-6963-jp-chubu-electric-9502-jp-and-tre-9247-jp/",
+ "published": "2026-10-19T22:00:47+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Rohm",
+    "ticker": "6963",
+    "exchange": "TSE",
+    "yahoo_symbol": "6963.T",
+    "direction": 1,
+    "first": true
+   },
+   {
+    "company": "Chubu Electric",
+    "ticker": "9502",
+    "exchange": "TSE",
+    "yahoo_symbol": "9502.T",
+    "direction": 1,
+    "first": true
+   },
+   {
+    "company": "TRE",
+    "ticker": "9247",
+    "exchange": "TSE",
+    "yahoo_symbol": "9247.T",
+    "direction": 1,
+    "first": true
+   }
+  ],
+  "claim": "valuation",
+  "severity": 0.1,
+  "summary": "Blue Orca announces long positions in Rohm, Chubu Electric, and TRE, three Japanese listed companies."
+ }
+}

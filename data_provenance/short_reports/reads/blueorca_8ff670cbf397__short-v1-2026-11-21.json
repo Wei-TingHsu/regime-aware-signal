@@ -1,0 +1,26 @@
+{
+ "slug": "blueorca",
+ "publisher": "Blue Orca",
+ "id": "https://www.blueorcacapital.com/?p=2615",
+ "title": "Blue Orca is Short Pinduoduo Inc.",
+ "link": "https://www.blueorcacapital.com/blue-orca-is-short-pinduoduo-inc/",
+ "published": "2018-11-14T17:24:00+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Pinduoduo Inc.",
+    "ticker": "PDD",
+    "exchange": "NASDAQ",
+    "yahoo_symbol": "PDD",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "other",
+  "severity": 0.5,
+  "summary": "Blue Orca announces a short position in Pinduoduo, alleging undisclosed issues with the company."
+ }
+}

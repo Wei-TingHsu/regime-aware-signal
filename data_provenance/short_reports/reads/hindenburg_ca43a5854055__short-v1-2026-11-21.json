@@ -1,0 +1,26 @@
+{
+ "slug": "hindenburg",
+ "publisher": "Hindenburg Research",
+ "id": "https://hindenburgresearch.com/?p=75",
+ "title": "PolarityTE: Investors Beware",
+ "link": "https://hindenburgresearch.com/polarityte-investors-beware/",
+ "published": "2017-10-07T13:40:49+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "PolarityTE, Inc.",
+    "ticker": "COOL",
+    "exchange": "NASDAQ",
+    "yahoo_symbol": "COOL",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.9,
+  "summary": "PolarityTE's sole asset is a single patent application; severe dilution risk; common equity likely worthless."
+ }
+}

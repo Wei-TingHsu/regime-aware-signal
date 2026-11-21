@@ -1,0 +1,26 @@
+{
+ "slug": "hindenburg",
+ "publisher": "Hindenburg Research",
+ "id": "https://hindenburgresearch.com/?p=400",
+ "title": "Eros International: New Receivables Accounting Red Flags",
+ "link": "https://hindenburgresearch.com/eros-international-new-receivables-accounting-red-flags/",
+ "published": "2017-08-24T17:01:39+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Eros International",
+    "ticker": "EROS",
+    "exchange": "NYSE",
+    "yahoo_symbol": "EROS",
+    "direction": -1,
+    "first": false
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.8,
+  "summary": "Follow-up report alleges Eros's receivables accounting hides related-party round-tripping via shell entity AIFPL."
+ }
+}

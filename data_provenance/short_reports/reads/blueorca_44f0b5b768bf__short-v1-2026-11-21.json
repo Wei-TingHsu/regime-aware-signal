@@ -1,0 +1,26 @@
+{
+ "slug": "blueorca",
+ "publisher": "Blue Orca",
+ "id": "https://www.blueorcacapital.com/?p=2624",
+ "title": "Blue Orca is Short Samsonite",
+ "link": "https://www.blueorcacapital.com/blue-orca-is-short-samsonite/",
+ "published": "2018-05-24T16:29:00+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Samsonite International S.A.",
+    "ticker": "1910",
+    "exchange": "HKEX",
+    "yahoo_symbol": "1910.HK",
+    "direction": -1,
+    "first": true
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.6,
+  "summary": "Blue Orca announces new short position in Samsonite, alleging undisclosed issues affecting the company's reported financials."
+ }
+}

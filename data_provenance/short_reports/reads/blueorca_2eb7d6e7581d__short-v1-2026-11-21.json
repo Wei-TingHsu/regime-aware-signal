@@ -1,0 +1,34 @@
+{
+ "slug": "blueorca",
+ "publisher": "Blue Orca",
+ "id": "https://www.blueorcacapital.com/?p=2441",
+ "title": "Blue Orca is Short Insulet Corporation and Long EOFlow Co. Ltd.",
+ "link": "https://www.blueorcacapital.com/blue-orca-is-short-insulet-corporation-and-long-eoflow-co-ltd/",
+ "published": "2024-05-14T14:47:00+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Insulet Corporation",
+    "ticker": "PODD",
+    "exchange": "NASDAQ",
+    "yahoo_symbol": "PODD",
+    "direction": -1,
+    "first": true
+   },
+   {
+    "company": "EOFlow Co. Ltd.",
+    "ticker": null,
+    "exchange": "KOSDAQ",
+    "yahoo_symbol": "294090.KQ",
+    "direction": 1,
+    "first": true
+   }
+  ],
+  "claim": "regulatory or legal",
+  "severity": 0.4,
+  "summary": "Blue Orca takes a short position on Insulet and a long position on EOFlow amid related legal dispute."
+ }
+}

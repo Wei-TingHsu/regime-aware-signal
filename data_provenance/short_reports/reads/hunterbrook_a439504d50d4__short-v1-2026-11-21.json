@@ -1,0 +1,34 @@
+{
+ "slug": "hunterbrook",
+ "publisher": "Hunterbrook",
+ "id": "https://newsletter.hntrbrk.com/p/new-the-story-millrose-told-wall",
+ "title": "NEW: The Story Millrose Told Wall Street About Lennar Purchases Doesn\u2019t Match The Evidence",
+ "link": "https://newsletter.hntrbrk.com/p/new-the-story-millrose-told-wall",
+ "published": "2026-10-08T16:32:21+00:00",
+ "model": "claude-sonnet-5",
+ "prompt_version": "short-v1-2026-11-21",
+ "read": {
+  "is_report": true,
+  "targets": [
+   {
+    "company": "Millrose Properties",
+    "ticker": "MRP",
+    "exchange": "NYSE",
+    "yahoo_symbol": "MRP",
+    "direction": -1,
+    "first": false
+   },
+   {
+    "company": "Lennar Corporation",
+    "ticker": "LEN",
+    "exchange": "NYSE",
+    "yahoo_symbol": "LEN",
+    "direction": -1,
+    "first": false
+   }
+  ],
+  "claim": "fraud or accounting",
+  "severity": 0.8,
+  "summary": "Hunterbrook finds Millrose's Lennar-bought homes vacant, contradicting claims to Goldman that tenants are pre-lined-up."
+ }
+}
