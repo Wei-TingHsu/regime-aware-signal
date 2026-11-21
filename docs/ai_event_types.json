@@ -1,0 +1,220 @@
+{
+ "bar": 0.01,
+ "cost_bp": 30.0,
+ "groups": {
+  "financing or capital return": {
+   "n": 111,
+   "p": 0.8805,
+   "best_signal": "neg_uncertainty | material 0.2+",
+   "best_cell": "next regular session, hold 30 min",
+   "mean": 19.079304616330983,
+   "t": 1.6337313360767975,
+   "hit": 0.6330275229357798,
+   "n_cell": 109,
+   "after_cost": -10.920695383669017,
+   "periods": [
+    [
+     4.8,
+     28
+    ],
+    [
+     13.6,
+     27
+    ],
+    [
+     52.6,
+     27
+    ],
+    [
+     5.9,
+     27
+    ]
+   ],
+   "without_ten_largest": 29.0,
+   "before_stamp": {
+    "n": 87,
+    "mean": 3.4,
+    "t": 0.5
+   },
+   "verdict": "does not pass"
+  },
+  "acquisition or disposal": {
+   "n": 54,
+   "p": 0.0795,
+   "best_signal": "neg_uncertainty | material 0.2+",
+   "best_cell": "5 min after the stamp, to the next 09:35",
+   "mean": -56.658814262900954,
+   "t": -2.8225146575166344,
+   "hit": 0.30952380952380953,
+   "n_cell": 42,
+   "after_cost": -86.65881426290096,
+   "periods": [
+    [
+     -61.6,
+     11
+    ],
+    [
+     -86.0,
+     11
+    ],
+    [
+     -76.0,
+     10
+    ],
+    [
+     0.4,
+     10
+    ]
+   ],
+   "without_ten_largest": -23.2,
+   "before_stamp": {
+    "n": 39,
+    "mean": 17.7,
+    "t": 0.91
+   },
+   "verdict": "does not pass"
+  },
+  "leadership change": {
+   "n": 37,
+   "p": 0.262,
+   "best_signal": "neg_uncertainty | material 0.2+",
+   "best_cell": "next regular session, hold 30 min",
+   "mean": 37.97661860719991,
+   "t": 1.9159276510851853,
+   "hit": 0.6,
+   "n_cell": 35,
+   "after_cost": 7.97661860719991,
+   "periods": [
+    [
+     44.6,
+     9
+    ],
+    [
+     -35.7,
+     9
+    ],
+    [
+     38.4,
+     9
+    ],
+    [
+     112.9,
+     8
+    ]
+   ],
+   "without_ten_largest": null,
+   "before_stamp": {
+    "n": 31,
+    "mean": 15.6,
+    "t": 1.16
+   },
+   "verdict": "does not pass"
+  },
+  "GROUP business news (contract or partnership; product or technology; guidance update; capital expenditure)": {
+   "n": 34,
+   "p": 0.4215,
+   "best_signal": "own_stock | material 0.2+",
+   "best_cell": "1 min after the stamp, hold 15 min",
+   "mean": 78.46878986266671,
+   "t": 2.140551714569007,
+   "hit": 0.7096774193548387,
+   "n_cell": 31,
+   "after_cost": 48.46878986266671,
+   "periods": [
+    [
+     114.8,
+     8
+    ],
+    [
+     78.6,
+     8
+    ],
+    [
+     8.0,
+     8
+    ],
+    [
+     117.3,
+     7
+    ]
+   ],
+   "without_ten_largest": null,
+   "before_stamp": {
+    "n": 27,
+    "mean": null,
+    "t": null
+   },
+   "verdict": "does not pass"
+  },
+  "GROUP trouble (legal or regulatory; cyber incident; accounting; restructuring; leadership change)": {
+   "n": 72,
+   "p": 0.0155,
+   "best_signal": "own_stock | material 0.2+",
+   "best_cell": "1 min after the stamp, hold 15 min",
+   "mean": 44.45200524079987,
+   "t": 2.9266635751693872,
+   "hit": 0.5625,
+   "n_cell": 48,
+   "after_cost": 14.45200524079987,
+   "periods": [
+    [
+     5.7,
+     12
+    ],
+    [
+     83.0,
+     12
+    ],
+    [
+     52.0,
+     12
+    ],
+    [
+     37.1,
+     12
+    ]
+   ],
+   "without_ten_largest": 5.7,
+   "before_stamp": {
+    "n": 57,
+    "mean": 27.4,
+    "t": 2.64
+   },
+   "verdict": "does not pass"
+  }
+ },
+ "not_tested": [
+  [
+   "legal or regulatory",
+   25
+  ],
+  [
+   "contract or partnership",
+   16
+  ],
+  [
+   "guidance update",
+   16
+  ],
+  [
+   "restructuring",
+   8
+  ],
+  [
+   "other",
+   5
+  ],
+  [
+   "product or technology",
+   2
+  ],
+  [
+   "accounting",
+   1
+  ],
+  [
+   "cyber incident",
+   1
+  ]
+ ]
+}
