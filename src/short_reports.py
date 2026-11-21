@@ -126,6 +126,92 @@ def cmd_reports():
     print("by publisher (rows; first reports; negative): " + ", ".join(f"{k} {len(g)}; {int(g['first'].sum())}; {(g.direction < 0).sum()}" for k, g in R.groupby("publisher"))); print(f"-> {ROOT / 'reports.csv'}")
 
 
+# ------------------------------------------------------------------------------------------------ the price test (registered in TRACK 3.84 before any price)
+N_SETS, SEED, COST_BP, MIN_N = 5000, 20261123, 30.0, 30
+CC = ["day 0"] + [f"+{k}" for k in range(1, 8)] + ["day 0 to +7"]; CELLS = CC + ["gone before the open", "open to close, day 0", "first tradable point to close +7"]; JUDGED = [c for c in CELLS if c != "gone before the open"]
+
+
+def _vec(L, j):
+    """for day-0 session j (arrays allowed): 9 close-to-close cells, the overnight piece, open->close, and the two versions of 'first tradable point to close +7'"""
+    import numpy as np
+    cc = np.stack([L["cc"][j + k] for k in range(8)], axis=-1); later = cc[..., 1:].sum(axis=-1)
+    return np.concatenate([cc, cc.sum(axis=-1, keepdims=True), np.stack([L["co"][j], L["oc"][j], L["oc"][j] + later, later], axis=-1)], axis=-1)      # 13 numbers
+
+
+def _pick(v, pre):
+    """13 numbers -> the 12 cells for one report: a report out BEFORE the open can be traded from the open; one out DURING the session only from the close"""
+    import numpy as np
+    out = np.concatenate([v[..., :9], v[..., 9:11], (v[..., 11:12] if pre else v[..., 12:13])], axis=-1)
+    if not pre: out[..., 9:11] = np.nan
+    return out
+
+
+def cmd_test():
+    import numpy as np
+    from src.public_calls import _prices_oc, _legs
+    R = pd.read_csv(ROOT / "reports.csv"); R = R[R.us_listed].copy(); n_foreign = int((~pd.read_csv(ROOT / "reports.csv").us_listed).sum())
+    px, bad = _prices_oc(sorted(set(R.symbol) | {"SPY"})); G = _legs(px); rng = np.random.default_rng(SEED); rows = []
+    ny = pd.to_datetime(R.published, utc=True).dt.tz_convert("America/New_York").dt.tz_localize(None); R["ny"] = ny.values
+    for r in R.itertuples():
+        if r.symbol not in px: continue
+        idx = px[r.symbol].index; d = r.ny.normalize(); hm = r.ny.hour * 60 + r.ny.minute; i0 = int(idx.searchsorted(d + pd.Timedelta(days=1) if hm >= 960 else d))
+        if i0 < 2 or i0 + 8 >= len(idx) or (idx[i0] - d).days > 6: continue
+        pre = not (idx[i0] == d and 570 <= hm < 960); v = _pick(_vec(G[r.symbol], i0), pre)
+        if not np.isfinite(v[:9]).all(): continue
+        rows.append(dict(publisher=r.publisher, symbol=r.symbol, direction=r.direction, first=bool(r.first), claim=str(r.claim), severity=r.severity, day0=idx[i0], i0=i0, before_open=bool(pre), title=r.title, **{c: r.direction * float(x) for c, x in zip(CELLS, v)}))
+    T = pd.DataFrame(rows).sort_values("day0").reset_index(drop=True)
+    if T.empty: print("no report could be priced"); return
+    T["cluster"] = [bool(((T.symbol == r.symbol) & (T.direction == r.direction) & (T.publisher != r.publisher) & (T.day0 < r.day0) & (T.day0 >= r.day0 - pd.Timedelta(days=14))).any()) for r in T.itertuples()]
+    calls = Path("data_provenance/public_calls/calls.csv"); T["after_investor_call"] = False
+    if calls.exists():
+        C = pd.read_csv(calls, parse_dates=["first_seen"]); C["d"] = C.first_seen.dt.tz_convert("America/New_York").dt.tz_localize(None)
+        T["after_investor_call"] = [bool(((C.ticker == r.symbol) & (C.direction == r.direction) & (C.d < r.day0) & (C.d >= r.day0 - pd.Timedelta(days=14))).any()) for r in T.itertuples()]
+    busy = {}
+    for tk, g in T.groupby("symbol"):
+        b = np.zeros(len(px[tk]), bool)
+        for i0 in g.i0: b[max(0, i0 - 20):i0 + 21] = True
+        busy[tk] = b
+    P = np.full((len(T), N_SETS, len(CELLS)), np.nan)      # every report: the same security and direction on 5,000 other dates
+    for r in T.itertuples():
+        n = len(px[r.symbol])
+        if n < 60: continue
+        j = rng.integers(2, n - 9, size=3 * N_SETS); v = _vec(G[r.symbol], j); ok = ~busy[r.symbol][j] & np.isfinite(v).all(axis=1); v = _pick(v[ok][:N_SETS], r.before_open); P[r.Index, :len(v)] = r.direction * v
+    def stat(mask, cell):
+        k = CELLS.index(cell); x = T.loc[mask, cell].to_numpy(); keep = np.isfinite(x); x = x[keep]
+        if len(x) < 8: return dict(n=int(len(x)))
+        lo, hi = np.quantile(x, [0.05, 0.95]); mean = float(x.mean()); S = dict(n=int(len(x)), mean=mean, median=float(np.median(x)), trimmed=float(x[(x >= lo) & (x <= hi)].mean()), hit=float((x > 0).mean()), after_cost=mean - COST_BP)
+        if len(x) >= MIN_N:
+            with np.errstate(all="ignore"): null = np.nanmean(P[np.flatnonzero(mask)[keep]][:, :, k], axis=0)
+            S["p"] = float((null >= mean).mean())
+        return S
+    neg = (T.direction < 0).to_numpy(); first = T["first"].to_numpy(); yr = T.day0.dt.year.to_numpy(); sev = pd.to_numeric(T.severity, errors="coerce").to_numpy(); pubs = sorted(T.publisher.unique()); mid = int(np.median(yr[neg])) if neg.any() else 2020
+    main = [("ALL negative reports", neg), ("negative, FIRST report on the company", neg & first), ("negative, follow-up report", neg & ~first)] + [(f"{k}, negative reports", neg & (T.publisher == k).to_numpy()) for k in pubs]
+    extra = [("positive reports (the publisher is long)", ~neg), (f"negative, up to {mid}", neg & (yr <= mid)), (f"negative, after {mid}", neg & (yr > mid)), ("negative, out before the open", neg & T.before_open.to_numpy()), ("negative, out during the session", neg & ~T.before_open.to_numpy())] \
+            + [(f"negative, severity {lab}", neg & m) for lab, m in (("0.9 or more", sev >= 0.9), ("0.7 or more", sev >= 0.7), ("0.5 or more", sev >= 0.5), ("under 0.7", sev < 0.7), ("under 0.5", sev < 0.5))] \
+            + [(f"negative, claim: {k}", neg & (T.claim == k).to_numpy()) for k in sorted(T.claim.unique())] + [(f"{k}, first negative reports", neg & first & (T.publisher == k).to_numpy()) for k in pubs] \
+            + [("CLUSTER: a second publisher, same company and direction, within two weeks", T.cluster.to_numpy()), ("CLUSTER: after a well-known investor's call in the same direction, within two weeks", T.after_investor_call.to_numpy())]
+    judged_groups = [name for name, m in main if int(m.sum()) >= MIN_N]; bar = 0.05 / max(1, len(judged_groups) * len(JUDGED)); out = dict(bar=bar, reports=int(len(T)), foreign_left_out=n_foreign, no_prices=bad, main={}, extra={})
+    def fmt(S, judged):
+        if "mean" not in S: return f"n {S['n']}"
+        star = "**" if judged and "p" in S and S["p"] < bar else ""; tail = f"; p {S['p']:.4f}" if "p" in S else "; under 30, not judged"
+        return f"{star}{S['mean']:+.0f} bp{star} (n {S['n']}; middle {S['median']:+.0f}; without extremes {S['trimmed']:+.0f}; right {S['hit']:.0%}; after cost {S['after_cost']:+.0f}{tail})"
+    M = ["# SR-1: short-report publishers -- how the company's share price moved", "",
+         f"{len(T)} report-and-company rows priced (US-listed only; {n_foreign} rows on companies listed elsewhere left out of this run; {len(bad)} US symbols have no prices on Yahoo, mostly delisted). Returns in bp (1 bp = 0.01%), minus the S&P 500's same piece, "
+         f"IN THE DIRECTION OF THE REPORT: for a negative report a positive number means the share FELL by that much against the market. Day 0 = the session during which, or before whose open, the report came out (the publisher's own clock time). "
+         f"'day 0' and '+1' to '+7' are each one session, close to close. 'gone before the open' = previous close to the open of day 0, for reports out before that open (description: not tradable in regular hours). "
+         f"'open to close, day 0' = the same reports, from that open to the close. 'first tradable point to close +7' = from the open of day 0 (report out before the open) or from the close of day 0 (report out during the session) to the close of session +7. "
+         f"p = how often the same securities on {N_SETS} sets of other dates did as well. Judged groups: {len(judged_groups)}; a cell counts at p < {bar:.5f}. Cost {COST_BP:.0f} bp a round trip is an assumption and does NOT include the fee to borrow the shares for a short sale.", ""]
+    for title, groups, key in (("Main groups", main, "main"), ("Splits (description; the bar does not apply)", extra, "extra")):
+        M += [f"## {title}", "", "| group | " + " | ".join(CELLS) + " |", "|---|" + "---|" * len(CELLS)]
+        for name, mask in groups:
+            S = {c: stat(mask, c) for c in CELLS}; out[key][name] = S; M.append(f"| {name} ({int(mask.sum())}) | " + " | ".join(fmt(S[c], key == "main" and c in JUDGED) for c in CELLS) + " |")
+            sh = lambda c: (f"{S[c]['mean']:+.0f}" + (f" (p {S[c]['p']:.4f}{' PASS' if key == 'main' and S[c]['p'] < bar else ''})" if "p" in S[c] else "")) if "mean" in S[c] else "n/a"
+            print(f"  {name} ({int(mask.sum())}): day 0 {sh('day 0')}; " + "; ".join(f"+{k} {sh(f'+{k}')}" for k in range(1, 8)) + f"; day 0 to +7 {sh('day 0 to +7')} | gone before the open {sh('gone before the open')}; open->close day 0 {sh('open to close, day 0')}; first tradable point to close +7 {sh('first tradable point to close +7')}")
+        M.append("")
+    Path("docs").mkdir(exist_ok=True); Path("docs/short_reports_test.md").write_text("\n".join(M) + "\n"); Path("docs/short_reports_test.json").write_text(json.dumps(out, indent=1)); T.drop(columns=["i0"]).to_csv(ROOT / "reports_priced.csv", index=False)
+    print(f"{len(T)} rows priced; {n_foreign} foreign-listed rows left out; {len(bad)} symbols without prices: {', '.join(bad[:40])}. Judged groups {len(judged_groups)}; bar p < {bar:.5f}. Numbers are in the direction of the report: for a negative report, + means the share fell. -> docs/short_reports_test.md")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["collect", "times", "cost", "extract", "reports"]); ap.add_argument("--max-usd", type=float, default=5.0); a = ap.parse_args()
-    {"collect": cmd_collect, "times": cmd_times, "cost": cmd_cost, "extract": lambda: cmd_extract(a.max_usd), "reports": cmd_reports}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["collect", "times", "cost", "extract", "reports", "test"]); ap.add_argument("--max-usd", type=float, default=5.0); a = ap.parse_args()
+    {"collect": cmd_collect, "times": cmd_times, "cost": cmd_cost, "extract": lambda: cmd_extract(a.max_usd), "reports": cmd_reports, "test": cmd_test}[a.cmd]()
