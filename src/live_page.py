@@ -120,6 +120,12 @@ def _body(tz: str):
 def render():
     st.markdown(CSS, unsafe_allow_html=True)
     c1, c2 = st.columns([1, 3]); tz = c1.selectbox("Local time zone", ["Asia/Singapore", "Asia/Taipei", "America/New_York", "Europe/London"], index=0, key="ev_tz")
+    def _sso():      # founder, 22 Nov 2026: a small 'Severe Sell-off' block in the top right corner; it floats, so no other block moves or changes size
+        try:
+            from src import selloff_forward as _F
+            st.markdown(_F.CARD_CSS + _F.card_html(), unsafe_allow_html=True)
+        except Exception: pass
+    with c2: (st.fragment(run_every=60)(_sso) if hasattr(st, "fragment") else _sso)()
     if hasattr(st, "fragment"): st.fragment(run_every=REFRESH_S)(_body)(tz); return
     auto = c2.checkbox(f"Redraw every {REFRESH_S} seconds", value=True, key="ev_auto"); _body(tz)      # older Streamlit: the whole app is redrawn
     if auto: time.sleep(REFRESH_S); (st.rerun if hasattr(st, "rerun") else st.experimental_rerun)()
