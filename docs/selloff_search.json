@@ -5,25 +5,25 @@
   "families_searched": 36,
   "families_total": 36,
   "tried": 2118940,
-  "found": 624,
-  "found_scrambled_median": 692.0,
-  "confirmed": 115,
-  "confirmed_scrambled_median": 12.0,
-  "confirmed_scrambled_95": 123.15000000000003,
-  "confirmed_scrambled_max": 417.0,
-  "p": 0.0664451827242525,
-  "passes": false,
+  "found": 623,
+  "found_scrambled_median": 12.0,
+  "confirmed": 114,
+  "confirmed_scrambled_median": 0.0,
+  "confirmed_scrambled_95": 3.0,
+  "confirmed_scrambled_max": 31.0,
+  "p": 0.0033222591362126247,
+  "passes": true,
   "families": [
    {
     "family": "T1",
     "items": 41,
     "tried": 32980,
     "found": 28,
-    "found_scrambled": 4.0,
+    "found_scrambled": 0.0,
     "confirmed": 16,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 7.050000000000011,
-    "p": 0.029900332225913623
+    "confirmed_scrambled_95": 0.0,
+    "p": 0.0033222591362126247
    },
    {
     "family": "T2",
@@ -41,10 +41,10 @@
     "items": 31,
     "tried": 6020,
     "found": 0,
-    "found_scrambled": 1.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 1.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -52,10 +52,10 @@
     "items": 62,
     "tried": 91720,
     "found": 5,
-    "found_scrambled": 40.5,
+    "found_scrambled": 1.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 6.050000000000011,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -63,7 +63,7 @@
     "items": 39,
     "tried": 5740,
     "found": 0,
-    "found_scrambled": 1.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
     "confirmed_scrambled_95": 0.0,
@@ -107,44 +107,44 @@
     "items": 93,
     "tried": 252940,
     "found": 405,
-    "found_scrambled": 25.0,
+    "found_scrambled": 0.0,
     "confirmed": 67,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 45.40000000000009,
-    "p": 0.04318936877076412
+    "confirmed_scrambled_95": 0.0,
+    "p": 0.0033222591362126247
    },
    {
     "family": "T1 + T3",
     "items": 72,
     "tried": 78920,
     "found": 26,
-    "found_scrambled": 29.5,
+    "found_scrambled": 0.0,
     "confirmed": 1,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 7.100000000000023,
-    "p": 0.2757475083056478
+    "confirmed_scrambled_95": 0.0,
+    "p": 0.006644518272425249
    },
    {
     "family": "T1 + T4",
     "items": 103,
     "tried": 318120,
-    "found": 79,
-    "found_scrambled": 130.0,
-    "confirmed": 18,
-    "confirmed_scrambled_median": 2.0,
-    "confirmed_scrambled_95": 29.100000000000023,
-    "p": 0.08637873754152824
+    "found": 78,
+    "found_scrambled": 1.0,
+    "confirmed": 17,
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 1.0,
+    "p": 0.0033222591362126247
    },
    {
     "family": "T1 + T5",
     "items": 80,
     "tried": 72280,
     "found": 8,
-    "found_scrambled": 17.0,
+    "found_scrambled": 0.0,
     "confirmed": 1,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 5.0,
-    "p": 0.292358803986711
+    "confirmed_scrambled_95": 0.0,
+    "p": 0.029900332225913623
    },
    {
     "family": "T1 + T6",
@@ -162,7 +162,7 @@
     "items": 55,
     "tried": 13020,
     "found": 0,
-    "found_scrambled": 2.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
     "confirmed_scrambled_95": 0.0,
@@ -173,10 +173,10 @@
     "items": 56,
     "tried": 52020,
     "found": 1,
-    "found_scrambled": 5.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 13.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -184,32 +184,32 @@
     "items": 83,
     "tried": 124300,
     "found": 14,
-    "found_scrambled": 21.5,
+    "found_scrambled": 0.0,
     "confirmed": 9,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 6.0,
-    "p": 0.046511627906976744
+    "confirmed_scrambled_95": 0.0,
+    "p": 0.0033222591362126247
    },
    {
     "family": "T2 + T4",
     "items": 114,
     "tried": 419720,
     "found": 36,
-    "found_scrambled": 129.5,
+    "found_scrambled": 2.0,
     "confirmed": 1,
-    "confirmed_scrambled_median": 1.0,
-    "confirmed_scrambled_95": 18.0,
-    "p": 0.5448504983388704
+    "confirmed_scrambled_median": 0.0,
+    "confirmed_scrambled_95": 0.0,
+    "p": 0.04318936877076412
    },
    {
     "family": "T2 + T5",
     "items": 91,
     "tried": 117800,
     "found": 1,
-    "found_scrambled": 14.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 5.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -228,7 +228,7 @@
     "items": 66,
     "tried": 29860,
     "found": 0,
-    "found_scrambled": 3.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
     "confirmed_scrambled_95": 0.0,
@@ -243,17 +243,17 @@
     "confirmed": 2,
     "confirmed_scrambled_median": 0.0,
     "confirmed_scrambled_95": 0.0,
-    "p": 0.016611295681063124
+    "p": 0.006644518272425249
    },
    {
     "family": "T3 + T4",
     "items": 93,
     "tried": 109140,
     "found": 4,
-    "found_scrambled": 39.5,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 7.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -261,10 +261,10 @@
     "items": 70,
     "tried": 14680,
     "found": 0,
-    "found_scrambled": 2.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 1.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -294,10 +294,10 @@
     "items": 46,
     "tried": 21340,
     "found": 0,
-    "found_scrambled": 3.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 3.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -305,10 +305,10 @@
     "items": 101,
     "tried": 102280,
     "found": 7,
-    "found_scrambled": 26.0,
+    "found_scrambled": 2.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 4.050000000000011,
+    "confirmed_scrambled_95": 1.0,
     "p": 1.0
    },
    {
@@ -327,10 +327,10 @@
     "items": 76,
     "tried": 8900,
     "found": 0,
-    "found_scrambled": 4.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 1.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -338,10 +338,10 @@
     "items": 77,
     "tried": 98920,
     "found": 7,
-    "found_scrambled": 27.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 5.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -423,12 +423,12 @@
     ],
     "outcome": "it beats the S&P 500 over 3 sessions",
     "found_rate": 0.3014950156211853,
-    "found_all": 0.48770150542259216,
+    "found_all": 0.48769786953926086,
     "found_days": 103.75816345214844,
     "found_months": 88,
-    "confirm_rate": 0.31080862879753113,
-    "confirm_all": 0.47111645340919495,
-    "confirm_days": 119.30244445800781,
+    "confirm_rate": 0.3108086884021759,
+    "confirm_all": 0.47111448645591736,
+    "confirm_days": 119.30242919921875,
     "confirm_months": 80,
     "events_found": 166,
     "events_confirm": 214,
@@ -440,7 +440,7 @@
      "7": -25.826141219256908,
      "10": 5.834176289321552
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -454,12 +454,12 @@
     ],
     "outcome": "it beats the S&P 500 over 3 sessions",
     "found_rate": 0.3525160253047943,
-    "found_all": 0.48770150542259216,
+    "found_all": 0.48769786953926086,
     "found_days": 169.5002899169922,
     "found_months": 107,
-    "confirm_rate": 0.3655526638031006,
-    "confirm_all": 0.47111645340919495,
-    "confirm_days": 233.48687744140625,
+    "confirm_rate": 0.3655529022216797,
+    "confirm_all": 0.47111448645591736,
+    "confirm_days": 233.48672485351562,
     "confirm_months": 92,
     "events_found": 253,
     "events_confirm": 390,
@@ -471,7 +471,7 @@
      "7": 14.924234546260594,
      "10": 26.872490851237494
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -485,12 +485,12 @@
     ],
     "outcome": "it beats its sector fund over 2 sessions",
     "found_rate": 0.30138683319091797,
-    "found_all": 0.493827223777771,
+    "found_all": 0.4938235282897949,
     "found_days": 84.74823760986328,
     "found_months": 75,
-    "confirm_rate": 0.3305646777153015,
-    "confirm_all": 0.48275700211524963,
-    "confirm_days": 100.83409118652344,
+    "confirm_rate": 0.3305647075176239,
+    "confirm_all": 0.48275497555732727,
+    "confirm_days": 100.83407592773438,
     "confirm_months": 76,
     "events_found": 128,
     "events_confirm": 184,
@@ -502,7 +502,7 @@
      "7": -0.03788884367912076,
      "10": 28.587625073718286
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -516,12 +516,12 @@
     ],
     "outcome": "the price is higher after 2 sessions",
     "found_rate": 0.3602275550365448,
-    "found_all": 0.5101866126060486,
+    "found_all": 0.510182797908783,
     "found_days": 136.2333221435547,
     "found_months": 95,
-    "confirm_rate": 0.3610672652721405,
-    "confirm_all": 0.48938968777656555,
-    "confirm_days": 99.44285583496094,
+    "confirm_rate": 0.3610673248767853,
+    "confirm_all": 0.4893876314163208,
+    "confirm_days": 99.44284057617188,
     "confirm_months": 65,
     "events_found": 180,
     "events_confirm": 146,
@@ -533,7 +533,7 @@
      "7": -5.231025278709809,
      "10": -0.6139341929515805
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -547,12 +547,12 @@
     ],
     "outcome": "the price is higher after 1 session",
     "found_rate": 0.35976916551589966,
-    "found_all": 0.4934650659561157,
+    "found_all": 0.49346137046813965,
     "found_days": 174.33135986328125,
     "found_months": 111,
-    "confirm_rate": 0.4184671938419342,
-    "confirm_all": 0.5121630430221558,
-    "confirm_days": 168.42478942871094,
+    "confirm_rate": 0.41846734285354614,
+    "confirm_all": 0.5121608972549438,
+    "confirm_days": 168.4247283935547,
     "confirm_months": 89,
     "events_found": 231,
     "events_confirm": 247,
@@ -578,12 +578,12 @@
     ],
     "outcome": "it beats the S&P 500 over 5 sessions",
     "found_rate": 0.3018331825733185,
-    "found_all": 0.4743642210960388,
+    "found_all": 0.4743606746196747,
     "found_days": 117.97663879394531,
     "found_months": 90,
-    "confirm_rate": 0.3480505347251892,
-    "confirm_all": 0.47807735204696655,
-    "confirm_days": 86.8963623046875,
+    "confirm_rate": 0.348050594329834,
+    "confirm_all": 0.4780753552913666,
+    "confirm_days": 86.89634704589844,
     "confirm_months": 67,
     "events_found": 227,
     "events_confirm": 145,
@@ -595,7 +595,7 @@
      "7": 10.346898112130724,
      "10": 51.154730171975444
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -609,12 +609,12 @@
     ],
     "outcome": "it beats the S&P 500 over 2 sessions",
     "found_rate": 0.308287650346756,
-    "found_all": 0.4928067922592163,
+    "found_all": 0.49280309677124023,
     "found_days": 96.79051971435547,
     "found_months": 84,
-    "confirm_rate": 0.35540202260017395,
-    "confirm_all": 0.47713735699653625,
-    "confirm_days": 96.03924560546875,
+    "confirm_rate": 0.3554019629955292,
+    "confirm_all": 0.4771353602409363,
+    "confirm_days": 96.03926086425781,
     "confirm_months": 78,
     "events_found": 141,
     "events_confirm": 162,
@@ -626,7 +626,7 @@
      "7": -31.008267652299228,
      "10": 4.259272908486439
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -637,12 +637,12 @@
      "T1"
     ],
     "outcome": "it beats the S&P 500 over 2 sessions",
-    "found_rate": 0.3534945845603943,
-    "found_all": 0.4928067922592163,
-    "found_days": 160.779052734375,
+    "found_rate": 0.3534944951534271,
+    "found_all": 0.49280309677124023,
+    "found_days": 160.77908325195312,
     "found_months": 103,
     "confirm_rate": 0.3778374195098877,
-    "confirm_all": 0.47713735699653625,
+    "confirm_all": 0.4771353602409363,
     "confirm_days": 143.66452026367188,
     "confirm_months": 90,
     "events_found": 212,
@@ -669,12 +669,12 @@
     ],
     "outcome": "the price is higher after 2 sessions",
     "found_rate": 0.35590916872024536,
-    "found_all": 0.5101866126060486,
+    "found_all": 0.510182797908783,
     "found_days": 133.60287475585938,
     "found_months": 99,
-    "confirm_rate": 0.3857630491256714,
-    "confirm_all": 0.48938968777656555,
-    "confirm_days": 125.46174621582031,
+    "confirm_rate": 0.38576310873031616,
+    "confirm_all": 0.4893876314163208,
+    "confirm_days": 125.46173095703125,
     "confirm_months": 89,
     "events_found": 175,
     "events_confirm": 186,
@@ -686,7 +686,7 @@
      "7": -57.11162904760797,
      "10": -49.632291703895106
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -700,12 +700,12 @@
     ],
     "outcome": "the price is higher after 2 sessions",
     "found_rate": 0.3746104836463928,
-    "found_all": 0.5101866126060486,
+    "found_all": 0.510182797908783,
     "found_days": 187.1735076904297,
     "found_months": 114,
-    "confirm_rate": 0.4039248526096344,
-    "confirm_all": 0.48938968777656555,
-    "confirm_days": 172.57081604003906,
+    "confirm_rate": 0.4039250612258911,
+    "confirm_all": 0.4893876314163208,
+    "confirm_days": 172.5707244873047,
     "confirm_months": 92,
     "events_found": 246,
     "events_confirm": 250,
@@ -731,12 +731,12 @@
     ],
     "outcome": "it beats the S&P 500 over 2 sessions",
     "found_rate": 0.3643653392791748,
-    "found_all": 0.4928067922592163,
+    "found_all": 0.49280309677124023,
     "found_days": 190.6118927001953,
     "found_months": 103,
-    "confirm_rate": 0.4076363444328308,
-    "confirm_all": 0.47713735699653625,
-    "confirm_days": 246.7431640625,
+    "confirm_rate": 0.4076366126537323,
+    "confirm_all": 0.4771353602409363,
+    "confirm_days": 246.7429962158203,
     "confirm_months": 89,
     "events_found": 249,
     "events_confirm": 405,
@@ -760,13 +760,13 @@
      "T2"
     ],
     "outcome": "the price is higher after 2 sessions",
-    "found_rate": 0.39939025044441223,
-    "found_all": 0.5101866126060486,
-    "found_days": 251.11782836914062,
+    "found_rate": 0.3993903398513794,
+    "found_all": 0.510182797908783,
+    "found_days": 251.11776733398438,
     "found_months": 127,
-    "confirm_rate": 0.4223299026489258,
-    "confirm_all": 0.48938968777656555,
-    "confirm_days": 255.22471618652344,
+    "confirm_rate": 0.4223300516605377,
+    "confirm_all": 0.4893876314163208,
+    "confirm_days": 255.22462463378906,
     "confirm_months": 102,
     "events_found": 357,
     "events_confirm": 408,
@@ -792,11 +792,11 @@
     ],
     "outcome": "it beats the S&P 500 over 1 session",
     "found_rate": 0.3113095462322235,
-    "found_all": 0.5060250759124756,
+    "found_all": 0.5060213208198547,
     "found_days": 82.12619018554688,
     "found_months": 70,
     "confirm_rate": 0.3755975067615509,
-    "confirm_all": 0.49188467860221863,
+    "confirm_all": 0.4918826222419739,
     "confirm_days": 80.03544616699219,
     "confirm_months": 64,
     "events_found": 104,
@@ -809,7 +809,7 @@
      "7": -72.59823603909105,
      "10": -89.15039420426271
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -823,12 +823,12 @@
     ],
     "outcome": "it beats the S&P 500 over 3 sessions",
     "found_rate": 0.30079323053359985,
-    "found_all": 0.48770150542259216,
-    "found_days": 97.85238647460938,
+    "found_all": 0.48769786953926086,
+    "found_days": 97.85237884521484,
     "found_months": 70,
-    "confirm_rate": 0.3703249990940094,
-    "confirm_all": 0.47111645340919495,
-    "confirm_days": 104.82856750488281,
+    "confirm_rate": 0.3703250586986542,
+    "confirm_all": 0.47111448645591736,
+    "confirm_days": 104.82855224609375,
     "confirm_months": 71,
     "events_found": 141,
     "events_confirm": 169,
@@ -840,7 +840,7 @@
      "7": -31.5441321813661,
      "10": -30.796535624750856
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -854,11 +854,11 @@
     ],
     "outcome": "it beats its sector fund over 2 sessions",
     "found_rate": 0.32101941108703613,
-    "found_all": 0.493827223777771,
+    "found_all": 0.4938235282897949,
     "found_days": 136.3291015625,
     "found_months": 99,
     "confirm_rate": 0.390537828207016,
-    "confirm_all": 0.48275700211524963,
+    "confirm_all": 0.48275497555732727,
     "confirm_days": 121.45777893066406,
     "confirm_months": 84,
     "events_found": 191,
@@ -885,12 +885,12 @@
     ],
     "outcome": "the price is higher after 2 sessions",
     "found_rate": 0.3197921812534332,
-    "found_all": 0.5101866126060486,
+    "found_all": 0.510182797908783,
     "found_days": 88.88739013671875,
     "found_months": 71,
-    "confirm_rate": 0.37408509850502014,
-    "confirm_all": 0.48938968777656555,
-    "confirm_days": 74.75617980957031,
+    "confirm_rate": 0.3740851879119873,
+    "confirm_all": 0.4893876314163208,
+    "confirm_days": 74.75615692138672,
     "confirm_months": 69,
     "events_found": 111,
     "events_confirm": 119,
@@ -902,7 +902,7 @@
      "7": -120.74283084760782,
      "10": -129.62040004285225
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -915,13 +915,13 @@
      "T4"
     ],
     "outcome": "the price is higher after 10 sessions",
-    "found_rate": 0.3703593313694,
-    "found_all": 0.5134069919586182,
-    "found_days": 169.50669860839844,
+    "found_rate": 0.3703593611717224,
+    "found_all": 0.5134031772613525,
+    "found_days": 169.50668334960938,
     "found_months": 102,
-    "confirm_rate": 0.46403300762176514,
-    "confirm_all": 0.544198751449585,
-    "confirm_days": 147.93690490722656,
+    "confirm_rate": 0.4640327990055084,
+    "confirm_all": 0.5441964268684387,
+    "confirm_days": 147.9369659423828,
     "confirm_months": 77,
     "events_found": 234,
     "events_confirm": 279,
@@ -947,12 +947,12 @@
     ],
     "outcome": "it beats its sector fund over 3 sessions",
     "found_rate": 0.2885381281375885,
-    "found_all": 0.49490055441856384,
+    "found_all": 0.49489685893058777,
     "found_days": 73.18501281738281,
     "found_months": 65,
     "confirm_rate": 0.3390752375125885,
-    "confirm_all": 0.4827064573764801,
-    "confirm_days": 45.95833206176758,
+    "confirm_all": 0.48270443081855774,
+    "confirm_days": 45.958335876464844,
     "confirm_months": 46,
     "events_found": 93,
     "events_confirm": 74,
@@ -964,7 +964,7 @@
      "7": -150.13090466659457,
      "10": -171.2535080500306
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -976,13 +976,13 @@
      "T4"
     ],
     "outcome": "it beats the S&P 500 over 2 sessions",
-    "found_rate": 0.33215853571891785,
-    "found_all": 0.4928067922592163,
-    "found_days": 119.03549194335938,
+    "found_rate": 0.33215847611427307,
+    "found_all": 0.49280309677124023,
+    "found_days": 119.03550720214844,
     "found_months": 88,
-    "confirm_rate": 0.38207343220710754,
-    "confirm_all": 0.47713735699653625,
-    "confirm_days": 99.77953338623047,
+    "confirm_rate": 0.38207337260246277,
+    "confirm_all": 0.4771353602409363,
+    "confirm_days": 99.77954864501953,
     "confirm_months": 71,
     "events_found": 173,
     "events_confirm": 168,
@@ -1008,12 +1008,12 @@
     ],
     "outcome": "it beats its sector fund over 1 session",
     "found_rate": 0.29790326952934265,
-    "found_all": 0.49082034826278687,
+    "found_all": 0.4908166825771332,
     "found_days": 90.35371398925781,
     "found_months": 68,
-    "confirm_rate": 0.38918477296829224,
-    "confirm_all": 0.49508416652679443,
-    "confirm_days": 78.16526794433594,
+    "confirm_rate": 0.3891848623752594,
+    "confirm_all": 0.4950820803642273,
+    "confirm_days": 78.16525268554688,
     "confirm_months": 58,
     "events_found": 119,
     "events_confirm": 131,
@@ -1025,7 +1025,7 @@
      "7": -32.15597637782797,
      "10": -46.64366889739242
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -1039,12 +1039,12 @@
     ],
     "outcome": "it beats the S&P 500 over 2 sessions",
     "found_rate": 0.2670883238315582,
-    "found_all": 0.4928067922592163,
+    "found_all": 0.49280309677124023,
     "found_days": 64.26422119140625,
     "found_months": 66,
-    "confirm_rate": 0.35828453302383423,
-    "confirm_all": 0.47713735699653625,
-    "confirm_days": 61.21764373779297,
+    "confirm_rate": 0.35828450322151184,
+    "confirm_all": 0.4771353602409363,
+    "confirm_days": 61.217647552490234,
     "confirm_months": 62,
     "events_found": 91,
     "events_confirm": 94,
@@ -1056,38 +1056,7 @@
      "7": -26.627677370907463,
      "10": 29.306757444680102
     },
-    "candidate": false
-   },
-   {
-    "when": [
-     "gap at the open %: low (under -2.94)",
-     "regional banks, move over 5 sessions %: middle (-5.82 to -0.707)",
-     "small against large companies, 5 sessions %: middle (-1.25 to 0.139)"
-    ],
-    "tables": [
-     "T1",
-     "T4"
-    ],
-    "outcome": "it beats its sector fund over 3 sessions",
-    "found_rate": 0.28273463249206543,
-    "found_all": 0.49490055441856384,
-    "found_days": 68.02810668945312,
-    "found_months": 66,
-    "confirm_rate": 0.3572310507297516,
-    "confirm_all": 0.4827064573764801,
-    "confirm_days": 54.83917999267578,
-    "confirm_months": 51,
-    "events_found": 187,
-    "events_confirm": 134,
-    "move_confirm": {
-     "1": -6.168587806111029,
-     "2": -31.397998054474233,
-     "3": -50.1344128338018,
-     "5": 52.51146264279013,
-     "7": 27.797867317920247,
-     "10": 37.018207356545524
-    },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -1101,12 +1070,12 @@
     ],
     "outcome": "it beats its sector fund over 3 sessions",
     "found_rate": 0.3138771951198578,
-    "found_all": 0.49490055441856384,
+    "found_all": 0.49489685893058777,
     "found_days": 100.76153564453125,
     "found_months": 88,
-    "confirm_rate": 0.3530605435371399,
-    "confirm_all": 0.4827064573764801,
-    "confirm_days": 49.28333282470703,
+    "confirm_rate": 0.3530604839324951,
+    "confirm_all": 0.48270443081855774,
+    "confirm_days": 49.28334045410156,
     "confirm_months": 40,
     "events_found": 190,
     "events_confirm": 88,
@@ -1118,7 +1087,7 @@
      "7": -6.788155844381961,
      "10": 39.02074506690446
     },
-    "candidate": false
+    "candidate": true
    },
    {
     "when": [
@@ -1128,13 +1097,13 @@
      "T1"
     ],
     "outcome": "it beats the S&P 500 over 2 sessions",
-    "found_rate": 0.3906145989894867,
-    "found_all": 0.4928067922592163,
-    "found_days": 294.6568908691406,
+    "found_rate": 0.39061474800109863,
+    "found_all": 0.49280309677124023,
+    "found_days": 294.6567687988281,
     "found_months": 134,
-    "confirm_rate": 0.42282283306121826,
-    "confirm_all": 0.47713735699653625,
-    "confirm_days": 273.01611328125,
+    "confirm_rate": 0.4228229820728302,
+    "confirm_all": 0.4771353602409363,
+    "confirm_days": 273.0160217285156,
     "confirm_months": 103,
     "events_found": 421,
     "events_confirm": 442,
@@ -1160,11 +1129,11 @@
     ],
     "outcome": "it beats the S&P 500 over 5 sessions",
     "found_rate": 0.32277947664260864,
-    "found_all": 0.4743642210960388,
+    "found_all": 0.4743606746196747,
     "found_days": 135.30453491210938,
     "found_months": 88,
     "confirm_rate": 0.3791426718235016,
-    "confirm_all": 0.47807735204696655,
+    "confirm_all": 0.4780753552913666,
     "confirm_days": 74.2611083984375,
     "confirm_months": 62,
     "events_found": 234,
@@ -1190,13 +1159,13 @@
      "T4"
     ],
     "outcome": "it beats the S&P 500 over 2 sessions",
-    "found_rate": 0.2590891718864441,
-    "found_all": 0.4928067922592163,
-    "found_days": 61.62043762207031,
+    "found_rate": 0.2590891420841217,
+    "found_all": 0.49280309677124023,
+    "found_days": 61.620445251464844,
     "found_months": 56,
-    "confirm_rate": 0.3531177043914795,
-    "confirm_all": 0.47713735699653625,
-    "confirm_days": 43.66459274291992,
+    "confirm_rate": 0.3531176745891571,
+    "confirm_all": 0.4771353602409363,
+    "confirm_days": 43.66459655761719,
     "confirm_months": 46,
     "events_found": 152,
     "events_confirm": 244,
@@ -1208,7 +1177,7 @@
      "7": -65.78415675765703,
      "10": -47.70417741204569
     },
-    "candidate": false
+    "candidate": true
    }
   ]
  },
@@ -1219,11 +1188,11 @@
   "families_total": 36,
   "tried": 1040040,
   "found": 161,
-  "found_scrambled_median": 141.0,
+  "found_scrambled_median": 4.0,
   "confirmed": 0,
-  "confirmed_scrambled_median": 2.0,
-  "confirmed_scrambled_95": 21.05000000000001,
-  "confirmed_scrambled_max": 208.0,
+  "confirmed_scrambled_median": 0.0,
+  "confirmed_scrambled_95": 1.0,
+  "confirmed_scrambled_max": 6.0,
   "p": 1.0,
   "passes": false,
   "families": [
@@ -1232,7 +1201,7 @@
     "items": 41,
     "tried": 20360,
     "found": 0,
-    "found_scrambled": 1.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
     "confirmed_scrambled_95": 0.0,
@@ -1265,10 +1234,10 @@
     "items": 57,
     "tried": 39680,
     "found": 0,
-    "found_scrambled": 10.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 3.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -1320,10 +1289,10 @@
     "items": 93,
     "tried": 171420,
     "found": 60,
-    "found_scrambled": 4.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 1.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -1331,10 +1300,10 @@
     "items": 72,
     "tried": 21440,
     "found": 0,
-    "found_scrambled": 3.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 1.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -1342,10 +1311,10 @@
     "items": 98,
     "tried": 139700,
     "found": 3,
-    "found_scrambled": 32.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 6.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -1353,7 +1322,7 @@
     "items": 80,
     "tried": 23380,
     "found": 0,
-    "found_scrambled": 2.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
     "confirmed_scrambled_95": 0.0,
@@ -1397,7 +1366,7 @@
     "items": 83,
     "tried": 51900,
     "found": 1,
-    "found_scrambled": 2.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
     "confirmed_scrambled_95": 0.0,
@@ -1408,10 +1377,10 @@
     "items": 109,
     "tried": 253620,
     "found": 14,
-    "found_scrambled": 32.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 6.050000000000011,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -1419,7 +1388,7 @@
     "items": 91,
     "tried": 51700,
     "found": 10,
-    "found_scrambled": 1.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
     "confirmed_scrambled_95": 0.0,
@@ -1463,10 +1432,10 @@
     "items": 88,
     "tried": 23920,
     "found": 0,
-    "found_scrambled": 6.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 1.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -1518,10 +1487,10 @@
     "items": 96,
     "tried": 32400,
     "found": 0,
-    "found_scrambled": 5.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 1.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -1551,10 +1520,10 @@
     "items": 72,
     "tried": 54900,
     "found": 0,
-    "found_scrambled": 6.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 3.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -1633,11 +1602,11 @@
   "families_total": 6,
   "tried": 29256,
   "found": 1,
-  "found_scrambled_median": 9.0,
+  "found_scrambled_median": 0.0,
   "confirmed": 0,
   "confirmed_scrambled_median": 0.0,
-  "confirmed_scrambled_95": 3.0,
-  "confirmed_scrambled_max": 19.0,
+  "confirmed_scrambled_95": 0.0,
+  "confirmed_scrambled_max": 1.0,
   "p": 1.0,
   "passes": false,
   "families": [
@@ -1649,7 +1618,7 @@
     "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 1.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -1679,10 +1648,10 @@
     "items": 98,
     "tried": 9672,
     "found": 0,
-    "found_scrambled": 3.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 2.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -1690,10 +1659,10 @@
     "items": 75,
     "tried": 7376,
     "found": 1,
-    "found_scrambled": 1.0,
+    "found_scrambled": 0.0,
     "confirmed": 0,
     "confirmed_scrambled_median": 0.0,
-    "confirmed_scrambled_95": 1.0,
+    "confirmed_scrambled_95": 0.0,
     "p": 1.0
    },
    {
@@ -1721,7 +1690,7 @@
   "confirmed": 0,
   "confirmed_scrambled_median": 0.0,
   "confirmed_scrambled_95": 0.0,
-  "confirmed_scrambled_max": 1.0,
+  "confirmed_scrambled_max": 0.0,
   "p": 1.0,
   "passes": false,
   "families": [
