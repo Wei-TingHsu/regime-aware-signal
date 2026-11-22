@@ -1,0 +1,1182 @@
+{
+ "cost_bp": 30.0,
+ "bar": 0.0020833333333333333,
+ "patterns": [
+  {
+   "when": [
+    "own results filing: yes",
+    "size rank in the list: high (over 0.728)"
+   ],
+   "outcome": "it beats the S&P 500 over 3 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 3,
+   "check_events": [
+    166,
+    214
+   ],
+   "search_events": [
+    166,
+    214
+   ],
+   "old": {
+    "days": 157,
+    "net": 64.75457755557004,
+    "win": 0.6178343949044586,
+    "p": 0.0582,
+    "gap": 25.26769210824928,
+    "cc": 121.83709557829728,
+    "raw": 69.74901477828239,
+    "exits": {
+     "1": 24.340350914838446,
+     "2": 37.371708422787435,
+     "3": 64.75457755557004,
+     "5": 39.73279181435623
+    }
+   },
+   "new": {
+    "days": 194,
+    "net": 65.80623210025031,
+    "win": 0.5670103092783505,
+    "p": 0.01,
+    "gap": 7.239204413241576,
+    "cc": 103.51589994058945,
+    "raw": 77.96018971860359,
+    "exits": {
+     "1": 20.47020400163708,
+     "2": 42.86960844482989,
+     "3": 65.80623210025031,
+     "5": 46.666829764422005
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "own results filing: yes",
+    "move against sector fund pct: low (under -4.82)",
+    "insider purchase filings in 90 days: at or under 0"
+   ],
+   "outcome": "it beats the S&P 500 over 3 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 3,
+   "check_events": [
+    253,
+    390
+   ],
+   "search_events": [
+    253,
+    390
+   ],
+   "old": {
+    "days": 227,
+    "net": 37.1019018153279,
+    "win": 0.5991189427312775,
+    "p": 0.074,
+    "gap": -0.8131796084450772,
+    "cc": 66.78473507161068,
+    "raw": 47.74769504720675,
+    "exits": {
+     "1": 18.982421081528805,
+     "2": 27.54278925004015,
+     "3": 37.101901815327906,
+     "5": 44.04281957896609
+    }
+   },
+   "new": {
+    "days": 316,
+    "net": 33.143402751931305,
+    "win": 0.5791139240506329,
+    "p": 0.0752,
+    "gap": 4.02559555925552,
+    "cc": 67.17301964750419,
+    "raw": 56.06409024139428,
+    "exits": {
+     "1": 0.11540340954114825,
+     "2": 17.307901898200235,
+     "3": 33.143402751931305,
+     "5": 4.568303349427879
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "own results filing: yes",
+    "own filings in the last 30 days: middle (1 to 2)",
+    "size rank in the list: high (over 0.728)"
+   ],
+   "outcome": "it beats its sector fund over 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    128,
+    184
+   ],
+   "search_events": [
+    128,
+    184
+   ],
+   "old": {
+    "days": 124,
+    "net": 51.65528084940017,
+    "win": 0.6532258064516129,
+    "p": 0.0208,
+    "gap": 15.37762048751768,
+    "cc": 97.76086873691453,
+    "raw": 55.06141454489313,
+    "exits": {
+     "1": 9.081402269235959,
+     "2": 51.65528084940014,
+     "3": 47.57991760129477,
+     "5": 25.84699161569405
+    }
+   },
+   "new": {
+    "days": 167,
+    "net": 31.96961700293306,
+    "win": 0.562874251497006,
+    "p": 0.1194,
+    "gap": 10.58432019765401,
+    "cc": 72.76455128732076,
+    "raw": 42.09288958252153,
+    "exits": {
+     "1": 21.786440791781665,
+     "2": 31.96961700293305,
+     "3": 54.94738839929924,
+     "5": 29.20728717094675
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "news-based policy uncertainty index: low (under 111)",
+    "St. Louis Fed financial stress index, change over 5 observations: middle (-0.16 to 0.23)"
+   ],
+   "outcome": "the price is higher after 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    142,
+    93
+   ],
+   "search_events": [
+    142,
+    93
+   ],
+   "old": {
+    "days": 125,
+    "net": 54.85006172529958,
+    "win": 0.552,
+    "p": 0.0382,
+    "gap": 113.14811553891447,
+    "cc": 188.7364595845243,
+    "raw": 95.54310020065053,
+    "exits": {
+     "1": -36.291373581377414,
+     "2": 54.850061725299554,
+     "3": 40.51027508399292,
+     "5": -50.740525509772425
+    }
+   },
+   "new": {
+    "days": 78,
+    "net": 49.516743099252324,
+    "win": 0.5641025641025641,
+    "p": 0.0622,
+    "gap": 2.5931399805188846,
+    "cc": 81.51416608583975,
+    "raw": 98.50403200752079,
+    "exits": {
+     "1": 4.495034931257763,
+     "2": 49.51674309925234,
+     "3": 75.7268038098719,
+     "5": 63.562886494670266
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "new jobless claims: low (under 3.84e+05)",
+    "investment-grade bond fund, move over 5 sessions %: middle (-0.187 to 0.632)"
+   ],
+   "outcome": "the price is higher after 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    159,
+    143
+   ],
+   "search_events": [
+    159,
+    143
+   ],
+   "old": {
+    "days": 140,
+    "net": 12.776235986619534,
+    "win": 0.5714285714285714,
+    "p": 0.2796,
+    "gap": 16.206850109820074,
+    "cc": 58.637121832382334,
+    "raw": 47.00493114060808,
+    "exits": {
+     "1": 13.933566104362143,
+     "2": 12.776235986619533,
+     "3": 13.299733877467993,
+     "5": -2.521214142725146
+    }
+   },
+   "new": {
+    "days": 114,
+    "net": 29.403828795138466,
+    "win": 0.6052631578947368,
+    "p": 0.1968,
+    "gap": 1.9969393801104298,
+    "cc": 61.90521597611638,
+    "raw": 54.94122906604328,
+    "exits": {
+     "1": 39.7463225508389,
+     "2": 29.403828795138466,
+     "3": 6.439381300127039,
+     "5": 12.74720386889883
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "size in units of its own usual move: low (under -2.72)",
+    "run-up over the 60 sessions before %: high (over 1.77)",
+    "the average share against the S&P 500, 5 sessions %: middle (-0.614 to 0.00347)"
+   ],
+   "outcome": "it beats the S&P 500 over 5 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 5,
+   "check_events": [
+    227,
+    145
+   ],
+   "search_events": [
+    227,
+    145
+   ],
+   "old": {
+    "days": 157,
+    "net": 43.40828045936341,
+    "win": 0.6050955414012739,
+    "p": 0.054,
+    "gap": 9.7028457293899,
+    "cc": 83.57320131587608,
+    "raw": 68.65894987014427,
+    "exits": {
+     "1": -6.339322424343262,
+     "2": 12.64491240338237,
+     "3": 11.732917165213252,
+     "5": 43.40828045936341
+    }
+   },
+   "new": {
+    "days": 113,
+    "net": 1.6200501057606267,
+    "win": 0.6283185840707964,
+    "p": 0.4772,
+    "gap": 19.29635775575725,
+    "cc": 51.707968960477416,
+    "raw": -14.826842094614344,
+    "exits": {
+     "1": -25.23313536302406,
+     "2": -5.452634769626243,
+     "3": 10.966306181435563,
+     "5": 1.6200501057606225
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "gap at the open %: low (under -2.94)",
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "size rank in the list: high (over 0.728)"
+   ],
+   "outcome": "it beats the S&P 500 over 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    141,
+    162
+   ],
+   "search_events": [
+    141,
+    162
+   ],
+   "old": {
+    "days": 135,
+    "net": 32.70690070294187,
+    "win": 0.6222222222222222,
+    "p": 0.1876,
+    "gap": 32.39741438798015,
+    "cc": 69.87745775947884,
+    "raw": 66.57086146707839,
+    "exits": {
+     "1": -12.310869120415603,
+     "2": 32.70690070294187,
+     "3": 3.2325849497347576,
+     "5": -140.99907269272938
+    }
+   },
+   "new": {
+    "days": 148,
+    "net": 42.86174516567982,
+    "win": 0.5878378378378378,
+    "p": 0.0756,
+    "gap": 3.1241384900388844,
+    "cc": 75.83347154684691,
+    "raw": 71.06415861815816,
+    "exits": {
+     "1": 38.913790471351476,
+     "2": 42.86174516567981,
+     "3": 38.85499843019417,
+     "5": -35.32453345590409
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "run-up over the 60 sessions before %: high (over 1.77)",
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "new jobless claims, change over 5 observations: low (under -1e+03)"
+   ],
+   "outcome": "it beats the S&P 500 over 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    119,
+    99
+   ],
+   "search_events": [
+    119,
+    99
+   ],
+   "old": {
+    "days": 110,
+    "net": 34.96650992373165,
+    "win": 0.6454545454545455,
+    "p": 0.07,
+    "gap": -14.143144409426077,
+    "cc": 49.9569073992204,
+    "raw": 54.196400833809804,
+    "exits": {
+     "1": 20.505313419238007,
+     "2": 34.96650992373165,
+     "3": 40.89123861752394,
+     "5": 73.63683940016877
+    }
+   },
+   "new": {
+    "days": 89,
+    "net": 10.5913607419104,
+    "win": 0.5730337078651685,
+    "p": 0.3404,
+    "gap": 3.3804973472015103,
+    "cc": 43.4992926655325,
+    "raw": 49.45980780754626,
+    "exits": {
+     "1": -10.27205709792645,
+     "2": 10.591360741910393,
+     "3": 28.344254063191585,
+     "5": -4.487021165317952
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "run-up over the 60 sessions before %: high (over 1.77)",
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "worst peer had any filing: no"
+   ],
+   "outcome": "the price is higher after 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    175,
+    186
+   ],
+   "search_events": [
+    175,
+    186
+   ],
+   "old": {
+    "days": 167,
+    "net": 14.048384998473137,
+    "win": 0.5808383233532934,
+    "p": 0.285,
+    "gap": 2.492487072861329,
+    "cc": 46.03006490592369,
+    "raw": 43.918337073428155,
+    "exits": {
+     "1": 7.2663319449016015,
+     "2": 14.04838499847314,
+     "3": 15.3244348258525,
+     "5": 24.876052707443385
+    }
+   },
+   "new": {
+    "days": 174,
+    "net": -6.132804096454069,
+    "win": 0.5632183908045977,
+    "p": 0.5906,
+    "gap": 5.31713239758129,
+    "cc": 29.389801017767574,
+    "raw": 19.619917794137574,
+    "exits": {
+     "1": -4.801583053871873,
+     "2": -6.132804096454073,
+     "3": 4.980885421168665,
+     "5": -26.61212762319388
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "news-based policy uncertainty index: low (under 111)",
+    "St. Louis Fed financial stress index, change over 5 observations: middle (-0.16 to 0.23)"
+   ],
+   "outcome": "it beats its sector fund over 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    142,
+    93
+   ],
+   "search_events": [
+    142,
+    93
+   ],
+   "old": {
+    "days": 125,
+    "net": 54.85006172529958,
+    "win": 0.552,
+    "p": 0.0422,
+    "gap": 113.14811553891447,
+    "cc": 188.7364595845243,
+    "raw": 95.54310020065053,
+    "exits": {
+     "1": -36.291373581377414,
+     "2": 54.850061725299554,
+     "3": 40.51027508399292,
+     "5": -50.740525509772425
+    }
+   },
+   "new": {
+    "days": 78,
+    "net": 49.516743099252324,
+    "win": 0.5641025641025641,
+    "p": 0.065,
+    "gap": 2.5931399805188846,
+    "cc": 81.51416608583975,
+    "raw": 98.50403200752079,
+    "exits": {
+     "1": 4.495034931257763,
+     "2": 49.51674309925234,
+     "3": 75.7268038098719,
+     "5": 63.562886494670266
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "news-based policy uncertainty index: low (under 111)",
+    "St. Louis Fed financial stress index: low (under 0.397)"
+   ],
+   "outcome": "it beats the S&P 500 over 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    204,
+    168
+   ],
+   "search_events": [
+    204,
+    168
+   ],
+   "old": {
+    "days": 181,
+    "net": 17.246715973861455,
+    "win": 0.5469613259668509,
+    "p": 0.2026,
+    "gap": 1.0013926957935975,
+    "cc": 47.75263636766225,
+    "raw": 52.366833314077375,
+    "exits": {
+     "1": 1.4734786156207598,
+     "2": 17.24671597386145,
+     "3": 19.812638650636224,
+     "5": 26.747636101850127
+    }
+   },
+   "new": {
+    "days": 142,
+    "net": 67.20221930188063,
+    "win": 0.5633802816901409,
+    "p": 0.014,
+    "gap": 3.043068540913958,
+    "cc": 100.88937580999003,
+    "raw": 109.90120232192162,
+    "exits": {
+     "1": 12.932104464535499,
+     "2": 67.20221930188063,
+     "3": 75.14637956703683,
+     "5": 75.91518040084712
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "own results filing: no",
+    "Fed funds rate: low (under 0.17)",
+    "small against large companies, 5 sessions %: high (over 0.139)"
+   ],
+   "outcome": "the price is higher after 10 sessions",
+   "side": "BUY the stock, sell the S&P 500",
+   "own_exit": 5,
+   "check_events": [
+    291,
+    218
+   ],
+   "search_events": [
+    291,
+    218
+   ],
+   "old": {
+    "days": 129,
+    "net": 142.70836425679022,
+    "win": 0.4883720930232558,
+    "p": 0.0252,
+    "gap": 39.24573863622972,
+    "cc": 210.14115601626233,
+    "raw": 203.20474771911438,
+    "exits": {
+     "1": -5.65462568140541,
+     "2": 51.7219194987715,
+     "3": 82.3340179618345,
+     "5": 142.70836425679022
+    }
+   },
+   "new": {
+    "days": 75,
+    "net": -20.179716110562694,
+    "win": 0.48,
+    "p": 0.6196,
+    "gap": 25.375359824520714,
+    "cc": 34.41994372986761,
+    "raw": 63.384171197658944,
+    "exits": {
+     "1": -41.45902580297592,
+     "2": 4.863254097313067,
+     "3": -3.736610521309089,
+     "5": -20.179716110562705
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "news-based policy uncertainty index: low (under 111)",
+    "new jobless claims, change over 5 observations: low (under -1e+03)"
+   ],
+   "outcome": "it beats its sector fund over 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    141,
+    83
+   ],
+   "search_events": [
+    141,
+    83
+   ],
+   "old": {
+    "days": 125,
+    "net": -44.51556929839958,
+    "win": 0.568,
+    "p": 0.7474,
+    "gap": 5.795874668276122,
+    "cc": -6.65244604641547,
+    "raw": -22.059139693206657,
+    "exits": {
+     "1": -17.547334447303943,
+     "2": -44.51556929839958,
+     "3": -42.509063295010144,
+     "5": 19.497417697962902
+    }
+   },
+   "new": {
+    "days": 70,
+    "net": 70.4084933126223,
+    "win": 0.5857142857142857,
+    "p": 0.052,
+    "gap": -1.2978072969702381,
+    "cc": 99.72534772062973,
+    "raw": 117.16731396392271,
+    "exits": {
+     "1": 2.9217546522912627,
+     "2": 70.4084933126223,
+     "3": 74.9389548832846,
+     "5": 50.98321479636803
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "run-up over the 60 sessions before %: high (over 1.77)",
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "new jobless claims, change over 5 observations: low (under -1e+03)"
+   ],
+   "outcome": "the price is higher after 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    119,
+    99
+   ],
+   "search_events": [
+    119,
+    99
+   ],
+   "old": {
+    "days": 110,
+    "net": 34.96650992373165,
+    "win": 0.6454545454545455,
+    "p": 0.0718,
+    "gap": -14.143144409426077,
+    "cc": 49.9569073992204,
+    "raw": 54.196400833809804,
+    "exits": {
+     "1": 20.505313419238007,
+     "2": 34.96650992373165,
+     "3": 40.89123861752394,
+     "5": 73.63683940016877
+    }
+   },
+   "new": {
+    "days": 89,
+    "net": 10.5913607419104,
+    "win": 0.5730337078651685,
+    "p": 0.3348,
+    "gap": 3.3804973472015103,
+    "cc": 43.4992926655325,
+    "raw": 49.45980780754626,
+    "exits": {
+     "1": -10.27205709792645,
+     "2": 10.591360741910393,
+     "3": 28.344254063191585,
+     "5": -4.487021165317952
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "run-up over the 60 sessions before %: high (over 1.77)",
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "dollar index, move over 5 sessions %: middle (-0.278 to 1.18)"
+   ],
+   "outcome": "it beats the S&P 500 over 1 session",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 1,
+   "check_events": [
+    104,
+    117
+   ],
+   "search_events": [
+    104,
+    117
+   ],
+   "old": {
+    "days": 98,
+    "net": 25.524628783428675,
+    "win": 0.5918367346938775,
+    "p": 0.1584,
+    "gap": -5.50134179498563,
+    "cc": 48.50568197702299,
+    "raw": 48.94116000900169,
+    "exits": {
+     "1": 25.524628783428682,
+     "2": 27.41982166989804,
+     "3": 12.086485376730465,
+     "5": 17.849199892362655
+    }
+   },
+   "new": {
+    "days": 106,
+    "net": 10.138916714246697,
+    "win": 0.5754716981132075,
+    "p": 0.332,
+    "gap": 25.628944884162234,
+    "cc": 65.95021181595864,
+    "raw": 60.130012229121846,
+    "exits": {
+     "1": 10.138916714246697,
+     "2": -17.426368397528346,
+     "3": 15.222211414910731,
+     "5": -0.4953321000079214
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "own results filing: yes",
+    "VIX against the three-month VIX: low (under 0.986)",
+    "investment-grade bond fund, move over 5 sessions %: middle (-0.187 to 0.632)"
+   ],
+   "outcome": "it beats the S&P 500 over 3 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 3,
+   "check_events": [
+    141,
+    169
+   ],
+   "search_events": [
+    141,
+    169
+   ],
+   "old": {
+    "days": 119,
+    "net": 61.39294158125109,
+    "win": 0.6134453781512605,
+    "p": 0.0048,
+    "gap": -3.4010091989240556,
+    "cc": 87.98470154383958,
+    "raw": 81.52727224733083,
+    "exits": {
+     "1": 25.72280460423444,
+     "2": 52.94671633031369,
+     "3": 61.392941581251094,
+     "5": 48.88131624866659
+    }
+   },
+   "new": {
+    "days": 125,
+    "net": 33.65498416644035,
+    "win": 0.568,
+    "p": 0.0798,
+    "gap": -1.5767575966402165,
+    "cc": 62.49610486892703,
+    "raw": 72.15515796755973,
+    "exits": {
+     "1": 4.435788533878011,
+     "2": 21.695190495820064,
+     "3": 33.65498416644035,
+     "5": 55.0509394080573
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "run-up over the 60 sessions before %: high (over 1.77)",
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "copper, move over 5 sessions %: middle (-4.95 to 0.689)"
+   ],
+   "outcome": "the price is higher after 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    111,
+    119
+   ],
+   "search_events": [
+    111,
+    119
+   ],
+   "old": {
+    "days": 104,
+    "net": 26.493551901776712,
+    "win": 0.5961538461538461,
+    "p": 0.2,
+    "gap": 9.233974083491228,
+    "cc": 64.89443765614564,
+    "raw": 54.98098045338459,
+    "exits": {
+     "1": 34.74328688848853,
+     "2": 26.493551901776712,
+     "3": 9.794809478342486,
+     "5": 26.00914802146481
+    }
+   },
+   "new": {
+    "days": 105,
+    "net": 0.5076377370252593,
+    "win": 0.5333333333333333,
+    "p": 0.4964,
+    "gap": 12.03440353737891,
+    "cc": 42.21657192993811,
+    "raw": 26.17956234533079,
+    "exits": {
+     "1": -4.826232877442532,
+     "2": 0.5076377370252629,
+     "3": 17.958055940726304,
+     "5": -19.62635012917864
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "run-up over the 60 sessions before %: high (over 1.77)",
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "small against large companies, 5 sessions %: middle (-1.25 to 0.139)"
+   ],
+   "outcome": "it beats its sector fund over 3 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 3,
+   "check_events": [
+    93,
+    74
+   ],
+   "search_events": [
+    93,
+    74
+   ],
+   "old": {
+    "days": 85,
+    "net": 29.21770200565766,
+    "win": 0.611764705882353,
+    "p": 0.1828,
+    "gap": 13.61702703270414,
+    "cc": 73.14764788230664,
+    "raw": 55.720982634297336,
+    "exits": {
+     "1": 34.027382711525874,
+     "2": 32.38993681468669,
+     "3": 29.217702005657657,
+     "5": 56.09665659979163
+    }
+   },
+   "new": {
+    "days": 64,
+    "net": 13.667689073457568,
+    "win": 0.53125,
+    "p": 0.3764,
+    "gap": 14.088734027763623,
+    "cc": 57.843020308042696,
+    "raw": 63.13441990198562,
+    "exits": {
+     "1": -5.452032473516837,
+     "2": -13.875545453246744,
+     "3": 13.667689073457574,
+     "5": -39.88647330622399
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "distance below the one-year high %: high (over -24.6)",
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "sessions to quarter end: middle (27 to 45)"
+   ],
+   "outcome": "it beats its sector fund over 1 session",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 1,
+   "check_events": [
+    119,
+    131
+   ],
+   "search_events": [
+    119,
+    131
+   ],
+   "old": {
+    "days": 111,
+    "net": 45.18258893285349,
+    "win": 0.6576576576576577,
+    "p": 0.003,
+    "gap": 9.131598508496202,
+    "cc": 84.16079845277025,
+    "raw": 70.50427323325252,
+    "exits": {
+     "1": 45.182588932853506,
+     "2": 26.438261842749675,
+     "3": 28.4926291959948,
+     "5": 25.749265292825676
+    }
+   },
+   "new": {
+    "days": 108,
+    "net": -22.096367292046786,
+    "win": 0.49074074074074076,
+    "p": 0.883,
+    "gap": 4.995232010513404,
+    "cc": 14.210780707825863,
+    "raw": 20.54759665679889,
+    "exits": {
+     "1": -22.096367292046786,
+     "2": -39.34849148943972,
+     "3": -29.16836198727783,
+     "5": -8.918895124675355
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "gap at the open %: low (under -2.94)",
+    "in ai chain: yes",
+    "machine group 3 of 5 in 'who fell and who set it off' (marked by low share of peers down 3pct and high peers average move pct)"
+   ],
+   "outcome": "it beats the S&P 500 over 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    91,
+    94
+   ],
+   "search_events": [
+    91,
+    94
+   ],
+   "old": {
+    "days": 88,
+    "net": 23.821277500834768,
+    "win": 0.6363636363636364,
+    "p": 0.3032,
+    "gap": -11.898671163501986,
+    "cc": 40.39158322285556,
+    "raw": 54.59227295319281,
+    "exits": {
+     "1": 8.902267134359285,
+     "2": 23.82127750083476,
+     "3": 50.24271382630502,
+     "5": 67.97192001586546
+    }
+   },
+   "new": {
+    "days": 91,
+    "net": 140.74152533626796,
+    "win": 0.6373626373626373,
+    "p": 0.0008,
+    "gap": 8.050211360330108,
+    "cc": 179.14817130630598,
+    "raw": 175.02998552225665,
+    "exits": {
+     "1": 96.72380966724587,
+     "2": 140.74152533626793,
+     "3": 169.74740507419486,
+     "5": 50.95262098003933
+    }
+   },
+   "passes": true
+  },
+  {
+   "when": [
+    "gap at the open %: low (under -2.94)",
+    "regional banks, move over 5 sessions %: middle (-5.82 to -0.707)",
+    "small against large companies, 5 sessions %: middle (-1.25 to 0.139)"
+   ],
+   "outcome": "it beats its sector fund over 3 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 3,
+   "check_events": [
+    187,
+    134
+   ],
+   "search_events": [
+    187,
+    134
+   ],
+   "old": {
+    "days": 83,
+    "net": 71.63914692789945,
+    "win": 0.6867469879518072,
+    "p": 0.0156,
+    "gap": 0.0047908102113037344,
+    "cc": 103.48710182834944,
+    "raw": 111.9049528853646,
+    "exits": {
+     "1": 57.58167909071828,
+     "2": 75.96181610551645,
+     "3": 71.63914692789945,
+     "5": 94.98981493766397
+    }
+   },
+   "new": {
+    "days": 74,
+    "net": 45.39445000959904,
+    "win": 0.527027027027027,
+    "p": 0.1612,
+    "gap": -20.19254064069111,
+    "cc": 56.158540858968145,
+    "raw": 41.2001220913669,
+    "exits": {
+     "1": -12.166377786041206,
+     "2": 21.521673875754345,
+     "3": 45.39445000959904,
+     "5": -33.71512057483487
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "gap at the open %: low (under -2.94)",
+    "small against large companies, 5 sessions %: middle (-1.25 to 0.139)",
+    "value against growth shares, 5 sessions %: middle (-0.993 to 0.327)"
+   ],
+   "outcome": "it beats its sector fund over 3 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 3,
+   "check_events": [
+    190,
+    88
+   ],
+   "search_events": [
+    190,
+    88
+   ],
+   "old": {
+    "days": 117,
+    "net": 97.42745881957705,
+    "win": 0.5982905982905983,
+    "p": 0.06,
+    "gap": 26.65708824449257,
+    "cc": 133.4516450466031,
+    "raw": 125.6735678500992,
+    "exits": {
+     "1": 22.393926301034853,
+     "2": 51.35767081709352,
+     "3": 97.42745881957705,
+     "5": 144.11098700020298
+    }
+   },
+   "new": {
+    "days": 59,
+    "net": 54.95948669847633,
+    "win": 0.5084745762711864,
+    "p": 0.0474,
+    "gap": 8.491149927635682,
+    "cc": 93.96383918656818,
+    "raw": 81.92000717398926,
+    "exits": {
+     "1": 16.285858737215968,
+     "2": 49.122977294298494,
+     "3": 54.959486698476354,
+     "5": -7.719638240273934
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "run-up over the 60 sessions before %: high (over 1.77)",
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "St. Louis Fed financial stress index, change over 5 observations: middle (-0.16 to 0.23)"
+   ],
+   "outcome": "the price is higher after 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    99,
+    111
+   ],
+   "search_events": [
+    99,
+    111
+   ],
+   "old": {
+    "days": 93,
+    "net": 55.880009279059486,
+    "win": 0.6236559139784946,
+    "p": 0.0668,
+    "gap": 22.14059372582838,
+    "cc": 106.76487928082649,
+    "raw": 99.21777193704925,
+    "exits": {
+     "1": 35.04470854453332,
+     "2": 55.88000927905948,
+     "3": 40.76192779500698,
+     "5": 36.70411767855413
+    }
+   },
+   "new": {
+    "days": 99,
+    "net": -15.57838874820053,
+    "win": 0.5353535353535354,
+    "p": 0.6874,
+    "gap": 17.459715713351205,
+    "cc": 31.351160145244574,
+    "raw": 32.75413325291794,
+    "exits": {
+     "1": -16.507641492636772,
+     "2": -15.578388748200537,
+     "3": 2.873420551394112,
+     "5": -29.630680696368696
+    }
+   },
+   "passes": false
+  },
+  {
+   "when": [
+    "last day's move %: low (under -7.56)",
+    "volume against normal: high (over 1.98)",
+    "gold, move over 5 sessions %: low (under -1.53)"
+   ],
+   "outcome": "it beats the S&P 500 over 2 sessions",
+   "side": "SELL the stock, buy the S&P 500",
+   "own_exit": 2,
+   "check_events": [
+    152,
+    244
+   ],
+   "search_events": [
+    152,
+    244
+   ],
+   "old": {
+    "days": 99,
+    "net": 104.5861864669623,
+    "win": 0.6161616161616161,
+    "p": 0.1382,
+    "gap": 83.05524275423718,
+    "cc": 203.20100631887794,
+    "raw": 153.02775103380387,
+    "exits": {
+     "1": 53.77782177948748,
+     "2": 104.58618646696229,
+     "3": 87.26208525713338,
+     "5": -38.22129847464021
+    }
+   },
+   "new": {
+    "days": 72,
+    "net": 45.47715242489293,
+    "win": 0.5416666666666666,
+    "p": 0.0758,
+    "gap": -20.086699014459136,
+    "cc": 57.24593329605472,
+    "raw": 54.42794485737232,
+    "exits": {
+     "1": 23.445799310721114,
+     "2": 45.47715242489295,
+     "3": 89.6024230808921,
+     "5": -0.23903102377950347
+    }
+   },
+   "passes": false
+  }
+ ],
+ "missing": []
+}
