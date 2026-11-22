@@ -1,0 +1,9 @@
+# Severe sell-off rule (SS-1): the forward record
+
+Registered in TRACK 3.101 on 22 Nov 2026. Counts every case from 23 Nov 2026. Rule: a stock of the list closes 5% or more down, on volume above 1.98 times its 60-session average, with a fall larger than 2.72 times its usual daily move. Prediction: after such a close the stock beats the S&P 500 over the next 2 sessions LESS often than the 48% of all sell-offs. **Verdict at 30 separate days** (each day counts once); a second, firmer look at 60. Sell-offs of 5% that do not meet the rule are recorded too, for comparison.
+
+**So far: 0 separate days with a severe sell-off and a known result (0 cases); 0 waiting for their two sessions.**  **30 more days to the verdict.**
+
+| day | stock | meets the rule | move % | volume, times normal | fall, times its usual move | against the S&P 500 after 1 / 2 / 3 sessions (bp) | overnight to next open (bp) | next open to close +2 (bp) |
+|---|---|---|---|---|---|---|---|---|
+| (no sell-off of 5% or more since the start) | | | | | | | | |
