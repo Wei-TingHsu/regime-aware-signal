@@ -1,0 +1,14 @@
+"""register_22nov_selloff_tradable.py -- TRACK 3.103: test SO-T registered BEFORE it runs: can the strong patterns of the machine search be acted on from the next open, after cost? Idempotent."""
+from pathlib import Path
+t = Path("docs/TRACK.md"); s = t.read_text()
+A = """
+
+### 3.103 Test SO-T registered: the strong sell-off patterns, traded from the NEXT OPEN, after cost (22 Nov 22:20)
+**Why.** 3.102: Claude's plain two-condition rule SS-1 is weak (46% against 48%). The search's own patterns are strong (for example 31% against 47%) but were measured from the close of the sell-off day, which nobody can trade. Founder, 22 Nov: test the strong patterns properly before any more page work.
+**What is tested (`src/selloff_tradable.py`, no download, no cost).** Every pattern marked CANDIDATE in `docs/selloff_search.json` for the group 'stocks, one day -5% or worse' (24 patterns), rebuilt on exactly the same sell-offs (same seed and order of calls as the search; the code checks that each rebuilt pattern has the number of sell-offs the search printed). **The trade:** enter at the next open after the sell-off day, in the direction the pattern says (the stock is expected lower -> sell the stock and buy the S&P 500; expected higher -> the reverse), exit at the close of the pattern's own horizon (1, 2, 3 or 5 sessions after the sell-off day; a 7- or 10-session pattern exits at 5), minus **30 basis points** for the round trip. Each day counts once. Other exits (1, 2, 3, 5) are printed beside it for the record. Also printed: the overnight move that is already gone at the open, and the close-to-close move the search saw.
+**PASSES** = the average after cost is above zero in 2005-2017 AND in 2018-2026, AND in 2018-2026 the chance that the average is zero or less is under 0.05 / (number of candidate patterns) -- calendar months redrawn 5,000 times, so days of one month stay together.
+**What the result can mean.** The patterns were chosen on these same years, so every number here is flattered. Therefore: a pattern that FAILS is dead as a trade; a pattern that PASSES is only admitted to a forward record (rule SS-2, to be registered then), where the verdict comes. No page change follows from this test alone. Borrowing cost for selling a large stock short is not taken off; it is small for these companies and would only lower the numbers further.
+**Priors.** #198: no pattern passes. #199: before cost, the trade gains in 2018-2026 for more than half of the patterns (the move is not all overnight -- 3.102 measured +3 basis points overnight for SS-1). #200: the pattern with the best result after cost in 2018-2026 contains 'own results filing: yes'.
+"""
+if "### 3.103 Test SO-T registered" not in s: t.write_text(s.rstrip("\n") + A); print("  TRACK.md: 3.103 added")
+else: print("  TRACK.md: 3.103 already there -- skipped")
