@@ -12,8 +12,8 @@ What it does, in order:
   3. FOUND = in 2005-2017 the outcome's frequency inside the pattern differs strongly from its frequency over all sell-offs (z of 3.5 or more, on at
      least 60 day-equivalents). CONFIRMED = in 2018-2026 (not used for finding) the difference has the same sign and at least half the size, on at
      least 30 day-equivalents.
-  4. Repeats the WHOLE search on scrambled data (the outcomes slid along the calendar by a random amount, so they keep their own clustering in time
-     but no longer belong to their sell-offs), many times. If scrambled data gives as many CONFIRMED patterns as the real data, the list is luck.
+  4. Repeats the WHOLE search on scrambled data (each sell-off's outcome, together with its weight, slid along the calendar by a random amount, so the
+     outcomes keep their own clustering in time and each day still counts once, but they no longer belong to their sell-offs), many times. If scrambled data gives as many CONFIRMED patterns as the real data, the list is luck.
 
     python -m src.selloff_search run --trial                      # a few minutes: checks everything works and estimates the time of the full run
     python -m src.selloff_search run --shuffles 100 --max-hours 7 # the night run -> docs/selloff_search.md, .json (written after every family: nothing is lost if it stops)
@@ -84,27 +84,27 @@ def _search(items, fam, Yd, Yc, wd, wc, dmask, cmask, n_out, runs, keep_real):
     tabs = fam; idx = [k for k, it in enumerate(items) if it[0] in tabs]
     if not idx: return None
     Md = np.array([items[k][3][dmask] for k in idx], dtype=np.float32); Mc = np.array([items[k][3][cmask] for k in idx], dtype=np.float32); col = np.array([hash((items[k][0], items[k][1])) for k in idx]); tab = np.array([tabs.index(items[k][0]) for k in idx]); I = len(idx)
-    bd = Yd.sum(0) / wd.sum(); bc = Yc.sum(0) / wc.sum(); vd = np.maximum(bd * (1 - bd), 1e-9); found = np.zeros(runs); conf = np.zeros(runs); tried = 0; real = []; pair = len(tabs) == 2
+    w0d = wd[:, 0]; bd = (Yd.sum(0).reshape(runs, n_out) / wd.sum(0)[:, None]); bc = (Yc.sum(0).reshape(runs, n_out) / wc.sum(0)[:, None]); vd = np.maximum(bd * (1 - bd), 1e-9); found = np.zeros(runs); conf = np.zeros(runs); tried = 0; real = []; pair = len(tabs) == 2
     def block(rows_d, id_d, rows_c, id_c, combos):
         nonlocal tried
-        nd = rows_d @ wd[id_d]; ok = nd >= SUP_D
-        if not ok.any(): return ok, nd
-        rd = rows_d[ok]; sd = rd @ Yd[id_d]; ndk = nd[ok][:, None]; dd = sd / ndk - bd; z = dd / np.sqrt(vd / ndk); F = np.abs(z) >= ZMIN; tried += int(ok.sum()) * n_out
+        nd0 = rows_d @ w0d[id_d]; ok = nd0 >= SUP_D
+        if not ok.any(): return ok, nd0
+        rd = rows_d[ok]; nd = (rd @ wd[id_d])[:, :, None]; sd = (rd @ Yd[id_d]).reshape(len(rd), runs, n_out); dd = sd / np.maximum(nd, 1e-9) - bd; z = dd / np.sqrt(vd / np.maximum(nd, 1e-9)); F = (np.abs(z) >= ZMIN) & (nd >= SUP_D); tried += int(ok.sum()) * n_out
         if F.any():
-            rc = rows_c[ok]; nc = (rc @ wc[id_c])[:, None]; dc = (rc @ Yc[id_c]) / np.maximum(nc, 1e-9) - bc; Cf = F & (nc >= SUP_C) & (np.sign(dc) == np.sign(dd)) & (np.abs(dc) >= KEEP * np.abs(dd))
-            found[:] += F.reshape(len(rd), runs, n_out).sum(axis=(0, 2)); conf[:] += Cf.reshape(len(rd), runs, n_out).sum(axis=(0, 2))
+            rc = rows_c[ok]; nc = (rc @ wc[id_c])[:, :, None]; dc = (rc @ Yc[id_c]).reshape(len(rc), runs, n_out) / np.maximum(nc, 1e-9) - bc; Cf = F & (nc >= SUP_C) & (np.sign(dc) == np.sign(dd)) & (np.abs(dc) >= KEEP * np.abs(dd))
+            found[:] += F.sum(axis=(0, 2)); conf[:] += Cf.sum(axis=(0, 2))
             if keep_real:
-                R = Cf.reshape(len(rd), runs, n_out)[:, 0, :]; pos = np.flatnonzero(ok)
-                for a, o in zip(*np.nonzero(R)): real.append((tuple(idx[k] for k in combos[pos[a]]), int(o), float(ndk[a, 0]), float(sd[a, o] / ndk[a, 0]), float(bd[o]), float(z[a, o]), float(nc[a, 0]), float(dc[a, o] + bc[o]), float(bc[o])))
-        return ok, nd
+                pos = np.flatnonzero(ok)
+                for a, o in zip(*np.nonzero(Cf[:, 0, :])): real.append((tuple(idx[k] for k in combos[pos[a]]), int(o), float(nd[a, 0, 0]), float(sd[a, 0, o] / nd[a, 0, 0]), float(bd[0, o]), float(z[a, 0, o]), float(nc[a, 0, 0]), float(dc[a, 0, o] + bc[0, o]), float(bc[0, o])))
+        return ok, nd0
     alld = np.arange(Md.shape[1]); allc = np.arange(Mc.shape[1])
     if not pair: block(Md, alld, Mc, allc, [(k,) for k in range(I)])
     for i in range(I - 1):
         id_i = np.flatnonzero(Md[i]); ic_i = np.flatnonzero(Mc[i])
-        if wd[id_i].sum() < SUP_D: continue
+        if w0d[id_i].sum() < SUP_D: continue
         js = np.array([j for j in range(i + 1, I) if col[j] != col[i]])
         if not len(js): continue
-        rows_d = Md[js][:, id_i]; rows_c = Mc[js][:, ic_i]; use2 = (tab[js] != tab[i]) if pair else np.ones(len(js), bool); nd2 = rows_d @ wd[id_i]
+        rows_d = Md[js][:, id_i]; rows_c = Mc[js][:, ic_i]; use2 = (tab[js] != tab[i]) if pair else np.ones(len(js), bool); nd2 = rows_d @ w0d[id_i]
         if use2.any(): block(rows_d[use2], id_i, rows_c[use2], ic_i, [(i, int(j)) for j in js[use2]])
         for a in np.flatnonzero(nd2 >= SUP_D):
             j = int(js[a]); id_ij = id_i[rows_d[a] > 0]; ic_ij = ic_i[rows_c[a] > 0]; ks = np.array([k for k in range(j + 1, I) if col[k] != col[i] and col[k] != col[j] and (not pair or not (tab[k] == tab[i] == tab[j]))])
@@ -117,7 +117,7 @@ def cmd_run(shuffles: int, max_hours: float, trial: bool):
     have = [t for t in TABLES if (TB / f"{t}.csv").exists() and len(pd.read_csv(TB / f"{t}.csv", nrows=5))]; print(f"tables on disk: {', '.join(have)}; {shuffles} scrambled repeats; " + ("TRIAL" if trial else f"stops starting new work after {max_hours:.1f} hours"))
     head = ["# Sell-off study, stage D: the machine search for patterns", "", f"Registered in TRACK 3.98 before running. Patterns are FOUND on sell-offs of 2005-2017 and CONFIRMED on 2018-2026 (not used for finding). A pattern = one, two or three conditions together, from one table or a pair of tables. "
             f"FOUND: inside the pattern the outcome's frequency differs from its frequency over all sell-offs by z of {ZMIN} or more, on {SUP_D:.0f} or more day-equivalents (each day counts once however many securities fell). CONFIRMED: in 2018-2026 the difference has the same sign and at least half the size, on {SUP_C:.0f} or more day-equivalents. "
-            f"**The test:** the whole search is repeated {shuffles} times on scrambled data (the outcomes slid along the calendar by a random amount). 'p' = the share of scrambled repeats that gave at least as many CONFIRMED patterns as the real data. A group of sell-offs counts at p < {0.05 / len(BASES):.4f} (0.05 / {len(BASES)} groups). "
+            f"**The test:** the whole search is repeated {shuffles} times on scrambled data (each sell-off's outcome, with its weight, slid along the calendar by a random amount). 'p' = the share of scrambled repeats that gave at least as many CONFIRMED patterns as the real data. A group of sell-offs counts at p < {0.05 / len(BASES):.4f} (0.05 / {len(BASES)} groups). "
             "Only then are its patterns candidates, and only those seen in 24 or more separate months of 2005-2017 and 12 or more of 2018-2026 with a difference of 10 points or more in 2018-2026.", ""]
     bases = list(BASES.items())[:1] if trial else list(BASES.items()); per_family_seconds = []
     for bname, (unit, dfn) in bases:
@@ -125,10 +125,11 @@ def cmd_run(shuffles: int, max_hours: float, trial: bool):
         disc = (B.day < SPLIT).to_numpy(); conf = ~disc; w = (1.0 / B.groupby("day").day.transform("size")).to_numpy().astype(np.float32); items = _items(B, disc, rng); fams = [(t,) for t in have if any(it[0] == t for it in items)]; fams += [p for p in itertools.combinations([f[0] for f in fams], 2)]
         if trial: fams = fams[:2] + fams[len([f for f in fams if len(f) == 1]):][:1]
         if disc.sum() < 300 or conf.sum() < 150: print(f"  {bname}: too few sell-offs ({int(disc.sum())} / {int(conf.sum())}) -- skipped"); continue
-        def stack(Ysub, wsub):      # real outcomes, then the scrambled copies: the outcome rows slid along time by a random amount
-            n = len(Ysub); offs = [0] + [int(rng.integers(max(1, n // 10), max(2, n - n // 10))) for _ in range(shuffles)]; return (np.concatenate([np.roll(Ysub, o, axis=0) for o in offs], axis=1) * wsub[:, None]).astype(np.float32)
-        Yd = stack(Y[disc], w[disc]); Yc = stack(Y[conf], w[conf]); wd, wc = w[disc], w[conf]; tot_f = np.zeros(runs); tot_c = np.zeros(runs); real = []; fam_rows = []; tried = 0; done = 0
-        print(f"  {bname}: {int(disc.sum())} sell-offs to find on ({wd.sum():.0f} days), {int(conf.sum())} to confirm on ({wc.sum():.0f} days); {len(items)} items from {len(set(it[0] for it in items))} tables; {n_out} outcomes; {len(fams)} families")
+        def stack(Ysub, wsub):      # real outcomes, then the scrambled copies: each sell-off's outcome slides along time by a random amount AND TAKES ITS WEIGHT WITH IT
+            n = len(Ysub); offs = [0] + [int(rng.integers(max(1, n // 10), max(2, n - n // 10))) for _ in range(shuffles)]; YW = Ysub * wsub[:, None]      # (22 Nov: in the first run the weight stayed behind, so a crash day's sixty near-identical outcomes counted as sixty days in the scrambled copies)
+            return np.concatenate([np.roll(YW, o, axis=0) for o in offs], axis=1).astype(np.float32), np.column_stack([np.roll(wsub, o) for o in offs]).astype(np.float32)
+        (Yd, Wd), (Yc, Wc) = stack(Y[disc], w[disc]), stack(Y[conf], w[conf]); wd, wc = Wd, Wc; tot_f = np.zeros(runs); tot_c = np.zeros(runs); real = []; fam_rows = []; tried = 0; done = 0
+        print(f"  {bname}: {int(disc.sum())} sell-offs to find on ({w[disc].sum():.0f} days), {int(conf.sum())} to confirm on ({w[conf].sum():.0f} days); {len(items)} items from {len(set(it[0] for it in items))} tables; {n_out} outcomes; {len(fams)} families")
         for fam in fams:
             if (time.time() - t0) / 3600 > max_hours and not trial: print(f"    time limit reached: {len(fams) - done} families of this group not searched"); break
             t1 = time.time(); R = _search(items, list(fam), Yd, Yc, wd, wc, disc, conf, n_out, runs, True)

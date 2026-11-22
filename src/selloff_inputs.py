@@ -64,10 +64,14 @@ def cmd_fetch():
     for k in FRED:
         f = EX / f"fred_{k}.parquet"
         if f.exists(): continue
-        try:
-            raw = urllib.request.urlopen(urllib.request.Request(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={k}", headers={"User-Agent": "Mozilla/5.0"}), timeout=40).read().decode(); d = pd.read_csv(io.StringIO(raw)); d.columns = ["date", "value"]
-            d["value"] = pd.to_numeric(d["value"], errors="coerce"); d = d.dropna(); d.index = pd.to_datetime(d.pop("date")); d.to_parquet(f); n += 1
-        except Exception as e: bad.append(f"{k} ({type(e).__name__})")
+        err = None
+        for attempt in range(4):      # 22 Nov: every series failed once with a dropped connection; try again, slowly, with a plain browser-like request
+            try:
+                raw = urllib.request.urlopen(urllib.request.Request(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={k}", headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15", "Accept": "text/csv,*/*"}), timeout=90).read().decode(); d = pd.read_csv(io.StringIO(raw)); d.columns = ["date", "value"]
+                d["value"] = pd.to_numeric(d["value"], errors="coerce"); d = d.dropna(); d.index = pd.to_datetime(d.pop("date")); d.to_parquet(f); n += 1; err = None; break
+            except Exception as e: err = type(e).__name__; time.sleep(8 + 8 * attempt)
+        if err: bad.append(f"{k} ({err})")
+        time.sleep(2)
     print(f"  FRED: {n} series downloaded now; failed: {bad or 'none'}")
     if not os.environ.get("SEC_CONTACT"): raise SystemExit("SEC_CONTACT is not set (needed for the SEC part; the Yahoo and FRED parts are done)")
     import src.ai_earnings as A
