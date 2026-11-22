@@ -1,5 +1,5 @@
 {
- "made": "2026-11-22 21:50",
+ "made": "2026-11-22 21:58",
  "companies": 104,
  "companies_with_rule": 104,
  "companies_8plus": 96,
@@ -12,5 +12,28 @@
  "days_new": 432.9782665244211,
  "days_old": 446.00468377686036,
  "open_to2_bp": -18.43022696050523,
- "close_to2_bp": -16.42957784755074
+ "open_to3_bp": -35.04688878036144,
+ "close_to2_bp": -16.42957784755074,
+ "by_condition": {
+  "A steep curve, low short-term rates": {
+   "rule": 0.4731482813799479,
+   "all": 0.5068503099236698,
+   "days": 313.03937022098614
+  },
+  "Low long-term rates, low or negative real rates": {
+   "rule": 0.4416038038746036,
+   "all": 0.4829640748101626,
+   "days": 164.1132476335189
+  },
+  "A flat or inverted curve, a strong dollar": {
+   "rule": 0.4543752694890948,
+   "all": 0.4472401266733554,
+   "days": 167.38228047614945
+  },
+  "Rapid money growth, a high policy rate": {
+   "rule": 0.4650572925999781,
+   "all": 0.5041437671228987,
+   "days": 134.3420995896747
+  }
+ }
 }

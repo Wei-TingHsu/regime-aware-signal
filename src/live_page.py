@@ -9,7 +9,7 @@ from src import live_view as V
 REFRESH_S = 30; CANDIDATES = Path("docs/SOURCE_CANDIDATES.md")
 CSS = """<style>
 .sig{padding:10px 14px;border-radius:14px;border:1px solid rgba(20,23,31,.10);margin:8px 0 0 0;font-size:.88rem;line-height:1.45;background:rgba(255,255,255,.55)}
-.sopen{background:rgba(234,246,239,.85);border-color:#178A4C}.swait{background:rgba(255,247,230,.85);border-color:#B7791F}.sshut{background:rgba(244,245,247,.7)}
+.sred{background:rgba(255,228,224,.92);border-color:#C0392B}.swait{background:rgba(255,247,230,.85);border-color:#B7791F}.sopen{background:rgba(234,246,239,.85);border-color:#178A4C}.sshut{background:rgba(244,245,247,.7)}
 .sbig{font-size:1.0rem;font-weight:700}.smut{color:#5F6672;font-size:.8rem}
 /* founder, 21 Nov 2026: the three blocks are real blocks -- rounded like app icons, with a soft white-and-grey frosted background, text smaller than the other sections */
 .blk{border-radius:22px;padding:16px 20px 18px 20px;margin:4px 0 16px 0;border:1px solid rgba(255,255,255,.75);outline:1px solid rgba(20,23,31,.07);
@@ -50,53 +50,62 @@ def _df(x, rows=None):
     except Exception: st.dataframe(x, use_container_width=True, **kw)
 
 
-def _colour(minutes: float) -> str:
-    """founder, 21 Nov 2026: counted from the RELEASE of the news -- red for the first 5 minutes, yellow from 5 to 10, green from 10 to 15, then the usual background"""
-    if minutes < 5: return "background-color: #FF8A8A; color: #14171F"
-    if minutes < 10: return "background-color: #FFE680; color: #14171F"
-    if minutes < 15: return "background-color: #A8E6B4; color: #14171F"
-    return ""
+BEST_S = 300; GREEN_H = 24      # red lasts until 5 minutes after the tested entry time (the same limit as 'missed' in live_view); green stays for 24 hours after the rule's time ended
+CLS = {"red": "sred", "yellow": "swait", "green": "sopen", "": "sshut"}; ROW = {"red": "background-color: #FF8A8A; color: #14171F", "yellow": "background-color: #FFE680; color: #14171F", "green": "background-color: #A8E6B4; color: #14171F", "": ""}
+LEGEND = ("<span style='background:#FF8A8A;padding:1px 8px;border-radius:4px;color:#14171F'>red</span> a tested rule says trade NOW (from the release until 5 minutes after the rule's entry time) "
+          "<span style='background:#FFE680;padding:1px 8px;border-radius:4px;color:#14171F'>yellow</span> the rule still applies but the best entry time has passed "
+          "<span style='background:#A8E6B4;padding:1px 8px;border-radius:4px;color:#14171F'>green</span> the rule applied and its whole trading time is over (kept 24 hours) · no colour = no tested rule applies")
 
 
-def _coloured(T, minutes: list):
-    if not any(m < 15 for m in minutes): return T      # nothing recent: the plain table
+def _stage(b: dict, now) -> str:
+    """founder, 22 Nov 2026 -- ONE colour rule for everything on this page. Colour belongs to TESTED rules only:
+    red = urgent, tradable now; yellow = the rule still applies but the best entry time has passed; green = the rule applied, its whole trading time is over."""
+    a = b.get("action") or {}; st_ = a.get("state")
+    if st_ not in ("before entry", "OPEN", "closed", "missed") or a.get("enter") is None: return ""
+    if now >= a["exit"]: return "green" if (now - a["exit"]).total_seconds() <= GREEN_H * 3600 else ""
+    if st_ == "missed": return "yellow"      # it reached us more than 5 minutes after the tested entry time, the hour is still running
+    return "red" if (now - a["enter"]).total_seconds() <= BEST_S else "yellow"
+
+
+def _coloured(T, stages: list):
+    if not any(stages): return T      # no tested rule applies to any row: the plain table
     try:
-        css = [_colour(m) for m in minutes]; num = [c for c in T.columns if str(T[c].dtype).startswith(("float", "int"))]
+        css = [ROW[x] for x in stages]; num = [c for c in T.columns if str(T[c].dtype).startswith(("float", "int"))]
         return T.style.apply(lambda r: [css[r.name]] * len(r), axis=1).format(precision=2, na_rep="", subset=num)
     except Exception: return T
 
 
 def _body(tz: str):
     D = V.load(); now = D["now"]; hb = D["heartbeat_s"]; Z = V.ZoneInfo(tz); live = hb is not None and hb < 180
-    st.caption(f"Updated {now.astimezone(Z):%Y-%m-%d %H:%M:%S} local time · redraws every {REFRESH_S} seconds · " + (f"news listener running (last check {hb:.0f} seconds ago)" if live else "NEWS LISTENER NOT RUNNING" + (f" (last check {hb / 60:.0f} minutes ago)" if hb is not None else "")))
+    st.caption("Colours on this page: red = a tested rule says trade now · yellow = the rule still applies, best entry time passed · green = the rule's trading time is over · no colour = no tested rule. " + f"Updated {now.astimezone(Z):%Y-%m-%d %H:%M:%S} local time · redraws every {REFRESH_S} seconds · " + (f"news listener running (last check {hb:.0f} seconds ago)" if live else "NEWS LISTENER NOT RUNNING" + (f" (last check {hb / 60:.0f} minutes ago)" if hb is not None else "")))
     if not live: st.warning("The news listener is not running, so nothing new can appear here.")
 
     def block(title, caption, cards): st.markdown(f"<div class='blk'><div class='blk-title'>{title}</div><div class='blk-cap'>{caption}</div>{''.join(cards)}</div>", unsafe_allow_html=True)
 
     act = [b for b in D["scored"] if b["action"].get("state") in ("before entry", "OPEN")]; cards = []
     for b in act:
-        a = b["action"]; cls = "sopen" if a["state"] == "OPEN" else "swait"
-        cards.append(f"<div class='sig {cls}'><span class='sbig'>{a['text']}</span><br>{V.RULE_NAMES.get(a['rule'], a['rule'])} · score {a['score']:+.2f} · {'open now' if a['state'] == 'OPEN' else 'not yet open'} · {a['minutes_left']} minutes left · exit at {a['exit'].astimezone(Z):%Y-%m-%d %H:%M} local time<br><span class='smut'>{b['source']}: {b['title']} — {V.kind_label(b)}</span></div>")
+        a = b["action"]; stg = _stage(b, now); cls = CLS[stg]; word = {"red": "TRADE NOW", "yellow": "best entry time passed", "green": "trading time over"}.get(stg, "")
+        cards.append(f"<div class='sig {cls}'><span class='sbig'>{a['text']}</span><br><b>{word}</b> · {V.RULE_NAMES.get(a['rule'], a['rule'])} · score {a['score']:+.2f} · {'entry time reached' if a['state'] == 'OPEN' else 'entry time not yet reached'} · {a['minutes_left']} minutes left · exit at {a['exit'].astimezone(Z):%Y-%m-%d %H:%M} local time<br><span class='smut'>{b['source']}: {b['title']} — {V.kind_label(b)}</span></div>")
     if not cards: cards = ["<div class='sig sshut'><span class='sbig'>No suggestion right now.</span><br><span class='smut'>A suggestion appears when a company's financial results score 0.7 or more in size, or when the Fed issues a statement. It stays for the hour the rule covers.</span></div>"]
     block("Current High-Confidence Suggestions", "From a tested rule, while its hour is open. The strongest evidence on this page — still a candidate: each rule gets its verdict after 30 live trades (see Forward record).", cards)
 
     cards = []
     for b in D["alerts"][:6]:
-        d = b["read"] or {}; cards.append(f"<div class='sig swait'><b>{b['ticker']}: reads as {V.direction(b)}</b> (own-stock score {V._num(d.get('own_stock')):+.2f}) · released {b['release'].astimezone(Z):%Y-%m-%d %H:%M} local time<br>{b['source']}: {b['title']} — {V.kind_label(b)}<br><span class='smut'>Information only: no tested trading rule exists yet for this kind of news.</span></div>")
+        d = b["read"] or {}; cards.append(f"<div class='sig sshut'><b>{b['ticker']}: reads as {V.direction(b)}</b> (own-stock score {V._num(d.get('own_stock')):+.2f}) · released {b['release'].astimezone(Z):%Y-%m-%d %H:%M} local time<br>{b['source']}: {b['title']} — {V.kind_label(b)}<br><span class='smut'>Information only: no tested trading rule exists yet for this kind of news.</span></div>")
     if not cards: cards = ["<div class='sig sshut'><span class='smut'>No alert in the last 24 hours.</span></div>"]
     block("Current Low-Confidence Alerts (no tested rule)", "News from the last 24 hours that reads strongly but has no tested trading rule. Information, not a trade suggestion: the kinds tested so far (short-seller reports, well-known investors' calls) moved the price before a user could act.", cards)
 
     cards = []
     for b in [x for x in D["scored"] if x["action"].get("state") in ("closed", "missed")][:3]:
-        a = b["action"]; cards.append(f"<div class='sig sshut'><b>{'Ended:' if a['state'] == 'closed' else 'Arrived too late:'}</b> {a['text']} · {V.RULE_NAMES.get(a['rule'], a['rule'])} · score {a['score']:+.2f} · released {b['release'].astimezone(V.NY):%Y-%m-%d %H:%M} New York<br><span class='smut'>{b['source']}: {b['title']}</span></div>")
+        a = b["action"]; cards.append(f"<div class='sig {CLS[_stage(b, now)]}'><b>{'Ended:' if a['state'] == 'closed' else 'Arrived too late:'}</b> {a['text']} · {V.RULE_NAMES.get(a['rule'], a['rule'])} · score {a['score']:+.2f} · released {b['release'].astimezone(V.NY):%Y-%m-%d %H:%M} New York<br><span class='smut'>{b['source']}: {b['title']}</span></div>")
     if not cards: cards = ["<div class='sig sshut'><span class='smut'>None yet.</span></div>"]
     block("Past Suggestions (Reference)", "The three most recent suggestions whose hour is over, or that reached us too late to act on. For reference only.", cards)
 
     st.subheader("Scored news, newest first")
     items = D["scored"][:200]; T = V.table(items, tz, now)
     if len(T):
-        st.markdown("<span class='smut'>Row colour = time since the source released the item: <span style='background:#FF8A8A;padding:1px 8px;border-radius:4px;color:#14171F'>under 5 minutes</span> <span style='background:#FFE680;padding:1px 8px;border-radius:4px;color:#14171F'>5 to 10 minutes</span> <span style='background:#A8E6B4;padding:1px 8px;border-radius:4px;color:#14171F'>10 to 15 minutes</span> no colour = released more than 15 minutes ago. An item that reaches us late never turns red: see the two Time Lag columns.</span>", unsafe_allow_html=True)
-        _df(_coloured(T, [V.since_release(b, now) for b in items]), rows=15)
+        st.markdown("<span class='smut'>Row colour: " + LEGEND + "</span>", unsafe_allow_html=True)
+        _df(_coloured(T, [_stage(b, now) for b in items]), rows=15)
     else: st.info("Nothing scored yet.")
     st.caption("Source = where the item came from. What it is — Financial results: a company's quarterly report. Company announcement: any other item on the company's own news page or the news wire. Regulatory filing: a filing with the US regulator (SEC). Third-party report: research or an investigation by someone else, who may hold a position; its claims are not verified. Fed statement: the central bank's policy statement. "
                "Scores run from -1 (bad for the stock) to +1 (good). The two Time Lag columns show our speed: 'publish -> listener' is how many seconds after the source published the item our listener saw it; 'listener -> Claude responsiveness' is how many seconds Claude then took to return the score."

@@ -144,10 +144,14 @@ Rule: a stock of the list closes 5% or more below the previous close, on volume 
 
 ## 3. Does the state of the market change it?
 
-Each row: sell-offs that happened in that state. The pattern is the DIFFERENCE between the two percentage columns.
+Each row: sell-offs that happened in that state. The pattern is the DIFFERENCE between the two percentage columns. The first rows use the MAIN PAGE's four market conditions, under the same names; the rows below them are single measures (VIX, stress index), which are not conditions of the main page.
 
 | state of the market on the day | severe sell-offs: beat the S&P 500 over 2 sessions | all sell-offs | difference (points) | days (severe) |
 |---|---|---|---|---|
+| Market condition (main page): A steep curve, low short-term rates | 47% | 51% | -3 | 313 |
+| Market condition (main page): Low long-term rates, low or negative real rates | 44% | 48% | -4 | 164 |
+| Market condition (main page): A flat or inverted curve, a strong dollar | 45% | 45% | +1 | 167 |
+| Market condition (main page): Rapid money growth, a high policy rate | 47% | 50% | -4 | 134 |
 | VIX: low (under 25.6) | 45% | 48% | -3 | 776 |
 | VIX: middle (25.6 to 46.7) | 50% | 50% | -1 | 96 |
 | VIX: high (over 46.7) | 49% | 50% | -1 | 7 |

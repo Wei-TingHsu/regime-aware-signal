@@ -28,6 +28,16 @@ COLS = ["ticker", "day", "rule", "move_pct", "volume_x", "size_x", "run_up_60_pc
 def _rate(y, w): ok = np.isfinite(y); return (float((y[ok] * w[ok]).sum() / w[ok].sum()), float(w[ok].sum())) if ok.any() and w[ok].sum() > 0 else (float("nan"), 0.0)
 
 
+def _regimes():
+    """the MAIN PAGE's market conditions (the four regimes of the 'Today' tab), by the same call app.py makes, with the same names (processed/regime_profile.json).
+    Labels are the expanding ones: each day's condition uses only data up to that day. Returns (labels by day, {label: name}) or (None, {}) when the inputs are missing."""
+    try:
+        import asset_extension as AE
+        cfg = AE.load_config(); sc, _ = AE.load_data(); lab = pd.Series(np.asarray(AE.regime_labels_expanding(sc, cfg)), index=pd.DatetimeIndex(sc.index)); prof = json.loads(Path("processed/regime_profile.json").read_text()).get("regimes", {})
+        return lab, {int(k): v.get("label", f"Condition {int(k) + 1} of 4") for k, v in prof.items()}
+    except Exception as e: print(f"  (the main page's market conditions could not be loaded: {type(e).__name__}: {str(e)[:120]})"); return None, {}
+
+
 # ------------------------------------------------------------------ describe: the old data, in detail
 def cmd_describe():
     from src.selloff_study import _px
@@ -66,10 +76,15 @@ def cmd_describe():
         print("\n".join(L[-(R.sector.nunique() + 2):]))
     L += ["", "| company | severe sell-offs | beat the S&P 500 over 2 sessions |", "|---|---|---|"] + [f"| {t} | {int(x['size'])} | {x['mean']:.0%} |" for t, x in per.sort_values("size", ascending=False).iterrows()]
     # 3. does the state of the market change it?
-    L += ["", "## 3. Does the state of the market change it?", "", "Each row: sell-offs that happened in that state. The pattern is the DIFFERENCE between the two percentage columns.", "", "| state of the market on the day | severe sell-offs: beat the S&P 500 over 2 sessions | all sell-offs | difference (points) | days (severe) |", "|---|---|---|---|---|"]; n3 = len(L)
+    L += ["", "## 3. Does the state of the market change it?", "", "Each row: sell-offs that happened in that state. The pattern is the DIFFERENCE between the two percentage columns. The first rows use the MAIN PAGE's four market conditions, under the same names; the rows below them are single measures (VIX, stress index), which are not conditions of the main page.", "", "| state of the market on the day | severe sell-offs: beat the S&P 500 over 2 sessions | all sell-offs | difference (points) | days (severe) |", "|---|---|---|---|---|"]; n3 = len(L)
     def split(name, masks):
         for lab, m in masks:
             a, da = _rate(b2[m & rule], w[m & rule]); c, _ = _rate(b2[m], w[m]); L.append(f"| {name}: {lab} | {pct(a)} | {pct(c)} | {'n/a' if a != a else f'{(a - c) * 100:+.0f}'} | {da:.0f} |")
+    lab, names = _regimes(); REG = {}
+    if lab is not None:
+        lab = lab[~lab.index.duplicated()].sort_index(); ud = pd.DatetimeIndex(B.day.unique()); g = lab.reindex(lab.index.union(ud)).ffill().reindex(B.day).to_numpy(float)
+        for k in sorted(names):
+            m = g == k; a, da = _rate(b2[m & rule], w[m & rule]); c, _ = _rate(b2[m], w[m]); REG[names[k]] = dict(rule=a, all=c, days=da); L.append(f"| Market condition (main page): {names[k]} | {pct(a)} | {pct(c)} | {'n/a' if a != a else f'{(a - c) * 100:+.0f}'} | {da:.0f} |")
     v = B[F_VIX].to_numpy(float); q1, q2 = np.nanquantile(v[old], [1 / 3, 2 / 3]); split("VIX", [(f"low (under {q1:.1f})", v < q1), (f"middle ({q1:.1f} to {q2:.1f})", (v >= q1) & (v <= q2)), (f"high (over {q2:.1f})", v > q2)])
     s2 = B[F_200].to_numpy(float); split("S&P 500", [("above its 200-day average", s2 >= 0), ("below its 200-day average", s2 < 0)])
     t4 = ROOT / "tables" / "T4.csv"; col = "St. Louis Fed financial stress index"
@@ -87,7 +102,7 @@ def cmd_describe():
     print("\n".join(L[n4 - 2:])); L += ["", "A cost of about 30 basis points for a round trip is not taken off. If the 'next open' rows are near zero, the fall after a severe sell-off happens overnight and cannot be captured by selling at the open."]
     DOCS.mkdir(exist_ok=True); (DOCS / "selloff_rule.md").write_text("\n".join(L) + "\n")
     J = dict(made=f"{datetime.now():%Y-%m-%d %H:%M}", companies=int(B.ticker.nunique()), companies_with_rule=int(len(per)), companies_8plus=int(len(big)), companies_8plus_below=int((big["mean"] < base).sum()), rule_beat2_old=S[("2005-2017", "sev")][0], rule_beat2_new=S[("2018-2026", "sev")][0], all_beat2_new=S[("2018-2026", "all")][0],
-             rule_up2_new=S[("2018-2026", "sev")][2], all_up2_new=S[("2018-2026", "all")][2], days_new=S[("2018-2026", "sev")][1], days_old=S[("2005-2017", "sev")][1], open_to2_bp=T.get("next open -> close two"[:22]), close_to2_bp=T.get("close -> close two sessions"[:22]))
+             rule_up2_new=S[("2018-2026", "sev")][2], all_up2_new=S[("2018-2026", "all")][2], days_new=S[("2018-2026", "sev")][1], days_old=S[("2005-2017", "sev")][1], open_to2_bp=T.get("next open -> close two"[:22]), open_to3_bp=T.get("next open -> close three"[:22]), close_to2_bp=T.get("close -> close two sessions"[:22]), by_condition=REG)
     RULE_JSON.write_text(json.dumps(J, indent=1)); print("-> docs/selloff_rule.md, docs/selloff_rule.json")
 
 
@@ -155,7 +170,15 @@ def scan(quiet=False, download=None, now=None):
     L += [f"| {r.day:%Y-%m-%d} | {r.ticker} | {'YES' if r.rule == 1 else 'no'} | {r.move_pct:+.1f} | {r.volume_x:.1f} | {-r.size_x:.1f} | {f(r.after1_vs_spx_bp)} / {f(r.after2_vs_spx_bp)} / {f(r.after3_vs_spx_bp)} | {f(r.gap_next_open_bp)} | {f(r.open_to2_vs_spx_bp)} |" for r in F.sort_values("day", ascending=False).itertuples()]
     if not len(F): L.append("| (no sell-off of 5% or more since the start) | | | | | | | | |")
     DOCS.mkdir(exist_ok=True); (DOCS / "selloff_forward.md").write_text("\n".join(L) + "\n")
-    card = dict(updated=datetime.now(NY).isoformat(), last_close=f"{done[-1]:%Y-%m-%d}", session_open=bool(live), falling=sorted(falling, key=lambda x: x["move_pct"]), recent=sorted(recent, key=lambda x: (x["sessions_since"], x["move_pct"])),
+    cond = None
+    try:
+        old = json.loads(CARD.read_text()) if CARD.exists() else {}
+        if old.get("condition") and old.get("last_close") == f"{done[-1]:%Y-%m-%d}": cond = old["condition"]      # worked out once per finished session (it takes about a minute)
+        else:
+            lab, names = _regimes()
+            if lab is not None and len(lab.dropna()): x = lab.dropna(); cond = dict(name=names.get(int(x.iloc[-1]), f"Condition {int(x.iloc[-1]) + 1} of 4"), day=f"{x.index[-1]:%Y-%m-%d}")
+    except Exception: pass
+    card = dict(updated=datetime.now(NY).isoformat(), condition=cond, last_close=f"{done[-1]:%Y-%m-%d}", session_open=bool(live), falling=sorted(falling, key=lambda x: x["move_pct"]), recent=sorted(recent, key=lambda x: (x["sessions_since"], x["move_pct"])),
                 last_rule=dict(last_rule, day=f"{last_rule['day']:%Y-%m-%d}") if last_rule else None, tally=tally, history=H, stocks=len([t for t in stocks if t in P]))
     CARD.parent.mkdir(parents=True, exist_ok=True); tmp = CARD.with_suffix(".tmp"); tmp.write_text(json.dumps(card, indent=1, default=float)); os.replace(tmp, CARD)
     say(f"  {card['stocks']} stocks priced; last finished session {card['last_close']}; New York session {'OPEN' if live else 'closed'}"); say(f"  severe sell-offs in the last 3 sessions: {', '.join(x['ticker'] + ' ' + x['day'] for x in recent) or 'none'}" + (f"; falling 5% or more right now: {', '.join(x['ticker'] for x in falling) or 'none'}" if live else ""))
@@ -171,7 +194,7 @@ CARD_CSS = """<style>
 .sso:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(20,23,31,.14), inset 0 1px 0 rgba(255,255,255,.9)}
 .sso summary{cursor:pointer;list-style:none;outline:none}.sso summary::-webkit-details-marker{display:none}
 .sso-t{font-size:.9rem;font-weight:700;letter-spacing:.01em}.sso-more{float:right;color:#5F6672;font-size:.72rem;margin-top:2px}
-.sso-s{display:block;margin-top:1px}.sso-hot{outline:1px solid #C0392B;background:linear-gradient(135deg,rgba(255,236,233,.96),rgba(255,222,217,.9))}.sso-warm{outline:1px solid #B7791F;background:linear-gradient(135deg,rgba(255,249,235,.96),rgba(255,241,214,.9))}
+.sso-s{display:block;margin-top:1px}.sso-on{outline:2px solid rgba(20,23,31,.55)}
 .sso-d{margin-top:8px;padding-top:8px;border-top:1px solid rgba(20,23,31,.10)}.sso-d p{margin:0 0 6px 0}.sso-m{color:#5F6672;font-size:.72rem}
 </style>"""
 
@@ -197,8 +220,8 @@ def card_html() -> str:
     try: C = json.loads(CARD.read_text())
     except Exception: return ""
     H = C.get("history") or {}; T = C.get("tally") or {}; rec = C.get("recent") or []; fal = C.get("falling") or []; cls = ""; pc = lambda x: f"{x:.0%}"
-    if rec: cls = "sso-hot"; x = rec[0]; status = "<b>" + ", ".join(f"{r['ticker']} {r['move_pct']:+.1f}%" for r in rec[:3]) + (f" +{len(rec) - 3} more" if len(rec) > 3 else "") + "</b><br>" + (f"closed {x['day']} on {x['volume_x']:.1f}× volume · " if len(rec) == 1 else "") + ("history: further fall more likely" if (H.get("rule_beat2_new") is not None and H["rule_beat2_new"] < H["all_beat2_new"] - 0.05) else "history: open details")
-    elif fal: cls = "sso-warm"; status = "<b>Falling 5%+ now: " + ", ".join(f"{r['ticker']} {r['move_pct']:+.1f}%" for r in fal[:3]) + (f" +{len(fal) - 3}" if len(fal) > 3 else "") + "</b><br>counts only if it holds at the close"
+    if rec: cls = "sso-on"; x = rec[0]; status = "<b>" + ", ".join(f"{r['ticker']} {r['move_pct']:+.1f}%" for r in rec[:3]) + (f" +{len(rec) - 3} more" if len(rec) > 3 else "") + "</b><br>" + (f"closed {x['day']} on {x['volume_x']:.1f}× volume · " if len(rec) == 1 else "") + "candidate rule, not a tested trade"
+    elif fal: cls = "sso-on"; status = "<b>Falling 5%+ now: " + ", ".join(f"{r['ticker']} {r['move_pct']:+.1f}%" for r in fal[:3]) + (f" +{len(fal) - 3}" if len(fal) > 3 else "") + "</b><br>counts only if it holds at the close"
     else: lr = C.get("last_rule"); status = "None in the last 3 sessions." + (f"<br><span class='sso-m'>Last one: {lr['ticker']} {lr['move_pct']:+.1f}% on {lr['day']}</span>" if lr else "")
     d = []
     for r in rec: d.append(f"<p><b>{r['ticker']}</b> closed {r['move_pct']:+.1f}% on {r['day']}, on {r['volume_x']:.1f} times its normal volume · {r['sessions_since']} of 3 sessions gone.</p>")
@@ -206,6 +229,9 @@ def card_html() -> str:
     if H.get("rule_beat2_new") is not None: d.append(f"<p><b>History (2018–2026, {H['days_new']:.0f} days):</b> after a severe sell-off the stock beat the S&P 500 over the next 2 sessions {pc(H['rule_beat2_new'])} of the time, against {pc(H['all_beat2_new'])} after any sell-off of 5%. Its price was higher after 2 sessions {pc(H['rule_up2_new'])} of the time (any sell-off: {pc(H['all_up2_new'])}).</p>" +
                                                      (f"<p>From the next open to the close two sessions later, against the S&P 500: {H['open_to2_bp']:+.0f} basis points on average, before cost.</p>" if H.get("open_to2_bp") is not None else ""))
     else: d.append("<p><b>History:</b> in the pattern search (2018–2026) stocks that fell 5% or more on heavy volume beat the S&P 500 over the next 2 sessions about 33–38% of the time, against 48% after any sell-off of 5%.</p>")
+    cd = C.get("condition"); bc = (H.get("by_condition") or {}).get((cd or {}).get("name"))
+    if cd: d.append(f"<p><b>Market condition (main page) on {cd['day']}:</b> {cd['name']}." + (f" In this condition, after a severe sell-off the stock beat the S&P 500 over 2 sessions {pc(bc['rule'])} of the time, against {pc(bc['all'])} after any sell-off of 5% ({bc['days']:.0f} days)." if bc and bc.get("rule") == bc.get("rule") else "") + "</p>")
+    d.append("<p><b>No colour on purpose:</b> on this page red, yellow and green belong to tested rules only. This rule is a candidate until its forward record reaches 30 days.</p>")
     d.append("<p><b>Rule:</b> a stock of the list closes 5% or more down, on volume above 1.98 times its 60-session average, with a fall larger than 2.72 times its usual daily move. The card shows it for 3 sessions.</p>")
     d.append(f"<p><b>Forward record:</b> {T.get('days', 0)} of {VERDICT_AT} days counted" + (f"; beat the S&P 500 over 2 sessions on {pc(T['beat2'])} of them" if T.get("beat2") is not None else "") + ". Candidate, not a tested trade: the verdict comes at 30 live days.</p>")
     try: up = datetime.fromisoformat(C["updated"]); d.append(f"<p class='sso-m'>{C.get('stocks', 0)} large US stocks · daily prices from Yahoo · last finished session {C.get('last_close')} · checked {up:%d %b %H:%M} New York</p>")
