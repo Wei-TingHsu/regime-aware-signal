@@ -65,14 +65,19 @@ def cmd_fetch():
         f = EX / f"fred_{k}.parquet"
         if f.exists(): continue
         err = None
-        for attempt in range(4):      # 22 Nov: every series failed once with a dropped connection; try again, slowly, with a plain browser-like request
+        if os.environ.get("FRED_API_KEY"):      # 22 Nov: the public file address dropped every connection twice; the project's own FRED key (already used elsewhere in this repo) is the reliable route
+            try:
+                from fredapi import Fred
+                x = Fred(api_key=os.environ["FRED_API_KEY"]).get_series(k).dropna(); x.index = pd.to_datetime(x.index); x.to_frame("value").to_parquet(f); n += 1; time.sleep(0.6); continue
+            except Exception as e: err = f"with the key: {type(e).__name__}"
+        for attempt in range(2):      # 22 Nov: every series failed once with a dropped connection; try again, slowly, with a plain browser-like request
             try:
                 raw = urllib.request.urlopen(urllib.request.Request(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={k}", headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15", "Accept": "text/csv,*/*"}), timeout=90).read().decode(); d = pd.read_csv(io.StringIO(raw)); d.columns = ["date", "value"]
                 d["value"] = pd.to_numeric(d["value"], errors="coerce"); d = d.dropna(); d.index = pd.to_datetime(d.pop("date")); d.to_parquet(f); n += 1; err = None; break
             except Exception as e: err = type(e).__name__; time.sleep(8 + 8 * attempt)
         if err: bad.append(f"{k} ({err})")
         time.sleep(2)
-    print(f"  FRED: {n} series downloaded now; failed: {bad or 'none'}")
+    print(f"  FRED: {n} series downloaded now; failed: {bad or 'none'}" + ("" if os.environ.get("FRED_API_KEY") or not bad else "   (FRED_API_KEY is not set in this window; with it the series download through the project's own key)"))
     if not os.environ.get("SEC_CONTACT"): raise SystemExit("SEC_CONTACT is not set (needed for the SEC part; the Yahoo and FRED parts are done)")
     import src.ai_earnings as A
     FS = A._sec(); cmap = json.loads(FS.get(FS.TICKERS)); look = {v["ticker"].upper(): str(v["cik_str"]).zfill(10) for v in cmap.values()}; rows = []; bad = []; n = 0; meta = SEC / "companies.csv"
