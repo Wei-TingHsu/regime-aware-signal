@@ -7,7 +7,7 @@
 | T1 | the fall and the market | 20776 | 12 | 20776 | 2000 |
 | T2 | who fell and who set it off | 15886 | 16 | 13733 | 2005 |
 | T3 | the company's condition | 15886 | 9 | 9064 | 2010 |
-| T4 | stress and other markets | 20776 | 19 | 10396 | 2014 |
+| T4 | stress and other markets | 20776 | 37 | 2977 | 2023 |
 | T5 | calendar | 20776 | 8 | 11785 | 2011 |
 | T6 | Claude's reading (AI chain) | 2397 | 6 | 204 | 2010 |
 | T7 | short selling | 9549 | 3 | 9549 | 2011 |
@@ -144,19 +144,10 @@
 
 ## Notes
 
-- high-yield credit spread: not downloaded
-- 10-year minus 2-year yield: not downloaded
-- Chicago Fed financial conditions index: not downloaded
-- 2-year yield: not downloaded
-- 10-year expected inflation: not downloaded
-- news-based policy uncertainty index: not downloaded
-- St. Louis Fed financial stress index: not downloaded
-- new jobless claims: not downloaded
-- Fed funds rate: not downloaded
 - T1 columns (share of rows filled): size in units of its own usual move (100%); last day's move % (100%); where it closed in the day's range (100%); gap at the open % (100%); volume against normal (100%); distance below the one-year high % (100%); run-up over the 60 sessions before % (100%); the S&P 500 over the same sessions % (100%); share of large stocks down 3%+ that day (100%); VIX level (100%); VIX change over the same sessions % (100%); S&P 500 against its 200-day average % (100%)
 - T2 columns (share of rows filled): sector (100%); in_ai_chain (100%); own_results_filing (100%); own_other_filing (100%); own_filings_in_the_last_30_days (99%); days_since_own_results (96%); share_of_peers_down_3pct (93%); peers_average_move_pct (93%); fell_more_than_every_peer (93%); worst_peer_move_pct (93%); worst_peer_had_results (93%); worst_peer_had_any_filing (93%); a_peer_reported_results_and_fell_3pct (93%); no_own_filing_but_a_peer_filed_and_fell (93%); sector_fund_move_pct (95%); move_against_sector_fund_pct (95%)
 - T3 columns (share of rows filled): profitable_last_year (59%); revenue_growth_last_year_pct (60%); profit_margin_pct (58%); liabilities_to_assets_pct (63%); cash_to_assets_pct (61%); size_rank_in_the_list (100%); move_over_the_year_before_pct (100%); sensitivity_to_the_market (100%); usual_daily_move_pct (100%)
-- T4 columns (share of rows filled): VIX against the three-month VIX (93%); VIX against the nine-day VIX (58%); volatility of the VIX (92%); SKEW index (100%); 10-year yield, change over 5 sessions (100%); 3-month yield, change over 5 sessions (100%); dollar index, move over 5 sessions % (100%); oil, move over 5 sessions % (99%); gold, move over 5 sessions % (99%); copper, move over 5 sessions % (99%); high-yield bond fund, move over 5 sessions % (92%); investment-grade bond fund, move over 5 sessions % (96%); long Treasury fund, move over 5 sessions % (96%); emerging-market shares, move over 5 sessions % (95%); regional banks, move over 5 sessions % (93%); bitcoin, move over 5 sessions % (50%); small against large companies, 5 sessions % (99%); value against growth shares, 5 sessions % (99%); the average share against the S&P 500, 5 sessions % (95%)
+- T4 columns (share of rows filled): high-yield credit spread (14%); high-yield credit spread, change over 5 observations (14%); 10-year minus 2-year yield (100%); 10-year minus 2-year yield, change over 5 observations (100%); Chicago Fed financial conditions index (100%); Chicago Fed financial conditions index, change over 5 observations (100%); 2-year yield (100%); 2-year yield, change over 5 observations (100%); 10-year expected inflation (95%); 10-year expected inflation, change over 5 observations (95%); news-based policy uncertainty index (100%); news-based policy uncertainty index, change over 5 observations (100%); St. Louis Fed financial stress index (100%); St. Louis Fed financial stress index, change over 5 observations (100%); new jobless claims (100%); new jobless claims, change over 5 observations (100%); Fed funds rate (100%); Fed funds rate, change over 5 observations (100%); VIX against the three-month VIX (93%); VIX against the nine-day VIX (58%); volatility of the VIX (92%); SKEW index (100%); 10-year yield, change over 5 sessions (100%); 3-month yield, change over 5 sessions (100%); dollar index, move over 5 sessions % (100%); oil, move over 5 sessions % (99%); gold, move over 5 sessions % (99%); copper, move over 5 sessions % (99%); high-yield bond fund, move over 5 sessions % (92%); investment-grade bond fund, move over 5 sessions % (96%); long Treasury fund, move over 5 sessions % (96%); emerging-market shares, move over 5 sessions % (95%); regional banks, move over 5 sessions % (93%); bitcoin, move over 5 sessions % (50%); small against large companies, 5 sessions % (99%); value against growth shares, 5 sessions % (99%); the average share against the S&P 500, 5 sessions % (95%)
 - T5 columns (share of rows filled): weekday (100%); month (100%); sessions_to_month_end (100%); sessions_to_quarter_end (100%); option_expiry_week (100%); days_to_next_fed_statement (57%); days_since_last_fed_statement (58%); results_filings_in_the_list_last_10_days (100%)
 - T6 columns (share of rows filled): latest_results_score (100%); days_since_those_results (100%); results_in_the_window (100%); event_in_the_window_score (9%); event_in_the_window_material (9%); event_in_the_window_type (9%)
 - T7 columns (share of rows filled): short_sales_share_of_volume_that_day (100%); short_sales_share_average_of_20_days_before (100%); short_sales_share_that_day_against_its_average (100%)

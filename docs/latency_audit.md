@@ -1,14 +1,14 @@
 # Input latency audit
 
-*2026-11-12 15:06. Last completed NYSE session: 2026-11-11. Lag = sessions the series is behind it at run time. Flag rule (TRACK 3.27): ≥ 2 sessions behind on ≥ 20% of the last 20 runs → STALE. Runs on record: 16.*
+*2026-11-18 15:18. Last completed NYSE session: 2026-11-17. Lag = sessions the series is behind it at run time. Flag rule (TRACK 3.27): ≥ 2 sessions behind on ≥ 20% of the last 20 runs → STALE. Runs on record: 20.*
 
 | file | series | last date this run | lag now | runs seen | share ≥ 2 behind | flag |
 |---|---|---|---|---|---|---|
-| asset_returns.parquet | SPY | 2026-11-11 | 0 | 16 | 0% |  |
-| asset_returns.parquet | TLT | 2026-11-11 | 0 | 16 | 0% |  |
-| asset_returns.parquet | GLD | 2026-11-11 | 0 | 16 | 0% |  |
-| asset_returns.parquet | UUP | 2026-11-11 | 0 | 16 | 0% |  |
-| asset_returns.parquet | USO | 2026-11-11 | 0 | 16 | 0% |  |
+| asset_returns.parquet | SPY | 2026-11-13 | 2 | 20 | 5% | watch |
+| asset_returns.parquet | TLT | 2026-11-13 | 2 | 20 | 5% | watch |
+| asset_returns.parquet | GLD | 2026-11-12 | 3 | 20 | 10% | watch |
+| asset_returns.parquet | UUP | 2026-11-13 | 2 | 20 | 5% | watch |
+| asset_returns.parquet | USO | 2026-11-13 | 2 | 20 | 5% | watch |
 | macro_panel.parquet | DGS10 | 2026-10-22 | 0 | 1 | 0% |  |
 | macro_panel.parquet | DFII10 | 2026-10-22 | 0 | 1 | 0% |  |
 | macro_panel.parquet | T10Y2Y | 2026-10-22 | 0 | 1 | 0% |  |
@@ -17,31 +17,31 @@
 | macro_panel.parquet | EFFR | 2026-10-22 | 0 | 1 | 0% |  |
 | macro_panel.parquet | VIXCLS | 2026-10-22 | 0 | 1 | 0% |  |
 | macro_panel.parquet | DTWEXBGS | 2026-10-22 | 0 | 1 | 0% |  |
-| wti_cont.parquet | WTI_SPOT | 2026-11-06 | 3 | 16 | 31% | STALE |
-| wti_cont.parquet | WTI_FUT | 2026-11-12 | 0 | 16 | 12% |  |
-| wti_cont.parquet | USO | 2026-11-11 | 0 | 16 | 12% |  |
-| yahoo-live | SPY | 2026-11-11 | 0 | 16 | 0% |  |
-| yahoo-live | GLD | 2026-11-11 | 0 | 16 | 0% |  |
-| yahoo-live | USO | 2026-11-11 | 0 | 16 | 0% |  |
-| yahoo-live | TLT | 2026-11-11 | 0 | 16 | 0% |  |
-| yahoo-live | UUP | 2026-11-11 | 0 | 16 | 0% |  |
-| yahoo-live | ^TNX | 2026-11-11 | 0 | 16 | 0% |  |
-| yahoo-live | DX-Y.NYB | 2026-11-12 | 0 | 16 | 0% |  |
-| yahoo-live | CL=F | 2026-11-12 | 0 | 16 | 0% |  |
-| yahoo-live | SI=F | 2026-11-12 | 0 | 16 | 0% |  |
-| raw/yfinance | GLD | 2026-11-11 | 0 | 15 | 7% |  |
-| raw/yfinance | SPY | 2026-11-11 | 0 | 15 | 7% |  |
-| raw/yfinance | TLT | 2026-11-11 | 0 | 15 | 7% |  |
-| raw/yfinance | USO | 2026-11-11 | 0 | 15 | 7% |  |
-| raw/yfinance | UUP | 2026-11-11 | 0 | 15 | 7% |  |
-| raw/fred | DFII10 | 2026-11-09 | 2 | 15 | 7% |  |
-| raw/fred | DGS10 | 2026-11-09 | 2 | 15 | 7% |  |
-| raw/fred | DGS2 | 2026-11-09 | 2 | 15 | 7% |  |
-| raw/fred | DTWEXBGS | 2026-11-06 | 3 | 15 | 80% | STALE |
-| raw/fred | EFFR | 2026-11-09 | 2 | 15 | 7% |  |
-| raw/fred | M2SL | 2026-09-01 | 51 | 15 | 100% | STALE |
-| raw/fred | SOFR | 2026-07-02 | 94 | 15 | 100% | STALE |
-| raw/fred | T10Y2Y | 2026-11-10 | 1 | 15 | 0% |  |
-| raw/fred | VIXCLS | 2026-11-10 | 1 | 15 | 0% |  |
+| wti_cont.parquet | WTI_SPOT | 2026-11-16 | 1 | 20 | 30% | STALE |
+| wti_cont.parquet | WTI_FUT |  |  | 20 | 10% |  |
+| wti_cont.parquet | USO | 2026-11-13 | 2 | 20 | 20% | STALE |
+| yahoo-live | SPY |  |  | 20 | 0% |  |
+| yahoo-live | GLD |  |  | 20 | 0% |  |
+| yahoo-live | USO |  |  | 20 | 0% |  |
+| yahoo-live | TLT |  |  | 20 | 0% |  |
+| yahoo-live | UUP |  |  | 20 | 0% |  |
+| yahoo-live | ^TNX |  |  | 20 | 0% |  |
+| yahoo-live | DX-Y.NYB |  |  | 20 | 0% |  |
+| yahoo-live | CL=F |  |  | 20 | 0% |  |
+| yahoo-live | SI=F |  |  | 20 | 0% |  |
+| raw/yfinance | GLD | 2026-11-12 | 3 | 19 | 16% | watch |
+| raw/yfinance | SPY | 2026-11-13 | 2 | 19 | 11% | watch |
+| raw/yfinance | TLT | 2026-11-13 | 2 | 19 | 11% | watch |
+| raw/yfinance | USO | 2026-11-13 | 2 | 19 | 11% | watch |
+| raw/yfinance | UUP | 2026-11-13 | 2 | 19 | 11% | watch |
+| raw/fred | DFII10 | 2026-11-12 | 3 | 19 | 21% | STALE |
+| raw/fred | DGS10 | 2026-11-12 | 3 | 19 | 21% | STALE |
+| raw/fred | DGS2 | 2026-11-12 | 3 | 19 | 21% | STALE |
+| raw/fred | DTWEXBGS | 2026-11-06 | 7 | 19 | 84% | STALE |
+| raw/fred | EFFR | 2026-11-12 | 3 | 19 | 21% | STALE |
+| raw/fred | M2SL | 2026-09-01 | 55 | 19 | 100% | STALE |
+| raw/fred | SOFR | 2026-07-02 | 98 | 19 | 100% | STALE |
+| raw/fred | T10Y2Y | 2026-11-13 | 2 | 19 | 5% | watch |
+| raw/fred | VIXCLS | 2026-11-12 | 3 | 19 | 16% | watch |
 
 Reading: raw/fred and raw/yfinance are what the nightly --force refresh actually received (no forward-fill). A lag of 1 on FRED series is their publication schedule, declared where it matters (the oil leg's provisional flag). A lag of 1 on the price panel at the nightly run time means the download missed the latest close — the fault seen on 16 and 21 Oct 2026. Backtests are unaffected by latency only where the backfill used the same as-of alignment; that is checked per flagged series.
