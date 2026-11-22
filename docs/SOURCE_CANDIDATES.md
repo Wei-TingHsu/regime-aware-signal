@@ -9,6 +9,7 @@ to know how strong these sources can influence the market; if it doesn't, there 
 | Well-known investors who make public calls on a stock | Michael Burry, Warren Buffett, George Soros, Bill Ackman, Ray Dalio, Cathie Wood, Carl Icahn (named 20 Nov 2026) | SR-2: the same reaction test; and whether two or more calls in the same direction within two weeks move the price more than one alone | TESTED, NOT ADMITTED (TRACK 3.76-3.81, 21 Nov): the price moves with the call on the day and jumps by the next open; from the next open onward nothing passes and the average is negative after cost; clusters (34): not supported. No rule; not read live. Open route: true minute of each call (SEC filing times) as a forward record. |
 | News media | Reuters, Bloomberg, CNBC, Seeking Alpha | SR-3: whether their items about the listed companies move the price on the day and the next 7 sessions | registered 20 Nov; after SR-1 and SR-2 |
 | Research publishers | SemiAnalysis | read live since 20 Nov as information only; reaction test with SR-1's method once enough items exist | live, no rule |
+| Market-research firms | TrendForce (named 22 Nov 2026) | TF-1: the memory, foundry and server stocks of the list after its releases, by subject and direction; one session to several weeks | list of releases being collected (TRACK 3.105); live as information only |
 
 New source addresses found later by the discovery search are added to this table automatically, with the date found.
 

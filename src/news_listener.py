@@ -36,6 +36,7 @@ FEEDS = [dict(name="PR Newswire: all releases", kind="wire", url="https://www.pr
 RESEARCH = [      # founder, 20 Nov: research publishers and funds that publish their reports. THIRD PARTIES: their claims are theirs, they may hold a position.
     dict(name="Hunterbrook", kind="research", short=True, position="publishes investigations and may trade on them (long or short)", urls=["https://newsletter.hntrbrk.com/feed", "https://hntrbrk.com/feed/", "https://hntrbrk.com/rss.xml"]),
     dict(name="SemiAnalysis", kind="research", position="independent semiconductor and AI research; sells research", urls=["https://semianalysis.com/feed/", "https://newsletter.semianalysis.com/feed", "https://www.semianalysis.com/feed"]),
+    dict(name="TrendForce", kind="research", position="market-research firm (memory, foundry, servers, displays); sells research; states no position", urls=["https://www.trendforce.com/feed/Semiconductors.html"]),
 ]      # the addresses are candidates; the first that answers is used (see `once`)
 SHORT = [      # founder, 21 Nov: publishers of short reports, admitted as live ALERTS after SR-1 showed their reports move the price on the day (TRACK 3.85). THIRD PARTIES, claims unverified, no trading rule.
     dict(name="Grizzly Research", kind="short", position="publishes short reports and may hold a short position", url="https://grizzlyreports.com/feed/"),

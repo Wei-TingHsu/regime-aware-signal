@@ -38,3 +38,14 @@ company news, and has no trading rule until one is tested. (3) Anonymous posts a
 | Media reports of company events before the company files | 15 Nov 2026 (raised by the test's limits) | no free, timed, primary route found |
 
 ## Research data sources (not news): see `SPEC_GRID.md` §3.
+
+## Trading costs and single-stock funds (22 Nov 2026)
+| source | what it is used for | status |
+|---|---|---|
+| The founder's broker, fee board 'US shares, ordinary orders' (screenshots, 22 Nov 2026) | the real fees in `src/real_cost.py` | primary (the founder's own account) |
+| Direxion, 'Single Stock ETFs List' (direxion.com/uploads/Single-Stock-ETFs-List.pdf) | which stocks have a 2x long or a 1x inverse fund | issuer's own list; each fund also checked against prices |
+| GraniteShares, product guide (graniteshares.com) | 2x long and 2x short single-stock funds | issuer's own list; checked against prices |
+| REX Shares, 'T-REX leveraged ETFs' (rexshares.com/t-rex-leveraged-etfs) | 2x long and 2x inverse single-stock funds | issuer's own list; checked against prices |
+| Tradr (TSLQ, NVDS) | two more inverse funds | named from memory, claims unverified; used only if the price check agrees |
+| Yahoo Finance daily prices with splits (free) | real share prices of each day, the funds' prices | secondary data vendor, free |
+| TrendForce press centre, Semiconductors (trendforce.com/presscenter/news/Semiconductors; feed trendforce.com/feed/Semiconductors.html) | research releases on memory, foundry, servers | third party, claims unverified; date only, no time of day; free |
