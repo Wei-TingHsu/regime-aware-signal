@@ -141,19 +141,25 @@ def _run(items, sys_prompt, out_dir, max_usd, max_tokens, label):
     """items: (key, user text). One call per item; each answer is saved at once, so a stop loses nothing and a second run continues."""
     from src.news_events2 import _client, _parse, MODEL, FATAL
     from src.short_reports import IN_RATE, OUT_RATE
-    client = _client(); out_dir.mkdir(parents=True, exist_ok=True); tin = tout = n = bad = 0; cost = lambda: tin / 1e6 * IN_RATE + tout / 1e6 * OUT_RATE; todo = [(k, u) for k, u in items if not (out_dir / f"{k}.json").exists()]
+    client = _client(); out_dir.mkdir(parents=True, exist_ok=True); tin = tout = n = bad = 0; why = {}; row = 0; cost = lambda: tin / 1e6 * IN_RATE + tout / 1e6 * OUT_RATE; todo = [(k, u) for k, u in items if not (out_dir / f"{k}.json").exists()]
     print(f"  {label}: {len(items)} in all, {len(todo)} still to read; limit US${max_usd:.2f}")
     for k, u in todo:
         if cost() >= max_usd: print(f"  stopped at the limit of US${max_usd:.2f}; run again with a higher limit to continue"); break
         try:
             a = client.messages.create(model=MODEL, max_tokens=max_tokens, system=sys_prompt, messages=[{"role": "user", "content": u}]); t = "".join(b.text for b in a.content if b.type == "text"); tin += a.usage.input_tokens; tout += a.usage.output_tokens
-            d = _parse(t)
-            if not isinstance(d, dict): bad += 1; continue
+            row = 0
+            try: d = _parse(t)
+            except Exception: d = None
+            if not isinstance(d, dict) or not d:      # paid for, but the answer cannot be used: say why (23 Nov: 138 of 340 failed silently, most of them answers cut off at the length limit)
+                r_ = "answer cut off at the length limit" if getattr(a, "stop_reason", "") == "max_tokens" else "answer was not valid JSON"; why[r_] = why.get(r_, 0) + 1; bad += 1; continue
             (out_dir / f"{k}.json").write_text(json.dumps(dict(key=k, model=MODEL, prompt_version=PV, read=d), indent=1)); n += 1
         except Exception as e:
             if any(f in str(e).lower() for f in FATAL): print(f"  stopped: {str(e)[:160]}"); break
-            bad += 1
+            r_ = type(e).__name__; why[r_] = why.get(r_, 0) + 1; bad += 1; row += 1
+            if row >= 5: print(f"  stopped: 5 calls in a row failed without an answer ({r_}: {str(e)[:120]}). Usually the internet connection or the key. Nothing was charged for these. Run again when it works."); break
+            time.sleep(2)
         if (n + bad) % 50 == 0 and n + bad: print(f"  {n + bad} of {len(todo)}; US${cost():.2f} so far")
+    if why: print("  why the failures: " + "; ".join(f"{k} {v}" for k, v in sorted(why.items(), key=lambda x: -x[1])))
     print(f"{label}: {n} read now, {bad} failed (run again to retry); {len(list(out_dir.glob('*.json')))} of {len(items)} on disk. Spent now: about US${cost():.2f} ({tin:,} tokens in, {tout:,} out).")
 
 
@@ -162,12 +168,12 @@ def cmd_profiles(max_usd: float):
     for r in F.itertuples():
         f = FIL / f"{r.ticker}_{r.filed}.txt"
         if f.exists() and int(r.chars) >= 8000: items.append((f"{r.ticker}_{r.filed}", f"COMPANY: {r.ticker}. ANNUAL REPORT ({r.form}) filed {r.filed}, for the year ended {r.period}.\n\n{f.read_text()}"))
-    _run(items, SYS_PROFILE, PRO, max_usd, 2500, "Step 1, company profiles")
+    _run(items, SYS_PROFILE, PRO, max_usd, 8000, "Step 1, company profiles")      # 23 Nov: 2,500 cut long profiles off (same prompt, only the length limit raised)
 
 
 def cmd_read(max_usd: float):
     R = pd.read_csv(TF / "releases.csv", dtype=str); items = [(r.id, f"PRESS RELEASE of {r.date}. TITLE: {r.title}\n\n{(TXT / f'{r.id}.txt').read_text()}") for r in R.itertuples() if (TXT / f"{r.id}.txt").exists()]
-    _run(items, SYS_RELEASE, RD, max_usd, 1500, "Step 2, releases")
+    _run(items, SYS_RELEASE, RD, max_usd, 3000, "Step 2, releases")
 
 
 def cmd_show():
