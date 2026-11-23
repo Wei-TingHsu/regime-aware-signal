@@ -12,10 +12,13 @@ The chain, each step on disk:
                x the release's change, using the company's reported revenue, margins and cash flow. The score is that change as a share of revenue.
   4. TEST      registered separately before it runs: does the score tell the stock's move after the release?
 
-THIS FILE, so far: the free steps and the cost count. Nothing is read by Claude until the founder has seen the cost.
+The free steps and the cost count come first; the two reading steps spend credit and stop at the limit given with --max-usd.
     python -m src.exposure filings     # free: the annual reports of the basket's technology companies from the SEC -> data_provenance/exposure/filings
     python -m src.exposure texts       # free: the full text of the TrendForce releases -> data_provenance/trendforce/text
     python -m src.exposure cost        # counts what steps 1 and 2 would cost; reads nothing
+    python -m src.exposure profiles --max-usd 20   # step 1: Claude reads the annual reports -> data_provenance/exposure/profiles
+    python -m src.exposure read --max-usd 20       # step 2: Claude reads the releases -> data_provenance/exposure/reads
+    python -m src.exposure show        # free: what was read, in words -> docs/exposure_profiles.md
 """
 from __future__ import annotations
 import argparse, html, json, os, re, time
@@ -131,10 +134,70 @@ def cmd_cost():
     DOCS.mkdir(exist_ok=True); (DOCS / "exposure_cost.md").write_text("# Exposure reading (EX-1): what the two reading steps would cost\n\n" + "\n\n".join(L) + f"\n\nPrompt version {PV}. Nothing was read.\n")
 
 
+PRO = ROOT / "profiles"; RD = ROOT / "reads"
+
+
+def _run(items, sys_prompt, out_dir, max_usd, max_tokens, label):
+    """items: (key, user text). One call per item; each answer is saved at once, so a stop loses nothing and a second run continues."""
+    from src.news_events2 import _client, _parse, MODEL, FATAL
+    from src.short_reports import IN_RATE, OUT_RATE
+    client = _client(); out_dir.mkdir(parents=True, exist_ok=True); tin = tout = n = bad = 0; cost = lambda: tin / 1e6 * IN_RATE + tout / 1e6 * OUT_RATE; todo = [(k, u) for k, u in items if not (out_dir / f"{k}.json").exists()]
+    print(f"  {label}: {len(items)} in all, {len(todo)} still to read; limit US${max_usd:.2f}")
+    for k, u in todo:
+        if cost() >= max_usd: print(f"  stopped at the limit of US${max_usd:.2f}; run again with a higher limit to continue"); break
+        try:
+            a = client.messages.create(model=MODEL, max_tokens=max_tokens, system=sys_prompt, messages=[{"role": "user", "content": u}]); t = "".join(b.text for b in a.content if b.type == "text"); tin += a.usage.input_tokens; tout += a.usage.output_tokens
+            d = _parse(t)
+            if not isinstance(d, dict): bad += 1; continue
+            (out_dir / f"{k}.json").write_text(json.dumps(dict(key=k, model=MODEL, prompt_version=PV, read=d), indent=1)); n += 1
+        except Exception as e:
+            if any(f in str(e).lower() for f in FATAL): print(f"  stopped: {str(e)[:160]}"); break
+            bad += 1
+        if (n + bad) % 50 == 0 and n + bad: print(f"  {n + bad} of {len(todo)}; US${cost():.2f} so far")
+    print(f"{label}: {n} read now, {bad} failed (run again to retry); {len(list(out_dir.glob('*.json')))} of {len(items)} on disk. Spent now: about US${cost():.2f} ({tin:,} tokens in, {tout:,} out).")
+
+
+def cmd_profiles(max_usd: float):
+    F = pd.read_csv(ROOT / "filings.csv", dtype=str); items = []
+    for r in F.itertuples():
+        f = FIL / f"{r.ticker}_{r.filed}.txt"
+        if f.exists() and int(r.chars) >= 8000: items.append((f"{r.ticker}_{r.filed}", f"COMPANY: {r.ticker}. ANNUAL REPORT ({r.form}) filed {r.filed}, for the year ended {r.period}.\n\n{f.read_text()}"))
+    _run(items, SYS_PROFILE, PRO, max_usd, 2500, "Step 1, company profiles")
+
+
+def cmd_read(max_usd: float):
+    R = pd.read_csv(TF / "releases.csv", dtype=str); items = [(r.id, f"PRESS RELEASE of {r.date}. TITLE: {r.title}\n\n{(TXT / f'{r.id}.txt').read_text()}") for r in R.itertuples() if (TXT / f"{r.id}.txt").exists()]
+    _run(items, SYS_RELEASE, RD, max_usd, 1500, "Step 2, releases")
+
+
+def cmd_show():
+    """free: what the two reading steps produced, in words, so the founder can check it against what he knows"""
+    P = [json.loads(f.read_text()) for f in sorted(PRO.glob("*.json"))] if PRO.exists() else []; Rr = [json.loads(f.read_text()) for f in sorted(RD.glob("*.json"))] if RD.exists() else []
+    L = ["# Exposure reading (EX-1): what Claude read", "", f"{len(P)} company profiles and {len(Rr)} releases on disk. Prompt version {PV}. No price has been joined to any of this.", ""]; latest = {}; kinds = {"stated in the report": 0, "computed from stated figures": 0, "estimated from the description": 0, "none": 0}
+    for p in P:
+        tk, filed = p["key"].rsplit("_", 1); latest[tk] = max(latest.get(tk, ("", None)), (filed, p), key=lambda x: x[0]); s = [x for x in p["read"].get("sells", []) if x.get("market") != "other"]; top = max(s, key=lambda x: x.get("share_of_revenue_pct") or 0) if s else None; kinds[top.get("share_is", "none") if top and top.get("share_of_revenue_pct") is not None else "none"] = kinds.get(top.get("share_is", "none") if top and top.get("share_of_revenue_pct") is not None else "none", 0) + 1
+    L += ["## How the share of the main market is known, over all profiles", "", "| stated in the report | computed from stated figures | estimated from the description | no figure |", "|---|---|---|---|", f"| {kinds.get('stated in the report', 0)} | {kinds.get('computed from stated figures', 0)} | {kinds.get('estimated from the description', 0)} | {kinds.get('none', 0)} |", "", "## Each company's newest profile", "", "| company | report filed | sells into (share of revenue; how known) | buys from (share of cost) | prices follow the market |", "|---|---|---|---|---|"]
+    fm = lambda x, k: f"{x.get('market')} ({'?' if x.get(k) is None else format(x.get(k), 'g') + '%'}; {str(x.get('share_is', ''))[:9]})"
+    for tk, (filed, p) in sorted(latest.items()):
+        d = p["read"]; L.append(f"| {tk} | {filed} | " + "; ".join(fm(x, "share_of_revenue_pct") for x in d.get("sells", [])) + " | " + ("; ".join(fm(x, "share_of_cost_pct") for x in d.get("buys", [])) or "-") + f" | {'yes' if d.get('priced_by_market') else 'no'} |")
+    mk = {}
+    for r in Rr:
+        for st in r["read"].get("statements", []): mk[(st.get("market"), st.get("quantity"), st.get("direction"))] = mk.get((st.get("market"), st.get("quantity"), st.get("direction")), 0) + 1
+    L += ["", "## What the releases say, counted", "", "| market | quantity | direction | statements |", "|---|---|---|---|"] + [f"| {a} | {b} | {c} | {n} |" for (a, b, c), n in sorted(mk.items(), key=lambda x: -x[1])[:40]]
+    ex = next((r for r in Rr if r["key"].startswith("20261119")), None)
+    if ex: L += ["", "## The release of 19 Nov 2026 (NAND), as read", "", "```", json.dumps(ex["read"], indent=1), "```"]
+    DOCS.mkdir(exist_ok=True); (DOCS / "exposure_profiles.md").write_text("\n".join(L) + "\n"); print("\n".join(L[4:9])); print("\n".join(l for l in L if l.startswith("| MU ") or l.startswith("| SNDK ") or l.startswith("| NVDA ") or l.startswith("| TSM ")))
+    if ex: print("The NAND release of 19 Nov 2026, as read: " + json.dumps(ex["read"].get("statements", []))[:900])
+    print("-> docs/exposure_profiles.md")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["filings", "texts", "cost"]); ap.add_argument("--limit", type=int, default=None); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["filings", "texts", "cost", "profiles", "read", "show"]); ap.add_argument("--limit", type=int, default=None); ap.add_argument("--max-usd", type=float, default=0.0); a = ap.parse_args()
     if a.cmd == "filings":
         if not os.environ.get("SEC_CONTACT"): raise SystemExit("SEC_CONTACT is not set (the SEC asks every script to say who is calling)")
         cmd_filings()
     elif a.cmd == "texts": cmd_texts(a.limit)
-    else: cmd_cost()
+    elif a.cmd == "cost": cmd_cost()
+    elif a.cmd == "show": cmd_show()
+    elif a.max_usd <= 0: raise SystemExit("this step spends credit: give a limit, for example --max-usd 20")
+    else: (cmd_profiles if a.cmd == "profiles" else cmd_read)(a.max_usd)

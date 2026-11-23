@@ -110,12 +110,20 @@ def cmd_run(everything=False):
         if not sin[q] > 0: sin[q] = float(spy.open.iloc[js + 1])
         for h in EXITS:
             ret[h][q] = c.iloc[i + h] / o.iloc[i + 1] - 1; rspy[h][q] = spy.close.iloc[js + h] / spy.open.iloc[js + 1] - 1; d_out[h][q] = c.index[i + h]; pout[h][q] = pin[q] * (1 + ret[h][q]); sout[h][q] = sin[q] * (1 + rspy[h][q])
+    # TRACK 3.108: a fund's price on Yahoo can be plainly wrong around a split (MUD, 3 Mar 2026: 381.6 -> 37.8 in two sessions while the stock moved +0.9%). A day is marked BAD for a fund when its
+    # close-to-close move differs from (its multiple x the stock's move) by more than 30 percentage points -- no real fund does that -- and a trade that touches a bad day is left out, for the fund AND for the comparison.
+    BAD = {}
+    for c in C.itertuples():
+        Fd, Sd = R.get(c.fund), R.get(c.stock)
+        if Fd is None or Sd is None: continue
+        X = pd.concat([Fd.close.pct_change(), Sd.close.pct_change()], axis=1, keys=["f", "s"], sort=True).dropna(); BAD[c.fund] = set(X.index[(X.f - float(c.stated) * X.s).abs() > 0.30])
+    nbad = sum(len(v) for v in BAD.values())
     def funds_for(q, h, sign):
         """every usable fund to BUY for this signal (inverse when the stock is expected lower, long when expected higher) with prices on both days: (fund, multiple, its return, its real price at entry); strongest first"""
         out = []
         for f, mult in sorted([x for x in fmap.get(B.ticker.iat[q], []) if (x[1] < 0) == (sign < 0)], key=lambda x: -abs(x[1])):
             F = R.get(f)
-            if F is not None and d_in[q] in F.index and d_out[h][q] in F.index:
+            if F is not None and d_in[q] in F.index and d_out[h][q] in F.index and not any(d_in[q] <= x <= d_out[h][q] for x in BAD.get(f, ())):
                 a, b = float(F.open.loc[d_in[q]]), float(F.close.loc[d_out[h][q]]); ra = float(F.raw_open.loc[d_in[q]])
                 if a > 0 and b > 0 and ra > 0: out.append((f, mult, b / a - 1, ra))
         return out
@@ -196,6 +204,7 @@ def cmd_run(everything=False):
     for r in rows:
         c = r["cheap"]; L.append(f"| {' AND '.join(r['when'])} | +{r['exit']} | {f0(c['old']['bp'])} | {f0(c['new']['bp'])} ({c['new']['days']}; {c['new']['p']:.4f}) | {c['new']['usd_year']:+,.0f} | {c['used']['stock']} / {c['used']['1x fund']} / {c['used']['2x fund']} | {'**PASSES**' if c['passes'] else 'fails'} |")
     L += ["", f"**Cheapest way always taken: {nc} of {len(rows)} pass.** The order of the three ways depends on the two spread allowances, which are assumptions: if the funds' real spread is under about half of the allowance, the 2x fund becomes the cheapest way."]
+    L += ["", f"Fund-days left out because the price on Yahoo is plainly wrong (the fund's move differs from its multiple x the stock's move by more than 30 percentage points): {nbad} -- " + (", ".join(f"{f} {', '.join(sorted(f'{x:%Y-%m-%d}' for x in v))}" for f, v in BAD.items() if v) or "none") + "."]
     L += ["", "Under 30 days with a fund: too few to say whether the fund version is better -- the single-stock funds only exist since 2022, most since 2024."]
     DOCS.mkdir(exist_ok=True); (DOCS / "selloff_real.md").write_text("\n".join(L) + "\n"); (DOCS / "selloff_real.json").write_text(json.dumps(dict(account=A, spread_bp=RC.SPREAD_BP, bar=bar, patterns=rows, pools=pools, way_cost_bp=cost_all, way_used=used_all), indent=1, default=float))
     print(f"PART 1 -- the stock, real cost (fees + {RC.SPREAD_BP['stock']:.0f} bp spread per order + {RC.MARGIN_RATE:.1%} a year on short positions), US${A:,.0f}; bar p < {bar:.4f}; numbers in basis points of the account per trading day")
@@ -203,7 +212,7 @@ def cmd_run(everything=False):
     for r in rows:
         h, a = r["hedged"], r["alone"]; print(f"  {f0(h['old']['bp']):>5} | {f0(h['new']['bp']):>5} ({h['new']['days']:>3}; {h['new']['p']:.4f}) | {h['new']['usd_trade']:>+7,.0f}; {h['new']['per_year']:>4.1f}; {h['new']['usd_year']:>+8,.0f} | {'PASSES' if h['passes'] else 'fails '} || {f0(a['old']['bp']):>5} | {f0(a['new']['bp']):>5} ({a['new']['p']:.4f}) | {a['new']['usd_year']:>+8,.0f} | {'PASSES' if a['passes'] else 'fails '} || +{r['exit']} | {r['side']:<4} | {' AND '.join(r['when'])[:120]}")
     print(f"=> against the S&P 500: {nh} of {len(rows)} pass; the stock alone: {na} of {len(rows)} pass")
-    print(f"PART 2 -- the same signals through single-stock funds (fees + {RC.SPREAD_BP['etf']:.0f} bp spread per order)")
+    print(f"PART 2 -- the same signals through single-stock funds (fees + {RC.SPREAD_BP['etf']:.0f} bp spread per order); {nbad} fund-days with a plainly wrong price left out: " + (", ".join(f"{f} {min(v):%Y-%m-%d}" + (f" (+{len(v) - 1})" if len(v) > 1 else "") for f, v in BAD.items() if v) or "none"))
     print("  days with a fund (since) | FUND bp/day (share with a gain) | the stock on the same signals | 1.5x-2x / 1x signals | exit | pattern")
     for r in rows:
         f = r["fund"]; print(f"  {f['days']:>3} ({f['first'] or '   -   '}) | {f0(f['bp']):>5} ({'n/a' if f['win'] != f['win'] else format(f['win'], '.0%'):>4}) | {f0(f['stock_same_signals']):>5} | {f['two_x']:>2} / {f['one_x']:>2} | +{r['exit']} | {' AND '.join(r['when'])[:110]}")
