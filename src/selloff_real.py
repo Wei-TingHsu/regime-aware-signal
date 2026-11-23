@@ -217,5 +217,33 @@ def cmd_run(everything=False):
     print("-> docs/selloff_real.md")
 
 
+def cmd_audit(top: int = 25):
+    """Free check of the doubt recorded in TRACK 3.106: the funds did about 150 basis points worse than their stocks on the same signals. For every one-day sell-off of
+    5% whose stock had an inverse fund (traded as a SELL, next open -> close two sessions after) it compares what the fund DID with what it SHOULD have done (its multiple x
+    the stock's move over the same span) and prints the largest differences with the fund's prices on the two days, so a bad price or a split can be seen by eye."""
+    E = pd.read_csv(ROOT / "events.csv", parse_dates=["day"]); P = _px(); unit, dfn = S.BASES[GROUP]; B = E[(E.unit == unit) & (E.definition == dfn)].sort_values("day").reset_index(drop=True)
+    R = {f.stem: pd.read_parquet(f) for f in RP.glob("*.parquet")}; C = pd.read_csv(CHECK); C = C[C.ok & (C.stated < 0)]; rows = []
+    for r in B.itertuples():
+        d = P[r.ticker]; i = int(r.i)
+        if i + 2 >= len(d): continue
+        din, dout = d.index[i + 1], d.index[i + 2]; sr = float(d.close.iloc[i + 2] / d.open.iloc[i + 1] - 1)
+        for c in C[C.stock == r.ticker].itertuples():
+            F = R.get(c.fund)
+            if F is None or din not in F.index or dout not in F.index: continue
+            fr = float(F.close.loc[dout] / F.open.loc[din] - 1); prev = F.close.shift(1).get(din, np.nan); rows.append(dict(day=f"{r.day:%Y-%m-%d}", stock=r.ticker, fund=c.fund, mult=float(c.stated), stock_move=sr * 100, fund_should=c.stated * sr * 100, fund_did=fr * 100,
+                        fund_prev_close=float(prev), fund_open=float(F.open.loc[din]), fund_close2=float(F.close.loc[dout]), open_gap=float(F.open.loc[din] / prev - 1) * 100 if prev == prev and prev > 0 else np.nan, stock_gap=float(d.open.iloc[i + 1] / d.close.iloc[i] - 1) * 100))
+    A = pd.DataFrame(rows)
+    if not len(A): print("no signal with an inverse fund found"); return
+    A["diff"] = A.fund_did - A.fund_should; A["gap_should"] = A.mult * A.stock_gap; A["gap_diff"] = A.open_gap - A.gap_should
+    print(f"{len(A)} fund trades on one-day sell-offs (inverse funds, next open -> close +2). In per cent of the money put in:")
+    print(f"  the stock moved {A.stock_move.mean():+.2f} on average; the funds SHOULD have made {A.fund_should.mean():+.2f}; they DID make {A.fund_did.mean():+.2f}; difference {A['diff'].mean():+.2f} (middle value {A['diff'].median():+.2f})")
+    print(f"  trades where did and should differ by more than 3 points: {int((A['diff'].abs() > 3).sum())}; by more than 10 points: {int((A['diff'].abs() > 10).sum())}. Without those over 3 points the average difference is {A[A['diff'].abs() <= 3]['diff'].mean():+.2f}")
+    print(f"  the fund's OPENING price against its stock's opening move (should be multiple x the stock's overnight move): average difference {A.gap_diff.mean():+.2f} points; over 3 points apart in {int((A.gap_diff.abs() > 3).sum())} trades")
+    print("  by fund: " + ", ".join(f"{f} {g['diff'].mean():+.2f} ({len(g)})" for f, g in A.groupby("fund")))
+    print(f"  the {top} largest differences:"); print("  day        stock fund   x   stock%  should%   did%   diff | fund: prev close -> open -> close+2 | its open against the stock's overnight move")
+    for r in A.reindex(A["diff"].abs().sort_values(ascending=False).index).head(top).itertuples(): print(f"  {r.day} {r.stock:<5} {r.fund:<5} {r.mult:+.0f} {r.stock_move:+7.2f} {r.fund_should:+8.2f} {r.fund_did:+7.2f} {r.diff:+7.2f} | {r.fund_prev_close:9.3f} -> {r.fund_open:9.3f} -> {r.fund_close2:9.3f} | {r.open_gap:+6.2f} against {r.gap_should:+6.2f}")
+    A.to_csv(DOCS / "selloff_funds_audit.csv", index=False); print("-> docs/selloff_funds_audit.csv")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["fetch", "run"]); ap.add_argument("--everything", action="store_true", help="also confirmed patterns that are not candidates (for checking the code)"); a = ap.parse_args(); cmd_fetch() if a.cmd == "fetch" else cmd_run(a.everything)
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["fetch", "run", "audit"]); ap.add_argument("--everything", action="store_true", help="also confirmed patterns that are not candidates (for checking the code)"); a = ap.parse_args(); cmd_fetch() if a.cmd == "fetch" else cmd_audit() if a.cmd == "audit" else cmd_run(a.everything)
