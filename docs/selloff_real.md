@@ -48,7 +48,7 @@ Only signals whose stock had a usable fund trading on both days (docs/selloff_fu
 | machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move) AND news-based policy uncertainty index: low (under 111) AND St. Louis Fed financial stress index, change over 5 observations: middle (-0.16 to 0.23) | +2 | 5 (2022-10) | -129 (40%) | -46 | 1 / 5 |
 | last day's move %: low (under -7.56) AND volume against normal: high (over 1.98) AND gold, move over 5 sessions %: low (under -1.53) | +2 | 14 (2022-09) | +13 (43%) | +49 | 1 / 14 |
 | gap at the open %: low (under -2.94) AND machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move) AND size rank in the list: high (over 0.728) | +2 | 31 (2022-10) | +62 (55%) | +91 | 3 / 32 |
-| gap at the open %: low (under -2.94) AND regional banks, move over 5 sessions %: middle (-5.82 to -0.707) AND small against large companies, 5 sessions %: middle (-1.25 to 0.139) | +3 | 14 (2022-10) | -654 (29%) | +53 | 5 / 16 |
+| gap at the open %: low (under -2.94) AND regional banks, move over 5 sessions %: middle (-5.82 to -0.707) AND small against large companies, 5 sessions %: middle (-1.25 to 0.139) | +3 | 13 (2022-10) | -14 (31%) | +12 | 5 / 15 |
 | own results filing: yes AND own filings in the last 30 days: middle (1 to 2) AND size rank in the list: high (over 0.728) | +2 | 52 (2022-08) | -20 (48%) | +11 | 11 / 44 |
 | own results filing: yes AND VIX against the three-month VIX: low (under 0.986) AND investment-grade bond fund, move over 5 sessions %: middle (-0.187 to 0.632) | +3 | 21 (2023-02) | +20 (57%) | +50 | 5 / 16 |
 | own results filing: yes AND move against sector fund pct: low (under -4.82) AND insider purchase filings in 90 days: at or under 0 | +3 | 49 (2022-08) | +14 (51%) | +35 | 10 / 41 |
@@ -67,13 +67,13 @@ Only signals whose stock had a usable fund trading on both days (docs/selloff_fu
 | larger set | exit | days with a fund (since) | the FUND, basis points a day (share with a gain) | the stock on the same signals | signals (of which 1.5x-2x funds) |
 |---|---|---|---|---|---|
 | a sell-off that is in ANY of the candidate patterns (stock expected lower) | +1 | 79 (2022-08) | -45 (56%) | +7 | 95 (20) |
-| a sell-off that is in ANY of the candidate patterns (stock expected lower) | +2 | 79 (2022-08) | -116 (48%) | +35 | 95 (20) |
-| a sell-off that is in ANY of the candidate patterns (stock expected lower) | +3 | 79 (2022-08) | -97 (49%) | +42 | 95 (20) |
-| a sell-off that is in ANY of the candidate patterns (stock expected lower) | +5 | 79 (2022-08) | -88 (46%) | +27 | 95 (20) |
+| a sell-off that is in ANY of the candidate patterns (stock expected lower) | +2 | 78 (2022-08) | -2 (49%) | +37 | 94 (20) |
+| a sell-off that is in ANY of the candidate patterns (stock expected lower) | +3 | 78 (2022-08) | +16 (50%) | +35 | 94 (20) |
+| a sell-off that is in ANY of the candidate patterns (stock expected lower) | +5 | 78 (2022-08) | +27 (46%) | +30 | 94 (20) |
 | EVERY one-day sell-off of 5% or more (for reference: no pattern required) | +1 | 199 (2022-08) | -78 (44%) | -31 | 350 (81) |
-| EVERY one-day sell-off of 5% or more (for reference: no pattern required) | +2 | 199 (2022-08) | -112 (48%) | -30 | 350 (81) |
-| EVERY one-day sell-off of 5% or more (for reference: no pattern required) | +3 | 199 (2022-08) | -126 (47%) | -38 | 350 (81) |
-| EVERY one-day sell-off of 5% or more (for reference: no pattern required) | +5 | 199 (2022-08) | -222 (42%) | -128 | 350 (81) |
+| EVERY one-day sell-off of 5% or more (for reference: no pattern required) | +2 | 198 (2022-08) | -67 (48%) | -29 | 349 (81) |
+| EVERY one-day sell-off of 5% or more (for reference: no pattern required) | +3 | 198 (2022-08) | -81 (47%) | -41 | 349 (81) |
+| EVERY one-day sell-off of 5% or more (for reference: no pattern required) | +5 | 198 (2022-08) | -177 (42%) | -127 | 349 (81) |
 
 ## Part 3. Which way is cheaper for the same exposure, and the result when the cheapest way is always taken
 
@@ -82,7 +82,7 @@ Same exposure of US$70,000 a day: the stock itself (sold short when it is expect
 | way | average cost, basis points of the exposure | signals where this way existed | times it was the cheapest |
 |---|---|---|---|
 | stock | 13.1 | 3279 | 3279 |
-| 1x fund | 28.2 | 338 | 0 |
+| 1x fund | 28.2 | 337 | 0 |
 | 2x fund | 18.7 | 175 | 0 |
 
 | pattern | exit | cheapest way always taken: 2005-2017 | 2018-2026 (days; chance of zero or less) | US$ a year | ways used 2018-2026: stock / 1x fund / 2x fund | verdict |
@@ -113,5 +113,7 @@ Same exposure of US$70,000 a day: the stock itself (sold short when it is expect
 | own results filing: no AND Fed funds rate: low (under 0.17) AND small against large companies, 5 sessions %: high (over 0.139) | +5 | +193 | +56 (75; 0.2296) | +3,300 | 218 / 0 / 0 | fails |
 
 **Cheapest way always taken: 2 of 24 pass.** The order of the three ways depends on the two spread allowances, which are assumptions: if the funds' real spread is under about half of the allowance, the 2x fund becomes the cheapest way.
+
+Fund-days left out because the price on Yahoo is plainly wrong (the fund's move differs from its multiple x the stock's move by more than 30 percentage points): 2 -- MUD 2026-03-05, NVDS 2023-08-09.
 
 Under 30 days with a fund: too few to say whether the fund version is better -- the single-stock funds only exist since 2022, most since 2024.
