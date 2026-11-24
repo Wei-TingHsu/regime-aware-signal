@@ -1,0 +1,13 @@
+"""record_24nov_pool_plan.py -- TRACK 3.109 for docs/POOL_PLAN.md (the founder's plan for the addition and subtraction pool, word for word as shown to him; the file comes in the same zip): (the pointer, the reading put on the waiting list, the order of work). Idempotent."""
+from pathlib import Path
+if not Path("docs/POOL_PLAN.md").exists(): raise SystemExit("docs/POOL_PLAN.md not found -- unzip again")
+t = Path("docs/TRACK.md"); s = t.read_text()
+A = """
+
+### 3.109 The addition and subtraction pool: the founder's plan recorded word for word; the reading put on the waiting list; the order of work (24 Nov 17:20)
+**The plan is in `docs/POOL_PLAN.md` and is the only text to quote from.** Part 1: the founder's 16 points (fast trends with no fixed length; news added and subtracted in a pool, recorded at release; linked news compared; publication time as the key data; support levels held by a story; the page with quick-entry buttons and two pools around the historical high; the fact base and the implied discount rate; the order of work). Part 2: Claude's method after five collisions with its first proposal -- no chosen length, the news clock before the chart, three measures of an item's effect, same-day items split by minute, weekend items -- NOT yet confirmed by the founder. Nothing is built.
+**EX-1 reading, state when it stopped (the founder's Anthropic credit ran out, 24 Nov):** 338 of 340 company profiles on disk (2 cut off at the length limit); 267 of 1,316 TrendForce releases read (46 cut off, limit since raised; the connection dropped twice). Spent about US$34.71 in all against a first estimate of US$20 to US$31 for the whole job; about US$25 more would finish it. Prior #205 (fewer than half of the profiles carry a stated or computed share for the main market): WRONG -- 169 of 337 are stated or computed, half. **WAITING LIST: the rest of the releases; the link arithmetic and the test of EX-1 follow it.**
+**Order of work (founder, 24 Nov).** Work that needs no Anthropic credit continues first; Databento credit may be used. The addition and subtraction pool is the LAST item on the waiting list. Waiting list now, in order: (1) ET-2 reading of the S&P-100 event filings (US$35-127, needs Anthropic credit); (2) the rest of the EX-1 reading (about US$25, needs Anthropic credit); (3) the fact base, the valuation model and the implied discount rate (needs the EX-1 reading for the financing links; the reported figures part is free); (4) the addition and subtraction pool.
+"""
+if "### 3.109 The addition and subtraction pool" not in s: t.write_text(s.rstrip("\n") + A); print("  TRACK.md: 3.109 added")
+else: print("  TRACK.md: 3.109 already there -- skipped")

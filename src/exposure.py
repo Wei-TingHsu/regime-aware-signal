@@ -173,7 +173,7 @@ def cmd_profiles(max_usd: float):
 
 def cmd_read(max_usd: float):
     R = pd.read_csv(TF / "releases.csv", dtype=str); items = [(r.id, f"PRESS RELEASE of {r.date}. TITLE: {r.title}\n\n{(TXT / f'{r.id}.txt').read_text()}") for r in R.itertuples() if (TXT / f"{r.id}.txt").exists()]
-    _run(items, SYS_RELEASE, RD, max_usd, 3000, "Step 2, releases")
+    _run(items, SYS_RELEASE, RD, max_usd, 8000, "Step 2, releases")
 
 
 def cmd_show():
