@@ -6,4 +6,4 @@ Registered in TRACK 3.101 on 22 Nov 2026. Counts every case from 23 Nov 2026. Ru
 
 | day | stock | meets the rule | move % | volume, times normal | fall, times its usual move | against the S&P 500 after 1 / 2 / 3 sessions (bp) | overnight to next open (bp) | next open to close +2 (bp) |
 |---|---|---|---|---|---|---|---|---|
-| (no sell-off of 5% or more since the start) | | | | | | | | |
+| 2026-11-23 | CRWD | no | -8.9 | 4.2 | 1.9 |  /  /  |  |  |

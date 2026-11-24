@@ -9,9 +9,9 @@ Signal = last completed US close; **entry = next US session**; exit = H trading 
 
 | model | matured trades | mean spread | hit-rate | NON-OVERLAP trades | NON-OVERLAP mean spread |
 |---|---|---|---|---|---|
-| model_1_baseline | 61 | +1.230% | 54% | 13 | +2.130% |
-| model_2_horizon_trend | 56 | -5.626% | 41% | 6 | -2.386% |
-| model_3_overfit | 46 | -4.130% | 46% | 3 | -7.341% |
+| model_1_baseline | 62 | +1.261% | 55% | 13 | +2.130% |
+| model_2_horizon_trend | 57 | -5.679% | 40% | 6 | -2.386% |
+| model_3_overfit | 47 | -4.549% | 45% | 3 | -7.341% |
 
 *Naive column counts overlapping daily entries (they share most of their days, so significance would be inflated). The NON-OVERLAP column samples every H-th trade and is the statistically honest one.*
 
@@ -19,6 +19,9 @@ Signal = last completed US close; **entry = next US session**; exit = H trading 
 
 | signal date | entry date | model | regime | longs | shorts | H | status | spread |
 |---|---|---|---|---|---|---|---|---|
+| 2026-11-23 | 2026-11-24 | model_1_baseline | 3 | FLY, SNDK, ARM, MU, INTC | XLV, XLP, UUP, TLT, TSLA | 5 | pending | pending |
+| 2026-11-23 | 2026-11-24 | model_2_horizon_trend | 3 | FLY, PLTR, SNDK, INTC, ARM | GLD, TLT, UUP, SLV, LMT | 10 | pending | pending |
+| 2026-11-23 | 2026-11-24 | model_3_overfit | 3 | FLY, PLTR, SNDK, ARM, URA | XLP, UUP, LMT, TLT, XLV | 20 | pending | pending |
 | 2026-11-20 | 2026-11-23 | model_1_baseline | 3 | FLY, DRAM, SNDK, INTC, ARM | TSLA, IAU, GLD, UUP, TLT | 5 | pending | pending |
 | 2026-11-20 | 2026-11-23 | model_2_horizon_trend | 3 | FLY, SNDK, ARM, DRAM, INTC | IAU, GLD, SPCX, USO, SLV | 10 | pending | pending |
 | 2026-11-20 | 2026-11-23 | model_3_overfit | 3 | SNDK, FLY, INTC, ARM, XSD | TLT, URNM, UUP, LMT, USO | 20 | pending | pending |
@@ -34,7 +37,7 @@ Signal = last completed US close; **entry = next US session**; exit = H trading 
 | 2026-11-16 | 2026-11-17 | model_1_baseline | 3 | FLY, ARM, PLTR, JETS, INTC | IAU, GLD, SLV, SPCX, USO | 5 | pending | pending |
 | 2026-11-16 | 2026-11-17 | model_2_horizon_trend | 3 | PLTR, FLY, NVDA, ARM, TSLA | USO, SLV, URNM, REMX, SPCX | 10 | pending | pending |
 | 2026-11-16 | 2026-11-17 | model_3_overfit | 3 | SNDK, PLTR, NVDA, INTC, TSLA | LMT, REMX, DRAM, URNM, USO | 20 | pending | pending |
-| 2026-11-13 | 2026-11-16 | model_1_baseline | 3 | PLTR, MSFT, LMT, ITA, XAR | SPCX, REMX, USO, DRAM, SNDK | 5 | pending | pending |
+| 2026-11-13 | 2026-11-16 | model_1_baseline | 3 | PLTR, MSFT, LMT, ITA, XAR | SPCX, REMX, USO, DRAM, SNDK | 5 | matured | +3.149% |
 | 2026-11-13 | 2026-11-16 | model_2_horizon_trend | 3 | PLTR, ARM, NVDA, MU, TSLA | URA, SLV, USO, URNM, REMX | 10 | pending | pending |
 | 2026-11-13 | 2026-11-16 | model_3_overfit | 3 | PLTR, TSLA, NVDA, MU, SKYY | URA, SLV, URNM, REMX, FLY | 20 | pending | pending |
 | 2026-11-12 | 2026-11-13 | model_1_baseline | 3 | LMT, MSFT, PLTR, ITA, XLV | ARM, REMX, INTC, DRAM, SNDK | 5 | matured | +12.711% |
@@ -50,7 +53,7 @@ Signal = last completed US close; **entry = next US session**; exit = H trading 
 | 2026-11-09 | 2026-11-10 | model_2_horizon_trend | 3 | SNDK, PLTR, MU, NVDA, XAR | JETS, UUP, ARM, FLY, TSLA | 10 | pending | pending |
 | 2026-11-09 | 2026-11-10 | model_3_overfit | 3 | SNDK, PLTR, SLV, USO, MU | XLP, URNM, XSD, ORCL, ARM | 20 | pending | pending |
 | 2026-11-06 | 2026-11-09 | model_1_baseline | 3 | FLY, SNDK, INTC, MU, ARM | IAU, GLD, XLP, TLT, UUP | 5 | matured | -4.536% |
-| 2026-11-06 | 2026-11-09 | model_2_horizon_trend | 3 | PLTR, SNDK, MU, NVDA, SLV | XLP, JETS, UUP, TSLA, FLY | 10 | pending | pending |
+| 2026-11-06 | 2026-11-09 | model_2_horizon_trend | 3 | PLTR, SNDK, MU, NVDA, SLV | XLP, JETS, UUP, TSLA, FLY | 10 | matured | -8.642% |
 | 2026-11-06 | 2026-11-09 | model_3_overfit | 3 | PLTR, SNDK, SLV, IAU, GLD | JETS, ASML, XSD, ORCL, ARM | 20 | pending | pending |
 | 2026-11-05 | 2026-11-06 | model_1_baseline | 3 | PLTR, LMT, MSFT, WCLD, HACK | ARM, INTC, DRAM, REMX, SNDK | 5 | matured | -1.550% |
 | 2026-11-05 | 2026-11-06 | model_2_horizon_trend | 3 | SNDK, DRAM, PLTR, USO, MU | TSLA, JETS, ARM, SPCX, FLY | 10 | matured | -5.687% |
@@ -81,7 +84,7 @@ Signal = last completed US close; **entry = next US session**; exit = H trading 
 | 2026-10-26 | 2026-10-27 | model_3_overfit | 3 | SNDK, PLTR, MU, USO, REMX | TLT, ORCL, JETS, ARM, FLY | 20 | pending | pending |
 | 2026-10-23 | 2026-10-26 | model_1_baseline | 3 | PLTR, ARM, MU, WCLD, MSFT | SPCX, DRAM, REMX, FLY, USO | 5 | matured | -2.214% |
 | 2026-10-23 | 2026-10-26 | model_2_horizon_trend | 3 | SNDK, INTC, MU, PLTR, NVDA | XLP, UUP, TLT, JETS, FLY | 10 | matured | -33.954% |
-| 2026-10-23 | 2026-10-26 | model_3_overfit | 3 | SNDK, PLTR, MU, USO, INTC | TSLA, ORCL, JETS, ARM, FLY | 20 | pending | pending |
+| 2026-10-23 | 2026-10-26 | model_3_overfit | 3 | SNDK, PLTR, MU, USO, INTC | TSLA, ORCL, JETS, ARM, FLY | 20 | matured | -23.859% |
 | 2026-10-22 | 2026-10-23 | model_1_baseline | 3 | PLTR, MSFT, LMT, SPCX, WCLD | FLY, ARM, REMX, DRAM, SNDK | 5 | matured | -0.051% |
 | 2026-10-22 | 2026-10-23 | model_2_horizon_trend | 3 | SNDK, PLTR, USO, ASML, MU | URA, URNM, DRAM, SPCX, FLY | 10 | matured | -14.610% |
 | 2026-10-22 | 2026-10-23 | model_3_overfit | 3 | SNDK, USO, PLTR, XLE, LMT | URNM, ORCL, DRAM, FLY, SPCX | 20 | matured | -3.514% |
