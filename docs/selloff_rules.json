@@ -1,0 +1,327 @@
+{
+ "made": "2026-11-24 18:01",
+ "group": "stocks, one day -5% or worse",
+ "seed": 20261126,
+ "split": "2018-01-01",
+ "rules": [
+  {
+   "code": "SS-2a",
+   "when": [
+    "gap at the open %: low (under -2.94)",
+    "in ai chain: yes",
+    "machine group 3 of 5 in 'who fell and who set it off' (marked by low share of peers down 3pct and high peers average move pct)"
+   ],
+   "side": "SELL",
+   "exit": 2,
+   "conditions": [
+    {
+     "kind": "lt",
+     "table": "T1",
+     "column": "gap at the open %",
+     "value": -2.9425675193978984,
+     "label": "gap at the open %: low (under -2.94)"
+    },
+    {
+     "kind": "eq",
+     "table": "T2",
+     "column": "in_ai_chain",
+     "value": 1.0,
+     "label": "in ai chain: yes"
+    },
+    {
+     "kind": "group",
+     "table": "T2",
+     "group": 2,
+     "columns": [
+      "own_filings_in_the_last_30_days",
+      "days_since_own_results",
+      "share_of_peers_down_3pct",
+      "peers_average_move_pct",
+      "worst_peer_move_pct",
+      "sector_fund_move_pct",
+      "move_against_sector_fund_pct"
+     ],
+     "mean": [
+      1.9279338842975207,
+      42.11504132231405,
+      0.5239439651257827,
+      -3.6928710852453652,
+      -7.191007836621234,
+      -3.4975801992809403,
+      -4.199188968614769
+     ],
+     "spread": [
+      2.3367908761664182,
+      47.08734969215567,
+      0.38086317212973964,
+      3.426902944122801,
+      5.645375265455111,
+      3.23054292423161,
+      4.09438684563749
+     ],
+     "centres": [
+      [
+       1.608253207388177,
+       -0.2502096224571212,
+       0.5452649740449531,
+       -0.36619145514425483,
+       -0.38640818043580244,
+       -0.47447307804941957,
+       0.14580149992285182
+      ],
+      [
+       -0.29125376020665855,
+       0.07605271369076108,
+       0.8804669459792249,
+       -0.4558693739246908,
+       -0.2228096681448259,
+       -0.4055928870704457,
+       0.516977553290261
+      ],
+      [
+       -0.07528867306523625,
+       -0.39666084651377764,
+       -1.273169319768037,
+       1.0890356962277457,
+       0.9221013943757436,
+       1.0424775405723403,
+       -0.9024994112228863
+      ],
+      [
+       -0.28807927977315356,
+       0.15703334655861678,
+       -0.4279523312627282,
+       0.38385461495084794,
+       0.3205744871742658,
+       0.36798127343899273,
+       -0.014662429643717632
+      ],
+      [
+       0.18554814560198513,
+       0.24017116854628173,
+       1.1181256501104413,
+       -2.034932245861554,
+       -2.1234593006813287,
+       -1.9480150810324042,
+       0.692487097753666
+      ]
+     ],
+     "label": "machine group 3 of 5 in 'who fell and who set it off' (marked by low share of peers down 3pct and high peers average move pct)"
+    }
+   ],
+   "passed_against_spx": true,
+   "passed_alone": true,
+   "history": {
+    "against_spx_bp": 157.42863920128787,
+    "alone_bp": 166.38794159318152,
+    "days": 91,
+    "per_year": 10.287140204271124,
+    "against_spx_bp_old": 34.51748220033174,
+    "alone_bp_old": 40.257789174541266
+   },
+   "picked": {
+    "old": 91,
+    "new": 94
+   }
+  },
+  {
+   "code": "SS-2b",
+   "when": [
+    "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)",
+    "news-based policy uncertainty index: low (under 111)",
+    "St. Louis Fed financial stress index: low (under 0.397)"
+   ],
+   "side": "SELL",
+   "exit": 2,
+   "conditions": [
+    {
+     "kind": "group",
+     "table": "T1",
+     "group": 2,
+     "columns": [
+      "size in units of its own usual move",
+      "last day's move %",
+      "where it closed in the day's range",
+      "gap at the open %",
+      "volume against normal",
+      "distance below the one-year high %",
+      "run-up over the 60 sessions before %",
+      "the S&P 500 over the same sessions %",
+      "share of large stocks down 3%+ that day",
+      "VIX level",
+      "VIX change over the same sessions %",
+      "S&P 500 against its 200-day average %"
+     ],
+     "mean": [
+      -2.584810591007435,
+      -7.635297356146528,
+      0.16447142661256461,
+      -2.5648053232027013,
+      2.0573976708410284,
+      -38.10428239520279,
+      -6.192168489094006,
+      -2.713585146928316,
+      0.4044098118632491,
+      38.383442295737666,
+      10.76178741348966,
+      -11.764679160045546
+     ],
+     "spread": [
+      1.8437065647450825,
+      3.481237367934703,
+      0.17278218344010432,
+      3.7358174356551515,
+      1.729963324974772,
+      21.88312429709623,
+      31.311491361763675,
+      2.637601050687114,
+      0.32087859285328396,
+      18.9280897137865,
+      12.90318593845197,
+      14.840369220598529
+     ],
+     "centres": [
+      [
+       0.05293899203628527,
+       0.3817377034291519,
+       -0.20334154925932924,
+       0.2836044821301695,
+       -0.08171766197749326,
+       0.5954512099251236,
+       0.5654004698561326,
+       0.5912716102340093,
+       -0.7152363960400612,
+       -0.8291171946142196,
+       -0.30605465066562054,
+       0.8627086592584959
+      ],
+      [
+       -0.45301195121578813,
+       0.11979779155732895,
+       -0.11588861380445363,
+       -0.11417938747232417,
+       -0.05958815246942229,
+       0.5470220119166658,
+       0.09278948034877188,
+       -0.8215393894474803,
+       1.0348181684734181,
+       0.011200516228867077,
+       1.8244339724302727,
+       0.19805185582309345
+      ],
+      [
+       -1.6295893992518542,
+       -0.6053146680425444,
+       1.256874039035467,
+       -1.4005937723360764,
+       1.8719582556252428,
+       0.6148810282559575,
+       0.251197147605803,
+       0.9756926911361286,
+       -1.0448985425489374,
+       -1.017358287878682,
+       -0.7812493684266409,
+       0.9624944919308295
+      ],
+      [
+       0.41906309889228754,
+       -0.24492038546881784,
+       -0.2745527890245062,
+       0.16332767538170664,
+       -0.46213906891404916,
+       -0.5190556611614277,
+       -0.5021067372653906,
+       -1.2714938191781398,
+       1.2657692343149312,
+       1.3163066286119263,
+       0.35897658551850964,
+       -1.2248881972655399
+      ],
+      [
+       0.609031279633988,
+       0.030000165311209366,
+       -0.018681635473213824,
+       0.2573857795252545,
+       -0.39730557470470823,
+       -0.8984002572913763,
+       -0.5118323346257069,
+       0.396203832338052,
+       -0.2978798797970874,
+       0.3347526528232795,
+       -0.510363469217314,
+       -0.5548100025982178
+      ]
+     ],
+     "label": "machine group 3 of 5 in 'the fall and the market' (marked by high volume against normal and low size in units of its own usual move)"
+    },
+    {
+     "kind": "lt",
+     "table": "T4",
+     "column": "news-based policy uncertainty index",
+     "value": 110.6,
+     "label": "news-based policy uncertainty index: low (under 111)"
+    },
+    {
+     "kind": "lt",
+     "table": "T4",
+     "column": "St. Louis Fed financial stress index",
+     "value": 0.3968,
+     "label": "St. Louis Fed financial stress index: low (under 0.397)"
+    }
+   ],
+   "passed_against_spx": true,
+   "passed_alone": true,
+   "history": {
+    "against_spx_bp": 84.72288720727455,
+    "alone_bp": 102.20618289735653,
+    "days": 142,
+    "per_year": 16.052460538532962,
+    "against_spx_bp_old": 33.151737037704194,
+    "alone_bp_old": 43.232959870364326
+   },
+   "picked": {
+    "old": 204,
+    "new": 168
+   }
+  },
+  {
+   "code": "SS-2c",
+   "when": [
+    "own results filing: yes",
+    "size rank in the list: high (over 0.728)"
+   ],
+   "side": "SELL",
+   "exit": 3,
+   "conditions": [
+    {
+     "kind": "eq",
+     "table": "T2",
+     "column": "own_results_filing",
+     "value": 1.0,
+     "label": "own results filing: yes"
+    },
+    {
+     "kind": "gt",
+     "table": "T3",
+     "column": "size_rank_in_the_list",
+     "value": 0.7282608695652174,
+     "label": "size rank in the list: high (over 0.728)"
+    }
+   ],
+   "passed_against_spx": true,
+   "passed_alone": false,
+   "history": {
+    "against_spx_bp": 81.50820809814545,
+    "alone_bp": 68.4814074011474,
+    "days": 194,
+    "per_year": 21.930826369545034,
+    "against_spx_bp_old": 78.83850032676365,
+    "alone_bp_old": 58.8554499529289
+   },
+   "picked": {
+    "old": 166,
+    "new": 214
+   }
+  }
+ ]
+}
