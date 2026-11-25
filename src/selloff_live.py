@@ -13,7 +13,7 @@ What it does, in order:
 Needs SEC_CONTACT and FRED_API_KEY set in the window. No cost. About 5 to 10 minutes.
 """
 from __future__ import annotations
-import argparse, json, os, shutil
+import argparse, json, logging, os, shutil, time
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -21,7 +21,12 @@ import numpy as np, pandas as pd
 
 LIVE = Path("data_provenance/selloff_live"); STUDY = Path("data_provenance/selloff"); RULES = Path("docs/selloff_rules.json"); FWD = Path("data_provenance/live/selloff_rules_forward.csv"); CARD = Path("processed/selloff_rules_card.json")
 START = pd.Timestamp("2026-11-24"); VERDICT_AT = 30; NY = ZoneInfo("America/New_York"); GROUP_DEF = ("stocks", "1 session, -5% or worse"); FRED_IDS = ["USEPUINDXD", "STLFSI4"]
-COLS = ["code", "ticker", "day", "move_pct", "side", "exit_sessions", "entry_day", "exit_day", "alone_bp", "against_spx_bp", "stock_move_bp", "spx_move_bp"]
+COLS = ["code", "ticker", "day", "move_pct", "side", "exit_sessions", "entry_day", "exit_day", "alone_bp", "against_spx_bp", "stock_move_bp", "spx_move_bp", "way", "way_usd"]
+# NYSE Group's holiday calendar (press release 'NYSE Group Announces 2026, 2027 and 2028 Holiday and Early Closings Calendar', read 25 Nov 2026). Extend before 2028.
+HOLIDAYS = {pd.Timestamp(x) for x in ["2026-11-26", "2026-12-25", "2027-01-01", "2027-01-18", "2027-02-15", "2027-03-26", "2027-05-31", "2027-06-18", "2027-07-05", "2027-09-06", "2027-11-25", "2027-12-24"]}
+EARLY = {pd.Timestamp(x) for x in ["2026-11-27", "2026-12-24", "2027-11-26"]}      # the market closes at 13:00 New York time
+SHORT_MONEY = 35_000.0      # founder, 25 Nov 2026 (TRACK 3.121): the inverse fund where one exists; where none exists the stock is sold short with US$35,000, half the account
+HS = {"stock": 3.6 + 0.6, "fund1": 7.8 + 5.2, "fund2": 11.4 + 6.6, "spy": 4.0}      # half the bid-ask gap in and out, basis points (measured, TRACK 3.114; the S&P 500 fund: the allowance)
 
 
 def _redirect():
@@ -36,15 +41,30 @@ def _redirect():
 def _prices(SS, now):
     import yfinance as yf
     SS.PX.mkdir(parents=True, exist_ok=True); ticks = SS._stocks() + SS.INDEX + SS.SECTORS + ["^VIX"]; n = 0; bad = []
-    D = yf.download(ticks, start="1998-01-01", interval="1d", progress=False, auto_adjust=True, group_by="ticker", threads=True)
+    logging.getLogger("yfinance").setLevel(logging.CRITICAL)      # Yahoo's own message for a refused request is 'possibly delisted' -- misleading; this code reports refusals itself
+    def save(t, d):
+        if isinstance(d.columns, pd.MultiIndex): d.columns = d.columns.get_level_values(0)
+        d = d[["Open", "High", "Low", "Close", "Volume"]].dropna(subset=["Close"]); d.columns = ["open", "high", "low", "close", "volume"]; d.index = pd.DatetimeIndex(d.index).tz_localize(None)
+        if len(d) and d.index[-1].date() == now.date() and now.hour * 60 + now.minute < 16 * 60 + 10: d = d.iloc[:-1]      # today's bar is not finished: left out
+        if len(d) < 300: return False
+        d.to_parquet(SS.PX / f"{t.replace('^', '_')}.parquet"); return True
+    try: D = yf.download(ticks, start="1998-01-01", interval="1d", progress=False, auto_adjust=True, group_by="ticker", threads=True)
+    except Exception: D = None
     for t in ticks:
-        try:
-            d = D[t][["Open", "High", "Low", "Close", "Volume"]].dropna(subset=["Close"]); d.columns = ["open", "high", "low", "close", "volume"]; d.index = pd.DatetimeIndex(d.index).tz_localize(None)
-            if len(d) and d.index[-1].date() == now.date() and now.hour * 60 + now.minute < 16 * 60 + 10: d = d.iloc[:-1]      # today's bar is not finished: left out
-            if len(d) < 300: bad.append(t); continue
-            d.to_parquet(SS.PX / f"{t.replace('^', '_')}.parquet"); n += 1
-        except Exception: bad.append(t)
-    print(f"  prices: {n} of {len(ticks)} securities; without prices: {bad or 'none'}"); return n
+        try: ok = D is not None and save(t, D[t].copy())
+        except Exception: ok = False
+        n += ok; bad += [] if ok else [t]
+    for wait in (20, 40, 60):      # Yahoo refuses requests when many come at once; the refused names are asked again one by one, slowly
+        if not bad: break
+        print(f"  Yahoo did not answer for {len(bad)} of {len(ticks)} securities (too many requests at once -- they are NOT delisted); waiting {wait} seconds and asking again ..."); time.sleep(wait); still = []
+        for t in bad:
+            try: ok = save(t, yf.download(t, start="1998-01-01", interval="1d", progress=False, auto_adjust=True)); time.sleep(1.0)
+            except Exception: ok = False
+            n += ok; still += [] if ok else [t]
+        bad = still
+    print(f"  prices: {n} of {len(ticks)} securities; without prices: {bad or 'none'}")
+    if bad: print(f"  WARNING: {len(bad)} securities have NO fresh price ({', '.join(bad)}). The check below uses their older prices: a match or a miss today may be wrong. Run the daily check again in 30 minutes.")
+    _prices.bad = bad; return n
 
 
 def _fred():
@@ -72,12 +92,42 @@ def _stage(sig: dict, now) -> str:
 
 
 def _next_sessions(day: pd.Timestamp, k: int) -> list:
-    """the next k weekdays after `day` (public holidays are not known to this code; on a holiday the entry is the session after)"""
+    """the next k sessions after `day`: weekdays that are not NYSE holidays (HOLIDAYS, 2026-2027)"""
     out = []; d = day
     while len(out) < k:
         d = d + pd.Timedelta(days=1)
-        if d.weekday() < 5: out.append(d)
+        if d.weekday() < 5 and d.normalize() not in HOLIDAYS: out.append(d)
     return out
+
+
+def _way(ticker: str, hedged: bool) -> dict:
+    """the founder's way to trade a match (TRACK 3.121): buy the inverse single-stock fund with cash where one exists (the 1x fund first); where none exists, sell the stock short with US$35,000.
+    Where the rule also buys the S&P 500 fund, the same exposure is bought of it; with a fund the US$70,000 cash is split so that nothing is borrowed."""
+    A = 70_000.0; f = None
+    try:
+        C = pd.read_csv(STUDY / "funds_check.csv"); C = C[C.ok.astype(bool) & (C.stated < 0) & (C.stock == ticker)]
+        if len(C): c = C.assign(k=(C.stated + 1).abs()).sort_values("k").iloc[0]; f = (str(c.fund), abs(float(c.stated)))
+    except Exception: pass
+    if f is None:
+        return dict(kind="short", money=SHORT_MONEY, spy=SHORT_MONEY if hedged else 0.0, text=f"sell {ticker} short with US${SHORT_MONEY:,.0f} (it has no inverse fund)" + (f" and buy the S&P 500 fund with US${SHORT_MONEY:,.0f}" if hedged else ""), short_text=f"sell {ticker} short, US${SHORT_MONEY:,.0f}")
+    fund, k = f; m = A / k if not hedged else A / (1 + k)
+    return dict(kind="fund", fund=fund, mult=k, money=m, spy=k * m if hedged else 0.0, text=f"buy the inverse fund {fund} ({k:g}x) with US${m:,.0f}" + (f" and the S&P 500 fund with US${k * m:,.0f}" if hedged else "") + "; no short sale, nothing borrowed", short_text=f"buy {fund}, US${m:,.0f}")
+
+
+def _way_usd(w: dict, pin, pout, sin, sout, d_in, d_out, nights, RC):
+    """the result of one finished trade done the founder's way, in US dollars after cost; None when the fund's prices cannot be had"""
+    if w["kind"] == "short":
+        fee, amt = RC.round_trip(pin, pout, w["money"], short=True); usd = -amt * (pout / pin - 1) - fee - HS["stock"] / 1e4 * amt - RC.short_carry(amt, nights)
+    else:
+        try:
+            import yfinance as yf
+            d = yf.download(w["fund"], start=f"{d_in - pd.Timedelta(days=7):%Y-%m-%d}", interval="1d", progress=False, auto_adjust=True)
+            if isinstance(d.columns, pd.MultiIndex): d.columns = d.columns.get_level_values(0)
+            d.index = pd.DatetimeIndex(d.index).tz_localize(None); fin, fout = float(d.Open.loc[d_in]), float(d.Close.loc[d_out])
+        except Exception: return None
+        fee, amt = RC.round_trip(fin, fout, w["money"], short=False); usd = amt * (fout / fin - 1) - fee - HS["fund1" if w["mult"] < 1.75 else "fund2"] / 1e4 * amt
+    if w["spy"]: fee2, a2 = RC.round_trip(sin, sout, w["spy"], short=False); usd += a2 * (sout / sin - 1) - fee2 - HS["spy"] / 1e4 * a2
+    return float(usd)
 
 
 def check(SS=None, start=START, now=None):
@@ -104,41 +154,47 @@ def check(SS=None, start=START, now=None):
     if rows: F = pd.concat([F, pd.DataFrame(rows)], ignore_index=True)
     for c in COLS:
         if c not in F.columns: F[c] = np.nan
-    F["day"] = pd.to_datetime(F["day"]); F[["entry_day", "exit_day"]] = F[["entry_day", "exit_day"]].astype(object)
+    F["day"] = pd.to_datetime(F["day"]); F[["entry_day", "exit_day", "way"]] = F[["entry_day", "exit_day", "way"]].astype(object); hedged_of = {r["code"]: not r["passed_alone"] for r in R}
+    for k, r in F.iterrows():
+        if not isinstance(r.way, str): F.at[k, "way"] = _way(r.ticker, hedged_of.get(r.code, False))["text"]
     for k, r in F.iterrows():      # what followed: sold at the next open, closed at the rule's exit, the founder's real cost
         d = P.get(r.ticker)
-        if d is None or r.day not in d.index or r.day not in spy.index or pd.notna(r.alone_bp): continue
+        if d is None or r.day not in d.index or r.day not in spy.index or (pd.notna(r.alone_bp) and pd.notna(r.way_usd)): continue
         i = d.index.get_loc(r.day); j = spy.index.get_loc(r.day); h = int(r.exit_sessions)
         if i + h >= len(d) or j + h >= len(spy): continue
         sign = -1.0 if r.side == "SELL" else 1.0; pin, pout = float(d.open.iloc[i + 1]), float(d.close.iloc[i + h]); sin, sout = float(spy.open.iloc[j + 1]), float(spy.close.iloc[j + h]); nights = (d.index[i + h] - d.index[i + 1]).days; A = RC.ACCOUNT; SSb = RC.SPREAD_BP["stock"] / 1e4
         fee, amt = RC.round_trip(pin, pout, A, short=sign < 0); alone = sign * amt * (pout / pin - 1) - fee - 2 * SSb * amt - (RC.short_carry(amt, nights) if sign < 0 else 0.0)
         fee2, amt2 = RC.round_trip(sin, sout, A, short=sign > 0); hedge = -sign * amt2 * (sout / sin - 1) - fee2 - 2 * SSb * amt2 - (RC.short_carry(amt2, nights) if sign > 0 else 0.0)
+        wu = _way_usd(_way(r.ticker, hedged_of.get(r.code, False)), pin, pout, sin, sout, d.index[i + 1], d.index[i + h], nights, RC); F.at[k, "way_usd"] = np.nan if wu is None else round(wu, 0)
         F.at[k, "entry_day"] = f"{d.index[i + 1]:%Y-%m-%d}"; F.at[k, "exit_day"] = f"{d.index[i + h]:%Y-%m-%d}"; F.at[k, "alone_bp"] = round(alone / A * 1e4, 1); F.at[k, "against_spx_bp"] = round((alone + hedge) / A * 1e4, 1); F.at[k, "stock_move_bp"] = round((pout / pin - 1) * 1e4, 1); F.at[k, "spx_move_bp"] = round((sout / sin - 1) * 1e4, 1)
     F = F[COLS].sort_values(["day", "code", "ticker"]).reset_index(drop=True); FWD.parent.mkdir(parents=True, exist_ok=True); tmp = FWD.with_suffix(".tmp"); F.to_csv(tmp, index=False); os.replace(tmp, FWD)
     # ---- the tally, per rule: each day counts once
     tally = {}; L = ["# Sell-off rules SS-2a, SS-2b, SS-2c: the forward record", "", f"Registered in TRACK 3.110 (24 Nov 2026) before any case. Every sell-off of 5% or more of the list from {start:%d %b %Y} is tested against the rules as frozen in `docs/selloff_rules.json`. A match is sold at the next open and closed at the rule's exit; "
-         f"cost: the founder's fees, 2 basis points of spread per order, 4.8% a year on the short position; account US${70000:,}. Each day counts once per rule. **Verdict per rule at {VERDICT_AT} separate days.** The history numbers are flattered (the rules were chosen on those years); this record is the first clean evidence.", "",
+         f"cost: the founder's fees, 2 basis points of spread per order, 4.8% a year on the short position; account US${70000:,}. Each day counts once per rule. **Verdict per rule at {VERDICT_AT} separate days.** The two bp columns are the registered measure (the stock sold short with the whole account). **'The founder's way' (decided 25 Nov 2026, TRACK 3.121) is how a match is really traded: the inverse fund bought with cash where one exists, otherwise the stock sold short with US$35,000; its result is in US dollars after cost.** The history numbers are flattered (the rules were chosen on those years); this record is the first clean evidence.", "",
          "| rule | trade that passed the test | history 2018-2026, per day with a trade | days so far with a known result | average so far, the stock alone | against the S&P 500 | waiting for their sessions |", "|---|---|---|---|---|---|---|"]
     for r in R:
         G = F[F.code == r["code"]]; K = G[G.alone_bp.notna()]; bd = K.groupby("day")[["alone_bp", "against_spx_bp"]].mean(); main = "against_spx" if not r["passed_alone"] else "alone"
         tally[r["code"]] = dict(days=int(len(bd)), alone=float(bd.alone_bp.mean()) if len(bd) else None, against_spx=float(bd.against_spx_bp.mean()) if len(bd) else None, waiting=int(G.alone_bp.isna().sum()), main=main)
         L.append(f"| {r['code']} | {'sell the stock' if r['passed_alone'] else 'sell the stock and buy the S&P 500 fund'}; exit +{r['exit']} | {r['history']['alone_bp' if r['passed_alone'] else 'against_spx_bp']:+.0f} bp ({r['history']['days']} days) | {len(bd)} of {VERDICT_AT} | {'' if not len(bd) else format(bd.alone_bp.mean(), '+.0f') + ' bp'} | {'' if not len(bd) else format(bd.against_spx_bp.mean(), '+.0f') + ' bp'} | {int(G.alone_bp.isna().sum())} |")
     f0 = lambda x: "" if pd.isna(x) else f"{x:+.0f}"
-    L += ["", "| sell-off day | rule | stock | move that day % | sold at the open of | closed at the close of | the stock alone, bp after cost | against the S&P 500, bp after cost |", "|---|---|---|---|---|---|---|---|"] + [f"| {x.day:%Y-%m-%d} | {x.code} | {x.ticker} | {f0(x.move_pct) if pd.isna(x.move_pct) else format(x.move_pct, '+.1f')} | {x.entry_day if isinstance(x.entry_day, str) else ''} | {x.exit_day if isinstance(x.exit_day, str) else ''} | {f0(x.alone_bp)} | {f0(x.against_spx_bp)} |" for x in F.sort_values("day", ascending=False).itertuples()]
-    if not len(F): L.append("| (no match yet) | | | | | | | |")
+    L += ["", "| sell-off day | rule | stock | move that day % | sold at the open of | closed at the close of | the stock alone, bp after cost | against the S&P 500, bp after cost | the founder's way | its result, US$ |", "|---|---|---|---|---|---|---|---|---|---|"] + [f"| {x.day:%Y-%m-%d} | {x.code} | {x.ticker} | {f0(x.move_pct) if pd.isna(x.move_pct) else format(x.move_pct, '+.1f')} | {x.entry_day if isinstance(x.entry_day, str) else ''} | {x.exit_day if isinstance(x.exit_day, str) else ''} | {f0(x.alone_bp)} | {f0(x.against_spx_bp)} | {x.way if isinstance(x.way, str) else ''} | {'' if pd.isna(x.way_usd) else format(x.way_usd, '+,.0f')} |" for x in F.sort_values("day", ascending=False).itertuples()]
+    if not len(F): L.append("| (no match yet) | | | | | | | | | |")
     if missing: L += ["", "Not checkable at the last run (an input was missing for the new days): " + "; ".join(f"{k}: {', '.join(sorted(set(v)))[:120]}" for k, v in missing.items()) + "."]
+    stale = list(getattr(_prices, "bad", []) or [])
+    if stale: L += ["", f"**Warning, last run:** Yahoo gave no fresh price for {', '.join(stale)}; a match or a miss of that run may be wrong until the check is run again."]
     Path("docs").mkdir(exist_ok=True); Path("docs/selloff_rules_forward.md").write_text("\n".join(L) + "\n")
     # ---- what the block shows
     sigs = []
     for r in R:
         for q in np.flatnonzero(r["_mask"] & new):
-            b = B.iloc[q]; ns = _next_sessions(b.day, int(r["exit"])); ent = datetime.combine(ns[0].date(), datetime.min.time(), NY).replace(hour=9, minute=30); ex = datetime.combine(ns[-1].date(), datetime.min.time(), NY).replace(hour=16)
-            if now <= ex + timedelta(hours=24): sigs.append(dict(code=r["code"], ticker=b.ticker, day=f"{b.day:%Y-%m-%d}", move_pct=round(float(b["last day's move %"]), 1) if "last day's move %" in B.columns else None, side=r["side"], hedged=not r["passed_alone"], entry_at=ent.isoformat(), exit_at=ex.isoformat(), exit_sessions=int(r["exit"]),
+            b = B.iloc[q]; ns = _next_sessions(b.day, int(r["exit"])); ent = datetime.combine(ns[0].date(), datetime.min.time(), NY).replace(hour=9, minute=30); ex = datetime.combine(ns[-1].date(), datetime.min.time(), NY).replace(hour=13 if ns[-1].normalize() in EARLY else 16)
+            if now <= ex + timedelta(hours=24): sigs.append(dict(code=r["code"], ticker=b.ticker, day=f"{b.day:%Y-%m-%d}", move_pct=round(float(b["last day's move %"]), 1) if "last day's move %" in B.columns else None, side=r["side"], hedged=not r["passed_alone"], way=_way(b.ticker, not r["passed_alone"])["text"], way_short=_way(b.ticker, not r["passed_alone"])["short_text"], entry_at=ent.isoformat(), exit_at=ex.isoformat(), exit_sessions=int(r["exit"]),
                                                              history_bp=r["history"]["alone_bp" if r["passed_alone"] else "against_spx_bp"], history_days=r["history"]["days"]))
     falls = B[(B.day == last)]; card = dict(checked=datetime.now(NY).isoformat(), last_close=f"{last:%Y-%m-%d}", falls_last_close=[dict(ticker=x.ticker, move_pct=round(float(x["last day's move %"]), 1)) for _, x in falls.iterrows()] if "last day's move %" in B.columns else [], signals=sigs, tally=tally,
-                                              rules=[dict(code=r["code"], when=r["when"], exit=r["exit"], hedged=not r["passed_alone"], history_bp=r["history"]["alone_bp" if r["passed_alone"] else "against_spx_bp"], history_days=r["history"]["days"], per_year=r["history"]["per_year"]) for r in R], not_checkable=missing)
+                                              rules=[dict(code=r["code"], when=r["when"], exit=r["exit"], hedged=not r["passed_alone"], history_bp=r["history"]["alone_bp" if r["passed_alone"] else "against_spx_bp"], history_days=r["history"]["days"], per_year=r["history"]["per_year"]) for r in R], not_checkable=missing, stale=stale)
     CARD.parent.mkdir(parents=True, exist_ok=True); tmp = CARD.with_suffix(".tmp"); tmp.write_text(json.dumps(card, indent=1, default=float)); os.replace(tmp, CARD)
     print(f"  last finished session {last:%Y-%m-%d}: {len(falls)} sell-offs of 5% or more in the list" + (f" ({', '.join(falls.ticker)})" if len(falls) else "") + f"; matches of a rule since {start:%d %b}: {len(F)} ({len(rows)} new now)")
+    for x in F[F.day >= last - pd.Timedelta(days=7)].itertuples(): print(f"  MATCH {x.code}: {x.ticker} closed {x.move_pct:+.1f}% on {x.day:%Y-%m-%d} -> your way: {x.way}" + ("" if pd.isna(x.way_usd) else f"; result US${x.way_usd:+,.0f}"))
     for r in R: tl = tally[r["code"]]; print(f"  {r['code']}: {tl['days']} of {VERDICT_AT} days with a known result" + (f", average {tl[tl['main']]:+.0f} bp after cost" if tl["days"] else "") + f"; {tl['waiting']} waiting" + (f"; NOT CHECKABLE today: {', '.join(sorted(set(missing[r['code']])))[:90]}" if r["code"] in missing else ""))
     print("-> docs/selloff_rules_forward.md, data_provenance/live/selloff_rules_forward.csv"); return card
 
@@ -163,14 +219,15 @@ def card_html() -> str:
     except Exception: return ""
     now = datetime.now(NY); S = [dict(s, stage=_stage(s, now)) for s in C.get("signals", [])]; S = [s for s in S if s["stage"]]; order = {"red": 0, "yellow": 1, "green": 2}; S.sort(key=lambda s: order[s["stage"]]); chk = datetime.fromisoformat(C["checked"]); old = (now - chk).total_seconds() > 30 * 3600
     word = {"red": "TRADE NOW", "yellow": "best entry time passed", "green": "trading time over"}; cls = {"red": "sso-red", "yellow": "sso-yel", "green": "sso-grn"}.get(S[0]["stage"], "") if S else ""
-    if S: status = "<b>" + ", ".join(f"{s['ticker']} {s['move_pct']:+.1f}%" for s in S[:3]) + (f" +{len(S) - 3}" if len(S) > 3 else "") + f"</b><br><b>{word[S[0]['stage']]}</b> · {S[0]['code']}: sell at the next open"
+    if S: status = "<b>" + ", ".join(f"{s['ticker']} {s['move_pct']:+.1f}%" for s in S[:3]) + (f" +{len(S) - 3}" if len(S) > 3 else "") + f"</b><br><b>{word[S[0]['stage']]}</b> · {S[0]['code']}: {S[0].get('way_short', 'sell at the next open')}"
     else: fl = C.get("falls_last_close", []); status = ("No rule met at the last close." if not fl else f"{len(fl)} fell 5%+ at the last close; no rule met.") + (f"<br><span class='sso-m'>checked {chk:%d %b %H:%M} New York</span>" if not old else "")
     if old: status += "<br><span class='sso-m'><b>Not checked since " + f"{chk:%d %b %H:%M}" + " New York — run the daily check.</b></span>"
     d = []
     for s in S:
-        ent = datetime.fromisoformat(s["entry_at"]); ex = datetime.fromisoformat(s["exit_at"]); d.append(f"<p><b>{s['ticker']}</b> closed {s['move_pct']:+.1f}% on {s['day']} and meets <b>{s['code']}</b> — <b>{word[s['stage']]}</b>. Trade: sell the stock" + (" and buy the S&P 500 fund" if s["hedged"] else "") + f" at the open of {ent:%a %d %b}; close it at the close of {ex:%a %d %b}. History 2018–2026: {s['history_bp']:+.0f} basis points per day with a trade, after cost ({s['history_days']} days).</p>")
+        ent = datetime.fromisoformat(s["entry_at"]); ex = datetime.fromisoformat(s["exit_at"]); d.append(f"<p><b>{s['ticker']}</b> closed {s['move_pct']:+.1f}% on {s['day']} and meets <b>{s['code']}</b> — <b>{word[s['stage']]}</b>. Trade: " + (s["way"] if s.get("way") else "sell the stock" + (" and buy the S&P 500 fund" if s["hedged"] else "")) + f" at the open of {ent:%a %d %b}; close it at the close of {ex:%a %d %b}" + (" (the market closes at 13:00 New York that day)" if ex.hour == 13 else "") + f". History 2018–2026: {s['history_bp']:+.0f} basis points per day with a trade, after cost ({s['history_days']} days).</p>")
     for r in C.get("rules", []):
         tl = (C.get("tally") or {}).get(r["code"], {}); d.append(f"<p><b>{r['code']}</b> — a stock of the list closes 5% or more down AND {' AND '.join(r['when'])}. Exit: the close {r['exit']} sessions after. History: {r['history_bp']:+.0f} bp after cost, about {r['per_year']:.0f} days a year. Forward record: {tl.get('days', 0)} of {VERDICT_AT} days" + (f", average {tl[tl['main']]:+.0f} bp" if tl.get("days") else "") + ".</p>")
+    if C.get("stale"): d.append("<p><b>Warning:</b> at the last check Yahoo gave no fresh price for " + ", ".join(C["stale"]) + "; run the daily check again.</p>")
     if C.get("not_checkable"): d.append("<p><b>Not checkable at the last run:</b> " + ", ".join(C["not_checkable"]) + " (an input was missing).</p>")
     d.append("<p class='sso-m'>Rules passed a test on 2005–2026 with the real trading cost; those numbers are flattered because the rules were chosen on the same years. The verdict comes from the forward record at 30 days each. Colours: red = trade now · yellow = best entry passed · green = over.</p>")
     d.append(f"<p class='sso-m'>Last finished session {C.get('last_close')} · checked {chk:%d %b %H:%M} New York · daily prices from Yahoo, filings from the SEC, indices from FRED</p>")
