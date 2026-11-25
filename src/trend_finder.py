@@ -21,7 +21,8 @@ from pathlib import Path
 import numpy as np, pandas as pd
 
 POOL = ["AAPL", "AMD", "AMZN", "AVGO", "CRWD", "CSCO", "EMR", "GE", "GOOG", "IBM", "INTC", "META", "MSFT", "MU", "NVDA", "ORCL", "QCOM", "SNDK", "TSM", "TXN"]      # the 20 companies with profiles (founder, 24 Nov)
-SIDE_MIN = 5      # a stretch shorter than a week is never called 'sideways'
+K_FIXED = 5
+TAIL_MIN, NEAR = 10, 1.5      # sideways: the last part of a swing, at least 10 sessions and a third of it, that ends within 1.5 usual daily moves of a price reached before it
 OUT = Path("docs/trends"); USUAL = 250; KS = [4, 5, 6, 7, 8, 9, 10]; SHOW = 620; FAST = {"slow": 0.0, "medium": 1.6, "fast": 2.6}; TOL = 9
 # The founder's marks of 25 Nov on the first charts, as swings that must exist: (stock, direction, start, end or None). Dates are those of the first version's table; a swing counts as found within 9 calendar days at each end.
 MARKS = [("AAPL", "down", "2025-10-29", "2026-01-20"), ("AAPL", "down", "2026-02-06", "2026-03-30"), ("AAPL", "up", "2026-08-12", "2026-11-13"), ("AAPL", "down", "2026-07-28", "2026-08-12"), ("AAPL", "down", "2024-12-26", "2025-04-08"),
@@ -59,15 +60,16 @@ def swings(d: pd.DataFrame, K: float) -> list:
         m = e - s; st = abs(lp[e] - lp[s]) / (usual[s] * np.sqrt(m)) if m > 0 and np.isfinite(usual[s]) else np.nan; path = float(np.nansum(np.abs(r[s + 1:e + 1])))
         return dict(side=side, start=d.index[s], end=d.index[e], sessions=int(m), move_pct=float((np.exp(lp[e] - lp[s]) - 1) * 100), strength=float(st), speed="sideways" if side == "sideways" else "fast" if st >= FAST["fast"] else "medium" if st >= FAST["medium"] else "slow",
                     first_seen=d.index[conf] if conf is not None else pd.NaT, straight=float(abs(lp[e] - lp[s]) / path) if path > 0 else np.nan, running=running, in_usual_moves=float(abs(lp[e] - lp[s]) / usual[s]) if np.isfinite(usual[s]) else np.nan)
-    def strength(a, b): return abs(lp[b] - lp[a]) / (usual[a] * np.sqrt(b - a)) if b > a and np.isfinite(usual[a]) else 0.0
     for (s, k0, conf), (e, k1, conf1) in zip(turns[:-1], turns[1:]):
         side = "up" if k0 == "trough" else "down"; sign = 1.0 if side == "up" else -1.0; s1, e1 = s, e
-        # Founder, 25 Nov (NVDA 5 and 10): a swing must END where the move ended; a long SIDEWAYS stretch after it, even with a slightly more extreme price at its end, is not part of the trend.
-        # The move 'ended' at the day up to which the strength counted from the start is highest. The rest is sideways -- and is cut off -- only when it is at least SIDE_MIN sessions long and its own
-        # move is smaller than one chance drift for its length (strength under 1). Only the END of a swing is tested: that is what the founder marked.
-        if e - s >= 2 * SIDE_MIN:
-            cand = [m for m in range(s + 2, e + 1)]; best = max(cand, key=lambda m: sign * (lp[m] - lp[s]) / np.sqrt(m - s))
-            if e - best >= SIDE_MIN and strength(best, e) < 1.0: e1 = best
+        # Founder, 25 Nov (NVDA): a trend must END where the move ended; a long SIDEWAYS stretch after it, even if it finishes on a slightly more extreme price, is not part of the trend.
+        # Second attempt (the first one, 'where the strength from the start is highest', ended trends after their first sharp days and spoiled AAPL, TSM, AMD, SNDK -- founder, 25 Nov 21:31).
+        # Now, conservative: take the best price reached in the first part of the swing, leaving a last part of at least TAIL_MIN sessions and at least a third of the swing. If that price is
+        # already within NEAR usual daily moves of the swing's final extreme, the move ended there and the last part is sideways. Otherwise the swing is left exactly as it was.
+        need = max(TAIL_MIN, int(np.ceil((e - s) / 3)))
+        if e - s > need + 2:
+            cand = np.arange(s + 1, e - need + 1); m = int(cand[np.argmax(sign * lp[cand])])
+            if np.isfinite(usual[m]) and sign * (lp[e] - lp[m]) <= NEAR * usual[m]: e1 = m
         if s1 > s: out.append(piece("sideways", s, s1, None, False))
         out.append(piece(side, s1, e1, conf, conf1 is None and e1 == e))
         if e1 < e: out.append(piece("sideways", e1, e, None, conf1 is None))
@@ -99,11 +101,11 @@ def cmd_run(tickers=None, K=None):
     marks = [m for m in MARKS if m[0] in P]; score = {}
     for k in KS:
         S = {t: swings(d, k) for t, d in P.items()}; score[k] = (sum(_hit(S[t], side, a, b) for t, side, a, b in marks), float(np.mean([sum(x["end"] > d.index[max(0, len(d) - SHOW)] and x["side"] != "sideways" for x in S[t]) for t, d in P.items()])))
-    if K is None: K = max(KS, key=lambda k: (score[k][0], -abs(k - 7))) if marks else 7
+    if K is None: K = K_FIXED      # fitted once on the founder's first marks (K = 5 reproduced 14 of 18) and fixed since 25 Nov; re-choosing K at every run made the charts jump (the fourth version drew K = 6)
     print(f"  the founder's marks ({len(marks)} swings that must exist) reproduced, by K: " + ", ".join(f"K={k}: {score[k][0]} ({score[k][1]:.0f} trends a stock)" for k in KS) + f" -> K = {K} is drawn")
     rows = []; L = ["# The trends on the daily chart: every swing between a trough and a crest (third version, from the founder's marks)", "", f"Step 1 of the addition and subtraction pool (`docs/POOL_PLAN.md`). No news is used. A crest is marked when the price has fallen back from it by K usual daily moves of the stock, a trough the same way upward; a trend is the swing from one turn to the next. "
-         f"**K = {K}**, the value that reproduces most of the founder's marks of 25 Nov ({score[K][0]} of {len(marks)}): " + ", ".join(f"K={k}: {score[k][0]}" for k in KS) + ". 'Strength' = the move divided by how far the price drifts by chance in that many sessions (fast swings are darker); 'size' = the move in usual daily moves; "
-         "'first seen' = the day the swing could have been recognised with the prices known that day. The last swing of each stock is still running. **Sideways (founder, 25 Nov):** a trend ends where its move ended -- the day up to which its strength, counted from its start, is highest; what follows is cut off as 'sideways' (row 's', grey on the chart) when it lasts at least 5 sessions and moves less than one chance drift for its length. **To mark: which numbers are wrong, and what is missing.**", ""]
+         f"**K = {K}**, fitted once on the founder's first marks of 25 Nov and fixed since. Marks reproduced now ({score[K][0]} of {len(marks)} with K = {K}): " + ", ".join(f"K={k}: {score[k][0]}" for k in KS) + ". 'Strength' = the move divided by how far the price drifts by chance in that many sessions (fast swings are darker); 'size' = the move in usual daily moves; "
+         "'first seen' = the day the swing could have been recognised with the prices known that day. The last swing of each stock is still running. **Sideways (founder, 25 Nov):** a trend ends where its move ended. If the best price of the first part of a swing is already within 1.5 usual daily moves of the swing's final extreme, and the part after it is at least 10 sessions and at least a third of the swing, that last part is 'sideways' (row 's', grey on the chart) and the trend ends at that earlier price. Every other swing is left as it was. **To mark: which numbers are wrong, and what is missing.**", ""]
     for t, d in P.items():
         sw = swings(d, K); _chart(t, d, sw, K, OUT / f"{t}.png"); shown = [x for x in sw if "no" in x]
         L += [f"## {t}", "", f"![{t}]({t}.png)", "", "| no. | direction | from | to | sessions | move | size, usual daily moves | strength (speed) | straightness | first seen |", "|---|---|---|---|---|---|---|---|---|---|"]
