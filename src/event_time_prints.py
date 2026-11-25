@@ -179,6 +179,18 @@ def market_surprise(day, live=False):
 
 
 # ---------------------------------------------------------------- text
+NOT_NATIONAL = ("county", "counties", "metropolitan", "state", "industry", "territor", "puerto", "guam", "samoa", "virgin", "mariana", "outdoor", "arts-and", "travel", "space", "marine", "health-care", "digital")
+
+
+def _bea_pick(links: list) -> str | None:
+    """Fault of 25 Nov 2026 (TRACK 3.124): the first link starting 'gross-domestic-product' on BEA's page was 'GDP by county 2024', and the engine read it as the
+    quarterly GDP release. Now: links about counties, states, industries or territories are dropped; of the rest, a link naming an estimate or a quarter/month comes first."""
+    keep = [x for x in dict.fromkeys(links) if not any(w in x.lower() for w in NOT_NATIONAL)]
+    if not keep: return None
+    best = [x for x in keep if re.search(r"estimate|quarter|january|february|march|april|may|june|july|august|september|october|november|december", x, re.I)]
+    return (best or keep)[0]
+
+
 def fetch_text(name, day):
     route = RELEASES[name][5]
     if route == "unfetchable": return None, "unfetchable (403 to scripts; use paste)"
@@ -192,10 +204,11 @@ def fetch_text(name, day):
         else:
             slug = route.split(":", 1)[1]
             with urllib.request.urlopen(urllib.request.Request("https://www.bea.gov/news/current-releases", headers={"User-Agent": "Mozilla/5.0"}), timeout=30) as r: page = r.read().decode("utf-8", "ignore")
-            m = re.search(rf'href="(/news/\d{{4}}/{slug}[^"]*)"', page)
-            if not m: return None, "BEA: release link not found on current-releases page"
-            with urllib.request.urlopen(urllib.request.Request("https://www.bea.gov" + m.group(1), headers={"User-Agent": "Mozilla/5.0"}), timeout=30) as r: html = r.read().decode("utf-8", "ignore")
+            link = _bea_pick(re.findall(rf'href="(/news/\d{{4}}/{slug}[^"]*)"', page))
+            if not link: return None, "BEA: the NATIONAL release was not found on the current-releases page (releases by county, state or industry are not read in its place)"
+            with urllib.request.urlopen(urllib.request.Request("https://www.bea.gov" + link, headers={"User-Agent": "Mozilla/5.0"}), timeout=30) as r: html = r.read().decode("utf-8", "ignore")
             txt = re.sub(r"<[^>]+>", " ", html); txt = re.sub(r"\s+", " ", txt)
+            if name == "gdp" and not re.search(r"annual rate", txt, re.I): return None, "BEA: the page found is not the national quarterly GDP release (no 'annual rate' in it) -- not read"
         TEXTS.mkdir(parents=True, exist_ok=True)
         f = TEXTS / f"{day.replace('-', '')}_{name}.txt"
         if not f.exists(): f.write_text(txt)

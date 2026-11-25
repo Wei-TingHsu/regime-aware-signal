@@ -1,0 +1,17 @@
+"""record_26nov_reversal_engine_check.py -- TRACK 3.124: what the engine recorded around the turn of 25 Nov; the wrong GDP document and its fix. Idempotent."""
+from pathlib import Path
+t = Path("docs/TRACK.md"); s = t.read_text()
+A = """
+
+### 3.124 The turn of 25 Nov: what the engine recorded; the wrong GDP document (26 Nov 08:40)
+**Run of `python -m src.reversal_check engine --day 2026-11-25` (commit 23f7b04).** Window 07:00-13:00 New York.
+**Answer to the founder's question: the engine recorded NO news that supports a turn at 11:00.** The listener has one item in the whole window (SK hynix, a 6-K at 07:56, shareholder returns; own stock +0.5, market +0.15) and nothing between 08:00 and 13:00. Company documents read that day (Intel class action, two routine TSMC filings) are not market news. The two White House documents of the day (an executive order on federal contractors; National Adoption Month) were read as no direction for any market.
+**What the engine said about the PCE release (read at 09:05 New York, 35 minutes after the release -- the job waits for delayed prices by design):** bonds -0.5, gold +0.3, dollar +0.2, equities +0.1, confidence 0.55. The bond call matches the first move (hawkish), not the turn. Nothing in the engine speaks about the hours after a release.
+**Why the engine could not have seen it.** It reads official documents and company filings. It has no source for market-wide headlines during the session (press reports of possible tariffs, Fed officials speaking, auction results) and no rule about the time of day (the European close at 11:30). A gap, stated: not a fault of a rule, a missing kind of source.
+**FAULT FOUND (Claude's code, `src/event_time_prints.py`): the engine read the wrong GDP document.** Its GDP reading of 25 Nov is headed 'Real GDP increased in 2,273 counties, decreased in 809 counties ... in 2024' -- BEA's 'GDP by county' release, not the third-quarter GDP estimate published that morning. Cause: the code took the first link on BEA's page whose address starts with 'gross-domestic-product'. The reading (no direction, confidence 0.45) is therefore about the wrong document; the ledger row 'print:gdp' of 25 Nov is void and stays in the ledger marked here, not deleted. **Fix:** links about counties, states, industries or territories are dropped; a link naming an estimate or a quarter comes first; a GDP page without the words 'annual rate' is not read at all. Earlier GDP readings should be checked for the same fault (to do: list the headline of every stored GDP reading).
+**Also seen, for the customer's view:** the three forward-ledger models of 24 Nov hold SNDK and MU among their BUY names for 5 to 20 days, while rule SS-2a (3.121) sells SNDK for 2 sessions. Two parts of the product say opposite things about one stock on one day; the horizons differ, but the page does not explain that.
+**Minute prices of the four futures for 25 Nov:** Databento's futures data ended 10:36 New York when the founder ran it; to be run again. Until then 'all three turned at 11:00' rests on the founder's observation.
+**Security note.** A Databento key was pasted into the chat with the terminal output on 26 Nov. It is not in any file of the repo. The founder was told to replace it.
+"""
+if "### 3.124 The turn of 25 Nov" not in s: t.write_text(s.rstrip("\n") + A); print("  TRACK.md: 3.124 added")
+else: print("  TRACK.md: 3.124 already there -- skipped")
