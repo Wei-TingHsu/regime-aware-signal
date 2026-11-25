@@ -1,0 +1,21 @@
+"""record_25nov_spreads_trends.py -- TRACK 3.114: the spread measurement (result, priors scored), the founder's decision on the server, and the trend
+finder of the pool plan (what it is, and that its cut is set by the founder's marks, not by a test). Idempotent."""
+from pathlib import Path
+t = Path("docs/TRACK.md"); s = t.read_text()
+A = """
+
+### 3.114 The real spreads; no server; the trend finder, step 1 of the pool (25 Nov 21:10)
+**Spread measurement** (`docs/spread_measure.md`, commit ad80f4b; Databento, Nasdaq's own book, one-minute quotes; 1,692 of 1,756 windows, 64 lost to the connection; charged about US$0.00). Cost of ONE order = half the gap between ask and bid, basis points, middle value (average; nine in ten under):
+| what is traded | 1 minute after the open | 5 minutes after the open | 5 minutes before the close | 1 minute before the close | assumed until now |
+|---|---|---|---|---|---|
+| the stock (343 sessions) | 3.6 (4.9; 9.9) | 2.4 (3.2; 6.3) | 1.1 (1.4; 2.8) | 0.6 (0.7; 1.4) | 2 |
+| 1x inverse fund (329-333) | 7.8 (12.9; 24.7) | 7.0 (10.4; 22.6) | 6.5 (11.2; 21.8) | 5.2 (6.9; 12.1) | 10 |
+| 2x inverse fund (172) | 11.4 (14.7; 23.7) | 10.2 (14.4; 24.6) | 8.2 (11.1; 21.6) | 6.6 (9.6; 21.4) | 10 |
+**The three ways for the same exposure, with the measured middle values** (entry 1 minute after the open, exit 1 minute before the close two sessions later; fees about 1 basis point; a short sale also about 2.6 for two nights): **sell the stock short 7.8** (with the assumptions: 13.1); **buy the 2x inverse fund with half the money 10.0** (18.7); **buy the 1x inverse fund 14.5** (28.2). The stock is still the cheapest; the 2x fund is now second; all three cost less than assumed. Entry and exit together cost the stock 4.2 basis points of spread against the 4.0 assumed, so **SO-T2's results for the stock stand without a rerun.** Spreads are widest in the first minute and fall through the day. Some funds are far wider than the rest at the open: QCMD 49, CSCS 41, ORCS 34. Nasdaq's own book only: an upper limit.
+**Priors scored.** #211 (stocks under 5 basis points one minute after the open): RIGHT, 3.6. #212 (1x funds over 10): WRONG, 7.8. #213 (selling the stock short stays the cheapest way): RIGHT.
+**Claude's time estimate was wrong by a factor of ten:** 'about 15 to 20 minutes' against about four hours (about 11 seconds a request). Download times are from now on estimated from a timed first batch, not guessed.
+**Server (founder, 25 Nov): 'no need for this renting.'** The listener stays on the laptop; it is to be started with `caffeinate -i` so the Mac does not sleep while it runs. Accepted consequence, recorded: news published while the laptop is off, asleep or offline reaches the page late (23-24 Nov: 71 minutes to 9 hours), and for the pool plan the publication-to-listener gap is the main risk (docs/POOL_PLAN.md, point 10). Since 25 Nov the listener reads the SEC's single list first and runs with `--poll 15`.
+**The trend finder (`src/trend_finder.py`), step 1 of the pool plan -- a drawing tool, not a test.** For every stretch of 5 to 60 sessions: strength = the change of the price over the stretch (log) / (the stock's usual daily move over the 250 sessions before the stretch x the square root of the number of sessions). A day belongs to a trend when it lies in a stretch whose strength is beyond the cut; days that belong together form one trend, drawn from its lowest to its highest price (or the reverse). Three cuts are drawn at once -- 1.6 (weak), 2.0 (middle), 2.6 (strong) -- for the 20 pool stocks, with crests and troughs (a turn is marked when the price has come back by three usual daily moves) and, for each trend, the first day it could have been recognised with the prices known that day. **The cut is NOT chosen by Claude and no result is claimed: the founder marks on the charts which trends his eye accepts and which are missing; the rule is then fitted to his marks and fixed before any news is joined.** Known weakness of this first version: days covered by long stretches can join a sharp move and the quiet weeks after it into one long trend.
+"""
+if "### 3.114 The real spreads; no server" not in s: t.write_text(s.rstrip("\n") + A); print("  TRACK.md: 3.114 added")
+else: print("  TRACK.md: 3.114 already there -- skipped")
