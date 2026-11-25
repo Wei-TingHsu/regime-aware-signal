@@ -119,5 +119,67 @@ def cmd_risk(limits=(0.30, 0.50)):
     print("-> docs/selloff_short_risk.md")
 
 
+def cmd_funds(nboot=5000, min_days=20):
+    """Founder, 25 Nov: 'we use the fund then, i dont really have money to further dip in, hence a margin call is a killing signal to entire asset.' Measurement FD-1 (TRACK 3.120):
+    every past trade of the three frozen rules done WITHOUT selling short and WITHOUT borrowing -- by buying the inverse single-stock fund with the account's own cash.
+    Where the rule also buys the S&P 500 fund, the cash is split so both sides carry the same exposure. Costs: the founder's fees and the spreads MEASURED in 3.114."""
+    from src import real_cost as RC
+    from src.selloff_real import RP, CHECK
+    HS = {"stock": (3.6, 0.6), 1: (7.8, 5.2), 2: (11.4, 6.6), "spy": (2.0, 2.0)}      # half the bid-ask gap in basis points, at the entry and at the exit (TRACK 3.114; the S&P 500 fund: the allowance used so far)
+    R = json.loads(OUT.read_text())["rules"]; E = pd.read_csv(ROOT / "events.csv", parse_dates=["day"]); E["event_id"] = E.index; P = _px(); unit, dfn = S.BASES[GROUP]; spy = P["SPY"]; A = RC.ACCOUNT
+    B = E[(E.unit == unit) & (E.definition == dfn)].sort_values("day").reset_index(drop=True); tabs = {tn: pd.read_csv(S.TB / f"{tn}.csv").drop_duplicates("event_id").set_index("event_id").reindex(B.event_id.to_numpy()) for tn in S.TABLES if (S.TB / f"{tn}.csv").exists()}
+    C = pd.read_csv(CHECK); C = C[C.ok.astype(bool) & (C.stated < 0)]; FP = {}; BAD = {}
+    for c in C.itertuples():
+        if not (RP / f"{c.fund}.parquet").exists() or not (RP / f"{c.stock}.parquet").exists(): continue
+        F = pd.read_parquet(RP / f"{c.fund}.parquet"); Sd = pd.read_parquet(RP / f"{c.stock}.parquet"); FP[c.fund] = F
+        X = pd.concat([F.close.pct_change(), Sd.close.pct_change()], axis=1, keys=["f", "s"], sort=True).dropna(); BAD[c.fund] = set(X.index[(X.f - float(c.stated) * X.s).abs() > 0.30])      # a plainly wrong price on Yahoo (TRACK 3.108)
+    by_stock = {t: sorted(((abs(float(c.stated) + 1), c.fund, float(c.stated)) for c in g.itertuples() if c.fund in FP)) for t, g in C.groupby("stock")}      # the 1x inverse fund first
+    rng = np.random.default_rng(20261125); rows = []; T = []
+    for r in R:
+        m = np.logical_and.reduce([apply_condition(c, tabs[c["table"]]) for c in r["conditions"]]); h = int(r["exit"]); hedged = not r["passed_alone"]; n_all = 0; nofund = {}
+        for q in np.flatnonzero(m):
+            b = B.iloc[q]; d = P[b.ticker]; i = int(b.i)
+            if i + h >= len(d) or b.day not in spy.index: continue
+            j = spy.index.get_loc(b.day)
+            if j + h >= len(spy): continue
+            n_all += 1; d_in, d_out = d.index[i + 1], d.index[i + h]; pin, pout = float(d.open.iloc[i + 1]), float(d.close.iloc[i + h]); sin, sout = float(spy.open.iloc[j + 1]), float(spy.close.iloc[j + h]); nights = (d_out - d_in).days
+            pick = next(((f, mult) for _, f, mult in by_stock.get(b.ticker, []) if d_in in FP[f].index and d_out in FP[f].index and not any(d_in <= x <= d_out for x in BAD.get(f, ()))), None)
+            if pick is None: nofund[b.ticker] = nofund.get(b.ticker, 0) + 1; continue
+            f, mult = pick; k = abs(mult); kk = 1 if k < 1.75 else 2; F = FP[f]; fin, fout = float(F.open.loc[d_in]), float(F.close.loc[d_out]); rin, rout = float(F.raw_open.loc[d_in]), float(F.raw_close.loc[d_out])
+            # the stock way (needs a margin account): the whole account sold short; where the rule says so, the same amount of the S&P 500 fund bought on top
+            fee, amt = RC.round_trip(pin, pout, A, short=True); stock = -amt * (pout / pin - 1) - fee - sum(HS["stock"]) / 1e4 * amt - RC.short_carry(amt, nights)
+            if hedged: fee2, a2 = RC.round_trip(sin, sout, A, short=False); stock += a2 * (sout / sin - 1) - fee2 - sum(HS["spy"]) / 1e4 * a2
+            # the fund way (cash only, nothing borrowed): alone -> cash / multiple in the fund (the same exposure as the short sale); with the S&P 500 fund -> cash split so both sides carry the same exposure
+            mny = A / k if not hedged else A / (1 + k); fee, amt = RC.round_trip(rin, rout, mny, short=False); fund = amt * (fout / fin - 1) - fee - sum(HS[kk]) / 1e4 * amt
+            if hedged: fee2, a2 = RC.round_trip(sin, sout, k * mny, short=False); fund += a2 * (sout / sin - 1) - fee2 - sum(HS["spy"]) / 1e4 * a2
+            T.append(dict(code=r["code"], ticker=b.ticker, day=b.day, entry_day=d_in, exit_day=d_out, fund=f, multiple=mult, money_in_fund=round(mny), stock_move_pct=round((pout / pin - 1) * 100, 2), fund_move_pct=round((fout / fin - 1) * 100, 2), stock_way_usd=round(stock, 1), fund_way_usd=round(fund, 1), most_the_fund_way_can_lose_usd=round(mny)))
+        G = pd.DataFrame([t for t in T if t["code"] == r["code"]])
+        if not len(G): rows.append(dict(code=r["code"], hedged=hedged, n_all=n_all, n=0, days=0, nofund=nofund)); continue
+        D = G.groupby("day")[["stock_way_usd", "fund_way_usd"]].mean(); x = D.fund_way_usd.to_numpy(); bs = np.array([x[rng.integers(0, len(x), len(x))].mean() for _ in range(nboot)]) if len(x) > 1 else np.array([np.nan])
+        rows.append(dict(code=r["code"], hedged=hedged, n_all=n_all, n=len(G), days=len(D), first=G.day.min(), stock=float(D.stock_way_usd.mean()), fund=float(x.mean()), lo=float(np.nanquantile(bs, 0.025)), hi=float(np.nanquantile(bs, 0.975)), p=float((bs <= 0).mean()) if len(x) > 1 else np.nan,
+                         won=float((x > 0).mean()), worst_fund=float(G.fund_way_usd.min()), worst_stock=float(G.stock_way_usd.min()), money=float(G.money_in_fund.median()), nofund=nofund, funds=sorted(G.fund.unique())))
+    bar = 0.05 / len(R)
+    def verdict(z): return "no trade could be done with a fund" if not z["n"] else (f"too few days to judge (under {min_days})" if z["days"] < min_days else ("PASSES" if z["fund"] > 0 and z["p"] < bar else "does not pass"))
+    L = ["# The three sell-off rules without selling short: buying the inverse fund with cash (measurement FD-1)", "", f"Registered in TRACK 3.120 before running. Founder's decision, 25 Nov 2026: no short sales -- a margin call would endanger the whole account. Every past trade of SS-2a, SS-2b, SS-2c is redone by BUYING the inverse single-stock fund "
+         f"(the 1x fund first, the 2x fund where there is no 1x) at the open after the sell-off and selling it at the rule's exit, with the account's own US${A:,.0f} and nothing borrowed. Where the rule also buys the S&P 500 fund, the cash is split so both sides carry the same exposure "
+         "(half and half with a 1x fund) -- so that trade is half the size of the short-sale version. Cost: the founder's fees and the measured spreads (half the bid-ask gap: 1x fund 7.8 basis points in and 5.2 out; 2x fund 11.4 and 6.6; stock 3.6 and 0.6). "
+         f"Each day counts once. A rule PASSES the fund way when it has at least {min_days} separate days, a gain on average, and a chance under {bar:.4f} (0.05 / {len(R)}) that the average is zero or less.", "",
+         "| rule | trades in the history | of which a fund existed | separate days | first | the fund way: average a day, US$ (basis points of the account) | 95 in 100 range, US$ | chance | days with a gain | worst trade, fund way | the stock way on the same days, US$ | worst trade, stock way | verdict |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for z in rows:
+        if not z["n"]: L.append(f"| {z['code']} | {z['n_all']} | 0 | 0 | | | | | | | | | {verdict(z)} |"); continue
+        L.append(f"| {z['code']} | {z['n_all']} | {z['n']} | {z['days']} | {z['first']:%Y-%m-%d} | {z['fund']:+,.0f} ({z['fund'] / A * 1e4:+.0f}) | {z['lo']:+,.0f} to {z['hi']:+,.0f} | {z['p']:.4f} | {z['won']:.0%} | {z['worst_fund']:+,.0f} | {z['stock']:+,.0f} ({z['stock'] / A * 1e4:+.0f}) | {z['worst_stock']:+,.0f} | {verdict(z)} |")
+    L += ["", "## What the fund way cannot trade", ""] + [f"- **{z['code']}**: {sum(z['nofund'].values())} of {z['n_all']} past trades had no usable inverse fund on the day (the stock has none, or the fund did not exist yet): " + (", ".join(f"{t} {k}" for t, k in sorted(z["nofund"].items(), key=lambda kv: -kv[1])[:25]) + (" ..." if len(z["nofund"]) > 25 else "") if z["nofund"] else "none") + "." for z in rows]
+    L += ["", "## What the fund way changes and what it does not", "", "- No margin call: the most a trade can lose is the money put into the fund. The loss itself is not smaller: when the stock rises 30%, a 1x inverse fund falls about 30%.",
+          "- An inverse fund resets every day; over two or three sessions its result differs a little from minus the stock's move (the table uses the fund's own prices, so this is counted).", "- The funds are young (most 1x inverse funds started between 2022 and 2025): the history is short and comes from one kind of market."]
+    DOCS.mkdir(exist_ok=True); (DOCS / "selloff_fund_way.md").write_text("\n".join(L) + "\n"); pd.DataFrame(T).to_csv(DOCS / "selloff_fund_way.csv", index=False)
+    print(f"Cash only, nothing borrowed, account US${A:,.0f}. A rule passes the fund way with {min_days}+ separate days, a gain on average and a chance under {bar:.4f}.")
+    print("  rule | trades in the history | a fund existed | separate days | fund way: average a day US$ (bp of the account); 95 in 100 range; chance | days with a gain | worst trade | stock way, same days | verdict")
+    for z in rows:
+        if not z["n"]: print(f"  {z['code']} | {z['n_all']} | 0 | 0 | - | - | - | - | {verdict(z)}"); continue
+        print(f"  {z['code']} | {z['n_all']} | {z['n']} | {z['days']} (from {z['first']:%Y-%m-%d}) | {z['fund']:+,.0f} ({z['fund'] / A * 1e4:+.0f} bp); {z['lo']:+,.0f} to {z['hi']:+,.0f}; {z['p']:.4f} | {z['won']:.0%} | {z['worst_fund']:+,.0f} | {z['stock']:+,.0f} ({z['stock'] / A * 1e4:+.0f} bp) | {verdict(z)}")
+    for z in rows: print(f"  {z['code']}: {sum(z['nofund'].values())} of {z['n_all']} past trades had no usable inverse fund; funds used: {', '.join(z.get('funds', [])) or 'none'}")
+    print("-> docs/selloff_fund_way.md, docs/selloff_fund_way.csv")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["freeze", "risk"]); ap.add_argument("--everything", action="store_true"); a = ap.parse_args(); cmd_freeze(a.everything) if a.cmd == "freeze" else cmd_risk()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["freeze", "risk", "funds"]); ap.add_argument("--everything", action="store_true"); a = ap.parse_args(); {"freeze": lambda: cmd_freeze(a.everything), "risk": cmd_risk, "funds": cmd_funds}[a.cmd]()
