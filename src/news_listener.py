@@ -109,6 +109,25 @@ def sec_recent(cik: str, n=6) -> list:
     return out
 
 
+SEC_CURRENT = "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type={form}&company=&dateb=&owner=include&count=100&output=atom"
+
+
+def sec_current(by_cik: dict) -> dict:
+    """25 Nov 2026 (lag watch, TRACK 3.113): the SEC's single list of the newest filings shows a filing about half a minute before the company's own list does
+    (middle 36 s against 73 s after acceptance). -> {source name: [items]} for the companies of the list, in the shape sec_recent gives; the company's own list
+    stays as the backup, and a filing seen on both is taken once (same accession number)."""
+    out = {}
+    for form in ("8-K", "6-K"):
+        for it in feed_items(fetch(SEC_CURRENT.format(form=form))):
+            m = re.search(r"/data/(\d+)/", it.get("link", "")); a = re.search(r"(\d{10})-?(\d{2})-?(\d{6})", it.get("link", "").split("/data/")[-1])
+            if not m or not a or it["title"].split(" - ")[0].strip().upper() != form or it.get("published") is None: continue
+            src = by_cik.get(m.group(1).zfill(10))
+            if src is None: continue
+            acc = f"{a.group(1)}-{a.group(2)}-{a.group(3)}"; items = ",".join(re.findall(r"Item (\d+\.\d+)", it.get("summary", "")))
+            out.setdefault(src, []).append(dict(id=acc, form=form, items=items, accession=acc, primary="", published=it["published"], title=f"{form} items {items or 'n/a'}"))
+    return out
+
+
 def sec_text(cik: str, accession: str, primary: str) -> str:
     acc = accession.replace("-", ""); base = f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{acc}/"; body = ""
     try: body = text_of(fetch(base + primary)) if primary else ""
@@ -341,8 +360,13 @@ def cmd_run(minutes: float | None, every: float, max_scores: int):
     try:
         while t_end is None or time.time() < t_end:
             t0 = time.time(); bad = []; now = datetime.now(timezone.utc); day = now.astimezone(NY).strftime("%Y-%m-%d")
+            try: fast = sec_current({x["cik"]: x["name"] for x in S if x["kind"] == "sec"})      # 25 Nov: the SEC's single list first; about half a minute earlier than each company's own list
+            except SystemExit: raise
+            except Exception: fast = {}
             for src in S:
-                try: items = poll(src)
+                if src["kind"] in ("research", "short") and time.time() - src.get("_last", 0) < 120: continue      # 25 Nov: these sites publish a few times a day and one refused a look every 15 s
+                src["_last"] = time.time()
+                try: items = fast.get(src["name"], []) + poll(src)
                 except SystemExit: raise
                 except Exception: bad.append(src["name"]); continue
                 first_time = src["name"] not in known; old = 0
