@@ -49,3 +49,4 @@ company news, and has no trading rule until one is tested. (3) Anonymous posts a
 | Tradr (TSLQ, NVDS) | two more inverse funds | named from memory, claims unverified; used only if the price check agrees |
 | Yahoo Finance daily prices with splits (free) | real share prices of each day, the funds' prices | secondary data vendor, free |
 | TrendForce press centre, Semiconductors (trendforce.com/presscenter/news/Semiconductors; feed trendforce.com/feed/Semiconductors.html) | research releases on memory, foundry, servers | third party, claims unverified; date only, no time of day; free |
+| Reuters, 'AI credit default swap spreads widen on unease over cash flow' (24 Nov 2026); Investing.com, 'U.S. chip stocks extend losses premarket as AI spending concerns resurface' (25 Nov 2026) | the event behind test LI-1 | news reports, headlines read; single-name credit default swap spreads themselves are sold data and not held |

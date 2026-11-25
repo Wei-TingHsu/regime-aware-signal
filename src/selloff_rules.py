@@ -92,5 +92,32 @@ def cmd_freeze(everything=False):
     print(f"{len(rules)} rules frozen -> docs/selloff_rules.json, docs/selloff_rules.md")
 
 
+def cmd_risk(limits=(0.30, 0.50)):
+    """Founder, 25 Nov: the cost comparison never counted the risk of a margin call when a stock is sold short. On the history of the three frozen rules: how far did the stock RISE
+    against a short position inside each trade (from the entry at the next open to the highest price before the exit), what was the largest loss, and how often would the account's
+    cushion have fallen under a broker's limit? One trade = the whole US$70,000 sold short on an account of US$70,000 (the worst case; a day with several signals splits the money)."""
+    from src import real_cost as RC
+    R = json.loads(OUT.read_text())["rules"]; E = pd.read_csv(ROOT / "events.csv", parse_dates=["day"]); E["event_id"] = E.index; P = _px(); unit, dfn = S.BASES[GROUP]
+    B = E[(E.unit == unit) & (E.definition == dfn)].sort_values("day").reset_index(drop=True); tabs = {tn: pd.read_csv(S.TB / f"{tn}.csv").drop_duplicates("event_id").set_index("event_id").reindex(B.event_id.to_numpy()) for tn in S.TABLES if (S.TB / f"{tn}.csv").exists()}; A = RC.ACCOUNT
+    L = ["# Selling short under the three sell-off rules: how far the stock went against the position", "", f"Every past trade of SS-2a, SS-2b, SS-2c (2005-2026): the stock is sold short at the open after the sell-off and bought back at the rule's exit. 'Worst rise' = the highest price before the exit against the entry price. "
+         f"The account: US${A:,.0f}, all of it sold short in one stock (the worst case). The cushion = (account + money received - cost of buying the shares back) / cost of buying them back; a broker closes the position when the cushion falls under its limit. "
+         "The founder's broker's limit for short sales is not known; 30% and 50% are shown. **A 2x inverse fund bought with half the money can lose at most US$35,000 and has no margin call; a 1x fund at most US$70,000.**", "",
+         "| rule | trades | worst rise inside a trade: middle | 9 in 10 under | 99 in 100 under | the largest | trades with a rise over 10% | over 20% | largest loss of one trade | cushion under 50% (rise over 33%) | cushion under 30% (rise over 54%) |", "|---|---|---|---|---|---|---|---|---|---|---|"]; rows = []
+    for r in R:
+        m = np.logical_and.reduce([apply_condition(c, tabs[c["table"]]) for c in r["conditions"]]); h = int(r["exit"]); adv = []; fin = []; when = []
+        for q in np.flatnonzero(m):
+            b = B.iloc[q]; d = P[b.ticker]; i = int(b.i)
+            if i + h >= len(d): continue
+            ent = float(d.open.iloc[i + 1]); hi = float(d.high.iloc[i + 1:i + h + 1].max()); adv.append(hi / ent - 1); fin.append(float(d.close.iloc[i + h]) / ent - 1); when.append((b.ticker, b.day))
+        adv = np.array(adv); fin = np.array(fin); k = int(np.argmax(adv)); worst_loss = float(fin.max()); kl = int(np.argmax(fin)); br = {x: float((1 + 1) / (1 + x) - 1) for x in limits}      # cushion = (2A - A(1+rise)) / (A(1+rise)) < limit  <=>  rise > 2/(1+limit) - 1
+        L.append(f"| {r['code']} | {len(adv)} | {np.median(adv):+.1%} | {np.quantile(adv, 0.9):+.1%} | {np.quantile(adv, 0.99):+.1%} | {adv[k]:+.1%} ({when[k][0]}, {when[k][1]:%Y-%m-%d}) | {int((adv > 0.10).sum())} ({(adv > 0.10).mean():.1%}) | {int((adv > 0.20).sum())} | {worst_loss:+.1%} = US${worst_loss * A:,.0f} ({when[kl][0]}, {when[kl][1]:%Y-%m-%d}) | {int((adv > br[0.50]).sum())} | {int((adv > br[0.30]).sum())} |")
+        rows.append((r["code"], len(adv), float(np.median(adv)), float(np.quantile(adv, 0.9)), float(np.quantile(adv, 0.99)), float(adv[k]), when[k], int((adv > 0.10).sum()), worst_loss, when[kl], int((adv > br[0.50]).sum()), int((adv > br[0.30]).sum())))
+    L += ["", "What this does not show: a rise larger than any in these years; a jump overnight between two sessions that cannot be traded out of (the 'largest' column includes such jumps only as far as the day's high); the broker raising its limit on a volatile stock; two positions open at once."]
+    (DOCS / "selloff_short_risk.md").write_text("\n".join(L) + "\n")
+    print("  rule | trades | worst rise inside a trade: middle; 9 in 10 under; 99 in 100 under; largest | rises over 10% | largest loss of one trade | cushion under 50% | under 30%")
+    for c, n, md, q9, q99, mx, w, n10, wl, wlw, b50, b30 in rows: print(f"  {c} | {n} | {md:+.1%}; {q9:+.1%}; {q99:+.1%}; {mx:+.1%} ({w[0]} {w[1]:%Y-%m-%d}) | {n10} | {wl:+.1%} = US${wl * A:,.0f} ({wlw[0]} {wlw[1]:%Y-%m-%d}) | {b50} | {b30}")
+    print("-> docs/selloff_short_risk.md")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["freeze"]); ap.add_argument("--everything", action="store_true"); a = ap.parse_args(); cmd_freeze(a.everything)
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["freeze", "risk"]); ap.add_argument("--everything", action="store_true"); a = ap.parse_args(); cmd_freeze(a.everything) if a.cmd == "freeze" else cmd_risk()
