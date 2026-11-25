@@ -6,4 +6,10 @@ Registered in TRACK 3.101 on 22 Nov 2026. Counts every case from 23 Nov 2026. Ru
 
 | day | stock | meets the rule | move % | volume, times normal | fall, times its usual move | against the S&P 500 after 1 / 2 / 3 sessions (bp) | overnight to next open (bp) | next open to close +2 (bp) |
 |---|---|---|---|---|---|---|---|---|
-| 2026-11-23 | CRWD | no | -8.9 | 4.2 | 1.9 |  /  /  |  |  |
+| 2026-11-24 | AMD | no | -8.9 | 1.6 | 1.6 |  /  /  |  |  |
+| 2026-11-24 | INTC | no | -8.2 | 1.1 | 1.4 |  /  /  |  |  |
+| 2026-11-24 | MU | no | -11.0 | 1.3 | 2.3 |  /  /  |  |  |
+| 2026-11-24 | NVDA | no | -5.9 | 2.1 | 1.9 |  /  /  |  |  |
+| 2026-11-24 | SNDK | no | -11.1 | 1.1 | 1.8 |  /  /  |  |  |
+| 2026-11-24 | TXN | no | -11.2 | 1.9 | 4.1 |  /  /  |  |  |
+| 2026-11-23 | CRWD | no | -8.9 | 4.2 | 1.9 | +139 /  /  | +174 |  |
