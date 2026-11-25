@@ -54,3 +54,16 @@ The founder's new points collide with Claude's first proposal of 24 Nov (15:34) 
 **Which stocks have a pool.** No set of 19 exists in the project. The sets are: 13 AI-chain stocks whose news the listener scores (AMD, NVDA, MU, INTC, AVGO, SNDK, ORCL, TSM, CRWD, GOOG, META, AMZN, MSFT); 20 companies whose annual reports were read into profiles (those 13 plus AAPL, CSCO, EMR, GE, IBM, QCOM, TXN); 104 stocks of the sell-off study (prices and reported figures, no news scoring). Claude proposes the 20 as the pool's stocks, to be confirmed.
 
 **Checked on 24 Nov.** The founder's NVIDIA example is real news: public radio reports of 17 Nov 2026 say the board did not intend to reinstate Jensen Huang; an SEC 8-K of NVIDIA dated 22 Nov 2026 carries a press release dated 23 Nov, which Claude has not read. The price dates and levels of the two chart examples are NOT yet checked against prices.
+
+## Part 3. The trend rule, confirmed by the founder on 25 Nov 2026 and fixed
+
+Founder, 25 Nov 21:41: 'nvda aapl amd amzn tsm goog MU SNDK ORCL are now all perfect matching my eyes' decision. I think the rule is fitted correctly.' Five of these nine stocks were used to fit the rule (AAPL, AMD, NVDA, SNDK, TSM); four were not (AMZN, GOOG, MU, ORCL). This replaces the first row ('Length') of the table in Part 2.
+
+**The rule (`src/trend_finder.py`), in words.**
+1. The stock's *usual daily move* on a day = the spread of its daily moves over the 250 sessions up to that day.
+2. A *crest* is confirmed when the price has fallen back from its highest point since the last trough by 5 usual daily moves. A *trough* is confirmed the same way upward. (K = 5, fitted on the founder's first marks and fixed.)
+3. A *trend* is the swing from one turn to the next. Every swing is a trend, fast or slow, of any length. A move against the swing smaller than 5 usual daily moves is part of the swing. The last swing is 'running'.
+4. *Sideways.* If the best price reached in the first part of a swing is already within 1.5 usual daily moves of the swing's final extreme, and the part after it is at least 10 sessions and at least a third of the swing, the trend ends at that earlier price and the part after it is 'sideways' -- not a trend.
+5. For each trend the code also gives its size in usual daily moves, how fast it is, and *the first day it could have been recognised with the prices known that day* (the day its starting turn was confirmed).
+
+**What is fixed and what is not.** The four numbers (250 sessions; 5 usual moves; 1.5 usual moves; 10 sessions and a third) are fixed from here on; they change only by a dated entry in TRACK. The rule draws trends AFTER the fact: a crest is known only once the price has fallen 5 usual moves from it. Anything the product says on a live day must use 'first seen' dates, never the drawn ends.
