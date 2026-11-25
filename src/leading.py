@@ -23,8 +23,9 @@ import numpy as np, pandas as pd
 
 ROOT = Path("data_provenance/leading"); DOCS = Path("docs"); TARGET = "SOXX"; LS, HS = [1, 5], [1, 5]; NSHIFT = 5000; MINSHIFT = 60; START = "2007-07-01"
 YAHOO = {"HYG": "high-yield bond fund", "LQD": "investment-grade bond fund", "IEF": "7-10 year Treasury fund", "BKLN": "bank-loan fund", "BIZD": "private-credit lenders (BDC fund)", "KRE": "regional banks", "XLF": "financial shares",
-         "^VIX": "share volatility (VIX)", "^MOVE": "bond volatility (MOVE)", "ORCL": "Oracle shares", "SPY": "S&P 500 fund", "SOXX": "semiconductor fund", "SMH": "semiconductor fund (second)", "QQQ": "Nasdaq-100 fund"}
-FRED = {"BAMLH0A0HYM2": "high-yield credit spread", "BAMLC0A0CM": "investment-grade credit spread", "BAMLH0A3HYC": "CCC credit spread", "BAMLC0A4CBBB": "BBB credit spread", "SOFR": "overnight funding rate (SOFR)", "IORB": "rate the Fed pays on reserves", "DGS10": "10-year yield", "DGS2": "2-year yield"}
+         "^VIX": "share volatility (VIX)", "^MOVE": "bond volatility (MOVE)", "ORCL": "Oracle shares", "SPY": "S&P 500 fund", "SOXX": "semiconductor fund", "SMH": "semiconductor fund (second)", "QQQ": "Nasdaq-100 fund", "TIP": "inflation-protected Treasury fund"}
+FRED = {"BAMLH0A0HYM2": "high-yield credit spread", "BAMLC0A0CM": "investment-grade credit spread", "BAMLH0A3HYC": "CCC credit spread", "BAMLC0A4CBBB": "BBB credit spread", "SOFR": "overnight funding rate (SOFR)", "IORB": "rate the Fed pays on reserves", "DGS10": "10-year yield", "DGS2": "2-year yield",
+        "T5YIE": "5-year expected inflation (breakeven)", "T10YIE": "10-year expected inflation (breakeven)", "T5YIFR": "expected inflation 5 to 10 years ahead", "PCEPILFE": "core PCE price index (monthly)"}
 # candidate -> (how it is built, what a RISE of it means). 'lag' = sessions until the day's value is public (FRED series appear the next morning).
 CANDS = {
     "high-yield bonds against Treasuries (HYG / IEF)": dict(kind="ratio", a="HYG", b="IEF", lag=0, rise="credit calmer"),
@@ -41,6 +42,16 @@ CANDS = {
     "BBB credit spread (FRED)": dict(kind="level", a="BAMLC0A4CBBB", lag=1, rise="credit tighter"),
     "funding stress (SOFR minus the rate on reserves)": dict(kind="diff", a="SOFR", b="IORB", lag=1, rise="cash dearer"),
     "10-year minus 2-year yield": dict(kind="diff", a="DGS10", b="DGS2", lag=1, rise="curve steeper"),
+}
+
+
+# LI-1b (TRACK 3.119), founder, 25 Nov: a candidate that reflects core PCE every day. Core PCE is published once a month; nothing published daily IS core PCE. The Cleveland Fed's daily
+# 'nowcast' of core PCE changes only when new CPI or PCE figures arrive and offers no data file. What moves every day is the inflation the bond market EXPECTS -- these four stand-ins.
+CANDS_INFL = {
+    "5-year expected inflation (breakeven, FRED)": dict(kind="level", a="T5YIE", lag=1, rise="more inflation expected"),
+    "10-year expected inflation (breakeven, FRED)": dict(kind="level", a="T10YIE", lag=1, rise="more inflation expected"),
+    "expected inflation 5 to 10 years ahead (FRED)": dict(kind="level", a="T5YIFR", lag=1, rise="more inflation expected far ahead"),
+    "inflation-protected against ordinary Treasuries (TIP / IEF)": dict(kind="ratio", a="TIP", b="IEF", lag=0, rise="more inflation expected"),
 }
 
 
@@ -90,7 +101,21 @@ def _link(x, y, rng, n_shift):
     return float(c), float((hits + 1) / (done + 1)), int(ok.sum())
 
 
-def cmd_run(n_shift=NSHIFT):
+def cmd_follow():
+    """how well does each daily stand-in follow core PCE? (description) Monthly average of the stand-in against core PCE inflation over 12 months, and their changes over 3 months."""
+    pce = _series("PCEPILFE")
+    if pce is None: print("  core PCE is not on disk: run fetch"); return []
+    y = (pce.pct_change(12) * 100).dropna(); y.index = y.index.to_period("M"); out = []
+    for name, c in CANDS_INFL.items():
+        a = _series(c["a"]); b = _series(c["b"]) if c.get("b") else None
+        if a is None or (c.get("b") and b is None): continue
+        v = a if c["kind"] == "level" else np.log(a) - np.log(b.reindex(a.index).ffill(limit=3)); m = v.groupby(v.index.to_period("M")).mean(); J = pd.concat([m, y], axis=1, keys=["x", "y"]).dropna()
+        if c["kind"] == "ratio": J["x"] = J.x - J.x.shift(12)      # a price ratio has no level meaning: its change over 12 months is compared
+        J = J.dropna(); out.append((name, float(J.x.corr(J.y)), float((J.x - J.x.shift(3)).corr(J.y - J.y.shift(3))), len(J), f"{J.index.min()}"))
+    return out
+
+
+def cmd_run(n_shift=NSHIFT, CANDS=CANDS, out="leading_indicator", code="LI-1", track="3.118", extra=None):
     tgt = _series(TARGET); spy = _series("SPY")
     if tgt is None or spy is None: raise SystemExit("run `python -m src.leading fetch` first")
     idx = tgt.loc[START:].index; lt = np.log(tgt.reindex(idx)); ls = np.log(spy.reindex(idx)); rng = np.random.default_rng(20261125); rows = []; cond, names = _conditions(idx)
@@ -113,7 +138,7 @@ def cmd_run(n_shift=NSHIFT):
                         m = (cond == k).to_numpy(); ck, pk, nk = _link(np.where(m, dx, np.nan), fy, rng, max(500, n_shift // 5)); row[f"cond::{nm}"] = (ck, pk, nk)
                 rows.append(row)
     R = pd.DataFrame(rows); f3 = lambda x: "n/a" if x != x else f"{x:+.3f}"; f4 = lambda x: "n/a" if x != x else f"{x:.4f}"
-    L_ = ["# Test LI-1: which market leads semiconductor shares, and in which market condition?", "", f"Registered in TRACK 3.118 before running. Target: the semiconductor fund {TARGET}, {idx[0]:%Y} to {idx[-1]:%Y-%m-%d}. For each candidate: the link between its change over the last L sessions and the fund's move over the NEXT H sessions. "
+    L_ = [f"# Test {code}: which market leads semiconductor shares, and in which market condition?", "", f"Registered in TRACK {track} before running. Target: the semiconductor fund {TARGET}, {idx[0]:%Y} to {idx[-1]:%Y-%m-%d}. For each candidate: the link between its change over the last L sessions and the fund's move over the NEXT H sessions. "
           f"'Link' is a correlation: 0 = no link, +1 or -1 = a perfect one; the sign says whether the fund follows a rise of the candidate upward (+) or downward (-). 'Chance' = the share of {n_shift:,} copies, with the candidate slid along the calendar, that show a link at least as strong. "
           f"**LEADS** = chance under {bar:.5f} (0.05 / {tests} tests). 'The other way round' = the fund's move over the last L sessions against the candidate's change over the next H: do chip shares lead it? Single AI borrowers' credit default swap spreads are sold data and are not here.", "",
           "| candidate (what a rise means) | look-back L | look-ahead H | link (chance) | link with the fund measured against the S&P 500 (chance) | the other way round: chip shares first (chance) | days | verdict |", "|---|---|---|---|---|---|---|---|"]
@@ -127,13 +152,21 @@ def cmd_run(n_shift=NSHIFT):
             r = g.sort_values("p").iloc[0]; vals = {c.split("::")[1]: r[c] for c in cc}; best = max(vals, key=lambda k: abs(vals[k][0]) if vals[k][0] == vals[k][0] else -1)
             L_.append(f"| {name} | {r.L}, {r.H} | {f3(r.link)} ({f4(r.p)}) | " + " | ".join(f"{f3(v[0])} ({f4(v[1])}; {v[2]} days)" for v in vals.values()) + f" | {best} |")
     L_ += ["", "How to read a 'LEADS': it says the link is too strong to be chance, not that it is large. A link of 0.05 explains a quarter of one per cent of the fund's moves. Whether it can be traded is a separate test (entry at the next open, the real cost)."]
-    DOCS.mkdir(exist_ok=True); (DOCS / "leading_indicator.md").write_text("\n".join(L_) + "\n"); R.drop(columns=[c for c in R.columns if c.startswith("cond::")]).to_csv(DOCS / "leading_indicator.csv", index=False)
+    if extra: L_ += [""] + extra
+    DOCS.mkdir(exist_ok=True); (DOCS / f"{out}.md").write_text("\n".join(L_) + "\n"); R.drop(columns=[c for c in R.columns if c.startswith("cond::")]).to_csv(DOCS / f"{out}.csv", index=False)
     print(f"{R.candidate.nunique()} candidates x {len(LS)} look-backs x {len(HS)} look-aheads = {len(R)} tests; limit: chance under {bar:.5f}; {n_shift:,} calendar-slid copies each")
     print("  link (chance) | against the S&P 500 | the other way round (chip shares first) | L | H | verdict | candidate")
     for r in R.sort_values("p").head(20).itertuples(): print(f"  {f3(r.link)} ({f4(r.p)}) | {f3(r.link_vs_spx)} ({f4(r.p_vs_spx)}) | {f3(r.reverse_link)} ({f4(r.reverse_p)}) | {r.L} | {r.H} | {'LEADS' if r.leads else 'no   '} | {r.candidate} ({r.rise})")
-    print(f"=> {lead.candidate.nunique()} of {R.candidate.nunique()} candidates lead in at least one pair. -> docs/leading_indicator.md")
+    print(f"=> {lead.candidate.nunique()} of {R.candidate.nunique()} candidates lead in at least one pair. -> docs/{out}.md")
     if cond is not None: print("\n".join(L_[L_.index("## By the main page's market condition") + 4:-2]))
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["fetch", "run"]); ap.add_argument("--shifts", type=int, default=NSHIFT); a = ap.parse_args(); cmd_fetch() if a.cmd == "fetch" else cmd_run(a.shifts)
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["fetch", "run", "inflation"]); ap.add_argument("--shifts", type=int, default=NSHIFT); a = ap.parse_args()
+    if a.cmd == "fetch": cmd_fetch()
+    elif a.cmd == "run": cmd_run(a.shifts)
+    else:
+        F = cmd_follow(); ex = ["## How well each daily stand-in follows core PCE (description)", "", "Core PCE inflation over 12 months, monthly, against the monthly average of each stand-in: the link between their levels and between their changes over 3 months (1 = they move together perfectly, 0 = not at all).", "",
+                                "| stand-in | link of levels | link of 3-month changes | months | since |", "|---|---|---|---|---|"] + [f"| {n} | {x:+.2f} | {y:+.2f} | {k} | {since} |" for n, x, y, k, since in F]
+        print("How well each daily stand-in follows core PCE (1 = perfectly): " + "; ".join(f"{n}: levels {x:+.2f}, 3-month changes {y:+.2f}" for n, x, y, k, since in F))
+        cmd_run(a.shifts, CANDS_INFL, "leading_inflation", "LI-1b", "3.119", ex)
