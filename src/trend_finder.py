@@ -21,6 +21,7 @@ from pathlib import Path
 import numpy as np, pandas as pd
 
 POOL = ["AAPL", "AMD", "AMZN", "AVGO", "CRWD", "CSCO", "EMR", "GE", "GOOG", "IBM", "INTC", "META", "MSFT", "MU", "NVDA", "ORCL", "QCOM", "SNDK", "TSM", "TXN"]      # the 20 companies with profiles (founder, 24 Nov)
+SIDE_MIN = 5      # a stretch shorter than a week is never called 'sideways'
 OUT = Path("docs/trends"); USUAL = 250; KS = [4, 5, 6, 7, 8, 9, 10]; SHOW = 620; FAST = {"slow": 0.0, "medium": 1.6, "fast": 2.6}; TOL = 9
 # The founder's marks of 25 Nov on the first charts, as swings that must exist: (stock, direction, start, end or None). Dates are those of the first version's table; a swing counts as found within 9 calendar days at each end.
 MARKS = [("AAPL", "down", "2025-10-29", "2026-01-20"), ("AAPL", "down", "2026-02-06", "2026-03-30"), ("AAPL", "up", "2026-08-12", "2026-11-13"), ("AAPL", "down", "2026-07-28", "2026-08-12"), ("AAPL", "down", "2024-12-26", "2025-04-08"),
@@ -54,10 +55,22 @@ def swings(d: pd.DataFrame, K: float) -> list:
         last, kind, _ = turns[-1]; ext = last + (int(np.argmin(lp[last:])) if kind == "crest" else int(np.argmax(lp[last:])))
         if ext > last: turns.append((ext, "trough" if kind == "crest" else "crest", None))
     out = []
-    for (s, k0, conf), (e, k1, conf1) in zip(turns[:-1], turns[1:]):
+    def piece(side, s, e, conf, running):
         m = e - s; st = abs(lp[e] - lp[s]) / (usual[s] * np.sqrt(m)) if m > 0 and np.isfinite(usual[s]) else np.nan; path = float(np.nansum(np.abs(r[s + 1:e + 1])))
-        out.append(dict(side="up" if k0 == "trough" else "down", start=d.index[s], end=d.index[e], sessions=int(m), move_pct=float((np.exp(lp[e] - lp[s]) - 1) * 100), strength=float(st), speed="fast" if st >= FAST["fast"] else "medium" if st >= FAST["medium"] else "slow",
-                        first_seen=d.index[conf] if conf is not None else pd.NaT, straight=float(abs(lp[e] - lp[s]) / path) if path > 0 else np.nan, running=conf1 is None, in_usual_moves=float(abs(lp[e] - lp[s]) / usual[s]) if np.isfinite(usual[s]) else np.nan))
+        return dict(side=side, start=d.index[s], end=d.index[e], sessions=int(m), move_pct=float((np.exp(lp[e] - lp[s]) - 1) * 100), strength=float(st), speed="sideways" if side == "sideways" else "fast" if st >= FAST["fast"] else "medium" if st >= FAST["medium"] else "slow",
+                    first_seen=d.index[conf] if conf is not None else pd.NaT, straight=float(abs(lp[e] - lp[s]) / path) if path > 0 else np.nan, running=running, in_usual_moves=float(abs(lp[e] - lp[s]) / usual[s]) if np.isfinite(usual[s]) else np.nan)
+    def strength(a, b): return abs(lp[b] - lp[a]) / (usual[a] * np.sqrt(b - a)) if b > a and np.isfinite(usual[a]) else 0.0
+    for (s, k0, conf), (e, k1, conf1) in zip(turns[:-1], turns[1:]):
+        side = "up" if k0 == "trough" else "down"; sign = 1.0 if side == "up" else -1.0; s1, e1 = s, e
+        # Founder, 25 Nov (NVDA 5 and 10): a swing must END where the move ended; a long SIDEWAYS stretch after it, even with a slightly more extreme price at its end, is not part of the trend.
+        # The move 'ended' at the day up to which the strength counted from the start is highest. The rest is sideways -- and is cut off -- only when it is at least SIDE_MIN sessions long and its own
+        # move is smaller than one chance drift for its length (strength under 1). Only the END of a swing is tested: that is what the founder marked.
+        if e - s >= 2 * SIDE_MIN:
+            cand = [m for m in range(s + 2, e + 1)]; best = max(cand, key=lambda m: sign * (lp[m] - lp[s]) / np.sqrt(m - s))
+            if e - best >= SIDE_MIN and strength(best, e) < 1.0: e1 = best
+        if s1 > s: out.append(piece("sideways", s, s1, None, False))
+        out.append(piece(side, s1, e1, conf, conf1 is None and e1 == e))
+        if e1 < e: out.append(piece("sideways", e1, e, None, conf1 is None))
     return out
 
 
@@ -72,10 +85,12 @@ def _chart(t, d, sw, K, f):
     x = d.iloc[-SHOW:]; fig, ax = plt.subplots(figsize=(15, 4.8), dpi=110); ax.plot(x.index, x.close, color="#14171F", lw=1.1); shade = {"slow": 0.08, "medium": 0.18, "fast": 0.32}; k = 0; ymax = float(x.close.max()); ymin = float(x.close.min())
     for tr in sw:
         if tr["end"] <= x.index[0]: continue
-        k += 1; tr["no"] = k; col = "#178A4C" if tr["side"] == "up" else "#C0392B"; a, b = max(tr["start"], x.index[0]), tr["end"]; ax.axvspan(a, b, color=col, alpha=shade[tr["speed"]], lw=0)
+        a, b = max(tr["start"], x.index[0]), tr["end"]
+        if tr["side"] == "sideways": tr["no"] = "s"; ax.axvspan(a, b, color="#8A8F98", alpha=0.10, lw=0, hatch="//"); continue
+        k += 1; tr["no"] = k; col = "#178A4C" if tr["side"] == "up" else "#C0392B"; ax.axvspan(a, b, color=col, alpha=shade[tr["speed"]], lw=0)
         ax.annotate(f"{k}", (a + (b - a) / 2, ymin + (ymax - ymin) * (0.03 if tr["side"] == "up" else 0.94)), ha="center", fontsize=9, color=col, fontweight="bold")
         ax.scatter([b], [float(x.close.loc[b])], s=14, color="#14171F", zorder=3)
-    ax.set_title(f"{t}: every swing between a trough and a crest is one trend (K = {K}). Green up, red down; darker = faster. Dots: the crests and troughs.", fontsize=10, loc="left"); ax.grid(alpha=0.25); ax.margins(x=0.01); fig.tight_layout(); fig.savefig(f); plt.close(fig)
+    ax.set_title(f"{t}: every swing between a trough and a crest is one trend (K = {K}). Green up, red down; darker = faster. Grey hatched = sideways. Dots: where a trend ends.", fontsize=10, loc="left"); ax.grid(alpha=0.25); ax.margins(x=0.01); fig.tight_layout(); fig.savefig(f); plt.close(fig)
 
 
 def cmd_run(tickers=None, K=None):
@@ -83,19 +98,19 @@ def cmd_run(tickers=None, K=None):
     # ---- which K reproduces the founder's marks best
     marks = [m for m in MARKS if m[0] in P]; score = {}
     for k in KS:
-        S = {t: swings(d, k) for t, d in P.items()}; score[k] = (sum(_hit(S[t], side, a, b) for t, side, a, b in marks), float(np.mean([sum(x["end"] > d.index[max(0, len(d) - SHOW)] for x in S[t]) for t, d in P.items()])))
+        S = {t: swings(d, k) for t, d in P.items()}; score[k] = (sum(_hit(S[t], side, a, b) for t, side, a, b in marks), float(np.mean([sum(x["end"] > d.index[max(0, len(d) - SHOW)] and x["side"] != "sideways" for x in S[t]) for t, d in P.items()])))
     if K is None: K = max(KS, key=lambda k: (score[k][0], -abs(k - 7))) if marks else 7
     print(f"  the founder's marks ({len(marks)} swings that must exist) reproduced, by K: " + ", ".join(f"K={k}: {score[k][0]} ({score[k][1]:.0f} trends a stock)" for k in KS) + f" -> K = {K} is drawn")
     rows = []; L = ["# The trends on the daily chart: every swing between a trough and a crest (third version, from the founder's marks)", "", f"Step 1 of the addition and subtraction pool (`docs/POOL_PLAN.md`). No news is used. A crest is marked when the price has fallen back from it by K usual daily moves of the stock, a trough the same way upward; a trend is the swing from one turn to the next. "
          f"**K = {K}**, the value that reproduces most of the founder's marks of 25 Nov ({score[K][0]} of {len(marks)}): " + ", ".join(f"K={k}: {score[k][0]}" for k in KS) + ". 'Strength' = the move divided by how far the price drifts by chance in that many sessions (fast swings are darker); 'size' = the move in usual daily moves; "
-         "'first seen' = the day the swing could have been recognised with the prices known that day. The last swing of each stock is still running. **To mark: which numbers are wrong, and what is missing.**", ""]
+         "'first seen' = the day the swing could have been recognised with the prices known that day. The last swing of each stock is still running. **Sideways (founder, 25 Nov):** a trend ends where its move ended -- the day up to which its strength, counted from its start, is highest; what follows is cut off as 'sideways' (row 's', grey on the chart) when it lasts at least 5 sessions and moves less than one chance drift for its length. **To mark: which numbers are wrong, and what is missing.**", ""]
     for t, d in P.items():
         sw = swings(d, K); _chart(t, d, sw, K, OUT / f"{t}.png"); shown = [x for x in sw if "no" in x]
         L += [f"## {t}", "", f"![{t}]({t}.png)", "", "| no. | direction | from | to | sessions | move | size, usual daily moves | strength (speed) | straightness | first seen |", "|---|---|---|---|---|---|---|---|---|---|"]
         for x in shown:
             L.append(f"| {x['no']} | {x['side']} | {x['start']:%Y-%m-%d} | {x['end']:%Y-%m-%d}{' (running)' if x['running'] else ''} | {x['sessions']} | {x['move_pct']:+.0f}% | {x['in_usual_moves']:.0f} | {x['strength']:.1f} ({x['speed']}) | {x['straight']:.2f} | {'' if pd.isna(x['first_seen']) else format(x['first_seen'], '%Y-%m-%d')} |")
             rows.append(dict(ticker=t, no=x["no"], side=x["side"], start=f"{x['start']:%Y-%m-%d}", end=f"{x['end']:%Y-%m-%d}", running=x["running"], sessions=x["sessions"], move_pct=round(x["move_pct"], 1), size_usual_moves=round(x["in_usual_moves"], 1), strength=round(x["strength"], 2), speed=x["speed"], straightness=round(x["straight"], 2), first_seen="" if pd.isna(x["first_seen"]) else f"{x['first_seen']:%Y-%m-%d}", founder_mark=""))
-        L.append(""); print(f"  {t}: {len(shown)} trends on the chart; last price day {d.index[-1]:%Y-%m-%d}")
+        L.append(""); print(f"  {t}: {sum(x['side'] != 'sideways' for x in shown)} trends and {sum(x['side'] == 'sideways' for x in shown)} sideways stretches on the chart; last price day {d.index[-1]:%Y-%m-%d}")
     R = pd.DataFrame(rows); R.to_csv(OUT / "trends.csv", index=False)
     L += ["## The founder's marks of 25 Nov, checked one by one", ""]
     for t, side, a, b in marks:
