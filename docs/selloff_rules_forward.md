@@ -4,10 +4,10 @@ Registered in TRACK 3.110 (24 Nov 2026) before any case. Every sell-off of 5% or
 
 | rule | trade that passed the test | history 2018-2026, per day with a trade | days so far with a known result | average so far, the stock alone | against the S&P 500 | waiting for their sessions |
 |---|---|---|---|---|---|---|
-| SS-2a | sell the stock; exit +2 | +166 bp (91 days) | 0 of 30 |  |  | 0 |
+| SS-2a | sell the stock; exit +2 | +166 bp (91 days) | 0 of 30 |  |  | 1 |
 | SS-2b | sell the stock; exit +2 | +102 bp (142 days) | 0 of 30 |  |  | 0 |
 | SS-2c | sell the stock and buy the S&P 500 fund; exit +3 | +82 bp (194 days) | 0 of 30 |  |  | 0 |
 
 | sell-off day | rule | stock | move that day % | sold at the open of | closed at the close of | the stock alone, bp after cost | against the S&P 500, bp after cost |
 |---|---|---|---|---|---|---|---|
-| (no match yet) | | | | | | | |
+| 2026-11-24 | SS-2a | SNDK | -11.1 |  |  |  |  |
