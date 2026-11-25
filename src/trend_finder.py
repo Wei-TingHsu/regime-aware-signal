@@ -83,7 +83,7 @@ def cmd_run(tickers=None, K=None):
     # ---- which K reproduces the founder's marks best
     marks = [m for m in MARKS if m[0] in P]; score = {}
     for k in KS:
-        S = {t: swings(d, k) for t, d in P.items()}; score[k] = (sum(_hit(S[t], side, a, b) for t, side, a, b in marks), float(np.mean([sum(x["end"] > d.index[-SHOW] for x in S[t]) for t, d in P.items()])))
+        S = {t: swings(d, k) for t, d in P.items()}; score[k] = (sum(_hit(S[t], side, a, b) for t, side, a, b in marks), float(np.mean([sum(x["end"] > d.index[max(0, len(d) - SHOW)] for x in S[t]) for t, d in P.items()])))
     if K is None: K = max(KS, key=lambda k: (score[k][0], -abs(k - 7))) if marks else 7
     print(f"  the founder's marks ({len(marks)} swings that must exist) reproduced, by K: " + ", ".join(f"K={k}: {score[k][0]} ({score[k][1]:.0f} trends a stock)" for k in KS) + f" -> K = {K} is drawn")
     rows = []; L = ["# The trends on the daily chart: every swing between a trough and a crest (third version, from the founder's marks)", "", f"Step 1 of the addition and subtraction pool (`docs/POOL_PLAN.md`). No news is used. A crest is marked when the price has fallen back from it by K usual daily moves of the stock, a trough the same way upward; a trend is the swing from one turn to the next. "
