@@ -197,6 +197,19 @@ def cmd_test(shifts: int):
     f = Path("docs/leading_cds.md"); f.write_text(f.read_text().replace(" Single AI borrowers' credit default swap spreads are sold data and are not here.", " The candidates here ARE the credit default swap spreads of single companies, built from public trade reports."))
 
 
+def cmd_recent(n_days: int):
+    """the last days, read directly: each company's spread of the day (the middle one of its trades) and Oracle's trades one by one with their New York time. A look, not a test."""
+    X = trades(); X["ny"] = X.t.dt.tz_convert("America/New_York"); X["d"] = pd.to_datetime(X.ny.dt.date); days = sorted(X.d.unique())[-n_days:]; comps = ["Oracle", "Amazon", "Meta", "Alphabet", "Microsoft", "Nvidia", "AMD", "CoreWeave"]
+    print(f"Spread of the day in basis points (number of usable trades), trades done before 16:00 New York. The last {len(days)} days with files.")
+    print("  day | " + " | ".join(comps))
+    for d in days:
+        g = X[X.d == d]; print(f"  {pd.Timestamp(d):%a %d %b} | " + " | ".join((f"{g[g.key == c].bp.median():.0f} ({int((g.key == c).sum())})" if (g.key == c).any() else "-") for c in comps))
+    o = X[(X.key == "Oracle") & X.d.isin(days[-4:])].sort_values("t"); print("\nOracle's usable trades of the last 4 of those days, one by one (New York time; 'given' = the file gives the spread, otherwise worked out from the one-off payment):")
+    for r in o.itertuples(): print(f"  {r.ny:%a %d %b %H:%M:%S} | {r.bp:.0f} bp | {r.how}")
+    if not len(o): print("  none")
+    print("Paste all of this to Claude.")
+
+
 def _days(n=6):
     d = datetime.utcnow().date() - timedelta(days=1); out = []
     while len(out) < n:
@@ -232,5 +245,5 @@ def cmd_probe():
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["probe", "fetch", "describe", "series", "test"]); ap.add_argument("--since", default=START); ap.add_argument("--shifts", type=int, default=5000); a = ap.parse_args()
-    {"probe": cmd_probe, "fetch": lambda: cmd_fetch(a.since), "describe": cmd_describe, "series": cmd_series, "test": lambda: cmd_test(a.shifts)}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["probe", "fetch", "describe", "series", "test", "recent"]); ap.add_argument("--days", type=int, default=10); ap.add_argument("--since", default=START); ap.add_argument("--shifts", type=int, default=5000); a = ap.parse_args()
+    {"probe": cmd_probe, "fetch": lambda: cmd_fetch(a.since), "describe": cmd_describe, "series": cmd_series, "test": lambda: cmd_test(a.shifts), "recent": lambda: cmd_recent(a.days)}[a.cmd]()
