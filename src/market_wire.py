@@ -37,13 +37,17 @@ CANDIDATES = [
     dict(name="Energy Information Administration: press", owner="EIA", fmt="feed", rights=US, url="https://www.eia.gov/rss/press_rss.xml"),
     dict(name="European Central Bank: press", owner="ECB", fmt="feed", rights=CHECK, url="https://www.ecb.europa.eu/rss/press.html"),
     dict(name="Bank of England: news", owner="Bank of England", fmt="feed", rights=CHECK, url="https://www.bankofengland.co.uk/rss/news"),
+    dict(name="SEC: new debt filed by a watched company", owner="US Securities and Exchange Commission (EDGAR)", fmt="secdebt", rights=US, url="https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type={form}&company=&dateb=&owner=include&count=100&output=atom"),
     dict(name="Bank of Japan: what's new", owner="Bank of Japan", fmt="feed", rights=CHECK, url="https://www.boj.or.jp/en/rss/whatsnew.xml"),
 ]
 
 
 # Admitted 26 Nov 2026 after the probe (docs/market_wire_probe.md, TRACK 3.126): they answer, give a time of day, and are US federal government works.
 ADMITTED = ["Federal Reserve: all press releases", "Federal Reserve: speeches", "Federal Reserve: testimony", "Treasury: auction results", "White House: presidential actions", "White House: briefings and statements",
-            "Federal Register: documents filed for the next issues", "US Trade Representative: press releases", "SEC: press releases", "Bureau of Economic Analysis: releases", "Energy Information Administration: press"]
+            "Federal Register: documents filed for the next issues", "US Trade Representative: press releases", "SEC: press releases", "Bureau of Economic Analysis: releases", "Energy Information Administration: press", "SEC: new debt filed by a watched company"]
+# Founder's YES of 26 Nov 2026 (TRACK 3.142): the minute a watched company files for new debt (prospectus and pricing forms for notes), the listener says so -- INFORMATION ONLY.
+# No rule has passed a test on it (DN-1 to DN-3, TRACK 3.138-3.140): it is not scored, not coloured, not a signal.
+DEBT_FORMS = ["424B5", "424B2", "424B3", "FWP"]; DEBT_WATCH = ["ORCL", "META", "GOOGL", "GOOG", "AMZN", "MSFT", "CRWV", "NVDA", "AVGO", "AMD", "INTC", "MU", "IBM", "CSCO", "AAPL", "DELL", "QCOM", "TXN"]; _cik: dict = {}
 LIVE = Path("data_provenance/live"); OUT = LIVE / "market_wire.jsonl"; STATE = LIVE / "market_wire_seen.json"; EVERY = 60.0; SLOW = {"Federal Register: documents filed for the next issues": 180.0}
 _last: dict = {}
 
@@ -88,6 +92,20 @@ def _t(raw):
 def items(c: dict) -> list:
     """the items of one candidate as dicts: id, title, link, published (a time with zone, or None)"""
     from src import news_listener as N
+    if c["fmt"] == "secdebt":
+        import re
+        if not _cik:
+            for v in json.loads(N.fetch("https://www.sec.gov/files/company_tickers.json")).values():
+                if v["ticker"].upper() in DEBT_WATCH: _cik[str(v["cik_str"]).zfill(10)] = "GOOG" if v["ticker"].upper() == "GOOGL" else v["ticker"].upper()
+        out = []
+        for form in DEBT_FORMS:
+            for it in N.feed_items(N.fetch(c["url"].format(form=form))):
+                m = re.search(r"/data/(\d+)/", it.get("link", "")); a = re.search(r"(\d{10})-?(\d{2})-?(\d{6})", it.get("link", "").split("/data/")[-1])
+                if not m or not a or it.get("published") is None: continue
+                tick = _cik.get(m.group(1).zfill(10))
+                if tick is None or it["title"].split(" - ")[0].strip().upper() != form: continue
+                out.append(dict(id=f"{a.group(1)}-{a.group(2)}-{a.group(3)}", title=f"NEW DEBT FILED -- {tick} (form {form}). Information only: no tested rule.", link=it.get("link", ""), published=it["published"], summary=""))
+        return out
     body = N.fetch(c["url"])
     if c["fmt"] == "feed": return N.feed_items(body)
     J = json.loads(body); out = []

@@ -223,6 +223,35 @@ def cmd_control(tk=None, out="debt_news_control", code="DN-2", track="3.138", re
     print(f"-> docs/{out}.md")
 
 
+FWD_START = "2026-11-27"; FWD_AT = 15; FUND = {"ORCL": "ORCS", "GOOG": "GGLS", "AMZN": "AMZD", "META": "METD", "MSFT": "MSFD"}; FUND_COST = 0.0013      # the 1x inverse fund's spread in and out, measured (TRACK 3.114): 7.8 + 5.2 basis points
+
+
+def cmd_forward():
+    """DN-F (TRACK 3.142): every new CLEAN debt deal of the five from 27 Nov 2026 -- the company's own share from the first open after the filing to that day's close and to
+    the next day's close; beside it what the 1x inverse fund would have made, roughly (minus the share's move, minus its measured spread). Verdict at 15 deals."""
+    f8 = Path("data_provenance/selloff_live/filings8k.csv")
+    if not (ROOT / "filings.csv").exists() or not f8.exists(): print("needs `python -m src.debt_news fetch` and the daily check"); return
+    D = deals(); D = D[D.ticker.isin(FIVE) & (D["first"] >= FWD_START)].copy(); R8 = pd.read_csv(f8, parse_dates=["accepted_ny"]); R8 = R8[R8.results.astype(str).str.lower().isin(["true", "1"])]
+    PX = {t: _ohlc(t) for t in FIVE}; PX = {t: d for t, d in PX.items() if d is not None}; rows = []; f2 = lambda x: "waiting" if x != x else f"{x * 100:+.2f}%"
+    for r in D.sort_values("first").itertuples():
+        d = PX.get(r.ticker)
+        if d is None: continue
+        cal = d.index; cv = cal.values; day = np.datetime64(r.first.normalize()); i0 = int(np.searchsorted(cv, day, side="left")); ie = i0 + 1 if (i0 < len(cal) and cal[i0] == r.first.normalize() and (r.first.hour, r.first.minute) >= (9, 30)) else i0
+        res = [int(np.searchsorted(cv, np.datetime64(x.normalize()), side="left")) + (1 if x.hour >= 16 else 0) for x in R8[R8.ticker == r.ticker].accepted_ny]; near = any(0 <= i0 - k <= 2 for k in res)
+        tr = float(d.close.iloc[ie] / d.open.iloc[ie] - 1) if ie < len(cal) else np.nan; tr2 = float(d.close.iloc[ie + 1] / d.open.iloc[ie] - 1) if ie + 1 < len(cal) else np.nan
+        rows.append(dict(filed=r.first, ticker=r.ticker, forms=r.forms, near=near, tr=tr, tr2=tr2))
+    T = pd.DataFrame(rows) if rows else pd.DataFrame(columns=["filed", "ticker", "forms", "near", "tr", "tr2"]); C = T[~T.near.astype(bool)] if len(T) else T; K = C[C.tr.notna()] if len(C) else C; n = len(K)
+    L = ["# DN-F forward record: the five AI spenders' own shares after a new debt deal", "", f"From {FWD_START}. A deal = the company's first debt filing after {GAP_DAYS} days without one; only CLEAN deals count (not within 3 sessions of the company's results). "
+         f"Measured from the first open after the filing became public. History (DN-2, TRACK 3.139): -0.70 points to that day's close and -0.97 to the next close on 35 clean deals -- NOT established, and it did not repeat on ten other companies (DN-3). Verdict at {FWD_AT} clean deals with a result. "
+         "'Fund' = roughly what the 1x inverse fund would have made: minus the share's move, minus 0.13 points for its measured spread.", "",
+         "| clean deals with a result | average to that day's close | average to the next day's close | the fund, to that day's close |", "|---|---|---|---|",
+         f"| {n} of {FWD_AT} | {f2(K.tr.mean()) if n else 'n/a'} | {f2(K.tr2.mean()) if n else 'n/a'} | {f2(-K.tr.mean() - FUND_COST) if n else 'n/a'} |", "",
+         "| filed (New York) | company | forms | counts? | first open after the filing -> that close | -> the next close | the inverse fund (name), roughly |", "|---|---|---|---|---|---|---|"]
+    L += [f"| {r.filed:%Y-%m-%d %H:%M} | {r.ticker} | {r.forms} | {'no: near results' if r.near else 'yes'} | {f2(r.tr)} | {f2(r.tr2)} | {FUND.get(r.ticker, '')}: {f2(-r.tr - FUND_COST) if r.tr == r.tr else 'waiting'} |" for r in T.itertuples()] or ["| (no deal yet) | | | | | | |"]
+    DOCS.mkdir(exist_ok=True); (DOCS / "debt_news_forward.md").write_text("\n".join(L) + "\n")
+    print(f"  debt-deal forward record (the five): {n} of {FWD_AT} clean deals with a result" + (f", average to that day's close {f2(K.tr.mean())}" if n else "") + f"; deals seen since {FWD_START}: {len(T)} -> docs/debt_news_forward.md")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["fetch", "run", "control", "replicate"]); a = ap.parse_args()
-    {"fetch": cmd_fetch, "run": cmd_run, "control": cmd_control, "replicate": lambda: cmd_control(OTHERS, "debt_news_replicate", "DN-3", "3.139", True)}[a.cmd]()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["fetch", "run", "control", "replicate", "forward"]); a = ap.parse_args()
+    {"fetch": cmd_fetch, "run": cmd_run, "control": cmd_control, "forward": cmd_forward, "replicate": lambda: cmd_control(OTHERS, "debt_news_replicate", "DN-3", "3.139", True)}[a.cmd]()
