@@ -14,6 +14,8 @@ Registered in TRACK 3.110 (24 Nov 2026) before any case. Every sell-off of 5% or
 | 2026-11-25 | SS-2a | SNDK | -5.6 |  |  |  |  | NO TRADE: a position in SNDK is still open |  |
 | 2026-11-24 | SS-2a | SNDK | -11.1 |  |  |  |  | sell SNDK short with US$35,000 (it has no inverse fund) |  |
 
+**Warning, last run:** Yahoo gave no fresh price for GOOG; a match or a miss of that run may be wrong until the check is run again.
+
 ## When signals overlap: the four ways side by side (founder, 26 Nov 2026)
 
 **A** = one position per stock; **B** = limits on the whole account; **C** = one position per stock AND limits on the whole account; **D** = no rule: every signal at full size. Limits of B and C: at most US$35,000 sold short in all, at most US$70,000 in all positions together; a signal that would get under US$5,000 is not traded. Sizes are the money in the fund or the short sale; results in US dollars after cost. **The page shows way C.**
