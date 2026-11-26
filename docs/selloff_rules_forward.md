@@ -10,6 +10,16 @@ Registered in TRACK 3.110 (24 Nov 2026) before any case. Every sell-off of 5% or
 
 | sell-off day | rule | stock | move that day % | sold at the open of | closed at the close of | the stock alone, bp after cost | against the S&P 500, bp after cost | the founder's way | its result, US$ |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-11-25 | SS-2a | ORCL | -5.1 |  |  |  |  | buy the inverse fund ORCS (1x) with US$70,000; no short sale, nothing borrowed |  |
-| 2026-11-25 | SS-2a | SNDK | -5.6 |  |  |  |  | sell SNDK short with US$35,000 (it has no inverse fund) |  |
+| 2026-11-25 | SS-2a | ORCL | -5.1 |  |  |  |  | buy the inverse fund ORCS (1x) with US$35,000; no short sale, nothing borrowed (reduced: the account already holds US$35,000 of its US$70,000) |  |
+| 2026-11-25 | SS-2a | SNDK | -5.6 |  |  |  |  | NO TRADE: a position in SNDK is still open |  |
 | 2026-11-24 | SS-2a | SNDK | -11.1 |  |  |  |  | sell SNDK short with US$35,000 (it has no inverse fund) |  |
+
+## When signals overlap: the four ways side by side (founder, 26 Nov 2026)
+
+**A** = one position per stock; **B** = limits on the whole account; **C** = one position per stock AND limits on the whole account; **D** = no rule: every signal at full size. Limits of B and C: at most US$35,000 sold short in all, at most US$70,000 in all positions together; a signal that would get under US$5,000 is not traded. Sizes are the money in the fund or the short sale; results in US dollars after cost. **The page shows way C.**
+
+| sell-off day | rule | stock | size A | size B | size C | size D | result A | result B | result C | result D |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-11-25 | SS-2a | ORCL | 70,000 | 35,000 | 35,000 | 70,000 |  |  |  |  |
+| 2026-11-25 | SS-2a | SNDK | no trade | no trade | no trade | 35,000 |  |  |  |  |
+| 2026-11-24 | SS-2a | SNDK | 35,000 | 35,000 | 35,000 | 35,000 |  |  |  |  |

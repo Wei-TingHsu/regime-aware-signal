@@ -1,4 +1,4 @@
-code,ticker,day,move_pct,side,exit_sessions,entry_day,exit_day,alone_bp,against_spx_bp,stock_move_bp,spx_move_bp,way,way_usd
-SS-2a,SNDK,2026-11-24,-11.13,SELL,2,,,,,,,"sell SNDK short with US$35,000 (it has no inverse fund)",
-SS-2a,ORCL,2026-11-25,-5.13,SELL,2,,,,,,,"buy the inverse fund ORCS (1x) with US$70,000; no short sale, nothing borrowed",
-SS-2a,SNDK,2026-11-25,-5.57,SELL,2,,,,,,,"sell SNDK short with US$35,000 (it has no inverse fund)",
+code,ticker,day,move_pct,side,exit_sessions,entry_day,exit_day,alone_bp,against_spx_bp,stock_move_bp,spx_move_bp,way,way_usd,size_A,size_B,size_C,size_D,usd_A,usd_B,usd_C,usd_D
+SS-2a,SNDK,2026-11-24,-11.13,SELL,2,,,,,,,"sell SNDK short with US$35,000 (it has no inverse fund)",,35000.0,35000.0,35000.0,35000.0,,,,
+SS-2a,ORCL,2026-11-25,-5.13,SELL,2,,,,,,,"buy the inverse fund ORCS (1x) with US$35,000; no short sale, nothing borrowed (reduced: the account already holds US$35,000 of its US$70,000)",,70000.0,35000.0,35000.0,70000.0,,,,
+SS-2a,SNDK,2026-11-25,-5.57,SELL,2,,,,,,,NO TRADE: a position in SNDK is still open,,0.0,0.0,0.0,35000.0,,,,
