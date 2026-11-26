@@ -10,6 +10,7 @@ to know how strong these sources can influence the market; if it doesn't, there 
 | News media | Reuters, Bloomberg, CNBC, Seeking Alpha | SR-3: whether their items about the listed companies move the price on the day and the next 7 sessions | registered 20 Nov; after SR-1 and SR-2 |
 | Research publishers | SemiAnalysis | read live since 20 Nov as information only; reaction test with SR-1's method once enough items exist | live, no rule |
 | Market-research firms | TrendForce (named 22 Nov 2026) | TF-1: the memory, foundry and server stocks of the list after its releases, by subject and direction; one session to several weeks | list of releases being collected (TRACK 3.105); live as information only |
+| Market-wide headlines during the session | Fed speeches and press releases, Treasury auction results, White House actions, documents filed for the Federal Register, USTR, Commerce (named after the turn of 25 Nov 2026; founder's YES 26 Nov) | MW-1: the four futures in the 5 to 60 minutes after a headline against the same minutes of the 20 sessions before; one test per kind of source | probe 26 Nov (TRACK 3.125); collected free once admitted; not read or scored until MW-1 passes |
 
 New source addresses found later by the discovery search are added to this table automatically, with the date found.
 
