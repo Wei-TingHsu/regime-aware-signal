@@ -384,6 +384,10 @@ def cmd_run(minutes: float | None, every: float, max_scores: int):
                 if first_time: known.add(src["name"]); print(f"   .. {src['name']}: connected for the first time; {len(items)} existing items memorised, none scored")
                 elif old: print(f"   .. {src['name']}: {old} item(s) older than a day skipped")
                 if src["kind"] == "sec": time.sleep(0.12)
+            try:      # 26 Nov 2026 (TRACK 3.126): market-wide headlines (Fed, Treasury auctions, White House, Federal Register ...) are collected on every pass; free, never scored here
+                from src import market_wire as _MW; _MW.collect()
+            except SystemExit: raise
+            except Exception: pass
             n += 1; state["ids"] = sorted(seen)[-20000:]; state["warmed"] = sorted(known); state["budget"] = budget; SEEN.write_text(json.dumps(state))
             if n == 1 or n % 20 == 0: print(f"  {datetime.now(NY):%H:%M:%S} New York / {datetime.now(SG):%H:%M:%S} Singapore: pass {n}, {len(S) - len(bad)} of {len(S)} sources answered" + (f"; silent: {', '.join(bad)[:120]}" if bad else "") + f"; scores used today: {int(budget.get(day, 0))} of {max_scores}")
             time.sleep(max(1.0, every - (time.time() - t0)))

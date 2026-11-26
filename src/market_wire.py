@@ -12,7 +12,7 @@ Rights. Works of the US federal government are not under copyright in the United
 News agencies (Reuters, Bloomberg, Dow Jones) are licensed and are NOT candidates.
 """
 from __future__ import annotations
-import argparse, json
+import argparse, json, time
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -39,6 +39,43 @@ CANDIDATES = [
     dict(name="Bank of England: news", owner="Bank of England", fmt="feed", rights=CHECK, url="https://www.bankofengland.co.uk/rss/news"),
     dict(name="Bank of Japan: what's new", owner="Bank of Japan", fmt="feed", rights=CHECK, url="https://www.boj.or.jp/en/rss/whatsnew.xml"),
 ]
+
+
+# Admitted 26 Nov 2026 after the probe (docs/market_wire_probe.md, TRACK 3.126): they answer, give a time of day, and are US federal government works.
+ADMITTED = ["Federal Reserve: all press releases", "Federal Reserve: speeches", "Federal Reserve: testimony", "Treasury: auction results", "White House: presidential actions", "White House: briefings and statements",
+            "Federal Register: documents filed for the next issues", "US Trade Representative: press releases", "SEC: press releases", "Bureau of Economic Analysis: releases", "Energy Information Administration: press"]
+LIVE = Path("data_provenance/live"); OUT = LIVE / "market_wire.jsonl"; STATE = LIVE / "market_wire_seen.json"; EVERY = 60.0; SLOW = {"Federal Register: documents filed for the next issues": 180.0}
+_last: dict = {}
+
+
+def collect(quiet=False) -> int:
+    """called by the listener on every pass; asks each admitted source at most once a minute (the Federal Register list every three minutes) and stores what is new:
+    source, headline, link, the minute the source gives, the minute we saw it. No headline is sent to a paid model. Returns the number of new live items."""
+    st = json.loads(STATE.read_text()) if STATE.exists() else dict(ids=[], warmed=[]); seen = set(st["ids"]); warmed = set(st["warmed"]); new = 0; rows = []; now = datetime.now(timezone.utc)
+    for c in CANDIDATES:
+        if c["name"] not in ADMITTED or time.time() - _last.get(c["name"], 0) < SLOW.get(c["name"], EVERY): continue
+        _last[c["name"]] = time.time()
+        try: I = items(c)
+        except SystemExit: raise
+        except Exception: continue
+        first = c["name"] not in warmed
+        for it in I:
+            uid = f"{c['name']}|{it['id']}"
+            if uid in seen: continue
+            seen.add(uid); pub = it.get("published")
+            rows.append(dict(source=c["name"], owner=c["owner"], title=it["title"][:400], link=it.get("link", ""), published=pub.astimezone(timezone.utc).isoformat() if pub else None, seen=now.isoformat(), first_pass=first))
+            if not first:
+                new += 1
+                if not quiet: print(f"   [market] {(pub or now).astimezone(NY):%H:%M} New York | {c['name']} | {it['title'][:110]}")
+        if first:
+            warmed.add(c["name"])
+            if not quiet: print(f"   .. market-wide source connected: {c['name']} ({len(I)} existing items stored with their own times)")
+    if rows:
+        LIVE.mkdir(parents=True, exist_ok=True)
+        with OUT.open("a") as f:
+            for r in rows: f.write(json.dumps(r, ensure_ascii=False) + "\n")
+    if rows or not STATE.exists(): st = dict(ids=sorted(seen)[-60000:], warmed=sorted(warmed)); tmp = STATE.with_suffix(".tmp"); tmp.write_text(json.dumps(st)); tmp.replace(STATE)
+    return new
 
 
 def _t(raw):
@@ -88,4 +125,6 @@ def cmd_probe():
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["probe"]); ap.parse_args(); cmd_probe()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["probe", "once"]); a = ap.parse_args()
+    if a.cmd == "probe": cmd_probe()
+    else: print(f"{collect()} new live items -> {OUT}")

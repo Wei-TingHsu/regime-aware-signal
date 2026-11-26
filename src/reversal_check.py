@@ -38,6 +38,16 @@ def cmd_engine(day: str, t0: str, t1: str):
         rd = e.get("read") or {}; near = " <-- within 30 minutes of 11:00" if abs((when - pd.Timestamp(f"{day} 11:00", tz=NY)).total_seconds()) <= 1800 else ""
         print(f"   {when:%H:%M} published" + (f", seen {seen:%H:%M}" if seen is not None else "") + f" | {e.get('ticker', '')} | {e.get('source', '')} | {_short(e.get('title', ''), 110)}{near}")
         if rd: print(f"        the engine's reading: type '{rd.get('event_type', '')}', material {rd.get('material', '')}, own stock {rd.get('own_stock', '')}, market {rd.get('market', '')} | {_short(rd.get('evidence', ''), 170)}")
+    # 1b. market-wide headlines (collected since 26 Nov 2026)
+    mw = Path("data_provenance/live/market_wire.jsonl"); M = []
+    if mw.exists():
+        for line in mw.read_text().splitlines():
+            try: e = json.loads(line)
+            except Exception: continue
+            when = pd.to_datetime(e.get("published"), utc=True, errors="coerce")
+            if pd.notna(when) and a <= when.tz_convert(NY) <= b: M.append((when.tz_convert(NY), e))
+    M.sort(key=lambda r: r[0]); print(f"\n1b. Market-wide headlines (Fed, Treasury auctions, White House, Federal Register ...): {len(M)} items in the window" + ("" if mw.exists() else " -- not collected yet"))
+    for when, e in M: print(f"   {when:%H:%M} | {e.get('source', '')} | {_short(e.get('title', ''), 150)}" + (" <-- within 30 minutes of 11:00" if abs((when - pd.Timestamp(f"{day} 11:00", tz=NY)).total_seconds()) <= 1800 else ""))
     # 2. the stored reads of that day
     for name, folder in FOLDERS:
         fs = sorted(f for f in folder.glob("*.json") if tag in f.name) if folder.exists() else []
