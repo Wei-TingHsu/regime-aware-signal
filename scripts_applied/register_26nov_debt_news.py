@@ -1,0 +1,19 @@
+"""register_26nov_debt_news.py -- TRACK 3.137: test DN-1 (debt news of the AI spenders -> shares) registered BEFORE it runs. Adds the source. Idempotent."""
+from pathlib import Path
+t = Path("docs/TRACK.md"); s = t.read_text()
+A = """
+
+### 3.137 Test DN-1 registered: when a large AI spender raises new debt, what do its share and the chip shares do? (26 Nov 19:20)
+**Why.** The founder, 26 Nov 06:48: traders change the CDS price because of news -- 'this is the one i want to investigate on'; his YES of 07:27 to test 'debt news of the large AI spenders -> shares'; second in his order of 11:38. The CDS itself did not lead chip shares (3.136); this goes to one kind of news behind it that is public, free and dated: the company's own new debt.
+**The news.** From the SEC's filing lists (`python -m src.debt_news fetch`): prospectus supplements and pricing sheets for notes (forms 424B2, 424B3, 424B5, FWP) and 8-K filings with item 2.03 ('creation of a direct financial obligation': a loan, a credit line, notes). A DEAL = a company's first such filing after 7 days without one. Day 0 = the day of that filing; for an 8-K filed after 16:00 New York, the next session. Companies tested: Oracle, Meta, Alphabet, Amazon, Microsoft (the five with a share in the price list); twelve more are counted, not tested (CoreWeave, Nvidia, Broadcom, AMD, Intel, Micron, IBM, Cisco, Apple, Dell, Qualcomm, Texas Instruments).
+**Test DN-1 (`python -m src.debt_news run`), fixed before it runs.** A grid: whose deals (the five together; Oracle alone) x the share watched (its own; the semiconductor fund SOXX) x the window (day 0, close to close; the session after; the 5 sessions after) x the period (2018 to now; 2025 to now, the AI build-out) = 24 cells. A cell's measure: the share's average move in the window after a deal minus its average move on all other days of the period. Under 8 deals: too few. **One verdict for the whole grid** (as in CDS-3, 3.133): is the strongest cell matched or beaten by the strongest cell of the copies -- the deal days slid along the calendar by 20 sessions or more -- in fewer than 5% of them? Each cell's own chance is printed as a description. Every deal of the five since 2025 is listed case by case. Result: `docs/debt_news.md`.
+**Checked on made-up data before sending:** a planted fall of 2% in one company's share on its deal days was found (its cell at the smallest chance the copies allow; the grid 'more than luck'); nothing else was.
+**What it cannot say, stated first.** (1) A bond sale is usually known to the market in the morning and filed in the afternoon or evening: day 0 is a whole day, not a reaction from the filing minute. (2) A filing says debt was raised, not how much, at what rate, or for what -- that needs the document read (Anthropic credit; waiting list). Deals of every size count the same. (3) Before 2025 these companies' bond sales were ordinary refinancing; the period '2025 to now' is the one that matches the AI-debt story and it is short.
+**Priors.** #241: the whole grid is NOT more than luck. #242: for the five since 2025, their own share is DOWN on day 0 against other days (the sign of the story), without passing. #243: Oracle alone since 2025 has fewer than 8 deals -- too few to judge.
+"""
+if "### 3.137 Test DN-1 registered" not in s: t.write_text(s.rstrip("\n") + A); print("  TRACK.md: 3.137 added")
+else: print("  TRACK.md: 3.137 already there -- skipped")
+p = Path("docs/SOURCES.md"); x = p.read_text(); key = "debt filings (forms 424B2"
+row = "| SEC EDGAR submissions: debt filings (forms 424B2, 424B3, 424B5, FWP; 8-K item 2.03) of 17 large technology companies | test DN-1, new debt of the AI spenders against shares (TRACK 3.137); `data_provenance/debt_news/filings.csv` | primary, public domain |"
+if key in x: print("  SOURCES.md: already there -- skipped")
+else: p.write_text(x.rstrip("\n") + "\n" + row + "\n"); print("  SOURCES.md: row added")
