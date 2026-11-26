@@ -14,7 +14,9 @@ import pandas as pd
 
 NY = "America/New_York"; LIVE = Path("data_provenance/live/events.jsonl")
 FOLDERS = [("release reads (PCE, GDP, jobs ...)", Path("data_provenance/doc_reads_prints")), ("official documents (White House, Fed, Treasury ...)", Path("data_provenance/doc_reads")), ("company documents read live", Path("data_provenance/ai_earnings/reads"))]
-SYMS = {"S&P 500 futures": "ES.c.0", "Nasdaq-100 futures": "NQ.c.0", "gold futures": "GC.c.0", "10-year Treasury note futures (price up = yield down)": "ZN.c.0"}
+# 26 Nov 2026: the MOST-TRADED contract of each (x.v.0), not the nearest-expiry one (x.c.0) -- the first version asked for the nearest gold contract, which hardly trades, and got no prices.
+# The same lesson was already written in src/intraday_fetch.py (cmd_volume); Claude did not apply it here.
+SYMS = {"S&P 500 futures": "ES.v.0", "Nasdaq-100 futures": "NQ.v.0", "gold futures": "GC.v.0", "10-year Treasury note futures (price up = yield down)": "ZN.v.0"}
 
 
 def _short(v, n=260):
@@ -77,7 +79,7 @@ def cmd_engine(day: str, t0: str, t1: str):
 
 def cmd_prices(day: str, max_usd: float):
     from src.intraday_fetch import _client
-    out = Path("data_provenance/intraday") / f"reversal_{day}.parquet"; a = pd.Timestamp(f"{day} 08:00", tz=NY); b = pd.Timestamp(f"{day} 13:00", tz=NY)
+    out = Path("data_provenance/intraday") / f"reversal_{day}_v.parquet"; a = pd.Timestamp(f"{day} 08:00", tz=NY); b = pd.Timestamp(f"{day} 13:00", tz=NY)
     if out.exists(): df = pd.read_parquet(out); print(f"prices already on disk ({out}); nothing downloaded, nothing charged")
     else:
         c = _client(); r = c.metadata.get_dataset_range(dataset="GLBX.MDP3"); end = pd.Timestamp(str(r.get("end", r.get("end_date", "")))).tz_convert("UTC") if pd.Timestamp(str(r.get("end", r.get("end_date", "")))).tzinfo else pd.Timestamp(str(r.get("end", r.get("end_date", ""))), tz="UTC")
@@ -88,18 +90,20 @@ def cmd_prices(day: str, max_usd: float):
         with warnings.catch_warnings():
             warnings.simplefilter("ignore"); df = c.timeseries.get_range(**kw).to_df()
         out.parent.mkdir(parents=True, exist_ok=True); df.to_parquet(out)
-    ix = pd.to_datetime(df.index, utc=True).tz_convert(NY); df = df.assign(t=ix); rel = pd.Timestamp(f"{day} 08:30", tz=NY); marks = ["09:30", "10:00", "10:30", "10:45", "11:00", "11:15", "11:30", "12:00", "12:59"]
+    ix = pd.to_datetime(df.index, utc=True).tz_convert(NY); df = df.assign(t=ix); rel = pd.Timestamp(f"{day} 08:30", tz=NY); marks = ["09:30", "09:45", "10:00", "10:30", "10:45", "11:00", "11:10", "11:20", "11:30", "12:00", "12:59"]
     print(f"\nAT WHICH MINUTE DID EACH MARKET TURN on {day}? Moves are measured from the price at 08:29, one minute before the PCE and GDP release (New York time).")
-    print("  market | lowest price after the release: minute, move from 08:29 | highest price after that low: minute | move from the low to 12:59 | " + " | ".join(marks))
-    lows = {}
+    print("  market | lowest price 08:30-12:59: minute, move from 08:29 | highest price 08:30-12:59: minute, move | inside 10:30-12:00 only: minute of the low, minute of the high | " + " | ".join(marks))
+    lows = {}; turns = {}
     for name, sym in SYMS.items():
         g = df[df["symbol"] == sym] if "symbol" in df.columns else df; g = g.set_index("t").sort_index()
         if not len(g): print(f"  {name}: no prices"); continue
-        base = float(g.close[g.index < rel].iloc[-1]) if (g.index < rel).any() else float(g.close.iloc[0]); post = g[g.index >= rel]; lo_t = post.low.idxmin(); lo = float(post.low.min()); after = post[post.index >= lo_t]; hi_t = after.high.idxmax(); last = float(post.close.iloc[-1]); lows[name] = lo_t
+        base = float(g.close[g.index < rel].iloc[-1]) if (g.index < rel).any() else float(g.close.iloc[0]); post = g[g.index >= rel]; lo_t = post.low.idxmin(); lo = float(post.low.min()); lows[name] = lo_t
         at = lambda hm: (float(g.close[g.index <= pd.Timestamp(f"{day} {hm}", tz=NY)].iloc[-1]) / base - 1) * 100
-        print(f"  {name} | {lo_t:%H:%M}, {(lo / base - 1) * 100:+.2f}% | {hi_t:%H:%M} | {(last / lo - 1) * 100:+.2f}% | " + " | ".join(f"{at(m):+.2f}%" for m in marks))
+        mid = post[(post.index >= pd.Timestamp(f"{day} 10:30", tz=NY)) & (post.index <= pd.Timestamp(f"{day} 12:00", tz=NY))]; hi_all = post.high.idxmax(); turns[name] = (mid.low.idxmin(), mid.high.idxmax()) if len(mid) else (None, None)
+        print(f"  {name} | {lo_t:%H:%M}, {(lo / base - 1) * 100:+.2f}% | {hi_all:%H:%M}, {(float(post.high.max()) / base - 1) * 100:+.2f}% | " + (f"low {turns[name][0]:%H:%M}, high {turns[name][1]:%H:%M}" if len(mid) else "no prices") + " | " + " | ".join(f"{at(m):+.2f}%" for m in marks))
     if len(lows) > 1:
-        ts = sorted(lows.values()); print(f"\nThe lows fall between {ts[0]:%H:%M} and {ts[-1]:%H:%M}: " + ("within 15 minutes of each other -- the markets turned together." if (ts[-1] - ts[0]).total_seconds() <= 900 else "more than 15 minutes apart -- the markets did NOT turn at the same minute."))
+        ts = sorted(lows.values()); print(f"\nThe lows of the whole morning fall between {ts[0]:%H:%M} and {ts[-1]:%H:%M}: " + ("within 15 minutes of each other." if (ts[-1] - ts[0]).total_seconds() <= 900 else "more than 15 minutes apart -- the markets did NOT make their low at the same minute."))
+        print("Read the 10:30-12:00 column for the turn seen at about 11:00: a market that turned UP there has its low near 11:00; one that turned DOWN there has its high near 11:00.")
     print("Paste all of this to Claude.")
 
 
