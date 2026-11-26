@@ -131,5 +131,87 @@ def cmd_run():
     print("-> docs/debt_news.md, docs/debt_news.csv")
 
 
+def _ohlc(sym):
+    f = PXD / f"{sym}.parquet"
+    if not f.exists(): return None
+    d = pd.read_parquet(f)[["open", "close"]]; d.index = pd.DatetimeIndex(d.index).tz_localize(None) if getattr(d.index, "tz", None) is not None else pd.DatetimeIndex(d.index); return d.dropna()
+
+
+def cmd_control():
+    """Test DN-2 (TRACK 3.138). DN-1 found the companies' own shares down on the day of a debt deal. Two doubts before that means anything:
+    (1) these companies sell bonds right after their results come out (the quiet period ends), so the fall may be the reaction to the RESULTS, not to the debt;
+    (2) the day-0 move cannot be traded -- by the time the filing is public most of the day is over. So: only deals that are NOT within three sessions of a results
+    filing ('clean deals'), and beside the whole-day windows a window that can be traded: bought or sold at the first open after the filing."""
+    f8 = Path("data_provenance/selloff_live/filings8k.csv")
+    if not (ROOT / "filings.csv").exists() or not f8.exists(): print("needs `python -m src.debt_news fetch` and the daily check (data_provenance/selloff_live/filings8k.csv)"); return
+    D = deals(); D = D[D.ticker.isin(FIVE)].copy(); R8 = pd.read_csv(f8, parse_dates=["accepted_ny"]); R8 = R8[R8.results.astype(str).str.lower().isin(["true", "1"]) & R8.ticker.isin(FIVE)]
+    PX = {t: _ohlc(t) for t in FIVE}; PX = {t: d for t, d in PX.items() if d is not None}; cal = max((d.index for d in PX.values()), key=len); cal = cal[cal >= "2018-01-01"]; cv = cal.values
+    def sess(ts, after_close_next):      # the session a filing belongs to
+        d = ts.normalize(); i = int(np.searchsorted(cv, np.datetime64(d), side="left"))
+        if after_close_next and i < len(cal) and cal[i] == d and ts.hour >= 16: i += 1
+        return i
+    def entry(ts):      # the first open AFTER the filing: the same session if filed before 09:30, otherwise the next one
+        d = ts.normalize(); i = int(np.searchsorted(cv, np.datetime64(d), side="left"))
+        if i < len(cal) and cal[i] == d and (ts.hour, ts.minute) >= (9, 30): i += 1
+        return i
+    res = {t: sorted({sess(r.accepted_ny, True) for r in R8[R8.ticker == t].itertuples()}) for t in PX}
+    D = D[D.ticker.isin(PX)]; D["i0"] = [sess(r["first"], r["is8k"]) for _, r in D.iterrows()]; D["ie"] = [entry(r["first"]) for _, r in D.iterrows()]; D = D[(D.i0 < len(cal)) & (D.i0 >= 0)]
+    D["near_results"] = [any(0 <= r.i0 - k <= 2 for k in res.get(r.ticker, [])) for r in D.itertuples()]
+    RET = {}
+    for t, d in PX.items():
+        o = d.open.reindex(cal); c = d.close.reindex(cal); RET[t] = dict(r0=(c / c.shift(1) - 1).to_numpy(), r1=(c.shift(-1) / c - 1).to_numpy(), tr=(c / o - 1).to_numpy(), tr2=(c.shift(-1) / o - 1).to_numpy())
+    WIN = {"day 0, whole day (not tradable)": ("r0", "i0"), "the session after, whole day": ("r1", "i0"), "TRADABLE: first open after the filing to that day's close": ("tr", "ie"), "TRADABLE: first open after the filing to the next day's close": ("tr2", "ie")}
+    def flags(sub, col):
+        F = {t: np.zeros(len(cal), bool) for t in PX}
+        for r in sub.itertuples():
+            i = getattr(r, col)
+            if 0 <= i < len(cal): F[r.ticker][i] = True
+        return F
+    def zstat(F, w, lo, shift=0):
+        a, b = [], []
+        for t in PX:
+            e = np.roll(F[t][lo:], shift) if shift else F[t][lo:]; r = RET[t][w][lo:]; ok = np.isfinite(r); a.append(r[e & ok]); b.append(r[~e & ok])
+        a = np.concatenate(a); b = np.concatenate(b)
+        if len(a) < MIN_EVENTS: return np.nan, len(a), np.nan
+        return (a.mean() - b.mean()) / (np.concatenate([a, b]).std() / np.sqrt(len(a))), len(a), a.mean() - b.mean()
+    cells = {}
+    for kind, sub in (("clean deals (not within 3 sessions of results)", D[~D.near_results]), ("deals within 3 sessions of results", D[D.near_results])):
+        for pname, start in PERIODS.items():
+            lo = int(np.searchsorted(cv, np.datetime64(start)))
+            for wl, (w, col) in WIN.items():
+                F = flags(sub, col); z, n, diff = zstat(F, w, lo); cells[(kind, pname, wl)] = dict(z=z, n=n, diff=diff, F=F, w=w, lo=lo)
+    test = {k: v for k, v in cells.items() if k[0].startswith("clean") and v["z"] == v["z"]}; every = {k: v for k, v in cells.items() if v["z"] == v["z"]}; exceed = {k: 0 for k in every}; done = {k: 0 for k in every}
+    best = max((abs(v["z"]) for v in test.values()), default=np.nan); beat = 0; total = 0; nmin = min((len(cal) - v["lo"] for v in every.values()), default=0)
+    for sh in range(MINSHIFT, max(MINSHIFT, nmin - MINSHIFT)):
+        m = 0.0
+        for k, v in every.items():
+            z, _, _ = zstat(v["F"], v["w"], v["lo"], sh)
+            if z == z:
+                done[k] += 1; exceed[k] += abs(z) >= abs(v["z"])
+                if k in test: m = max(m, abs(z))
+        total += 1; beat += m >= best
+    whole = (beat + 1) / (total + 1) if total and best == best else np.nan; verdict = "MORE THAN LUCK" if whole == whole and whole < 0.05 else ("TOO FEW clean deals to judge" if best != best else "NOT more than luck")
+    rows = [dict(deals_kind=k[0], period=k[1], window=k[2], deals=v["n"], diff_pct=v["diff"] * 100 if v["diff"] == v["diff"] else np.nan, chance=(exceed[k] + 1) / (done[k] + 1) if k in every and done[k] else np.nan) for k, v in cells.items()]
+    T = pd.DataFrame(rows); f2 = lambda x: "n/a" if x != x else f"{x:+.2f}"; nc = int((~D.near_results).sum()); nr = int(D.near_results.sum()); pc = lambda x: "n/a" if x != x else f"{x * 100:+.1f}%"
+    L = ["# Test DN-2: is the fall on debt-deal days the debt, or the results that came just before -- and can any of it be traded?", "", f"Registered in TRACK 3.138 before running. Deals of Oracle, Meta, Alphabet, Amazon, Microsoft since 2018: {len(D)}; within 3 sessions of the company's own results filing: {nr}; clean: {nc}. "
+         "'Difference' = the company's own share in the window, minus its average on all other days. The whole-day windows are counted from the day of the filing; the TRADABLE windows start at the first open after the filing became public. "
+         "The registered verdict is on the CLEAN deals only (8 cells): is their strongest cell matched by the strongest of the slid copies in fewer than 5%? The deals near results are shown beside them as a description.", "",
+         f"**Verdict on the clean deals: {verdict}**" + ("" if whole != whole else f" -- the strongest clean cell is matched or beaten in {whole:.0%} of {total} copies (limit 5%).") , "",
+         "| which deals | period | window | deals | difference, % | chance of this cell |", "|---|---|---|---|---|---|"]
+    for r in T.itertuples(): L.append(f"| {r.deals_kind} | {r.period} | {r.window} | {r.deals} | {f2(r.diff_pct)} | {'too few' if r.chance != r.chance else f'{r.chance:.4f}'} |")
+    L += ["", "## Every deal since 2025", "", "| filed (New York) | company | near results? | day 0 | the session after | first open after the filing -> that close | -> the next close |", "|---|---|---|---|---|---|---|"]; case = []
+    for r in D[D["first"] >= "2025-01-01"].sort_values("first").itertuples():
+        g = lambda w, i: pc(RET[r.ticker][w][i]) if 0 <= i < len(cal) else "n/a"; case.append(f"{r.first:%Y-%m-%d %H:%M} | {r.ticker} | {'YES' if r.near_results else 'no'} | {g('r0', r.i0)} | {g('r1', r.i0)} | {g('tr', r.ie)} | {g('tr2', r.ie)}"); L.append("| " + case[-1] + " |")
+    L += ["", "Source: SEC EDGAR submissions (public domain). A filing says debt was raised, not how much; deals of every size count the same."]
+    DOCS.mkdir(exist_ok=True); (DOCS / "debt_news_control.md").write_text("\n".join(L) + "\n"); T.to_csv(DOCS / "debt_news_control.csv", index=False)
+    print(f"{len(D)} deals of the five since 2018: {nr} within 3 sessions of the company's results, {nc} clean")
+    print(f"VERDICT ON THE CLEAN DEALS: {verdict}" + ("" if whole != whole else f" -- the strongest clean cell is matched or beaten in {whole:.0%} of {total} copies (limit 5%)"))
+    print("  difference % (chance) | deals | period | which deals | window")
+    for r in T.sort_values(["deals_kind", "period", "window"]).itertuples(): print(f"    {f2(r.diff_pct)} ({'too few' if r.chance != r.chance else f'{r.chance:.4f}'}) | {r.deals} | {r.period[:12]} | {r.deals_kind[:34]} | {r.window}")
+    print("  every deal since 2025: filed | company | near results? | day 0 | session after | first open after the filing -> that close | -> the next close")
+    for c in case: print("    " + c)
+    print("-> docs/debt_news_control.md")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["fetch", "run"]); a = ap.parse_args(); cmd_fetch() if a.cmd == "fetch" else cmd_run()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["fetch", "run", "control"]); a = ap.parse_args(); {"fetch": cmd_fetch, "run": cmd_run, "control": cmd_control}[a.cmd]()
