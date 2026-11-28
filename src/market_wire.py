@@ -38,13 +38,15 @@ CANDIDATES = [
     dict(name="European Central Bank: press", owner="ECB", fmt="feed", rights=CHECK, url="https://www.ecb.europa.eu/rss/press.html"),
     dict(name="Bank of England: news", owner="Bank of England", fmt="feed", rights=CHECK, url="https://www.bankofengland.co.uk/rss/news"),
     dict(name="SEC: new debt filed by a watched company", owner="US Securities and Exchange Commission (EDGAR)", fmt="secdebt", rights=US, url="https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type={form}&company=&dateb=&owner=include&count=100&output=atom"),
+    dict(name="Treasury: auction results, Fiscal Data copy (lag measurement)", owner="US Treasury (Fiscal Data)", fmt="fiscal", rights=US, url="https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?format=json&sort=-auction_date&page%5Bsize%5D=60&filter=auction_date:gte:{since}"),
     dict(name="Bank of Japan: what's new", owner="Bank of Japan", fmt="feed", rights=CHECK, url="https://www.boj.or.jp/en/rss/whatsnew.xml"),
 ]
 
 
 # Admitted 26 Nov 2026 after the probe (docs/market_wire_probe.md, TRACK 3.126): they answer, give a time of day, and are US federal government works.
 ADMITTED = ["Federal Reserve: all press releases", "Federal Reserve: speeches", "Federal Reserve: testimony", "Treasury: auction results", "White House: presidential actions", "White House: briefings and statements",
-            "Federal Register: documents filed for the next issues", "US Trade Representative: press releases", "SEC: press releases", "Bureau of Economic Analysis: releases", "Energy Information Administration: press", "SEC: new debt filed by a watched company"]
+            "Federal Register: documents filed for the next issues", "US Trade Representative: press releases", "SEC: press releases", "Bureau of Economic Analysis: releases", "Energy Information Administration: press", "SEC: new debt filed by a watched company",
+            "Treasury: auction results, Fiscal Data copy (lag measurement)"]      # 28 Nov 2026 (TRACK 3.146): collected NEXT TO the TreasuryDirect source, only to measure how much later it shows a result
 # Founder's YES of 26 Nov 2026 (TRACK 3.142): the minute a watched company files for new debt (prospectus and pricing forms for notes), the listener says so -- INFORMATION ONLY.
 # No rule has passed a test on it (DN-1 to DN-3, TRACK 3.138-3.140): it is not scored, not coloured, not a signal.
 DEBT_FORMS = ["424B5", "424B2", "424B3", "FWP"]; DEBT_WATCH = ["ORCL", "META", "GOOGL", "GOOG", "AMZN", "MSFT", "CRWV", "NVDA", "AVGO", "AMD", "INTC", "MU", "IBM", "CSCO", "AAPL", "DELL", "QCOM", "TXN"]; _cik: dict = {}
@@ -106,6 +108,14 @@ def items(c: dict) -> list:
                 if tick is None or it["title"].split(" - ")[0].strip().upper() != form: continue
                 out.append(dict(id=f"{a.group(1)}-{a.group(2)}-{a.group(3)}", title=f"NEW DEBT FILED -- {tick} (form {form}). Information only: no tested rule.", link=it.get("link", ""), published=it["published"], summary=""))
         return out
+    if c["fmt"] == "fiscal":
+        from datetime import timedelta
+        J = json.loads(N.fetch(c["url"].format(since=(datetime.now(NY) - timedelta(days=10)).strftime("%Y-%m-%d")), timeout=40)); out = []
+        for a in J.get("data", []):
+            y = next((v for k, v in a.items() if k.startswith("high_") and ("yield" in k or "rate" in k) and v not in (None, "", "null")), "")
+            if not y: continue      # announced, not yet auctioned
+            out.append(dict(id=f"{a.get('cusip')}|{str(a.get('auction_date'))[:10]}", title=f"Auction result: {a.get('security_term', '')} {a.get('security_type', '')} -- high yield/rate {y}, bid-to-cover {a.get('bid_to_cover_ratio', '')}", link="https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/", published=None, summary=""))
+        return out
     body = N.fetch(c["url"])
     if c["fmt"] == "feed": return N.feed_items(body)
     J = json.loads(body); out = []
@@ -142,7 +152,41 @@ def cmd_probe():
     print(f"=> {len(good)} of {len(rows)} answer; {len(usable)} usable now: " + (", ".join(r["name"] for r in usable) or "none") + ". -> docs/market_wire_probe.md")
 
 
+def cmd_lag():
+    """how much later the Fiscal Data copy shows an auction result than TreasuryDirect: for every result both sources showed LIVE (not on first connection), the minute each was first seen"""
+    if not OUT.exists(): print(f"{OUT} is missing: the listener has not collected anything yet"); return
+    TD = "Treasury: auction results"; FD = "Treasury: auction results, Fiscal Data copy (lag measurement)"; seen = {TD: {}, FD: {}}; first = {TD: 0, FD: 0}
+    for ln in OUT.read_text().splitlines():
+        try: d = json.loads(ln)
+        except Exception: continue
+        if d.get("source") not in seen: continue
+        if d.get("first_pass"): first[d["source"]] += 1; continue
+        seen[d["source"]].setdefault(d["title"].split(" -- ")[0], []).append(datetime.fromisoformat(d["seen"]))      # by the name of the security ('13-Week Bill'); the same name comes back every week or month
+    from datetime import timedelta
+    pairs = []; only_td = []
+    for name, ts in seen[TD].items():
+        ts = sorted(ts); fs = sorted(seen[FD].get(name, []))
+        for n, t in enumerate(ts):
+            nxt = ts[n + 1] if n + 1 < len(ts) else None; f = next((x for x in fs if x >= t - timedelta(minutes=10) and (nxt is None or x < nxt - timedelta(minutes=10))), None)      # the first Fiscal Data sighting of that security before its next auction
+            (pairs.append((t, name, f)) if f else only_td.append((t, name)))
+    pairs.sort(); only_td.sort(); lags = [(f - t).total_seconds() / 60 for t, _, f in pairs]; nTD = sum(len(v) for v in seen[TD].values()); nFD = sum(len(v) for v in seen[FD].values())
+    L = ["# How much later Fiscal Data shows an auction result than TreasuryDirect", "", "Both sources are asked once a minute by the listener (TRACK 3.146). A row = one auction result that both showed while the listener was running. "
+         "'Seen' = the minute our listener first saw it (New York time), so each time is exact to about one minute. Results that were already there when a source was first connected are left out.", "",
+         "| auction result | TreasuryDirect: seen | Fiscal Data: seen | Fiscal Data later by, minutes |", "|---|---|---|---|"]
+    for (t, name, f), g in zip(pairs, lags): L.append(f"| {name} | {t.astimezone(NY):%Y-%m-%d %H:%M} | {f.astimezone(NY):%Y-%m-%d %H:%M} | {g:.0f} |")
+    L += ["", f"Results seen live: TreasuryDirect {nTD}, Fiscal Data {nFD}, on both {len(pairs)}. On TreasuryDirect and not yet on Fiscal Data: {len(only_td)}" + (" (" + "; ".join(f"{n}, seen {t.astimezone(NY):%d %b %H:%M}" for t, n in only_td[:6]) + ")" if only_td else "") + "."]
+    if lags:
+        z = sorted(lags); L.append(f"**Fiscal Data later by: smallest {z[0]:.0f}, middle {z[len(z) // 2]:.0f}, largest {z[-1]:.0f} minutes ({len(z)} results).**")
+    else: L.append("**No result has been seen live on both sources yet. Auctions of bills are held on most Mondays to Thursdays at 11:30 New York; run this again after the listener has been on through one.**")
+    DOCS.mkdir(exist_ok=True); (DOCS / "treasury_lag.md").write_text("\n".join(L) + "\n")
+    print(f"  results seen live: TreasuryDirect {nTD}, Fiscal Data {nFD}, on both {len(pairs)} (stored on first connection and not counted: {first[TD]} and {first[FD]})")
+    for (t, name, f), g in zip(pairs, lags): print(f"    Fiscal Data later by {g:.0f} minutes | {name} | TreasuryDirect {t.astimezone(NY):%d %b %H:%M} New York")
+    for t, name in only_td[:8]: print(f"    on TreasuryDirect, not yet on Fiscal Data | {name} | seen {t.astimezone(NY):%d %b %H:%M} New York")
+    print(L[-1].replace("**", "") + " -> docs/treasury_lag.md")
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["probe", "once"]); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["probe", "once", "lag"]); a = ap.parse_args()
     if a.cmd == "probe": cmd_probe()
+    elif a.cmd == "lag": cmd_lag()
     else: print(f"{collect()} new live items -> {OUT}")

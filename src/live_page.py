@@ -124,7 +124,7 @@ def _body(tz: str):
 
     # founder's YES of 28 Nov 2026 (TRACK 3.144): what the listener collects for the whole market is shown here, in its own block. INFORMATION ONLY: not read by Claude, not scored, no colour.
     W = _wire(now); cards = []
-    for r in [x for x in W if x["debt"]][:4] + [x for x in W if not x["debt"] and not x["fedreg"]][:8]:
+    for r in [x for x in W if x["debt"]][:4] + [x for x in W if not x["debt"] and not x["fedreg"] and "(lag measurement)" not in x["source"]][:8]:
         link = f" · <a href='{r['link']}' target='_blank'>open</a>" if str(r["link"]).startswith("http") else ""
         cards.append(f"<div class='sig sshut'><b>{_html.escape(r['title'])}</b><br><span class='smut'>{_html.escape(r['source'])} · {r['when'].astimezone(Z):%Y-%m-%d %H:%M} local time{link}</span></div>")
     nfr = sum(1 for x in W if x["fedreg"])

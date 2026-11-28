@@ -17,3 +17,4 @@ New source addresses found later by the discovery search are added to this table
 | WAITING LIST (founder, 21 Nov 2026) | Reading the event filings of the S&P 100 companies (ET-2): 6,590 texts on disk, counted cost US$35-53 (press releases only) or US$84-127 (all). Not read. | TRACK 3.91-3.93 |
 
 | Google News search feed: DROPPED 28 Nov 2026 | named in the plan of 20 Nov as the free discovery search | none | its terms allow personal, non-commercial display only and forbid robots; replaced by the GDELT Project's index (TRACK 3.145) |
+| Treasury auction results: TESTED 28 Nov 2026 (MW-1) | market-wide headline, first kind | 11 of 16 tests pass: the note future moves 2.8 times the ordinary in the first 5 minutes; shares and gold 1.2 to 1.3 times | moves prices, no direction; MW-2 (direction and the cost of a late source) registered in TRACK 3.146 |
