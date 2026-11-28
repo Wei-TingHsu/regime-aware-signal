@@ -4,7 +4,7 @@ Registered in TRACK 3.110 (24 Nov 2026) before any case. Every sell-off of 5% or
 
 | rule | trade that passed the test | history 2018-2026, per day with a trade | days so far with a known result | average so far, the stock alone | against the S&P 500 | waiting for their sessions |
 |---|---|---|---|---|---|---|
-| SS-2a | sell the stock; exit +2 | +166 bp (91 days) | 0 of 30 |  |  | 3 |
+| SS-2a | sell the stock; exit +2 | +166 bp (91 days) | 1 of 30 | -1976 bp | -1626 bp | 2 |
 | SS-2b | sell the stock; exit +2 | +102 bp (142 days) | 0 of 30 |  |  | 0 |
 | SS-2c | sell the stock and buy the S&P 500 fund; exit +3 | +82 bp (194 days) | 0 of 30 |  |  | 0 |
 
@@ -12,9 +12,7 @@ Registered in TRACK 3.110 (24 Nov 2026) before any case. Every sell-off of 5% or
 |---|---|---|---|---|---|---|---|---|---|
 | 2026-11-25 | SS-2a | ORCL | -5.1 |  |  |  |  | buy the inverse fund ORCS (1x) with US$35,000; no short sale, nothing borrowed (reduced: the account already holds US$35,000 of its US$70,000) |  |
 | 2026-11-25 | SS-2a | SNDK | -5.6 |  |  |  |  | NO TRADE: a position in SNDK is still open |  |
-| 2026-11-24 | SS-2a | SNDK | -11.1 |  |  |  |  | sell SNDK short with US$35,000 (it has no inverse fund) |  |
-
-**Warning, last run:** Yahoo gave no fresh price for GOOG; a match or a miss of that run may be wrong until the check is run again.
+| 2026-11-24 | SS-2a | SNDK | -11.1 | 2026-11-25 | 2026-11-27 | -1976 | -1626 | sell SNDK short with US$35,000 (it has no inverse fund) | -6,912 |
 
 ## When signals overlap: the four ways side by side (founder, 26 Nov 2026)
 
@@ -24,4 +22,5 @@ Registered in TRACK 3.110 (24 Nov 2026) before any case. Every sell-off of 5% or
 |---|---|---|---|---|---|---|---|---|---|---|
 | 2026-11-25 | SS-2a | ORCL | 70,000 | 35,000 | 35,000 | 70,000 |  |  |  |  |
 | 2026-11-25 | SS-2a | SNDK | no trade | no trade | no trade | 35,000 |  |  |  |  |
-| 2026-11-24 | SS-2a | SNDK | 35,000 | 35,000 | 35,000 | 35,000 |  |  |  |  |
+| 2026-11-24 | SS-2a | SNDK | 35,000 | 35,000 | 35,000 | 35,000 | -6,912 | -6,912 | -6,912 | -6,912 |
+| **total of the finished trades** | | | | | | | **-6,912** | **-6,912** | **-6,912** | **-6,912** |
