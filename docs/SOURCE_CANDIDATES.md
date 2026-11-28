@@ -15,3 +15,5 @@ to know how strong these sources can influence the market; if it doesn't, there 
 New source addresses found later by the discovery search are added to this table automatically, with the date found.
 
 | WAITING LIST (founder, 21 Nov 2026) | Reading the event filings of the S&P 100 companies (ET-2): 6,590 texts on disk, counted cost US$35-53 (press releases only) or US$84-127 (all). Not read. | TRACK 3.91-3.93 |
+
+| Google News search feed: DROPPED 28 Nov 2026 | named in the plan of 20 Nov as the free discovery search | none | its terms allow personal, non-commercial display only and forbid robots; replaced by the GDELT Project's index (TRACK 3.145) |

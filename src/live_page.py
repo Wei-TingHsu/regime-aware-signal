@@ -1,7 +1,8 @@
 """live_page.py -- the 'Event-driven company signals' tab of app.py (also served by pages/Event_signals.py). It only DISPLAYS what the news listener
 logs; it redraws itself every 30 seconds. The listener runs in its own terminal: caffeinate -i python -m src.news_listener run --poll 30"""
 from __future__ import annotations
-import time
+import html as _html, json, time
+from datetime import datetime, timezone
 from pathlib import Path
 import streamlit as st
 from src import live_view as V
@@ -75,6 +76,26 @@ def _coloured(T, stages: list):
     except Exception: return T
 
 
+WIRE = Path("data_provenance/live/market_wire.jsonl"); WIRE_H = 48
+
+
+def _wire(now) -> list:
+    """the market-wide items the listener stored (src/market_wire.py), newest first, last WIRE_H hours by the time the SOURCE gives (the time we saw it when the source gives none)"""
+    if not WIRE.exists(): return []
+    out = []
+    try: lines = WIRE.read_text().splitlines()[-4000:]
+    except Exception: return []
+    for ln in lines:
+        try:
+            d = json.loads(ln); w = datetime.fromisoformat(d.get("published") or d["seen"])
+            if w.tzinfo is None: w = w.replace(tzinfo=timezone.utc)
+        except Exception: continue
+        age = (now - w).total_seconds()
+        if age < -3600 or age > WIRE_H * 3600: continue
+        src = str(d.get("source", "")); out.append(dict(when=w, source=src, title=str(d.get("title", "")), link=str(d.get("link", "")), debt=src.startswith("SEC: new debt"), fedreg=src.startswith("Federal Register")))
+    return sorted(out, key=lambda x: x["when"], reverse=True)
+
+
 def _body(tz: str):
     D = V.load(); now = D["now"]; hb = D["heartbeat_s"]; Z = V.ZoneInfo(tz); live = hb is not None and hb < 180
     st.caption("Colours on this page: red = a tested rule says trade now · yellow = the rule still applies, best entry time passed · green = the rule's trading time is over · no colour = no tested rule. " + f"Updated {now.astimezone(Z):%Y-%m-%d %H:%M:%S} local time · redraws every {REFRESH_S} seconds · " + (f"news listener running (last check {hb:.0f} seconds ago)" if live else "NEWS LISTENER NOT RUNNING" + (f" (last check {hb / 60:.0f} minutes ago)" if hb is not None else "")))
@@ -100,6 +121,20 @@ def _body(tz: str):
         a = b["action"]; cards.append(f"<div class='sig {CLS[_stage(b, now)]}'><b>{'Ended:' if a['state'] == 'closed' else 'Arrived too late:'}</b> {a['text']} · {V.RULE_NAMES.get(a['rule'], a['rule'])} · score {a['score']:+.2f} · released {b['release'].astimezone(V.NY):%Y-%m-%d %H:%M} New York<br><span class='smut'>{b['source']}: {b['title']}</span></div>")
     if not cards: cards = ["<div class='sig sshut'><span class='smut'>None yet.</span></div>"]
     block("Past Suggestions (Reference)", "The three most recent suggestions whose hour is over, or that reached us too late to act on. For reference only.", cards)
+
+    # founder's YES of 28 Nov 2026 (TRACK 3.144): what the listener collects for the whole market is shown here, in its own block. INFORMATION ONLY: not read by Claude, not scored, no colour.
+    W = _wire(now); cards = []
+    for r in [x for x in W if x["debt"]][:4] + [x for x in W if not x["debt"] and not x["fedreg"]][:8]:
+        link = f" · <a href='{r['link']}' target='_blank'>open</a>" if str(r["link"]).startswith("http") else ""
+        cards.append(f"<div class='sig sshut'><b>{_html.escape(r['title'])}</b><br><span class='smut'>{_html.escape(r['source'])} · {r['when'].astimezone(Z):%Y-%m-%d %H:%M} local time{link}</span></div>")
+    nfr = sum(1 for x in W if x["fedreg"])
+    if not cards: cards = [f"<div class='sig sshut'><span class='smut'>Nothing from the Fed, the Treasury, the White House, the trade office, the SEC or the statistics offices, and no new debt filing, in the last {WIRE_H} hours.</span></div>"]
+    block("Market-wide headlines and new debt filings (information only)", f"Collected by the listener in the last {WIRE_H} hours from US-government sources (Fed, Treasury auctions, White House, trade office, SEC, statistics offices) and the SEC's list of new debt filed by a watched company. "
+          "Not read by Claude, not scored, no colour: no tested rule exists for any of these. Newspapers and news agencies are not here (licensed)." + (f" {nfr} documents filed for the Federal Register are in the full list below." if nfr else ""), cards)
+    if W:
+        with st.expander(f"All {len(W)} market-wide items of the last {WIRE_H} hours"):
+            import pandas as _pd
+            _df(_pd.DataFrame([{"Time (local)": x["when"].astimezone(Z).strftime("%Y-%m-%d %H:%M"), "Source": x["source"], "Headline": x["title"], "Link": x["link"]} for x in W]), rows=12)
 
     st.subheader("Scored news, newest first")
     items = D["scored"][:200]; T = V.table(items, tz, now)

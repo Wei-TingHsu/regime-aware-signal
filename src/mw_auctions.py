@@ -78,16 +78,34 @@ def cmd_auctions():
     today = pd.Timestamp.now().strftime("%Y-%m-%d"); rows = []; used = ""
     tries = [("TreasuryDirect search", [f"https://www.treasurydirect.gov/TA_WS/securities/search?format=json&type={t}&startDate={START}&endDate={today}&dateFieldName=auctionDate" for t in ("Note", "Bond")]),
              ("TreasuryDirect auctioned", [f"https://www.treasurydirect.gov/TA_WS/securities/auctioned?format=json&type={t}&days=3300" for t in ("Note", "Bond")]),
-             ("Fiscal Data", [f"https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?format=json&filter=auction_date:gte:{START}&page[size]=10000"])]
+             ("Fiscal Data, in pages", "PAGED")]
+    FD = "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?format=json&sort=-{f}&filter={f}:gte:" + START + "{extra}&page%5Bsize%5D=200&page%5Bnumber%5D={n}"
+    def paged():      # 28 Nov 2026: one answer of 10,000 auctions was cut off at the reader's limit of 4 MB (the fault of 27 Nov); now 200 auctions a page, with a pause between pages
+        last = None
+        for f, extra in (("auction_date", ",security_type:in:(Note,Bond)"), ("auction_date", ""), ("record_date", ",security_type:in:(Note,Bond)"), ("record_date", "")):
+            got = []
+            try:
+                for n in range(1, 120):
+                    J = json.loads(N.fetch(FD.format(f=f, extra=extra, n=n), timeout=90)); d = J.get("data", [])
+                    got += d
+                    if n == 1: print(f"    Fiscal Data, dated by '{f}'{' (notes and bonds only)' if extra else ' (every kind)'}: page 1 has {len(d)} records; pages in all: {(J.get('meta') or {}).get('total-pages', '?')}; fields: {', '.join(list(d[0])[:8]) + ' ...' if d else 'none'}")
+                    if len(d) < 200: break
+                    time.sleep(0.4)
+                if got: return got
+            except Exception as ex: last = ex; print(f"    Fiscal Data, dated by '{f}'{' (notes and bonds only)' if extra else ''}: no ({type(ex).__name__}: {str(ex)[:60]})")
+        if last: raise last
+        return []
     for name, urls in tries:
         got = []
         try:
-            for u in urls:
-                J = json.loads(N.fetch(u, timeout=90)); got += J.get("data", []) if isinstance(J, dict) else J
+            if urls == "PAGED": got = paged()
+            else:
+                for u in urls:
+                    J = json.loads(N.fetch(u, timeout=90)); got += J.get("data", []) if isinstance(J, dict) else J
         except Exception as ex: print(f"  {name}: no ({type(ex).__name__}: {str(ex)[:70]})"); continue
         out = []
         for a in got:
-            typ = str(_pick(a, "securitytype") or ""); d = pd.to_datetime(str(_pick(a, "auctiondate") or "")[:10], errors="coerce"); y = _pick(a, "highyield"); btc = _pick(a, "bidtocover"); ct = str(_pick(a, "closingtimecomp") or "")
+            typ = str(_pick(a, "securitytype") or ""); d = pd.to_datetime(str(a.get("auction_date") or a.get("auctionDate") or _pick(a, "auctiondate") or a.get("record_date") or "")[:10], errors="coerce"); y = a.get("high_yield") or a.get("highYield") or _pick(a, "highyield"); btc = _pick(a, "bidtocover"); ct = str(_pick(a, "closingtimecomp") or "")
             if pd.isna(d) or typ not in ("Note", "Bond") or y in (None, "", "null") or d < pd.Timestamp(START): continue
             tt = pd.to_datetime(ct, errors="coerce"); hm = (tt.hour, tt.minute) if pd.notna(tt) and tt.hour >= 8 else (13, 0)
             out.append(dict(day=d, type=typ, term=str(_pick(a, "securityterm") or ""), close_h=hm[0], close_m=hm[1], closing_time_given=bool(pd.notna(tt) and tt.hour >= 8), high_yield=pd.to_numeric(y, errors="coerce"), bid_to_cover=pd.to_numeric(btc, errors="coerce"), cusip=str(_pick(a, "cusip") or "")))
